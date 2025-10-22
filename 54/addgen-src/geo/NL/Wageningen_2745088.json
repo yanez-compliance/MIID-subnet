@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Wageningen",
+  "geonameid": 2745088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.98031058300925,
+      "lon": 5.6942456034489135,
+      "geoinfo": {
+        "display_name": "Scheidingslaan, Wageningen-Hoog, Wageningen, Gelderland, Netherlands, 6704 PN, Netherlands",
+        "road": "Scheidingslaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wageningen",
+        "state": "Gelderland",
+        "postcode": "6704 PN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Scheidingslaan, Wageningen, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.95522737300639,
+      "lon": 5.6754038665168665,
+      "geoinfo": {
+        "display_name": "Aan de Rijn, Wageningen, Gelderland, Netherlands, 6703 CM, Netherlands",
+        "road": "Aan de Rijn",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wageningen",
+        "state": "Gelderland",
+        "postcode": "6703 CM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "494, Aan de Rijn, Wageningen, Gelderland, Netherlands, 6703 CM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:07.420045+00:00",
+  "_kind": "geo_samples"
+}

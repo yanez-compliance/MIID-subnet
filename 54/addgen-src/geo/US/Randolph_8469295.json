@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Randolph",
+  "geonameid": 8469295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.861202984128354,
+      "lon": -74.5431014210778,
+      "geoinfo": {
+        "display_name": "Mountainside Drive, Randolph Township, Morris County, New Jersey, 07869, United States",
+        "road": "Mountainside Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Randolph Township",
+        "state": "New Jersey",
+        "postcode": "07869",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mountainside Drive, Randolph, New Jersey, United States"
+    },
+    {
+      "lat": 40.84326857620354,
+      "lon": -74.61669705465462,
+      "geoinfo": {
+        "display_name": "Sanford Drive, Randolph Township, Morris County, New Jersey, 07869, United States",
+        "road": "Sanford Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Randolph Township",
+        "state": "New Jersey",
+        "postcode": "07869",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "258, Sanford Drive, Randolph Township, Morris County, New Jersey, 07869, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:41.283438+00:00",
+  "_kind": "geo_samples"
+}

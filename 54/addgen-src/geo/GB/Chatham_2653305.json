@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chatham",
+  "geonameid": 2653305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.339993814417404,
+      "lon": 0.5469753324615932,
+      "geoinfo": {
+        "display_name": "North Dane Way, Walderslade, Chatham, Medway, England, ME5 8YE, United Kingdom",
+        "road": "North Dane Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Walderslade",
+        "city_district": null,
+        "city": "Chatham",
+        "state": "England",
+        "postcode": "ME5 8YE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "North Dane Way, Chatham, England, United Kingdom"
+    },
+    {
+      "lat": 51.416831280454275,
+      "lon": 0.5597762446029518,
+      "geoinfo": {
+        "display_name": "Vicarage Lane, Broad Street, Lower Upnor, Hoo St. Werburgh, Medway, England, ME3 9BD, United Kingdom",
+        "road": "Vicarage Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lower Upnor",
+        "state": "England",
+        "postcode": "ME3 9BD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Vicarage Lane, Broad Street, Lower Upnor, Hoo St. Werburgh, Medway, England, ME3 9BD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:20.377802+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Viareggio",
+  "geonameid": 3164433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.898598943905114,
+      "lon": 10.222904859636332,
+      "geoinfo": {
+        "display_name": "IP, 123, Viale Cristoforo Colombo, Lido di Camaiore, Camaiore, Unione dei comuni della Versilia, Lucca, Tuscany, 55041, Italy",
+        "road": "Viale Cristoforo Colombo",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Camaiore",
+        "state": "Tuscany",
+        "postcode": "55041",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "123 Viale Cristoforo Colombo, Viareggio, Tuscany, Italy"
+    },
+    {
+      "lat": 43.88323622890864,
+      "lon": 10.22822612157495,
+      "geoinfo": {
+        "display_name": "Bagno Pinocchio, Terrazza della Repubblica, Viareggio, Unione dei comuni della Versilia, Lucca, Tuscany, 55043, Italy",
+        "road": "Terrazza della Repubblica",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viareggio",
+        "state": "Tuscany",
+        "postcode": "55043",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "467, Terrazza della Repubblica, Viareggio, 55043 Tuscany, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:14.997329+00:00",
+  "_kind": "geo_samples"
+}

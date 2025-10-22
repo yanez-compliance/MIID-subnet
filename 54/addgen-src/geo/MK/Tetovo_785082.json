@@ -1,0 +1,65 @@
+{
+  "country_code": "MK",
+  "country": "North Macedonia",
+  "city": "Tetovo",
+  "geonameid": 785082,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 42.036342623581234,
+      "lon": 20.946661085784374,
+      "geoinfo": {
+        "display_name": "Selce, Municipality of Tetovo, 1200, North Macedonia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Selce",
+        "state": null,
+        "postcode": "1200",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "194, Selce, Municipality of Tetovo, 1200, North Macedonia"
+    },
+    {
+      "lat": 41.989522341061765,
+      "lon": 21.01438593145656,
+      "geoinfo": {
+        "display_name": "Tetovo, Municipality of Tetovo, 1200, North Macedonia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tetovo",
+        "state": null,
+        "postcode": "1200",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "414, Tetovo, Municipality of Tetovo, 1200, North Macedonia"
+    },
+    {
+      "lat": 42.01644743126761,
+      "lon": 20.92532620206995,
+      "geoinfo": {
+        "display_name": "R1209, Gajre, Municipality of Tetovo, 1220, North Macedonia",
+        "road": "R1209",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gajre",
+        "state": null,
+        "postcode": "1220",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "R1209, Gajre, Municipality of Tetovo, 1220, North Macedonia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:33.716686+00:00",
+  "_kind": "geo_samples"
+}

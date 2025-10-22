@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Fraijanes",
+  "geonameid": 3595714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.477851709020014,
+      "lon": -90.44557545830824,
+      "geoinfo": {
+        "display_name": "Fraijanes, Zona 5, Guatemala Department, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fraijanes",
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Fraijanes, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.444901174888754,
+      "lon": -90.464902608196,
+      "geoinfo": {
+        "display_name": "San Martín del Campo, Fraijanes, Zona 5, Guatemala Department, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "San Martín del Campo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fraijanes",
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "528, San Martín del Campo, Fraijanes, Zona 5, Guatemala Department, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:22.429818+00:00",
+  "_kind": "geo_samples"
+}

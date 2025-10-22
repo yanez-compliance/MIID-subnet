@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Milazzo",
+  "geonameid": 2524155,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.211842295299014,
+      "lon": 15.194744941814637,
+      "geoinfo": {
+        "display_name": "Santa Marina, Milazzo, Messina, Sicily, 98057, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Marina",
+        "city_district": null,
+        "city": "Milazzo",
+        "state": "Sicily",
+        "postcode": "98057",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Santa Marina, Milazzo, Sicily, Italy"
+    },
+    {
+      "lat": 38.226722400451564,
+      "lon": 15.287126813572353,
+      "geoinfo": {
+        "display_name": "Archi, San Filippo del Mela, Messina, Sicily, 98044, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Archi",
+        "state": "Sicily",
+        "postcode": "98044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "461, Archi, San Filippo del Mela, Messina, Sicily, 98044, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:48.199828+00:00",
+  "_kind": "geo_samples"
+}

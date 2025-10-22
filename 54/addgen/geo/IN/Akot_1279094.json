@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Akot",
+  "geonameid": 1279094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.139132817828248,
+      "lon": 77.05594047580827,
+      "geoinfo": {
+        "display_name": "ODR3, Sukali, Shivpur, Akot, Akola District, Maharashtra, India",
+        "road": "ODR3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sukali",
+        "city": "Shivpur",
+        "state": "Maharashtra",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "ODR3, Akot, Maharashtra, India"
+    },
+    {
+      "lat": 21.098294617037443,
+      "lon": 77.06262904437405,
+      "geoinfo": {
+        "display_name": "Akot, Akola District, Maharashtra, 444100, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Akot",
+        "city": "Akot",
+        "state": "Maharashtra",
+        "postcode": "444100",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "432, Akot, Akola District, Maharashtra, 444100, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:03.563642+00:00",
+  "_kind": "geo_samples"
+}

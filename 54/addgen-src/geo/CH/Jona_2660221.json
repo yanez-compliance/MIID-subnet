@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Jona",
+  "geonameid": 2660221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.21255953185558,
+      "lon": 8.830146732957274,
+      "geoinfo": {
+        "display_name": "Strandweg, Jona, Rapperswil-Jona, Wahlkreis See-Gaster, St. Gallen, 8645, Switzerland",
+        "road": "Strandweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rapperswil-Jona",
+        "state": "St. Gallen",
+        "postcode": "8645",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Strandweg, Jona, St. Gallen, Switzerland"
+    },
+    {
+      "lat": 47.2100112776482,
+      "lon": 8.84059316148715,
+      "geoinfo": {
+        "display_name": "Hessenhofweg, Jona, Rapperswil-Jona, Wahlkreis See-Gaster, St. Gallen, 8645, Switzerland",
+        "road": "Hessenhofweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rapperswil-Jona",
+        "state": "St. Gallen",
+        "postcode": "8645",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Hessenhofweg, Jona, St. Gallen, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:05:54.227650+00:00",
+  "_kind": "geo_samples"
+}

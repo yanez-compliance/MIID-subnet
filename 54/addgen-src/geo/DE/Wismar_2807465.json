@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wismar",
+  "geonameid": 2807465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.888431259274945,
+      "lon": 11.447496028966313,
+      "geoinfo": {
+        "display_name": "Hochschule Wismar, Philipp-Müller-Straße, Lembkenhof, Wismar West, Wismar, Nordwestmecklenburg, Mecklenburg-Vorpommern, 23966, Germany",
+        "road": "Philipp-Müller-Straße",
+        "house_number": null,
+        "neighbourhood": "Lembkenhof",
+        "suburb": "Wismar West",
+        "city_district": null,
+        "city": "Wismar",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "23966",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Philipp-Müller-Straße, Wismar, Mecklenburg-Vorpommern, Germany"
+    },
+    {
+      "lat": 53.85547074391816,
+      "lon": 11.49419234568861,
+      "geoinfo": {
+        "display_name": "A 20, Triwalk, Lübow, Dorf Mecklenburg-Bad Kleinen, Nordwestmecklenburg, Mecklenburg-Vorpommern, 23972, Germany",
+        "road": "A 20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lübow",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "23972",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 20, Wismar, 23972 Mecklenburg-Vorpommern, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:36.594782+00:00",
+  "_kind": "geo_samples"
+}

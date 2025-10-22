@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gardanne",
+  "geonameid": 3016667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.457557604890766,
+      "lon": 5.471875926306818,
+      "geoinfo": {
+        "display_name": "37, Rue Parmentier, Gardanne, Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13120, France",
+        "road": "Rue Parmentier",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gardanne",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "37 Rue Parmentier, Gardanne, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.46211522607062,
+      "lon": 5.433913915801695,
+      "geoinfo": {
+        "display_name": "Bouc-Bel-Air, Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13320, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bouc-Bel-Air",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13320",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "924, Bouc-Bel-Air, Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13320, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:31.544987+00:00",
+  "_kind": "geo_samples"
+}

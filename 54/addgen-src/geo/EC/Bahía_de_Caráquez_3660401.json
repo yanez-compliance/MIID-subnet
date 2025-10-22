@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Bahía de Caráquez",
+  "geonameid": 3660401,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -0.6003556007992092,
+      "lon": -80.43221766809583,
+      "geoinfo": {
+        "display_name": "Avenida Unidad Nacional, Bahía de Caráquez, Sucre, Manabí, 131110, Ecuador",
+        "road": "Avenida Unidad Nacional",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahía de Caráquez",
+        "state": "Manabí",
+        "postcode": "131110",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Avenida Unidad Nacional, Bahía de Caráquez, Manabí, Ecuador"
+    },
+    {
+      "lat": -0.5782595502978548,
+      "lon": -80.40361208200358,
+      "geoinfo": {
+        "display_name": "San Vicente, Manabí, 132250, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Vicente",
+        "state": "Manabí",
+        "postcode": "132250",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Bahía de Caráquez, Manabí, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:08:27.193559+00:00",
+  "_kind": "geo_samples"
+}

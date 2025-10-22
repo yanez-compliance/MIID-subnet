@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakewood",
+  "geonameid": 5160315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.47178577806981,
+      "lon": -81.81793946166503,
+      "geoinfo": {
+        "display_name": "North Marginal Drive, Indianola Park, Lakewood, Cuyahoga County, Ohio, 44107, United States",
+        "road": "North Marginal Drive",
+        "house_number": null,
+        "neighbourhood": "Indianola Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakewood",
+        "state": "Ohio",
+        "postcode": "44107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Marginal Drive, Lakewood, Ohio, United States"
+    },
+    {
+      "lat": 41.468292727142945,
+      "lon": -81.85344703624935,
+      "geoinfo": {
+        "display_name": "Civic Center Drive, Rocky River, Cuyahoga County, Ohio, 44116, United States",
+        "road": "Civic Center Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rocky River",
+        "state": "Ohio",
+        "postcode": "44116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "446, Civic Center Drive, Rocky River, Cuyahoga County, Ohio, 44116, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:05.802259+00:00",
+  "_kind": "geo_samples"
+}

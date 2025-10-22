@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Este",
+  "geonameid": 3177337,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.18850938734601,
+      "lon": 11.678636915121771,
+      "geoinfo": {
+        "display_name": "Villa Estense, Province of Padua, Veneto, 35040, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Estense",
+        "state": "Veneto",
+        "postcode": "35040",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Este, Veneto, Italy"
+    },
+    {
+      "lat": 45.26125960339021,
+      "lon": 11.65728690105726,
+      "geoinfo": {
+        "display_name": "Via Piombà, Piombà, Calaone, Baone, Province of Padua, Veneto, 35030, Italy",
+        "road": "Via Piombà",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calaone",
+        "state": "Veneto",
+        "postcode": "35030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "761, Via Piombà, Piombà, Calaone, Baone, Province of Padua, Veneto, 35030, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:14.738828+00:00",
+  "_kind": "geo_samples"
+}

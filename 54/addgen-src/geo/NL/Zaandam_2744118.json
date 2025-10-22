@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Zaandam",
+  "geonameid": 2744118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.45770496452685,
+      "lon": 4.824025702613874,
+      "geoinfo": {
+        "display_name": "Benno Premselastraat, Zaandam, Zaanstad, North Holland, Netherlands, 1508 EA, Netherlands",
+        "road": "Benno Premselastraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zaandam",
+        "state": "North Holland",
+        "postcode": "1508 EA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Benno Premselastraat, Zaandam, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.45347809656732,
+      "lon": 4.813016746630181,
+      "geoinfo": {
+        "display_name": "237R, Westzijde, Zaandam, Zaanstad, North Holland, Netherlands, 1506 GE, Netherlands",
+        "road": "Westzijde",
+        "house_number": "237R",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zaandam",
+        "state": "North Holland",
+        "postcode": "1506 GE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "237R, Westzijde, Zaandam, Zaanstad, North Holland, Netherlands, 1506 GE, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:58:59.940621+00:00",
+  "_kind": "geo_samples"
+}

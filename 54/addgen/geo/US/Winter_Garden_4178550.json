@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winter Garden",
+  "geonameid": 4178550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.55413382268909,
+      "lon": -81.61774969165485,
+      "geoinfo": {
+        "display_name": "15786, Oakland Avenue, Oakland, Orange County, Florida, 34787, United States",
+        "road": "Oakland Avenue",
+        "house_number": "15786",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakland",
+        "state": "Florida",
+        "postcode": "34787",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15786 Oakland Avenue, Winter Garden, Florida, United States"
+    },
+    {
+      "lat": 28.56186692734153,
+      "lon": -81.60096946902574,
+      "geoinfo": {
+        "display_name": "325, Lakeview Road, Tildenville, Winter Garden, Orange County, Florida, 34787, United States",
+        "road": "Lakeview Road",
+        "house_number": "325",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winter Garden",
+        "state": "Florida",
+        "postcode": "34787",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "325, Lakeview Road, Tildenville, Winter Garden, Orange County, Florida, 34787, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:06.558790+00:00",
+  "_kind": "geo_samples"
+}

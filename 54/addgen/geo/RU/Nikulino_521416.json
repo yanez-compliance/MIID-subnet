@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Nikulino",
+  "geonameid": 521416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.66139816474153,
+      "lon": 37.50771178628318,
+      "geoinfo": {
+        "display_name": "111/1, Leninskiy Avenue, Obruchevsky District, Moscow, Central Federal District, 117198, Russia",
+        "road": "Leninskiy Avenue",
+        "house_number": "111/1",
+        "neighbourhood": null,
+        "suburb": "Obruchevsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "117198",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "111/1 Leninskiy Avenue, Nikulino, Moscow, Russia"
+    },
+    {
+      "lat": 55.64656182424633,
+      "lon": 37.513596781987125,
+      "geoinfo": {
+        "display_name": "21, улица Академика Волгина, Konkovo District, Moscow, Central Federal District, 117871, Russia",
+        "road": "улица Академика Волгина",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": "Konkovo District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "117871",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "21, улица Академика Волгина, Konkovo District, Moscow, Central Federal District, 117871, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:13.958294+00:00",
+  "_kind": "geo_samples"
+}

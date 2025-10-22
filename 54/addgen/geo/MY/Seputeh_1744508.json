@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Seputeh",
+  "geonameid": 1744508,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.1165148974323102,
+      "lon": 101.68310352523532,
+      "geoinfo": {
+        "display_name": "Jalan Taman Seputeh, Seputeh, Kuala Lumpur, 50614, Malaysia",
+        "road": "Jalan Taman Seputeh",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seputeh",
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "50614",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Taman Seputeh, Seputeh, Kuala Lumpur, Malaysia"
+    },
+    {
+      "lat": 3.116260111154429,
+      "lon": 101.71011707313498,
+      "geoinfo": {
+        "display_name": "Jalan Utusan, Razak Mansion, Kuala Lumpur, 55720, Malaysia",
+        "road": "Jalan Utusan",
+        "house_number": null,
+        "neighbourhood": "Razak Mansion",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "55720",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "104, Jalan Utusan, Razak Mansion, Kuala Lumpur, 55720, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:52.165038+00:00",
+  "_kind": "geo_samples"
+}

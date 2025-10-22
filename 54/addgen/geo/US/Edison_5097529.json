@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Edison",
+  "geonameid": 5097529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.502910589011385,
+      "lon": -74.40607072683292,
+      "geoinfo": {
+        "display_name": "11, Boltin Street, Edison, Middlesex County, New Jersey, 08817, United States",
+        "road": "Boltin Street",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edison",
+        "state": "New Jersey",
+        "postcode": "08817",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11 Boltin Street, Edison, New Jersey, United States"
+    },
+    {
+      "lat": 40.5229214014275,
+      "lon": -74.4116523458188,
+      "geoinfo": {
+        "display_name": "232, Metroplex Drive, Edison, Middlesex County, New Jersey, 08817, United States",
+        "road": "Metroplex Drive",
+        "house_number": "232",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edison",
+        "state": "New Jersey",
+        "postcode": "08817",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "232, Metroplex Drive, Edison, Middlesex County, New Jersey, 08817, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:24.608804+00:00",
+  "_kind": "geo_samples"
+}

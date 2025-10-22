@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guye",
+  "geonameid": 1809159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.77107790038595,
+      "lon": 118.47185220218614,
+      "geoinfo": {
+        "display_name": "Y199, 平台子, Guye District, Tangshan, Hebei, 063100, China",
+        "road": "Y199",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guye District",
+        "state": "Hebei",
+        "postcode": "063100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Y199, Guye, Hebei, China"
+    },
+    {
+      "lat": 39.70150304095171,
+      "lon": 118.42871757314377,
+      "geoinfo": {
+        "display_name": "Guye District, Tangshan, Hebei, 063100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guye District",
+        "state": "Hebei",
+        "postcode": "063100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "772, Guye District, Tangshan, Hebei, 063100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:22.447669+00:00",
+  "_kind": "geo_samples"
+}

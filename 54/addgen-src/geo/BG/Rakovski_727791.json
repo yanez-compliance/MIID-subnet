@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Rakovski",
+  "geonameid": 727791,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.32684447472187,
+      "lon": 24.981894283301845,
+      "geoinfo": {
+        "display_name": "14-та, Rakovski, Plovdiv, 4163, Bulgaria",
+        "road": "14-та",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rakovski",
+        "state": "Plovdiv",
+        "postcode": "4163",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "14-та, Rakovski, Plovdiv, Bulgaria"
+    },
+    {
+      "lat": 42.30241243748331,
+      "lon": 24.914793228965674,
+      "geoinfo": {
+        "display_name": "кв. Секирово, Rakovski, Plovdiv, 4150, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "кв. Секирово",
+        "city_district": null,
+        "city": "Rakovski",
+        "state": "Plovdiv",
+        "postcode": "4150",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "кв. Секирово, Rakovski, Plovdiv, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:48:15.569755+00:00",
+  "_kind": "geo_samples"
+}

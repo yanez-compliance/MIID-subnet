@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gesundbrunnen",
+  "geonameid": 2920789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.5512838602016,
+      "lon": 13.391272473666037,
+      "geoinfo": {
+        "display_name": "10, Jülicher Straße, Gartenstadt Atlantic, Gesundbrunnen, Mitte, Berlin, 13357, Germany",
+        "road": "Jülicher Straße",
+        "house_number": "10",
+        "neighbourhood": "Gartenstadt Atlantic",
+        "suburb": "Gesundbrunnen",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13357",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10 Jülicher Straße, Gesundbrunnen, Germany"
+    },
+    {
+      "lat": 52.54367575114309,
+      "lon": 13.39747315488931,
+      "geoinfo": {
+        "display_name": "Lortzingstraße, Brunnenviertel, Gesundbrunnen, Mitte, Berlin, 13355, Germany",
+        "road": "Lortzingstraße",
+        "house_number": null,
+        "neighbourhood": "Brunnenviertel",
+        "suburb": "Gesundbrunnen",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13355",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "855, Lortzingstraße, Brunnenviertel, Gesundbrunnen, Mitte, Berlin, 13355, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:28.524770+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Cerro",
+  "geonameid": 3564436,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.09197671181551,
+      "lon": -82.4280900136374,
+      "geoinfo": {
+        "display_name": "Liberty School City, Avenida 29F, Libertad, Marianao, Havana, 12501, Cuba",
+        "road": "Avenida 29F",
+        "house_number": null,
+        "neighbourhood": "Libertad",
+        "suburb": "Marianao",
+        "city_district": null,
+        "city": "Havana",
+        "state": "Havana",
+        "postcode": "12501",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Avenida 29F, Cerro, Havana, Cuba"
+    },
+    {
+      "lat": 23.08316143868096,
+      "lon": -82.39163166489121,
+      "geoinfo": {
+        "display_name": "Canal, Reparto Antonio Maceo, Reparto Martí, Armada, Cerro, Havana, 13400, Cuba",
+        "road": "Canal",
+        "house_number": null,
+        "neighbourhood": "Reparto Antonio Maceo",
+        "suburb": "Reparto Martí",
+        "city_district": "Armada",
+        "city": null,
+        "state": "Havana",
+        "postcode": "13400",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "315, Canal, Reparto Antonio Maceo, Reparto Martí, Armada, Cerro, Havana, 13400, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:36.670077+00:00",
+  "_kind": "geo_samples"
+}

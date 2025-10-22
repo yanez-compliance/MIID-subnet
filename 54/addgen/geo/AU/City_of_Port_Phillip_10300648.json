@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "City of Port Phillip",
+  "geonameid": 10300648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.82307018000157,
+      "lon": 144.89930258729083,
+      "geoinfo": {
+        "display_name": "Francis Street, Spotswood, Melbourne, City of Hobsons Bay, Victoria, 3013, Australia",
+        "road": "Francis Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Spotswood",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3013",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Francis Street, City of Port Phillip, Victoria, Australia"
+    },
+    {
+      "lat": -37.803995397570986,
+      "lon": 144.93382737315565,
+      "geoinfo": {
+        "display_name": "Wurundjeri Way, West Melbourne, Melbourne, City of Melbourne, Victoria, 3003, Australia",
+        "road": "Wurundjeri Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3003",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "421, Wurundjeri Way, West Melbourne, Melbourne, City of Melbourne, Victoria, 3003, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:13.528878+00:00",
+  "_kind": "geo_samples"
+}

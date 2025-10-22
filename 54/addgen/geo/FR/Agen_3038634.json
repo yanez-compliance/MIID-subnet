@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Agen",
+  "geonameid": 3038634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.22363971189386,
+      "lon": 0.6002973204228195,
+      "geoinfo": {
+        "display_name": "Chemin Côte de Lamoure, Colayrac-Saint-Cirq, Agen, Lot-et-Garonne, Nouvelle-Aquitaine, Metropolitan France, 47450, France",
+        "road": "Chemin Côte de Lamoure",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colayrac-Saint-Cirq",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "47450",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin Côte de Lamoure, Agen, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.174948963896696,
+      "lon": 0.6270722265282287,
+      "geoinfo": {
+        "display_name": "Boé, Agen, Lot-et-Garonne, Nouvelle-Aquitaine, Metropolitan France, 47550, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boé",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "47550",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "494, Boé, Agen, Lot-et-Garonne, Nouvelle-Aquitaine, Metropolitan France, 47550, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:23.192100+00:00",
+  "_kind": "geo_samples"
+}

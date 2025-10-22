@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Lansing-Westgate",
+  "geonameid": 12156849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.750706861449224,
+      "lon": -79.4652036493413,
+      "geoinfo": {
+        "display_name": "1070, Sheppard Avenue West, Downsview, York Centre, North York, Toronto, Golden Horseshoe, Ontario, M3K 2A2, Canada",
+        "road": "Sheppard Avenue West",
+        "house_number": "1070",
+        "neighbourhood": "Downsview",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3K 2A2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1070 Sheppard Avenue West, Lansing-Westgate, Ontario, Canada"
+    },
+    {
+      "lat": 43.781299879095904,
+      "lon": -79.44250919019774,
+      "geoinfo": {
+        "display_name": "483, Drewry Avenue, Newtonbrook West, Willowdale, North York, Toronto, Golden Horseshoe, Ontario, M2R 2N1, Canada",
+        "road": "Drewry Avenue",
+        "house_number": "483",
+        "neighbourhood": "Newtonbrook West",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M2R 2N1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "483, Drewry Avenue, Newtonbrook West, Willowdale, North York, Toronto, Golden Horseshoe, Ontario, M2R 2N1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:56.616466+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Pulai",
+  "geonameid": 1734445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.638448868781567,
+      "lon": 100.90059077113482,
+      "geoinfo": {
+        "display_name": "Kampung Sera, Baling, Kedah, 09100, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kampung Sera",
+        "state": "Kedah",
+        "postcode": "09100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Pulai, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.678336737444918,
+      "lon": 100.9226380481852,
+      "geoinfo": {
+        "display_name": "Pekan Baling, Baling, Kedah, 09100, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Pekan Baling",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baling",
+        "state": "Kedah",
+        "postcode": "09100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "733, Pekan Baling, Baling, Kedah, 09100, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:46.351997+00:00",
+  "_kind": "geo_samples"
+}

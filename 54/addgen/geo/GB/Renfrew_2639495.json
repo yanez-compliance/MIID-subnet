@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Renfrew",
+  "geonameid": 2639495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.88256860947417,
+      "lon": -4.427206258404053,
+      "geoinfo": {
+        "display_name": "Greenock Road, Garnieland, Inchinnan, Renfrewshire, Scotland, PA4 9NH, United Kingdom",
+        "road": "Greenock Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Garnieland",
+        "city_district": null,
+        "city": "Inchinnan",
+        "state": "Scotland",
+        "postcode": "PA4 9NH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Greenock Road, Renfrew, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.8987940759809,
+      "lon": -4.339843280889753,
+      "geoinfo": {
+        "display_name": "High Knightswood, Knightswood, Glasgow, Glasgow City, Scotland, G13 2QP, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Knightswood",
+        "city_district": null,
+        "city": "Glasgow",
+        "state": "Scotland",
+        "postcode": "G13 2QP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "High Knightswood, Knightswood, Glasgow, Glasgow City, Scotland, G13 2QP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:56.529736+00:00",
+  "_kind": "geo_samples"
+}

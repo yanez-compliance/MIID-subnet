@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Sidi Amrane",
+  "geonameid": 2481058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.51450861094526,
+      "lon": 5.981688690971914,
+      "geoinfo": {
+        "display_name": "RN 3, Djamaa, Djamaa District, El M'Ghair, Algeria",
+        "road": "RN 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Djamaa",
+        "state": "El M'Ghair",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 3, Sidi Amrane, El M'Ghair, Algeria"
+    },
+    {
+      "lat": 33.48519610389458,
+      "lon": 5.970282085803879,
+      "geoinfo": {
+        "display_name": "Chemmara, Sidi Amrane, Djamaa District, El M'Ghair, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sidi Amrane",
+        "state": "El M'Ghair",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "082, Chemmara, Sidi Amrane, Djamaa District, 13469 El M'Ghair, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:36.831620+00:00",
+  "_kind": "geo_samples"
+}

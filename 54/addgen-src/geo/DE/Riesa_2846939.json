@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Riesa",
+  "geonameid": 2846939,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.303820482655105,
+      "lon": 13.333674278688157,
+      "geoinfo": {
+        "display_name": "47, Ziegeleistraße, Göhlis, Riesa, Meissen, Saxony, 01589, Germany",
+        "road": "Ziegeleistraße",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": "Göhlis",
+        "city_district": null,
+        "city": "Riesa",
+        "state": "Saxony",
+        "postcode": "01589",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "47 Ziegeleistraße, Riesa, Saxony, Germany"
+    },
+    {
+      "lat": 51.2949056092107,
+      "lon": 13.256704942922612,
+      "geoinfo": {
+        "display_name": "Oelsitzer Weg, Weida, Riesa, Meissen, Saxony, 01587, Germany",
+        "road": "Oelsitzer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Weida",
+        "city_district": null,
+        "city": "Riesa",
+        "state": "Saxony",
+        "postcode": "01587",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "036, Oelsitzer Weg, Weida, Riesa, Meissen, Saxony, 01587, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:43.056033+00:00",
+  "_kind": "geo_samples"
+}

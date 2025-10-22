@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Vijayapuram",
+  "geonameid": 13353548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.565205496026122,
+      "lon": 76.55927381220533,
+      "geoinfo": {
+        "display_name": "Puthuppally, Kottayam, Kerala, 686018, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puthuppally",
+        "state": "Kerala",
+        "postcode": "686018",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Vijayapuram, Kerala, India"
+    },
+    {
+      "lat": 9.613791486056206,
+      "lon": 76.52911148100343,
+      "geoinfo": {
+        "display_name": "Kumaranalloor, Kottayam, Kerala, 686016, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kumaranalloor",
+        "city_district": null,
+        "city": "Kottayam",
+        "state": "Kerala",
+        "postcode": "686016",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "719, Kumaranalloor, Kottayam, Kerala, 686016, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:19.277271+00:00",
+  "_kind": "geo_samples"
+}

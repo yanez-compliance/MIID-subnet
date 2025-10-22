@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sehnde",
+  "geonameid": 2833475,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.31325160990684,
+      "lon": 9.917351844279313,
+      "geoinfo": {
+        "display_name": "K 148, Wassel, Sehnde, Region Hannover, Lower Saxony, 31319, Germany",
+        "road": "K 148",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sehnde",
+        "state": "Lower Saxony",
+        "postcode": "31319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 148, Sehnde, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.33977778964298,
+      "lon": 10.011002285852936,
+      "geoinfo": {
+        "display_name": "Sehnde, Region Hannover, Lower Saxony, 31319, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sehnde",
+        "state": "Lower Saxony",
+        "postcode": "31319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "550, Sehnde, Region Hannover, Lower Saxony, 31319, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:56.329463+00:00",
+  "_kind": "geo_samples"
+}

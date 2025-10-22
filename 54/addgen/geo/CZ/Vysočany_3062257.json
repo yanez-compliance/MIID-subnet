@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Vysočany",
+  "geonameid": 3062257,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.11188884938209,
+      "lon": 14.490230790415161,
+      "geoinfo": {
+        "display_name": "246, Podvinný mlýn, Libeň, Prague, obvod Praha 9, Capital City of Prague, Prague, 190 00, Czechia",
+        "road": "Podvinný mlýn",
+        "house_number": "246",
+        "neighbourhood": null,
+        "suburb": "Libeň",
+        "city_district": "obvod Praha 9",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "190 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "246 Podvinný mlýn, Vysočany, Prague, Czechia"
+    },
+    {
+      "lat": 50.07785447822758,
+      "lon": 14.53241949185086,
+      "geoinfo": {
+        "display_name": "U Stavoservisu, Malešice, Prague, obvod Praha 10, Capital City of Prague, Prague, 102 03, Czechia",
+        "road": "U Stavoservisu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Malešice",
+        "city_district": "obvod Praha 10",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "102 03",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "U Stavoservisu, Malešice, Prague, obvod Praha 10, Capital City of Prague, Prague, 102 03, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:42.261192+00:00",
+  "_kind": "geo_samples"
+}

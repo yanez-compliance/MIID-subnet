@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Brainerd",
+  "geonameid": 4619943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.99852015052843,
+      "lon": -85.16410935828333,
+      "geoinfo": {
+        "display_name": "Davidson Road, East Brainerd, Chattanooga, Hamilton County, East Tennessee, Tennessee, 37421, United States",
+        "road": "Davidson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chattanooga",
+        "state": "Tennessee",
+        "postcode": "37421",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Davidson Road, East Brainerd, Tennessee, United States"
+    },
+    {
+      "lat": 34.97281034459741,
+      "lon": -85.18911734306408,
+      "geoinfo": {
+        "display_name": "249, Hillcrest Drive, Foster Hills, Catoosa County, Georgia, 30736, United States",
+        "road": "Hillcrest Drive",
+        "house_number": "249",
+        "neighbourhood": "Foster Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30736",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "249, Hillcrest Drive, Foster Hills, Catoosa County, Georgia, 30736, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:06.563299+00:00",
+  "_kind": "geo_samples"
+}

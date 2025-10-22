@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cricklewood",
+  "geonameid": 2651984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.56461962974048,
+      "lon": -0.22553333954653854,
+      "geoinfo": {
+        "display_name": "Conway Road, Dollis Hill, London Borough of Brent, London, Greater London, England, NW2 6HJ, United Kingdom",
+        "road": "Conway Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dollis Hill",
+        "city_district": "London Borough of Brent",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW2 6HJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Conway Road, Cricklewood, England, United Kingdom"
+    },
+    {
+      "lat": 51.53133864522455,
+      "lon": -0.23944822007242977,
+      "geoinfo": {
+        "display_name": "Willesden Traction Maintenance Depot, Scrubs Lane, College Park, London Borough of Hammersmith and Fulham, London, Greater London, England, NW10 5NG, United Kingdom",
+        "road": "Scrubs Lane",
+        "house_number": null,
+        "neighbourhood": "College Park",
+        "suburb": null,
+        "city_district": "London Borough of Hammersmith and Fulham",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW10 5NG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Willesden Traction Maintenance Depot, Scrubs Lane, College Park, London Borough of Hammersmith and Fulham, London, Greater London, England, NW10 5NG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:53.102007+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Elsinore",
+  "geonameid": 5364499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.67627212845633,
+      "lon": -117.37675736302322,
+      "geoinfo": {
+        "display_name": "Lake Elsinore, Riverside County, California, 92530, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Elsinore",
+        "state": "California",
+        "postcode": "92530",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Elsinore, California, United States"
+    },
+    {
+      "lat": 33.67082228308688,
+      "lon": -117.27862745931932,
+      "geoinfo": {
+        "display_name": "95, Via del Lago, Lake Elsinore, Riverside County, California, 92532, United States",
+        "road": "Via del Lago",
+        "house_number": "95",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Elsinore",
+        "state": "California",
+        "postcode": "92532",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "95, Via del Lago, Lake Elsinore, Riverside County, California, 92532, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:59.866508+00:00",
+  "_kind": "geo_samples"
+}

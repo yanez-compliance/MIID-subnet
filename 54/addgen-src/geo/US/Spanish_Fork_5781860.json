@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spanish Fork",
+  "geonameid": 5781860,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.08760035413037,
+      "lon": -111.64070731924548,
+      "geoinfo": {
+        "display_name": "South River Bottoms Road, Utah County, Utah, 84660, United States",
+        "road": "South River Bottoms Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": "84660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South River Bottoms Road, Spanish Fork, Utah, United States"
+    },
+    {
+      "lat": 40.107996647722224,
+      "lon": -111.66163209419844,
+      "geoinfo": {
+        "display_name": "398, 100 South, Spanish Fork, Utah County, Utah, 84660, United States",
+        "road": "100 South",
+        "house_number": "398",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spanish Fork",
+        "state": "Utah",
+        "postcode": "84660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "398, 100 South, Spanish Fork, Utah County, Utah, 84660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:36.854725+00:00",
+  "_kind": "geo_samples"
+}

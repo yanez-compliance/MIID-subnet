@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shawan",
+  "geonameid": 1795776,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.596374957380604,
+      "lon": 104.5766436673805,
+      "geoinfo": {
+        "display_name": "G212, Wudu District, Longnan, Gansu, China",
+        "road": "G212",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G212, Shawan, Gansu, China"
+    },
+    {
+      "lat": 33.61574530294887,
+      "lon": 104.5409551859108,
+      "geoinfo": {
+        "display_name": "Shawan, Tanchang County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shawan",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "702, Shawan, Tanchang County, Longnan, 01939 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:50.201375+00:00",
+  "_kind": "geo_samples"
+}

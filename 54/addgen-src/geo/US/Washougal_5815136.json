@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Washougal",
+  "geonameid": 5815136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.56567219684701,
+      "lon": -122.3702229441205,
+      "geoinfo": {
+        "display_name": "Multnomah County, Oregon, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Washougal, Oregon, United States"
+    },
+    {
+      "lat": 45.55505924547696,
+      "lon": -122.35798944490203,
+      "geoinfo": {
+        "display_name": "Meadow Trail, Multnomah County, Oregon, 98671, United States",
+        "road": "Meadow Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "98671",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "414, Meadow Trail, Multnomah County, Oregon, 98671, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:40.565180+00:00",
+  "_kind": "geo_samples"
+}

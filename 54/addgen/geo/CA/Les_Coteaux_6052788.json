@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Les Coteaux",
+  "geonameid": 6052788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.3221726758019,
+      "lon": -74.24956701786527,
+      "geoinfo": {
+        "display_name": "Saint-Clet, Vaudreuil-Soulanges, Montérégie, Quebec, J0P 1S0, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Clet",
+        "state": "Quebec",
+        "postcode": "J0P 1S0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Les Coteaux, Quebec, Canada"
+    },
+    {
+      "lat": 45.26214502952599,
+      "lon": -74.2119798833437,
+      "geoinfo": {
+        "display_name": "Rue Adrien-Rouleau, Coteau-Landing, Les Coteaux, Vaudreuil-Soulanges, Montérégie, Quebec, J7X 1A1, Canada",
+        "road": "Rue Adrien-Rouleau",
+        "house_number": null,
+        "neighbourhood": "Coteau-Landing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Les Coteaux",
+        "state": "Quebec",
+        "postcode": "J7X 1A1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Adrien-Rouleau, Coteau-Landing, Les Coteaux, Vaudreuil-Soulanges, Montérégie, Quebec, J7X 1A1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:30.384205+00:00",
+  "_kind": "geo_samples"
+}

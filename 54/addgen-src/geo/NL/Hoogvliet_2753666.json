@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Hoogvliet",
+  "geonameid": 2753666,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.886122697638086,
+      "lon": 4.362991261602582,
+      "geoinfo": {
+        "display_name": "Weg 105, Shell Pernis, Rotterdam, South Holland, Netherlands, 3196 KK, Netherlands",
+        "road": "Weg 105",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Holland",
+        "postcode": "3196 KK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Weg 105, Hoogvliet, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.88209232179362,
+      "lon": 4.402571119954442,
+      "geoinfo": {
+        "display_name": "Streefwaalseweg, Matrans Rotterdam Terminal, Pernis, Rotterdam, South Holland, Netherlands, 3195 KN, Netherlands",
+        "road": "Streefwaalseweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pernis",
+        "state": "South Holland",
+        "postcode": "3195 KN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "515, Streefwaalseweg, Matrans Rotterdam Terminal, Pernis, Rotterdam, South Holland, Netherlands, 3195 KN, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:37.124424+00:00",
+  "_kind": "geo_samples"
+}

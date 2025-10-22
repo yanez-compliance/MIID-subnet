@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Leicester",
+  "geonameid": 2644668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.63709521529012,
+      "lon": -1.1760400962398738,
+      "geoinfo": {
+        "display_name": "Western Park School, Hinckley Road, Western Park, Leicester, City of Leicester, England, LE3 6HX, United Kingdom",
+        "road": "Hinckley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Western Park",
+        "city_district": null,
+        "city": "Leicester",
+        "state": "England",
+        "postcode": "LE3 6HX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hinckley Road, Leicester, England, United Kingdom"
+    },
+    {
+      "lat": 52.651795372250426,
+      "lon": -1.1093332809832215,
+      "geoinfo": {
+        "display_name": "Sutton Avenue, Northfields, Leicester, City of Leicester, England, LE4 6RU, United Kingdom",
+        "road": "Sutton Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Northfields",
+        "city_district": null,
+        "city": "Leicester",
+        "state": "England",
+        "postcode": "LE4 6RU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sutton Avenue, Northfields, Leicester, City of Leicester, England, LE4 6RU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:44.505557+00:00",
+  "_kind": "geo_samples"
+}

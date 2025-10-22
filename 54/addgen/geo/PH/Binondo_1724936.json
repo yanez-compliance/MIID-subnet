@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Binondo",
+  "geonameid": 1724936,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.601705623494317,
+      "lon": 120.9887263385798,
+      "geoinfo": {
+        "display_name": "7-Eleven, C. M. Recto Avenue, Sampaloc, Fourth District, Manila, Capital District, Metro Manila, 1001, Philippines",
+        "road": "C. M. Recto Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sampaloc",
+        "city_district": "Fourth District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1001",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "C. M. Recto Avenue, Binondo, Philippines"
+    },
+    {
+      "lat": 14.583106090652638,
+      "lon": 120.95380045848408,
+      "geoinfo": {
+        "display_name": "BASECO Compound, Port Area, Fifth District, Manila, Capital District, Metro Manila, 1018, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "BASECO Compound",
+        "suburb": "Port Area",
+        "city_district": "Fifth District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1018",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "027, BASECO Compound, Port Area, Fifth District, Manila, Capital District, Metro Manila, 1018, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:28:36.014305+00:00",
+  "_kind": "geo_samples"
+}

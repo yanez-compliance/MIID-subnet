@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Luis Obispo",
+  "geonameid": 5392323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.25200191050159,
+      "lon": -120.68530910723298,
+      "geoinfo": {
+        "display_name": "Los Osos Valley Rd., San Luis Obispo, San Luis Obispo County, California, 93405, United States",
+        "road": "Los Osos Valley Rd.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis Obispo",
+        "state": "California",
+        "postcode": "93405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Los Osos Valley Rd., San Luis Obispo, California, United States"
+    },
+    {
+      "lat": 35.28896133844781,
+      "lon": -120.67061584858293,
+      "geoinfo": {
+        "display_name": "752, Mission Street, San Luis Obispo, San Luis Obispo County, California, 93407, United States",
+        "road": "Mission Street",
+        "house_number": "752",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis Obispo",
+        "state": "California",
+        "postcode": "93407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "752, Mission Street, San Luis Obispo, San Luis Obispo County, California, 93407, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:14.007942+00:00",
+  "_kind": "geo_samples"
+}

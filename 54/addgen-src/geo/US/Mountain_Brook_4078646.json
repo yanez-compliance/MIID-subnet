@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mountain Brook",
+  "geonameid": 4078646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.53045299159908,
+      "lon": -86.71540236643885,
+      "geoinfo": {
+        "display_name": "Montevallo Road, Holiday Gardens, Springdale, Birmingham, Jefferson County, Alabama, 35210, United States",
+        "road": "Montevallo Road",
+        "house_number": null,
+        "neighbourhood": "Holiday Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Montevallo Road, Mountain Brook, Alabama, United States"
+    },
+    {
+      "lat": 33.462036503316405,
+      "lon": -86.72666865131939,
+      "geoinfo": {
+        "display_name": "3299, Dale Drive, Overton Manor, Cahaba Heights, Vestavia Hills, Jefferson County, Alabama, 35243, United States",
+        "road": "Dale Drive",
+        "house_number": "3299",
+        "neighbourhood": "Overton Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vestavia Hills",
+        "state": "Alabama",
+        "postcode": "35243",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3299, Dale Drive, Overton Manor, Cahaba Heights, Vestavia Hills, Jefferson County, Alabama, 35243, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:44.686910+00:00",
+  "_kind": "geo_samples"
+}

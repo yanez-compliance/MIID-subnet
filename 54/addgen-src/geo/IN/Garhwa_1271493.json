@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Garhwa",
+  "geonameid": 1271493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.167955138349104,
+      "lon": 83.85010752861851,
+      "geoinfo": {
+        "display_name": "Garhwa, Jharkhand, 822114, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garhwa",
+        "state": "Jharkhand",
+        "postcode": "822114",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Garhwa, Jharkhand, India"
+    },
+    {
+      "lat": 24.155050683550765,
+      "lon": 83.77494614486159,
+      "geoinfo": {
+        "display_name": "Bishnupur, Garhwa, Jharkhand, 822114, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bishnupur",
+        "city_district": null,
+        "city": "Garhwa",
+        "state": "Jharkhand",
+        "postcode": "822114",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "360, Bishnupur, Garhwa, Jharkhand, 822114, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:22.064458+00:00",
+  "_kind": "geo_samples"
+}

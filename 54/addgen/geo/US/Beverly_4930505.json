@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beverly",
+  "geonameid": 4930505,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.58913731827619,
+      "lon": -70.8403261990874,
+      "geoinfo": {
+        "display_name": "1, Deer Haven Road, Beverly, Essex County, Massachusetts, 01984, United States",
+        "road": "Deer Haven Road",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beverly",
+        "state": "Massachusetts",
+        "postcode": "01984",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1 Deer Haven Road, Beverly, Massachusetts, United States"
+    },
+    {
+      "lat": 42.57062568689033,
+      "lon": -70.89915837452604,
+      "geoinfo": {
+        "display_name": "24, Dartmouth Street, North Beverly, Beverly, Essex County, Massachusetts, 01915, United States",
+        "road": "Dartmouth Street",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beverly",
+        "state": "Massachusetts",
+        "postcode": "01915",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24, Dartmouth Street, North Beverly, Beverly, Essex County, Massachusetts, 01915, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:02.217284+00:00",
+  "_kind": "geo_samples"
+}

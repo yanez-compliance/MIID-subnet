@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Laurel",
+  "geonameid": 4369978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.07744216822344,
+      "lon": -76.8562520313986,
+      "geoinfo": {
+        "display_name": "8607, Briarcroft Lane, Briarwood, Snow Hill Manor, Laurel, Prince George's County, Maryland, 20708, United States",
+        "road": "Briarcroft Lane",
+        "house_number": "8607",
+        "neighbourhood": "Briarwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Laurel",
+        "state": "Maryland",
+        "postcode": "20708",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8607 Briarcroft Lane, South Laurel, Maryland, United States"
+    },
+    {
+      "lat": 39.074754077906164,
+      "lon": -76.79689334579528,
+      "geoinfo": {
+        "display_name": "Wild Turkey Way, Anne Arundel County, Maryland, 20724, United States",
+        "road": "Wild Turkey Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20724",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "730, Wild Turkey Way, Anne Arundel County, Maryland, 20724, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:44.503874+00:00",
+  "_kind": "geo_samples"
+}

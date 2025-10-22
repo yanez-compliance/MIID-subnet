@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Town",
+  "geonameid": 4916118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.896693166024605,
+      "lon": -87.68914170745353,
+      "geoinfo": {
+        "display_name": "Chopin Elementary School, 2450, West Rice Street, Ukrainian Village, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+        "road": "West Rice Street",
+        "house_number": "2450",
+        "neighbourhood": "Ukrainian Village",
+        "suburb": "West Town",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60622",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2450 West Rice Street, West Town, Illinois, United States"
+    },
+    {
+      "lat": 41.910171003709564,
+      "lon": -87.72189972930414,
+      "geoinfo": {
+        "display_name": "3808, West North Avenue, Beat 2535, Chicago, Jefferson Township, Cook County, Illinois, 60651, United States",
+        "road": "West North Avenue",
+        "house_number": "3808",
+        "neighbourhood": "Beat 2535",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3808, West North Avenue, Beat 2535, Chicago, Jefferson Township, Cook County, Illinois, 60651, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:01.728260+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Al Mithnab",
+  "geonameid": 109131,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.830078042007344,
+      "lon": 44.23758709629045,
+      "geoinfo": {
+        "display_name": "Al Midhnab, Al-Qassim Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Midhnab",
+        "state": "Al-Qassim Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Al Mithnab, Al-Qassim Province, Saudi Arabia"
+    },
+    {
+      "lat": 25.861607379461287,
+      "lon": 44.2278025376172,
+      "geoinfo": {
+        "display_name": "Alowa, Ash Shawraqiyah, Al Midhnab, Al-Qassim Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Alowa",
+        "suburb": "Ash Shawraqiyah",
+        "city_district": null,
+        "city": "Al Midhnab",
+        "state": "Al-Qassim Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Alowa, Al Mithnab, Al-Qassim Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:19:11.632464+00:00",
+  "_kind": "geo_samples"
+}

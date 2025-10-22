@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Omer",
+  "geonameid": 2977845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.70816879401158,
+      "lon": 2.238980762570054,
+      "geoinfo": {
+        "display_name": "Chemin des Pâtures, Wizernes, Saint-Omer, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62570, France",
+        "road": "Chemin des Pâtures",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wizernes",
+        "state": "Hauts-de-France",
+        "postcode": "62570",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Pâtures, Saint-Omer, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.77574153766497,
+      "lon": 2.2441316584556454,
+      "geoinfo": {
+        "display_name": "Chemin du Tourniquet, Saint-Omer, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62500, France",
+        "road": "Chemin du Tourniquet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Omer",
+        "state": "Hauts-de-France",
+        "postcode": "62500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "329, Chemin du Tourniquet, Saint-Omer, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:06.512719+00:00",
+  "_kind": "geo_samples"
+}

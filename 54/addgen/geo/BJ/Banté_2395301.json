@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Banté",
+  "geonameid": 2395301,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 8.395321559289,
+      "lon": 1.8549401448757175,
+      "geoinfo": {
+        "display_name": "Itchocobo, Koko, Bantè, Collines Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Itchocobo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koko",
+        "state": "Collines Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Itchocobo, Banté, Collines Department, Benin"
+    },
+    {
+      "lat": 8.400370914378263,
+      "lon": 1.8595241257256725,
+      "geoinfo": {
+        "display_name": "Koko, Bantè, Collines Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Koko",
+        "state": "Collines Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Banté, Collines Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-16T10:52:53.966079+00:00",
+  "_kind": "geo_samples"
+}

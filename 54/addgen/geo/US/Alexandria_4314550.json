@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alexandria",
+  "geonameid": 4314550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.297438818220037,
+      "lon": -92.48173912466609,
+      "geoinfo": {
+        "display_name": "Motel 6 Alexandria, Macarthur Drive, Alexandria, Rapides Parish, Louisiana, 71301, United States",
+        "road": "Macarthur Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alexandria",
+        "state": "Louisiana",
+        "postcode": "71301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Macarthur Drive, Alexandria, Louisiana, United States"
+    },
+    {
+      "lat": 31.322178201096506,
+      "lon": -92.40523988930451,
+      "geoinfo": {
+        "display_name": "Aubrey Street, Smithville, Pineville, Rapides Parish, Louisiana, 71360, United States",
+        "road": "Aubrey Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pineville",
+        "state": "Louisiana",
+        "postcode": "71360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "195, Aubrey Street, Smithville, Pineville, Rapides Parish, Louisiana, 71360, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:54.974603+00:00",
+  "_kind": "geo_samples"
+}

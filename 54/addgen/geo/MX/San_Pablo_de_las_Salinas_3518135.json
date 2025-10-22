@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pablo de las Salinas",
+  "geonameid": 3518135,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.69713015552197,
+      "lon": -99.07466938039886,
+      "geoinfo": {
+        "display_name": "Nextlalpan, State of Mexico, 55796, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "55796",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Pablo de las Salinas, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.6630416425344,
+      "lon": -99.0610219832002,
+      "geoinfo": {
+        "display_name": "Avenida Canal del Desagüe, Villas de Tonanitla, Tecámac, Tonanitla, State of Mexico, 55783, Mexico",
+        "road": "Avenida Canal del Desagüe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tecámac",
+        "state": "State of Mexico",
+        "postcode": "55783",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "841, Avenida Canal del Desagüe, Villas de Tonanitla, Tecámac, Tonanitla, State of Mexico, 55783, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:56.242161+00:00",
+  "_kind": "geo_samples"
+}

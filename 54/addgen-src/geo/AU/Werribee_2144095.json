@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Werribee",
+  "geonameid": 2144095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.90770875865605,
+      "lon": 144.68632970627894,
+      "geoinfo": {
+        "display_name": "1, Koombahla Court, Werribee, Melbourne, City of Wyndham, Victoria, 3030, Australia",
+        "road": "Koombahla Court",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Werribee",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3030",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "1 Koombahla Court, Werribee, Victoria, Australia"
+    },
+    {
+      "lat": -37.878963790723304,
+      "lon": 144.6280140510275,
+      "geoinfo": {
+        "display_name": "1, Ducane Street, Belle Meade, Wyndham Vale, Melbourne, City of Wyndham, Victoria, 3024, Australia",
+        "road": "Ducane Street",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Wyndham Vale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3024",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "1, Ducane Street, Belle Meade, Wyndham Vale, Melbourne, City of Wyndham, Victoria, 3024, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:44.580729+00:00",
+  "_kind": "geo_samples"
+}

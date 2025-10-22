@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Lenox",
+  "geonameid": 4903535,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.54529690244649,
+      "lon": -87.98730155349328,
+      "geoinfo": {
+        "display_name": "Silver Cross Hospital, 1900, Silver Cross Boulevard, New Lenox, Will County, Illinois, 60451, United States",
+        "road": "Silver Cross Boulevard",
+        "house_number": "1900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Lenox",
+        "state": "Illinois",
+        "postcode": "60451",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1900 Silver Cross Boulevard, New Lenox, Illinois, United States"
+    },
+    {
+      "lat": 41.486671095874364,
+      "lon": -88.00676674364311,
+      "geoinfo": {
+        "display_name": "Berens Drive, New Lenox, Will County, Illinois, United States",
+        "road": "Berens Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Lenox",
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "951, Berens Drive, New Lenox, Will County, 41531 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:43.174256+00:00",
+  "_kind": "geo_samples"
+}

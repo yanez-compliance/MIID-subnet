@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kings Bridge",
+  "geonameid": 5123443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.87679516903921,
+      "lon": -73.93746927926273,
+      "geoinfo": {
+        "display_name": "Englewood Cliffs, Bergen County, New Jersey, 07632, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Englewood Cliffs",
+        "state": "New Jersey",
+        "postcode": "07632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kings Bridge, New Jersey, United States"
+    },
+    {
+      "lat": 40.846463562373906,
+      "lon": -73.891075916942,
+      "geoinfo": {
+        "display_name": "1980, Belmont Avenue, East Tremont, The Bronx, Bronx County, New York, 10457, United States",
+        "road": "Belmont Avenue",
+        "house_number": "1980",
+        "neighbourhood": "East Tremont",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10457",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1980, Belmont Avenue, East Tremont, The Bronx, Bronx County, New York, 10457, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:40.384949+00:00",
+  "_kind": "geo_samples"
+}

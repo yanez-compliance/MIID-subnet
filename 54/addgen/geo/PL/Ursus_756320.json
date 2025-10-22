@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Ursus",
+  "geonameid": 756320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.20212860110478,
+      "lon": 20.906648849330757,
+      "geoinfo": {
+        "display_name": "Tynkarska, Solipse, Stare Włochy, Włochy, Warsaw, Masovian Voivodeship, 02-477, Poland",
+        "road": "Tynkarska",
+        "house_number": null,
+        "neighbourhood": "Solipse",
+        "suburb": "Włochy",
+        "city_district": null,
+        "city": "Warsaw",
+        "state": "Masovian Voivodeship",
+        "postcode": "02-477",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Tynkarska, Ursus, Masovian Voivodeship, Poland"
+    },
+    {
+      "lat": 52.21412663334155,
+      "lon": 20.93040901903343,
+      "geoinfo": {
+        "display_name": "Potrzebna, Przyce, Odolany, Wola, Warsaw, Masovian Voivodeship, 01-253, Poland",
+        "road": "Potrzebna",
+        "house_number": null,
+        "neighbourhood": "Przyce",
+        "suburb": "Wola",
+        "city_district": null,
+        "city": "Warsaw",
+        "state": "Masovian Voivodeship",
+        "postcode": "01-253",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Potrzebna, Przyce, Odolany, Wola, Warsaw, Masovian Voivodeship, 01-253, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T02:52:03.655523+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Pengpu",
+  "geonameid": 1798919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.270728374839322,
+      "lon": 121.43126272528474,
+      "geoinfo": {
+        "display_name": "上海市回民中学, Hutai Road, Pengpu, Jing'an District, Shanghai, 200061, China",
+        "road": "Hutai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jing'an District",
+        "state": "Shanghai",
+        "postcode": "200061",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hutai Road, Pengpu, Shanghai, China"
+    },
+    {
+      "lat": 31.247518014833442,
+      "lon": 121.44278685541379,
+      "geoinfo": {
+        "display_name": "69, Aomen Road, Dazimingzhong, Changshoulu, Putuo District, Shanghai, 200061, China",
+        "road": "Aomen Road",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": "Changshoulu",
+        "city_district": null,
+        "city": "Putuo District",
+        "state": "Shanghai",
+        "postcode": "200061",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "69, Aomen Road, Dazimingzhong, Changshoulu, Putuo District, Shanghai, 200061, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:04.561361+00:00",
+  "_kind": "geo_samples"
+}

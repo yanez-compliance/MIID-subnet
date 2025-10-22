@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Warrensburg",
+  "geonameid": 4413595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.76788082082792,
+      "lon": -93.69431348405521,
+      "geoinfo": {
+        "display_name": "Redwood Street, Warrensburg, Johnson County, Missouri, 64093, United States",
+        "road": "Redwood Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warrensburg",
+        "state": "Missouri",
+        "postcode": "64093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Redwood Street, Warrensburg, Missouri, United States"
+    },
+    {
+      "lat": 38.753173859856055,
+      "lon": -93.70628960835674,
+      "geoinfo": {
+        "display_name": "South Ridgeview Drive, Warrensburg, Johnson County, Missouri, 64093, United States",
+        "road": "South Ridgeview Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warrensburg",
+        "state": "Missouri",
+        "postcode": "64093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "161, South Ridgeview Drive, Warrensburg, Johnson County, Missouri, 64093, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:46.430363+00:00",
+  "_kind": "geo_samples"
+}

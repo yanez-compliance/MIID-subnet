@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kingsville",
+  "geonameid": 4703384,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.542235936501356,
+      "lon": -97.82491156186613,
+      "geoinfo": {
+        "display_name": "U.S. Highway 77, Kingsville, Kleberg County, Texas, 78316, United States",
+        "road": "U.S. Highway 77",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingsville",
+        "state": "Texas",
+        "postcode": "78316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "U.S. Highway 77, Kingsville, Texas, United States"
+    },
+    {
+      "lat": 27.552257856254556,
+      "lon": -97.86956041216348,
+      "geoinfo": {
+        "display_name": "West County Road 1995, Kleberg County, Texas, 78363, United States",
+        "road": "West County Road 1995",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78363",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West County Road 1995, Kleberg County, Texas, 78363, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:47.924127+00:00",
+  "_kind": "geo_samples"
+}

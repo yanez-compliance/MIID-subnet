@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carlsbad",
+  "geonameid": 5334223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.137364415064596,
+      "lon": -117.37190797635142,
+      "geoinfo": {
+        "display_name": "Carlsbad, San Diego County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carlsbad",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carlsbad, California, United States"
+    },
+    {
+      "lat": 33.13710223953736,
+      "lon": -117.30905069676174,
+      "geoinfo": {
+        "display_name": "Cannon Road, Carlsbad, San Diego County, California, 92008, United States",
+        "road": "Cannon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carlsbad",
+        "state": "California",
+        "postcode": "92008",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "346, Cannon Road, Carlsbad, San Diego County, California, 92008, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:24.515196+00:00",
+  "_kind": "geo_samples"
+}

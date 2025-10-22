@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Porte",
+  "geonameid": 8449910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.60458739813348,
+      "lon": -86.66285668160994,
+      "geoinfo": {
+        "display_name": "1868, East Division Road, LaPorte County, Indiana, 46350, United States",
+        "road": "East Division Road",
+        "house_number": "1868",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1868 East Division Road, La Porte, Indiana, United States"
+    },
+    {
+      "lat": 41.56461682454979,
+      "lon": -86.72457849509311,
+      "geoinfo": {
+        "display_name": "West 250 South, La Porte, LaPorte County, Indiana, 46350, United States",
+        "road": "West 250 South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Porte",
+        "state": "Indiana",
+        "postcode": "46350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 250 South, La Porte, LaPorte County, Indiana, 46350, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:01.844082+00:00",
+  "_kind": "geo_samples"
+}

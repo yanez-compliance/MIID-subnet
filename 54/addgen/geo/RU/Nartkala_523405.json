@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Nartkala",
+  "geonameid": 523405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.54686694247997,
+      "lon": 43.87421821501846,
+      "geoinfo": {
+        "display_name": "Межрайонная многопрофильная больница, Erkenov Street, Nartkala, городское поселение Нарткала, Urvan District, Kabardino-Balkaria, North Caucasian Federal District, 361336, Russia",
+        "road": "Erkenov Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nartkala",
+        "state": "Kabardino-Balkaria",
+        "postcode": "361336",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Erkenov Street, Nartkala, Kabardino-Balkaria, Russia"
+    },
+    {
+      "lat": 43.57853959023329,
+      "lon": 43.82791487095531,
+      "geoinfo": {
+        "display_name": "Urvan District, Kabardino-Balkaria, North Caucasian Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kabardino-Balkaria",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "677, Nartkala, 71666 Kabardino-Balkaria, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:58.182499+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Amesbury",
+  "geonameid": 4929004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.85319940555858,
+      "lon": -70.96602691222344,
+      "geoinfo": {
+        "display_name": "Amesbury Town Forest, Lion's Swamp, Amesbury, Essex County, Massachusetts, 01913, United States",
+        "road": "Lion's Swamp",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amesbury",
+        "state": "Massachusetts",
+        "postcode": "01913",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lion's Swamp, Amesbury, Massachusetts, United States"
+    },
+    {
+      "lat": 42.871384297822466,
+      "lon": -70.89160414709504,
+      "geoinfo": {
+        "display_name": "17, Locust Street, Salisbury Plains, Salisbury, Essex County, Massachusetts, 03874, United States",
+        "road": "Locust Street",
+        "house_number": "17",
+        "neighbourhood": "Salisbury Plains",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salisbury",
+        "state": "Massachusetts",
+        "postcode": "03874",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17, Locust Street, Salisbury Plains, Salisbury, Essex County, Massachusetts, 03874, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:01.306845+00:00",
+  "_kind": "geo_samples"
+}

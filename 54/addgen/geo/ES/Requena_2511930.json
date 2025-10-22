@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Requena",
+  "geonameid": 2511930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.525563835137724,
+      "lon": -1.0804969190184996,
+      "geoinfo": {
+        "display_name": "Requena, La Plana de Utiel-Requena, Valencia, Valencian Community, 46340, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Requena",
+        "state": "Valencian Community",
+        "postcode": "46340",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Requena, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.467311738308794,
+      "lon": -1.0879516427967406,
+      "geoinfo": {
+        "display_name": "Camino del Duende, Requena, La Plana de Utiel-Requena, Valencia, Valencian Community, 46357, Spain",
+        "road": "Camino del Duende",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Requena",
+        "state": "Valencian Community",
+        "postcode": "46357",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "988, Camino del Duende, Requena, La Plana de Utiel-Requena, Valencia, Valencian Community, 46357, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:36:01.122673+00:00",
+  "_kind": "geo_samples"
+}

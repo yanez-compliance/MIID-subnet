@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hayward",
+  "geonameid": 5355933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.67990085816673,
+      "lon": -122.0523500856899,
+      "geoinfo": {
+        "display_name": "Fairview Elementary School, 23515, Maud Avenue, Hayward, Alameda County, California, 94541, United States",
+        "road": "Maud Avenue",
+        "house_number": "23515",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hayward",
+        "state": "California",
+        "postcode": "94541",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23515 Maud Avenue, Hayward, California, United States"
+    },
+    {
+      "lat": 37.66610725505161,
+      "lon": -122.0698458822817,
+      "geoinfo": {
+        "display_name": "1273, Highland Boulevard, Hayward, Alameda County, California, 25426, United States",
+        "road": "Highland Boulevard",
+        "house_number": "1273",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hayward",
+        "state": "California",
+        "postcode": "25426",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1273, Highland Boulevard, Hayward, Alameda County, California, 25426, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:14.484036+00:00",
+  "_kind": "geo_samples"
+}

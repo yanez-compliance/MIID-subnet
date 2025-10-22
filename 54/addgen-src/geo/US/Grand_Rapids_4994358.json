@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grand Rapids",
+  "geonameid": 4994358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.962090803852675,
+      "lon": -85.64344532650422,
+      "geoinfo": {
+        "display_name": "1051, Baldwin Street Southeast, Grand Rapids, Kent County, Michigan, 49506, United States",
+        "road": "Baldwin Street Southeast",
+        "house_number": "1051",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Rapids",
+        "state": "Michigan",
+        "postcode": "49506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1051 Baldwin Street Southeast, Grand Rapids, Michigan, United States"
+    },
+    {
+      "lat": 42.92885514659381,
+      "lon": -85.6954916062438,
+      "geoinfo": {
+        "display_name": "1900, Hendricks Avenue Southwest, Wyoming, Kent County, Michigan, 49509, United States",
+        "road": "Hendricks Avenue Southwest",
+        "house_number": "1900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyoming",
+        "state": "Michigan",
+        "postcode": "49509",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1900, Hendricks Avenue Southwest, Wyoming, Kent County, Michigan, 49509, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:45.289413+00:00",
+  "_kind": "geo_samples"
+}

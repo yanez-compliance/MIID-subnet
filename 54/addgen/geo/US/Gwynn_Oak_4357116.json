@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gwynn Oak",
+  "geonameid": 4357116,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.33927703964211,
+      "lon": -76.72400900743095,
+      "geoinfo": {
+        "display_name": "6605, Liberty Road, Lochearn, Baltimore County, Maryland, 21207, United States",
+        "road": "Liberty Road",
+        "house_number": "6605",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lochearn",
+        "state": "Maryland",
+        "postcode": "21207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6605 Liberty Road, Gwynn Oak, Maryland, United States"
+    },
+    {
+      "lat": 39.31891543518076,
+      "lon": -76.74620365622114,
+      "geoinfo": {
+        "display_name": "6704, Edward Avenue, Belmont Heights, Woodlawn, Baltimore County, Maryland, 21244, United States",
+        "road": "Edward Avenue",
+        "house_number": "6704",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodlawn",
+        "state": "Maryland",
+        "postcode": "21244",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6704, Edward Avenue, Belmont Heights, Woodlawn, Baltimore County, Maryland, 21244, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:05.976205+00:00",
+  "_kind": "geo_samples"
+}

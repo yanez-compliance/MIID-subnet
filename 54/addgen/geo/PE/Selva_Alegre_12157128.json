@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Selva Alegre",
+  "geonameid": 12157128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -16.357527186726653,
+      "lon": -71.56146743083376,
+      "geoinfo": {
+        "display_name": "Sol Terracé, Calle Amazonas, Urbanización Monte Bello, Zamácola, Cerro Colorado, Province of Arequipa, Arequipa, 04017, Peru",
+        "road": "Calle Amazonas",
+        "house_number": null,
+        "neighbourhood": "Urbanización Monte Bello",
+        "suburb": "Zamácola",
+        "city_district": null,
+        "city": "Cerro Colorado",
+        "state": "Arequipa",
+        "postcode": "04017",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle Amazonas, Selva Alegre, Arequipa, Peru"
+    },
+    {
+      "lat": -16.36131034755033,
+      "lon": -71.49855128213538,
+      "geoinfo": {
+        "display_name": "Bella Esperanza, Alto Selva Alegre, Province of Arequipa, Arequipa, 04003, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alto Selva Alegre",
+        "state": "Arequipa",
+        "postcode": "04003",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "389, Bella Esperanza, Alto Selva Alegre, Province of Arequipa, Arequipa, 04003, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:27.696759+00:00",
+  "_kind": "geo_samples"
+}

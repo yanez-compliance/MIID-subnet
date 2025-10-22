@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ixtlán del Río",
+  "geonameid": 4004267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.042105170256193,
+      "lon": -104.38485048285501,
+      "geoinfo": {
+        "display_name": "Autopista Guadalajara - Tepic, Ixtlán del Río, Nayarit, 63959, Mexico",
+        "road": "Autopista Guadalajara - Tepic",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ixtlán del Río",
+        "state": "Nayarit",
+        "postcode": "63959",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Autopista Guadalajara - Tepic, Ixtlán del Río, Nayarit, Mexico"
+    },
+    {
+      "lat": 21.07619757537824,
+      "lon": -104.36606166124334,
+      "geoinfo": {
+        "display_name": "Los Aguajes, Jala, Nayarit, 68880, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Aguajes",
+        "state": "Nayarit",
+        "postcode": "68880",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "939, Los Aguajes, Jala, Nayarit, 68880, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:23.702401+00:00",
+  "_kind": "geo_samples"
+}

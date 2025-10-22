@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Wajir",
+  "geonameid": 178443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.7121626108870192,
+      "lon": 40.037016507687376,
+      "geoinfo": {
+        "display_name": "Wajir East, Wajir County, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wajir County",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Wajir, Wajir County, Kenya"
+    },
+    {
+      "lat": 1.7428224919179593,
+      "lon": 40.05429310045029,
+      "geoinfo": {
+        "display_name": "Wajir, Wajir East, Wajir County, 70200, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wajir",
+        "state": "Wajir County",
+        "postcode": "70200",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "432, Wajir, Wajir East, Wajir County, 70200, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:54.766836+00:00",
+  "_kind": "geo_samples"
+}

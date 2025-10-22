@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Francisco I. Madero",
+  "geonameid": 4006194,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.752533930845477,
+      "lon": -103.26648618110764,
+      "geoinfo": {
+        "display_name": "Carretera a Jaboncillo, Francisco. I Madero, Jaboncillo, Francisco I. Madero, Coahuila, 27900, Mexico",
+        "road": "Carretera a Jaboncillo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jaboncillo",
+        "state": "Coahuila",
+        "postcode": "27900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera a Jaboncillo, Francisco I. Madero, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.761462213896344,
+      "lon": -103.31158941158155,
+      "geoinfo": {
+        "display_name": "La Florida, Francisco I. Madero, Coahuila, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Florida",
+        "state": "Coahuila",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "085, La Florida, Francisco I. Madero, 16024 Coahuila, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:30.546632+00:00",
+  "_kind": "geo_samples"
+}

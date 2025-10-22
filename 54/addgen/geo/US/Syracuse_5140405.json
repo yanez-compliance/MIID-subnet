@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Syracuse",
+  "geonameid": 5140405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.06197853733088,
+      "lon": -76.17567204320632,
+      "geoinfo": {
+        "display_name": "685, Hiawatha Boulevard West, Lakefront, City of Syracuse, Onondaga County, New York, 13204, United States",
+        "road": "Hiawatha Boulevard West",
+        "house_number": "685",
+        "neighbourhood": "Lakefront",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Syracuse",
+        "state": "New York",
+        "postcode": "13204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "685 Hiawatha Boulevard West, Syracuse, New York, United States"
+    },
+    {
+      "lat": 43.058871730185665,
+      "lon": -76.10852479269288,
+      "geoinfo": {
+        "display_name": "511, Caleb Avenue, Eastwood, City of Syracuse, Onondaga County, New York, 13206, United States",
+        "road": "Caleb Avenue",
+        "house_number": "511",
+        "neighbourhood": "Eastwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Syracuse",
+        "state": "New York",
+        "postcode": "13206",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "511, Caleb Avenue, Eastwood, City of Syracuse, Onondaga County, New York, 13206, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:31.422813+00:00",
+  "_kind": "geo_samples"
+}

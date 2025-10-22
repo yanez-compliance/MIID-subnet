@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Gent",
+  "geonameid": 2797656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.03535092940227,
+      "lon": 3.752867616879156,
+      "geoinfo": {
+        "display_name": "Brusselsesteenweg, Gentbrugge, Ghent, Gent, East Flanders, 9050, Belgium",
+        "road": "Brusselsesteenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9050",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Brusselsesteenweg, Gent, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.0920310948104,
+      "lon": 3.7139253618881347,
+      "geoinfo": {
+        "display_name": "12, Elzeboomlaan, Wondelgem, Ghent, Gent, East Flanders, 9032, Belgium",
+        "road": "Elzeboomlaan",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9032",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "12, Elzeboomlaan, Wondelgem, Ghent, Gent, East Flanders, 9032, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:20.271028+00:00",
+  "_kind": "geo_samples"
+}

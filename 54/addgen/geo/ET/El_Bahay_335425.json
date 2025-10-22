@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "El Bahay",
+  "geonameid": 335425,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.3137482483095395,
+      "lon": 45.50067233992497,
+      "geoinfo": {
+        "display_name": "Dollo, Somali Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Somali Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "El Bahay, Somali Region, Ethiopia"
+    },
+    {
+      "lat": 6.367594141156953,
+      "lon": 45.45634903126347,
+      "geoinfo": {
+        "display_name": "El Bahay, Dollo, Somali Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Bahay",
+        "state": "Somali Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "445, El Bahay, Dollo, 16563 Somali Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:08.582354+00:00",
+  "_kind": "geo_samples"
+}

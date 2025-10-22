@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yan’an",
+  "geonameid": 1787765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.59630780439001,
+      "lon": 109.51440871504354,
+      "geoinfo": {
+        "display_name": "罗家坪村, Yan'an, Shaanxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yan'an",
+        "state": "Shaanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yan’an, Shaanxi, China"
+    },
+    {
+      "lat": 36.63217761540421,
+      "lon": 109.4947578034554,
+      "geoinfo": {
+        "display_name": "子长路, Baota District, Yan'an, Shaanxi, China",
+        "road": "子长路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baota District",
+        "state": "Shaanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "785, 子长路, Baota District, Yan'an, 74855 Shaanxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:28.511229+00:00",
+  "_kind": "geo_samples"
+}

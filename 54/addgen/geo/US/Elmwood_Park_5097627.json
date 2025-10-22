@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elmwood Park",
+  "geonameid": 5097627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.91605414142754,
+      "lon": -74.17298275022188,
+      "geoinfo": {
+        "display_name": "Silk City Trust Company Building, 124-126, Market Street, Paterson, Passaic County, New Jersey, 07505, United States",
+        "road": "Market Street",
+        "house_number": "124-126",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paterson",
+        "state": "New Jersey",
+        "postcode": "07505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "124-126 Market Street, Elmwood Park, New Jersey, United States"
+    },
+    {
+      "lat": 40.875403513312214,
+      "lon": -74.12076765036943,
+      "geoinfo": {
+        "display_name": "Five Below, 24, Barbour Avenue, Passaic, Passaic County, New Jersey, 07055, United States",
+        "road": "Barbour Avenue",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Passaic",
+        "state": "New Jersey",
+        "postcode": "07055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Five Below, 24, Barbour Avenue, Passaic, Passaic County, New Jersey, 07055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:07.392928+00:00",
+  "_kind": "geo_samples"
+}

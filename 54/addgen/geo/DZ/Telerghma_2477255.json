@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Telerghma",
+  "geonameid": 2477255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.1262454418478,
+      "lon": 6.360449413226388,
+      "geoinfo": {
+        "display_name": "RN 5A, Cité El Oued, Cité 344 logements, Cité Ennecim Superieure, Teleghma, Teleghma District, Mila, 43250, Algeria",
+        "road": "RN 5A",
+        "house_number": null,
+        "neighbourhood": "Cité El Oued",
+        "suburb": "Cité 344 logements",
+        "city_district": null,
+        "city": "Teleghma",
+        "state": "Mila",
+        "postcode": "43250",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 5A, Telerghma, Mila, Algeria"
+    },
+    {
+      "lat": 36.12512929776432,
+      "lon": 6.3119289049792,
+      "geoinfo": {
+        "display_name": "Douar Chadi, Teleghma, Teleghma District, Mila, 43250, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Douar Chadi",
+        "city_district": null,
+        "city": "Teleghma",
+        "state": "Mila",
+        "postcode": "43250",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "062, Douar Chadi, Teleghma, Teleghma District, Mila, 43250, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:06.357876+00:00",
+  "_kind": "geo_samples"
+}

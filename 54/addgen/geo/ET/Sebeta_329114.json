@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Sebeta",
+  "geonameid": 329114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.947161537063598,
+      "lon": 38.64048207972112,
+      "geoinfo": {
+        "display_name": "Meda chaf, South West Shewa, Oromia Region, 1061, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meda chaf",
+        "state": "Oromia Region",
+        "postcode": "1061",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Sebeta, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 8.899716446812262,
+      "lon": 38.60353269566127,
+      "geoinfo": {
+        "display_name": "Dima, South West Shewa, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dima",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "738, Sebeta, 50310 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:02.028790+00:00",
+  "_kind": "geo_samples"
+}

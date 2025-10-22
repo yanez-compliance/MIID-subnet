@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Catalina Foothills",
+  "geonameid": 5288786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.30526219473689,
+      "lon": -110.930411798687,
+      "geoinfo": {
+        "display_name": "2841, East Camino Norberto, Catalina Foothills, Pima County, Arizona, 85718, United States",
+        "road": "East Camino Norberto",
+        "house_number": "2841",
+        "neighbourhood": null,
+        "suburb": "Catalina Foothills",
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85718",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2841 East Camino Norberto, Catalina Foothills, Arizona, United States"
+    },
+    {
+      "lat": 32.30804368461216,
+      "lon": -110.89673751244918,
+      "geoinfo": {
+        "display_name": "East Sunrise Drive, Pima County, Arizona, 85718, United States",
+        "road": "East Sunrise Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85718",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "908, East Sunrise Drive, Pima County, Arizona, 85718, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:15.726946+00:00",
+  "_kind": "geo_samples"
+}

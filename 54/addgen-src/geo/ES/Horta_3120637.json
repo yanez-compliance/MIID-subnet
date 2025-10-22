@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Horta",
+  "geonameid": 3120637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.397109989578915,
+      "lon": 2.183982344405736,
+      "geoinfo": {
+        "display_name": "Bonpreu, 136, Carrer de la Marina, el Fort Pienc, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08013, Spain",
+        "road": "Carrer de la Marina",
+        "house_number": "136",
+        "neighbourhood": "el Fort Pienc",
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08013",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "136 Carrer de la Marina, Horta, Catalonia, Spain"
+    },
+    {
+      "lat": 41.435988244221576,
+      "lon": 2.1250243473865305,
+      "geoinfo": {
+        "display_name": "2209, Carrer del Llentiscle, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08035, Spain",
+        "road": "Carrer del Llentiscle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Cugat del Vallès",
+        "state": "Catalonia",
+        "postcode": "08035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "2209, Carrer del Llentiscle, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08035, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:40.942505+00:00",
+  "_kind": "geo_samples"
+}

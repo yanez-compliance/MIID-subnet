@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Orhangazi",
+  "geonameid": 741045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.45244218675182,
+      "lon": 29.302329438736844,
+      "geoinfo": {
+        "display_name": "Örnekköy, Orhangazi, Bursa, Marmara Region, 16800, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orhangazi",
+        "state": null,
+        "postcode": "16800",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Orhangazi, Turkey"
+    },
+    {
+      "lat": 40.53300104631312,
+      "lon": 29.30003377463969,
+      "geoinfo": {
+        "display_name": "Sugören Köyü, Yalova Merkez, Yalova, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yalova Merkez",
+        "state": "Yalova",
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "855, Sugören Köyü, Yalova Merkez, Yalova, 26276 Marmara Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:43.980371+00:00",
+  "_kind": "geo_samples"
+}

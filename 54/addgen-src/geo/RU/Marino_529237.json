@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Mar’ino",
+  "geonameid": 529237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.66008905418245,
+      "lon": 37.7264945286581,
+      "geoinfo": {
+        "display_name": "80А, Люблинская улица, Maryino District, Moscow, Central Federal District, 109387, Russia",
+        "road": "Люблинская улица",
+        "house_number": "80А",
+        "neighbourhood": null,
+        "suburb": "Maryino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "109387",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "80А Люблинская улица, Mar’ino, Moscow, Russia"
+    },
+    {
+      "lat": 55.65098891107405,
+      "lon": 37.735280922476925,
+      "geoinfo": {
+        "display_name": "улица Перерва, Maryino District, Moscow, Central Federal District, 109369, Russia",
+        "road": "улица Перерва",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maryino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "109369",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "189, улица Перерва, Maryino District, Moscow, Central Federal District, 109369, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:33:04.690733+00:00",
+  "_kind": "geo_samples"
+}

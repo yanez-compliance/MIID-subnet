@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Dour",
+  "geonameid": 2799226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.372795624323764,
+      "lon": 3.7711402625714294,
+      "geoinfo": {
+        "display_name": "Rue du Préfeuillet, Athis, Honnelles, Mons, Hainaut, Wallonia, 7387, Belgium",
+        "road": "Rue du Préfeuillet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athis",
+        "state": "Hainaut",
+        "postcode": "7387",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue du Préfeuillet, Dour, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.368449473291825,
+      "lon": 3.74162988238938,
+      "geoinfo": {
+        "display_name": "Rue Comtesse de Belleville, Montignies-sur-Roc, Honnelles, Mons, Hainaut, Wallonia, 7387, Belgium",
+        "road": "Rue Comtesse de Belleville",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montignies-sur-Roc",
+        "state": "Hainaut",
+        "postcode": "7387",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "572, Rue Comtesse de Belleville, Montignies-sur-Roc, Honnelles, Mons, Hainaut, Wallonia, 7387, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:23.841765+00:00",
+  "_kind": "geo_samples"
+}

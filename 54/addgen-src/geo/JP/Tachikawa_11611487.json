@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tachikawa",
+  "geonameid": 11611487,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.7184199136891,
+      "lon": 139.38960852445663,
+      "geoinfo": {
+        "display_name": "Oyamado, Kamisunacho 1-chome, Kamisunacho, Tachikawa, Tokyo, 190-0031, Japan",
+        "road": "Oyamado",
+        "house_number": null,
+        "neighbourhood": "Kamisunacho 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tachikawa",
+        "state": null,
+        "postcode": "190-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Oyamado, Tachikawa, Japan"
+    },
+    {
+      "lat": 35.69282722276841,
+      "lon": 139.38717354965732,
+      "geoinfo": {
+        "display_name": "Gochicho 3, Gochicho, Akishima, Tokyo, 196-0031, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Gochicho 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Akishima",
+        "state": null,
+        "postcode": "196-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Gochicho 3, Gochicho, Akishima, Tokyo, 196-0031, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:11.469663+00:00",
+  "_kind": "geo_samples"
+}

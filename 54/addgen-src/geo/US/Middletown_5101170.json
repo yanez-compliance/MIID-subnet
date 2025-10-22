@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middletown",
+  "geonameid": 5101170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.38668511828433,
+      "lon": -74.06770733385753,
+      "geoinfo": {
+        "display_name": "Whipporwill Valley Road, Oak Hill, Middletown Township, Monmouth County, New Jersey, 07737, United States",
+        "road": "Whipporwill Valley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown Township",
+        "state": "New Jersey",
+        "postcode": "07737",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Whipporwill Valley Road, Middletown, New Jersey, United States"
+    },
+    {
+      "lat": 40.365016075233,
+      "lon": -74.145757757681,
+      "geoinfo": {
+        "display_name": "166, Willow Grove Drive, Oak Hill, Middletown Township, Monmouth County, New Jersey, 07738, United States",
+        "road": "Willow Grove Drive",
+        "house_number": "166",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown Township",
+        "state": "New Jersey",
+        "postcode": "07738",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "166, Willow Grove Drive, Oak Hill, Middletown Township, Monmouth County, New Jersey, 07738, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:44.081246+00:00",
+  "_kind": "geo_samples"
+}

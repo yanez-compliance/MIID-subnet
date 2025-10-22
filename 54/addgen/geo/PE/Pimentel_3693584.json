@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Pimentel",
+  "geonameid": 3693584,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -6.797703012919668,
+      "lon": -79.93439349589248,
+      "geoinfo": {
+        "display_name": "LA-767, Lotización La Rivera, Baldera, Ciudad de Dios, San José, Province of Lambayeque, Lambayeque, Peru",
+        "road": "LA-767",
+        "house_number": null,
+        "neighbourhood": "Lotización La Rivera",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad de Dios",
+        "state": "Lambayeque",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "LA-767, Pimentel, Lambayeque, Peru"
+    },
+    {
+      "lat": -6.848222872255978,
+      "lon": -79.91657541891473,
+      "geoinfo": {
+        "display_name": "Villa Arcangel, Pimentel, Province of Chiclayo, Lambayeque, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Villa Arcangel",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pimentel",
+        "state": "Lambayeque",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "328, Villa Arcangel, Pimentel, Province of Chiclayo, 73602 Lambayeque, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:39.460979+00:00",
+  "_kind": "geo_samples"
+}

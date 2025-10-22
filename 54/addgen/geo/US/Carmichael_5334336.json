@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carmichael",
+  "geonameid": 5334336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.627597020051304,
+      "lon": -121.33780469797559,
+      "geoinfo": {
+        "display_name": "5498, Whitney Avenue, Carmichael, Sacramento County, California, 95608, United States",
+        "road": "Whitney Avenue",
+        "house_number": "5498",
+        "neighbourhood": null,
+        "suburb": "Carmichael",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5498 Whitney Avenue, Carmichael, California, United States"
+    },
+    {
+      "lat": 38.60779685787514,
+      "lon": -121.30086170200923,
+      "geoinfo": {
+        "display_name": "2105, Danbury Way, Rancho Cordova, Sacramento County, California, 95670, United States",
+        "road": "Danbury Way",
+        "house_number": "2105",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Cordova",
+        "state": "California",
+        "postcode": "95670",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2105, Danbury Way, Rancho Cordova, Sacramento County, California, 95670, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:37.634928+00:00",
+  "_kind": "geo_samples"
+}

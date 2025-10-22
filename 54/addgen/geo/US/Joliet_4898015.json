@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Joliet",
+  "geonameid": 4898015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.55550328951023,
+      "lon": -88.04505646530727,
+      "geoinfo": {
+        "display_name": "18162, South Briggs Street, Joliet, Will County, Illinois, 60432, United States",
+        "road": "South Briggs Street",
+        "house_number": "18162",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joliet",
+        "state": "Illinois",
+        "postcode": "60432",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18162 South Briggs Street, Joliet, Illinois, United States"
+    },
+    {
+      "lat": 41.51621028568135,
+      "lon": -88.04715649243852,
+      "geoinfo": {
+        "display_name": "1404, 5th Avenue, Ingalls Park, Will County, Illinois, 60433, United States",
+        "road": "5th Avenue",
+        "house_number": "1404",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60433",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1404, 5th Avenue, Ingalls Park, Will County, Illinois, 60433, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:32.929324+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Teziutlan",
+  "geonameid": 3515696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.80840475377333,
+      "lon": -97.33015395369229,
+      "geoinfo": {
+        "display_name": "Calle Venustiano Carranza, San José, Xiutetelco, Puebla, 73974, Mexico",
+        "road": "Calle Venustiano Carranza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San José",
+        "state": "Puebla",
+        "postcode": "73974",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Venustiano Carranza, Teziutlan, Puebla, Mexico"
+    },
+    {
+      "lat": 19.82720817490744,
+      "lon": -97.38926530867086,
+      "geoinfo": {
+        "display_name": "Autopista Puebla - Teziutlán, Yopi, Chignautla, Puebla, 73967, Mexico",
+        "road": "Autopista Puebla - Teziutlán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chignautla",
+        "state": "Puebla",
+        "postcode": "73967",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "416, Autopista Puebla - Teziutlán, Yopi, Chignautla, Puebla, 73967, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:39.086557+00:00",
+  "_kind": "geo_samples"
+}

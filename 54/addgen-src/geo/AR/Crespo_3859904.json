@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Crespo",
+  "geonameid": 3859904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.06167785846799,
+      "lon": -60.28963178622487,
+      "geoinfo": {
+        "display_name": "Distrito Isletas, Departamento Diamante, Entre Ríos Province, 3116, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Entre Ríos Province",
+        "postcode": "3116",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Crespo, Entre Ríos Province, Argentina"
+    },
+    {
+      "lat": -32.02313979812368,
+      "lon": -60.31490212862096,
+      "geoinfo": {
+        "display_name": "Barrio Norte, Crespo, Distrito Espinillo, Departamento Paraná, 3116, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio Norte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Crespo",
+        "state": null,
+        "postcode": "3116",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "458, Barrio Norte, Crespo, Distrito Espinillo, Departamento Paraná, 3116, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:57:16.951769+00:00",
+  "_kind": "geo_samples"
+}

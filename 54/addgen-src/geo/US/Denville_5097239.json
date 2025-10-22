@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Denville",
+  "geonameid": 5097239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.88307773130499,
+      "lon": -74.48351241000425,
+      "geoinfo": {
+        "display_name": "16, Estling Lake Road, Denville, Morris County, New Jersey, 07834, United States",
+        "road": "Estling Lake Road",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denville",
+        "state": "New Jersey",
+        "postcode": "07834",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16 Estling Lake Road, Denville, New Jersey, United States"
+    },
+    {
+      "lat": 40.89986371468092,
+      "lon": -74.49017251367373,
+      "geoinfo": {
+        "display_name": "Christopher Columbus Highway, Denville, Morris County, New Jersey, 07866, United States",
+        "road": "Christopher Columbus Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denville",
+        "state": "New Jersey",
+        "postcode": "07866",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "001, Christopher Columbus Highway, Denville, Morris County, New Jersey, 07866, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:21.131721+00:00",
+  "_kind": "geo_samples"
+}

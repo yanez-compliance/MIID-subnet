@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Riley Park",
+  "geonameid": 13495380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.20797279218138,
+      "lon": -123.10270980169454,
+      "geoinfo": {
+        "display_name": "Main Street, Sunset, Vancouver, Metro Vancouver Regional District, British Columbia, V5X, Canada",
+        "road": "Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sunset",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5X",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Main Street, Riley Park, British Columbia, Canada"
+    },
+    {
+      "lat": 49.28039616805081,
+      "lon": -123.12235232185147,
+      "geoinfo": {
+        "display_name": "900 Howe, 900, Howe Street, Yaletown, Downtown, Vancouver, Metro Vancouver Regional District, British Columbia, V6Z, Canada",
+        "road": "Howe Street",
+        "house_number": "900",
+        "neighbourhood": "Yaletown",
+        "suburb": "Downtown",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6Z",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "900 Howe, 900, Howe Street, Yaletown, Downtown, Vancouver, Metro Vancouver Regional District, British Columbia, V6Z, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:29.619914+00:00",
+  "_kind": "geo_samples"
+}

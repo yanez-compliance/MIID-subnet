@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sherman",
+  "geonameid": 4728328,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.62066859141232,
+      "lon": -96.59844815919456,
+      "geoinfo": {
+        "display_name": "571, East Lake Avenue, Sherman, Grayson County, Texas, 75090, United States",
+        "road": "East Lake Avenue",
+        "house_number": "571",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sherman",
+        "state": "Texas",
+        "postcode": "75090",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "571 East Lake Avenue, Sherman, Texas, United States"
+    },
+    {
+      "lat": 33.648671018763935,
+      "lon": -96.58188512990763,
+      "geoinfo": {
+        "display_name": "Sherman High School, North Elliott Avenue, Sherman, Grayson County, Texas, 75090, United States",
+        "road": "North Elliott Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sherman",
+        "state": "Texas",
+        "postcode": "75090",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "690, North Elliott Avenue, Sherman, 75090 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:34.380440+00:00",
+  "_kind": "geo_samples"
+}

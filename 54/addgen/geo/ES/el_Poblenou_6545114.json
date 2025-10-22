@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "el Poblenou",
+  "geonameid": 6545114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38208011752827,
+      "lon": 2.2410840600738746,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "el Poblenou, Spain"
+    },
+    {
+      "lat": 41.426669398492564,
+      "lon": 2.2232285230005084,
+      "geoinfo": {
+        "display_name": "66, Carrer Pi i Gilbert, Sant Joan Baptista, Sant Adrià de Besòs, Barcelonès, Barcelona, Catalonia, 08930, Spain",
+        "road": "Carrer Pi i Gilbert",
+        "house_number": "66",
+        "neighbourhood": "Sant Joan Baptista",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Adrià de Besòs",
+        "state": "Catalonia",
+        "postcode": "08930",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "66, Carrer Pi i Gilbert, Sant Joan Baptista, Sant Adrià de Besòs, Barcelonès, Barcelona, Catalonia, 08930, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:37.584423+00:00",
+  "_kind": "geo_samples"
+}

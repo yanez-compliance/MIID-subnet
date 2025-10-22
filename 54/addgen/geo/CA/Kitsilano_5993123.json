@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kitsilano",
+  "geonameid": 5993123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.285851529937375,
+      "lon": -123.1759213225415,
+      "geoinfo": {
+        "display_name": "Metro Vancouver Regional District, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Kitsilano, British Columbia, Canada"
+    },
+    {
+      "lat": 49.2844245919939,
+      "lon": -123.15362168571374,
+      "geoinfo": {
+        "display_name": "Lower Davie, West End, Vancouver, Metro Vancouver Regional District, British Columbia, V6G, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Lower Davie",
+        "suburb": "West End",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6G",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "391, Lower Davie, West End, Vancouver, Metro Vancouver Regional District, British Columbia, V6G, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:30.544410+00:00",
+  "_kind": "geo_samples"
+}

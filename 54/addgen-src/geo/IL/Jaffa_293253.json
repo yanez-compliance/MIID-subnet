@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Jaffa",
+  "geonameid": 293253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.03605462428734,
+      "lon": 34.70831285560854,
+      "geoinfo": {
+        "display_name": "Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Jaffa, Tel-Aviv District, Israel"
+    },
+    {
+      "lat": 32.02852121122493,
+      "lon": 34.792554186723514,
+      "geoinfo": {
+        "display_name": "HaHortim, Industrial Zone A, Holon, Tel Aviv Subdistrict, Tel-Aviv District, 5800239, Israel",
+        "road": "HaHortim",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Industrial Zone A",
+        "city_district": null,
+        "city": "Holon",
+        "state": "Tel-Aviv District",
+        "postcode": "5800239",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "733, HaHortim, Industrial Zone A, Holon, Tel Aviv Subdistrict, Tel-Aviv District, 5800239, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:01.523805+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Highland Park",
+  "geonameid": 4895876,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.160280676870165,
+      "lon": -87.80330595347941,
+      "geoinfo": {
+        "display_name": "Clavey Road, Highland Park, Lake County, Illinois, 60035, United States",
+        "road": "Clavey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Highland Park",
+        "state": "Illinois",
+        "postcode": "60035",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Clavey Road, Highland Park, Illinois, United States"
+    },
+    {
+      "lat": 42.15661747974492,
+      "lon": -87.7786869378577,
+      "geoinfo": {
+        "display_name": "Ravinia Festival, 418, Sheridan Road, Braeside, Highland Park, Lake County, Illinois, 60035, United States",
+        "road": "Sheridan Road",
+        "house_number": "418",
+        "neighbourhood": "Braeside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Highland Park",
+        "state": "Illinois",
+        "postcode": "60035",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ravinia Festival, 418, Sheridan Road, Braeside, Highland Park, Lake County, Illinois, 60035, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:53.562530+00:00",
+  "_kind": "geo_samples"
+}

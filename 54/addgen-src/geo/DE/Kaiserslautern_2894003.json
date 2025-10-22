@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kaiserslautern",
+  "geonameid": 2894003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.44034839626286,
+      "lon": 7.779342226732973,
+      "geoinfo": {
+        "display_name": "67, Augustastraße, Betzenberg, Kaiserslautern, Rhineland-Palatinate, 67655, Germany",
+        "road": "Augustastraße",
+        "house_number": "67",
+        "neighbourhood": null,
+        "suburb": "Betzenberg",
+        "city_district": null,
+        "city": "Kaiserslautern",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67655",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "67 Augustastraße, Kaiserslautern, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.41612191251218,
+      "lon": 7.735616085418328,
+      "geoinfo": {
+        "display_name": "6512-360, Am Handballplatz, Dansenberg, Kaiserslautern, Rhineland-Palatinate, 67661, Germany",
+        "road": "Am Handballplatz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dansenberg",
+        "city_district": null,
+        "city": "Kaiserslautern",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67661",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6512-360, Am Handballplatz, Dansenberg, Kaiserslautern, Rhineland-Palatinate, 67661, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:35.507847+00:00",
+  "_kind": "geo_samples"
+}

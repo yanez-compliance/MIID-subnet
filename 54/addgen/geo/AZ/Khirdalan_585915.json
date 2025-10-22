@@ -1,0 +1,65 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Khirdalan",
+  "geonameid": 585915,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.44682104472213,
+      "lon": 49.697407604392424,
+      "geoinfo": {
+        "display_name": "Məhsəti Gəncəvi küç., Binagady Raion, Atyali, 0117, Azerbaijan",
+        "road": "Məhsəti Gəncəvi küç.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Binagady Raion",
+        "city": "Atyali",
+        "state": null,
+        "postcode": "0117",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Məhsəti Gəncəvi küç., Khirdalan, Azerbaijan"
+    },
+    {
+      "lat": 40.43565460915682,
+      "lon": 49.744438283335676,
+      "geoinfo": {
+        "display_name": "Binagady Raion, Baku City, 0117, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Binagady Raion",
+        "city": "Baku City",
+        "state": null,
+        "postcode": "0117",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "471, Binagady Raion, Baku City, 0117, Azerbaijan"
+    },
+    {
+      "lat": 40.42584512781974,
+      "lon": 49.78726506267363,
+      "geoinfo": {
+        "display_name": "Motodrom YS, Binagady Raion, Baku City, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Motodrom YS",
+        "suburb": null,
+        "city_district": "Binagady Raion",
+        "city": "Baku City",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "012, Motodrom YS, Binagady Raion, 90126 Baku City, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:06.740469+00:00",
+  "_kind": "geo_samples"
+}

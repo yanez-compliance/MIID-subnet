@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Toulouse",
+  "geonameid": 2972315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.574482253341806,
+      "lon": 1.4720053944862277,
+      "geoinfo": {
+        "display_name": "Avenue de Lespinet, Pont des Demoiselles, Pont des Demoiselles / Ormeau/ Montaudran / La Terrasse / Malepère, Toulouse, Haute-Garonne, Occitania, Metropolitan France, 31400, France",
+        "road": "Avenue de Lespinet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pont des Demoiselles / Ormeau/ Montaudran / La Terrasse / Malepère",
+        "city_district": null,
+        "city": "Toulouse",
+        "state": "Occitania",
+        "postcode": "31400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de Lespinet, Toulouse, Occitania, France"
+    },
+    {
+      "lat": 43.61724023282003,
+      "lon": 1.4416942846292728,
+      "geoinfo": {
+        "display_name": "11, Rue Salvy, Raisin, Minimes / Barrière de Paris / Ponts-Jumeaux / La Vache / Raisin / Fondeyre, Toulouse, Haute-Garonne, Occitania, Metropolitan France, 31200, France",
+        "road": "Rue Salvy",
+        "house_number": "11",
+        "neighbourhood": "Raisin",
+        "suburb": "Minimes / Barrière de Paris / Ponts-Jumeaux / La Vache / Raisin / Fondeyre",
+        "city_district": null,
+        "city": "Toulouse",
+        "state": "Occitania",
+        "postcode": "31200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "11, Rue Salvy, Toulouse, 31200 Occitania, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:29.659698+00:00",
+  "_kind": "geo_samples"
+}

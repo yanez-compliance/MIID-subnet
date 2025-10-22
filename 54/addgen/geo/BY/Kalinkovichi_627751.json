@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Kalinkovichi",
+  "geonameid": 627751,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 52.15731560157098,
+      "lon": 29.265246336164612,
+      "geoinfo": {
+        "display_name": "24, вуліца Міру, Рудня Антонаўская, Гарбавіцкі сельскі Савет, Kalinkavichy District, Homyel Region, Belarus",
+        "road": "вуліца Міру",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Гарбавіцкі сельскі Савет",
+        "state": "Homyel Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "24 вуліца Міру, Kalinkovichi, Homyel Region, Belarus"
+    },
+    {
+      "lat": 52.11682514459098,
+      "lon": 29.36656853363089,
+      "geoinfo": {
+        "display_name": "Kalinkavichy, Kalinkavichy District, Homyel Region, 247694, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalinkavichy",
+        "state": "Homyel Region",
+        "postcode": "247694",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Kalinkovichi, Homyel Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:44.784695+00:00",
+  "_kind": "geo_samples"
+}

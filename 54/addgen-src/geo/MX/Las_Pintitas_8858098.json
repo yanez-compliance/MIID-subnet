@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Las Pintitas",
+  "geonameid": 8858098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.560513329918724,
+      "lon": -103.29485002526968,
+      "geoinfo": {
+        "display_name": "Calle Bronce, Las Pintitas, El Salto, Región Centro, Jalisco, 45693, Mexico",
+        "road": "Calle Bronce",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Pintitas",
+        "state": "Jalisco",
+        "postcode": "45693",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Bronce, Las Pintitas, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.53713949351298,
+      "lon": -103.33277101796432,
+      "geoinfo": {
+        "display_name": "Privada Santa Teresita, Santa Cruz del Valle, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45600, Mexico",
+        "road": "Privada Santa Teresita",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Cruz del Valle",
+        "state": "Jalisco",
+        "postcode": "45600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "691, Privada Santa Teresita, Santa Cruz del Valle, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45600, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:10.894427+00:00",
+  "_kind": "geo_samples"
+}

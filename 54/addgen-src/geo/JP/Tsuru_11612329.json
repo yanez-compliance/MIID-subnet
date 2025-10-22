@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tsuru",
+  "geonameid": 11612329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.56231433818093,
+      "lon": 138.89188383859639,
+      "geoinfo": {
+        "display_name": "Kanai, Tsuru, Yamanashi Prefecture, 402-0054, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsuru",
+        "state": null,
+        "postcode": "402-0054",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tsuru, Japan"
+    },
+    {
+      "lat": 35.57217848445745,
+      "lon": 138.90389401160016,
+      "geoinfo": {
+        "display_name": "Chuo Expressway, Tsuru 5-chome, Tsuru, Yamanashi Prefecture, 402-0024, Japan",
+        "road": "Chuo Expressway",
+        "house_number": null,
+        "neighbourhood": "Tsuru 5-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsuru",
+        "state": null,
+        "postcode": "402-0024",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Chuo Expressway, Tsuru 5-chome, Tsuru, Yamanashi Prefecture, 402-0024, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:54.465232+00:00",
+  "_kind": "geo_samples"
+}

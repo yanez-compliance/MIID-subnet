@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alboraya",
+  "geonameid": 2522203,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.48871822960322,
+      "lon": -0.352878596006546,
+      "geoinfo": {
+        "display_name": "Camí de Farinós, Camí de Vera, Benimaclet, Valencia, Comarca de València, Valencia, Valencian Community, 46020, Spain",
+        "road": "Camí de Farinós",
+        "house_number": null,
+        "neighbourhood": "Camí de Vera",
+        "suburb": "Benimaclet",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46020",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de Farinós, Alboraya, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.47461225610646,
+      "lon": -0.3169648782141583,
+      "geoinfo": {
+        "display_name": "el Cabanyal, Poblats Marítims, Valencia, Comarca de València, Valencia, Valencian Community, 46011, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "el Cabanyal",
+        "suburb": "Poblats Marítims",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46011",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "073, el Cabanyal, Poblats Marítims, Valencia, Comarca de València, Valencia, Valencian Community, 46011, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:23.367637+00:00",
+  "_kind": "geo_samples"
+}

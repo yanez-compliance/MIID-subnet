@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Casa de Oro-Mount Helix",
+  "geonameid": 7261029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.756918207870044,
+      "lon": -116.9752489859325,
+      "geoinfo": {
+        "display_name": "4305, Crestview Drive, La Mesa, San Diego County, California, 91941, United States",
+        "road": "Crestview Drive",
+        "house_number": "4305",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Mesa",
+        "state": "California",
+        "postcode": "91941",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4305 Crestview Drive, Casa de Oro-Mount Helix, California, United States"
+    },
+    {
+      "lat": 32.73976939432774,
+      "lon": -116.95218229023253,
+      "geoinfo": {
+        "display_name": "Jamacha Boulevard, Lemon Grove, Rancho San Diego, San Diego County, California, 91978, United States",
+        "road": "Jamacha Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lemon Grove",
+        "state": "California",
+        "postcode": "91978",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "130, Jamacha Boulevard, Lemon Grove, Rancho San Diego, San Diego County, California, 91978, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:31.930993+00:00",
+  "_kind": "geo_samples"
+}

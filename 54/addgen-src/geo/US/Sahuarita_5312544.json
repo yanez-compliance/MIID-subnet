@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sahuarita",
+  "geonameid": 5312544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.96051561039316,
+      "lon": -111.00842678239542,
+      "geoinfo": {
+        "display_name": "West Sahuarita Road, Pima County, Arizona, 85629, United States",
+        "road": "West Sahuarita Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85629",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Sahuarita Road, Sahuarita, Arizona, United States"
+    },
+    {
+      "lat": 31.966049179154723,
+      "lon": -110.95662238028582,
+      "geoinfo": {
+        "display_name": "Nogales Highway, Sahuarita, Pima County, Arizona, 85629, United States",
+        "road": "Nogales Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sahuarita",
+        "state": "Arizona",
+        "postcode": "85629",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "198, Nogales Highway, Sahuarita, Pima County, Arizona, 85629, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:23.132563+00:00",
+  "_kind": "geo_samples"
+}

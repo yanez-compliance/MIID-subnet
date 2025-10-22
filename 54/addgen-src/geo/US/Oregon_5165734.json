@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oregon",
+  "geonameid": 5165734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.66665208823931,
+      "lon": -83.44241250939584,
+      "geoinfo": {
+        "display_name": "Parkway Road, Oregon, Lucas County, Ohio, 43434, United States",
+        "road": "Parkway Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oregon",
+        "state": "Ohio",
+        "postcode": "43434",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Parkway Road, Oregon, Ohio, United States"
+    },
+    {
+      "lat": 41.62707602654452,
+      "lon": -83.44458117878696,
+      "geoinfo": {
+        "display_name": "1341, South Lallendorf Road, Lynpark Estates, Oregon, Lucas County, Ohio, 43616, United States",
+        "road": "South Lallendorf Road",
+        "house_number": "1341",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oregon",
+        "state": "Ohio",
+        "postcode": "43616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1341, South Lallendorf Road, Lynpark Estates, Oregon, Lucas County, Ohio, 43616, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:16.370545+00:00",
+  "_kind": "geo_samples"
+}

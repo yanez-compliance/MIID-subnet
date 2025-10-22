@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norwood",
+  "geonameid": 4519995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.199670027348084,
+      "lon": -84.45696922177402,
+      "geoinfo": {
+        "display_name": "7616, Reading Road, Roselawn, Cincinnati, Hamilton County, Ohio, 45237, United States",
+        "road": "Reading Road",
+        "house_number": "7616",
+        "neighbourhood": null,
+        "suburb": "Roselawn",
+        "city_district": null,
+        "city": "Cincinnati",
+        "state": "Ohio",
+        "postcode": "45237",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7616 Reading Road, Norwood, Ohio, United States"
+    },
+    {
+      "lat": 39.16016793249542,
+      "lon": -84.46198317312276,
+      "geoinfo": {
+        "display_name": "Franklin Avenue, Norwood, Hamilton County, Ohio, 45212, United States",
+        "road": "Franklin Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norwood",
+        "state": "Ohio",
+        "postcode": "45212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "079, Franklin Avenue, Norwood, Hamilton County, Ohio, 45212, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:43.256644+00:00",
+  "_kind": "geo_samples"
+}

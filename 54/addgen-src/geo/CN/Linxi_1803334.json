@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Linxi",
+  "geonameid": 1803334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.72395044869461,
+      "lon": 118.43010723391711,
+      "geoinfo": {
+        "display_name": "Gulin Road, Guye Subdistrict, Guye District, Tangshan, Hebei, 063100, China",
+        "road": "Gulin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Guye Subdistrict",
+        "city_district": null,
+        "city": "Guye District",
+        "state": "Hebei",
+        "postcode": "063100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Gulin Road, Linxi, Hebei, China"
+    },
+    {
+      "lat": 39.708223883659876,
+      "lon": 118.5025477765545,
+      "geoinfo": {
+        "display_name": "Jiubaihu, Tangshan, Hebei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tangshan",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "330, Jiubaihu, Tangshan, 18030 Hebei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:21.546677+00:00",
+  "_kind": "geo_samples"
+}

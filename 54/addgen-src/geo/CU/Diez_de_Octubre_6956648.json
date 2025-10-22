@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Diez de Octubre",
+  "geonameid": 6956648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.09510666160671,
+      "lon": -82.31646113425856,
+      "geoinfo": {
+        "display_name": "Calle F, Vista Hermosa, Luyanó Moderno, San Miguel del Padrón, Havana, 10400, Cuba",
+        "road": "Calle F",
+        "house_number": null,
+        "neighbourhood": "Vista Hermosa",
+        "suburb": "San Miguel del Padrón",
+        "city_district": null,
+        "city": "Havana",
+        "state": "Havana",
+        "postcode": "10400",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Calle F, Diez de Octubre, Havana, Cuba"
+    },
+    {
+      "lat": 23.10759723231992,
+      "lon": -82.36224370245152,
+      "geoinfo": {
+        "display_name": "Carné, Calle Villanueva, Luyanó, Diez de Octubre, Havana, 12000, Cuba",
+        "road": "Calle Villanueva",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Luyanó",
+        "city_district": "Luyanó",
+        "city": null,
+        "state": "Havana",
+        "postcode": "12000",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "966, Calle Villanueva, Diez de Octubre, 12000 Havana, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:33.518939+00:00",
+  "_kind": "geo_samples"
+}

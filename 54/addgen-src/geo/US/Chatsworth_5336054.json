@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chatsworth",
+  "geonameid": 5336054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.2525267436991,
+      "lon": -118.5665364450273,
+      "geoinfo": {
+        "display_name": "10024, Oakdale Avenue, Chatsworth Neighborhood Council District, Los Angeles, Los Angeles County, California, 91311, United States",
+        "road": "Oakdale Avenue",
+        "house_number": "10024",
+        "neighbourhood": null,
+        "suburb": "Chatsworth Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10024 Oakdale Avenue, Chatsworth, California, United States"
+    },
+    {
+      "lat": 34.2713122781568,
+      "lon": -118.65224976056776,
+      "geoinfo": {
+        "display_name": "Ronald Reagan Freeway, Simi Valley, Ventura County, California, 93063, United States",
+        "road": "Ronald Reagan Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Simi Valley",
+        "state": "California",
+        "postcode": "93063",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "378, Ronald Reagan Freeway, Simi Valley, Ventura County, California, 93063, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:37.821857+00:00",
+  "_kind": "geo_samples"
+}

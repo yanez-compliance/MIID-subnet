@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Walnut Park",
+  "geonameid": 5407030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.928486764599214,
+      "lon": -118.22236435700813,
+      "geoinfo": {
+        "display_name": "Lynwood, Los Angeles County, California, 90262, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynwood",
+        "state": "California",
+        "postcode": "90262",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walnut Park, California, United States"
+    },
+    {
+      "lat": 34.003767031640834,
+      "lon": -118.19428795244553,
+      "geoinfo": {
+        "display_name": "Bandini Boulevard, Vernon, Los Angeles County, California, 90040, United States",
+        "road": "Bandini Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vernon",
+        "state": "California",
+        "postcode": "90040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "415, Bandini Boulevard, Vernon, Los Angeles County, California, 90040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:22.501470+00:00",
+  "_kind": "geo_samples"
+}

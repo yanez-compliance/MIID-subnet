@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hamburg-Nord",
+  "geonameid": 8354626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.587348898172415,
+      "lon": 10.033218602955419,
+      "geoinfo": {
+        "display_name": "25a, Saarlandstraße, Winterhude, Hamburg-Nord, Hamburg, 22303, Germany",
+        "road": "Saarlandstraße",
+        "house_number": "25a",
+        "neighbourhood": null,
+        "suburb": "Winterhude",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25a Saarlandstraße, Hamburg-Nord, Germany"
+    },
+    {
+      "lat": 53.62453572057323,
+      "lon": 10.021985142074335,
+      "geoinfo": {
+        "display_name": "24, Ahornkamp, Ohlsdorf, Hamburg-Nord, Hamburg, 22335, Germany",
+        "road": "Ahornkamp",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Ohlsdorf",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22335",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24, Ahornkamp, Ohlsdorf, Hamburg-Nord, Hamburg, 22335, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:56.527663+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Mandelieu-la-Napoule",
+  "geonameid": 2996255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.51467810453492,
+      "lon": 6.975593640438788,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Mandelieu-la-Napoule, France"
+    },
+    {
+      "lat": 43.58926406093531,
+      "lon": 6.952600054118081,
+      "geoinfo": {
+        "display_name": "Les Cardillons, Les Peyroux, La Roquette-sur-Siagne, Grasse, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06550, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Les Cardillons",
+        "suburb": "Les Peyroux",
+        "city_district": null,
+        "city": "La Roquette-sur-Siagne",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "06550",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "612, Les Cardillons, Les Peyroux, La Roquette-sur-Siagne, Grasse, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06550, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:04.208488+00:00",
+  "_kind": "geo_samples"
+}

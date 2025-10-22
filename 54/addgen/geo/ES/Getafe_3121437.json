@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Getafe",
+  "geonameid": 3121437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.27100485323222,
+      "lon": -3.76402057487419,
+      "geoinfo": {
+        "display_name": "M-419, Polígono Industrial Sonsoles, Centro - El Arroyo - La Fuente, Fuenlabrada, Community of Madrid, 28946, Spain",
+        "road": "M-419",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Centro - El Arroyo - La Fuente",
+        "city": "Fuenlabrada",
+        "state": "Community of Madrid",
+        "postcode": "28946",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-419, Getafe, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.328789095341044,
+      "lon": -3.6948486467722335,
+      "geoinfo": {
+        "display_name": "Planta de transporte y almacenamiento de productos petrolíferos Exolum, Avenida de Andalucía, San Cristóbal, Villaverde, Madrid, Community of Madrid, 28906, Spain",
+        "road": "Avenida de Andalucía",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaverde",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28906",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "368, Avenida de Andalucía, Getafe, 28906 Community of Madrid, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:57.031727+00:00",
+  "_kind": "geo_samples"
+}

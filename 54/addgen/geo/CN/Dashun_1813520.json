@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dashun",
+  "geonameid": 1813520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.591780052757233,
+      "lon": 107.04655217645983,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dashun, Chongqing, China"
+    },
+    {
+      "lat": 29.60402110329181,
+      "lon": 107.0623717459006,
+      "geoinfo": {
+        "display_name": "Xinmiao, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinmiao",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "023, Xinmiao, Fuling District, 28485 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:57:39.558077+00:00",
+  "_kind": "geo_samples"
+}

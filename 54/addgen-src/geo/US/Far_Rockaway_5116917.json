@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Far Rockaway",
+  "geonameid": 5116917,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.60828359427189,
+      "lon": -73.70306390035702,
+      "geoinfo": {
+        "display_name": "Village of Lawrence, Town of Hempstead, Nassau County, New York, 11559, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Lawrence",
+        "state": "New York",
+        "postcode": "11559",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Far Rockaway, New York, United States"
+    },
+    {
+      "lat": 40.63965997709596,
+      "lon": -73.74224401699702,
+      "geoinfo": {
+        "display_name": "Rockaway Boulevard, Meadowmere Park, Queens, Queens County, New York, 11516, United States",
+        "road": "Rockaway Boulevard",
+        "house_number": null,
+        "neighbourhood": "Meadowmere Park",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "588, Rockaway Boulevard, Meadowmere Park, Queens, Queens County, New York, 11516, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:23.097563+00:00",
+  "_kind": "geo_samples"
+}

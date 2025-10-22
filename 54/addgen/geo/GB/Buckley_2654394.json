@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Buckley",
+  "geonameid": 2654394,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.193208716200864,
+      "lon": -3.085716513673129,
+      "geoinfo": {
+        "display_name": "Buckley, Northop Hall, Flintshire, Wales, CH7 6HF, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Buckley",
+        "city_district": null,
+        "city": "Northop Hall",
+        "state": "Wales",
+        "postcode": "CH7 6HF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Buckley, Buckley, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.138455838777155,
+      "lon": -3.0379628921582245,
+      "geoinfo": {
+        "display_name": "Platt Lane, Penyffordd, Flintshire, Wales, CH4 0HX, United Kingdom",
+        "road": "Platt Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Penyffordd",
+        "state": "Wales",
+        "postcode": "CH4 0HX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Platt Lane, Penyffordd, Flintshire, Wales, CH4 0HX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:38.372346+00:00",
+  "_kind": "geo_samples"
+}

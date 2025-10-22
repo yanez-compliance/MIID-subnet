@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tultepec",
+  "geonameid": 3515044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.68608229596426,
+      "lon": -99.13099881991212,
+      "geoinfo": {
+        "display_name": "Calle Nicolás Bravo, Tultepec, State of Mexico, 54960, Mexico",
+        "road": "Calle Nicolás Bravo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tultepec",
+        "state": "State of Mexico",
+        "postcode": "54960",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Nicolás Bravo, Tultepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.699262952064892,
+      "lon": -99.1552549552049,
+      "geoinfo": {
+        "display_name": "Melchor Ocampo, State of Mexico, 54880, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melchor Ocampo",
+        "state": "State of Mexico",
+        "postcode": "54880",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "772, Melchor Ocampo, State of Mexico, 54880, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:50.126521+00:00",
+  "_kind": "geo_samples"
+}

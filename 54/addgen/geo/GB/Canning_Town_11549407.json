@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Canning Town",
+  "geonameid": 11549407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.5077975274202,
+      "lon": -0.0069350125659359135,
+      "geoinfo": {
+        "display_name": "Aspen Way, Blackwall, London Borough of Tower Hamlets, London, Greater London, England, E14 9FN, United Kingdom",
+        "road": "Aspen Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Blackwall",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E14 9FN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Aspen Way, Canning Town, England, United Kingdom"
+    },
+    {
+      "lat": 51.54350535074045,
+      "lon": 0.02200355643830304,
+      "geoinfo": {
+        "display_name": "67, Disraeli Road, Upton, London Borough of Newham, London, Greater London, England, E7 9JU, United Kingdom",
+        "road": "Disraeli Road",
+        "house_number": "67",
+        "neighbourhood": null,
+        "suburb": "Upton",
+        "city_district": "London Borough of Newham",
+        "city": "London",
+        "state": "England",
+        "postcode": "E7 9JU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "67, Disraeli Road, Upton, London Borough of Newham, London, Greater London, England, E7 9JU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:07.198731+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "San Diego",
+  "geonameid": 3669947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.340129443356492,
+      "lon": -73.18425824020244,
+      "geoinfo": {
+        "display_name": "Vía San Diego - Los Tupes, Los Tupes, San Diego, Cesar, Colombia",
+        "road": "Vía San Diego - Los Tupes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "Cesar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Vía San Diego - Los Tupes, San Diego, Cesar, Colombia"
+    },
+    {
+      "lat": 10.337239844354707,
+      "lon": -73.19589814833716,
+      "geoinfo": {
+        "display_name": "San Diego, Cesar, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "Cesar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "861, San Diego, 18757 Cesar, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:13.965271+00:00",
+  "_kind": "geo_samples"
+}

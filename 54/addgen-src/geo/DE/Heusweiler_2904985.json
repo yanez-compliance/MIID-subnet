@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Heusweiler",
+  "geonameid": 2904985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.333509228165745,
+      "lon": 6.9736295548893485,
+      "geoinfo": {
+        "display_name": "132, Heusweilerstraße, Holz, Heusweiler, Regionalverband Saarbrücken, Saarland, 66265, Germany",
+        "road": "Heusweilerstraße",
+        "house_number": "132",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Holz",
+        "city": "Heusweiler",
+        "state": "Saarland",
+        "postcode": "66265",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "132 Heusweilerstraße, Heusweiler, Saarland, Germany"
+    },
+    {
+      "lat": 49.36325017710793,
+      "lon": 6.935143865443636,
+      "geoinfo": {
+        "display_name": "5, Hambacher Weg, Eiweiler, Heusweiler, Regionalverband Saarbrücken, Saarland, 66265, Germany",
+        "road": "Hambacher Weg",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Eiweiler",
+        "city_district": "Eiweiler",
+        "city": "Heusweiler",
+        "state": "Saarland",
+        "postcode": "66265",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Hambacher Weg, Eiweiler, Heusweiler, Regionalverband Saarbrücken, Saarland, 66265, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:46.248147+00:00",
+  "_kind": "geo_samples"
+}

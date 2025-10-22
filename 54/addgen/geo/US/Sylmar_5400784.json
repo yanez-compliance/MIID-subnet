@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sylmar",
+  "geonameid": 5400784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.331698047145764,
+      "lon": -118.45813883218989,
+      "geoinfo": {
+        "display_name": "Wilson Canyon Road, Sylmar Neighborhood Council District, Los Angeles, Los Angeles County, California, 91342, United States",
+        "road": "Wilson Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sylmar Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91342",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wilson Canyon Road, Sylmar, California, United States"
+    },
+    {
+      "lat": 34.292171045667814,
+      "lon": -118.45753873529246,
+      "geoinfo": {
+        "display_name": "15036, Bleeker Street, Carey Ranch, Sylmar Neighborhood Council District, Los Angeles, Los Angeles County, California, 91342, United States",
+        "road": "Bleeker Street",
+        "house_number": "15036",
+        "neighbourhood": "Carey Ranch",
+        "suburb": "Sylmar Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91342",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15036, Bleeker Street, Carey Ranch, Sylmar Neighborhood Council District, Los Angeles, Los Angeles County, California, 91342, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:14.521203+00:00",
+  "_kind": "geo_samples"
+}

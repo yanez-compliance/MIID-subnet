@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Camargo",
+  "geonameid": 4013724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.66293290145045,
+      "lon": -105.20575721032739,
+      "geoinfo": {
+        "display_name": "Callejón Lareño-Leyes de Reforma, Las Pilas, Camargo, Chihuahua, 33700, Mexico",
+        "road": "Callejón Lareño-Leyes de Reforma",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Camargo",
+        "state": "Chihuahua",
+        "postcode": "33700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Callejón Lareño-Leyes de Reforma, Camargo, Chihuahua, Mexico"
+    },
+    {
+      "lat": 27.65783057038432,
+      "lon": -105.20617829446493,
+      "geoinfo": {
+        "display_name": "Las Pilas, Camargo, Chihuahua, 33700, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chihuahua",
+        "postcode": "33700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "480, Las Pilas, Camargo, Chihuahua, 33700, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:51.335702+00:00",
+  "_kind": "geo_samples"
+}

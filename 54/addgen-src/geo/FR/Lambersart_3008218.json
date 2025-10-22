@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lambersart",
+  "geonameid": 3008218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.67819342623987,
+      "lon": 3.0041217494075036,
+      "geoinfo": {
+        "display_name": "Chemin Vert, Le Corbeau, Verlinghem, Lille, Nord, Hauts-de-France, Metropolitan France, 59237, France",
+        "road": "Chemin Vert",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Verlinghem",
+        "state": "Hauts-de-France",
+        "postcode": "59237",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin Vert, Lambersart, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.63110394669623,
+      "lon": 2.991746533562164,
+      "geoinfo": {
+        "display_name": "Avenue de la Rotonde, Lomme, Lille, Nord, Hauts-de-France, Metropolitan France, 59160, France",
+        "road": "Avenue de la Rotonde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "761, Avenue de la Rotonde, Lomme, Lille, Nord, Hauts-de-France, Metropolitan France, 59160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:03.351575+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Cranbourne East",
+  "geonameid": 9972515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.116099075700575,
+      "lon": 145.31544488000824,
+      "geoinfo": {
+        "display_name": "3, Shelby Street, Brookford Estate, Cranbourne East, Melbourne, City of Casey, Victoria, 3977, Australia",
+        "road": "Shelby Street",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Cranbourne East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3977",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "3 Shelby Street, Cranbourne East, Victoria, Australia"
+    },
+    {
+      "lat": -38.12214437370189,
+      "lon": 145.2860825987691,
+      "geoinfo": {
+        "display_name": "58, Earlston Circuit, Cranbourne, Melbourne, City of Casey, Victoria, 3977, Australia",
+        "road": "Earlston Circuit",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": "Cranbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3977",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "58, Earlston Circuit, Cranbourne, Melbourne, City of Casey, Victoria, 3977, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:47.778798+00:00",
+  "_kind": "geo_samples"
+}

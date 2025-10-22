@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gangshang",
+  "geonameid": 1549538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.486885458537465,
+      "lon": 118.14950905957274,
+      "geoinfo": {
+        "display_name": "Huayuan, Linyi, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linyi",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Gangshang, Shandong, China"
+    },
+    {
+      "lat": 34.553411306855565,
+      "lon": 118.09172900245983,
+      "geoinfo": {
+        "display_name": "Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "131, Pizhou, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:18.103943+00:00",
+  "_kind": "geo_samples"
+}

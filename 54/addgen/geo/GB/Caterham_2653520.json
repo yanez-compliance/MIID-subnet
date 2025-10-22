@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Caterham",
+  "geonameid": 2653520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.27262436720624,
+      "lon": -0.045471088772797416,
+      "geoinfo": {
+        "display_name": "Church Road, Woldingham, Tandridge, Surrey, England, CR3 7JG, United Kingdom",
+        "road": "Church Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woldingham",
+        "city_district": null,
+        "city": "Woldingham",
+        "state": "England",
+        "postcode": "CR3 7JG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Road, Caterham, England, United Kingdom"
+    },
+    {
+      "lat": 51.30936040966368,
+      "lon": -0.1339051750206594,
+      "geoinfo": {
+        "display_name": "90, Chaldon Way, Coulsdon, London, Greater London, England, CR5 1DD, United Kingdom",
+        "road": "Chaldon Way",
+        "house_number": "90",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "CR5 1DD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "90, Chaldon Way, Coulsdon, London, Greater London, England, CR5 1DD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:26.191338+00:00",
+  "_kind": "geo_samples"
+}

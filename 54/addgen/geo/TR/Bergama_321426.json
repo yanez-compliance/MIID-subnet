@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Bergama",
+  "geonameid": 321426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.15857091006914,
+      "lon": 27.18556653493942,
+      "geoinfo": {
+        "display_name": "Kaleardı Mahallesi, Bergama, Aegean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergama",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Bergama, Turkey"
+    },
+    {
+      "lat": 39.12354569918326,
+      "lon": 27.124419913623694,
+      "geoinfo": {
+        "display_name": "Kadriye Mahallesi, Tiyelti Mahallesi, Bergama, Aegean Region, 35700, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kadriye Mahallesi",
+        "city_district": null,
+        "city": "Bergama",
+        "state": null,
+        "postcode": "35700",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "327, Kadriye Mahallesi, 35700 Bergama, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:06.225906+00:00",
+  "_kind": "geo_samples"
+}

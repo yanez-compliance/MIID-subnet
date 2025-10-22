@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Branford",
+  "geonameid": 5283054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.30075146048853,
+      "lon": -72.8305651446855,
+      "geoinfo": {
+        "display_name": "29, Valley Brook Road, Branford, South Central Connecticut Planning Region, Connecticut, 06405, United States",
+        "road": "Valley Brook Road",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Branford",
+        "state": "Connecticut",
+        "postcode": "06405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29 Valley Brook Road, Branford, Connecticut, United States"
+    },
+    {
+      "lat": 41.296802183419764,
+      "lon": -72.84381605219178,
+      "geoinfo": {
+        "display_name": "Lake Saltonstall Watershed Reserve Land, Cedar Street, Branford Center, Branford, South Central Connecticut Planning Region, Connecticut, 06405, United States",
+        "road": "Cedar Street",
+        "house_number": null,
+        "neighbourhood": "Branford Center",
+        "suburb": null,
+        "city_district": null,
+        "city": "Branford",
+        "state": "Connecticut",
+        "postcode": "06405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "619, Cedar Street, Branford, 06405 Connecticut, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:19.399807+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhongxiang",
+  "geonameid": 1786546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.185667829741476,
+      "lon": 112.62255514827811,
+      "geoinfo": {
+        "display_name": "Zhongxiang City, Jingmen, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhongxiang City",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhongxiang, Hubei, China"
+    },
+    {
+      "lat": 31.19145567479638,
+      "lon": 112.60597443506819,
+      "geoinfo": {
+        "display_name": "皇庄街道, Jingmen, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jingmen",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "660, 皇庄街道, Jingmen, 63575 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:26.604995+00:00",
+  "_kind": "geo_samples"
+}

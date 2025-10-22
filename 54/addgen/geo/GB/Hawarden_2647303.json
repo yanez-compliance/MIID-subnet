@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hawarden",
+  "geonameid": 2647303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.16095242423332,
+      "lon": -2.9850394783255325,
+      "geoinfo": {
+        "display_name": "North Wales Expressway, Broughton and Bretton, Penyffordd, Flintshire, Wales, CH4 0FA, United Kingdom",
+        "road": "North Wales Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Broughton and Bretton",
+        "city_district": null,
+        "city": "Penyffordd",
+        "state": "Wales",
+        "postcode": "CH4 0FA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "North Wales Expressway, Hawarden, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.16210979744824,
+      "lon": -3.0805791353290837,
+      "geoinfo": {
+        "display_name": "Moel View Road, Nant Mawr, Buckley, Flintshire, Wales, CH7 2BT, United Kingdom",
+        "road": "Moel View Road",
+        "house_number": null,
+        "neighbourhood": "Nant Mawr",
+        "suburb": "Buckley",
+        "city_district": null,
+        "city": "Buckley",
+        "state": "Wales",
+        "postcode": "CH7 2BT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moel View Road, Nant Mawr, Buckley, Flintshire, Wales, CH7 2BT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:34.220513+00:00",
+  "_kind": "geo_samples"
+}

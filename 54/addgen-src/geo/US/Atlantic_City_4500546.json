@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Atlantic City",
+  "geonameid": 4500546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.371827947430596,
+      "lon": -74.47385184731682,
+      "geoinfo": {
+        "display_name": "Atlantic City Expressway, Atlantic City, Atlantic County, New Jersey, 08401, United States",
+        "road": "Atlantic City Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlantic City",
+        "state": "New Jersey",
+        "postcode": "08401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Atlantic City Expressway, Atlantic City, New Jersey, United States"
+    },
+    {
+      "lat": 39.35159563317008,
+      "lon": -74.43196130636211,
+      "geoinfo": {
+        "display_name": "Playground Pier, 1, Atlantic City Boardwalk, Chelsea, Atlantic City, Atlantic County, New Jersey, 08401, United States",
+        "road": "Atlantic City Boardwalk",
+        "house_number": "1",
+        "neighbourhood": "Chelsea",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlantic City",
+        "state": "New Jersey",
+        "postcode": "08401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Playground Pier, 1, Atlantic City Boardwalk, Chelsea, Atlantic City, Atlantic County, New Jersey, 08401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:24.042461+00:00",
+  "_kind": "geo_samples"
+}

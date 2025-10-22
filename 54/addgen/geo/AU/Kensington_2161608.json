@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Kensington",
+  "geonameid": 2161608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.904548035712374,
+      "lon": 151.22142756874564,
+      "geoinfo": {
+        "display_name": "23, Salisbury Road, Kensington, Eastern Suburbs, Sydney, Randwick City Council, New South Wales, 2033, Australia",
+        "road": "Salisbury Road",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Kensington",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2033",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "23 Salisbury Road, Kensington, New South Wales, Australia"
+    },
+    {
+      "lat": -33.88025116074433,
+      "lon": 151.22985252428347,
+      "geoinfo": {
+        "display_name": "Lawson Street, Five Ways, Paddington, Eastern Suburbs, Sydney, Woollahra Municipal Council, New South Wales, 2021, Australia",
+        "road": "Lawson Street",
+        "house_number": null,
+        "neighbourhood": "Five Ways",
+        "suburb": "Paddington",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2021",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "090, Lawson Street, Five Ways, Paddington, Eastern Suburbs, Sydney, Woollahra Municipal Council, New South Wales, 2021, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:50.317299+00:00",
+  "_kind": "geo_samples"
+}

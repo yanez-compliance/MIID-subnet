@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Zehlendorf",
+  "geonameid": 2805059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.41748948492028,
+      "lon": 13.208306500590565,
+      "geoinfo": {
+        "display_name": "Königsweg, Nikolassee, Steglitz-Zehlendorf, Berlin, 14129, Germany",
+        "road": "Königsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nikolassee",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14129",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Königsweg, Zehlendorf, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.46722355598186,
+      "lon": 13.26094121387381,
+      "geoinfo": {
+        "display_name": "Jagdschloss Grunewald, 100, Hüttenweg, Grunewald, Steglitz-Zehlendorf, Berlin, Teltow, 14193, Germany",
+        "road": "Hüttenweg",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": "Grunewald",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14193",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Jagdschloss Grunewald, 100, Hüttenweg, Grunewald, Steglitz-Zehlendorf, Berlin, Teltow, 14193, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:15.304576+00:00",
+  "_kind": "geo_samples"
+}

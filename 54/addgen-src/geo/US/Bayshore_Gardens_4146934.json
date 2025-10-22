@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bayshore Gardens",
+  "geonameid": 4146934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.415519653774385,
+      "lon": -82.58851945877375,
+      "geoinfo": {
+        "display_name": "26th Street West, Bayshore Gardens, Manatee County, Florida, 34207, United States",
+        "road": "26th Street West",
+        "house_number": null,
+        "neighbourhood": "Bayshore Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "26th Street West, Bayshore Gardens, Florida, United States"
+    },
+    {
+      "lat": 27.438288195846038,
+      "lon": -82.5854530027031,
+      "geoinfo": {
+        "display_name": "5828, 24th Street West, South Bradenton, Manatee County, Florida, 34207, United States",
+        "road": "24th Street West",
+        "house_number": "5828",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Bradenton",
+        "state": "Florida",
+        "postcode": "34207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5828, 24th Street West, South Bradenton, Manatee County, Florida, 34207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:39.558790+00:00",
+  "_kind": "geo_samples"
+}

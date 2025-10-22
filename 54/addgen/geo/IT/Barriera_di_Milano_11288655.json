@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Barriera di Milano",
+  "geonameid": 11288655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.106428548084416,
+      "lon": 7.643537238144058,
+      "geoinfo": {
+        "display_name": "Corso Grosseto, Villaggio Santa Caterina, Circoscrizione 5, Turin, Piedmont, 10151, Italy",
+        "road": "Corso Grosseto",
+        "house_number": null,
+        "neighbourhood": "Villaggio Santa Caterina",
+        "suburb": "Circoscrizione 5",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10151",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Corso Grosseto, Barriera di Milano, Piedmont, Italy"
+    },
+    {
+      "lat": 45.121169944940824,
+      "lon": 7.664954215189108,
+      "geoinfo": {
+        "display_name": "Strada Bellacomba, Villaretto, Circoscrizione 6, Turin, Piedmont, 10148, Italy",
+        "road": "Strada Bellacomba",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaretto",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10148",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Bellacomba, Villaretto, Circoscrizione 6, Turin, Piedmont, 10148, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:10.573256+00:00",
+  "_kind": "geo_samples"
+}

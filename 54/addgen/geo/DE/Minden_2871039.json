@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Minden",
+  "geonameid": 2871039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.29581676290929,
+      "lon": 8.946180323906487,
+      "geoinfo": {
+        "display_name": "Bahnstraße, Rechtes Weserufer, Minden, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32423, Germany",
+        "road": "Bahnstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rechtes Weserufer",
+        "city_district": null,
+        "city": "Minden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32423",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bahnstraße, Minden, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.266679790692756,
+      "lon": 8.86058173068814,
+      "geoinfo": {
+        "display_name": "Uphauser Weg, Dützen, Häverstädt, Minden, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32429, Germany",
+        "road": "Uphauser Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dützen",
+        "city_district": null,
+        "city": "Minden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32429",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "238, Uphauser Weg, Dützen, Häverstädt, Minden, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32429, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:27.166777+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Aston",
+  "geonameid": 2656867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.49427473229528,
+      "lon": -1.924330915325813,
+      "geoinfo": {
+        "display_name": "Wharf Street, Hockley Port, Birmingham, West Midlands, England, B18 5HB, United Kingdom",
+        "road": "Wharf Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hockley Port",
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "England",
+        "postcode": "B18 5HB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wharf Street, Aston, England, United Kingdom"
+    },
+    {
+      "lat": 52.53262235216599,
+      "lon": -1.8776501527494716,
+      "geoinfo": {
+        "display_name": "Ercall Close, Short Heath, Birmingham, West Midlands, England, B23 7TJ, United Kingdom",
+        "road": "Ercall Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Short Heath",
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "England",
+        "postcode": "B23 7TJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ercall Close, Short Heath, Birmingham, West Midlands, England, B23 7TJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:43.807280+00:00",
+  "_kind": "geo_samples"
+}

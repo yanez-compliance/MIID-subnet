@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Chirpan",
+  "geonameid": 732452,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.16010260674447,
+      "lon": 25.352348142345168,
+      "geoinfo": {
+        "display_name": "Chirpan, Stara Zagora, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chirpan",
+        "state": "Stara Zagora",
+        "postcode": null,
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "184, Chirpan, 30970 Stara Zagora, Bulgaria"
+    },
+    {
+      "lat": 42.19600112295834,
+      "lon": 25.294017858038437,
+      "geoinfo": {
+        "display_name": "66, Chirpan, Stara Zagora, Bulgaria",
+        "road": "66",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chirpan",
+        "state": "Stara Zagora",
+        "postcode": null,
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "66, Chirpan, 05125 Stara Zagora, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:59:02.561686+00:00",
+  "_kind": "geo_samples"
+}

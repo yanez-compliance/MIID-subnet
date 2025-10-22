@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Braunschweig",
+  "geonameid": 2945024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.29607354421953,
+      "lon": 10.502561011939678,
+      "geoinfo": {
+        "display_name": "A 391, Nordstadt-Schunteraue, Nördliche Schunter-/Okeraue, Brunswick, Lower Saxony, 38112, Germany",
+        "road": "A 391",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nordstadt-Schunteraue",
+        "city_district": "Nördliche Schunter-/Okeraue",
+        "city": "Brunswick",
+        "state": "Lower Saxony",
+        "postcode": "38112",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 391, Braunschweig, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.243771441057895,
+      "lon": 10.468262823922863,
+      "geoinfo": {
+        "display_name": "Broitzemer Holz, Rheinviertel, Weststadt, Brunswick, Lower Saxony, 38120, Germany",
+        "road": "Broitzemer Holz",
+        "house_number": null,
+        "neighbourhood": "Rheinviertel",
+        "suburb": "Weststadt",
+        "city_district": "Weststadt",
+        "city": "Brunswick",
+        "state": "Lower Saxony",
+        "postcode": "38120",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "733, Broitzemer Holz, Rheinviertel, Weststadt, Brunswick, Lower Saxony, 38120, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:00.278894+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Brighton",
+  "geonameid": 2174039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.9102782398956,
+      "lon": 144.99378664113271,
+      "geoinfo": {
+        "display_name": "Brighton Grammar School, 90, Outer Crescent, Brighton, Melbourne, City of Bayside, Victoria, 3186, Australia",
+        "road": "Outer Crescent",
+        "house_number": "90",
+        "neighbourhood": null,
+        "suburb": "Brighton",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3186",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "90 Outer Crescent, Brighton, Victoria, Australia"
+    },
+    {
+      "lat": -37.89941001784434,
+      "lon": 145.00201830616257,
+      "geoinfo": {
+        "display_name": "128, North Road, Brighton, Melbourne, City of Bayside, Victoria, 3186, Australia",
+        "road": "North Road",
+        "house_number": "128",
+        "neighbourhood": null,
+        "suburb": "Brighton",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3186",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "128, North Road, Brighton, Melbourne, City of Bayside, Victoria, 3186, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:33.107661+00:00",
+  "_kind": "geo_samples"
+}

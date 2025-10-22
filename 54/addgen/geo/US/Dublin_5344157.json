@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dublin",
+  "geonameid": 5344157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.72750038315007,
+      "lon": -121.91781152066551,
+      "geoinfo": {
+        "display_name": "Dougherty Hills Open Space Trail, Komandorski Village, Dublin, Alameda County, California, 94582, United States",
+        "road": "Dougherty Hills Open Space Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dublin",
+        "state": "California",
+        "postcode": "94582",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dougherty Hills Open Space Trail, Dublin, California, United States"
+    },
+    {
+      "lat": 37.73251735670509,
+      "lon": -121.92461260125371,
+      "geoinfo": {
+        "display_name": "Alcosta Boulevard, San Ramon, Contra Costa County, California, 94582, United States",
+        "road": "Alcosta Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Ramon",
+        "state": "California",
+        "postcode": "94582",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "839, Alcosta Boulevard, San Ramon, Contra Costa County, California, 94582, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:56.823142+00:00",
+  "_kind": "geo_samples"
+}

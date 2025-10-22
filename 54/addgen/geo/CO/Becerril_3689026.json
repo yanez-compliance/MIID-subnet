@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Becerril",
+  "geonameid": 3689026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.695952318924666,
+      "lon": -73.26205466142994,
+      "geoinfo": {
+        "display_name": "becerril, Becerril, Cesar, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Becerril",
+        "state": "Cesar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Becerril, Cesar, Colombia"
+    },
+    {
+      "lat": 9.662092566933719,
+      "lon": -73.28475480976466,
+      "geoinfo": {
+        "display_name": "49, Becerril, Cesar, Colombia",
+        "road": "49",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Becerril",
+        "state": "Cesar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "49, Becerril, 34747 Cesar, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:00.166252+00:00",
+  "_kind": "geo_samples"
+}

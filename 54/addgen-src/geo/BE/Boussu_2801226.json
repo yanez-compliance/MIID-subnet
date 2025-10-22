@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Boussu",
+  "geonameid": 2801226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.430594707940294,
+      "lon": 3.7958403464413806,
+      "geoinfo": {
+        "display_name": "54, Rue du Centenaire, Boussu, Mons, Hainaut, Wallonia, 7300, Belgium",
+        "road": "Rue du Centenaire",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boussu",
+        "state": "Hainaut",
+        "postcode": "7300",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "54 Rue du Centenaire, Boussu, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.45253778451882,
+      "lon": 3.834958673088472,
+      "geoinfo": {
+        "display_name": "Autoroute de Wallonie, Quaregnon, Mons, Hainaut, Wallonia, 7390, Belgium",
+        "road": "Autoroute de Wallonie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Quaregnon",
+        "city": "Quaregnon",
+        "state": "Hainaut",
+        "postcode": "7390",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "848, Autoroute de Wallonie, Quaregnon, Mons, Hainaut, Wallonia, 7390, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:37.619064+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Yuma",
+  "geonameid": 5322053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.69775142987533,
+      "lon": -114.59874299962362,
+      "geoinfo": {
+        "display_name": "1659, South Pacific Avenue, Yuma, Yuma County, Arizona, 85365, United States",
+        "road": "South Pacific Avenue",
+        "house_number": "1659",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuma",
+        "state": "Arizona",
+        "postcode": "85365",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1659 South Pacific Avenue, Yuma, Arizona, United States"
+    },
+    {
+      "lat": 32.6834077023669,
+      "lon": -114.63745820927875,
+      "geoinfo": {
+        "display_name": "ParkView Loop, Yuma, Yuma County, Arizona, 85364, United States",
+        "road": "ParkView Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuma",
+        "state": "Arizona",
+        "postcode": "85364",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "909, ParkView Loop, Yuma, Yuma County, Arizona, 85364, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:46.644412+00:00",
+  "_kind": "geo_samples"
+}

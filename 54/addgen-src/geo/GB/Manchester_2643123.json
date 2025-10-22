@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Manchester",
+  "geonameid": 2643123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.48245630786642,
+      "lon": -2.251365245150719,
+      "geoinfo": {
+        "display_name": "Clermont-Ferrand Square, Trinity, City Centre, Salford, Greater Manchester, England, M3 5LH, United Kingdom",
+        "road": "Clermont-Ferrand Square",
+        "house_number": null,
+        "neighbourhood": "Trinity",
+        "suburb": "City Centre",
+        "city_district": null,
+        "city": "Salford",
+        "state": "England",
+        "postcode": "M3 5LH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Clermont-Ferrand Square, Manchester, England, United Kingdom"
+    },
+    {
+      "lat": 53.493998599235034,
+      "lon": -2.2164159742457294,
+      "geoinfo": {
+        "display_name": "Johnson's Square, Collyhurst, Manchester, Greater Manchester, England, M40 7QW, United Kingdom",
+        "road": "Johnson's Square",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Collyhurst",
+        "city_district": null,
+        "city": "Manchester",
+        "state": "England",
+        "postcode": "M40 7QW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Johnson's Square, Collyhurst, Manchester, Greater Manchester, England, M40 7QW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:58.994671+00:00",
+  "_kind": "geo_samples"
+}

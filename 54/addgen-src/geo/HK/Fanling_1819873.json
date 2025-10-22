@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Fanling",
+  "geonameid": 1819873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.478361541309337,
+      "lon": 114.12397828973296,
+      "geoinfo": {
+        "display_name": "Tai Lung, Ping Kong, North District, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North District",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Fanling, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.523329929949064,
+      "lon": 114.16707478547048,
+      "geoinfo": {
+        "display_name": "Ng Chow South Road, Ping Che Kat Tin, North District, Ping Che, New Territories, Hong Kong, 518021, China",
+        "road": "Ng Chow South Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "North District",
+        "city_district": null,
+        "city": "Ping Che",
+        "state": "Hong Kong",
+        "postcode": "518021",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "422, Ng Chow South Road, Ping Che Kat Tin, North District, Ping Che, New Territories, Hong Kong, 518021, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:51.074517+00:00",
+  "_kind": "geo_samples"
+}

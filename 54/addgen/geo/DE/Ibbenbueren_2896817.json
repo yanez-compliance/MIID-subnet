@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ibbenbueren",
+  "geonameid": 2896817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.29060813178866,
+      "lon": 7.7000225300294,
+      "geoinfo": {
+        "display_name": "50, An der Glashütte, Bockraden, Ibbenbüren, Kreis Steinfurt, North Rhine-Westphalia, 49477, Germany",
+        "road": "An der Glashütte",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": "Bockraden",
+        "city_district": null,
+        "city": "Ibbenbüren",
+        "state": "North Rhine-Westphalia",
+        "postcode": "49477",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "50 An der Glashütte, Ibbenbueren, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.26430837074029,
+      "lon": 7.713148138768444,
+      "geoinfo": {
+        "display_name": "12, Winkelstraße, Ibbenbüren, Kreis Steinfurt, North Rhine-Westphalia, 49477, Germany",
+        "road": "Winkelstraße",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ibbenbüren",
+        "state": "North Rhine-Westphalia",
+        "postcode": "49477",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12, Winkelstraße, Ibbenbüren, Kreis Steinfurt, North Rhine-Westphalia, 49477, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:58.524396+00:00",
+  "_kind": "geo_samples"
+}

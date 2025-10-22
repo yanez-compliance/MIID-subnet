@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ober-Ramstadt",
+  "geonameid": 2859380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.80704856964514,
+      "lon": 8.789726780622951,
+      "geoinfo": {
+        "display_name": "L 3477, Hahn, Wembach-Hahn, Ober-Ramstadt, Landkreis Darmstadt-Dieburg, Hesse, 64372, Germany",
+        "road": "L 3477",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hahn",
+        "state": "Hesse",
+        "postcode": "64372",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 3477, Ober-Ramstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.85344783954567,
+      "lon": 8.711969473040718,
+      "geoinfo": {
+        "display_name": "Unterer Pürschweg, Darmstadt-Ost, Ober-Ramstadt, Landkreis Darmstadt-Dieburg, Hesse, 64372, Germany",
+        "road": "Unterer Pürschweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Darmstadt-Ost",
+        "city": "Ober-Ramstadt",
+        "state": "Hesse",
+        "postcode": "64372",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "681, Unterer Pürschweg, Darmstadt-Ost, Ober-Ramstadt, Landkreis Darmstadt-Dieburg, Hesse, 64372, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:48.459889+00:00",
+  "_kind": "geo_samples"
+}

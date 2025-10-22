@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Foggia",
+  "geonameid": 3176885,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.49195437548625,
+      "lon": 15.574124664039019,
+      "geoinfo": {
+        "display_name": "Autostrada Adriatica, Foggia, Apulia, 71100, Italy",
+        "road": "Autostrada Adriatica",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foggia",
+        "state": "Apulia",
+        "postcode": "71100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada Adriatica, Foggia, Apulia, Italy"
+    },
+    {
+      "lat": 41.47105613354143,
+      "lon": 15.537996350078553,
+      "geoinfo": {
+        "display_name": "Via San Severo, Foggia, Apulia, 71121, Italy",
+        "road": "Via San Severo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foggia",
+        "state": "Apulia",
+        "postcode": "71121",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "003, Via San Severo, Foggia, Apulia, 71121, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:59.065834+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Junction City",
+  "geonameid": 4273680,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.05700910022571,
+      "lon": -96.8034951102961,
+      "geoinfo": {
+        "display_name": "Millenium Rail, Junction City, Geary County, Kansas, 66442, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Junction City",
+        "state": "Kansas",
+        "postcode": "66442",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Junction City, Kansas, United States"
+    },
+    {
+      "lat": 39.0305923252134,
+      "lon": -96.80559678893016,
+      "geoinfo": {
+        "display_name": "East 6th Street, Grandview Plaza, Geary County, Kansas, 66441, United States",
+        "road": "East 6th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grandview Plaza",
+        "state": "Kansas",
+        "postcode": "66441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 6th Street, Grandview Plaza, Geary County, Kansas, 66441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:11.548191+00:00",
+  "_kind": "geo_samples"
+}

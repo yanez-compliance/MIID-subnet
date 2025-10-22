@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mitchell",
+  "geonameid": 5229794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.697449364184074,
+      "lon": -97.97732581382074,
+      "geoinfo": {
+        "display_name": "Bartscher Road, Mitchell Township, Davison County, South Dakota, 57301, United States",
+        "road": "Bartscher Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Dakota",
+        "postcode": "57301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bartscher Road, Mitchell, South Dakota, United States"
+    },
+    {
+      "lat": 43.733218878957636,
+      "lon": -97.99367333890032,
+      "geoinfo": {
+        "display_name": "Kelly Drive, Mitchell Township, Davison County, South Dakota, 57301, United States",
+        "road": "Kelly Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Dakota",
+        "postcode": "57301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "581, Kelly Drive, Mitchell Township, Davison County, South Dakota, 57301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:49.214334+00:00",
+  "_kind": "geo_samples"
+}

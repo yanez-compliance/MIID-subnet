@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Jette",
+  "geonameid": 2794914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.89029060512325,
+      "lon": 4.335372731541425,
+      "geoinfo": {
+        "display_name": "32, Avenue Jean-Baptiste Depaire - Jean-Baptiste Depairelaan, Laeken - Laken, Brussels, Brussels-Capital, 1020, Belgium",
+        "road": "Avenue Jean-Baptiste Depaire - Jean-Baptiste Depairelaan",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brussels",
+        "state": null,
+        "postcode": "1020",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "32 Avenue Jean-Baptiste Depaire - Jean-Baptiste Depairelaan, Jette, Belgium"
+    },
+    {
+      "lat": 50.858019269552784,
+      "lon": 4.378913713622677,
+      "geoinfo": {
+        "display_name": "136, Avenue Paul Deschanel - Paul Deschanellaan, Dailly, Schaerbeek - Schaarbeek, Brussels-Capital, 1030, Belgium",
+        "road": "Avenue Paul Deschanel - Paul Deschanellaan",
+        "house_number": "136",
+        "neighbourhood": "Dailly",
+        "suburb": null,
+        "city_district": null,
+        "city": "Schaerbeek - Schaarbeek",
+        "state": null,
+        "postcode": "1030",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "136, Avenue Paul Deschanel - Paul Deschanellaan, Dailly, Schaerbeek - Schaarbeek, Brussels-Capital, 1030, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:17.533228+00:00",
+  "_kind": "geo_samples"
+}

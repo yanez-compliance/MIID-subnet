@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Leblon",
+  "geonameid": 3473654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -23.009898666146764,
+      "lon": -43.25173480192671,
+      "geoinfo": {
+        "display_name": "Rio de Janeiro, Southeast Region, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rio de Janeiro",
+        "postcode": null,
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Leblon, Rio de Janeiro, Brazil"
+    },
+    {
+      "lat": -22.99350743731747,
+      "lon": -43.25799711352069,
+      "geoinfo": {
+        "display_name": "Rua São Leobaldo, São Conrado, Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 22610-001, Brazil",
+        "road": "Rua São Leobaldo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "São Conrado",
+        "city_district": null,
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "postcode": "22610-001",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rua São Leobaldo, São Conrado, Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 22610-001, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T01:26:23.760599+00:00",
+  "_kind": "geo_samples"
+}

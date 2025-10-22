@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Durango",
+  "geonameid": 3123773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.20504573782311,
+      "lon": -2.6296743231650477,
+      "geoinfo": {
+        "display_name": "BI-3341, Goiuria, Mañarikua, Garai, Biscay, Autonomous Community of the Basque Country, 48215, Spain",
+        "road": "BI-3341",
+        "house_number": null,
+        "neighbourhood": "Goiuria",
+        "suburb": null,
+        "city_district": null,
+        "city": "Garai",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48215",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-3341, Durango, Autonomous Community of the Basque Country, Spain"
+    },
+    {
+      "lat": 43.21311665279169,
+      "lon": -2.6249948850192357,
+      "geoinfo": {
+        "display_name": "Amatzorbeko iturria, BI-3341, Goiuria, Mañarikua, Iurreta, Biscay, Autonomous Community of the Basque Country, 48215, Spain",
+        "road": "BI-3341",
+        "house_number": null,
+        "neighbourhood": "Goiuria",
+        "suburb": null,
+        "city_district": null,
+        "city": "Iurreta",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48215",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-3341, Durango, 48215 Autonomous Community of the Basque Country, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:20.711575+00:00",
+  "_kind": "geo_samples"
+}

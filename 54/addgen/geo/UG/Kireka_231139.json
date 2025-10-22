@@ -1,0 +1,47 @@
+{
+  "country_code": "UG",
+  "country": "Uganda",
+  "city": "Kireka",
+  "geonameid": 231139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 0.37865318850121543,
+      "lon": 32.66750799766004,
+      "geoinfo": {
+        "display_name": "Butto, Wakiso, Central Region, Uganda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Butto",
+        "state": "Wakiso",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "Kireka, Wakiso, Uganda"
+    },
+    {
+      "lat": 0.3604056262620865,
+      "lon": 32.62139698871252,
+      "geoinfo": {
+        "display_name": "Kyambogo, Nakawa, Kampala, Central Region, Uganda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kyambogo",
+        "city_district": null,
+        "city": "Kampala",
+        "state": "Central Region",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "045, Kyambogo, Nakawa, Kampala, 99638 Central Region, Uganda"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:21.768287+00:00",
+  "_kind": "geo_samples"
+}

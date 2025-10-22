@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Iztapalapa",
+  "geonameid": 3526683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.336303454128096,
+      "lon": -99.02812360467246,
+      "geoinfo": {
+        "display_name": "Calle Francisco Villa, Colonia Palmitas, Mexico City, Iztapalapa, Pueblo Santiago Acahualtepec, Mexico City, 09670, Mexico",
+        "road": "Calle Francisco Villa",
+        "house_number": null,
+        "neighbourhood": "Colonia Palmitas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "09670",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Francisco Villa, Iztapalapa, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.39069283364534,
+      "lon": -99.07346010719384,
+      "geoinfo": {
+        "display_name": "Colonia INFONAVIT Sur 20, Mexico City, Iztacalco, Mexico City, 08500, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Colonia INFONAVIT Sur 20",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "08500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Colonia INFONAVIT Sur 20, Mexico City, Iztacalco, Mexico City, 08500, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:41.959622+00:00",
+  "_kind": "geo_samples"
+}

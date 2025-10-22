@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lennox",
+  "geonameid": 5365937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.91011075295785,
+      "lon": -118.35294386418897,
+      "geoinfo": {
+        "display_name": "Hawthorne Boulevard, Hawthorne, Los Angeles County, California, 90275, United States",
+        "road": "Hawthorne Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorne",
+        "state": "California",
+        "postcode": "90275",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hawthorne Boulevard, Lennox, California, United States"
+    },
+    {
+      "lat": 33.94184456280469,
+      "lon": -118.33961409794071,
+      "geoinfo": {
+        "display_name": "3799, West 104th Street, Lennox, Inglewood, Los Angeles County, California, 90303, United States",
+        "road": "West 104th Street",
+        "house_number": "3799",
+        "neighbourhood": null,
+        "suburb": "Lennox",
+        "city_district": null,
+        "city": "Inglewood",
+        "state": "California",
+        "postcode": "90303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3799, West 104th Street, Lennox, Inglewood, Los Angeles County, California, 90303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:10:12.853676+00:00",
+  "_kind": "geo_samples"
+}

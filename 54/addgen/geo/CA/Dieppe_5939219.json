@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Dieppe",
+  "geonameid": 5939219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.11365662544567,
+      "lon": -64.68356567320434,
+      "geoinfo": {
+        "display_name": "8, Aviation Avenue, Dieppe, City of Dieppe, Westmorland County, New Brunswick, E1A 9A3, Canada",
+        "road": "Aviation Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dieppe",
+        "city": "City of Dieppe",
+        "state": "New Brunswick",
+        "postcode": "E1A 9A3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Aviation Avenue, Dieppe, New Brunswick, Canada"
+    },
+    {
+      "lat": 46.062228048914825,
+      "lon": -64.65715900151376,
+      "geoinfo": {
+        "display_name": "Dorchester Parish, Village of Memramcook, Westmorland County, New Brunswick, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dorchester Parish",
+        "city": "Village of Memramcook",
+        "state": "New Brunswick",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "574, Dorchester Parish, Village of Memramcook, Westmorland County, 66460 New Brunswick, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:51.187086+00:00",
+  "_kind": "geo_samples"
+}

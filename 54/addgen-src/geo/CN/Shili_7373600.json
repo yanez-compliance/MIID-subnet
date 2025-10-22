@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shili",
+  "geonameid": 7373600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.971625886471784,
+      "lon": 105.28097409775789,
+      "geoinfo": {
+        "display_name": "Shilipu, Xihe County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shilipu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shili, Gansu, China"
+    },
+    {
+      "lat": 33.921821431818394,
+      "lon": 105.31146338458728,
+      "geoinfo": {
+        "display_name": "Liangshan, Xihe County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liangshan",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "685, Liangshan, Xihe County, Longnan, 45471 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:01:58.321968+00:00",
+  "_kind": "geo_samples"
+}

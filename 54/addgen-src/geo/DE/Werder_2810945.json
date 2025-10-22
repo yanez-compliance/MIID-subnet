@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Werder",
+  "geonameid": 2810945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.40497252482408,
+      "lon": 12.899308768017047,
+      "geoinfo": {
+        "display_name": "11a, An der Phöbener Chaussee, Werder (Havel), Potsdam-Mittelmark, Brandenburg, 14542, Germany",
+        "road": "An der Phöbener Chaussee",
+        "house_number": "11a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Werder (Havel)",
+        "city": "Werder (Havel)",
+        "state": "Brandenburg",
+        "postcode": "14542",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11a An der Phöbener Chaussee, Werder, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.384286822489074,
+      "lon": 12.93977832919873,
+      "geoinfo": {
+        "display_name": "Weidenweg, Kleingartenverein Havelstrand, Werder (Havel), Potsdam-Mittelmark, Brandenburg, 14542, Germany",
+        "road": "Weidenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Werder (Havel)",
+        "city": "Werder (Havel)",
+        "state": "Brandenburg",
+        "postcode": "14542",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "950, Weidenweg, Kleingartenverein Havelstrand, Werder (Havel), Potsdam-Mittelmark, Brandenburg, 14542, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:46.859744+00:00",
+  "_kind": "geo_samples"
+}

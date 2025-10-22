@@ -1,0 +1,47 @@
+{
+  "country_code": "LY",
+  "country": "Libya",
+  "city": "Msalātah",
+  "geonameid": 12687313,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 32.603040530839785,
+      "lon": 14.081862382945518,
+      "geoinfo": {
+        "display_name": "Qaryat Bani Musallam, Central Msallata, Murqub, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Central Msallata",
+        "state": "Murqub",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "345, Qaryat Bani Musallam, Central Msallata, 38563 Murqub, Libya"
+    },
+    {
+      "lat": 32.58130283739621,
+      "lon": 14.071867078445907,
+      "geoinfo": {
+        "display_name": "Al Qusbat, Qabilat Al-Swadenia, Central Msallata, Murqub, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Qabilat Al-Swadenia",
+        "city_district": null,
+        "city": "Central Msallata",
+        "state": "Murqub",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "178, Al Qusbat, Qabilat Al-Swadenia, Central Msallata, 53269 Murqub, Libya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:23.511580+00:00",
+  "_kind": "geo_samples"
+}

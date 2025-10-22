@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hicksville",
+  "geonameid": 5120656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.76152513084196,
+      "lon": -73.53571589753915,
+      "geoinfo": {
+        "display_name": "12, Burkland Lane, Hicksville, Town of Oyster Bay, Nassau County, New York, 11801, United States",
+        "road": "Burkland Lane",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hicksville",
+        "state": "New York",
+        "postcode": "11801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12 Burkland Lane, Hicksville, New York, United States"
+    },
+    {
+      "lat": 40.73432327745169,
+      "lon": -73.51358636388336,
+      "geoinfo": {
+        "display_name": "Tulip Lane, Levittown, Town of Hempstead, Nassau County, New York, 11756, United States",
+        "road": "Tulip Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Levittown",
+        "state": "New York",
+        "postcode": "11756",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "396, Tulip Lane, Levittown, Town of Hempstead, Nassau County, New York, 11756, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:40.344135+00:00",
+  "_kind": "geo_samples"
+}

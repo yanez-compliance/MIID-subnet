@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hastings",
+  "geonameid": 2647356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.855923360419744,
+      "lon": 0.5567534106160191,
+      "geoinfo": {
+        "display_name": "37, Charles Road, St Leonards Green, St Leonards, Hastings, East Sussex, England, TN38 0QD, United Kingdom",
+        "road": "Charles Road",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": "St Leonards Green",
+        "city_district": null,
+        "city": "St Leonards",
+        "state": "England",
+        "postcode": "TN38 0QD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "37 Charles Road, Hastings, England, United Kingdom"
+    },
+    {
+      "lat": 50.8745492833206,
+      "lon": 0.6214808995766219,
+      "geoinfo": {
+        "display_name": "Fairlight Road, Ore, Hastings, East Sussex, England, TN35 5EP, United Kingdom",
+        "road": "Fairlight Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ore",
+        "city_district": null,
+        "city": "Hastings",
+        "state": "England",
+        "postcode": "TN35 5EP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Fairlight Road, Ore, Hastings, East Sussex, England, TN35 5EP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:34.553968+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westmont",
+  "geonameid": 4916207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.81115306429547,
+      "lon": -87.92362143598261,
+      "geoinfo": {
+        "display_name": "The Lane Elementary School, The Lane, Hinsdale, Lyons Township, DuPage County, Illinois, 60521, United States",
+        "road": "The Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hinsdale",
+        "state": "Illinois",
+        "postcode": "60521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Lane, Westmont, Illinois, United States"
+    },
+    {
+      "lat": 41.804933058727464,
+      "lon": -87.9612823986041,
+      "geoinfo": {
+        "display_name": "222, Oxford Avenue, Clarendon Hills, DuPage County, Illinois, 60514, United States",
+        "road": "Oxford Avenue",
+        "house_number": "222",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarendon Hills",
+        "state": "Illinois",
+        "postcode": "60514",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "222, Oxford Avenue, Clarendon Hills, DuPage County, Illinois, 60514, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:56:59.017193+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Acacias",
+  "geonameid": 11549948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.40917302310475,
+      "lon": -3.7219546855015295,
+      "geoinfo": {
+        "display_name": "Madrid Río, Puerta del Ángel, Latina, Madrid, Community of Madrid, 28005, Spain",
+        "road": "Madrid Río",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Madrid Río, Acacias, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42792198355463,
+      "lon": -3.6637628845625025,
+      "geoinfo": {
+        "display_name": "18, Calle del Maestro Alonso, Fuente del Berro, Salamanca, Madrid, Community of Madrid, 28028, Spain",
+        "road": "Calle del Maestro Alonso",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28028",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "18, Calle del Maestro Alonso, Fuente del Berro, Salamanca, Madrid, Community of Madrid, 28028, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:07.459545+00:00",
+  "_kind": "geo_samples"
+}

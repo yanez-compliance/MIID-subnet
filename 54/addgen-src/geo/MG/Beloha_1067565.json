@@ -1,0 +1,47 @@
+{
+  "country_code": "MG",
+  "country": "Madagascar",
+  "city": "Beloha",
+  "geonameid": 1067565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.135899175069696,
+      "lon": 45.054900509468716,
+      "geoinfo": {
+        "display_name": "Beloha, Androy, Province de Toliara, Madagascar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beloha",
+        "state": "Androy",
+        "postcode": null,
+        "country": "Madagascar",
+        "country_code": "mg"
+      },
+      "address": "Beloha, Androy, Madagascar"
+    },
+    {
+      "lat": -25.16717143823233,
+      "lon": 45.08281090521856,
+      "geoinfo": {
+        "display_name": "N 10, Beloha, Androy, Province de Toliara, Madagascar",
+        "road": "N 10",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beloha",
+        "state": "Androy",
+        "postcode": null,
+        "country": "Madagascar",
+        "country_code": "mg"
+      },
+      "address": "N 10, Beloha, Androy, 45613 Province de Toliara, Madagascar"
+    }
+  ],
+  "updated_at": "2025-10-19T05:55:31.830765+00:00",
+  "_kind": "geo_samples"
+}

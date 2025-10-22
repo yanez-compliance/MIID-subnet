@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Calafell",
+  "geonameid": 3127066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.19700492183608,
+      "lon": 1.5832438501211694,
+      "geoinfo": {
+        "display_name": "Camí del Mas d'en Vives, Vilarenc, Alorda Parc, Calafell Residencial, Calafell, Baix Penedès, Tarragona, Catalonia, 43820, Spain",
+        "road": "Camí del Mas d'en Vives",
+        "house_number": null,
+        "neighbourhood": "Vilarenc",
+        "suburb": "Calafell Residencial",
+        "city_district": "Calafell",
+        "city": "Calafell",
+        "state": "Catalonia",
+        "postcode": "43820",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí del Mas d'en Vives, Calafell, Catalonia, Spain"
+    },
+    {
+      "lat": 41.23264833506909,
+      "lon": 1.565455723765241,
+      "geoinfo": {
+        "display_name": "N-340, Bellvei, Baix Penedès, Tarragona, Catalonia, 43719, Spain",
+        "road": "N-340",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellvei",
+        "state": "Catalonia",
+        "postcode": "43719",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-340, Bellvei, Baix Penedès, Tarragona, Catalonia, 43719, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:23.075146+00:00",
+  "_kind": "geo_samples"
+}

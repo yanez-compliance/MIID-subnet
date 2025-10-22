@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ponda",
+  "geonameid": 1259429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.380834073352844,
+      "lon": 74.01665563886583,
+      "geoinfo": {
+        "display_name": "NH566, Borim, Ponda, South Goa, Goa, 403401, India",
+        "road": "NH566",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borim",
+        "state": "Goa",
+        "postcode": "403401",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH566, Ponda, Goa, India"
+    },
+    {
+      "lat": 15.403788455283474,
+      "lon": 73.98327739173043,
+      "geoinfo": {
+        "display_name": "Nageshi, Bandora, Ponda, South Goa, Goa, 403404, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nageshi",
+        "suburb": "Bandora",
+        "city_district": null,
+        "city": "Ponda",
+        "state": "Goa",
+        "postcode": "403404",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "272, Nageshi, Bandora, Ponda, South Goa, Goa, 403404, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:14.730464+00:00",
+  "_kind": "geo_samples"
+}

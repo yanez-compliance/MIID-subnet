@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Forest Lake",
+  "geonameid": 5027117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.29104027105414,
+      "lon": -93.01967044982614,
+      "geoinfo": {
+        "display_name": "17751, Lyons Street Northeast, Columbus, Anoka County, Minnesota, 55025, United States",
+        "road": "Lyons Street Northeast",
+        "house_number": "17751",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Minnesota",
+        "postcode": "55025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17751 Lyons Street Northeast, Forest Lake, Minnesota, United States"
+    },
+    {
+      "lat": 45.30963293790426,
+      "lon": -93.02761870077398,
+      "geoinfo": {
+        "display_name": "189th Avenue Northeast, Columbus, Anoka County, Minnesota, 55025, United States",
+        "road": "189th Avenue Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Minnesota",
+        "postcode": "55025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "189th Avenue Northeast, Columbus, Anoka County, Minnesota, 55025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:57.293875+00:00",
+  "_kind": "geo_samples"
+}

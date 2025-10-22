@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Lawrence Park South",
+  "geonameid": 12156850,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.72836816226028,
+      "lon": -79.45934652880672,
+      "geoinfo": {
+        "display_name": "Highway 401 Collector, Downsview, York Centre, North York, Toronto, Golden Horseshoe, Ontario, M3K 1E4, Canada",
+        "road": "Highway 401 Collector",
+        "house_number": null,
+        "neighbourhood": "Downsview",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3K 1E4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Highway 401 Collector, Lawrence Park South, 30481 Ontario, Canada"
+    },
+    {
+      "lat": 43.70126831611276,
+      "lon": -79.40289204270674,
+      "geoinfo": {
+        "display_name": "59, Eastbourne Avenue, Yonge-Eglinton, Toronto—St. Paul's, Toronto, Golden Horseshoe, Ontario, M5P 1A7, Canada",
+        "road": "Eastbourne Avenue",
+        "house_number": "59",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5P 1A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "59, Eastbourne Avenue, Yonge-Eglinton, Toronto—St. Paul's, Toronto, Golden Horseshoe, Ontario, M5P 1A7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:19.186619+00:00",
+  "_kind": "geo_samples"
+}

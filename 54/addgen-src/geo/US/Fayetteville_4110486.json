@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fayetteville",
+  "geonameid": 4110486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.06275622145146,
+      "lon": -94.17163223555909,
+      "geoinfo": {
+        "display_name": "The Cardinal at West Center, 831, West Center Street, Fayetteville, Washington County, Arkansas, 72701, United States",
+        "road": "West Center Street",
+        "house_number": "831",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fayetteville",
+        "state": "Arkansas",
+        "postcode": "72701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "831 West Center Street, Fayetteville, Arkansas, United States"
+    },
+    {
+      "lat": 36.09525262965873,
+      "lon": -94.15160284784392,
+      "geoinfo": {
+        "display_name": "East Township Street, Fayetteville, Washington County, Arkansas, 72703, United States",
+        "road": "East Township Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fayetteville",
+        "state": "Arkansas",
+        "postcode": "72703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "725, East Township Street, Fayetteville, Washington County, Arkansas, 72703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:55.629363+00:00",
+  "_kind": "geo_samples"
+}

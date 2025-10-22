@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holden",
+  "geonameid": 4939647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.32311275311289,
+      "lon": -71.87579608247685,
+      "geoinfo": {
+        "display_name": "744, Reservoir Street, Camp Kinneywood, Holden, Worcester County, Massachusetts, 01520, United States",
+        "road": "Reservoir Street",
+        "house_number": "744",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holden",
+        "state": "Massachusetts",
+        "postcode": "01520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "744 Reservoir Street, Holden, Massachusetts, United States"
+    },
+    {
+      "lat": 42.32253957636974,
+      "lon": -71.86945690802487,
+      "geoinfo": {
+        "display_name": "Bailey Road, Holden, Worcester County, Massachusetts, 01520, United States",
+        "road": "Bailey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holden",
+        "state": "Massachusetts",
+        "postcode": "01520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "048, Bailey Road, Holden, Worcester County, Massachusetts, 01520, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:14.584988+00:00",
+  "_kind": "geo_samples"
+}

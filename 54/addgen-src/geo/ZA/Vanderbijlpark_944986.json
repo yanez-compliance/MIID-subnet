@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Vanderbijlpark",
+  "geonameid": 944986,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.696641686530775,
+      "lon": 27.856447805230406,
+      "geoinfo": {
+        "display_name": "Playfair Boulevard, CE4, Emfuleni Ward 9, Emfuleni Local Municipality, Sedibeng District Municipality, Gauteng, 1933, South Africa",
+        "road": "Playfair Boulevard",
+        "house_number": null,
+        "neighbourhood": "CE4",
+        "suburb": null,
+        "city_district": "Emfuleni Ward 9",
+        "city": "Emfuleni Local Municipality",
+        "state": "Gauteng",
+        "postcode": "1933",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Playfair Boulevard, Vanderbijlpark, Gauteng, South Africa"
+    },
+    {
+      "lat": -26.703492442763856,
+      "lon": 27.866133635731842,
+      "geoinfo": {
+        "display_name": "Playfair Boulevard, CE6, Sharpeville, Emfuleni Ward 14, Emfuleni Local Municipality, Sedibeng District Municipality, Gauteng, 1933, South Africa",
+        "road": "Playfair Boulevard",
+        "house_number": null,
+        "neighbourhood": "CE6",
+        "suburb": "Sharpeville",
+        "city_district": "Emfuleni Ward 14",
+        "city": "Emfuleni Local Municipality",
+        "state": "Gauteng",
+        "postcode": "1933",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "479, Playfair Boulevard, Vanderbijlpark, 1933 Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:51:21.470631+00:00",
+  "_kind": "geo_samples"
+}

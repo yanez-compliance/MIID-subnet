@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chino",
+  "geonameid": 5336537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.98319389568715,
+      "lon": -117.72071076158558,
+      "geoinfo": {
+        "display_name": "3826, Buckingham Road, Chino Hills, San Bernardino County, California, 91709, United States",
+        "road": "Buckingham Road",
+        "house_number": "3826",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chino Hills",
+        "state": "California",
+        "postcode": "91709",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3826 Buckingham Road, Chino, California, United States"
+    },
+    {
+      "lat": 34.010677351070505,
+      "lon": -117.69383560623051,
+      "geoinfo": {
+        "display_name": "5071, F Street, Chino, San Bernardino County, California, 91710, United States",
+        "road": "F Street",
+        "house_number": "5071",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chino",
+        "state": "California",
+        "postcode": "91710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5071, F Street, Chino, San Bernardino County, California, 91710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:38.709418+00:00",
+  "_kind": "geo_samples"
+}

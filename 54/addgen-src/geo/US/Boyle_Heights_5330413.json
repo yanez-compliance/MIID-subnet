@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boyle Heights",
+  "geonameid": 5330413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.027631684918234,
+      "lon": -118.19937862592663,
+      "geoinfo": {
+        "display_name": "99 Cents Only Stores, 3451, Whittier Boulevard, Los Angeles, Los Angeles County, California, 90023, United States",
+        "road": "Whittier Boulevard",
+        "house_number": "3451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90023",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3451 Whittier Boulevard, Boyle Heights, California, United States"
+    },
+    {
+      "lat": 33.99089860416821,
+      "lon": -118.19243632500603,
+      "geoinfo": {
+        "display_name": "4071, East 56th Street, Maywood, Los Angeles County, California, 90270, United States",
+        "road": "East 56th Street",
+        "house_number": "4071",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maywood",
+        "state": "California",
+        "postcode": "90270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4071, East 56th Street, Maywood, Los Angeles County, California, 90270, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:08.641299+00:00",
+  "_kind": "geo_samples"
+}

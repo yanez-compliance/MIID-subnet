@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Selama",
+  "geonameid": 1734399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.224231513652177,
+      "lon": 100.66315368483025,
+      "geoinfo": {
+        "display_name": "Kampung Sungai Itam Luar, Bandar Baharu, Kedah, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kedah",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Selama, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.26147430655417,
+      "lon": 100.68022191416759,
+      "geoinfo": {
+        "display_name": "Desa KEDA, Bandar Baharu, Kedah, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Desa KEDA",
+        "state": "Kedah",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "750, Desa KEDA, Bandar Baharu, 27709 Kedah, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:33.353012+00:00",
+  "_kind": "geo_samples"
+}

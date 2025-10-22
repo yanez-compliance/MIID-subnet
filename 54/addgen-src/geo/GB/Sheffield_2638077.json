@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Sheffield",
+  "geonameid": 2638077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.41972173982056,
+      "lon": -1.482889831584603,
+      "geoinfo": {
+        "display_name": "Dryden Avenue, Southey, Sheffield, South Yorkshire, England, S5 8HF, United Kingdom",
+        "road": "Dryden Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southey",
+        "city_district": null,
+        "city": "Sheffield",
+        "state": "England",
+        "postcode": "S5 8HF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Dryden Avenue, Sheffield, England, United Kingdom"
+    },
+    {
+      "lat": 53.34798265604029,
+      "lon": -1.4873884998890976,
+      "geoinfo": {
+        "display_name": "111, Archer Road, Moscar Cottages, Sheffield, South Yorkshire, England, S8 0LB, United Kingdom",
+        "road": "Archer Road",
+        "house_number": "111",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sheffield",
+        "state": "England",
+        "postcode": "S8 0LB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "111, Archer Road, Moscar Cottages, Sheffield, South Yorkshire, England, S8 0LB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:34.367983+00:00",
+  "_kind": "geo_samples"
+}

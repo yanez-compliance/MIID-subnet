@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Suresnes",
+  "geonameid": 2973675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.870364013618,
+      "lon": 2.208585615827043,
+      "geoinfo": {
+        "display_name": "101, Rue des Rosiers, Village Mont-Valérien, Rueil-Malmaison, Arrondissement of Nanterre, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92500, France",
+        "road": "Rue des Rosiers",
+        "house_number": "101",
+        "neighbourhood": null,
+        "suburb": "Village Mont-Valérien",
+        "city_district": null,
+        "city": "Rueil-Malmaison",
+        "state": "Ile-de-France",
+        "postcode": "92500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "101 Rue des Rosiers, Suresnes, Ile-de-France, France"
+    },
+    {
+      "lat": 48.84404333962561,
+      "lon": 2.2735900973887015,
+      "geoinfo": {
+        "display_name": "Port de Javel-Bas, Rue Leblanc, Quartier de Javel, 15th Arrondissement, Paris, Metropolitan France, 75015, France",
+        "road": "Rue Leblanc",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "15th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75015",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Port de Javel-Bas, Rue Leblanc, Quartier de Javel, 15th Arrondissement, Paris, Metropolitan France, 75015, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:42.907231+00:00",
+  "_kind": "geo_samples"
+}

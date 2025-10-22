@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Futian",
+  "geonameid": 8398677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.265065997051913,
+      "lon": 109.70146261558291,
+      "geoinfo": {
+        "display_name": "G347, Wushan County, Chongqing, China",
+        "road": "G347",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G347, Futian, Chongqing, China"
+    },
+    {
+      "lat": 31.202533934847818,
+      "lon": 109.72590580197262,
+      "geoinfo": {
+        "display_name": "Futian, Wushan County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Futian",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "532, Futian, Wushan County, 21723 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:48.236638+00:00",
+  "_kind": "geo_samples"
+}

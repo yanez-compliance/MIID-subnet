@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Viry-Châtillon",
+  "geonameid": 2967917,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.66056469586506,
+      "lon": 2.3835353119362392,
+      "geoinfo": {
+        "display_name": "Rue du 8 Mai 1945, Quartier des Solstices, Grigny, Évry, Essonne, Metropolitan France, 91350, France",
+        "road": "Rue du 8 Mai 1945",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grigny",
+        "state": null,
+        "postcode": "91350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du 8 Mai 1945, Viry-Châtillon, Ile-de-France, France"
+    },
+    {
+      "lat": 48.69339496449518,
+      "lon": 2.385221892570725,
+      "geoinfo": {
+        "display_name": "11, Rue Marguerite, Val, Athis-Mons, Palaiseau, Essonne, Metropolitan France, 91200, France",
+        "road": "Rue Marguerite",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athis-Mons",
+        "state": null,
+        "postcode": "91200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "11, Rue Marguerite, Val, Athis-Mons, Palaiseau, Essonne, Metropolitan France, 91200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:33.255979+00:00",
+  "_kind": "geo_samples"
+}

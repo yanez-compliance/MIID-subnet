@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Vynnyky",
+  "geonameid": 689564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.80175992104042,
+      "lon": 24.138486324499944,
+      "geoinfo": {
+        "display_name": "28, Ivana Boberskoho Street, Chyshky, Davydiv Rural Hromada, Lviv Raion, Lviv Oblast, 81144, Ukraine",
+        "road": "Ivana Boberskoho Street",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chyshky",
+        "state": "Lviv Oblast",
+        "postcode": "81144",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "28 Ivana Boberskoho Street, Vynnyky, Lviv Oblast, Ukraine"
+    },
+    {
+      "lat": 49.838404914229976,
+      "lon": 24.10191239695171,
+      "geoinfo": {
+        "display_name": "Velyki Kryvchytsi, Lviv, Lviv Urban Hromada, Lviv Raion, Lviv Oblast, 79067, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Velyki Kryvchytsi",
+        "city_district": null,
+        "city": "Lviv",
+        "state": "Lviv Oblast",
+        "postcode": "79067",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "358, Velyki Kryvchytsi, Lviv, Lviv Urban Hromada, Lviv Raion, Lviv Oblast, 79067, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T06:00:19.226879+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Gönen",
+  "geonameid": 746574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.08865571121962,
+      "lon": 27.65907958523007,
+      "geoinfo": {
+        "display_name": "7002 Cadde, Plevne Mahallesi, Gönen, Balıkesir, Marmara Region, 10900, Turkey",
+        "road": "7002 Cadde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Plevne Mahallesi",
+        "city_district": null,
+        "city": "Gönen",
+        "state": null,
+        "postcode": "10900",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "7002 Cadde, Gönen, Turkey"
+    },
+    {
+      "lat": 40.07424613814148,
+      "lon": 27.65721324671026,
+      "geoinfo": {
+        "display_name": "Plevne Mahallesi, Gönen, Balıkesir, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Plevne Mahallesi",
+        "city_district": null,
+        "city": "Gönen",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "985, Plevne Mahallesi, Gönen, Balıkesir, 97602 Marmara Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:59.306037+00:00",
+  "_kind": "geo_samples"
+}

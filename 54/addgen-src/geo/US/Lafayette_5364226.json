@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lafayette",
+  "geonameid": 5364226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.91758592343982,
+      "lon": -122.09959272126858,
+      "geoinfo": {
+        "display_name": "1487, Pleasant Hill Road, Walnut Creek, Contra Costa County, California, 94549, United States",
+        "road": "Pleasant Hill Road",
+        "house_number": "1487",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walnut Creek",
+        "state": "California",
+        "postcode": "94549",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1487 Pleasant Hill Road, Lafayette, California, United States"
+    },
+    {
+      "lat": 37.925075425120355,
+      "lon": -122.09212575798482,
+      "geoinfo": {
+        "display_name": "1577, Pleasant Hill Road, Palos Verdes Mall, Walnut Creek, Contra Costa County, California, 94549, United States",
+        "road": "Pleasant Hill Road",
+        "house_number": "1577",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walnut Creek",
+        "state": "California",
+        "postcode": "94549",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1577, Pleasant Hill Road, Palos Verdes Mall, Walnut Creek, Contra Costa County, California, 94549, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:22.203997+00:00",
+  "_kind": "geo_samples"
+}

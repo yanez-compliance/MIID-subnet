@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Riverdale",
+  "geonameid": 4353925,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.98339641911928,
+      "lon": -76.89165049794778,
+      "geoinfo": {
+        "display_name": "Baltimore-Washington Parkway, Greenbelt, Prince George's County, Maryland, 20052, United States",
+        "road": "Baltimore-Washington Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenbelt",
+        "state": "Maryland",
+        "postcode": "20052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Baltimore-Washington Parkway, East Riverdale, Maryland, United States"
+    },
+    {
+      "lat": 38.954324509372235,
+      "lon": -76.96718808295546,
+      "geoinfo": {
+        "display_name": "5462, Jamestown Road, Kirkwood, Hyattsville, Prince George's County, Maryland, 20782, United States",
+        "road": "Jamestown Road",
+        "house_number": "5462",
+        "neighbourhood": "Kirkwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hyattsville",
+        "state": "Maryland",
+        "postcode": "20782",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5462, Jamestown Road, Kirkwood, Hyattsville, Prince George's County, Maryland, 20782, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:15.714546+00:00",
+  "_kind": "geo_samples"
+}

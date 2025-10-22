@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alice",
+  "geonameid": 4670234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.723959887005016,
+      "lon": -98.09644575349492,
+      "geoinfo": {
+        "display_name": "County Road 129, Holshouser Number 3 Colonia, Hawks Addition Colonia, Jim Wells County, Texas, 78333, United States",
+        "road": "County Road 129",
+        "house_number": null,
+        "neighbourhood": "Holshouser Number 3 Colonia",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78333",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 129, Alice, Texas, United States"
+    },
+    {
+      "lat": 27.724897847987485,
+      "lon": -98.06400295033853,
+      "geoinfo": {
+        "display_name": "Garcia Elementary School, 3051, Old Kingsville Road, Alice, Jim Wells County, Texas, 78332, United States",
+        "road": "Old Kingsville Road",
+        "house_number": "3051",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alice",
+        "state": "Texas",
+        "postcode": "78332",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Garcia Elementary School, 3051, Old Kingsville Road, Alice, Jim Wells County, Texas, 78332, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:15.420881+00:00",
+  "_kind": "geo_samples"
+}

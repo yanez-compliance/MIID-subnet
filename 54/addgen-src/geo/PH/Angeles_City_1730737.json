@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Angeles City",
+  "geonameid": 1730737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.164474288018058,
+      "lon": 120.54986485388994,
+      "geoinfo": {
+        "display_name": "Manuel A. Roxas Highway, Mabalacat, Pampanga, Central Luzon, 2023, Philippines",
+        "road": "Manuel A. Roxas Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mabalacat",
+        "state": "Pampanga",
+        "postcode": "2023",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Manuel A. Roxas Highway, Angeles City, Pampanga, Philippines"
+    },
+    {
+      "lat": 15.132375467422275,
+      "lon": 120.60115970321928,
+      "geoinfo": {
+        "display_name": "Purok 2, Angeles, Central Luzon, 2001, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Purok 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Angeles",
+        "state": null,
+        "postcode": "2001",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Purok 2, 2001 Angeles City, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T09:06:00.238123+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Taverny",
+  "geonameid": 2973258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.04375688580199,
+      "lon": 2.2468520754308043,
+      "geoinfo": {
+        "display_name": "Route des Fonds, Les Coudrées, Taverny, Argenteuil, Val-d'Oise, Ile-de-France, Metropolitan France, 95150, France",
+        "road": "Route des Fonds",
+        "house_number": null,
+        "neighbourhood": "Les Coudrées",
+        "suburb": null,
+        "city_district": null,
+        "city": "Taverny",
+        "state": "Ile-de-France",
+        "postcode": "95150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route des Fonds, Taverny, Ile-de-France, France"
+    },
+    {
+      "lat": 49.00810807158591,
+      "lon": 2.1698880778713736,
+      "geoinfo": {
+        "display_name": "Boulevard du Havre, ZAC de la Patte d'Oie, Herblay-sur-Seine, Argenteuil, Val-d'Oise, Ile-de-France, Metropolitan France, 95220, France",
+        "road": "Boulevard du Havre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "ZAC de la Patte d'Oie",
+        "city_district": null,
+        "city": "Herblay-sur-Seine",
+        "state": "Ile-de-France",
+        "postcode": "95220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "505, Boulevard du Havre, ZAC de la Patte d'Oie, Herblay-sur-Seine, Argenteuil, Val-d'Oise, Ile-de-France, Metropolitan France, 95220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:28.809929+00:00",
+  "_kind": "geo_samples"
+}

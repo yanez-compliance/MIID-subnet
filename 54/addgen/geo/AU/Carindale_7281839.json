@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Carindale",
+  "geonameid": 7281839,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.517208524708334,
+      "lon": 153.1030152065493,
+      "geoinfo": {
+        "display_name": "Pacific Golf Club, 430, Pine Mountain Road, Carindale, Mansfield, Greater Brisbane, Queensland, 4152, Australia",
+        "road": "Pine Mountain Road",
+        "house_number": "430",
+        "neighbourhood": null,
+        "suburb": "Carindale",
+        "city_district": "Mansfield",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4152",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "430 Pine Mountain Road, Carindale, Queensland, Australia"
+    },
+    {
+      "lat": -27.523382531323698,
+      "lon": 153.06301645913214,
+      "geoinfo": {
+        "display_name": "32, Iveagh Avenue, Holland Park West, City of Brisbane, Queensland, 4121, Australia",
+        "road": "Iveagh Avenue",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Holland Park West",
+        "city_district": "Holland Park West",
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4121",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "32, Iveagh Avenue, Holland Park West, City of Brisbane, Queensland, 4121, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:36.538188+00:00",
+  "_kind": "geo_samples"
+}

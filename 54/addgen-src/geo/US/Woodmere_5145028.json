@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodmere",
+  "geonameid": 5145028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.62233178149577,
+      "lon": -73.73996319565286,
+      "geoinfo": {
+        "display_name": "133, West End Avenue, North Lawrence, Inwood, Town of Hempstead, Nassau County, New York, 11096, United States",
+        "road": "West End Avenue",
+        "house_number": "133",
+        "neighbourhood": "North Lawrence",
+        "suburb": null,
+        "city_district": null,
+        "city": "Inwood",
+        "state": "New York",
+        "postcode": "11096",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "133 West End Avenue, Woodmere, New York, United States"
+    },
+    {
+      "lat": 40.626927489275346,
+      "lon": -73.73017728479962,
+      "geoinfo": {
+        "display_name": "428, Arlington Road, Village of Cedarhurst, Town of Hempstead, Nassau County, New York, 11516, United States",
+        "road": "Arlington Road",
+        "house_number": "428",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Cedarhurst",
+        "state": "New York",
+        "postcode": "11516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "428, Arlington Road, Village of Cedarhurst, Town of Hempstead, Nassau County, New York, 11516, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:45.588582+00:00",
+  "_kind": "geo_samples"
+}

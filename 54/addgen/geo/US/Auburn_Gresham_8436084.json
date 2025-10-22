@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn Gresham",
+  "geonameid": 8436084,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.719047502495805,
+      "lon": -87.67314903735368,
+      "geoinfo": {
+        "display_name": "9601, South Seeley Avenue, Beverly, Chicago, Lake Township, Cook County, Illinois, 60643, United States",
+        "road": "South Seeley Avenue",
+        "house_number": "9601",
+        "neighbourhood": null,
+        "suburb": "Beverly",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60643",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9601 South Seeley Avenue, Auburn Gresham, Illinois, United States"
+    },
+    {
+      "lat": 41.72820553047534,
+      "lon": -87.6840856892471,
+      "geoinfo": {
+        "display_name": "91st Street, Worth Township, Cook County, Illinois, 60805, United States",
+        "road": "91st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "91st Street, Worth Township, Cook County, Illinois, 60805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:47.719274+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norwalk",
+  "geonameid": 5377995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.878197812303874,
+      "lon": -118.08577864326533,
+      "geoinfo": {
+        "display_name": "John H. Niemes Elementary School, 16715, Jersey Avenue, Artesia, Los Angeles County, California, 90703, United States",
+        "road": "Jersey Avenue",
+        "house_number": "16715",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Artesia",
+        "state": "California",
+        "postcode": "90703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16715 Jersey Avenue, Norwalk, California, United States"
+    },
+    {
+      "lat": 33.92839408458041,
+      "lon": -118.05771182620772,
+      "geoinfo": {
+        "display_name": "11360, Greenstone Avenue, Santa Fe Springs, Los Angeles County, California, 90670, United States",
+        "road": "Greenstone Avenue",
+        "house_number": "11360",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Fe Springs",
+        "state": "California",
+        "postcode": "90670",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11360, Greenstone Avenue, Santa Fe Springs, Los Angeles County, California, 90670, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:20.196232+00:00",
+  "_kind": "geo_samples"
+}

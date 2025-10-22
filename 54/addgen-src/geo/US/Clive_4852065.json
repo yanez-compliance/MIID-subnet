@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clive",
+  "geonameid": 4852065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.601685392494545,
+      "lon": -93.72480214819312,
+      "geoinfo": {
+        "display_name": "1320, Northwest 78th Street, Clive, Polk County, Iowa, 50325, United States",
+        "road": "Northwest 78th Street",
+        "house_number": "1320",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clive",
+        "state": "Iowa",
+        "postcode": "50325",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1320 Northwest 78th Street, Clive, Iowa, United States"
+    },
+    {
+      "lat": 41.61393819480861,
+      "lon": -93.73897325303682,
+      "geoinfo": {
+        "display_name": "Clive Public Safety Center, 8800, Hickman Road, Urbandale, Polk County, Iowa, 50322, United States",
+        "road": "Hickman Road",
+        "house_number": "8800",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbandale",
+        "state": "Iowa",
+        "postcode": "50322",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Clive Public Safety Center, 8800, Hickman Road, Urbandale, Polk County, Iowa, 50322, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:38.231304+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Martinez",
+  "geonameid": 5370868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.01490244827196,
+      "lon": -122.14672554580622,
+      "geoinfo": {
+        "display_name": "Rankin Park Trail, Martinez, Contra Costa County, California, 94569, United States",
+        "road": "Rankin Park Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Martinez",
+        "state": "California",
+        "postcode": "94569",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rankin Park Trail, Martinez, California, United States"
+    },
+    {
+      "lat": 38.023287510056356,
+      "lon": -122.15047917169552,
+      "geoinfo": {
+        "display_name": "Pickleweed Trail, Martinez, Contra Costa County, California, 94569, United States",
+        "road": "Pickleweed Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Martinez",
+        "state": "California",
+        "postcode": "94569",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "972, Pickleweed Trail, Martinez, Contra Costa County, California, 94569, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:43.417389+00:00",
+  "_kind": "geo_samples"
+}

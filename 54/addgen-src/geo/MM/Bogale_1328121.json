@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Bogale",
+  "geonameid": 1328121,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 16.326100592612647,
+      "lon": 95.39536262304539,
+      "geoinfo": {
+        "display_name": "Ta Man Chaung, Bogale Township, Pyapon, Ayeyarwady, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ta Man Chaung",
+        "state": "Ayeyarwady",
+        "postcode": null,
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Bogale, Ayeyarwady, Myanmar"
+    },
+    {
+      "lat": 16.28846085482152,
+      "lon": 95.43760311174434,
+      "geoinfo": {
+        "display_name": "NH5, Hpoe Shwe Lone, Bogale Township, Pyapon, Ayeyarwady, Myanmar",
+        "road": "NH5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hpoe Shwe Lone",
+        "state": "Ayeyarwady",
+        "postcode": null,
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "NH5, Bogale, Ayeyarwady, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-16T19:37:56.717624+00:00",
+  "_kind": "geo_samples"
+}

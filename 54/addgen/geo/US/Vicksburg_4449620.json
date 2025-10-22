@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vicksburg",
+  "geonameid": 4449620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.35549473977475,
+      "lon": -90.85019352976981,
+      "geoinfo": {
+        "display_name": "Confederate Avenue, Warren County, Mississippi, 31980, United States",
+        "road": "Confederate Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mississippi",
+        "postcode": "31980",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Confederate Avenue, Vicksburg, Mississippi, United States"
+    },
+    {
+      "lat": 32.36691988150981,
+      "lon": -90.90103983171747,
+      "geoinfo": {
+        "display_name": "Port of Vicksburg, Vicksburg, Warren County, Mississippi, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Port of Vicksburg",
+        "city_district": null,
+        "city": "Vicksburg",
+        "state": "Mississippi",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "125, Port of Vicksburg, Vicksburg, Warren County, 44607 Mississippi, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:12.517186+00:00",
+  "_kind": "geo_samples"
+}

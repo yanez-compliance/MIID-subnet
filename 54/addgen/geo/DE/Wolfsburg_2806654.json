@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wolfsburg",
+  "geonameid": 2806654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.43842529643698,
+      "lon": 10.751025668177537,
+      "geoinfo": {
+        "display_name": "Straße 100, Sandkamp, Wolfsburg, Lower Saxony, 38440, Germany",
+        "road": "Straße 100",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sandkamp",
+        "city_district": null,
+        "city": "Wolfsburg",
+        "state": "Lower Saxony",
+        "postcode": "38440",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Straße 100, Wolfsburg, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.43753806912451,
+      "lon": 10.79735146936716,
+      "geoinfo": {
+        "display_name": "Oebisfelder Straße, Alt-Wolfsburg, Wolfsburg, Lower Saxony, 38440, Germany",
+        "road": "Oebisfelder Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alt-Wolfsburg",
+        "city_district": null,
+        "city": "Wolfsburg",
+        "state": "Lower Saxony",
+        "postcode": "38440",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "442, Oebisfelder Straße, Alt-Wolfsburg, Wolfsburg, Lower Saxony, 38440, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:18.859275+00:00",
+  "_kind": "geo_samples"
+}

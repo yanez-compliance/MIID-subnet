@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Terrell",
+  "geonameid": 4736028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.69453497414815,
+      "lon": -96.28527900743778,
+      "geoinfo": {
+        "display_name": "County Road 301, Terrell, Kaufman County, Texas, 75160, United States",
+        "road": "County Road 301",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terrell",
+        "state": "Texas",
+        "postcode": "75160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 301, Terrell, Texas, United States"
+    },
+    {
+      "lat": 32.74928916148746,
+      "lon": -96.31905171991089,
+      "geoinfo": {
+        "display_name": "Terrell, Kaufman County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terrell",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "160, Terrell, Kaufman County, 30386 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:38.020593+00:00",
+  "_kind": "geo_samples"
+}

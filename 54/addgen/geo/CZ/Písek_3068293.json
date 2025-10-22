@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Písek",
+  "geonameid": 3068293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.298110307177076,
+      "lon": 14.108831661098145,
+      "geoinfo": {
+        "display_name": "ev.52, Zátaví, Kestřany, okres Písek, 397 01, Czechia",
+        "road": null,
+        "house_number": "ev.52",
+        "neighbourhood": null,
+        "suburb": "Zátaví",
+        "city_district": null,
+        "city": "Zátaví",
+        "state": null,
+        "postcode": "397 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Zátaví, Písek, Czechia"
+    },
+    {
+      "lat": 49.28282949316479,
+      "lon": 14.150413896511319,
+      "geoinfo": {
+        "display_name": "Smrkovice, Písek, okres Písek, 397 11, Czechia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Smrkovice",
+        "city_district": null,
+        "city": "Písek",
+        "state": null,
+        "postcode": "397 11",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Smrkovice, Písek, okres Písek, 397 11, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:11.654699+00:00",
+  "_kind": "geo_samples"
+}

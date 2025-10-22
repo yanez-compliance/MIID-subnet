@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Taman Pelangi",
+  "geonameid": 7798288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.4237653454641346,
+      "lon": 102.65185888570973,
+      "geoinfo": {
+        "display_name": "Segamat, Johor, 85200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": "85200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Taman Pelangi, Johor, Malaysia"
+    },
+    {
+      "lat": 2.4485260488182417,
+      "lon": 102.67711067792679,
+      "geoinfo": {
+        "display_name": "Jalan Asahan-Jementah, Bukit Jementah, Jementah, Segamat, Johor, 85200, Malaysia",
+        "road": "Jalan Asahan-Jementah",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jementah",
+        "state": "Johor",
+        "postcode": "85200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "787, Jalan Asahan-Jementah, Bukit Jementah, Jementah, Segamat, Johor, 85200, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:54:31.167931+00:00",
+  "_kind": "geo_samples"
+}

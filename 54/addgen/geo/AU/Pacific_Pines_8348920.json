@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Pacific Pines",
+  "geonameid": 8348920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.918261606497246,
+      "lon": 153.30914129441337,
+      "geoinfo": {
+        "display_name": "Universal Street, Oxenford, Gold Coast City, Queensland, 4210, Australia",
+        "road": "Universal Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oxenford",
+        "city_district": null,
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4210",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Universal Street, Pacific Pines, Queensland, Australia"
+    },
+    {
+      "lat": -27.9315529617494,
+      "lon": 153.27502315755856,
+      "geoinfo": {
+        "display_name": "Maudsland Road, Maudsland, Gold Coast City, Queensland, 4210, Australia",
+        "road": "Maudsland Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maudsland",
+        "city_district": null,
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4210",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "663, Maudsland Road, Maudsland, Gold Coast City, Queensland, 4210, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:44.519713+00:00",
+  "_kind": "geo_samples"
+}

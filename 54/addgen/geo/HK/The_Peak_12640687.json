@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "The Peak",
+  "geonameid": 12640687,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.243620275707805,
+      "lon": 114.1864034198276,
+      "geoinfo": {
+        "display_name": "Island Road, Deep Water Bay, Southern District, Hong Kong Island, Hong Kong, China",
+        "road": "Island Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Deep Water Bay",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Island Road, The Peak, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.223252731357316,
+      "lon": 114.15299563069983,
+      "geoinfo": {
+        "display_name": "Mo Tat New Village, Islands District, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "476, Mo Tat New Village, Islands District, New Territories, 14851 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:15.263682+00:00",
+  "_kind": "geo_samples"
+}

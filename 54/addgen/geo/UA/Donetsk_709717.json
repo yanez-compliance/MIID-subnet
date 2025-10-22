@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Donetsk",
+  "geonameid": 709717,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.05265856046096,
+      "lon": 37.75932455591166,
+      "geoinfo": {
+        "display_name": "Donetsk, Kyivskyi Raion, Донецька міська громада, Донецький район, Donetsk Oblast, 83018, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donetsk",
+        "state": "Donetsk Oblast",
+        "postcode": "83018",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "Donetsk, Donetsk Oblast, Ukraine"
+    },
+    {
+      "lat": 48.03448687190454,
+      "lon": 37.78436902347614,
+      "geoinfo": {
+        "display_name": "Artema Street, Donetsk, Kyivskyi Raion, Донецька міська громада, Донецький район, Donetsk Oblast, 83004, Ukraine",
+        "road": "Artema Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donetsk",
+        "state": "Donetsk Oblast",
+        "postcode": "83004",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "111, Artema Street, Donetsk, Kyivskyi Raion, Донецька міська громада, Донецький район, Donetsk Oblast, 83004, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T10:38:39.299207+00:00",
+  "_kind": "geo_samples"
+}

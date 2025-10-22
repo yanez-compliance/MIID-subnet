@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Orange",
+  "geonameid": 5106298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.79588076991685,
+      "lon": -74.24035842377653,
+      "geoinfo": {
+        "display_name": "148, Long Branch Way, Llewellyn Park, West Orange, Essex County, New Jersey, 07052, United States",
+        "road": "Long Branch Way",
+        "house_number": "148",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Orange",
+        "state": "New Jersey",
+        "postcode": "07052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "148 Long Branch Way, West Orange, New Jersey, United States"
+    },
+    {
+      "lat": 40.77614795350891,
+      "lon": -74.28445588399026,
+      "geoinfo": {
+        "display_name": "8, Cedar Avenue, West Orange, Essex County, New Jersey, 07052, United States",
+        "road": "Cedar Avenue",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Orange",
+        "state": "New Jersey",
+        "postcode": "07052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8, Cedar Avenue, West Orange, Essex County, New Jersey, 07052, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:11.260039+00:00",
+  "_kind": "geo_samples"
+}

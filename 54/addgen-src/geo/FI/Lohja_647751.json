@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Lohja",
+  "geonameid": 647751,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.258700249412435,
+      "lon": 24.08610319687719,
+      "geoinfo": {
+        "display_name": "2a, Runeberginkatu, Moisio, Lohja, Helsinki sub-region, Uusimaa, Mainland Finland, 08100, Finland",
+        "road": "Runeberginkatu",
+        "house_number": "2a",
+        "neighbourhood": null,
+        "suburb": "Moisio",
+        "city_district": "Lohja",
+        "city": "Lohja",
+        "state": "Uusimaa",
+        "postcode": "08100",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "2a Runeberginkatu, Lohja, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.26289379302443,
+      "lon": 23.993935575723338,
+      "geoinfo": {
+        "display_name": "Ruolahdentie, Lohja, Helsinki sub-region, Uusimaa, Mainland Finland, 08450, Finland",
+        "road": "Ruolahdentie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lohja",
+        "city": "Lohja",
+        "state": "Uusimaa",
+        "postcode": "08450",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Ruolahdentie, Lohja, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:58:12.414861+00:00",
+  "_kind": "geo_samples"
+}

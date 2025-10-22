@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Laval",
+  "geonameid": 3005866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.08738055735063,
+      "lon": -0.7863893651147289,
+      "geoinfo": {
+        "display_name": "Boulevard Pierre Elain, Grenoux-Ribaudières, Laval, Mayenne, Pays de la Loire, Metropolitan France, 53000, France",
+        "road": "Boulevard Pierre Elain",
+        "house_number": null,
+        "neighbourhood": "Grenoux-Ribaudières",
+        "suburb": "Grenoux-Ribaudières",
+        "city_district": null,
+        "city": "Laval",
+        "state": "Pays de la Loire",
+        "postcode": "53000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Pierre Elain, Laval, Pays de la Loire, France"
+    },
+    {
+      "lat": 48.048125646429924,
+      "lon": -0.7440703098711507,
+      "geoinfo": {
+        "display_name": "285 bis, Avenue d'Angers, Thévalles, Thévalles-Chartrière, Kellermann, Laval, Mayenne, Pays de la Loire, Metropolitan France, 53000, France",
+        "road": "Avenue d'Angers",
+        "house_number": "285 bis",
+        "neighbourhood": "Thévalles",
+        "suburb": "Kellermann",
+        "city_district": null,
+        "city": "Laval",
+        "state": "Pays de la Loire",
+        "postcode": "53000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "285 bis, Avenue d'Angers, Thévalles, Thévalles-Chartrière, Kellermann, Laval, Mayenne, Pays de la Loire, Metropolitan France, 53000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:49.514601+00:00",
+  "_kind": "geo_samples"
+}

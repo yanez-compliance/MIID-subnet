@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Leatherhead",
+  "geonameid": 2644726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.27666280155588,
+      "lon": -0.36393002776527095,
+      "geoinfo": {
+        "display_name": "Crabtree Close, Great Bookham, Mole Valley, Surrey, England, KT23 4PG, United Kingdom",
+        "road": "Crabtree Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mole Valley",
+        "state": "England",
+        "postcode": "KT23 4PG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Crabtree Close, Leatherhead, England, United Kingdom"
+    },
+    {
+      "lat": 51.25857412616637,
+      "lon": -0.31504715550439405,
+      "geoinfo": {
+        "display_name": "FP 21, Mickleham, Mole Valley, Surrey, England, RH5 6DF, United Kingdom",
+        "road": "FP 21",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mickleham",
+        "city_district": null,
+        "city": "Mole Valley",
+        "state": "England",
+        "postcode": "RH5 6DF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "FP 21, Leatherhead, RH5 6DF England, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:06.606800+00:00",
+  "_kind": "geo_samples"
+}

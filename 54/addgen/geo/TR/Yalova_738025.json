@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Yalova",
+  "geonameid": 738025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.65073380668841,
+      "lon": 29.25837184092448,
+      "geoinfo": {
+        "display_name": "Sevim Göğez Ortaokulu, Fesleğen Sokak, Adnan Menderes Mahallesi, Yalova Belediye sınırı, Yalova Merkez, Yalova, Marmara Region, 77200, Turkey",
+        "road": "Fesleğen Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Adnan Menderes Mahallesi",
+        "city_district": "Yalova Belediye sınırı",
+        "city": "Yalova Merkez",
+        "state": "Yalova",
+        "postcode": "77200",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Fesleğen Sokak, Yalova, Yalova, Turkey"
+    },
+    {
+      "lat": 40.673028911198045,
+      "lon": 29.287433488256468,
+      "geoinfo": {
+        "display_name": "Mehmet Akif Ersoy, Çiftlikköy, Yalova, Marmara Region, 77600, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mehmet Akif Ersoy",
+        "city_district": null,
+        "city": "Çiftlikköy",
+        "state": "Yalova",
+        "postcode": "77600",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "412, Mehmet Akif Ersoy, Çiftlikköy, Yalova, Marmara Region, 77600, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:33.626073+00:00",
+  "_kind": "geo_samples"
+}

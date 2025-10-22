@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Surrey",
+  "geonameid": 6159905,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.068287104279904,
+      "lon": -122.8588064644112,
+      "geoinfo": {
+        "display_name": "Chantrell Hill, Crescent Heights, South Surrey, Surrey, Metro Vancouver Regional District, British Columbia, V4P 2A7, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Crescent Heights",
+        "city_district": "South Surrey",
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V4P 2A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Crescent Heights, Surrey, British Columbia, Canada"
+    },
+    {
+      "lat": 49.072561668320915,
+      "lon": -122.82804511269613,
+      "geoinfo": {
+        "display_name": "14230, Rio Place, Elgin, South Surrey, Surrey, Metro Vancouver Regional District, British Columbia, V4P 1B7, Canada",
+        "road": "Rio Place",
+        "house_number": "14230",
+        "neighbourhood": null,
+        "suburb": "Elgin",
+        "city_district": "South Surrey",
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V4P 1B7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "14230, Rio Place, Elgin, South Surrey, Surrey, Metro Vancouver Regional District, British Columbia, V4P 1B7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:29.481667+00:00",
+  "_kind": "geo_samples"
+}

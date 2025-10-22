@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Burunday",
+  "geonameid": 1524958,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.340441449909314,
+      "lon": 76.83308485265647,
+      "geoinfo": {
+        "display_name": "383, Sain street, Alatau District, Almaty, 040707, Kazakhstan",
+        "road": "Sain street",
+        "house_number": "383",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Alatau District",
+        "city": "Almaty",
+        "state": null,
+        "postcode": "040707",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "383, Sain street, Alatau District, Almaty, 040707, Kazakhstan"
+    },
+    {
+      "lat": 43.32032389763957,
+      "lon": 76.83864326969885,
+      "geoinfo": {
+        "display_name": "Alatau District, Almaty, 050065, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Alatau District",
+        "city": "Almaty",
+        "state": null,
+        "postcode": "050065",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "040, Alatau District, Almaty, 050065, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:11.933762+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lampertheim",
+  "geonameid": 2881695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.62341878975958,
+      "lon": 8.460370132655454,
+      "geoinfo": {
+        "display_name": "B 44, Bürstadt, Kreis Bergstraße, Hesse, 68642, Germany",
+        "road": "B 44",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bürstadt",
+        "state": "Hesse",
+        "postcode": "68642",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 44, Lampertheim, Hesse, Germany"
+    },
+    {
+      "lat": 49.57463075006157,
+      "lon": 8.460193312041348,
+      "geoinfo": {
+        "display_name": "Scharhof, Sandhofen-Nord, Sandhofen, Mannheim, Baden-Württemberg, 68307, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sandhofen-Nord",
+        "suburb": "Sandhofen",
+        "city_district": null,
+        "city": "Mannheim",
+        "state": "Baden-Württemberg",
+        "postcode": "68307",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "777, Scharhof, Sandhofen-Nord, Sandhofen, Mannheim, Baden-Württemberg, 68307, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:06.240225+00:00",
+  "_kind": "geo_samples"
+}

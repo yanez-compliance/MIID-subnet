@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Canary Wharf",
+  "geonameid": 6692280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.51497218369482,
+      "lon": -0.032841525458735206,
+      "geoinfo": {
+        "display_name": "101, Rhodeswell Road, Locksley Estate, Limehouse, London Borough of Tower Hamlets, London, Greater London, England, E14 7TW, United Kingdom",
+        "road": "Rhodeswell Road",
+        "house_number": "101",
+        "neighbourhood": "Locksley Estate",
+        "suburb": "Limehouse",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E14 7TW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "101 Rhodeswell Road, Canary Wharf, 55776 England, United Kingdom"
+    },
+    {
+      "lat": 51.5010884840025,
+      "lon": -0.06694231742464446,
+      "geoinfo": {
+        "display_name": "Luna House, 37, Bermondsey Wall West, Butler's Wharf, Bermondsey, London Borough of Southwark, London, Greater London, England, SE16 4RW, United Kingdom",
+        "road": "Bermondsey Wall West",
+        "house_number": "37",
+        "neighbourhood": "Butler's Wharf",
+        "suburb": "Bermondsey",
+        "city_district": "London Borough of Southwark",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE16 4RW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Luna House, 37, Bermondsey Wall West, Butler's Wharf, Bermondsey, London Borough of Southwark, London, Greater London, England, SE16 4RW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:29.968336+00:00",
+  "_kind": "geo_samples"
+}

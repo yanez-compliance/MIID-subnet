@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norland",
+  "geonameid": 4166066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.954909603224987,
+      "lon": -80.23060225992602,
+      "geoinfo": {
+        "display_name": "Lot 15, Northwest 199th Street, Miami Gardens, Miami-Dade County, Florida, 33056, United States",
+        "road": "Northwest 199th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami Gardens",
+        "state": "Florida",
+        "postcode": "33056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northwest 199th Street, Norland, Florida, United States"
+    },
+    {
+      "lat": 25.92385761990527,
+      "lon": -80.225125675933,
+      "geoinfo": {
+        "display_name": "16400, Northwest 15th Avenue, Miami Gardens, Miami-Dade County, Florida, 33169, United States",
+        "road": "Northwest 15th Avenue",
+        "house_number": "16400",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami Gardens",
+        "state": "Florida",
+        "postcode": "33169",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16400, Northwest 15th Avenue, Miami Gardens, Miami-Dade County, Florida, 33169, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:03.373828+00:00",
+  "_kind": "geo_samples"
+}

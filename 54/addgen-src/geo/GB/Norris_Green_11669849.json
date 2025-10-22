@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Norris Green",
+  "geonameid": 11669849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.44408917289957,
+      "lon": -2.910320672507955,
+      "geoinfo": {
+        "display_name": "Hasfield Road, West Derby, Liverpool, Liverpool City Region, England, L11 2TQ, United Kingdom",
+        "road": "Hasfield Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Derby",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L11 2TQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hasfield Road, Norris Green, England, United Kingdom"
+    },
+    {
+      "lat": 53.43358673455719,
+      "lon": -2.9830685957684326,
+      "geoinfo": {
+        "display_name": "Newman Street, Kirkdale, Liverpool, Liverpool City Region, England, L4 1RJ, United Kingdom",
+        "road": "Newman Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kirkdale",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L4 1RJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Newman Street, Kirkdale, Liverpool, Liverpool City Region, England, L4 1RJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:57.757631+00:00",
+  "_kind": "geo_samples"
+}

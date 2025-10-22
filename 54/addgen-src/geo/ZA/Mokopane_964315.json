@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Mokopane",
+  "geonameid": 964315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -24.19628513919421,
+      "lon": 29.002080325426228,
+      "geoinfo": {
+        "display_name": "Lleka Lekalakala Street, Chroom Park, Mogalakwena Ward 31, Mokopane, Mogalakwena Local Municipality, Waterberg District Municipality, Limpopo, 0600, South Africa",
+        "road": "Lleka Lekalakala Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mogalakwena Ward 31",
+        "city_district": null,
+        "city": "Mokopane",
+        "state": "Limpopo",
+        "postcode": "0600",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Lleka Lekalakala Street, Mokopane, Limpopo, South Africa"
+    },
+    {
+      "lat": -24.1898649208885,
+      "lon": 28.969995242862545,
+      "geoinfo": {
+        "display_name": "Mogalakwena Ward 31, Sekgakgapeng, Mogalakwena Local Municipality, Waterberg District Municipality, Limpopo, 0600, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mogalakwena Ward 31",
+        "city_district": null,
+        "city": "Mogalakwena Local Municipality",
+        "state": "Limpopo",
+        "postcode": "0600",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mogalakwena Ward 31, Mokopane, 0600 Limpopo, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:19.700264+00:00",
+  "_kind": "geo_samples"
+}

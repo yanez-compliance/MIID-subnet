@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "'s-Gravenzande",
+  "geonameid": 2747364,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.02881752265507,
+      "lon": 4.124571128103969,
+      "geoinfo": {
+        "display_name": "Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "'s-Gravenzande, The Netherlands"
+    },
+    {
+      "lat": 52.02673670727302,
+      "lon": 4.136697537991548,
+      "geoinfo": {
+        "display_name": "Slag Arendsduin, 's-Gravenzande, Westland, South Holland, Netherlands, 2691 JJ, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "'s-Gravenzande",
+        "state": "South Holland",
+        "postcode": "2691 JJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "967, Slag Arendsduin, 's-Gravenzande, Westland, South Holland, Netherlands, 2691 JJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:11.045343+00:00",
+  "_kind": "geo_samples"
+}

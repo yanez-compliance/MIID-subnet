@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cosamaloapan",
+  "geonameid": 3530177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.36565512192818,
+      "lon": -95.78516324093346,
+      "geoinfo": {
+        "display_name": "Calle Manuel Arróniz C., Cosamaloapan, Cosamaloapan de Carpio, Veracruz, 95400, Mexico",
+        "road": "Calle Manuel Arróniz C.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cosamaloapan",
+        "state": "Veracruz",
+        "postcode": "95400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Manuel Arróniz C., Cosamaloapan, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.407868006553194,
+      "lon": -95.79381635933869,
+      "geoinfo": {
+        "display_name": "Ixmatlahuacan, Veracruz, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ixmatlahuacan",
+        "state": "Veracruz",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "848, Ixmatlahuacan, 64589 Veracruz, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:18.417110+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Paz",
+  "geonameid": 4000900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.15003573575188,
+      "lon": -110.2905663068896,
+      "geoinfo": {
+        "display_name": "Calle Venustiano Carranza, Guadalupe Victoria, La Paz, Municipio de La Paz, Baja California Sur, 23000, Mexico",
+        "road": "Calle Venustiano Carranza",
+        "house_number": null,
+        "neighbourhood": "Guadalupe Victoria",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Paz",
+        "state": "Baja California Sur",
+        "postcode": "23000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Venustiano Carranza, La Paz, Baja California Sur, Mexico"
+    },
+    {
+      "lat": 24.104670391149963,
+      "lon": -110.31112471951367,
+      "geoinfo": {
+        "display_name": "Callejón Correcaminos, La Paz, Municipio de La Paz, Baja California Sur, 23083, Mexico",
+        "road": "Callejón Correcaminos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Paz",
+        "state": "Baja California Sur",
+        "postcode": "23083",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "165, Callejón Correcaminos, La Paz, Municipio de La Paz, Baja California Sur, 23083, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:24.207724+00:00",
+  "_kind": "geo_samples"
+}

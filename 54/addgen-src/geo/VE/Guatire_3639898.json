@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Guatire",
+  "geonameid": 3639898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.473821830035812,
+      "lon": -66.57920588201789,
+      "geoinfo": {
+        "display_name": "Carretera Guarenas - Guatire, Urbanización Las Mesetas, Los Flores, Parroquia Guatire, Municipio Zamora, Miranda State, 1221, Venezuela",
+        "road": "Carretera Guarenas - Guatire",
+        "house_number": null,
+        "neighbourhood": "Urbanización Las Mesetas",
+        "suburb": "Los Flores",
+        "city_district": null,
+        "city": "Parroquia Guatire",
+        "state": "Miranda State",
+        "postcode": "1221",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Carretera Guarenas - Guatire, Guatire, Miranda State, Venezuela"
+    },
+    {
+      "lat": 10.507014125366101,
+      "lon": -66.57015769829955,
+      "geoinfo": {
+        "display_name": "Los Mangos, San José, Parroquia Guatire, Municipio Zamora, Miranda State, 1221, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Los Mangos",
+        "suburb": "San José",
+        "city_district": null,
+        "city": "Parroquia Guatire",
+        "state": "Miranda State",
+        "postcode": "1221",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "574, Los Mangos, San José, Parroquia Guatire, Municipio Zamora, Miranda State, 1221, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:39.289143+00:00",
+  "_kind": "geo_samples"
+}

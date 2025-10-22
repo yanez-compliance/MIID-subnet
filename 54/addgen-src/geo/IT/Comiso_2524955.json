@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Comiso",
+  "geonameid": 2524955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.97086894853004,
+      "lon": 14.63823075357491,
+      "geoinfo": {
+        "display_name": "Ragusa, Sicily, 97013, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ragusa",
+        "state": "Sicily",
+        "postcode": "97013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Comiso, Sicily, Italy"
+    },
+    {
+      "lat": 36.945006526046484,
+      "lon": 14.607591932103475,
+      "geoinfo": {
+        "display_name": "Via Principessa Elena, Comiso, Ragusa, Sicily, 97013, Italy",
+        "road": "Via Principessa Elena",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Comiso",
+        "state": "Sicily",
+        "postcode": "97013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "006, Via Principessa Elena, Comiso, Ragusa, Sicily, 97013, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:01.376462+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Isidro",
+  "geonameid": 8858095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.317385763393478,
+      "lon": -98.92779162033456,
+      "geoinfo": {
+        "display_name": "Ixtapaluca, State of Mexico, 56577, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ixtapaluca",
+        "state": "State of Mexico",
+        "postcode": "56577",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Isidro, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.361204647865218,
+      "lon": -98.96447332453033,
+      "geoinfo": {
+        "display_name": "Avenida Puebla, Los Reyes Acaquilpan, La Paz, State of Mexico, 56500, Mexico",
+        "road": "Avenida Puebla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Reyes Acaquilpan",
+        "state": "State of Mexico",
+        "postcode": "56500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "568, Avenida Puebla, Los Reyes Acaquilpan, La Paz, State of Mexico, 56500, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:10.037621+00:00",
+  "_kind": "geo_samples"
+}

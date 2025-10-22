@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashtabula",
+  "geonameid": 5146089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.843139248186425,
+      "lon": -80.80220092625864,
+      "geoinfo": {
+        "display_name": "Austinburg Road, Ashtabula, Ashtabula Township, Ashtabula County, Ohio, 44004, United States",
+        "road": "Austinburg Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashtabula",
+        "state": "Ohio",
+        "postcode": "44004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Austinburg Road, Ashtabula, Ohio, United States"
+    },
+    {
+      "lat": 41.891821114478105,
+      "lon": -80.77100140073748,
+      "geoinfo": {
+        "display_name": "Middle Road, Ashtabula Township, Ashtabula County, Ohio, 44005, United States",
+        "road": "Middle Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "761, Middle Road, Ashtabula Township, Ashtabula County, Ohio, 44005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:21.846404+00:00",
+  "_kind": "geo_samples"
+}

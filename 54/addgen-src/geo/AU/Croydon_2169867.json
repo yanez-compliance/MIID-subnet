@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Croydon",
+  "geonameid": 2169867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.81754090960222,
+      "lon": 145.28378932561196,
+      "geoinfo": {
+        "display_name": "22, Homer Avenue, Croydon South, Melbourne, City of Maroondah, Victoria, 3136, Australia",
+        "road": "Homer Avenue",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Croydon South",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3136",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "22 Homer Avenue, Croydon, Victoria, Australia"
+    },
+    {
+      "lat": -37.80479518482307,
+      "lon": 145.23674301346668,
+      "geoinfo": {
+        "display_name": "Mullum Mullum Road, Ringwood, Melbourne, City of Maroondah, Victoria, 3134, Australia",
+        "road": "Mullum Mullum Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ringwood",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3134",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "318, Mullum Mullum Road, Ringwood, Melbourne, City of Maroondah, Victoria, 3134, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:50.230441+00:00",
+  "_kind": "geo_samples"
+}

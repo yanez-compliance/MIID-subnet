@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Baumschulenweg",
+  "geonameid": 2951935,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.441460251356304,
+      "lon": 13.488201515696955,
+      "geoinfo": {
+        "display_name": "7, Am Buckersberg, Späthsfelde, Baumschulenweg, Treptow-Köpenick, Berlin, 12487, Germany",
+        "road": "Am Buckersberg",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Baumschulenweg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12487",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Am Buckersberg, Baumschulenweg, Germany"
+    },
+    {
+      "lat": 52.454447669472906,
+      "lon": 13.482388207928336,
+      "geoinfo": {
+        "display_name": "Königsheideweg, Späthsfelde, Baumschulenweg, Treptow-Köpenick, Berlin, 12437, Germany",
+        "road": "Königsheideweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baumschulenweg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12437",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "695, Königsheideweg, Späthsfelde, Baumschulenweg, Treptow-Köpenick, Berlin, 12437, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:05.704299+00:00",
+  "_kind": "geo_samples"
+}

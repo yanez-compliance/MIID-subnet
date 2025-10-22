@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Buseresere",
+  "geonameid": 160833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -3.070406315842238,
+      "lon": 31.911487520923483,
+      "geoinfo": {
+        "display_name": "Geita, Lake Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Geita",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "Buseresere, Geita, Tanzania"
+    },
+    {
+      "lat": -3.0404318859743378,
+      "lon": 31.92198018770534,
+      "geoinfo": {
+        "display_name": "Katoro, Geita, Lake Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katoro",
+        "state": "Geita",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "123, Katoro, Geita, 39889 Lake Zone, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:21.408006+00:00",
+  "_kind": "geo_samples"
+}

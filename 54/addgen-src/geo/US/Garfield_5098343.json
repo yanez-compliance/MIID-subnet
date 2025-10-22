@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garfield",
+  "geonameid": 5098343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.875063291361975,
+      "lon": -74.11856497979296,
+      "geoinfo": {
+        "display_name": "NJ 21, Passaic, Passaic County, New Jersey, 07026, United States",
+        "road": "NJ 21",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Passaic",
+        "state": "New Jersey",
+        "postcode": "07026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NJ 21, Garfield, New Jersey, United States"
+    },
+    {
+      "lat": 40.873758100557744,
+      "lon": -74.15404070911117,
+      "geoinfo": {
+        "display_name": "354, Harding Avenue, Clifton, Passaic County, New Jersey, 07011, United States",
+        "road": "Harding Avenue",
+        "house_number": "354",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clifton",
+        "state": "New Jersey",
+        "postcode": "07011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "354, Harding Avenue, Clifton, Passaic County, New Jersey, 07011, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:07.231696+00:00",
+  "_kind": "geo_samples"
+}

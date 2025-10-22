@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clarksdale",
+  "geonameid": 4421935,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.19584421333486,
+      "lon": -90.56078138364394,
+      "geoinfo": {
+        "display_name": "785, Garfield Street, Myrtle Hall, Clarksdale, Coahoma County, Mississippi, 38614, United States",
+        "road": "Garfield Street",
+        "house_number": "785",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksdale",
+        "state": "Mississippi",
+        "postcode": "38614",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "785 Garfield Street, Clarksdale, Mississippi, United States"
+    },
+    {
+      "lat": 34.187118430744114,
+      "lon": -90.537169600501,
+      "geoinfo": {
+        "display_name": "Little Simmons Road, Clarksdale, Coahoma County, Mississippi, 38614, United States",
+        "road": "Little Simmons Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksdale",
+        "state": "Mississippi",
+        "postcode": "38614",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "932, Little Simmons Road, Clarksdale, Coahoma County, Mississippi, 38614, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:49.774844+00:00",
+  "_kind": "geo_samples"
+}

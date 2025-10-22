@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saskatoon",
+  "geonameid": 6141256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.13883716377541,
+      "lon": -106.61264532786868,
+      "geoinfo": {
+        "display_name": "Circle Drive, U of S Lands Management Area, University, Saskatoon, Saskatchewan, S7N 1R6, Canada",
+        "road": "Circle Drive",
+        "house_number": null,
+        "neighbourhood": "U of S Lands Management Area",
+        "suburb": "University",
+        "city_district": null,
+        "city": "Saskatoon",
+        "state": "Saskatchewan",
+        "postcode": "S7N 1R6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Circle Drive, Saskatoon, Saskatchewan, Canada"
+    },
+    {
+      "lat": 52.16298085775467,
+      "lon": -106.67094193882173,
+      "geoinfo": {
+        "display_name": "Cynthia Street, Airport Business Area, Saskatoon, Saskatchewan, S7L 5X5, Canada",
+        "road": "Cynthia Street",
+        "house_number": null,
+        "neighbourhood": "Airport Business Area",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saskatoon",
+        "state": "Saskatchewan",
+        "postcode": "S7L 5X5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Cynthia Street, Airport Business Area, Saskatoon, Saskatchewan, S7L 5X5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:12.822411+00:00",
+  "_kind": "geo_samples"
+}

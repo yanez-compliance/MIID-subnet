@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Råsunda",
+  "geonameid": 2683034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.36524055209204,
+      "lon": 18.00819240731655,
+      "geoinfo": {
+        "display_name": "Dalvägen, Vasalund, Hagalund, Solna, Solna kommun, Stockholm County, 171 22, Sweden",
+        "road": "Dalvägen",
+        "house_number": null,
+        "neighbourhood": "Vasalund",
+        "suburb": "Hagalund",
+        "city_district": null,
+        "city": "Solna",
+        "state": null,
+        "postcode": "171 22",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Dalvägen, Råsunda, Sweden"
+    },
+    {
+      "lat": 59.39245809886508,
+      "lon": 17.990705997270307,
+      "geoinfo": {
+        "display_name": "Sollentunavägen, Nya Ulriksdal, Solna kommun, Stockholm County, 170 67, Sweden",
+        "road": "Sollentunavägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nya Ulriksdal",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "170 67",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Sollentunavägen, Nya Ulriksdal, Solna kommun, Stockholm County, 170 67, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:51.059150+00:00",
+  "_kind": "geo_samples"
+}

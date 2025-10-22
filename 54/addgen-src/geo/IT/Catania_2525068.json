@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Catania",
+  "geonameid": 2525068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.51972046904545,
+      "lon": 15.060445732094978,
+      "geoinfo": {
+        "display_name": "Viale Antoniotto Usodimare, San Nullo, San Giovanni Galermo-Trappeto-Cibali, Catania, Sicily, 95123, Italy",
+        "road": "Viale Antoniotto Usodimare",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Giovanni Galermo-Trappeto-Cibali",
+        "city_district": null,
+        "city": "Catania",
+        "state": "Sicily",
+        "postcode": "95123",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Viale Antoniotto Usodimare, Catania, Sicily, Italy"
+    },
+    {
+      "lat": 37.52430097192822,
+      "lon": 15.032828174744523,
+      "geoinfo": {
+        "display_name": "Via Federico De Roberto, Monte Palma, Lineri, Misterbianco, Catania, Sicily, 95045, Italy",
+        "road": "Via Federico De Roberto",
+        "house_number": null,
+        "neighbourhood": "Monte Palma",
+        "suburb": "Lineri",
+        "city_district": null,
+        "city": "Misterbianco",
+        "state": "Sicily",
+        "postcode": "95045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "499, Via Federico De Roberto, Monte Palma, Lineri, Misterbianco, Catania, Sicily, 95045, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:30.209442+00:00",
+  "_kind": "geo_samples"
+}

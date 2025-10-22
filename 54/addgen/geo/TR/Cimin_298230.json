@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Cimin",
+  "geonameid": 298230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.70067123787357,
+      "lon": 39.65575416451661,
+      "geoinfo": {
+        "display_name": "Çadırtepe, Üzümlü, Erzincan, Eastern Anatolia Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Üzümlü",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Cimin, Turkey"
+    },
+    {
+      "lat": 39.68007226617953,
+      "lon": 39.69366176351928,
+      "geoinfo": {
+        "display_name": "Terzibaba Mah., Altınbaşak, Üzümlü, Erzincan, Eastern Anatolia Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Terzibaba Mah.",
+        "city_district": null,
+        "city": "Üzümlü",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "240, Terzibaba Mah., 04144 Cimin, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:11.565045+00:00",
+  "_kind": "geo_samples"
+}

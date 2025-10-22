@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Kerkrade",
+  "geonameid": 2752923,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.889335359347726,
+      "lon": 6.069750638305019,
+      "geoinfo": {
+        "display_name": "5, Kapelaan Friedrichsstraat, Vink, Kerkrade, Limburg, Netherlands, 6464 DZ, Netherlands",
+        "road": "Kapelaan Friedrichsstraat",
+        "house_number": "5",
+        "neighbourhood": "Vink",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kerkrade",
+        "state": "Limburg",
+        "postcode": "6464 DZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "5 Kapelaan Friedrichsstraat, Kerkrade, Limburg, The Netherlands"
+    },
+    {
+      "lat": 50.878395320879754,
+      "lon": 6.004998744017811,
+      "geoinfo": {
+        "display_name": "Stadionbaan, Schiffelerveld, Onderste Caumer, Heerlen, Limburg, Netherlands, 6416 CS, Netherlands",
+        "road": "Stadionbaan",
+        "house_number": null,
+        "neighbourhood": "Schiffelerveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Heerlen",
+        "state": "Limburg",
+        "postcode": "6416 CS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "548, Stadionbaan, Schiffelerveld, Onderste Caumer, Heerlen, Limburg, Netherlands, 6416 CS, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:17.664936+00:00",
+  "_kind": "geo_samples"
+}

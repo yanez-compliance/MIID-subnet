@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wilmersdorf",
+  "geonameid": 2808473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.48919790254297,
+      "lon": 13.30365763512633,
+      "geoinfo": {
+        "display_name": "46, Hohenzollerndamm, Wilmersdorf, Charlottenburg-Wilmersdorf, Berlin, 10713, Germany",
+        "road": "Hohenzollerndamm",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": "Wilmersdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10713",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "46 Hohenzollerndamm, Wilmersdorf, Germany"
+    },
+    {
+      "lat": 52.45462782709174,
+      "lon": 13.356454968374429,
+      "geoinfo": {
+        "display_name": "15a, Karl-Fischer-Weg, Südende, Steglitz, Steglitz-Zehlendorf, Berlin, 12169, Germany",
+        "road": "Karl-Fischer-Weg",
+        "house_number": "15a",
+        "neighbourhood": null,
+        "suburb": "Steglitz",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12169",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15a, Karl-Fischer-Weg, Südende, Steglitz, Steglitz-Zehlendorf, Berlin, 12169, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:00.475743+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fellbach",
+  "geonameid": 2927268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.82548564159386,
+      "lon": 9.286073354215915,
+      "geoinfo": {
+        "display_name": "Stauferstraße, Schmiden, Fellbach, Rems-Murr-Kreis, Baden-Württemberg, 70736, Germany",
+        "road": "Stauferstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Schmiden",
+        "city_district": null,
+        "city": "Fellbach",
+        "state": "Baden-Württemberg",
+        "postcode": "70736",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Stauferstraße, Fellbach, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.81781286592954,
+      "lon": 9.250936389921563,
+      "geoinfo": {
+        "display_name": "19, Hortensienweg, Sommerrain, Bad Cannstatt, Stuttgart, Baden-Württemberg, 70374, Germany",
+        "road": "Hortensienweg",
+        "house_number": "19",
+        "neighbourhood": "Sommerrain",
+        "suburb": "Bad Cannstatt",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70374",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19, Hortensienweg, Sommerrain, Bad Cannstatt, Stuttgart, Baden-Württemberg, 70374, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:22.068086+00:00",
+  "_kind": "geo_samples"
+}

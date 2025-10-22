@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Katihar",
+  "geonameid": 1267480,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.56733556903659,
+      "lon": 87.57177877369354,
+      "geoinfo": {
+        "display_name": "Katihar, Bihar, 854101, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katihar",
+        "state": "Bihar",
+        "postcode": "854101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Katihar, Bihar, India"
+    },
+    {
+      "lat": 25.583203127012336,
+      "lon": 87.57353565722897,
+      "geoinfo": {
+        "display_name": "New Market Road, Katihar, Bihar, 854101, India",
+        "road": "New Market Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katihar",
+        "state": "Bihar",
+        "postcode": "854101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "554, New Market Road, Katihar, Bihar, 854101, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:57.481636+00:00",
+  "_kind": "geo_samples"
+}

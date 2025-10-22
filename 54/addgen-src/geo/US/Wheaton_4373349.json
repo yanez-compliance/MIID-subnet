@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wheaton",
+  "geonameid": 4373349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.038037800691974,
+      "lon": -77.0425794314719,
+      "geoinfo": {
+        "display_name": "11105, Dayton Street, Wheaton Forest, Wheaton, Montgomery County, Maryland, 20902, United States",
+        "road": "Dayton Street",
+        "house_number": "11105",
+        "neighbourhood": "Wheaton Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wheaton",
+        "state": "Maryland",
+        "postcode": "20902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11105 Dayton Street, Wheaton, Maryland, United States"
+    },
+    {
+      "lat": 39.03674879912635,
+      "lon": -77.00670249359254,
+      "geoinfo": {
+        "display_name": "11018, Oakwood Street, Burnt Mills Manor, Burnt Mills, Montgomery County, Maryland, 20901, United States",
+        "road": "Oakwood Street",
+        "house_number": "11018",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burnt Mills",
+        "state": "Maryland",
+        "postcode": "20901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11018, Oakwood Street, Burnt Mills Manor, Burnt Mills, Montgomery County, Maryland, 20901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:25.632800+00:00",
+  "_kind": "geo_samples"
+}

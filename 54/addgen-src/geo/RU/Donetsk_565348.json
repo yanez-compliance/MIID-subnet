@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Donetsk",
+  "geonameid": 565348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.33199324491842,
+      "lon": 39.915194217257316,
+      "geoinfo": {
+        "display_name": "ВГЧС, Donetsk, городской округ Донецк, Rostov Oblast, 346333, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "ВГЧС",
+        "suburb": null,
+        "city_district": null,
+        "city": "Donetsk",
+        "state": "Rostov Oblast",
+        "postcode": "346333",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "ВГЧС, Donetsk, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 48.35423231015691,
+      "lon": 39.985525621173814,
+      "geoinfo": {
+        "display_name": "Donetsk, городской округ Донецк, Rostov Oblast, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donetsk",
+        "state": "Rostov Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "818, Donetsk, городской округ Донецк, 87323 Rostov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:04.829268+00:00",
+  "_kind": "geo_samples"
+}

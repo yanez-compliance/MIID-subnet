@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Pontian Besar",
+  "geonameid": 1732710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.5172542209057418,
+      "lon": 103.3701184944289,
+      "geoinfo": {
+        "display_name": "Pontian, Johor, 82000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pontian",
+        "state": "Johor",
+        "postcode": "82000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Pontian Besar, Johor, Malaysia"
+    },
+    {
+      "lat": 1.4904824874286158,
+      "lon": 103.39213802112847,
+      "geoinfo": {
+        "display_name": "Lorong Lee Pee, Pontian Kecil, Pontian, Johor, 82000, Malaysia",
+        "road": "Lorong Lee Pee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pontian Kecil",
+        "city_district": null,
+        "city": "Pontian",
+        "state": "Johor",
+        "postcode": "82000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "637, Lorong Lee Pee, Pontian Kecil, Pontian, Johor, 82000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:32.814075+00:00",
+  "_kind": "geo_samples"
+}

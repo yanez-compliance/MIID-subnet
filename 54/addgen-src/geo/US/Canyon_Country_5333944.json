@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Canyon Country",
+  "geonameid": 5333944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.427308991350685,
+      "lon": -118.50248335951471,
+      "geoinfo": {
+        "display_name": "Santa Clara River Trail, Santa Clarita, Los Angeles County, California, 91350, United States",
+        "road": "Santa Clara River Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clarita",
+        "state": "California",
+        "postcode": "91350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Clara River Trail, Canyon Country, California, United States"
+    },
+    {
+      "lat": 34.433546477310855,
+      "lon": -118.5121228868649,
+      "geoinfo": {
+        "display_name": "Santa Clarita, Los Angeles County, California, 91350, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clarita",
+        "state": "California",
+        "postcode": "91350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "966, Santa Clarita, Los Angeles County, California, 91350, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:34.067857+00:00",
+  "_kind": "geo_samples"
+}

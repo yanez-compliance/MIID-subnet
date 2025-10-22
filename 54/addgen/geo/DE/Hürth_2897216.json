@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hürth",
+  "geonameid": 2897216,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.893189714140945,
+      "lon": 6.806101777970352,
+      "geoinfo": {
+        "display_name": "Berrenrather Straße, Bachem, Frechen, Rhein-Erft-Kreis, North Rhine-Westphalia, 50226, Germany",
+        "road": "Berrenrather Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bachem",
+        "city_district": null,
+        "city": "Frechen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50226",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Berrenrather Straße, Hürth, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.9031609679723,
+      "lon": 6.90199188641543,
+      "geoinfo": {
+        "display_name": "A 4, Sülz, Lindenthal, Cologne, North Rhine-Westphalia, 50937, Germany",
+        "road": "A 4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sülz",
+        "city_district": "Lindenthal",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50937",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 4, Sülz, Lindenthal, Cologne, North Rhine-Westphalia, 50937, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:02.260612+00:00",
+  "_kind": "geo_samples"
+}

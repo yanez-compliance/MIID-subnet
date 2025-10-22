@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pittsburgh",
+  "geonameid": 5206379,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.480753044331436,
+      "lon": -79.9922103507908,
+      "geoinfo": {
+        "display_name": "Cemetery Road, Reserve Township, Allegheny County, Pennsylvania, 15214, United States",
+        "road": "Cemetery Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reserve Township",
+        "state": "Pennsylvania",
+        "postcode": "15214",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cemetery Road, Pittsburgh, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.42598907351783,
+      "lon": -79.97532788364641,
+      "geoinfo": {
+        "display_name": "Mary Street, South Side Flats, Pittsburgh, Allegheny County, Pennsylvania, 15203, United States",
+        "road": "Mary Street",
+        "house_number": null,
+        "neighbourhood": "South Side Flats",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "postcode": "15203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "090, Mary Street, South Side Flats, Pittsburgh, Allegheny County, Pennsylvania, 15203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:15.758385+00:00",
+  "_kind": "geo_samples"
+}

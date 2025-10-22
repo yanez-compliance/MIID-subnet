@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Robertson",
+  "geonameid": 3362349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.78575657005527,
+      "lon": 19.920842138582934,
+      "geoinfo": {
+        "display_name": "De Hoop Street, Robertson, Langeberg Local Municipality, Cape Winelands District Municipality, Western Cape, 6705, South Africa",
+        "road": "De Hoop Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Langeberg Local Municipality",
+        "state": "Western Cape",
+        "postcode": "6705",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "De Hoop Street, Robertson, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.83005912876204,
+      "lon": 19.86260787241621,
+      "geoinfo": {
+        "display_name": "Langeberg Ward 5, Robertson, Langeberg Local Municipality, Cape Winelands District Municipality, Western Cape, 6705, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Langeberg Ward 5",
+        "city_district": null,
+        "city": "Langeberg Local Municipality",
+        "state": "Western Cape",
+        "postcode": "6705",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Langeberg Ward 5, Robertson, Langeberg Local Municipality, Cape Winelands District Municipality, Western Cape, 6705, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:57:03.518551+00:00",
+  "_kind": "geo_samples"
+}

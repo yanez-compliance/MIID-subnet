@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Champigny-sur-Marne",
+  "geonameid": 3027105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80358509472175,
+      "lon": 2.5471171048433896,
+      "geoinfo": {
+        "display_name": "Villa Lorraine, Bois l'Abbé, Chennevières-sur-Marne, Créteil, Val-de-Marne, Ile-de-France, Metropolitan France, 94430, France",
+        "road": "Villa Lorraine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bois l'Abbé",
+        "city_district": null,
+        "city": "Chennevières-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "94430",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Villa Lorraine, Champigny-sur-Marne, Ile-de-France, France"
+    },
+    {
+      "lat": 48.77728290577409,
+      "lon": 2.525130818717024,
+      "geoinfo": {
+        "display_name": "Rue du Grand Val, Sucy-en-Brie, Créteil, Val-de-Marne, Metropolitan France, 94370, France",
+        "road": "Rue du Grand Val",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sucy-en-Brie",
+        "state": null,
+        "postcode": "94370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "136, Rue du Grand Val, Sucy-en-Brie, Créteil, Val-de-Marne, Metropolitan France, 94370, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:44.884977+00:00",
+  "_kind": "geo_samples"
+}

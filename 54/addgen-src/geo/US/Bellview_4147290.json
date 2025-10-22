@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellview",
+  "geonameid": 4147290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.45607576006685,
+      "lon": -87.30748675783167,
+      "geoinfo": {
+        "display_name": "5814, Ventura Lane, Avondale, Escambia County, Florida, 32526, United States",
+        "road": "Ventura Lane",
+        "house_number": "5814",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5814 Ventura Lane, Bellview, Florida, United States"
+    },
+    {
+      "lat": 30.459720407351934,
+      "lon": -87.35278240368008,
+      "geoinfo": {
+        "display_name": "Shilston Bridge, Escambia County, Florida, 32526, United States",
+        "road": "Shilston Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "177, Shilston Bridge, Escambia County, Florida, 32526, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:29.428763+00:00",
+  "_kind": "geo_samples"
+}

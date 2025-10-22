@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palisades Park",
+  "geonameid": 5102369,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82888390603588,
+      "lon": -73.99021110620312,
+      "geoinfo": {
+        "display_name": "433, Columbia Avenue, Cliffside Park, Bergen County, New Jersey, 07010, United States",
+        "road": "Columbia Avenue",
+        "house_number": "433",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cliffside Park",
+        "state": "New Jersey",
+        "postcode": "07010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "433 Columbia Avenue, Palisades Park, New Jersey, United States"
+    },
+    {
+      "lat": 40.83237020453845,
+      "lon": -74.01224455342411,
+      "geoinfo": {
+        "display_name": "Hudson Transmission Project, 1, Railroad Avenue, Ridgefield, Bergen County, New Jersey, 97657, United States",
+        "road": "Railroad Avenue",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ridgefield",
+        "state": "New Jersey",
+        "postcode": "97657",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hudson Transmission Project, 1, Railroad Avenue, Ridgefield, Bergen County, New Jersey, 97657, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:46.250807+00:00",
+  "_kind": "geo_samples"
+}

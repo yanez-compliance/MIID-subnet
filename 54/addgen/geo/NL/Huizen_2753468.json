@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Huizen",
+  "geonameid": 2753468,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.304883220827925,
+      "lon": 5.193201508371564,
+      "geoinfo": {
+        "display_name": "Oud Huizerweg, Valkeveen, Naarden, Gooise Meren, North Holland, Netherlands, 1411 GT, Netherlands",
+        "road": "Oud Huizerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naarden",
+        "state": "North Holland",
+        "postcode": "1411 GT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Oud Huizerweg, Huizen, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.27846911979651,
+      "lon": 5.287389141995178,
+      "geoinfo": {
+        "display_name": "Meendijk, Eemnes, Utrecht, Netherlands, 1261 NZ, Netherlands",
+        "road": "Meendijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eemnes",
+        "state": "Utrecht",
+        "postcode": "1261 NZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "237, Meendijk, Eemnes, Utrecht, Netherlands, 1261 NZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:26.247488+00:00",
+  "_kind": "geo_samples"
+}

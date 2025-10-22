@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Florence-Graham",
+  "geonameid": 7261268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.952763065928195,
+      "lon": -118.24484272869763,
+      "geoinfo": {
+        "display_name": "9251, Maie Avenue, Los Angeles, Los Angeles County, California, 90002, United States",
+        "road": "Maie Avenue",
+        "house_number": "9251",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9251 Maie Avenue, Florence-Graham, California, United States"
+    },
+    {
+      "lat": 33.952723583330325,
+      "lon": -118.26709199503098,
+      "geoinfo": {
+        "display_name": "East 92nd Street, Los Angeles, Los Angeles County, California, 90003, United States",
+        "road": "East 92nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 92nd Street, Los Angeles, Los Angeles County, California, 90003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:44.774988+00:00",
+  "_kind": "geo_samples"
+}

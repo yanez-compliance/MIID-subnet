@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dixon",
+  "geonameid": 5343303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.451694940590116,
+      "lon": -121.82523194351764,
+      "geoinfo": {
+        "display_name": "695, North Adams Street, Dixon, Solano County, California, 95620, United States",
+        "road": "North Adams Street",
+        "house_number": "695",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dixon",
+        "state": "California",
+        "postcode": "95620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "695 North Adams Street, Dixon, California, United States"
+    },
+    {
+      "lat": 38.453879090967156,
+      "lon": -121.78688347322085,
+      "geoinfo": {
+        "display_name": "7991, Robben Road, Solano County, California, 95620, United States",
+        "road": "Robben Road",
+        "house_number": "7991",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7991, Robben Road, Solano County, California, 95620, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:47.808960+00:00",
+  "_kind": "geo_samples"
+}

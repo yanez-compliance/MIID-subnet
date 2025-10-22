@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carney",
+  "geonameid": 4350413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.38503681918051,
+      "lon": -76.55574162997551,
+      "geoinfo": {
+        "display_name": "1827, Berrywood Road, Hillendale Farms, Parkville, Baltimore County, Maryland, 21234, United States",
+        "road": "Berrywood Road",
+        "house_number": "1827",
+        "neighbourhood": "Hillendale Farms",
+        "suburb": null,
+        "city_district": null,
+        "city": "Parkville",
+        "state": "Maryland",
+        "postcode": "21234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1827 Berrywood Road, Carney, Maryland, United States"
+    },
+    {
+      "lat": 39.38372592962421,
+      "lon": -76.46712144661174,
+      "geoinfo": {
+        "display_name": "5, Wolf Trap Court, Nottingham Woods, White Marsh, Baltimore County, Maryland, 21236, United States",
+        "road": "Wolf Trap Court",
+        "house_number": "5",
+        "neighbourhood": "Nottingham Woods",
+        "suburb": null,
+        "city_district": null,
+        "city": "White Marsh",
+        "state": "Maryland",
+        "postcode": "21236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5, Wolf Trap Court, Nottingham Woods, White Marsh, Baltimore County, Maryland, 21236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:06.495440+00:00",
+  "_kind": "geo_samples"
+}

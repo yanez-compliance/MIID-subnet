@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Dagadji",
+  "geonameid": 12687206,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.092227607321146,
+      "lon": -6.812562563334547,
+      "geoinfo": {
+        "display_name": "Dagadji, San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dagadji",
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Dagadji, Bas-Sassandra, Ivory Coast"
+    },
+    {
+      "lat": 5.152020132304441,
+      "lon": -6.781345792663315,
+      "geoinfo": {
+        "display_name": "San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "692, San-Pédro, 32714 Bas-Sassandra, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:02.143850+00:00",
+  "_kind": "geo_samples"
+}

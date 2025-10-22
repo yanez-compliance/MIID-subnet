@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Uriangato",
+  "geonameid": 3980777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.15879473126239,
+      "lon": -101.16666838157343,
+      "geoinfo": {
+        "display_name": "Calle Pascual Orozco, Independencia, Uriangato, Guanajuato, 38982, Mexico",
+        "road": "Calle Pascual Orozco",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uriangato",
+        "state": "Guanajuato",
+        "postcode": "38982",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Pascual Orozco, Uriangato, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.182157642766857,
+      "lon": -101.17161430343837,
+      "geoinfo": {
+        "display_name": "Parangarico, Uriangato, Guanajuato, 38950, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guanajuato",
+        "postcode": "38950",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "460, Uriangato, 38950 Guanajuato, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:32:05.758813+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 4) / Aussersihl",
+  "geonameid": 2661666,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.38260313804101,
+      "lon": 8.507947182306944,
+      "geoinfo": {
+        "display_name": "89, Bullingerstrasse, Hard, Kreis 4, Zurich, District Zurich, Zurich, 8004, Switzerland",
+        "road": "Bullingerstrasse",
+        "house_number": "89",
+        "neighbourhood": null,
+        "suburb": "Kreis 4",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8004",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "89, Bullingerstrasse, Zürich (Kreis 4) / Aussersihl, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.374874866480816,
+      "lon": 8.460698950636512,
+      "geoinfo": {
+        "display_name": "13, Ringstrasse, Waldegg, Uitikon, Bezirk Dietikon, Zurich, 8142, Switzerland",
+        "road": "Ringstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waldegg",
+        "state": "Zurich",
+        "postcode": "8142",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "13, Ringstrasse, Waldegg, Uitikon, Bezirk Dietikon, Zurich, 8142, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:19.309568+00:00",
+  "_kind": "geo_samples"
+}

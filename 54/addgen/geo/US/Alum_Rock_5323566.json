@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alum Rock",
+  "geonameid": 5323566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.360435227327066,
+      "lon": -121.82921183863495,
+      "geoinfo": {
+        "display_name": "260, Nancy Lane, Alum Rock, San Jose, Santa Clara County, California, 95127, United States",
+        "road": "Nancy Lane",
+        "house_number": "260",
+        "neighbourhood": null,
+        "suburb": "Alum Rock",
+        "city_district": null,
+        "city": "San Jose",
+        "state": "California",
+        "postcode": "95127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "260 Nancy Lane, Alum Rock, California, United States"
+    },
+    {
+      "lat": 37.34932392265755,
+      "lon": -121.78912266236458,
+      "geoinfo": {
+        "display_name": "3590, Pleasant Crest Drive, San Jose, Santa Clara County, California, 95148, United States",
+        "road": "Pleasant Crest Drive",
+        "house_number": "3590",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Jose",
+        "state": "California",
+        "postcode": "95148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3590, Pleasant Crest Drive, San Jose, Santa Clara County, California, 95148, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:26.763257+00:00",
+  "_kind": "geo_samples"
+}

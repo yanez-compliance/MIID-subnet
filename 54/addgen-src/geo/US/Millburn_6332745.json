@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Millburn",
+  "geonameid": 6332745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72733274042622,
+      "lon": -74.291284927108,
+      "geoinfo": {
+        "display_name": "88, Cypress Street, Wyoming, Millburn, Essex County, New Jersey, 07041, United States",
+        "road": "Cypress Street",
+        "house_number": "88",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millburn",
+        "state": "New Jersey",
+        "postcode": "07041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "88 Cypress Street, Millburn, New Jersey, United States"
+    },
+    {
+      "lat": 40.72373395055557,
+      "lon": -74.27355676558483,
+      "geoinfo": {
+        "display_name": "33, Sommer Avenue, Maplewood, Essex County, New Jersey, 07040, United States",
+        "road": "Sommer Avenue",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maplewood",
+        "state": "New Jersey",
+        "postcode": "07040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33, Sommer Avenue, Maplewood, Essex County, New Jersey, 07040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:42.458789+00:00",
+  "_kind": "geo_samples"
+}

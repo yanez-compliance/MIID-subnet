@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Horsens",
+  "geonameid": 2619771,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 55.842781810235095,
+      "lon": 9.914049352226291,
+      "geoinfo": {
+        "display_name": "Fjordvej, Horsens, Horsens Municipality, Central Denmark Region, Denmark",
+        "road": "Fjordvej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Horsens",
+        "state": "Central Denmark Region",
+        "postcode": null,
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Fjordvej, Horsens, Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 55.82636102832573,
+      "lon": 9.8689550449265,
+      "geoinfo": {
+        "display_name": "Nordrevej, Tyrsted, Horsens, Horsens Municipality, Central Denmark Region, 8700, Denmark",
+        "road": "Nordrevej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tyrsted",
+        "city_district": null,
+        "city": "Horsens",
+        "state": "Central Denmark Region",
+        "postcode": "8700",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Nordrevej, Horsens, Central Denmark Region, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-16T12:58:54.692787+00:00",
+  "_kind": "geo_samples"
+}

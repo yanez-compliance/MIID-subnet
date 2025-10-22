@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Geertruidenberg",
+  "geonameid": 2755669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.72670178768968,
+      "lon": 4.800460001800543,
+      "geoinfo": {
+        "display_name": "Biesbosch, Drimmelen, North Brabant, Netherlands, 4924 AA, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Drimmelen",
+        "state": "North Brabant",
+        "postcode": "4924 AA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Geertruidenberg, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.69762710909164,
+      "lon": 4.928640157432467,
+      "geoinfo": {
+        "display_name": "Maasroute, Waspik, Waalwijk, North Brabant, Netherlands, 4944 AS, Netherlands",
+        "road": "Maasroute",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waspik",
+        "state": "North Brabant",
+        "postcode": "4944 AS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "496, Maasroute, Waspik, Waalwijk, North Brabant, Netherlands, 4944 AS, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:27.898736+00:00",
+  "_kind": "geo_samples"
+}

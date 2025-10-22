@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Vermoim",
+  "geonameid": 2732785,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.22704941347736,
+      "lon": -8.613931694808317,
+      "geoinfo": {
+        "display_name": "84, Rua Fernando Namora, Mogos, Vermoim, Cidade da Maia, Maia, Porto, 4470-289, Portugal",
+        "road": "Rua Fernando Namora",
+        "house_number": "84",
+        "neighbourhood": "Mogos",
+        "suburb": "Vermoim",
+        "city_district": null,
+        "city": "Cidade da Maia",
+        "state": null,
+        "postcode": "4470-289",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "84 Rua Fernando Namora, Vermoim, Portugal"
+    },
+    {
+      "lat": 41.26933470975397,
+      "lon": -8.633693240212933,
+      "geoinfo": {
+        "display_name": "Rua Nova da Bajouca, Campa do Preto, Gemunde, Castêlo da Maia, Maia, Porto, 4475-131, Portugal",
+        "road": "Rua Nova da Bajouca",
+        "house_number": null,
+        "neighbourhood": "Campa do Preto",
+        "suburb": "Gemunde",
+        "city_district": null,
+        "city": "Castêlo da Maia",
+        "state": null,
+        "postcode": "4475-131",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Nova da Bajouca, Campa do Preto, Gemunde, Castêlo da Maia, Maia, Porto, 4475-131, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:40:45.782675+00:00",
+  "_kind": "geo_samples"
+}

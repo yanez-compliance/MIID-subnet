@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manassas Park",
+  "geonameid": 4771414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.78429619079307,
+      "lon": -77.46640819409012,
+      "geoinfo": {
+        "display_name": "Walden Street, Manassas Park, Virginia, 20111, United States",
+        "road": "Walden Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manassas Park",
+        "state": "Virginia",
+        "postcode": "20111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walden Street, Manassas Park, Virginia, United States"
+    },
+    {
+      "lat": 38.77660181561022,
+      "lon": -77.50593146842986,
+      "geoinfo": {
+        "display_name": "8200, Sudley Road, Iron Gate, Prince William County, Virginia, 20109, United States",
+        "road": "Sudley Road",
+        "house_number": "8200",
+        "neighbourhood": "Iron Gate",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8200, Sudley Road, Iron Gate, Prince William County, Virginia, 20109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:41.499962+00:00",
+  "_kind": "geo_samples"
+}

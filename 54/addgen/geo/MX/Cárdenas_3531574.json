@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cárdenas",
+  "geonameid": 3531574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.042649597889064,
+      "lon": -99.62424988945968,
+      "geoinfo": {
+        "display_name": "Cárdenas, San Luis Potosí, 79382, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "San Luis Potosí",
+        "postcode": "79382",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Cárdenas, San Luis Potosí, Mexico"
+    },
+    {
+      "lat": 22.015764004810922,
+      "lon": -99.6574968446195,
+      "geoinfo": {
+        "display_name": "Cárdenas, San Luis Potosí, 79382, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cárdenas",
+        "state": "San Luis Potosí",
+        "postcode": "79382",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "045, Cárdenas, San Luis Potosí, 79382, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:13.559875+00:00",
+  "_kind": "geo_samples"
+}

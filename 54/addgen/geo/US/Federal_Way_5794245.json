@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Federal Way",
+  "geonameid": 5794245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.343520550347556,
+      "lon": -122.26902062916575,
+      "geoinfo": {
+        "display_name": "28661, 53rd Avenue South, Woodbrook, Auburn, King County, Washington, 98001, United States",
+        "road": "53rd Avenue South",
+        "house_number": "28661",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Washington",
+        "postcode": "98001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28661 53rd Avenue South, Federal Way, Washington, United States"
+    },
+    {
+      "lat": 47.30506573122936,
+      "lon": -122.32574010766788,
+      "geoinfo": {
+        "display_name": "822, South 333rd Street, Federal Way, King County, Washington, 98003, United States",
+        "road": "South 333rd Street",
+        "house_number": "822",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Federal Way",
+        "state": "Washington",
+        "postcode": "98003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "822, South 333rd Street, Federal Way, King County, Washington, 98003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:06.425944+00:00",
+  "_kind": "geo_samples"
+}

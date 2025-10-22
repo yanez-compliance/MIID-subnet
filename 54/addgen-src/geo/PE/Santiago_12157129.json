@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Santiago",
+  "geonameid": 12157129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.550789371464845,
+      "lon": -72.01045192829483,
+      "geoinfo": {
+        "display_name": "Jaquira, Santiago, Province of Cusco, Cusco, 00801, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santiago",
+        "state": "Cusco",
+        "postcode": "00801",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Santiago, Cusco, Peru"
+    },
+    {
+      "lat": -13.500824082231508,
+      "lon": -71.95495444765925,
+      "geoinfo": {
+        "display_name": "Inkilltambo, CU-1110, Yuncaypata, Cuzco, Distrito de Cusco, Province of Cusco, Cusco, 08002, Peru",
+        "road": "CU-1110",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuzco",
+        "state": "Cusco",
+        "postcode": "08002",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Inkilltambo, CU-1110, Yuncaypata, Cuzco, Distrito de Cusco, Province of Cusco, Cusco, 08002, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:28.516397+00:00",
+  "_kind": "geo_samples"
+}

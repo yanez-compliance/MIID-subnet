@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Villiers",
+  "geonameid": 943937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.014025915906128,
+      "lon": 28.597792424067112,
+      "geoinfo": {
+        "display_name": "R54, Dipaleseng Ward 5, Dipaleseng Local Municipality, Gert Sibande, Mpumalanga, 9840, South Africa",
+        "road": "R54",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dipaleseng Ward 5",
+        "city_district": null,
+        "city": "Dipaleseng Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": "9840",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R54, Villiers, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -27.036803225520387,
+      "lon": 28.634807095348652,
+      "geoinfo": {
+        "display_name": "R103, Mafube Ward 9, Mafube Local Municipality, Fezile Dabi District Municipality, Free State, South Africa",
+        "road": "R103",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mafube Ward 9",
+        "city_district": null,
+        "city": "Mafube Local Municipality",
+        "state": "Free State",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R103, Villiers, 51253 Free State, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:36:31.307190+00:00",
+  "_kind": "geo_samples"
+}

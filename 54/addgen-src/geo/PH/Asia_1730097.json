@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Asia",
+  "geonameid": 1730097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.584002836007526,
+      "lon": 122.52653336663307,
+      "geoinfo": {
+        "display_name": "Asia, Hinoba-an, Negros Occidental, Negros Island Region, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hinoba-an",
+        "state": "Negros Occidental",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Asia, Negros Occidental, Philippines"
+    },
+    {
+      "lat": 9.583186114502544,
+      "lon": 122.54673603887461,
+      "geoinfo": {
+        "display_name": "Hinoba-an, Negros Occidental, Negros Island Region, 6114, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hinoba-an",
+        "state": "Negros Occidental",
+        "postcode": "6114",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "257, Asia, 6114 Negros Occidental, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T09:05:51.122805+00:00",
+  "_kind": "geo_samples"
+}

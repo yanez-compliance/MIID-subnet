@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Erlangen",
+  "geonameid": 2929567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.61128558994709,
+      "lon": 10.963261568953532,
+      "geoinfo": {
+        "display_name": "Frankenstraße, In der Reuth, Alterlangen, Erlangen, Bavaria, 91056, Germany",
+        "road": "Frankenstraße",
+        "house_number": null,
+        "neighbourhood": "In der Reuth",
+        "suburb": "Alterlangen",
+        "city_district": null,
+        "city": "Erlangen",
+        "state": "Bavaria",
+        "postcode": "91056",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Frankenstraße, Erlangen, Bavaria, Germany"
+    },
+    {
+      "lat": 49.550594654691,
+      "lon": 11.028639932518569,
+      "geoinfo": {
+        "display_name": "14a, Branderweg, Erlangen, Bavaria, 91058, Germany",
+        "road": "Branderweg",
+        "house_number": "14a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erlangen",
+        "state": "Bavaria",
+        "postcode": "91058",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14a, Branderweg, Erlangen, Bavaria, 91058, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:56.926183+00:00",
+  "_kind": "geo_samples"
+}

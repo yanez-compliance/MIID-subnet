@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Etmadpur",
+  "geonameid": 1269646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.23095246968034,
+      "lon": 78.24404511542845,
+      "geoinfo": {
+        "display_name": "SH31, Tundla, Firozabad, Uttar Pradesh, 283204, India",
+        "road": "SH31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tundla",
+        "state": "Uttar Pradesh",
+        "postcode": "283204",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "SH31, Etmadpur, Uttar Pradesh, India"
+    },
+    {
+      "lat": 27.241830892259465,
+      "lon": 78.22094173736842,
+      "geoinfo": {
+        "display_name": "Tundla, Firozabad, Uttar Pradesh, 283204, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tundla",
+        "state": "Uttar Pradesh",
+        "postcode": "283204",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "256, Tundla, Firozabad, Uttar Pradesh, 283204, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:43.857410+00:00",
+  "_kind": "geo_samples"
+}

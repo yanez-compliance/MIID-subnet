@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lichtenrade",
+  "geonameid": 2878044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.38168758014559,
+      "lon": 13.406928462377904,
+      "geoinfo": {
+        "display_name": "46, Paplitzer Straße, Lichtenrade, Tempelhof-Schöneberg, Berlin, Teltow, 12307, Germany",
+        "road": "Paplitzer Straße",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": "Lichtenrade",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12307",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "46 Paplitzer Straße, Lichtenrade, Germany"
+    },
+    {
+      "lat": 52.437041202582705,
+      "lon": 13.443332049496512,
+      "geoinfo": {
+        "display_name": "58, Gutschmidtstraße, Neuland, Britz, Neukölln, Berlin, 12359, Germany",
+        "road": "Gutschmidtstraße",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": "Britz",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12359",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "58, Gutschmidtstraße, Neuland, Britz, Neukölln, Berlin, 12359, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:53.063126+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Baoji",
+  "geonameid": 10942359,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.371423721960745,
+      "lon": 107.26579252119141,
+      "geoinfo": {
+        "display_name": "Jintai District, Baoji, Shaanxi, 721004, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jintai District",
+        "state": "Shaanxi",
+        "postcode": "721004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Baoji, Shaanxi, China"
+    },
+    {
+      "lat": 34.35284975551539,
+      "lon": 107.23887965187994,
+      "geoinfo": {
+        "display_name": "Weibin District, Shaanxi, 721013, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weibin District",
+        "state": "Shaanxi",
+        "postcode": "721013",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "987, Weibin District, Shaanxi, 721013, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:12.012057+00:00",
+  "_kind": "geo_samples"
+}

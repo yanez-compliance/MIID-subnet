@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alcalá de Henares",
+  "geonameid": 3130616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.467456400761336,
+      "lon": -3.373464887700702,
+      "geoinfo": {
+        "display_name": "Avenida de Roma, Los Gorriones, Nueva Rinconada, Reyes Católicos, Distrito II, Alcalá de Henares, Community of Madrid, 28803, Spain",
+        "road": "Avenida de Roma",
+        "house_number": null,
+        "neighbourhood": "Los Gorriones",
+        "suburb": "Reyes Católicos",
+        "city_district": "Distrito II",
+        "city": "Alcalá de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28803",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de Roma, Alcalá de Henares, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.50991449567905,
+      "lon": -3.3641933461175997,
+      "geoinfo": {
+        "display_name": "8, Calle Francisco Umbral, Espartales Norte, Espartales, Distrito IV, Alcalá de Henares, Community of Madrid, 28806, Spain",
+        "road": "Calle Francisco Umbral",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Espartales",
+        "city_district": "Distrito IV",
+        "city": "Alcalá de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28806",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "8, Calle Francisco Umbral, Espartales Norte, Espartales, Distrito IV, Alcalá de Henares, Community of Madrid, 28806, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:53.212360+00:00",
+  "_kind": "geo_samples"
+}

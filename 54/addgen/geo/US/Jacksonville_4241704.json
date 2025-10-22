@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jacksonville",
+  "geonameid": 4241704,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.73298481685422,
+      "lon": -90.26577672186738,
+      "geoinfo": {
+        "display_name": "82, Westfair Drive, Jacksonville, Morgan County, Illinois, 62650, United States",
+        "road": "Westfair Drive",
+        "house_number": "82",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jacksonville",
+        "state": "Illinois",
+        "postcode": "62650",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "82 Westfair Drive, Jacksonville, Illinois, United States"
+    },
+    {
+      "lat": 39.7515261304988,
+      "lon": -90.20621325487386,
+      "geoinfo": {
+        "display_name": "2088, Strawn Crossing Road, Portuguese Hill, Morgan County, Illinois, 62650, United States",
+        "road": "Strawn Crossing Road",
+        "house_number": "2088",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "62650",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2088, Strawn Crossing Road, Portuguese Hill, Morgan County, Illinois, 62650, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:34.966712+00:00",
+  "_kind": "geo_samples"
+}

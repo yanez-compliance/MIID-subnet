@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Opa-locka",
+  "geonameid": 4167003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.89619469150168,
+      "lon": -80.22347860595244,
+      "geoinfo": {
+        "display_name": "1500, Northwest 133rd Street, Miami, Miami-Dade County, Florida, 33167, United States",
+        "road": "Northwest 133rd Street",
+        "house_number": "1500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33167",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1500 Northwest 133rd Street, Opa-locka, Florida, United States"
+    },
+    {
+      "lat": 25.875190589581745,
+      "lon": -80.24742748281506,
+      "geoinfo": {
+        "display_name": "Lake Road, Westview, Miami-Dade County, Florida, 33167, United States",
+        "road": "Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33167",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "441, Lake Road, Westview, Miami-Dade County, Florida, 33167, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:03.967030+00:00",
+  "_kind": "geo_samples"
+}

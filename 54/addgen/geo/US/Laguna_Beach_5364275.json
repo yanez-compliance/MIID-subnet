@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laguna Beach",
+  "geonameid": 5364275,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.55635681420833,
+      "lon": -117.7754778147814,
+      "geoinfo": {
+        "display_name": "Laguna Canyon Road, Canyon Acres, Laguna Beach, Orange County, California, 92652, United States",
+        "road": "Laguna Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laguna Beach",
+        "state": "California",
+        "postcode": "92652",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Laguna Canyon Road, Laguna Beach, California, United States"
+    },
+    {
+      "lat": 33.57652318824506,
+      "lon": -117.78023950153957,
+      "geoinfo": {
+        "display_name": "Old Emerald Trail, Orange County, California, 92652, United States",
+        "road": "Old Emerald Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92652",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "539, Old Emerald Trail, Orange County, California, 92652, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:44.265315+00:00",
+  "_kind": "geo_samples"
+}

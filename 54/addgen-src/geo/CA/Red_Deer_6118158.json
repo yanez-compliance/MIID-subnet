@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Red Deer",
+  "geonameid": 6118158,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.30447618316091,
+      "lon": -113.76596634821942,
+      "geoinfo": {
+        "display_name": "30 Avenue, Red Deer, Alberta, T4P 0M8, Canada",
+        "road": "30 Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Red Deer",
+        "state": "Alberta",
+        "postcode": "T4P 0M8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "30 Avenue, Red Deer, Alberta, Canada"
+    },
+    {
+      "lat": 52.25191794899758,
+      "lon": -113.86579932356489,
+      "geoinfo": {
+        "display_name": "38146, 38146 Range Road 280, Red Deer County, Alberta, T4N 1E3, Canada",
+        "road": "38146 Range Road 280",
+        "house_number": "38146",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alberta",
+        "postcode": "T4N 1E3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "38146, 38146 Range Road 280, Red Deer County, Alberta, T4N 1E3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:41.176451+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Lida",
+  "geonameid": 626081,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 53.88069507869323,
+      "lon": 25.28328469300836,
+      "geoinfo": {
+        "display_name": "143, 8А, Баранавіцкая вуліца, Lida, Lida District, Hrodna Region, 231284, Belarus",
+        "road": "Баранавіцкая вуліца",
+        "house_number": "8А",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lida",
+        "state": "Hrodna Region",
+        "postcode": "231284",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "8А Баранавіцкая вуліца, Lida, Hrodna Region, Belarus"
+    },
+    {
+      "lat": 53.84422385533204,
+      "lon": 25.262906287761457,
+      "geoinfo": {
+        "display_name": "М6, Тарноўскі сельскі Савет, Lida District, Hrodna Region, 231293, Belarus",
+        "road": "М6",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Тарноўскі сельскі Савет",
+        "state": "Hrodna Region",
+        "postcode": "231293",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "М6, Lida, Hrodna Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:32.971781+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Yalvaç",
+  "geonameid": 297789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.32636576664917,
+      "lon": 31.197523401646695,
+      "geoinfo": {
+        "display_name": "Aziz Paul Yolu, Sücüllü, Yalvaç, Isparta, Mediterranean Region, 32400, Turkey",
+        "road": "Aziz Paul Yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yalvaç",
+        "state": null,
+        "postcode": "32400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Aziz Paul Yolu, Yalvaç, Turkey"
+    },
+    {
+      "lat": 38.30669997819924,
+      "lon": 31.182236442734773,
+      "geoinfo": {
+        "display_name": "Görgücami, Yalvaç, Isparta, Mediterranean Region, 32400, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Görgücami",
+        "city_district": null,
+        "city": "Yalvaç",
+        "state": null,
+        "postcode": "32400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "250, Görgücami, Yalvaç, Isparta, Mediterranean Region, 32400, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:06.752199+00:00",
+  "_kind": "geo_samples"
+}

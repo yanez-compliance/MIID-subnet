@@ -1,0 +1,47 @@
+{
+  "country_code": "SD",
+  "country": "Sudan",
+  "city": "Abyei",
+  "geonameid": 380308,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 9.608252154684378,
+      "lon": 28.415372056372124,
+      "geoinfo": {
+        "display_name": "Abyei, South Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abyei",
+        "state": null,
+        "postcode": null,
+        "country": "South Sudan",
+        "country_code": "ss"
+      },
+      "address": "Abyei, Sudan"
+    },
+    {
+      "lat": 9.592917546086907,
+      "lon": 28.47657026494039,
+      "geoinfo": {
+        "display_name": "B38, Gong Limok, Awolnhom, Abyei, South Sudan",
+        "road": "B38",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Awolnhom",
+        "state": null,
+        "postcode": null,
+        "country": "South Sudan",
+        "country_code": "ss"
+      },
+      "address": "B38, Abyei, Sudan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:13.182762+00:00",
+  "_kind": "geo_samples"
+}

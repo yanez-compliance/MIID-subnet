@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Leninsk",
+  "geonameid": 536156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.695253889969614,
+      "lon": 45.19086011419467,
+      "geoinfo": {
+        "display_name": "улица Фрунзе, Ленинск, Leninsky District, Volgograd Oblast, 404621, Russia",
+        "road": "улица Фрунзе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ленинск",
+        "state": "Volgograd Oblast",
+        "postcode": "404621",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Фрунзе, Leninsk, Volgograd Oblast, Russia"
+    },
+    {
+      "lat": 48.71189891074885,
+      "lon": 45.1823340779208,
+      "geoinfo": {
+        "display_name": "13, ПМК-40, микрорайон ПМК-40, Leninsk, Leninsky District, Volgograd Oblast, 404621, Russia",
+        "road": "ПМК-40",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leninsk",
+        "state": "Volgograd Oblast",
+        "postcode": "404621",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "13, ПМК-40, микрорайон ПМК-40, Leninsk, Leninsky District, Volgograd Oblast, 404621, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:45.399470+00:00",
+  "_kind": "geo_samples"
+}

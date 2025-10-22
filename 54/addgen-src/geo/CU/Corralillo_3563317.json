@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Corralillo",
+  "geonameid": 3563317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.02545312393843,
+      "lon": -80.59591264607158,
+      "geoinfo": {
+        "display_name": "Elguea, Corralillo, Villa Clara, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Corralillo",
+        "state": "Villa Clara",
+        "postcode": null,
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Corralillo, Villa Clara, Cuba"
+    },
+    {
+      "lat": 22.979244679332965,
+      "lon": -80.61206092785194,
+      "geoinfo": {
+        "display_name": "Carretera de Elguea, Elguea, Corralillo, Villa Clara, 51100, Cuba",
+        "road": "Carretera de Elguea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Corralillo",
+        "state": "Villa Clara",
+        "postcode": "51100",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "511, Carretera de Elguea, Elguea, Corralillo, Villa Clara, 51100, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:37.799537+00:00",
+  "_kind": "geo_samples"
+}

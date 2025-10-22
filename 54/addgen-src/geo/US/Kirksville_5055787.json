@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kirksville",
+  "geonameid": 5055787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.21075596918121,
+      "lon": -92.55056441932636,
+      "geoinfo": {
+        "display_name": "Steer Creek Way, Kirksville, Adair County, Missouri, 63501, United States",
+        "road": "Steer Creek Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirksville",
+        "state": "Missouri",
+        "postcode": "63501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Steer Creek Way, Kirksville, Missouri, United States"
+    },
+    {
+      "lat": 40.176529977595436,
+      "lon": -92.53524708916773,
+      "geoinfo": {
+        "display_name": "Adair County, Missouri, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "719, Kirksville, 54763 Missouri, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:39.379423+00:00",
+  "_kind": "geo_samples"
+}

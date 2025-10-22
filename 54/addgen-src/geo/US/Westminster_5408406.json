@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westminster",
+  "geonameid": 5408406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.73000509619695,
+      "lon": -118.04612491472433,
+      "geoinfo": {
+        "display_name": "4622, Edinger Avenue, Huntington Beach, Orange County, California, 92649, United States",
+        "road": "Edinger Avenue",
+        "house_number": "4622",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntington Beach",
+        "state": "California",
+        "postcode": "92649",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4622 Edinger Avenue, Westminster, California, United States"
+    },
+    {
+      "lat": 33.792648970524425,
+      "lon": -117.99521631866078,
+      "geoinfo": {
+        "display_name": "7852, Yorkshire Avenue, Stanton, Orange County, California, 90680, United States",
+        "road": "Yorkshire Avenue",
+        "house_number": "7852",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stanton",
+        "state": "California",
+        "postcode": "90680",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7852, Yorkshire Avenue, Stanton, Orange County, California, 90680, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:41.265600+00:00",
+  "_kind": "geo_samples"
+}

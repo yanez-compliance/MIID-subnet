@@ -1,0 +1,65 @@
+{
+  "country_code": "CR",
+  "country": "Costa Rica",
+  "city": "San Felipe",
+  "geonameid": 3621922,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 9.886581409664691,
+      "lon": -84.12991844929209,
+      "geoinfo": {
+        "display_name": "Calle La Chanfaina, San Antonio, Alajuelita, San Jose Province, 10202, Costa Rica",
+        "road": "Calle La Chanfaina",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": null,
+        "postcode": "10202",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "098, Calle La Chanfaina, San Antonio, Alajuelita, San Jose Province, 10202, Costa Rica"
+    },
+    {
+      "lat": 9.891307266050879,
+      "lon": -84.14627765772383,
+      "geoinfo": {
+        "display_name": "Calle Higuerones, Higuerones, Ciudad de San José, Escazú, San Jose Province, 10202, Costa Rica",
+        "road": "Calle Higuerones",
+        "house_number": null,
+        "neighbourhood": "Higuerones",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad de San José",
+        "state": null,
+        "postcode": "10202",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "364, Calle Higuerones, Higuerones, Ciudad de San José, Escazú, San Jose Province, 10202, Costa Rica"
+    },
+    {
+      "lat": 9.903760431145052,
+      "lon": -84.06460179882693,
+      "geoinfo": {
+        "display_name": "Calle 31, Maalot, Ciudad de San José, San José, San Jose Province, 10106, Costa Rica",
+        "road": "Calle 31",
+        "house_number": null,
+        "neighbourhood": "Maalot",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad de San José",
+        "state": null,
+        "postcode": "10106",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle 31, Maalot, Ciudad de San José, San José, San Jose Province, 10106, Costa Rica"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:57.503155+00:00",
+  "_kind": "geo_samples"
+}

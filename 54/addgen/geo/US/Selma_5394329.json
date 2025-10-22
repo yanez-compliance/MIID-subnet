@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Selma",
+  "geonameid": 5394329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.556584947819985,
+      "lon": -119.61324111913062,
+      "geoinfo": {
+        "display_name": "Valley View Street, Selma, Fresno County, California, 93662, United States",
+        "road": "Valley View Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Selma",
+        "state": "California",
+        "postcode": "93662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Valley View Street, Selma, California, United States"
+    },
+    {
+      "lat": 36.570198563109415,
+      "lon": -119.57970030218756,
+      "geoinfo": {
+        "display_name": "East Rose Avenue, Selma, Fresno County, California, 93662, United States",
+        "road": "East Rose Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Selma",
+        "state": "California",
+        "postcode": "93662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "208, East Rose Avenue, Selma, Fresno County, California, 93662, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:08.989394+00:00",
+  "_kind": "geo_samples"
+}

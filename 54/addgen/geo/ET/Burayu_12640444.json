@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Burayu",
+  "geonameid": 12640444,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.035861680932648,
+      "lon": 38.61973447350975,
+      "geoinfo": {
+        "display_name": "Walmara, West Shewa, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Burayu, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 9.01806933294279,
+      "lon": 38.650978813033504,
+      "geoinfo": {
+        "display_name": "Burayu, Walmara, West Shewa, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burayu",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "945, Burayu, Walmara, West Shewa, 92621 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:55.415997+00:00",
+  "_kind": "geo_samples"
+}

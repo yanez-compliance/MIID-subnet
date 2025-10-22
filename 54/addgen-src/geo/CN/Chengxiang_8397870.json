@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chengxiang",
+  "geonameid": 8397870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.39759030484774,
+      "lon": 109.54632557512481,
+      "geoinfo": {
+        "display_name": "龙凤中路, Baiyang Subdistrict, Fenghuang, Wuxi County, Chongqing, China",
+        "road": "龙凤中路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baiyang Subdistrict",
+        "city_district": null,
+        "city": "Fenghuang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "龙凤中路, Chengxiang, Chongqing, China"
+    },
+    {
+      "lat": 31.36399451492999,
+      "lon": 109.55695289384789,
+      "geoinfo": {
+        "display_name": "Chengxiang, Wuxi County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chengxiang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "725, Chengxiang, Wuxi County, 36692 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:02:09.861081+00:00",
+  "_kind": "geo_samples"
+}

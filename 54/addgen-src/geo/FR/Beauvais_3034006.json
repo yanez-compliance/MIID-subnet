@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Beauvais",
+  "geonameid": 3034006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.39663085816581,
+      "lon": 2.075662231461982,
+      "geoinfo": {
+        "display_name": "Le Metz, Saint-Martin-le-Nœud, Beauvais, Oise, Hauts-de-France, Metropolitan France, 60000, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Martin-le-Nœud",
+        "state": "Hauts-de-France",
+        "postcode": "60000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Beauvais, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.4545663524737,
+      "lon": 2.091409446777034,
+      "geoinfo": {
+        "display_name": "Rue de Tillé, Les Ruisselets, Beauvais, Oise, Hauts-de-France, Metropolitan France, 60000, France",
+        "road": "Rue de Tillé",
+        "house_number": null,
+        "neighbourhood": "Les Ruisselets",
+        "suburb": null,
+        "city_district": null,
+        "city": "Beauvais",
+        "state": "Hauts-de-France",
+        "postcode": "60000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "094, Rue de Tillé, Les Ruisselets, Beauvais, Oise, Hauts-de-France, Metropolitan France, 60000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:16.466000+00:00",
+  "_kind": "geo_samples"
+}

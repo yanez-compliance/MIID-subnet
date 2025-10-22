@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakeland",
+  "geonameid": 4161438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.052729112687736,
+      "lon": -81.9413278590162,
+      "geoinfo": {
+        "display_name": "Lake Parker Avenue, Lakeland, Polk County, Florida, 33081, United States",
+        "road": "Lake Parker Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakeland",
+        "state": "Florida",
+        "postcode": "33081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Parker Avenue, Lakeland, Florida, United States"
+    },
+    {
+      "lat": 28.026965920819666,
+      "lon": -81.90768730205183,
+      "geoinfo": {
+        "display_name": "1349, South Combee Road, Polk County, Florida, 33801, United States",
+        "road": "South Combee Road",
+        "house_number": "1349",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1349, South Combee Road, Polk County, Florida, 33801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:34.016110+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dickson",
+  "geonameid": 4618057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.037026526629354,
+      "lon": -87.4047570428183,
+      "geoinfo": {
+        "display_name": "Countryway Road, Dickson County, Middle Tennessee, Tennessee, 37055, United States",
+        "road": "Countryway Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Countryway Road, Dickson, Tennessee, United States"
+    },
+    {
+      "lat": 36.070829506228186,
+      "lon": -87.40957029835039,
+      "geoinfo": {
+        "display_name": "Regency Lane, Dickson, Dickson County, Middle Tennessee, Tennessee, 37055, United States",
+        "road": "Regency Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dickson",
+        "state": "Tennessee",
+        "postcode": "37055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "919, Regency Lane, Dickson, Dickson County, Middle Tennessee, Tennessee, 37055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:55.895645+00:00",
+  "_kind": "geo_samples"
+}

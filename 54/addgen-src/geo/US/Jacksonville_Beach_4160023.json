@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jacksonville Beach",
+  "geonameid": 4160023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.261702100883284,
+      "lon": -81.37110504364064,
+      "geoinfo": {
+        "display_name": "South Jax Beach, Jacksonville Beach, Duval County, Florida, 32250, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jacksonville Beach",
+        "state": "Florida",
+        "postcode": "32250",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jacksonville Beach, Florida, United States"
+    },
+    {
+      "lat": 30.296569338124595,
+      "lon": -81.4425149607726,
+      "geoinfo": {
+        "display_name": "14229, Crystal Cove Drive, Villages of Pablo, San Pablo, Jacksonville, Duval County, Florida, 32224, United States",
+        "road": "Crystal Cove Drive",
+        "house_number": "14229",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pablo",
+        "state": "Florida",
+        "postcode": "32224",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14229, Crystal Cove Drive, Villages of Pablo, San Pablo, Jacksonville, Duval County, Florida, 32224, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:24.950119+00:00",
+  "_kind": "geo_samples"
+}

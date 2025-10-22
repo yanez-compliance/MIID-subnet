@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Fălticeni",
+  "geonameid": 678459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.41002400546078,
+      "lon": 26.293246038277466,
+      "geoinfo": {
+        "display_name": "Fântâna Mare, Suceava, 727566, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fântâna Mare",
+        "state": null,
+        "postcode": "727566",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Fălticeni, Romania"
+    },
+    {
+      "lat": 47.43767004237374,
+      "lon": 26.290127537161048,
+      "geoinfo": {
+        "display_name": "DN2E, Rădășeni, Fântâna Mare, Suceava, 727460, Romania",
+        "road": "DN2E",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rădășeni",
+        "state": null,
+        "postcode": "727460",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "DN2E, Rădășeni, Fântâna Mare, Suceava, 727460, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:43.513504+00:00",
+  "_kind": "geo_samples"
+}

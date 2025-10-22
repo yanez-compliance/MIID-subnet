@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Hoogeveen",
+  "geonameid": 2753719,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.739152294659895,
+      "lon": 6.531722541930755,
+      "geoinfo": {
+        "display_name": "Hoogeveenseweg, Tiendeveen, Hoogeveen, Drenthe, Netherlands, 7936 PB, Netherlands",
+        "road": "Hoogeveenseweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tiendeveen",
+        "state": "Drenthe",
+        "postcode": "7936 PB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Hoogeveenseweg, Hoogeveen, Drenthe, The Netherlands"
+    },
+    {
+      "lat": 52.73546933549292,
+      "lon": 6.452539510562695,
+      "geoinfo": {
+        "display_name": "8, Veldkamp, Fluitenberg, Hoogeveen, Drenthe, Netherlands, 7931 TL, Netherlands",
+        "road": "Veldkamp",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fluitenberg",
+        "state": "Drenthe",
+        "postcode": "7931 TL",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "8, Veldkamp, Fluitenberg, Hoogeveen, Drenthe, Netherlands, 7931 TL, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:10.658157+00:00",
+  "_kind": "geo_samples"
+}

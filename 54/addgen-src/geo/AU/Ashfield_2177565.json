@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Ashfield",
+  "geonameid": 2177565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.8942402312329,
+      "lon": 151.1169515849239,
+      "geoinfo": {
+        "display_name": "Watson Avenue, Croydon Park, Inner West, Sydney, Inner West Council, New South Wales, 2131, Australia",
+        "road": "Watson Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Croydon Park",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2131",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Watson Avenue, Ashfield, New South Wales, Australia"
+    },
+    {
+      "lat": -33.88108349120107,
+      "lon": 151.07882186523187,
+      "geoinfo": {
+        "display_name": "Firth Avenue, Strathfield, Inner West, Sydney, Strathfield Municipal Council, New South Wales, 2135, Australia",
+        "road": "Firth Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Strathfield",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2135",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "583, Firth Avenue, Strathfield, Inner West, Sydney, Strathfield Municipal Council, New South Wales, 2135, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:12.695898+00:00",
+  "_kind": "geo_samples"
+}

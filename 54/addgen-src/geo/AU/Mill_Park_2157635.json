@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Mill Park",
+  "geonameid": 2157635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.676047409506204,
+      "lon": 145.03279189326307,
+      "geoinfo": {
+        "display_name": "209, The Boulevard, Thomastown, Melbourne, City of Whittlesea, Victoria, 3074, Australia",
+        "road": "The Boulevard",
+        "house_number": "209",
+        "neighbourhood": null,
+        "suburb": "Thomastown",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3074",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "209 The Boulevard, Mill Park, Victoria, Australia"
+    },
+    {
+      "lat": -37.68933011958581,
+      "lon": 145.09265794570254,
+      "geoinfo": {
+        "display_name": "Jarrah Court, Greensborough, Melbourne, Shire of Nillumbik, Victoria, 3087, Australia",
+        "road": "Jarrah Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greensborough",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3087",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "356, Jarrah Court, Greensborough, Melbourne, Shire of Nillumbik, Victoria, 3087, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:03.607088+00:00",
+  "_kind": "geo_samples"
+}

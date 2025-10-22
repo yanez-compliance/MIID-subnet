@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jackson",
+  "geonameid": 4632595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.641636482067,
+      "lon": -88.77516200419018,
+      "geoinfo": {
+        "display_name": "2603, North Parkway East, Jackson, Madison County, West Tennessee, Tennessee, 38301, United States",
+        "road": "North Parkway East",
+        "house_number": "2603",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jackson",
+        "state": "Tennessee",
+        "postcode": "38301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2603 North Parkway East, Jackson, Tennessee, United States"
+    },
+    {
+      "lat": 35.59170847916809,
+      "lon": -88.83021976396282,
+      "geoinfo": {
+        "display_name": "Riverside Drive, Medon, Madison County, West Tennessee, Tennessee, United States",
+        "road": "Riverside Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555, Riverside Drive, Medon, Madison County, West Tennessee, 17434 Tennessee, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:26.746297+00:00",
+  "_kind": "geo_samples"
+}

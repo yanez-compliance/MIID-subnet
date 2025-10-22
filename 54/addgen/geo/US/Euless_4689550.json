@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Euless",
+  "geonameid": 4689550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.83797772106659,
+      "lon": -97.08702474785568,
+      "geoinfo": {
+        "display_name": "Airport Freeway, Euless, Tarrant County, Texas, 76040, United States",
+        "road": "Airport Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Euless",
+        "state": "Texas",
+        "postcode": "76040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Airport Freeway, Euless, Texas, United States"
+    },
+    {
+      "lat": 32.82876608087309,
+      "lon": -97.0963031482566,
+      "geoinfo": {
+        "display_name": "641, Del Paso Street, Euless, Tarrant County, Texas, 76040, United States",
+        "road": "Del Paso Street",
+        "house_number": "641",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Euless",
+        "state": "Texas",
+        "postcode": "76040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "641, Del Paso Street, Euless, Tarrant County, Texas, 76040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:57.343336+00:00",
+  "_kind": "geo_samples"
+}

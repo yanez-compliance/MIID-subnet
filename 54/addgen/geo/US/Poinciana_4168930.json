@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Poinciana",
+  "geonameid": 4168930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.14588268548232,
+      "lon": -81.4918294545139,
+      "geoinfo": {
+        "display_name": "Cypress Parkway, Polk County, Florida, 33844, United States",
+        "road": "Cypress Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33844",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cypress Parkway, Poinciana, Florida, United States"
+    },
+    {
+      "lat": 28.14472276796445,
+      "lon": -81.45501631913389,
+      "geoinfo": {
+        "display_name": "Country Club Road, Poinciana, Osceola County, Florida, 34759, United States",
+        "road": "Country Club Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poinciana",
+        "state": "Florida",
+        "postcode": "34759",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "260, Country Club Road, Poinciana, Osceola County, Florida, 34759, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:23.807272+00:00",
+  "_kind": "geo_samples"
+}

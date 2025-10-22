@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Riverview",
+  "geonameid": 4170156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.869228314698564,
+      "lon": -82.29105380533329,
+      "geoinfo": {
+        "display_name": "8406, Tidal Breeze Drive, Riverview, Hillsborough County, Florida, 33569, United States",
+        "road": "Tidal Breeze Drive",
+        "house_number": "8406",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverview",
+        "state": "Florida",
+        "postcode": "33569",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8406 Tidal Breeze Drive, Riverview, Florida, United States"
+    },
+    {
+      "lat": 27.883833453550338,
+      "lon": -82.28836351394001,
+      "geoinfo": {
+        "display_name": "202, Wild Oak Drive, Hillsborough County, Florida, 33511, United States",
+        "road": "Wild Oak Drive",
+        "house_number": "202",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33511",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "202, Wild Oak Drive, Hillsborough County, Florida, 33511, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:19.829665+00:00",
+  "_kind": "geo_samples"
+}

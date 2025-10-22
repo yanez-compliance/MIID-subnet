@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Houilles",
+  "geonameid": 3013097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.936039151884295,
+      "lon": 2.191332237567295,
+      "geoinfo": {
+        "display_name": "48, Rue de Jemmapes, Le Val Notre-Dame, Houilles, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78800, France",
+        "road": "Rue de Jemmapes",
+        "house_number": "48",
+        "neighbourhood": null,
+        "suburb": "Le Val Notre-Dame",
+        "city_district": null,
+        "city": "Houilles",
+        "state": "Ile-de-France",
+        "postcode": "78800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "48 Rue de Jemmapes, Houilles, Ile-de-France, France"
+    },
+    {
+      "lat": 48.91891759367544,
+      "lon": 2.205180728014245,
+      "geoinfo": {
+        "display_name": "3, Rue Jean Allemane, Bezons, Argenteuil, Val-d'Oise, Metropolitan France, 95870, France",
+        "road": "Rue Jean Allemane",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bezons",
+        "state": null,
+        "postcode": "95870",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3, Rue Jean Allemane, Bezons, Argenteuil, Val-d'Oise, Metropolitan France, 95870, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:01.866989+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Panlong",
+  "geonameid": 8405713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.593498983871267,
+      "lon": 107.86666992836092,
+      "geoinfo": {
+        "display_name": "Baijia, Liangping District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baijia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Panlong, Chongqing, China"
+    },
+    {
+      "lat": 30.625543667840997,
+      "lon": 107.88565178934107,
+      "geoinfo": {
+        "display_name": "沪聂路, Panlong, Liangping District, Chongqing, China",
+        "road": "沪聂路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panlong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "738, 沪聂路, Panlong, Liangping District, 39555 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:31.629305+00:00",
+  "_kind": "geo_samples"
+}

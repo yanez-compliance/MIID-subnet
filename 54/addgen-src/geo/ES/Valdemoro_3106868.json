@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Valdemoro",
+  "geonameid": 3106868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.197620049509005,
+      "lon": -3.6366736982794663,
+      "geoinfo": {
+        "display_name": "Las Carcavonas, Valdemoro, Community of Madrid, 28343, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valdemoro",
+        "state": "Community of Madrid",
+        "postcode": "28343",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Valdemoro, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.17912751310815,
+      "lon": -3.6435977628825094,
+      "geoinfo": {
+        "display_name": "Camino de Ciempozuelos, El Caracol, Valdemoro, Community of Madrid, 28343, Spain",
+        "road": "Camino de Ciempozuelos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Caracol",
+        "city_district": null,
+        "city": "Valdemoro",
+        "state": "Community of Madrid",
+        "postcode": "28343",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "263, Camino de Ciempozuelos, El Caracol, Valdemoro, Community of Madrid, 28343, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:04.419241+00:00",
+  "_kind": "geo_samples"
+}

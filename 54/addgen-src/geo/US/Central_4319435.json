@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Central",
+  "geonameid": 4319435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.532079443067126,
+      "lon": -91.06455723457839,
+      "geoinfo": {
+        "display_name": "10886, Lovett Road, Tanglewood, Central, East Baton Rouge Parish, Louisiana, 70818, United States",
+        "road": "Lovett Road",
+        "house_number": "10886",
+        "neighbourhood": "Tanglewood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Central",
+        "state": "Louisiana",
+        "postcode": "70818",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10886 Lovett Road, Central, Louisiana, United States"
+    },
+    {
+      "lat": 30.516106501663316,
+      "lon": -91.02649069000273,
+      "geoinfo": {
+        "display_name": "Central Throughway, Oak Shadows Place, Comite, Central, East Baton Rouge Parish, Louisiana, 70739, United States",
+        "road": "Central Throughway",
+        "house_number": null,
+        "neighbourhood": "Oak Shadows Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "Central",
+        "state": "Louisiana",
+        "postcode": "70739",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "811, Central Throughway, Oak Shadows Place, Comite, Central, East Baton Rouge Parish, Louisiana, 70739, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:49.405456+00:00",
+  "_kind": "geo_samples"
+}

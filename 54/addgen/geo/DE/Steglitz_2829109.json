@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Steglitz",
+  "geonameid": 2829109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.45159899244122,
+      "lon": 13.27638544068095,
+      "geoinfo": {
+        "display_name": "31F, Saargemünder Straße, Fünf Morgen, Dahlem, Steglitz-Zehlendorf, Berlin, Teltow, 14195, Germany",
+        "road": "Saargemünder Straße",
+        "house_number": "31F",
+        "neighbourhood": "Fünf Morgen",
+        "suburb": "Dahlem",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14195",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31F Saargemünder Straße, Steglitz, Germany"
+    },
+    {
+      "lat": 52.4810043563226,
+      "lon": 13.341488191275516,
+      "geoinfo": {
+        "display_name": "Nymphenburger Straße, Akazienkiez, Schöneberg, Tempelhof-Schöneberg, Berlin, 10825, Germany",
+        "road": "Nymphenburger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Schöneberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10825",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "477, Nymphenburger Straße, Akazienkiez, Schöneberg, Tempelhof-Schöneberg, Berlin, 10825, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:16.266772+00:00",
+  "_kind": "geo_samples"
+}

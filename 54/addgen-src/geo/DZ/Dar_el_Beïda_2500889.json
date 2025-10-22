@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Dar el Beïda",
+  "geonameid": 2500889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.67450850436508,
+      "lon": 3.2173615478795123,
+      "geoinfo": {
+        "display_name": "Ben Khelil, Dar El Beïda, Dar el-Beida District, Algiers, 16270, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dar El Beïda",
+        "state": "Algiers",
+        "postcode": "16270",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Dar el Beïda, Algiers, Algeria"
+    },
+    {
+      "lat": 36.724567627367925,
+      "lon": 3.2165187633374,
+      "geoinfo": {
+        "display_name": "Moukhtari, Dar El Beïda, Dar el-Beida District, Algiers, 16311, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Moukhtari",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dar El Beïda",
+        "state": "Algiers",
+        "postcode": "16311",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "669, Moukhtari, Dar El Beïda, Dar el-Beida District, Algiers, 16311, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:15.625726+00:00",
+  "_kind": "geo_samples"
+}

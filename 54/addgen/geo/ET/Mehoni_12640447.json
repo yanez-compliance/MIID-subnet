@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Mehoni",
+  "geonameid": 12640447,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 12.834683718707824,
+      "lon": 39.65749526053868,
+      "geoinfo": {
+        "display_name": "Hirka, Southern Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hirka",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Mehoni, Tigray, Ethiopia"
+    },
+    {
+      "lat": 12.794809227028018,
+      "lon": 39.686894084484614,
+      "geoinfo": {
+        "display_name": "Aredebasa, Adi Bidera (1), Southern Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adi Bidera (1)",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "714, Mehoni, 64169 Tigray, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:03:22.019561+00:00",
+  "_kind": "geo_samples"
+}

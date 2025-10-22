@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Larkhall",
+  "geonameid": 2644853,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.718463015329405,
+      "lon": -4.010248742757399,
+      "geoinfo": {
+        "display_name": "Craigthornhill Road, Stonehouse, South Lanarkshire, Scotland, ML3 7ZN, United Kingdom",
+        "road": "Craigthornhill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stonehouse",
+        "state": "Scotland",
+        "postcode": "ML3 7ZN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Craigthornhill Road, Larkhall, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.752881857037785,
+      "lon": -3.9914136982276793,
+      "geoinfo": {
+        "display_name": "Carlisle Road, Summerlee, Larkhall, South Lanarkshire, Scotland, ML9 2UG, United Kingdom",
+        "road": "Carlisle Road",
+        "house_number": null,
+        "neighbourhood": "Summerlee",
+        "suburb": null,
+        "city_district": null,
+        "city": "Larkhall",
+        "state": "Scotland",
+        "postcode": "ML9 2UG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Carlisle Road, Summerlee, Larkhall, South Lanarkshire, Scotland, ML9 2UG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:09.793738+00:00",
+  "_kind": "geo_samples"
+}

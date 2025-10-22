@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winder",
+  "geonameid": 4231523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.00350492202834,
+      "lon": -83.7250548492483,
+      "geoinfo": {
+        "display_name": "223, North 5th Avenue, Winder, Barrow County, Georgia, 30680, United States",
+        "road": "North 5th Avenue",
+        "house_number": "223",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winder",
+        "state": "Georgia",
+        "postcode": "30680",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "223 North 5th Avenue, Winder, Georgia, United States"
+    },
+    {
+      "lat": 33.967859456628695,
+      "lon": -83.7332333724772,
+      "geoinfo": {
+        "display_name": "Picnic #2 Road, Winder, Barrow County, Georgia, United States",
+        "road": "Picnic #2 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winder",
+        "state": "Georgia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Picnic #2 Road, Winder, Barrow County, 01518 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:01.870846+00:00",
+  "_kind": "geo_samples"
+}

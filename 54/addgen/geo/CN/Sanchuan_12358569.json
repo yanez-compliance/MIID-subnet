@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Sanchuan",
+  "geonameid": 12358569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.74122058480831,
+      "lon": 100.62901139489497,
+      "geoinfo": {
+        "display_name": "Hechong, Yongsheng County, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Sanchuan, Yunnan, China"
+    },
+    {
+      "lat": 26.77427465017397,
+      "lon": 100.64903504450155,
+      "geoinfo": {
+        "display_name": "G353, Guojiaying, Yongsheng County, Yunnan, China",
+        "road": "G353",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G353, Guojiaying, Yongsheng County, 12287 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:48.721859+00:00",
+  "_kind": "geo_samples"
+}

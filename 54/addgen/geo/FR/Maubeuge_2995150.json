@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Maubeuge",
+  "geonameid": 2995150,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.24984562331835,
+      "lon": 3.945640908875429,
+      "geoinfo": {
+        "display_name": "N 2, Centre Commercial du Val de Sambre, Louvroil, Avesnes-sur-Helpe, Nord, Hauts-de-France, Metropolitan France, 59720, France",
+        "road": "N 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louvroil",
+        "state": "Hauts-de-France",
+        "postcode": "59720",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "N 2, Maubeuge, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.24431222211155,
+      "lon": 3.9657158174876104,
+      "geoinfo": {
+        "display_name": "Rue du Fort, Ferrière-la-Grande, Avesnes-sur-Helpe, Nord, Hauts-de-France, Metropolitan France, 59680, France",
+        "road": "Rue du Fort",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ferrière-la-Grande",
+        "state": "Hauts-de-France",
+        "postcode": "59680",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "454, Rue du Fort, Ferrière-la-Grande, Avesnes-sur-Helpe, Nord, Hauts-de-France, Metropolitan France, 59680, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:16.686326+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guilin",
+  "geonameid": 1809498,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.25224248190919,
+      "lon": 110.30980197343311,
+      "geoinfo": {
+        "display_name": "桂林高级技工学校, 6, Wulidian Road, Lidong, Qixing District, Guilin, Guangxi, 541004, China",
+        "road": "Wulidian Road",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Lidong",
+        "city_district": null,
+        "city": "Guilin",
+        "state": "Guangxi",
+        "postcode": "541004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "6 Wulidian Road, Guilin, Guangxi, China"
+    },
+    {
+      "lat": 25.310274065455758,
+      "lon": 110.31480446305638,
+      "geoinfo": {
+        "display_name": "Xiliangjiang Road, Dahe, Diecai District, Guilin, Guangxi, 541213, China",
+        "road": "Xiliangjiang Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diecai District",
+        "state": "Guangxi",
+        "postcode": "541213",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "228, Xiliangjiang Road, Dahe, Diecai District, Guilin, Guangxi, 541213, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:45.319252+00:00",
+  "_kind": "geo_samples"
+}

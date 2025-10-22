@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Barbigha",
+  "geonameid": 9036524,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.218499652951728,
+      "lon": 85.70243011514928,
+      "geoinfo": {
+        "display_name": "SubCentre, Gilani, NH33, Asthawan, Nalanda, Bihar, 803101, India",
+        "road": "NH33",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "803101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH33, Barbigha, Bihar, India"
+    },
+    {
+      "lat": 25.207936910212783,
+      "lon": 85.75817598489802,
+      "geoinfo": {
+        "display_name": "Barbigha, Sheikhpura, Bihar, 811101, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barbigha",
+        "state": "Bihar",
+        "postcode": "811101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "947, Barbigha, Sheikhpura, Bihar, 811101, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:51.533813+00:00",
+  "_kind": "geo_samples"
+}

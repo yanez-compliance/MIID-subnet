@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shimen",
+  "geonameid": 1795140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.102295799936794,
+      "lon": 105.99568050796142,
+      "geoinfo": {
+        "display_name": "Jiangjin District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shimen, Chongqing, China"
+    },
+    {
+      "lat": 29.07160797460851,
+      "lon": 106.0099608400894,
+      "geoinfo": {
+        "display_name": "Shimen, Jiangjin District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shimen",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "368, Shimen, Jiangjin District, 11165 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:53:15.072334+00:00",
+  "_kind": "geo_samples"
+}

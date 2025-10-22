@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Cleveland",
+  "geonameid": 5152599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.5360472979422,
+      "lon": -81.56148868318954,
+      "geoinfo": {
+        "display_name": "935, Ravine Drive, Ravine Park, Cleveland Heights, Cuyahoga County, Ohio, 44112, United States",
+        "road": "Ravine Drive",
+        "house_number": "935",
+        "neighbourhood": "Ravine Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland Heights",
+        "state": "Ohio",
+        "postcode": "44112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "935 Ravine Drive, East Cleveland, Ohio, United States"
+    },
+    {
+      "lat": 41.57700168218346,
+      "lon": -81.57948577074565,
+      "geoinfo": {
+        "display_name": "Overlook Park Drive, North Collinwood, Cleveland, Cuyahoga County, Ohio, 44110, United States",
+        "road": "Overlook Park Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "397, Overlook Park Drive, North Collinwood, Cleveland, Cuyahoga County, Ohio, 44110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:28.973485+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Central City",
+  "geonameid": 11979238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.41579987938468,
+      "lon": -112.07758669037668,
+      "geoinfo": {
+        "display_name": "3425, South 3rd Avenue, South Mountain, Phoenix, Maricopa County, Arizona, 85041, United States",
+        "road": "South 3rd Avenue",
+        "house_number": "3425",
+        "neighbourhood": null,
+        "suburb": "South Mountain",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3425 South 3rd Avenue, Central City, Arizona, United States"
+    },
+    {
+      "lat": 33.43523489054909,
+      "lon": -112.11140274216218,
+      "geoinfo": {
+        "display_name": "2424, West Yuma Street, Estrella, Phoenix, Maricopa County, Arizona, 85009, United States",
+        "road": "West Yuma Street",
+        "house_number": "2424",
+        "neighbourhood": null,
+        "suburb": "Estrella",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2424, West Yuma Street, Estrella, Phoenix, Maricopa County, Arizona, 85009, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:20.471490+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Saint Andrews",
+  "geonameid": 2638864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.33316973708328,
+      "lon": -2.739284503694309,
+      "geoinfo": {
+        "display_name": "St Andrews, Fife, Scotland, KY16 9PA, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St Andrews",
+        "state": "Scotland",
+        "postcode": "KY16 9PA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Saint Andrews, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.326365174198976,
+      "lon": -2.7714948390333745,
+      "geoinfo": {
+        "display_name": "B9131, St Andrews, Fife, Scotland, KY16 8PY, United Kingdom",
+        "road": "B9131",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St Andrews",
+        "state": "Scotland",
+        "postcode": "KY16 8PY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "B9131, St Andrews, Fife, Scotland, KY16 8PY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:40:29.929689+00:00",
+  "_kind": "geo_samples"
+}

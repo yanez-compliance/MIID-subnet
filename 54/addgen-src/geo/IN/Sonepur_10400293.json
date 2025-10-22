@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sonepur",
+  "geonameid": 10400293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.711857943431635,
+      "lon": 85.14333140802553,
+      "geoinfo": {
+        "display_name": "NH31, Sonepur, Saran, Bihar, India",
+        "road": "NH31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sonepur",
+        "state": "Bihar",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH31, Sonepur, Bihar, India"
+    },
+    {
+      "lat": 25.678085187684673,
+      "lon": 85.13415267541816,
+      "geoinfo": {
+        "display_name": "Sonepur, Saran, Bihar, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sonepur",
+        "state": "Bihar",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "801, Sonepur, Saran, 81488 Bihar, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:01.405010+00:00",
+  "_kind": "geo_samples"
+}

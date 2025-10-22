@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ratingen",
+  "geonameid": 2850174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.28302504914631,
+      "lon": 6.859006483298148,
+      "geoinfo": {
+        "display_name": "44, Knittkuhler Straße, Ost, Mitte, Ratingen, Kreis Mettmann, North Rhine-Westphalia, 40882, Germany",
+        "road": "Knittkuhler Straße",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Ost",
+        "city_district": "Mitte",
+        "city": "Ratingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40882",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "44 Knittkuhler Straße, Ratingen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.26291438599971,
+      "lon": 6.827989348134495,
+      "geoinfo": {
+        "display_name": "Wilhelm-Unger-Straße, Rath, Stadtbezirk 6, Dusseldorf, North Rhine-Westphalia, 40472, Germany",
+        "road": "Wilhelm-Unger-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rath",
+        "city_district": "Stadtbezirk 6",
+        "city": "Dusseldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40472",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wilhelm-Unger-Straße, Rath, Stadtbezirk 6, Dusseldorf, North Rhine-Westphalia, 40472, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:09.930691+00:00",
+  "_kind": "geo_samples"
+}

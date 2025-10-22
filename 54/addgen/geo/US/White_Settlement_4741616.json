@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "White Settlement",
+  "geonameid": 4741616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.73865393413653,
+      "lon": -97.46803740143909,
+      "geoinfo": {
+        "display_name": "Jack in the Box, 8700, West Freeway, White Settlement, Tarrant County, Texas, 76108, United States",
+        "road": "West Freeway",
+        "house_number": "8700",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "White Settlement",
+        "state": "Texas",
+        "postcode": "76108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8700 West Freeway, White Settlement, Texas, United States"
+    },
+    {
+      "lat": 32.727455062539335,
+      "lon": -97.47760672271373,
+      "geoinfo": {
+        "display_name": "3001, West Normandale Street, Fort Worth, Tarrant County, Texas, 76116, United States",
+        "road": "West Normandale Street",
+        "house_number": "3001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Worth",
+        "state": "Texas",
+        "postcode": "76116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3001, West Normandale Street, Fort Worth, Tarrant County, Texas, 76116, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:02.848994+00:00",
+  "_kind": "geo_samples"
+}

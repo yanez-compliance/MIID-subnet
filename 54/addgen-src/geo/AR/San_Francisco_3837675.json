@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Francisco",
+  "geonameid": 3837675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.386439708086616,
+      "lon": -62.099650570180835,
+      "geoinfo": {
+        "display_name": "Avenida de los Inmigrantes, Plaza San Francisco, Municipio de San Francisco, Pedanía Juárez Celman, Departamento San Justo, Córdoba Province, X2400, Argentina",
+        "road": "Avenida de los Inmigrantes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Plaza San Francisco",
+        "city_district": null,
+        "city": "Plaza San Francisco",
+        "state": "Córdoba Province",
+        "postcode": "X2400",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida de los Inmigrantes, San Francisco, Córdoba Province, Argentina"
+    },
+    {
+      "lat": -31.446262684664287,
+      "lon": -62.04362331260447,
+      "geoinfo": {
+        "display_name": "Villa Josefina, Municipio de Frontera, Departamento Castellanos, S2438, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de Frontera",
+        "state": null,
+        "postcode": "S2438",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "862, Villa Josefina, Municipio de Frontera, Departamento Castellanos, S2438, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:58.474132+00:00",
+  "_kind": "geo_samples"
+}

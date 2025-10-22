@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Villanueva del Pardillo",
+  "geonameid": 3105214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.47295027548904,
+      "lon": -3.967700832929727,
+      "geoinfo": {
+        "display_name": "Carril de la Lana, Villanueva del Pardillo, Community of Madrid, 28692, Spain",
+        "road": "Carril de la Lana",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villanueva del Pardillo",
+        "state": "Community of Madrid",
+        "postcode": "28692",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carril de la Lana, Villanueva del Pardillo, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.51523688215627,
+      "lon": -3.9288154382501035,
+      "geoinfo": {
+        "display_name": "5, Calle de la Salvia, Las Rozas de Madrid, Community of Madrid, 28232, Spain",
+        "road": "Calle de la Salvia",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Rozas de Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28232",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "5, Calle de la Salvia, Las Rozas de Madrid, Community of Madrid, 28232, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:32.173007+00:00",
+  "_kind": "geo_samples"
+}

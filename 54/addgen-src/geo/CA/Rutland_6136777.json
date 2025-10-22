@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Rutland",
+  "geonameid": 6136777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.888614099316285,
+      "lon": -119.36089405220838,
+      "geoinfo": {
+        "display_name": "McKenzie Road, Rutland, Kelowna, Regional District of Central Okanagan, British Columbia, V1X 2M9, Canada",
+        "road": "McKenzie Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rutland",
+        "city_district": null,
+        "city": "Kelowna",
+        "state": "British Columbia",
+        "postcode": "V1X 2M9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "McKenzie Road, Rutland, British Columbia, Canada"
+    },
+    {
+      "lat": 49.883284218533454,
+      "lon": -119.3783582848709,
+      "geoinfo": {
+        "display_name": "522, Seaford Road, Rutland, Kelowna, Regional District of Central Okanagan, British Columbia, V1X 2A1, Canada",
+        "road": "Seaford Road",
+        "house_number": "522",
+        "neighbourhood": null,
+        "suburb": "Rutland",
+        "city_district": null,
+        "city": "Kelowna",
+        "state": "British Columbia",
+        "postcode": "V1X 2A1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "522, Seaford Road, Rutland, Kelowna, Regional District of Central Okanagan, British Columbia, V1X 2A1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:36.198889+00:00",
+  "_kind": "geo_samples"
+}

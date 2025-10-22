@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Frontignan",
+  "geonameid": 3016956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.43764135318551,
+      "lon": 3.775173974509122,
+      "geoinfo": {
+        "display_name": "Avenue des Étangs, Frontignan, Montpellier, Hérault, Occitania, Metropolitan France, 34110, France",
+        "road": "Avenue des Étangs",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frontignan",
+        "state": "Occitania",
+        "postcode": "34110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue des Étangs, Frontignan, Occitania, France"
+    },
+    {
+      "lat": 43.42226660517704,
+      "lon": 3.8004105686322744,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "088, 70233 Metropolitan France, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:00.742096+00:00",
+  "_kind": "geo_samples"
+}

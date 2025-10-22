@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chinatown",
+  "geonameid": 5112540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7145765171934,
+      "lon": -73.99000506366049,
+      "geoinfo": {
+        "display_name": "Canal Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+        "road": "Canal Street",
+        "house_number": null,
+        "neighbourhood": "Lower East Side",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Canal Street, Chinatown, New York, United States"
+    },
+    {
+      "lat": 40.74410785187106,
+      "lon": -74.02791370158057,
+      "geoinfo": {
+        "display_name": "622, Hudson Street, Uptown, Hoboken, Hudson County, New Jersey, 07030, United States",
+        "road": "Hudson Street",
+        "house_number": "622",
+        "neighbourhood": "Uptown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hoboken",
+        "state": "New Jersey",
+        "postcode": "07030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "622, Hudson Street, Uptown, Hoboken, Hudson County, New Jersey, 07030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:31.538324+00:00",
+  "_kind": "geo_samples"
+}

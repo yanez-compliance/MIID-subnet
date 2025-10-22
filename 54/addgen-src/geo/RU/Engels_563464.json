@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Engels",
+  "geonameid": 563464,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.45754419992637,
+      "lon": 46.116861864411845,
+      "geoinfo": {
+        "display_name": "улица Крупской, поселок \"Керамика\", микрорайон \"Керамика\", Engels, городское поселение Энгельс, Engelssky District, Saratov Oblast, Volga Federal District, 413100, Russia",
+        "road": "улица Крупской",
+        "house_number": null,
+        "neighbourhood": "поселок \"Керамика\"",
+        "suburb": "микрорайон \"Керамика\"",
+        "city_district": null,
+        "city": "Engels",
+        "state": "Saratov Oblast",
+        "postcode": "413100",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Крупской, Engels, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 51.44720508860488,
+      "lon": 46.07292055993554,
+      "geoinfo": {
+        "display_name": "И. С. Конев, Волжский проспект, Anisovka, Engels, городское поселение Энгельс, Engelssky District, Saratov Oblast, Volga Federal District, 413100, Russia",
+        "road": "Волжский проспект",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Anisovka",
+        "city_district": null,
+        "city": "Engels",
+        "state": "Saratov Oblast",
+        "postcode": "413100",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "467, Волжский проспект, Engels, 413100 Saratov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:34.118637+00:00",
+  "_kind": "geo_samples"
+}

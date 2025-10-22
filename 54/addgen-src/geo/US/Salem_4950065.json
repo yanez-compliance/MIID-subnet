@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salem",
+  "geonameid": 4950065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.50186033529327,
+      "lon": -70.92178116788578,
+      "geoinfo": {
+        "display_name": "Shaw's, Traders Way, Salem, Essex County, Massachusetts, 01970, United States",
+        "road": "Traders Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salem",
+        "state": "Massachusetts",
+        "postcode": "01970",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Traders Way, Salem, Massachusetts, United States"
+    },
+    {
+      "lat": 42.541106482075456,
+      "lon": -70.94319651571263,
+      "geoinfo": {
+        "display_name": "Northshore Mall, 210, Andover Street, Peabody, Essex County, Massachusetts, 01960, United States",
+        "road": "Andover Street",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peabody",
+        "state": "Massachusetts",
+        "postcode": "01960",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northshore Mall, 210, Andover Street, Peabody, Essex County, Massachusetts, 01960, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:17.864473+00:00",
+  "_kind": "geo_samples"
+}

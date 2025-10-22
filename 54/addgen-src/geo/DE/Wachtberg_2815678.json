@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wachtberg",
+  "geonameid": 2815678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.60296797772841,
+      "lon": 7.115907494595898,
+      "geoinfo": {
+        "display_name": "5308-151, Werthhovener Straße, Birresdorf, Grafschaft, Landkreis Ahrweiler, Rhineland-Palatinate, 53501, Germany",
+        "road": "Werthhovener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grafschaft",
+        "state": "Rhineland-Palatinate",
+        "postcode": "53501",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Werthhovener Straße, Wachtberg, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.61105005449968,
+      "lon": 7.151547950560942,
+      "geoinfo": {
+        "display_name": "12, Werthhovener Straße, Oedingen, Remagen, Landkreis Ahrweiler, Rhineland-Palatinate, 53424, Germany",
+        "road": "Werthhovener Straße",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Remagen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "53424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12, Werthhovener Straße, Oedingen, Remagen, Landkreis Ahrweiler, Rhineland-Palatinate, 53424, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:01.126650+00:00",
+  "_kind": "geo_samples"
+}

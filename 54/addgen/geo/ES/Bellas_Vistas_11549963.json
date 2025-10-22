@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Bellas Vistas",
+  "geonameid": 11549963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.452608352578,
+      "lon": -3.710687840358226,
+      "geoinfo": {
+        "display_name": "Toyota Llorente, 62, Avenida del Doctor Federico Rubio y Galí, Bellas Vistas, Tetuán, Madrid, Community of Madrid, 28039, Spain",
+        "road": "Avenida del Doctor Federico Rubio y Galí",
+        "house_number": "62",
+        "neighbourhood": null,
+        "suburb": "Tetuán",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28039",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "62 Avenida del Doctor Federico Rubio y Galí, Bellas Vistas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42436533532127,
+      "lon": -3.703954207739649,
+      "geoinfo": {
+        "display_name": "24, Calle de El Escorial, Malasaña, Universidad, Centro, Madrid, Community of Madrid, 28004, Spain",
+        "road": "Calle de El Escorial",
+        "house_number": "24",
+        "neighbourhood": "Malasaña",
+        "suburb": null,
+        "city_district": "Centro",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28004",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "24, Calle de El Escorial, Malasaña, Universidad, Centro, Madrid, Community of Madrid, 28004, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:35.846434+00:00",
+  "_kind": "geo_samples"
+}

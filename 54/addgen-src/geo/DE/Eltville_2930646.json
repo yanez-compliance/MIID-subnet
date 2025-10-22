@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eltville",
+  "geonameid": 2930646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.02970397204513,
+      "lon": 8.084492234278162,
+      "geoinfo": {
+        "display_name": "K 638, Erbach, Eltville am Rhein, Rheingau-Taunus-Kreis, Hesse, 65346, Germany",
+        "road": "K 638",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erbach",
+        "state": "Hesse",
+        "postcode": "65346",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 638, Eltville, Hesse, Germany"
+    },
+    {
+      "lat": 50.05552340285372,
+      "lon": 8.064635399529177,
+      "geoinfo": {
+        "display_name": "Forsthaus, 27, Waldstraße, Kiedrich, Rheingau-Taunus-Kreis, Hesse, 65399, Germany",
+        "road": "Waldstraße",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kiedrich",
+        "state": "Hesse",
+        "postcode": "65399",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "27, Waldstraße, Eltville, 65399 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:13.040203+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "As Sallūm",
+  "geonameid": 359867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.531364059541865,
+      "lon": 25.116013186030536,
+      "geoinfo": {
+        "display_name": "As Sallum, Matruh, 51713, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "As Sallum",
+        "state": "Matruh",
+        "postcode": "51713",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "As Sallūm, Matruh, Egypt"
+    },
+    {
+      "lat": 31.557771694739024,
+      "lon": 25.158696353186873,
+      "geoinfo": {
+        "display_name": "Al Forqan Mosque Street, As Sallum, Matruh, 51713, Egypt",
+        "road": "Al Forqan Mosque Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "As Sallum",
+        "state": "Matruh",
+        "postcode": "51713",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "378, Al Forqan Mosque Street, As Sallum, Matruh, 51713, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:39.252558+00:00",
+  "_kind": "geo_samples"
+}

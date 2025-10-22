@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harvey",
+  "geonameid": 4895298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.593593239830206,
+      "lon": -87.64491674881913,
+      "geoinfo": {
+        "display_name": "Center Avenue, Harvey, Thornton Township, Cook County, Illinois, 60426, United States",
+        "road": "Center Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harvey",
+        "state": "Illinois",
+        "postcode": "60426",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Center Avenue, Harvey, Illinois, United States"
+    },
+    {
+      "lat": 41.566322711445025,
+      "lon": -87.64205739911027,
+      "geoinfo": {
+        "display_name": "17755, Presidents Drive, Homewood, Thornton Township, Cook County, Illinois, 60430, United States",
+        "road": "Presidents Drive",
+        "house_number": "17755",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Homewood",
+        "state": "Illinois",
+        "postcode": "60430",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17755, Presidents Drive, Homewood, Thornton Township, Cook County, Illinois, 60430, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:20.132206+00:00",
+  "_kind": "geo_samples"
+}

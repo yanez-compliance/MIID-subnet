@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hampton",
+  "geonameid": 4762894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.01062371934975,
+      "lon": -76.32102404492898,
+      "geoinfo": {
+        "display_name": "Hampton Roads Bridge-Tunnel, Phoebus, Hampton, Virginia, 23651, United States",
+        "road": "Hampton Roads Bridge-Tunnel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Phoebus",
+        "city_district": null,
+        "city": "Hampton",
+        "state": "Virginia",
+        "postcode": "23651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hampton Roads Bridge-Tunnel, Hampton, Virginia, United States"
+    },
+    {
+      "lat": 37.03649569678532,
+      "lon": -76.33347227350694,
+      "geoinfo": {
+        "display_name": "See Associated Address, 53, North Boxwood Street, Chester Place, East Hampton, Hampton, Virginia, 23669, United States",
+        "road": "North Boxwood Street",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": "East Hampton",
+        "city_district": null,
+        "city": "Hampton",
+        "state": "Virginia",
+        "postcode": "23669",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "See Associated Address, 53, North Boxwood Street, Chester Place, East Hampton, Hampton, Virginia, 23669, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:34.183132+00:00",
+  "_kind": "geo_samples"
+}

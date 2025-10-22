@@ -1,0 +1,47 @@
+{
+  "country_code": "BF",
+  "country": "Burkina Faso",
+  "city": "Zorgo",
+  "geonameid": 2353197,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.277443596199223,
+      "lon": -0.5893636216542341,
+      "geoinfo": {
+        "display_name": "Boumtenga, Ganzourgou, Central-Plateau, Burkina Faso",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boumtenga",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "Zorgo, Burkina Faso"
+    },
+    {
+      "lat": 12.24717129063537,
+      "lon": -0.6444651887745447,
+      "geoinfo": {
+        "display_name": "N 4, Bogré, Zorgho, Ganzourgou, Central-Plateau, Burkina Faso",
+        "road": "N 4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zorgho",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "N 4, Zorgo, Burkina Faso"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:27.310804+00:00",
+  "_kind": "geo_samples"
+}

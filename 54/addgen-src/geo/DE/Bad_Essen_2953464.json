@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Essen",
+  "geonameid": 2953464,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.342280692491286,
+      "lon": 8.322501315086452,
+      "geoinfo": {
+        "display_name": "Alte Schlittenbahn, Wehrendorf, Bad Essen, Landkreis Osnabrück, Lower Saxony, 49152, Germany",
+        "road": "Alte Schlittenbahn",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Essen",
+        "state": "Lower Saxony",
+        "postcode": "49152",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Alte Schlittenbahn, Bad Essen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.353825874335264,
+      "lon": 8.305036097826882,
+      "geoinfo": {
+        "display_name": "36, An der Hunte, Bohmte, Landkreis Osnabrück, Lower Saxony, 49163, Germany",
+        "road": "An der Hunte",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bohmte",
+        "state": "Lower Saxony",
+        "postcode": "49163",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "36, An der Hunte, Bohmte, Landkreis Osnabrück, Lower Saxony, 49163, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:43.901192+00:00",
+  "_kind": "geo_samples"
+}

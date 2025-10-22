@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Portage",
+  "geonameid": 4925006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.55686914167636,
+      "lon": -87.16415209789383,
+      "geoinfo": {
+        "display_name": "Lute Road, Portage, Porter County, Indiana, 46368, United States",
+        "road": "Lute Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Portage",
+        "state": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lute Road, Portage, Indiana, United States"
+    },
+    {
+      "lat": 41.597173628057305,
+      "lon": -87.20705640131224,
+      "geoinfo": {
+        "display_name": "Yogi Bear’s Jellystone Park Camp Resort, Canyon Avenue, Portage, Porter County, Indiana, 46368, United States",
+        "road": "Canyon Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Portage",
+        "state": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "305, Canyon Avenue, Portage, 46368 Indiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:47.722110+00:00",
+  "_kind": "geo_samples"
+}

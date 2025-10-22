@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Paz",
+  "geonameid": 11549980,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.495122737834215,
+      "lon": -3.7405355136642173,
+      "geoinfo": {
+        "display_name": "M-40, Mirasierra, Fuencarral-El Pardo, Madrid, Community of Madrid, 28035, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, La Paz, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.522298212799,
+      "lon": -3.690772117355375,
+      "geoinfo": {
+        "display_name": "Autovía de Colmenar, El Goloso, Fuencarral-El Pardo, Madrid, Community of Madrid, 28049, Spain",
+        "road": "Autovía de Colmenar",
+        "house_number": null,
+        "neighbourhood": "El Goloso",
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28049",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "126, Autovía de Colmenar, El Goloso, Fuencarral-El Pardo, Madrid, Community of Madrid, 28049, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:26.662203+00:00",
+  "_kind": "geo_samples"
+}

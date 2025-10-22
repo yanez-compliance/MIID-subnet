@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tepatlaxco de Hidalgo",
+  "geonameid": 3515906,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.089191079594336,
+      "lon": -97.93022648422986,
+      "geoinfo": {
+        "display_name": "Acajete, Puebla, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acajete",
+        "state": "Puebla",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tepatlaxco de Hidalgo, Puebla, Mexico"
+    },
+    {
+      "lat": 19.10692683877199,
+      "lon": -97.94823121201289,
+      "geoinfo": {
+        "display_name": "Avenida 7 Oriente, Acajete, Puebla, Mexico",
+        "road": "Avenida 7 Oriente",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acajete",
+        "state": "Puebla",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida 7 Oriente, Acajete, 84302 Puebla, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:46.382567+00:00",
+  "_kind": "geo_samples"
+}

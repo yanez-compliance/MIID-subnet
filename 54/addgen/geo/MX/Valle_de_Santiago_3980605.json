@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Valle de Santiago",
+  "geonameid": 3980605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.435567222233214,
+      "lon": -101.18650982715582,
+      "geoinfo": {
+        "display_name": "Valle de Santiago, Guanajuato, 36886, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valle de Santiago",
+        "state": "Guanajuato",
+        "postcode": "36886",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Valle de Santiago, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.37520803814854,
+      "lon": -101.17828780894808,
+      "geoinfo": {
+        "display_name": "Avenida del Potrero, Ucoc 3, Valle de Santiago, Guanajuato, 38404, Mexico",
+        "road": "Avenida del Potrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valle de Santiago",
+        "state": "Guanajuato",
+        "postcode": "38404",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida del Potrero, Ucoc 3, Valle de Santiago, Guanajuato, 38404, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:35.910994+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Porz am Rhein",
+  "geonameid": 2852566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.910385920689635,
+      "lon": 7.031548114389335,
+      "geoinfo": {
+        "display_name": "A 559, Gremberghoven, Porz, Cologne, North Rhine-Westphalia, 51149, Germany",
+        "road": "A 559",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gremberghoven",
+        "city_district": "Porz",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51149",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 559, Porz am Rhein, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.88296724336423,
+      "lon": 7.129062145841858,
+      "geoinfo": {
+        "display_name": "Flughafen Ringstraße, Sieglar, Grengel, Porz, Cologne, Rhein-Sieg-Kreis, North Rhine-Westphalia, 51147, Germany",
+        "road": "Flughafen Ringstraße",
+        "house_number": null,
+        "neighbourhood": "Sieglar",
+        "suburb": "Grengel",
+        "city_district": "Porz",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51147",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "806, Flughafen Ringstraße, Sieglar, Grengel, Porz, Cologne, Rhein-Sieg-Kreis, North Rhine-Westphalia, 51147, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:42.911818+00:00",
+  "_kind": "geo_samples"
+}

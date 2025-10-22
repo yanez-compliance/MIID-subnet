@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Tomilino",
+  "geonameid": 482260,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.65969558007674,
+      "lon": 37.94094395414059,
+      "geoinfo": {
+        "display_name": "25, улица Никитина, Tomilino, Lyuberetsky District, Moscow Oblast, Central Federal District, 140072, Russia",
+        "road": "улица Никитина",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tomilino",
+        "state": "Moscow Oblast",
+        "postcode": "140072",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "25 улица Никитина, Tomilino, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.64319672596552,
+      "lon": 38.01469530150476,
+      "geoinfo": {
+        "display_name": "13, Рельсовая улица, МЭЗ-1, Malakhovka, Lyuberetsky District, Moscow Oblast, Central Federal District, 140032, Russia",
+        "road": "Рельсовая улица",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "МЭЗ-1",
+        "city_district": null,
+        "city": "Malakhovka",
+        "state": "Moscow Oblast",
+        "postcode": "140032",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "13, Рельсовая улица, МЭЗ-1, Malakhovka, Lyuberetsky District, Moscow Oblast, Central Federal District, 140032, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:13.040566+00:00",
+  "_kind": "geo_samples"
+}

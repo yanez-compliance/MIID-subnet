@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Rejas",
+  "geonameid": 11550030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.44439204934621,
+      "lon": -3.591401881053278,
+      "geoinfo": {
+        "display_name": "M-14, Ciudad Pegaso, Rejas, San Blas - Canillejas, Madrid, Community of Madrid, 28042, Spain",
+        "road": "M-14",
+        "house_number": null,
+        "neighbourhood": "Ciudad Pegaso",
+        "suburb": "San Blas - Canillejas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28042",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-14, Rejas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.4065496082504,
+      "lon": -3.547389383955203,
+      "geoinfo": {
+        "display_name": "38, Calle Cerro del Tesoro, El Cañaveral, Vicálvaro, Madrid, Community of Madrid, 28052, Spain",
+        "road": "Calle Cerro del Tesoro",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": "Vicálvaro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28052",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "38, Calle Cerro del Tesoro, El Cañaveral, Vicálvaro, Madrid, Community of Madrid, 28052, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:44.209129+00:00",
+  "_kind": "geo_samples"
+}

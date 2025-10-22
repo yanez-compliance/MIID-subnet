@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Birmingham",
+  "geonameid": 4049979,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.527069782278275,
+      "lon": -86.7728684486171,
+      "geoinfo": {
+        "display_name": "4306, 1st Avenue South, Avondale, Woodlawn, Birmingham, Jefferson County, Alabama, 35222, United States",
+        "road": "1st Avenue South",
+        "house_number": "4306",
+        "neighbourhood": "Avondale",
+        "suburb": "Woodlawn",
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35222",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4306 1st Avenue South, Birmingham, Alabama, United States"
+    },
+    {
+      "lat": 33.496839114158895,
+      "lon": -86.8238652223018,
+      "geoinfo": {
+        "display_name": "465, Gamma Street South, Birmingham, Jefferson County, Alabama, 35205, United States",
+        "road": "Gamma Street South",
+        "house_number": "465",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "465, Gamma Street South, Birmingham, Jefferson County, Alabama, 35205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:47.010135+00:00",
+  "_kind": "geo_samples"
+}

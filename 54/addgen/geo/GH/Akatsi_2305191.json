@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Akatsi",
+  "geonameid": 2305191,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.123563600508168,
+      "lon": 0.7602339860685996,
+      "geoinfo": {
+        "display_name": "Torve, Akatsi South District, Volta Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torve",
+        "state": "Volta Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Akatsi, Volta Region, Ghana"
+    },
+    {
+      "lat": 6.115653958261146,
+      "lon": 0.792088201566257,
+      "geoinfo": {
+        "display_name": "The Point, Akatsi, Akatsi South District, Volta Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "The Point",
+        "city_district": null,
+        "city": "Akatsi",
+        "state": "Volta Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "The Point, Akatsi, Volta Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:49:37.808495+00:00",
+  "_kind": "geo_samples"
+}

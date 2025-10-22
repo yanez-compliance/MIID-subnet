@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Troy",
+  "geonameid": 5174358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.02153965052869,
+      "lon": -84.22465689282596,
+      "geoinfo": {
+        "display_name": "1444, Waco Street, Troy, Miami County, Ohio, 45373, United States",
+        "road": "Waco Street",
+        "house_number": "1444",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troy",
+        "state": "Ohio",
+        "postcode": "45373",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1444 Waco Street, Troy, Ohio, United States"
+    },
+    {
+      "lat": 40.01096307508373,
+      "lon": -84.22438397116117,
+      "geoinfo": {
+        "display_name": "1649, Old Schoolhouse Road, Miami County, Ohio, 45373, United States",
+        "road": "Old Schoolhouse Road",
+        "house_number": "1649",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45373",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1649, Old Schoolhouse Road, Miami County, Ohio, 45373, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:18.127175+00:00",
+  "_kind": "geo_samples"
+}

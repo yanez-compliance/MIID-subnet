@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxford",
+  "geonameid": 4081914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.62194378646091,
+      "lon": -85.88341096305227,
+      "geoinfo": {
+        "display_name": "Access, Anniston, Calhoun County, Alabama, 36201, United States",
+        "road": "Access",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anniston",
+        "state": "Alabama",
+        "postcode": "36201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Access, Oxford, Alabama, United States"
+    },
+    {
+      "lat": 33.60284726016491,
+      "lon": -85.87875705871856,
+      "geoinfo": {
+        "display_name": "3326, Bobwhite Street, Hobson City, Calhoun County, Alabama, 36203, United States",
+        "road": "Bobwhite Street",
+        "house_number": "3326",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hobson City",
+        "state": "Alabama",
+        "postcode": "36203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3326, Bobwhite Street, Hobson City, Calhoun County, Alabama, 36203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:21.040066+00:00",
+  "_kind": "geo_samples"
+}

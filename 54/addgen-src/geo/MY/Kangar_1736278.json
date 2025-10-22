@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kangar",
+  "geonameid": 1736278,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.424332389545883,
+      "lon": 100.1985440244666,
+      "geoinfo": {
+        "display_name": "Jalan Maju 7, Taman Kemajuan, Kangar, Perlis, 01000, Malaysia",
+        "road": "Jalan Maju 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kangar",
+        "state": "Perlis",
+        "postcode": "01000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Maju 7, Kangar, Perlis, Malaysia"
+    },
+    {
+      "lat": 6.442773828767098,
+      "lon": 100.17151291299011,
+      "geoinfo": {
+        "display_name": "Kangar, Perlis, 01000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kangar",
+        "state": "Perlis",
+        "postcode": "01000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "172, Kangar, Perlis, 01000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:37.972431+00:00",
+  "_kind": "geo_samples"
+}

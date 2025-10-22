@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wangen",
+  "geonameid": 2814270,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.68767502088337,
+      "lon": 9.844365260321315,
+      "geoinfo": {
+        "display_name": "Danneckerweg, Hinteres Ebnet, Wangen, Wangen im Allgäu, Verwaltungsgemeinschaft Wangen im Allgäu, Landkreis Ravensburg, Baden-Württemberg, 88239, Germany",
+        "road": "Danneckerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hinteres Ebnet",
+        "city_district": null,
+        "city": "Wangen im Allgäu",
+        "state": "Baden-Württemberg",
+        "postcode": "88239",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Danneckerweg, Wangen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 47.66500220213329,
+      "lon": 9.884439322602272,
+      "geoinfo": {
+        "display_name": "B 12, Beuren, Staudach, Hergatz, Landkreis Lindau, Bavaria, 88145, Germany",
+        "road": "B 12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Staudach",
+        "state": "Bavaria",
+        "postcode": "88145",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 12, Beuren, Staudach, Hergatz, Landkreis Lindau, Bavaria, 88145, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:24.443948+00:00",
+  "_kind": "geo_samples"
+}

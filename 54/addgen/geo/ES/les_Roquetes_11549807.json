@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "les Roquetes",
+  "geonameid": 11549807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.48092090970529,
+      "lon": 2.164476545378509,
+      "geoinfo": {
+        "display_name": "N-150, Polígon industrial Hermes, Montcada i Reixac, Vallès Occidental, Barcelona, Catalonia, 08110, Spain",
+        "road": "N-150",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montcada i Reixac",
+        "state": "Catalonia",
+        "postcode": "08110",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-150, les Roquetes, Catalonia, Spain"
+    },
+    {
+      "lat": 41.45661277388337,
+      "lon": 2.217209943710571,
+      "geoinfo": {
+        "display_name": "30, Carrer de Milà, Puigfred, Llatí, Santa Coloma de Gramenet, Barcelonès, Barcelona, Catalonia, 08921, Spain",
+        "road": "Carrer de Milà",
+        "house_number": "30",
+        "neighbourhood": "Puigfred",
+        "suburb": null,
+        "city_district": "Llatí",
+        "city": "Santa Coloma de Gramenet",
+        "state": "Catalonia",
+        "postcode": "08921",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "30, Carrer de Milà, Puigfred, Llatí, Santa Coloma de Gramenet, Barcelonès, Barcelona, Catalonia, 08921, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:35.353414+00:00",
+  "_kind": "geo_samples"
+}

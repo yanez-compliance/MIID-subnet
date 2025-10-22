@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Samokov",
+  "geonameid": 727462,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.35368462649895,
+      "lon": 23.599011007802794,
+      "geoinfo": {
+        "display_name": "822, Shipochane, Samokov, Sofia, 2000, Bulgaria",
+        "road": "822",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shipochane",
+        "state": "Sofia",
+        "postcode": "2000",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "822, Shipochane, Samokov, Sofia, 2000, Bulgaria"
+    },
+    {
+      "lat": 42.356256974869765,
+      "lon": 23.53562490446356,
+      "geoinfo": {
+        "display_name": "Prodanovtsi, Samokov, Sofia, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prodanovtsi",
+        "state": "Sofia",
+        "postcode": null,
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "860, Prodanovtsi, Samokov, 66593 Sofia, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:48.623557+00:00",
+  "_kind": "geo_samples"
+}

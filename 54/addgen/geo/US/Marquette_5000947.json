@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marquette",
+  "geonameid": 5000947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.558470967171154,
+      "lon": -87.44216113022026,
+      "geoinfo": {
+        "display_name": "2491, Cherry Street, Trowbridge Park, Marquette Township, Marquette County, Michigan, 49855, United States",
+        "road": "Cherry Street",
+        "house_number": "2491",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marquette Township",
+        "state": "Michigan",
+        "postcode": "49855",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2491 Cherry Street, Marquette, Michigan, United States"
+    },
+    {
+      "lat": 46.52363970647221,
+      "lon": -87.34545596748973,
+      "geoinfo": {
+        "display_name": "Michigan, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Michigan",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "367, Marquette, 14013 Michigan, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:39.905012+00:00",
+  "_kind": "geo_samples"
+}

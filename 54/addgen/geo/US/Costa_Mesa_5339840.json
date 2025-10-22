@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Costa Mesa",
+  "geonameid": 5339840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.66043370285056,
+      "lon": -117.91735203957926,
+      "geoinfo": {
+        "display_name": "2362, Harbor Boulevard, College Park, Costa Mesa, Orange County, California, 92626, United States",
+        "road": "Harbor Boulevard",
+        "house_number": "2362",
+        "neighbourhood": "College Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Costa Mesa",
+        "state": "California",
+        "postcode": "92626",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2362 Harbor Boulevard, Costa Mesa, California, United States"
+    },
+    {
+      "lat": 33.62438785754244,
+      "lon": -117.88439577945505,
+      "geoinfo": {
+        "display_name": "1433, High Bluff Drive, Harbor Cove, Newport Beach, Orange County, California, 92660, United States",
+        "road": "High Bluff Drive",
+        "house_number": "1433",
+        "neighbourhood": "Harbor Cove",
+        "suburb": null,
+        "city_district": null,
+        "city": "Newport Beach",
+        "state": "California",
+        "postcode": "92660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1433, High Bluff Drive, Harbor Cove, Newport Beach, Orange County, California, 92660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:58.224297+00:00",
+  "_kind": "geo_samples"
+}

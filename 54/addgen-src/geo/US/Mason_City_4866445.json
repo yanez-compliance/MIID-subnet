@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mason City",
+  "geonameid": 4866445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.15371871668929,
+      "lon": -93.14747584423931,
+      "geoinfo": {
+        "display_name": "Lexington Square, Eastbrooke, Mason City, Cerro Gordo County, Iowa, 50401, United States",
+        "road": "Lexington Square",
+        "house_number": null,
+        "neighbourhood": "Eastbrooke",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mason City",
+        "state": "Iowa",
+        "postcode": "50401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lexington Square, Mason City, Iowa, United States"
+    },
+    {
+      "lat": 43.13622246415281,
+      "lon": -93.15925298274269,
+      "geoinfo": {
+        "display_name": "Spruce Avenue, Mason City, Cerro Gordo County, Iowa, 50401, United States",
+        "road": "Spruce Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mason City",
+        "state": "Iowa",
+        "postcode": "50401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "292, Spruce Avenue, Mason City, Cerro Gordo County, Iowa, 50401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:41.742019+00:00",
+  "_kind": "geo_samples"
+}

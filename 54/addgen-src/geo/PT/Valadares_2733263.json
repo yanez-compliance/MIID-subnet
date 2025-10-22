@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Valadares",
+  "geonameid": 2733263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.11475894144417,
+      "lon": -8.645522600148825,
+      "geoinfo": {
+        "display_name": "Rua do Rodelo, Canidelo, Valadares, Vila Nova de Gaia, Porto, 4405-786, Portugal",
+        "road": "Rua do Rodelo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canidelo",
+        "city_district": null,
+        "city": "Vila Nova de Gaia",
+        "state": null,
+        "postcode": "4405-786",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua do Rodelo, Valadares, Portugal"
+    },
+    {
+      "lat": 41.127876779205124,
+      "lon": -8.606212323101465,
+      "geoinfo": {
+        "display_name": "VNG-00172, Avenida da República, Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto, 4434-501, Portugal",
+        "road": "Avenida da República",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mafamude e Vilar do Paraíso",
+        "city": "Vila Nova de Gaia",
+        "state": null,
+        "postcode": "4434-501",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "VNG-00172, Avenida da República, Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto, 4434-501, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:02.905267+00:00",
+  "_kind": "geo_samples"
+}

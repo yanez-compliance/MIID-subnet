@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Corio",
+  "geonameid": 2170307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.039225442940996,
+      "lon": 144.3921062756657,
+      "geoinfo": {
+        "display_name": "Forest Road South, Lara, City of Greater Geelong, Victoria, 3212, Australia",
+        "road": "Forest Road South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lara",
+        "state": "Victoria",
+        "postcode": "3212",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Forest Road South, Corio, Victoria, Australia"
+    },
+    {
+      "lat": -38.122289816324354,
+      "lon": 144.39267474915061,
+      "geoinfo": {
+        "display_name": "Geelong, City of Greater Geelong, Victoria, 3218, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geelong",
+        "state": "Victoria",
+        "postcode": "3218",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "550, Geelong, City of Greater Geelong, Victoria, 3218, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:54.115011+00:00",
+  "_kind": "geo_samples"
+}

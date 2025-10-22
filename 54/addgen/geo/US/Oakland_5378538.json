@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakland",
+  "geonameid": 5378538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.80747824024404,
+      "lon": -122.27127061333218,
+      "geoinfo": {
+        "display_name": "Oakland Ice Center, 519, 18th Street, Uptown, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+        "road": "18th Street",
+        "house_number": "519",
+        "neighbourhood": "Uptown",
+        "suburb": "Downtown Oakland",
+        "city_district": null,
+        "city": "Oakland",
+        "state": "California",
+        "postcode": "94612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "519 18th Street, Oakland, California, United States"
+    },
+    {
+      "lat": 37.84791822520093,
+      "lon": -122.26099908598226,
+      "geoinfo": {
+        "display_name": "510, 62nd Street, Idora Park, North Oakland, Oakland, Alameda County, California, 94168, United States",
+        "road": "62nd Street",
+        "house_number": "510",
+        "neighbourhood": "Idora Park",
+        "suburb": "North Oakland",
+        "city_district": null,
+        "city": "Oakland",
+        "state": "California",
+        "postcode": "94168",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "510, 62nd Street, Idora Park, North Oakland, Oakland, Alameda County, California, 94168, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:03.126622+00:00",
+  "_kind": "geo_samples"
+}

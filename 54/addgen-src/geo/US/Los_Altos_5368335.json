@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Los Altos",
+  "geonameid": 5368335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.36819032392011,
+      "lon": -122.116929661967,
+      "geoinfo": {
+        "display_name": "73, Deepwell Lane, Creekside Oaks, Los Altos, Santa Clara County, California, 94022, United States",
+        "road": "Deepwell Lane",
+        "house_number": "73",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Altos",
+        "state": "California",
+        "postcode": "94022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "73 Deepwell Lane, Los Altos, California, United States"
+    },
+    {
+      "lat": 37.39170426319595,
+      "lon": -122.11186168098394,
+      "geoinfo": {
+        "display_name": "101, Arbuelo Way, Los Altos, Santa Clara County, California, 94022, United States",
+        "road": "Arbuelo Way",
+        "house_number": "101",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Altos",
+        "state": "California",
+        "postcode": "94022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "101, Arbuelo Way, Los Altos, Santa Clara County, California, 94022, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:02.919738+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Côte-Saint-Luc",
+  "geonameid": 5928488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.45982772722615,
+      "lon": -73.67842720522036,
+      "geoinfo": {
+        "display_name": "École Rudolf Steiner de Montréal, Avenue Wentworth, Côte Saint-Luc, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4W 2S1, Canada",
+        "road": "Avenue Wentworth",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Côte Saint-Luc",
+        "state": "Quebec",
+        "postcode": "H4W 2S1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Avenue Wentworth, Côte-Saint-Luc, Quebec, Canada"
+    },
+    {
+      "lat": 45.42842710934218,
+      "lon": -73.69336294982641,
+      "geoinfo": {
+        "display_name": "Piste cyclable des Berges, Lachine, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H8S 4B7, Canada",
+        "road": "Piste cyclable des Berges",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lachine",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H8S 4B7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Piste cyclable des Berges, Lachine, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H8S 4B7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:13.480104+00:00",
+  "_kind": "geo_samples"
+}

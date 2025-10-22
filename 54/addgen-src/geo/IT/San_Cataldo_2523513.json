@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Cataldo",
+  "geonameid": 2523513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.48283581730349,
+      "lon": 14.03739494692608,
+      "geoinfo": {
+        "display_name": "Caltanissetta, Sicily, 93100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caltanissetta",
+        "state": "Sicily",
+        "postcode": "93100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "San Cataldo, Sicily, Italy"
+    },
+    {
+      "lat": 37.45336307860355,
+      "lon": 13.962866351268975,
+      "geoinfo": {
+        "display_name": "Serradifalco, Caltanissetta, Sicily, 93010, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serradifalco",
+        "state": "Sicily",
+        "postcode": "93010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "878, Serradifalco, Caltanissetta, Sicily, 93010, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:21.947072+00:00",
+  "_kind": "geo_samples"
+}

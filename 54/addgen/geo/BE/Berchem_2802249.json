@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Berchem",
+  "geonameid": 2802249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.19002797862486,
+      "lon": 4.413418795193975,
+      "geoinfo": {
+        "display_name": "E19, Antwerp, Flanders, 2018, Belgium",
+        "road": "E19",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Antwerp",
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2018",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E19, Berchem, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.2192742318078,
+      "lon": 4.410630954147472,
+      "geoinfo": {
+        "display_name": "VBS De Dames, 74, Lange Nieuwstraat, Meir, Antwerpen-Noord, Antwerp, 2000, Belgium",
+        "road": "Lange Nieuwstraat",
+        "house_number": "74",
+        "neighbourhood": null,
+        "suburb": "Antwerpen-Noord",
+        "city_district": "Antwerp",
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "VBS De Dames, 74, Lange Nieuwstraat, Meir, Antwerpen-Noord, Antwerp, 2000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:41.359093+00:00",
+  "_kind": "geo_samples"
+}

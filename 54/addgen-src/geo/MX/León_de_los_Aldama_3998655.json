@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "León de los Aldama",
+  "geonameid": 3998655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.14219833210487,
+      "lon": -101.67869015536034,
+      "geoinfo": {
+        "display_name": "226, Calle Fernando Montes de Oca, Rincon De La Florida, León, Guanajuato, 37199, Mexico",
+        "road": "Calle Fernando Montes de Oca",
+        "house_number": "226",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "León",
+        "state": "Guanajuato",
+        "postcode": "37199",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "226 Calle Fernando Montes de Oca, León de los Aldama, Guanajuato, Mexico"
+    },
+    {
+      "lat": 21.090181452413514,
+      "lon": -101.6956141083743,
+      "geoinfo": {
+        "display_name": "Pompa, León, Guanajuato, 37490, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "León",
+        "state": "Guanajuato",
+        "postcode": "37490",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "906, Pompa, León, Guanajuato, 37490, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:23.565804+00:00",
+  "_kind": "geo_samples"
+}

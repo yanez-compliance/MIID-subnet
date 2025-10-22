@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Loves Park",
+  "geonameid": 4900579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.317689758736854,
+      "lon": -89.02866942283879,
+      "geoinfo": {
+        "display_name": "North Alpine Road, Rockford, Rockford Township, Winnebago County, Illinois, 61111, United States",
+        "road": "North Alpine Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockford",
+        "state": "Illinois",
+        "postcode": "61111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Alpine Road, Loves Park, Illinois, United States"
+    },
+    {
+      "lat": 42.35440680640572,
+      "lon": -89.06011549944402,
+      "geoinfo": {
+        "display_name": "1237, Key West Drive, Machesney Park, Owen Township, Winnebago County, Illinois, 61103, United States",
+        "road": "Key West Drive",
+        "house_number": "1237",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Machesney Park",
+        "state": "Illinois",
+        "postcode": "61103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1237, Key West Drive, Machesney Park, Owen Township, Winnebago County, Illinois, 61103, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:25.212537+00:00",
+  "_kind": "geo_samples"
+}

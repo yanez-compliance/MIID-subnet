@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Tubize",
+  "geonameid": 2785169,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.716031960646916,
+      "lon": 4.155467960112186,
+      "geoinfo": {
+        "display_name": "Haras de Mussain, Rue de Platain Bois, Mussain, Saintes, Tubize, Nivelles, Walloon Brabant, Wallonia, 1480, Belgium",
+        "road": "Rue de Platain Bois",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saintes",
+        "state": "Walloon Brabant",
+        "postcode": "1480",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue de Platain Bois, Tubize, Walloon Brabant, Belgium"
+    },
+    {
+      "lat": 50.65374542281072,
+      "lon": 4.227897054923278,
+      "geoinfo": {
+        "display_name": "Rue du Sart, Ittre, Nivelles, Walloon Brabant, Wallonia, 1460, Belgium",
+        "road": "Rue du Sart",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ittre",
+        "city": "Ittre",
+        "state": "Walloon Brabant",
+        "postcode": "1460",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "874, Rue du Sart, Ittre, Nivelles, Walloon Brabant, Wallonia, 1460, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:22.450043+00:00",
+  "_kind": "geo_samples"
+}

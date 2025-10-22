@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stendal",
+  "geonameid": 2827479,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.59899948034104,
+      "lon": 11.828758455163028,
+      "geoinfo": {
+        "display_name": "68, Albrecht-Dürer-Straße, Stadtsee, Stendal, Saxony-Anhalt, 39576, Germany",
+        "road": "Albrecht-Dürer-Straße",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": "Stadtsee",
+        "city_district": "Stendal",
+        "city": "Stendal",
+        "state": "Saxony-Anhalt",
+        "postcode": "39576",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "68 Albrecht-Dürer-Straße, Stendal, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 52.61458227322349,
+      "lon": 11.900746170767185,
+      "geoinfo": {
+        "display_name": "B 189, Haferbreite, Ost, Stendal, Saxony-Anhalt, 39576, Germany",
+        "road": "B 189",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Haferbreite",
+        "city_district": "Stendal",
+        "city": "Stendal",
+        "state": "Saxony-Anhalt",
+        "postcode": "39576",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 189, Haferbreite, Ost, Stendal, Saxony-Anhalt, 39576, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:10.976304+00:00",
+  "_kind": "geo_samples"
+}

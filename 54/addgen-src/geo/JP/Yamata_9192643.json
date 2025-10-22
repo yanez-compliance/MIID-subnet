@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yamata",
+  "geonameid": 9192643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.11314973316606,
+      "lon": 139.3877993355096,
+      "geoinfo": {
+        "display_name": "下恩田, Kumagaya, Saitama Prefecture, 360-0161, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kumagaya",
+        "state": null,
+        "postcode": "360-0161",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yamata, Japan"
+    },
+    {
+      "lat": 36.07969482490398,
+      "lon": 139.38401691573523,
+      "geoinfo": {
+        "display_name": "Kamisato, Higashimatsuyama, Saitama Prefecture, 355-0803, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kamisato",
+        "suburb": null,
+        "city_district": null,
+        "city": "Higashimatsuyama",
+        "state": null,
+        "postcode": "355-0803",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kamisato, Higashimatsuyama, Saitama Prefecture, 355-0803, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:29.323236+00:00",
+  "_kind": "geo_samples"
+}

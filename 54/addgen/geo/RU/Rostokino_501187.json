@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Rostokino",
+  "geonameid": 501187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.84224891836925,
+      "lon": 37.70125441235695,
+      "geoinfo": {
+        "display_name": "проектируемый проезд № 3453, Yaroslavsky District, Moscow, Central Federal District, 129337, Russia",
+        "road": "проектируемый проезд № 3453",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yaroslavsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "129337",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "проектируемый проезд № 3453, Rostokino, Moscow, Russia"
+    },
+    {
+      "lat": 55.863250898036995,
+      "lon": 37.68146658432162,
+      "geoinfo": {
+        "display_name": "15/1, Анадырский проезд, Babushkinsky District, Moscow, Central Federal District, 129337, Russia",
+        "road": "Анадырский проезд",
+        "house_number": "15/1",
+        "neighbourhood": null,
+        "suburb": "Babushkinsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "129337",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "15/1, Анадырский проезд, Babushkinsky District, Moscow, Central Federal District, 129337, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:31:26.026233+00:00",
+  "_kind": "geo_samples"
+}

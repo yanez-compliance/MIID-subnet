@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Zagazig",
+  "geonameid": 359493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.605371755928815,
+      "lon": 31.459405359989923,
+      "geoinfo": {
+        "display_name": "Abou Agwa Road, Al Qanayat, Eastern, 44745, Egypt",
+        "road": "Abou Agwa Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Qanayat",
+        "state": "Eastern",
+        "postcode": "44745",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Abou Agwa Road, Zagazig, Eastern, Egypt"
+    },
+    {
+      "lat": 30.613735343767722,
+      "lon": 31.541029582192568,
+      "geoinfo": {
+        "display_name": "Saeid Soliman Street, Hirriyat Raznah, Eastern, 44839, Egypt",
+        "road": "Saeid Soliman Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hirriyat Raznah",
+        "state": "Eastern",
+        "postcode": "44839",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "868, Saeid Soliman Street, Zagazig, 44839 Eastern, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:04:14.404067+00:00",
+  "_kind": "geo_samples"
+}

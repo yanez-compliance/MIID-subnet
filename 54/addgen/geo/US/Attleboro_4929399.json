@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Attleboro",
+  "geonameid": 4929399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.97279324639574,
+      "lon": -71.29282288383943,
+      "geoinfo": {
+        "display_name": "45, Sperry Lane, Jackson Farm, North Attleborough, Bristol County, Massachusetts, 02760, United States",
+        "road": "Sperry Lane",
+        "house_number": "45",
+        "neighbourhood": "Jackson Farm",
+        "suburb": null,
+        "city_district": null,
+        "city": "North Attleborough",
+        "state": "Massachusetts",
+        "postcode": "02760",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "45 Sperry Lane, Attleboro, Massachusetts, United States"
+    },
+    {
+      "lat": 41.97849129711414,
+      "lon": -71.31179693184505,
+      "geoinfo": {
+        "display_name": "North Attleborough Public Schools, 1, Stoddard Drive, Attleboro Falls, North Attleborough, Bristol County, Massachusetts, 02760, United States",
+        "road": "Stoddard Drive",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Attleborough",
+        "state": "Massachusetts",
+        "postcode": "02760",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Attleborough Public Schools, 1, Stoddard Drive, Attleboro Falls, North Attleborough, Bristol County, Massachusetts, 02760, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:06.139010+00:00",
+  "_kind": "geo_samples"
+}

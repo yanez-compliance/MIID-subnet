@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "San Germán",
+  "geonameid": 3534749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.619042855879304,
+      "lon": -76.12458641114134,
+      "geoinfo": {
+        "display_name": "La Loma, Urbano Noris, Holguín, 82800, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Loma",
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbano Noris",
+        "state": "Holguín",
+        "postcode": "82800",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "La Loma, San Germán, Holguín, Cuba"
+    },
+    {
+      "lat": 20.615102870839575,
+      "lon": -76.11279690642142,
+      "geoinfo": {
+        "display_name": "Urbano Noris, Holguín, 82800, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbano Noris",
+        "state": "Holguín",
+        "postcode": "82800",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "155, Urbano Noris, Holguín, 82800, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:51.535776+00:00",
+  "_kind": "geo_samples"
+}

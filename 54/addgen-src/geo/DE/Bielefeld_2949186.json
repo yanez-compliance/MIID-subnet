@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bielefeld",
+  "geonameid": 2949186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.99670696142635,
+      "lon": 8.55486392660665,
+      "geoinfo": {
+        "display_name": "2, Bodelschwinghstraße, Sieker, Stieghorst, Bielefeld, North Rhine-Westphalia, 33604, Germany",
+        "road": "Bodelschwinghstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Stieghorst",
+        "city_district": null,
+        "city": "Bielefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33604",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Bodelschwinghstraße, Bielefeld, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.062554050547604,
+      "lon": 8.489272888339494,
+      "geoinfo": {
+        "display_name": "11, Immermannstraße, Babenhausen, Dornberg, Bielefeld, North Rhine-Westphalia, 33619, Germany",
+        "road": "Immermannstraße",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Dornberg",
+        "city_district": null,
+        "city": "Bielefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33619",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Immermannstraße, Babenhausen, Dornberg, Bielefeld, North Rhine-Westphalia, 33619, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:56.247075+00:00",
+  "_kind": "geo_samples"
+}

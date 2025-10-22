@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Blanes",
+  "geonameid": 3127978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.66306484252656,
+      "lon": 2.808418343621843,
+      "geoinfo": {
+        "display_name": "Rocalla de Zenon Schreiber, Mas Terrats, Blanes, la Selva, Girona, Catalonia, 17300, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mas Terrats",
+        "suburb": null,
+        "city_district": null,
+        "city": "Blanes",
+        "state": "Catalonia",
+        "postcode": "17300",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Mas Terrats, Blanes, Catalonia, Spain"
+    },
+    {
+      "lat": 41.708597141202176,
+      "lon": 2.768193614690689,
+      "geoinfo": {
+        "display_name": "camí del Vilar, Tordera, Maresme, Barcelona, Catalonia, 17300, Spain",
+        "road": "camí del Vilar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tordera",
+        "state": "Catalonia",
+        "postcode": "17300",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "057, camí del Vilar, Tordera, Maresme, Barcelona, Catalonia, 17300, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:23.302636+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "New Taipei City",
+  "geonameid": 12908892,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.06688262231926,
+      "lon": 121.49193074593799,
+      "geoinfo": {
+        "display_name": "1號, 民生街38巷1弄, Minsheng Village, Sanchong District, New Taipei, 24145, Taiwan",
+        "road": "民生街38巷1弄",
+        "house_number": "1號",
+        "neighbourhood": "Minsheng Village",
+        "suburb": "Sanchong District",
+        "city_district": null,
+        "city": "New Taipei",
+        "state": null,
+        "postcode": "24145",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "1號, 民生街38巷1弄, Minsheng Village, Sanchong District, New Taipei, 24145, Taiwan"
+    },
+    {
+      "lat": 25.030411659733893,
+      "lon": 121.42386562005224,
+      "geoinfo": {
+        "display_name": "35號, Guifeng Street, Guihe Village, Taishan District, Yingpan, New Taipei, 242061, Taiwan",
+        "road": "Guifeng Street",
+        "house_number": "35號",
+        "neighbourhood": "Guihe Village",
+        "suburb": "Taishan District",
+        "city_district": null,
+        "city": "New Taipei",
+        "state": null,
+        "postcode": "242061",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "35號, Guifeng Street, Guihe Village, Taishan District, Yingpan, New Taipei, 242061, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:46.951379+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Segovia",
+  "geonameid": 3109256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.934859506212725,
+      "lon": -4.0954930643067735,
+      "geoinfo": {
+        "display_name": "Avenida Don Juan de Borbón y Battemberg, Comunidad de Ciudad y Tierra, El Palo-Mirasierra, La Albuera, Segovia, Castile and León, 40006, Spain",
+        "road": "Avenida Don Juan de Borbón y Battemberg",
+        "house_number": null,
+        "neighbourhood": "Comunidad de Ciudad y Tierra",
+        "suburb": "La Albuera",
+        "city_district": null,
+        "city": "Segovia",
+        "state": "Castile and León",
+        "postcode": "40006",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida Don Juan de Borbón y Battemberg, Segovia, Castile and León, Spain"
+    },
+    {
+      "lat": 40.942193400851004,
+      "lon": -4.080959658340989,
+      "geoinfo": {
+        "display_name": "Camino del Molino, San Cristóbal de Segovia, Segovia, Castile and León, 40197, Spain",
+        "road": "Camino del Molino",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Cristóbal de Segovia",
+        "state": "Castile and León",
+        "postcode": "40197",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "291, Camino del Molino, San Cristóbal de Segovia, Segovia, Castile and León, 40197, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:08.074828+00:00",
+  "_kind": "geo_samples"
+}

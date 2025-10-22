@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Torcy",
+  "geonameid": 2972444,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.83540029320203,
+      "lon": 2.6007636473533142,
+      "geoinfo": {
+        "display_name": "D 51, Pablo Picasso, Cité Descartes, Champs-sur-Marne, Torcy, Seine-et-Marne, Metropolitan France, 77420, France",
+        "road": "D 51",
+        "house_number": null,
+        "neighbourhood": "Pablo Picasso",
+        "suburb": "Cité Descartes",
+        "city_district": null,
+        "city": "Champs-sur-Marne",
+        "state": null,
+        "postcode": "77420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 51, Torcy, France"
+    },
+    {
+      "lat": 48.84602916745327,
+      "lon": 2.608010970450976,
+      "geoinfo": {
+        "display_name": "Allée Anatole France, Pablo Picasso, Les Deux Parcs, Champs-sur-Marne, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77420, France",
+        "road": "Allée Anatole France",
+        "house_number": null,
+        "neighbourhood": "Pablo Picasso",
+        "suburb": "Les Deux Parcs",
+        "city_district": null,
+        "city": "Champs-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "77420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "578, Allée Anatole France, Pablo Picasso, Les Deux Parcs, Champs-sur-Marne, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77420, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:20.787902+00:00",
+  "_kind": "geo_samples"
+}

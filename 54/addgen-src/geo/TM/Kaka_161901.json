@@ -1,0 +1,47 @@
+{
+  "country_code": "TM",
+  "country": "Turkmenistan",
+  "city": "Kaka",
+  "geonameid": 161901,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 37.38158923553441,
+      "lon": 59.65119200335619,
+      "geoinfo": {
+        "display_name": "Kaka District, Ahal Region, Turkmenistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ahal Region",
+        "postcode": null,
+        "country": "Turkmenistan",
+        "country_code": "tm"
+      },
+      "address": "Kaka, Ahal Region, Turkmenistan"
+    },
+    {
+      "lat": 37.354512375600514,
+      "lon": 59.64619723064983,
+      "geoinfo": {
+        "display_name": "M37, Kaka, Kaka District, Ahal Region, Turkmenistan",
+        "road": "M37",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaka",
+        "state": "Ahal Region",
+        "postcode": null,
+        "country": "Turkmenistan",
+        "country_code": "tm"
+      },
+      "address": "M37, Kaka, Ahal Region, Turkmenistan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:21:36.440635+00:00",
+  "_kind": "geo_samples"
+}

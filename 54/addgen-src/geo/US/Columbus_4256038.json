@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Columbus",
+  "geonameid": 4256038,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.22053202785797,
+      "lon": -85.9391095831111,
+      "geoinfo": {
+        "display_name": "County Road West 100 North, Columbus, Bartholomew County, Indiana, 47201, United States",
+        "road": "County Road West 100 North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Indiana",
+        "postcode": "47201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road West 100 North, Columbus, Indiana, United States"
+    },
+    {
+      "lat": 39.21154823622683,
+      "lon": -85.93693103379344,
+      "geoinfo": {
+        "display_name": "Tellman Road, Columbus, Bartholomew County, Indiana, 47201, United States",
+        "road": "Tellman Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Indiana",
+        "postcode": "47201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "008, Tellman Road, Columbus, Bartholomew County, Indiana, 47201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:53.377428+00:00",
+  "_kind": "geo_samples"
+}

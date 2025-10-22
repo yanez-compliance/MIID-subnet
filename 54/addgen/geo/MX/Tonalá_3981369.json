@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tonalá",
+  "geonameid": 3981369,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.652733864741094,
+      "lon": -103.24974720601354,
+      "geoinfo": {
+        "display_name": "mariscos veracruzanos el chino, 34, Avenida Juan Gil Preciado, Basilio Badillo, Tonalá, Región Centro, Jalisco, 45406, Mexico",
+        "road": "Avenida Juan Gil Preciado",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": "Basilio Badillo",
+        "city_district": null,
+        "city": "Tonalá",
+        "state": "Jalisco",
+        "postcode": "45406",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "34 Avenida Juan Gil Preciado, Tonalá, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.654588203953054,
+      "lon": -103.24308074252917,
+      "geoinfo": {
+        "display_name": "Avenida Juan Gil Preciado, Coyula, Tonalá, Región Centro, Jalisco, 45406, Mexico",
+        "road": "Avenida Juan Gil Preciado",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyula",
+        "state": "Jalisco",
+        "postcode": "45406",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "178, Avenida Juan Gil Preciado, Coyula, Tonalá, Región Centro, Jalisco, 45406, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:31.853933+00:00",
+  "_kind": "geo_samples"
+}

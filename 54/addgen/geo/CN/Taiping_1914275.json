@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Taiping",
+  "geonameid": 1914275,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.8713102104575,
+      "lon": 106.01187873602035,
+      "geoinfo": {
+        "display_name": "Tongliang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongliang District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Taiping, Chongqing, China"
+    },
+    {
+      "lat": 29.91077767596036,
+      "lon": 106.02972315091813,
+      "geoinfo": {
+        "display_name": "Taiping, Tongliang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongliang District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "643, Taiping, Tongliang District, 63541 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:47.835624+00:00",
+  "_kind": "geo_samples"
+}

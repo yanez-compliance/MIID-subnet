@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Viladecans",
+  "geonameid": 3105935,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.31771200162224,
+      "lon": 2.0158255627250043,
+      "geoinfo": {
+        "display_name": "Carrer Pere Masallach, l'Eixample Centre, Viladecans, Baix Llobregat, Barcelona, Catalonia, 08840, Spain",
+        "road": "Carrer Pere Masallach",
+        "house_number": null,
+        "neighbourhood": "l'Eixample Centre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Viladecans",
+        "state": "Catalonia",
+        "postcode": "08840",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer Pere Masallach, Viladecans, Catalonia, Spain"
+    },
+    {
+      "lat": 41.279527147907,
+      "lon": 2.0070143932967555,
+      "geoinfo": {
+        "display_name": "Camí de sota la corredora, Gavà, Baix Llobregat, Barcelona, Catalonia, 08850, Spain",
+        "road": "Camí de sota la corredora",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gavà",
+        "state": "Catalonia",
+        "postcode": "08850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "815, Camí de sota la corredora, Gavà, Baix Llobregat, Barcelona, Catalonia, 08850, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:33.306342+00:00",
+  "_kind": "geo_samples"
+}

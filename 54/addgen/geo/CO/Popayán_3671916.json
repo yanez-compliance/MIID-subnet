@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Popayán",
+  "geonameid": 3671916,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.4702146035504375,
+      "lon": -76.59120181163851,
+      "geoinfo": {
+        "display_name": "Calle 34N, Valle Robledo, Comuna 1, Popayán, Centro, Cauca, RAP Pacífico, 190001, Colombia",
+        "road": "Calle 34N",
+        "house_number": null,
+        "neighbourhood": "Valle Robledo",
+        "suburb": "Comuna 1",
+        "city_district": null,
+        "city": "Popayán",
+        "state": "Cauca",
+        "postcode": "190001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 34N, Popayán, Cauca, Colombia"
+    },
+    {
+      "lat": 2.450111530765876,
+      "lon": -76.64081794302808,
+      "geoinfo": {
+        "display_name": "Bosques De occidente, Popayán, Centro, Cauca, RAP Pacífico, 190004, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bosques De occidente",
+        "suburb": null,
+        "city_district": null,
+        "city": "Popayán",
+        "state": "Cauca",
+        "postcode": "190004",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "341, Bosques De occidente, Popayán, Centro, Cauca, RAP Pacífico, 190004, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:39.396002+00:00",
+  "_kind": "geo_samples"
+}

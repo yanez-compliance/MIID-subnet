@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lents",
+  "geonameid": 5736378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.506099701032646,
+      "lon": -122.58028359129676,
+      "geoinfo": {
+        "display_name": "Portland Community College Southeast, 2305, Southeast 82nd Avenue, Jade District, Montavilla, Portland, Multnomah County, Oregon, 97216, United States",
+        "road": "Southeast 82nd Avenue",
+        "house_number": "2305",
+        "neighbourhood": "Jade District",
+        "suburb": "Montavilla",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2305 Southeast 82nd Avenue, Lents, Oregon, United States"
+    },
+    {
+      "lat": 45.50017790968177,
+      "lon": -122.60255121210436,
+      "geoinfo": {
+        "display_name": "Southeast Tibbetts Street, South Tabor, Portland, Multnomah County, Oregon, 97286, United States",
+        "road": "Southeast Tibbetts Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Tabor",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97286",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "025, Southeast Tibbetts Street, South Tabor, Portland, Multnomah County, Oregon, 97286, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:42.700457+00:00",
+  "_kind": "geo_samples"
+}

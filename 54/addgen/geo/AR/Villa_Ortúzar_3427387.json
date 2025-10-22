@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Villa Ortúzar",
+  "geonameid": 3427387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.56925964666206,
+      "lon": -58.48645027990138,
+      "geoinfo": {
+        "display_name": "3570, Avenida Álvarez Thomas, Villa Urquiza, Buenos Aires, Comuna 12, Autonomous City of Buenos Aires, C1431, Argentina",
+        "road": "Avenida Álvarez Thomas",
+        "house_number": "3570",
+        "neighbourhood": null,
+        "suburb": "Villa Urquiza",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1431",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "3570 Avenida Álvarez Thomas, Villa Ortúzar, Autonomous City of Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.554823550999615,
+      "lon": -58.49612063033048,
+      "geoinfo": {
+        "display_name": "4999, Correa, Saavedra, Buenos Aires, Comuna 12, Autonomous City of Buenos Aires, C1430DQQ, Argentina",
+        "road": "Correa",
+        "house_number": "4999",
+        "neighbourhood": null,
+        "suburb": "Saavedra",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1430DQQ",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "4999, Correa, Saavedra, Buenos Aires, Comuna 12, Autonomous City of Buenos Aires, C1430DQQ, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:05.539024+00:00",
+  "_kind": "geo_samples"
+}

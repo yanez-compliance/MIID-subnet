@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Juegang",
+  "geonameid": 1804979,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.29190987875393,
+      "lon": 121.16745741228699,
+      "geoinfo": {
+        "display_name": "南环路, Juegang, Rudong County, Nantong, Jiangsu, 225300, China",
+        "road": "南环路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rudong County",
+        "state": "Jiangsu",
+        "postcode": "225300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "南环路, Juegang, Jiangsu, China"
+    },
+    {
+      "lat": 32.33484139460286,
+      "lon": 121.22070337989413,
+      "geoinfo": {
+        "display_name": "掘坎线, Chengzhong, Rudong County, Nantong, Jiangsu, 225300, China",
+        "road": "掘坎线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chengzhong",
+        "city_district": null,
+        "city": "Rudong County",
+        "state": "Jiangsu",
+        "postcode": "225300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "281, 掘坎线, Juegang, 225300 Jiangsu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:28.437205+00:00",
+  "_kind": "geo_samples"
+}

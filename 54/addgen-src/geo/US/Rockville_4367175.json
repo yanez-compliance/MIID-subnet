@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rockville",
+  "geonameid": 4367175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.08442579795534,
+      "lon": -77.17135434396394,
+      "geoinfo": {
+        "display_name": "First Baptist Church, 55, Adclare Road, West End Park, Rockville, Montgomery County, Maryland, 20850, United States",
+        "road": "Adclare Road",
+        "house_number": "55",
+        "neighbourhood": "West End Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockville",
+        "state": "Maryland",
+        "postcode": "20850",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "55 Adclare Road, Rockville, Maryland, United States"
+    },
+    {
+      "lat": 39.088564917538555,
+      "lon": -77.13990745412185,
+      "geoinfo": {
+        "display_name": "382, Charles Street, Croydon Park, Rockville, Montgomery County, Maryland, 20850, United States",
+        "road": "Charles Street",
+        "house_number": "382",
+        "neighbourhood": "Croydon Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockville",
+        "state": "Maryland",
+        "postcode": "20850",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "382, Charles Street, Croydon Park, Rockville, Montgomery County, Maryland, 20850, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:32.770780+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Bolu",
+  "geonameid": 750516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71782890342496,
+      "lon": 31.598353632471177,
+      "geoinfo": {
+        "display_name": "Çiğirtkanlar Caddesi, Sümer Mahallesi, Çayırköy, Bolu, Black Sea Region, 14100, Turkey",
+        "road": "Çiğirtkanlar Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sümer Mahallesi",
+        "city_district": null,
+        "city": "Bolu",
+        "state": null,
+        "postcode": "14100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Çiğirtkanlar Caddesi, Bolu, Turkey"
+    },
+    {
+      "lat": 40.75801831336894,
+      "lon": 31.56519462121717,
+      "geoinfo": {
+        "display_name": "Demirciler, Pirahmetler, Bolu, Black Sea Region, 14300, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Demirciler",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bolu",
+        "state": null,
+        "postcode": "14300",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "303, Demirciler, Pirahmetler, Bolu, Black Sea Region, 14300, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:50.723109+00:00",
+  "_kind": "geo_samples"
+}

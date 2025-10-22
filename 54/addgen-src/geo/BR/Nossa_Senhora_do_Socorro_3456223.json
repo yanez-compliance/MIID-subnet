@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Nossa Senhora do Socorro",
+  "geonameid": 3456223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -10.861215634013266,
+      "lon": -37.093111769470546,
+      "geoinfo": {
+        "display_name": "Rua Oviêdo Felix dos Santos, Fernando Collor, Nossa Senhora do Socorro, Região Geográfica Imediata de Aracaju, Região Metropolitana de Aracaju, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 49160-000, Brazil",
+        "road": "Rua Oviêdo Felix dos Santos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fernando Collor",
+        "city_district": "Nossa Senhora do Socorro",
+        "city": "Nossa Senhora do Socorro",
+        "state": "Sergipe",
+        "postcode": "49160-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rua Oviêdo Felix dos Santos, Nossa Senhora do Socorro, Sergipe, Brazil"
+    },
+    {
+      "lat": -10.831965702294285,
+      "lon": -37.120607349761805,
+      "geoinfo": {
+        "display_name": "Mussuca, Laranjeiras, Região Geográfica Imediata de Aracaju, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 49170-000, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laranjeiras",
+        "state": "Sergipe",
+        "postcode": "49170-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Mussuca, Laranjeiras, Região Geográfica Imediata de Aracaju, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 49170-000, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T01:13:49.276115+00:00",
+  "_kind": "geo_samples"
+}

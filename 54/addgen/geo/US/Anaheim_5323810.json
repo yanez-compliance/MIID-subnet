@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Anaheim",
+  "geonameid": 5323810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.83842992682195,
+      "lon": -117.96478765277327,
+      "geoinfo": {
+        "display_name": "Dad Miller Golf Course, 430, North Gilbert Street, Anaheim, Orange County, California, 92801, United States",
+        "road": "North Gilbert Street",
+        "house_number": "430",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anaheim",
+        "state": "California",
+        "postcode": "92801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "430 North Gilbert Street, Anaheim, California, United States"
+    },
+    {
+      "lat": 33.81220937839233,
+      "lon": -117.91866013240492,
+      "geoinfo": {
+        "display_name": "Disneyland, 1313, South Harbor Boulevard, Anaheim Resort District, Anaheim, Orange County, California, 92802, United States",
+        "road": "South Harbor Boulevard",
+        "house_number": "1313",
+        "neighbourhood": null,
+        "suburb": "Anaheim Resort District",
+        "city_district": null,
+        "city": "Anaheim",
+        "state": "California",
+        "postcode": "92802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Disneyland, 1313, South Harbor Boulevard, Anaheim Resort District, Anaheim, Orange County, California, 92802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:22.840705+00:00",
+  "_kind": "geo_samples"
+}

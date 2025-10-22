@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mason",
+  "geonameid": 4517698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.372709135257196,
+      "lon": -84.3033781989406,
+      "geoinfo": {
+        "display_name": "Alliance Drive, Mason, Warren County, Ohio, 45040, United States",
+        "road": "Alliance Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mason",
+        "state": "Ohio",
+        "postcode": "45040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Alliance Drive, Mason, Ohio, United States"
+    },
+    {
+      "lat": 39.38895388431648,
+      "lon": -84.32011178197752,
+      "geoinfo": {
+        "display_name": "3579, Crooked Tree Drive, Crooked Tree, Mason, Deerfield Township, Warren County, Ohio, 45040, United States",
+        "road": "Crooked Tree Drive",
+        "house_number": "3579",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mason",
+        "state": "Ohio",
+        "postcode": "45040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3579, Crooked Tree Drive, Crooked Tree, Mason, Deerfield Township, Warren County, Ohio, 45040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:23.272649+00:00",
+  "_kind": "geo_samples"
+}

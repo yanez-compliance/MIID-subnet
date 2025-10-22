@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Worcester",
+  "geonameid": 2633563,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.18649266793194,
+      "lon": -2.2524454650628667,
+      "geoinfo": {
+        "display_name": "Bromyard Road, Dines Green, Worcester, Worcestershire, England, WR2 5JP, United Kingdom",
+        "road": "Bromyard Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dines Green",
+        "city_district": null,
+        "city": "Worcester",
+        "state": "England",
+        "postcode": "WR2 5JP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bromyard Road, Worcester, England, United Kingdom"
+    },
+    {
+      "lat": 52.188077379814686,
+      "lon": -2.2884439914055044,
+      "geoinfo": {
+        "display_name": "Otherton Lane, Cotheridge, Crown East, Malvern Hills, Worcestershire, England, WR6 5LS, United Kingdom",
+        "road": "Otherton Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Malvern Hills",
+        "state": "England",
+        "postcode": "WR6 5LS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Otherton Lane, Cotheridge, Crown East, Malvern Hills, Worcestershire, England, WR6 5LS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:29.284884+00:00",
+  "_kind": "geo_samples"
+}

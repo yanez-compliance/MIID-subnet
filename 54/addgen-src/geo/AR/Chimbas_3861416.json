@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Chimbas",
+  "geonameid": 3861416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.47144366328012,
+      "lon": -68.57745544982835,
+      "geoinfo": {
+        "display_name": "Las Tapias, Albardón, San Juan, 5413, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "San Juan",
+        "postcode": "5413",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Chimbas, San Juan, Argentina"
+    },
+    {
+      "lat": -31.530218128947737,
+      "lon": -68.52757473078461,
+      "geoinfo": {
+        "display_name": "327 (N), Entre Ríos, Concepción, San Juan, Capital, San Juan, J5400EDG, Argentina",
+        "road": "Entre Ríos",
+        "house_number": "327 (N)",
+        "neighbourhood": null,
+        "suburb": "Concepción",
+        "city_district": null,
+        "city": "San Juan",
+        "state": "San Juan",
+        "postcode": "J5400EDG",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "327 (N), Entre Ríos, Concepción, San Juan, Capital, San Juan, J5400EDG, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:34.712737+00:00",
+  "_kind": "geo_samples"
+}

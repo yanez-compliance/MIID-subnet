@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Romainville",
+  "geonameid": 2983026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.859850772481934,
+      "lon": 2.418474312942123,
+      "geoinfo": {
+        "display_name": "Collège Georges Politzer, 52, Rue Jules Ferry, Coutures, Bagnolet, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93170, France",
+        "road": "Rue Jules Ferry",
+        "house_number": "52",
+        "neighbourhood": null,
+        "suburb": "Coutures",
+        "city_district": null,
+        "city": "Bagnolet",
+        "state": "Ile-de-France",
+        "postcode": "93170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "52 Rue Jules Ferry, Romainville, Ile-de-France, France"
+    },
+    {
+      "lat": 48.87694655853476,
+      "lon": 2.4782185206897847,
+      "geoinfo": {
+        "display_name": "3, Rue de Verdun, Bois Perrier, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France",
+        "road": "Rue de Verdun",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosny-sous-Bois",
+        "state": null,
+        "postcode": "93110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3, Rue de Verdun, Bois Perrier, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:31.488074+00:00",
+  "_kind": "geo_samples"
+}

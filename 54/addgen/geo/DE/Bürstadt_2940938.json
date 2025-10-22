@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bürstadt",
+  "geonameid": 2940938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.624754055982265,
+      "lon": 8.453196929562246,
+      "geoinfo": {
+        "display_name": "B 44, Bürstadt, Kreis Bergstraße, Hesse, 68642, Germany",
+        "road": "B 44",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bürstadt",
+        "state": "Hesse",
+        "postcode": "68642",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 44, Bürstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.64767954796775,
+      "lon": 8.482254297900942,
+      "geoinfo": {
+        "display_name": "Nibelungenstraße, Rodstücke, Bürstadt, Kreis Bergstraße, Hesse, 68642, Germany",
+        "road": "Nibelungenstraße",
+        "house_number": null,
+        "neighbourhood": "Rodstücke",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bürstadt",
+        "state": "Hesse",
+        "postcode": "68642",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "352, Nibelungenstraße, Rodstücke, Bürstadt, Kreis Bergstraße, Hesse, 68642, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:42.747532+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mansfield",
+  "geonameid": 4709013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.586812113741445,
+      "lon": -97.09684588466688,
+      "geoinfo": {
+        "display_name": "Woodbridge Court, Arbors Crossing, Mansfield, Tarrant County, Texas, 76063, United States",
+        "road": "Woodbridge Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Texas",
+        "postcode": "76063",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Woodbridge Court, Mansfield, Texas, United States"
+    },
+    {
+      "lat": 32.594328877327676,
+      "lon": -97.11326749579425,
+      "geoinfo": {
+        "display_name": "53, Trenton Court, Walnut Creek North, Mansfield, Tarrant County, Texas, 76063, United States",
+        "road": "Trenton Court",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Texas",
+        "postcode": "76063",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "53, Trenton Court, Walnut Creek North, Mansfield, Tarrant County, Texas, 76063, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:43.228037+00:00",
+  "_kind": "geo_samples"
+}

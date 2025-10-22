@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Lougheed",
+  "geonameid": 13512377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.245120606590326,
+      "lon": -122.91285228484068,
+      "geoinfo": {
+        "display_name": "9060, Stormont Avenue, Lougheed, Burnaby, Metro Vancouver Regional District, British Columbia, V3N 4T2, Canada",
+        "road": "Stormont Avenue",
+        "house_number": "9060",
+        "neighbourhood": null,
+        "suburb": "Lougheed",
+        "city_district": null,
+        "city": "Burnaby",
+        "state": "British Columbia",
+        "postcode": "V3N 4T2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "9060 Stormont Avenue, Lougheed, British Columbia, Canada"
+    },
+    {
+      "lat": 49.21249080745864,
+      "lon": -122.89895759275201,
+      "geoinfo": {
+        "display_name": "Victoria Hill, 11, East Royal Avenue, McBride Sapperton, New Westminster, Metro Vancouver Regional District, British Columbia, V3L 0A9, Canada",
+        "road": "East Royal Avenue",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "McBride Sapperton",
+        "city": "New Westminster",
+        "state": "British Columbia",
+        "postcode": "V3L 0A9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Victoria Hill, 11, East Royal Avenue, McBride Sapperton, New Westminster, Metro Vancouver Regional District, British Columbia, V3L 0A9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:04.712967+00:00",
+  "_kind": "geo_samples"
+}

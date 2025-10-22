@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Örnsköldsvik",
+  "geonameid": 2686469,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 63.250157513085114,
+      "lon": 18.69051055326257,
+      "geoinfo": {
+        "display_name": "Gene, Själevad District, Örnsköldsviks kommun, Västernorrland County, 892 51, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gene",
+        "city_district": null,
+        "city": "Själevad District",
+        "state": null,
+        "postcode": "892 51",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Gene, Örnsköldsvik, Sweden"
+    },
+    {
+      "lat": 63.26333921393267,
+      "lon": 18.659734235015403,
+      "geoinfo": {
+        "display_name": "Kornvägen, Svedjeholmen, Själevad District, Örnsköldsviks kommun, Västernorrland County, 892 34, Sweden",
+        "road": "Kornvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Svedjeholmen",
+        "city_district": null,
+        "city": "Själevad District",
+        "state": null,
+        "postcode": "892 34",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "587, Kornvägen, 892 34 Örnsköldsvik, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:56.087520+00:00",
+  "_kind": "geo_samples"
+}

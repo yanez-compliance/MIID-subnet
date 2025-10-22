@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Lugu",
+  "geonameid": 1672551,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 23.7392290462144,
+      "lon": 120.70947575836574,
+      "geoinfo": {
+        "display_name": "中山路, Qiezhikeng, Guilin Village, Zhushan Township, Nantou County, 55779, Taiwan",
+        "road": "中山路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Guilin Village",
+        "city": "Zhushan Township",
+        "state": null,
+        "postcode": "55779",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "中山路, Lugu, Taiwan"
+    },
+    {
+      "lat": 23.738843162663414,
+      "lon": 120.7818454689025,
+      "geoinfo": {
+        "display_name": "鳳園路, Dingcheng, Fenghuang Village, Lugu Township, Nantou County, 558, Taiwan",
+        "road": "鳳園路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fenghuang Village",
+        "city": "Lugu Township",
+        "state": null,
+        "postcode": "558",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "鳳園路, Lugu, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:35:07.070318+00:00",
+  "_kind": "geo_samples"
+}

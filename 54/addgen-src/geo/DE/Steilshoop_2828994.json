@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Steilshoop",
+  "geonameid": 2828994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.606766633322685,
+      "lon": 10.04844211556599,
+      "geoinfo": {
+        "display_name": "Hermann-Buck-Weg, Steilshoop, Wandsbek, Hamburg, 22309, Germany",
+        "road": "Hermann-Buck-Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Steilshoop",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22309",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hermann-Buck-Weg, Steilshoop, Germany"
+    },
+    {
+      "lat": 53.56882968117012,
+      "lon": 10.08582825393293,
+      "geoinfo": {
+        "display_name": "Jüthornstraße, Marienthal, Wandsbek, Hamburg, 22043, Germany",
+        "road": "Jüthornstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marienthal",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22043",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "116, Jüthornstraße, Marienthal, Wandsbek, Hamburg, 22043, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:35.011478+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Ntandabale",
+  "geonameid": 13132733,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.345941293550657,
+      "lon": 28.426359856810834,
+      "geoinfo": {
+        "display_name": "Chongwe District, Lusaka Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Ntandabale, Lusaka Province, Zambia"
+    },
+    {
+      "lat": -15.377108766640259,
+      "lon": 28.42228078172819,
+      "geoinfo": {
+        "display_name": "Mission Road, Chongwe District, Lusaka Province, Zambia",
+        "road": "Mission Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "659, Mission Road, Chongwe District, 26625 Lusaka Province, Zambia"
+    },
+    {
+      "lat": -15.357932653161745,
+      "lon": 28.397731837077,
+      "geoinfo": {
+        "display_name": "Chakunkula, Lusaka District, Lusaka Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chakunkula",
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "432, Chakunkula, Lusaka District, 88690 Lusaka Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:48:05.458862+00:00",
+  "_kind": "geo_samples"
+}

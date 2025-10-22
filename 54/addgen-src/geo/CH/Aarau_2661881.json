@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Aarau",
+  "geonameid": 2661881,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.41567528513309,
+      "lon": 8.05500706449309,
+      "geoinfo": {
+        "display_name": "9, Eibenweg, Rombach, Küttigen, Bezirk Aarau, Aargau, 5024, Switzerland",
+        "road": "Eibenweg",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rombach",
+        "state": "Aargau",
+        "postcode": "5024",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "9 Eibenweg, Aarau, Aargau, Switzerland"
+    },
+    {
+      "lat": 47.36662947416282,
+      "lon": 8.080673579382463,
+      "geoinfo": {
+        "display_name": "Ringstrasse, Helgenfeld, Suhr, Bezirk Aarau, Aargau, 5034, Switzerland",
+        "road": "Ringstrasse",
+        "house_number": null,
+        "neighbourhood": "Helgenfeld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suhr",
+        "state": "Aargau",
+        "postcode": "5034",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Ringstrasse, Aarau, Aargau, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:07:25.636642+00:00",
+  "_kind": "geo_samples"
+}

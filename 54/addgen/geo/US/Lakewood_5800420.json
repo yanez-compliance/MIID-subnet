@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakewood",
+  "geonameid": 5800420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.19335518186591,
+      "lon": -122.50911501143011,
+      "geoinfo": {
+        "display_name": "Lakewood Drive West, Tacoma, Pierce County, Washington, 98467, United States",
+        "road": "Lakewood Drive West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tacoma",
+        "state": "Washington",
+        "postcode": "98467",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lakewood Drive West, Lakewood, Washington, United States"
+    },
+    {
+      "lat": 47.14418984190821,
+      "lon": -122.49659698612085,
+      "geoinfo": {
+        "display_name": "8th Street, Carlyle Aparments, Pierce County, Washington, 98438, United States",
+        "road": "8th Street",
+        "house_number": null,
+        "neighbourhood": "Carlyle Aparments",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98438",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8th Street, Carlyle Aparments, Pierce County, Washington, 98438, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:48.820321+00:00",
+  "_kind": "geo_samples"
+}

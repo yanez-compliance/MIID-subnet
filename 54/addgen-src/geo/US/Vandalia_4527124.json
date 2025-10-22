@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vandalia",
+  "geonameid": 4527124,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.867125833783895,
+      "lon": -84.16614100566609,
+      "geoinfo": {
+        "display_name": "I 70, Taylorsville, Huber Heights, Montgomery County, Ohio, 45424, United States",
+        "road": "I 70",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huber Heights",
+        "state": "Ohio",
+        "postcode": "45424",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 70, Vandalia, Ohio, United States"
+    },
+    {
+      "lat": 39.92158090085031,
+      "lon": -84.2278656768537,
+      "geoinfo": {
+        "display_name": "11983, Peters Pike, Dayton, Butler Township, Montgomery County, Ohio, 45377, United States",
+        "road": "Peters Pike",
+        "house_number": "11983",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Ohio",
+        "postcode": "45377",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11983, Peters Pike, Dayton, Butler Township, Montgomery County, Ohio, 45377, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:30.334802+00:00",
+  "_kind": "geo_samples"
+}

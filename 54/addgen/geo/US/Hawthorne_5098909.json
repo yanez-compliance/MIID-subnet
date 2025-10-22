@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hawthorne",
+  "geonameid": 5098909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.94615214575235,
+      "lon": -74.15635084309443,
+      "geoinfo": {
+        "display_name": "132, South Avenue, Hawthorne, Passaic County, New Jersey, 07506, United States",
+        "road": "South Avenue",
+        "house_number": "132",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorne",
+        "state": "New Jersey",
+        "postcode": "07506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "132 South Avenue, Hawthorne, New Jersey, United States"
+    },
+    {
+      "lat": 40.93313267518954,
+      "lon": -74.12338379931765,
+      "geoinfo": {
+        "display_name": "Berdan Avenue, Fair Lawn, Bergen County, New Jersey, 07410, United States",
+        "road": "Berdan Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fair Lawn",
+        "state": "New Jersey",
+        "postcode": "07410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "822, Berdan Avenue, Fair Lawn, Bergen County, New Jersey, 07410, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:31.751435+00:00",
+  "_kind": "geo_samples"
+}

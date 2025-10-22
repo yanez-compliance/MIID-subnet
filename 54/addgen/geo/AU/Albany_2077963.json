@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Albany",
+  "geonameid": 2077963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -35.00237935671651,
+      "lon": 117.88324569622189,
+      "geoinfo": {
+        "display_name": "Sydney Street, Yakamia, Albany, City Of Albany, Western Australia, 6330, Australia",
+        "road": "Sydney Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yakamia",
+        "city_district": null,
+        "city": "Albany",
+        "state": "Western Australia",
+        "postcode": "6330",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Sydney Street, Albany, Western Australia, Australia"
+    },
+    {
+      "lat": -35.00630483809734,
+      "lon": 117.92342128039306,
+      "geoinfo": {
+        "display_name": "Emu Point Drive, Collingwood Park, Albany, City Of Albany, Western Australia, 6332, Australia",
+        "road": "Emu Point Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Collingwood Park",
+        "city_district": null,
+        "city": "Albany",
+        "state": "Western Australia",
+        "postcode": "6332",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "096, Emu Point Drive, Collingwood Park, Albany, City Of Albany, Western Australia, 6332, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:51.350641+00:00",
+  "_kind": "geo_samples"
+}

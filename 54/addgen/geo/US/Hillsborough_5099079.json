@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hillsborough",
+  "geonameid": 5099079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.51249693469333,
+      "lon": -74.61253600480808,
+      "geoinfo": {
+        "display_name": "Sunnymeade Road, Hillsborough Township, Somerset County, New Jersey, 08844, United States",
+        "road": "Sunnymeade Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hillsborough Township",
+        "state": "New Jersey",
+        "postcode": "08844",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sunnymeade Road, Hillsborough, New Jersey, United States"
+    },
+    {
+      "lat": 40.450040684534784,
+      "lon": -74.60310001860287,
+      "geoinfo": {
+        "display_name": "769, River Road, Montgomery Township, Somerset County, New Jersey, 08502, United States",
+        "road": "River Road",
+        "house_number": "769",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery Township",
+        "state": "New Jersey",
+        "postcode": "08502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "769, River Road, Montgomery Township, Somerset County, New Jersey, 08502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:35.407731+00:00",
+  "_kind": "geo_samples"
+}

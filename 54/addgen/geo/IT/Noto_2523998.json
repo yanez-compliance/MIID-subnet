@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Noto",
+  "geonameid": 2523998,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.89362117990926,
+      "lon": 15.110403636750103,
+      "geoinfo": {
+        "display_name": "Autostrada Siracusa-Gela, Avola, Siracusa, Sicily, 96012, Italy",
+        "road": "Autostrada Siracusa-Gela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avola",
+        "state": "Sicily",
+        "postcode": "96012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada Siracusa-Gela, Noto, Sicily, Italy"
+    },
+    {
+      "lat": 36.88069365390358,
+      "lon": 15.053731915250976,
+      "geoinfo": {
+        "display_name": "Madonna Marina, SS115, Noto, Siracusa, Sicily, 96017, Italy",
+        "road": "SS115",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noto",
+        "state": "Sicily",
+        "postcode": "96017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Madonna Marina, SS115, Noto, Siracusa, Sicily, 96017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:23.024040+00:00",
+  "_kind": "geo_samples"
+}

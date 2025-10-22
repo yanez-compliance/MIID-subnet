@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashland",
+  "geonameid": 5146055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.87031124807681,
+      "lon": -82.32687547639466,
+      "geoinfo": {
+        "display_name": "832, West Main Street, Ashland, Milton Township, Ashland County, Ohio, 44805, United States",
+        "road": "West Main Street",
+        "house_number": "832",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Ohio",
+        "postcode": "44805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "832 West Main Street, Ashland, Ohio, United States"
+    },
+    {
+      "lat": 40.8815274504789,
+      "lon": -82.3682561825836,
+      "geoinfo": {
+        "display_name": "1226, Wells Road, Milton Township, Ashland County, Ohio, 44805, United States",
+        "road": "Wells Road",
+        "house_number": "1226",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1226, Wells Road, Milton Township, Ashland County, Ohio, 44805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:58.644013+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Charlestown",
+  "geonameid": 4932819,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.39276671776326,
+      "lon": -71.07372025953629,
+      "geoinfo": {
+        "display_name": "Encore Riverwalk, Everett, Middlesex County, Massachusetts, 02145, United States",
+        "road": "Encore Riverwalk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Everett",
+        "state": "Massachusetts",
+        "postcode": "02145",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Encore Riverwalk, Charlestown, Massachusetts, United States"
+    },
+    {
+      "lat": 42.40652725899332,
+      "lon": -71.01928668925372,
+      "geoinfo": {
+        "display_name": "129, Fenno Street, Revere, Suffolk County, Massachusetts, 02150, United States",
+        "road": "Fenno Street",
+        "house_number": "129",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Revere",
+        "state": "Massachusetts",
+        "postcode": "02150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "129, Fenno Street, Revere, Suffolk County, Massachusetts, 02150, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:13.197922+00:00",
+  "_kind": "geo_samples"
+}

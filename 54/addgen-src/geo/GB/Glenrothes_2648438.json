@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Glenrothes",
+  "geonameid": 2648438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.1994258306703,
+      "lon": -3.127689968853637,
+      "geoinfo": {
+        "display_name": "A911, Woodside, Markinch, Fife, Scotland, KY7 6HE, United Kingdom",
+        "road": "A911",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woodside",
+        "city_district": null,
+        "city": "Markinch",
+        "state": "Scotland",
+        "postcode": "KY7 6HE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A911, Glenrothes, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.21489930349586,
+      "lon": -3.1194414743766368,
+      "geoinfo": {
+        "display_name": "Markinch, Fife, Scotland, KY7 6JP, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Markinch",
+        "state": "Scotland",
+        "postcode": "KY7 6JP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "782, Glenrothes, KY7 6JP Scotland, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:37.594386+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dracut",
+  "geonameid": 4935038,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.69529178017403,
+      "lon": -71.32538457426607,
+      "geoinfo": {
+        "display_name": "110, Black Oak Lane, Dracut, Middlesex County, Massachusetts, 01826, United States",
+        "road": "Black Oak Lane",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dracut",
+        "state": "Massachusetts",
+        "postcode": "01826",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110 Black Oak Lane, Dracut, Massachusetts, United States"
+    },
+    {
+      "lat": 42.71248313961153,
+      "lon": -71.30173127464,
+      "geoinfo": {
+        "display_name": "82, Grouse Run, Pelham, Hillsborough County, New Hampshire, 03076, United States",
+        "road": "Grouse Run",
+        "house_number": "82",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pelham",
+        "state": "New Hampshire",
+        "postcode": "03076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "82, Grouse Run, Pelham, Hillsborough County, New Hampshire, 03076, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:42.292615+00:00",
+  "_kind": "geo_samples"
+}

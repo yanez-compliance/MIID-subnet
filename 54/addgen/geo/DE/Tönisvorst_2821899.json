@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Tönisvorst",
+  "geonameid": 2821899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.31814790435015,
+      "lon": 6.552560570523739,
+      "geoinfo": {
+        "display_name": "Martinstraße, Krefeld-Mitte, Krefeld-Süd, Krefeld, North Rhine-Westphalia, 47805, Germany",
+        "road": "Martinstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Krefeld-Mitte",
+        "city_district": "Krefeld-Süd",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47805",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Martinstraße, Tönisvorst, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.33031163572646,
+      "lon": 6.452705711954871,
+      "geoinfo": {
+        "display_name": "Reckenhöfe, St. Tönis, Region Kempen-Viersen, Tönisvorst, Kreis Viersen, North Rhine-Westphalia, 47918, Germany",
+        "road": "Reckenhöfe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47918",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "003, Reckenhöfe, St. Tönis, Region Kempen-Viersen, Tönisvorst, Kreis Viersen, North Rhine-Westphalia, 47918, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:56.666582+00:00",
+  "_kind": "geo_samples"
+}

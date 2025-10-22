@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Pleasant View",
+  "geonameid": 7871317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.78391696151921,
+      "lon": -79.29305121829735,
+      "geoinfo": {
+        "display_name": "Agincourt Mall, 3850, Sheppard Avenue East, Tam O'Shanter-Sullivan, Scarborough—Agincourt, Scarborough, Toronto, Golden Horseshoe, Ontario, M1T 3T8, Canada",
+        "road": "Sheppard Avenue East",
+        "house_number": "3850",
+        "neighbourhood": "Tam O'Shanter-Sullivan",
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1T 3T8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3850 Sheppard Avenue East, Pleasant View, Ontario, Canada"
+    },
+    {
+      "lat": 43.75764585678458,
+      "lon": -79.28696179259883,
+      "geoinfo": {
+        "display_name": "172, Vauxhall Drive, Dorset Park, Scarborough Centre, Scarborough, Toronto, Golden Horseshoe, Ontario, M1P 1M2, Canada",
+        "road": "Vauxhall Drive",
+        "house_number": "172",
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1P 1M2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "172, Vauxhall Drive, Dorset Park, Scarborough Centre, Scarborough, Toronto, Golden Horseshoe, Ontario, M1P 1M2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:02.684951+00:00",
+  "_kind": "geo_samples"
+}

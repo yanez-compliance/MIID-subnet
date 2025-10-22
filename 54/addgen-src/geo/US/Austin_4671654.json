@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Austin",
+  "geonameid": 4671654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.233571886458872,
+      "lon": -97.75194669237004,
+      "geoinfo": {
+        "display_name": "2612, Friar Tuck Lane, Sherwood Oaks, Austin, Travis County, Texas, 78704, United States",
+        "road": "Friar Tuck Lane",
+        "house_number": "2612",
+        "neighbourhood": "Sherwood Oaks",
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2612 Friar Tuck Lane, Austin, Texas, United States"
+    },
+    {
+      "lat": 30.265032213786586,
+      "lon": -97.7562482457992,
+      "geoinfo": {
+        "display_name": "Pfluger Pedestrian Bridge, Ann & Roy Butler Hike and Bike Trail, Seaholm, Austin, Travis County, Texas, 78701, United States",
+        "road": "Ann & Roy Butler Hike and Bike Trail",
+        "house_number": null,
+        "neighbourhood": "Seaholm",
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "147, Ann & Roy Butler Hike and Bike Trail, Austin, 78701 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:24.508563+00:00",
+  "_kind": "geo_samples"
+}

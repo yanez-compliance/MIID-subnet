@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Coquitlam",
+  "geonameid": 5927690,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.30985027261558,
+      "lon": -122.78047377292994,
+      "geoinfo": {
+        "display_name": "Mallard Court, Westwood Plateau, Coquitlam, Metro Vancouver Regional District, British Columbia, V3E 3A1, Canada",
+        "road": "Mallard Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westwood Plateau",
+        "city_district": null,
+        "city": "Coquitlam",
+        "state": "British Columbia",
+        "postcode": "V3E 3A1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Mallard Court, Coquitlam, British Columbia, Canada"
+    },
+    {
+      "lat": 49.29730768413536,
+      "lon": -122.74814279326937,
+      "geoinfo": {
+        "display_name": "Kingston Street, Coquitlam, Metro Vancouver Regional District, British Columbia, V3E 0G1, Canada",
+        "road": "Kingston Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coquitlam",
+        "state": "British Columbia",
+        "postcode": "V3E 0G1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Kingston Street, Coquitlam, Metro Vancouver Regional District, British Columbia, V3E 0G1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:18.671510+00:00",
+  "_kind": "geo_samples"
+}

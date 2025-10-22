@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Aksu",
+  "geonameid": 1525462,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.465661538024,
+      "lon": 69.8291744620749,
+      "geoinfo": {
+        "display_name": "Аксукент, Sayram District, Turkistan Region, 168800, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Аксукент",
+        "state": "Turkistan Region",
+        "postcode": "168800",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "334, Aksu, 168800 Turkistan Region, Kazakhstan"
+    },
+    {
+      "lat": 42.43636208433404,
+      "lon": 69.78142828245107,
+      "geoinfo": {
+        "display_name": "Әйтеке би ауылы, Әйтеке би, Sayram District, Turkistan Region, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Әйтеке би ауылы",
+        "state": "Turkistan Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "751, Aksu, 99954 Turkistan Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:05.917101+00:00",
+  "_kind": "geo_samples"
+}

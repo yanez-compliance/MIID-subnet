@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Ylöjärvi",
+  "geonameid": 630752,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 61.564410251970436,
+      "lon": 23.676884115945438,
+      "geoinfo": {
+        "display_name": "Vasamantie, Siivikkala, Ylöjärvi, Tampere sub-region, Pirkanmaa, Mainland Finland, 33450, Finland",
+        "road": "Vasamantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Siivikkala",
+        "city_district": null,
+        "city": "Ylöjärvi",
+        "state": "Pirkanmaa",
+        "postcode": "33450",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "117, Vasamantie, Siivikkala, Ylöjärvi, Tampere sub-region, Pirkanmaa, Mainland Finland, 33450, Finland"
+    },
+    {
+      "lat": 61.582326475606216,
+      "lon": 23.657262008597556,
+      "geoinfo": {
+        "display_name": "Antaverkka, Ylöjärvi, Tampere sub-region, Pirkanmaa, Mainland Finland, 33450, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ylöjärvi",
+        "state": "Pirkanmaa",
+        "postcode": "33450",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "592, Antaverkka, Ylöjärvi, Tampere sub-region, Pirkanmaa, Mainland Finland, 33450, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:50.487987+00:00",
+  "_kind": "geo_samples"
+}

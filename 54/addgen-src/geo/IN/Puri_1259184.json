@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Puri",
+  "geonameid": 1259184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.781936028682694,
+      "lon": 85.78911112371699,
+      "geoinfo": {
+        "display_name": "Puri, Sadar, Puri, Odisha, 752001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Odisha",
+        "postcode": "752001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Puri, Odisha, India"
+    },
+    {
+      "lat": 19.841984815225842,
+      "lon": 85.81606844789177,
+      "geoinfo": {
+        "display_name": "Batagaon, Sadar, Puri, Odisha, 752012, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Batagaon",
+        "state": "Odisha",
+        "postcode": "752012",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "887, Batagaon, Sadar, Puri, Odisha, 752012, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:13.651384+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Sobinka",
+  "geonameid": 491480,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.9944785478493,
+      "lon": 40.0388459407539,
+      "geoinfo": {
+        "display_name": "46, улица Ленина, Sobinka, Sobinsky District, Vladimir Oblast, Central Federal District, 601202, Russia",
+        "road": "улица Ленина",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sobinka",
+        "state": "Vladimir Oblast",
+        "postcode": "601202",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "46 улица Ленина, Sobinka, Vladimir Oblast, Russia"
+    },
+    {
+      "lat": 55.97699174724143,
+      "lon": 40.04348706276914,
+      "geoinfo": {
+        "display_name": "Sobinsky District, Vladimir Oblast, Central Federal District, 601203, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Vladimir Oblast",
+        "postcode": "601203",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "620, Sobinka, 601203 Vladimir Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:42.751642+00:00",
+  "_kind": "geo_samples"
+}

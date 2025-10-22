@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burnsville",
+  "geonameid": 5019767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.755371840373066,
+      "lon": -93.31953248711181,
+      "geoinfo": {
+        "display_name": "13620, Judicial Loop, Burnsville, Dakota County, Minnesota, 55337, United States",
+        "road": "Judicial Loop",
+        "house_number": "13620",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burnsville",
+        "state": "Minnesota",
+        "postcode": "55337",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13620 Judicial Loop, Burnsville, Minnesota, United States"
+    },
+    {
+      "lat": 44.76324448881992,
+      "lon": -93.33599962798867,
+      "geoinfo": {
+        "display_name": "4498, West 132nd Street, Savage, Scott County, Minnesota, 55378, United States",
+        "road": "West 132nd Street",
+        "house_number": "4498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Savage",
+        "state": "Minnesota",
+        "postcode": "55378",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4498, West 132nd Street, Savage, Scott County, Minnesota, 55378, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:51.312480+00:00",
+  "_kind": "geo_samples"
+}

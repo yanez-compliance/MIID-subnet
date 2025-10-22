@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gautier",
+  "geonameid": 4427569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.380122493857026,
+      "lon": -88.64885988005717,
+      "geoinfo": {
+        "display_name": "College Park Elementary School, Ladnier Road, Gautier, Jackson County, Mississippi, 39553, United States",
+        "road": "Ladnier Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gautier",
+        "state": "Mississippi",
+        "postcode": "39553",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ladnier Road, Gautier, Mississippi, United States"
+    },
+    {
+      "lat": 30.39420242566895,
+      "lon": -88.56907807722985,
+      "geoinfo": {
+        "display_name": "Moss Point, Jackson County, Mississippi, 39563, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moss Point",
+        "state": "Mississippi",
+        "postcode": "39563",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "229, Moss Point, Jackson County, Mississippi, 39563, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:45.064202+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Florence",
+  "geonameid": 4062577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.78576074078213,
+      "lon": -87.70693140427244,
+      "geoinfo": {
+        "display_name": "Savannah Highway, Three Forks, Florence, Lauderdale County, Alabama, 35632, United States",
+        "road": "Savannah Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Florence",
+        "state": "Alabama",
+        "postcode": "35632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Savannah Highway, Florence, Alabama, United States"
+    },
+    {
+      "lat": 34.76671161225194,
+      "lon": -87.6444544416156,
+      "geoinfo": {
+        "display_name": "Muscle Shoals, Colbert County, Alabama, 35661, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muscle Shoals",
+        "state": "Alabama",
+        "postcode": "35661",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "444, Florence, 35661 Alabama, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:40:27.028928+00:00",
+  "_kind": "geo_samples"
+}

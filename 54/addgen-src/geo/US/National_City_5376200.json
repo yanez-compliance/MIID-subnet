@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "National City",
+  "geonameid": 5376200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.69611512374583,
+      "lon": -117.07530827027936,
+      "geoinfo": {
+        "display_name": "5677, Cervantes Avenue, Valencia Park, San Diego, San Diego County, California, 92114, United States",
+        "road": "Cervantes Avenue",
+        "house_number": "5677",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92114",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5677 Cervantes Avenue, National City, California, United States"
+    },
+    {
+      "lat": 32.653180900321836,
+      "lon": -117.1021521519768,
+      "geoinfo": {
+        "display_name": "3224, Hoover Avenue, National City, San Diego County, California, 91950, United States",
+        "road": "Hoover Avenue",
+        "house_number": "3224",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "National City",
+        "state": "California",
+        "postcode": "91950",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3224, Hoover Avenue, National City, San Diego County, California, 91950, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:16.269203+00:00",
+  "_kind": "geo_samples"
+}

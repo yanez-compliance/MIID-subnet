@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cedar Park",
+  "geonameid": 4679867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.5362489414874,
+      "lon": -97.84998497695571,
+      "geoinfo": {
+        "display_name": "Kettering, Leander, Williamson County, Texas, 78641, United States",
+        "road": "Kettering",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leander",
+        "state": "Texas",
+        "postcode": "78641",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kettering, Cedar Park, Texas, United States"
+    },
+    {
+      "lat": 30.52434606941549,
+      "lon": -97.85149239108522,
+      "geoinfo": {
+        "display_name": "1770, Oakmont Lane, Cedar Park, Williamson County, Texas, 78613, United States",
+        "road": "Oakmont Lane",
+        "house_number": "1770",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Park",
+        "state": "Texas",
+        "postcode": "78613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1770, Oakmont Lane, Cedar Park, Williamson County, Texas, 78613, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:21.109585+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Ploieşti",
+  "geonameid": 670474,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.95955292134381,
+      "lon": 25.961933420986778,
+      "geoinfo": {
+        "display_name": "DJ101I, Păulești, Prahova, 100213, Romania",
+        "road": "DJ101I",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Păulești",
+        "state": null,
+        "postcode": "100213",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "DJ101I, Ploieşti, Romania"
+    },
+    {
+      "lat": 44.915913470140545,
+      "lon": 26.03059876206178,
+      "geoinfo": {
+        "display_name": "Bulevardul Petrolului, Ploiești, Mimiu, Ploiești, Prahova, 100519, Romania",
+        "road": "Bulevardul Petrolului",
+        "house_number": null,
+        "neighbourhood": "Mimiu",
+        "suburb": "Mimiu",
+        "city_district": null,
+        "city": "Ploiești",
+        "state": null,
+        "postcode": "100519",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "364, Bulevardul Petrolului, 100519 Ploieşti, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:49.547643+00:00",
+  "_kind": "geo_samples"
+}

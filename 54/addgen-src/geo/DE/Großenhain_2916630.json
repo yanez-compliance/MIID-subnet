@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Großenhain",
+  "geonameid": 2916630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.259454932166875,
+      "lon": 13.519553384391712,
+      "geoinfo": {
+        "display_name": "Zschauitzer Straße, Strießen, Priestewitz, Meissen, Saxony, 01561, Germany",
+        "road": "Zschauitzer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Strießen",
+        "state": "Saxony",
+        "postcode": "01561",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Zschauitzer Straße, Großenhain, Saxony, Germany"
+    },
+    {
+      "lat": 51.298716638896714,
+      "lon": 13.562428108308772,
+      "geoinfo": {
+        "display_name": "24, Friedrich-Ebert-Straße, Naundorf, Großenhain, Meissen, Saxony, 01558, Germany",
+        "road": "Friedrich-Ebert-Straße",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Naundorf",
+        "city_district": null,
+        "city": "Großenhain",
+        "state": "Saxony",
+        "postcode": "01558",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24, Friedrich-Ebert-Straße, Naundorf, Großenhain, Meissen, Saxony, 01558, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:14.945060+00:00",
+  "_kind": "geo_samples"
+}

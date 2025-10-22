@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Swindon",
+  "geonameid": 2636389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.563322928661904,
+      "lon": -1.7284235614726882,
+      "geoinfo": {
+        "display_name": "32, St Ambrose Close, Covingham, Swindon, England, SN3 5EG, United Kingdom",
+        "road": "St Ambrose Close",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Covingham",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "SN3 5EG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "32 St Ambrose Close, Swindon, England, United Kingdom"
+    },
+    {
+      "lat": 51.55004609668186,
+      "lon": -1.7913254535019627,
+      "geoinfo": {
+        "display_name": "Celsus Grove, Okus, South Swindon, Swindon, England, SN1 4GT, United Kingdom",
+        "road": "Celsus Grove",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Okus",
+        "city_district": null,
+        "city": "Swindon",
+        "state": "England",
+        "postcode": "SN1 4GT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Celsus Grove, Okus, South Swindon, Swindon, England, SN1 4GT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:41.676589+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Duluth",
+  "geonameid": 4192289,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.00115272309006,
+      "lon": -84.13902688720987,
+      "geoinfo": {
+        "display_name": "3394, Howell Street Northwest, GardenDale TownHomes, Duluth, Gwinnett County, Georgia, 30096, United States",
+        "road": "Howell Street Northwest",
+        "house_number": "3394",
+        "neighbourhood": "GardenDale TownHomes",
+        "suburb": null,
+        "city_district": null,
+        "city": "Duluth",
+        "state": "Georgia",
+        "postcode": "30096",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3394 Howell Street Northwest, Duluth, Georgia, United States"
+    },
+    {
+      "lat": 33.981598472689484,
+      "lon": -84.12299356324603,
+      "geoinfo": {
+        "display_name": "2807, Bluebird Circle Northwest, Gwinnett County, Georgia, 30096, United States",
+        "road": "Bluebird Circle Northwest",
+        "house_number": "2807",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30096",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2807, Bluebird Circle Northwest, Gwinnett County, Georgia, 30096, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:39.719511+00:00",
+  "_kind": "geo_samples"
+}

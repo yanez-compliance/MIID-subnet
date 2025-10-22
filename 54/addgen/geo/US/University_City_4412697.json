@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University City",
+  "geonameid": 4412697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.663749152101495,
+      "lon": -90.31354807846893,
+      "geoinfo": {
+        "display_name": "Pennsylvania Avenue, Varsity neighborhood, University City, Saint Louis County, Missouri, 63133, United States",
+        "road": "Pennsylvania Avenue",
+        "house_number": null,
+        "neighbourhood": "Varsity neighborhood",
+        "suburb": null,
+        "city_district": null,
+        "city": "University City",
+        "state": "Missouri",
+        "postcode": "63133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pennsylvania Avenue, University City, Missouri, United States"
+    },
+    {
+      "lat": 38.652031098601796,
+      "lon": -90.36017540855102,
+      "geoinfo": {
+        "display_name": "4, Mc Knight Lane, McKnight Lane, Ladue, Saint Louis County, Missouri, 63124, United States",
+        "road": "Mc Knight Lane",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ladue",
+        "state": "Missouri",
+        "postcode": "63124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4, Mc Knight Lane, McKnight Lane, Ladue, Saint Louis County, Missouri, 63124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:56.088503+00:00",
+  "_kind": "geo_samples"
+}

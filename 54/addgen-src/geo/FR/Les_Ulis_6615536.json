@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Les Ulis",
+  "geonameid": 6615536,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.68257369025061,
+      "lon": 2.2040503517531524,
+      "geoinfo": {
+        "display_name": "Avenue de l'Océanie, Parc d'Activités de Courtabœuf, Courtabœuf 3, Villejust, Palaiseau, Essonne, Metropolitan France, 91140, France",
+        "road": "Avenue de l'Océanie",
+        "house_number": null,
+        "neighbourhood": "Courtabœuf 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villejust",
+        "state": null,
+        "postcode": "91140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de l'Océanie, Les Ulis, France"
+    },
+    {
+      "lat": 48.65993865390279,
+      "lon": 2.184456416003369,
+      "geoinfo": {
+        "display_name": "La Francilienne, Marcoussis, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91460, France",
+        "road": "La Francilienne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marcoussis",
+        "state": "Ile-de-France",
+        "postcode": "91460",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "704, La Francilienne, Marcoussis, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91460, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:51.846435+00:00",
+  "_kind": "geo_samples"
+}

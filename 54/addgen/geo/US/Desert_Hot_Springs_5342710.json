@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Desert Hot Springs",
+  "geonameid": 5342710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.95952829080111,
+      "lon": -116.49318366436395,
+      "geoinfo": {
+        "display_name": "66971, Buena Vista Avenue, Desert Hot Springs, Riverside County, California, 92240, United States",
+        "road": "Buena Vista Avenue",
+        "house_number": "66971",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Desert Hot Springs",
+        "state": "California",
+        "postcode": "92240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "66971 Buena Vista Avenue, Desert Hot Springs, California, United States"
+    },
+    {
+      "lat": 33.967810603542596,
+      "lon": -116.50451834170325,
+      "geoinfo": {
+        "display_name": "66307, 7th Street, Desert Hot Springs, Riverside County, California, 92240, United States",
+        "road": "7th Street",
+        "house_number": "66307",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Desert Hot Springs",
+        "state": "California",
+        "postcode": "92240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7th Street, Desert Hot Springs, 92240 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:15.190079+00:00",
+  "_kind": "geo_samples"
+}

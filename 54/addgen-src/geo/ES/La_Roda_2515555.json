@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Roda",
+  "geonameid": 2515555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.23433583296617,
+      "lon": -2.157478052616078,
+      "geoinfo": {
+        "display_name": "AB-101, La Roda, Albacete, Castile-La Mancha, 02630, Spain",
+        "road": "AB-101",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Roda",
+        "state": "Castile-La Mancha",
+        "postcode": "02630",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "AB-101, La Roda, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 39.215885127961414,
+      "lon": -2.175111416430517,
+      "geoinfo": {
+        "display_name": "Autovía de Alicante, La Roda, Albacete, Castile-La Mancha, 02630, Spain",
+        "road": "Autovía de Alicante",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Roda",
+        "state": "Castile-La Mancha",
+        "postcode": "02630",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "613, Autovía de Alicante, La Roda, Albacete, Castile-La Mancha, 02630, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:03.118043+00:00",
+  "_kind": "geo_samples"
+}

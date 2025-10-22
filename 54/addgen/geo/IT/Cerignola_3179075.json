@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cerignola",
+  "geonameid": 3179075,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.28956312889237,
+      "lon": 15.845949344287797,
+      "geoinfo": {
+        "display_name": "Cerignola, Foggia, Apulia, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cerignola",
+        "state": "Apulia",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Cerignola, Apulia, Italy"
+    },
+    {
+      "lat": 41.28118216896095,
+      "lon": 15.922644791652012,
+      "geoinfo": {
+        "display_name": "SV Torre Quarto, Cerignola, Foggia, Apulia, 71042, Italy",
+        "road": "SV Torre Quarto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cerignola",
+        "state": "Apulia",
+        "postcode": "71042",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "089, SV Torre Quarto, Cerignola, Foggia, Apulia, 71042, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:09.422239+00:00",
+  "_kind": "geo_samples"
+}

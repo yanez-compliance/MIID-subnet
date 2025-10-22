@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bensenville",
+  "geonameid": 4884509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.92412224276419,
+      "lon": -87.9529535307582,
+      "geoinfo": {
+        "display_name": "825, Church Road, Elmhurst, Addison Township, DuPage County, Illinois, 60126, United States",
+        "road": "Church Road",
+        "house_number": "825",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmhurst",
+        "state": "Illinois",
+        "postcode": "60126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "825 Church Road, Bensenville, Illinois, United States"
+    },
+    {
+      "lat": 41.98537528968905,
+      "lon": -87.91626437046904,
+      "geoinfo": {
+        "display_name": "Hangar Road, O'Hare, Chicago, Jefferson Township, Cook County, Illinois, 60666, United States",
+        "road": "Hangar Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "O'Hare",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60666",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "680, Hangar Road, O'Hare, Chicago, Jefferson Township, Cook County, Illinois, 60666, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:53.073270+00:00",
+  "_kind": "geo_samples"
+}

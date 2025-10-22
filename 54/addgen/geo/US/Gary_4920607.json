@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gary",
+  "geonameid": 4920607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.584885105777275,
+      "lon": -87.30210485394767,
+      "geoinfo": {
+        "display_name": "I 65, Marshalltown, Gary, Calumet Township, Lake County, Indiana, 46401, United States",
+        "road": "I 65",
+        "house_number": null,
+        "neighbourhood": "Marshalltown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gary",
+        "state": "Indiana",
+        "postcode": "46401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 65, Gary, Indiana, United States"
+    },
+    {
+      "lat": 41.576261062612936,
+      "lon": -87.33456110163083,
+      "geoinfo": {
+        "display_name": "2324, Connecticut Street, Midtown, Gary, Calumet Township, Lake County, Indiana, 46407, United States",
+        "road": "Connecticut Street",
+        "house_number": "2324",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gary",
+        "state": "Indiana",
+        "postcode": "46407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2324, Connecticut Street, Midtown, Gary, Calumet Township, Lake County, Indiana, 46407, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:23.972187+00:00",
+  "_kind": "geo_samples"
+}

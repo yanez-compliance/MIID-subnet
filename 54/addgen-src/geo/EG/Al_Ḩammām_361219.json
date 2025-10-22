@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Ḩammām",
+  "geonameid": 361219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.820919782948394,
+      "lon": 29.35462507571153,
+      "geoinfo": {
+        "display_name": "Matruh, 51717, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Matruh",
+        "postcode": "51717",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Ḩammām, Matruh, Egypt"
+    },
+    {
+      "lat": 30.85376309543645,
+      "lon": 29.401076360472793,
+      "geoinfo": {
+        "display_name": "Al Hamam City, Matruh, 51717, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Al Hamam City",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Matruh",
+        "postcode": "51717",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "876, Al Hamam City, Matruh, 51717, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:10.735265+00:00",
+  "_kind": "geo_samples"
+}

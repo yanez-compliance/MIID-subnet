@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Bellmore",
+  "geonameid": 5128904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71216998309764,
+      "lon": -73.56286161941762,
+      "geoinfo": {
+        "display_name": "373, Chestnut Avenue, Mitchel Houses, East Meadow, Town of Hempstead, Nassau County, New York, 11554, United States",
+        "road": "Chestnut Avenue",
+        "house_number": "373",
+        "neighbourhood": "Mitchel Houses",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Meadow",
+        "state": "New York",
+        "postcode": "11554",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "373 Chestnut Avenue, North Bellmore, New York, United States"
+    },
+    {
+      "lat": 40.66255713773101,
+      "lon": -73.53377854778917,
+      "geoinfo": {
+        "display_name": "602, Argyle Place, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States",
+        "road": "Argyle Place",
+        "house_number": "602",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellmore",
+        "state": "New York",
+        "postcode": "11710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "602, Argyle Place, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:38.253456+00:00",
+  "_kind": "geo_samples"
+}

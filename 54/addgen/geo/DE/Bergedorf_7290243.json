@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bergedorf",
+  "geonameid": 7290243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.47173932897529,
+      "lon": 10.16994920562497,
+      "geoinfo": {
+        "display_name": "406, Allermöher Deich, Allermöhe, Bergedorf, Hamburg, 21037, Germany",
+        "road": "Allermöher Deich",
+        "house_number": "406",
+        "neighbourhood": null,
+        "suburb": "Allermöhe",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21037",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "406 Allermöher Deich, Bergedorf, Germany"
+    },
+    {
+      "lat": 53.476450670547045,
+      "lon": 10.221449221163677,
+      "geoinfo": {
+        "display_name": "A 25, Bergedorf, Hamburg, 21029, Germany",
+        "road": "A 25",
+        "house_number": null,
+        "neighbourhood": "Bergedorf",
+        "suburb": "Bergedorf",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21029",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 25, Bergedorf, Hamburg, 21029, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:34.969877+00:00",
+  "_kind": "geo_samples"
+}

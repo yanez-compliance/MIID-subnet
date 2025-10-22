@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Prenzlauer Berg",
+  "geonameid": 2852217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.53686862128156,
+      "lon": 13.447314286349547,
+      "geoinfo": {
+        "display_name": "Kniprodestraße, Mühlenviertel, Prenzlauer Berg, Pankow, Berlin, 10407, Germany",
+        "road": "Kniprodestraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Prenzlauer Berg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10407",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kniprodestraße, Prenzlauer Berg, Germany"
+    },
+    {
+      "lat": 52.53587732066583,
+      "lon": 13.372085147890635,
+      "geoinfo": {
+        "display_name": "Bundeswehrkrankenhaus Berlin, 13, Scharnhorststraße, Charitéviertel, Mitte, Berlin, 10115, Germany",
+        "road": "Scharnhorststraße",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Mitte",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10115",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bundeswehrkrankenhaus Berlin, 13, Scharnhorststraße, Charitéviertel, Mitte, Berlin, 10115, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:41.532312+00:00",
+  "_kind": "geo_samples"
+}

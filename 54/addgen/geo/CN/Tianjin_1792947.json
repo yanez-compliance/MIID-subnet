@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tianjin",
+  "geonameid": 1792947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.131151410277646,
+      "lon": 117.22440249013886,
+      "geoinfo": {
+        "display_name": "Tangjiakou, Hedong District, Tianjin, 300151, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tangjiakou",
+        "city_district": null,
+        "city": "Hedong District",
+        "state": "Tianjin",
+        "postcode": "300151",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tangjiakou, Tianjin, Tianjin, China"
+    },
+    {
+      "lat": 39.13598165208891,
+      "lon": 117.12610109278559,
+      "geoinfo": {
+        "display_name": "Huanghe Avenue, Xiangyanglu, Nankai District, Tianjin, 300190, China",
+        "road": "Huanghe Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xiangyanglu",
+        "city_district": null,
+        "city": "Nankai District",
+        "state": "Tianjin",
+        "postcode": "300190",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "661, Huanghe Avenue, Xiangyanglu, Nankai District, Tianjin, 300190, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:29.640245+00:00",
+  "_kind": "geo_samples"
+}

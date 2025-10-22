@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Brickworks Estate",
+  "geonameid": 1880756,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3049925022743445,
+      "lon": 103.82684668337507,
+      "geoinfo": {
+        "display_name": "28, Cuscaden Road, Orchard, Orchard Road, Central, Singapore, 249723, Singapore",
+        "road": "Cuscaden Road",
+        "house_number": "28",
+        "neighbourhood": "Orchard Road",
+        "suburb": "Orchard",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "249723",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "28, Cuscaden Road, Orchard, Orchard Road, Central, Singapore, 249723, Singapore"
+    },
+    {
+      "lat": 1.3101983246053999,
+      "lon": 103.77635147858655,
+      "geoinfo": {
+        "display_name": "Singapore Polytechnic, 500, Dover Road, one-north, Queenstown, Central, Singapore, 139651, Singapore",
+        "road": "Dover Road",
+        "house_number": "500",
+        "neighbourhood": null,
+        "suburb": "one-north",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "139651",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Singapore Polytechnic, 500, Dover Road, one-north, Queenstown, Central, Singapore, 139651, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:32.098399+00:00",
+  "_kind": "geo_samples"
+}

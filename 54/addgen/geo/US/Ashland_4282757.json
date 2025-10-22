@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashland",
+  "geonameid": 4282757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.488087997815626,
+      "lon": -82.66422708934871,
+      "geoinfo": {
+        "display_name": "US 23, Ashland, Boyd County, Kentucky, 41101, United States",
+        "road": "US 23",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Kentucky",
+        "postcode": "41101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 23, Ashland, Kentucky, United States"
+    },
+    {
+      "lat": 38.459533223572464,
+      "lon": -82.62374651698705,
+      "geoinfo": {
+        "display_name": "Stratton Drive, Geigers Crossing, Ashland, Boyd County, Kentucky, 41101, United States",
+        "road": "Stratton Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Kentucky",
+        "postcode": "41101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206, Stratton Drive, Geigers Crossing, Ashland, Boyd County, Kentucky, 41101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:37.879435+00:00",
+  "_kind": "geo_samples"
+}

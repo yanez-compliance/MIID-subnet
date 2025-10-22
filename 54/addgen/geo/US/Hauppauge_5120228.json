@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hauppauge",
+  "geonameid": 5120228,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82652475079413,
+      "lon": -73.20322307053726,
+      "geoinfo": {
+        "display_name": "ShopRite, 335, Smithtown Bypass, Hauppauge, Town of Smithtown, Suffolk County, New York, 11788, United States",
+        "road": "Smithtown Bypass",
+        "house_number": "335",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hauppauge",
+        "state": "New York",
+        "postcode": "11788",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "335 Smithtown Bypass, Hauppauge, New York, United States"
+    },
+    {
+      "lat": 40.8391005108478,
+      "lon": -73.17054670368125,
+      "geoinfo": {
+        "display_name": "36, Ridgeley Road, Nesconset, Town of Smithtown, Suffolk County, New York, 11787, United States",
+        "road": "Ridgeley Road",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Smithtown",
+        "state": "New York",
+        "postcode": "11787",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36, Ridgeley Road, Nesconset, Town of Smithtown, Suffolk County, New York, 11787, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:46.652636+00:00",
+  "_kind": "geo_samples"
+}

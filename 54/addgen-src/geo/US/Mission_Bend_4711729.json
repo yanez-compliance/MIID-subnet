@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mission Bend",
+  "geonameid": 4711729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.67305714856418,
+      "lon": -95.69239100314257,
+      "geoinfo": {
+        "display_name": "Westmoor Drive, Mission Trace, Fort Bend County, Texas, 77407, United States",
+        "road": "Westmoor Drive",
+        "house_number": null,
+        "neighbourhood": "Mission Trace",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Westmoor Drive, Mission Bend, Texas, United States"
+    },
+    {
+      "lat": 29.699183850890293,
+      "lon": -95.70605572737301,
+      "geoinfo": {
+        "display_name": "Grand Mission, Fort Bend County, Texas, 77407, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Grand Mission",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "539, Grand Mission, Fort Bend County, Texas, 77407, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:18.869697+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Finsterwalde",
+  "geonameid": 2926670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.63575086108701,
+      "lon": 13.66870424125373,
+      "geoinfo": {
+        "display_name": "Finsterwalde/Heinrichsruh Airfield, Bertolt-Brecht-Straße, Finsterwalde, Elbe-Elster, Brandenburg, 03238, Germany",
+        "road": "Bertolt-Brecht-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Finsterwalde",
+        "state": "Brandenburg",
+        "postcode": "03238",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bertolt-Brecht-Straße, Finsterwalde, Brandenburg, Germany"
+    },
+    {
+      "lat": 51.60979394862774,
+      "lon": 13.663497610188722,
+      "geoinfo": {
+        "display_name": "K 6224, Eichholz, Heideland, Elsterland, Elbe-Elster, Brandenburg, 03238, Germany",
+        "road": "K 6224",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Eichholz",
+        "city": "Heideland",
+        "state": "Brandenburg",
+        "postcode": "03238",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 6224, Finsterwalde, 03238 Brandenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:20.008064+00:00",
+  "_kind": "geo_samples"
+}

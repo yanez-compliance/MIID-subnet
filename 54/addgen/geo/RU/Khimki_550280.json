@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Khimki",
+  "geonameid": 550280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.91431643978983,
+      "lon": 37.46741802419619,
+      "geoinfo": {
+        "display_name": "Neva Motorway, Лобаново, Клязьма-Старбеево, Khimki, Khimki Urban Okrug, Moscow Oblast, Central Federal District, 141401, Russia",
+        "road": "Neva Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Клязьма-Старбеево",
+        "city_district": null,
+        "city": "Khimki",
+        "state": "Moscow Oblast",
+        "postcode": "141401",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Neva Motorway, Khimki, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.86190237996864,
+      "lon": 37.42209769364477,
+      "geoinfo": {
+        "display_name": "23 к2, улица Вилиса Лациса, North Tushino District, Moscow, Central Federal District, 125480, Russia",
+        "road": "улица Вилиса Лациса",
+        "house_number": "23 к2",
+        "neighbourhood": null,
+        "suburb": "North Tushino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "125480",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "23 к2, улица Вилиса Лациса, North Tushino District, Moscow, Central Federal District, 125480, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:24.769108+00:00",
+  "_kind": "geo_samples"
+}

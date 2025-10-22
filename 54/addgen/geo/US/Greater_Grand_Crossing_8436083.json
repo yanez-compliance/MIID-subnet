@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greater Grand Crossing",
+  "geonameid": 8436083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.74839220755549,
+      "lon": -87.62769938394503,
+      "geoinfo": {
+        "display_name": "8019, South La Salle Street, Auburn Park, Chatham, Chicago, Lake Township, Cook County, Illinois, 60620, United States",
+        "road": "South La Salle Street",
+        "house_number": "8019",
+        "neighbourhood": "Auburn Park",
+        "suburb": "Chatham",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8019 South La Salle Street, Greater Grand Crossing, Illinois, United States"
+    },
+    {
+      "lat": 41.80083644785544,
+      "lon": -87.63819846846863,
+      "geoinfo": {
+        "display_name": "NS 55th Street Yard, West 51st Street, New City, Chicago, Lake Township, Cook County, Illinois, 60632, United States",
+        "road": "West 51st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New City",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NS 55th Street Yard, West 51st Street, New City, Chicago, Lake Township, Cook County, Illinois, 60632, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:25.642682+00:00",
+  "_kind": "geo_samples"
+}

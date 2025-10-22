@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eastlake",
+  "geonameid": 5152833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.69637353952678,
+      "lon": -81.44173404278503,
+      "geoinfo": {
+        "display_name": "Lakeline, Eastlake, Lake County, Ohio, 44095, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastlake",
+        "state": "Ohio",
+        "postcode": "44095",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eastlake, Ohio, United States"
+    },
+    {
+      "lat": 41.63724162010634,
+      "lon": -81.4984719873955,
+      "geoinfo": {
+        "display_name": "Wickliffe Club, Euclid, Cuyahoga County, Ohio, 44132, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Wickliffe Club",
+        "suburb": null,
+        "city_district": null,
+        "city": "Euclid",
+        "state": "Ohio",
+        "postcode": "44132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "869, Wickliffe Club, Euclid, Cuyahoga County, Ohio, 44132, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:51.678195+00:00",
+  "_kind": "geo_samples"
+}

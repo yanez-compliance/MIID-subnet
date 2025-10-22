@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Toms River",
+  "geonameid": 4504476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.965442418253,
+      "lon": -74.20429654265011,
+      "geoinfo": {
+        "display_name": "Presidential Boulevard, Emerald Apartments, Toms River, Ocean County, New Jersey, 08753, United States",
+        "road": "Presidential Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toms River",
+        "state": "New Jersey",
+        "postcode": "08753",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Presidential Boulevard, Toms River, New Jersey, United States"
+    },
+    {
+      "lat": 39.98480649769155,
+      "lon": -74.22710568290884,
+      "geoinfo": {
+        "display_name": "Oak Ridge Parkway, Toms River, Ocean County, New Jersey, 08755, United States",
+        "road": "Oak Ridge Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toms River",
+        "state": "New Jersey",
+        "postcode": "08755",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "122, Oak Ridge Parkway, Toms River, Ocean County, New Jersey, 08755, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:42.856065+00:00",
+  "_kind": "geo_samples"
+}

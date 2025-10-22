@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bartow",
+  "geonameid": 4146723,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.894781668107452,
+      "lon": -81.81861709346187,
+      "geoinfo": {
+        "display_name": "Main Street, Bartow, Polk County, Florida, 33830, United States",
+        "road": "Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bartow",
+        "state": "Florida",
+        "postcode": "33830",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Main Street, Bartow, Florida, United States"
+    },
+    {
+      "lat": 27.92379974468975,
+      "lon": -81.86579635606687,
+      "geoinfo": {
+        "display_name": "Charleston Lane, Lyle Corner, Bartow, Polk County, Florida, United States",
+        "road": "Charleston Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bartow",
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "711, Charleston Lane, Lyle Corner, Bartow, Polk County, 95505 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:05.757872+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Blackburn",
+  "geonameid": 2655524,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.76015886535548,
+      "lon": -2.5454858088827,
+      "geoinfo": {
+        "display_name": "Further Lane, Mellor, Mellor Brook, Ribble Valley, Lancashire, England, BB2 7QA, United Kingdom",
+        "road": "Further Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mellor",
+        "city_district": null,
+        "city": "Ribble Valley",
+        "state": "England",
+        "postcode": "BB2 7QA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Further Lane, Blackburn, England, United Kingdom"
+    },
+    {
+      "lat": 53.72931021254305,
+      "lon": -2.440759141605229,
+      "geoinfo": {
+        "display_name": "School Lane, Blackamoor, Guide, Blackburn with Darwen, Lancashire, England, BB1 2LW, United Kingdom",
+        "road": "School Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Blackamoor",
+        "city_district": null,
+        "city": "Guide",
+        "state": "England",
+        "postcode": "BB1 2LW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "School Lane, Blackamoor, Guide, Blackburn with Darwen, Lancashire, England, BB1 2LW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:49.134999+00:00",
+  "_kind": "geo_samples"
+}

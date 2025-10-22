@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Killeen",
+  "geonameid": 4703223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.09699943487325,
+      "lon": -97.7671231299087,
+      "geoinfo": {
+        "display_name": "Farhills Drive, Killeen, Bell County, Texas, 76549, United States",
+        "road": "Farhills Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Killeen",
+        "state": "Texas",
+        "postcode": "76549",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Farhills Drive, Killeen, Texas, United States"
+    },
+    {
+      "lat": 31.095881489658687,
+      "lon": -97.74535662558122,
+      "geoinfo": {
+        "display_name": "2530, Daisy Drive, Killeen, Bell County, Texas, 76542, United States",
+        "road": "Daisy Drive",
+        "house_number": "2530",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Killeen",
+        "state": "Texas",
+        "postcode": "76542",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2530, Daisy Drive, Killeen, Bell County, Texas, 76542, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:39.683498+00:00",
+  "_kind": "geo_samples"
+}

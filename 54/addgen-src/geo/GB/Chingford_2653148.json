@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chingford",
+  "geonameid": 2653148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.612959837238044,
+      "lon": -0.02913497381663136,
+      "geoinfo": {
+        "display_name": "Burnham Road, South Chingford, London Borough of Waltham Forest, London, Greater London, England, E4 8PE, United Kingdom",
+        "road": "Burnham Road",
+        "house_number": null,
+        "neighbourhood": "South Chingford",
+        "suburb": null,
+        "city_district": "London Borough of Waltham Forest",
+        "city": "London",
+        "state": "England",
+        "postcode": "E4 8PE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Burnham Road, Chingford, England, United Kingdom"
+    },
+    {
+      "lat": 51.65303710901456,
+      "lon": -0.006351977691893953,
+      "geoinfo": {
+        "display_name": "Sewardstone Road, Waltham Abbey, Sewardstonebury, Epping Forest, Essex, England, E4 7RB, United Kingdom",
+        "road": "Sewardstone Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Waltham Abbey",
+        "city_district": null,
+        "city": "Epping Forest",
+        "state": "England",
+        "postcode": "E4 7RB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sewardstone Road, Waltham Abbey, Sewardstonebury, Epping Forest, Essex, England, E4 7RB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:43.410093+00:00",
+  "_kind": "geo_samples"
+}

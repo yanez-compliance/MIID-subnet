@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bobingen",
+  "geonameid": 2947449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.229944787900244,
+      "lon": 10.822850483844094,
+      "geoinfo": {
+        "display_name": "Bahnhofstraße, Großaitingen, Augsburg (district), Bavaria, 86845, Germany",
+        "road": "Bahnhofstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Großaitingen",
+        "state": "Bavaria",
+        "postcode": "86845",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bahnhofstraße, Bobingen, Bavaria, Germany"
+    },
+    {
+      "lat": 48.313767205991574,
+      "lon": 10.815476508002156,
+      "geoinfo": {
+        "display_name": "26, Oberschönenfelder Straße, Bergheim, Augsburg, Bavaria, 86199, Germany",
+        "road": "Oberschönenfelder Straße",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Bergheim",
+        "city_district": null,
+        "city": "Augsburg",
+        "state": "Bavaria",
+        "postcode": "86199",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "26, Oberschönenfelder Straße, Bergheim, Augsburg, Bavaria, 86199, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:42.735037+00:00",
+  "_kind": "geo_samples"
+}

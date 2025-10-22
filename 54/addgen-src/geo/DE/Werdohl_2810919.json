@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Werdohl",
+  "geonameid": 2810919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.26883941196647,
+      "lon": 7.817687605092053,
+      "geoinfo": {
+        "display_name": "In der Lothmecke, Bauckloh, Werdohl, Märkischer Kreis, North Rhine-Westphalia, 58791, Germany",
+        "road": "In der Lothmecke",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Werdohl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58791",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "In der Lothmecke, Werdohl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.231824609524075,
+      "lon": 7.816566130255196,
+      "geoinfo": {
+        "display_name": "K 8, Breitenfeld, Ohle, Plettenberg, Märkischer Kreis, North Rhine-Westphalia, 58840, Germany",
+        "road": "K 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Breitenfeld",
+        "city_district": null,
+        "city": "Plettenberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58840",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 8, Breitenfeld, Ohle, Plettenberg, Märkischer Kreis, North Rhine-Westphalia, 58840, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:30.008984+00:00",
+  "_kind": "geo_samples"
+}

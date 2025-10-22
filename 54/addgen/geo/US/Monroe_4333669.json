@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monroe",
+  "geonameid": 4333669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.54020772431567,
+      "lon": -92.11741004863087,
+      "geoinfo": {
+        "display_name": "2182, Emerson Street, Monroe, Ouachita Parish, Louisiana, 71201, United States",
+        "road": "Emerson Street",
+        "house_number": "2182",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroe",
+        "state": "Louisiana",
+        "postcode": "71201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2182 Emerson Street, Monroe, Louisiana, United States"
+    },
+    {
+      "lat": 32.54526655454065,
+      "lon": -92.10979791473771,
+      "geoinfo": {
+        "display_name": "2456, Spencer Lane, Monroe, Ouachita Parish, Louisiana, 71201, United States",
+        "road": "Spencer Lane",
+        "house_number": "2456",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroe",
+        "state": "Louisiana",
+        "postcode": "71201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2456, Spencer Lane, Monroe, Ouachita Parish, Louisiana, 71201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:53.357547+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cedar Hill",
+  "geonameid": 4679803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.59276306661957,
+      "lon": -96.93236967574634,
+      "geoinfo": {
+        "display_name": "232, North Cannady Drive, Cedar Hill, Dallas County, Texas, 75104, United States",
+        "road": "North Cannady Drive",
+        "house_number": "232",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Hill",
+        "state": "Texas",
+        "postcode": "75104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "232 North Cannady Drive, Cedar Hill, Texas, United States"
+    },
+    {
+      "lat": 32.61164318551385,
+      "lon": -96.92815029606939,
+      "geoinfo": {
+        "display_name": "1190, Holly Lane, Cedar Hill, Dallas County, Texas, 75104, United States",
+        "road": "Holly Lane",
+        "house_number": "1190",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Hill",
+        "state": "Texas",
+        "postcode": "75104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1190, Holly Lane, Cedar Hill, Dallas County, Texas, 75104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:13.888140+00:00",
+  "_kind": "geo_samples"
+}

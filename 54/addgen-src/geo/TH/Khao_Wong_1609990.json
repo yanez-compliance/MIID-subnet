@@ -1,0 +1,47 @@
+{
+  "country_code": "TH",
+  "country": "Thailand",
+  "city": "Khao Wong",
+  "geonameid": 1609990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.728059548859928,
+      "lon": 104.05741858067088,
+      "geoinfo": {
+        "display_name": "Sa Phang Thong, Khao Wong, Kalasin Province, 46250, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "46250",
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "Khao Wong, Thailand"
+    },
+    {
+      "lat": 16.667728425168292,
+      "lon": 104.08335314518304,
+      "geoinfo": {
+        "display_name": "Khao Wong, Kut Sim Khum Mai, Khao Wong, Kalasin Province, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khao Wong",
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "150, Khao Wong, Kut Sim Khum Mai, Khao Wong, 10706 Kalasin Province, Thailand"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:32.300546+00:00",
+  "_kind": "geo_samples"
+}

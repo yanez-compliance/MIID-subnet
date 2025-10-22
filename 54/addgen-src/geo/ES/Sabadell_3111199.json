@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sabadell",
+  "geonameid": 3111199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.57552243177737,
+      "lon": 2.115997440073377,
+      "geoinfo": {
+        "display_name": "PR-C 30, Carretera de Molins de Rei a Sabadell, Sabadell, Vallès Occidental, Barcelona, Catalonia, 08208, Spain",
+        "road": "Carretera de Molins de Rei a Sabadell",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sabadell",
+        "state": "Catalonia",
+        "postcode": "08208",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Molins de Rei a Sabadell, Sabadell, Catalonia, Spain"
+    },
+    {
+      "lat": 41.57707702606722,
+      "lon": 2.126914172018008,
+      "geoinfo": {
+        "display_name": "Carretera de Molins de Rei a Sabadell, Pedra Santa, Sentmenat, Vallès Occidental, Barcelona, Catalonia, 08181, Spain",
+        "road": "Carretera de Molins de Rei a Sabadell",
+        "house_number": null,
+        "neighbourhood": "Pedra Santa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sentmenat",
+        "state": "Catalonia",
+        "postcode": "08181",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "493, Carretera de Molins de Rei a Sabadell, Pedra Santa, Sentmenat, Vallès Occidental, Barcelona, Catalonia, 08181, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:02.241435+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Xàtiva",
+  "geonameid": 2516345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.015680271995485,
+      "lon": -0.5476265749984824,
+      "geoinfo": {
+        "display_name": "Xàtiva, la Costera, Valencia, Valencian Community, 46815, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xàtiva",
+        "state": "Valencian Community",
+        "postcode": "46815",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Xàtiva, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.96761616283111,
+      "lon": -0.5336375731000241,
+      "geoinfo": {
+        "display_name": "Camí del Portet, Bixquert, Xàtiva, la Costera, Valencia, Valencian Community, 46800, Spain",
+        "road": "Camí del Portet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bixquert",
+        "city_district": null,
+        "city": "Xàtiva",
+        "state": "Valencian Community",
+        "postcode": "46800",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "093, Camí del Portet, Bixquert, Xàtiva, la Costera, Valencia, Valencian Community, 46800, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:10.076548+00:00",
+  "_kind": "geo_samples"
+}

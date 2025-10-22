@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Frederiksberg",
+  "geonameid": 2621942,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 55.642972991255434,
+      "lon": 12.495320683936542,
+      "geoinfo": {
+        "display_name": "19, Sydkærsvej, Hvidovre, Hvidovre Municipality, Capital Region of Denmark, 2650, Denmark",
+        "road": "Sydkærsvej",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Hvidovre",
+        "city_district": null,
+        "city": null,
+        "state": "Capital Region of Denmark",
+        "postcode": "2650",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "19, Sydkærsvej, Hvidovre, Hvidovre Municipality, Capital Region of Denmark, 2650, Denmark"
+    },
+    {
+      "lat": 55.656502485686666,
+      "lon": 12.552299575521975,
+      "geoinfo": {
+        "display_name": "2, Belvederekaj, Frederiks Brygge, Vesterbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2450, Denmark",
+        "road": "Belvederekaj",
+        "house_number": "2",
+        "neighbourhood": "Frederiks Brygge",
+        "suburb": "Vesterbro",
+        "city_district": null,
+        "city": "Copenhagen",
+        "state": "Capital Region of Denmark",
+        "postcode": "2450",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "2, Belvederekaj, Frederiks Brygge, Vesterbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2450, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:32.553986+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Kortrijk",
+  "geonameid": 2794055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.842854390381305,
+      "lon": 3.240913009767292,
+      "geoinfo": {
+        "display_name": "7;9, Warande, Heule, Kortrijk, West Flanders, 8501, Belgium",
+        "road": "Warande",
+        "house_number": "7;9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kortrijk",
+        "state": "West Flanders",
+        "postcode": "8501",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "7;9 Warande, Kortrijk, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.81332054905086,
+      "lon": 3.225799232821994,
+      "geoinfo": {
+        "display_name": "Trakelweg, Bissegem, Kortrijk, West Flanders, 8501, Belgium",
+        "road": "Trakelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kortrijk",
+        "state": "West Flanders",
+        "postcode": "8501",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "711, Trakelweg, Bissegem, Kortrijk, West Flanders, 8501, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:35.553163+00:00",
+  "_kind": "geo_samples"
+}

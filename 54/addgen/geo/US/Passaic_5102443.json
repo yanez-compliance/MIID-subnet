@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Passaic",
+  "geonameid": 5102443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.849660981749146,
+      "lon": -74.15210812168509,
+      "geoinfo": {
+        "display_name": "79, Shafto Street, Allwood, Clifton, Passaic County, New Jersey, 07012, United States",
+        "road": "Shafto Street",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clifton",
+        "state": "New Jersey",
+        "postcode": "07012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "79 Shafto Street, Passaic, New Jersey, United States"
+    },
+    {
+      "lat": 40.86976832444194,
+      "lon": -74.11524411918265,
+      "geoinfo": {
+        "display_name": "260, 4th Street, Passaic, Passaic County, New Jersey, 07055, United States",
+        "road": "4th Street",
+        "house_number": "260",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Passaic",
+        "state": "New Jersey",
+        "postcode": "07055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "260, 4th Street, Passaic, Passaic County, New Jersey, 07055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:29.991264+00:00",
+  "_kind": "geo_samples"
+}

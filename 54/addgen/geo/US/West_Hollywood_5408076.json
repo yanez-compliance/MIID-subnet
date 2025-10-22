@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Hollywood",
+  "geonameid": 5408076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.09814019839575,
+      "lon": -118.36462321713923,
+      "geoinfo": {
+        "display_name": "8001, West Sunset Boulevard, Los Angeles, Los Angeles County, California, 90046, United States",
+        "road": "West Sunset Boulevard",
+        "house_number": "8001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8001 West Sunset Boulevard, West Hollywood, California, United States"
+    },
+    {
+      "lat": 34.13178128577224,
+      "lon": -118.37463065162908,
+      "geoinfo": {
+        "display_name": "3282, Wrightwood Drive, Studio City Neighborhood Council District, Los Angeles, Los Angeles County, California, 91604, United States",
+        "road": "Wrightwood Drive",
+        "house_number": "3282",
+        "neighbourhood": null,
+        "suburb": "Studio City Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3282, Wrightwood Drive, Studio City Neighborhood Council District, Los Angeles, Los Angeles County, California, 91604, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:37.790356+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Plessis-Trévise",
+  "geonameid": 3002647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.808133816865485,
+      "lon": 2.5865589496005588,
+      "geoinfo": {
+        "display_name": "8, Allée Théodore Botrel, Le Plessis-Trévise, Créteil, Val-de-Marne, Metropolitan France, 94420, France",
+        "road": "Allée Théodore Botrel",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Plessis-Trévise",
+        "state": null,
+        "postcode": "94420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8 Allée Théodore Botrel, Le Plessis-Trévise, France"
+    },
+    {
+      "lat": 48.812012464930746,
+      "lon": 2.599634253550564,
+      "geoinfo": {
+        "display_name": "Rue du Muguet, Pontault-Combault, Torcy, Seine-et-Marne, Metropolitan France, 77340, France",
+        "road": "Rue du Muguet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pontault-Combault",
+        "state": null,
+        "postcode": "77340",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "647, Rue du Muguet, Pontault-Combault, Torcy, Seine-et-Marne, Metropolitan France, 77340, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:08:58.446821+00:00",
+  "_kind": "geo_samples"
+}

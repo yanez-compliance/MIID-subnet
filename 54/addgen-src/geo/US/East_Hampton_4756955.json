@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Hampton",
+  "geonameid": 4756955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.039301424649054,
+      "lon": -76.3404488687348,
+      "geoinfo": {
+        "display_name": "5, Jennifer Lane, Breezy Point, Old North Hampton, Hampton, Virginia, 23669, United States",
+        "road": "Jennifer Lane",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Old North Hampton",
+        "city_district": null,
+        "city": "Hampton",
+        "state": "Virginia",
+        "postcode": "23669",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5 Jennifer Lane, East Hampton, Virginia, United States"
+    },
+    {
+      "lat": 37.050296114563466,
+      "lon": -76.3143871455369,
+      "geoinfo": {
+        "display_name": "1917, Seward Drive, Fordham, Bloxoms Corner, Hampton, Virginia, 23663, United States",
+        "road": "Seward Drive",
+        "house_number": "1917",
+        "neighbourhood": null,
+        "suburb": "Bloxoms Corner",
+        "city_district": null,
+        "city": "Hampton",
+        "state": "Virginia",
+        "postcode": "23663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1917, Seward Drive, Fordham, Bloxoms Corner, Hampton, Virginia, 23663, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:59.002528+00:00",
+  "_kind": "geo_samples"
+}

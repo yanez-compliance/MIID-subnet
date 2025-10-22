@@ -1,0 +1,47 @@
+{
+  "country_code": "KP",
+  "country": "North Korea",
+  "city": "Sinanju",
+  "geonameid": 1870742,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 39.61423881092456,
+      "lon": 125.61299720096453,
+      "geoinfo": {
+        "display_name": "1;AH1, Yokjon-dong, Anju-si, South Pyongan, North Korea",
+        "road": "1;AH1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anju-si",
+        "state": "South Pyongan",
+        "postcode": null,
+        "country": "North Korea",
+        "country_code": "kp"
+      },
+      "address": "1;AH1, Sinanju, South Pyongan, North Korea"
+    },
+    {
+      "lat": 39.554252614501735,
+      "lon": 125.60794121885361,
+      "geoinfo": {
+        "display_name": "1, 운송리, Anju-si, South Pyongan, North Korea",
+        "road": "1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anju-si",
+        "state": "South Pyongan",
+        "postcode": null,
+        "country": "North Korea",
+        "country_code": "kp"
+      },
+      "address": "1, Sinanju, 10971 South Pyongan, North Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:33.418286+00:00",
+  "_kind": "geo_samples"
+}

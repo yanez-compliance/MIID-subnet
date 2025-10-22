@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Acireale",
+  "geonameid": 2525790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.636197838858976,
+      "lon": 15.15562061077542,
+      "geoinfo": {
+        "display_name": "Via Chiuse, Loreto, Acireale, Catania, Sicily, 95024, Italy",
+        "road": "Via Chiuse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acireale",
+        "state": "Sicily",
+        "postcode": "95024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Chiuse, Acireale, Sicily, Italy"
+    },
+    {
+      "lat": 37.60030947792202,
+      "lon": 15.144188856388169,
+      "geoinfo": {
+        "display_name": "Via Tropea, Aci Santa Lucia, Marchesana, Aci Catena, Catania, Sicily, 95022, Italy",
+        "road": "Via Tropea",
+        "house_number": null,
+        "neighbourhood": "Aci Santa Lucia",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aci Catena",
+        "state": "Sicily",
+        "postcode": "95022",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "359, Via Tropea, Aci Santa Lucia, Marchesana, Aci Catena, Catania, Sicily, 95022, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:02.974014+00:00",
+  "_kind": "geo_samples"
+}

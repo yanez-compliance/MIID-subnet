@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Barranco",
+  "geonameid": 3946818,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.169259765488931,
+      "lon": -76.99390563669182,
+      "geoinfo": {
+        "display_name": "Calle 5, Sagitario, Santiago de Surco, Province of Lima, Lima Metropolitan Area, Lima, 15054, Peru",
+        "road": "Calle 5",
+        "house_number": null,
+        "neighbourhood": "Sagitario",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santiago de Surco",
+        "state": "Lima",
+        "postcode": "15054",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle 5, Barranco, Lima, Peru"
+    },
+    {
+      "lat": -12.15401772319123,
+      "lon": -77.03849630875308,
+      "geoinfo": {
+        "display_name": "Lima, Province of Lima, Lima Metropolitan Area, Lima, 15001, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15001",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "130, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15001, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:08.512509+00:00",
+  "_kind": "geo_samples"
+}

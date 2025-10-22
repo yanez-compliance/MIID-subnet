@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Haines City",
+  "geonameid": 4157827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.14056065449887,
+      "lon": -81.61580368750467,
+      "geoinfo": {
+        "display_name": "North Patterson Road, Polk County, Florida, 33836, United States",
+        "road": "North Patterson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33836",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Patterson Road, Haines City, Florida, United States"
+    },
+    {
+      "lat": 28.105387169078732,
+      "lon": -81.66007017582906,
+      "geoinfo": {
+        "display_name": "US 17;US 92, Polk County, Florida, United States",
+        "road": "US 17;US 92",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 17;US 92, Haines City, Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:42:13.843960+00:00",
+  "_kind": "geo_samples"
+}

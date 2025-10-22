@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Altamirano",
+  "geonameid": 4013727,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.3844780872324,
+      "lon": -100.68543005854356,
+      "geoinfo": {
+        "display_name": "Ciudad Altamirano, Pungarabato, Guerrero, 40660, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Altamirano",
+        "state": "Guerrero",
+        "postcode": "40660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Altamirano, Guerrero, Mexico"
+    },
+    {
+      "lat": 18.329887853197974,
+      "lon": -100.69814076747505,
+      "geoinfo": {
+        "display_name": "Avenida Cuauhtémoc, Coyuca de Catalán, Guerrero, 40660, Mexico",
+        "road": "Avenida Cuauhtémoc",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyuca de Catalán",
+        "state": "Guerrero",
+        "postcode": "40660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "173, Avenida Cuauhtémoc, Coyuca de Catalán, Guerrero, 40660, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:34:22.023201+00:00",
+  "_kind": "geo_samples"
+}

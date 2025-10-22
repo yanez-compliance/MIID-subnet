@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bristol",
+  "geonameid": 5282835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.710099006977984,
+      "lon": -72.94556797700241,
+      "geoinfo": {
+        "display_name": "20, Alba Drive, Bristol, Naugatuck Valley Planning Region, Connecticut, 06010, United States",
+        "road": "Alba Drive",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Connecticut",
+        "postcode": "06010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20 Alba Drive, Bristol, Connecticut, United States"
+    },
+    {
+      "lat": 41.65447841724456,
+      "lon": -72.98035752119449,
+      "geoinfo": {
+        "display_name": "Saddlebrook Boulevard, Bristol, Naugatuck Valley Planning Region, Connecticut, 06786, United States",
+        "road": "Saddlebrook Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Connecticut",
+        "postcode": "06786",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "040, Saddlebrook Boulevard, Bristol, Naugatuck Valley Planning Region, Connecticut, 06786, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:23.961385+00:00",
+  "_kind": "geo_samples"
+}

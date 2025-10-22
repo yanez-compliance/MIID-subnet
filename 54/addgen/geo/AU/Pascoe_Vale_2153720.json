@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Pascoe Vale",
+  "geonameid": 2153720,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.71449764103127,
+      "lon": 144.92740292030226,
+      "geoinfo": {
+        "display_name": "Northern Golf Club, Glenroy Road, Glenroy, Melbourne, City of Merri-bek, Victoria, 3046, Australia",
+        "road": "Glenroy Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glenroy",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3046",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Glenroy Road, Pascoe Vale, Victoria, Australia"
+    },
+    {
+      "lat": -37.72475337728465,
+      "lon": 144.88825357544238,
+      "geoinfo": {
+        "display_name": "29, Fraser Street, Airport West, Melbourne, City of Moonee Valley, Victoria, 3042, Australia",
+        "road": "Fraser Street",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "Airport West",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3042",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "29, Fraser Street, Airport West, Melbourne, City of Moonee Valley, Victoria, 3042, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:16.570997+00:00",
+  "_kind": "geo_samples"
+}

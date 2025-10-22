@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "St. Thomas",
+  "geonameid": 6158357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.76027344340945,
+      "lon": -81.2205159215908,
+      "geoinfo": {
+        "display_name": "Bush Line, St. Thomas, Elgin County, Ontario, N5R 3B9, Canada",
+        "road": "Bush Line",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Thomas",
+        "state": "Ontario",
+        "postcode": "N5R 3B9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Bush Line, St. Thomas, Ontario, Canada"
+    },
+    {
+      "lat": 42.78654405379349,
+      "lon": -81.21095890402066,
+      "geoinfo": {
+        "display_name": "Toles, Wellington Road, Central Elgin, Elgin County, Southwestern Ontario, Ontario, N5P 2K8, Canada",
+        "road": "Wellington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Central Elgin",
+        "state": "Ontario",
+        "postcode": "N5P 2K8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "830, Wellington Road, St. Thomas, N5P 2K8 Ontario, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:07.415953+00:00",
+  "_kind": "geo_samples"
+}

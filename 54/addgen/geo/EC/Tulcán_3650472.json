@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Tulcán",
+  "geonameid": 3650472,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 0.7800822071216477,
+      "lon": -77.74558630026934,
+      "geoinfo": {
+        "display_name": "La Estrellita Vía al Caramelo, Tulcán, Carchi, 040105, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulcán",
+        "state": "Carchi",
+        "postcode": "040105",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "232, La Estrellita Vía al Caramelo, Tulcán, Carchi, 040105, Ecuador"
+    },
+    {
+      "lat": 0.7883942958394075,
+      "lon": -77.73480883950059,
+      "geoinfo": {
+        "display_name": "Panamericana Norte, La Rrinconada, Urbina, Tulcán, Carchi, 040105, Ecuador",
+        "road": "Panamericana Norte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Carchi",
+        "postcode": "040105",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "313, Panamericana Norte, La Rrinconada, Urbina, Tulcán, Carchi, 040105, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:13.866200+00:00",
+  "_kind": "geo_samples"
+}

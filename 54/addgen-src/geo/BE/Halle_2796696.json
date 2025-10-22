@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Halle",
+  "geonameid": 2796696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.75277393642145,
+      "lon": 4.212853195285755,
+      "geoinfo": {
+        "display_name": "444, Lenniksesteenweg, Windmoleken, Halle, Halle-Vilvoorde, Flemish Brabant, Flanders, 1500, Belgium",
+        "road": "Lenniksesteenweg",
+        "house_number": "444",
+        "neighbourhood": "Windmoleken",
+        "suburb": null,
+        "city_district": "Halle",
+        "city": "Halle",
+        "state": "Flemish Brabant",
+        "postcode": "1500",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "444 Lenniksesteenweg, Halle, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.706747179314135,
+      "lon": 4.195238433953535,
+      "geoinfo": {
+        "display_name": "421, Chaussée d'Hondzocht, Le Péchi, Tubize, Nivelles, Walloon Brabant, Wallonia, 1480, Belgium",
+        "road": "Chaussée d'Hondzocht",
+        "house_number": "421",
+        "neighbourhood": null,
+        "suburb": "Le Péchi",
+        "city_district": null,
+        "city": "Tubize",
+        "state": "Walloon Brabant",
+        "postcode": "1480",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "421, Chaussée d'Hondzocht, Le Péchi, Tubize, Nivelles, Walloon Brabant, Wallonia, 1480, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:13.055242+00:00",
+  "_kind": "geo_samples"
+}

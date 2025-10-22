@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Soumagne",
+  "geonameid": 2786344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.60622629887068,
+      "lon": 5.779279992750597,
+      "geoinfo": {
+        "display_name": "Salle Alexandre Chapelier, Rue du Bief, Xhendelesse, Herve, Verviers, Liège, Wallonia, 4652, Belgium",
+        "road": "Rue du Bief",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Herve",
+        "state": "Liège",
+        "postcode": "4652",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue du Bief, Soumagne, Liège, Belgium"
+    },
+    {
+      "lat": 50.61558112203618,
+      "lon": 5.758314697166735,
+      "geoinfo": {
+        "display_name": "Voie de l'Eau, Soumagne, Liège, Wallonia, 4630, Belgium",
+        "road": "Voie de l'Eau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Soumagne",
+        "state": "Liège",
+        "postcode": "4630",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "812, Voie de l'Eau, Soumagne, Liège, Wallonia, 4630, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:33.679505+00:00",
+  "_kind": "geo_samples"
+}

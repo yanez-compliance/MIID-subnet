@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Quedlinburg",
+  "geonameid": 2851465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.75427517644114,
+      "lon": 11.194723477905834,
+      "geoinfo": {
+        "display_name": "Rieder, Ballenstedt, Landkreis Harz, Saxony-Anhalt, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ballenstedt",
+        "state": "Saxony-Anhalt",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Quedlinburg, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.75979881311365,
+      "lon": 11.145550956314812,
+      "geoinfo": {
+        "display_name": "L 66, Quedlinburg, Landkreis Harz, Saxony-Anhalt, 06484, Germany",
+        "road": "L 66",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Quedlinburg",
+        "city": "Quedlinburg",
+        "state": "Saxony-Anhalt",
+        "postcode": "06484",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 66, Quedlinburg, Landkreis Harz, Saxony-Anhalt, 06484, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:54.412674+00:00",
+  "_kind": "geo_samples"
+}

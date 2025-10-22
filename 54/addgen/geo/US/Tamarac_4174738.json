@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tamarac",
+  "geonameid": 4174738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.207323764261126,
+      "lon": -80.28488234255539,
+      "geoinfo": {
+        "display_name": "Nob Hill Road, Tamarac, Broward County, Florida, 33321, United States",
+        "road": "Nob Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tamarac",
+        "state": "Florida",
+        "postcode": "33321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nob Hill Road, Tamarac, Florida, United States"
+    },
+    {
+      "lat": 26.232973322300136,
+      "lon": -80.22663247572385,
+      "geoinfo": {
+        "display_name": "222, Northwest 76th Avenue, Margate, Broward County, Florida, 33063, United States",
+        "road": "Northwest 76th Avenue",
+        "house_number": "222",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Margate",
+        "state": "Florida",
+        "postcode": "33063",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "222, Northwest 76th Avenue, Margate, Broward County, Florida, 33063, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:21.277773+00:00",
+  "_kind": "geo_samples"
+}

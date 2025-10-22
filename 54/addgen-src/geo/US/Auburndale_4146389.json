@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburndale",
+  "geonameid": 4146389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.091167247018728,
+      "lon": -81.75170688766224,
+      "geoinfo": {
+        "display_name": "Lake Alfred Road, Lake Alfred, Polk County, Florida, 33850, United States",
+        "road": "Lake Alfred Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Alfred",
+        "state": "Florida",
+        "postcode": "33850",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Alfred Road, Auburndale, Florida, United States"
+    },
+    {
+      "lat": 28.07530295739305,
+      "lon": -81.75119720105222,
+      "geoinfo": {
+        "display_name": "1260, Lynchburg Road, Lake Alfred, Polk County, Florida, 33850, United States",
+        "road": "Lynchburg Road",
+        "house_number": "1260",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Alfred",
+        "state": "Florida",
+        "postcode": "33850",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1260, Lynchburg Road, Lake Alfred, Polk County, Florida, 33850, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:05.997305+00:00",
+  "_kind": "geo_samples"
+}

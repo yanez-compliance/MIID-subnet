@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Charlotte",
+  "geonameid": 4169130,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.949908345649426,
+      "lon": -82.11795001314283,
+      "geoinfo": {
+        "display_name": "Charlotte County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Port Charlotte, Florida, United States"
+    },
+    {
+      "lat": 26.966828540285068,
+      "lon": -82.08724032035582,
+      "geoinfo": {
+        "display_name": "499, Notson Terrace Northeast, Port Charlotte, Charlotte County, Florida, 33952, United States",
+        "road": "Notson Terrace Northeast",
+        "house_number": "499",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Charlotte",
+        "state": "Florida",
+        "postcode": "33952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "499, Notson Terrace Northeast, Port Charlotte, Charlotte County, Florida, 33952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:35.619276+00:00",
+  "_kind": "geo_samples"
+}

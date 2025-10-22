@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hattingen",
+  "geonameid": 2909230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.3697549661445,
+      "lon": 7.208214848603467,
+      "geoinfo": {
+        "display_name": "15, Am Wasserturm, Oberbredenscheid, Hattingen, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 45527, Germany",
+        "road": "Am Wasserturm",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hattingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45527",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15 Am Wasserturm, Hattingen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.36803104888682,
+      "lon": 7.138566753504081,
+      "geoinfo": {
+        "display_name": "6, Fellerstraße, Nierenhof, Langenberg, Velbert, Kreis Mettmann, North Rhine-Westphalia, 42555, Germany",
+        "road": "Fellerstraße",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Nierenhof",
+        "city_district": "Langenberg",
+        "city": "Velbert",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42555",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6, Fellerstraße, Nierenhof, Langenberg, Velbert, Kreis Mettmann, North Rhine-Westphalia, 42555, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:57.953075+00:00",
+  "_kind": "geo_samples"
+}

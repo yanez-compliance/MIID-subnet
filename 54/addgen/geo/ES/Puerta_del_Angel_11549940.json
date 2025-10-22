@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Puerta del Angel",
+  "geonameid": 11549940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.41039169449976,
+      "lon": -3.7370564969372446,
+      "geoinfo": {
+        "display_name": "131, Paseo de Extremadura, Puerta del Ángel, Latina, Madrid, Community of Madrid, 28011, Spain",
+        "road": "Paseo de Extremadura",
+        "house_number": "131",
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28011",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "131 Paseo de Extremadura, Puerta del Angel, 88880 Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.37579720278238,
+      "lon": -3.70542041827934,
+      "geoinfo": {
+        "display_name": "Pradolongo, Usera, Madrid, Community of Madrid, 28026, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Usera",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28026",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "770, Pradolongo, Usera, Madrid, Community of Madrid, 28026, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:12.515571+00:00",
+  "_kind": "geo_samples"
+}

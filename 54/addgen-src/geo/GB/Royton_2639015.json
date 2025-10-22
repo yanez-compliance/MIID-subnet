@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Royton",
+  "geonameid": 2639015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.53420673244674,
+      "lon": -2.1062518831741435,
+      "geoinfo": {
+        "display_name": "New Earth, Primrose Bank, Chadderton, Oldham, Greater Manchester, England, OL8 2BH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "New Earth",
+        "suburb": "Primrose Bank",
+        "city_district": null,
+        "city": "Chadderton",
+        "state": "England",
+        "postcode": "OL8 2BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "New Earth, Royton, England, United Kingdom"
+    },
+    {
+      "lat": 53.598441742297865,
+      "lon": -2.156020592231527,
+      "geoinfo": {
+        "display_name": "Hardy Close, Kirkholt, Rochdale, Greater Manchester, England, OL11 2HQ, United Kingdom",
+        "road": "Hardy Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kirkholt",
+        "city_district": null,
+        "city": "Rochdale",
+        "state": "England",
+        "postcode": "OL11 2HQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hardy Close, Kirkholt, Rochdale, Greater Manchester, England, OL11 2HQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:46.219680+00:00",
+  "_kind": "geo_samples"
+}

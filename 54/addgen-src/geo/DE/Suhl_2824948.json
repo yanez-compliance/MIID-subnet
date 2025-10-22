@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Suhl",
+  "geonameid": 2824948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.574657318633164,
+      "lon": 10.73324428169809,
+      "geoinfo": {
+        "display_name": "L 3247, St. Kilian, Schleusingen, Landkreis Hildburghausen, Thuringia, 98553, Germany",
+        "road": "L 3247",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Kilian",
+        "state": "Thuringia",
+        "postcode": "98553",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 3247, Suhl, Thuringia, Germany"
+    },
+    {
+      "lat": 50.5801489260051,
+      "lon": 10.653425786472907,
+      "geoinfo": {
+        "display_name": "Heinrichs, Suhl, Thuringia, 98529, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Heinrichs",
+        "city_district": null,
+        "city": "Suhl",
+        "state": "Thuringia",
+        "postcode": "98529",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "473, Heinrichs, Suhl, Thuringia, 98529, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:18.946683+00:00",
+  "_kind": "geo_samples"
+}

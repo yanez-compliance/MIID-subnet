@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Tottenham",
+  "geonameid": 2635608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.63370273238467,
+      "lon": -0.1121180120978795,
+      "geoinfo": {
+        "display_name": "Park View, Oakwood, Southgate, London Borough of Enfield, London, Greater London, England, N21 1QX, United Kingdom",
+        "road": "Park View",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southgate",
+        "city_district": "London Borough of Enfield",
+        "city": "London",
+        "state": "England",
+        "postcode": "N21 1QX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Park View, Tottenham, England, United Kingdom"
+    },
+    {
+      "lat": 51.5960990451801,
+      "lon": -0.06430307914820182,
+      "geoinfo": {
+        "display_name": "Sherringham Avenue, London Borough of Haringey, London, Greater London, England, N17 9TU, United Kingdom",
+        "road": "Sherringham Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Haringey",
+        "city": "London",
+        "state": "England",
+        "postcode": "N17 9TU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sherringham Avenue, London Borough of Haringey, London, Greater London, England, N17 9TU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:29.162982+00:00",
+  "_kind": "geo_samples"
+}

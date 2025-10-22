@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seymour",
+  "geonameid": 4842818,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.427322519811355,
+      "lon": -73.04418494282228,
+      "geoinfo": {
+        "display_name": "555, Skokorat Road, Beacon Falls, Naugatuck Valley Planning Region, Connecticut, 06403, United States",
+        "road": "Skokorat Road",
+        "house_number": "555",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beacon Falls",
+        "state": "Connecticut",
+        "postcode": "06403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555 Skokorat Road, Seymour, Connecticut, United States"
+    },
+    {
+      "lat": 41.40480170505703,
+      "lon": -73.10496443872715,
+      "geoinfo": {
+        "display_name": "118, Bee Mountain Road, Oxford, Naugatuck Valley Planning Region, Connecticut, 06478, United States",
+        "road": "Bee Mountain Road",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxford",
+        "state": "Connecticut",
+        "postcode": "06478",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118, Bee Mountain Road, Oxford, Naugatuck Valley Planning Region, Connecticut, 06478, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:43.216396+00:00",
+  "_kind": "geo_samples"
+}

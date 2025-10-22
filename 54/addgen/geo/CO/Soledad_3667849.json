@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Soledad",
+  "geonameid": 3667849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.907325813737861,
+      "lon": -74.75430086837518,
+      "geoinfo": {
+        "display_name": "Vía a Cabica, La Esperanza, Soledad, Atlántico, 083001, Colombia",
+        "road": "Vía a Cabica",
+        "house_number": null,
+        "neighbourhood": "La Esperanza",
+        "suburb": null,
+        "city_district": null,
+        "city": "Soledad",
+        "state": "Atlántico",
+        "postcode": "083001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Vía a Cabica, Soledad, Atlántico, Colombia"
+    },
+    {
+      "lat": 10.955586899486205,
+      "lon": -74.74052786829814,
+      "geoinfo": {
+        "display_name": "Villa Clarín, Palermo, Sitionuevo, Magdalena, 083002, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Villa Clarín",
+        "suburb": "Palermo",
+        "city_district": null,
+        "city": "Sitionuevo",
+        "state": "Magdalena",
+        "postcode": "083002",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "864, Villa Clarín, Palermo, Sitionuevo, Magdalena, 083002, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:46.684860+00:00",
+  "_kind": "geo_samples"
+}

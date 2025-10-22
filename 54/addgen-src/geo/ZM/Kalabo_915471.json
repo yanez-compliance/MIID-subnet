@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Kalabo",
+  "geonameid": 915471,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.002796221551892,
+      "lon": 22.686409083633315,
+      "geoinfo": {
+        "display_name": "Kalabo, Kalabo District, Western Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalabo",
+        "state": "Western Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Kalabo, Western Province, Zambia"
+    },
+    {
+      "lat": -14.968162102645199,
+      "lon": 22.6662498777807,
+      "geoinfo": {
+        "display_name": "RD459, Kalabo, Kalabo District, Western Province, Zambia",
+        "road": "RD459",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalabo",
+        "state": "Western Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "RD459, Kalabo, Western Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-17T01:28:36.532490+00:00",
+  "_kind": "geo_samples"
+}

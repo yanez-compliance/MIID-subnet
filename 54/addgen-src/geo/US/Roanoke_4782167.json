@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roanoke",
+  "geonameid": 4782167,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.275147088238164,
+      "lon": -79.97732898858706,
+      "geoinfo": {
+        "display_name": "2136, Patterson Avenue Southwest, Runnymede, West End, Roanoke, Virginia, 24016, United States",
+        "road": "Patterson Avenue Southwest",
+        "house_number": "2136",
+        "neighbourhood": "Runnymede",
+        "suburb": "West End",
+        "city_district": null,
+        "city": "Roanoke",
+        "state": "Virginia",
+        "postcode": "24016",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2136 Patterson Avenue Southwest, Roanoke, Virginia, United States"
+    },
+    {
+      "lat": 37.285182489791,
+      "lon": -79.97577325792815,
+      "geoinfo": {
+        "display_name": "Salem Turnpike Northwest, Lansdowne Park, West End, Roanoke, Virginia, 24017, United States",
+        "road": "Salem Turnpike Northwest",
+        "house_number": null,
+        "neighbourhood": "Lansdowne Park",
+        "suburb": "West End",
+        "city_district": null,
+        "city": "Roanoke",
+        "state": "Virginia",
+        "postcode": "24017",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "330, Salem Turnpike Northwest, Lansdowne Park, West End, Roanoke, Virginia, 24017, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:15.727483+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Porto",
+  "geonameid": 2735943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.1353997070295,
+      "lon": -8.639761354443264,
+      "geoinfo": {
+        "display_name": "Rua do Monte da Costa, Canidelo, Afurada, Vila Nova de Gaia, Porto, 4400-667, Portugal",
+        "road": "Rua do Monte da Costa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canidelo",
+        "city_district": null,
+        "city": "Vila Nova de Gaia",
+        "state": null,
+        "postcode": "4400-667",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua do Monte da Costa, Porto, Portugal"
+    },
+    {
+      "lat": 41.14384298865884,
+      "lon": -8.657357821694994,
+      "geoinfo": {
+        "display_name": "Mensageiro, Rua de Sobreiras, Santa Catarina, Lordelo do Ouro, Lordelo do Ouro e Massarelos, Porto, 4169-006, Portugal",
+        "road": "Rua de Sobreiras",
+        "house_number": null,
+        "neighbourhood": "Santa Catarina",
+        "suburb": "Lordelo do Ouro",
+        "city_district": "Lordelo do Ouro e Massarelos",
+        "city": "Porto",
+        "state": null,
+        "postcode": "4169-006",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Mensageiro, Rua de Sobreiras, Santa Catarina, Lordelo do Ouro, Lordelo do Ouro e Massarelos, Porto, 4169-006, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:14.471673+00:00",
+  "_kind": "geo_samples"
+}

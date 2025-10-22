@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Xizhou",
+  "geonameid": 1676682,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.25964780533461,
+      "lon": 120.70599674934309,
+      "geoinfo": {
+        "display_name": "8號, 豐洲路, Fengzhou Village, Shengang District, Taichung, 42945, Taiwan",
+        "road": "豐洲路",
+        "house_number": "8號",
+        "neighbourhood": "Fengzhou Village",
+        "suburb": "Shengang District",
+        "city_district": null,
+        "city": "Taichung",
+        "state": null,
+        "postcode": "42945",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "8號, 豐洲路, Fengzhou Village, Shengang District, Taichung, 42945, Taiwan"
+    },
+    {
+      "lat": 24.265464175009527,
+      "lon": 120.64919711722409,
+      "geoinfo": {
+        "display_name": "Zundu Village, Shengang District, Taichung, 429778, Taiwan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Zundu Village",
+        "suburb": "Shengang District",
+        "city_district": null,
+        "city": "Taichung",
+        "state": null,
+        "postcode": "429778",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "042, Zundu Village, Shengang District, Taichung, 429778, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:37.493656+00:00",
+  "_kind": "geo_samples"
+}

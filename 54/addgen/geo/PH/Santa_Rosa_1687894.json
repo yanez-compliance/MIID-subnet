@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Santa Rosa",
+  "geonameid": 1687894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.292352499436342,
+      "lon": 121.0922017057934,
+      "geoinfo": {
+        "display_name": "Santa Rosa, Laguna, Calabarzon, 4026, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa",
+        "state": "Laguna",
+        "postcode": "4026",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Santa Rosa, Laguna, Philippines"
+    },
+    {
+      "lat": 14.272160291285402,
+      "lon": 121.09417642269868,
+      "geoinfo": {
+        "display_name": "South Lake Drive, Eton City, Pulong Santa Cruz, Santa Rosa, Laguna, Calabarzon, 4026, Philippines",
+        "road": "South Lake Drive",
+        "house_number": null,
+        "neighbourhood": "Eton City",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa",
+        "state": "Laguna",
+        "postcode": "4026",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "182, South Lake Drive, Eton City, Pulong Santa Cruz, Santa Rosa, Laguna, Calabarzon, 4026, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:46.439296+00:00",
+  "_kind": "geo_samples"
+}

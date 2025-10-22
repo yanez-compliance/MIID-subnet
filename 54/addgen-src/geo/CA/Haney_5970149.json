@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Haney",
+  "geonameid": 5970149,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.260315636518854,
+      "lon": -122.60162386026013,
+      "geoinfo": {
+        "display_name": "224 Street, Alouette, Maple Ridge, Metro Vancouver Regional District, British Columbia, V4R 2P8, Canada",
+        "road": "224 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alouette",
+        "city_district": "Alouette",
+        "city": "Maple Ridge",
+        "state": "British Columbia",
+        "postcode": "V4R 2P8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "224 Street, Haney, British Columbia, Canada"
+    },
+    {
+      "lat": 49.17911104633659,
+      "lon": -122.62480429054304,
+      "geoinfo": {
+        "display_name": "216 Street, Township of Langley, Metro Vancouver Regional District, British Columbia, V1M 2C6, Canada",
+        "road": "216 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Township of Langley",
+        "state": "British Columbia",
+        "postcode": "V1M 2C6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "216 Street, Township of Langley, Metro Vancouver Regional District, British Columbia, V1M 2C6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:06.503302+00:00",
+  "_kind": "geo_samples"
+}

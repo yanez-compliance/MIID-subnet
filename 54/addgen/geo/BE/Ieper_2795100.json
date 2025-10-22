@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ieper",
+  "geonameid": 2795100,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.82416468169954,
+      "lon": 2.849102831983732,
+      "geoinfo": {
+        "display_name": "12, Dikkebusvijverdreef, Vlamertinge, Ypres, Ieper, West Flanders, 8908, Belgium",
+        "road": "Dikkebusvijverdreef",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ypres",
+        "state": "West Flanders",
+        "postcode": "8908",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "12 Dikkebusvijverdreef, Ieper, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.875801515936296,
+      "lon": 2.8629164049932347,
+      "geoinfo": {
+        "display_name": "225, Diksmuidseweg, Boezinge, Ypres, Ieper, West Flanders, Flanders, 8900, Belgium",
+        "road": "Diksmuidseweg",
+        "house_number": "225",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ypres",
+        "state": "West Flanders",
+        "postcode": "8900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "225, Diksmuidseweg, Boezinge, Ypres, Ieper, West Flanders, Flanders, 8900, Belgium"
+    },
+    {
+      "lat": 50.87374554517748,
+      "lon": 2.891303295448239,
+      "geoinfo": {
+        "display_name": "Hogeziekenweg, Boezinge, Ypres, Ieper, West Flanders, Flanders, 8904, Belgium",
+        "road": "Hogeziekenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ypres",
+        "state": "West Flanders",
+        "postcode": "8904",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "810, Hogeziekenweg, Boezinge, Ypres, Ieper, West Flanders, Flanders, 8904, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:19.966710+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TN",
+  "country": "Tunisia",
+  "city": "Carthage",
+  "geonameid": 2468245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.81645491808917,
+      "lon": 10.334449442853806,
+      "geoinfo": {
+        "display_name": "Le Kram, Tunis, 2025, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Kram",
+        "state": "Tunis",
+        "postcode": "2025",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "Carthage, Tunis, Tunisia"
+    },
+    {
+      "lat": 36.85877517320595,
+      "lon": 10.327852378830448,
+      "geoinfo": {
+        "display_name": "شارع البيئة, قرطاج بيرصة, Carthage, Tunis, 1054, Tunisia",
+        "road": "شارع البيئة",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "قرطاج بيرصة",
+        "city_district": "Carthage",
+        "city": "Tunis",
+        "state": "Tunis",
+        "postcode": "1054",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "814, شارع البيئة, قرطاج بيرصة, Carthage, Tunis, 1054, Tunisia"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:35.390831+00:00",
+  "_kind": "geo_samples"
+}

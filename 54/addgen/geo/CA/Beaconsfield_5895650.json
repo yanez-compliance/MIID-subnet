@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Beaconsfield",
+  "geonameid": 5895650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.416727061119964,
+      "lon": -73.9217428177042,
+      "geoinfo": {
+        "display_name": "Autoroute du Souvenir, Baie-D'Urfé, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9X 3A8, Canada",
+        "road": "Autoroute du Souvenir",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baie-D'Urfé",
+        "state": "Quebec",
+        "postcode": "H9X 3A8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Autoroute du Souvenir, Beaconsfield, Quebec, Canada"
+    },
+    {
+      "lat": 45.42393990930169,
+      "lon": -73.82493246071861,
+      "geoinfo": {
+        "display_name": "1, Avenue Saint-Joachim, Village de Pointe-Claire, Pointe-Claire, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9S 4L3, Canada",
+        "road": "Avenue Saint-Joachim",
+        "house_number": "1",
+        "neighbourhood": "Village de Pointe-Claire",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pointe-Claire",
+        "state": "Quebec",
+        "postcode": "H9S 4L3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1, Avenue Saint-Joachim, Village de Pointe-Claire, Pointe-Claire, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9S 4L3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:03.920866+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kearny",
+  "geonameid": 5099967,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.778571017291384,
+      "lon": -74.19063965172487,
+      "geoinfo": {
+        "display_name": "Grove Street, Bloomfield, Essex County, New Jersey, 07003, United States",
+        "road": "Grove Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomfield",
+        "state": "New Jersey",
+        "postcode": "07003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grove Street, Kearny, New Jersey, United States"
+    },
+    {
+      "lat": 40.76878794724297,
+      "lon": -74.13279312378052,
+      "geoinfo": {
+        "display_name": "Gross Avenue, Kearny, Hudson County, New Jersey, 07032, United States",
+        "road": "Gross Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kearny",
+        "state": "New Jersey",
+        "postcode": "07032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "729, Gross Avenue, Kearny, Hudson County, New Jersey, 07032, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:13.576580+00:00",
+  "_kind": "geo_samples"
+}

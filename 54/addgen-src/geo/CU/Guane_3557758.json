@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Guane",
+  "geonameid": 3557758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.182499253774598,
+      "lon": -84.09504554063962,
+      "geoinfo": {
+        "display_name": "Carretera de Guane, Surí, Isabel Rubio, Guane, Pinar del Rio, 24580, Cuba",
+        "road": "Carretera de Guane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Isabel Rubio",
+        "state": "Pinar del Rio",
+        "postcode": "24580",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Carretera de Guane, Guane, Pinar del Rio, Cuba"
+    },
+    {
+      "lat": 22.240693991466493,
+      "lon": -84.06126446900575,
+      "geoinfo": {
+        "display_name": "La Curva, Guane, Pinar del Rio, 22100, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guane",
+        "state": "Pinar del Rio",
+        "postcode": "22100",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "683, La Curva, Guane, Pinar del Rio, 22100, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:18.866819+00:00",
+  "_kind": "geo_samples"
+}

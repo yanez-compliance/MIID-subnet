@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Adana",
+  "geonameid": 325363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.95918033606918,
+      "lon": 35.31799980483849,
+      "geoinfo": {
+        "display_name": "Bey, Bey Mahallesi, Seyhan, Adana, Mediterranean Region, 01030, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bey",
+        "city_district": "Bey Mahallesi",
+        "city": "Seyhan",
+        "state": null,
+        "postcode": "01030",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Bey, Adana, Turkey"
+    },
+    {
+      "lat": 37.0142833819375,
+      "lon": 35.33624420647975,
+      "geoinfo": {
+        "display_name": "Şehit Metehan Şahbaz Caddesi, Köprülü, Köprülü Mahallesi, Yüreğir, Adana, Mediterranean Region, 01140, Turkey",
+        "road": "Şehit Metehan Şahbaz Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Köprülü",
+        "city_district": "Köprülü Mahallesi",
+        "city": "Yüreğir",
+        "state": null,
+        "postcode": "01140",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "152, Şehit Metehan Şahbaz Caddesi, Köprülü, Köprülü Mahallesi, Yüreğir, Adana, Mediterranean Region, 01140, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:59.087692+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maywood",
+  "geonameid": 4901514,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.889985520108965,
+      "lon": -87.83594904100234,
+      "geoinfo": {
+        "display_name": "223, Ohio Street, Maywood, Proviso Township, Cook County, Illinois, 60153, United States",
+        "road": "Ohio Street",
+        "house_number": "223",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maywood",
+        "state": "Illinois",
+        "postcode": "60153",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "223 Ohio Street, Maywood, Illinois, United States"
+    },
+    {
+      "lat": 41.876410289060814,
+      "lon": -87.89168122197916,
+      "geoinfo": {
+        "display_name": "FedEx Ship Center, 300, Craig Place, Hillside, Proviso Township, Cook County, Illinois, 60162, United States",
+        "road": "Craig Place",
+        "house_number": "300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hillside",
+        "state": "Illinois",
+        "postcode": "60162",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "FedEx Ship Center, 300, Craig Place, Hillside, Proviso Township, Cook County, Illinois, 60162, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:26.094654+00:00",
+  "_kind": "geo_samples"
+}

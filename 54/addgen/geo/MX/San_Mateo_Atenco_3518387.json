@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Mateo Atenco",
+  "geonameid": 3518387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.279209907566713,
+      "lon": -99.51327162517438,
+      "geoinfo": {
+        "display_name": "Avenida Solidaridad Las Torres, Lerma De Villada, Lerma, State of Mexico, 52006, Mexico",
+        "road": "Avenida Solidaridad Las Torres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lerma",
+        "state": "State of Mexico",
+        "postcode": "52006",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Solidaridad Las Torres, San Mateo Atenco, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.295609740685823,
+      "lon": -99.52713977280534,
+      "geoinfo": {
+        "display_name": "Avenida Santa Ana, Lerma, State of Mexico, 52004, Mexico",
+        "road": "Avenida Santa Ana",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lerma",
+        "state": "State of Mexico",
+        "postcode": "52004",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "509, Avenida Santa Ana, Lerma, State of Mexico, 52004, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:28:50.610790+00:00",
+  "_kind": "geo_samples"
+}

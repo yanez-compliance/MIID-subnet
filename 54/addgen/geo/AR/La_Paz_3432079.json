@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "La Paz",
+  "geonameid": 3432079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -30.71275651714596,
+      "lon": -59.616292829567804,
+      "geoinfo": {
+        "display_name": "La Paz, Distrito Estacas, Departamento La Paz, Entre Ríos Province, 3190, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Paz",
+        "state": "Entre Ríos Province",
+        "postcode": "3190",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "La Paz, Entre Ríos Province, Argentina"
+    },
+    {
+      "lat": -30.705969095165866,
+      "lon": -59.63518291891476,
+      "geoinfo": {
+        "display_name": "Municipio de Colonia Mascías, Departamento Garay, Santa Fe, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Santa Fe",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "770, Municipio de Colonia Mascías, Departamento Garay, 16171 Santa Fe, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:51.983211+00:00",
+  "_kind": "geo_samples"
+}

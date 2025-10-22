@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Alexandra Hills",
+  "geonameid": 8348615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.524911749800417,
+      "lon": 153.1825251502357,
+      "geoinfo": {
+        "display_name": "Moreton Bay Road, Chandler, Greater Brisbane, Queensland, 4155, Australia",
+        "road": "Moreton Bay Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chandler",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4155",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Moreton Bay Road, Alexandra Hills, Queensland, Australia"
+    },
+    {
+      "lat": -27.559254660833272,
+      "lon": 153.20209494665562,
+      "geoinfo": {
+        "display_name": "1, Cassia Court, Capalaba, Greater Brisbane, Queensland, 4157, Australia",
+        "road": "Cassia Court",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Capalaba",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4157",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "1, Cassia Court, Capalaba, Greater Brisbane, Queensland, 4157, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:41.058388+00:00",
+  "_kind": "geo_samples"
+}

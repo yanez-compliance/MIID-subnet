@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Potsdam",
+  "geonameid": 2852458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.386465288786304,
+      "lon": 13.065344783323908,
+      "geoinfo": {
+        "display_name": "25, Albert-Einstein-Straße, Hauptbahnhof und Brauhausberg Nord, Potsdam, Brandenburg, 14473, Germany",
+        "road": "Albert-Einstein-Straße",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Hauptbahnhof und Brauhausberg Nord",
+        "city_district": null,
+        "city": "Potsdam",
+        "state": "Brandenburg",
+        "postcode": "14473",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25 Albert-Einstein-Straße, Potsdam, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.372038956267126,
+      "lon": 13.097308562602962,
+      "geoinfo": {
+        "display_name": "16e, Tiroler Damm, Waldstadt I, Waldstadt I und Industriegelände, Potsdam, Brandenburg, 14478, Germany",
+        "road": "Tiroler Damm",
+        "house_number": "16e",
+        "neighbourhood": "Waldstadt I",
+        "suburb": "Waldstadt I und Industriegelände",
+        "city_district": null,
+        "city": "Potsdam",
+        "state": "Brandenburg",
+        "postcode": "14478",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16e, Tiroler Damm, Waldstadt I, Waldstadt I und Industriegelände, Potsdam, Brandenburg, 14478, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:16.801376+00:00",
+  "_kind": "geo_samples"
+}

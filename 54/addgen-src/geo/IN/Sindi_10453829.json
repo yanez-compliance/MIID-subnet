@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sindi",
+  "geonameid": 10453829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.77295034166722,
+      "lon": 78.59926930908564,
+      "geoinfo": {
+        "display_name": "Wardha, Maharashtra, 442001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wardha",
+        "state": "Maharashtra",
+        "postcode": "442001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Sindi, Maharashtra, India"
+    },
+    {
+      "lat": 20.706304306721595,
+      "lon": 78.57434915060675,
+      "geoinfo": {
+        "display_name": "Wardha, Paloti, Wardha, Maharashtra, 442001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paloti",
+        "state": "Maharashtra",
+        "postcode": "442001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "123, Sindi, 442001 Maharashtra, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:17.851144+00:00",
+  "_kind": "geo_samples"
+}

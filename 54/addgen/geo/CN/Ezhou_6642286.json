@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "E’zhou",
+  "geonameid": 6642286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.38054447931955,
+      "lon": 114.85272705504735,
+      "geoinfo": {
+        "display_name": "Echeng District, Ezhou, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Echeng District",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "E’zhou, Hubei, China"
+    },
+    {
+      "lat": 30.427585776309357,
+      "lon": 114.86288842124918,
+      "geoinfo": {
+        "display_name": "Xishan, Echeng District, Ezhou, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xishan",
+        "city_district": null,
+        "city": "Echeng District",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "460, Xishan, Echeng District, Ezhou, 66867 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:34.495709+00:00",
+  "_kind": "geo_samples"
+}

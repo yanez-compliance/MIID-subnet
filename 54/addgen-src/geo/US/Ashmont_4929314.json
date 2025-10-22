@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashmont",
+  "geonameid": 4929314,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.28380349234904,
+      "lon": -71.07516601936608,
+      "geoinfo": {
+        "display_name": "100, Armandine Street, Ashmont, Dorchester, Boston, Suffolk County, Massachusetts, 02124, United States",
+        "road": "Armandine Street",
+        "house_number": "100",
+        "neighbourhood": "Ashmont",
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Armandine Street, Ashmont, Massachusetts, United States"
+    },
+    {
+      "lat": 42.3051205072933,
+      "lon": -71.0373432738759,
+      "geoinfo": {
+        "display_name": "Victory Road, Dorchester, Boston, Suffolk County, Massachusetts, 02122, United States",
+        "road": "Victory Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "122, Victory Road, Dorchester, Boston, Suffolk County, Massachusetts, 02122, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:04.891720+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "El Khroub",
+  "geonameid": 2497849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.30295148210135,
+      "lon": 6.681337907037512,
+      "geoinfo": {
+        "display_name": "Ben Abdelmalek, Constantine, Constantine District, Constantine, 25100, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Constantine",
+        "state": "Constantine",
+        "postcode": "25100",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "El Khroub, Constantine, Algeria"
+    },
+    {
+      "lat": 36.299772615570234,
+      "lon": 6.697555358929381,
+      "geoinfo": {
+        "display_name": "RN 3, Oued Hammime, El Khroub, El Khroub District, Constantine, 25100, Algeria",
+        "road": "RN 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Khroub",
+        "state": "Constantine",
+        "postcode": "25100",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 3, Oued Hammime, El Khroub, El Khroub District, Constantine, 25100, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:12.039309+00:00",
+  "_kind": "geo_samples"
+}

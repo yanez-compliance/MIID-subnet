@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maryland Heights",
+  "geonameid": 4397340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.69604781954314,
+      "lon": -90.4237304655302,
+      "geoinfo": {
+        "display_name": "Lilburn Park Road, Maryland Heights, Saint Louis County, Missouri, 63146, United States",
+        "road": "Lilburn Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maryland Heights",
+        "state": "Missouri",
+        "postcode": "63146",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lilburn Park Road, Maryland Heights, Missouri, United States"
+    },
+    {
+      "lat": 38.75432319846208,
+      "lon": -90.44921781783304,
+      "geoinfo": {
+        "display_name": "3379, Tortosa Drive, Spanish Village, Bridgeton, Saint Louis County, Missouri, 63044, United States",
+        "road": "Tortosa Drive",
+        "house_number": "3379",
+        "neighbourhood": "Spanish Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bridgeton",
+        "state": "Missouri",
+        "postcode": "63044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3379, Tortosa Drive, Spanish Village, Bridgeton, Saint Louis County, Missouri, 63044, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:30.444154+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Silistra",
+  "geonameid": 727221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 44.11736877585919,
+      "lon": 27.25901441699486,
+      "geoinfo": {
+        "display_name": "Iliya Blaskov, Център, Silistra, 7500, Bulgaria",
+        "road": "Iliya Blaskov",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Център",
+        "city_district": null,
+        "city": "Silistra",
+        "state": "Silistra",
+        "postcode": "7500",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "Iliya Blaskov, Silistra, Silistra, Bulgaria"
+    },
+    {
+      "lat": 44.12695916797287,
+      "lon": 27.2940955709521,
+      "geoinfo": {
+        "display_name": "Ostrov, Constanța, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Silistra, Silistra, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:48:05.576404+00:00",
+  "_kind": "geo_samples"
+}

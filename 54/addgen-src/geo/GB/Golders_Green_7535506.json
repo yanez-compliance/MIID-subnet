@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Golders Green",
+  "geonameid": 7535506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.535128858745594,
+      "lon": -0.18452808557619269,
+      "geoinfo": {
+        "display_name": "72, Carlton Hill, Maida Vale, London, Greater London, England, NW8 0EN, United Kingdom",
+        "road": "Carlton Hill",
+        "house_number": "72",
+        "neighbourhood": null,
+        "suburb": "Maida Vale",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "NW8 0EN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "72 Carlton Hill, Golders Green, England, United Kingdom"
+    },
+    {
+      "lat": 51.56350625264427,
+      "lon": -0.17761478877687004,
+      "geoinfo": {
+        "display_name": "Vale of Health, West Hampstead, London Borough of Camden, London, Greater London, England, NW3 1BA, United Kingdom",
+        "road": "Vale of Health",
+        "house_number": null,
+        "neighbourhood": "Vale of Health",
+        "suburb": "West Hampstead",
+        "city_district": "London Borough of Camden",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW3 1BA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Vale of Health, West Hampstead, London Borough of Camden, London, Greater London, England, NW3 1BA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:25.626626+00:00",
+  "_kind": "geo_samples"
+}

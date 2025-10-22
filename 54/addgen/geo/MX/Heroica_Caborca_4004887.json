@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Heroica Caborca",
+  "geonameid": 4004887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.679162515487604,
+      "lon": -112.17308325586828,
+      "geoinfo": {
+        "display_name": "Camino a la Calera, Heroica Caborca, Caborca, Sonora, 83600, Mexico",
+        "road": "Camino a la Calera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heroica Caborca",
+        "state": "Sonora",
+        "postcode": "83600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino a la Calera, Heroica Caborca, Sonora, Mexico"
+    },
+    {
+      "lat": 30.74232103725248,
+      "lon": -112.17065247207147,
+      "geoinfo": {
+        "display_name": "Heroica Caborca, Caborca, Sonora, 83600, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heroica Caborca",
+        "state": "Sonora",
+        "postcode": "83600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "497, Heroica Caborca, Caborca, Sonora, 83600, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:44.603660+00:00",
+  "_kind": "geo_samples"
+}

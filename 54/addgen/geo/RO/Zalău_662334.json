@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Zalău",
+  "geonameid": 662334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.20380365101902,
+      "lon": 23.041667959734223,
+      "geoinfo": {
+        "display_name": "Strada Simion Bărnuțiu, Dealul Morii, Zalău, Sălaj, 450025, Romania",
+        "road": "Strada Simion Bărnuțiu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dealul Morii",
+        "city_district": null,
+        "city": "Zalău",
+        "state": null,
+        "postcode": "450025",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Strada Simion Bărnuțiu, Zalău, Romania"
+    },
+    {
+      "lat": 47.18121957883901,
+      "lon": 23.097733769081735,
+      "geoinfo": {
+        "display_name": "Sărmaș, Zalău, Sălaj, 450146, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sărmaș",
+        "city_district": null,
+        "city": "Zalău",
+        "state": null,
+        "postcode": "450146",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "530, Sărmaș, Zalău, Sălaj, 450146, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:27.849986+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Galapagar",
+  "geonameid": 3121766,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.618011693852154,
+      "lon": -4.001897034858111,
+      "geoinfo": {
+        "display_name": "Lugar Fincas Suertes Nuevas, Urbanización Las Suertes, Collado Villalba, Community of Madrid, 28400, Spain",
+        "road": "Lugar Fincas Suertes Nuevas",
+        "house_number": null,
+        "neighbourhood": "Urbanización Las Suertes",
+        "suburb": null,
+        "city_district": null,
+        "city": "Collado Villalba",
+        "state": "Community of Madrid",
+        "postcode": "28400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Lugar Fincas Suertes Nuevas, Galapagar, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.58960238229922,
+      "lon": -3.9600709319425835,
+      "geoinfo": {
+        "display_name": "Calle de Monte Aurora, Fuente La Teja, Galapagar, Community of Madrid, 28420, Spain",
+        "road": "Calle de Monte Aurora",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fuente La Teja",
+        "city_district": null,
+        "city": "Galapagar",
+        "state": "Community of Madrid",
+        "postcode": "28420",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "890, Calle de Monte Aurora, Fuente La Teja, Galapagar, Community of Madrid, 28420, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:15.808101+00:00",
+  "_kind": "geo_samples"
+}

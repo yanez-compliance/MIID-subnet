@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ekeren",
+  "geonameid": 2798873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.2883753942815,
+      "lon": 4.432256867768341,
+      "geoinfo": {
+        "display_name": "25, Hendrik Kanorastraat, Sint-Mariaburg (Antwerpen), Ekeren, Antwerp, 2180, Belgium",
+        "road": "Hendrik Kanorastraat",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "25 Hendrik Kanorastraat, Ekeren, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.241192459459974,
+      "lon": 4.4291471212195175,
+      "geoinfo": {
+        "display_name": "Winterling, Nieuwdreef, Merksem, Antwerp, 2170, Belgium",
+        "road": "Winterling",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nieuwdreef",
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2170",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "092, Winterling, Nieuwdreef, Merksem, Antwerp, 2170, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:58.614360+00:00",
+  "_kind": "geo_samples"
+}

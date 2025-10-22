@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Manage",
+  "geonameid": 2791814,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.511385945221,
+      "lon": 4.235930573923229,
+      "geoinfo": {
+        "display_name": "40, Chaussée de Nivelles, Cité-Parc Bois Robert, Champ du Gros Saule, Manage, Soignies, Hainaut, Wallonia, 7170, Belgium",
+        "road": "Chaussée de Nivelles",
+        "house_number": "40",
+        "neighbourhood": "Cité-Parc Bois Robert",
+        "suburb": null,
+        "city_district": "Manage",
+        "city": "Manage",
+        "state": "Hainaut",
+        "postcode": "7170",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "40 Chaussée de Nivelles, Manage, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.5174009916855,
+      "lon": 4.257989702117249,
+      "geoinfo": {
+        "display_name": "Véloroute W3, Seneffe, Soignies, Hainaut, Wallonia, 7180, Belgium",
+        "road": "Véloroute W3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Seneffe",
+        "city": "Seneffe",
+        "state": "Hainaut",
+        "postcode": "7180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Véloroute W3, Seneffe, Soignies, Hainaut, Wallonia, 7180, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:06.782302+00:00",
+  "_kind": "geo_samples"
+}

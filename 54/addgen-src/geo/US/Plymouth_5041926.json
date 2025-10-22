@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plymouth",
+  "geonameid": 5041926,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.024313584868324,
+      "lon": -93.40139796146758,
+      "geoinfo": {
+        "display_name": "3640, Lancaster Lane North, Plymouth, Hennepin County, Minnesota, 55441, United States",
+        "road": "Lancaster Lane North",
+        "house_number": "3640",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plymouth",
+        "state": "Minnesota",
+        "postcode": "55441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3640 Lancaster Lane North, Plymouth, Minnesota, United States"
+    },
+    {
+      "lat": 44.9960712109703,
+      "lon": -93.48210345947217,
+      "geoinfo": {
+        "display_name": "1570, Weston Lane North, Plymouth, Hennepin County, Minnesota, 55447, United States",
+        "road": "Weston Lane North",
+        "house_number": "1570",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plymouth",
+        "state": "Minnesota",
+        "postcode": "55447",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1570, Weston Lane North, Plymouth, Hennepin County, Minnesota, 55447, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:59.723062+00:00",
+  "_kind": "geo_samples"
+}

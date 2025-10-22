@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Delicias",
+  "geonameid": 4013720,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.17128446514687,
+      "lon": -105.48398901674592,
+      "geoinfo": {
+        "display_name": "Delicias, Chihuahua, 33093, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delicias",
+        "state": "Chihuahua",
+        "postcode": "33093",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Delicias, Chihuahua, Mexico"
+    },
+    {
+      "lat": 28.17809189621335,
+      "lon": -105.48288622289407,
+      "geoinfo": {
+        "display_name": "Calle Cuarta Sur, Delicias, Chihuahua, 33093, Mexico",
+        "road": "Calle Cuarta Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delicias",
+        "state": "Chihuahua",
+        "postcode": "33093",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "320, Calle Cuarta Sur, Delicias, Chihuahua, 33093, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:42.271602+00:00",
+  "_kind": "geo_samples"
+}

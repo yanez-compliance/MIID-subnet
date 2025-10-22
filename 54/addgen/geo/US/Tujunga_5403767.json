@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tujunga",
+  "geonameid": 5403767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.26522870847218,
+      "lon": -118.33864592603847,
+      "geoinfo": {
+        "display_name": "Independent Studio Services, 9545, Wentworth Street, Shadow Hills, Los Angeles, Los Angeles County, California, 91040, United States",
+        "road": "Wentworth Street",
+        "house_number": "9545",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9545 Wentworth Street, Tujunga, California, United States"
+    },
+    {
+      "lat": 34.21860170387158,
+      "lon": -118.30569958105346,
+      "geoinfo": {
+        "display_name": "Verdugo Crest Trail, Burbank, Los Angeles County, California, 91504, United States",
+        "road": "Verdugo Crest Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burbank",
+        "state": "California",
+        "postcode": "91504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "395, Verdugo Crest Trail, Burbank, Los Angeles County, California, 91504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:59.904638+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Compiègne",
+  "geonameid": 3024066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.41618380210212,
+      "lon": 2.7679709789460594,
+      "geoinfo": {
+        "display_name": "Venette, Compiègne, Oise, Hauts-de-France, Metropolitan France, 60280, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Venette",
+        "state": "Hauts-de-France",
+        "postcode": "60280",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Compiègne, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.42878060066214,
+      "lon": 2.8718876129948203,
+      "geoinfo": {
+        "display_name": "Viaduc de Compiègne, Rue du Président Roosevelt, Zone Industrielle Nord, Le Buissonnet, Choisy-au-Bac, Compiègne, Oise, Hauts-de-France, Metropolitan France, 60750, France",
+        "road": "Rue du Président Roosevelt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Choisy-au-Bac",
+        "state": "Hauts-de-France",
+        "postcode": "60750",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "796, Rue du Président Roosevelt, Compiègne, 60750 Hauts-de-France, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:36.081082+00:00",
+  "_kind": "geo_samples"
+}

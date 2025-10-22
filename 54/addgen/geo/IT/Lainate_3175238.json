@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lainate",
+  "geonameid": 3175238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.56808533410807,
+      "lon": 9.04725389380311,
+      "geoinfo": {
+        "display_name": "Via Juan Manuel Fangio, Cascina dei Frati, Lainate, Milan, Lombardy, 20045, Italy",
+        "road": "Via Juan Manuel Fangio",
+        "house_number": null,
+        "neighbourhood": "Cascina dei Frati",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lainate",
+        "state": "Lombardy",
+        "postcode": "20045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Juan Manuel Fangio, Lainate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.54341003157611,
+      "lon": 9.022561923071517,
+      "geoinfo": {
+        "display_name": "Via Umbria, Biringhello, Rho, Milan, Lombardy, 20017, Italy",
+        "road": "Via Umbria",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rho",
+        "state": "Lombardy",
+        "postcode": "20017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "774, Via Umbria, Biringhello, Rho, Milan, Lombardy, 20017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:24.148535+00:00",
+  "_kind": "geo_samples"
+}

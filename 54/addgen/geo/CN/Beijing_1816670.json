@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Beijing",
+  "geonameid": 1816670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.93259165697616,
+      "lon": 116.41092265360861,
+      "geoinfo": {
+        "display_name": "东四北大街, 门楼社区, Beixinqiao Subdistrict, 首都功能核心区, Dongcheng District, Beijing, 100010, China",
+        "road": "东四北大街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Beixinqiao Subdistrict",
+        "city_district": "首都功能核心区",
+        "city": "Dongcheng District",
+        "state": "Beijing",
+        "postcode": "100010",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "东四北大街, Beijing, Beijing, China"
+    },
+    {
+      "lat": 39.91181898795934,
+      "lon": 116.35152559880554,
+      "geoinfo": {
+        "display_name": "Fuxingmenbeishuncheng Str, Beijing Financial Street, Financial Street Subdistrict, 首都功能核心区, Xicheng District, Beijing, 100032, China",
+        "road": "Fuxingmenbeishuncheng Str",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Financial Street Subdistrict",
+        "city_district": "首都功能核心区",
+        "city": "Xicheng District",
+        "state": "Beijing",
+        "postcode": "100032",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "992, Fuxingmenbeishuncheng Str, Beijing Financial Street, Financial Street Subdistrict, 首都功能核心区, Xicheng District, Beijing, 100032, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:58:10.283196+00:00",
+  "_kind": "geo_samples"
+}

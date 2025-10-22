@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Frankston",
+  "geonameid": 2166144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.1113549950433,
+      "lon": 145.15344893388095,
+      "geoinfo": {
+        "display_name": "7, Sussex Crescent, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia",
+        "road": "Sussex Crescent",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Seaford",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3198",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "7 Sussex Crescent, Frankston, Victoria, Australia"
+    },
+    {
+      "lat": -38.1276362249308,
+      "lon": 145.11346638030608,
+      "geoinfo": {
+        "display_name": "Kananook, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kananook",
+        "suburb": "Seaford",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3198",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "531, Kananook, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:57.943191+00:00",
+  "_kind": "geo_samples"
+}

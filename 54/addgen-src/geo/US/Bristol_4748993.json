@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bristol",
+  "geonameid": 4748993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.578972171518124,
+      "lon": -82.23523479182147,
+      "geoinfo": {
+        "display_name": "299, Memory Lane, Collingwood, Bristol, Sullivan County, East Tennessee, Tennessee, 37620, United States",
+        "road": "Memory Lane",
+        "house_number": "299",
+        "neighbourhood": "Collingwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Tennessee",
+        "postcode": "37620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "299 Memory Lane, Bristol, Tennessee, United States"
+    },
+    {
+      "lat": 36.552329038511324,
+      "lon": -82.18925472249565,
+      "geoinfo": {
+        "display_name": "Raytheon Road, Belle Brook Estates, Bristol, Sullivan County, East Tennessee, Tennessee, 37620, United States",
+        "road": "Raytheon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Tennessee",
+        "postcode": "37620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "820, Raytheon Road, Belle Brook Estates, Bristol, Sullivan County, East Tennessee, Tennessee, 37620, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:57.528094+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Mexicali",
+  "geonameid": 3996069,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.61297362987003,
+      "lon": -115.42503887367644,
+      "geoinfo": {
+        "display_name": "Avenida Presa López Zamora, Mexicali, Municipio de Mexicali, Baja California, 21390, Mexico",
+        "road": "Avenida Presa López Zamora",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexicali",
+        "state": "Baja California",
+        "postcode": "21390",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Presa López Zamora, Mexicali, Baja California, Mexico"
+    },
+    {
+      "lat": 32.66449535353851,
+      "lon": -115.43161595176672,
+      "geoinfo": {
+        "display_name": "260, Calle Río San Lorenzo, Mexicali, Municipio de Mexicali, Baja California, 21210, Mexico",
+        "road": "Calle Río San Lorenzo",
+        "house_number": "260",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexicali",
+        "state": "Baja California",
+        "postcode": "21210",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "260, Calle Río San Lorenzo, Mexicali, Municipio de Mexicali, Baja California, 21210, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:20.916227+00:00",
+  "_kind": "geo_samples"
+}

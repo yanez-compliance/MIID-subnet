@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Juárez",
+  "geonameid": 4013708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.678570200844355,
+      "lon": -106.45632807917613,
+      "geoinfo": {
+        "display_name": "Calle General Santiago Ramírez, Ciudad Juárez, Juárez, Chihuahua, 32030, Mexico",
+        "road": "Calle General Santiago Ramírez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Juárez",
+        "state": "Chihuahua",
+        "postcode": "32030",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle General Santiago Ramírez, Ciudad Juárez, Chihuahua, Mexico"
+    },
+    {
+      "lat": 31.731425861876176,
+      "lon": -106.50340355421854,
+      "geoinfo": {
+        "display_name": "Privada 15 De Septiembre, Anexas, Ciudad Juárez, Juárez, Chihuahua, 32160, Mexico",
+        "road": "Privada 15 De Septiembre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Anexas",
+        "city_district": null,
+        "city": "Ciudad Juárez",
+        "state": "Chihuahua",
+        "postcode": "32160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Privada 15 De Septiembre, Anexas, Ciudad Juárez, Juárez, Chihuahua, 32160, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:41.675823+00:00",
+  "_kind": "geo_samples"
+}

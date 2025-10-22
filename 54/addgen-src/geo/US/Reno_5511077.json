@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Reno",
+  "geonameid": 5511077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.537276637450596,
+      "lon": -119.80359066543832,
+      "geoinfo": {
+        "display_name": "North Wells Avenue, Reno, Washoe County, Nevada, 89505, United States",
+        "road": "North Wells Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reno",
+        "state": "Nevada",
+        "postcode": "89505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Wells Avenue, Reno, Nevada, United States"
+    },
+    {
+      "lat": 39.547525390656865,
+      "lon": -119.77699488848842,
+      "geoinfo": {
+        "display_name": "Greenbrae Drive, Sparks, Washoe County, Nevada, 89431, United States",
+        "road": "Greenbrae Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sparks",
+        "state": "Nevada",
+        "postcode": "89431",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "383, Greenbrae Drive, Sparks, Washoe County, Nevada, 89431, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:59.865993+00:00",
+  "_kind": "geo_samples"
+}

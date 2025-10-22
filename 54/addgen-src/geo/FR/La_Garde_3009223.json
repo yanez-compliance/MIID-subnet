@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Garde",
+  "geonameid": 3009223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.088585842430845,
+      "lon": 5.991037113409364,
+      "geoinfo": {
+        "display_name": "La Terre Promise, La Garde, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83130, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Terre Promise",
+        "city_district": null,
+        "city": "La Garde",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "La Terre Promise, La Garde, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.15630024445426,
+      "lon": 6.035178835160871,
+      "geoinfo": {
+        "display_name": "Chemin de Pierrascas, Chemin de Saint-Honorat, La Farlède, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83210, France",
+        "road": "Chemin de Pierrascas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Farlède",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83210",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "294, Chemin de Pierrascas, Chemin de Saint-Honorat, La Farlède, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83210, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:17:31.243886+00:00",
+  "_kind": "geo_samples"
+}

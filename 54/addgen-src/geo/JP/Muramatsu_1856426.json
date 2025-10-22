@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Muramatsu",
+  "geonameid": 1856426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.69540994143483,
+      "lon": 139.11974252671385,
+      "geoinfo": {
+        "display_name": "Gosen, Niigata Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gosen",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Muramatsu, Japan"
+    },
+    {
+      "lat": 37.688209727044224,
+      "lon": 139.2239520283347,
+      "geoinfo": {
+        "display_name": "不動堂, Gosen, Niigata Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "不動堂",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gosen",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "341, 不動堂, Gosen, 87249 Niigata Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:40.597189+00:00",
+  "_kind": "geo_samples"
+}

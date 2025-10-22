@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Lào Cai",
+  "geonameid": 1576303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.446557388840205,
+      "lon": 103.969765879666,
+      "geoinfo": {
+        "display_name": "Cam Đường, Phường Cam Đường, Lào Cai Province, 31153, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cam Đường",
+        "city_district": null,
+        "city": null,
+        "state": "Lào Cai Province",
+        "postcode": "31153",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Cam Đường, Lào Cai, Lào Cai Province, Vietnam"
+    },
+    {
+      "lat": 22.50557014490253,
+      "lon": 103.96946715255706,
+      "geoinfo": {
+        "display_name": "Son Ha Road, Lao Cai Ward, Lao Cai, Phường Lào Cai, Lào Cai Province, 31100, Vietnam",
+        "road": "Son Ha Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lao Cai Ward",
+        "city_district": null,
+        "city": "Lao Cai",
+        "state": "Lào Cai Province",
+        "postcode": "31100",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "886, Son Ha Road, Lao Cai Ward, Lao Cai, Phường Lào Cai, Lào Cai Province, 31100, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T05:39:18.832164+00:00",
+  "_kind": "geo_samples"
+}

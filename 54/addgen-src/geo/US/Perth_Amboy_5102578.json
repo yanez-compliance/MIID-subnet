@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Perth Amboy",
+  "geonameid": 5102578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.52326959337449,
+      "lon": -74.26369469615139,
+      "geoinfo": {
+        "display_name": "194, Chauncey Street, Perth Amboy, Middlesex County, New Jersey, 08861, United States",
+        "road": "Chauncey Street",
+        "house_number": "194",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perth Amboy",
+        "state": "New Jersey",
+        "postcode": "08861",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "194 Chauncey Street, Perth Amboy, New Jersey, United States"
+    },
+    {
+      "lat": 40.49510695153923,
+      "lon": -74.27769018399185,
+      "geoinfo": {
+        "display_name": "Second Street, Perth Amboy, Middlesex County, New Jersey, 08861, United States",
+        "road": "Second Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perth Amboy",
+        "state": "New Jersey",
+        "postcode": "08861",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "217, Second Street, Perth Amboy, Middlesex County, New Jersey, 08861, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:03.737742+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grayslake",
+  "geonameid": 4894465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.388838011371284,
+      "lon": -88.03553114702181,
+      "geoinfo": {
+        "display_name": "West Rollins Road, Carillon North, Grayslake, Lake County, Illinois, 60046, United States",
+        "road": "West Rollins Road",
+        "house_number": null,
+        "neighbourhood": "Carillon North",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grayslake",
+        "state": "Illinois",
+        "postcode": "60046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Rollins Road, Grayslake, Illinois, United States"
+    },
+    {
+      "lat": 42.31592548684691,
+      "lon": -88.067830142083,
+      "geoinfo": {
+        "display_name": "Saddlebrook Farms, Round Lake Park, Lake County, Illinois, 60030, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Round Lake Park",
+        "state": "Illinois",
+        "postcode": "60030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "978, Saddlebrook Farms, Round Lake Park, Lake County, Illinois, 60030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:26.166278+00:00",
+  "_kind": "geo_samples"
+}

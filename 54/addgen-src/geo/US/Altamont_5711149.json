@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Altamont",
+  "geonameid": 5711149,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.200985602533336,
+      "lon": -121.69900876692529,
+      "geoinfo": {
+        "display_name": "2839, Watson Street, Moyina Heights, Klamath County, Oregon, 97603, United States",
+        "road": "Watson Street",
+        "house_number": "2839",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2839 Watson Street, Altamont, Oregon, United States"
+    },
+    {
+      "lat": 42.1891756047698,
+      "lon": -121.7617021457435,
+      "geoinfo": {
+        "display_name": "Laverne Avenue, Klamath Falls, Klamath County, Oregon, 97603, United States",
+        "road": "Laverne Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Klamath Falls",
+        "state": "Oregon",
+        "postcode": "97603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "689, Laverne Avenue, Klamath Falls, Klamath County, Oregon, 97603, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:44.843388+00:00",
+  "_kind": "geo_samples"
+}

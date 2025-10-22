@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Independence",
+  "geonameid": 4385018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.071482246675664,
+      "lon": -94.3565088258857,
+      "geoinfo": {
+        "display_name": "Ringo Road, Castle Woods East, Independence, Jackson County, Missouri, 64057, United States",
+        "road": "Ringo Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Independence",
+        "state": "Missouri",
+        "postcode": "64057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ringo Road, East Independence, Missouri, United States"
+    },
+    {
+      "lat": 39.10044024890523,
+      "lon": -94.4033477719414,
+      "geoinfo": {
+        "display_name": "East College Street, Independence, Jackson County, Missouri, 64050, United States",
+        "road": "East College Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Independence",
+        "state": "Missouri",
+        "postcode": "64050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "863, East College Street, Independence, Jackson County, Missouri, 64050, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:56.342367+00:00",
+  "_kind": "geo_samples"
+}

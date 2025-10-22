@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Centerville",
+  "geonameid": 4508204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.67021825996944,
+      "lon": -84.14850039208035,
+      "geoinfo": {
+        "display_name": "802, Hyde Park Drive, Centerville, Washington Township, Montgomery County, Ohio, 45429, United States",
+        "road": "Hyde Park Drive",
+        "house_number": "802",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centerville",
+        "state": "Ohio",
+        "postcode": "45429",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "802 Hyde Park Drive, Centerville, Ohio, United States"
+    },
+    {
+      "lat": 39.607677381888614,
+      "lon": -84.1155768231146,
+      "geoinfo": {
+        "display_name": "2650, Wood Bluff Lane, Washington Township, Montgomery County, Ohio, 45458, United States",
+        "road": "Wood Bluff Lane",
+        "house_number": "2650",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45458",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2650, Wood Bluff Lane, Washington Township, Montgomery County, Ohio, 45458, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:15.975581+00:00",
+  "_kind": "geo_samples"
+}

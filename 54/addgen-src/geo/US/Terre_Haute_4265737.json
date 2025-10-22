@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Terre Haute",
+  "geonameid": 4265737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.46805747777278,
+      "lon": -87.44758954459603,
+      "geoinfo": {
+        "display_name": "302, West Johnson Avenue, West Terre Haute, Vigo County, Indiana, 47885, United States",
+        "road": "West Johnson Avenue",
+        "house_number": "302",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Terre Haute",
+        "state": "Indiana",
+        "postcode": "47885",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "302 West Johnson Avenue, Terre Haute, Indiana, United States"
+    },
+    {
+      "lat": 39.481341919919075,
+      "lon": -87.36193919654335,
+      "geoinfo": {
+        "display_name": "The Sign Place, 6th Avenue, Terre Haute, Vigo County, Indiana, 47803, United States",
+        "road": "6th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terre Haute",
+        "state": "Indiana",
+        "postcode": "47803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Sign Place, 6th Avenue, Terre Haute, Vigo County, Indiana, 47803, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:58.690596+00:00",
+  "_kind": "geo_samples"
+}

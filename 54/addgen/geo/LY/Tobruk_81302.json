@@ -1,0 +1,47 @@
+{
+  "country_code": "LY",
+  "country": "Libya",
+  "city": "Tobruk",
+  "geonameid": 81302,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 32.11357725422037,
+      "lon": 23.971798933298064,
+      "geoinfo": {
+        "display_name": "Hayy Al-Andalus, Tobruk, Butnan, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hayy Al-Andalus",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tobruk",
+        "state": "Butnan",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "678, Hayy Al-Andalus, Tobruk, 04318 Butnan, Libya"
+    },
+    {
+      "lat": 32.122032413462485,
+      "lon": 23.979032231711823,
+      "geoinfo": {
+        "display_name": "tobruk city, Butnan, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "tobruk city",
+        "state": "Butnan",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "232, tobruk city, 16097 Butnan, Libya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:32.155423+00:00",
+  "_kind": "geo_samples"
+}

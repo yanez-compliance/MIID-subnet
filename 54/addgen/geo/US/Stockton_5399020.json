@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stockton",
+  "geonameid": 5399020,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.92011528056071,
+      "lon": -121.2977048028789,
+      "geoinfo": {
+        "display_name": "2755, Colorado Avenue, Stockton, San Joaquin County, California, 95206, United States",
+        "road": "Colorado Avenue",
+        "house_number": "2755",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stockton",
+        "state": "California",
+        "postcode": "95206",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2755 Colorado Avenue, Stockton, California, United States"
+    },
+    {
+      "lat": 37.953202663557754,
+      "lon": -121.27966893110444,
+      "geoinfo": {
+        "display_name": "34, East Market Street, Mormon, Stockton, San Joaquin County, California, 95202, United States",
+        "road": "East Market Street",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stockton",
+        "state": "California",
+        "postcode": "95202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "34, East Market Street, Mormon, Stockton, San Joaquin County, California, 95202, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:04.213428+00:00",
+  "_kind": "geo_samples"
+}

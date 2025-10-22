@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Berkley",
+  "geonameid": 4985744,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.49099887504959,
+      "lon": -83.17038938605756,
+      "geoinfo": {
+        "display_name": "1436, Columbia Road, Berkley, Oakland County, Michigan, 48072, United States",
+        "road": "Columbia Road",
+        "house_number": "1436",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkley",
+        "state": "Michigan",
+        "postcode": "48072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1436 Columbia Road, Berkley, Michigan, United States"
+    },
+    {
+      "lat": 42.51607286867587,
+      "lon": -83.14118992085014,
+      "geoinfo": {
+        "display_name": "346, East la Salle Avenue, Royal Oak, Oakland County, Michigan, 48073, United States",
+        "road": "East la Salle Avenue",
+        "house_number": "346",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Royal Oak",
+        "state": "Michigan",
+        "postcode": "48073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "346, East la Salle Avenue, Royal Oak, Oakland County, Michigan, 48073, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:02.606762+00:00",
+  "_kind": "geo_samples"
+}

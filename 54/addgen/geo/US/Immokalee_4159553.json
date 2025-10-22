@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Immokalee",
+  "geonameid": 4159553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.4259388911259,
+      "lon": -81.41923789032276,
+      "geoinfo": {
+        "display_name": "220, Immokalee Drive, Immokalee, Collier County, Florida, 34142, United States",
+        "road": "Immokalee Drive",
+        "house_number": "220",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Immokalee",
+        "state": "Florida",
+        "postcode": "34142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "220 Immokalee Drive, Immokalee, Florida, United States"
+    },
+    {
+      "lat": 26.44673684095079,
+      "lon": -81.38244869224717,
+      "geoinfo": {
+        "display_name": "Collier County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "433, Collier County, 55149 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:21.166235+00:00",
+  "_kind": "geo_samples"
+}

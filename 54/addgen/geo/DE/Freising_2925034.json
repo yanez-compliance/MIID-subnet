@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Freising",
+  "geonameid": 2925034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.40047879069322,
+      "lon": 11.735681683313913,
+      "geoinfo": {
+        "display_name": "4, Möhlestraße, Goldberg, Freising, Landkreis Freising, Bavaria, 85354, Germany",
+        "road": "Möhlestraße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Goldberg",
+        "city_district": null,
+        "city": "Freising",
+        "state": "Bavaria",
+        "postcode": "85354",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Möhlestraße, Freising, Bavaria, Germany"
+    },
+    {
+      "lat": 48.37790152787166,
+      "lon": 11.741663070269032,
+      "geoinfo": {
+        "display_name": "FS 44, Seilerbrückl, Freising, Landkreis Freising, Bavaria, 85356, Germany",
+        "road": "FS 44",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seilerbrückl",
+        "city_district": null,
+        "city": "Freising",
+        "state": "Bavaria",
+        "postcode": "85356",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "FS 44, Seilerbrückl, Freising, Landkreis Freising, Bavaria, 85356, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:14:03.597414+00:00",
+  "_kind": "geo_samples"
+}

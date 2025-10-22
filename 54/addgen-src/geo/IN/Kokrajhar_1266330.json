@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kokrajhar",
+  "geonameid": 1266330,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.4320254326031,
+      "lon": 90.25897739669915,
+      "geoinfo": {
+        "display_name": "Kokrajhar, Assam, 783370, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Assam",
+        "postcode": "783370",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kokrajhar, Assam, India"
+    },
+    {
+      "lat": 26.37214482086625,
+      "lon": 90.25688643392455,
+      "geoinfo": {
+        "display_name": "NH117A, Kokrajhar, Assam, 783370, India",
+        "road": "NH117A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kokrajhar",
+        "state": "Assam",
+        "postcode": "783370",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH117A, Kokrajhar, Assam, 783370, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:26.014317+00:00",
+  "_kind": "geo_samples"
+}

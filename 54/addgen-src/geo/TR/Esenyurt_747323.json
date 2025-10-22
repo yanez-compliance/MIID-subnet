@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Esenyurt",
+  "geonameid": 747323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.0423248827288,
+      "lon": 28.632522552772652,
+      "geoinfo": {
+        "display_name": "Osmangazi Mahallesi, Esenyurt, Istanbul, Marmara Region, 34522, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Osmangazi Mahallesi",
+        "city_district": null,
+        "city": "Esenyurt",
+        "state": null,
+        "postcode": "34522",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Osmangazi Mahallesi, Esenyurt, Turkey"
+    },
+    {
+      "lat": 41.006770553615226,
+      "lon": 28.707793234522423,
+      "geoinfo": {
+        "display_name": "Ali Gülmez Caddesi, Firuzköy Mahallesi, Avcılar, Istanbul, Marmara Region, 34325, Turkey",
+        "road": "Ali Gülmez Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Firuzköy Mahallesi",
+        "city_district": null,
+        "city": "Avcılar",
+        "state": null,
+        "postcode": "34325",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "897, Ali Gülmez Caddesi, Firuzköy Mahallesi, Avcılar, Istanbul, Marmara Region, 34325, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:47.614445+00:00",
+  "_kind": "geo_samples"
+}

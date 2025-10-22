@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint John",
+  "geonameid": 6138517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.268413831223015,
+      "lon": -66.03835499196325,
+      "geoinfo": {
+        "display_name": "Irving Road East, City of Saint John, Saint John County, New Brunswick, E2J 1N8, Canada",
+        "road": "Irving Road East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Saint John",
+        "state": "New Brunswick",
+        "postcode": "E2J 1N8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Irving Road East, Saint John, New Brunswick, Canada"
+    },
+    {
+      "lat": 45.23636177238164,
+      "lon": -66.01592396005229,
+      "geoinfo": {
+        "display_name": "Anthonys Cove, City of Saint John, Saint John County, New Brunswick, E2P 1K4, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Saint John",
+        "state": "New Brunswick",
+        "postcode": "E2P 1K4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Anthonys Cove, City of Saint John, Saint John County, New Brunswick, E2P 1K4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:42.182504+00:00",
+  "_kind": "geo_samples"
+}

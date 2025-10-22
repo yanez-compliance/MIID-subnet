@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenwood",
+  "geonameid": 4580569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.23070810526774,
+      "lon": -82.18777211294137,
+      "geoinfo": {
+        "display_name": "180, Oxford Road, Druid Hills, Greenwood County, South Carolina, 29649, United States",
+        "road": "Oxford Road",
+        "house_number": "180",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29649",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "180 Oxford Road, Greenwood, South Carolina, United States"
+    },
+    {
+      "lat": 34.16921039260121,
+      "lon": -82.1411939972117,
+      "geoinfo": {
+        "display_name": "139, Foundry Road, South Greenwood, Greenwood, Greenwood County, South Carolina, 29646, United States",
+        "road": "Foundry Road",
+        "house_number": "139",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenwood",
+        "state": "South Carolina",
+        "postcode": "29646",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "139, Foundry Road, South Greenwood, Greenwood, Greenwood County, South Carolina, 29646, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:25.834909+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newark",
+  "geonameid": 5376803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.505475997603725,
+      "lon": -122.02571222065966,
+      "geoinfo": {
+        "display_name": "Mowry Landing, Newark, Alameda County, California, 94560, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "California",
+        "postcode": "94560",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Newark, California, United States"
+    },
+    {
+      "lat": 37.56300660744076,
+      "lon": -122.00669538648168,
+      "geoinfo": {
+        "display_name": "3498, Pinewood Terrace, Meadow Brook, Centerville District, Fremont, Alameda County, California, 94536, United States",
+        "road": "Pinewood Terrace",
+        "house_number": "3498",
+        "neighbourhood": null,
+        "suburb": "Centerville District",
+        "city_district": null,
+        "city": "Fremont",
+        "state": "California",
+        "postcode": "94536",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3498, Pinewood Terrace, Meadow Brook, Centerville District, Fremont, Alameda County, California, 94536, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:48.935472+00:00",
+  "_kind": "geo_samples"
+}

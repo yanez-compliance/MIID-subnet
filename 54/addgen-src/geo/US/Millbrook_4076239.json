@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Millbrook",
+  "geonameid": 4076239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.51348540401602,
+      "lon": -86.37552620232077,
+      "geoinfo": {
+        "display_name": "5818, Main Street, Knollwood, Millbrook, Elmore County, Alabama, 36054, United States",
+        "road": "Main Street",
+        "house_number": "5818",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millbrook",
+        "state": "Alabama",
+        "postcode": "36054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5818 Main Street, Millbrook, Alabama, United States"
+    },
+    {
+      "lat": 32.47237008120442,
+      "lon": -86.36350758101453,
+      "geoinfo": {
+        "display_name": "Park Circle, Great Oaks, Millbrook, Elmore County, Alabama, 36054, United States",
+        "road": "Park Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millbrook",
+        "state": "Alabama",
+        "postcode": "36054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "764, Park Circle, Great Oaks, Millbrook, Elmore County, Alabama, 36054, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:58.455366+00:00",
+  "_kind": "geo_samples"
+}

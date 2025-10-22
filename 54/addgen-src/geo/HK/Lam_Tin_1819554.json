@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Lam Tin",
+  "geonameid": 1819554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.29529516834424,
+      "lon": 114.21516860155478,
+      "geoinfo": {
+        "display_name": "Eastern Harbour Crossing, Food and Environmental Hygiene Department Quarry Bay Depot, Quarry Bay, Eastern District, Kwun Tong District, Hong Kong Island, Hong Kong, China",
+        "road": "Eastern Harbour Crossing",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Quarry Bay",
+        "city_district": "Kwun Tong District",
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Eastern Harbour Crossing, Lam Tin, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.31706640483882,
+      "lon": 114.19525444780636,
+      "geoinfo": {
+        "display_name": "Central Kowloon Bypass, Ma Tau Kok, Kowloon City District, Kowloon, Hong Kong, 999077, China",
+        "road": "Central Kowloon Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ma Tau Kok",
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": "999077",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "693, Central Kowloon Bypass, Ma Tau Kok, Kowloon City District, Kowloon, Hong Kong, 999077, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:54:40.910038+00:00",
+  "_kind": "geo_samples"
+}

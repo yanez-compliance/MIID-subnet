@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Chicago",
+  "geonameid": 4919857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.649293042472735,
+      "lon": -87.40300518480363,
+      "geoinfo": {
+        "display_name": "Lake County, Indiana, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Chicago, Indiana, United States"
+    },
+    {
+      "lat": 41.64793212172469,
+      "lon": -87.49983869139318,
+      "geoinfo": {
+        "display_name": "BP Whiting Refinery, Whiting, North Township, Lake County, Indiana, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whiting",
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "135, BP Whiting Refinery, Whiting, North Township, Lake County, 89796 Indiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:12.963961+00:00",
+  "_kind": "geo_samples"
+}

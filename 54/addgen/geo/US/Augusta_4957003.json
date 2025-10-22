@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Augusta",
+  "geonameid": 4957003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.32245831452012,
+      "lon": -69.78329138276112,
+      "geoinfo": {
+        "display_name": "Reservoir Lane, Sand Hill, Augusta, Kennebec County, Maine, 04330, United States",
+        "road": "Reservoir Lane",
+        "house_number": null,
+        "neighbourhood": "Sand Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Augusta",
+        "state": "Maine",
+        "postcode": "04330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Reservoir Lane, Augusta, Maine, United States"
+    },
+    {
+      "lat": 44.34214293296659,
+      "lon": -69.80160583808018,
+      "geoinfo": {
+        "display_name": "I 95, Augusta, Kennebec County, Maine, 04330, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Augusta",
+        "state": "Maine",
+        "postcode": "04330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, Augusta, Kennebec County, Maine, 04330, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:50.212248+00:00",
+  "_kind": "geo_samples"
+}

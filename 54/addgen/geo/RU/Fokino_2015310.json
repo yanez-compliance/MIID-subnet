@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Fokino",
+  "geonameid": 2015310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.969404584180275,
+      "lon": 132.39561146647648,
+      "geoinfo": {
+        "display_name": "1Б, Заводская улица, Fokino, ЗАТО Фокино, Primorsky Krai, Far Eastern Federal District, 692880, Russia",
+        "road": "Заводская улица",
+        "house_number": "1Б",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fokino",
+        "state": "Primorsky Krai",
+        "postcode": "692880",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "1Б Заводская улица, Fokino, Primorsky Krai, Russia"
+    },
+    {
+      "lat": 42.97909882642845,
+      "lon": 132.43528836811805,
+      "geoinfo": {
+        "display_name": "ЗАТО Фокино, Primorsky Krai, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Primorsky Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "415, Fokino, 48574 Primorsky Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:11.343627+00:00",
+  "_kind": "geo_samples"
+}

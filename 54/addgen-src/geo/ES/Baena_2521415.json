@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Baena",
+  "geonameid": 2521415,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.584516800126394,
+      "lon": -4.32652046391747,
+      "geoinfo": {
+        "display_name": "Llano de Pedro Ruiz, Baena, Córdoba, Andalusia, 14850, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baena",
+        "state": "Andalusia",
+        "postcode": "14850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Baena, Andalusia, Spain"
+    },
+    {
+      "lat": 37.6374949096553,
+      "lon": -4.348567432503195,
+      "geoinfo": {
+        "display_name": "A-3125, Baena, Córdoba, Andalusia, 14850, Spain",
+        "road": "A-3125",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baena",
+        "state": "Andalusia",
+        "postcode": "14850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "A-3125, Baena, Córdoba, Andalusia, 14850, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:55.590928+00:00",
+  "_kind": "geo_samples"
+}

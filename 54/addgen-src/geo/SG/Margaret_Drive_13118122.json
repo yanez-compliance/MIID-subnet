@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Margaret Drive",
+  "geonameid": 13118122,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3008875054813671,
+      "lon": 103.82254434141328,
+      "geoinfo": {
+        "display_name": "Rochalie Drive, Tanglin, Central, Singapore, 248649, Singapore",
+        "road": "Rochalie Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tanglin",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "248649",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "185, Rochalie Drive, Tanglin, Central, Singapore, 248649, Singapore"
+    },
+    {
+      "lat": 1.3382522488013917,
+      "lon": 103.79239509481864,
+      "geoinfo": {
+        "display_name": "Turf Club Road, Hock Seng Park, Bukit Timah, Northwest, Singapore, 288001, Singapore",
+        "road": "Turf Club Road",
+        "house_number": null,
+        "neighbourhood": "Hock Seng Park",
+        "suburb": "Bukit Timah",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "288001",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "385, Turf Club Road, Hock Seng Park, Bukit Timah, Northwest, Singapore, 288001, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:57:32.778775+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Penarth",
+  "geonameid": 2640496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.41795947368164,
+      "lon": -3.152550811224942,
+      "geoinfo": {
+        "display_name": "Lower Penarth, Penarth, Vale of Glamorgan, Wales, CF64 3QH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lower Penarth",
+        "city_district": null,
+        "city": "Penarth",
+        "state": "Wales",
+        "postcode": "CF64 3QH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lower Penarth, Penarth, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.478878634169625,
+      "lon": -3.1488830864841786,
+      "geoinfo": {
+        "display_name": "Neath Street, Pengam Green, Splott, Cardiff, Wales, CF24 2EP, United Kingdom",
+        "road": "Neath Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pengam Green",
+        "city_district": null,
+        "city": "Cardiff",
+        "state": "Wales",
+        "postcode": "CF24 2EP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Neath Street, Pengam Green, Splott, Cardiff, Wales, CF24 2EP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:19.224041+00:00",
+  "_kind": "geo_samples"
+}

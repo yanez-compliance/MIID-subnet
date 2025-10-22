@@ -1,0 +1,83 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Alamar",
+  "geonameid": 3569370,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 23.132247789025147,
+      "lon": -82.27346564053049,
+      "geoinfo": {
+        "display_name": "Vía Monumental, Ricabar, La Jata – Naranjo, Guanabacoa, Havana, 10100, Cuba",
+        "road": "Vía Monumental",
+        "house_number": null,
+        "neighbourhood": "Ricabar",
+        "suburb": null,
+        "city_district": "La Jata – Naranjo",
+        "city": "Guanabacoa",
+        "state": "Havana",
+        "postcode": "10100",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Vía Monumental, Alamar, Havana, Cuba"
+    },
+    {
+      "lat": 23.129840652877245,
+      "lon": -82.31581312378142,
+      "geoinfo": {
+        "display_name": "Vía Blanca, Chibás – Roble, Guanabacoa, Havana, 11100, Cuba",
+        "road": "Vía Blanca",
+        "house_number": null,
+        "neighbourhood": "Chibás – Roble",
+        "suburb": "Guanabacoa",
+        "city_district": null,
+        "city": null,
+        "state": "Havana",
+        "postcode": "11100",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "605, Vía Blanca, Chibás – Roble, Guanabacoa, Havana, 11100, Cuba"
+    },
+    {
+      "lat": 23.146449729911314,
+      "lon": -82.29454754465505,
+      "geoinfo": {
+        "display_name": "Vía Blanca, Antonio Guiteras, Habana del Este, Havana, 12804, Cuba",
+        "road": "Vía Blanca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Antonio Guiteras",
+        "city_district": null,
+        "city": null,
+        "state": "Havana",
+        "postcode": "12804",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "980, Vía Blanca, Antonio Guiteras, Habana del Este, Havana, 12804, Cuba"
+    },
+    {
+      "lat": 23.177247512610226,
+      "lon": -82.29924906385719,
+      "geoinfo": {
+        "display_name": "Zona 4, Alamar Playa, Zona 4, Habana del Este, Havana, 12500, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Zona 4",
+        "suburb": null,
+        "city_district": "Alamar Playa",
+        "city": "Zona 4",
+        "state": "Havana",
+        "postcode": "12500",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Zona 4, Alamar Playa, Zona 4, Habana del Este, Havana, 12500, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:10.542091+00:00",
+  "_kind": "geo_samples"
+}

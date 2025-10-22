@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elmwood",
+  "geonameid": 4557787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.923809626212886,
+      "lon": -75.22800878151178,
+      "geoinfo": {
+        "display_name": "6301, Elmwood Avenue, Elmwood Park, Southwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19142, United States",
+        "road": "Elmwood Avenue",
+        "house_number": "6301",
+        "neighbourhood": "Elmwood Park",
+        "suburb": "Southwest Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6301 Elmwood Avenue, Elmwood, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.941784437646014,
+      "lon": -75.21386724032169,
+      "geoinfo": {
+        "display_name": "SEPTA Woodland Trolley Shop, 4901, Woodland Avenue, Southwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19143, United States",
+        "road": "Woodland Avenue",
+        "house_number": "4901",
+        "neighbourhood": null,
+        "suburb": "Southwest Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "SEPTA Woodland Trolley Shop, 4901, Woodland Avenue, Southwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:57.821106+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pascagoula",
+  "geonameid": 4440397,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.338879666473535,
+      "lon": -88.5331522110533,
+      "geoinfo": {
+        "display_name": "Beach Boulevard, East Pascagoula, Pascagoula, Jackson County, Mississippi, 39567, United States",
+        "road": "Beach Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pascagoula",
+        "state": "Mississippi",
+        "postcode": "39567",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Beach Boulevard, Pascagoula, Mississippi, United States"
+    },
+    {
+      "lat": 30.384806816739623,
+      "lon": -88.5876252824141,
+      "geoinfo": {
+        "display_name": "Pascagoula, Jackson County, Mississippi, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pascagoula",
+        "state": "Mississippi",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "230, Pascagoula, Jackson County, 96092 Mississippi, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:48:08.336005+00:00",
+  "_kind": "geo_samples"
+}

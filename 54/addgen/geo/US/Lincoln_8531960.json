@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lincoln",
+  "geonameid": 8531960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.9252868492049,
+      "lon": -71.48862190498012,
+      "geoinfo": {
+        "display_name": "North Central State Airport, George Washington Highway, Smithfield, Providence County, Rhode Island, 02802, United States",
+        "road": "George Washington Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Smithfield",
+        "state": "Rhode Island",
+        "postcode": "02802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "George Washington Highway, Lincoln, Rhode Island, United States"
+    },
+    {
+      "lat": 41.94449726350163,
+      "lon": -71.46340191035794,
+      "geoinfo": {
+        "display_name": "Kirkbrae Avenue, Albion, Lincoln, Providence County, Rhode Island, 02802, United States",
+        "road": "Kirkbrae Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "Rhode Island",
+        "postcode": "02802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "738, Kirkbrae Avenue, Albion, Lincoln, Providence County, Rhode Island, 02802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:09.804244+00:00",
+  "_kind": "geo_samples"
+}

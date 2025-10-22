@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Galt",
+  "geonameid": 5351428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.271614650957424,
+      "lon": -121.32935510432048,
+      "geoinfo": {
+        "display_name": "Live Oak Avenue, Sacramento County, California, 95632, United States",
+        "road": "Live Oak Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Live Oak Avenue, Galt, California, United States"
+    },
+    {
+      "lat": 38.2648300881572,
+      "lon": -121.24547694673599,
+      "geoinfo": {
+        "display_name": "13554, Herald Road, Herald, Sacramento County, California, 95632, United States",
+        "road": "Herald Road",
+        "house_number": "13554",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13554, Herald Road, Herald, Sacramento County, California, 95632, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:08.662375+00:00",
+  "_kind": "geo_samples"
+}

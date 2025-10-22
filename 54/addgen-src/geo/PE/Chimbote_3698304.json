@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Chimbote",
+  "geonameid": 3698304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -9.095498587538815,
+      "lon": -78.60382577027616,
+      "geoinfo": {
+        "display_name": "Centro, Chimbote, Province of Santa, Ancash, 20058, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centro",
+        "city_district": null,
+        "city": "Chimbote",
+        "state": "Ancash",
+        "postcode": "20058",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Centro, Chimbote, Ancash, Peru"
+    },
+    {
+      "lat": -9.102986090855593,
+      "lon": -78.56432594990324,
+      "geoinfo": {
+        "display_name": "Chimbote, Province of Santa, Ancash, 02800, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chimbote",
+        "state": "Ancash",
+        "postcode": "02800",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "650, Chimbote, Province of Santa, Ancash, 02800, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:53.937901+00:00",
+  "_kind": "geo_samples"
+}

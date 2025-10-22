@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Frechen",
+  "geonameid": 2925259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.902275878413654,
+      "lon": 6.837051032915192,
+      "geoinfo": {
+        "display_name": "Frechener Straße, Hemmerich, Bachem, Frechen, Rhein-Erft-Kreis, North Rhine-Westphalia, 50226, Germany",
+        "road": "Frechener Straße",
+        "house_number": null,
+        "neighbourhood": "Hemmerich",
+        "suburb": "Bachem",
+        "city_district": null,
+        "city": "Frechen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50226",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Frechener Straße, Frechen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.948168355218684,
+      "lon": 6.802852624706521,
+      "geoinfo": {
+        "display_name": "Bonnstraße, Freimersdorf, Pulheim, Rhein-Erft-Kreis, North Rhine-Westphalia, 50259, Germany",
+        "road": "Bonnstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pulheim",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50259",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "771, Bonnstraße, Freimersdorf, Pulheim, Rhein-Erft-Kreis, North Rhine-Westphalia, 50259, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:46.554291+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Belsand",
+  "geonameid": 1276495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.4301139710112,
+      "lon": 85.37508442442532,
+      "geoinfo": {
+        "display_name": "Belsand, Sitamarhi, Bihar, 843316, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "843316",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Belsand, Bihar, India"
+    },
+    {
+      "lat": 26.441634455111306,
+      "lon": 85.39124738088124,
+      "geoinfo": {
+        "display_name": "MDR, Belsand, Sitamarhi, Bihar, 843316, India",
+        "road": "MDR",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belsand",
+        "state": "Bihar",
+        "postcode": "843316",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "099, MDR, Belsand, Sitamarhi, Bihar, 843316, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:24.406185+00:00",
+  "_kind": "geo_samples"
+}

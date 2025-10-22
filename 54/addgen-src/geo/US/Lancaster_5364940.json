@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lancaster",
+  "geonameid": 5364940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.7080073221462,
+      "lon": -118.13765091321858,
+      "geoinfo": {
+        "display_name": "45314, Sierra Highway, Lancaster, Los Angeles County, California, 93534, United States",
+        "road": "Sierra Highway",
+        "house_number": "45314",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lancaster",
+        "state": "California",
+        "postcode": "93534",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "45314 Sierra Highway, Lancaster, California, United States"
+    },
+    {
+      "lat": 34.703368791603864,
+      "lon": -118.11313581565447,
+      "geoinfo": {
+        "display_name": "830, East Avenue I, Lancaster, Los Angeles County, California, 93535, United States",
+        "road": "East Avenue I",
+        "house_number": "830",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lancaster",
+        "state": "California",
+        "postcode": "93535",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "830, East Avenue I, Lancaster, Los Angeles County, California, 93535, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:49.324059+00:00",
+  "_kind": "geo_samples"
+}

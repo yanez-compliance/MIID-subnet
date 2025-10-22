@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Teapa",
+  "geonameid": 3516210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.592292394231674,
+      "lon": -92.97205650185941,
+      "geoinfo": {
+        "display_name": "Calle Juan Aldama, Colonia Municipal, Teapa, Tabasco, Mexico",
+        "road": "Calle Juan Aldama",
+        "house_number": null,
+        "neighbourhood": "Colonia Municipal",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tabasco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Juan Aldama, Teapa, Tabasco, Mexico"
+    },
+    {
+      "lat": 17.58138975155076,
+      "lon": -92.95572143486325,
+      "geoinfo": {
+        "display_name": "Manuel Buelta Segunda Sección, Teapa, Tabasco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Manuel Buelta Segunda Sección",
+        "suburb": null,
+        "city_district": null,
+        "city": "Teapa",
+        "state": "Tabasco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "773, Manuel Buelta Segunda Sección, Teapa, 51735 Tabasco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:05.269842+00:00",
+  "_kind": "geo_samples"
+}

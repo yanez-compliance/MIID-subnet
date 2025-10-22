@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Tolyatti",
+  "geonameid": 482283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.545263190509914,
+      "lon": 49.35309951414289,
+      "geoinfo": {
+        "display_name": "2А, Рябиновый бульвар, 20 квартал, Автозаводский район, Tolyatti, Samara Oblast, Volga Federal District, 445030, Russia",
+        "road": "Рябиновый бульвар",
+        "house_number": "2А",
+        "neighbourhood": null,
+        "suburb": "20 квартал",
+        "city_district": "Автозаводский район",
+        "city": "Tolyatti",
+        "state": "Samara Oblast",
+        "postcode": "445030",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "2А Рябиновый бульвар, Tolyatti, Samara Oblast, Russia"
+    },
+    {
+      "lat": 53.556396168095986,
+      "lon": 49.299539734268706,
+      "geoinfo": {
+        "display_name": "Транспортная улица, Автозаводский район, Tolyatti, Samara Oblast, Volga Federal District, 445031, Russia",
+        "road": "Транспортная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Автозаводский район",
+        "city_district": "Автозаводский район",
+        "city": "Tolyatti",
+        "state": "Samara Oblast",
+        "postcode": "445031",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "430, Транспортная улица, Автозаводский район, Tolyatti, Samara Oblast, Volga Federal District, 445031, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:11.765926+00:00",
+  "_kind": "geo_samples"
+}

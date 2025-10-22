@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Fidenza",
+  "geonameid": 3177029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.83847177064491,
+      "lon": 10.100708987484305,
+      "geoinfo": {
+        "display_name": "1a, Via Parola, Noceto, Parma, Emilia-Romagna, 43046, Italy",
+        "road": "Via Parola",
+        "house_number": "1a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noceto",
+        "state": "Emilia-Romagna",
+        "postcode": "43046",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "1a Via Parola, Fidenza, Emilia-Romagna, Italy"
+    },
+    {
+      "lat": 44.82578741004888,
+      "lon": 10.058105720660535,
+      "geoinfo": {
+        "display_name": "18, Frazione Cogolonchio, Castellazzo, Fidenza, Parma, Emilia-Romagna, 43036, Italy",
+        "road": "Frazione Cogolonchio",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fidenza",
+        "state": "Emilia-Romagna",
+        "postcode": "43036",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "18, Frazione Cogolonchio, Castellazzo, Fidenza, Parma, Emilia-Romagna, 43036, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:15.052612+00:00",
+  "_kind": "geo_samples"
+}

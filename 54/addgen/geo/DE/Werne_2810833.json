@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Werne",
+  "geonameid": 2810833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.67444685387466,
+      "lon": 7.630185048858223,
+      "geoinfo": {
+        "display_name": "31, Lohstraße, Werne, Kreis Unna, North Rhine-Westphalia, 59368, Germany",
+        "road": "Lohstraße",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Werne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59368",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31 Lohstraße, Werne, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.706659779960866,
+      "lon": 7.645447268155154,
+      "geoinfo": {
+        "display_name": "Hagenbuschweg, Werne, Kreis Unna, North Rhine-Westphalia, 59368, Germany",
+        "road": "Hagenbuschweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Werne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59368",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "662, Hagenbuschweg, Werne, Kreis Unna, North Rhine-Westphalia, 59368, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:08.470752+00:00",
+  "_kind": "geo_samples"
+}

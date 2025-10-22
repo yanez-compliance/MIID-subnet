@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Poperinge",
+  "geonameid": 2788726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.85720903200876,
+      "lon": 2.683408689033108,
+      "geoinfo": {
+        "display_name": "16, Watouseweg, Poperinge, Ieper, West Flanders, Flanders, 8970, Belgium",
+        "road": "Watouseweg",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Poperinge",
+        "city": "Poperinge",
+        "state": "West Flanders",
+        "postcode": "8970",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "16 Watouseweg, Poperinge, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.85273281713373,
+      "lon": 2.7843698109091544,
+      "geoinfo": {
+        "display_name": "Zevekotestraat, Brandhoek, Vlamertinge, Ypres, Ieper, West Flanders, 8908, Belgium",
+        "road": "Zevekotestraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ypres",
+        "state": "West Flanders",
+        "postcode": "8908",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "874, Zevekotestraat, Brandhoek, Vlamertinge, Ypres, Ieper, West Flanders, 8908, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:42.571190+00:00",
+  "_kind": "geo_samples"
+}

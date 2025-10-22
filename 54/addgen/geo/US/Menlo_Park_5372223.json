@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Menlo Park",
+  "geonameid": 5372223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.44682681422685,
+      "lon": -122.18740711755925,
+      "geoinfo": {
+        "display_name": "1017, Fremont Street, Menlo Park, San Mateo County, California, 94025, United States",
+        "road": "Fremont Street",
+        "house_number": "1017",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Menlo Park",
+        "state": "California",
+        "postcode": "94025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1017 Fremont Street, Menlo Park, California, United States"
+    },
+    {
+      "lat": 37.413676485237076,
+      "lon": -122.19885573131077,
+      "geoinfo": {
+        "display_name": "Ansel Lane, Stanford Weekend Acres, Ladera, San Mateo County, California, 94028, United States",
+        "road": "Ansel Lane",
+        "house_number": null,
+        "neighbourhood": "Stanford Weekend Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ladera",
+        "state": "California",
+        "postcode": "94028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "273, Ansel Lane, Stanford Weekend Acres, Ladera, San Mateo County, California, 94028, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:36.715030+00:00",
+  "_kind": "geo_samples"
+}

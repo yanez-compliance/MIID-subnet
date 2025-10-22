@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elizabeth",
+  "geonameid": 5097598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.68479751763644,
+      "lon": -74.19362509105339,
+      "geoinfo": {
+        "display_name": "Holiday Inn Express, 1128, Spring Street, Elizabeth, Union County, New Jersey, 07201, United States",
+        "road": "Spring Street",
+        "house_number": "1128",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elizabeth",
+        "state": "New Jersey",
+        "postcode": "07201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1128 Spring Street, Elizabeth, New Jersey, United States"
+    },
+    {
+      "lat": 40.70008526527843,
+      "lon": -74.24054602253528,
+      "geoinfo": {
+        "display_name": "538, Chapman Street, Hillside, Union County, New Jersey, 07205, United States",
+        "road": "Chapman Street",
+        "house_number": "538",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hillside",
+        "state": "New Jersey",
+        "postcode": "07205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "538, Chapman Street, Hillside, Union County, New Jersey, 07205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:39.249721+00:00",
+  "_kind": "geo_samples"
+}

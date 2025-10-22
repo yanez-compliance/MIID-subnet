@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Benevento",
+  "geonameid": 3182179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.13747738398492,
+      "lon": 14.76163993504112,
+      "geoinfo": {
+        "display_name": "Strada Comunale Cellarulo, Madonna delle Grazie, Ferrovia, Benevento, Campania, 82100, Italy",
+        "road": "Strada Comunale Cellarulo",
+        "house_number": null,
+        "neighbourhood": "Madonna delle Grazie",
+        "suburb": "Ferrovia",
+        "city_district": null,
+        "city": "Benevento",
+        "state": "Campania",
+        "postcode": "82100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Comunale Cellarulo, Benevento, Campania, Italy"
+    },
+    {
+      "lat": 41.13120149140751,
+      "lon": 14.732921514260292,
+      "geoinfo": {
+        "display_name": "Masseria Castiello, Benevento, Campania, 82010, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Benevento",
+        "state": "Campania",
+        "postcode": "82010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "251, Masseria Castiello, Benevento, Campania, 82010, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:52.836795+00:00",
+  "_kind": "geo_samples"
+}

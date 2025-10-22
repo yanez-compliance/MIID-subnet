@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Blundell",
+  "geonameid": 13495394,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.163262410239454,
+      "lon": -123.22188981061934,
+      "geoinfo": {
+        "display_name": "Richmond, Metro Vancouver Regional District, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Blundell, British Columbia, Canada"
+    },
+    {
+      "lat": 49.13935501174484,
+      "lon": -123.18736067301855,
+      "geoinfo": {
+        "display_name": "Manoah Steves Elementary School, 10111, 4th Avenue, Steveston, Richmond, Metro Vancouver Regional District, British Columbia, V7E 1J5, Canada",
+        "road": "4th Avenue",
+        "house_number": "10111",
+        "neighbourhood": null,
+        "suburb": "Steveston",
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7E 1J5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Manoah Steves Elementary School, 10111, 4th Avenue, Steveston, Richmond, Metro Vancouver Regional District, British Columbia, V7E 1J5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:39:19.806185+00:00",
+  "_kind": "geo_samples"
+}

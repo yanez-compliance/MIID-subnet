@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Brussels",
+  "geonameid": 2800866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.86133852868459,
+      "lon": 4.378301203762529,
+      "geoinfo": {
+        "display_name": "7, Rue Kessels - Kesselsstraat, Colignon, Schaerbeek - Schaarbeek, Brussels-Capital, 1030, Belgium",
+        "road": "Rue Kessels - Kesselsstraat",
+        "house_number": "7",
+        "neighbourhood": "Colignon",
+        "suburb": null,
+        "city_district": null,
+        "city": "Schaerbeek - Schaarbeek",
+        "state": null,
+        "postcode": "1030",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "7 Rue Kessels - Kesselsstraat, Brussels, Belgium"
+    },
+    {
+      "lat": 50.87288869074246,
+      "lon": 4.293151568558243,
+      "geoinfo": {
+        "display_name": "15, Rue Bois des Îles - Eilandenhoutstraat, Berchem-Sainte-Agathe - Sint-Agatha-Berchem, Brussels-Capital, 1082, Belgium",
+        "road": "Rue Bois des Îles - Eilandenhoutstraat",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berchem-Sainte-Agathe - Sint-Agatha-Berchem",
+        "state": null,
+        "postcode": "1082",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "15, Rue Bois des Îles - Eilandenhoutstraat, Berchem-Sainte-Agathe - Sint-Agatha-Berchem, Brussels-Capital, 1082, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:34.118275+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dublin",
+  "geonameid": 4192205,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.541061430048245,
+      "lon": -82.89511911698371,
+      "geoinfo": {
+        "display_name": "East Madison Street, Dublin, Laurens County, Georgia, 31021, United States",
+        "road": "East Madison Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dublin",
+        "state": "Georgia",
+        "postcode": "31021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Madison Street, Dublin, Georgia, United States"
+    },
+    {
+      "lat": 32.550975594151666,
+      "lon": -82.9141692493139,
+      "geoinfo": {
+        "display_name": "Hillcrest Parkway, Dublin, Laurens County, Georgia, 31021, United States",
+        "road": "Hillcrest Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dublin",
+        "state": "Georgia",
+        "postcode": "31021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "408, Hillcrest Parkway, Dublin, Laurens County, Georgia, 31021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:54.308918+00:00",
+  "_kind": "geo_samples"
+}

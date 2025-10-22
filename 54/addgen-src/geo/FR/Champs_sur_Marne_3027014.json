@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Champs-sur-Marne",
+  "geonameid": 3027014,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.8520035935847,
+      "lon": 2.5983709140882794,
+      "geoinfo": {
+        "display_name": "Avenue du Général de Gaulle, Centre Ville, Champs-sur-Marne, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77420, France",
+        "road": "Avenue du Général de Gaulle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centre Ville",
+        "city_district": null,
+        "city": "Champs-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "77420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue du Général de Gaulle, Champs-sur-Marne, Ile-de-France, France"
+    },
+    {
+      "lat": 48.82894618744597,
+      "lon": 2.575060792878827,
+      "geoinfo": {
+        "display_name": "4, Rue de la Providence, Yvris, Noisy-le-Grand, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93160, France",
+        "road": "Rue de la Providence",
+        "house_number": "4",
+        "neighbourhood": "Yvris",
+        "suburb": null,
+        "city_district": null,
+        "city": "Noisy-le-Grand",
+        "state": "Ile-de-France",
+        "postcode": "93160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "4, Rue de la Providence, Yvris, Noisy-le-Grand, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:22.250154+00:00",
+  "_kind": "geo_samples"
+}

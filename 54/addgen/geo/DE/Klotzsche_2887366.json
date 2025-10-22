@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Klotzsche",
+  "geonameid": 2887366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.11939572209655,
+      "lon": 13.785360710468606,
+      "geoinfo": {
+        "display_name": "Sturmfried, 18, Stendaler Straße, Königswald, Klotzsche, Dresden, Saxony, 01109, Germany",
+        "road": "Stendaler Straße",
+        "house_number": "18",
+        "neighbourhood": "Königswald",
+        "suburb": "Klotzsche",
+        "city_district": "Klotzsche",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01109",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "18 Stendaler Straße, Klotzsche, Saxony, Germany"
+    },
+    {
+      "lat": 51.11907241893538,
+      "lon": 13.838765556068962,
+      "geoinfo": {
+        "display_name": "Erster Hutungsweg, Dresdner Heide, Loschwitz, Dresden, Saxony, 01099, Germany",
+        "road": "Erster Hutungsweg",
+        "house_number": null,
+        "neighbourhood": "Dresdner Heide",
+        "suburb": null,
+        "city_district": "Loschwitz",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "613, Erster Hutungsweg, Dresdner Heide, Loschwitz, Dresden, Saxony, 01099, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:34.466946+00:00",
+  "_kind": "geo_samples"
+}

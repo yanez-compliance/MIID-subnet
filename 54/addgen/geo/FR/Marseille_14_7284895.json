@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 14",
+  "geonameid": 7284895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.3173429911759,
+      "lon": 5.37761535857371,
+      "geoinfo": {
+        "display_name": "Traverse de Gibbes, Saint-Mauront, 3rd Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13003, France",
+        "road": "Traverse de Gibbes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "3rd Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13003",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Traverse de Gibbes, Marseille 14, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.36099961898059,
+      "lon": 5.421458787080567,
+      "geoinfo": {
+        "display_name": "Chemin des Grottes Loubières, Le Vallon, Les Mourets, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France",
+        "road": "Chemin des Grottes Loubières",
+        "house_number": null,
+        "neighbourhood": "Le Vallon",
+        "suburb": "13th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13013",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Grottes Loubières, Le Vallon, Les Mourets, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:28.581196+00:00",
+  "_kind": "geo_samples"
+}

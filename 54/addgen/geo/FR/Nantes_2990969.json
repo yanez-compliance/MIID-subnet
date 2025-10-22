@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Nantes",
+  "geonameid": 2990969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.19014192343458,
+      "lon": -1.5858929046775962,
+      "geoinfo": {
+        "display_name": "25, Rue de la Californie, ZI de Cheviré, Rezé, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44400, France",
+        "road": "Rue de la Californie",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rezé",
+        "state": "Pays de la Loire",
+        "postcode": "44400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "25 Rue de la Californie, Nantes, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.20416343109139,
+      "lon": -1.5204869277363582,
+      "geoinfo": {
+        "display_name": "27, Rue de la Baugerie, Le Petit Rocher, Saint-Sébastien-sur-Loire, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44230, France",
+        "road": "Rue de la Baugerie",
+        "house_number": "27",
+        "neighbourhood": "Le Petit Rocher",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Sébastien-sur-Loire",
+        "state": "Pays de la Loire",
+        "postcode": "44230",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "27, Rue de la Baugerie, Le Petit Rocher, Saint-Sébastien-sur-Loire, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44230, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:34.629514+00:00",
+  "_kind": "geo_samples"
+}

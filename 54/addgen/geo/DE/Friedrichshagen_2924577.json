@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedrichshagen",
+  "geonameid": 2924577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.456599141718314,
+      "lon": 13.69045889535555,
+      "geoinfo": {
+        "display_name": "Birkenweg, Rahnsdorf, Treptow-Köpenick, Berlin, 12589, Germany",
+        "road": "Birkenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rahnsdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12589",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Birkenweg, Friedrichshagen, Germany"
+    },
+    {
+      "lat": 52.46738040418997,
+      "lon": 13.587048491678134,
+      "geoinfo": {
+        "display_name": "3, Aschenbrödelstraße, Märchenviertel, Köpenick, Treptow-Köpenick, Berlin, 12555, Germany",
+        "road": "Aschenbrödelstraße",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Köpenick",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12555",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3, Aschenbrödelstraße, Märchenviertel, Köpenick, Treptow-Köpenick, Berlin, 12555, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:22.515399+00:00",
+  "_kind": "geo_samples"
+}

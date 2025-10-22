@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Selm",
+  "geonameid": 2833170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.679136415740395,
+      "lon": 7.498858951996849,
+      "geoinfo": {
+        "display_name": "Auf der Dinkel, Netteberge, Selm, Kreis Unna, North Rhine-Westphalia, 59379, Germany",
+        "road": "Auf der Dinkel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Selm",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59379",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Auf der Dinkel, Selm, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.71828485688243,
+      "lon": 7.501089983466427,
+      "geoinfo": {
+        "display_name": "Berger, Nordkirchen, Kreis Coesfeld, North Rhine-Westphalia, 59394, Germany",
+        "road": "Berger",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nordkirchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59394",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "508, Berger, Nordkirchen, Kreis Coesfeld, North Rhine-Westphalia, 59394, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:59.141147+00:00",
+  "_kind": "geo_samples"
+}

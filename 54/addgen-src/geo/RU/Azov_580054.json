@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Azov",
+  "geonameid": 580054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.1479298942656,
+      "lon": 39.40191034714042,
+      "geoinfo": {
+        "display_name": "Елизаветинское сельское поселение, Azovsky District, Rostov Oblast, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rostov Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Azov, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 47.10360372206038,
+      "lon": 39.357535972968044,
+      "geoinfo": {
+        "display_name": "Кагальницкое сельское поселение, Azovsky District, Rostov Oblast, 346781, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rostov Oblast",
+        "postcode": "346781",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "978, Azov, 346781 Rostov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:40.732903+00:00",
+  "_kind": "geo_samples"
+}

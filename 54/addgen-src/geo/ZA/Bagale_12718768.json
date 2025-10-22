@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Bagale",
+  "geonameid": 12718768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.03263656176865,
+      "lon": 27.624521993183006,
+      "geoinfo": {
+        "display_name": "R24, Mogale City Ward 30, Orient Hills, Mogale City Local Municipality, West Rand District Municipality, Gauteng, South Africa",
+        "road": "R24",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mogale City Ward 30",
+        "city_district": null,
+        "city": "Mogale City Local Municipality",
+        "state": "Gauteng",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R24, Bagale, Gauteng, South Africa"
+    },
+    {
+      "lat": -26.03105764815155,
+      "lon": 27.651604143191303,
+      "geoinfo": {
+        "display_name": "Mogale City Ward 30, Mogale City Local Municipality, West Rand District Municipality, Gauteng, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mogale City Ward 30",
+        "city_district": null,
+        "city": "Mogale City Local Municipality",
+        "state": "Gauteng",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mogale City Ward 30, Mogale City Local Municipality, West Rand District Municipality, 87152 Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:21.339410+00:00",
+  "_kind": "geo_samples"
+}

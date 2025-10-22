@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Icod de los Vinos",
+  "geonameid": 2516474,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.373572827596597,
+      "lon": -16.6850270685241,
+      "geoinfo": {
+        "display_name": "Hoya Ana Díaz, Buen Paso, Icod de los Vinos, Santa Cruz de Tenerife, Canary Islands, 38440, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Icod de los Vinos",
+        "state": null,
+        "postcode": "38440",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Icod de los Vinos, Spain"
+    },
+    {
+      "lat": 28.37925013863042,
+      "lon": -16.755114191960747,
+      "geoinfo": {
+        "display_name": "TF-42, El Volcán, Garachico, Santa Cruz de Tenerife, Canary Islands, 38450, Spain",
+        "road": "TF-42",
+        "house_number": null,
+        "neighbourhood": "El Volcán",
+        "suburb": null,
+        "city_district": null,
+        "city": "Garachico",
+        "state": null,
+        "postcode": "38450",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "TF-42, El Volcán, Garachico, Santa Cruz de Tenerife, Canary Islands, 38450, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:50.678061+00:00",
+  "_kind": "geo_samples"
+}

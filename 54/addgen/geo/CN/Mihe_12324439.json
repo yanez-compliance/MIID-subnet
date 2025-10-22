@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Mihe",
+  "geonameid": 12324439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.644761948716436,
+      "lon": 118.54855514675077,
+      "geoinfo": {
+        "display_name": "凤梨路, Qingzhou City, Weifang, Shandong, China",
+        "road": "凤梨路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "凤梨路, Mihe, Shandong, China"
+    },
+    {
+      "lat": 36.60922457189511,
+      "lon": 118.5463303993193,
+      "geoinfo": {
+        "display_name": "Qingzhou City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "788, Qingzhou City, Weifang, 82299 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:34.269009+00:00",
+  "_kind": "geo_samples"
+}

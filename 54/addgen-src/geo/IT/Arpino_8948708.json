@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Arpino",
+  "geonameid": 8948708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.87298929048188,
+      "lon": 14.34273779915732,
+      "geoinfo": {
+        "display_name": "Via Pietro Nenni, Volla, Naples, Campania, 80147, Italy",
+        "road": "Via Pietro Nenni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Volla",
+        "state": "Campania",
+        "postcode": "80147",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pietro Nenni, Arpino, Campania, Italy"
+    },
+    {
+      "lat": 40.85642550711936,
+      "lon": 14.334218705877683,
+      "geoinfo": {
+        "display_name": "Via privata Parco Azzurro, Ponticelli, Municipalità 6, Naples, Campania, 80147, Italy",
+        "road": "Via privata Parco Azzurro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ponticelli",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80147",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via privata Parco Azzurro, Ponticelli, Municipalità 6, Naples, Campania, 80147, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:16.019480+00:00",
+  "_kind": "geo_samples"
+}

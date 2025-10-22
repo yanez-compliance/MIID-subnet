@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Lancing",
+  "geonameid": 2641319,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83945004592918,
+      "lon": -0.33144124003881664,
+      "geoinfo": {
+        "display_name": "Meadowview Road, Sompting, Adur, West Sussex, England, BN15 0LU, United Kingdom",
+        "road": "Meadowview Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adur",
+        "state": "England",
+        "postcode": "BN15 0LU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Meadowview Road, Lancing, England, United Kingdom"
+    },
+    {
+      "lat": 50.842354802262534,
+      "lon": -0.31543721537465247,
+      "geoinfo": {
+        "display_name": "Ring Road, North Lancing, Lancing, Adur, West Sussex, England, BN15 0QG, United Kingdom",
+        "road": "Ring Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adur",
+        "state": "England",
+        "postcode": "BN15 0QG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ring Road, North Lancing, Lancing, Adur, West Sussex, England, BN15 0QG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:38.769424+00:00",
+  "_kind": "geo_samples"
+}

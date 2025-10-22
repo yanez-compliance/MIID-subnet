@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Vincennes",
+  "geonameid": 2968054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.85143867386109,
+      "lon": 2.4365446689604027,
+      "geoinfo": {
+        "display_name": "119, Avenue de la République, Sorano, Vincennes, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94300, France",
+        "road": "Avenue de la République",
+        "house_number": "119",
+        "neighbourhood": null,
+        "suburb": "Sorano",
+        "city_district": null,
+        "city": "Vincennes",
+        "state": null,
+        "postcode": "94300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "119 Avenue de la République, Vincennes, Ile-de-France, France"
+    },
+    {
+      "lat": 48.86534155923293,
+      "lon": 2.493818924404004,
+      "geoinfo": {
+        "display_name": "5, Rue Paul Bert, Le Pré Gentil, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France",
+        "road": "Rue Paul Bert",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosny-sous-Bois",
+        "state": null,
+        "postcode": "93110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5, Rue Paul Bert, Le Pré Gentil, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:57.212391+00:00",
+  "_kind": "geo_samples"
+}

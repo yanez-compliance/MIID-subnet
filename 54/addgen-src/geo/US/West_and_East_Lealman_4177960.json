@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West and East Lealman",
+  "geonameid": 4177960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.839662184646034,
+      "lon": -82.66394639910635,
+      "geoinfo": {
+        "display_name": "27th Street North, Pinellas County, Florida, 33702, United States",
+        "road": "27th Street North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27th Street North, Pinellas County, Florida, 33702, United States"
+    },
+    {
+      "lat": 27.841835121364408,
+      "lon": -82.6564128579135,
+      "geoinfo": {
+        "display_name": "1726, 76th Avenue North, Saint Petersburg, Pinellas County, Florida, 33702, United States",
+        "road": "76th Avenue North",
+        "house_number": "1726",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Florida",
+        "postcode": "33702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1726, 76th Avenue North, Saint Petersburg, Pinellas County, Florida, 33702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:00.695989+00:00",
+  "_kind": "geo_samples"
+}

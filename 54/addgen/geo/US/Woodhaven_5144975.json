@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodhaven",
+  "geonameid": 5144975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.67623922149894,
+      "lon": -73.83476054824064,
+      "geoinfo": {
+        "display_name": "Aqueduct Racetrack, Rockaway Boulevard, Queens, Queens County, New York, 11419, United States",
+        "road": "Rockaway Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11419",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rockaway Boulevard, Woodhaven, New York, United States"
+    },
+    {
+      "lat": 40.70536457258201,
+      "lon": -73.80269218005179,
+      "geoinfo": {
+        "display_name": "Moda Apartments, 153-30, 89th Avenue, Queens, Queens County, New York, 11432, United States",
+        "road": "89th Avenue",
+        "house_number": "153-30",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11432",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Moda Apartments, 153-30, 89th Avenue, Queens, Queens County, New York, 11432, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:50.962659+00:00",
+  "_kind": "geo_samples"
+}

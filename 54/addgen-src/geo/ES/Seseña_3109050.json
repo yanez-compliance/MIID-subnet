@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Seseña",
+  "geonameid": 3109050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.08233571756839,
+      "lon": -3.7134273644882496,
+      "geoinfo": {
+        "display_name": "Vereda de Pedro del Valle, Borox, Toledo, Castile-La Mancha, 45222, Spain",
+        "road": "Vereda de Pedro del Valle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borox",
+        "state": "Castile-La Mancha",
+        "postcode": "45222",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Vereda de Pedro del Valle, Seseña, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 40.06301327687314,
+      "lon": -3.6925342991790924,
+      "geoinfo": {
+        "display_name": "Pastos Santos, Borox, Toledo, Castile-La Mancha, 45222, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borox",
+        "state": "Castile-La Mancha",
+        "postcode": "45222",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "779, Pastos Santos, Borox, Toledo, Castile-La Mancha, 45222, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:56.373264+00:00",
+  "_kind": "geo_samples"
+}

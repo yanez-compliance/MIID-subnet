@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuhan",
+  "geonameid": 1791247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.561236077907523,
+      "lon": 114.23341868782906,
+      "geoinfo": {
+        "display_name": "汉钢路, 五里墩街道, Hanyang District, Wuhan, Hubei, 430050, China",
+        "road": "汉钢路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "五里墩街道",
+        "city_district": null,
+        "city": "Hanyang District",
+        "state": "Hubei",
+        "postcode": "430050",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "汉钢路, Wuhan, Hubei, China"
+    },
+    {
+      "lat": 30.553231506070816,
+      "lon": 114.28811060433985,
+      "geoinfo": {
+        "display_name": "临江大道, 中华路街道, Wuchang District, Wuhan, Hubei, 430060, China",
+        "road": "临江大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "中华路街道",
+        "city_district": null,
+        "city": "Wuchang District",
+        "state": "Hubei",
+        "postcode": "430060",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "465, 临江大道, 中华路街道, Wuchang District, Wuhan, Hubei, 430060, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:54.718475+00:00",
+  "_kind": "geo_samples"
+}

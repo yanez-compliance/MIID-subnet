@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Charleston",
+  "geonameid": 4589387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.84236535598248,
+      "lon": -79.9564626042979,
+      "geoinfo": {
+        "display_name": "1901, Boxwood Avenue, Windsor Place, Union Heights, North Charleston, Charleston County, South Carolina, 29405, United States",
+        "road": "Boxwood Avenue",
+        "house_number": "1901",
+        "neighbourhood": "Windsor Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "North Charleston",
+        "state": "South Carolina",
+        "postcode": "29405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1901 Boxwood Avenue, North Charleston, South Carolina, United States"
+    },
+    {
+      "lat": 32.84528090823888,
+      "lon": -79.92722797319304,
+      "geoinfo": {
+        "display_name": "Daniel Island, Charleston, Berkeley County, South Carolina, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Daniel Island",
+        "city_district": null,
+        "city": "Charleston",
+        "state": "South Carolina",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "722, Daniel Island, Charleston, Berkeley County, 92435 South Carolina, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:31.752099+00:00",
+  "_kind": "geo_samples"
+}

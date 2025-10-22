@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Rayevskiy",
+  "geonameid": 502540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.08187120225301,
+      "lon": 54.96271379134141,
+      "geoinfo": {
+        "display_name": "Казанский сельсовет, Alsheyevsky District, Bashkortostan, Volga Federal District, 452111, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bashkortostan",
+        "postcode": "452111",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Rayevskiy, Bashkortostan, Russia"
+    },
+    {
+      "lat": 54.10083064014707,
+      "lon": 54.91936527677265,
+      "geoinfo": {
+        "display_name": "80К-011, Казанский сельсовет, Alsheyevsky District, Bashkortostan, Volga Federal District, 450110, Russia",
+        "road": "80К-011",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bashkortostan",
+        "postcode": "450110",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "80К-011, Rayevskiy, Bashkortostan, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:15.986428+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Flörsheim",
+  "geonameid": 2926120,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.04183901965123,
+      "lon": 8.434167105738863,
+      "geoinfo": {
+        "display_name": "4, Fichtenstraße, Weilbach, Flörsheim, Main-Taunus-Kreis, Hesse, 65439, Germany",
+        "road": "Fichtenstraße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weilbach",
+        "state": "Hesse",
+        "postcode": "65439",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Fichtenstraße, Flörsheim, Hesse, Germany"
+    },
+    {
+      "lat": 49.99825845316972,
+      "lon": 8.403643201066473,
+      "geoinfo": {
+        "display_name": "Am Wickerbach, Keramag/Falkenberg, Flörsheim, Main-Taunus-Kreis, Hesse, 65439, Germany",
+        "road": "Am Wickerbach",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Keramag/Falkenberg",
+        "state": "Hesse",
+        "postcode": "65439",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "511, Am Wickerbach, Keramag/Falkenberg, Flörsheim, Main-Taunus-Kreis, Hesse, 65439, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:15.310753+00:00",
+  "_kind": "geo_samples"
+}

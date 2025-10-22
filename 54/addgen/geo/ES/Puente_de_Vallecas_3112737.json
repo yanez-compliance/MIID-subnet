@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Puente de Vallecas",
+  "geonameid": 3112737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.40190877060037,
+      "lon": -3.606798605714435,
+      "geoinfo": {
+        "display_name": "Calle del Socorro, Casco Histórico de Vicálvaro, Vicálvaro, Madrid, Community of Madrid, 28032, Spain",
+        "road": "Calle del Socorro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vicálvaro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28032",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle del Socorro, Puente de Vallecas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.34897596005234,
+      "lon": -3.6621723412627087,
+      "geoinfo": {
+        "display_name": "Estación Depuradora de Aguas Ressiduales La Gavia, 1, M-45, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28051, Spain",
+        "road": "M-45",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28051",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Estación Depuradora de Aguas Ressiduales La Gavia, 1, M-45, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28051, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:29.683115+00:00",
+  "_kind": "geo_samples"
+}

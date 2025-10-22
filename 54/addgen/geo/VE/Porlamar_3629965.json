@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Porlamar",
+  "geonameid": 3629965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.956717320017543,
+      "lon": -63.8789878946409,
+      "geoinfo": {
+        "display_name": "Calle Gómez, Urbanización Ali Primera, Zona Industrial de El Piache, El Piache, Parroquia Mariño, Municipio Mariño, Nueva Esparta State, 6301, Venezuela",
+        "road": "Calle Gómez",
+        "house_number": null,
+        "neighbourhood": "Urbanización Ali Primera",
+        "suburb": "Zona Industrial de El Piache",
+        "city_district": null,
+        "city": "El Piache",
+        "state": "Nueva Esparta State",
+        "postcode": "6301",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Calle Gómez, Porlamar, Nueva Esparta State, Venezuela"
+    },
+    {
+      "lat": 10.967963655695177,
+      "lon": -63.91022267187311,
+      "geoinfo": {
+        "display_name": "Urbanización Pedro Luis Briceño, San Antonio, Parroquia Francisco Fajardo, Municipio García, Nueva Esparta State, 6301, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Urbanización Pedro Luis Briceño",
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Nueva Esparta State",
+        "postcode": "6301",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "312, Urbanización Pedro Luis Briceño, San Antonio, Parroquia Francisco Fajardo, Municipio García, Nueva Esparta State, 6301, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:49:56.282172+00:00",
+  "_kind": "geo_samples"
+}

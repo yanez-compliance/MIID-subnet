@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Melrose",
+  "geonameid": 5126550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82063060800156,
+      "lon": -73.91924994024687,
+      "geoinfo": {
+        "display_name": "320, East 156th Street, Melrose, The Bronx, Bronx County, New York, 10451, United States",
+        "road": "East 156th Street",
+        "house_number": "320",
+        "neighbourhood": "Melrose",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10451",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "320 East 156th Street, Melrose, New York, United States"
+    },
+    {
+      "lat": 40.86091741891518,
+      "lon": -73.9002930463684,
+      "geoinfo": {
+        "display_name": "2415, Morris Avenue, Fordham, The Bronx, Bronx County, New York, 10468, United States",
+        "road": "Morris Avenue",
+        "house_number": "2415",
+        "neighbourhood": "Fordham",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10468",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2415, Morris Avenue, Fordham, The Bronx, Bronx County, New York, 10468, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:50.537695+00:00",
+  "_kind": "geo_samples"
+}

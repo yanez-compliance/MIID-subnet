@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Barmbek-Süd",
+  "geonameid": 7932343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.57675223605551,
+      "lon": 10.04896603503548,
+      "geoinfo": {
+        "display_name": "66, Friedrichsberger Straße, Barmbek-Süd, Hamburg-Nord, Hamburg, 22081, Germany",
+        "road": "Friedrichsberger Straße",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": "Barmbek-Süd",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22081",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "66 Friedrichsberger Straße, Barmbek-Süd, Germany"
+    },
+    {
+      "lat": 53.58278430135676,
+      "lon": 10.070343424862687,
+      "geoinfo": {
+        "display_name": "88, Straßburger Straße, Dulsberg, Hamburg-Nord, Hamburg, 22049, Germany",
+        "road": "Straßburger Straße",
+        "house_number": "88",
+        "neighbourhood": null,
+        "suburb": "Dulsberg",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22049",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "88, Straßburger Straße, Dulsberg, Hamburg-Nord, Hamburg, 22049, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:38.457006+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Örebro",
+  "geonameid": 2686657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.25309813073806,
+      "lon": 15.22180857351849,
+      "geoinfo": {
+        "display_name": "7, Kaprisvägen, Sörbyängen, Örebro, Örebro kommun, Örebro County, 702 18, Sweden",
+        "road": "Kaprisvägen",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Sörbyängen",
+        "city_district": null,
+        "city": "Örebro",
+        "state": null,
+        "postcode": "702 18",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "7 Kaprisvägen, Örebro, Sweden"
+    },
+    {
+      "lat": 59.247213527786364,
+      "lon": 15.16411723771124,
+      "geoinfo": {
+        "display_name": "Mosåsvägen, Nastaberg, Brunnsgärdet, Örebro, Örebro kommun, Örebro County, 702 28, Sweden",
+        "road": "Mosåsvägen",
+        "house_number": null,
+        "neighbourhood": "Nastaberg",
+        "suburb": "Brunnsgärdet",
+        "city_district": null,
+        "city": "Örebro",
+        "state": null,
+        "postcode": "702 28",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Mosåsvägen, Nastaberg, Brunnsgärdet, Örebro, Örebro kommun, Örebro County, 702 28, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T09:48:37.556003+00:00",
+  "_kind": "geo_samples"
+}

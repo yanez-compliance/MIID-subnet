@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Francisco Acuautla",
+  "geonameid": 3519290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.350683523907716,
+      "lon": -98.88054580408865,
+      "geoinfo": {
+        "display_name": "Ixtapaluca, State of Mexico, 56530, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ixtapaluca",
+        "state": "State of Mexico",
+        "postcode": "56530",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Francisco Acuautla, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.36680374227753,
+      "lon": -98.84734585476244,
+      "geoinfo": {
+        "display_name": "San Francisco Acuautla, Ixtapaluca, State of Mexico, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco Acuautla",
+        "state": "State of Mexico",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "053, San Francisco Acuautla, Ixtapaluca, 60719 State of Mexico, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:19.323826+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Marienfelde",
+  "geonameid": 2873589,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.39485646097718,
+      "lon": 13.345640210509337,
+      "geoinfo": {
+        "display_name": "B 101, Heinersdorf, Großbeeren, Teltow-Fläming, Brandenburg, 14979, Germany",
+        "road": "B 101",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heinersdorf",
+        "state": "Brandenburg",
+        "postcode": "14979",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 101, Marienfelde, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.41428719703032,
+      "lon": 13.36792076833811,
+      "geoinfo": {
+        "display_name": "Sportanlage an der Dorfkirche, An der Dorfkirche, Alt-Marienfelde, Marienfelde, Tempelhof-Schöneberg, Berlin, Teltow, 12277, Germany",
+        "road": "An der Dorfkirche",
+        "house_number": null,
+        "neighbourhood": "Alt-Marienfelde",
+        "suburb": "Marienfelde",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12277",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "817, An der Dorfkirche, 12277 Marienfelde, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:48.690637+00:00",
+  "_kind": "geo_samples"
+}

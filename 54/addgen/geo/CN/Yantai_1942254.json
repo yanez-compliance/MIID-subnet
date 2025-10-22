@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yantai",
+  "geonameid": 1942254,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.15457760631159,
+      "lon": 107.28565083410722,
+      "geoinfo": {
+        "display_name": "Yantai, Dianjiang County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yantai",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yantai, Chongqing, China"
+    },
+    {
+      "lat": 30.15870857687914,
+      "lon": 107.33771375579602,
+      "geoinfo": {
+        "display_name": "Wangjia, Dianjiang County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wangjia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "541, Wangjia, Dianjiang County, 42381 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:01.349460+00:00",
+  "_kind": "geo_samples"
+}

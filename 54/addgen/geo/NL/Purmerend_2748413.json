@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Purmerend",
+  "geonameid": 2748413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.53030766948231,
+      "lon": 4.916551776286558,
+      "geoinfo": {
+        "display_name": "35, Volgerweg, Middenbeemster, Purmerend, North Holland, Netherlands, 1462 HR, Netherlands",
+        "road": "Volgerweg",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middenbeemster",
+        "state": "North Holland",
+        "postcode": "1462 HR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "35 Volgerweg, Purmerend, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.486934183455936,
+      "lon": 5.007832813463939,
+      "geoinfo": {
+        "display_name": "Oosterweg M, Purmer, Waterland, North Holland, Netherlands, 1482 AJ, Netherlands",
+        "road": "Oosterweg M",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Purmer",
+        "state": "North Holland",
+        "postcode": "1482 AJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "674, Oosterweg M, Purmer, Waterland, North Holland, Netherlands, 1482 AJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:38.933282+00:00",
+  "_kind": "geo_samples"
+}

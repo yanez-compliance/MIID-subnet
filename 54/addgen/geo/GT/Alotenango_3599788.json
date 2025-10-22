@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Alotenango",
+  "geonameid": 3599788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.51645463705216,
+      "lon": -90.83483341018596,
+      "geoinfo": {
+        "display_name": "San Miguel Dueñas, Sacatepéquez, 03015, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Dueñas",
+        "state": "Sacatepéquez",
+        "postcode": "03015",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Alotenango, Sacatepéquez, Guatemala"
+    },
+    {
+      "lat": 14.488037220844683,
+      "lon": -90.76656190912549,
+      "geoinfo": {
+        "display_name": "Ciudad Vieja, Sacatepéquez, 03012, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Vieja",
+        "state": "Sacatepéquez",
+        "postcode": "03012",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "668, Ciudad Vieja, Sacatepéquez, 03012, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:40.256027+00:00",
+  "_kind": "geo_samples"
+}

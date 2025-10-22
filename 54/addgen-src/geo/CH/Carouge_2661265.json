@@ -1,0 +1,65 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Carouge",
+  "geonameid": 2661265,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.17639991863177,
+      "lon": 6.130691684373036,
+      "geoinfo": {
+        "display_name": "Ducret M. SA, 105, Route des Jeunes, Grand-Lancy, Lancy, Geneva, 1227, Switzerland",
+        "road": "Route des Jeunes",
+        "house_number": "105",
+        "neighbourhood": null,
+        "suburb": "Grand-Lancy",
+        "city_district": null,
+        "city": "Lancy",
+        "state": "Geneva",
+        "postcode": "1227",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "105 Route des Jeunes, Carouge, Geneva, Switzerland"
+    },
+    {
+      "lat": 46.176829383232295,
+      "lon": 6.118699798404131,
+      "geoinfo": {
+        "display_name": "20, Chemin des Palettes, Grand-Lancy, Lancy, Geneva, 1212, Switzerland",
+        "road": "Chemin des Palettes",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Grand-Lancy",
+        "city_district": null,
+        "city": "Lancy",
+        "state": "Geneva",
+        "postcode": "1212",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "20, Chemin des Palettes, Grand-Lancy, Lancy, Geneva, 1212, Switzerland"
+    },
+    {
+      "lat": 46.21352065218614,
+      "lon": 6.106448208623257,
+      "geoinfo": {
+        "display_name": "Chemin de l'Etang, Le Bouchet, Châtelaine, Vernier, Geneva, 1220, Switzerland",
+        "road": "Chemin de l'Etang",
+        "house_number": null,
+        "neighbourhood": "Le Bouchet",
+        "suburb": "Châtelaine",
+        "city_district": null,
+        "city": "Vernier",
+        "state": "Geneva",
+        "postcode": "1220",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "799, Chemin de l'Etang, Le Bouchet, Châtelaine, Vernier, Geneva, 1220, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:09:28.527390+00:00",
+  "_kind": "geo_samples"
+}

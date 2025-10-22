@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomington",
+  "geonameid": 5018739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.86146522314902,
+      "lon": -93.34125509235041,
+      "geoinfo": {
+        "display_name": "Bloomington, Hennepin County, Minnesota, 55435, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "Minnesota",
+        "postcode": "55435",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bloomington, Minnesota, United States"
+    },
+    {
+      "lat": 44.86640101624656,
+      "lon": -93.32356724354915,
+      "geoinfo": {
+        "display_name": "7520, Edinborough Way, Edinborough, Edina, Hennepin County, Minnesota, 55435, United States",
+        "road": "Edinborough Way",
+        "house_number": "7520",
+        "neighbourhood": "Edinborough",
+        "suburb": null,
+        "city_district": null,
+        "city": "Edina",
+        "state": "Minnesota",
+        "postcode": "55435",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7520, Edinborough Way, Edinborough, Edina, Hennepin County, Minnesota, 55435, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:32.964039+00:00",
+  "_kind": "geo_samples"
+}

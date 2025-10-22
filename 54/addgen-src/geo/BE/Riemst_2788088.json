@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Riemst",
+  "geonameid": 2788088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.82638920082351,
+      "lon": 5.630716129948318,
+      "geoinfo": {
+        "display_name": "129, Maastrichtersteenweg, Vroenhoven, Riemst, Tongeren, Limburg, 3770, Belgium",
+        "road": "Maastrichtersteenweg",
+        "house_number": "129",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riemst",
+        "state": "Limburg",
+        "postcode": "3770",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "129 Maastrichtersteenweg, Riemst, Limburg, Belgium"
+    },
+    {
+      "lat": 50.83904237102503,
+      "lon": 5.586776153126366,
+      "geoinfo": {
+        "display_name": "Vlijtingen, Riemst, Bilzen-Hoeselt, Tongeren, Limburg, 3770, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riemst",
+        "state": "Limburg",
+        "postcode": "3770",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "111, Riemst, 3770 Limburg, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:34.090180+00:00",
+  "_kind": "geo_samples"
+}

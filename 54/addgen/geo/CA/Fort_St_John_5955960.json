@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Fort St. John",
+  "geonameid": 5955960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.26962592631878,
+      "lon": -120.89875140027883,
+      "geoinfo": {
+        "display_name": "Road 269, Area C (Old Fort/Charlie Lake), Peace River Regional District, British Columbia, V1J 4H6, Canada",
+        "road": "Road 269",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Area C (Old Fort/Charlie Lake)",
+        "state": "British Columbia",
+        "postcode": "V1J 4H6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Road 269, Fort St. John, British Columbia, Canada"
+    },
+    {
+      "lat": 56.23653182723532,
+      "lon": -120.84407655187749,
+      "geoinfo": {
+        "display_name": "Totem Mall, 93 Avenue, Fort St. John, Peace River Regional District, British Columbia, V1J 6V5, Canada",
+        "road": "93 Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort St. John",
+        "state": "British Columbia",
+        "postcode": "V1J 6V5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Totem Mall, 93 Avenue, Fort St. John, Peace River Regional District, British Columbia, V1J 6V5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:29.316858+00:00",
+  "_kind": "geo_samples"
+}

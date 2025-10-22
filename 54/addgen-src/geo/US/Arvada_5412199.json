@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arvada",
+  "geonameid": 5412199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.7772621264186,
+      "lon": -105.10587509231628,
+      "geoinfo": {
+        "display_name": "4341, Iris Street, Wheat Ridge, Jefferson County, Colorado, 80033, United States",
+        "road": "Iris Street",
+        "house_number": "4341",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wheat Ridge",
+        "state": "Colorado",
+        "postcode": "80033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4341 Iris Street, Arvada, Colorado, United States"
+    },
+    {
+      "lat": 39.827057787711034,
+      "lon": -105.07983582239876,
+      "geoinfo": {
+        "display_name": "West 72nd Avenue, Arvada, Jefferson County, Colorado, 80003, United States",
+        "road": "West 72nd Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arvada",
+        "state": "Colorado",
+        "postcode": "80003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 72nd Avenue, Arvada, Jefferson County, Colorado, 80003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:46.468622+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chennai",
+  "geonameid": 1264527,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 13.057269403989554,
+      "lon": 80.28885906540744,
+      "geoinfo": {
+        "display_name": "Mattankuppam, Ward 116, Zone 9 Teynampet, Chennai, Tamil Nadu, 600005, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mattankuppam",
+        "suburb": "Zone 9 Teynampet",
+        "city_district": null,
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postcode": "600005",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Mattankuppam, Chennai, Tamil Nadu, India"
+    },
+    {
+      "lat": 13.117214745541446,
+      "lon": 80.30481742942514,
+      "geoinfo": {
+        "display_name": "Chennai Port Entry Road, Chennai Port, Ward 50, Zone 5 Royapuram, Chennai, Tamil Nadu, 600021, India",
+        "road": "Chennai Port Entry Road",
+        "house_number": null,
+        "neighbourhood": "Ward 50",
+        "suburb": "Zone 5 Royapuram",
+        "city_district": null,
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postcode": "600021",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Chennai Port Entry Road, Chennai Port, Ward 50, Zone 5 Royapuram, Chennai, Tamil Nadu, 600021, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:14.355775+00:00",
+  "_kind": "geo_samples"
+}

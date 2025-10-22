@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Drexel Heights",
+  "geonameid": 5293183,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.13764788579366,
+      "lon": -111.0238082812039,
+      "geoinfo": {
+        "display_name": "2644, West San Paulus Road, Mission Terrace, Drexel Heights, Pima County, Arizona, 85746, United States",
+        "road": "West San Paulus Road",
+        "house_number": "2644",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2644 West San Paulus Road, Drexel Heights, Arizona, United States"
+    },
+    {
+      "lat": 32.180669832954855,
+      "lon": -111.03593057462075,
+      "geoinfo": {
+        "display_name": "Robles Pass Trail, Pima County, Arizona, 85746, United States",
+        "road": "Robles Pass Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "611, Robles Pass Trail, Pima County, Arizona, 85746, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:19.846783+00:00",
+  "_kind": "geo_samples"
+}

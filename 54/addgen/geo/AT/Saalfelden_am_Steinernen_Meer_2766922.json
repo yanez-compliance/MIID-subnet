@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Saalfelden am Steinernen Meer",
+  "geonameid": 2766922,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.43762652728441,
+      "lon": 12.786455676919735,
+      "geoinfo": {
+        "display_name": "115, Hirnreit, Leogang, Bezirk Zell am See, Salzburg, 5771, Austria",
+        "road": null,
+        "house_number": "115",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hirnreit",
+        "state": "Salzburg",
+        "postcode": "5771",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "115, Hirnreit, Leogang, Bezirk Zell am See, Salzburg, 5771, Austria"
+    },
+    {
+      "lat": 47.43821274931552,
+      "lon": 12.889965488979978,
+      "geoinfo": {
+        "display_name": "Überlackerweg, Bachwinkl, Saalfelden am Steinernen Meer, Bezirk Zell am See, Salzburg, 5760, Austria",
+        "road": "Überlackerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saalfelden am Steinernen Meer",
+        "state": "Salzburg",
+        "postcode": "5760",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "008, Überlackerweg, Bachwinkl, Saalfelden am Steinernen Meer, Bezirk Zell am See, Salzburg, 5760, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:20.042157+00:00",
+  "_kind": "geo_samples"
+}

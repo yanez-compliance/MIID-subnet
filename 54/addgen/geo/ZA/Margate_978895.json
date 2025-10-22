@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Margate",
+  "geonameid": 978895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -30.89714118090964,
+      "lon": 30.39908983422316,
+      "geoinfo": {
+        "display_name": "Margate, Hibiscus Coast Local Municipality, Ugu District Municipality, KwaZulu-Natal, 4276, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hibiscus Coast Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "4276",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Margate, KwaZulu-Natal, South Africa"
+    },
+    {
+      "lat": -30.875602616064747,
+      "lon": 30.32687660319114,
+      "geoinfo": {
+        "display_name": "P520, Hibiscus Coast Ward 2, Ramsgate, Hibiscus Coast Local Municipality, Ugu District Municipality, KwaZulu-Natal, 4285, South Africa",
+        "road": "P520",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hibiscus Coast Ward 2",
+        "city_district": null,
+        "city": "Hibiscus Coast Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "4285",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "P520, Margate, 4285 KwaZulu-Natal, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:30.051519+00:00",
+  "_kind": "geo_samples"
+}

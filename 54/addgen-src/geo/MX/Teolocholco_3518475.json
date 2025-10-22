@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Teolocholco",
+  "geonameid": 3518475,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.223273021477734,
+      "lon": -98.15095852898283,
+      "geoinfo": {
+        "display_name": "Teolocholco, Tlaxcala, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tlaxcala",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Teolocholco, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.218573467491105,
+      "lon": -98.23026892212378,
+      "geoinfo": {
+        "display_name": "Avenida Camino Real, Zacatelco, Tlaxcala, 90740, Mexico",
+        "road": "Avenida Camino Real",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zacatelco",
+        "state": "Tlaxcala",
+        "postcode": "90740",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "744, Avenida Camino Real, Zacatelco, Tlaxcala, 90740, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:59.648995+00:00",
+  "_kind": "geo_samples"
+}

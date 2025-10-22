@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Medford",
+  "geonameid": 5740099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.29844511295528,
+      "lon": -122.83585003666289,
+      "geoinfo": {
+        "display_name": "3, I 5, Medford, Jackson County, Oregon, 97535, United States",
+        "road": "I 5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "Oregon",
+        "postcode": "97535",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 5, Medford, Oregon, United States"
+    },
+    {
+      "lat": 42.33613018871445,
+      "lon": -122.8860082835434,
+      "geoinfo": {
+        "display_name": "Old McAndrews Road Off-ramp, Medford, Jackson County, Oregon, 97501, United States",
+        "road": "Old McAndrews Road Off-ramp",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "Oregon",
+        "postcode": "97501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "706, Old McAndrews Road Off-ramp, Medford, Jackson County, Oregon, 97501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:55.755514+00:00",
+  "_kind": "geo_samples"
+}

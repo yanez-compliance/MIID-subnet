@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Niagara-on-the-Lake",
+  "geonameid": 6087905,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.28987087996538,
+      "lon": -79.09946399158453,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Niagara-on-the-Lake, Ontario, Canada"
+    },
+    {
+      "lat": 43.2488365501921,
+      "lon": -79.06414154045643,
+      "geoinfo": {
+        "display_name": "317, Queens Parade, Niagara-on-the-Lake, Niagara Region, Golden Horseshoe, Ontario, L0S 1J0, Canada",
+        "road": "Queens Parade",
+        "house_number": "317",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Niagara-on-the-Lake",
+        "state": "Ontario",
+        "postcode": "L0S 1J0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "317, Queens Parade, Niagara-on-the-Lake, Niagara Region, Golden Horseshoe, Ontario, L0S 1J0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:22.543481+00:00",
+  "_kind": "geo_samples"
+}

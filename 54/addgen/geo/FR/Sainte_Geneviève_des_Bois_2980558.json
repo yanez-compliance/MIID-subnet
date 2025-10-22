@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sainte-Geneviève-des-Bois",
+  "geonameid": 2980558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.64505453426078,
+      "lon": 2.29949079857553,
+      "geoinfo": {
+        "display_name": "Route de Longpont, Sainte-Geneviève-des-Bois, Palaiseau, Essonne, Metropolitan France, 91700, France",
+        "road": "Route de Longpont",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Geneviève-des-Bois",
+        "state": null,
+        "postcode": "91700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Longpont, Sainte-Geneviève-des-Bois, France"
+    },
+    {
+      "lat": 48.64114745306083,
+      "lon": 2.2860592794136703,
+      "geoinfo": {
+        "display_name": "Rue du Champ de Bataille, Le Mesnil, Longpont-sur-Orge, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91310, France",
+        "road": "Rue du Champ de Bataille",
+        "house_number": null,
+        "neighbourhood": "Le Mesnil",
+        "suburb": null,
+        "city_district": null,
+        "city": "Longpont-sur-Orge",
+        "state": "Ile-de-France",
+        "postcode": "91310",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "751, Rue du Champ de Bataille, Le Mesnil, Longpont-sur-Orge, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91310, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:05.380146+00:00",
+  "_kind": "geo_samples"
+}

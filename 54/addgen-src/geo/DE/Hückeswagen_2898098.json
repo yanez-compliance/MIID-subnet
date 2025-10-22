@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hückeswagen",
+  "geonameid": 2898098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.14311475172434,
+      "lon": 7.27509328968208,
+      "geoinfo": {
+        "display_name": "Wippertalbahn, Gemarkung Bergisch Born, Lennep, Bornefeld, Remscheid, North Rhine-Westphalia, 42897, Germany",
+        "road": "Wippertalbahn",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lennep",
+        "city_district": null,
+        "city": "Remscheid",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42897",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wippertalbahn, Hückeswagen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.12911817240616,
+      "lon": 7.358948339747447,
+      "geoinfo": {
+        "display_name": "Auendynamik, Wippertalbahn, Neuhückeswagen, Mühlenberg, Hückeswagen, Oberbergischer Kreis, North Rhine-Westphalia, 42499, Germany",
+        "road": "Wippertalbahn",
+        "house_number": null,
+        "neighbourhood": "Neuhückeswagen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hückeswagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42499",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "423, Wippertalbahn, Hückeswagen, 42499 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:22.875464+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Solingen",
+  "geonameid": 2831580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.17653478581922,
+      "lon": 7.0202225227654,
+      "geoinfo": {
+        "display_name": "19, Ziegelstraße, Bech, Wald, Solingen, North Rhine-Westphalia, 42719, Germany",
+        "road": "Ziegelstraße",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Wald",
+        "city_district": null,
+        "city": "Solingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42719",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19 Ziegelstraße, Solingen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.17241204044055,
+      "lon": 7.126004413091717,
+      "geoinfo": {
+        "display_name": "Bergbahntrasse, Grunenburg, Solingen-Mitte, Solingen, North Rhine-Westphalia, 42651, Germany",
+        "road": "Bergbahntrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Solingen-Mitte",
+        "city_district": null,
+        "city": "Solingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42651",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "856, Bergbahntrasse, Grunenburg, Solingen-Mitte, Solingen, North Rhine-Westphalia, 42651, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:52.295453+00:00",
+  "_kind": "geo_samples"
+}

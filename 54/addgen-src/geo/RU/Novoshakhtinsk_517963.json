@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Novoshakhtinsk",
+  "geonameid": 517963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.770845986356534,
+      "lon": 39.9207773199143,
+      "geoinfo": {
+        "display_name": "улица Ушакова, Антиповка, Novoshakhtinsk, Rostov Oblast, 346900, Russia",
+        "road": "улица Ушакова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Антиповка",
+        "city_district": null,
+        "city": "Novoshakhtinsk",
+        "state": "Rostov Oblast",
+        "postcode": "346900",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Ушакова, Novoshakhtinsk, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 47.75815476889425,
+      "lon": 39.89547830944,
+      "geoinfo": {
+        "display_name": "28, Yaroslavskaya Street, Belyshev, Novoshakhtinsk, Rostov Oblast, 346905, Russia",
+        "road": "Yaroslavskaya Street",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": "Belyshev",
+        "city_district": null,
+        "city": "Novoshakhtinsk",
+        "state": "Rostov Oblast",
+        "postcode": "346905",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "28, Yaroslavskaya Street, Belyshev, Novoshakhtinsk, Rostov Oblast, 346905, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:19.074541+00:00",
+  "_kind": "geo_samples"
+}

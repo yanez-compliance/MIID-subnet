@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Maaseik",
+  "geonameid": 2791964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.083260004093226,
+      "lon": 5.77574457005081,
+      "geoinfo": {
+        "display_name": "40, Waaierhofstraat, Siemkensheuvel, Maaseik, Limburg, 3680, Belgium",
+        "road": "Waaierhofstraat",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Maaseik",
+        "city": "Maaseik",
+        "state": "Limburg",
+        "postcode": "3680",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "40 Waaierhofstraat, Maaseik, Limburg, Belgium"
+    },
+    {
+      "lat": 51.11952852370167,
+      "lon": 5.8373579239589874,
+      "geoinfo": {
+        "display_name": "Molendijk, Stevensweert, Maasgouw, Limburg, Netherlands, 6107 AA, Netherlands",
+        "road": "Molendijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stevensweert",
+        "state": "Limburg",
+        "postcode": "6107 AA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "318, Molendijk, Maaseik, 6107 AA Limburg, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:10.482486+00:00",
+  "_kind": "geo_samples"
+}

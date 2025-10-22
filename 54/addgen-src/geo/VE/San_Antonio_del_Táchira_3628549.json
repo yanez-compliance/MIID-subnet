@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "San Antonio del Táchira",
+  "geonameid": 3628549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.84535959517087,
+      "lon": -72.44940194646708,
+      "geoinfo": {
+        "display_name": "Villa del Rosario, Oriental, RAP Gran Santander, 541030, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa del Rosario",
+        "state": null,
+        "postcode": "541030",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "San Antonio del Táchira, Venezuela"
+    },
+    {
+      "lat": 7.777661849587575,
+      "lon": -72.4536839304211,
+      "geoinfo": {
+        "display_name": "Llano de Jorge, San Antonio del Táchira, Parroquia San Antonio, Municipio Bolívar, Tachira State, 5007, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llano de Jorge",
+        "city_district": null,
+        "city": "San Antonio del Táchira",
+        "state": "Tachira State",
+        "postcode": "5007",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "892, Llano de Jorge, San Antonio del Táchira, Parroquia San Antonio, Municipio Bolívar, Tachira State, 5007, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:40.874408+00:00",
+  "_kind": "geo_samples"
+}

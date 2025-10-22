@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Ödemiş",
+  "geonameid": 303700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.25891755436362,
+      "lon": 27.965219827633135,
+      "geoinfo": {
+        "display_name": "İnönü, İnönü Mahallesi, Ödemiş, Aegean Region, 35750, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "İnönü",
+        "city_district": "İnönü Mahallesi",
+        "city": "Ödemiş",
+        "state": null,
+        "postcode": "35750",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "İnönü, Ödemiş, Turkey"
+    },
+    {
+      "lat": 38.20395545285488,
+      "lon": 27.963589566642213,
+      "geoinfo": {
+        "display_name": "Emmioğlu Mahallesi, Ödemiş, Aegean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Emmioğlu Mahallesi",
+        "city_district": null,
+        "city": "Ödemiş",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "654, Emmioğlu Mahallesi, Ödemiş, 04370 Aegean Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:55.748540+00:00",
+  "_kind": "geo_samples"
+}

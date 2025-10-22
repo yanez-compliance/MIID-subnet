@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Accrington",
+  "geonameid": 2657770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.76451029455297,
+      "lon": -2.3954792049475104,
+      "geoinfo": {
+        "display_name": "M65, Dill Hall, Clayton-le-Moors, Hyndburn, Lancashire, England, BB5 5JP, United Kingdom",
+        "road": "M65",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dill Hall",
+        "city_district": null,
+        "city": "Hyndburn",
+        "state": "England",
+        "postcode": "BB5 5JP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M65, Accrington, England, United Kingdom"
+    },
+    {
+      "lat": 53.76620286132351,
+      "lon": -2.322281708246724,
+      "geoinfo": {
+        "display_name": "Burnley Road, Hapton, Burnley, Lancashire, England, BB11 5QT, United Kingdom",
+        "road": "Burnley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hapton",
+        "city_district": null,
+        "city": "Burnley",
+        "state": "England",
+        "postcode": "BB11 5QT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Burnley Road, Hapton, Burnley, Lancashire, England, BB11 5QT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:12.365925+00:00",
+  "_kind": "geo_samples"
+}

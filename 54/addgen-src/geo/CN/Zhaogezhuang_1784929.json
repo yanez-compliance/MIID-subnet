@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhaogezhuang",
+  "geonameid": 1784929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.7866962935975,
+      "lon": 118.46145518361229,
+      "geoinfo": {
+        "display_name": "Guye District, Tangshan, Hebei, 063100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guye District",
+        "state": "Hebei",
+        "postcode": "063100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhaogezhuang, Hebei, China"
+    },
+    {
+      "lat": 39.76737469200005,
+      "lon": 118.35417470270963,
+      "geoinfo": {
+        "display_name": "Y200, Shuangqiao, Kaiping District, Tangshan, Hebei, 063100, China",
+        "road": "Y200",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tangshan",
+        "state": "Hebei",
+        "postcode": "063100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Y200, Shuangqiao, Kaiping District, Tangshan, Hebei, 063100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:19.779740+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Long Beach",
+  "geonameid": 5125086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.61784812680839,
+      "lon": -73.68375261485427,
+      "geoinfo": {
+        "display_name": "Bay Park, Town of Hempstead, Nassau County, New York, 11518, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bay Park",
+        "state": "New York",
+        "postcode": "11518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Long Beach, New York, United States"
+    },
+    {
+      "lat": 40.60459090490231,
+      "lon": -73.63395247275092,
+      "geoinfo": {
+        "display_name": "Barnum Island, Town of Hempstead, Nassau County, New York, 11558, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barnum Island",
+        "state": "New York",
+        "postcode": "11558",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "852, Barnum Island, Town of Hempstead, Nassau County, New York, 11558, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:02.388812+00:00",
+  "_kind": "geo_samples"
+}

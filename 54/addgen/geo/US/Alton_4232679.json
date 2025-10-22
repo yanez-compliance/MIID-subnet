@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alton",
+  "geonameid": 4232679,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.91707512313747,
+      "lon": -90.13919884238524,
+      "geoinfo": {
+        "display_name": "3254, Agnes Boulevard, Sloan, Alton, Madison County, Illinois, 62002, United States",
+        "road": "Agnes Boulevard",
+        "house_number": "3254",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alton",
+        "state": "Illinois",
+        "postcode": "62002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3254 Agnes Boulevard, Alton, Illinois, United States"
+    },
+    {
+      "lat": 38.902286229221005,
+      "lon": -90.21689363846971,
+      "geoinfo": {
+        "display_name": "Great River Road, Fairmont, Godfrey, Madison County, Illinois, 63386, United States",
+        "road": "Great River Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Godfrey",
+        "state": "Illinois",
+        "postcode": "63386",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "756, Great River Road, Fairmont, Godfrey, Madison County, Illinois, 63386, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:02.233217+00:00",
+  "_kind": "geo_samples"
+}

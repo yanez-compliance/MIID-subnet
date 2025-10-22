@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Reston",
+  "geonameid": 4781530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.931382383481086,
+      "lon": -77.33754032108162,
+      "geoinfo": {
+        "display_name": "South Lakes Drive, Reston, Fairfax County, Virginia, 20195, United States",
+        "road": "South Lakes Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reston",
+        "state": "Virginia",
+        "postcode": "20195",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Lakes Drive, Reston, Virginia, United States"
+    },
+    {
+      "lat": 38.975499574483635,
+      "lon": -77.30443760459052,
+      "geoinfo": {
+        "display_name": "10405, Van Patten Lane, Old Mill Estates, Great Falls Crossing, Fairfax County, Virginia, 22066, United States",
+        "road": "Van Patten Lane",
+        "house_number": "10405",
+        "neighbourhood": "Old Mill Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Great Falls Crossing",
+        "state": "Virginia",
+        "postcode": "22066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10405, Van Patten Lane, Old Mill Estates, Great Falls Crossing, Fairfax County, Virginia, 22066, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:36.391068+00:00",
+  "_kind": "geo_samples"
+}

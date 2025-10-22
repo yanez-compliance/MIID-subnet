@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hoboken",
+  "geonameid": 5099133,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70624401424919,
+      "lon": -74.03022445698714,
+      "geoinfo": {
+        "display_name": "Hudson River Waterfront Walkway, Colgate Center, Jersey City, Hudson County, New Jersey, 07311, United States",
+        "road": "Hudson River Waterfront Walkway",
+        "house_number": null,
+        "neighbourhood": "Colgate Center",
+        "suburb": null,
+        "city_district": null,
+        "city": "Jersey City",
+        "state": "New Jersey",
+        "postcode": "07311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hudson River Waterfront Walkway, Hoboken, New Jersey, United States"
+    },
+    {
+      "lat": 40.72562076678452,
+      "lon": -74.02749212837148,
+      "geoinfo": {
+        "display_name": "Holland Tunnel, Newport, Jersey City, Hudson County, New Jersey, 07310, United States",
+        "road": "Holland Tunnel",
+        "house_number": null,
+        "neighbourhood": "Newport",
+        "suburb": null,
+        "city_district": null,
+        "city": "Jersey City",
+        "state": "New Jersey",
+        "postcode": "07310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "501, Holland Tunnel, Newport, Jersey City, Hudson County, New Jersey, 07310, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:19.037084+00:00",
+  "_kind": "geo_samples"
+}

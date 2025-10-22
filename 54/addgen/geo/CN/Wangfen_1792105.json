@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wangfen",
+  "geonameid": 1792105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.55282656578932,
+      "lon": 118.3637166180871,
+      "geoinfo": {
+        "display_name": "Qingzhou City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wangfen, Shandong, China"
+    },
+    {
+      "lat": 36.509125491414345,
+      "lon": 118.37474440342825,
+      "geoinfo": {
+        "display_name": "仰天山路, Qingzhou City, Weifang, Shandong, China",
+        "road": "仰天山路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "751, 仰天山路, Qingzhou City, Weifang, 84786 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:19.447494+00:00",
+  "_kind": "geo_samples"
+}

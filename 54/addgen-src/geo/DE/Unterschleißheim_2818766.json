@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Unterschleißheim",
+  "geonameid": 2818766,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.28278735803962,
+      "lon": 11.584710614336556,
+      "geoinfo": {
+        "display_name": "7, Sportplatzstraße, Hollern, Unterschleißheim, Landkreis München, Bavaria, 85716, Germany",
+        "road": "Sportplatzstraße",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Hollern",
+        "city_district": null,
+        "city": "Unterschleißheim",
+        "state": "Bavaria",
+        "postcode": "85716",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Sportplatzstraße, Unterschleißheim, Bavaria, Germany"
+    },
+    {
+      "lat": 48.304592289953355,
+      "lon": 11.52180279743095,
+      "geoinfo": {
+        "display_name": "St 2339, Ottershausen, Haimhausen, Landkreis Dachau, Bavaria, 85778, Germany",
+        "road": "St 2339",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ottershausen",
+        "state": "Bavaria",
+        "postcode": "85778",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "St 2339, Ottershausen, Haimhausen, Landkreis Dachau, Bavaria, 85778, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:42.907247+00:00",
+  "_kind": "geo_samples"
+}

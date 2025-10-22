@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellingham",
+  "geonameid": 5786899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.76606415145394,
+      "lon": -122.47252911615526,
+      "geoinfo": {
+        "display_name": "206, Brier Lane, Cornwall Park, Lettered Streets, Bellingham, Whatcom County, Washington, 98225, United States",
+        "road": "Brier Lane",
+        "house_number": "206",
+        "neighbourhood": "Cornwall Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellingham",
+        "state": "Washington",
+        "postcode": "98225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206 Brier Lane, Bellingham, Washington, United States"
+    },
+    {
+      "lat": 48.754302697867836,
+      "lon": -122.50904508040497,
+      "geoinfo": {
+        "display_name": "3G West, Squalicum Way, City Center, Bellingham, Whatcom County, Washington, 98225, United States",
+        "road": "Squalicum Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "City Center",
+        "city_district": null,
+        "city": "Bellingham",
+        "state": "Washington",
+        "postcode": "98225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3G West, Squalicum Way, City Center, Bellingham, Whatcom County, Washington, 98225, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:11.603365+00:00",
+  "_kind": "geo_samples"
+}

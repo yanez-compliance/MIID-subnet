@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Acuña",
+  "geonameid": 4013728,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.280215061112912,
+      "lon": -100.96097204128277,
+      "geoinfo": {
+        "display_name": "Ciudad Acuña, Acuña, Coahuila, 26200, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Acuña",
+        "state": "Coahuila",
+        "postcode": "26200",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Acuña, Coahuila, Mexico"
+    },
+    {
+      "lat": 29.321627540348224,
+      "lon": -100.96630803857141,
+      "geoinfo": {
+        "display_name": "Calle Sierra Central, Sin Nombre de Col 14, Ciudad Acuña, Acuña, Coahuila, 26230, Mexico",
+        "road": "Calle Sierra Central",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Acuña",
+        "state": "Coahuila",
+        "postcode": "26230",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Sierra Central, Sin Nombre de Col 14, Ciudad Acuña, Acuña, Coahuila, 26230, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:45.266332+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Maur-des-Fossés",
+  "geonameid": 2978179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.76830032918221,
+      "lon": 2.541370976838405,
+      "geoinfo": {
+        "display_name": "1, Chemin de la Fontaine, Noiseau, Créteil, Val-de-Marne, Metropolitan France, 94880, France",
+        "road": "Chemin de la Fontaine",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noiseau",
+        "state": null,
+        "postcode": "94880",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1 Chemin de la Fontaine, Saint-Maur-des-Fossés, Ile-de-France, France"
+    },
+    {
+      "lat": 48.76779672925122,
+      "lon": 2.529962153113551,
+      "geoinfo": {
+        "display_name": "Lys d'Or, Avenue Charles de Gaulle, Sucy-en-Brie, Créteil, Val-de-Marne, Metropolitan France, 94370, France",
+        "road": "Avenue Charles de Gaulle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sucy-en-Brie",
+        "state": null,
+        "postcode": "94370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "488, Avenue Charles de Gaulle, 94370 Saint-Maur-des-Fossés, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:16.626796+00:00",
+  "_kind": "geo_samples"
+}

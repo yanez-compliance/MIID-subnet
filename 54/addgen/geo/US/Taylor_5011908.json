@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Taylor",
+  "geonameid": 5011908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.247292157478924,
+      "lon": -83.26569000420106,
+      "geoinfo": {
+        "display_name": "8279, Syracuse Street, Hand, Taylor, Wayne County, Michigan, 48180, United States",
+        "road": "Syracuse Street",
+        "house_number": "8279",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taylor",
+        "state": "Michigan",
+        "postcode": "48180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8279 Syracuse Street, Taylor, Michigan, United States"
+    },
+    {
+      "lat": 42.22522188002453,
+      "lon": -83.31156503484856,
+      "geoinfo": {
+        "display_name": "27786, Goddard Road, Romulus, Wayne County, Michigan, 48174, United States",
+        "road": "Goddard Road",
+        "house_number": "27786",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Romulus",
+        "state": "Michigan",
+        "postcode": "48174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27786, Goddard Road, Romulus, Wayne County, Michigan, 48174, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:08.208111+00:00",
+  "_kind": "geo_samples"
+}

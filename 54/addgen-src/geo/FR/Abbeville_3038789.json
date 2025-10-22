@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Abbeville",
+  "geonameid": 3038789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.13325727309708,
+      "lon": 1.8874057527408996,
+      "geoinfo": {
+        "display_name": "Neufmoulin, Abbeville, Somme, Hauts-de-France, Metropolitan France, 80132, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neufmoulin",
+        "state": "Hauts-de-France",
+        "postcode": "80132",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Abbeville, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.13953824759379,
+      "lon": 1.836166477223979,
+      "geoinfo": {
+        "display_name": "Chemin de la Station Météo, Le Haut de Justice, Buigny-Saint-Maclou, Abbeville, Somme, Hauts-de-France, Metropolitan France, 80132, France",
+        "road": "Chemin de la Station Météo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buigny-Saint-Maclou",
+        "state": "Hauts-de-France",
+        "postcode": "80132",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "853, Chemin de la Station Météo, Le Haut de Justice, Buigny-Saint-Maclou, Abbeville, Somme, Hauts-de-France, Metropolitan France, 80132, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:36.214121+00:00",
+  "_kind": "geo_samples"
+}

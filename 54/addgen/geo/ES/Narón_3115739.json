@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Narón",
+  "geonameid": 3115739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.48551771737444,
+      "lon": -8.22500376307393,
+      "geoinfo": {
+        "display_name": "Rúa Valdoviño, Recimil, Ferrol, A Coruña, Galicia, 15403, Spain",
+        "road": "Rúa Valdoviño",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Recimil",
+        "city_district": null,
+        "city": "Ferrol",
+        "state": "Galicia",
+        "postcode": "15403",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Rúa Valdoviño, Narón, Galicia, Spain"
+    },
+    {
+      "lat": 43.488267042151676,
+      "lon": -8.247060405967213,
+      "geoinfo": {
+        "display_name": "FE-15, Canido, Ferrol, A Coruña, Galicia, 15401, Spain",
+        "road": "FE-15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canido",
+        "city_district": null,
+        "city": "Ferrol",
+        "state": "Galicia",
+        "postcode": "15401",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "FE-15, Canido, Ferrol, A Coruña, Galicia, 15401, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:18.124507+00:00",
+  "_kind": "geo_samples"
+}

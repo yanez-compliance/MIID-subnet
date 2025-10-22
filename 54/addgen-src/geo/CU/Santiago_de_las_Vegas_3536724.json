@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Santiago de las Vegas",
+  "geonameid": 3536724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.979625264793015,
+      "lon": -82.41133618848214,
+      "geoinfo": {
+        "display_name": "Wajay, Boyeros, Havana, 19298, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wajay",
+        "city": "Boyeros",
+        "state": "Havana",
+        "postcode": "19298",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Wajay, Santiago de las Vegas, Havana, Cuba"
+    },
+    {
+      "lat": 22.994978605579796,
+      "lon": -82.41941082479505,
+      "geoinfo": {
+        "display_name": "Carretera de Murgas, Wajay, Boyeros, Havana, 22417, Cuba",
+        "road": "Carretera de Murgas",
+        "house_number": null,
+        "neighbourhood": "Wajay",
+        "suburb": "Boyeros",
+        "city_district": null,
+        "city": null,
+        "state": "Havana",
+        "postcode": "22417",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "935, Carretera de Murgas, Wajay, Boyeros, Havana, 22417, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T02:04:25.652428+00:00",
+  "_kind": "geo_samples"
+}

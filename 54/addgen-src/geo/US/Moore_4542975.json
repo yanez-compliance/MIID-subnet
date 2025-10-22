@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Moore",
+  "geonameid": 4542975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.30482091287822,
+      "lon": -97.50546834011955,
+      "geoinfo": {
+        "display_name": "1939, Southwest 34th Street, Moore, Cleveland County, Oklahoma, 73160, United States",
+        "road": "Southwest 34th Street",
+        "house_number": "1939",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moore",
+        "state": "Oklahoma",
+        "postcode": "73160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1939 Southwest 34th Street, Moore, Oklahoma, United States"
+    },
+    {
+      "lat": 35.36169408035375,
+      "lon": -97.46789268302345,
+      "geoinfo": {
+        "display_name": "2681, Amber Street, Moore, Cleveland County, Oklahoma, 73160, United States",
+        "road": "Amber Street",
+        "house_number": "2681",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moore",
+        "state": "Oklahoma",
+        "postcode": "73160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2681, Amber Street, Moore, Cleveland County, Oklahoma, 73160, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:02.614175+00:00",
+  "_kind": "geo_samples"
+}

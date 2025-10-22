@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunland",
+  "geonameid": 5399976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.261265250776674,
+      "lon": -118.29799374409117,
+      "geoinfo": {
+        "display_name": "Verdugo Hills High School, Hillrose Street, Sunland, Los Angeles, Los Angeles County, California, 91040, United States",
+        "road": "Hillrose Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sunland",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hillrose Street, Sunland, California, United States"
+    },
+    {
+      "lat": 34.275282477000395,
+      "lon": -118.34953437278999,
+      "geoinfo": {
+        "display_name": "Los Angeles, Los Angeles County, California, 91040, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "987, Los Angeles, Los Angeles County, California, 91040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:21.093434+00:00",
+  "_kind": "geo_samples"
+}

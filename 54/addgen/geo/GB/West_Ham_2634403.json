@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "West Ham",
+  "geonameid": 2634403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.56132815223407,
+      "lon": -0.017048326858005673,
+      "geoinfo": {
+        "display_name": "Pine Close, Leyton, London Borough of Waltham Forest, London, Greater London, England, E10 5TS, United Kingdom",
+        "road": "Pine Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Leyton",
+        "city_district": "London Borough of Waltham Forest",
+        "city": "London",
+        "state": "England",
+        "postcode": "E10 5TS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Pine Close, West Ham, England, United Kingdom"
+    },
+    {
+      "lat": 51.522864272590205,
+      "lon": 0.04165668426715034,
+      "geoinfo": {
+        "display_name": "Brampton Manor Academy, Roman Road, Beckton, East Ham, London, Greater London, England, E6 3SQ, United Kingdom",
+        "road": "Roman Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Beckton",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E6 3SQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Brampton Manor Academy, Roman Road, Beckton, East Ham, London, Greater London, England, E6 3SQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:44.902876+00:00",
+  "_kind": "geo_samples"
+}

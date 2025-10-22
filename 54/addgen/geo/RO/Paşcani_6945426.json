@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Paşcani",
+  "geonameid": 6945426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.27356068018518,
+      "lon": 26.677374745564155,
+      "geoinfo": {
+        "display_name": "Valea Seacă, Iași, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Paşcani, Romania"
+    },
+    {
+      "lat": 47.28319592691376,
+      "lon": 26.74690832900663,
+      "geoinfo": {
+        "display_name": "Strada Dimitrie Bolintineanu, Lunca, Pașcani, Iași, 705200, Romania",
+        "road": "Strada Dimitrie Bolintineanu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pașcani",
+        "state": null,
+        "postcode": "705200",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "710, Strada Dimitrie Bolintineanu, 705200 Paşcani, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:42:16.252640+00:00",
+  "_kind": "geo_samples"
+}

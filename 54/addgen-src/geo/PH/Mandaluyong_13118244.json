@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Mandaluyong",
+  "geonameid": 13118244,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.547696428081968,
+      "lon": 121.06468037532501,
+      "geoinfo": {
+        "display_name": "Kamagong Street, Pavahai, Comembo, Taguig District 1, Taguig, Southern Manila District, Metro Manila, 1641, Philippines",
+        "road": "Kamagong Street",
+        "house_number": null,
+        "neighbourhood": "Pavahai",
+        "suburb": null,
+        "city_district": "Taguig District 1",
+        "city": "Taguig",
+        "state": null,
+        "postcode": "1641",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Kamagong Street, Mandaluyong, Philippines"
+    },
+    {
+      "lat": 14.540557274797022,
+      "lon": 121.02551329342329,
+      "geoinfo": {
+        "display_name": "1501, Carissa Street, Dasmariñas, District I, Makati, Southern Manila District, Metro Manila, 1221, Philippines",
+        "road": "Carissa Street",
+        "house_number": "1501",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "District I",
+        "city": "Makati",
+        "state": null,
+        "postcode": "1221",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "1501, Carissa Street, Dasmariñas, District I, Makati, Southern Manila District, Metro Manila, 1221, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T05:04:04.465042+00:00",
+  "_kind": "geo_samples"
+}

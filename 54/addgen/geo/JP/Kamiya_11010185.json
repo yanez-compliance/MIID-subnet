@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kamiya",
+  "geonameid": 11010185,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.75726708313524,
+      "lon": 139.69140343490716,
+      "geoinfo": {
+        "display_name": "Kannana-dori Avenue, Tokiwadai 1, Minami Tokiwadai 1, Minami Tokiwadai, Itabashi, Tokyo, 174-0072, Japan",
+        "road": "Kannana-dori Avenue",
+        "house_number": null,
+        "neighbourhood": "Tokiwadai 1",
+        "suburb": "Minami Tokiwadai",
+        "city_district": null,
+        "city": "Itabashi",
+        "state": null,
+        "postcode": "174-0072",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kannana-dori Avenue, Kamiya, Japan"
+    },
+    {
+      "lat": 35.787222833605476,
+      "lon": 139.70806489148833,
+      "geoinfo": {
+        "display_name": "Akabane kita 2, Akabane kita, Kita, Tokyo, 115-0052, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Akabane kita 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kita",
+        "state": null,
+        "postcode": "115-0052",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Akabane kita 2, Akabane kita, Kita, Tokyo, 115-0052, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:46.734579+00:00",
+  "_kind": "geo_samples"
+}

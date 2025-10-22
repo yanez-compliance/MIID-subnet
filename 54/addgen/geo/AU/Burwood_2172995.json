@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Burwood",
+  "geonameid": 2172995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.9044378194057,
+      "lon": 151.06566058398948,
+      "geoinfo": {
+        "display_name": "Ampol, Roberts Road, Greenacre, Sydney, Strathfield Municipal Council, New South Wales, 2190, Australia",
+        "road": "Roberts Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greenacre",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2190",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Roberts Road, Burwood, New South Wales, Australia"
+    },
+    {
+      "lat": -33.893039703296814,
+      "lon": 151.10283409480013,
+      "geoinfo": {
+        "display_name": "30, Rose Street, Croydon Park, Inner West, Sydney, Burwood Council, New South Wales, 2133, Australia",
+        "road": "Rose Street",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "Croydon Park",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2133",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "30, Rose Street, Croydon Park, Inner West, Sydney, Burwood Council, New South Wales, 2133, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:01.050702+00:00",
+  "_kind": "geo_samples"
+}

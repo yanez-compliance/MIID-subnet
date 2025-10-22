@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "La Habana Vieja",
+  "geonameid": 3746184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.142363280237262,
+      "lon": -82.32398411236588,
+      "geoinfo": {
+        "display_name": "Casablanca, Regla, Havana, 19130, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Casablanca",
+        "city": "Regla",
+        "state": "Havana",
+        "postcode": "19130",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Casablanca, La Habana Vieja, Havana, Cuba"
+    },
+    {
+      "lat": 23.104448963244927,
+      "lon": -82.31906716732344,
+      "geoinfo": {
+        "display_name": "12, Guanabacoa, Havana, 10400, Cuba",
+        "road": "12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Guanabacoa",
+        "city_district": null,
+        "city": null,
+        "state": "Havana",
+        "postcode": "10400",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "12, Guanabacoa, Havana, 10400, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T02:05:42.649983+00:00",
+  "_kind": "geo_samples"
+}

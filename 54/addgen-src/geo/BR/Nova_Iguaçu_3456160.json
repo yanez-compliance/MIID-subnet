@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Nova Iguaçu",
+  "geonameid": 3456160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -22.748319399210907,
+      "lon": -43.49432048158984,
+      "geoinfo": {
+        "display_name": "58, Rua São Geraldo, Comendador Soares, Nova Iguaçu, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 26275-130, Brazil",
+        "road": "Rua São Geraldo",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": "Comendador Soares",
+        "city_district": null,
+        "city": "Nova Iguaçu",
+        "state": "Rio de Janeiro",
+        "postcode": "26275-130",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "58 Rua São Geraldo, Nova Iguaçu, Rio de Janeiro, Brazil"
+    },
+    {
+      "lat": -22.78457906995443,
+      "lon": -43.4372953605197,
+      "geoinfo": {
+        "display_name": "Rua Jardinópolis, Alto Uruguai, Mesquita, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 26553-240, Brazil",
+        "road": "Rua Jardinópolis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alto Uruguai",
+        "city_district": null,
+        "city": "Mesquita",
+        "state": "Rio de Janeiro",
+        "postcode": "26553-240",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rua Jardinópolis, Alto Uruguai, Mesquita, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 26553-240, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-18T23:29:25.568985+00:00",
+  "_kind": "geo_samples"
+}

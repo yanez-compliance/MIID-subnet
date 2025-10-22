@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Frankfort",
+  "geonameid": 1003763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.29751062073199,
+      "lon": 28.53040031925974,
+      "geoinfo": {
+        "display_name": "Mafube Ward 5, Mafube Local Municipality, Fezile Dabi District Municipality, Free State, 9830, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mafube Ward 5",
+        "city_district": null,
+        "city": "Mafube Local Municipality",
+        "state": "Free State",
+        "postcode": "9830",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mafube Ward 5, Frankfort, Free State, South Africa"
+    },
+    {
+      "lat": -27.257807976058338,
+      "lon": 28.541326769847235,
+      "geoinfo": {
+        "display_name": "R34, Mafube Ward 5, Mafube Local Municipality, Fezile Dabi District Municipality, Free State, South Africa",
+        "road": "R34",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mafube Ward 5",
+        "city_district": null,
+        "city": "Mafube Local Municipality",
+        "state": "Free State",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R34, Frankfort, 66197 Free State, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:45:16.770344+00:00",
+  "_kind": "geo_samples"
+}

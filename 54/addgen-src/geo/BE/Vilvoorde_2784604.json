@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Vilvoorde",
+  "geonameid": 2784604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.927105347807064,
+      "lon": 4.39262820163889,
+      "geoinfo": {
+        "display_name": "29, Eeuwlaan, Klein Molenveld, Grimbergen, Halle-Vilvoorde, Flemish Brabant, Flanders, 1850, Belgium",
+        "road": "Eeuwlaan",
+        "house_number": "29",
+        "neighbourhood": "Klein Molenveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grimbergen",
+        "state": "Flemish Brabant",
+        "postcode": "1850",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "29 Eeuwlaan, Vilvoorde, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.94557580505861,
+      "lon": 4.478276734624641,
+      "geoinfo": {
+        "display_name": "Houtembos, Huinhovenstraat, Vilvoorde, Halle-Vilvoorde, Flemish Brabant, Flanders, 1800, Belgium",
+        "road": "Huinhovenstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Vilvoorde",
+        "city": "Vilvoorde",
+        "state": "Flemish Brabant",
+        "postcode": "1800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "647, Huinhovenstraat, Vilvoorde, 1800 Flemish Brabant, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:23.544290+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Inglewood-Finn Hill",
+  "geonameid": 7261476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.71221510352827,
+      "lon": -122.18616173919754,
+      "geoinfo": {
+        "display_name": "116th Avenue Northeast, Kirkland, King County, Washington, 98034, United States",
+        "road": "116th Avenue Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirkland",
+        "state": "Washington",
+        "postcode": "98034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "116th Avenue Northeast, Inglewood-Finn Hill, Washington, United States"
+    },
+    {
+      "lat": 47.70623158984031,
+      "lon": -122.26572036952938,
+      "geoinfo": {
+        "display_name": "Matthews Beach, Seattle, King County, Washington, 98165, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Matthews Beach",
+        "suburb": null,
+        "city_district": null,
+        "city": "Seattle",
+        "state": "Washington",
+        "postcode": "98165",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "646, Matthews Beach, Seattle, King County, Washington, 98165, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:16.390958+00:00",
+  "_kind": "geo_samples"
+}

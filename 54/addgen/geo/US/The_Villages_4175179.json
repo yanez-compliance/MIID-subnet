@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "The Villages",
+  "geonameid": 4175179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.95569731362998,
+      "lon": -81.97178090427374,
+      "geoinfo": {
+        "display_name": "7931, County Road 109, Oakland Hills, Lady Lake, Sumter County, Florida, 32162, United States",
+        "road": "County Road 109",
+        "house_number": "7931",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lady Lake",
+        "state": "Florida",
+        "postcode": "32162",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7931 County Road 109, The Villages, Florida, United States"
+    },
+    {
+      "lat": 28.96911685939168,
+      "lon": -81.95393456138618,
+      "geoinfo": {
+        "display_name": "Marion County, Florida, 32195, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32195",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "999, Marion County, Florida, 32195, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:25.068042+00:00",
+  "_kind": "geo_samples"
+}

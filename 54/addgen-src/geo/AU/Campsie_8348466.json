@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Campsie",
+  "geonameid": 8348466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.953933514586666,
+      "lon": 151.10487951464935,
+      "geoinfo": {
+        "display_name": "Moore Street, Hurstville, St George, Sydney, Georges River Council, New South Wales, 2220, Australia",
+        "road": "Moore Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hurstville",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2220",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Moore Street, Campsie, New South Wales, Australia"
+    },
+    {
+      "lat": -33.898040844956206,
+      "lon": 151.13956320472738,
+      "geoinfo": {
+        "display_name": "51, Windsor Road, Dulwich Hill, Inner West, Sydney, Inner West Council, New South Wales, 2203, Australia",
+        "road": "Windsor Road",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": "Dulwich Hill",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2203",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "51, Windsor Road, Dulwich Hill, Inner West, Sydney, Inner West Council, New South Wales, 2203, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:22.010706+00:00",
+  "_kind": "geo_samples"
+}

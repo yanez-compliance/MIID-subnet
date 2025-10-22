@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Neópolis",
+  "geonameid": 3456325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -10.284590239069681,
+      "lon": -36.603243282648684,
+      "geoinfo": {
+        "display_name": "SE-120, Várzea do Valentim, Santana do São Francisco, Região Geográfica Imediata de Propriá, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 57200-000, Brazil",
+        "road": "SE-120",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Santana do São Francisco",
+        "city": "Santana do São Francisco",
+        "state": "Sergipe",
+        "postcode": "57200-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "SE-120, Neópolis, Sergipe, Brazil"
+    },
+    {
+      "lat": -10.345977957435844,
+      "lon": -36.57023898349909,
+      "geoinfo": {
+        "display_name": "SE-120, Cidade Nova, Neópolis, Região Geográfica Imediata de Propriá, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 49980-000, Brazil",
+        "road": "SE-120",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cidade Nova",
+        "city_district": "Neópolis",
+        "city": "Neópolis",
+        "state": "Sergipe",
+        "postcode": "49980-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "SE-120, Cidade Nova, Neópolis, Região Geográfica Imediata de Propriá, Região Geográfica Intermediária de Aracaju, Sergipe, Northeast Region, 49980-000, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:36.795892+00:00",
+  "_kind": "geo_samples"
+}

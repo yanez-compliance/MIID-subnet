@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Svitavy",
+  "geonameid": 3064454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.789044802808185,
+      "lon": 16.45393337756914,
+      "geoinfo": {
+        "display_name": "D35, Nový Valdek, Opatovec, okres Svitavy, Pardubice Region, Northeast, 578 02, Czechia",
+        "road": "D35",
+        "house_number": null,
+        "neighbourhood": "Nový Valdek",
+        "suburb": "Opatovec",
+        "city_district": null,
+        "city": "Opatovec",
+        "state": "Northeast",
+        "postcode": "578 02",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "D35, Svitavy, Northeast, Czechia"
+    },
+    {
+      "lat": 49.7398286055167,
+      "lon": 16.418532481793424,
+      "geoinfo": {
+        "display_name": "338, Vendolí, okres Svitavy, Pardubice Region, Northeast, 569 14, Czechia",
+        "road": null,
+        "house_number": "338",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vendolí",
+        "state": "Northeast",
+        "postcode": "569 14",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "338, Vendolí, okres Svitavy, Pardubice Region, Northeast, 569 14, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:33.366741+00:00",
+  "_kind": "geo_samples"
+}

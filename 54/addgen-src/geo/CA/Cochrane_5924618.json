@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Cochrane",
+  "geonameid": 5924618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.17358123701054,
+      "lon": -114.4557955289219,
+      "geoinfo": {
+        "display_name": "Riviera View, Riverview, Town of Cochrane, Alberta, T4C 2C5, Canada",
+        "road": "Riviera View",
+        "house_number": null,
+        "neighbourhood": "Riverview",
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Cochrane",
+        "state": "Alberta",
+        "postcode": "T4C 2C5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Riviera View, Cochrane, Alberta, Canada"
+    },
+    {
+      "lat": 51.16578278661603,
+      "lon": -114.49883505899082,
+      "geoinfo": {
+        "display_name": "254187, Towers Trail, Fireside, Town of Cochrane, Alberta, T4C 2L8, Canada",
+        "road": "Towers Trail",
+        "house_number": "254187",
+        "neighbourhood": "Fireside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Cochrane",
+        "state": "Alberta",
+        "postcode": "T4C 2L8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "254187, Towers Trail, Fireside, Town of Cochrane, Alberta, T4C 2L8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:02.421981+00:00",
+  "_kind": "geo_samples"
+}

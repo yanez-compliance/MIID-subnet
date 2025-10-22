@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mead Valley",
+  "geonameid": 5371858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.83831088845808,
+      "lon": -117.29019559063454,
+      "geoinfo": {
+        "display_name": "21447, Johnson Street, Mead Valley, Riverside County, California, 92570, United States",
+        "road": "Johnson Street",
+        "house_number": "21447",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21447 Johnson Street, Mead Valley, California, United States"
+    },
+    {
+      "lat": 33.83789269386449,
+      "lon": -117.31934363813929,
+      "geoinfo": {
+        "display_name": "20006, Cajalco Road, Riverside County, California, 92570, United States",
+        "road": "Cajalco Road",
+        "house_number": "20006",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20006, Cajalco Road, Riverside County, California, 92570, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:47.814123+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Karlovy Vary",
+  "geonameid": 3073803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.22317841498135,
+      "lon": 12.928064762197742,
+      "geoinfo": {
+        "display_name": "Hloubek potok, 222, Sedlečko u Karlových Var, Sedlečko, Šemnice, okres Karlovy Vary, Karlovy Vary Region, Northwest, 362 72, Czechia",
+        "road": "222",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sedlečko u Karlových Var",
+        "city_district": null,
+        "city": "Sedlečko",
+        "state": "Northwest",
+        "postcode": "362 72",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "222, Karlovy Vary, Northwest, Czechia"
+    },
+    {
+      "lat": 50.274929567470956,
+      "lon": 12.856986555562735,
+      "geoinfo": {
+        "display_name": "ev.110, Nivy, Děpoltovice, okres Karlovy Vary, Karlovy Vary Region, Northwest, 362 25, Czechia",
+        "road": null,
+        "house_number": "ev.110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Děpoltovice",
+        "state": "Northwest",
+        "postcode": "362 25",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "ev.110, Nivy, Děpoltovice, okres Karlovy Vary, Karlovy Vary Region, Northwest, 362 25, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:24.863516+00:00",
+  "_kind": "geo_samples"
+}

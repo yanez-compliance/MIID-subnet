@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Torrejón de Ardoz",
+  "geonameid": 3107784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.430904799566434,
+      "lon": -3.47319388460066,
+      "geoinfo": {
+        "display_name": "Palacio de la Aldovea, Calle del Castillo, Barrio del Castillo, Castillo de Aldovea, San Fernando de Henares, Community of Madrid, 28850, Spain",
+        "road": "Calle del Castillo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle del Castillo, Torrejón de Ardoz, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.43700030857481,
+      "lon": -3.4243530375644964,
+      "geoinfo": {
+        "display_name": "M-203, Consejo de Barrio 5. Distrito II, Distrito II, San Fernando de Henares, Community of Madrid, 28802, Spain",
+        "road": "M-203",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Distrito II",
+        "city": "San Fernando de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28802",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-203, Consejo de Barrio 5. Distrito II, Distrito II, San Fernando de Henares, Community of Madrid, 28802, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:44.508232+00:00",
+  "_kind": "geo_samples"
+}

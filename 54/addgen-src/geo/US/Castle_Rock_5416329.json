@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Castle Rock",
+  "geonameid": 5416329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.375981211050046,
+      "lon": -104.82881729601326,
+      "geoinfo": {
+        "display_name": "North Ridge Road, Castle Rock, Douglas County, Colorado, 80104, United States",
+        "road": "North Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Rock",
+        "state": "Colorado",
+        "postcode": "80104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Ridge Road, Castle Rock, Colorado, United States"
+    },
+    {
+      "lat": 39.39783522926817,
+      "lon": -104.85743902223244,
+      "geoinfo": {
+        "display_name": "424, Tippen Place, Castle Rock, Douglas County, Colorado, 80104, United States",
+        "road": "Tippen Place",
+        "house_number": "424",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Rock",
+        "state": "Colorado",
+        "postcode": "80104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "424, Tippen Place, Castle Rock, Douglas County, Colorado, 80104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:50.192540+00:00",
+  "_kind": "geo_samples"
+}

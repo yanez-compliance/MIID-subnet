@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakewood",
+  "geonameid": 5364855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.861923568179805,
+      "lon": -118.11017221161252,
+      "geoinfo": {
+        "display_name": "Esther Lindstrom Elementary School, 5900, Canehill Avenue, Lakewood, Los Angeles County, California, 90713, United States",
+        "road": "Canehill Avenue",
+        "house_number": "5900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakewood",
+        "state": "California",
+        "postcode": "90713",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5900 Canehill Avenue, Lakewood, California, United States"
+    },
+    {
+      "lat": 33.86568363795187,
+      "lon": -118.16769823039667,
+      "geoinfo": {
+        "display_name": "East Curry Street, Long Beach, Los Angeles County, California, 90805, United States",
+        "road": "East Curry Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Long Beach",
+        "state": "California",
+        "postcode": "90805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "304, East Curry Street, Long Beach, Los Angeles County, California, 90805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:47.745552+00:00",
+  "_kind": "geo_samples"
+}

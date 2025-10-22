@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Béchar",
+  "geonameid": 2505530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.574041185549792,
+      "lon": -2.2039792153352886,
+      "geoinfo": {
+        "display_name": "1500 lgts AADL, Bechar, Da'ira Bechar, Bechar, 08000, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bechar",
+        "state": "Bechar",
+        "postcode": "08000",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Béchar, Bechar, Algeria"
+    },
+    {
+      "lat": 31.579550516587876,
+      "lon": -2.223384776362279,
+      "geoinfo": {
+        "display_name": "El Djorf, Bechar, Da'ira Bechar, Bechar, 08000, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "El Djorf",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bechar",
+        "state": "Bechar",
+        "postcode": "08000",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "775, El Djorf, Bechar, Da'ira Bechar, Bechar, 08000, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T00:26:30.680940+00:00",
+  "_kind": "geo_samples"
+}

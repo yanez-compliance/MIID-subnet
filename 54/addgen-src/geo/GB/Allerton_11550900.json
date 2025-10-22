@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Allerton",
+  "geonameid": 11550900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.369416622049144,
+      "lon": -2.867275038638102,
+      "geoinfo": {
+        "display_name": "School Lane, Woolton, Liverpool, Liverpool City Region, England, L25 7TP, United Kingdom",
+        "road": "School Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woolton",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L25 7TP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "School Lane, Allerton, England, United Kingdom"
+    },
+    {
+      "lat": 53.39413510254784,
+      "lon": -2.8841332908527657,
+      "geoinfo": {
+        "display_name": "Childwall Abbey Road, Childwall, Liverpool, Liverpool City Region, England, L16 7QE, United Kingdom",
+        "road": "Childwall Abbey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Childwall",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L16 7QE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Childwall Abbey Road, Childwall, Liverpool, Liverpool City Region, England, L16 7QE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:50.866144+00:00",
+  "_kind": "geo_samples"
+}

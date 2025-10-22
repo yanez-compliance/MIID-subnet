@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Vaughan",
+  "geonameid": 6173577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.834854954001955,
+      "lon": -79.55451493863463,
+      "geoinfo": {
+        "display_name": "Ashbury Boulevard, Vellore, Vaughan, York Region, Golden Horseshoe, Ontario, L4H 2T9, Canada",
+        "road": "Ashbury Boulevard",
+        "house_number": null,
+        "neighbourhood": "Vellore",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vaughan",
+        "state": "Ontario",
+        "postcode": "L4H 2T9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Ashbury Boulevard, Vaughan, Ontario, Canada"
+    },
+    {
+      "lat": 43.81131422250138,
+      "lon": -79.54753314896402,
+      "geoinfo": {
+        "display_name": "104, Creditview Road, Vaughan, York Region, Golden Horseshoe, Ontario, L4L 9T1, Canada",
+        "road": "Creditview Road",
+        "house_number": "104",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vaughan",
+        "state": "Ontario",
+        "postcode": "L4L 9T1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "104, Creditview Road, Vaughan, York Region, Golden Horseshoe, Ontario, L4L 9T1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:19.411262+00:00",
+  "_kind": "geo_samples"
+}

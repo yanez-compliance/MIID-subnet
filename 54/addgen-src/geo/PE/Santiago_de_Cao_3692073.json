@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Santiago de Cao",
+  "geonameid": 3692073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -7.962038234655046,
+      "lon": -79.28436992372508,
+      "geoinfo": {
+        "display_name": "Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Santiago de Cao, Peru"
+    },
+    {
+      "lat": -7.9311468178596884,
+      "lon": -79.25155236097095,
+      "geoinfo": {
+        "display_name": "Carretera Chocope - Santiago de Cao, Cartavio, Santiago de Cao, Province of Ascope, La Libertad, Peru",
+        "road": "Carretera Chocope - Santiago de Cao",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cartavio",
+        "state": "La Libertad",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "594, Carretera Chocope - Santiago de Cao, Cartavio, Santiago de Cao, Province of Ascope, 01916 La Libertad, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:11.740967+00:00",
+  "_kind": "geo_samples"
+}

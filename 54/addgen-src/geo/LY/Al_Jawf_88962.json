@@ -1,0 +1,47 @@
+{
+  "country_code": "LY",
+  "country": "Libya",
+  "city": "Al Jawf",
+  "geonameid": 88962,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.189161211942874,
+      "lon": 23.292407258668938,
+      "geoinfo": {
+        "display_name": "Al Kufrah, Al Shoura, Al Jawf, Kufra, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Al Shoura",
+        "city_district": null,
+        "city": "Al Jawf",
+        "state": "Kufra",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "974, Al Kufrah, Al Shoura, Al Jawf, 40637 Kufra, Libya"
+    },
+    {
+      "lat": 24.226103949105866,
+      "lon": 23.270322736389154,
+      "geoinfo": {
+        "display_name": "Airport Road, At Taj, Al Jawf, Kufra, Libya",
+        "road": "Airport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "At Taj",
+        "city_district": null,
+        "city": "Al Jawf",
+        "state": "Kufra",
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "647, Airport Road, At Taj, Al Jawf, 54794 Kufra, Libya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:42.407883+00:00",
+  "_kind": "geo_samples"
+}

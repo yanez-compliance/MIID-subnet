@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Swift Current",
+  "geonameid": 6160603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.28218465449082,
+      "lon": -107.85919782279112,
+      "geoinfo": {
+        "display_name": "South Railway Street West, Swift Current No. 137, Saskatchewan, S9H 5L4, Canada",
+        "road": "South Railway Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saskatchewan",
+        "postcode": "S9H 5L4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "South Railway Street West, Swift Current, Saskatchewan, Canada"
+    },
+    {
+      "lat": 50.275541514071485,
+      "lon": -107.74280417044689,
+      "geoinfo": {
+        "display_name": "Swift Current No. 137, Saskatchewan, S9H 5R4, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saskatchewan",
+        "postcode": "S9H 5R4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Swift Current No. 137, Saskatchewan, S9H 5R4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:22:21.726665+00:00",
+  "_kind": "geo_samples"
+}

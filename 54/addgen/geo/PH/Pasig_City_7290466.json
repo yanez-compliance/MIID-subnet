@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Pasig City",
+  "geonameid": 7290466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.599116393955558,
+      "lon": 121.0205304525939,
+      "geoinfo": {
+        "display_name": "Camia Street, 508, Santa Mesa, Sixth District, Manila, Capital District, Metro Manila, 1016, Philippines",
+        "road": "Camia Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Mesa",
+        "city_district": "Sixth District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1016",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Camia Street, Pasig City, Philippines"
+    },
+    {
+      "lat": 14.58157909096758,
+      "lon": 121.10462511369782,
+      "geoinfo": {
+        "display_name": "Almond Street, Santa Lucia, Pasig Second District, Pasig, Eastern Manila District, Metro Manila, 1608, Philippines",
+        "road": "Almond Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pasig Second District",
+        "city": "Pasig",
+        "state": null,
+        "postcode": "1608",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "029, Almond Street, Santa Lucia, Pasig Second District, Pasig, Eastern Manila District, Metro Manila, 1608, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:29:10.519162+00:00",
+  "_kind": "geo_samples"
+}

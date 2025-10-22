@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waterford",
+  "geonameid": 5014130,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.66353971320247,
+      "lon": -83.41765755650097,
+      "geoinfo": {
+        "display_name": "Oakland County International Airport, Highland Road, Waterford Township, Oakland County, Michigan, 48386, United States",
+        "road": "Highland Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterford Township",
+        "state": "Michigan",
+        "postcode": "48386",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Highland Road, Waterford, Michigan, United States"
+    },
+    {
+      "lat": 42.70751027497527,
+      "lon": -83.42836039146721,
+      "geoinfo": {
+        "display_name": "Andersonville Road, Independence Charter Township, Oakland County, Michigan, 48346, United States",
+        "road": "Andersonville Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Independence Charter Township",
+        "state": "Michigan",
+        "postcode": "48346",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "878, Andersonville Road, Independence Charter Township, Oakland County, Michigan, 48346, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:35.193042+00:00",
+  "_kind": "geo_samples"
+}

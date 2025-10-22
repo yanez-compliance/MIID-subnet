@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Coacalco",
+  "geonameid": 3530569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.663000821307897,
+      "lon": -99.09298282405742,
+      "geoinfo": {
+        "display_name": "Calle Mariano Matamoros, San Pablo de las Salinas, Tultitlán, State of Mexico, 55710, Mexico",
+        "road": "Calle Mariano Matamoros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pablo de las Salinas",
+        "state": "State of Mexico",
+        "postcode": "55710",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Mariano Matamoros, Coacalco, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.63072197687961,
+      "lon": -99.15189711498402,
+      "geoinfo": {
+        "display_name": "Boulevard Benito Juárez, Buenavista, Tultitlán, State of Mexico, 54900, Mexico",
+        "road": "Boulevard Benito Juárez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buenavista",
+        "state": "State of Mexico",
+        "postcode": "54900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "678, Boulevard Benito Juárez, Buenavista, Tultitlán, State of Mexico, 54900, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:30.072042+00:00",
+  "_kind": "geo_samples"
+}

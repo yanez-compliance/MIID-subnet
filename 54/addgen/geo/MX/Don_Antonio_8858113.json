@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Don Antonio",
+  "geonameid": 8858113,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.875514890624213,
+      "lon": -98.9126003933665,
+      "geoinfo": {
+        "display_name": "Las Pintas (El Porvenir), Temascalapa, State of Mexico, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Don Antonio, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.898591083432468,
+      "lon": -98.97006196294149,
+      "geoinfo": {
+        "display_name": "El Carmen, Hueypoxtla, State of Mexico, 43823, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Carmen",
+        "state": "State of Mexico",
+        "postcode": "43823",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "134, El Carmen, Hueypoxtla, State of Mexico, 43823, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:31.746659+00:00",
+  "_kind": "geo_samples"
+}

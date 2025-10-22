@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Wayne",
+  "geonameid": 4920423,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.1617388383216,
+      "lon": -85.08748653602653,
+      "geoinfo": {
+        "display_name": "Veritas Boulevard, Fort Wayne, Allen County, Indiana, 46835, United States",
+        "road": "Veritas Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Wayne",
+        "state": "Indiana",
+        "postcode": "46835",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Veritas Boulevard, Fort Wayne, Indiana, United States"
+    },
+    {
+      "lat": 41.11917716473147,
+      "lon": -85.1314674868468,
+      "geoinfo": {
+        "display_name": "Office Depot, 705, Noble Drive, Northcrest, Fort Wayne, Allen County, Indiana, 46805, United States",
+        "road": "Noble Drive",
+        "house_number": "705",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Wayne",
+        "state": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Office Depot, 705, Noble Drive, Northcrest, Fort Wayne, Allen County, Indiana, 46805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:31.315000+00:00",
+  "_kind": "geo_samples"
+}

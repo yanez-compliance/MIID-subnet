@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ḩadā’iq al Qubbah",
+  "geonameid": 356436,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.09948349234036,
+      "lon": 31.3108688838114,
+      "geoinfo": {
+        "display_name": "4R, Shahin Street, Al-Zaitoun, Cairo, 11734, Egypt",
+        "road": "Shahin Street",
+        "house_number": "4R",
+        "neighbourhood": null,
+        "suburb": "Al-Zaitoun",
+        "city_district": null,
+        "city": "Cairo",
+        "state": "Cairo",
+        "postcode": "11734",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "4R Shahin Street, Ḩadā’iq al Qubbah, Cairo, Egypt"
+    },
+    {
+      "lat": 30.045513260765368,
+      "lon": 31.284065504317308,
+      "geoinfo": {
+        "display_name": "3, Shendy Alley, Manshiet Naser, Cairo, 11695, Egypt",
+        "road": "Shendy Alley",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Manshiet Naser",
+        "city_district": null,
+        "city": "Cairo",
+        "state": "Cairo",
+        "postcode": "11695",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "3, Shendy Alley, Manshiet Naser, Cairo, 11695, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:09.479970+00:00",
+  "_kind": "geo_samples"
+}

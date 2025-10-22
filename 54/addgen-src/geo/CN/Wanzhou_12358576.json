@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wanzhou",
+  "geonameid": 12358576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.791557994909077,
+      "lon": 108.38945002220476,
+      "geoinfo": {
+        "display_name": "牌楼, 北滨大道, Pailou Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": "北滨大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pailou Subdistrict",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "北滨大道, Wanzhou, Chongqing, China"
+    },
+    {
+      "lat": 30.75301168914779,
+      "lon": 108.402604645939,
+      "geoinfo": {
+        "display_name": "Longxiang North Road, Longdu Subdistrict, Wanzhou, Chongqing, China",
+        "road": "Longxiang North Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longdu Subdistrict",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "632, Longxiang North Road, Longdu Subdistrict, Wanzhou, 31007 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:42.489510+00:00",
+  "_kind": "geo_samples"
+}

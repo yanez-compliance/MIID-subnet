@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longchi",
+  "geonameid": 12324285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.939401166894896,
+      "lon": 119.35760051200087,
+      "geoinfo": {
+        "display_name": "柳龙路, 岱邱村, Changyi City, Weifang, Shandong, 261303, China",
+        "road": "柳龙路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changyi City",
+        "state": "Shandong",
+        "postcode": "261303",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "柳龙路, Longchi, Shandong, China"
+    },
+    {
+      "lat": 36.90947445808839,
+      "lon": 119.35127838534521,
+      "geoinfo": {
+        "display_name": "王范庄村, Kuiju, Changyi City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changyi City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "799, Longchi, 42648 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:32.502391+00:00",
+  "_kind": "geo_samples"
+}

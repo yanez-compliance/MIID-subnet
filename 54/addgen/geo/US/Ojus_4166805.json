@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ojus",
+  "geonameid": 4166805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.92782489072025,
+      "lon": -80.16690080456488,
+      "geoinfo": {
+        "display_name": "16450, Miami Drive, North Miami Beach, Miami-Dade County, Florida, 33162, United States",
+        "road": "Miami Drive",
+        "house_number": "16450",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Miami Beach",
+        "state": "Florida",
+        "postcode": "33162",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16450 Miami Drive, Ojus, Florida, United States"
+    },
+    {
+      "lat": 25.91430070936696,
+      "lon": -80.15609263113612,
+      "geoinfo": {
+        "display_name": "Biscayne Boulevard, North Miami, Miami-Dade County, Florida, 33181, United States",
+        "road": "Biscayne Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Miami",
+        "state": "Florida",
+        "postcode": "33181",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "547, Biscayne Boulevard, North Miami, Miami-Dade County, Florida, 33181, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:00.628640+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuyang",
+  "geonameid": 1790885,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.994958932168263,
+      "lon": 116.2562092276424,
+      "geoinfo": {
+        "display_name": "Guzhen, Yu'an District, Lu'an, Anhui, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yu'an District",
+        "state": "Anhui",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wuyang, Anhui, China"
+    },
+    {
+      "lat": 32.0027860579338,
+      "lon": 116.22904906503723,
+      "geoinfo": {
+        "display_name": "Caomiao, Huoqiu County, Lu'an, Anhui, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lu'an",
+        "state": "Anhui",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "067, Caomiao, Huoqiu County, Lu'an, 17630 Anhui, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:01.886823+00:00",
+  "_kind": "geo_samples"
+}

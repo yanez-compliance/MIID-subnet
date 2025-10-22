@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Antu",
+  "geonameid": 2035754,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.09603765981698,
+      "lon": 128.8916219133953,
+      "geoinfo": {
+        "display_name": "Donghuan Road, Jiulong, Mingyue, Antu County, Yanbian, Jilin, China",
+        "road": "Donghuan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jiulong",
+        "city_district": null,
+        "city": "Antu County",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Donghuan Road, Antu, Jilin, China"
+    },
+    {
+      "lat": 43.08517965180254,
+      "lon": 128.88220463901268,
+      "geoinfo": {
+        "display_name": "Mingyue, Antu County, Yanbian, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antu County",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "409, Mingyue, Antu County, Yanbian, 50393 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:45.460863+00:00",
+  "_kind": "geo_samples"
+}

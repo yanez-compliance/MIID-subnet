@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Macerata",
+  "geonameid": 3174380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.31918057820925,
+      "lon": 13.45452765577171,
+      "geoinfo": {
+        "display_name": "Santo Stefano, Macerata, 62100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Macerata",
+        "state": null,
+        "postcode": "62100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Macerata, Italy"
+    },
+    {
+      "lat": 43.28089395844177,
+      "lon": 13.464267903626244,
+      "geoinfo": {
+        "display_name": "Via Domenico Costanzi, Peschiera, Piediripa, Macerata, 62100, Italy",
+        "road": "Via Domenico Costanzi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Peschiera",
+        "city_district": null,
+        "city": "Macerata",
+        "state": null,
+        "postcode": "62100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "082, Via Domenico Costanzi, Peschiera, Piediripa, Macerata, 62100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:38.607326+00:00",
+  "_kind": "geo_samples"
+}

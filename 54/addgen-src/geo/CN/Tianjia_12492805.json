@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tianjia",
+  "geonameid": 12492805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.12730147118627,
+      "lon": 105.85158339924213,
+      "geoinfo": {
+        "display_name": "潼南公路, Tongnan, Tongnan District, Chongqing, China",
+        "road": "潼南公路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongnan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "潼南公路, Tianjia, Chongqing, China"
+    },
+    {
+      "lat": 30.0893309054022,
+      "lon": 105.86509959058901,
+      "geoinfo": {
+        "display_name": "S540, Tianjia, Tongnan District, Chongqing, China",
+        "road": "S540",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tianjia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S540, Tianjia, Tongnan District, 16438 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:20.077379+00:00",
+  "_kind": "geo_samples"
+}

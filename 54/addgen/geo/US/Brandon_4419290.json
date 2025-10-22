@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brandon",
+  "geonameid": 4419290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.29477934515204,
+      "lon": -90.02760652872463,
+      "geoinfo": {
+        "display_name": "17, Glenway Place, Crossgates, Brandon, Rankin County, Mississippi, 39042, United States",
+        "road": "Glenway Place",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brandon",
+        "state": "Mississippi",
+        "postcode": "39042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17 Glenway Place, Brandon, Mississippi, United States"
+    },
+    {
+      "lat": 32.27837119716535,
+      "lon": -89.95105376854882,
+      "geoinfo": {
+        "display_name": "I 20, Easthaven, Brandon, Rankin County, Mississippi, 39042, United States",
+        "road": "I 20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brandon",
+        "state": "Mississippi",
+        "postcode": "39042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 20, Easthaven, Brandon, Rankin County, Mississippi, 39042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:54.445195+00:00",
+  "_kind": "geo_samples"
+}

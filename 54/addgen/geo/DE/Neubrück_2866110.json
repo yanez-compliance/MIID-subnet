@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neubrück",
+  "geonameid": 2866110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0961680325079,
+      "lon": 6.632793341697803,
+      "geoinfo": {
+        "display_name": "L 69, Wevelinghoven, Grevenbroich, Rhein-Kreis Neuss, North Rhine-Westphalia, 41516, Germany",
+        "road": "L 69",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wevelinghoven",
+        "city_district": null,
+        "city": "Grevenbroich",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41516",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 69, Neubrück, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.16949495813307,
+      "lon": 6.667313800542473,
+      "geoinfo": {
+        "display_name": "Am Lousfeld, Löveling, Holzheim, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41472, Germany",
+        "road": "Am Lousfeld",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Löveling",
+        "city_district": null,
+        "city": "Neuss",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41472",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "983, Am Lousfeld, Löveling, Holzheim, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41472, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:34.928061+00:00",
+  "_kind": "geo_samples"
+}

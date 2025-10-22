@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairhope",
+  "geonameid": 4061234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.48914371420936,
+      "lon": -87.88935722378127,
+      "geoinfo": {
+        "display_name": "Publix, 18125, Old Battles Road, Fairhope, Baldwin County, Alabama, 36532, United States",
+        "road": "Old Battles Road",
+        "house_number": "18125",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairhope",
+        "state": "Alabama",
+        "postcode": "36532",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18125 Old Battles Road, Fairhope, Alabama, United States"
+    },
+    {
+      "lat": 30.553356846437396,
+      "lon": -87.93200855193226,
+      "geoinfo": {
+        "display_name": "Montrose, Fairhope, Baldwin County, Alabama, 36559, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Montrose",
+        "city_district": null,
+        "city": "Fairhope",
+        "state": "Alabama",
+        "postcode": "36559",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "734, Montrose, Fairhope, Baldwin County, Alabama, 36559, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:01.885716+00:00",
+  "_kind": "geo_samples"
+}

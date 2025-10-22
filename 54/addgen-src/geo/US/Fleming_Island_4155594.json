@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fleming Island",
+  "geonameid": 4155594,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.12863871186427,
+      "lon": -81.70732988974542,
+      "geoinfo": {
+        "display_name": "US 17, Orange Park, Clay County, Florida, 32003, United States",
+        "road": "US 17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orange Park",
+        "state": "Florida",
+        "postcode": "32003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 17, Fleming Island, Florida, United States"
+    },
+    {
+      "lat": 30.10554304531601,
+      "lon": -81.72013194157228,
+      "geoinfo": {
+        "display_name": "1695, Misty Lake Drive, Orange Park, Clay County, Florida, 32003, United States",
+        "road": "Misty Lake Drive",
+        "house_number": "1695",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orange Park",
+        "state": "Florida",
+        "postcode": "32003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1695, Misty Lake Drive, Orange Park, Clay County, Florida, 32003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:58.992843+00:00",
+  "_kind": "geo_samples"
+}

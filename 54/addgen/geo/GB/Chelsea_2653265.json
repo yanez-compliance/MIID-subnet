@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chelsea",
+  "geonameid": 2653265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.512007776827275,
+      "lon": -0.21535749993455153,
+      "geoinfo": {
+        "display_name": "The ClementJames Centre, 95, Sirdar Road, Lancaster West Estate, North Kensington, Royal Borough of Kensington and Chelsea, London, Greater London, England, W11 4EG, United Kingdom",
+        "road": "Sirdar Road",
+        "house_number": "95",
+        "neighbourhood": "Lancaster West Estate",
+        "suburb": "North Kensington",
+        "city_district": "Royal Borough of Kensington and Chelsea",
+        "city": "London",
+        "state": "England",
+        "postcode": "W11 4EG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "95 Sirdar Road, Chelsea, England, United Kingdom"
+    },
+    {
+      "lat": 51.46994585559298,
+      "lon": -0.20148762967505646,
+      "geoinfo": {
+        "display_name": "Hurlingham Road, Upper Hurlingham, Fulham, London Borough of Hammersmith and Fulham, London, Greater London, England, SW6 3RF, United Kingdom",
+        "road": "Hurlingham Road",
+        "house_number": null,
+        "neighbourhood": "Upper Hurlingham",
+        "suburb": "Fulham",
+        "city_district": "London Borough of Hammersmith and Fulham",
+        "city": "London",
+        "state": "England",
+        "postcode": "SW6 3RF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hurlingham Road, Upper Hurlingham, Fulham, London Borough of Hammersmith and Fulham, London, Greater London, England, SW6 3RF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:16.916083+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Kaihua",
+  "geonameid": 1804874,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.391889404087678,
+      "lon": 104.29242558812597,
+      "geoinfo": {
+        "display_name": "Qianjin, Wenshan City, Wenshan, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wenshan City",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Kaihua, Yunnan, China"
+    },
+    {
+      "lat": 23.392708814637576,
+      "lon": 104.24186739861038,
+      "geoinfo": {
+        "display_name": "龙海路, Wolong Subdistrict, Wenshan City, Wenshan, Yunnan, China",
+        "road": "龙海路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wenshan City",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "463, 龙海路, Wolong Subdistrict, Wenshan City, Wenshan, 95320 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:40.296112+00:00",
+  "_kind": "geo_samples"
+}

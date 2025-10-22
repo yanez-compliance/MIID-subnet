@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Dendermonde",
+  "geonameid": 2799645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.03517979479851,
+      "lon": 4.096239389303545,
+      "geoinfo": {
+        "display_name": "24, Prinsenmeers, Mechelse Poort, Dendermonde, East Flanders, 9200, Belgium",
+        "road": "Prinsenmeers",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dendermonde",
+        "city": "Dendermonde",
+        "state": "East Flanders",
+        "postcode": "9200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "24 Prinsenmeers, Dendermonde, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.04741657643815,
+      "lon": 4.076799068533791,
+      "geoinfo": {
+        "display_name": "Sint-Onolfsdijk, Dendermonde, East Flanders, Flanders, 9200, Belgium",
+        "road": "Sint-Onolfsdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dendermonde",
+        "city": "Dendermonde",
+        "state": "East Flanders",
+        "postcode": "9200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "765, Sint-Onolfsdijk, Dendermonde, East Flanders, Flanders, 9200, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:45.901098+00:00",
+  "_kind": "geo_samples"
+}

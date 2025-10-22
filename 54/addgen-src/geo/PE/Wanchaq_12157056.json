@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Wanchaq",
+  "geonameid": 12157056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.51830080250464,
+      "lon": -71.96945618266433,
+      "geoinfo": {
+        "display_name": "Colegio Nacional Clorinda Matto de Turner, Pumacahua, Urbanización Tahuantinsuyo, Cuzco, Distrito de Cusco, Province of Cusco, Cusco, 08003, Peru",
+        "road": "Pumacahua",
+        "house_number": null,
+        "neighbourhood": "Urbanización Tahuantinsuyo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuzco",
+        "state": "Cusco",
+        "postcode": "08003",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Pumacahua, Wanchaq, Cusco, Peru"
+    },
+    {
+      "lat": -13.537562276706796,
+      "lon": -71.92153452054193,
+      "geoinfo": {
+        "display_name": "Vía Expresa, Ayarmaca, San Sebastián, Province of Cusco, Cusco, 08006, Peru",
+        "road": "Vía Expresa",
+        "house_number": null,
+        "neighbourhood": "Ayarmaca",
+        "suburb": "San Sebastián",
+        "city_district": null,
+        "city": "San Sebastián",
+        "state": "Cusco",
+        "postcode": "08006",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "811, Vía Expresa, Ayarmaca, San Sebastián, Province of Cusco, Cusco, 08006, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:41.295781+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chenghai",
+  "geonameid": 12358570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.422326190088587,
+      "lon": 100.65551230443494,
+      "geoinfo": {
+        "display_name": "Lunan Expressway, Caojiacun, Yongsheng County, Lijiang City, Yunnan, China",
+        "road": "Lunan Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lijiang City",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lunan Expressway, Chenghai, Yunnan, China"
+    },
+    {
+      "lat": 26.49129693138818,
+      "lon": 100.6593422793099,
+      "geoinfo": {
+        "display_name": "Xinghucun, Lijiang City, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lijiang City",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "466, Xinghucun, Lijiang City, 49200 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:04:17.014910+00:00",
+  "_kind": "geo_samples"
+}

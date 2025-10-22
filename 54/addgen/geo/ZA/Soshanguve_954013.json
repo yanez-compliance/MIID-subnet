@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Soshanguve",
+  "geonameid": 954013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.495942155801544,
+      "lon": 28.092486212297498,
+      "geoinfo": {
+        "display_name": "Buitekant Road, Tshwane Ward 29, City of Tshwane Metropolitan Municipality, Gauteng, 0198, South Africa",
+        "road": "Buitekant Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 29",
+        "city_district": null,
+        "city": null,
+        "state": "Gauteng",
+        "postcode": "0198",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Buitekant Road, Soshanguve, Gauteng, South Africa"
+    },
+    {
+      "lat": -25.43475640056591,
+      "lon": 28.097987044257525,
+      "geoinfo": {
+        "display_name": "Tshwane Ward 25, City of Tshwane Metropolitan Municipality, Gauteng, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 25",
+        "city_district": null,
+        "city": null,
+        "state": "Gauteng",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Tshwane Ward 25, City of Tshwane Metropolitan Municipality, 98989 Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:44:07.633788+00:00",
+  "_kind": "geo_samples"
+}

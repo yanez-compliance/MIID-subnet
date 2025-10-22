@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Nijmegen",
+  "geonameid": 2750053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.829028712167876,
+      "lon": 5.8040781996054465,
+      "geoinfo": {
+        "display_name": "1030, de Kluijskamp, De Kamp, Lindenholt, Nijmegen, Gelderland, Netherlands, 6545 JD, Netherlands",
+        "road": "de Kluijskamp",
+        "house_number": "1030",
+        "neighbourhood": "de Kluijskamp",
+        "suburb": "Lindenholt",
+        "city_district": "Nijmegen",
+        "city": "Nijmegen",
+        "state": "Gelderland",
+        "postcode": "6545 JD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "1030 de Kluijskamp, Nijmegen, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.864880345771645,
+      "lon": 5.851679489458794,
+      "geoinfo": {
+        "display_name": "Kees van Sambeekstraat, Hof van Holland, Lent, Nijmegen-Noord, Lent, Nijmegen, Gelderland, Netherlands, 6663 RN, Netherlands",
+        "road": "Kees van Sambeekstraat",
+        "house_number": null,
+        "neighbourhood": "Hof van Holland",
+        "suburb": "Nijmegen-Noord",
+        "city_district": null,
+        "city": "Nijmegen",
+        "state": "Gelderland",
+        "postcode": "6663 RN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "432, Kees van Sambeekstraat, Hof van Holland, Lent, Nijmegen-Noord, Lent, Nijmegen, Gelderland, Netherlands, 6663 RN, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:46.469740+00:00",
+  "_kind": "geo_samples"
+}

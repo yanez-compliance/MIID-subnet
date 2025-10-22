@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Aue",
+  "geonameid": 2954695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.577903725297034,
+      "lon": 12.771204174026204,
+      "geoinfo": {
+        "display_name": "Blumen u. Geschenke, 13, Straße der Einheit, Bernsbach, Lauter-Bernsbach, Erzgebirgskreis, Saxony, 08315, Germany",
+        "road": "Straße der Einheit",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lauter-Bernsbach",
+        "state": "Saxony",
+        "postcode": "08315",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13 Straße der Einheit, Aue, Saxony, Germany"
+    },
+    {
+      "lat": 50.62457668628179,
+      "lon": 12.68669158892061,
+      "geoinfo": {
+        "display_name": "Aue, Aue-Bad Schlema, Erzgebirgskreis, Saxony, 08280, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aue",
+        "state": "Saxony",
+        "postcode": "08280",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "277, Aue, Aue-Bad Schlema, Erzgebirgskreis, Saxony, 08280, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:32.729877+00:00",
+  "_kind": "geo_samples"
+}

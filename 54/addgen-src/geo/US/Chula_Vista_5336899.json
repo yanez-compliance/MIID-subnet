@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chula Vista",
+  "geonameid": 5336899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.65814024495376,
+      "lon": -117.04269484444174,
+      "geoinfo": {
+        "display_name": "3955, Bonita Road, Imperial Beach, Bonita, San Diego County, California, 91902, United States",
+        "road": "Bonita Road",
+        "house_number": "3955",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Imperial Beach",
+        "state": "California",
+        "postcode": "91902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3955 Bonita Road, Chula Vista, California, United States"
+    },
+    {
+      "lat": 32.662702704628195,
+      "lon": -117.06566921300194,
+      "geoinfo": {
+        "display_name": "Valley Road, National City, San Diego County, California, 92139, United States",
+        "road": "Valley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "National City",
+        "state": "California",
+        "postcode": "92139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "329, Valley Road, National City, San Diego County, California, 92139, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:51.145145+00:00",
+  "_kind": "geo_samples"
+}

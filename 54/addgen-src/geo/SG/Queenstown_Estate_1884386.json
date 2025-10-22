@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Queenstown Estate",
+  "geonameid": 1884386,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3185074436171496,
+      "lon": 103.78413681572033,
+      "geoinfo": {
+        "display_name": "Holland Road, Villas Holland, Bukit Timah, Northwest, Singapore, 278790, Singapore",
+        "road": "Holland Road",
+        "house_number": null,
+        "neighbourhood": "Villas Holland",
+        "suburb": "Bukit Timah",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "278790",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "811, Holland Road, Villas Holland, Bukit Timah, Northwest, Singapore, 278790, Singapore"
+    },
+    {
+      "lat": 1.3361840401537803,
+      "lon": 103.81113224876202,
+      "geoinfo": {
+        "display_name": "Adam Drive, Bukit Timah, Central, Singapore, 289848, Singapore",
+        "road": "Adam Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bukit Timah",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "289848",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "267, Adam Drive, Bukit Timah, Central, Singapore, 289848, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:45.557740+00:00",
+  "_kind": "geo_samples"
+}

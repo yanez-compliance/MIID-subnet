@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Casula",
+  "geonameid": 8348477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.96583959003169,
+      "lon": 150.8734158569875,
+      "geoinfo": {
+        "display_name": "Hume Motorway, Edmondson Park, Sydney, Liverpool City Council, New South Wales, 2565, Australia",
+        "road": "Hume Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Edmondson Park",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2565",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Hume Motorway, Casula, New South Wales, Australia"
+    },
+    {
+      "lat": -33.962687402847294,
+      "lon": 150.9180023753125,
+      "geoinfo": {
+        "display_name": "Moorebank Avenue, Moorebank, Sydney, Liverpool City Council, New South Wales, 2170, Australia",
+        "road": "Moorebank Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moorebank",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2170",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "834, Moorebank Avenue, Moorebank, Sydney, Liverpool City Council, New South Wales, 2170, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:51.355336+00:00",
+  "_kind": "geo_samples"
+}

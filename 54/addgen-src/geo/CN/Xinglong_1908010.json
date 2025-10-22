@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xinglong",
+  "geonameid": 1908010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.06099059770323,
+      "lon": 105.37465974999887,
+      "geoinfo": {
+        "display_name": "Y735, Shaoyu, Xihe County, Longnan, Gansu, China",
+        "road": "Y735",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaoyu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Y735, Xinglong, Gansu, China"
+    },
+    {
+      "lat": 34.042612189086334,
+      "lon": 105.29858837038432,
+      "geoinfo": {
+        "display_name": "Zhangzhuang, Xihe County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhangzhuang",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "071, Zhangzhuang, Xihe County, Longnan, 23775 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:59:14.811395+00:00",
+  "_kind": "geo_samples"
+}

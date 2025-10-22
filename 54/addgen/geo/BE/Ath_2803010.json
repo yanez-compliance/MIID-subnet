@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ath",
+  "geonameid": 2803010,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.61746656056815,
+      "lon": 3.7441375266435175,
+      "geoinfo": {
+        "display_name": "Chemin des deux Villers, Villers-Saint-Amand, Ath, Hainaut, Wallonia, 7812, Belgium",
+        "road": "Chemin des deux Villers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Villers-Saint-Amand",
+        "city": "Ath",
+        "state": "Hainaut",
+        "postcode": "7812",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin des deux Villers, Ath, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.60614703664803,
+      "lon": 3.766527051148612,
+      "geoinfo": {
+        "display_name": "Ferme Pilote, Ath, Hainaut, Wallonia, 7800, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ath",
+        "city": "Ath",
+        "state": "Hainaut",
+        "postcode": "7800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "386, Ferme Pilote, Ath, Hainaut, Wallonia, 7800, Belgium"
+    },
+    {
+      "lat": 50.628654230534856,
+      "lon": 3.838323724306523,
+      "geoinfo": {
+        "display_name": "Rue Le Coucou, Meslin-l'Évêque, Ath, Brugelette, Ath, Hainaut, Wallonia, 7822, Belgium",
+        "road": "Rue Le Coucou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Meslin-l'Évêque",
+        "city": "Ath",
+        "state": "Hainaut",
+        "postcode": "7822",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "462, Rue Le Coucou, Meslin-l'Évêque, Ath, Brugelette, Ath, Hainaut, Wallonia, 7822, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:59.241070+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Oak Bay",
+  "geonameid": 6091919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.41288119317961,
+      "lon": -123.278427497788,
+      "geoinfo": {
+        "display_name": "Juan de Fuca Electoral Area, Capital Regional District, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Juan de Fuca Electoral Area",
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Oak Bay, British Columbia, Canada"
+    },
+    {
+      "lat": 48.43468505743294,
+      "lon": -123.3593431719903,
+      "geoinfo": {
+        "display_name": "2323, Wark Street, North Park, Victoria, Capital Regional District, British Columbia, V8T 4H9, Canada",
+        "road": "Wark Street",
+        "house_number": "2323",
+        "neighbourhood": null,
+        "suburb": "North Park",
+        "city_district": null,
+        "city": "Victoria",
+        "state": "British Columbia",
+        "postcode": "V8T 4H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2323, Wark Street, North Park, Victoria, Capital Regional District, British Columbia, V8T 4H9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:42.645574+00:00",
+  "_kind": "geo_samples"
+}

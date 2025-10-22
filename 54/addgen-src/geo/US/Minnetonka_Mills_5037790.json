@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Minnetonka Mills",
+  "geonameid": 5037790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.95394781798639,
+      "lon": -93.4415133282484,
+      "geoinfo": {
+        "display_name": "2630, Plymouth Road, Minnetonka Mills, Minnetonka, Hennepin County, Minnesota, 55305, United States",
+        "road": "Plymouth Road",
+        "house_number": "2630",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Minnetonka",
+        "state": "Minnesota",
+        "postcode": "55305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2630 Plymouth Road, Minnetonka Mills, Minnesota, United States"
+    },
+    {
+      "lat": 44.95818840082064,
+      "lon": -93.48812313518103,
+      "geoinfo": {
+        "display_name": "Minnetonka, Hennepin County, Minnesota, 55391, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Minnetonka",
+        "state": "Minnesota",
+        "postcode": "55391",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "200, Minnetonka, Hennepin County, Minnesota, 55391, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:11.219044+00:00",
+  "_kind": "geo_samples"
+}

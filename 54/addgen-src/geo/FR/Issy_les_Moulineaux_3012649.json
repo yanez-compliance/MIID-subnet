@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Issy-les-Moulineaux",
+  "geonameid": 3012649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.82691608057128,
+      "lon": 2.2714423966303867,
+      "geoinfo": {
+        "display_name": "ARTE France, 8, Rue Marceau, Quartier Bords et Val de Seine / Les Arches, Issy-les-Moulineaux, Boulogne-Billancourt, Hauts-de-Seine, Metropolitan France, 92130, France",
+        "road": "Rue Marceau",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Quartier Bords et Val de Seine / Les Arches",
+        "city_district": null,
+        "city": "Issy-les-Moulineaux",
+        "state": null,
+        "postcode": "92130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8 Rue Marceau, Issy-les-Moulineaux, Ile-de-France, France"
+    },
+    {
+      "lat": 48.85089338372955,
+      "lon": 2.2783903721106995,
+      "geoinfo": {
+        "display_name": "5, Quai Louis Blériot, Quartier d'Auteuil, 16th Arrondissement, Paris, Metropolitan France, 75016, France",
+        "road": "Quai Louis Blériot",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Quartier d'Auteuil",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75016",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5, Quai Louis Blériot, Quartier d'Auteuil, 16th Arrondissement, Paris, Metropolitan France, 75016, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:23.752240+00:00",
+  "_kind": "geo_samples"
+}

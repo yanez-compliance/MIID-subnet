@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Parets del Vallès",
+  "geonameid": 3114267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.57503631512909,
+      "lon": 2.211619764927782,
+      "geoinfo": {
+        "display_name": "Carretera de Palaudàries a la C-155, Can Vila-rosal, Lliçà de Vall, Vallès Oriental, Barcelona, Catalonia, 08104, Spain",
+        "road": "Carretera de Palaudàries a la C-155",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lliçà de Vall",
+        "state": "Catalonia",
+        "postcode": "08104",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Palaudàries a la C-155, Parets del Vallès, Catalonia, Spain"
+    },
+    {
+      "lat": 41.58194115967255,
+      "lon": 2.2346080975332905,
+      "geoinfo": {
+        "display_name": "Carrer del Camí de Sant Valerià, Sant Valerià, Lliçà de Vall, Vallès Oriental, Barcelona, Catalonia, 08185, Spain",
+        "road": "Carrer del Camí de Sant Valerià",
+        "house_number": null,
+        "neighbourhood": "Sant Valerià",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lliçà de Vall",
+        "state": "Catalonia",
+        "postcode": "08185",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "398, Carrer del Camí de Sant Valerià, Sant Valerià, Lliçà de Vall, Vallès Oriental, Barcelona, Catalonia, 08185, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:45.019299+00:00",
+  "_kind": "geo_samples"
+}

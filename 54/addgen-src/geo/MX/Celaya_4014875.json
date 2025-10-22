@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Celaya",
+  "geonameid": 4014875,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.562790850158812,
+      "lon": -100.79296963540962,
+      "geoinfo": {
+        "display_name": "San Luis Rey, Celaya, Guanajuato, 38127, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guanajuato",
+        "postcode": "38127",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Celaya, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.491077609253452,
+      "lon": -100.80207615872585,
+      "geoinfo": {
+        "display_name": "521, Calle Sitio de Querétaro, Villas Del Romeral, Celaya, Guanajuato, 38095, Mexico",
+        "road": "Calle Sitio de Querétaro",
+        "house_number": "521",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Celaya",
+        "state": "Guanajuato",
+        "postcode": "38095",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "521, Calle Sitio de Querétaro, Villas Del Romeral, Celaya, Guanajuato, 38095, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:55.059456+00:00",
+  "_kind": "geo_samples"
+}

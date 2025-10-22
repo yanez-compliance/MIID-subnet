@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Bairro da Penha",
+  "geonameid": 12426999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -23.39468486716421,
+      "lon": -46.32377644209928,
+      "geoinfo": {
+        "display_name": "Rodoviária de Arujá, 150, Avenida João Manoel, Vila Riman, Centro, Arujá, Região Imediata de São Paulo, Região Metropolitana de São Paulo, São Paulo, Southeast Region, 07400-490, Brazil",
+        "road": "Avenida João Manoel",
+        "house_number": "150",
+        "neighbourhood": null,
+        "suburb": "Centro",
+        "city_district": "Arujá",
+        "city": "Arujá",
+        "state": "São Paulo",
+        "postcode": "07400-490",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "150 Avenida João Manoel, Bairro da Penha, São Paulo, Brazil"
+    },
+    {
+      "lat": -23.341672064777974,
+      "lon": -46.32657234881382,
+      "geoinfo": {
+        "display_name": "Correas, Arujá, Região Imediata de São Paulo, Região Metropolitana de São Paulo, São Paulo, Southeast Region, 07418-085, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Correas",
+        "city_district": "Arujá",
+        "city": "Arujá",
+        "state": "São Paulo",
+        "postcode": "07418-085",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Correas, Arujá, Região Imediata de São Paulo, Região Metropolitana de São Paulo, São Paulo, Southeast Region, 07418-085, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T03:16:11.451825+00:00",
+  "_kind": "geo_samples"
+}

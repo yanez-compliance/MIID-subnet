@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Reichenbach/Vogtland",
+  "geonameid": 2849156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.58891847546846,
+      "lon": 12.305848911189262,
+      "geoinfo": {
+        "display_name": "13B, Weststraße, Schneidenbach, Reichenbach, Reichenbach im Vogtland, Vogtlandkreis, Saxony, 08468, Germany",
+        "road": "Weststraße",
+        "house_number": "13B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Schneidenbach",
+        "city": "Reichenbach",
+        "state": "Saxony",
+        "postcode": "08468",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13B Weststraße, Reichenbach/Vogtland, Saxony, Germany"
+    },
+    {
+      "lat": 50.6309212281519,
+      "lon": 12.327736195858536,
+      "geoinfo": {
+        "display_name": "40, Eisenbahnstraße, Oberreichenbach, Reichenbach, Reichenbach im Vogtland, Vogtlandkreis, Saxony, 08468, Germany",
+        "road": "Eisenbahnstraße",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": "Oberreichenbach",
+        "city_district": null,
+        "city": "Reichenbach",
+        "state": "Saxony",
+        "postcode": "08468",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "40, Eisenbahnstraße, Oberreichenbach, Reichenbach, Reichenbach im Vogtland, Vogtlandkreis, Saxony, 08468, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:34.418258+00:00",
+  "_kind": "geo_samples"
+}

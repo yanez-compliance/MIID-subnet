@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Llandudno",
+  "geonameid": 2644120,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.28819551693571,
+      "lon": -3.821881448983685,
+      "geoinfo": {
+        "display_name": "Glan y Môr Road, Llandudno Junction, Conwy, Wales, LL31 9ST, United Kingdom",
+        "road": "Glan y Môr Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Llandudno Junction",
+        "state": "Wales",
+        "postcode": "LL31 9ST",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Glan y Môr Road, Llandudno, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.355177407938285,
+      "lon": -3.8149347530749727,
+      "geoinfo": {
+        "display_name": "Craig-y-don, Llandudno, Conwy, Wales, LL30 1EZ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Craig-y-don",
+        "city_district": null,
+        "city": "Llandudno",
+        "state": "Wales",
+        "postcode": "LL30 1EZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Craig-y-don, Llandudno, Conwy, Wales, LL30 1EZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:07.650242+00:00",
+  "_kind": "geo_samples"
+}

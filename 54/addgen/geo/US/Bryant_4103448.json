@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bryant",
+  "geonameid": 4103448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.63523200276689,
+      "lon": -92.48749004709137,
+      "geoinfo": {
+        "display_name": "697, Woody Drive, Collegeville, Bryant, Saline County, Arkansas, 72002, United States",
+        "road": "Woody Drive",
+        "house_number": "697",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bryant",
+        "state": "Arkansas",
+        "postcode": "72002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "697 Woody Drive, Bryant, Arkansas, United States"
+    },
+    {
+      "lat": 34.56814771360105,
+      "lon": -92.45769158962837,
+      "geoinfo": {
+        "display_name": "China Grove, Bauxite, Saline County, Arkansas, 72011, United States",
+        "road": "China Grove",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bauxite",
+        "state": "Arkansas",
+        "postcode": "72011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "234, China Grove, Bauxite, Saline County, Arkansas, 72011, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:50.109610+00:00",
+  "_kind": "geo_samples"
+}

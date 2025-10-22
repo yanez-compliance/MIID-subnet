@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Reims",
+  "geonameid": 2984114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.25440463031534,
+      "lon": 4.051222965881873,
+      "geoinfo": {
+        "display_name": "56, Rue Grandval, Plein R, Port Sec, Reims, Marne, Grand Est, Metropolitan France, 51100, France",
+        "road": "Rue Grandval",
+        "house_number": "56",
+        "neighbourhood": "Plein R",
+        "suburb": "Port Sec",
+        "city_district": null,
+        "city": "Reims",
+        "state": "Grand Est",
+        "postcode": "51100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "56 Rue Grandval, Reims, Grand Est, France"
+    },
+    {
+      "lat": 49.22836823058295,
+      "lon": 4.039509268945204,
+      "geoinfo": {
+        "display_name": "125, Rue de Louvois, Val de Murigny, Reims, Marne, Grand Est, Metropolitan France, 51100, France",
+        "road": "Rue de Louvois",
+        "house_number": "125",
+        "neighbourhood": null,
+        "suburb": "Val de Murigny",
+        "city_district": null,
+        "city": "Reims",
+        "state": "Grand Est",
+        "postcode": "51100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "125, Rue de Louvois, Val de Murigny, Reims, Marne, Grand Est, Metropolitan France, 51100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:51.466460+00:00",
+  "_kind": "geo_samples"
+}

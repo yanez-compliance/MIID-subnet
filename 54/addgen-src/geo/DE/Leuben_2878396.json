@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leuben",
+  "geonameid": 2878396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.01798800450837,
+      "lon": 13.83280932501296,
+      "geoinfo": {
+        "display_name": "toom Baumarkt, 61, Leubener Straße, Leuben, Laubegast, Leuben, Dresden, Saxony, 01279, Germany",
+        "road": "Leubener Straße",
+        "house_number": "61",
+        "neighbourhood": "Leuben",
+        "suburb": "Laubegast",
+        "city_district": "Leuben",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01279",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "61 Leubener Straße, Leuben, Saxony, Germany"
+    },
+    {
+      "lat": 50.97817684579884,
+      "lon": 13.825868763465289,
+      "geoinfo": {
+        "display_name": "Alte Landstraße, Lockwitz, Wölkau, Prohlis, Dresden, Sächsische Schweiz-Osterzgebirge, Saxony, 01259, Germany",
+        "road": "Alte Landstraße",
+        "house_number": null,
+        "neighbourhood": "Lockwitz",
+        "suburb": null,
+        "city_district": "Prohlis",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01259",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "668, Alte Landstraße, Lockwitz, Wölkau, Prohlis, Dresden, Sächsische Schweiz-Osterzgebirge, Saxony, 01259, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:02.688352+00:00",
+  "_kind": "geo_samples"
+}

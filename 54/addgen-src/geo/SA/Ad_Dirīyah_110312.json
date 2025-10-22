@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Ad Dir‘īyah",
+  "geonameid": 110312,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.71051392869907,
+      "lon": 46.55746384644535,
+      "geoinfo": {
+        "display_name": "Riyadh governorate, Riyadh Region, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Riyadh Region",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "446, Riyadh governorate, 23890 Riyadh Region, Saudi Arabia"
+    },
+    {
+      "lat": 24.74340752491873,
+      "lon": 46.58259789697755,
+      "geoinfo": {
+        "display_name": "Mohamed Bin Moslem, HayyalFaysaliyah, Ad Dir`iyah, Ad Diriyah, Riyadh Region, 12572, Saudi Arabia",
+        "road": "Mohamed Bin Moslem",
+        "house_number": null,
+        "neighbourhood": "HayyalFaysaliyah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ad Dir`iyah",
+        "state": "Riyadh Region",
+        "postcode": "12572",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "283, Mohamed Bin Moslem, Ad Dir‘īyah, 12572 Riyadh Region, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:23.256162+00:00",
+  "_kind": "geo_samples"
+}

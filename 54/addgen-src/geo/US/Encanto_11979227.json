@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Encanto",
+  "geonameid": 11979227,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.45562096377516,
+      "lon": -112.08509864738778,
+      "geoinfo": {
+        "display_name": "654, North 9th Avenue, F. Q. Story, Central City, Phoenix, Maricopa County, Arizona, 85007, United States",
+        "road": "North 9th Avenue",
+        "house_number": "654",
+        "neighbourhood": null,
+        "suburb": "Central City",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "654 North 9th Avenue, Encanto, Arizona, United States"
+    },
+    {
+      "lat": 33.483262622701574,
+      "lon": -112.1064856322958,
+      "geoinfo": {
+        "display_name": "2202, West Pinchot Avenue, Encanto, Phoenix, Maricopa County, Arizona, 85015, United States",
+        "road": "West Pinchot Avenue",
+        "house_number": "2202",
+        "neighbourhood": null,
+        "suburb": "Encanto",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2202, West Pinchot Avenue, Encanto, Phoenix, Maricopa County, Arizona, 85015, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:17:34.414975+00:00",
+  "_kind": "geo_samples"
+}

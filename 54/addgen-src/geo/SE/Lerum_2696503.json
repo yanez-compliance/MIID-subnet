@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Lerum",
+  "geonameid": 2696503,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.73826226360336,
+      "lon": 12.302632437377964,
+      "geoinfo": {
+        "display_name": "Häckenvägen, Mysten, Lerums distrikt, Öxeryd, Lerums kommun, Västra Götaland County, 443 92, Sweden",
+        "road": "Häckenvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lerums distrikt",
+        "city": "Öxeryd",
+        "state": null,
+        "postcode": "443 92",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Häckenvägen, Lerum, Sweden"
+    },
+    {
+      "lat": 57.75630127532417,
+      "lon": 12.221050085300513,
+      "geoinfo": {
+        "display_name": "Jonseredvägen, Gullringsbo, Lerums distrikt, Lerums kommun, Västra Götaland County, 443 51, Sweden",
+        "road": "Jonseredvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lerums distrikt",
+        "city": null,
+        "state": null,
+        "postcode": "443 51",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Jonseredvägen, Gullringsbo, Lerums distrikt, Lerums kommun, Västra Götaland County, 443 51, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:57.288260+00:00",
+  "_kind": "geo_samples"
+}

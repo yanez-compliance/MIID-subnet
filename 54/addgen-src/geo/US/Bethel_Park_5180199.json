@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bethel Park",
+  "geonameid": 5180199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3069194715739,
+      "lon": -80.03608403863966,
+      "geoinfo": {
+        "display_name": "5902, Kings School Road, Bethel Park, Allegheny County, Pennsylvania, 15102, United States",
+        "road": "Kings School Road",
+        "house_number": "5902",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bethel Park",
+        "state": "Pennsylvania",
+        "postcode": "15102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5902 Kings School Road, Bethel Park, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.36022742105099,
+      "lon": -80.04395707747442,
+      "geoinfo": {
+        "display_name": "30, Woodland Drive, Hoodridge Hilands, Pittsburgh, Allegheny County, Pennsylvania, 15228, United States",
+        "road": "Woodland Drive",
+        "house_number": "30",
+        "neighbourhood": "Hoodridge Hilands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "postcode": "15228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "30, Woodland Drive, Hoodridge Hilands, Pittsburgh, Allegheny County, Pennsylvania, 15228, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:47.361232+00:00",
+  "_kind": "geo_samples"
+}

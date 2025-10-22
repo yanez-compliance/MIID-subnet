@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Rafael",
+  "geonameid": 3836669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.590097705999355,
+      "lon": -68.29168293984405,
+      "geoinfo": {
+        "display_name": "Distrito El Cerrito, Departamento San Rafael, Mendoza, 5607, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mendoza",
+        "postcode": "5607",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San Rafael, Mendoza, Argentina"
+    },
+    {
+      "lat": -34.62565429820643,
+      "lon": -68.36234554285292,
+      "geoinfo": {
+        "display_name": "San Rafael, Distrito Ciudad de San Rafael, Departamento San Rafael, Mendoza, M5600, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "San Rafael",
+        "suburb": null,
+        "city_district": null,
+        "city": "Distrito Ciudad de San Rafael",
+        "state": "Mendoza",
+        "postcode": "M5600",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "277, San Rafael, Distrito Ciudad de San Rafael, Departamento San Rafael, Mendoza, M5600, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:45:31.678670+00:00",
+  "_kind": "geo_samples"
+}

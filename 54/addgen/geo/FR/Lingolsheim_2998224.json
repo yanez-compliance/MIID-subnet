@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lingolsheim",
+  "geonameid": 2998224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.54937249093796,
+      "lon": 7.694689288113523,
+      "geoinfo": {
+        "display_name": "Rue de Lingolsheim, Ostwald, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67540, France",
+        "road": "Rue de Lingolsheim",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ostwald",
+        "state": "Grand Est",
+        "postcode": "67540",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Lingolsheim, Lingolsheim, Grand Est, France"
+    },
+    {
+      "lat": 48.536661542988995,
+      "lon": 7.726289197168661,
+      "geoinfo": {
+        "display_name": "18, Route de Lyon, Illkirch-Graffenstaden, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67400, France",
+        "road": "Route de Lyon",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Illkirch-Graffenstaden",
+        "state": "Grand Est",
+        "postcode": "67400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "18, Route de Lyon, Illkirch-Graffenstaden, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:56.323381+00:00",
+  "_kind": "geo_samples"
+}

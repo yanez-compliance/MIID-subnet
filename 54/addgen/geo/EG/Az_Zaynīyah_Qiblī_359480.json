@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Az Zaynīyah Qiblī",
+  "geonameid": 359480,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 25.746898112959315,
+      "lon": 32.718224384201285,
+      "geoinfo": {
+        "display_name": "New Thebes, Tiba, Luxor, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Thebes",
+        "state": "Luxor",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Az Zaynīyah Qiblī, Luxor, Egypt"
+    },
+    {
+      "lat": 25.778568202372867,
+      "lon": 32.67491671166116,
+      "geoinfo": {
+        "display_name": "Al-Qarnah, Luxor, 85831, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Luxor",
+        "postcode": "85831",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "605, Az Zaynīyah Qiblī, 85831 Luxor, Egypt"
+    },
+    {
+      "lat": 25.763980609155613,
+      "lon": 32.63119764587241,
+      "geoinfo": {
+        "display_name": "Ezbet Abu Habashi, Al-Qarnah, Luxor, 85831, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ezbet Abu Habashi",
+        "state": "Luxor",
+        "postcode": "85831",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "207, Ezbet Abu Habashi, Al-Qarnah, Luxor, 85831, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:15.982458+00:00",
+  "_kind": "geo_samples"
+}

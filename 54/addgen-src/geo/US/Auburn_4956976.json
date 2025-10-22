@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn",
+  "geonameid": 4956976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.07535171463511,
+      "lon": -70.25219869635434,
+      "geoinfo": {
+        "display_name": "389, Poland Road, Littlefield Corner, Auburn, Androscoggin County, Maine, 04210, United States",
+        "road": "Poland Road",
+        "house_number": "389",
+        "neighbourhood": "Littlefield Corner",
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Maine",
+        "postcode": "04210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "389 Poland Road, Auburn, Maine, United States"
+    },
+    {
+      "lat": 44.10536214061111,
+      "lon": -70.28759790164321,
+      "geoinfo": {
+        "display_name": "110, Sunrise Lane, Auburn, Androscoggin County, Maine, 04210, United States",
+        "road": "Sunrise Lane",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Maine",
+        "postcode": "04210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110, Sunrise Lane, Auburn, Androscoggin County, Maine, 04210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:23.042795+00:00",
+  "_kind": "geo_samples"
+}

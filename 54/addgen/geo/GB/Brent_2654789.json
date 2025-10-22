@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Brent",
+  "geonameid": 2654789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.509678368654,
+      "lon": -0.29374658510047813,
+      "geoinfo": {
+        "display_name": "Warwick Road, London Borough of Ealing, London, Greater London, England, W5 3NH, United Kingdom",
+        "road": "Warwick Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Ealing",
+        "city": "London",
+        "state": "England",
+        "postcode": "W5 3NH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Warwick Road, Brent, England, United Kingdom"
+    },
+    {
+      "lat": 51.56105972829584,
+      "lon": -0.34381863246994065,
+      "geoinfo": {
+        "display_name": "Orley Farm School, South Hill Avenue, Sudbury Hill, London Borough of Harrow, London, Greater London, England, HA1 3NZ, United Kingdom",
+        "road": "South Hill Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sudbury Hill",
+        "city_district": "London Borough of Harrow",
+        "city": "London",
+        "state": "England",
+        "postcode": "HA1 3NZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Orley Farm School, South Hill Avenue, Sudbury Hill, London Borough of Harrow, London, Greater London, England, HA1 3NZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:53.134674+00:00",
+  "_kind": "geo_samples"
+}

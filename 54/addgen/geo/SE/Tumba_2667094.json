@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Tumba",
+  "geonameid": 2667094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.19322641327668,
+      "lon": 17.868456336193788,
+      "geoinfo": {
+        "display_name": "Himmelsbodavägen, Storvreten, Tumba, Botkyrka kommun, Stockholm County, 146 41, Sweden",
+        "road": "Himmelsbodavägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Storvreten",
+        "city_district": null,
+        "city": "Tumba",
+        "state": null,
+        "postcode": "146 41",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Himmelsbodavägen, Tumba, Sweden"
+    },
+    {
+      "lat": 59.194486179181965,
+      "lon": 17.88759232290145,
+      "geoinfo": {
+        "display_name": "Rikstensvägen, Brantbrink, Tullinge, Botkyrka kommun, Stockholm County, 146 40, Sweden",
+        "road": "Rikstensvägen",
+        "house_number": null,
+        "neighbourhood": "Brantbrink",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tullinge",
+        "state": null,
+        "postcode": "146 40",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Rikstensvägen, Brantbrink, Tullinge, Botkyrka kommun, Stockholm County, 146 40, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:44.156894+00:00",
+  "_kind": "geo_samples"
+}

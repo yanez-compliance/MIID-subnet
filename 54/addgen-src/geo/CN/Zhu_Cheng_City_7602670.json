@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhu Cheng City",
+  "geonameid": 7602670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.99731139160161,
+      "lon": 119.39673421781193,
+      "geoinfo": {
+        "display_name": "市场街, Zhucheng City, Weifang, Shandong, 262200, China",
+        "road": "市场街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": "262200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "市场街, Zhu Cheng City, Shandong, China"
+    },
+    {
+      "lat": 35.99678789730652,
+      "lon": 119.38217567981849,
+      "geoinfo": {
+        "display_name": "Zhucheng City, Weifang, Shandong, 262200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": "262200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "037, Zhucheng City, Weifang, Shandong, 262200, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:02:06.145686+00:00",
+  "_kind": "geo_samples"
+}

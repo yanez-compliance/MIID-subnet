@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lauf an der Pegnitz",
+  "geonameid": 2880144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.52301974571813,
+      "lon": 11.295059635717072,
+      "geoinfo": {
+        "display_name": "2, Weinbergstraße, Heuchling, Lauf an der Pegnitz, Nürnberger Land, Bavaria, 91207, Germany",
+        "road": "Weinbergstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Heuchling",
+        "city_district": null,
+        "city": "Lauf an der Pegnitz",
+        "state": "Bavaria",
+        "postcode": "91207",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Weinbergstraße, Lauf an der Pegnitz, Bavaria, Germany"
+    },
+    {
+      "lat": 49.49740558538227,
+      "lon": 11.25490746664326,
+      "geoinfo": {
+        "display_name": "Viertling, Ludwigshöhe, Rückersdorf, Nürnberger Land, Bavaria, 90607, Germany",
+        "road": "Viertling",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ludwigshöhe",
+        "city_district": null,
+        "city": "Rückersdorf",
+        "state": "Bavaria",
+        "postcode": "90607",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "718, Viertling, Ludwigshöhe, Rückersdorf, Nürnberger Land, Bavaria, 90607, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:07.136296+00:00",
+  "_kind": "geo_samples"
+}

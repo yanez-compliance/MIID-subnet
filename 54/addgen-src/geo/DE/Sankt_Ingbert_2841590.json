@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sankt Ingbert",
+  "geonameid": 2841590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.26975230499621,
+      "lon": 7.121160087101076,
+      "geoinfo": {
+        "display_name": "13, Winnweg, Sengscheid, St. Ingbert-Mitte, St. Ingbert, Sankt Ingbert, Saarpfalz-Kreis, Saarland, 66386, Germany",
+        "road": "Winnweg",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Sengscheid",
+        "city_district": "St. Ingbert",
+        "city": "Sankt Ingbert",
+        "state": "Saarland",
+        "postcode": "66386",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13 Winnweg, Sankt Ingbert, Saarland, Germany"
+    },
+    {
+      "lat": 49.314231096755535,
+      "lon": 7.104398408735571,
+      "geoinfo": {
+        "display_name": "A 8, Friedrichsthal, Regionalverband Saarbrücken, Saarland, 66299, Germany",
+        "road": "A 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Friedrichsthal",
+        "city": "Friedrichsthal",
+        "state": "Saarland",
+        "postcode": "66299",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 8, Friedrichsthal, Regionalverband Saarbrücken, Saarland, 66299, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:20.501443+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Tarabya",
+  "geonameid": 739110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.14177451252443,
+      "lon": 29.059887450494823,
+      "geoinfo": {
+        "display_name": "Haydar Aliyev Caddesi, Tarabya Mahallesi, Sarıyer, Istanbul, Marmara Region, 34457, Turkey",
+        "road": "Haydar Aliyev Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tarabya Mahallesi",
+        "city_district": null,
+        "city": "Sarıyer",
+        "state": null,
+        "postcode": "34457",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Haydar Aliyev Caddesi, Tarabya, Turkey"
+    },
+    {
+      "lat": 41.11298593683438,
+      "lon": 29.013751921999937,
+      "geoinfo": {
+        "display_name": "Maslak Mahallesi, Sarıyer, Istanbul, Marmara Region, 34485, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maslak Mahallesi",
+        "city_district": null,
+        "city": "Sarıyer",
+        "state": null,
+        "postcode": "34485",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "207, Maslak Mahallesi, Sarıyer, Istanbul, Marmara Region, 34485, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:37.981658+00:00",
+  "_kind": "geo_samples"
+}

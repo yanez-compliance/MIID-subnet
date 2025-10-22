@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Buenavista",
+  "geonameid": 3827606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.63358318982373,
+      "lon": -99.1794453110502,
+      "geoinfo": {
+        "display_name": "Tultitlán, State of Mexico, 54915, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tultitlán",
+        "state": "State of Mexico",
+        "postcode": "54915",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Buenavista, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.61258799455549,
+      "lon": -99.17387777971379,
+      "geoinfo": {
+        "display_name": "Avenida Miguel Hidalgo, Buenavista, Tultitlán, State of Mexico, 54913, Mexico",
+        "road": "Avenida Miguel Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buenavista",
+        "state": "State of Mexico",
+        "postcode": "54913",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "091, Avenida Miguel Hidalgo, Buenavista, Tultitlán, State of Mexico, 54913, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:13.555671+00:00",
+  "_kind": "geo_samples"
+}

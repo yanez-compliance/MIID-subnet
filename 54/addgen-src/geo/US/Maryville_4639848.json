@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maryville",
+  "geonameid": 4639848,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.745196724108766,
+      "lon": -84.01603622112897,
+      "geoinfo": {
+        "display_name": "Robert C Jackson Drive, Morganton Reserve, Maryville, Blount County, East Tennessee, Tennessee, 37802, United States",
+        "road": "Robert C Jackson Drive",
+        "house_number": null,
+        "neighbourhood": "Morganton Reserve",
+        "suburb": null,
+        "city_district": null,
+        "city": "Maryville",
+        "state": "Tennessee",
+        "postcode": "37802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Robert C Jackson Drive, Maryville, Tennessee, United States"
+    },
+    {
+      "lat": 35.773387762629085,
+      "lon": -84.0173086006274,
+      "geoinfo": {
+        "display_name": "Lively Road, Bent Tree, Blount County, East Tennessee, Tennessee, 37701, United States",
+        "road": "Lively Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "490, Lively Road, Bent Tree, Blount County, East Tennessee, Tennessee, 37701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:19.728016+00:00",
+  "_kind": "geo_samples"
+}

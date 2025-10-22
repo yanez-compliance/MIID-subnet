@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University Place",
+  "geonameid": 5814450,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.25484114481485,
+      "lon": -122.5648150212006,
+      "geoinfo": {
+        "display_name": "Artondale, Pierce County, Washington, 98335, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Artondale",
+        "state": "Washington",
+        "postcode": "98335",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "University Place, Washington, United States"
+    },
+    {
+      "lat": 47.22761782208001,
+      "lon": -122.56746853143427,
+      "geoinfo": {
+        "display_name": "3430, Soundview Drive West, University Place, Pierce County, Washington, 98466, United States",
+        "road": "Soundview Drive West",
+        "house_number": "3430",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "University Place",
+        "state": "Washington",
+        "postcode": "98466",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3430, Soundview Drive West, University Place, Pierce County, Washington, 98466, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:24.760822+00:00",
+  "_kind": "geo_samples"
+}

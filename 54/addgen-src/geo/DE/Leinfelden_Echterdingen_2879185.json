@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leinfelden-Echterdingen",
+  "geonameid": 2879185,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.70224815163898,
+      "lon": 9.163884428990542,
+      "geoinfo": {
+        "display_name": "B 27, Hofstetten, Echterdingen, Leinfelden-Echterdingen, Landkreis Esslingen, Baden-Württemberg, 70771, Germany",
+        "road": "B 27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Echterdingen",
+        "city_district": null,
+        "city": null,
+        "state": "Baden-Württemberg",
+        "postcode": "70771",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 27, Leinfelden-Echterdingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.70891753622993,
+      "lon": 9.159666542428269,
+      "geoinfo": {
+        "display_name": "16, Logauweg, Fasanenhof, Möhringen, Stuttgart, Baden-Württemberg, 70565, Germany",
+        "road": "Logauweg",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Fasanenhof",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70565",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16, Logauweg, Fasanenhof, Möhringen, Stuttgart, Baden-Württemberg, 70565, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:52.242301+00:00",
+  "_kind": "geo_samples"
+}

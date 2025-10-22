@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Melton Mowbray",
+  "geonameid": 2642763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.78127172021317,
+      "lon": -0.914115781231897,
+      "geoinfo": {
+        "display_name": "Melton Mowbray, Melton, Leicestershire, England, LE14 3JH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melton",
+        "state": "England",
+        "postcode": "LE14 3JH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Melton Mowbray, England, United Kingdom"
+    },
+    {
+      "lat": 52.73224564443186,
+      "lon": -0.8853725444563996,
+      "geoinfo": {
+        "display_name": "Dalby Road, Burton and Dalby, Great Dalby, Melton, Leicestershire, England, LE13 0BL, United Kingdom",
+        "road": "Dalby Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Burton and Dalby",
+        "city_district": null,
+        "city": "Melton",
+        "state": "England",
+        "postcode": "LE13 0BL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Dalby Road, Burton and Dalby, Great Dalby, Melton, Leicestershire, England, LE13 0BL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:51.839515+00:00",
+  "_kind": "geo_samples"
+}

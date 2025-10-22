@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Folsom",
+  "geonameid": 5349705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.709967790485756,
+      "lon": -121.13931810896293,
+      "geoinfo": {
+        "display_name": "Represa, Folsom, Sacramento County, California, 95671, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Represa",
+        "city_district": null,
+        "city": "Folsom",
+        "state": "California",
+        "postcode": "95671",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Represa, Folsom, California, United States"
+    },
+    {
+      "lat": 38.697576438571204,
+      "lon": -121.20246668872232,
+      "geoinfo": {
+        "display_name": "9318, Ottomon Way, Sacramento County, California, 95662, United States",
+        "road": "Ottomon Way",
+        "house_number": "9318",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9318, Ottomon Way, Sacramento County, California, 95662, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:30.122294+00:00",
+  "_kind": "geo_samples"
+}

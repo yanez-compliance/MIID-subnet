@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bourg-en-Bresse",
+  "geonameid": 3031009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.234429028656116,
+      "lon": 5.26153868582314,
+      "geoinfo": {
+        "display_name": "Route de Strasbourg, Zone de la Cambuse, Pont-de-Jugnon, Viriat, Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes, Metropolitan France, 01440, France",
+        "road": "Route de Strasbourg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viriat",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "01440",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Strasbourg, Bourg-en-Bresse, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 46.20394040528457,
+      "lon": 5.218299991863846,
+      "geoinfo": {
+        "display_name": "3, Rue Docteur Roux, Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes, Metropolitan France, 01000, France",
+        "road": "Rue Docteur Roux",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourg-en-Bresse",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "01000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3, Rue Docteur Roux, Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes, Metropolitan France, 01000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:13.189204+00:00",
+  "_kind": "geo_samples"
+}

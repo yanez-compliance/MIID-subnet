@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Semender",
+  "geonameid": 12750458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.99683818025195,
+      "lon": 47.38318760929921,
+      "geoinfo": {
+        "display_name": "603, Семендер, Semender, Makhachkala Urban Okrug, Dagestan, North Caucasian Federal District, 367006, Russia",
+        "road": null,
+        "house_number": "603",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Семендер",
+        "state": "Dagestan",
+        "postcode": "367006",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Semender, Dagestan, Russia"
+    },
+    {
+      "lat": 43.01592541875169,
+      "lon": 47.42300275041827,
+      "geoinfo": {
+        "display_name": "82К-045, квартал Нефтекачка, Новый город, Кировский район, Makhachkala, Makhachkala Urban Okrug, Dagestan, North Caucasian Federal District, 367000, Russia",
+        "road": "82К-045",
+        "house_number": null,
+        "neighbourhood": "квартал Нефтекачка",
+        "suburb": "Новый город",
+        "city_district": "Кировский район",
+        "city": "Makhachkala",
+        "state": "Dagestan",
+        "postcode": "367000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "82К-045, квартал Нефтекачка, Новый город, Кировский район, Makhachkala, Makhachkala Urban Okrug, Dagestan, North Caucasian Federal District, 367000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:13.816546+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Springfield",
+  "geonameid": 4955089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.14339086037726,
+      "lon": -72.6522228483207,
+      "geoinfo": {
+        "display_name": "72, Kelly Drive, West Springfield, Hampden County, Massachusetts, 01089, United States",
+        "road": "Kelly Drive",
+        "house_number": "72",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Springfield",
+        "state": "Massachusetts",
+        "postcode": "01089",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "72 Kelly Drive, West Springfield, Massachusetts, United States"
+    },
+    {
+      "lat": 42.07053538721004,
+      "lon": -72.62893296838251,
+      "geoinfo": {
+        "display_name": "52, Valentine Street, Agawam, Hampden County, Massachusetts, 01001, United States",
+        "road": "Valentine Street",
+        "house_number": "52",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Agawam",
+        "state": "Massachusetts",
+        "postcode": "01001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "52, Valentine Street, Agawam, Hampden County, Massachusetts, 01001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:53.440269+00:00",
+  "_kind": "geo_samples"
+}

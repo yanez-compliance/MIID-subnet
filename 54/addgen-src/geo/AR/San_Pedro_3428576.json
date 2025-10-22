@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Pedro",
+  "geonameid": 3428576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.680938278777106,
+      "lon": -59.672381989396484,
+      "geoinfo": {
+        "display_name": "425, Chacabuco, San Pedro, Partido de San Pedro, Buenos Aires, B2930, Argentina",
+        "road": "Chacabuco",
+        "house_number": "425",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro",
+        "state": "Buenos Aires",
+        "postcode": "B2930",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "425 Chacabuco, San Pedro, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -33.66348984232861,
+      "lon": -59.70898680672645,
+      "geoinfo": {
+        "display_name": "Lucio Mansilla, San Pedro, Partido de San Pedro, Buenos Aires, 2930, Argentina",
+        "road": "Lucio Mansilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro",
+        "state": "Buenos Aires",
+        "postcode": "2930",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "748, Lucio Mansilla, San Pedro, Partido de San Pedro, Buenos Aires, 2930, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:32.397210+00:00",
+  "_kind": "geo_samples"
+}

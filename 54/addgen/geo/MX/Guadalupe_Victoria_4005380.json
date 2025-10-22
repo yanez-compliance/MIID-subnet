@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Guadalupe Victoria",
+  "geonameid": 4005380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.4411959702738,
+      "lon": -104.16554621281591,
+      "geoinfo": {
+        "display_name": "Juan Aldama, Guadalupe Victoria, Durango, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Juan Aldama",
+        "state": "Durango",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Guadalupe Victoria, Durango, Mexico"
+    },
+    {
+      "lat": 24.482577985090604,
+      "lon": -104.15248463649166,
+      "geoinfo": {
+        "display_name": "Autopista de Peaje Gómez Palacio-Durango, Guadalupe Victoria, Durango, Mexico",
+        "road": "Autopista de Peaje Gómez Palacio-Durango",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Durango",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "930, Autopista de Peaje Gómez Palacio-Durango, Guadalupe Victoria, 92269 Durango, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:34.847449+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Fresnillo",
+  "geonameid": 4006163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.19768139896572,
+      "lon": -102.85227693687315,
+      "geoinfo": {
+        "display_name": "Fresnillo, Zacatecas, 99059, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fresnillo",
+        "state": "Zacatecas",
+        "postcode": "99059",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Fresnillo, Zacatecas, Mexico"
+    },
+    {
+      "lat": 23.149944508292734,
+      "lon": -102.85006132156288,
+      "geoinfo": {
+        "display_name": "Los Chilitos, Fresnillo, Zacatecas, 99000, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fresnillo",
+        "state": "Zacatecas",
+        "postcode": "99000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "038, Los Chilitos, Fresnillo, Zacatecas, 99000, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:48.551600+00:00",
+  "_kind": "geo_samples"
+}

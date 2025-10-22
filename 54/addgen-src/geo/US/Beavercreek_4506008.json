@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beavercreek",
+  "geonameid": 4506008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.68013088194893,
+      "lon": -84.03224014770842,
+      "geoinfo": {
+        "display_name": "Shepherd Road, Beavercreek Township, Greene County, Ohio, 45385, United States",
+        "road": "Shepherd Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45385",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Shepherd Road, Beavercreek, Ohio, United States"
+    },
+    {
+      "lat": 39.748593676953575,
+      "lon": -84.03806153164697,
+      "geoinfo": {
+        "display_name": "2774, Van Oss Drive, Beavercreek, Greene County, Ohio, 45431, United States",
+        "road": "Van Oss Drive",
+        "house_number": "2774",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beavercreek",
+        "state": "Ohio",
+        "postcode": "45431",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2774, Van Oss Drive, Beavercreek, Greene County, Ohio, 45431, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:19.598518+00:00",
+  "_kind": "geo_samples"
+}

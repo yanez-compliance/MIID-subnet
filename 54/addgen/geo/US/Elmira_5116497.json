@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elmira",
+  "geonameid": 5116497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.062165217750064,
+      "lon": -76.76672367268095,
+      "geoinfo": {
+        "display_name": "Southern Tier Expressway, Town of Elmira, Chemung County, New York, 14894, United States",
+        "road": "Southern Tier Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "14894",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southern Tier Expressway, Elmira, New York, United States"
+    },
+    {
+      "lat": 42.09620417975138,
+      "lon": -76.77743862770876,
+      "geoinfo": {
+        "display_name": "Bowlby Road, Town of Elmira, Chemung County, New York, 14901, United States",
+        "road": "Bowlby Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "14901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "855, Bowlby Road, Town of Elmira, Chemung County, New York, 14901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:17.076805+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Manly",
+  "geonameid": 2158867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.795071602988706,
+      "lon": 151.26127812592682,
+      "geoinfo": {
+        "display_name": "West Street, Balgowlah, Northern Beaches, Sydney, Northern Beaches Council, New South Wales, 2093, Australia",
+        "road": "West Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Balgowlah",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2093",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "West Street, Manly, New South Wales, Australia"
+    },
+    {
+      "lat": -33.794092891031035,
+      "lon": 151.3368851853136,
+      "geoinfo": {
+        "display_name": "New South Wales, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "412, 44883 New South Wales, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:24.926001+00:00",
+  "_kind": "geo_samples"
+}

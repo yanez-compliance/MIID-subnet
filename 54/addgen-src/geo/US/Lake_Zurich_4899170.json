@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Zurich",
+  "geonameid": 4899170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.1525977511298,
+      "lon": -88.10169613961881,
+      "geoinfo": {
+        "display_name": "100, North Ela Road, Deer Lake, Barrington, Palatine Township, Cook County, Illinois, 60010, United States",
+        "road": "North Ela Road",
+        "house_number": "100",
+        "neighbourhood": "Deer Lake",
+        "suburb": null,
+        "city_district": null,
+        "city": "Barrington",
+        "state": "Illinois",
+        "postcode": "60010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 North Ela Road, Lake Zurich, Illinois, United States"
+    },
+    {
+      "lat": 42.22374568376322,
+      "lon": -88.0773578743822,
+      "geoinfo": {
+        "display_name": "51, Mulberry Drive, Copperfield, Hawthorn Woods, Ela Township, Lake County, Illinois, 60047, United States",
+        "road": "Mulberry Drive",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorn Woods",
+        "state": "Illinois",
+        "postcode": "60047",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "51, Mulberry Drive, Copperfield, Hawthorn Woods, Ela Township, Lake County, Illinois, 60047, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:30.449494+00:00",
+  "_kind": "geo_samples"
+}

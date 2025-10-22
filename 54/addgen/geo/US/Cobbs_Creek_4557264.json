@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cobbs Creek",
+  "geonameid": 4557264,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94677305314038,
+      "lon": -75.23648479812063,
+      "geoinfo": {
+        "display_name": "5622, Baltimore Avenue, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19143, United States",
+        "road": "Baltimore Avenue",
+        "house_number": "5622",
+        "neighbourhood": null,
+        "suburb": "West Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5622 Baltimore Avenue, Cobbs Creek, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.93952679326503,
+      "lon": -75.22379454572894,
+      "geoinfo": {
+        "display_name": "5421, Chester Avenue, Kingsessing, Southwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19142, United States",
+        "road": "Chester Avenue",
+        "house_number": "5421",
+        "neighbourhood": "Kingsessing",
+        "suburb": "Southwest Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5421, Chester Avenue, Kingsessing, Southwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19142, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:41.479267+00:00",
+  "_kind": "geo_samples"
+}

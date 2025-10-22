@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Lebanon",
+  "geonameid": 5202215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36604925605521,
+      "lon": -80.04146985452294,
+      "geoinfo": {
+        "display_name": "146, Mount Lebanon Boulevard, Lebanon Hills, Pittsburgh, Allegheny County, Pennsylvania, 15228, United States",
+        "road": "Mount Lebanon Boulevard",
+        "house_number": "146",
+        "neighbourhood": "Lebanon Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "postcode": "15228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "146 Mount Lebanon Boulevard, Mount Lebanon, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.33831867733757,
+      "lon": -80.05052801183692,
+      "geoinfo": {
+        "display_name": "Fort Couch Road, Brookside, Bethel Park, Allegheny County, Pennsylvania, 15241, United States",
+        "road": "Fort Couch Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bethel Park",
+        "state": "Pennsylvania",
+        "postcode": "15241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "190, Fort Couch Road, Brookside, Bethel Park, Allegheny County, Pennsylvania, 15241, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:42.938502+00:00",
+  "_kind": "geo_samples"
+}

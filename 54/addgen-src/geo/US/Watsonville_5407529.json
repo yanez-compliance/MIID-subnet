@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Watsonville",
+  "geonameid": 5407529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.905215305188094,
+      "lon": -121.75955020834733,
+      "geoinfo": {
+        "display_name": "246, Locust Street, Watsonville, Santa Cruz County, California, 95076, United States",
+        "road": "Locust Street",
+        "house_number": "246",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Watsonville",
+        "state": "California",
+        "postcode": "95076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "246 Locust Street, Watsonville, California, United States"
+    },
+    {
+      "lat": 36.928349467786894,
+      "lon": -121.7771169560784,
+      "geoinfo": {
+        "display_name": "99, Bright View Court, Watsonville, Santa Cruz County, California, 95076, United States",
+        "road": "Bright View Court",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Watsonville",
+        "state": "California",
+        "postcode": "95076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99, Bright View Court, Watsonville, Santa Cruz County, California, 95076, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:27.356878+00:00",
+  "_kind": "geo_samples"
+}

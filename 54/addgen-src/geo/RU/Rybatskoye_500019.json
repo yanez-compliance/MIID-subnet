@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Rybatskoye",
+  "geonameid": 500019,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.81517265113112,
+      "lon": 30.525153091243993,
+      "geoinfo": {
+        "display_name": "СНТ (КО) «Овраги», Petro-Slavyanka, Saint Petersburg, Northwestern Federal District, 196642, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petro-Slavyanka",
+        "state": "Saint Petersburg",
+        "postcode": "196642",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Rybatskoye, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.864222452355264,
+      "lon": 30.518441433905153,
+      "geoinfo": {
+        "display_name": "28, Русановская улица, Rusanovka, Народный округ, Saint Petersburg, Northwestern Federal District, 193149, Russia",
+        "road": "Русановская улица",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": "Rusanovka",
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "193149",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "28, Русановская улица, Rusanovka, Народный округ, Saint Petersburg, Northwestern Federal District, 193149, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:51.929036+00:00",
+  "_kind": "geo_samples"
+}

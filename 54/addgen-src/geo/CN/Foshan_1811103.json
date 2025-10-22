@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Foshan",
+  "geonameid": 1811103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.023546246778675,
+      "lon": 113.1515898307236,
+      "geoinfo": {
+        "display_name": "Yihai Road, Dong'ercun, Guicheng Subdistrict, Nanhai District, Foshan, Guangdong Province, 528000, China",
+        "road": "Yihai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Guicheng Subdistrict",
+        "city_district": null,
+        "city": "Nanhai District",
+        "state": "Guangdong Province",
+        "postcode": "528000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yihai Road, Foshan, Guangdong Province, China"
+    },
+    {
+      "lat": 22.99317707047241,
+      "lon": 113.1396504230443,
+      "geoinfo": {
+        "display_name": "Poyangcun, Shiwanzhen Subdistrict, Chancheng District, Foshan, Guangdong Province, 528000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shiwanzhen Subdistrict",
+        "city_district": null,
+        "city": "Chancheng District",
+        "state": "Guangdong Province",
+        "postcode": "528000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "087, Poyangcun, Shiwanzhen Subdistrict, Chancheng District, Foshan, Guangdong Province, 528000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:58.804826+00:00",
+  "_kind": "geo_samples"
+}

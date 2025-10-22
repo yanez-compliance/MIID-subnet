@@ -1,0 +1,47 @@
+{
+  "country_code": "LK",
+  "country": "Sri Lanka",
+  "city": "Colombo",
+  "geonameid": 1248991,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.958088862077953,
+      "lon": 79.84891373809243,
+      "geoinfo": {
+        "display_name": "De Saram Lane, Seram Gate, Lunupokurana, Colombo, Colombo District, Western Province, 00130, Sri Lanka",
+        "road": "De Saram Lane",
+        "house_number": null,
+        "neighbourhood": "Seram Gate",
+        "suburb": "Lunupokurana",
+        "city_district": null,
+        "city": "Colombo",
+        "state": "Western Province",
+        "postcode": "00130",
+        "country": "Sri Lanka",
+        "country_code": "lk"
+      },
+      "address": "De Saram Lane, Colombo, Western Province, Sri Lanka"
+    },
+    {
+      "lat": 6.89296468195032,
+      "lon": 79.83764494232831,
+      "geoinfo": {
+        "display_name": "Bambalapitiya, Milagiriya, Colombo, Colombo District, Western Province, 00400, Sri Lanka",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bambalapitiya",
+        "city_district": null,
+        "city": "Colombo",
+        "state": "Western Province",
+        "postcode": "00400",
+        "country": "Sri Lanka",
+        "country_code": "lk"
+      },
+      "address": "Bambalapitiya, Colombo, Western Province, Sri Lanka"
+    }
+  ],
+  "updated_at": "2025-10-16T18:29:02.752575+00:00",
+  "_kind": "geo_samples"
+}

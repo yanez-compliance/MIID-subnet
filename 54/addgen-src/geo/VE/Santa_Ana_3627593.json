@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Santa Ana",
+  "geonameid": 3627593,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.07753156358581,
+      "lon": -63.89459659235583,
+      "geoinfo": {
+        "display_name": "Las Gamboas, Santa Ana, Parroquia Santa Ana, Municipio Gómez, Nueva Esparta State, 6323, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Las Gamboas",
+        "city_district": null,
+        "city": "Santa Ana",
+        "state": "Nueva Esparta State",
+        "postcode": "6323",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Las Gamboas, Santa Ana, Nueva Esparta State, Venezuela"
+    },
+    {
+      "lat": 11.044322775606371,
+      "lon": -63.895027192809984,
+      "geoinfo": {
+        "display_name": "Calle La Trinidad, Tacarigua, Parroquia Guevara, Municipio Gómez, Nueva Esparta State, 6323, Venezuela",
+        "road": "Calle La Trinidad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tacarigua",
+        "state": "Nueva Esparta State",
+        "postcode": "6323",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "133, Calle La Trinidad, Tacarigua, Parroquia Guevara, Municipio Gómez, Nueva Esparta State, 6323, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T05:37:30.711780+00:00",
+  "_kind": "geo_samples"
+}

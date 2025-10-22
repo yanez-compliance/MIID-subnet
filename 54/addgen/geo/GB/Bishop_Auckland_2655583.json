@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bishop Auckland",
+  "geonameid": 2655583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.65523058438858,
+      "lon": -1.601743643754165,
+      "geoinfo": {
+        "display_name": "A689, Windlestone, Spennymoor, County Durham, North East, England, DL17 0NB, United Kingdom",
+        "road": "A689",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Windlestone",
+        "city_district": null,
+        "city": "Spennymoor",
+        "state": "England",
+        "postcode": "DL17 0NB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A689, Bishop Auckland, England, United Kingdom"
+    },
+    {
+      "lat": 54.657405604486605,
+      "lon": -1.7030845270406565,
+      "geoinfo": {
+        "display_name": "Beckett Close, Escomb, County Durham, North East, England, DL14 0SX, United Kingdom",
+        "road": "Beckett Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Escomb",
+        "state": "England",
+        "postcode": "DL14 0SX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Beckett Close, Escomb, County Durham, North East, England, DL14 0SX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:50.561168+00:00",
+  "_kind": "geo_samples"
+}

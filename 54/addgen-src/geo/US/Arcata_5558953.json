@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arcata",
+  "geonameid": 5558953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.891930152459636,
+      "lon": -124.09428209029564,
+      "geoinfo": {
+        "display_name": "3763, Spear Avenue, Alliance, Arcata, Humboldt County, California, 95521, United States",
+        "road": "Spear Avenue",
+        "house_number": "3763",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcata",
+        "state": "California",
+        "postcode": "95521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3763 Spear Avenue, Arcata, California, United States"
+    },
+    {
+      "lat": 40.89969204496696,
+      "lon": -124.07574780595067,
+      "geoinfo": {
+        "display_name": "The Mill Yard, CA 299, Korblex, Arcata, Humboldt County, California, 95521, United States",
+        "road": "CA 299",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcata",
+        "state": "California",
+        "postcode": "95521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Mill Yard, CA 299, Korblex, Arcata, Humboldt County, California, 95521, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:40.449357+00:00",
+  "_kind": "geo_samples"
+}

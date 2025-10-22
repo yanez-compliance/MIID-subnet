@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Los Gatos",
+  "geonameid": 5368518,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.238813229844624,
+      "lon": -121.9772010274033,
+      "geoinfo": {
+        "display_name": "17513, Via Sereno, Monte Sereno, Santa Clara County, California, 95030, United States",
+        "road": "Via Sereno",
+        "house_number": "17513",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monte Sereno",
+        "state": "California",
+        "postcode": "95030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17513 Via Sereno, Los Gatos, California, United States"
+    },
+    {
+      "lat": 37.20809835334719,
+      "lon": -122.02125845606714,
+      "geoinfo": {
+        "display_name": "PG&E Road, Santa Clara County, California, United States",
+        "road": "PG&E Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "503, PG&E Road, Santa Clara County, 54116 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:35.733366+00:00",
+  "_kind": "geo_samples"
+}

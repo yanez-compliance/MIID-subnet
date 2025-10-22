@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tláhuac",
+  "geonameid": 3515463,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.292181581528727,
+      "lon": -98.99144918096242,
+      "geoinfo": {
+        "display_name": "Carretera a Santa Catarina, Colonia San Miguel Yecahuizotl, Mexico City, Tláhuac, Santa Catarina Yecahuízotl, Mexico City, 13430, Mexico",
+        "road": "Carretera a Santa Catarina",
+        "house_number": null,
+        "neighbourhood": "Colonia San Miguel Yecahuizotl",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "13430",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera a Santa Catarina, Tláhuac, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.27721920793417,
+      "lon": -98.98358267044509,
+      "geoinfo": {
+        "display_name": "Colonia Ampliación Selene, Tabla los Pozos, Tláhuac, Mexico City, 13430, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Colonia Ampliación Selene",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "13430",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "807, Colonia Ampliación Selene, Tabla los Pozos, Tláhuac, Mexico City, 13430, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:46.599879+00:00",
+  "_kind": "geo_samples"
+}

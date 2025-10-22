@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Rhyl",
+  "geonameid": 2639409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.30079584920483,
+      "lon": -3.4679869530453793,
+      "geoinfo": {
+        "display_name": "Rhyl, Rhuddlan, Denbighshire, Wales, LL18 2TJ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rhyl",
+        "city_district": null,
+        "city": "Rhuddlan",
+        "state": "Wales",
+        "postcode": "LL18 2TJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Rhyl, Rhyl, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.28207713386275,
+      "lon": -3.5243580377513326,
+      "geoinfo": {
+        "display_name": "Rhuddlan Road, Kinmel Bay and Towyn, Conwy, Wales, LL22 9SD, United Kingdom",
+        "road": "Rhuddlan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kinmel Bay and Towyn",
+        "city_district": null,
+        "city": null,
+        "state": "Wales",
+        "postcode": "LL22 9SD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Rhuddlan Road, Kinmel Bay and Towyn, Conwy, Wales, LL22 9SD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:24.745019+00:00",
+  "_kind": "geo_samples"
+}

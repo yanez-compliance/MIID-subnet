@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Yakuplu",
+  "geonameid": 738064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.023408785580656,
+      "lon": 28.672078399502052,
+      "geoinfo": {
+        "display_name": "1029. Sokak, Talatpaşa Mahallesi, Esenyurt, Istanbul, Marmara Region, 34513, Turkey",
+        "road": "1029. Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Talatpaşa Mahallesi",
+        "city_district": null,
+        "city": "Esenyurt",
+        "state": null,
+        "postcode": "34513",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "1029. Sokak, Yakuplu, Turkey"
+    },
+    {
+      "lat": 40.95557780028089,
+      "lon": 28.704294638335735,
+      "geoinfo": {
+        "display_name": "Istanbul, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "022, Istanbul, 16066 Marmara Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:16.185046+00:00",
+  "_kind": "geo_samples"
+}

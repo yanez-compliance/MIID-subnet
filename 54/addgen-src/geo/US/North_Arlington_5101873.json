@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Arlington",
+  "geonameid": 5101873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.78408395698322,
+      "lon": -74.12164906851797,
+      "geoinfo": {
+        "display_name": "Home Dynamix, 100, Porete Avenue, North Arlington, Bergen County, New Jersey, 07031, United States",
+        "road": "Porete Avenue",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Arlington",
+        "state": "New Jersey",
+        "postcode": "07031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Porete Avenue, North Arlington, New Jersey, United States"
+    },
+    {
+      "lat": 40.75681763529697,
+      "lon": -74.11935827739214,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike Western Spur, Kearny, Hudson County, New Jersey, 07032, United States",
+        "road": "New Jersey Turnpike Western Spur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kearny",
+        "state": "New Jersey",
+        "postcode": "07032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "987, New Jersey Turnpike Western Spur, Kearny, Hudson County, New Jersey, 07032, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:22.580390+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Whitman",
+  "geonameid": 4562237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.91178373599049,
+      "lon": -75.14022379958773,
+      "geoinfo": {
+        "display_name": "East Oregon Avenue, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19148, United States",
+        "road": "East Oregon Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Oregon Avenue, Whitman, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.882073480210344,
+      "lon": -75.17034997112059,
+      "geoinfo": {
+        "display_name": "Navy Yard Promenade, The Navy Yard, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19112, United States",
+        "road": "Navy Yard Promenade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "751, Navy Yard Promenade, The Navy Yard, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:08.935721+00:00",
+  "_kind": "geo_samples"
+}

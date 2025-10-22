@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Marino",
+  "geonameid": 3173914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.81404484152074,
+      "lon": 12.661402072170775,
+      "geoinfo": {
+        "display_name": "Frascati, Roma Capitale, Lazio, 00044, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frascati",
+        "state": "Lazio",
+        "postcode": "00044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Marino, Lazio, Italy"
+    },
+    {
+      "lat": 41.75292018198434,
+      "lon": 12.678076598783836,
+      "geoinfo": {
+        "display_name": "Via Spiaggia del Lago, Castel Gandolfo, Roma Capitale, Lazio, 00073, Italy",
+        "road": "Via Spiaggia del Lago",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castel Gandolfo",
+        "state": "Lazio",
+        "postcode": "00073",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "633, Via Spiaggia del Lago, Castel Gandolfo, Roma Capitale, Lazio, 00073, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:43.155373+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield Gardens",
+  "geonameid": 5139287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.69067650015447,
+      "lon": -73.73481707305113,
+      "geoinfo": {
+        "display_name": "118-34, 228th Street, Cambria Heights, Queens, Queens County, New York, 11411, United States",
+        "road": "228th Street",
+        "house_number": "118-34",
+        "neighbourhood": "Cambria Heights",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11411",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118-34 228th Street, Springfield Gardens, New York, United States"
+    },
+    {
+      "lat": 40.66107242169899,
+      "lon": -73.74125192269042,
+      "geoinfo": {
+        "display_name": "240-20, 144th Avenue, Rosedale, Queens, Queens County, New York, 11422, United States",
+        "road": "144th Avenue",
+        "house_number": "240-20",
+        "neighbourhood": "Rosedale",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11422",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "240-20, 144th Avenue, Rosedale, Queens, Queens County, New York, 11422, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:03:50.144602+00:00",
+  "_kind": "geo_samples"
+}

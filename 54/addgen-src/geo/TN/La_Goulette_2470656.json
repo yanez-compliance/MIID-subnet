@@ -1,0 +1,47 @@
+{
+  "country_code": "TN",
+  "country": "Tunisia",
+  "city": "La Goulette",
+  "geonameid": 2470656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.82718832275933,
+      "lon": 10.27769204952217,
+      "geoinfo": {
+        "display_name": "Cité des Pins, الطيب مهيري, معتمدية حلق الوادي, Tunis, 1053, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cité des Pins",
+        "city_district": "معتمدية حلق الوادي",
+        "city": "Tunis",
+        "state": "Tunis",
+        "postcode": "1053",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "Cité des Pins, La Goulette, Tunis, Tunisia"
+    },
+    {
+      "lat": 36.84305630677547,
+      "lon": 10.31813801310696,
+      "geoinfo": {
+        "display_name": "شارع الهادي شاكر, قرطاج بيرصة, Carthage, Tunis, 2025, Tunisia",
+        "road": "شارع الهادي شاكر",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "قرطاج بيرصة",
+        "city_district": "Carthage",
+        "city": "Tunis",
+        "state": "Tunis",
+        "postcode": "2025",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "322, شارع الهادي شاكر, قرطاج بيرصة, Carthage, Tunis, 2025, Tunisia"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:20.875694+00:00",
+  "_kind": "geo_samples"
+}

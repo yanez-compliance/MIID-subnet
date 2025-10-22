@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kingsland",
+  "geonameid": 4204007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.801393187232254,
+      "lon": -81.68902637371946,
+      "geoinfo": {
+        "display_name": "232, East Lily Street, Kingsland, Camden County, Georgia, 31548, United States",
+        "road": "East Lily Street",
+        "house_number": "232",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingsland",
+        "state": "Georgia",
+        "postcode": "31548",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "232 East Lily Street, Kingsland, Georgia, United States"
+    },
+    {
+      "lat": 30.83532944124501,
+      "lon": -81.72004679921939,
+      "geoinfo": {
+        "display_name": "Red Smith Road, Kingsland, Camden County, Georgia, 31458, United States",
+        "road": "Red Smith Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingsland",
+        "state": "Georgia",
+        "postcode": "31458",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "157, Red Smith Road, Kingsland, Camden County, Georgia, 31458, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:14.796351+00:00",
+  "_kind": "geo_samples"
+}

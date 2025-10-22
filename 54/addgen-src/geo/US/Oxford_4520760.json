@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxford",
+  "geonameid": 4520760,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.46873039105652,
+      "lon": -84.7608478931343,
+      "geoinfo": {
+        "display_name": "3175, Oxford Reily Road, Reily Township, Oxford Township, Butler County, Ohio, 45056, United States",
+        "road": "Oxford Reily Road",
+        "house_number": "3175",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reily Township",
+        "state": "Ohio",
+        "postcode": "45056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3175 Oxford Reily Road, Oxford, Ohio, United States"
+    },
+    {
+      "lat": 39.53061752086264,
+      "lon": -84.75889142634122,
+      "geoinfo": {
+        "display_name": "Oxford Township, Butler County, Ohio, 45056, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, Oxford Township, Butler County, Ohio, 45056, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:07.637201+00:00",
+  "_kind": "geo_samples"
+}

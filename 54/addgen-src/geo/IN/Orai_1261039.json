@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Orai",
+  "geonameid": 1261039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.02082345287163,
+      "lon": 79.46250271843702,
+      "geoinfo": {
+        "display_name": "Orai, Jalaun, Uttar Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orai",
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Orai, Uttar Pradesh, India"
+    },
+    {
+      "lat": 25.964501431417208,
+      "lon": 79.42936892565811,
+      "geoinfo": {
+        "display_name": "Orai, Jalaun, Uttar Pradesh, 285001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orai",
+        "state": "Uttar Pradesh",
+        "postcode": "285001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "000, Orai, Jalaun, Uttar Pradesh, 285001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:44.867165+00:00",
+  "_kind": "geo_samples"
+}

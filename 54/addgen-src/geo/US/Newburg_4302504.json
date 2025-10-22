@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newburg",
+  "geonameid": 4302504,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.14588692070933,
+      "lon": -85.67982013949081,
+      "geoinfo": {
+        "display_name": "Okolona, Louisville, Jefferson County, Kentucky, 40219, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Newburg, Kentucky, United States"
+    },
+    {
+      "lat": 38.13633118407236,
+      "lon": -85.64831478873853,
+      "geoinfo": {
+        "display_name": "7800, Cecilia Way, Smyrna, Louisville, Jefferson County, Kentucky, 40219, United States",
+        "road": "Cecilia Way",
+        "house_number": "7800",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7800, Cecilia Way, Smyrna, Louisville, Jefferson County, Kentucky, 40219, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:53.301717+00:00",
+  "_kind": "geo_samples"
+}

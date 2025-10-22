@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Luoyang",
+  "geonameid": 1801799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.185136927020725,
+      "lon": 114.29085358103622,
+      "geoinfo": {
+        "display_name": "桃园路, Boluo County, Huizhou, Guangdong Province, 516100, China",
+        "road": "桃园路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huizhou",
+        "state": "Guangdong Province",
+        "postcode": "516100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "桃园路, Luoyang, Guangdong Province, China"
+    },
+    {
+      "lat": 23.200137017038777,
+      "lon": 114.28018222649958,
+      "geoinfo": {
+        "display_name": "Boluo County, Huizhou, Guangdong Province, 516100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huizhou",
+        "state": "Guangdong Province",
+        "postcode": "516100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "802, Boluo County, Huizhou, Guangdong Province, 516100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:44.339268+00:00",
+  "_kind": "geo_samples"
+}

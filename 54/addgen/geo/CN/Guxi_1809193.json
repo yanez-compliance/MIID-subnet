@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guxi",
+  "geonameid": 1809193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.314533812941978,
+      "lon": 105.87890103055477,
+      "geoinfo": {
+        "display_name": "S538, Guxi, Tongnan District, Chongqing, China",
+        "road": "S538",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guxi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S538, Guxi, Chongqing, China"
+    },
+    {
+      "lat": 30.316540933572533,
+      "lon": 105.85258717571308,
+      "geoinfo": {
+        "display_name": "Qunli, Tongnan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qunli",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "856, Qunli, Tongnan District, 31296 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:30.640518+00:00",
+  "_kind": "geo_samples"
+}

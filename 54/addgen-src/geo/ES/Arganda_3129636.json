@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Arganda",
+  "geonameid": 3129636,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.315158917251196,
+      "lon": -3.49283491107405,
+      "geoinfo": {
+        "display_name": "Parque de Bomberos - Arganda. Nº23, Parque de Bomberos Arganda, Arganda del Rey, Community of Madrid, 28521, Spain",
+        "road": "Parque de Bomberos Arganda",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arganda del Rey",
+        "state": "Community of Madrid",
+        "postcode": "28521",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Parque de Bomberos Arganda, Arganda, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.27357608246913,
+      "lon": -3.4764281863421433,
+      "geoinfo": {
+        "display_name": "Valdecorzas, Arganda del Rey, Community of Madrid, 28500, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arganda del Rey",
+        "state": "Community of Madrid",
+        "postcode": "28500",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "788, Valdecorzas, Arganda del Rey, Community of Madrid, 28500, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:46.039097+00:00",
+  "_kind": "geo_samples"
+}

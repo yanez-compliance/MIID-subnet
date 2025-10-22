@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Huber Heights",
+  "geonameid": 4514746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.865935889291876,
+      "lon": -84.15221542120672,
+      "geoinfo": {
+        "display_name": "7800, Fernbank Court, Huber Heights, Montgomery County, Ohio, 45424, United States",
+        "road": "Fernbank Court",
+        "house_number": "7800",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huber Heights",
+        "state": "Ohio",
+        "postcode": "45424",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7800 Fernbank Court, Huber Heights, Ohio, United States"
+    },
+    {
+      "lat": 39.84424624924256,
+      "lon": -84.16423407627353,
+      "geoinfo": {
+        "display_name": "Fishburg Road, Miami Villa, Dayton, Montgomery County, Ohio, 45424, United States",
+        "road": "Fishburg Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Ohio",
+        "postcode": "45424",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "409, Fishburg Road, Miami Villa, Dayton, Montgomery County, Ohio, 45424, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:46.404580+00:00",
+  "_kind": "geo_samples"
+}

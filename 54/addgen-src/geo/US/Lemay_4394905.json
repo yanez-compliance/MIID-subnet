@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lemay",
+  "geonameid": 4394905,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.51908319979433,
+      "lon": -90.27410708088775,
+      "geoinfo": {
+        "display_name": "North Road, Lemay, Saint Louis County, Missouri, 63125, United States",
+        "road": "North Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lemay",
+        "state": "Missouri",
+        "postcode": "63125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Road, Lemay, Missouri, United States"
+    },
+    {
+      "lat": 38.51617636017959,
+      "lon": -90.33212656530402,
+      "geoinfo": {
+        "display_name": "4556, Bellewood Drive, Bellewood Park, Saint Louis County, Missouri, 63125, United States",
+        "road": "Bellewood Drive",
+        "house_number": "4556",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": "63125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4556, Bellewood Drive, Bellewood Park, Saint Louis County, Missouri, 63125, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:36.128303+00:00",
+  "_kind": "geo_samples"
+}

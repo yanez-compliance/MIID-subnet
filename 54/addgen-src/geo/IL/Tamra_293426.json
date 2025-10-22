@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Tamra",
+  "geonameid": 293426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.85862145740965,
+      "lon": 35.223926376261986,
+      "geoinfo": {
+        "display_name": "Kabul, Acre Subdistrict, North District, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kabul",
+        "state": "North District",
+        "postcode": null,
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Tamra, North District, Israel"
+    },
+    {
+      "lat": 32.826424452879266,
+      "lon": 35.1837151232199,
+      "geoinfo": {
+        "display_name": "Um-Shatawiya, Ibilin, Acre Subdistrict, North District, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Um-Shatawiya",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ibilin",
+        "state": "North District",
+        "postcode": null,
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "803, Um-Shatawiya, Ibilin, Acre Subdistrict, 58504 North District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:10.912746+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fishers",
+  "geonameid": 4257494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94189849781744,
+      "lon": -86.00600641669918,
+      "geoinfo": {
+        "display_name": "9184, East 106th Street, Fishers, Hamilton County, Indiana, 46037, United States",
+        "road": "East 106th Street",
+        "house_number": "9184",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fishers",
+        "state": "Indiana",
+        "postcode": "46037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9184 East 106th Street, Fishers, Indiana, United States"
+    },
+    {
+      "lat": 39.92313813208532,
+      "lon": -86.03390470787207,
+      "geoinfo": {
+        "display_name": "Crosspoint Common, Indianapolis, Marion County, Indiana, 46038, United States",
+        "road": "Crosspoint Common",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "043, Crosspoint Common, Indianapolis, Marion County, Indiana, 46038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:38.657699+00:00",
+  "_kind": "geo_samples"
+}

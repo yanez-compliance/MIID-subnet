@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Mula",
+  "geonameid": 2513436,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.06047340621719,
+      "lon": -1.5090955978894058,
+      "geoinfo": {
+        "display_name": "El Niño, Mula, Río Mula, Region of Murcia, 30194, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Niño",
+        "city_district": null,
+        "city": "Mula",
+        "state": "Region of Murcia",
+        "postcode": "30194",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "El Niño, Mula, Region of Murcia, Spain"
+    },
+    {
+      "lat": 38.01159143430451,
+      "lon": -1.4549079208414915,
+      "geoinfo": {
+        "display_name": "Mula, Río Mula, Region of Murcia, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mula",
+        "state": "Region of Murcia",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "862, Mula, Río Mula, 68466 Region of Murcia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:22.630388+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Bedok New Town",
+  "geonameid": 1884382,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.2976911641574598,
+      "lon": 103.93855904227958,
+      "geoinfo": {
+        "display_name": "Bayshore, Singapur East, Bedok, Southeast, Singapore, 466584, Singapore",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Bedok",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "466584",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "804, Bayshore, Singapur East, Bedok, Southeast, Singapore, 466584, Singapore"
+    },
+    {
+      "lat": 1.3470488993315217,
+      "lon": 103.95308676745383,
+      "geoinfo": {
+        "display_name": "Pan-Island Expressway, Tampines East, Singapur East, Tampines, Northeast, Singapore, 520279, Singapore",
+        "road": "Pan-Island Expressway",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Tampines",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "520279",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "222, Pan-Island Expressway, Tampines East, Singapur East, Tampines, Northeast, Singapore, 520279, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:57:19.426353+00:00",
+  "_kind": "geo_samples"
+}

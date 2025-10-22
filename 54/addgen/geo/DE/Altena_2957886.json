@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Altena",
+  "geonameid": 2957886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.30748061068486,
+      "lon": 7.730061899025108,
+      "geoinfo": {
+        "display_name": "7, Ihmerter Straße, Scharpschnute, Evingsen, Altena, Märkischer Kreis, North Rhine-Westphalia, 58762, Germany",
+        "road": "Ihmerter Straße",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altena",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58762",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Ihmerter Straße, Altena, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.270585164071186,
+      "lon": 7.68464492027309,
+      "geoinfo": {
+        "display_name": "Bergfeld, Altena, Märkischer Kreis, North Rhine-Westphalia, 58762, Germany",
+        "road": "Bergfeld",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altena",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58762",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "226, Bergfeld, Altena, Märkischer Kreis, North Rhine-Westphalia, 58762, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:30.267294+00:00",
+  "_kind": "geo_samples"
+}

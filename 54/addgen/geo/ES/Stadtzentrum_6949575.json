@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Stadtzentrum",
+  "geonameid": 6949575,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.125099172593202,
+      "lon": -15.380791762058658,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Stadtzentrum, Spain"
+    },
+    {
+      "lat": 28.10587943686048,
+      "lon": -15.401572100117235,
+      "geoinfo": {
+        "display_name": "Vegueta, Las Palmas de Gran Canaria, Las Palmas, Canary Islands, 35001, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vegueta",
+        "city_district": "Vegueta",
+        "city": "Las Palmas de Gran Canaria",
+        "state": null,
+        "postcode": "35001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "414, Vegueta, Las Palmas de Gran Canaria, Las Palmas, Canary Islands, 35001, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:39.379251+00:00",
+  "_kind": "geo_samples"
+}

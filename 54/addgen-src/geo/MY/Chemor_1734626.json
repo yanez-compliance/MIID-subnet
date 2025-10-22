@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Chemor",
+  "geonameid": 1734626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.731379455672118,
+      "lon": 101.07772222823347,
+      "geoinfo": {
+        "display_name": "Chemor, Ipoh, Kinta, Perak, 31200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "31200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Chemor, Perak, Malaysia"
+    },
+    {
+      "lat": 4.682285995283989,
+      "lon": 101.11443336149715,
+      "geoinfo": {
+        "display_name": "Taman Klebang Ria, Klebang, Ipoh, Kinta, Perak, 31200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Klebang Ria",
+        "suburb": "Klebang",
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "31200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "429, Taman Klebang Ria, Klebang, Ipoh, Kinta, Perak, 31200, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:03.521169+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Herborn",
+  "geonameid": 2906199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.65837760541483,
+      "lon": 8.288042978563887,
+      "geoinfo": {
+        "display_name": "46, Jahnstraße, Merkenbach, Herborn, Lahn-Dill-Kreis, Hesse, 35745, Germany",
+        "road": "Jahnstraße",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merkenbach",
+        "state": "Hesse",
+        "postcode": "35745",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "46 Jahnstraße, Herborn, Hesse, Germany"
+    },
+    {
+      "lat": 50.67362030884134,
+      "lon": 8.350702001256236,
+      "geoinfo": {
+        "display_name": "Ballersbacher Weg, Ballersbach, Mittenaar, Lahn-Dill-Kreis, Hesse, 35756, Germany",
+        "road": "Ballersbacher Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ballersbach",
+        "state": "Hesse",
+        "postcode": "35756",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "002, Ballersbacher Weg, Ballersbach, Mittenaar, Lahn-Dill-Kreis, Hesse, 35756, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:07.262246+00:00",
+  "_kind": "geo_samples"
+}

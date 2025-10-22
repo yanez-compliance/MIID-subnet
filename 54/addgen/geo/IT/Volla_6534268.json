@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Volla",
+  "geonameid": 6534268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.84085857679708,
+      "lon": 14.344517950899892,
+      "geoinfo": {
+        "display_name": "Via Alessandro Manzoni, San Giorgio a Cremano, Naples, Campania, 80147, Italy",
+        "road": "Via Alessandro Manzoni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Giorgio a Cremano",
+        "state": "Campania",
+        "postcode": "80147",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Alessandro Manzoni, Volla, Campania, Italy"
+    },
+    {
+      "lat": 40.847644923858105,
+      "lon": 14.303646000522843,
+      "geoinfo": {
+        "display_name": "Via Argine, Monteleone, San Giovanni a Teduccio, Municipalità 6, Naples, Campania, 80146, Italy",
+        "road": "Via Argine",
+        "house_number": null,
+        "neighbourhood": "Monteleone",
+        "suburb": "San Giovanni a Teduccio",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80146",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Argine, Monteleone, San Giovanni a Teduccio, Municipalità 6, Naples, Campania, 80146, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:12.532063+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Biella",
+  "geonameid": 3182043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.539477447743614,
+      "lon": 8.027574889074016,
+      "geoinfo": {
+        "display_name": "Cascina Palazzina, Occhieppo Inferiore, Biella, Piedmont, 13897, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Occhieppo Inferiore",
+        "state": "Piedmont",
+        "postcode": "13897",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Biella, Piedmont, Italy"
+    },
+    {
+      "lat": 45.55929670665289,
+      "lon": 8.042879280620687,
+      "geoinfo": {
+        "display_name": "Lega Italiana per la Lotta contro i Tumori, Via Ivrea, Vernato, Piazzo, Biella, Piedmont, 13900, Italy",
+        "road": "Via Ivrea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vernato",
+        "city_district": null,
+        "city": "Biella",
+        "state": "Piedmont",
+        "postcode": "13900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "774, Via Ivrea, Biella, 13900 Piedmont, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:44.979805+00:00",
+  "_kind": "geo_samples"
+}

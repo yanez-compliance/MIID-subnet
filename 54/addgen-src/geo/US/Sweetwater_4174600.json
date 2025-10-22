@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sweetwater",
+  "geonameid": 4174600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.747330871462584,
+      "lon": -80.38188059601747,
+      "geoinfo": {
+        "display_name": "Southwest 114th Avenue, Miami-Dade County, Florida, 33199, United States",
+        "road": "Southwest 114th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33199",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 114th Avenue, Sweetwater, Florida, United States"
+    },
+    {
+      "lat": 25.789505032000772,
+      "lon": -80.33635924671746,
+      "geoinfo": {
+        "display_name": "Red Lobster, 1695, Northwest 87th Avenue, Doral, Miami-Dade County, Florida, 33172, United States",
+        "road": "Northwest 87th Avenue",
+        "house_number": "1695",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doral",
+        "state": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Red Lobster, 1695, Northwest 87th Avenue, Doral, Miami-Dade County, Florida, 33172, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:49.638924+00:00",
+  "_kind": "geo_samples"
+}

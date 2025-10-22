@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Torrevieja",
+  "geonameid": 2510253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.98149507596981,
+      "lon": -0.6751535529768777,
+      "geoinfo": {
+        "display_name": "Avenida Diego Ramírez Pastor, Urbanización Calas Blancas, Torrevieja, el Baix Segura / La Vega Baja, Alacant / Alicante, Valencian Community, 03182, Spain",
+        "road": "Avenida Diego Ramírez Pastor",
+        "house_number": null,
+        "neighbourhood": "Urbanización Calas Blancas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrevieja",
+        "state": "Valencian Community",
+        "postcode": "03182",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida Diego Ramírez Pastor, Torrevieja, Valencian Community, Spain"
+    },
+    {
+      "lat": 37.98299417248415,
+      "lon": -0.6595237245929316,
+      "geoinfo": {
+        "display_name": "El Palmeral, Torrevieja, el Baix Segura / La Vega Baja, Alacant / Alicante, Valencian Community, 00383, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "El Palmeral",
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrevieja",
+        "state": "Valencian Community",
+        "postcode": "00383",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "833, El Palmeral, Torrevieja, el Baix Segura / La Vega Baja, Alacant / Alicante, Valencian Community, 00383, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:05:59.723083+00:00",
+  "_kind": "geo_samples"
+}

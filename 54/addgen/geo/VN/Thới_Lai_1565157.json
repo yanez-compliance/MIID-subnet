@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Thới Lai",
+  "geonameid": 1565157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.034058621730859,
+      "lon": 105.53122647724993,
+      "geoinfo": {
+        "display_name": "Thới Lai, Cần Thơ, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cần Thơ",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Thới Lai, Vietnam"
+    },
+    {
+      "lat": 10.049309511947836,
+      "lon": 105.55552536888709,
+      "geoinfo": {
+        "display_name": "Xã Thới Lai, Cần Thơ, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Xã Thới Lai",
+        "city": "Cần Thơ",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "148, Xã Thới Lai, 14130 Cần Thơ, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T11:32:32.593954+00:00",
+  "_kind": "geo_samples"
+}

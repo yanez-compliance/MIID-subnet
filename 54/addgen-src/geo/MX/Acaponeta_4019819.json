@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Acaponeta",
+  "geonameid": 4019819,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.488216847100517,
+      "lon": -105.3736611139912,
+      "geoinfo": {
+        "display_name": "Calle 1o de Febrero, Acaponeta, Nayarit, 63434, Mexico",
+        "road": "Calle 1o de Febrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acaponeta",
+        "state": "Nayarit",
+        "postcode": "63434",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 1o de Febrero, Acaponeta, Nayarit, Mexico"
+    },
+    {
+      "lat": 22.500504785839198,
+      "lon": -105.34686136113719,
+      "geoinfo": {
+        "display_name": "San Dieguito de Arriba, Acaponeta, Nayarit, 63405, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Dieguito de Arriba",
+        "state": "Nayarit",
+        "postcode": "63405",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "264, San Dieguito de Arriba, Acaponeta, Nayarit, 63405, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:49.860723+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lewisville",
+  "geonameid": 4706057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.020616761178935,
+      "lon": -96.97867309809543,
+      "geoinfo": {
+        "display_name": "East Corporate Drive, Lewisville, Denton County, Texas, 75057, United States",
+        "road": "East Corporate Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lewisville",
+        "state": "Texas",
+        "postcode": "75057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Corporate Drive, Lewisville, Texas, United States"
+    },
+    {
+      "lat": 33.0185367718256,
+      "lon": -96.9872783001284,
+      "geoinfo": {
+        "display_name": "328, East Southwest Parkway, Lewisville, Denton County, Texas, 75067, United States",
+        "road": "East Southwest Parkway",
+        "house_number": "328",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lewisville",
+        "state": "Texas",
+        "postcode": "75067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "328, East Southwest Parkway, Lewisville, Denton County, Texas, 75067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:11.129998+00:00",
+  "_kind": "geo_samples"
+}

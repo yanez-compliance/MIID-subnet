@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wausau",
+  "geonameid": 5278120,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.93097128729927,
+      "lon": -89.59771940985915,
+      "geoinfo": {
+        "display_name": "Northwestern Avenue, Wausau, Town of Weston, Marathon County, Wisconsin, 54403, United States",
+        "road": "Northwestern Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wausau",
+        "state": "Wisconsin",
+        "postcode": "54403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northwestern Avenue, Wausau, Wisconsin, United States"
+    },
+    {
+      "lat": 44.93830710525149,
+      "lon": -89.64754914386056,
+      "geoinfo": {
+        "display_name": "Imm Street, S.W. Jones, Wausau, Marathon County, Wisconsin, 54401, United States",
+        "road": "Imm Street",
+        "house_number": null,
+        "neighbourhood": "S.W. Jones",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wausau",
+        "state": "Wisconsin",
+        "postcode": "54401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "271, Imm Street, S.W. Jones, Wausau, Marathon County, Wisconsin, 54401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:19.813240+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Twin Falls",
+  "geonameid": 5610810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.561069769972136,
+      "lon": -114.48510417487981,
+      "geoinfo": {
+        "display_name": "297, Blake Street South, Twin Falls, Twin Falls County, Idaho, 83301, United States",
+        "road": "Blake Street South",
+        "house_number": "297",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Twin Falls",
+        "state": "Idaho",
+        "postcode": "83301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "297 Blake Street South, Twin Falls, Idaho, United States"
+    },
+    {
+      "lat": 42.57846238670525,
+      "lon": -114.49747852569247,
+      "geoinfo": {
+        "display_name": "Kenbrook Loop, Twin Falls, Twin Falls County, Idaho, 83301, United States",
+        "road": "Kenbrook Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Twin Falls",
+        "state": "Idaho",
+        "postcode": "83301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "503, Kenbrook Loop, Twin Falls, Twin Falls County, Idaho, 83301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:15.679388+00:00",
+  "_kind": "geo_samples"
+}

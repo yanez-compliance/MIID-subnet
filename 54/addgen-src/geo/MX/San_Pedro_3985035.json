@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pedro",
+  "geonameid": 3985035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.74216832793072,
+      "lon": -103.02562103610425,
+      "geoinfo": {
+        "display_name": "San Pedro, Coahuila, 27958, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": "27958",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Pedro, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.719347679420615,
+      "lon": -102.99158383928707,
+      "geoinfo": {
+        "display_name": "San Esteban de Abajo, San Pedro, Coahuila, 27954, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Esteban de Abajo",
+        "state": "Coahuila",
+        "postcode": "27954",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "370, San Esteban de Abajo, San Pedro, Coahuila, 27954, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:48.566836+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Manzanillo",
+  "geonameid": 3996663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.094682099990475,
+      "lon": -104.37355475290131,
+      "geoinfo": {
+        "display_name": "Condominios La Punta, Manzanillo, Colima, 28200, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Condominios La Punta",
+        "city_district": null,
+        "city": "Manzanillo",
+        "state": "Colima",
+        "postcode": "28200",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Condominios La Punta, Manzanillo, Colima, Mexico"
+    },
+    {
+      "lat": 19.10017277717842,
+      "lon": -104.34499159865108,
+      "geoinfo": {
+        "display_name": "Marina Las Hadas, Camino del Rey Colimán, Condominios La Punta, Manzanillo, Colima, 28200, Mexico",
+        "road": "Camino del Rey Colimán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Condominios La Punta",
+        "city_district": null,
+        "city": "Manzanillo",
+        "state": "Colima",
+        "postcode": "28200",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "699, Camino del Rey Colimán, Manzanillo, 28200 Colima, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:26.119545+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neuss",
+  "geonameid": 2864118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.16595680743855,
+      "lon": 6.6987933066854035,
+      "geoinfo": {
+        "display_name": "Knechtstedener Straße, Weckhoven, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41466, Germany",
+        "road": "Knechtstedener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuss",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41466",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Knechtstedener Straße, Neuss, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.16583834547984,
+      "lon": 6.657072662360178,
+      "geoinfo": {
+        "display_name": "Kreitzweg, Löveling, Holzheim, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41472, Germany",
+        "road": "Kreitzweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Löveling",
+        "city_district": null,
+        "city": "Neuss",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41472",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "743, Kreitzweg, Löveling, Holzheim, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41472, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:58.015461+00:00",
+  "_kind": "geo_samples"
+}

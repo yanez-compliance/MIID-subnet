@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Santa Teresa",
+  "geonameid": 8858090,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.836973782851555,
+      "lon": -99.1941324793022,
+      "geoinfo": {
+        "display_name": "Huehuetoca, State of Mexico, 54680, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huehuetoca",
+        "state": "State of Mexico",
+        "postcode": "54680",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Santa Teresa, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.802826295982612,
+      "lon": -99.21929455772487,
+      "geoinfo": {
+        "display_name": "Coyotepec, State of Mexico, 54660, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyotepec",
+        "state": "State of Mexico",
+        "postcode": "54660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "480, Coyotepec, State of Mexico, 54660, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:04.567033+00:00",
+  "_kind": "geo_samples"
+}

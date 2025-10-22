@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Las Rozas de Madrid",
+  "geonameid": 3118848,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.521793822319076,
+      "lon": -3.8882997932684003,
+      "geoinfo": {
+        "display_name": "Calle de Pablo Neruda, La Dehesa de Navalcarbón, Las Rozas de Madrid, Community of Madrid, 28230, Spain",
+        "road": "Calle de Pablo Neruda",
+        "house_number": null,
+        "neighbourhood": "La Dehesa de Navalcarbón",
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Rozas de Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28230",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de Pablo Neruda, Las Rozas de Madrid, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.50076179779258,
+      "lon": -3.9158894551804537,
+      "geoinfo": {
+        "display_name": "Majuelo Grande, Majadahonda, Community of Madrid, 28230, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Majadahonda",
+        "state": "Community of Madrid",
+        "postcode": "28230",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "561, Majuelo Grande, Majadahonda, Community of Madrid, 28230, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:52.354941+00:00",
+  "_kind": "geo_samples"
+}

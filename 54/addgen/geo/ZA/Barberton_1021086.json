@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Barberton",
+  "geonameid": 1021086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.78328340073329,
+      "lon": 31.0419871110179,
+      "geoinfo": {
+        "display_name": "Barberton Provincial Hospital, 1, Hospital Street, Umjindi Ward 9, Barberton, Umjindi Local Municipality, Ehlanzeni District Municipality, Mpumalanga, 1300, South Africa",
+        "road": "Hospital Street",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Umjindi Ward 9",
+        "city_district": null,
+        "city": "Umjindi Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": "1300",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "1 Hospital Street, Barberton, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -25.772824949809046,
+      "lon": 31.012629703767026,
+      "geoinfo": {
+        "display_name": "Umjindi Ward 3, eMjindini, Umjindi Local Municipality, Ehlanzeni District Municipality, Mpumalanga, 1300, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Umjindi Ward 3",
+        "city_district": null,
+        "city": "Umjindi Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": "1300",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Umjindi Ward 3, eMjindini, Umjindi Local Municipality, Ehlanzeni District Municipality, Mpumalanga, 1300, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:40.057802+00:00",
+  "_kind": "geo_samples"
+}

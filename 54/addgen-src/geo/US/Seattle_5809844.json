@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seattle",
+  "geonameid": 5809844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.61521139219598,
+      "lon": -122.30172735331666,
+      "geoinfo": {
+        "display_name": "1535, 24th Avenue, Washington Park, Central District, Seattle, King County, Washington, 98122, United States",
+        "road": "24th Avenue",
+        "house_number": "1535",
+        "neighbourhood": null,
+        "suburb": "Washington Park",
+        "city_district": null,
+        "city": "Seattle",
+        "state": "Washington",
+        "postcode": "98122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1535 24th Avenue, Seattle, Washington, United States"
+    },
+    {
+      "lat": 47.60028407978341,
+      "lon": -122.36420381438145,
+      "geoinfo": {
+        "display_name": "Belltown, Seattle, King County, Washington, 98121, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Belltown",
+        "city_district": null,
+        "city": "Seattle",
+        "state": "Washington",
+        "postcode": "98121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "072, Belltown, Seattle, King County, Washington, 98121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:52.653593+00:00",
+  "_kind": "geo_samples"
+}

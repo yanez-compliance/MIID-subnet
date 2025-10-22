@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Florence",
+  "geonameid": 4059870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.84625752145946,
+      "lon": -87.66379666375866,
+      "geoinfo": {
+        "display_name": "Mars Hill, Florence, Lauderdale County, Alabama, 35630, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Florence",
+        "state": "Alabama",
+        "postcode": "35630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Florence, Alabama, United States"
+    },
+    {
+      "lat": 34.84976767131316,
+      "lon": -87.64682549461547,
+      "geoinfo": {
+        "display_name": "206, Woodfield Court, Cedar Park, Florence, Lauderdale County, Alabama, 35630, United States",
+        "road": "Woodfield Court",
+        "house_number": "206",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Florence",
+        "state": "Alabama",
+        "postcode": "35630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206, Woodfield Court, Cedar Park, Florence, Lauderdale County, Alabama, 35630, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:43.937147+00:00",
+  "_kind": "geo_samples"
+}

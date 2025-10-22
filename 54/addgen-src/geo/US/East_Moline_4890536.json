@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Moline",
+  "geonameid": 4890536,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.50652718681593,
+      "lon": -90.39394011452475,
+      "geoinfo": {
+        "display_name": "North 2nd Avenue, Carbon Cliff, Rock Island County, Illinois, 61282, United States",
+        "road": "North 2nd Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carbon Cliff",
+        "state": "Illinois",
+        "postcode": "61282",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 2nd Avenue, East Moline, Illinois, United States"
+    },
+    {
+      "lat": 41.492055209953804,
+      "lon": -90.46163386209882,
+      "geoinfo": {
+        "display_name": "22nd Avenue, Moline, Rock Island County, Illinois, 61265, United States",
+        "road": "22nd Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moline",
+        "state": "Illinois",
+        "postcode": "61265",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22nd Avenue, Moline, Rock Island County, Illinois, 61265, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:38.339674+00:00",
+  "_kind": "geo_samples"
+}

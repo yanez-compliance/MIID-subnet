@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rheinfelden",
+  "geonameid": 2847639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.590773741534235,
+      "lon": 7.755980458549073,
+      "geoinfo": {
+        "display_name": "10, Paradiesweg, Niedereichsel, Rheinfelden (Baden), Verwaltungsgemeinschaft Rheinfelden (Baden), Landkreis Lörrach, Baden-Württemberg, 79618, Germany",
+        "road": "Paradiesweg",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rheinfelden (Baden)",
+        "state": "Baden-Württemberg",
+        "postcode": "79618",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10 Paradiesweg, Rheinfelden, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 47.57675176920067,
+      "lon": 7.795588238868642,
+      "geoinfo": {
+        "display_name": "Beuggener Straße, Karsau, Rheinfelden (Baden), Verwaltungsgemeinschaft Rheinfelden (Baden), Landkreis Lörrach, Baden-Württemberg, 79618, Germany",
+        "road": "Beuggener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Karsau",
+        "city_district": null,
+        "city": "Rheinfelden (Baden)",
+        "state": "Baden-Württemberg",
+        "postcode": "79618",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "007, Beuggener Straße, Karsau, Rheinfelden (Baden), Verwaltungsgemeinschaft Rheinfelden (Baden), Landkreis Lörrach, Baden-Württemberg, 79618, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:46.489085+00:00",
+  "_kind": "geo_samples"
+}

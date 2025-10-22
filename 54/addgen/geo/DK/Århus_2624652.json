@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Århus",
+  "geonameid": 2624652,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 56.17467173227461,
+      "lon": 10.15892577516155,
+      "geoinfo": {
+        "display_name": "2B, Julivej, Haslegårds Haveby, Hasle, Aarhus, Aarhus Municipality, Central Denmark Region, 8210, Denmark",
+        "road": "Julivej",
+        "house_number": "2B",
+        "neighbourhood": "Haslegårds Haveby",
+        "suburb": "Hasle",
+        "city_district": null,
+        "city": "Aarhus",
+        "state": "Central Denmark Region",
+        "postcode": "8210",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "2B, Julivej, Århus, 8210 Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 56.13075284156825,
+      "lon": 10.154718734775729,
+      "geoinfo": {
+        "display_name": "Myrholmsvej, Nordby, Viby J., Aarhus, Aarhus Municipality, Central Denmark Region, 8260, Denmark",
+        "road": "Myrholmsvej",
+        "house_number": null,
+        "neighbourhood": "Nordby",
+        "suburb": "Viby J.",
+        "city_district": null,
+        "city": "Aarhus",
+        "state": "Central Denmark Region",
+        "postcode": "8260",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "916, Myrholmsvej, Nordby, Viby J., Aarhus, Aarhus Municipality, Central Denmark Region, 8260, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:41.790294+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Settsu",
+  "geonameid": 1852643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.74816645462041,
+      "lon": 135.5779802159454,
+      "geoinfo": {
+        "display_name": "大阪中央環状線, Yagumo-higashimachi 2-chome, Moriguchi, Osaka Prefecture, 570-0021, Japan",
+        "road": "大阪中央環状線",
+        "house_number": null,
+        "neighbourhood": "Yagumo-higashimachi 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Moriguchi",
+        "state": null,
+        "postcode": "570-0021",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "大阪中央環状線, Settsu, Japan"
+    },
+    {
+      "lat": 34.77742508044882,
+      "lon": 135.61042353311848,
+      "geoinfo": {
+        "display_name": "摂南大学（寝屋川キャンパス）, 8, Ikeda-nakamachi, Neyagawa, Osaka Prefecture, 572-8508, Japan",
+        "road": null,
+        "house_number": "8",
+        "neighbourhood": "Ikeda-nakamachi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Neyagawa",
+        "state": null,
+        "postcode": "572-8508",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "摂南大学（寝屋川キャンパス）, 8, Ikeda-nakamachi, Neyagawa, Osaka Prefecture, 572-8508, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:07.868732+00:00",
+  "_kind": "geo_samples"
+}

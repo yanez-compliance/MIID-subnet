@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bon Air",
+  "geonameid": 4748305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.52027307286269,
+      "lon": -77.56338082711979,
+      "geoinfo": {
+        "display_name": "1718, Chatsworth Avenue, Bon Air, Chesterfield County, Virginia, 23235, United States",
+        "road": "Chatsworth Avenue",
+        "house_number": "1718",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bon Air",
+        "state": "Virginia",
+        "postcode": "23235",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1718 Chatsworth Avenue, Bon Air, Virginia, United States"
+    },
+    {
+      "lat": 37.55388013332055,
+      "lon": -77.53428402606156,
+      "geoinfo": {
+        "display_name": "4400, Menokin Road, Stratford Hills, Richmond, Virginia, 23225, United States",
+        "road": "Menokin Road",
+        "house_number": "4400",
+        "neighbourhood": "Stratford Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "Virginia",
+        "postcode": "23225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4400, Menokin Road, Stratford Hills, Richmond, Virginia, 23225, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:47.408768+00:00",
+  "_kind": "geo_samples"
+}

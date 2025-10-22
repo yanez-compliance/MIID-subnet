@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Kikuyu",
+  "geonameid": 192126,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -1.2374555946082542,
+      "lon": 36.701916765426084,
+      "geoinfo": {
+        "display_name": "Gitaru ward, Kabete, Kiambu, 12345, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gitaru ward",
+        "state": "Kiambu",
+        "postcode": "12345",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Kikuyu, Kiambu, Kenya"
+    },
+    {
+      "lat": -1.257313491575263,
+      "lon": 36.67709300114579,
+      "geoinfo": {
+        "display_name": "Kidfarmaco, Thogoto, Kinoo ward, Kikuyu, Kiambu, 12345, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Thogoto",
+        "city_district": null,
+        "city": "Kinoo ward",
+        "state": "Kiambu",
+        "postcode": "12345",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "926, Thogoto, Kikuyu, 12345 Kiambu, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:04.499637+00:00",
+  "_kind": "geo_samples"
+}

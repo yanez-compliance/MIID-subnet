@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Luis",
+  "geonameid": 3837056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.30197270109965,
+      "lon": -66.27633690458363,
+      "geoinfo": {
+        "display_name": "Los Quebrachos, Los Venados, Municipio de Juana Koslay, Juan Martín de Pueyrredón, San Luis, 5702, Argentina",
+        "road": "Los Quebrachos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Los Venados",
+        "city_district": null,
+        "city": null,
+        "state": "San Luis",
+        "postcode": "5702",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Los Quebrachos, San Luis, San Luis, Argentina"
+    },
+    {
+      "lat": -33.28501076669426,
+      "lon": -66.36873590340508,
+      "geoinfo": {
+        "display_name": "Santa Rita, El Brete, San Luis, Juan Martín de Pueyrredón, San Luis, D5702JRP, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Rita",
+        "city_district": null,
+        "city": "San Luis",
+        "state": "San Luis",
+        "postcode": "D5702JRP",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "118, Santa Rita, El Brete, San Luis, Juan Martín de Pueyrredón, San Luis, D5702JRP, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:13.015451+00:00",
+  "_kind": "geo_samples"
+}

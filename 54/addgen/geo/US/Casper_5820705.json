@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Casper",
+  "geonameid": 5820705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.86358824956339,
+      "lon": -106.29283300631808,
+      "geoinfo": {
+        "display_name": "Bryan-Evansville Road, Casper, Natrona County, Wyoming, 82605, United States",
+        "road": "Bryan-Evansville Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Casper",
+        "state": "Wyoming",
+        "postcode": "82605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bryan-Evansville Road, Casper, Wyoming, United States"
+    },
+    {
+      "lat": 42.87249674949789,
+      "lon": -106.35544670543786,
+      "geoinfo": {
+        "display_name": "1844, Skyview Drive, Hartrandt, Natrona County, Wyoming, 82601, United States",
+        "road": "Skyview Drive",
+        "house_number": "1844",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hartrandt",
+        "state": "Wyoming",
+        "postcode": "82601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1844, Skyview Drive, Hartrandt, Natrona County, Wyoming, 82601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:32.261671+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marne La Vallée",
+  "geonameid": 12278193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.83278483444206,
+      "lon": 2.702507919168591,
+      "geoinfo": {
+        "display_name": "D 406, Bussy-Saint-Georges, Torcy, Seine-et-Marne, Metropolitan France, 77600, France",
+        "road": "D 406",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bussy-Saint-Georges",
+        "state": null,
+        "postcode": "77600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 406, Marne La Vallée, France"
+    },
+    {
+      "lat": 48.81424379222099,
+      "lon": 2.6100130377797366,
+      "geoinfo": {
+        "display_name": "Allée de la Briarde, Malnoue, Émerainville, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77184, France",
+        "road": "Allée de la Briarde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Malnoue",
+        "city_district": null,
+        "city": "Émerainville",
+        "state": "Ile-de-France",
+        "postcode": "77184",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "544, Allée de la Briarde, Malnoue, Émerainville, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77184, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:19.603396+00:00",
+  "_kind": "geo_samples"
+}

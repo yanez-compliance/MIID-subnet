@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Saint Peters",
+  "geonameid": 2638703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.379642164081055,
+      "lon": 1.4799439922682418,
+      "geoinfo": {
+        "display_name": "Broadstairs, Thanet, Kent, England, CT10 1BH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT10 1BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Saint Peters, England, United Kingdom"
+    },
+    {
+      "lat": 51.335434307194056,
+      "lon": 1.4531955902112517,
+      "geoinfo": {
+        "display_name": "East Cliff, Ramsgate, Broadstairs, Thanet, Kent, England, CT11 8NB, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East Cliff",
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT11 8NB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "East Cliff, Ramsgate, Broadstairs, Thanet, Kent, England, CT11 8NB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:55.477301+00:00",
+  "_kind": "geo_samples"
+}

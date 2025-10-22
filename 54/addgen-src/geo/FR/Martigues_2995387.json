@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Martigues",
+  "geonameid": 2995387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.39642894475886,
+      "lon": 5.068068252856973,
+      "geoinfo": {
+        "display_name": "Chemin de Saint-Lazare, Jonquières Centre, Martigues, Istres, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13500, France",
+        "road": "Chemin de Saint-Lazare",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Martigues",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Saint-Lazare, Martigues, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.424665983893036,
+      "lon": 5.088979908651159,
+      "geoinfo": {
+        "display_name": "Berre-l'Étang, Istres, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13130, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berre-l'Étang",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "722, Berre-l'Étang, Istres, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:08:23.215412+00:00",
+  "_kind": "geo_samples"
+}

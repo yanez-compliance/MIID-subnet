@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Union",
+  "geonameid": 5105608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.700518549789955,
+      "lon": -74.28048603441107,
+      "geoinfo": {
+        "display_name": "Aldi, 1020, Commerce Avenue, Unionburg, Union, Union County, New Jersey, 07083, United States",
+        "road": "Commerce Avenue",
+        "house_number": "1020",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union",
+        "state": "New Jersey",
+        "postcode": "07083",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1020 Commerce Avenue, Union, New Jersey, United States"
+    },
+    {
+      "lat": 40.71167622592079,
+      "lon": -74.29880990332258,
+      "geoinfo": {
+        "display_name": "Springfield Avenue, Union, Union County, New Jersey, 07088, United States",
+        "road": "Springfield Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union",
+        "state": "New Jersey",
+        "postcode": "07088",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "331, Springfield Avenue, Union, Union County, New Jersey, 07088, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:07.567176+00:00",
+  "_kind": "geo_samples"
+}

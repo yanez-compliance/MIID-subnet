@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "St. Johns",
+  "geonameid": 11704266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.08741569048844,
+      "lon": -81.59083848715451,
+      "geoinfo": {
+        "display_name": "100, Burnett Court, Aberdeen, Fruit Cove, Saint Johns County, Florida, 32259, United States",
+        "road": "Burnett Court",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fruit Cove",
+        "state": "Florida",
+        "postcode": "32259",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Burnett Court, St. Johns, Florida, United States"
+    },
+    {
+      "lat": 30.083954699212835,
+      "lon": -81.51092394217142,
+      "geoinfo": {
+        "display_name": "Red Blaze Trail, Durbin, Saint Johns County, Florida, 33359, United States",
+        "road": "Red Blaze Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Durbin",
+        "state": "Florida",
+        "postcode": "33359",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "238, Red Blaze Trail, Durbin, Saint Johns County, Florida, 33359, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:31.706096+00:00",
+  "_kind": "geo_samples"
+}

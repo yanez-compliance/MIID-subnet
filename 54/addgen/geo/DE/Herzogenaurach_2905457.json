@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Herzogenaurach",
+  "geonameid": 2905457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.56123352059484,
+      "lon": 10.909194617384157,
+      "geoinfo": {
+        "display_name": "Hutweg, Niederndorf, Hauptendorf, Herzogenaurach, Landkreis Erlangen-Höchstadt, Bavaria, 91074, Germany",
+        "road": "Hutweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Niederndorf",
+        "city_district": null,
+        "city": "Herzogenaurach",
+        "state": "Bavaria",
+        "postcode": "91074",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hutweg, Herzogenaurach, Bavaria, Germany"
+    },
+    {
+      "lat": 49.58417278058061,
+      "lon": 10.901723067640615,
+      "geoinfo": {
+        "display_name": "Musicbase, 4, Auf der Nutzung, Herzo Base, Beutelsdorf, Herzogenaurach, Landkreis Erlangen-Höchstadt, Bavaria, 91074, Germany",
+        "road": "Auf der Nutzung",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Herzo Base",
+        "city_district": null,
+        "city": "Herzogenaurach",
+        "state": "Bavaria",
+        "postcode": "91074",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Musicbase, 4, Auf der Nutzung, Herzo Base, Beutelsdorf, Herzogenaurach, Landkreis Erlangen-Höchstadt, Bavaria, 91074, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:20.568303+00:00",
+  "_kind": "geo_samples"
+}

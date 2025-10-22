@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dandong",
+  "geonameid": 2037886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.166979228482504,
+      "lon": 124.405729271742,
+      "geoinfo": {
+        "display_name": "Jinshan, Yuanbao District, Liaoning, 118000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinshan",
+        "state": "Liaoning",
+        "postcode": "118000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dandong, Liaoning, China"
+    },
+    {
+      "lat": 40.146758083566525,
+      "lon": 124.35932564546457,
+      "geoinfo": {
+        "display_name": "Qidao Subdistrict, Yuanbao, Yuanbao District, Liaoning, 118000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Qidao Subdistrict",
+        "city_district": null,
+        "city": "Yuanbao",
+        "state": "Liaoning",
+        "postcode": "118000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "735, Qidao Subdistrict, Yuanbao, Yuanbao District, Liaoning, 118000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:27.282003+00:00",
+  "_kind": "geo_samples"
+}

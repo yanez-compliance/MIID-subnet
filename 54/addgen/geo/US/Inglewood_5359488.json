@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Inglewood",
+  "geonameid": 5359488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.97801489247833,
+      "lon": -118.32870274311287,
+      "geoinfo": {
+        "display_name": "3252, West 67th Street, Hyde Park, Los Angeles, Los Angeles County, California, 90043, United States",
+        "road": "West 67th Street",
+        "house_number": "3252",
+        "neighbourhood": null,
+        "suburb": "Hyde Park",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3252 West 67th Street, Inglewood, California, United States"
+    },
+    {
+      "lat": 33.97973407077173,
+      "lon": -118.3475369385145,
+      "geoinfo": {
+        "display_name": "1317, Wexham Way, Inglewood, Los Angeles County, California, 90302, United States",
+        "road": "Wexham Way",
+        "house_number": "1317",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Inglewood",
+        "state": "California",
+        "postcode": "90302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1317, Wexham Way, Inglewood, Los Angeles County, California, 90302, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:20.391411+00:00",
+  "_kind": "geo_samples"
+}

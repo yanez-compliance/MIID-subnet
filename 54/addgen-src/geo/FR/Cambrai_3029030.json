@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cambrai",
+  "geonameid": 3029030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.18218070910514,
+      "lon": 3.283686842145876,
+      "geoinfo": {
+        "display_name": "D 942, Cauroir, Cambrai, Nord, Hauts-de-France, Metropolitan France, 59400, France",
+        "road": "D 942",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cauroir",
+        "state": "Hauts-de-France",
+        "postcode": "59400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 942, Cambrai, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.19582605109889,
+      "lon": 3.273464309012698,
+      "geoinfo": {
+        "display_name": "Voie des Loups, Escaudœuvres, Cambrai, Nord, Hauts-de-France, Metropolitan France, 59161, France",
+        "road": "Voie des Loups",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Escaudœuvres",
+        "state": "Hauts-de-France",
+        "postcode": "59161",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "192, Voie des Loups, Escaudœuvres, Cambrai, Nord, Hauts-de-France, Metropolitan France, 59161, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:26.166090+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Blythe",
+  "geonameid": 5329649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.620452745840616,
+      "lon": -114.5605379621225,
+      "geoinfo": {
+        "display_name": "East Chanslor Way, Blythe, Riverside County, California, 92226, United States",
+        "road": "East Chanslor Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blythe",
+        "state": "California",
+        "postcode": "92226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Chanslor Way, Blythe, California, United States"
+    },
+    {
+      "lat": 33.570781191545144,
+      "lon": -114.58340860530419,
+      "geoinfo": {
+        "display_name": "18th Avenue, Miller Farms, Riverside County, California, 92226, United States",
+        "road": "18th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18th Avenue, Miller Farms, Riverside County, California, 92226, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:29.386903+00:00",
+  "_kind": "geo_samples"
+}

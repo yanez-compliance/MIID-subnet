@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Poppenbüttel",
+  "geonameid": 2852673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.65677039042054,
+      "lon": 10.09442119945427,
+      "geoinfo": {
+        "display_name": "48, Heegbarg, Poppenbüttel, Wandsbek, Hamburg, 22395, Germany",
+        "road": "Heegbarg",
+        "house_number": "48",
+        "neighbourhood": null,
+        "suburb": "Poppenbüttel",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22395",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "48 Heegbarg, Poppenbüttel, Germany"
+    },
+    {
+      "lat": 53.6165386997836,
+      "lon": 10.062596305456678,
+      "geoinfo": {
+        "display_name": "48, Borchertring, Quartierszentrum Campus Steilshoop, Steilshoop, Wandsbek, Hamburg, 22309, Germany",
+        "road": "Borchertring",
+        "house_number": "48",
+        "neighbourhood": "Quartierszentrum Campus Steilshoop",
+        "suburb": "Steilshoop",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22309",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "48, Borchertring, Quartierszentrum Campus Steilshoop, Steilshoop, Wandsbek, Hamburg, 22309, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:56.814066+00:00",
+  "_kind": "geo_samples"
+}

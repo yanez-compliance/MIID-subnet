@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Thuqbah",
+  "geonameid": 107991,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 26.284340770613863,
+      "lon": 50.1851378608659,
+      "geoinfo": {
+        "display_name": "Ath Thuqbah, Al Khobar, Khobar Governorate, Eastern Province, 34446, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ath Thuqbah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Khobar",
+        "state": "Eastern Province",
+        "postcode": "34446",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Ath Thuqbah, Thuqbah, Eastern Province, Saudi Arabia"
+    },
+    {
+      "lat": 26.244638028375917,
+      "lon": 50.1843081534319,
+      "geoinfo": {
+        "display_name": "King Khaled Road, Dhahran, Dammam Governorate, Eastern Province, 34624, Saudi Arabia",
+        "road": "King Khaled Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dhahran",
+        "state": "Eastern Province",
+        "postcode": "34624",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "King Khaled Road, Thuqbah, Eastern Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:18:35.653643+00:00",
+  "_kind": "geo_samples"
+}

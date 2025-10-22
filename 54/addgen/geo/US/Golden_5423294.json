@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Golden",
+  "geonameid": 5423294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.792305910795555,
+      "lon": -105.2383070805464,
+      "geoinfo": {
+        "display_name": "Pine Ridge Road, Golden, Jefferson County, Colorado, 80403, United States",
+        "road": "Pine Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Golden",
+        "state": "Colorado",
+        "postcode": "80403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pine Ridge Road, Golden, Colorado, United States"
+    },
+    {
+      "lat": 39.75166358329729,
+      "lon": -105.25977245396537,
+      "geoinfo": {
+        "display_name": "Jefferson County, Colorado, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "635, Jefferson County, 96192 Colorado, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:33.119157+00:00",
+  "_kind": "geo_samples"
+}

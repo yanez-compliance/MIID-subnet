@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Michael",
+  "geonameid": 5045258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.178702694035344,
+      "lon": -93.67404446607891,
+      "geoinfo": {
+        "display_name": "15th Street Northeast, Saint Michael, Wright County, Minnesota, 55376, United States",
+        "road": "15th Street Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Michael",
+        "state": "Minnesota",
+        "postcode": "55376",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15th Street Northeast, Saint Michael, Minnesota, United States"
+    },
+    {
+      "lat": 45.18796030972971,
+      "lon": -93.64471966898769,
+      "geoinfo": {
+        "display_name": "Rogers, Hennepin County, Minnesota, 55374, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rogers",
+        "state": "Minnesota",
+        "postcode": "55374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "918, Rogers, Hennepin County, Minnesota, 55374, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:47.761559+00:00",
+  "_kind": "geo_samples"
+}

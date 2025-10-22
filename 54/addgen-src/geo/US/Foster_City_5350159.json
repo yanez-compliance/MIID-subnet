@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Foster City",
+  "geonameid": 5350159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.52601509975847,
+      "lon": -122.2336596108605,
+      "geoinfo": {
+        "display_name": "Redwood Shores, Redwood City, San Mateo County, California, 94065, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redwood City",
+        "state": "California",
+        "postcode": "94065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Foster City, California, United States"
+    },
+    {
+      "lat": 37.59381227683585,
+      "lon": -122.26201276318447,
+      "geoinfo": {
+        "display_name": "Foster City, San Mateo County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foster City",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "298, Foster City, San Mateo County, 43312 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:16.198871+00:00",
+  "_kind": "geo_samples"
+}

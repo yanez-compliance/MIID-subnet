@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "City of Sammamish",
+  "geonameid": 7174365,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.589418776278265,
+      "lon": -121.99996619801531,
+      "geoinfo": {
+        "display_name": "2427, East Beaver Lake Drive Southeast, Trossachs, Sammamish, King County, Washington, 98075, United States",
+        "road": "East Beaver Lake Drive Southeast",
+        "house_number": "2427",
+        "neighbourhood": null,
+        "suburb": "Trossachs",
+        "city_district": null,
+        "city": "Sammamish",
+        "state": "Washington",
+        "postcode": "98075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2427 East Beaver Lake Drive Southeast, City of Sammamish, Washington, United States"
+    },
+    {
+      "lat": 47.5729714292826,
+      "lon": -122.08160140031575,
+      "geoinfo": {
+        "display_name": "18872, Southeast 42nd Street, Lindley Shore, Issaquah, King County, Washington, 98027, United States",
+        "road": "Southeast 42nd Street",
+        "house_number": "18872",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Issaquah",
+        "state": "Washington",
+        "postcode": "98027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18872, Southeast 42nd Street, Lindley Shore, Issaquah, King County, Washington, 98027, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:45.843770+00:00",
+  "_kind": "geo_samples"
+}

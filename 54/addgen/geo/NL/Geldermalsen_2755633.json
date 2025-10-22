@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Geldermalsen",
+  "geonameid": 2755633,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.85738232326287,
+      "lon": 5.288710140223445,
+      "geoinfo": {
+        "display_name": "Rijksweg A15, Oud Meteren, Meteren, West Betuwe, Gelderland, Netherlands, 4194 SM, Netherlands",
+        "road": "Rijksweg A15",
+        "house_number": null,
+        "neighbourhood": "Oud Meteren",
+        "suburb": null,
+        "city_district": null,
+        "city": "Meteren",
+        "state": "Gelderland",
+        "postcode": "4194 SM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Rijksweg A15, Geldermalsen, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.88010877396513,
+      "lon": 5.275840593472966,
+      "geoinfo": {
+        "display_name": "26, Tunnelweg, Tuindorp, Stationswijk, Geldermalsen, West Betuwe, Gelderland, Netherlands, 4191 KJ, Netherlands",
+        "road": "Tunnelweg",
+        "house_number": "26",
+        "neighbourhood": "Tuindorp",
+        "suburb": null,
+        "city_district": null,
+        "city": "Geldermalsen",
+        "state": "Gelderland",
+        "postcode": "4191 KJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "26, Tunnelweg, Tuindorp, Stationswijk, Geldermalsen, West Betuwe, Gelderland, Netherlands, 4191 KJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:43.388603+00:00",
+  "_kind": "geo_samples"
+}

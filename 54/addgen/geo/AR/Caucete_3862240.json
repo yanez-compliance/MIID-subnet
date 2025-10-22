@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Caucete",
+  "geonameid": 3862240,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -31.687726894311275,
+      "lon": -68.26390977344575,
+      "geoinfo": {
+        "display_name": "Paso de Los Andes, Pozo de los Algarrobos, El Rincón, Caucete, San Juan, J5442EFD, Argentina",
+        "road": "Paso de Los Andes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Rincón",
+        "state": "San Juan",
+        "postcode": "J5442EFD",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Paso de Los Andes, Caucete, San Juan, Argentina"
+    },
+    {
+      "lat": -31.64440435150549,
+      "lon": -68.23513956027693,
+      "geoinfo": {
+        "display_name": "Patricias Sanjuaninas, Caucete, San Juan, 5442, Argentina",
+        "road": "Patricias Sanjuaninas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "San Juan",
+        "postcode": "5442",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "968, Patricias Sanjuaninas, Caucete, San Juan, 5442, Argentina"
+    },
+    {
+      "lat": -31.6468270634061,
+      "lon": -68.25937588741299,
+      "geoinfo": {
+        "display_name": "Salta, Barrio Guayama, Caucete, San Juan, J5442, Argentina",
+        "road": "Salta",
+        "house_number": null,
+        "neighbourhood": "Barrio Guayama",
+        "suburb": null,
+        "city_district": null,
+        "city": "Caucete",
+        "state": "San Juan",
+        "postcode": "J5442",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "672, Salta, Barrio Guayama, Caucete, San Juan, J5442, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:30.563464+00:00",
+  "_kind": "geo_samples"
+}

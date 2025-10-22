@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laplace",
+  "geonameid": 4330525,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.060362157843777,
+      "lon": -90.476385861279,
+      "geoinfo": {
+        "display_name": "Marjorie Court, LaPlace, St. John the Baptist Parish, Louisiana, 70068, United States",
+        "road": "Marjorie Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "LaPlace",
+        "state": "Louisiana",
+        "postcode": "70068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Marjorie Court, Laplace, Louisiana, United States"
+    },
+    {
+      "lat": 30.09817423193892,
+      "lon": -90.51833948501047,
+      "geoinfo": {
+        "display_name": "Oriole Street, New Era, LaPlace, St. John the Baptist Parish, Louisiana, 70068, United States",
+        "road": "Oriole Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "LaPlace",
+        "state": "Louisiana",
+        "postcode": "70068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "428, Oriole Street, New Era, LaPlace, St. John the Baptist Parish, Louisiana, 70068, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:59.893409+00:00",
+  "_kind": "geo_samples"
+}

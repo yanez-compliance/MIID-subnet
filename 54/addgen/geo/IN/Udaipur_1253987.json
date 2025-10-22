@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Udaipur",
+  "geonameid": 1253987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.51307367078947,
+      "lon": 91.44794048637617,
+      "geoinfo": {
+        "display_name": "Kakraban, Gomati, Tripura, 799105, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tripura",
+        "postcode": "799105",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Udaipur, Tripura, India"
+    },
+    {
+      "lat": 23.525267927150125,
+      "lon": 91.50935544968691,
+      "geoinfo": {
+        "display_name": "Udaipur, Matarbari, Gomati, Tripura, 799120, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Udaipur",
+        "state": "Tripura",
+        "postcode": "799120",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "651, Udaipur, Matarbari, Gomati, Tripura, 799120, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:08.524178+00:00",
+  "_kind": "geo_samples"
+}

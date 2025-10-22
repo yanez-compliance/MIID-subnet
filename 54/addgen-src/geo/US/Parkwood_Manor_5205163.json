@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parkwood Manor",
+  "geonameid": 5205163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.117281284152604,
+      "lon": -74.93932257482793,
+      "geoinfo": {
+        "display_name": "3856, Mechanicsville Road, Bensalem Township, Bucks County, Pennsylvania, 19020, United States",
+        "road": "Mechanicsville Road",
+        "house_number": "3856",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bensalem Township",
+        "state": "Pennsylvania",
+        "postcode": "19020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3856 Mechanicsville Road, Parkwood Manor, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.0623805643987,
+      "lon": -74.99004156998765,
+      "geoinfo": {
+        "display_name": "3960, Stevenson Street, Chestnut Wood Village, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19114, United States",
+        "road": "Stevenson Street",
+        "house_number": "3960",
+        "neighbourhood": "Chestnut Wood Village",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19114",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3960, Stevenson Street, Chestnut Wood Village, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19114, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:30.914028+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Livry-Gargan",
+  "geonameid": 2998056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.93425128494533,
+      "lon": 2.567237147753602,
+      "geoinfo": {
+        "display_name": "D 933, Vaujours, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93410, France",
+        "road": "D 933",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vaujours",
+        "state": null,
+        "postcode": "93410",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 933, Livry-Gargan, France"
+    },
+    {
+      "lat": 48.93612925811866,
+      "lon": 2.5513328617036994,
+      "geoinfo": {
+        "display_name": "Avenue Louis Maurel, Parc de la Poudrerie, Sevran, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93190, France",
+        "road": "Avenue Louis Maurel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parc de la Poudrerie",
+        "city_district": null,
+        "city": "Sevran",
+        "state": null,
+        "postcode": "93190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "934, Avenue Louis Maurel, Parc de la Poudrerie, Sevran, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93190, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:33.477637+00:00",
+  "_kind": "geo_samples"
+}

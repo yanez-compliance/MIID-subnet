@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Eysines",
+  "geonameid": 3019193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.856133216567855,
+      "lon": -0.6447572087339141,
+      "geoinfo": {
+        "display_name": "8 bis, Avenue de Magudas, Le Grand Louis, Capeyron, Mérignac, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33700, France",
+        "road": "Avenue de Magudas",
+        "house_number": "8 bis",
+        "neighbourhood": null,
+        "suburb": "Le Grand Louis",
+        "city_district": null,
+        "city": "Mérignac",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8 bis Avenue de Magudas, Eysines, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.89054565049862,
+      "lon": -0.669952730350582,
+      "geoinfo": {
+        "display_name": "Route de Lacanau, At'home, Carès, Le Haillan, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33185, France",
+        "road": "Route de Lacanau",
+        "house_number": null,
+        "neighbourhood": "At'home",
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Haillan",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33185",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "855, Route de Lacanau, At'home, Carès, Le Haillan, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33185, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:18:05.782119+00:00",
+  "_kind": "geo_samples"
+}

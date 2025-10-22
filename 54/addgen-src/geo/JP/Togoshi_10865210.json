@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Togoshi",
+  "geonameid": 10865210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.60736699524627,
+      "lon": 139.7331327478474,
+      "geoinfo": {
+        "display_name": "Oi 1, Oi, Shinagawa, Tokyo, 140-0005, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Oi 1",
+        "suburb": "Oi",
+        "city_district": null,
+        "city": "Shinagawa",
+        "state": null,
+        "postcode": "140-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Oi 1, Togoshi, Japan"
+    },
+    {
+      "lat": 35.65027906014123,
+      "lon": 139.71231972802192,
+      "geoinfo": {
+        "display_name": "Hiroo 1-chome, Hiroo, Shibuya, Tokyo, 150-0000, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hiroo 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shibuya",
+        "state": null,
+        "postcode": "150-0000",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hiroo 1-chome, Hiroo, Shibuya, Tokyo, 150-0000, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:18.658680+00:00",
+  "_kind": "geo_samples"
+}

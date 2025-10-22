@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Panama City",
+  "geonameid": 4167694,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.177055042587266,
+      "lon": -85.69251756471405,
+      "geoinfo": {
+        "display_name": "1529, Frankford Avenue, Baker, Panama City, Bay County, Florida, 32405, United States",
+        "road": "Frankford Avenue",
+        "house_number": "1529",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panama City",
+        "state": "Florida",
+        "postcode": "32405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1529 Frankford Avenue, Panama City, Florida, United States"
+    },
+    {
+      "lat": 30.156393721401475,
+      "lon": -85.67979206313177,
+      "geoinfo": {
+        "display_name": "Baker, Panama City, Bay County, Florida, 32405, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panama City",
+        "state": "Florida",
+        "postcode": "32405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "345, Baker, Panama City, Bay County, Florida, 32405, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:24.653895+00:00",
+  "_kind": "geo_samples"
+}

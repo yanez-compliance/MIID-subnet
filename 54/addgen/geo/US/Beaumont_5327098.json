@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beaumont",
+  "geonameid": 5327098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.94538216824306,
+      "lon": -116.94897533926908,
+      "geoinfo": {
+        "display_name": "1498, Half Moon Lane, Beaumont, Riverside County, California, 92223, United States",
+        "road": "Half Moon Lane",
+        "house_number": "1498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beaumont",
+        "state": "California",
+        "postcode": "92223",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1498 Half Moon Lane, Beaumont, California, United States"
+    },
+    {
+      "lat": 33.91948862556767,
+      "lon": -117.02556839914794,
+      "geoinfo": {
+        "display_name": "Riverside County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "496, Riverside County, 54000 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:38.613255+00:00",
+  "_kind": "geo_samples"
+}

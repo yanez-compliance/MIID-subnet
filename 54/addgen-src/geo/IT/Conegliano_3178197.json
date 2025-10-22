@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Conegliano",
+  "geonameid": 3178197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.88391636218038,
+      "lon": 12.312506707787874,
+      "geoinfo": {
+        "display_name": "6, Via C. Goldoni, Piazza d'Armi, Conegliano, Province of Treviso, Veneto, 31015, Italy",
+        "road": "Via C. Goldoni",
+        "house_number": "6",
+        "neighbourhood": "Piazza d'Armi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Conegliano",
+        "state": "Veneto",
+        "postcode": "31015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "6 Via C. Goldoni, Conegliano, Veneto, Italy"
+    },
+    {
+      "lat": 45.86410218732001,
+      "lon": 12.319980359563674,
+      "geoinfo": {
+        "display_name": "Via Ca' di Villa, Conegliano, Province of Treviso, Veneto, 31015, Italy",
+        "road": "Via Ca' di Villa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Conegliano",
+        "state": "Veneto",
+        "postcode": "31015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "536, Via Ca' di Villa, Conegliano, Province of Treviso, Veneto, 31015, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:32.813622+00:00",
+  "_kind": "geo_samples"
+}

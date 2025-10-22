@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pampa",
+  "geonameid": 5527953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.50318901329411,
+      "lon": -100.94736421540094,
+      "geoinfo": {
+        "display_name": "Loop 171, Gray County, Texas, United States",
+        "road": "Loop 171",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Loop 171, Pampa, Texas, United States"
+    },
+    {
+      "lat": 35.5148136891831,
+      "lon": -100.95888629241877,
+      "geoinfo": {
+        "display_name": "West Eshom Street, Gray County, Texas, 79065, United States",
+        "road": "West Eshom Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "79065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "226, West Eshom Street, Gray County, Texas, 79065, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:33.182585+00:00",
+  "_kind": "geo_samples"
+}

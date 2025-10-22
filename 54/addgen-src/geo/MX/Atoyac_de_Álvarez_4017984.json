@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Atoyac de Álvarez",
+  "geonameid": 4017984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.206557024335826,
+      "lon": -100.40362403829263,
+      "geoinfo": {
+        "display_name": "La Laja, Atoyac de Álvarez, Guerrero, 40930, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guerrero",
+        "postcode": "40930",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Atoyac de Álvarez, Guerrero, Mexico"
+    },
+    {
+      "lat": 17.20055794603431,
+      "lon": -100.41399488689176,
+      "geoinfo": {
+        "display_name": "Escuela Primaria Venustiano Carranza, A San Martin, Atoyac de Álvarez, Guerrero, 40930, Mexico",
+        "road": "A San Martin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atoyac de Álvarez",
+        "state": "Guerrero",
+        "postcode": "40930",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "836, A San Martin, Atoyac de Álvarez, 40930 Guerrero, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:56.388768+00:00",
+  "_kind": "geo_samples"
+}

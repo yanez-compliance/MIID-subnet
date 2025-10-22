@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Reynosa",
+  "geonameid": 3520339,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.088424178571223,
+      "lon": -98.30513065996037,
+      "geoinfo": {
+        "display_name": "Calle Mariano Salas, Reynosa, Tamaulipas, 88500, Mexico",
+        "road": "Calle Mariano Salas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reynosa",
+        "state": "Tamaulipas",
+        "postcode": "88500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Mariano Salas, Reynosa, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 26.087402383584653,
+      "lon": -98.29309930119254,
+      "geoinfo": {
+        "display_name": "Calle Ignacio López Rayón, Reynosa, Tamaulipas, 88500, Mexico",
+        "road": "Calle Ignacio López Rayón",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reynosa",
+        "state": "Tamaulipas",
+        "postcode": "88500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "458, Calle Ignacio López Rayón, Reynosa, Tamaulipas, 88500, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:49.992976+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Jelebu",
+  "geonameid": 13118135,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3413431519407693,
+      "lon": 103.7762549755046,
+      "geoinfo": {
+        "display_name": "118, Upper Bukit Timah Road, Fairwood Park, Northwest, Singapore, 588173, Singapore",
+        "road": "Upper Bukit Timah Road",
+        "house_number": "118",
+        "neighbourhood": "Fairwood Park",
+        "suburb": null,
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "588173",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "118 Upper Bukit Timah Road, Jelebu, Singapore"
+    },
+    {
+      "lat": 1.3482070653338405,
+      "lon": 103.7496577979141,
+      "geoinfo": {
+        "display_name": "Bukit Batok, 10, Bukit Batok Central, Bukit Batok, Southwest, Singapore, 659958, Singapore",
+        "road": "Bukit Batok Central",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Bukit Batok",
+        "city_district": "Southwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "659958",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Bukit Batok, 10, Bukit Batok Central, Bukit Batok, Southwest, Singapore, 659958, Singapore"
+    },
+    {
+      "lat": 1.358689620449885,
+      "lon": 103.76355058585611,
+      "geoinfo": {
+        "display_name": "Hillview Park Connector, Hillview Green, Bukit Batok, Southwest, Singapore, 669592, Singapore",
+        "road": "Hillview Park Connector",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bukit Batok",
+        "city_district": "Southwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "669592",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "634, Hillview Park Connector, Hillview Green, Bukit Batok, Southwest, Singapore, 669592, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:12.714264+00:00",
+  "_kind": "geo_samples"
+}

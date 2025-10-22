@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tepalcatepec",
+  "geonameid": 3982007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.146434904206643,
+      "lon": -102.83642672351756,
+      "geoinfo": {
+        "display_name": "Tepalcatepec, Michoacán, 60540, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Michoacán",
+        "postcode": "60540",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tepalcatepec, Michoacán, Mexico"
+    },
+    {
+      "lat": 19.199800340416964,
+      "lon": -102.87427528944477,
+      "geoinfo": {
+        "display_name": "Tepalcatepec, Michoacán, 60540, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tepalcatepec",
+        "state": "Michoacán",
+        "postcode": "60540",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "962, Tepalcatepec, Michoacán, 60540, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:32:17.644631+00:00",
+  "_kind": "geo_samples"
+}

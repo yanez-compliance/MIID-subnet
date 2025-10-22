@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Málaga",
+  "geonameid": 2514256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.71353366203784,
+      "lon": -4.4741376354541496,
+      "geoinfo": {
+        "display_name": "5, Calle Alfredo Corrochano, Polígono Industrial El Viso, Cruz de Humilladero, Málaga, Málaga-Costa del Sol, Malaga, Andalusia, 29006, Spain",
+        "road": "Calle Alfredo Corrochano",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Málaga",
+        "state": "Andalusia",
+        "postcode": "29006",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "5 Calle Alfredo Corrochano, Málaga, Andalusia, Spain"
+    },
+    {
+      "lat": 36.732992464199626,
+      "lon": -4.394691872285622,
+      "geoinfo": {
+        "display_name": "3, Calle de la Minilla, El Mayorazgo, Este, Málaga, Málaga-Costa del Sol, Malaga, Andalusia, 29016, Spain",
+        "road": "Calle de la Minilla",
+        "house_number": "3",
+        "neighbourhood": "El Mayorazgo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Málaga",
+        "state": "Andalusia",
+        "postcode": "29016",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "3, Calle de la Minilla, El Mayorazgo, Este, Málaga, Málaga-Costa del Sol, Malaga, Andalusia, 29016, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:37.528405+00:00",
+  "_kind": "geo_samples"
+}

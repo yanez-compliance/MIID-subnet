@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Near South Side",
+  "geonameid": 4903363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.82995272395598,
+      "lon": -87.58221891430905,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Near South Side, Illinois, United States"
+    },
+    {
+      "lat": 41.84527366151721,
+      "lon": -87.67310466665235,
+      "geoinfo": {
+        "display_name": "Chicago International Produce Market, 2404, South Wolcott Avenue, Lower West Side, Chicago, West Chicago Township, Cook County, Illinois, 60608, United States",
+        "road": "South Wolcott Avenue",
+        "house_number": "2404",
+        "neighbourhood": null,
+        "suburb": "Lower West Side",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chicago International Produce Market, 2404, South Wolcott Avenue, Lower West Side, Chicago, West Chicago Township, Cook County, Illinois, 60608, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:39.682495+00:00",
+  "_kind": "geo_samples"
+}

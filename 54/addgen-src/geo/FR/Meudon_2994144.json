@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Meudon",
+  "geonameid": 2994144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.79913390474067,
+      "lon": 2.2317110875323007,
+      "geoinfo": {
+        "display_name": "Avenue de Trivaux, Le Parc de Chalais, Meudon-la-Forêt, Meudon, Boulogne-Billancourt, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92190, France",
+        "road": "Avenue de Trivaux",
+        "house_number": null,
+        "neighbourhood": "Le Parc de Chalais",
+        "suburb": "Meudon-la-Forêt",
+        "city_district": null,
+        "city": "Meudon",
+        "state": "Ile-de-France",
+        "postcode": "92190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de Trivaux, Meudon, Ile-de-France, France"
+    },
+    {
+      "lat": 48.81655675349918,
+      "lon": 2.2272084684013107,
+      "geoinfo": {
+        "display_name": "1, Rue des Capucins, La Bourgogne des Capucins, Bellevue, Meudon, Boulogne-Billancourt, Hauts-de-Seine, Metropolitan France, 92190, France",
+        "road": "Rue des Capucins",
+        "house_number": "1",
+        "neighbourhood": "La Bourgogne des Capucins",
+        "suburb": "Bellevue",
+        "city_district": null,
+        "city": "Meudon",
+        "state": null,
+        "postcode": "92190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1, Rue des Capucins, La Bourgogne des Capucins, Bellevue, Meudon, Boulogne-Billancourt, Hauts-de-Seine, Metropolitan France, 92190, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:34.273724+00:00",
+  "_kind": "geo_samples"
+}

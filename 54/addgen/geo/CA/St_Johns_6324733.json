@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "St. John's",
+  "geonameid": 6324733,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.57582838558403,
+      "lon": -52.7558642114547,
+      "geoinfo": {
+        "display_name": "Trans Canada Highway, Bells Turn, Pippy Park, St. John's, Newfoundland, Newfoundland and Labrador, A1B 4E8, Canada",
+        "road": "Trans Canada Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pippy Park",
+        "city_district": null,
+        "city": "St. John's",
+        "state": "Newfoundland and Labrador",
+        "postcode": "A1B 4E8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Trans Canada Highway, St. John's, Newfoundland and Labrador, Canada"
+    },
+    {
+      "lat": 47.5690103760288,
+      "lon": -52.65643816425313,
+      "geoinfo": {
+        "display_name": "Newfoundland, Newfoundland and Labrador, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Newfoundland and Labrador",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "824, Newfoundland, 52605 Newfoundland and Labrador, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:22:43.111372+00:00",
+  "_kind": "geo_samples"
+}

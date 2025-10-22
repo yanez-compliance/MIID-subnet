@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Indianola",
+  "geonameid": 4861719,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.3883477351453,
+      "lon": -93.56631164216496,
+      "geoinfo": {
+        "display_name": "125th Avenue, Indianola, Lincoln Township, Warren County, Iowa, 50125, United States",
+        "road": "125th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianola",
+        "state": "Iowa",
+        "postcode": "50125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "125th Avenue, Indianola, Iowa, United States"
+    },
+    {
+      "lat": 41.330004242571384,
+      "lon": -93.52222937464921,
+      "geoinfo": {
+        "display_name": "150th Avenue, Otter Township, Warren County, Iowa, 50125, United States",
+        "road": "150th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": "50125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "150th Avenue, Otter Township, Warren County, Iowa, 50125, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:42.101133+00:00",
+  "_kind": "geo_samples"
+}

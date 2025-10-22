@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Storrs",
+  "geonameid": 4843786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.811232181377086,
+      "lon": -72.2450918911325,
+      "geoinfo": {
+        "display_name": "University of Connecticut, South Eagleville Road, Storrs, Mansfield, Capitol Planning Region, Connecticut, 06269, United States",
+        "road": "South Eagleville Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Connecticut",
+        "postcode": "06269",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Eagleville Road, Storrs, Connecticut, United States"
+    },
+    {
+      "lat": 41.83845592583358,
+      "lon": -72.22197251911685,
+      "geoinfo": {
+        "display_name": "66, Boston Turnpike, Laurel Pond Apartments, Willington, Capitol Planning Region, Connecticut, 06279, United States",
+        "road": "Boston Turnpike",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Willington",
+        "state": "Connecticut",
+        "postcode": "06279",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "66, Boston Turnpike, Laurel Pond Apartments, Willington, Capitol Planning Region, Connecticut, 06279, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:03.086042+00:00",
+  "_kind": "geo_samples"
+}

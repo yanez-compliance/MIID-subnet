@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stonegate",
+  "geonameid": 12750405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.69049694364414,
+      "lon": -117.77015629170057,
+      "geoinfo": {
+        "display_name": "Jeffrey Road, El Camino Real, Irvine, Orange County, California, 92406, United States",
+        "road": "Jeffrey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Camino Real",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92406",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jeffrey Road, Stonegate, California, United States"
+    },
+    {
+      "lat": 33.71011072463848,
+      "lon": -117.70728002983883,
+      "geoinfo": {
+        "display_name": "Old Bee Canyon Road, Limestone Canyon, Orange County, California, 92619, United States",
+        "road": "Old Bee Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Limestone Canyon",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92619",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "551, Old Bee Canyon Road, Limestone Canyon, Orange County, California, 92619, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:50.518284+00:00",
+  "_kind": "geo_samples"
+}

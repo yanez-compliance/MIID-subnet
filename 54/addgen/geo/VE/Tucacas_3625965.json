@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Tucacas",
+  "geonameid": 3625965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.803010064796604,
+      "lon": -68.29702624269925,
+      "geoinfo": {
+        "display_name": "Parroquia Tucacas, Municipio Silva, Falcon State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Falcon State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Tucacas, Falcon State, Venezuela"
+    },
+    {
+      "lat": 10.786742626091561,
+      "lon": -68.3253185350488,
+      "geoinfo": {
+        "display_name": "Tucacas, Parroquia Tucacas, Municipio Silva, Falcon State, 2054, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tucacas",
+        "state": "Falcon State",
+        "postcode": "2054",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "422, Tucacas, Parroquia Tucacas, Municipio Silva, Falcon State, 2054, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:49:42.313504+00:00",
+  "_kind": "geo_samples"
+}

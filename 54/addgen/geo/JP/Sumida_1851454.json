@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sumida",
+  "geonameid": 1851454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.74197631652883,
+      "lon": 139.84215415111464,
+      "geoinfo": {
+        "display_name": "Heisei Tateishi Hosptal, Mito-kaido Ave., Tateishi 5, Tateishi, Katsushika, Tokyo, 124-0005, Japan",
+        "road": "Mito-kaido Ave.",
+        "house_number": null,
+        "neighbourhood": "Tateishi 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katsushika",
+        "state": null,
+        "postcode": "124-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Mito-kaido Ave., Sumida, Japan"
+    },
+    {
+      "lat": 35.69784250645715,
+      "lon": 139.8490152717161,
+      "geoinfo": {
+        "display_name": "Komatsugawa 3, Komatsugawa, Edogawa, Tokyo, 132-0034, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Komatsugawa 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Edogawa",
+        "state": null,
+        "postcode": "132-0034",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Komatsugawa 3, Komatsugawa, Edogawa, Tokyo, 132-0034, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:59.120342+00:00",
+  "_kind": "geo_samples"
+}

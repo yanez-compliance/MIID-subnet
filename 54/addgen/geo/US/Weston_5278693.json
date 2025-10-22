@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Weston",
+  "geonameid": 5278693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.89211805978078,
+      "lon": -89.58198234790939,
+      "geoinfo": {
+        "display_name": "6971, Birch Street, Weston Medical Center, Village of Weston, Marathon County, Wisconsin, 54476, United States",
+        "road": "Birch Street",
+        "house_number": "6971",
+        "neighbourhood": "Weston Medical Center",
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Weston",
+        "state": "Wisconsin",
+        "postcode": "54476",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6971 Birch Street, Weston, Wisconsin, United States"
+    },
+    {
+      "lat": 44.85748016425957,
+      "lon": -89.53645695241863,
+      "geoinfo": {
+        "display_name": "Kmiecik Street, Village of Weston, Marathon County, Wisconsin, United States",
+        "road": "Kmiecik Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Weston",
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "585, Kmiecik Street, Village of Weston, Marathon County, 52722 Wisconsin, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:08.811022+00:00",
+  "_kind": "geo_samples"
+}

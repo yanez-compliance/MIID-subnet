@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Ganye",
+  "geonameid": 2341955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.439448818286106,
+      "lon": 12.015048352502324,
+      "geoinfo": {
+        "display_name": "Ganye, Adamawa State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Adamawa State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Ganye, Adamawa State, Nigeria"
+    },
+    {
+      "lat": 8.447436828495157,
+      "lon": 12.087539741342708,
+      "geoinfo": {
+        "display_name": "A8, DasHEN, Ganye, Adamawa State, Nigeria",
+        "road": "A8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "DasHEN",
+        "state": "Adamawa State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "A8, DasHEN, Ganye, 10981 Adamawa State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:21.940289+00:00",
+  "_kind": "geo_samples"
+}

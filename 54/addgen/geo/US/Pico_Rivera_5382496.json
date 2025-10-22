@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pico Rivera",
+  "geonameid": 5382496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.96477481164825,
+      "lon": -118.11909696061656,
+      "geoinfo": {
+        "display_name": "8716, Paramount Boulevard, Downey, Los Angeles County, California, 90240, United States",
+        "road": "Paramount Boulevard",
+        "house_number": "8716",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Downey",
+        "state": "California",
+        "postcode": "90240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8716 Paramount Boulevard, Pico Rivera, California, United States"
+    },
+    {
+      "lat": 33.970751557578915,
+      "lon": -118.12399906699207,
+      "geoinfo": {
+        "display_name": "Rio Hondo Bikeway, Downey, Los Angeles County, California, 92041, United States",
+        "road": "Rio Hondo Bikeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Downey",
+        "state": "California",
+        "postcode": "92041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "675, Rio Hondo Bikeway, Downey, Los Angeles County, California, 92041, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:01.077868+00:00",
+  "_kind": "geo_samples"
+}

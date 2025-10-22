@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Bucheon-si",
+  "geonameid": 1838716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.49081251713022,
+      "lon": 126.82349624825217,
+      "geoinfo": {
+        "display_name": "Gyeongin-ro, Onsu-dong, Sugung-dong, Guro-gu, Seoul, 08360, South Korea",
+        "road": "Gyeongin-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sugung-dong",
+        "city_district": null,
+        "city": "Seoul",
+        "state": null,
+        "postcode": "08360",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Gyeongin-ro, Bucheon-si, South Korea"
+    },
+    {
+      "lat": 37.47832831944173,
+      "lon": 126.75720997382973,
+      "geoinfo": {
+        "display_name": "Incheon Campus of Korea Polytechnic, 56, Munemi-ro 448beon-gil, Gusan-dong, Ilsin-dong, Bupyeong-gu, Incheon, 14743, South Korea",
+        "road": "Munemi-ro 448beon-gil",
+        "house_number": "56",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Incheon",
+        "state": null,
+        "postcode": "14743",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Munemi-ro 448beon-gil, 14743 Bucheon-si, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:39.267187+00:00",
+  "_kind": "geo_samples"
+}

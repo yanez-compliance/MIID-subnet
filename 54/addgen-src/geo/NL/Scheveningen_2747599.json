@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Scheveningen",
+  "geonameid": 2747599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.13023783002323,
+      "lon": 4.2323260869939405,
+      "geoinfo": {
+        "display_name": "Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Scheveningen, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.0852913854709,
+      "lon": 4.324910187663758,
+      "geoinfo": {
+        "display_name": "Utrechtsebaan, Nassaubuurt, Haagse Hout, The Hague, South Holland, Netherlands, 2594 NB, Netherlands",
+        "road": "Utrechtsebaan",
+        "house_number": null,
+        "neighbourhood": "Nassaubuurt",
+        "suburb": "Haagse Hout",
+        "city_district": null,
+        "city": "The Hague",
+        "state": "South Holland",
+        "postcode": "2594 NB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "227, Utrechtsebaan, Nassaubuurt, Haagse Hout, The Hague, South Holland, Netherlands, 2594 NB, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:59.552146+00:00",
+  "_kind": "geo_samples"
+}

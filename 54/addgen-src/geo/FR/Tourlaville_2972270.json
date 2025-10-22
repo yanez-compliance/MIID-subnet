@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Tourlaville",
+  "geonameid": 2972270,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.64391807404704,
+      "lon": -1.5374865930140649,
+      "geoinfo": {
+        "display_name": "Rue du Hameau Burnel, Hameau Burnel, Tourlaville, Cherbourg-en-Cotentin, Cherbourg, Manche, Normandy, Metropolitan France, 50110, France",
+        "road": "Rue du Hameau Burnel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Tourlaville",
+        "city": "Cherbourg-en-Cotentin",
+        "state": "Normandy",
+        "postcode": "50110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du Hameau Burnel, Tourlaville, Normandy, France"
+    },
+    {
+      "lat": 49.67194681975894,
+      "lon": -1.611991170844324,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "487, 26667 Metropolitan France, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:45:29.962139+00:00",
+  "_kind": "geo_samples"
+}

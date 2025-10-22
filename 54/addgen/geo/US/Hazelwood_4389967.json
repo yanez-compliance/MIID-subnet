@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hazelwood",
+  "geonameid": 4389967,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.77634092050321,
+      "lon": -90.36411380035068,
+      "geoinfo": {
+        "display_name": "10, Airshire Place, Hazelwood, Saint Louis County, Missouri, 63042, United States",
+        "road": "Airshire Place",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hazelwood",
+        "state": "Missouri",
+        "postcode": "63042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10 Airshire Place, Hazelwood, Missouri, United States"
+    },
+    {
+      "lat": 38.780962751490165,
+      "lon": -90.35743874790137,
+      "geoinfo": {
+        "display_name": "North Lindbergh Boulevard, Hazelwood, Saint Louis County, Missouri, 63042, United States",
+        "road": "North Lindbergh Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hazelwood",
+        "state": "Missouri",
+        "postcode": "63042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "294, North Lindbergh Boulevard, Hazelwood, Saint Louis County, Missouri, 63042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:38.136292+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Villaviciosa de Odón",
+  "geonameid": 3104703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.35436494390287,
+      "lon": -3.8543487775269454,
+      "geoinfo": {
+        "display_name": "Carretera de San Martín, Norte, Alcorcón, Community of Madrid, 28932, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alcorcón",
+        "state": "Community of Madrid",
+        "postcode": "28932",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Villaviciosa de Odón, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.394819821256135,
+      "lon": -3.891421566108103,
+      "geoinfo": {
+        "display_name": "Autovía de los Pantanos, Residencial Siglo XXI, Villaviciosa de Odón, Community of Madrid, 28660, Spain",
+        "road": "Autovía de los Pantanos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Residencial Siglo XXI",
+        "city_district": null,
+        "city": "Villaviciosa de Odón",
+        "state": "Community of Madrid",
+        "postcode": "28660",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "262, Autovía de los Pantanos, Residencial Siglo XXI, Villaviciosa de Odón, Community of Madrid, 28660, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:30.614722+00:00",
+  "_kind": "geo_samples"
+}

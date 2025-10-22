@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arlington",
+  "geonameid": 5785868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.1691622649976,
+      "lon": -122.09159695089949,
+      "geoinfo": {
+        "display_name": "190th Street Northeast, Snohomish County, Washington, 98223, United States",
+        "road": "190th Street Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98223",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "190th Street Northeast, Arlington, Washington, United States"
+    },
+    {
+      "lat": 48.197760013474735,
+      "lon": -122.0849640854402,
+      "geoinfo": {
+        "display_name": "10732, Homestead Road, Snohomish County, Washington, 98223, United States",
+        "road": "Homestead Road",
+        "house_number": "10732",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98223",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10732, Homestead Road, Snohomish County, Washington, 98223, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:04.529355+00:00",
+  "_kind": "geo_samples"
+}

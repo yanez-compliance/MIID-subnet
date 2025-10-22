@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Hersfeld",
+  "geonameid": 2953439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.88973273411026,
+      "lon": 9.767053393150833,
+      "geoinfo": {
+        "display_name": "Meckbach, Ludwigsau, Landkreis Hersfeld-Rotenburg, Hesse, 36251, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meckbach",
+        "state": "Hesse",
+        "postcode": "36251",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bad Hersfeld, Hesse, Germany"
+    },
+    {
+      "lat": 50.90449963124072,
+      "lon": 9.715248643709051,
+      "geoinfo": {
+        "display_name": "Lotte-Kümmel-Weg, Ludwigsau, Landkreis Hersfeld-Rotenburg, Hesse, 36251, Germany",
+        "road": "Lotte-Kümmel-Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Hesse",
+        "postcode": "36251",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "774, Lotte-Kümmel-Weg, Bad Hersfeld, 36251 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:21.933638+00:00",
+  "_kind": "geo_samples"
+}

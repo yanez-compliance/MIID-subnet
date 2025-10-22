@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tumwater",
+  "geonameid": 5814095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.968833772919325,
+      "lon": -122.90818526930227,
+      "geoinfo": {
+        "display_name": "955, Malin Lane Southwest, Tumwater, Thurston County, Washington, 98501, United States",
+        "road": "Malin Lane Southwest",
+        "house_number": "955",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tumwater",
+        "state": "Washington",
+        "postcode": "98501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "955 Malin Lane Southwest, Tumwater, Washington, United States"
+    },
+    {
+      "lat": 47.00122576467308,
+      "lon": -122.8701743089756,
+      "geoinfo": {
+        "display_name": "Hewitt Lake Drive Southeast, Thurston County, Washington, 98501, United States",
+        "road": "Hewitt Lake Drive Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "909, Hewitt Lake Drive Southeast, Thurston County, Washington, 98501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:23.834884+00:00",
+  "_kind": "geo_samples"
+}

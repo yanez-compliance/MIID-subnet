@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Rochedale South",
+  "geonameid": 9958114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.58687106457863,
+      "lon": 153.12567847752797,
+      "geoinfo": {
+        "display_name": "550, Priestdale Road, Rochedale, City of Brisbane, Queensland, 4123, Australia",
+        "road": "Priestdale Road",
+        "house_number": "550",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rochedale",
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4123",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "550 Priestdale Road, Rochedale South, Queensland, Australia"
+    },
+    {
+      "lat": -27.615408519061926,
+      "lon": 153.10856549636947,
+      "geoinfo": {
+        "display_name": "1, Pele Court, Underwood, Greater Brisbane, Queensland, 4119, Australia",
+        "road": "Pele Court",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Underwood",
+        "city_district": "Underwood",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4119",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "1, Pele Court, Underwood, Greater Brisbane, Queensland, 4119, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:34.033138+00:00",
+  "_kind": "geo_samples"
+}

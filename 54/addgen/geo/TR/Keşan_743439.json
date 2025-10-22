@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Keşan",
+  "geonameid": 743439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.86848400652758,
+      "lon": 26.576339731119788,
+      "geoinfo": {
+        "display_name": "Yeniceçiftlik Köyü, Keşan, Edirne, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yeniceçiftlik Köyü",
+        "city": "Keşan",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Yeniceçiftlik Köyü, Keşan, Turkey"
+    },
+    {
+      "lat": 40.827910712292244,
+      "lon": 26.662017669312185,
+      "geoinfo": {
+        "display_name": "Keşan, Yeni Mahalle, Keşan, Edirne, Marmara Region, 22800, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yeni Mahalle",
+        "city_district": null,
+        "city": "Keşan",
+        "state": null,
+        "postcode": "22800",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "600, Yeni Mahalle, 22800 Keşan, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:48.209608+00:00",
+  "_kind": "geo_samples"
+}

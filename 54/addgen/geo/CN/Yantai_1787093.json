@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yantai",
+  "geonameid": 1787093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.46931988335428,
+      "lon": 121.43242948022859,
+      "geoinfo": {
+        "display_name": "Yinhai Road, Chujia, Laishan District, Yantai, Shandong, 264000, China",
+        "road": "Yinhai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laishan District",
+        "state": "Shandong",
+        "postcode": "264000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yinhai Road, Yantai, Shandong, China"
+    },
+    {
+      "lat": 37.494105001004485,
+      "lon": 121.47833918018935,
+      "geoinfo": {
+        "display_name": "Huanghailu, Laishan District, Yantai, Shandong, 264000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Huanghailu",
+        "city_district": null,
+        "city": "Laishan District",
+        "state": "Shandong",
+        "postcode": "264000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "315, Huanghailu, Laishan District, Yantai, Shandong, 264000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:33:13.199599+00:00",
+  "_kind": "geo_samples"
+}

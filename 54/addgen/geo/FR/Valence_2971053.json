@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Valence",
+  "geonameid": 2971053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.942944582645886,
+      "lon": 4.954567293372713,
+      "geoinfo": {
+        "display_name": "Chemin des Routes, Valence, Drôme, Auvergne-Rhône-Alpes, Metropolitan France, 26000, France",
+        "road": "Chemin des Routes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valence",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "26000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Routes, Valence, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 44.9238876765101,
+      "lon": 4.9387242335634385,
+      "geoinfo": {
+        "display_name": "305, Chemin des Martins, ZA Briffaut, Chabeuil, Valence, Drôme, Auvergne-Rhône-Alpes, Metropolitan France, 26120, France",
+        "road": "Chemin des Martins",
+        "house_number": "305",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chabeuil",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "26120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "305, Chemin des Martins, ZA Briffaut, Chabeuil, Valence, Drôme, Auvergne-Rhône-Alpes, Metropolitan France, 26120, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:03.205953+00:00",
+  "_kind": "geo_samples"
+}

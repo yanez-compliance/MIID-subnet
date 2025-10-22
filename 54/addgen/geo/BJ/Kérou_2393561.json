@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Kérou",
+  "geonameid": 2393561,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 10.831424388112163,
+      "lon": 2.1135477288150084,
+      "geoinfo": {
+        "display_name": "Kérou, Kerou, Atakora Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kérou",
+        "state": "Atakora Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Kérou, Atakora Department, Benin"
+    },
+    {
+      "lat": 10.823873573147916,
+      "lon": 2.1156462894672377,
+      "geoinfo": {
+        "display_name": "RN 8, Brignamaro, Kerou, Atakora Department, Benin",
+        "road": "RN 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brignamaro",
+        "state": "Atakora Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "RN 8, Kérou, Atakora Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-16T10:52:22.865567+00:00",
+  "_kind": "geo_samples"
+}

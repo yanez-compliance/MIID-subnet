@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ischia",
+  "geonameid": 3175458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72788387416688,
+      "lon": 13.916321842082654,
+      "geoinfo": {
+        "display_name": "SP143, Piedimonte, Barano d'Ischia, Naples, Campania, 80076, Italy",
+        "road": "SP143",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barano d'Ischia",
+        "state": "Campania",
+        "postcode": "80076",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP143, Ischia, Campania, Italy"
+    },
+    {
+      "lat": 40.769165692194434,
+      "lon": 13.93579859819085,
+      "geoinfo": {
+        "display_name": "Bagni, Casamicciola Terme, Naples, Campania, 80074, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagni",
+        "state": "Campania",
+        "postcode": "80074",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "653, Bagni, Casamicciola Terme, Naples, Campania, 80074, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:31.269888+00:00",
+  "_kind": "geo_samples"
+}

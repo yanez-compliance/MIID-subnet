@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Ness Ziona",
+  "geonameid": 294074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.919026058051067,
+      "lon": 34.83142364522167,
+      "geoinfo": {
+        "display_name": "431, Hoter, Gezer Regional Council, Ramla Subdistrict, Center District, 7031011, Israel",
+        "road": "431",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hoter",
+        "city_district": null,
+        "city": null,
+        "state": "Center District",
+        "postcode": "7031011",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "431, Ness Ziona, Center District, Israel"
+    },
+    {
+      "lat": 31.930587924264636,
+      "lon": 34.81638246657984,
+      "geoinfo": {
+        "display_name": "423, Savioney Netzer, Nes Ziona, Rehovot Subdistrict, Center District, 7401421, Israel",
+        "road": "423",
+        "house_number": null,
+        "neighbourhood": "Savioney Netzer",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nes Ziona",
+        "state": "Center District",
+        "postcode": "7401421",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "423, Savioney Netzer, Nes Ziona, Rehovot Subdistrict, Center District, 7401421, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:10.060943+00:00",
+  "_kind": "geo_samples"
+}

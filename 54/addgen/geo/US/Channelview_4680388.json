@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Channelview",
+  "geonameid": 4680388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.779109502191112,
+      "lon": -95.09547344104053,
+      "geoinfo": {
+        "display_name": "Mantu, Channelview, Harris County, Texas, 77562, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Channelview",
+        "state": "Texas",
+        "postcode": "77562",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Channelview, Texas, United States"
+    },
+    {
+      "lat": 29.773950517609958,
+      "lon": -95.0703842645985,
+      "geoinfo": {
+        "display_name": "Crosby Lynchburg Road, Lynchburg Landing, Houston, Harris County, Texas, 77562, United States",
+        "road": "Crosby Lynchburg Road",
+        "house_number": null,
+        "neighbourhood": "Lynchburg Landing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77562",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "715, Crosby Lynchburg Road, Lynchburg Landing, Houston, Harris County, Texas, 77562, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:41.348295+00:00",
+  "_kind": "geo_samples"
+}

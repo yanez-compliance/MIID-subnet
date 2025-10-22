@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Ben Mehidi",
+  "geonameid": 2504486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.73378991219073,
+      "lon": 7.883208098471747,
+      "geoinfo": {
+        "display_name": "CW 129, Zerizer, Besbes District, El Tarf, 36003, Algeria",
+        "road": "CW 129",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zerizer",
+        "state": "El Tarf",
+        "postcode": "36003",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "CW 129, Ben Mehidi, El Tarf, Algeria"
+    },
+    {
+      "lat": 36.7606739551811,
+      "lon": 7.877983128998511,
+      "geoinfo": {
+        "display_name": "Besbes, Besbes District, El Tarf, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Besbes",
+        "state": "El Tarf",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "148, Besbes, Besbes District, 67450 El Tarf, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:48.246867+00:00",
+  "_kind": "geo_samples"
+}

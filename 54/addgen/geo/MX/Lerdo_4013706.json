@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Lerdo",
+  "geonameid": 4013706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.5618597108112,
+      "lon": -103.54562677398226,
+      "geoinfo": {
+        "display_name": "Los Dos Arbolitos, Ciudad Lerdo, Lerdo, Durango, 35026, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Lerdo",
+        "state": "Durango",
+        "postcode": "35026",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Lerdo, Durango, Mexico"
+    },
+    {
+      "lat": 25.54998206579778,
+      "lon": -103.51654366711476,
+      "geoinfo": {
+        "display_name": "Prolongación Francisco I. Madero, Ciudad Lerdo, Lerdo, Durango, 35157, Mexico",
+        "road": "Prolongación Francisco I. Madero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Lerdo",
+        "state": "Durango",
+        "postcode": "35157",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "523, Prolongación Francisco I. Madero, Ciudad Lerdo, Lerdo, Durango, 35157, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:58.024474+00:00",
+  "_kind": "geo_samples"
+}

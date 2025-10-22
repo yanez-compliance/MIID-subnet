@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stuttgart Mühlhausen",
+  "geonameid": 2867993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.84006990907837,
+      "lon": 9.22976476321489,
+      "geoinfo": {
+        "display_name": "Aldinger Straße, Mühlhausen, Stuttgart, Baden-Württemberg, 70378, Germany",
+        "road": "Aldinger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mühlhausen",
+        "city_district": "Mühlhausen",
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70378",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Aldinger Straße, Stuttgart Mühlhausen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.853227451135986,
+      "lon": 9.285394438329492,
+      "geoinfo": {
+        "display_name": "Langer Weg, Oeffingen, Hegnach, Fellbach, Rems-Murr-Kreis, Baden-Württemberg, 70736, Germany",
+        "road": "Langer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oeffingen",
+        "city_district": null,
+        "city": "Fellbach",
+        "state": "Baden-Württemberg",
+        "postcode": "70736",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "661, Langer Weg, Oeffingen, Hegnach, Fellbach, Rems-Murr-Kreis, Baden-Württemberg, 70736, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:50.275465+00:00",
+  "_kind": "geo_samples"
+}

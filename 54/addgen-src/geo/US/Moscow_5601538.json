@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Moscow",
+  "geonameid": 5601538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.7341637779817,
+      "lon": -116.96724096322045,
+      "geoinfo": {
+        "display_name": "209, Panorama Drive, Moscow, Latah County, Idaho, 83843, United States",
+        "road": "Panorama Drive",
+        "house_number": "209",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Idaho",
+        "postcode": "83843",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "209 Panorama Drive, Moscow, Idaho, United States"
+    },
+    {
+      "lat": 46.70759616876171,
+      "lon": -116.98874478007731,
+      "geoinfo": {
+        "display_name": "Latah County, Idaho, 83843, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Idaho",
+        "postcode": "83843",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "936, Moscow, 83843 Idaho, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:28.381767+00:00",
+  "_kind": "geo_samples"
+}

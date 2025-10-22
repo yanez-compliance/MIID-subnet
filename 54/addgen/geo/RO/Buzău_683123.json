@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Buzău",
+  "geonameid": 683123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.12132739805038,
+      "lon": 26.855281665849642,
+      "geoinfo": {
+        "display_name": "Buzău, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buzău",
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Buzău, Romania"
+    },
+    {
+      "lat": 45.177887014582325,
+      "lon": 26.79062844267247,
+      "geoinfo": {
+        "display_name": "Mărăcineni, Buzău, 127326, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mărăcineni",
+        "state": null,
+        "postcode": "127326",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "278, Mărăcineni, Buzău, 127326, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:47.238616+00:00",
+  "_kind": "geo_samples"
+}

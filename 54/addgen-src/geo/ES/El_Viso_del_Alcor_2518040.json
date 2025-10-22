@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Viso del Alcor",
+  "geonameid": 2518040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.39281639369461,
+      "lon": -5.755302559376985,
+      "geoinfo": {
+        "display_name": "A-398, Urbanización Cerro de los Camellos, Mairena del Alcor, Sevilla, Andalusia, 41510, Spain",
+        "road": "A-398",
+        "house_number": null,
+        "neighbourhood": "Urbanización Cerro de los Camellos",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mairena del Alcor",
+        "state": "Andalusia",
+        "postcode": "41510",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "A-398, El Viso del Alcor, Andalusia, Spain"
+    },
+    {
+      "lat": 37.34991931943916,
+      "lon": -5.720839269887126,
+      "geoinfo": {
+        "display_name": "Traviesa Alta, Mairena del Alcor, Sevilla, Andalusia, 41510, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mairena del Alcor",
+        "state": "Andalusia",
+        "postcode": "41510",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "048, Traviesa Alta, Mairena del Alcor, Sevilla, Andalusia, 41510, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:36:35.868097+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wittenau",
+  "geonameid": 2807360,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.585478837130374,
+      "lon": 13.320389464770964,
+      "geoinfo": {
+        "display_name": "180, Holzhauser Straße, Holzhauser Markt, Borsigwalde, Reinickendorf, Berlin, 13509, Germany",
+        "road": "Holzhauser Straße",
+        "house_number": "180",
+        "neighbourhood": "Holzhauser Markt",
+        "suburb": "Borsigwalde",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13509",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "180 Holzhauser Straße, Wittenau, Germany"
+    },
+    {
+      "lat": 52.60187865113277,
+      "lon": 13.25704152519317,
+      "geoinfo": {
+        "display_name": "Heiligenseestraße, Tegel, Reinickendorf, Berlin, 13505, Germany",
+        "road": "Heiligenseestraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tegel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13505",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "173, Heiligenseestraße, Tegel, Reinickendorf, Berlin, 13505, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:05.028892+00:00",
+  "_kind": "geo_samples"
+}

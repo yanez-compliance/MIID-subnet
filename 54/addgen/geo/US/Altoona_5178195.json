@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Altoona",
+  "geonameid": 5178195,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.49441991203457,
+      "lon": -78.40194753394393,
+      "geoinfo": {
+        "display_name": "Duff Drive, Hileman Heights, Altoona, Blair County, Pennsylvania, 16602, United States",
+        "road": "Duff Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altoona",
+        "state": "Pennsylvania",
+        "postcode": "16602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Duff Drive, Altoona, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.49484008817754,
+      "lon": -78.36161701687105,
+      "geoinfo": {
+        "display_name": "Fire Tower Road, Logan Township, Blair County, Pennsylvania, 16602, United States",
+        "road": "Fire Tower Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Logan Township",
+        "state": "Pennsylvania",
+        "postcode": "16602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "418, Fire Tower Road, Logan Township, Blair County, Pennsylvania, 16602, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:28.156531+00:00",
+  "_kind": "geo_samples"
+}

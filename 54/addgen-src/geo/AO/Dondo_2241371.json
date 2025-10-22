@@ -1,0 +1,47 @@
+{
+  "country_code": "AO",
+  "country": "Angola",
+  "city": "Dondo",
+  "geonameid": 2241371,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -9.706810131601237,
+      "lon": 14.433435121017888,
+      "geoinfo": {
+        "display_name": "Municipality of Quiçama, Luanda Province, Angola",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Luanda Province",
+        "postcode": null,
+        "country": "Angola",
+        "country_code": "ao"
+      },
+      "address": "Dondo, Luanda Province, Angola"
+    },
+    {
+      "lat": -9.720488786695162,
+      "lon": 14.406396048205929,
+      "geoinfo": {
+        "display_name": "EN321, Dondo, Cuanza Norte Province, Angola",
+        "road": "EN321",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dondo",
+        "state": "Cuanza Norte Province",
+        "postcode": null,
+        "country": "Angola",
+        "country_code": "ao"
+      },
+      "address": "EN321, Dondo, Cuanza Norte Province, Angola"
+    }
+  ],
+  "updated_at": "2025-10-16T10:24:11.812272+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Groves",
+  "geonameid": 4695317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.947159947934054,
+      "lon": -93.88386013543563,
+      "geoinfo": {
+        "display_name": "Port Arthur, Jefferson County, Texas, 77642, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Arthur",
+        "state": "Texas",
+        "postcode": "77642",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Groves, Texas, United States"
+    },
+    {
+      "lat": 29.954457891351854,
+      "lon": -93.88168797230918,
+      "geoinfo": {
+        "display_name": "KHYS Radio Tower (Port Arthur), TX 73;TX 87, Jefferson County, Texas, 77643, United States",
+        "road": "TX 73;TX 87",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77643",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "KHYS Radio Tower (Port Arthur), TX 73;TX 87, Jefferson County, Texas, 77643, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:59.020976+00:00",
+  "_kind": "geo_samples"
+}

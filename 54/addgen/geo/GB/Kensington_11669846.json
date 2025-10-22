@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Kensington",
+  "geonameid": 11669846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.38947244993188,
+      "lon": -2.928170526114235,
+      "geoinfo": {
+        "display_name": "Jet Wash, Smithdown Road, Wavertree, Liverpool, Liverpool City Region, England, L17 1AZ, United Kingdom",
+        "road": "Smithdown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wavertree",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L17 1AZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Smithdown Road, Kensington, England, United Kingdom"
+    },
+    {
+      "lat": 53.41214288948085,
+      "lon": -2.957243017928907,
+      "geoinfo": {
+        "display_name": "Marvin Street, Kensington, Liverpool, Liverpool City Region, England, L6 1DZ, United Kingdom",
+        "road": "Marvin Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kensington",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L6 1DZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Marvin Street, Kensington, Liverpool, Liverpool City Region, England, L6 1DZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:45.241201+00:00",
+  "_kind": "geo_samples"
+}

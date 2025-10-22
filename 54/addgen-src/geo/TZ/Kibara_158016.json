@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Kibara",
+  "geonameid": 158016,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -2.160789966693352,
+      "lon": 33.472109352490826,
+      "geoinfo": {
+        "display_name": "Main Roads, Kibara, Bunda, Lake Zone, Tanzania",
+        "road": "Main Roads",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kibara",
+        "state": null,
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "Main Roads, Kibara, Tanzania"
+    },
+    {
+      "lat": -2.147464623527349,
+      "lon": 33.463601751932146,
+      "geoinfo": {
+        "display_name": "Kibara Store, Bunda, Lake Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kibara Store",
+        "state": null,
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "054, Kibara Store, Bunda, 23797 Lake Zone, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:19.022152+00:00",
+  "_kind": "geo_samples"
+}

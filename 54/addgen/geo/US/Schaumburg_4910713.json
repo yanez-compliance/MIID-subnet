@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Schaumburg",
+  "geonameid": 4910713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.02578474872321,
+      "lon": -88.10726474193658,
+      "geoinfo": {
+        "display_name": "1105, Frontage Road, Hill N Dale, Schaumburg, Schaumburg Township, Cook County, Illinois, 60193, United States",
+        "road": "Frontage Road",
+        "house_number": "1105",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schaumburg",
+        "state": "Illinois",
+        "postcode": "60193",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1105 Frontage Road, Schaumburg, Illinois, United States"
+    },
+    {
+      "lat": 42.06728614127462,
+      "lon": -88.09434560184697,
+      "geoinfo": {
+        "display_name": "Paul Douglas Red Paved Trail, Hoffman Estates, Palatine Township, Cook County, Illinois, 60195, United States",
+        "road": "Paul Douglas Red Paved Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hoffman Estates",
+        "state": "Illinois",
+        "postcode": "60195",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "437, Paul Douglas Red Paved Trail, Hoffman Estates, Palatine Township, Cook County, Illinois, 60195, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:00.341971+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sterling",
+  "geonameid": 4912499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.78409004640545,
+      "lon": -89.68313137480186,
+      "geoinfo": {
+        "display_name": "220, D Avenue, Rock Falls, Whiteside County, Illinois, 61071, United States",
+        "road": "D Avenue",
+        "house_number": "220",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rock Falls",
+        "state": "Illinois",
+        "postcode": "61071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "220 D Avenue, Sterling, Illinois, United States"
+    },
+    {
+      "lat": 41.78983689213499,
+      "lon": -89.73254711152197,
+      "geoinfo": {
+        "display_name": "Frary Lumber, 2707, West Lincolnway, Galt, Sterling, Whiteside County, Illinois, 61081, United States",
+        "road": "West Lincolnway",
+        "house_number": "2707",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterling",
+        "state": "Illinois",
+        "postcode": "61081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Frary Lumber, 2707, West Lincolnway, Galt, Sterling, Whiteside County, Illinois, 61081, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:44.306095+00:00",
+  "_kind": "geo_samples"
+}

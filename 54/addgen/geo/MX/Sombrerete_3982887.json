@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Sombrerete",
+  "geonameid": 3982887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.65972620128403,
+      "lon": -103.60941662091824,
+      "geoinfo": {
+        "display_name": "Sombrerete, Zacatecas, 99100, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Zacatecas",
+        "postcode": "99100",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Sombrerete, Zacatecas, Mexico"
+    },
+    {
+      "lat": 23.63813113116114,
+      "lon": -103.59925483408037,
+      "geoinfo": {
+        "display_name": "El Capulín, Álvaro Obregón (Barajas), Sombrerete, Zacatecas, 99100, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Álvaro Obregón (Barajas)",
+        "state": "Zacatecas",
+        "postcode": "99100",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "980, Sombrerete, 99100 Zacatecas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:32:31.709834+00:00",
+  "_kind": "geo_samples"
+}

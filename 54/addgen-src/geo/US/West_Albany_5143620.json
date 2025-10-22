@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Albany",
+  "geonameid": 5143620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.69114826953178,
+      "lon": -73.83710049358953,
+      "geoinfo": {
+        "display_name": "Albany NanoTech Complex, 257, Fuller Road, City of Albany, Albany County, New York, 12203, United States",
+        "road": "Fuller Road",
+        "house_number": "257",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Albany",
+        "state": "New York",
+        "postcode": "12203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Albany NanoTech Complex, 257, Fuller Road, City of Albany, Albany County, New York, 12203, United States"
+    },
+    {
+      "lat": 42.66651259525826,
+      "lon": -73.74363267405805,
+      "geoinfo": {
+        "display_name": "446, North Pearl Street, Warehouse District, City of Albany, Albany County, New York, 12204, United States",
+        "road": "North Pearl Street",
+        "house_number": "446",
+        "neighbourhood": "Warehouse District",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Albany",
+        "state": "New York",
+        "postcode": "12204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "446, North Pearl Street, Warehouse District, City of Albany, Albany County, New York, 12204, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:45.631354+00:00",
+  "_kind": "geo_samples"
+}

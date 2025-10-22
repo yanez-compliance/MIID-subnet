@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Australind",
+  "geonameid": 2077454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.312067431142566,
+      "lon": 115.74023002488745,
+      "geoinfo": {
+        "display_name": "Forrest Highway, Waterloo, Shire Of Dardanup, Western Australia, 6228, Australia",
+        "road": "Forrest Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Waterloo",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6228",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Forrest Highway, Australind, Western Australia, Australia"
+    },
+    {
+      "lat": -33.31368374822544,
+      "lon": 115.69917774691463,
+      "geoinfo": {
+        "display_name": "Ennis Street, Eaton, Shire Of Dardanup, Western Australia, 6232, Australia",
+        "road": "Ennis Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Eaton",
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6232",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "350, Ennis Street, Eaton, Shire Of Dardanup, Western Australia, 6232, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:25.025700+00:00",
+  "_kind": "geo_samples"
+}

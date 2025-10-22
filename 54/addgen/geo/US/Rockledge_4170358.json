@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rockledge",
+  "geonameid": 4170358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.36326977256119,
+      "lon": -80.72080040829448,
+      "geoinfo": {
+        "display_name": "Merritt Island, Brevard County, Florida, 32952, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merritt Island",
+        "state": "Florida",
+        "postcode": "32952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rockledge, Florida, United States"
+    },
+    {
+      "lat": 28.38363495283603,
+      "lon": -80.75671601076687,
+      "geoinfo": {
+        "display_name": "Eastern Florida State College - Cocoa Campus, 1519, Clearlake Road, Cocoa, Brevard County, Florida, 32922, United States",
+        "road": "Clearlake Road",
+        "house_number": "1519",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cocoa",
+        "state": "Florida",
+        "postcode": "32922",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eastern Florida State College - Cocoa Campus, 1519, Clearlake Road, Cocoa, Brevard County, Florida, 32922, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:08.512558+00:00",
+  "_kind": "geo_samples"
+}

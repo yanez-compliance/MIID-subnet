@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kreuzau",
+  "geonameid": 2884245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.73297079611038,
+      "lon": 6.498982560785771,
+      "geoinfo": {
+        "display_name": "Grünstraße, Drove, Kreuzau, Kreis Düren, North Rhine-Westphalia, 52372, Germany",
+        "road": "Grünstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kreuzau",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52372",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Grünstraße, Kreuzau, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.769216640596284,
+      "lon": 6.505904947952017,
+      "geoinfo": {
+        "display_name": "Trimm-Dich-Pfad - Station 8, Panzerstraße, Niederau, Duren, Kreis Düren, North Rhine-Westphalia, 52351, Germany",
+        "road": "Panzerstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Duren",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52351",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Trimm-Dich-Pfad - Station 8, Panzerstraße, Niederau, Duren, Kreis Düren, North Rhine-Westphalia, 52351, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:14.056728+00:00",
+  "_kind": "geo_samples"
+}

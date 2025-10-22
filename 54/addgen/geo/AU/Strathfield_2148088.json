@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Strathfield",
+  "geonameid": 2148088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.90830169918452,
+      "lon": 151.09537083909115,
+      "geoinfo": {
+        "display_name": "Wangee Park School, 12, Second Avenue, Campsie, Sydney, Canterbury-Bankstown Council, New South Wales, 2194, Australia",
+        "road": "Second Avenue",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Campsie",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2194",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "12 Second Avenue, Strathfield, New South Wales, Australia"
+    },
+    {
+      "lat": -33.87850177612307,
+      "lon": 151.11031436373142,
+      "geoinfo": {
+        "display_name": "Lucas Road, Burwood, Inner West, Sydney, Burwood Council, New South Wales, 2134, Australia",
+        "road": "Lucas Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Burwood",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2134",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "615, Lucas Road, Burwood, Inner West, Sydney, Burwood Council, New South Wales, 2134, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:06.492915+00:00",
+  "_kind": "geo_samples"
+}

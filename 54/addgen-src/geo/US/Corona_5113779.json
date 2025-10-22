@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Corona",
+  "geonameid": 5113779,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.759945567074844,
+      "lon": -73.86718722910943,
+      "geoinfo": {
+        "display_name": "31-46, 102nd Street, East Elmhurst, Queens, Queens County, New York, 11369, United States",
+        "road": "102nd Street",
+        "house_number": "31-46",
+        "neighbourhood": "East Elmhurst",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11369",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31-46 102nd Street, Corona, New York, United States"
+    },
+    {
+      "lat": 40.777746486218994,
+      "lon": -73.84407348282932,
+      "geoinfo": {
+        "display_name": "23-29, 124th Street, Queens, Queens County, New York, 11356, United States",
+        "road": "124th Street",
+        "house_number": "23-29",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11356",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23-29, 124th Street, Queens, Queens County, New York, 11356, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:21.661882+00:00",
+  "_kind": "geo_samples"
+}

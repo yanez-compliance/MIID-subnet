@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Mitras Poniente",
+  "geonameid": 8858110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.81345834767864,
+      "lon": -100.40040684050193,
+      "geoinfo": {
+        "display_name": "General Escobedo, Nuevo León, 64103, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "General Escobedo",
+        "state": "Nuevo León",
+        "postcode": "64103",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Mitras Poniente, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.792084421541606,
+      "lon": -100.42643849424817,
+      "geoinfo": {
+        "display_name": "Calle Trueno, García, Nuevo León, 64103, Mexico",
+        "road": "Calle Trueno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "64103",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "017, Calle Trueno, García, Nuevo León, 64103, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:11.679349+00:00",
+  "_kind": "geo_samples"
+}

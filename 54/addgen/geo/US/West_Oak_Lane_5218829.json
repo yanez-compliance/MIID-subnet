@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Oak Lane",
+  "geonameid": 5218829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.11144204031856,
+      "lon": -75.16584882675878,
+      "geoinfo": {
+        "display_name": "2828, Limekiln Pike, North Hills, Abington Township, Montgomery County, Pennsylvania, 19038, United States",
+        "road": "Limekiln Pike",
+        "house_number": "2828",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abington Township",
+        "state": "Pennsylvania",
+        "postcode": "19038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2828 Limekiln Pike, West Oak Lane, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.09053484902496,
+      "lon": -75.18758556325362,
+      "geoinfo": {
+        "display_name": "8412, Widener Road, Enfield, Springfield Township, Montgomery County, Pennsylvania, 19038, United States",
+        "road": "Widener Road",
+        "house_number": "8412",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield Township",
+        "state": "Pennsylvania",
+        "postcode": "19038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8412, Widener Road, Enfield, Springfield Township, Montgomery County, Pennsylvania, 19038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:22.850065+00:00",
+  "_kind": "geo_samples"
+}

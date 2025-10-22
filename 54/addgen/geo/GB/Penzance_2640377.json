@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Penzance",
+  "geonameid": 2640377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.10192427704868,
+      "lon": -5.506950184591829,
+      "geoinfo": {
+        "display_name": "Longrock, Cornwall, England, TR20 8HZ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longrock",
+        "state": "England",
+        "postcode": "TR20 8HZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Penzance, England, United Kingdom"
+    },
+    {
+      "lat": 50.10391884236924,
+      "lon": -5.58630374941671,
+      "geoinfo": {
+        "display_name": "Avrack Close, Sancreed, Lower Drift, Cornwall, England, TR19 6AH, United Kingdom",
+        "road": "Avrack Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sancreed",
+        "city_district": null,
+        "city": "Lower Drift",
+        "state": "England",
+        "postcode": "TR19 6AH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Avrack Close, Sancreed, Lower Drift, Cornwall, England, TR19 6AH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:41.402354+00:00",
+  "_kind": "geo_samples"
+}

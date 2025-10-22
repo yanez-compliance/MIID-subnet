@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alcoy",
+  "geonameid": 2522098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.67545944505783,
+      "lon": -0.4851609087685719,
+      "geoinfo": {
+        "display_name": "Carretera Font Roja, Alcoi / Alcoy, l'Alcoià, Alacant / Alicante, Valencian Community, 03802, Spain",
+        "road": "Carretera Font Roja",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alcoi / Alcoy",
+        "state": "Valencian Community",
+        "postcode": "03802",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera Font Roja, Alcoy, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.72466256200881,
+      "lon": -0.46043563201590915,
+      "geoinfo": {
+        "display_name": "Carrer Timó, Urbanització Gormaig, Cocentaina, el Comtat, Alacant / Alicante, Valencian Community, 03804, Spain",
+        "road": "Carrer Timó",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cocentaina",
+        "state": "Valencian Community",
+        "postcode": "03804",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "821, Carrer Timó, Urbanització Gormaig, Cocentaina, el Comtat, Alacant / Alicante, Valencian Community, 03804, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:46.445218+00:00",
+  "_kind": "geo_samples"
+}

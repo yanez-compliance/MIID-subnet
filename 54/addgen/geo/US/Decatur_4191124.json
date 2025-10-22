@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Decatur",
+  "geonameid": 4191124,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.75578374477302,
+      "lon": -84.29613280691319,
+      "geoinfo": {
+        "display_name": "975, South McDonough Street, Oakhurst, Decatur, DeKalb County, Georgia, 30030, United States",
+        "road": "South McDonough Street",
+        "house_number": "975",
+        "neighbourhood": "Oakhurst",
+        "suburb": null,
+        "city_district": null,
+        "city": "Decatur",
+        "state": "Georgia",
+        "postcode": "30030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "975 South McDonough Street, Decatur, Georgia, United States"
+    },
+    {
+      "lat": 33.751147633466466,
+      "lon": -84.31803713943994,
+      "geoinfo": {
+        "display_name": "2129, Hosea L Williams Drive Southeast, Kirkwood, Atlanta, DeKalb County, Georgia, 30317, United States",
+        "road": "Hosea L Williams Drive Southeast",
+        "house_number": "2129",
+        "neighbourhood": "Kirkwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2129, Hosea L Williams Drive Southeast, Kirkwood, Atlanta, DeKalb County, Georgia, 30317, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:01.871979+00:00",
+  "_kind": "geo_samples"
+}

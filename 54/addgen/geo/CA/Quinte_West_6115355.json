@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Quinte West",
+  "geonameid": 6115355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.192927753678475,
+      "lon": -77.60203140099709,
+      "geoinfo": {
+        "display_name": "136, March Street, Sidney, Quinte West, Central Ontario, Ontario, K0K 2C0, Canada",
+        "road": "March Street",
+        "house_number": "136",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sidney",
+        "city": "Quinte West",
+        "state": "Ontario",
+        "postcode": "K0K 2C0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "136 March Street, Quinte West, Ontario, Canada"
+    },
+    {
+      "lat": 44.157088575185014,
+      "lon": -77.53438776553622,
+      "geoinfo": {
+        "display_name": "Highway 401, Sidney, Quinte West, Central Ontario, Ontario, K8V 5P8, Canada",
+        "road": "Highway 401",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sidney",
+        "city": "Quinte West",
+        "state": "Ontario",
+        "postcode": "K8V 5P8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Highway 401, Sidney, Quinte West, Central Ontario, Ontario, K8V 5P8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:08.709756+00:00",
+  "_kind": "geo_samples"
+}

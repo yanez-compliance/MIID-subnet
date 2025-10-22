@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Raytown",
+  "geonameid": 4405188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.016944224952304,
+      "lon": -94.47198466295741,
+      "geoinfo": {
+        "display_name": "5849, Elm Avenue, Raytown, Jackson County, Missouri, 64133, United States",
+        "road": "Elm Avenue",
+        "house_number": "5849",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Raytown",
+        "state": "Missouri",
+        "postcode": "64133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5849 Elm Avenue, Raytown, Missouri, United States"
+    },
+    {
+      "lat": 38.97793321126061,
+      "lon": -94.48372870537706,
+      "geoinfo": {
+        "display_name": "8014, Spring Valley Road, Raytown, Jackson County, Missouri, 64138, United States",
+        "road": "Spring Valley Road",
+        "house_number": "8014",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Raytown",
+        "state": "Missouri",
+        "postcode": "64138",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8014, Spring Valley Road, Raytown, Jackson County, Missouri, 64138, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:23.135523+00:00",
+  "_kind": "geo_samples"
+}

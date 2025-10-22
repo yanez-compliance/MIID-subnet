@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Llanelli",
+  "geonameid": 2644100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.66577141110982,
+      "lon": -4.180218888382751,
+      "geoinfo": {
+        "display_name": "Llanelli, Carmarthenshire, Wales, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llanelli",
+        "city_district": null,
+        "city": "Llanelli",
+        "state": "Wales",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Llanelli, Llanelli, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.671062281768116,
+      "lon": -4.223044085025545,
+      "geoinfo": {
+        "display_name": "Llanelli Rural, Carmarthenshire, Wales, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llanelli Rural",
+        "city_district": null,
+        "city": null,
+        "state": "Wales",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "097, Llanelli Rural, Carmarthenshire, 64830 Wales, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:04.139961+00:00",
+  "_kind": "geo_samples"
+}

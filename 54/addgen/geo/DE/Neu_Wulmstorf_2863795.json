@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neu Wulmstorf",
+  "geonameid": 2863795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.42844484716191,
+      "lon": 9.815457220545975,
+      "geoinfo": {
+        "display_name": "Oheweg, Schwiederstorf, Neu Wulmstorf, Harburg, Lower Saxony, 21629, Germany",
+        "road": "Oheweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neu Wulmstorf",
+        "state": "Lower Saxony",
+        "postcode": "21629",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Oheweg, Neu Wulmstorf, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.488266725956834,
+      "lon": 9.854855125261915,
+      "geoinfo": {
+        "display_name": "Francoper Hinterdeich, Francop, Harburg, Hamburg, 21129, Germany",
+        "road": "Francoper Hinterdeich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Francop",
+        "city_district": "Harburg",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21129",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "205, Francoper Hinterdeich, Francop, Harburg, Hamburg, 21129, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:31.330681+00:00",
+  "_kind": "geo_samples"
+}

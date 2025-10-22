@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rockford",
+  "geonameid": 4907959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.27404045875236,
+      "lon": -89.08408043210073,
+      "geoinfo": {
+        "display_name": "314, Olive Street, Prairie Hill, Rockford, Rockford Township, Winnebago County, Illinois, 61107, United States",
+        "road": "Olive Street",
+        "house_number": "314",
+        "neighbourhood": "Prairie Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockford",
+        "state": "Illinois",
+        "postcode": "61107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "314 Olive Street, Rockford, Illinois, United States"
+    },
+    {
+      "lat": 42.29869458417382,
+      "lon": -89.05622648902191,
+      "geoinfo": {
+        "display_name": "4600, Lexington Court, Loves Park, Rockford Township, Winnebago County, Illinois, 61111, United States",
+        "road": "Lexington Court",
+        "house_number": "4600",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loves Park",
+        "state": "Illinois",
+        "postcode": "61111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4600, Lexington Court, Loves Park, Rockford Township, Winnebago County, Illinois, 61111, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:40.721351+00:00",
+  "_kind": "geo_samples"
+}

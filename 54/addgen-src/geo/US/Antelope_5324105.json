@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Antelope",
+  "geonameid": 5324105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.71933950211665,
+      "lon": -121.29583735474817,
+      "geoinfo": {
+        "display_name": "I 80, Citrus Heights, Sacramento County, California, 95621, United States",
+        "road": "I 80",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Citrus Heights",
+        "state": "California",
+        "postcode": "95621",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 80, Antelope, California, United States"
+    },
+    {
+      "lat": 38.6956040801463,
+      "lon": -121.37708587074827,
+      "geoinfo": {
+        "display_name": "3723, Turner Drive, Sacramento County, California, 95660, United States",
+        "road": "Turner Drive",
+        "house_number": "3723",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3723, Turner Drive, Sacramento County, California, 95660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:54.901841+00:00",
+  "_kind": "geo_samples"
+}

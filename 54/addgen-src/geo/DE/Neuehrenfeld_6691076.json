@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neuehrenfeld",
+  "geonameid": 6691076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.958914398573604,
+      "lon": 6.923069214913356,
+      "geoinfo": {
+        "display_name": "Gemeinschaftsgrundschule Nußbaumer Straße, Grolmanstraße, Neuehrenfeld, Ehrenfeld, Cologne, North Rhine-Westphalia, 50825, Germany",
+        "road": "Grolmanstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Neuehrenfeld",
+        "city_district": "Ehrenfeld",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50825",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Grolmanstraße, Neuehrenfeld, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.94593056639913,
+      "lon": 6.893751409339244,
+      "geoinfo": {
+        "display_name": "Mercedes Benz Center Köln, 1, Mercedes-Allee, Ehrenfeld, Cologne, North Rhine-Westphalia, 50825, Germany",
+        "road": "Mercedes-Allee",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Ehrenfeld",
+        "city_district": "Ehrenfeld",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50825",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Mercedes Benz Center Köln, 1, Mercedes-Allee, Ehrenfeld, Cologne, North Rhine-Westphalia, 50825, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:45.880137+00:00",
+  "_kind": "geo_samples"
+}

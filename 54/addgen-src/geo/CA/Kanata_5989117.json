@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kanata",
+  "geonameid": 5989117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.28329580817318,
+      "lon": -75.8732124144975,
+      "geoinfo": {
+        "display_name": "110, Akerson Road, Kanata, Kanata South, Ottawa, Eastern Ontario, Ontario, K2M 0E2, Canada",
+        "road": "Akerson Road",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": "Kanata",
+        "city_district": "Kanata South",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K2M 0E2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "110 Akerson Road, Kanata, Ontario, Canada"
+    },
+    {
+      "lat": 45.30811762251146,
+      "lon": -75.95362491382804,
+      "geoinfo": {
+        "display_name": "1838, Bradley Side Road, West Carleton-March, Ottawa, Eastern Ontario, Ontario, K2T 0N2, Canada",
+        "road": "Bradley Side Road",
+        "house_number": "1838",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "West Carleton-March",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K2T 0N2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1838, Bradley Side Road, West Carleton-March, Ottawa, Eastern Ontario, Ontario, K2T 0N2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:54.704090+00:00",
+  "_kind": "geo_samples"
+}

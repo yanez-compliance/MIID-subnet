@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Barbate",
+  "geonameid": 2521335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.202971217367924,
+      "lon": -5.894464782472825,
+      "geoinfo": {
+        "display_name": "Cerro del Bujar, Barbate, La Janda, Cádiz, Andalusia, 11160, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barbate",
+        "state": "Andalusia",
+        "postcode": "11160",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Barbate, Andalusia, Spain"
+    },
+    {
+      "lat": 36.20128761277924,
+      "lon": -5.938370544447941,
+      "geoinfo": {
+        "display_name": "Barriada del Pinar, Barbate, La Janda, Cádiz, Andalusia, 11160, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barriada del Pinar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Barbate",
+        "state": "Andalusia",
+        "postcode": "11160",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "985, Barriada del Pinar, Barbate, La Janda, Cádiz, Andalusia, 11160, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:51.087235+00:00",
+  "_kind": "geo_samples"
+}

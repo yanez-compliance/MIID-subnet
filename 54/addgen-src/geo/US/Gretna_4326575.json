@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gretna",
+  "geonameid": 4326575,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.908399198288194,
+      "lon": -90.04465426809705,
+      "geoinfo": {
+        "display_name": "39, Tulip Drive, Gretna, Jefferson Parish, Louisiana, 70053, United States",
+        "road": "Tulip Drive",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gretna",
+        "state": "Louisiana",
+        "postcode": "70053",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "39 Tulip Drive, Gretna, Louisiana, United States"
+    },
+    {
+      "lat": 29.907524434513764,
+      "lon": -90.06895676696927,
+      "geoinfo": {
+        "display_name": "626, Manhattan Boulevard, Harvey, Jefferson Parish, Louisiana, 70058, United States",
+        "road": "Manhattan Boulevard",
+        "house_number": "626",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harvey",
+        "state": "Louisiana",
+        "postcode": "70058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "626, Manhattan Boulevard, Harvey, Jefferson Parish, Louisiana, 70058, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:52.867308+00:00",
+  "_kind": "geo_samples"
+}

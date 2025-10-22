@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Mariakerke",
+  "geonameid": 2791700,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.06644705105175,
+      "lon": 3.684812656992641,
+      "geoinfo": {
+        "display_name": "265, Brugsesteenweg, Rooigem, Ghent, Gent, East Flanders, Flanders, 9000, Belgium",
+        "road": "Brugsesteenweg",
+        "house_number": "265",
+        "neighbourhood": "Rooigem",
+        "suburb": null,
+        "city_district": "Ghent",
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "265 Brugsesteenweg, Mariakerke, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.099281117558874,
+      "lon": 3.6963496243725764,
+      "geoinfo": {
+        "display_name": "Westbekesluis, Evergem, Gent, East Flanders, 9940, Belgium",
+        "road": "Westbekesluis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Evergem",
+        "state": "East Flanders",
+        "postcode": "9940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "968, Westbekesluis, Evergem, Gent, East Flanders, 9940, Belgium"
+    },
+    {
+      "lat": 51.08025181700133,
+      "lon": 3.6161479706291426,
+      "geoinfo": {
+        "display_name": "Oude Kalepad, Lo, Lovendegem, Lievegem, Gent, East Flanders, 9920, Belgium",
+        "road": "Oude Kalepad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lievegem",
+        "state": "East Flanders",
+        "postcode": "9920",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "177, Oude Kalepad, Lo, Lovendegem, Lievegem, Gent, East Flanders, 9920, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:44.058459+00:00",
+  "_kind": "geo_samples"
+}

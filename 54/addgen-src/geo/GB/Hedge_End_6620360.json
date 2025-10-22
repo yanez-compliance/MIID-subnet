@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hedge End",
+  "geonameid": 6620360,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.89289530620508,
+      "lon": -1.3370753932648827,
+      "geoinfo": {
+        "display_name": "Portsmouth Road, Hound, Butlocks Heath, Eastleigh, Hampshire, England, SO19 9PW, United Kingdom",
+        "road": "Portsmouth Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastleigh",
+        "state": "England",
+        "postcode": "SO19 9PW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Portsmouth Road, Hedge End, England, United Kingdom"
+    },
+    {
+      "lat": 50.880306391729945,
+      "lon": -1.2670075116942263,
+      "geoinfo": {
+        "display_name": "1, Danube Drive, Whiteley, Swanwick, Fareham, Hampshire, England, SO31 1ER, United Kingdom",
+        "road": "Danube Drive",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fareham",
+        "state": "England",
+        "postcode": "SO31 1ER",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "1, Danube Drive, Whiteley, Swanwick, Fareham, Hampshire, England, SO31 1ER, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:23.028481+00:00",
+  "_kind": "geo_samples"
+}

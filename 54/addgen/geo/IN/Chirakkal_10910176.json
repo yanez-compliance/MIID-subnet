@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chirakkal",
+  "geonameid": 10910176,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.885713612323329,
+      "lon": 75.33246391211999,
+      "geoinfo": {
+        "display_name": "Pallikkunu, Valapattanam, Kannur, Kerala, 670008, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Valapattanam",
+        "city": null,
+        "state": "Kerala",
+        "postcode": "670008",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Valapattanam, Chirakkal, Kerala, India"
+    },
+    {
+      "lat": 11.893602850853519,
+      "lon": 75.32043007740897,
+      "geoinfo": {
+        "display_name": "Neerkadavu, Kannur, Kerala, 670008, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Neerkadavu",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kerala",
+        "postcode": "670008",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "433, Neerkadavu, Kannur, Kerala, 670008, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:22.187002+00:00",
+  "_kind": "geo_samples"
+}

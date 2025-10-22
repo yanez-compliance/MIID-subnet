@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Easton",
+  "geonameid": 5188140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.67521102021103,
+      "lon": -75.19450736015105,
+      "geoinfo": {
+        "display_name": "1296, Cedarville Road, Williams Township, Northampton County, Pennsylvania, 18042, United States",
+        "road": "Cedarville Road",
+        "house_number": "1296",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Williams Township",
+        "state": "Pennsylvania",
+        "postcode": "18042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1296 Cedarville Road, Easton, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.69999897493791,
+      "lon": -75.24276183510565,
+      "geoinfo": {
+        "display_name": "Two Rivers Trailway - Palmer, Palmer Township, Northampton County, Pennsylvania, 18044, United States",
+        "road": "Two Rivers Trailway - Palmer",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmer Township",
+        "state": "Pennsylvania",
+        "postcode": "18044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "318, Two Rivers Trailway - Palmer, Palmer Township, Northampton County, Pennsylvania, 18044, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:11.723825+00:00",
+  "_kind": "geo_samples"
+}

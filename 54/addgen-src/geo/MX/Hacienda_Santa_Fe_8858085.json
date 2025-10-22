@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Hacienda Santa Fe",
+  "geonameid": 8858085,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.556393011308856,
+      "lon": -103.38168678733533,
+      "geoinfo": {
+        "display_name": "Fraccionamiento Real del Valle, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45654, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fraccionamiento Real del Valle",
+        "state": "Jalisco",
+        "postcode": "45654",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Hacienda Santa Fe, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.518360294071847,
+      "lon": -103.4001847413188,
+      "geoinfo": {
+        "display_name": "Circuito de Cañas, Fresnos 3, San Sebastián El Grande, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45641, Mexico",
+        "road": "Circuito de Cañas",
+        "house_number": null,
+        "neighbourhood": "Fresnos 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Sebastián El Grande",
+        "state": "Jalisco",
+        "postcode": "45641",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Circuito de Cañas, Fresnos 3, San Sebastián El Grande, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45641, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:05.721898+00:00",
+  "_kind": "geo_samples"
+}

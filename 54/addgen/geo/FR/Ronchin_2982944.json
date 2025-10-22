@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Ronchin",
+  "geonameid": 2982944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.599715712177215,
+      "lon": 3.137514072292281,
+      "geoinfo": {
+        "display_name": "A 23, Lesquin, Lille, Nord, Hauts-de-France, Metropolitan France, 59810, France",
+        "road": "A 23",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lesquin",
+        "state": "Hauts-de-France",
+        "postcode": "59810",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 23, Ronchin, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.61637870306464,
+      "lon": 3.0328311599195747,
+      "geoinfo": {
+        "display_name": "5, Place de Suède, Faubourg de Béthune, Lille, Nord, Hauts-de-France, Metropolitan France, 59037, France",
+        "road": "Place de Suède",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Faubourg de Béthune",
+        "city_district": "Lille",
+        "city": "Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59037",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5, Place de Suède, Faubourg de Béthune, Lille, Nord, Hauts-de-France, Metropolitan France, 59037, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:39.813030+00:00",
+  "_kind": "geo_samples"
+}

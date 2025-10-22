@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhushan",
+  "geonameid": 8403620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.724472470624043,
+      "lon": 108.25984139799897,
+      "geoinfo": {
+        "display_name": "Zhushan, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhushan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhushan, Chongqing, China"
+    },
+    {
+      "lat": 30.695943791715543,
+      "lon": 108.2915393293136,
+      "geoinfo": {
+        "display_name": "Ganning, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ganning",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "687, Ganning, Wanzhou, 56588 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:02:35.118056+00:00",
+  "_kind": "geo_samples"
+}

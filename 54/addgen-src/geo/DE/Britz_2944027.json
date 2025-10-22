@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Britz",
+  "geonameid": 2944027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.44228042651381,
+      "lon": 13.45369425788884,
+      "geoinfo": {
+        "display_name": "Gielower Straße, Krugpfuhlsiedlung, Britz, Neukölln, Berlin, 12359, Germany",
+        "road": "Gielower Straße",
+        "house_number": null,
+        "neighbourhood": "Krugpfuhlsiedlung",
+        "suburb": "Britz",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12359",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Gielower Straße, Britz, Germany"
+    },
+    {
+      "lat": 52.40671219725747,
+      "lon": 13.402421029651238,
+      "geoinfo": {
+        "display_name": "43, Lessingstraße, Lichtenrade, Tempelhof-Schöneberg, Berlin, Teltow, 12305, Germany",
+        "road": "Lessingstraße",
+        "house_number": "43",
+        "neighbourhood": null,
+        "suburb": "Lichtenrade",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12305",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "43, Lessingstraße, Lichtenrade, Tempelhof-Schöneberg, Berlin, Teltow, 12305, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:04.896604+00:00",
+  "_kind": "geo_samples"
+}

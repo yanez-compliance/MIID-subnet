@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "City Garden",
+  "geonameid": 12719544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.33155595768722,
+      "lon": 114.18878235433674,
+      "geoinfo": {
+        "display_name": "Kowloon City, Kowloon City District, Kowloon, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kowloon City",
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Kowloon City, City Garden, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.31710040696919,
+      "lon": 114.1660702863689,
+      "geoinfo": {
+        "display_name": "Tower 1, West Kowloon Corridor West, 油尖旺區 Yau Tsim Mong, Yau Tsim Mong District, Kowloon, Hong Kong, China",
+        "road": "West Kowloon Corridor West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "油尖旺區 Yau Tsim Mong",
+        "city_district": "Yau Tsim Mong District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tower 1, West Kowloon Corridor West, 油尖旺區 Yau Tsim Mong, Yau Tsim Mong District, Kowloon, 36877 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:11.465164+00:00",
+  "_kind": "geo_samples"
+}

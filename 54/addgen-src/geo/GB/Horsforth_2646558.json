@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Horsforth",
+  "geonameid": 2646558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.83362433499641,
+      "lon": -1.6330153811092063,
+      "geoinfo": {
+        "display_name": "Wood Lane, Cragg Hill, Leeds, West Yorkshire, England, LS18 4RW, United Kingdom",
+        "road": "Wood Lane",
+        "house_number": null,
+        "neighbourhood": "Cragg Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS18 4RW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wood Lane, Horsforth, England, United Kingdom"
+    },
+    {
+      "lat": 53.8847166940827,
+      "lon": -1.613332802239262,
+      "geoinfo": {
+        "display_name": "Leeds Road, Old Bramhope, Leeds, West Yorkshire, England, LS16 9BA, United Kingdom",
+        "road": "Leeds Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS16 9BA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Leeds Road, Old Bramhope, Leeds, West Yorkshire, England, LS16 9BA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:05.636243+00:00",
+  "_kind": "geo_samples"
+}

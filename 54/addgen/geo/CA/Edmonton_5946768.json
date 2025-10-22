@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Edmonton",
+  "geonameid": 5946768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.550646817618684,
+      "lon": -113.53627826602506,
+      "geoinfo": {
+        "display_name": "Pro Care Pharmacy & Medical Clinic, 124 Street NW, Westmount, Western Mature Area, Edmonton, Alberta, T5M 1Z1, Canada",
+        "road": "124 Street NW",
+        "house_number": null,
+        "neighbourhood": "Westmount",
+        "suburb": "Western Mature Area",
+        "city_district": null,
+        "city": "Edmonton",
+        "state": "Alberta",
+        "postcode": "T5M 1Z1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "124 Street NW, Edmonton, Alberta, Canada"
+    },
+    {
+      "lat": 53.58098515149584,
+      "lon": -113.42984037224818,
+      "geoinfo": {
+        "display_name": "Yellowhead Trail NW, Montrose, Newton, Greater Highlands, Edmonton, Alberta, T5A 4X1, Canada",
+        "road": "Yellowhead Trail NW",
+        "house_number": null,
+        "neighbourhood": "Montrose",
+        "suburb": "Greater Highlands",
+        "city_district": null,
+        "city": "Edmonton",
+        "state": "Alberta",
+        "postcode": "T5A 4X1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Yellowhead Trail NW, Montrose, Newton, Greater Highlands, Edmonton, Alberta, T5A 4X1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:17.195235+00:00",
+  "_kind": "geo_samples"
+}

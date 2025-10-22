@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Iturrama",
+  "geonameid": 8050879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.77725178952644,
+      "lon": -1.6395564517917458,
+      "geoinfo": {
+        "display_name": "77817, Calle S, Esquíroz / Ezkirotz, Cordovilla, Galar, Iruñerria / Comarca de Pamplona, Navarre, 31191, Spain",
+        "road": "Calle S",
+        "house_number": null,
+        "neighbourhood": "Esquíroz / Ezkirotz",
+        "suburb": null,
+        "city_district": null,
+        "city": "Galar",
+        "state": "Navarre",
+        "postcode": "31191",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle S, Iturrama, Navarre, Spain"
+    },
+    {
+      "lat": 42.84152643940127,
+      "lon": -1.6893683450040473,
+      "geoinfo": {
+        "display_name": "Autopista de Navarra / Nafarroako autobidea, Berrioplano/Berriobeiti, Iruñerria / Comarca de Pamplona, Navarre, 31195, Spain",
+        "road": "Autopista de Navarra / Nafarroako autobidea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Berrioplano/Berriobeiti",
+        "city": "Berrioplano/Berriobeiti",
+        "state": "Navarre",
+        "postcode": "31195",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "369, Autopista de Navarra / Nafarroako autobidea, Berrioplano/Berriobeiti, Iruñerria / Comarca de Pamplona, Navarre, 31195, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:52.043608+00:00",
+  "_kind": "geo_samples"
+}

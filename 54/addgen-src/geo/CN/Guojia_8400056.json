@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guojia",
+  "geonameid": 8400056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.327366189796145,
+      "lon": 108.50282990661077,
+      "geoinfo": {
+        "display_name": "Yinbai Expressway, Daxi, Kaizhou District, Chongqing, China",
+        "road": "Yinbai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daxi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yinbai Expressway, Guojia, Chongqing, China"
+    },
+    {
+      "lat": 31.328000440327095,
+      "lon": 108.51187295770313,
+      "geoinfo": {
+        "display_name": "Daxi, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daxi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "154, Daxi, Kaizhou District, 47027 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:10.775805+00:00",
+  "_kind": "geo_samples"
+}

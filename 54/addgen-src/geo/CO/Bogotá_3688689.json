@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Bogotá",
+  "geonameid": 3688689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.595639057112187,
+      "lon": -74.08666010608268,
+      "geoinfo": {
+        "display_name": "Calle 4, UPZs Localidad Los Mártires, Localidad Los Mártires, Bogota, Bogota, Capital District, RAP (Especial) Central, 111411, Colombia",
+        "road": "Calle 4",
+        "house_number": null,
+        "neighbourhood": "UPZs Localidad Los Mártires",
+        "suburb": "Localidad Los Mártires",
+        "city_district": null,
+        "city": "Bogota",
+        "state": "Bogota, Capital District",
+        "postcode": "111411",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 4, Bogotá, Bogota, Capital District, Colombia"
+    },
+    {
+      "lat": 4.636763966228383,
+      "lon": -74.05455801684606,
+      "geoinfo": {
+        "display_name": "Politécnico Grancolombiano, Transversal 2 Este, UPZs Localidad Chapinero, Localidad Chapinero, Bogota, Bogota, Capital District, RAP (Especial) Central, 110231, Colombia",
+        "road": "Transversal 2 Este",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Localidad Chapinero",
+        "city_district": null,
+        "city": "Bogota",
+        "state": "Bogota, Capital District",
+        "postcode": "110231",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Transversal 2 Este, Bogotá, Bogota, 110231 Capital District, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:56.573249+00:00",
+  "_kind": "geo_samples"
+}

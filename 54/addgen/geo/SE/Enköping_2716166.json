@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Enköping",
+  "geonameid": 2716166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.651354015531965,
+      "lon": 17.158475594599604,
+      "geoinfo": {
+        "display_name": "55, Fallet, Enköpings kommun, Uppsala County, Sweden",
+        "road": "55",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "55, Enköping, Sweden"
+    },
+    {
+      "lat": 59.65485257391837,
+      "lon": 17.008620728572264,
+      "geoinfo": {
+        "display_name": "E 18, Mälby, Enköpings kommun, Uppsala County, 745 71, Sweden",
+        "road": "E 18",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "745 71",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "E 18, Mälby, Enköpings kommun, Uppsala County, 745 71, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:56:50.930634+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Offenburg",
+  "geonameid": 2857798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.47405545078252,
+      "lon": 7.922393048641244,
+      "geoinfo": {
+        "display_name": "EDEKA Handelsgesellschaft Suedwest, 1, Edekastraße, Offenburg, Verwaltungsgemeinschaft Offenburg, Ortenaukreis, Baden-Württemberg, 77656, Germany",
+        "road": "Edekastraße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Offenburg",
+        "state": "Baden-Württemberg",
+        "postcode": "77656",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Edekastraße, Offenburg, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.47174676977141,
+      "lon": 7.966070987682921,
+      "geoinfo": {
+        "display_name": "16, Im Rindfleischgrund, Offenburg, Verwaltungsgemeinschaft Offenburg, Ortenaukreis, Baden-Württemberg, 77654, Germany",
+        "road": "Im Rindfleischgrund",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Offenburg",
+        "state": "Baden-Württemberg",
+        "postcode": "77654",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16, Im Rindfleischgrund, Offenburg, Verwaltungsgemeinschaft Offenburg, Ortenaukreis, Baden-Württemberg, 77654, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:38.948423+00:00",
+  "_kind": "geo_samples"
+}

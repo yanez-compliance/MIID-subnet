@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Aulnay-sous-Bois",
+  "geonameid": 3036145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.921845862251104,
+      "lon": 2.4479443752730425,
+      "geoinfo": {
+        "display_name": "Avenue Jean Jaurès, Drancy Centre, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France",
+        "road": "Avenue Jean Jaurès",
+        "house_number": null,
+        "neighbourhood": "Drancy Centre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Drancy",
+        "state": null,
+        "postcode": "93700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue Jean Jaurès, Aulnay-sous-Bois, France"
+    },
+    {
+      "lat": 48.958828234144995,
+      "lon": 2.50372083656432,
+      "geoinfo": {
+        "display_name": "Avenue Raoul Dufy, Gros Saule, Aulnay-sous-Bois, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93600, France",
+        "road": "Avenue Raoul Dufy",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gros Saule",
+        "city_district": null,
+        "city": "Aulnay-sous-Bois",
+        "state": "Ile-de-France",
+        "postcode": "93600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "861, Avenue Raoul Dufy, Gros Saule, Aulnay-sous-Bois, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93600, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:19.577716+00:00",
+  "_kind": "geo_samples"
+}

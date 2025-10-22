@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Langenfeld",
+  "geonameid": 2881085,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.13094845172352,
+      "lon": 6.944764026595358,
+      "geoinfo": {
+        "display_name": "Klosterstraße, Richrath, Langenfeld (Rheinland), Kreis Mettmann, North Rhine-Westphalia, 40764, Germany",
+        "road": "Klosterstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Richrath",
+        "city_district": null,
+        "city": "Langenfeld (Rheinland)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40764",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Klosterstraße, Langenfeld, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.150758855135145,
+      "lon": 6.9646574343616425,
+      "geoinfo": {
+        "display_name": "A 3, Ohligs/Aufderhöhe/Merscheid, Solingen, Kreis Mettmann, North Rhine-Westphalia, 42697, Germany",
+        "road": "A 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ohligs/Aufderhöhe/Merscheid",
+        "city_district": null,
+        "city": "Solingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42697",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 3, Ohligs/Aufderhöhe/Merscheid, Solingen, Kreis Mettmann, North Rhine-Westphalia, 42697, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:59.289254+00:00",
+  "_kind": "geo_samples"
+}

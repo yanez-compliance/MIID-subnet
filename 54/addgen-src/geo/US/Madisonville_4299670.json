@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madisonville",
+  "geonameid": 4299670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.340449358974084,
+      "lon": -87.49628052010209,
+      "geoinfo": {
+        "display_name": "Baptist Health Madisonville, 900, Hospital Drive, Madisonville, Hopkins County, Kentucky, 42431, United States",
+        "road": "Hospital Drive",
+        "house_number": "900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madisonville",
+        "state": "Kentucky",
+        "postcode": "42431",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "900 Hospital Drive, Madisonville, Kentucky, United States"
+    },
+    {
+      "lat": 37.31655390944575,
+      "lon": -87.47159129571914,
+      "geoinfo": {
+        "display_name": "I 69, Hopkins County, Kentucky, 42431, United States",
+        "road": "I 69",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "42431",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 69, Hopkins County, Kentucky, 42431, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:49.170477+00:00",
+  "_kind": "geo_samples"
+}

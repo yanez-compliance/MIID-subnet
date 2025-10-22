@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eschweiler",
+  "geonameid": 2928963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83130753991009,
+      "lon": 6.32006205084678,
+      "geoinfo": {
+        "display_name": "32, Johannisstraße, Wilhelmshöhe, Weisweiler, Eschweiler, Aachen (district), North Rhine-Westphalia, 52249, Germany",
+        "road": "Johannisstraße",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Wilhelmshöhe",
+        "city_district": null,
+        "city": "Eschweiler",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "32 Johannisstraße, Eschweiler, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.799870069695764,
+      "lon": 6.314264811777379,
+      "geoinfo": {
+        "display_name": "Buschhof, Scherpenseel, Eschweiler, Aachen (district), North Rhine-Westphalia, 52249, Germany",
+        "road": "Buschhof",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eschweiler",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "117, Buschhof, Scherpenseel, Eschweiler, Aachen (district), North Rhine-Westphalia, 52249, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:45.348108+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sumter",
+  "geonameid": 4597948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.91005848464953,
+      "lon": -80.32037823725558,
+      "geoinfo": {
+        "display_name": "408, Belk Street, Sumter, Sumter County, South Carolina, 29153, United States",
+        "road": "Belk Street",
+        "house_number": "408",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sumter",
+        "state": "South Carolina",
+        "postcode": "29153",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "408 Belk Street, Sumter, South Carolina, United States"
+    },
+    {
+      "lat": 33.91778860349558,
+      "lon": -80.30721283842244,
+      "geoinfo": {
+        "display_name": "Golden Acre Mobile Home Park, East Sumter, Sumter County, South Carolina, 29153, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Sumter",
+        "state": "South Carolina",
+        "postcode": "29153",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "921, Golden Acre Mobile Home Park, East Sumter, Sumter County, South Carolina, 29153, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:55.670374+00:00",
+  "_kind": "geo_samples"
+}

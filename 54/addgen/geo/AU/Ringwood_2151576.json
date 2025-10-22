@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Ringwood",
+  "geonameid": 2151576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.78145479656725,
+      "lon": 145.21008240145545,
+      "geoinfo": {
+        "display_name": "493-495, Park Road, Park Orchards, Melbourne, City of Manningham, Victoria, 3114, Australia",
+        "road": "Park Road",
+        "house_number": "493-495",
+        "neighbourhood": null,
+        "suburb": "Park Orchards",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3114",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "493-495 Park Road, Ringwood, Victoria, Australia"
+    },
+    {
+      "lat": -37.83174155060095,
+      "lon": 145.28230128321954,
+      "geoinfo": {
+        "display_name": "18, Market Drive, Bayswater North, Melbourne, City of Maroondah, Victoria, 3153, Australia",
+        "road": "Market Drive",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Bayswater North",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3153",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "18, Market Drive, Bayswater North, Melbourne, City of Maroondah, Victoria, 3153, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:39.863609+00:00",
+  "_kind": "geo_samples"
+}

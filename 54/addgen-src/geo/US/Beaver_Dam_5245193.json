@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beaver Dam",
+  "geonameid": 5245193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.49581690187037,
+      "lon": -88.83615298528014,
+      "geoinfo": {
+        "display_name": "Eagle Road, Town of Beaver Dam, Dodge County, Wisconsin, 53916, United States",
+        "road": "Eagle Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Beaver Dam",
+        "state": "Wisconsin",
+        "postcode": "53916",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eagle Road, Beaver Dam, Wisconsin, United States"
+    },
+    {
+      "lat": 43.44830177578862,
+      "lon": -88.89362018403007,
+      "geoinfo": {
+        "display_name": "County Road DE, South Beaver Dam, Town of Calamus, Dodge County, Wisconsin, 53916, United States",
+        "road": "County Road DE",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Calamus",
+        "state": "Wisconsin",
+        "postcode": "53916",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "883, County Road DE, South Beaver Dam, Town of Calamus, Dodge County, Wisconsin, 53916, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:50.448343+00:00",
+  "_kind": "geo_samples"
+}

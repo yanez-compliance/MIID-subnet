@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Glenroy",
+  "geonameid": 2165200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.714170876580816,
+      "lon": 144.93242445198888,
+      "geoinfo": {
+        "display_name": "Northern Golf Club, Glenroy Road, Glenroy, Melbourne, City of Merri-bek, Victoria, 3046, Australia",
+        "road": "Glenroy Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glenroy",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3046",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Glenroy Road, Glenroy, Victoria, Australia"
+    },
+    {
+      "lat": -37.67518437245142,
+      "lon": 144.96168249192718,
+      "geoinfo": {
+        "display_name": "40, Sycamore Crescent, Campbellfield, Melbourne, City of Hume, Victoria, 3061, Australia",
+        "road": "Sycamore Crescent",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": "Campbellfield",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3061",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "40, Sycamore Crescent, Campbellfield, Melbourne, City of Hume, Victoria, 3061, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:42.946513+00:00",
+  "_kind": "geo_samples"
+}

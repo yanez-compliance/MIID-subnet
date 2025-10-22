@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Myitkyina",
+  "geonameid": 1307741,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.390298494544993,
+      "lon": 97.42322560305249,
+      "geoinfo": {
+        "display_name": "Waingmaw, Myitkyina District, Kachin State, 10101, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kachin State",
+        "postcode": "10101",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Myitkyina, Kachin State, Myanmar"
+    },
+    {
+      "lat": 25.384128446565228,
+      "lon": 97.36601789363881,
+      "geoinfo": {
+        "display_name": "Pyi Thuaung Su Rd, Myitkyina, Myitkyina Township, Myitkyina District, Kachin State, 01011, Myanmar",
+        "road": "Pyi Thuaung Su Rd",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Myitkyina",
+        "state": "Kachin State",
+        "postcode": "01011",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Pyi Thuaung Su Rd, Myitkyina, Kachin State, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-16T19:37:08.724881+00:00",
+  "_kind": "geo_samples"
+}

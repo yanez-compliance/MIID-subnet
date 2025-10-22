@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Umán",
+  "geonameid": 3514929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.871812807442577,
+      "lon": -89.78692414112565,
+      "geoinfo": {
+        "display_name": "Carretera Kinchil - Umán, Oxholón, Umán, Yucatán, Mexico",
+        "road": "Carretera Kinchil - Umán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxholón",
+        "state": "Yucatán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Kinchil - Umán, Umán, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.865585966056685,
+      "lon": -89.72307122506392,
+      "geoinfo": {
+        "display_name": "Carretera Campeche - Mérida, Umán, Yucatán, 97390, Mexico",
+        "road": "Carretera Campeche - Mérida",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yucatán",
+        "postcode": "97390",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "546, Carretera Campeche - Mérida, Umán, Yucatán, 97390, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:28.558980+00:00",
+  "_kind": "geo_samples"
+}

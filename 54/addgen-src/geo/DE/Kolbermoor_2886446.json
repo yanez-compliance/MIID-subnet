@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kolbermoor",
+  "geonameid": 2886446,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.87086859941937,
+      "lon": 12.072257415439593,
+      "geoinfo": {
+        "display_name": "Theodor-Mayer-Straße, Großkarolinenfeld, Landkreis Rosenheim, Bavaria, 83109, Germany",
+        "road": "Theodor-Mayer-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Großkarolinenfeld",
+        "state": "Bavaria",
+        "postcode": "83109",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Theodor-Mayer-Straße, Kolbermoor, Bavaria, Germany"
+    },
+    {
+      "lat": 47.84519324921401,
+      "lon": 12.00913939577714,
+      "geoinfo": {
+        "display_name": "26, Willinger Straße, Pullach, Kolbermoor, Landkreis Rosenheim, Bavaria, 83059, Germany",
+        "road": "Willinger Straße",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kolbermoor",
+        "state": "Bavaria",
+        "postcode": "83059",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "26, Willinger Straße, Pullach, Kolbermoor, Landkreis Rosenheim, Bavaria, 83059, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:27.531443+00:00",
+  "_kind": "geo_samples"
+}

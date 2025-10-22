@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Kwinana",
+  "geonameid": 2068079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.25403410904163,
+      "lon": 115.79581044960725,
+      "geoinfo": {
+        "display_name": "Wellard Road, Calista, City of Kwinana, Western Australia, 6170, Australia",
+        "road": "Wellard Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Calista",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6170",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Wellard Road, Kwinana, Western Australia, Australia"
+    },
+    {
+      "lat": -32.21052049169229,
+      "lon": 115.80672353115949,
+      "geoinfo": {
+        "display_name": "Abercrombie Road, Hope Valley, City of Kwinana, Western Australia, 6165, Australia",
+        "road": "Abercrombie Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hope Valley",
+        "city_district": "Hope Valley",
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6165",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "714, Abercrombie Road, Hope Valley, City of Kwinana, Western Australia, 6165, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:34.514274+00:00",
+  "_kind": "geo_samples"
+}

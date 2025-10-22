@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "San Fernando",
+  "geonameid": 12157037,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -8.403062686335522,
+      "lon": -74.51549906757099,
+      "geoinfo": {
+        "display_name": "San Fernando, Manantay, Province of Coronel Portillo, Ucayali, 25000, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manantay",
+        "state": "Ucayali",
+        "postcode": "25000",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "San Fernando, Ucayali, Peru"
+    },
+    {
+      "lat": -8.426759860774798,
+      "lon": -74.50711237256934,
+      "geoinfo": {
+        "display_name": "Pucallpillo, Manantay, Province of Coronel Portillo, Ucayali, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manantay",
+        "state": "Ucayali",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "119, San Fernando, 36219 Ucayali, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T08:59:20.930268+00:00",
+  "_kind": "geo_samples"
+}

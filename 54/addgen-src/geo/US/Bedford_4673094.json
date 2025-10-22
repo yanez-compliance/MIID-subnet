@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bedford",
+  "geonameid": 4673094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.847989087607154,
+      "lon": -97.17641658244632,
+      "geoinfo": {
+        "display_name": "459, West Harwood Road, Hurst, Tarrant County, Texas, 76054, United States",
+        "road": "West Harwood Road",
+        "house_number": "459",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hurst",
+        "state": "Texas",
+        "postcode": "76054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "459 West Harwood Road, Bedford, Texas, United States"
+    },
+    {
+      "lat": 32.821437038748364,
+      "lon": -97.13491803405583,
+      "geoinfo": {
+        "display_name": "KEYS High School, 1100, Raider Drive, Euless, Tarrant County, Texas, 76040, United States",
+        "road": "Raider Drive",
+        "house_number": "1100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Euless",
+        "state": "Texas",
+        "postcode": "76040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "KEYS High School, 1100, Raider Drive, Euless, Tarrant County, Texas, 76040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:28.023847+00:00",
+  "_kind": "geo_samples"
+}

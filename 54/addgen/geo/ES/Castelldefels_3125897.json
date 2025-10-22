@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Castelldefels",
+  "geonameid": 3125897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.285287997076495,
+      "lon": 1.991979450709139,
+      "geoinfo": {
+        "display_name": "Passeig del Ferrocarril, Gavà, Baix Llobregat, Barcelona, Catalonia, 08850, Spain",
+        "road": "Passeig del Ferrocarril",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gavà",
+        "state": "Catalonia",
+        "postcode": "08850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Passeig del Ferrocarril, Castelldefels, Catalonia, Spain"
+    },
+    {
+      "lat": 41.30859824916656,
+      "lon": 2.0058354913673244,
+      "geoinfo": {
+        "display_name": "Avinguda Mil·lenari, Can Sellarès, l'Alba-rosa, Viladecans, Baix Llobregat, Barcelona, Catalonia, 08840, Spain",
+        "road": "Avinguda Mil·lenari",
+        "house_number": null,
+        "neighbourhood": "Can Sellarès",
+        "suburb": null,
+        "city_district": null,
+        "city": "Viladecans",
+        "state": "Catalonia",
+        "postcode": "08840",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "229, Avinguda Mil·lenari, Can Sellarès, l'Alba-rosa, Viladecans, Baix Llobregat, Barcelona, Catalonia, 08840, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:25.023180+00:00",
+  "_kind": "geo_samples"
+}

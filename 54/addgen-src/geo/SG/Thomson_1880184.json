@@ -1,0 +1,65 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Thomson",
+  "geonameid": 1880184,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3720062483537157,
+      "lon": 103.84398527138403,
+      "geoinfo": {
+        "display_name": "Ang Mo Kio Street 12, Ang Mo Kio, Central, Singapore, 560126, Singapore",
+        "road": "Ang Mo Kio Street 12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ang Mo Kio",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "560126",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Ang Mo Kio Street 12, Thomson, Singapore"
+    },
+    {
+      "lat": 1.348156412548745,
+      "lon": 103.865456993956,
+      "geoinfo": {
+        "display_name": "Melrose Drive, Serangoon, Singapur East, Southeast, Singapore, 556112, Singapore",
+        "road": "Melrose Drive",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Serangoon",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "556112",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "508, Melrose Drive, Serangoon, Singapur East, Southeast, Singapore, 556112, Singapore"
+    },
+    {
+      "lat": 1.3690533362356798,
+      "lon": 103.8650052358882,
+      "geoinfo": {
+        "display_name": "Kingswear Avenue, Serangoon, Singapur East, Southeast, Singapore, 569928, Singapore",
+        "road": "Kingswear Avenue",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Serangoon",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "569928",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "728, Kingswear Avenue, Serangoon, Singapur East, Southeast, Singapore, 569928, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:12.329745+00:00",
+  "_kind": "geo_samples"
+}

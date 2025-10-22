@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Berlin Köpenick",
+  "geonameid": 2885657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.445641827992205,
+      "lon": 13.579273749192568,
+      "geoinfo": {
+        "display_name": "Mittelpunktbibliothek, 2, Alter Markt, Altstadt Köpenick, Köpenick, Treptow-Köpenick, Berlin, 12555, Germany",
+        "road": "Alter Markt",
+        "house_number": "2",
+        "neighbourhood": "Altstadt Köpenick",
+        "suburb": "Köpenick",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12555",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Alter Markt, Berlin Köpenick, Germany"
+    },
+    {
+      "lat": 52.43599489239171,
+      "lon": 13.526273756357655,
+      "geoinfo": {
+        "display_name": "Katharina-Boll-Dornberger-Straße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany",
+        "road": "Katharina-Boll-Dornberger-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Adlershof",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "518, Katharina-Boll-Dornberger-Straße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:40.662308+00:00",
+  "_kind": "geo_samples"
+}

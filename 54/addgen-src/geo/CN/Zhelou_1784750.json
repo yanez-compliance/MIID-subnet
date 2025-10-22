@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhelou",
+  "geonameid": 1784750,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.9493778105752,
+      "lon": 105.82941665454662,
+      "geoinfo": {
+        "display_name": "Ceheng, Qianxinan, Guizhou, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ceheng",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhelou, Guizhou, China"
+    },
+    {
+      "lat": 24.967589336404505,
+      "lon": 105.78746203784021,
+      "geoinfo": {
+        "display_name": "Zhelou, Ceheng, Qianxinan, Guizhou, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zhelou",
+        "city_district": null,
+        "city": "Ceheng",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "300, Zhelou, Ceheng, Qianxinan, 24157 Guizhou, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:50:56.735449+00:00",
+  "_kind": "geo_samples"
+}

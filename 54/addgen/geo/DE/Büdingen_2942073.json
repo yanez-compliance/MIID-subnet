@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Büdingen",
+  "geonameid": 2942073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.287167361406944,
+      "lon": 9.124211852890197,
+      "geoinfo": {
+        "display_name": "An der Papiermühle, Büdingen, Wetteraukreis, Hesse, 63654, Germany",
+        "road": "An der Papiermühle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Büdingen",
+        "state": "Hesse",
+        "postcode": "63654",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "An der Papiermühle, Büdingen, Hesse, Germany"
+    },
+    {
+      "lat": 50.30803235045884,
+      "lon": 9.156887487631359,
+      "geoinfo": {
+        "display_name": "L 3010, Rinderbügen, Büdingen, Wetteraukreis, Hesse, 63654, Germany",
+        "road": "L 3010",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rinderbügen",
+        "state": "Hesse",
+        "postcode": "63654",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 3010, Rinderbügen, Büdingen, Wetteraukreis, Hesse, 63654, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:24.978216+00:00",
+  "_kind": "geo_samples"
+}

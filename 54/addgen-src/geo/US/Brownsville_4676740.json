@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brownsville",
+  "geonameid": 4676740,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.925369906024656,
+      "lon": -97.4620525164501,
+      "geoinfo": {
+        "display_name": "South Padre Island Highway, Four Corners, Brownsville, Cameron County, Texas, 78521, United States",
+        "road": "South Padre Island Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brownsville",
+        "state": "Texas",
+        "postcode": "78521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Padre Island Highway, Brownsville, Texas, United States"
+    },
+    {
+      "lat": 25.896404409267227,
+      "lon": -97.52246788984911,
+      "geoinfo": {
+        "display_name": "Palm Boulevard, Riverside, Brownsville, Cameron County, Texas, 78520, United States",
+        "road": "Palm Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Riverside",
+        "city_district": null,
+        "city": "Brownsville",
+        "state": "Texas",
+        "postcode": "78520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "192, Palm Boulevard, Riverside, Brownsville, Cameron County, Texas, 78520, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:45.515161+00:00",
+  "_kind": "geo_samples"
+}

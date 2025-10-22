@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Kano",
+  "geonameid": 2335204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 12.009177830215286,
+      "lon": 8.540539128100505,
+      "geoinfo": {
+        "display_name": "Hadejia Road, Fagge C, Fagge, Kano State, 700214, Nigeria",
+        "road": "Hadejia Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fagge C",
+        "state": "Kano State",
+        "postcode": "700214",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Hadejia Road, Kano, Kano State, Nigeria"
+    },
+    {
+      "lat": 11.968590800185178,
+      "lon": 8.521070925550774,
+      "geoinfo": {
+        "display_name": "Gandu, Gandu Albasa, Kano Municipal, Kano State, 700224, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gandu",
+        "city_district": null,
+        "city": "Gandu Albasa",
+        "state": "Kano State",
+        "postcode": "700224",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "505, Gandu, Gandu Albasa, Kano Municipal, Kano State, 700224, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:23.650861+00:00",
+  "_kind": "geo_samples"
+}

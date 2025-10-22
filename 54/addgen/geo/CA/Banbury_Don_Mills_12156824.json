@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Banbury-Don Mills",
+  "geonameid": 12156824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.732304681727776,
+      "lon": -79.33075629681107,
+      "geoinfo": {
+        "display_name": "Don Valley Parkway, Banbury-Don Mills, Don Valley East, North York, Toronto, Golden Horseshoe, Ontario, M3C 3N7, Canada",
+        "road": "Don Valley Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3C 3N7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Don Valley Parkway, Banbury-Don Mills, Ontario, Canada"
+    },
+    {
+      "lat": 43.7523813753265,
+      "lon": -79.29819884064013,
+      "geoinfo": {
+        "display_name": "Manhattan Drive, Wexford, Scarborough Centre, Scarborough, Toronto, Golden Horseshoe, Ontario, M1R 3V3, Canada",
+        "road": "Manhattan Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1R 3V3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Manhattan Drive, Wexford, Scarborough Centre, Scarborough, Toronto, Golden Horseshoe, Ontario, M1R 3V3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:59.698258+00:00",
+  "_kind": "geo_samples"
+}

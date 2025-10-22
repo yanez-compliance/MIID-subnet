@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cortland",
+  "geonameid": 5113790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.612441942292065,
+      "lon": -76.19611547867325,
+      "geoinfo": {
+        "display_name": "4298, West Road, District 1, Ward 1, City of Cortland, Town of Cortlandville, Cortland County, New York, 13045, United States",
+        "road": "West Road",
+        "house_number": "4298",
+        "neighbourhood": null,
+        "suburb": "District 1",
+        "city_district": "Ward 1",
+        "city": "City of Cortland",
+        "state": "New York",
+        "postcode": "13045",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4298 West Road, Cortland, New York, United States"
+    },
+    {
+      "lat": 42.60990602142257,
+      "lon": -76.1476089267277,
+      "geoinfo": {
+        "display_name": "1911, Riley Road, Town of Cortlandville, Cortland County, New York, 13045, United States",
+        "road": "Riley Road",
+        "house_number": "1911",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "13045",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1911, Riley Road, Town of Cortlandville, Cortland County, New York, 13045, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:43.525417+00:00",
+  "_kind": "geo_samples"
+}

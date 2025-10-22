@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Tongaat",
+  "geonameid": 948468,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -29.580227074512397,
+      "lon": 31.119661582770167,
+      "geoinfo": {
+        "display_name": "Gandhinagar, eThekwini Ward 61, oThongathi, eThekwini Metropolitan Municipality, KwaZulu-Natal, 4400, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gandhinagar",
+        "city_district": null,
+        "city": "oThongathi",
+        "state": "KwaZulu-Natal",
+        "postcode": "4400",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Gandhinagar, Tongaat, KwaZulu-Natal, South Africa"
+    },
+    {
+      "lat": -29.564241039750303,
+      "lon": 31.15092533937977,
+      "geoinfo": {
+        "display_name": "82047 Street, eThekwini Ward 58, oThongathi, eThekwini Metropolitan Municipality, KwaZulu-Natal, 4399, South Africa",
+        "road": "82047 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "eThekwini Ward 58",
+        "city_district": null,
+        "city": "oThongathi",
+        "state": "KwaZulu-Natal",
+        "postcode": "4399",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "82047 Street, Tongaat, 4399 KwaZulu-Natal, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:11.653013+00:00",
+  "_kind": "geo_samples"
+}

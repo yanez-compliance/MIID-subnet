@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West University Place",
+  "geonameid": 4741100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.695900510808436,
+      "lon": -95.41557662393076,
+      "geoinfo": {
+        "display_name": "Kroger, 7747, Kirby Drive, Houston, Harris County, Texas, 77030, United States",
+        "road": "Kirby Drive",
+        "house_number": "7747",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7747 Kirby Drive, West University Place, Texas, United States"
+    },
+    {
+      "lat": 29.713811636971617,
+      "lon": -95.43881337898881,
+      "geoinfo": {
+        "display_name": "3858, Swarthmore Street, West University Place, Harris County, Texas, 77005, United States",
+        "road": "Swarthmore Street",
+        "house_number": "3858",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West University Place",
+        "state": "Texas",
+        "postcode": "77005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3858, Swarthmore Street, West University Place, Harris County, Texas, 77005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:59.324797+00:00",
+  "_kind": "geo_samples"
+}

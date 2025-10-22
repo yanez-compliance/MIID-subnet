@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chowchilla",
+  "geonameid": 5336667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.12124373892772,
+      "lon": -120.29017796097138,
+      "geoinfo": {
+        "display_name": "Howell Road, Chowchilla, Madera County, California, United States",
+        "road": "Howell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chowchilla",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Howell Road, Chowchilla, California, United States"
+    },
+    {
+      "lat": 37.11652767880411,
+      "lon": -120.31008556470464,
+      "geoinfo": {
+        "display_name": "12552, Road 13, Madera County, California, 93610, United States",
+        "road": "Road 13",
+        "house_number": "12552",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93610",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12552, Road 13, Madera County, California, 93610, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:45.083464+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Varennes",
+  "geonameid": 6173508,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.672346769783154,
+      "lon": -73.47783414725521,
+      "geoinfo": {
+        "display_name": "Varennes, Marguerite-D'Youville, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Varennes, Quebec, Canada"
+    },
+    {
+      "lat": 45.652750649952196,
+      "lon": -73.44314515993351,
+      "geoinfo": {
+        "display_name": "V1 Collectif21, La Riveraine, Boucherville, Urban agglomeration of Longueuil, Montérégie, Quebec, J4B 6N9, Canada",
+        "road": "La Riveraine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boucherville",
+        "state": "Quebec",
+        "postcode": "J4B 6N9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "V1 Collectif21, La Riveraine, Boucherville, Urban agglomeration of Longueuil, Montérégie, Quebec, J4B 6N9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:01.451308+00:00",
+  "_kind": "geo_samples"
+}

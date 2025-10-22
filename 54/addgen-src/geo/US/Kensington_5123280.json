@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kensington",
+  "geonameid": 5123280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.67408538778863,
+      "lon": -73.98838543824642,
+      "geoinfo": {
+        "display_name": "3rd Avenue, Gowanus, Brooklyn, Kings County, New York, 11215, United States",
+        "road": "3rd Avenue",
+        "house_number": null,
+        "neighbourhood": "Gowanus",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11215",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3rd Avenue, Kensington, New York, United States"
+    },
+    {
+      "lat": 40.64834916031114,
+      "lon": -74.00251064784771,
+      "geoinfo": {
+        "display_name": "41st Street, Sunset Park, Brooklyn, Kings County, New York, 11232, United States",
+        "road": "41st Street",
+        "house_number": null,
+        "neighbourhood": "Sunset Park",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11232",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "41st Street, Sunset Park, Brooklyn, Kings County, New York, 11232, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:32.615318+00:00",
+  "_kind": "geo_samples"
+}

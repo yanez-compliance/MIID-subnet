@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Red Wing",
+  "geonameid": 5042773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.581222089794274,
+      "lon": -92.53018498945279,
+      "geoinfo": {
+        "display_name": "Town of Trenton, Pierce County, Wisconsin, 55066, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Trenton",
+        "state": "Wisconsin",
+        "postcode": "55066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Red Wing, Wisconsin, United States"
+    },
+    {
+      "lat": 44.53460749871608,
+      "lon": -92.54229944918437,
+      "geoinfo": {
+        "display_name": "2489, South Oak Drive, Hay Creek Township, Goodhue County, Minnesota, 55066, United States",
+        "road": "South Oak Drive",
+        "house_number": "2489",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hay Creek Township",
+        "state": "Minnesota",
+        "postcode": "55066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2489, South Oak Drive, Hay Creek Township, Goodhue County, Minnesota, 55066, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:36.241801+00:00",
+  "_kind": "geo_samples"
+}

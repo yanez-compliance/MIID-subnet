@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wulong",
+  "geonameid": 12110889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.35047765533646,
+      "lon": 107.72625285508795,
+      "geoinfo": {
+        "display_name": "包茂高速, Furong Jiedao, 芙蓉街道, Wulong District, Chongqing, China",
+        "road": "包茂高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Furong Jiedao",
+        "city_district": "芙蓉街道",
+        "city": "Wulong District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "包茂高速, Wulong, Chongqing, China"
+    },
+    {
+      "lat": 29.3482642898663,
+      "lon": 107.78900155358706,
+      "geoinfo": {
+        "display_name": "Qingji, Wulong District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wulong District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "460, Qingji, Wulong District, 00962 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:16.319306+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hayesville",
+  "geonameid": 5730675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.96196834241618,
+      "lon": -122.98925938996145,
+      "geoinfo": {
+        "display_name": "2735, Fisher Road Northeast, Oak Park, Salem, Marion County, Oregon, 97305, United States",
+        "road": "Fisher Road Northeast",
+        "house_number": "2735",
+        "neighbourhood": "Oak Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salem",
+        "state": "Oregon",
+        "postcode": "97305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2735 Fisher Road Northeast, Hayesville, Oregon, United States"
+    },
+    {
+      "lat": 44.95118018044337,
+      "lon": -122.97593365698779,
+      "geoinfo": {
+        "display_name": "Swegle Elementary School, 45th Avenue Northeast, Salem, Marion County, Oregon, 97305, United States",
+        "road": "45th Avenue Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salem",
+        "state": "Oregon",
+        "postcode": "97305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Swegle Elementary School, 45th Avenue Northeast, Salem, Marion County, Oregon, 97305, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:31.002412+00:00",
+  "_kind": "geo_samples"
+}

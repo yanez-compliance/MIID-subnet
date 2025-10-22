@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hilo",
+  "geonameid": 5855927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.73121419512617,
+      "lon": -155.11737570694297,
+      "geoinfo": {
+        "display_name": "Amauulu Road, Hilo, Hawaiʻi County, Hawaii, 96720, United States",
+        "road": "Amauulu Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hilo",
+        "state": "Hawaii",
+        "postcode": "96720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Amauulu Road, Hilo, Hawaii, United States"
+    },
+    {
+      "lat": 19.738834522245853,
+      "lon": -155.07978728534303,
+      "geoinfo": {
+        "display_name": "Downtown Hilo, Pu‘u‘eo, Hilo, Hawaiʻi County, Hawaii, 96720, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Downtown Hilo",
+        "suburb": "Pu‘u‘eo",
+        "city_district": null,
+        "city": "Hilo",
+        "state": "Hawaii",
+        "postcode": "96720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "779, Downtown Hilo, Pu‘u‘eo, Hilo, Hawaiʻi County, Hawaii, 96720, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:35.226318+00:00",
+  "_kind": "geo_samples"
+}

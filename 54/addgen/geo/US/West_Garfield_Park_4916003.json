@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Garfield Park",
+  "geonameid": 4916003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.900622392822676,
+      "lon": -87.72475271672297,
+      "geoinfo": {
+        "display_name": "1051, North Harding Avenue, Beat 2535, Humboldt Park, Chicago, West Chicago Township, Cook County, Illinois, 60651, United States",
+        "road": "North Harding Avenue",
+        "house_number": "1051",
+        "neighbourhood": "Beat 2535",
+        "suburb": "Humboldt Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1051 North Harding Avenue, West Garfield Park, Illinois, United States"
+    },
+    {
+      "lat": 41.91593469380184,
+      "lon": -87.74177487572463,
+      "geoinfo": {
+        "display_name": "4619, West Homer Street, Beat 2523, Belmont Cragin, Chicago, Jefferson Township, Cook County, Illinois, 60639, United States",
+        "road": "West Homer Street",
+        "house_number": "4619",
+        "neighbourhood": null,
+        "suburb": "Belmont Cragin",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60639",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4619, West Homer Street, Beat 2523, Belmont Cragin, Chicago, Jefferson Township, Cook County, Illinois, 60639, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:24.228514+00:00",
+  "_kind": "geo_samples"
+}

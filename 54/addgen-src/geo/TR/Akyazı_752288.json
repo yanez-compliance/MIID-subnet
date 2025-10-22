@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Akyazı",
+  "geonameid": 752288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71508687625372,
+      "lon": 30.6355119655255,
+      "geoinfo": {
+        "display_name": "Yuvalak, Akyazı, Sakarya, Marmara Region, 54400, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akyazı",
+        "state": null,
+        "postcode": "54400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Akyazı, Turkey"
+    },
+    {
+      "lat": 40.68382337848665,
+      "lon": 30.583161449246926,
+      "geoinfo": {
+        "display_name": "Batakköy, Akbalık, Akyazı, Sakarya, Marmara Region, 54400, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Batakköy",
+        "city_district": null,
+        "city": "Akyazı",
+        "state": null,
+        "postcode": "54400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "499, Batakköy, 54400 Akyazı, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:53:36.452723+00:00",
+  "_kind": "geo_samples"
+}

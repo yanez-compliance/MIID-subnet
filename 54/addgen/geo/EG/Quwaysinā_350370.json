@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Quwaysinā",
+  "geonameid": 350370,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 30.56157076514688,
+      "lon": 31.139516232877117,
+      "geoinfo": {
+        "display_name": "Street 2, Quwaysina, Al Minufiya, 32631, Egypt",
+        "road": "Street 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quwaysina",
+        "state": "Al Minufiya",
+        "postcode": "32631",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Street 2, Quwaysinā, Al Minufiya, Egypt"
+    },
+    {
+      "lat": 30.5656640857933,
+      "lon": 31.151730427154767,
+      "geoinfo": {
+        "display_name": "Quwaysina, Al Minufiya, 32632, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quwaysina",
+        "state": "Al Minufiya",
+        "postcode": "32632",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "942, Quwaysina, Al Minufiya, 32632, Egypt"
+    },
+    {
+      "lat": 30.554814130231712,
+      "lon": 31.199763344980408,
+      "geoinfo": {
+        "display_name": "Al Minufiya, 13834, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Al Minufiya",
+        "postcode": "13834",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "329, Quwaysinā, 13834 Al Minufiya, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:40.843845+00:00",
+  "_kind": "geo_samples"
+}

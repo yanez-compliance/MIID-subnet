@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Beckenham",
+  "geonameid": 2656065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.39912952224398,
+      "lon": -0.019924041698213366,
+      "geoinfo": {
+        "display_name": "10, Stone Park Avenue, Eden Park, London Borough of Bromley, London, Greater London, England, BR3 3LT, United Kingdom",
+        "road": "Stone Park Avenue",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Eden Park",
+        "city_district": "London Borough of Bromley",
+        "city": "London",
+        "state": "England",
+        "postcode": "BR3 3LT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "10 Stone Park Avenue, Beckenham, England, United Kingdom"
+    },
+    {
+      "lat": 51.41040388528379,
+      "lon": -0.08708335685901374,
+      "geoinfo": {
+        "display_name": "Beulah Hill, Upper Norwood, London Borough of Croydon, London, Greater London, England, SE19 3LY, United Kingdom",
+        "road": "Beulah Hill",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Upper Norwood",
+        "city_district": "London Borough of Croydon",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE19 3LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Beulah Hill, Upper Norwood, London Borough of Croydon, London, Greater London, England, SE19 3LY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:07.199730+00:00",
+  "_kind": "geo_samples"
+}

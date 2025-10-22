@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 4409896,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.21758476375368,
+      "lon": -93.2580067611593,
+      "geoinfo": {
+        "display_name": "East Pythian Street, Cooper Park, Springfield, Greene County, Missouri, 65898, United States",
+        "road": "East Pythian Street",
+        "house_number": null,
+        "neighbourhood": "Cooper Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Missouri",
+        "postcode": "65898",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Pythian Street, Springfield, Missouri, United States"
+    },
+    {
+      "lat": 37.196499728171716,
+      "lon": -93.34032526048587,
+      "geoinfo": {
+        "display_name": "1089, Colgate Street, Ewing, Springfield, Greene County, Missouri, 65802, United States",
+        "road": "Colgate Street",
+        "house_number": "1089",
+        "neighbourhood": "Ewing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Missouri",
+        "postcode": "65802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1089, Colgate Street, Ewing, Springfield, Greene County, Missouri, 65802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:40.141023+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alpharetta",
+  "geonameid": 4179574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.06124476244881,
+      "lon": -84.27268357702692,
+      "geoinfo": {
+        "display_name": "11610, Great Oaks Way, Alpharetta, Fulton County, Georgia, 30022, United States",
+        "road": "Great Oaks Way",
+        "house_number": "11610",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alpharetta",
+        "state": "Georgia",
+        "postcode": "30022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11610 Great Oaks Way, Alpharetta, Georgia, United States"
+    },
+    {
+      "lat": 34.07563003683784,
+      "lon": -84.27493205888243,
+      "geoinfo": {
+        "display_name": "3013, Webb Bridge Road, Wedgewood Forest, Alpharetta, Fulton County, Georgia, 30009, United States",
+        "road": "Webb Bridge Road",
+        "house_number": "3013",
+        "neighbourhood": "Wedgewood Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alpharetta",
+        "state": "Georgia",
+        "postcode": "30009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3013, Webb Bridge Road, Wedgewood Forest, Alpharetta, Fulton County, Georgia, 30009, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:54.845828+00:00",
+  "_kind": "geo_samples"
+}

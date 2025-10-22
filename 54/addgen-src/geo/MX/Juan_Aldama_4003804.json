@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Juan Aldama",
+  "geonameid": 4003804,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.271002672149205,
+      "lon": -103.43100375896348,
+      "geoinfo": {
+        "display_name": "Miguel Auza, Zacatecas, 98330, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miguel Auza",
+        "state": "Zacatecas",
+        "postcode": "98330",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Juan Aldama, Zacatecas, Mexico"
+    },
+    {
+      "lat": 24.26242569519621,
+      "lon": -103.41216529430577,
+      "geoinfo": {
+        "display_name": "La Moneda [Rancho], Miguel Auza, Zacatecas, 98330, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Zacatecas",
+        "postcode": "98330",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "994, Juan Aldama, 98330 Zacatecas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:19.237650+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Escárcega",
+  "geonameid": 3527795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.582727925097185,
+      "lon": -90.77572816645043,
+      "geoinfo": {
+        "display_name": "División del Norte, Escárcega, Campeche, 24350, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "División del Norte",
+        "state": "Campeche",
+        "postcode": "24350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Escárcega, Campeche, Mexico"
+    },
+    {
+      "lat": 18.577460344875988,
+      "lon": -90.74504492422868,
+      "geoinfo": {
+        "display_name": "Escárcega, Campeche, 24350, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Campeche",
+        "postcode": "24350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "677, Escárcega, Campeche, 24350, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:42.473638+00:00",
+  "_kind": "geo_samples"
+}

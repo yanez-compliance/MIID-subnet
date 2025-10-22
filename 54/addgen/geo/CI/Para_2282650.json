@@ -1,0 +1,65 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Para",
+  "geonameid": 2282650,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 5.486123254700267,
+      "lon": -7.301607660436148,
+      "geoinfo": {
+        "display_name": "San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Para, Bas-Sassandra, Ivory Coast"
+    },
+    {
+      "lat": 5.555198795293929,
+      "lon": -7.3290726449638175,
+      "geoinfo": {
+        "display_name": "Para, San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Para",
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "189, Para, San-Pédro, 36247 Bas-Sassandra, Côte d'Ivoire"
+    },
+    {
+      "lat": 5.47945255550627,
+      "lon": -7.347823047271141,
+      "geoinfo": {
+        "display_name": "Lobo, San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "977, Lobo, San-Pédro, 47459 Bas-Sassandra, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:18.521442+00:00",
+  "_kind": "geo_samples"
+}

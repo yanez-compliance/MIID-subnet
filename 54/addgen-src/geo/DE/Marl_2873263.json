@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Marl",
+  "geonameid": 2873263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.641126981298235,
+      "lon": 7.1348858405794795,
+      "geoinfo": {
+        "display_name": "Matenastraße, Hüls-Süd, Marl, Kreis Recklinghausen, North Rhine-Westphalia, 45770, Germany",
+        "road": "Matenastraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hüls-Süd",
+        "city_district": null,
+        "city": "Marl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45770",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Matenastraße, Marl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.62270562005267,
+      "lon": 7.045980392492282,
+      "geoinfo": {
+        "display_name": "20, Unterkamp, Polsum, Marl, Kreis Recklinghausen, North Rhine-Westphalia, 45768, Germany",
+        "road": "Unterkamp",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Polsum",
+        "city_district": null,
+        "city": "Marl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45768",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20, Unterkamp, Polsum, Marl, Kreis Recklinghausen, North Rhine-Westphalia, 45768, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:57.459902+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ulm",
+  "geonameid": 2820256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.359046443072245,
+      "lon": 10.001014738970442,
+      "geoinfo": {
+        "display_name": "Illerholzweg, Neu-Ulm, Landkreis Neu-Ulm, Bavaria, 89231, Germany",
+        "road": "Illerholzweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neu-Ulm",
+        "state": "Bavaria",
+        "postcode": "89231",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Illerholzweg, Ulm, Bavaria, Germany"
+    },
+    {
+      "lat": 48.376161429065405,
+      "lon": 10.038806198168102,
+      "geoinfo": {
+        "display_name": "Reuttier Straße, Neu-Ulm, Landkreis Neu-Ulm, Bavaria, 89233, Germany",
+        "road": "Reuttier Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neu-Ulm",
+        "state": "Bavaria",
+        "postcode": "89233",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "598, Reuttier Straße, Neu-Ulm, Landkreis Neu-Ulm, Bavaria, 89233, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:46.540710+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "UY",
+  "country": "Uruguay",
+  "city": "Carmelo",
+  "geonameid": 3443341,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": -34.037742921589604,
+      "lon": -58.29968566866599,
+      "geoinfo": {
+        "display_name": "Punta Piedras, Colonia, 70100, Uruguay",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colonia",
+        "postcode": "70100",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "Carmelo, Colonia, Uruguay"
+    },
+    {
+      "lat": -33.962069615039745,
+      "lon": -58.27912674809962,
+      "geoinfo": {
+        "display_name": "Ruta 97, Colonia, Uruguay",
+        "road": "Ruta 97",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colonia",
+        "postcode": null,
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "Ruta 97, Carmelo, Colonia, Uruguay"
+    },
+    {
+      "lat": -34.01924051557341,
+      "lon": -58.2758293381959,
+      "geoinfo": {
+        "display_name": "3110, Ruta 21, Carmelo, Colonia, 70100, Uruguay",
+        "road": "Ruta 21",
+        "house_number": "3110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmelo",
+        "state": "Colonia",
+        "postcode": "70100",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "3110 Ruta 21, Carmelo, Colonia, Uruguay"
+    },
+    {
+      "lat": -33.98215343257166,
+      "lon": -58.26427664154115,
+      "geoinfo": {
+        "display_name": "Las Tunas, Carmelo, Colonia, 70100, Uruguay",
+        "road": "Las Tunas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmelo",
+        "state": "Colonia",
+        "postcode": "70100",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "Las Tunas, Carmelo, Colonia, Uruguay"
+    }
+  ],
+  "updated_at": "2025-10-17T00:34:01.875619+00:00",
+  "_kind": "geo_samples"
+}

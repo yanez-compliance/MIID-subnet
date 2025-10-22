@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Evans",
+  "geonameid": 5576909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.34450681877286,
+      "lon": -104.72277125323085,
+      "geoinfo": {
+        "display_name": "Weld County, Colorado, 80645, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80645",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Evans, Colorado, United States"
+    },
+    {
+      "lat": 40.41628685725286,
+      "lon": -104.71252580074429,
+      "geoinfo": {
+        "display_name": "2170, 14th Street Road, Greeley, Weld County, Colorado, 80631, United States",
+        "road": "14th Street Road",
+        "house_number": "2170",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greeley",
+        "state": "Colorado",
+        "postcode": "80631",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2170, 14th Street Road, Greeley, Weld County, Colorado, 80631, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:21.407745+00:00",
+  "_kind": "geo_samples"
+}

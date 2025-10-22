@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kokomo",
+  "geonameid": 4922388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.50102820317623,
+      "lon": -86.08456710904684,
+      "geoinfo": {
+        "display_name": "US 31;US 35, Kokomo, Howard County, Indiana, United States",
+        "road": "US 31;US 35",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kokomo",
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 31;US 35, Kokomo, Indiana, United States"
+    },
+    {
+      "lat": 40.45090670447948,
+      "lon": -86.16797606528401,
+      "geoinfo": {
+        "display_name": "2507, Locust Lane, Greentree, Kokomo, Howard County, Indiana, 46902, United States",
+        "road": "Locust Lane",
+        "house_number": "2507",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kokomo",
+        "state": "Indiana",
+        "postcode": "46902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2507, Locust Lane, Greentree, Kokomo, Howard County, Indiana, 46902, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:22.369901+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newburgh",
+  "geonameid": 5128654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.54758895588331,
+      "lon": -74.00427481939626,
+      "geoinfo": {
+        "display_name": "217, Cherry Lane, City of Newburgh, Orange County, New York, 12550, United States",
+        "road": "Cherry Lane",
+        "house_number": "217",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "12550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "217 Cherry Lane, Newburgh, New York, United States"
+    },
+    {
+      "lat": 41.5256553527056,
+      "lon": -74.00264902646526,
+      "geoinfo": {
+        "display_name": "8, Commonwealth Avenue, Balmville, City of Newburgh, Orange County, New York, 12550, United States",
+        "road": "Commonwealth Avenue",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balmville",
+        "state": "New York",
+        "postcode": "12550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8, Commonwealth Avenue, Balmville, City of Newburgh, Orange County, New York, 12550, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:30.905930+00:00",
+  "_kind": "geo_samples"
+}

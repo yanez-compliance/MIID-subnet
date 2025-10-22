@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn",
+  "geonameid": 4830796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.62807560790797,
+      "lon": -85.5187190992793,
+      "geoinfo": {
+        "display_name": "Auburn University Club, Auburn, Lee County, Alabama, 36832, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Auburn University Club",
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Alabama",
+        "postcode": "36832",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Auburn University Club, Auburn, Alabama, United States"
+    },
+    {
+      "lat": 32.59512384413378,
+      "lon": -85.45907667671246,
+      "geoinfo": {
+        "display_name": "507, Green Street, Terrace Acres, Auburn, Lee County, Alabama, 36830, United States",
+        "road": "Green Street",
+        "house_number": "507",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Alabama",
+        "postcode": "36830",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "507, Green Street, Terrace Acres, Auburn, Lee County, Alabama, 36830, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:43.217564+00:00",
+  "_kind": "geo_samples"
+}

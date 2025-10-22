@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Düsseldorf-Pempelfort",
+  "geonameid": 11258605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.238417007735606,
+      "lon": 6.78443802047792,
+      "geoinfo": {
+        "display_name": "58, Parkstraße, Pempelfort, Stadtbezirk 1, Dusseldorf, North Rhine-Westphalia, 40477, Germany",
+        "road": "Parkstraße",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": "Pempelfort",
+        "city_district": "Stadtbezirk 1",
+        "city": "Dusseldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40477",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "58 Parkstraße, Düsseldorf-Pempelfort, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.246316063557444,
+      "lon": 6.79248877991099,
+      "geoinfo": {
+        "display_name": "42, Yorckstraße, Derendorf, Stadtbezirk 1, Dusseldorf, North Rhine-Westphalia, 40476, Germany",
+        "road": "Yorckstraße",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "Derendorf",
+        "city_district": "Stadtbezirk 1",
+        "city": "Dusseldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40476",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "42, Yorckstraße, Derendorf, Stadtbezirk 1, Dusseldorf, North Rhine-Westphalia, 40476, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:13.980993+00:00",
+  "_kind": "geo_samples"
+}

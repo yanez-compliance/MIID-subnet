@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Itzehoe",
+  "geonameid": 2895569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.9175191788331,
+      "lon": 9.587223351933357,
+      "geoinfo": {
+        "display_name": "Dorfstraße, Kollmoor, Breitenburg, Kreis Steinburg, Schleswig-Holstein, 25524, Germany",
+        "road": "Dorfstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kollmoor",
+        "state": "Schleswig-Holstein",
+        "postcode": "25524",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dorfstraße, Itzehoe, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.913609604131324,
+      "lon": 9.577177251870637,
+      "geoinfo": {
+        "display_name": "Charlottenhöhe, Oelixdorf, Breitenburg, Kreis Steinburg, Schleswig-Holstein, 25524, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oelixdorf",
+        "state": "Schleswig-Holstein",
+        "postcode": "25524",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "676, Itzehoe, 25524 Schleswig-Holstein, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:41.513313+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Orly",
+  "geonameid": 2989297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.73216423360123,
+      "lon": 2.329233160809023,
+      "geoinfo": {
+        "display_name": "Rue de l'Amiral Mouchez, Le Colombier, Wissous, Palaiseau, Essonne, Metropolitan France, 91320, France",
+        "road": "Rue de l'Amiral Mouchez",
+        "house_number": null,
+        "neighbourhood": "Le Colombier",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wissous",
+        "state": null,
+        "postcode": "91320",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de l'Amiral Mouchez, Orly, Ile-de-France, France"
+    },
+    {
+      "lat": 48.738927239736284,
+      "lon": 2.458365091014326,
+      "geoinfo": {
+        "display_name": "Rue Jean Jaurès, Villeneuve-Saint-Georges, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94190, France",
+        "road": "Rue Jean Jaurès",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villeneuve-Saint-Georges",
+        "state": null,
+        "postcode": "94190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "841, Rue Jean Jaurès, Villeneuve-Saint-Georges, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94190, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:17.373801+00:00",
+  "_kind": "geo_samples"
+}

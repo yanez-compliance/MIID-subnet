@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Chuka",
+  "geonameid": 199284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -0.3084114821328274,
+      "lon": 37.66030652458172,
+      "geoinfo": {
+        "display_name": "Meru-Nairobi Highway, Muthambi ward, Muthambi, Tharaka-Nithi, Kenya",
+        "road": "Meru-Nairobi Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muthambi ward",
+        "state": "Tharaka-Nithi",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Meru-Nairobi Highway, Chuka, Tharaka-Nithi, Kenya"
+    },
+    {
+      "lat": -0.3209965225901538,
+      "lon": 37.6471064894119,
+      "geoinfo": {
+        "display_name": "Karingani ward, Chuka, Tharaka-Nithi, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Karingani ward",
+        "state": "Tharaka-Nithi",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "326, Karingani ward, Chuka, 60537 Tharaka-Nithi, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:59.376437+00:00",
+  "_kind": "geo_samples"
+}

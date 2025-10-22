@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chadderton",
+  "geonameid": 11551009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.53247218119514,
+      "lon": -2.1709485174497214,
+      "geoinfo": {
+        "display_name": "Moston Road, White Gate, Failsworth, Oldham, Greater Manchester, England, M24 1SF, United Kingdom",
+        "road": "Moston Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "White Gate",
+        "city_district": null,
+        "city": "Failsworth",
+        "state": "England",
+        "postcode": "M24 1SF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moston Road, Chadderton, England, United Kingdom"
+    },
+    {
+      "lat": 53.50087346544399,
+      "lon": -2.1331257723884502,
+      "geoinfo": {
+        "display_name": "Brookdale Golf Club, Stamford Drive, Holt Lane End, Woodhouses, Oldham, Greater Manchester, England, M35 9NS, United Kingdom",
+        "road": "Stamford Drive",
+        "house_number": null,
+        "neighbourhood": "Holt Lane End",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oldham",
+        "state": "England",
+        "postcode": "M35 9NS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Brookdale Golf Club, Stamford Drive, Holt Lane End, Woodhouses, Oldham, Greater Manchester, England, M35 9NS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:50.719745+00:00",
+  "_kind": "geo_samples"
+}

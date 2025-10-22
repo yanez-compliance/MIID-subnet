@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hopkins",
+  "geonameid": 5030670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.90882344318454,
+      "lon": -93.50259866864651,
+      "geoinfo": {
+        "display_name": "Minnetonka Library, 17524, Excelsior Boulevard, Minnetonka, Hennepin County, Minnesota, 55345, United States",
+        "road": "Excelsior Boulevard",
+        "house_number": "17524",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Minnetonka",
+        "state": "Minnesota",
+        "postcode": "55345",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17524 Excelsior Boulevard, Hopkins, Minnesota, United States"
+    },
+    {
+      "lat": 44.95350282790552,
+      "lon": -93.44269929404653,
+      "geoinfo": {
+        "display_name": "2601, Abbey Hill Drive, Minnetonka, Hennepin County, Minnesota, 55305, United States",
+        "road": "Abbey Hill Drive",
+        "house_number": "2601",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Minnetonka",
+        "state": "Minnesota",
+        "postcode": "55305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2601, Abbey Hill Drive, Minnetonka, Hennepin County, Minnesota, 55305, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:59.098876+00:00",
+  "_kind": "geo_samples"
+}

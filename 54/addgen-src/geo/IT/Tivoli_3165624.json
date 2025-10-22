@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Tivoli",
+  "geonameid": 3165624,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.92979488681758,
+      "lon": 12.7809581464316,
+      "geoinfo": {
+        "display_name": "Villaggio Adriano, Tivoli, Roma Capitale, Lazio, 00019, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tivoli",
+        "state": "Lazio",
+        "postcode": "00019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Tivoli, Lazio, Italy"
+    },
+    {
+      "lat": 41.946635881603136,
+      "lon": 12.835320535472857,
+      "geoinfo": {
+        "display_name": "Via dei Gelsi, Tivoli, Roma Capitale, Lazio, 00024, Italy",
+        "road": "Via dei Gelsi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tivoli",
+        "state": "Lazio",
+        "postcode": "00024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "748, Via dei Gelsi, Tivoli, Roma Capitale, Lazio, 00024, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:43.222949+00:00",
+  "_kind": "geo_samples"
+}

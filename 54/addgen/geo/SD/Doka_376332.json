@@ -1,0 +1,47 @@
+{
+  "country_code": "SD",
+  "country": "Sudan",
+  "city": "Doka",
+  "geonameid": 376332,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 13.522679972582514,
+      "lon": 35.77425999413641,
+      "geoinfo": {
+        "display_name": "Doka, Al Galabat, Al Qadarif State, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doka",
+        "state": "Al Qadarif State",
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "333, Doka, Al Galabat, 93956 Al Qadarif State, Sudan"
+    },
+    {
+      "lat": 13.542232245937306,
+      "lon": 35.775160035764074,
+      "geoinfo": {
+        "display_name": "قريب, Al Galabat, Al Qadarif State, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Galabat",
+        "state": "Al Qadarif State",
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "610, قريب, Al Galabat, 11476 Al Qadarif State, Sudan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:55:43.145738+00:00",
+  "_kind": "geo_samples"
+}

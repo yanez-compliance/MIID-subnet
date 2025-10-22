@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Magdalena Atlicpac",
+  "geonameid": 3525424,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.3533285172425,
+      "lon": -98.9152891397379,
+      "geoinfo": {
+        "display_name": "La Paz, State of Mexico, 56516, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "56516",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Magdalena Atlicpac, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.375141117453076,
+      "lon": -98.98707970907321,
+      "geoinfo": {
+        "display_name": "Calle Ignacio Zaragoza, Nezahualcóyotl, State of Mexico, 57840, Mexico",
+        "road": "Calle Ignacio Zaragoza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nezahualcóyotl",
+        "state": "State of Mexico",
+        "postcode": "57840",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "137, Calle Ignacio Zaragoza, Nezahualcóyotl, State of Mexico, 57840, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:55.037800+00:00",
+  "_kind": "geo_samples"
+}

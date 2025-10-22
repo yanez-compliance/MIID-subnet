@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhonghe",
+  "geonameid": 9988213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.08843231615738,
+      "lon": 98.38563756230637,
+      "geoinfo": {
+        "display_name": "Tengchong City, Baoshan, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baoshan",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhonghe, Yunnan, China"
+    },
+    {
+      "lat": 25.04204173241552,
+      "lon": 98.39478959165488,
+      "geoinfo": {
+        "display_name": "镇安-瑞丽, Tengchong City, Baoshan, Yunnan, China",
+        "road": "镇安-瑞丽",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baoshan",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "156, 镇安-瑞丽, Tengchong City, Baoshan, 74674 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:16.195648+00:00",
+  "_kind": "geo_samples"
+}

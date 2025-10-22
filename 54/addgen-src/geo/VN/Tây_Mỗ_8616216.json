@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Tây Mỗ",
+  "geonameid": 8616216,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.01731977260107,
+      "lon": 105.73398018179117,
+      "geoinfo": {
+        "display_name": "Xuan Phuong Ward, Hà Nội, 34000, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xuan Phuong Ward",
+        "city_district": null,
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "34000",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Xuan Phuong Ward, Tây Mỗ, Vietnam"
+    },
+    {
+      "lat": 20.968000473648832,
+      "lon": 105.73013481904087,
+      "geoinfo": {
+        "display_name": "An Khanh Commune, Hà Nội, 10189, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "An Khanh Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "10189",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "563, An Khanh Commune, Hà Nội, 10189, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:49:53.789376+00:00",
+  "_kind": "geo_samples"
+}

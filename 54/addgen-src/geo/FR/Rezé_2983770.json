@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Rezé",
+  "geonameid": 2983770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.19701800398425,
+      "lon": -1.5678284880627997,
+      "geoinfo": {
+        "display_name": "1Box en Plus, 108, Rue de la Basse Île, Le Port Au Blé, Basse Île, Rezé, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44400, France",
+        "road": "Rue de la Basse Île",
+        "house_number": "108",
+        "neighbourhood": "Le Port Au Blé",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rezé",
+        "state": "Pays de la Loire",
+        "postcode": "44400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "108 Rue de la Basse Île, Rezé, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.20736524018523,
+      "lon": -1.625099673718263,
+      "geoinfo": {
+        "display_name": "Chemin du Printemps, Bernardière, Saint-Herblain, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44800, France",
+        "road": "Chemin du Printemps",
+        "house_number": null,
+        "neighbourhood": "Bernardière",
+        "suburb": "Bernardière",
+        "city_district": null,
+        "city": "Saint-Herblain",
+        "state": "Pays de la Loire",
+        "postcode": "44800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "455, Chemin du Printemps, Bernardière, Saint-Herblain, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44800, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:12.228020+00:00",
+  "_kind": "geo_samples"
+}

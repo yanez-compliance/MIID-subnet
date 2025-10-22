@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ardea",
+  "geonameid": 3182897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.61960553128582,
+      "lon": 12.493525758474748,
+      "geoinfo": {
+        "display_name": "Via Pratica di Mare, Torvaianica Alta, Pomezia, Roma Capitale, Lazio, 00071, Italy",
+        "road": "Via Pratica di Mare",
+        "house_number": null,
+        "neighbourhood": "Torvaianica Alta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pomezia",
+        "state": "Lazio",
+        "postcode": "00071",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pratica di Mare, Ardea, Lazio, Italy"
+    },
+    {
+      "lat": 41.64834185435456,
+      "lon": 12.54187286191239,
+      "geoinfo": {
+        "display_name": "Strada provinciale 95/b Laurentina, Santa Procula, Ardea, Roma Capitale, Lazio, Italy",
+        "road": "Strada provinciale 95/b Laurentina",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ardea",
+        "state": "Lazio",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada provinciale 95/b Laurentina, Santa Procula, Ardea, Roma Capitale, 05417 Lazio, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:37.826188+00:00",
+  "_kind": "geo_samples"
+}

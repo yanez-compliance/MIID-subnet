@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bethesda",
+  "geonameid": 4348599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.98138097126808,
+      "lon": -77.13277116928681,
+      "geoinfo": {
+        "display_name": "7400, Honesty Way, Cohasset, Bethesda, Montgomery County, Maryland, 20817, United States",
+        "road": "Honesty Way",
+        "house_number": "7400",
+        "neighbourhood": "Cohasset",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bethesda",
+        "state": "Maryland",
+        "postcode": "20817",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7400 Honesty Way, Bethesda, Maryland, United States"
+    },
+    {
+      "lat": 38.96682208134581,
+      "lon": -77.1079387925862,
+      "geoinfo": {
+        "display_name": "5511, Westbard Avenue, Westwood, Westbard, Bethesda, Montgomery County, Maryland, 20816, United States",
+        "road": "Westbard Avenue",
+        "house_number": "5511",
+        "neighbourhood": "Westwood",
+        "suburb": "Westbard",
+        "city_district": null,
+        "city": "Bethesda",
+        "state": "Maryland",
+        "postcode": "20816",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5511, Westbard Avenue, Westwood, Westbard, Bethesda, Montgomery County, Maryland, 20816, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:00.308622+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ambikāpuram",
+  "geonameid": 11477658,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.79046249807478,
+      "lon": 76.6811281264798,
+      "geoinfo": {
+        "display_name": "Palakkad, Kerala, 678001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palakkad",
+        "state": "Kerala",
+        "postcode": "678001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Ambikāpuram, Kerala, India"
+    },
+    {
+      "lat": 10.763433734316493,
+      "lon": 76.6548778569435,
+      "geoinfo": {
+        "display_name": "West Fort Road, Manjakulam, Palakkad, Kerala, 678001, India",
+        "road": "West Fort Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Manjakulam",
+        "city_district": null,
+        "city": "Palakkad",
+        "state": "Kerala",
+        "postcode": "678001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "711, West Fort Road, Manjakulam, Palakkad, Kerala, 678001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:29.311922+00:00",
+  "_kind": "geo_samples"
+}

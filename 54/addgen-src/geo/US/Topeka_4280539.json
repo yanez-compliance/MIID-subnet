@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Topeka",
+  "geonameid": 4280539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.058914758264535,
+      "lon": -95.63293231803394,
+      "geoinfo": {
+        "display_name": "411, Northeast Kellam Avenue, Oakland, Topeka, Shawnee County, Kansas, 66616, United States",
+        "road": "Northeast Kellam Avenue",
+        "house_number": "411",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Topeka",
+        "state": "Kansas",
+        "postcode": "66616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "411 Northeast Kellam Avenue, Topeka, Kansas, United States"
+    },
+    {
+      "lat": 39.06552546409734,
+      "lon": -95.65242482079233,
+      "geoinfo": {
+        "display_name": "Northeast River Road, Topeka, Shawnee County, Kansas, 66616, United States",
+        "road": "Northeast River Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Topeka",
+        "state": "Kansas",
+        "postcode": "66616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "775, Northeast River Road, Topeka, Shawnee County, Kansas, 66616, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:27.354186+00:00",
+  "_kind": "geo_samples"
+}

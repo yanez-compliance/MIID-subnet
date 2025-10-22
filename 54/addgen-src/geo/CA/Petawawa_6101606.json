@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Petawawa",
+  "geonameid": 6101606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.85835127186225,
+      "lon": -77.27679018303652,
+      "geoinfo": {
+        "display_name": "Petawawa, Renfrew County, Eastern Ontario, Ontario, K8H 3N2, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petawawa",
+        "state": "Ontario",
+        "postcode": "K8H 3N2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Petawawa, Ontario, Canada"
+    },
+    {
+      "lat": 45.86605225359442,
+      "lon": -77.23785632444532,
+      "geoinfo": {
+        "display_name": "Biesenthal Road, Kramer Subdivision, Petawawa, Renfrew County, Eastern Ontario, Ontario, K8A 7G7, Canada",
+        "road": "Biesenthal Road",
+        "house_number": null,
+        "neighbourhood": "Kramer Subdivision",
+        "suburb": null,
+        "city_district": null,
+        "city": "Petawawa",
+        "state": "Ontario",
+        "postcode": "K8A 7G7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Biesenthal Road, Kramer Subdivision, Petawawa, Renfrew County, Eastern Ontario, Ontario, K8A 7G7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:05.512329+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Emerson Hill",
+  "geonameid": 5116570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.62825899471724,
+      "lon": -74.08845412011821,
+      "geoinfo": {
+        "display_name": "Howard Avenue, Grymes Hill, Staten Island, Richmond County, New York, 10301, United States",
+        "road": "Howard Avenue",
+        "house_number": null,
+        "neighbourhood": "Grymes Hill",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Howard Avenue, Emerson Hill, New York, United States"
+    },
+    {
+      "lat": 40.60817835655685,
+      "lon": -74.126599669088,
+      "geoinfo": {
+        "display_name": "156, Mountainview Avenue, Castleton Corners, Staten Island, Richmond County, New York, 10314, United States",
+        "road": "Mountainview Avenue",
+        "house_number": "156",
+        "neighbourhood": "Castleton Corners",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10314",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "156, Mountainview Avenue, Castleton Corners, Staten Island, Richmond County, New York, 10314, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:08.535224+00:00",
+  "_kind": "geo_samples"
+}

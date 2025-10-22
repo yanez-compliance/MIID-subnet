@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Queenstown",
+  "geonameid": 963516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.89036050138657,
+      "lon": 26.853501444454142,
+      "geoinfo": {
+        "display_name": "Cathcart Street, Westbourne, Lukhanji Ward 25, Komani, Lukhanji Local Municipality, Chris Hani District Municipality, Eastern Cape, 5319, South Africa",
+        "road": "Cathcart Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westbourne",
+        "city_district": null,
+        "city": "Lukhanji Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": "5319",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Cathcart Street, Queenstown, Eastern Cape, South Africa"
+    },
+    {
+      "lat": -31.928311300250748,
+      "lon": 26.912950489886754,
+      "geoinfo": {
+        "display_name": "Komani Psychiatric Hospital, 1833, N6, Lukhanji Ward 6, Lukhanji Local Municipality, Chris Hani District Municipality, Eastern Cape, 5320, South Africa",
+        "road": "N6",
+        "house_number": "1833",
+        "neighbourhood": null,
+        "suburb": "Lukhanji Ward 6",
+        "city_district": null,
+        "city": "Lukhanji Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": "5320",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Komani Psychiatric Hospital, 1833, N6, Lukhanji Ward 6, Lukhanji Local Municipality, Chris Hani District Municipality, Eastern Cape, 5320, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:51:27.303247+00:00",
+  "_kind": "geo_samples"
+}

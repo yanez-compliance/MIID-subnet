@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xintian",
+  "geonameid": 1788590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.67498823248782,
+      "lon": 108.42200045533451,
+      "geoinfo": {
+        "display_name": "Yinbai Expressway, Tongyi, Xintian, Wanzhou, Chongqing, China",
+        "road": "Yinbai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xintian",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yinbai Expressway, Xintian, Chongqing, China"
+    },
+    {
+      "lat": 30.72213522447843,
+      "lon": 108.39524829222036,
+      "geoinfo": {
+        "display_name": "Longdu Subdistrict, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longdu Subdistrict",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "671, Longdu Subdistrict, Wanzhou, 03106 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:51:50.425881+00:00",
+  "_kind": "geo_samples"
+}

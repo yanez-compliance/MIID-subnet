@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Annonay",
+  "geonameid": 3037514,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.24835537231514,
+      "lon": 4.653964250060861,
+      "geoinfo": {
+        "display_name": "57, Chemin de la Prade, Annonay, Tournon-sur-Rhône, Ardèche, Auvergne-Rhône-Alpes, Metropolitan France, 07100, France",
+        "road": "Chemin de la Prade",
+        "house_number": "57",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Annonay",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "07100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "57 Chemin de la Prade, Annonay, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.211405150786696,
+      "lon": 4.652618333758258,
+      "geoinfo": {
+        "display_name": "Chardon, Roiffieux, Tournon-sur-Rhône, Ardèche, Auvergne-Rhône-Alpes, Metropolitan France, 07100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roiffieux",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "07100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "282, Chardon, Roiffieux, Tournon-sur-Rhône, Ardèche, Auvergne-Rhône-Alpes, Metropolitan France, 07100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:04.381310+00:00",
+  "_kind": "geo_samples"
+}

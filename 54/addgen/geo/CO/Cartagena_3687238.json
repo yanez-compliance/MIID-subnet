@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Cartagena",
+  "geonameid": 3687238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.401406285672032,
+      "lon": -75.47198531981586,
+      "geoinfo": {
+        "display_name": "Calle 32, Nuevo Paraíso, Cartagena, Dique, Bolívar, 130010, Colombia",
+        "road": "Calle 32",
+        "house_number": null,
+        "neighbourhood": "Nuevo Paraíso",
+        "suburb": "Nuevo Paraíso",
+        "city_district": null,
+        "city": "Cartagena",
+        "state": "Bolívar",
+        "postcode": "130010",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 32, Cartagena, Bolívar, Colombia"
+    },
+    {
+      "lat": 10.409236757635163,
+      "lon": -75.45419557844563,
+      "geoinfo": {
+        "display_name": "Transversal 61, El Pozón, Cartagena, Dique, Bolívar, 130010, Colombia",
+        "road": "Transversal 61",
+        "house_number": null,
+        "neighbourhood": "El Pozón",
+        "suburb": "El Pozón",
+        "city_district": null,
+        "city": "Cartagena",
+        "state": "Bolívar",
+        "postcode": "130010",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Transversal 61, El Pozón, Cartagena, Dique, Bolívar, 130010, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:24.783348+00:00",
+  "_kind": "geo_samples"
+}

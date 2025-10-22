@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mobile",
+  "geonameid": 4076598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.72544530818842,
+      "lon": -88.01829204098846,
+      "geoinfo": {
+        "display_name": "Mobile City Council District 2, Mobile, Mobile County, Alabama, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mobile City Council District 2",
+        "city": "Mobile",
+        "state": "Alabama",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mobile City Council District 2, Mobile, Alabama, United States"
+    },
+    {
+      "lat": 30.7271291372052,
+      "lon": -88.0206156615555,
+      "geoinfo": {
+        "display_name": "Mobile County Commission District 1, Saraland, Mobile County, Alabama, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mobile County Commission District 1",
+        "city": "Saraland",
+        "state": "Alabama",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mobile County Commission District 1, Saraland, Mobile County, 44049 Alabama, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:39.326138+00:00",
+  "_kind": "geo_samples"
+}

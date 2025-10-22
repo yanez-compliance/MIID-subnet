@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sarcelles",
+  "geonameid": 2976043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.03449172503555,
+      "lon": 2.3583457272429964,
+      "geoinfo": {
+        "display_name": "Centre Equestre d'Ezanville, Rue de Condé, Ézanville, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95460, France",
+        "road": "Rue de Condé",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ézanville",
+        "state": "Ile-de-France",
+        "postcode": "95460",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Condé, Sarcelles, Ile-de-France, France"
+    },
+    {
+      "lat": 48.96486154825892,
+      "lon": 2.340218374086993,
+      "geoinfo": {
+        "display_name": "Rue Jules Ferry, Montmagny, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95360, France",
+        "road": "Rue Jules Ferry",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montmagny",
+        "state": "Ile-de-France",
+        "postcode": "95360",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "028, Rue Jules Ferry, Montmagny, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95360, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:28.625604+00:00",
+  "_kind": "geo_samples"
+}

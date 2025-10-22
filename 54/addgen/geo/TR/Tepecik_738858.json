@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Tepecik",
+  "geonameid": 738858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.06255514150225,
+      "lon": 28.545249922233594,
+      "geoinfo": {
+        "display_name": "Büyükçekmece, Istanbul, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Büyükçekmece",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Tepecik, Turkey"
+    },
+    {
+      "lat": 41.0395385436643,
+      "lon": 28.52825070492317,
+      "geoinfo": {
+        "display_name": "Türkoba Mahallesi, Büyükçekmece, Istanbul, Marmara Region, 34537, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Türkoba Mahallesi",
+        "city_district": null,
+        "city": "Büyükçekmece",
+        "state": null,
+        "postcode": "34537",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "175, Türkoba Mahallesi, Büyükçekmece, Istanbul, Marmara Region, 34537, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:23.683019+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Haiger",
+  "geonameid": 2911964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.71458179063707,
+      "lon": 8.155408770643081,
+      "geoinfo": {
+        "display_name": "4215, K 15, Holzhausen, Burbach, Kreis Siegen-Wittgenstein, North Rhine-Westphalia, 57299, Germany",
+        "road": "K 15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holzhausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57299",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 15, Haiger, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.7364794132048,
+      "lon": 8.272644216388263,
+      "geoinfo": {
+        "display_name": "Marbach Talbrücke, Alte Rheinstraße, Dillenburg, Lahn-Dill-Kreis, Hesse, 35683, Germany",
+        "road": "Alte Rheinstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dillenburg",
+        "state": "Hesse",
+        "postcode": "35683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "579, Alte Rheinstraße, Haiger, 35683 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:37.860009+00:00",
+  "_kind": "geo_samples"
+}

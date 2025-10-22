@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wertheim",
+  "geonameid": 2810716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.783789739387416,
+      "lon": 9.547703734031032,
+      "geoinfo": {
+        "display_name": "MSP 36, Trennfeld, Rettersheim, Triefenstein, Landkreis Main-Spessart, Bavaria, 97855, Germany",
+        "road": "MSP 36",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Trennfeld",
+        "city_district": null,
+        "city": "Rettersheim",
+        "state": "Bavaria",
+        "postcode": "97855",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "MSP 36, Wertheim, Bavaria, Germany"
+    },
+    {
+      "lat": 49.756302152180574,
+      "lon": 9.526533288638607,
+      "geoinfo": {
+        "display_name": "Eichelsteige, Wertheim, Hofgarten, Wertheim, Main-Tauber-Kreis, Baden-Württemberg, 97877, Germany",
+        "road": "Eichelsteige",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wertheim",
+        "city_district": null,
+        "city": "Wertheim",
+        "state": "Baden-Württemberg",
+        "postcode": "97877",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "855, Eichelsteige, Wertheim, Hofgarten, Wertheim, Main-Tauber-Kreis, Baden-Württemberg, 97877, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:22.638697+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Steubenville",
+  "geonameid": 5173048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.374714698697176,
+      "lon": -80.62426711674057,
+      "geoinfo": {
+        "display_name": "Franciscan University of Steubenville, 1235, University Boulevard, Franciscan Square, Brady Estates Historic District, Steubenville, Jefferson County, Ohio, 43952, United States",
+        "road": "University Boulevard",
+        "house_number": "1235",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Steubenville",
+        "state": "Ohio",
+        "postcode": "43952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1235 University Boulevard, Steubenville, Ohio, United States"
+    },
+    {
+      "lat": 40.385612293237116,
+      "lon": -80.6038923181201,
+      "geoinfo": {
+        "display_name": "WV 2, Weirton District, Brooke County, West Virginia, 43952, United States",
+        "road": "WV 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "West Virginia",
+        "postcode": "43952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "WV 2, Weirton District, Brooke County, West Virginia, 43952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:14.623295+00:00",
+  "_kind": "geo_samples"
+}

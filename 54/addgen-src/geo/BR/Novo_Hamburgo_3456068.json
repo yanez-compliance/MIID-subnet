@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Novo Hamburgo",
+  "geonameid": 3456068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -29.70862471325115,
+      "lon": -51.13756296609459,
+      "geoinfo": {
+        "display_name": "Rua Lupicínio Rodrigues, Ideal, Novo Hamburgo, Região Geográfica Imediata de Novo Hamburgo - São Leopoldo, Metropolitan Region of Porto Alegre, Região Geográfica Intermediária de Porto Alegre, Rio Grande do Sul, South Region, 93320-010, Brazil",
+        "road": "Rua Lupicínio Rodrigues",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ideal",
+        "city_district": "Novo Hamburgo",
+        "city": "Novo Hamburgo",
+        "state": "Rio Grande do Sul",
+        "postcode": "93320-010",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rua Lupicínio Rodrigues, Novo Hamburgo, Rio Grande do Sul, Brazil"
+    },
+    {
+      "lat": -29.64004550489852,
+      "lon": -51.15116759427846,
+      "geoinfo": {
+        "display_name": "Rincão Gaúcho, Estância Velha, Região Geográfica Imediata de Novo Hamburgo - São Leopoldo, Metropolitan Region of Porto Alegre, Região Geográfica Intermediária de Porto Alegre, Rio Grande do Sul, South Region, 93609-780, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rincão Gaúcho",
+        "city_district": "Estância Velha",
+        "city": "Estância Velha",
+        "state": "Rio Grande do Sul",
+        "postcode": "93609-780",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rincão Gaúcho, Estância Velha, Região Geográfica Imediata de Novo Hamburgo - São Leopoldo, Metropolitan Region of Porto Alegre, Região Geográfica Intermediária de Porto Alegre, Rio Grande do Sul, South Region, 93609-780, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T02:51:01.299751+00:00",
+  "_kind": "geo_samples"
+}

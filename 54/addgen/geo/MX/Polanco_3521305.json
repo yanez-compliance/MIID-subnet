@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Polanco",
+  "geonameid": 3521305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.434954442006866,
+      "lon": -99.15274967272565,
+      "geoinfo": {
+        "display_name": "Reforma 27, 27, Avenida Paseo de la Reforma, Tabacalera, Mexico City, Cuauhtémoc, Mexico City, 06030, Mexico",
+        "road": "Avenida Paseo de la Reforma",
+        "house_number": "27",
+        "neighbourhood": "Tabacalera",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "06030",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "27 Avenida Paseo de la Reforma, Polanco, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.453285484501755,
+      "lon": -99.22242097302657,
+      "geoinfo": {
+        "display_name": "Parque de Chapultepec, Lázaro Cárdenas, Naucalpan de Juárez, State of Mexico, 53560, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naucalpan de Juárez",
+        "state": "State of Mexico",
+        "postcode": "53560",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "437, Parque de Chapultepec, Lázaro Cárdenas, Naucalpan de Juárez, State of Mexico, 53560, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:06.653214+00:00",
+  "_kind": "geo_samples"
+}

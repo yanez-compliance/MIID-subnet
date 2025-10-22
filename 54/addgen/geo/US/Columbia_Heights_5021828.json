@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Columbia Heights",
+  "geonameid": 5021828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.00409315815092,
+      "lon": -93.23774431884229,
+      "geoinfo": {
+        "display_name": "Northeast Recreation Center, 1530, Northeast Johnson Street, Windom Park, Northeast, Minneapolis, Hennepin County, Minnesota, 55413, United States",
+        "road": "Northeast Johnson Street",
+        "house_number": "1530",
+        "neighbourhood": "Windom Park",
+        "suburb": "Northeast",
+        "city_district": null,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "postcode": "55413",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1530 Northeast Johnson Street, Columbia Heights, Minnesota, United States"
+    },
+    {
+      "lat": 45.02490693209783,
+      "lon": -93.30442380188904,
+      "geoinfo": {
+        "display_name": "Crystal Lake Cemetery, North 39th Avenue, Webber-Camden, Camden, Minneapolis, Hennepin County, Minnesota, 55412, United States",
+        "road": "North 39th Avenue",
+        "house_number": null,
+        "neighbourhood": "Webber-Camden",
+        "suburb": "Camden",
+        "city_district": null,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "postcode": "55412",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Crystal Lake Cemetery, North 39th Avenue, Webber-Camden, Camden, Minneapolis, Hennepin County, Minnesota, 55412, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:31.257209+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Villa Sarmiento",
+  "geonameid": 11148100,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -34.62595531252708,
+      "lon": -58.61885420130795,
+      "geoinfo": {
+        "display_name": "Gaona, El Palomar, Partido de Morón, Buenos Aires, B1706CGO, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Palomar",
+        "state": "Buenos Aires",
+        "postcode": "B1706CGO",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Villa Sarmiento, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.648741075815,
+      "lon": -58.56684185106365,
+      "geoinfo": {
+        "display_name": "Colegio Santisimo Redentor, Saavedra, Ramos Mejía Sur, Ramos Mejía, Partido de La Matanza, Buenos Aires, 1704, Argentina",
+        "road": "Saavedra",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramos Mejía",
+        "state": "Buenos Aires",
+        "postcode": "1704",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "163, Saavedra, Villa Sarmiento, 1704 Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.65414733666032,
+      "lon": -58.54769390886825,
+      "geoinfo": {
+        "display_name": "1740, Pueyrredón, Villa Rebasa, Ramos Mejía, Partido de La Matanza, Buenos Aires, B1752CXU, Argentina",
+        "road": "Pueyrredón",
+        "house_number": "1740",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramos Mejía",
+        "state": "Buenos Aires",
+        "postcode": "B1752CXU",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "1740, Pueyrredón, Villa Rebasa, Ramos Mejía, Partido de La Matanza, Buenos Aires, B1752CXU, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:46.547282+00:00",
+  "_kind": "geo_samples"
+}

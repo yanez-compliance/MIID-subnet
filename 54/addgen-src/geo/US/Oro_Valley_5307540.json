@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oro Valley",
+  "geonameid": 5307540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.36056590424194,
+      "lon": -110.95718749850768,
+      "geoinfo": {
+        "display_name": "East Windward Place, Oro Valley, Pima County, Arizona, 85704, United States",
+        "road": "East Windward Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oro Valley",
+        "state": "Arizona",
+        "postcode": "85704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Windward Place, Oro Valley, Arizona, United States"
+    },
+    {
+      "lat": 32.41947070296013,
+      "lon": -110.99551658770515,
+      "geoinfo": {
+        "display_name": "1397, Valley Ridge Place, Coper Creek, Oro Valley, Pima County, Arizona, 85737, United States",
+        "road": "Valley Ridge Place",
+        "house_number": "1397",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oro Valley",
+        "state": "Arizona",
+        "postcode": "85737",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1397, Valley Ridge Place, Coper Creek, Oro Valley, Pima County, Arizona, 85737, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:44.846803+00:00",
+  "_kind": "geo_samples"
+}

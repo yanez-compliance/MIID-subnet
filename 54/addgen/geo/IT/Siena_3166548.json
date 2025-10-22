@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Siena",
+  "geonameid": 3166548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.363052005426766,
+      "lon": 11.331749691760145,
+      "geoinfo": {
+        "display_name": "Strada di Vagliagli, Siena, Tuscany, 53035, Italy",
+        "road": "Strada di Vagliagli",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siena",
+        "state": "Tuscany",
+        "postcode": "53035",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada di Vagliagli, Siena, Tuscany, Italy"
+    },
+    {
+      "lat": 43.292685523719484,
+      "lon": 11.367790645235283,
+      "geoinfo": {
+        "display_name": "Strada di Certosa, Bucciano, Siena, Tuscany, 53100, Italy",
+        "road": "Strada di Certosa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siena",
+        "state": "Tuscany",
+        "postcode": "53100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "470, Strada di Certosa, Bucciano, Siena, Tuscany, 53100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:06.348943+00:00",
+  "_kind": "geo_samples"
+}

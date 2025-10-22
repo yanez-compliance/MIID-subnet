@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cobham",
+  "geonameid": 2652689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.32580529748859,
+      "lon": -0.4102390309018588,
+      "geoinfo": {
+        "display_name": "Church Street, Cobham, Elmbridge, Surrey, England, KT11 3EG, United Kingdom",
+        "road": "Church Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "KT11 3EG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Street, Cobham, England, United Kingdom"
+    },
+    {
+      "lat": 51.30856822389061,
+      "lon": -0.46746481710530474,
+      "geoinfo": {
+        "display_name": "Wisley Lane, Elm Corner, Ockham, Guildford, Surrey, England, GU23 6QB, United Kingdom",
+        "road": "Wisley Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ockham",
+        "city_district": null,
+        "city": "Guildford",
+        "state": "England",
+        "postcode": "GU23 6QB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wisley Lane, Elm Corner, Ockham, Guildford, Surrey, England, GU23 6QB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:30.701151+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Methuen",
+  "geonameid": 4943828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.75688349026116,
+      "lon": -71.18199963435065,
+      "geoinfo": {
+        "display_name": "Merrimack Valley Golf Club, 210, Howe Street, Tozier Corner, Methuen, Essex County, Massachusetts, 01844, United States",
+        "road": "Howe Street",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Methuen",
+        "state": "Massachusetts",
+        "postcode": "01844",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210 Howe Street, Methuen, Massachusetts, United States"
+    },
+    {
+      "lat": 42.75596346253134,
+      "lon": -71.2260319253896,
+      "geoinfo": {
+        "display_name": "I 93, Salem, Rockingham County, New Hampshire, 03079, United States",
+        "road": "I 93",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salem",
+        "state": "New Hampshire",
+        "postcode": "03079",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 93, Salem, Rockingham County, New Hampshire, 03079, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:05.859190+00:00",
+  "_kind": "geo_samples"
+}

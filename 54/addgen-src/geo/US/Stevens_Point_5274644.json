@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stevens Point",
+  "geonameid": 5274644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.53764631664399,
+      "lon": -89.51967802035045,
+      "geoinfo": {
+        "display_name": "Maple Bluff Road, Town of Hull, Portage County, Wisconsin, 54482, United States",
+        "road": "Maple Bluff Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Hull",
+        "state": "Wisconsin",
+        "postcode": "54482",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Maple Bluff Road, Stevens Point, Wisconsin, United States"
+    },
+    {
+      "lat": 44.550118751653436,
+      "lon": -89.56050008982463,
+      "geoinfo": {
+        "display_name": "2568, Falcons Cove, Stevens Point, Portage County, Wisconsin, 54482, United States",
+        "road": "Falcons Cove",
+        "house_number": "2568",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stevens Point",
+        "state": "Wisconsin",
+        "postcode": "54482",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2568, Falcons Cove, Stevens Point, Portage County, Wisconsin, 54482, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:03.676003+00:00",
+  "_kind": "geo_samples"
+}

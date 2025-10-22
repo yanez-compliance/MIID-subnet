@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Sandbach",
+  "geonameid": 2638600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.14272622729332,
+      "lon": -2.3442869538117113,
+      "geoinfo": {
+        "display_name": "21, St. Johns Way, Sandbach Heath, Sandbach, Cheshire East, England, CW11 2LY, United Kingdom",
+        "road": "St. Johns Way",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": "Sandbach Heath",
+        "city_district": null,
+        "city": "Sandbach",
+        "state": "England",
+        "postcode": "CW11 2LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "21 St. Johns Way, Sandbach, England, United Kingdom"
+    },
+    {
+      "lat": 53.14256977219729,
+      "lon": -2.2948539260876775,
+      "geoinfo": {
+        "display_name": "Overton Green, Smallwood, Cheshire East, England, CW11 2UP, United Kingdom",
+        "road": "Overton Green",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "CW11 2UP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Overton Green, Smallwood, Cheshire East, England, CW11 2UP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:08.792901+00:00",
+  "_kind": "geo_samples"
+}

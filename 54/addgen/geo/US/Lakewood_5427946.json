@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakewood",
+  "geonameid": 5427946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.71457439308464,
+      "lon": -105.13460218548798,
+      "geoinfo": {
+        "display_name": "Sere Lane, Lakewood, Jefferson County, Colorado, 80228, United States",
+        "road": "Sere Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakewood",
+        "state": "Colorado",
+        "postcode": "80228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sere Lane, Lakewood, Colorado, United States"
+    },
+    {
+      "lat": 39.7038974809074,
+      "lon": -105.0936997840903,
+      "geoinfo": {
+        "display_name": "699, South Cody Street, Lakewood, Jefferson County, Colorado, 80226, United States",
+        "road": "South Cody Street",
+        "house_number": "699",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakewood",
+        "state": "Colorado",
+        "postcode": "80226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "699, South Cody Street, Lakewood, Jefferson County, Colorado, 80226, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:48.320553+00:00",
+  "_kind": "geo_samples"
+}

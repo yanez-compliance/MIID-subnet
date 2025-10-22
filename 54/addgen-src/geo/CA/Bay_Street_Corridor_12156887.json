@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Bay Street Corridor",
+  "geonameid": 12156887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.63249358672409,
+      "lon": -79.3689121482384,
+      "geoinfo": {
+        "display_name": "St Lawrence-East Bayfront-The Islands, Spadina—Fort York, Toronto, Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Bay Street Corridor, Ontario, Canada"
+    },
+    {
+      "lat": 43.65369599495747,
+      "lon": -79.3991566668583,
+      "geoinfo": {
+        "display_name": "7, Glen Baillie Place, Kensington Market, University—Rosedale, Toronto, Golden Horseshoe, Ontario, M5T 2E7, Canada",
+        "road": "Glen Baillie Place",
+        "house_number": "7",
+        "neighbourhood": "Kensington Market",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5T 2E7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "7, Glen Baillie Place, Kensington Market, University—Rosedale, Toronto, Golden Horseshoe, Ontario, M5T 2E7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:30.650287+00:00",
+  "_kind": "geo_samples"
+}

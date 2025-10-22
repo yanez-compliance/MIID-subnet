@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holland",
+  "geonameid": 4996248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.7680043381139,
+      "lon": -86.07533089021396,
+      "geoinfo": {
+        "display_name": "740, East 32nd Street, Holland, Ottawa County, Michigan, 49423, United States",
+        "road": "East 32nd Street",
+        "house_number": "740",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holland",
+        "state": "Michigan",
+        "postcode": "49423",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "740 East 32nd Street, Holland, Michigan, United States"
+    },
+    {
+      "lat": 42.761605524522984,
+      "lon": -86.08990207280848,
+      "geoinfo": {
+        "display_name": "377, East 40th Street, Holland, Allegan County, Michigan, 49423, United States",
+        "road": "East 40th Street",
+        "house_number": "377",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holland",
+        "state": "Michigan",
+        "postcode": "49423",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "377, East 40th Street, Holland, Allegan County, Michigan, 49423, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:48.898524+00:00",
+  "_kind": "geo_samples"
+}

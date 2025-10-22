@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tallmadge",
+  "geonameid": 5173623,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.093538567845386,
+      "lon": -81.46492582953458,
+      "geoinfo": {
+        "display_name": "Freedom Trail, Tallmadge Town Square Historic District, Tallmadge, Summit County, Ohio, 44305, United States",
+        "road": "Freedom Trail",
+        "house_number": null,
+        "neighbourhood": "Tallmadge Town Square Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tallmadge",
+        "state": "Ohio",
+        "postcode": "44305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Freedom Trail, Tallmadge, Ohio, United States"
+    },
+    {
+      "lat": 41.07877299109352,
+      "lon": -81.43055384514206,
+      "geoinfo": {
+        "display_name": "749, Beechview Drive, Akron, Summit County, Ohio, 44305, United States",
+        "road": "Beechview Drive",
+        "house_number": "749",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akron",
+        "state": "Ohio",
+        "postcode": "44305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "749, Beechview Drive, Akron, Summit County, Ohio, 44305, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:13.213564+00:00",
+  "_kind": "geo_samples"
+}

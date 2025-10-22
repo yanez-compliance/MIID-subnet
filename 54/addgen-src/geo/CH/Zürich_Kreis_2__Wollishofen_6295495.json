@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 2) / Wollishofen",
+  "geonameid": 6295495,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.30090010767626,
+      "lon": 8.50153824863559,
+      "geoinfo": {
+        "display_name": "Gratstrasse, Hinterbuchenegg, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland",
+        "road": "Gratstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stallikon",
+        "state": "Zurich",
+        "postcode": "8143",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Gratstrasse, Zürich (Kreis 2) / Wollishofen, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.3394256090461,
+      "lon": 8.535044897071522,
+      "geoinfo": {
+        "display_name": "Schule Im Lee, Hoffnungsstrasse, Wollishofen, Kreis 2, Zurich, District Zurich, Zurich, 8038, Switzerland",
+        "road": "Hoffnungsstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wollishofen",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8038",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Hoffnungsstrasse, Zürich (Kreis 2) / Wollishofen, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.310116312643316,
+      "lon": 8.525891838647414,
+      "geoinfo": {
+        "display_name": "Albisstrasse, Tobelhof, Adliswil, Bezirk Horgen, Zurich, 8134, Switzerland",
+        "road": "Albisstrasse",
+        "house_number": null,
+        "neighbourhood": "Tobelhof",
+        "suburb": null,
+        "city_district": null,
+        "city": "Adliswil",
+        "state": "Zurich",
+        "postcode": "8134",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "429, Albisstrasse, Tobelhof, Adliswil, Bezirk Horgen, Zurich, 8134, Switzerland"
+    },
+    {
+      "lat": 47.32627495348863,
+      "lon": 8.54865043255556,
+      "geoinfo": {
+        "display_name": "107, Seestrasse, Kilchberg (ZH), Bezirk Horgen, Zurich, 8802, Switzerland",
+        "road": "Seestrasse",
+        "house_number": "107",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kilchberg (ZH)",
+        "state": "Zurich",
+        "postcode": "8802",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "107, Seestrasse, Kilchberg (ZH), Bezirk Horgen, Zurich, 8802, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:10:11.820983+00:00",
+  "_kind": "geo_samples"
+}

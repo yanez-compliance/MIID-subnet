@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Niendorf",
+  "geonameid": 2862606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.62463662135104,
+      "lon": 9.940439009012584,
+      "geoinfo": {
+        "display_name": "12, Hadermanns Weg, Niendorf, Eimsbüttel, Hamburg, 22459, Germany",
+        "road": "Hadermanns Weg",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Niendorf",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22459",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12 Hadermanns Weg, Niendorf, Germany"
+    },
+    {
+      "lat": 53.65037323562599,
+      "lon": 9.956571728697227,
+      "geoinfo": {
+        "display_name": "Moordamm, Niendorf, Eimsbüttel, Norderstedt, Kreis Segeberg, Schleswig-Holstein, 22848, Germany",
+        "road": "Moordamm",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Niendorf",
+        "city_district": null,
+        "city": "Norderstedt",
+        "state": "Schleswig-Holstein",
+        "postcode": "22848",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "211, Moordamm, Niendorf, Eimsbüttel, Norderstedt, Kreis Segeberg, Schleswig-Holstein, 22848, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:57.068740+00:00",
+  "_kind": "geo_samples"
+}

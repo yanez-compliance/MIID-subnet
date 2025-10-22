@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Igusa",
+  "geonameid": 10866536,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.743666777115195,
+      "lon": 139.58987159099954,
+      "geoinfo": {
+        "display_name": "Shakujiidai, Nerima, Tokyo, 178-0063, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "178-0063",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Igusa, Japan"
+    },
+    {
+      "lat": 35.739625253060375,
+      "lon": 139.56708050082185,
+      "geoinfo": {
+        "display_name": "Higashicho 5-chome, Nishitokyo, Tokyo, 202-0013, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Higashicho 5-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nishitokyo",
+        "state": null,
+        "postcode": "202-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Higashicho 5-chome, Nishitokyo, Tokyo, 202-0013, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:56.052251+00:00",
+  "_kind": "geo_samples"
+}

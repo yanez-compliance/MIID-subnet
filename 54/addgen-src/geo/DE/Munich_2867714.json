@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Munich",
+  "geonameid": 2867714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.09959297405482,
+      "lon": 11.549663071240131,
+      "geoinfo": {
+        "display_name": "Zentralländstraße, Maria Einsiedel, 19.1, Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln, Munich, Bavaria, 81379, Germany",
+        "road": "Zentralländstraße",
+        "house_number": null,
+        "neighbourhood": "Maria Einsiedel",
+        "suburb": "19.1",
+        "city_district": "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+        "city": "Munich",
+        "state": "Bavaria",
+        "postcode": "81379",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Zentralländstraße, Munich, Bavaria, Germany"
+    },
+    {
+      "lat": 48.15537524885021,
+      "lon": 11.532921784037953,
+      "geoinfo": {
+        "display_name": "Square-Meter, Nymphenburger Straße, Ebenau, 9.6, Neuhausen-Nymphenburg, Munich, Bavaria, 80634, Germany",
+        "road": "Nymphenburger Straße",
+        "house_number": null,
+        "neighbourhood": "9.6",
+        "suburb": "Neuhausen-Nymphenburg",
+        "city_district": null,
+        "city": "Munich",
+        "state": "Bavaria",
+        "postcode": "80634",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "344, Nymphenburger Straße, Munich, 80634 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:19.206913+00:00",
+  "_kind": "geo_samples"
+}

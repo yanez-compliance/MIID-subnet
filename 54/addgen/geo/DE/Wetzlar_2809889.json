@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wetzlar",
+  "geonameid": 2809889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.51956591694882,
+      "lon": 8.48263031204093,
+      "geoinfo": {
+        "display_name": "Wilhelm-Will-Straße, Nauborn, Wetzlar, Lahn-Dill-Kreis, Hesse, 35580, Germany",
+        "road": "Wilhelm-Will-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nauborn",
+        "state": "Hesse",
+        "postcode": "35580",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wilhelm-Will-Straße, Wetzlar, Hesse, Germany"
+    },
+    {
+      "lat": 50.588791874964855,
+      "lon": 8.522134283691567,
+      "geoinfo": {
+        "display_name": "32, Bachstraße, Naunheim, Wetzlar, Lahn-Dill-Kreis, Hesse, 35584, Germany",
+        "road": "Bachstraße",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naunheim",
+        "state": "Hesse",
+        "postcode": "35584",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "32, Bachstraße, Naunheim, Wetzlar, Lahn-Dill-Kreis, Hesse, 35584, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:26.377219+00:00",
+  "_kind": "geo_samples"
+}

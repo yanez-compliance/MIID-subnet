@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newberg",
+  "geonameid": 5742726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.3290261403489,
+      "lon": -122.99930890564919,
+      "geoinfo": {
+        "display_name": "23440, Northeast North Valley Road, Newberg, Yamhill County, Oregon, 97132, United States",
+        "road": "Northeast North Valley Road",
+        "house_number": "23440",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newberg",
+        "state": "Oregon",
+        "postcode": "97132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23440 Northeast North Valley Road, Newberg, Oregon, United States"
+    },
+    {
+      "lat": 45.286574305525285,
+      "lon": -122.93884326786389,
+      "geoinfo": {
+        "display_name": "Northeast Wilsonville Road, Yamhill County, Oregon, United States",
+        "road": "Northeast Wilsonville Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "013, Northeast Wilsonville Road, Yamhill County, 47756 Oregon, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:33.225779+00:00",
+  "_kind": "geo_samples"
+}

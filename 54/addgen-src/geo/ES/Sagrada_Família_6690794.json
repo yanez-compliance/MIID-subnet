@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sagrada Família",
+  "geonameid": 6690794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.400666355400055,
+      "lon": 2.1827767253518835,
+      "geoinfo": {
+        "display_name": "Gran Via de les Corts Catalanes, el Fort Pienc, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08013, Spain",
+        "road": "Gran Via de les Corts Catalanes",
+        "house_number": null,
+        "neighbourhood": "el Fort Pienc",
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08013",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Gran Via de les Corts Catalanes, Sagrada Família, Catalonia, Spain"
+    },
+    {
+      "lat": 41.38347257824855,
+      "lon": 2.188940944994828,
+      "geoinfo": {
+        "display_name": "Ronda Litoral, la Barceloneta, Old Town, Barcelona, Barcelonès, Barcelona, Catalonia, 08003, Spain",
+        "road": "Ronda Litoral",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Old Town",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08003",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "601, Ronda Litoral, la Barceloneta, Old Town, Barcelona, Barcelonès, Barcelona, Catalonia, 08003, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:48.611448+00:00",
+  "_kind": "geo_samples"
+}

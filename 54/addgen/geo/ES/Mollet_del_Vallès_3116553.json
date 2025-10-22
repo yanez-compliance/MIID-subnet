@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Mollet del Vallès",
+  "geonameid": 3116553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.54648396524358,
+      "lon": 2.196449305220762,
+      "geoinfo": {
+        "display_name": "Autopista de la Mediterrània, Mollet del Vallès, Vallès Oriental, Barcelona, Catalonia, 08130, Spain",
+        "road": "Autopista de la Mediterrània",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mollet del Vallès",
+        "state": "Catalonia",
+        "postcode": "08130",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista de la Mediterrània, Mollet del Vallès, Catalonia, Spain"
+    },
+    {
+      "lat": 41.52399886201115,
+      "lon": 2.200719759527655,
+      "geoinfo": {
+        "display_name": "carretera de Puigcerdà, Mogoda, la Florida, Santa Perpètua de Mogoda, Vallès Occidental, Barcelona, Catalonia, 08120, Spain",
+        "road": "carretera de Puigcerdà",
+        "house_number": null,
+        "neighbourhood": "Mogoda",
+        "suburb": "la Florida",
+        "city_district": null,
+        "city": "Santa Perpètua de Mogoda",
+        "state": "Catalonia",
+        "postcode": "08120",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "098, carretera de Puigcerdà, Mogoda, la Florida, Santa Perpètua de Mogoda, Vallès Occidental, Barcelona, Catalonia, 08120, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:35.881913+00:00",
+  "_kind": "geo_samples"
+}

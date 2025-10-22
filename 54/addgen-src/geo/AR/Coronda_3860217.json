@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Coronda",
+  "geonameid": 3860217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.971031792332273,
+      "lon": -60.913626865307066,
+      "geoinfo": {
+        "display_name": "1588, Doctor Héctor López, Municipio de Coronda, Coronda, Departamento San Jerónimo, Santa Fe, S2240, Argentina",
+        "road": "Doctor Héctor López",
+        "house_number": "1588",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de Coronda",
+        "state": "Santa Fe",
+        "postcode": "S2240",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "1588 Doctor Héctor López, Coronda, Santa Fe, Argentina"
+    },
+    {
+      "lat": -31.967977103420015,
+      "lon": -60.90694775134566,
+      "geoinfo": {
+        "display_name": "Doctor Héctor López, Municipio de Coronda, Coronda, Departamento San Jerónimo, Santa Fe, 2240, Argentina",
+        "road": "Doctor Héctor López",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de Coronda",
+        "state": "Santa Fe",
+        "postcode": "2240",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "660, Doctor Héctor López, Municipio de Coronda, Coronda, Departamento San Jerónimo, Santa Fe, 2240, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:47.495993+00:00",
+  "_kind": "geo_samples"
+}

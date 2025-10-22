@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Stabroek",
+  "geonameid": 2786229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.30931427780069,
+      "lon": 4.416799084443279,
+      "geoinfo": {
+        "display_name": "37, Binnenweg, Essenhout, Kapellen, Antwerp, 2950, Belgium",
+        "road": "Binnenweg",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kapellen",
+        "state": "Antwerp",
+        "postcode": "2950",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "37 Binnenweg, Stabroek, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.353835522710305,
+      "lon": 4.367689668165538,
+      "geoinfo": {
+        "display_name": "Kraaienberg, Berendrecht, Stabroek, Antwerp, 2940, Belgium",
+        "road": "Kraaienberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Stabroek",
+        "city": "Stabroek",
+        "state": "Antwerp",
+        "postcode": "2940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "952, Kraaienberg, Berendrecht, Stabroek, Antwerp, 2940, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:30.714572+00:00",
+  "_kind": "geo_samples"
+}

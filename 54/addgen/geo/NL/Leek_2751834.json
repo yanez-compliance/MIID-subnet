@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Leek",
+  "geonameid": 2751834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.177485965744076,
+      "lon": 6.368162985134888,
+      "geoinfo": {
+        "display_name": "17, Kapteynlaan, Leeksterhout, Leek, Westerkwartier, Groningen, Netherlands, 9351 VG, Netherlands",
+        "road": "Kapteynlaan",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leek",
+        "state": "Groningen",
+        "postcode": "9351 VG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "17 Kapteynlaan, Leek, Groningen, The Netherlands"
+    },
+    {
+      "lat": 53.152200932382634,
+      "lon": 6.308739820990652,
+      "geoinfo": {
+        "display_name": "Nieuweweg, Nuis, Westerkwartier, Groningen, Netherlands, 9364 PL, Netherlands",
+        "road": "Nieuweweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nuis",
+        "state": "Groningen",
+        "postcode": "9364 PL",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "066, Nieuweweg, Nuis, Westerkwartier, Groningen, Netherlands, 9364 PL, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:40.017174+00:00",
+  "_kind": "geo_samples"
+}

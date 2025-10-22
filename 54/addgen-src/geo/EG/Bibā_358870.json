@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Bibā",
+  "geonameid": 358870,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 28.919471415940244,
+      "lon": 31.025889752618617,
+      "geoinfo": {
+        "display_name": "Bani Sweif, 62611, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bani Sweif",
+        "postcode": "62611",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Bibā, Bani Sweif, Egypt"
+    },
+    {
+      "lat": 28.949640424088894,
+      "lon": 31.01136214090228,
+      "geoinfo": {
+        "display_name": "Kafr Naser Village, Bani Sweif, 62611, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kafr Naser Village",
+        "state": "Bani Sweif",
+        "postcode": "62611",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "674, Kafr Naser Village, Bani Sweif, 62611, Egypt"
+    },
+    {
+      "lat": 28.93826239988918,
+      "lon": 30.986629785608624,
+      "geoinfo": {
+        "display_name": "Mohamed Farid Sarhan Street, Beba, Bani Sweif, 62611, Egypt",
+        "road": "Mohamed Farid Sarhan Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beba",
+        "state": "Bani Sweif",
+        "postcode": "62611",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "176, Mohamed Farid Sarhan Street, Bibā, 62611 Bani Sweif, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:55.923520+00:00",
+  "_kind": "geo_samples"
+}

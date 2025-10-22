@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hummelsbüttel",
+  "geonameid": 2897674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.65096835215274,
+      "lon": 10.031553001761571,
+      "geoinfo": {
+        "display_name": "Waldkindergarten \"Die Schlaufüchse\", Raakmoorgrund, Langenhorn, Hamburg-Nord, Hamburg, 22339, Germany",
+        "road": "Raakmoorgrund",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Langenhorn",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22339",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Raakmoorgrund, Hummelsbüttel, Germany"
+    },
+    {
+      "lat": 53.637794411177275,
+      "lon": 10.011026157058778,
+      "geoinfo": {
+        "display_name": "25, Im Ring, Fuhlsbüttel, Hamburg-Nord, Hamburg, 22335, Germany",
+        "road": "Im Ring",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Fuhlsbüttel",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22335",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25, Im Ring, Fuhlsbüttel, Hamburg-Nord, Hamburg, 22335, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:04.018730+00:00",
+  "_kind": "geo_samples"
+}

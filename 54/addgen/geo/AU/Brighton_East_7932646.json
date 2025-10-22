@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Brighton East",
+  "geonameid": 7932646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.90013514829108,
+      "lon": 145.01044373877244,
+      "geoinfo": {
+        "display_name": "189, North Road, Gardenvale, Melbourne, City of Glen Eira, Victoria, 3185, Australia",
+        "road": "North Road",
+        "house_number": "189",
+        "neighbourhood": null,
+        "suburb": "Gardenvale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3185",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "189 North Road, Brighton East, Victoria, Australia"
+    },
+    {
+      "lat": -37.93977687109885,
+      "lon": 145.0158783406977,
+      "geoinfo": {
+        "display_name": "145, Thomas Street, Hampton, Melbourne, City of Bayside, Victoria, 3188, Australia",
+        "road": "Thomas Street",
+        "house_number": "145",
+        "neighbourhood": null,
+        "suburb": "Hampton",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3188",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "145, Thomas Street, Hampton, Melbourne, City of Bayside, Victoria, 3188, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:11.328906+00:00",
+  "_kind": "geo_samples"
+}

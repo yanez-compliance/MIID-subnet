@@ -1,0 +1,47 @@
+{
+  "country_code": "RW",
+  "country": "Rwanda",
+  "city": "Mugina",
+  "geonameid": 201841,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -2.1011869616913077,
+      "lon": 29.964491371531608,
+      "geoinfo": {
+        "display_name": "Mugina, Kamonyi, Southern Province, Rwanda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mugina",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "Mugina, Southern Province, Rwanda"
+    },
+    {
+      "lat": -2.1040192832507247,
+      "lon": 29.914826289559375,
+      "geoinfo": {
+        "display_name": "DR82, Nyamiyaga, Kamonyi, Southern Province, Rwanda",
+        "road": "DR82",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nyamiyaga",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "DR82, Mugina, Southern Province, Rwanda"
+    }
+  ],
+  "updated_at": "2025-10-16T22:16:51.338603+00:00",
+  "_kind": "geo_samples"
+}

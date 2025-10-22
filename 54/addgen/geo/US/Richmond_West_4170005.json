@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richmond West",
+  "geonameid": 4170005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.611129386301787,
+      "lon": -80.42647147397732,
+      "geoinfo": {
+        "display_name": "14432, Southwest 168th Street, Richmond West, Miami, Miami-Dade County, Florida, 33177, United States",
+        "road": "Southwest 168th Street",
+        "house_number": "14432",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14432 Southwest 168th Street, Richmond West, Florida, United States"
+    },
+    {
+      "lat": 25.605554847014787,
+      "lon": -80.45597746960821,
+      "geoinfo": {
+        "display_name": "Southwest 172nd Street, Miami-Dade County, Florida, 33187, United States",
+        "road": "Southwest 172nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33187",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 172nd Street, Richmond West, 33187 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:14.827444+00:00",
+  "_kind": "geo_samples"
+}

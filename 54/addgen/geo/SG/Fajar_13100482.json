@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Fajar",
+  "geonameid": 13100482,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3529872634815057,
+      "lon": 103.75146499005103,
+      "geoinfo": {
+        "display_name": "Bukit Batok Street 52, Bukit Gombak, Bukit Batok, Southwest, Singapore, 650528, Singapore",
+        "road": "Bukit Batok Street 52",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bukit Batok",
+        "city_district": "Southwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "650528",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Bukit Batok Street 52, Bukit Gombak, Bukit Batok, Southwest, Singapore, 650528, Singapore"
+    },
+    {
+      "lat": 1.3804213103340823,
+      "lon": 103.81079989248936,
+      "geoinfo": {
+        "display_name": "Upper Peirce Reservoir, Central Water Catchment, Northwest, Singapore, 787478, Singapore",
+        "road": "Upper Peirce Reservoir",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Central Water Catchment",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "787478",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "436, Upper Peirce Reservoir, Central Water Catchment, Northwest, Singapore, 787478, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:57:27.971074+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stadtallendorf",
+  "geonameid": 2829804,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.8577026245734,
+      "lon": 8.973084668813112,
+      "geoinfo": {
+        "display_name": "K 14, Emsdorf, Kirchhain, Landkreis Marburg-Biedenkopf, Hesse, 35274, Germany",
+        "road": "K 14",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emsdorf",
+        "state": "Hesse",
+        "postcode": "35274",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 14, Stadtallendorf, Hesse, Germany"
+    },
+    {
+      "lat": 50.801580326437275,
+      "lon": 8.978441479090932,
+      "geoinfo": {
+        "display_name": "B 62, Amöneburg, Landkreis Marburg-Biedenkopf, Hesse, 35287, Germany",
+        "road": "B 62",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amöneburg",
+        "state": "Hesse",
+        "postcode": "35287",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 62, Stadtallendorf, 35287 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:38.550685+00:00",
+  "_kind": "geo_samples"
+}

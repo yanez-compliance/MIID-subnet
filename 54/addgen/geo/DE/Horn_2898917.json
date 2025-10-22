@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Horn",
+  "geonameid": 2898917,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.56640770765042,
+      "lon": 10.115422122161647,
+      "geoinfo": {
+        "display_name": "A 24, Billstedt, Hamburg-Mitte, Hamburg, 22119, Germany",
+        "road": "A 24",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Billstedt",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22119",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 24, Horn, Germany"
+    },
+    {
+      "lat": 53.54615967621696,
+      "lon": 10.066870372528303,
+      "geoinfo": {
+        "display_name": "Tierheim Süderstraße, 25, Neue Süderstraße, Hamm, Hamburg-Mitte, Hamburg, 20537, Germany",
+        "road": "Neue Süderstraße",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Hamm",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20537",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Tierheim Süderstraße, 25, Neue Süderstraße, Hamm, Hamburg-Mitte, Hamburg, 20537, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:04.541721+00:00",
+  "_kind": "geo_samples"
+}

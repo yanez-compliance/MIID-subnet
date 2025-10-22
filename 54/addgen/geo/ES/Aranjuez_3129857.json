@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Aranjuez",
+  "geonameid": 3129857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.026607460904316,
+      "lon": -3.584947654771426,
+      "geoinfo": {
+        "display_name": "Calle Parque Güell, La Música, Valdelascasas, Aranjuez, Community of Madrid, 28300, Spain",
+        "road": "Calle Parque Güell",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aranjuez",
+        "state": "Community of Madrid",
+        "postcode": "28300",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Parque Güell, Aranjuez, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.03663302789714,
+      "lon": -3.6542296009445914,
+      "geoinfo": {
+        "display_name": "Las Picaronas, Seseña, Toledo, Castile-La Mancha, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seseña",
+        "state": "Castile-La Mancha",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "667, Las Picaronas, Seseña, Toledo, 68592 Castile-La Mancha, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:12.855262+00:00",
+  "_kind": "geo_samples"
+}

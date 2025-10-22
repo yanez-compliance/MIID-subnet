@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Takoma Park",
+  "geonameid": 4370890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.98613001690685,
+      "lon": -77.02115336826022,
+      "geoinfo": {
+        "display_name": "Pavilion 4, 7713, Chicago Avenue, Takoma Park, Montgomery County, Maryland, 20912, United States",
+        "road": "Chicago Avenue",
+        "house_number": "7713",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Takoma Park",
+        "state": "Maryland",
+        "postcode": "20912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7713 Chicago Avenue, Takoma Park, Maryland, United States"
+    },
+    {
+      "lat": 38.96716941284619,
+      "lon": -77.00024107233659,
+      "geoinfo": {
+        "display_name": "Sheridan Street, Hampshire Knolls, Chillum, Prince George's County, Maryland, 20783, United States",
+        "road": "Sheridan Street",
+        "house_number": null,
+        "neighbourhood": "Hampshire Knolls",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chillum",
+        "state": "Maryland",
+        "postcode": "20783",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "285, Sheridan Street, Hampshire Knolls, Chillum, Prince George's County, Maryland, 20783, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:59.803140+00:00",
+  "_kind": "geo_samples"
+}

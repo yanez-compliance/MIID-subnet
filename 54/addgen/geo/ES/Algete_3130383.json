@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Algete",
+  "geonameid": 3130383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.598995884053956,
+      "lon": -3.514684644407633,
+      "geoinfo": {
+        "display_name": "Polideportivo Duque de Algete, M-103, Algete, Community of Madrid, 28110, Spain",
+        "road": "M-103",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Algete",
+        "state": "Community of Madrid",
+        "postcode": "28110",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-103, Algete, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.63009216889326,
+      "lon": -3.5071555233321487,
+      "geoinfo": {
+        "display_name": "Calle Río Ibor, Fuente el Saz de Jarama, Community of Madrid, 28140, Spain",
+        "road": "Calle Río Ibor",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuente el Saz de Jarama",
+        "state": "Community of Madrid",
+        "postcode": "28140",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "967, Calle Río Ibor, Fuente el Saz de Jarama, Community of Madrid, 28140, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:36.024965+00:00",
+  "_kind": "geo_samples"
+}

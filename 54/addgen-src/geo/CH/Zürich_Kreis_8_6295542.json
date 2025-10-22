@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 8)",
+  "geonameid": 6295542,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.31512117981309,
+      "lon": 8.544598355447842,
+      "geoinfo": {
+        "display_name": "22, Im Broelberg, Broëlberg Park, Kilchberg (ZH), Bezirk Horgen, Zurich, 8802, Switzerland",
+        "road": "Im Broelberg",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kilchberg (ZH)",
+        "state": "Zurich",
+        "postcode": "8802",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "22, Im Broelberg, Broëlberg Park, Kilchberg (ZH), Bezirk Horgen, Zurich, 8802, Switzerland"
+    },
+    {
+      "lat": 47.37320836587901,
+      "lon": 8.62027517774619,
+      "geoinfo": {
+        "display_name": "Sängglenweg, Pfaffhausen, Fällanden, Bezirk Uster, Zurich, 8118, Switzerland",
+        "road": "Sängglenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pfaffhausen",
+        "state": "Zurich",
+        "postcode": "8118",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "000, Sängglenweg, Pfaffhausen, Fällanden, Bezirk Uster, Zurich, 8118, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:22.692699+00:00",
+  "_kind": "geo_samples"
+}

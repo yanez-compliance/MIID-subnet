@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Poyang",
+  "geonameid": 1798548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.020162039362518,
+      "lon": 116.68110220937791,
+      "geoinfo": {
+        "display_name": "Poyang, Poyang County, Shangrao, Jiangxi, 333100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poyang",
+        "state": "Jiangxi",
+        "postcode": "333100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Poyang, Jiangxi, China"
+    },
+    {
+      "lat": 28.977627338950203,
+      "lon": 116.62436448953427,
+      "geoinfo": {
+        "display_name": "Lianhu, Poyang County, Shangrao, Jiangxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lianhu",
+        "state": "Jiangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "416, Lianhu, Poyang County, Shangrao, 68001 Jiangxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:59.616051+00:00",
+  "_kind": "geo_samples"
+}

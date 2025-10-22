@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Francisco",
+  "geonameid": 5391959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.77298638819852,
+      "lon": -122.41055440873167,
+      "geoinfo": {
+        "display_name": "367, 9th Street, West SoMa, South of Market, San Francisco, California, 94103, United States",
+        "road": "9th Street",
+        "house_number": "367",
+        "neighbourhood": "West SoMa",
+        "suburb": "South of Market",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "367 9th Street, San Francisco, California, United States"
+    },
+    {
+      "lat": 37.80244187209904,
+      "lon": -122.395642489444,
+      "geoinfo": {
+        "display_name": "Pier 15, Herb Caen Way..., Telegraph Hill, San Francisco, California, 94111, United States",
+        "road": "Herb Caen Way...",
+        "house_number": null,
+        "neighbourhood": "Telegraph Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pier 15, Herb Caen Way..., Telegraph Hill, San Francisco, California, 94111, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:52.717645+00:00",
+  "_kind": "geo_samples"
+}

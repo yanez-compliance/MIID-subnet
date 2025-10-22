@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shunhe",
+  "geonameid": 1794348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.85564951664315,
+      "lon": 116.50590746235324,
+      "geoinfo": {
+        "display_name": "Feng County, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Feng County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shunhe, Jiangsu, China"
+    },
+    {
+      "lat": 34.847587030664606,
+      "lon": 116.54846684159688,
+      "geoinfo": {
+        "display_name": "S346, Feng County, Xuzhou, Jiangsu, 221000, China",
+        "road": "S346",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Feng County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S346, Feng County, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:09.443863+00:00",
+  "_kind": "geo_samples"
+}

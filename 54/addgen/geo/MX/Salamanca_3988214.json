@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Salamanca",
+  "geonameid": 3988214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.565215509868214,
+      "lon": -101.19692493975901,
+      "geoinfo": {
+        "display_name": "407, Avenida Álvaro Obregón, El Eden 2a Seccion, Salamanca, Guanajuato, 36793, Mexico",
+        "road": "Avenida Álvaro Obregón",
+        "house_number": "407",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salamanca",
+        "state": "Guanajuato",
+        "postcode": "36793",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "407 Avenida Álvaro Obregón, Salamanca, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.547848862302477,
+      "lon": -101.20334688889602,
+      "geoinfo": {
+        "display_name": "Avenida Valle de Santiago, Villas Del Valle, Salamanca, Guanajuato, 36786, Mexico",
+        "road": "Avenida Valle de Santiago",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salamanca",
+        "state": "Guanajuato",
+        "postcode": "36786",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "681, Avenida Valle de Santiago, Villas Del Valle, Salamanca, Guanajuato, 36786, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:53.380338+00:00",
+  "_kind": "geo_samples"
+}

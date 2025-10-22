@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Bandar Tenggara",
+  "geonameid": 7614200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.9130667802366303,
+      "lon": 103.6222571247667,
+      "geoinfo": {
+        "display_name": "Bandar Tenggara, Kota Tinggi, Johor, 81440, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bandar Tenggara",
+        "state": "Johor",
+        "postcode": "81440",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Bandar Tenggara, Johor, Malaysia"
+    },
+    {
+      "lat": 1.844415972518094,
+      "lon": 103.59025685007833,
+      "geoinfo": {
+        "display_name": "Kluang, Johor, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "172, Bandar Tenggara, 84900 Johor, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:41.698014+00:00",
+  "_kind": "geo_samples"
+}

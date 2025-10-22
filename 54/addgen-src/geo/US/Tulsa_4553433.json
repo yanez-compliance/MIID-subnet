@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tulsa",
+  "geonameid": 4553433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.167985122809704,
+      "lon": -95.96884922710346,
+      "geoinfo": {
+        "display_name": "East King Street North, Crutchfield, Tulsa, Tulsa County, Oklahoma, 74110, United States",
+        "road": "East King Street North",
+        "house_number": null,
+        "neighbourhood": "Crutchfield",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulsa",
+        "state": "Oklahoma",
+        "postcode": "74110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East King Street North, Tulsa, Oklahoma, United States"
+    },
+    {
+      "lat": 36.15605001601294,
+      "lon": -95.94413543600942,
+      "geoinfo": {
+        "display_name": "3114, East 3rd Street South, Kendall-Whittier, Tulsa, Tulsa County, Oklahoma, 74104, United States",
+        "road": "East 3rd Street South",
+        "house_number": "3114",
+        "neighbourhood": "Kendall-Whittier",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulsa",
+        "state": "Oklahoma",
+        "postcode": "74104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3114, East 3rd Street South, Kendall-Whittier, Tulsa, Tulsa County, Oklahoma, 74104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:21.857890+00:00",
+  "_kind": "geo_samples"
+}

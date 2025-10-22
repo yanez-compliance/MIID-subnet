@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Quận Ba",
+  "geonameid": 9645086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.733852423141437,
+      "lon": 106.68552744910295,
+      "geoinfo": {
+        "display_name": "Đường số 14, Xã Bình Hưng, Ho Chi Minh City, 72900, Vietnam",
+        "road": "Đường số 14",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Xã Bình Hưng",
+        "city": "Ho Chi Minh City",
+        "state": null,
+        "postcode": "72900",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Đường số 14, Quận Ba, Vietnam"
+    },
+    {
+      "lat": 10.747114115867985,
+      "lon": 106.65064330462162,
+      "geoinfo": {
+        "display_name": "Pham Van Chi, Phường Bình Tiên, Ho Chi Minh City, 73000, Vietnam",
+        "road": "Pham Van Chi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Phường Bình Tiên",
+        "city_district": null,
+        "city": "Ho Chi Minh City",
+        "state": null,
+        "postcode": "73000",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "505, Pham Van Chi, Phường Bình Tiên, Ho Chi Minh City, 73000, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:02.810708+00:00",
+  "_kind": "geo_samples"
+}

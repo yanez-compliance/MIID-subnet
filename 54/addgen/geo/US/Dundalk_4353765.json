@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dundalk",
+  "geonameid": 4353765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.2098827155244,
+      "lon": -76.5402419814576,
+      "geoinfo": {
+        "display_name": "Baltimore Beltway, Hawkins Point, Baltimore, Maryland, 21226, United States",
+        "road": "Baltimore Beltway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Baltimore Beltway, Dundalk, Maryland, United States"
+    },
+    {
+      "lat": 39.2718955906889,
+      "lon": -76.50001853515413,
+      "geoinfo": {
+        "display_name": "501, Westfield Road, Gray Manor, Dundalk, Baltimore County, Maryland, 21222, United States",
+        "road": "Westfield Road",
+        "house_number": "501",
+        "neighbourhood": "Gray Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dundalk",
+        "state": "Maryland",
+        "postcode": "21222",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "501, Westfield Road, Gray Manor, Dundalk, Baltimore County, Maryland, 21222, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:12.215447+00:00",
+  "_kind": "geo_samples"
+}

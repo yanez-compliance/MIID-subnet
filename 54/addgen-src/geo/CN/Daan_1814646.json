@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Da’an",
+  "geonameid": 1814646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.381505991325135,
+      "lon": 106.05606987297733,
+      "geoinfo": {
+        "display_name": "Yongchuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Da’an, Chongqing, China"
+    },
+    {
+      "lat": 29.39494165694787,
+      "lon": 105.99923999008506,
+      "geoinfo": {
+        "display_name": "Da'an, Yongchuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Da'an",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "284, Da'an, Yongchuan District, 56656 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:48.904736+00:00",
+  "_kind": "geo_samples"
+}

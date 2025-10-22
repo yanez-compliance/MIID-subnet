@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Andenne",
+  "geonameid": 2803204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.45945763585277,
+      "lon": 5.132528683664327,
+      "geoinfo": {
+        "display_name": "Rue Saint-Mort - Rue de la Chapelle, Coutisse, Andenne, Namur, Wallonia, 5300, Belgium",
+        "road": "Rue Saint-Mort - Rue de la Chapelle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Andenne",
+        "state": "Namur",
+        "postcode": "5300",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue Saint-Mort - Rue de la Chapelle, Andenne, Namur, Belgium"
+    },
+    {
+      "lat": 50.52820123140098,
+      "lon": 5.067927910665104,
+      "geoinfo": {
+        "display_name": "Rue Mostombe, Landenne, Andenne, Namur, Wallonia, 5300, Belgium",
+        "road": "Rue Mostombe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Andenne",
+        "state": "Namur",
+        "postcode": "5300",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "554, Rue Mostombe, Landenne, Andenne, Namur, Wallonia, 5300, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:46.395911+00:00",
+  "_kind": "geo_samples"
+}

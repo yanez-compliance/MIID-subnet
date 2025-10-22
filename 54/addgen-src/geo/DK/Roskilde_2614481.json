@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Roskilde",
+  "geonameid": 2614481,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 55.65907443258836,
+      "lon": 12.073062405868477,
+      "geoinfo": {
+        "display_name": "990, Strandgade, Sankt Jørgensbjerg, Sankt Agnes Huse, Roskilde, Roskilde Municipality, Region Zealand, 4000, Denmark",
+        "road": "Strandgade",
+        "house_number": "990",
+        "neighbourhood": "Sankt Jørgensbjerg",
+        "suburb": "Sankt Agnes Huse",
+        "city_district": null,
+        "city": "Roskilde",
+        "state": "Region Zealand",
+        "postcode": "4000",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "990 Strandgade, Roskilde, Region Zealand, Denmark"
+    },
+    {
+      "lat": 55.67705501985619,
+      "lon": 12.04737635850833,
+      "geoinfo": {
+        "display_name": "Sankt Hans, Roskilde, Roskilde Municipality, Region Zealand, 4000, Denmark",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sankt Hans",
+        "city_district": null,
+        "city": "Roskilde",
+        "state": "Region Zealand",
+        "postcode": "4000",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Sankt Hans, Roskilde, Region Zealand, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-16T12:58:04.880553+00:00",
+  "_kind": "geo_samples"
+}

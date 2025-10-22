@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Comonfort",
+  "geonameid": 4013094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.761716211210924,
+      "lon": -100.74460474651877,
+      "geoinfo": {
+        "display_name": "Comonfort, Guanajuato, 38207, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guanajuato",
+        "postcode": "38207",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Comonfort, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.703441890166477,
+      "lon": -100.7482549538922,
+      "geoinfo": {
+        "display_name": "La Providencia, Comonfort, Guanajuato, 38202, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Comonfort",
+        "state": "Guanajuato",
+        "postcode": "38202",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "778, La Providencia, Comonfort, Guanajuato, 38202, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:40.235646+00:00",
+  "_kind": "geo_samples"
+}

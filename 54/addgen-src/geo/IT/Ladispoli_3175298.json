@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ladispoli",
+  "geonameid": 3175298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.94507641154658,
+      "lon": 12.09582038390534,
+      "geoinfo": {
+        "display_name": "Cavalcavia Sud, Palo Laziale, Ladispoli, Roma Capitale, Lazio, 00055, Italy",
+        "road": "Cavalcavia Sud",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ladispoli",
+        "state": "Lazio",
+        "postcode": "00055",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Cavalcavia Sud, Ladispoli, Lazio, Italy"
+    },
+    {
+      "lat": 41.986069975936786,
+      "lon": 12.08358180676352,
+      "geoinfo": {
+        "display_name": "Via Verdiano Garbini, Fontana Ficona, Cerveteri, Roma Capitale, Lazio, 00052, Italy",
+        "road": "Via Verdiano Garbini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fontana Ficona",
+        "city_district": null,
+        "city": "Cerveteri",
+        "state": "Lazio",
+        "postcode": "00052",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "268, Via Verdiano Garbini, Fontana Ficona, Cerveteri, Roma Capitale, Lazio, 00052, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:27.805162+00:00",
+  "_kind": "geo_samples"
+}

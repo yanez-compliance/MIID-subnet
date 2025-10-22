@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middletown",
+  "geonameid": 4518264,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.52484245109362,
+      "lon": -84.34452425540155,
+      "geoinfo": {
+        "display_name": "4680, Manchester Road, Manchester Meadows, Middletown, Butler County, Ohio, 45042, United States",
+        "road": "Manchester Road",
+        "house_number": "4680",
+        "neighbourhood": "Manchester Meadows",
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Ohio",
+        "postcode": "45042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4680 Manchester Road, Middletown, Ohio, United States"
+    },
+    {
+      "lat": 39.5298818114594,
+      "lon": -84.35204627992883,
+      "geoinfo": {
+        "display_name": "1795, Schirm Drive, Middletown, Butler County, Ohio, 45042, United States",
+        "road": "Schirm Drive",
+        "house_number": "1795",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Ohio",
+        "postcode": "45042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1795, Schirm Drive, Middletown, Butler County, Ohio, 45042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:23.154666+00:00",
+  "_kind": "geo_samples"
+}

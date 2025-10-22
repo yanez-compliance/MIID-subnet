@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ciutat Vella",
+  "geonameid": 6544106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.39272610274748,
+      "lon": 2.1466170663213138,
+      "geoinfo": {
+        "display_name": "265-275, Carrer de Villarroel, l'Antiga Esquerra de l'Eixample, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08029, Spain",
+        "road": "Carrer de Villarroel",
+        "house_number": "265-275",
+        "neighbourhood": null,
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08029",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "265-275 Carrer de Villarroel, Ciutat Vella, Catalonia, Spain"
+    },
+    {
+      "lat": 41.41361792138691,
+      "lon": 2.1896170069165737,
+      "geoinfo": {
+        "display_name": "658, Carrer de Mallorca, el Clot, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08027, Spain",
+        "road": "Carrer de Mallorca",
+        "house_number": "658",
+        "neighbourhood": null,
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08027",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "658, Carrer de Mallorca, el Clot, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08027, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:59.122173+00:00",
+  "_kind": "geo_samples"
+}

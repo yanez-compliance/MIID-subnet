@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Prince Albert",
+  "geonameid": 6113335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.21181776690811,
+      "lon": -105.74898897810147,
+      "geoinfo": {
+        "display_name": "Northern Woods & Water Route, Prince Albert, Saskatchewan, S6V 2K2, Canada",
+        "road": "Northern Woods & Water Route",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prince Albert",
+        "state": "Saskatchewan",
+        "postcode": "S6V 2K2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Northern Woods & Water Route, Prince Albert, Saskatchewan, Canada"
+    },
+    {
+      "lat": 53.21132357702138,
+      "lon": -105.8285822047523,
+      "geoinfo": {
+        "display_name": "Cl Marshall Road, Buckland No. 491, Saskatchewan, S6V 4B2, Canada",
+        "road": "Cl Marshall Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saskatchewan",
+        "postcode": "S6V 4B2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Cl Marshall Road, Buckland No. 491, Saskatchewan, S6V 4B2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:56.275830+00:00",
+  "_kind": "geo_samples"
+}

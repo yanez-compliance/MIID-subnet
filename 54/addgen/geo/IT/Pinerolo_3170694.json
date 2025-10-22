@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pinerolo",
+  "geonameid": 3170694,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.92151572188915,
+      "lon": 7.334930970894782,
+      "geoinfo": {
+        "display_name": "Bocchetto, Roletto, Turin, Piedmont, 10064, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roletto",
+        "state": "Piedmont",
+        "postcode": "10064",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Pinerolo, Piedmont, Italy"
+    },
+    {
+      "lat": 44.92118950847362,
+      "lon": 7.333183908561094,
+      "geoinfo": {
+        "display_name": "Via Ariosto, Bocchetto, Roletto, Turin, Piedmont, 10064, Italy",
+        "road": "Via Ariosto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roletto",
+        "state": "Piedmont",
+        "postcode": "10064",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "718, Via Ariosto, Bocchetto, Roletto, Turin, Piedmont, 10064, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:03.796977+00:00",
+  "_kind": "geo_samples"
+}

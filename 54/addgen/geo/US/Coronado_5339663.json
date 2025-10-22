@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coronado",
+  "geonameid": 5339663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.669194450044536,
+      "lon": -117.18358816786589,
+      "geoinfo": {
+        "display_name": "San Diego, San Diego County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coronado, California, United States"
+    },
+    {
+      "lat": 32.684837389467035,
+      "lon": -117.15933301226411,
+      "geoinfo": {
+        "display_name": "San Diego-Coronado Bridge, Barrio Logan, Coronado, San Diego County, California, 92155, United States",
+        "road": "San Diego-Coronado Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barrio Logan",
+        "city_district": null,
+        "city": "Coronado",
+        "state": "California",
+        "postcode": "92155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "296, San Diego-Coronado Bridge, Barrio Logan, Coronado, San Diego County, California, 92155, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:40.541405+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weiterstadt",
+  "geonameid": 2811644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.91244959901179,
+      "lon": 8.567524550503332,
+      "geoinfo": {
+        "display_name": "Im Bremee, Braunshardt, Weiterstadt, Landkreis Darmstadt-Dieburg, Hesse, 64331, Germany",
+        "road": "Im Bremee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Braunshardt",
+        "state": "Hesse",
+        "postcode": "64331",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Im Bremee, Weiterstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.91241065830018,
+      "lon": 8.651100990552164,
+      "geoinfo": {
+        "display_name": "Alter Wixhäuser Weg, Glockengarten, Arheilgen, Darmstadt, Hesse, 64291, Germany",
+        "road": "Alter Wixhäuser Weg",
+        "house_number": null,
+        "neighbourhood": "Glockengarten",
+        "suburb": "Arheilgen",
+        "city_district": null,
+        "city": "Darmstadt",
+        "state": "Hesse",
+        "postcode": "64291",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "584, Alter Wixhäuser Weg, Glockengarten, Arheilgen, Darmstadt, Hesse, 64291, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:45.524723+00:00",
+  "_kind": "geo_samples"
+}

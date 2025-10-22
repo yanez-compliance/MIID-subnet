@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guozhen",
+  "geonameid": 1809263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.34552817559112,
+      "lon": 107.33723974110059,
+      "geoinfo": {
+        "display_name": "Chencang District, Baoji, Shaanxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chencang District",
+        "state": "Shaanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Guozhen, Shaanxi, China"
+    },
+    {
+      "lat": 34.36784074803348,
+      "lon": 107.30492332849478,
+      "geoinfo": {
+        "display_name": "Chencang District, Baoji, Shaanxi, 721004, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chencang District",
+        "state": "Shaanxi",
+        "postcode": "721004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "186, Chencang District, Baoji, Shaanxi, 721004, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:34.285340+00:00",
+  "_kind": "geo_samples"
+}

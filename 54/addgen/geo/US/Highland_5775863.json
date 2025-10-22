@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Highland",
+  "geonameid": 5775863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.46462631897539,
+      "lon": -111.7673336792451,
+      "geoinfo": {
+        "display_name": "Alpine, Utah County, Utah, 84004, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alpine",
+        "state": "Utah",
+        "postcode": "84004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Highland, Utah, United States"
+    },
+    {
+      "lat": 40.41429509378919,
+      "lon": -111.77726148780552,
+      "geoinfo": {
+        "display_name": "North Limestone Way, Highland, Utah County, Utah, 84003, United States",
+        "road": "North Limestone Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Highland",
+        "state": "Utah",
+        "postcode": "84003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "364, North Limestone Way, Highland, Utah County, Utah, 84003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:08.961639+00:00",
+  "_kind": "geo_samples"
+}

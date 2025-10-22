@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Logan",
+  "geonameid": 5777544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.75091436824302,
+      "lon": -111.79632060511348,
+      "geoinfo": {
+        "display_name": "1532, 1100 North, Hillcrest Neighborhood, Logan, Cache County, Utah, 84341, United States",
+        "road": "1100 North",
+        "house_number": "1532",
+        "neighbourhood": "Hillcrest Neighborhood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Logan",
+        "state": "Utah",
+        "postcode": "84341",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1532 1100 North, Logan, Utah, United States"
+    },
+    {
+      "lat": 41.73165796147284,
+      "lon": -111.84565335557463,
+      "geoinfo": {
+        "display_name": "403, Center Street, Logan, Cache County, Utah, 84321, United States",
+        "road": "Center Street",
+        "house_number": "403",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Logan",
+        "state": "Utah",
+        "postcode": "84321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "403, Center Street, Logan, Cache County, Utah, 84321, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:27.525982+00:00",
+  "_kind": "geo_samples"
+}

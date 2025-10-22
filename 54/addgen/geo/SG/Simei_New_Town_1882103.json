@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Simei New Town",
+  "geonameid": 1882103,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3491230130182725,
+      "lon": 103.98812922822968,
+      "geoinfo": {
+        "display_name": "F60, Changi Airport Connector, Singapur East, Changi, Southeast, Singapore, 819659, Singapore",
+        "road": "Changi Airport Connector",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Changi",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "819659",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "F60, Changi Airport Connector, Singapur East, Changi, Southeast, Singapore, 819659, Singapore"
+    },
+    {
+      "lat": 1.3857635396874275,
+      "lon": 103.95348462893391,
+      "geoinfo": {
+        "display_name": "Pit 27, Tampines Park Connector, Singapur East, Pasir Ris, Northeast, Singapore, 519599, Singapore",
+        "road": "Tampines Park Connector",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Pasir Ris",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "519599",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Pit 27, Tampines Park Connector, Singapur East, Pasir Ris, Northeast, Singapore, 519599, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:00.726467+00:00",
+  "_kind": "geo_samples"
+}

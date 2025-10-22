@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Budapest XII. kerület",
+  "geonameid": 7284823,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.508772313431166,
+      "lon": 18.968059916262614,
+      "geoinfo": {
+        "display_name": "Rózsaház Gyógypedagógiai Waldorf Iskola, 53/b, Mátyás király út, Zugliget, 12th district, Budapest, Central Hungary, 1125, Hungary",
+        "road": "Mátyás király út",
+        "house_number": "53/b",
+        "neighbourhood": null,
+        "suburb": "Zugliget",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1125",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "53/b Mátyás király út, Budapest XII. kerület, Hungary"
+    },
+    {
+      "lat": 47.486265517283094,
+      "lon": 18.966156534222716,
+      "geoinfo": {
+        "display_name": "Szélső utca, Csillebérci Üdülőtelep, Csillebérc, 12th district, Budapest, Central Hungary, 1121, Hungary",
+        "road": "Szélső utca",
+        "house_number": null,
+        "neighbourhood": "Csillebérci Üdülőtelep",
+        "suburb": "Csillebérc",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1121",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "Szélső utca, Csillebérci Üdülőtelep, Csillebérc, 12th district, Budapest, Central Hungary, 1121, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:42.918864+00:00",
+  "_kind": "geo_samples"
+}

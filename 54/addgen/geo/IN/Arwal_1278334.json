@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Arwal",
+  "geonameid": 1278334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.27845926393096,
+      "lon": 84.64847443475671,
+      "geoinfo": {
+        "display_name": "Sahar, Bhojpur, Bihar, 804402, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sahar",
+        "state": "Bihar",
+        "postcode": "804402",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Arwal, Bihar, India"
+    },
+    {
+      "lat": 25.255624577140484,
+      "lon": 84.69396480795005,
+      "geoinfo": {
+        "display_name": "Karpi, Arwal, Bihar, 804426, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "804426",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "333, Karpi, Arwal, Bihar, 804426, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:33.035444+00:00",
+  "_kind": "geo_samples"
+}

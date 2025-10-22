@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fordham",
+  "geonameid": 5117549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.884328328794126,
+      "lon": -73.93431492058465,
+      "geoinfo": {
+        "display_name": "Englewood Cliffs, Bergen County, New Jersey, 07632, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Englewood Cliffs",
+        "state": "New Jersey",
+        "postcode": "07632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fordham, New Jersey, United States"
+    },
+    {
+      "lat": 40.82392504075117,
+      "lon": -73.88623529567322,
+      "geoinfo": {
+        "display_name": "Bronx River Greenway, The Bronx, Bronx County, New York, 10459, United States",
+        "road": "Bronx River Greenway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10459",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "919, Bronx River Greenway, The Bronx, Bronx County, New York, 10459, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:32.569790+00:00",
+  "_kind": "geo_samples"
+}

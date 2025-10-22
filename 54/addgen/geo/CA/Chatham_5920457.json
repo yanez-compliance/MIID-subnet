@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Chatham",
+  "geonameid": 5920457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.41993411282754,
+      "lon": -82.14976341661199,
+      "geoinfo": {
+        "display_name": "Park Avenue East, Chatham, Chatham-Kent, Southwestern Ontario, Ontario, N7M 5J4, Canada",
+        "road": "Park Avenue East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chatham",
+        "state": "Ontario",
+        "postcode": "N7M 5J4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Park Avenue East, Chatham, Ontario, Canada"
+    },
+    {
+      "lat": 42.386216442116506,
+      "lon": -82.21511005396677,
+      "geoinfo": {
+        "display_name": "Irwin Street, Chatham, Chatham-Kent, Southwestern Ontario, Ontario, N7L 1C5, Canada",
+        "road": "Irwin Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chatham",
+        "state": "Ontario",
+        "postcode": "N7L 1C5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Irwin Street, Chatham, Chatham-Kent, Southwestern Ontario, Ontario, N7L 1C5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:18.351208+00:00",
+  "_kind": "geo_samples"
+}

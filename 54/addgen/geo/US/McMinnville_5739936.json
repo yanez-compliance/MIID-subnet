@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McMinnville",
+  "geonameid": 5739936,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.20622239721857,
+      "lon": -123.18618728890767,
+      "geoinfo": {
+        "display_name": "Southeast Brooks Street, McMinnville, Yamhill County, Oregon, 97128, United States",
+        "road": "Southeast Brooks Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McMinnville",
+        "state": "Oregon",
+        "postcode": "97128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southeast Brooks Street, McMinnville, Oregon, United States"
+    },
+    {
+      "lat": 45.23881870539026,
+      "lon": -123.21714875429385,
+      "geoinfo": {
+        "display_name": "Northwest Brentano Lane, Yamhill County, Oregon, 97128, United States",
+        "road": "Northwest Brentano Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "232, Northwest Brentano Lane, Yamhill County, Oregon, 97128, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:29.694217+00:00",
+  "_kind": "geo_samples"
+}

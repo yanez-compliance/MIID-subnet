@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "el Camp de l'Arpa del Clot",
+  "geonameid": 11549795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.41592504346151,
+      "lon": 2.1840437182869983,
+      "geoinfo": {
+        "display_name": "100-98, Carrer de Trinxant, el Camp de l'Arpa del Clot, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08026, Spain",
+        "road": "Carrer de Trinxant",
+        "house_number": "100-98",
+        "neighbourhood": "el Camp de l'Arpa del Clot",
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08026",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "100-98 Carrer de Trinxant, el Camp de l'Arpa del Clot, Catalonia, Spain"
+    },
+    {
+      "lat": 41.4093422960296,
+      "lon": 2.1511825297431524,
+      "geoinfo": {
+        "display_name": "235, Carrer de Verdi, la Salut, Barcelona, Barcelonès, Barcelona, Catalonia, 08023, Spain",
+        "road": "Carrer de Verdi",
+        "house_number": "235",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08023",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "235, Carrer de Verdi, la Salut, Barcelona, Barcelonès, Barcelona, Catalonia, 08023, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:55.550977+00:00",
+  "_kind": "geo_samples"
+}

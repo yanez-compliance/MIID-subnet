@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dormagen",
+  "geonameid": 2935825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.120954727420525,
+      "lon": 6.782803247495748,
+      "geoinfo": {
+        "display_name": "35, Am Sülzhof, Delrath, Dormagen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41542, Germany",
+        "road": "Am Sülzhof",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dormagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41542",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "35 Am Sülzhof, Dormagen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.1098756799179,
+      "lon": 6.847179169483687,
+      "geoinfo": {
+        "display_name": "Wiesenstraße, Rheinfeld, Dormagen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41539, Germany",
+        "road": "Wiesenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dormagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41539",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "200, Wiesenstraße, Rheinfeld, Dormagen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41539, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:25.102859+00:00",
+  "_kind": "geo_samples"
+}

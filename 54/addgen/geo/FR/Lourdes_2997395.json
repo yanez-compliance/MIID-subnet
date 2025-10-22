@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lourdes",
+  "geonameid": 2997395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.06453185758777,
+      "lon": -0.04412755317057304,
+      "geoinfo": {
+        "display_name": "2, Route d'Argelès, Viger, Argelès-Gazost, Hautes Pyrenees, Occitania, Metropolitan France, 65100, France",
+        "road": "Route d'Argelès",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viger",
+        "state": "Occitania",
+        "postcode": "65100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "2 Route d'Argelès, Lourdes, Occitania, France"
+    },
+    {
+      "lat": 43.13875949285494,
+      "lon": -0.04275659363644544,
+      "geoinfo": {
+        "display_name": "Bois Darré, Adé, Argelès-Gazost, Hautes Pyrenees, Occitania, Metropolitan France, 65100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adé",
+        "state": "Occitania",
+        "postcode": "65100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "181, Bois Darré, Adé, Argelès-Gazost, Hautes Pyrenees, Occitania, Metropolitan France, 65100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:07.748114+00:00",
+  "_kind": "geo_samples"
+}

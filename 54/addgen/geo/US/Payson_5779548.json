@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Payson",
+  "geonameid": 5779548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.060541832400936,
+      "lon": -111.69990403792416,
+      "geoinfo": {
+        "display_name": "Payson, Utah County, Utah, 84651, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Payson",
+        "state": "Utah",
+        "postcode": "84651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Payson, Utah, United States"
+    },
+    {
+      "lat": 40.05099414424843,
+      "lon": -111.72782399043663,
+      "geoinfo": {
+        "display_name": "Barnett School, East 500 North Street, Payson, Utah County, Utah, 84651, United States",
+        "road": "East 500 North Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Payson",
+        "state": "Utah",
+        "postcode": "84651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Barnett School, East 500 North Street, Payson, Utah County, Utah, 84651, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:00.906454+00:00",
+  "_kind": "geo_samples"
+}

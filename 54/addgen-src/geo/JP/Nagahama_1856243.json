@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Nagahama",
+  "geonameid": 1856243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.35354275324276,
+      "lon": 136.22808613855645,
+      "geoinfo": {
+        "display_name": "Nagahama, Shiga Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nagahama",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nagahama, Japan"
+    },
+    {
+      "lat": 35.41127640883719,
+      "lon": 136.25729186008232,
+      "geoinfo": {
+        "display_name": "Sonecho, 虎姫町, Nagahama, Shiga Prefecture, 526-0021, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "虎姫町",
+        "city_district": null,
+        "city": "Nagahama",
+        "state": null,
+        "postcode": "526-0021",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sonecho, 虎姫町, Nagahama, Shiga Prefecture, 526-0021, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:19.473286+00:00",
+  "_kind": "geo_samples"
+}

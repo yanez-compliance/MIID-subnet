@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Martinsburg",
+  "geonameid": 4813878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.4397011613277,
+      "lon": -77.91329686420494,
+      "geoinfo": {
+        "display_name": "2453, Golf Course Road, Van Clevesville, Winebrenners Crossroad, Berkeley County, West Virginia, 25405, United States",
+        "road": "Golf Course Road",
+        "house_number": "2453",
+        "neighbourhood": "Van Clevesville",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "West Virginia",
+        "postcode": "25405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2453 Golf Course Road, Martinsburg, West Virginia, United States"
+    },
+    {
+      "lat": 39.45862021414138,
+      "lon": -77.93276384877683,
+      "geoinfo": {
+        "display_name": "118, Universe Drive, Wildflower Ridge, Berkeley County, West Virginia, 25404, United States",
+        "road": "Universe Drive",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "West Virginia",
+        "postcode": "25404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118, Universe Drive, Wildflower Ridge, Berkeley County, West Virginia, 25404, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:18.829028+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Kumla",
+  "geonameid": 2698767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.15632707487017,
+      "lon": 15.118252971956768,
+      "geoinfo": {
+        "display_name": "Västra Ekeby, Kumla kommun, Örebro County, 692 71, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "692 71",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Kumla, Sweden"
+    },
+    {
+      "lat": 59.15238732954801,
+      "lon": 15.084546536281803,
+      "geoinfo": {
+        "display_name": "Hörstabacken, Kumla kommun, Örebro County, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "031, Hörstabacken, Kumla kommun, 58414 Örebro County, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T09:48:43.557419+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Medina",
+  "geonameid": 3996299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.15830797264791,
+      "lon": -101.62438143104703,
+      "geoinfo": {
+        "display_name": "La Huerta, León, Guanajuato, 37210, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "León",
+        "state": "Guanajuato",
+        "postcode": "37210",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Medina, Guanajuato, Mexico"
+    },
+    {
+      "lat": 21.188599316408048,
+      "lon": -101.6350900072295,
+      "geoinfo": {
+        "display_name": "Presa Del Riego, Ibarrilla, León, Guanajuato, 37207, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ibarrilla",
+        "state": "Guanajuato",
+        "postcode": "37207",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "425, Presa Del Riego, Ibarrilla, León, Guanajuato, 37207, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:24.682291+00:00",
+  "_kind": "geo_samples"
+}

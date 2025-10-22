@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Longmeadow",
+  "geonameid": 4935434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.07938949529574,
+      "lon": -72.53684298173368,
+      "geoinfo": {
+        "display_name": "31, Van Dyke Road, East Longmeadow, Hampden County, Massachusetts, 01118, United States",
+        "road": "Van Dyke Road",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Longmeadow",
+        "state": "Massachusetts",
+        "postcode": "01118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31 Van Dyke Road, East Longmeadow, Massachusetts, United States"
+    },
+    {
+      "lat": 42.096141189798395,
+      "lon": -72.53298811960578,
+      "geoinfo": {
+        "display_name": "8, Maxwell Place, East Forest Park, Springfield, Hampden County, Massachusetts, 01118, United States",
+        "road": "Maxwell Place",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Massachusetts",
+        "postcode": "01118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8, Maxwell Place, East Forest Park, Springfield, Hampden County, Massachusetts, 01118, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:23.051631+00:00",
+  "_kind": "geo_samples"
+}

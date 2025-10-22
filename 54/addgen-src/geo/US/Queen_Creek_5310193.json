@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Queen Creek",
+  "geonameid": 5310193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.258487498805536,
+      "lon": -111.63120077678897,
+      "geoinfo": {
+        "display_name": "21008, East Twin Acres Drive, Queenland Manor, Queen Creek, Maricopa County, Arizona, 85142, United States",
+        "road": "East Twin Acres Drive",
+        "house_number": "21008",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Queen Creek",
+        "state": "Arizona",
+        "postcode": "85142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21008 East Twin Acres Drive, Queen Creek, Arizona, United States"
+    },
+    {
+      "lat": 33.23445090649964,
+      "lon": -111.63848085187264,
+      "geoinfo": {
+        "display_name": "20655, East Chandler Heights Road, Maricopa County, Arizona, 85142, United States",
+        "road": "East Chandler Heights Road",
+        "house_number": "20655",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20655, East Chandler Heights Road, Maricopa County, Arizona, 85142, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:30.828745+00:00",
+  "_kind": "geo_samples"
+}

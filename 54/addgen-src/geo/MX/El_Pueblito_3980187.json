@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "El Pueblito",
+  "geonameid": 3980187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.513792749091053,
+      "lon": -100.44200718565173,
+      "geoinfo": {
+        "display_name": "La Joyita, Camino a la Joya, Condominio Santa Elvia, Santa Barbara, Corregidora, Querétaro, 76925, Mexico",
+        "road": "Camino a la Joya",
+        "house_number": null,
+        "neighbourhood": "Condominio Santa Elvia",
+        "suburb": "Santa Barbara",
+        "city_district": null,
+        "city": "Corregidora",
+        "state": "Querétaro",
+        "postcode": "76925",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino a la Joya, El Pueblito, Querétaro, Mexico"
+    },
+    {
+      "lat": 20.56973465762914,
+      "lon": -100.40956786200131,
+      "geoinfo": {
+        "display_name": "Boulevard Hacienda del Jacal, Querétaro, Municipio de Querétaro, Querétaro, 76180, Mexico",
+        "road": "Boulevard Hacienda del Jacal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Querétaro",
+        "state": "Querétaro",
+        "postcode": "76180",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "789, Boulevard Hacienda del Jacal, Querétaro, Municipio de Querétaro, Querétaro, 76180, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:31:57.663268+00:00",
+  "_kind": "geo_samples"
+}

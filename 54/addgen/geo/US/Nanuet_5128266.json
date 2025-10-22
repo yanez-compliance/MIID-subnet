@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nanuet",
+  "geonameid": 5128266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.10675578735814,
+      "lon": -73.99657837894307,
+      "geoinfo": {
+        "display_name": "207, State Highway 304, Bardonia, Town of Clarkstown, Rockland County, New York, 10954, United States",
+        "road": "State Highway 304",
+        "house_number": "207",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bardonia",
+        "state": "New York",
+        "postcode": "10954",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "207 State Highway 304, Nanuet, New York, United States"
+    },
+    {
+      "lat": 41.082612697653936,
+      "lon": -73.96058215756892,
+      "geoinfo": {
+        "display_name": "Pine View Road, West Nyack, Town of Clarkstown, Rockland County, New York, 10994, United States",
+        "road": "Pine View Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Nyack",
+        "state": "New York",
+        "postcode": "10994",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "181, Pine View Road, West Nyack, Town of Clarkstown, Rockland County, New York, 10994, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:10.653197+00:00",
+  "_kind": "geo_samples"
+}

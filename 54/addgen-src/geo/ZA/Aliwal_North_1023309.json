@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Aliwal North",
+  "geonameid": 1023309,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -30.69940148334648,
+      "lon": 26.707887778910514,
+      "geoinfo": {
+        "display_name": "Aliwal North Hospital, 1, Somerset Street, Maletswai Ward 4, Aliwal North, Maletswai Local Municipality, Joe Gqabi District Municipality, Eastern Cape, 9750, South Africa",
+        "road": "Somerset Street",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Maletswai Ward 4",
+        "city_district": null,
+        "city": "Maletswai Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": "9750",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "1 Somerset Street, Aliwal North, Eastern Cape, South Africa"
+    },
+    {
+      "lat": -30.70685712194458,
+      "lon": 26.72977367197965,
+      "geoinfo": {
+        "display_name": "Maletswai Ward 4, Aliwal North, Maletswai Local Municipality, Joe Gqabi District Municipality, Eastern Cape, 9750, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maletswai Ward 4",
+        "city_district": null,
+        "city": "Maletswai Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": "9750",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Maletswai Ward 4, Aliwal North, Maletswai Local Municipality, Joe Gqabi District Municipality, Eastern Cape, 9750, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:59.660567+00:00",
+  "_kind": "geo_samples"
+}

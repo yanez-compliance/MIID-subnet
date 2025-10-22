@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Athis-Mons",
+  "geonameid": 3036460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.72013735898485,
+      "lon": 2.3808098636689534,
+      "geoinfo": {
+        "display_name": "Rue de la Travée, Orly Parc Centre, Acacias, Athis-Mons, Palaiseau, Essonne, Metropolitan France, 91200, France",
+        "road": "Rue de la Travée",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athis-Mons",
+        "state": null,
+        "postcode": "91200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de la Travée, Athis-Mons, 76799 Ile-de-France, France"
+    },
+    {
+      "lat": 48.72791737896435,
+      "lon": 2.371624992852108,
+      "geoinfo": {
+        "display_name": "Orly 4, Rue de Séville, Paray-Vieille-Poste, Palaiseau, Essonne, Metropolitan France, 94390, France",
+        "road": "Rue de Séville",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paray-Vieille-Poste",
+        "state": null,
+        "postcode": "94390",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Orly 4, Rue de Séville, Paray-Vieille-Poste, Palaiseau, Essonne, Metropolitan France, 94390, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:01.559928+00:00",
+  "_kind": "geo_samples"
+}

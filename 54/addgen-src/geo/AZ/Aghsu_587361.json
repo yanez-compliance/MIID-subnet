@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Aghsu",
+  "geonameid": 587361,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.54817597122143,
+      "lon": 48.447926360270266,
+      "geoinfo": {
+        "display_name": "Agsu District, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Aghsu, Azerbaijan"
+    },
+    {
+      "lat": 40.58713827011273,
+      "lon": 48.413411904087866,
+      "geoinfo": {
+        "display_name": "Bakı-Şamaxı-Yevlax yolu, Muğanlı, Agsu District, Azerbaijan",
+        "road": "Bakı-Şamaxı-Yevlax yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muğanlı",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Bakı-Şamaxı-Yevlax yolu, Aghsu, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:39:28.586492+00:00",
+  "_kind": "geo_samples"
+}

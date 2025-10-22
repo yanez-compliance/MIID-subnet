@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Poplar Bluff",
+  "geonameid": 4404233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.77331063212165,
+      "lon": -90.39154298030776,
+      "geoinfo": {
+        "display_name": "1877, Bradley Street, Poplar Bluff, Butler County, Missouri, 63901, United States",
+        "road": "Bradley Street",
+        "house_number": "1877",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poplar Bluff",
+        "state": "Missouri",
+        "postcode": "63901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1877 Bradley Street, Poplar Bluff, Missouri, United States"
+    },
+    {
+      "lat": 36.74965677321508,
+      "lon": -90.3410363645296,
+      "geoinfo": {
+        "display_name": "County Road 604, Poplar Bluff, Butler County, Missouri, 63901, United States",
+        "road": "County Road 604",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poplar Bluff",
+        "state": "Missouri",
+        "postcode": "63901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 604, Poplar Bluff, Butler County, Missouri, 63901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:53.154150+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hartford",
+  "geonameid": 4835797,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.78319316786339,
+      "lon": -72.705017865314,
+      "geoinfo": {
+        "display_name": "1575, Albany Avenue, Watkinson School Historic District, Hartford, Connecticut, 06105, United States",
+        "road": "Albany Avenue",
+        "house_number": "1575",
+        "neighbourhood": "Watkinson School Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hartford",
+        "state": "Connecticut",
+        "postcode": "06105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1575 Albany Avenue, Hartford, Connecticut, United States"
+    },
+    {
+      "lat": 41.78559130092135,
+      "lon": -72.63855179560382,
+      "geoinfo": {
+        "display_name": "94, Mohawk Drive, East Hartford, Capitol Planning Region, Connecticut, 06108, United States",
+        "road": "Mohawk Drive",
+        "house_number": "94",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Hartford",
+        "state": "Connecticut",
+        "postcode": "06108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "94, Mohawk Drive, East Hartford, Capitol Planning Region, Connecticut, 06108, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:09.405576+00:00",
+  "_kind": "geo_samples"
+}

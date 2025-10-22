@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Valencia",
+  "geonameid": 3625549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.17535069641684,
+      "lon": -68.00359851409968,
+      "geoinfo": {
+        "display_name": "Calle 101 Díaz Moreno, Candelaria, Valencia, Parroquia La Candelaria, Municipio Valencia, Carabobo State, 2001, Venezuela",
+        "road": "Calle 101 Díaz Moreno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Carabobo State",
+        "postcode": "2001",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Calle 101 Díaz Moreno, Valencia, Carabobo State, Venezuela"
+    },
+    {
+      "lat": 10.196651314519984,
+      "lon": -68.02129850612279,
+      "geoinfo": {
+        "display_name": "Sabana Larga, Urbanización Valle de Camoruco, Prebo, Valencia, Parroquia San José, Municipio Valencia, Carabobo State, 2001, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sabana Larga",
+        "suburb": "Prebo",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Carabobo State",
+        "postcode": "2001",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "139, Sabana Larga, Urbanización Valle de Camoruco, Prebo, Valencia, Parroquia San José, Municipio Valencia, Carabobo State, 2001, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:09.702321+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oak Lawn",
+  "geonameid": 4904365,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.7094554188849,
+      "lon": -87.71964061785056,
+      "geoinfo": {
+        "display_name": "3925, West 101st Street, Mount Greenwood, Chicago, Lake Township, Cook County, Illinois, 60655, United States",
+        "road": "West 101st Street",
+        "house_number": "3925",
+        "neighbourhood": null,
+        "suburb": "Mount Greenwood",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60655",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3925 West 101st Street, Oak Lawn, Illinois, United States"
+    },
+    {
+      "lat": 41.7184902419503,
+      "lon": -87.71791231774522,
+      "geoinfo": {
+        "display_name": "3848, 96th Street, Evergreen Park, Worth Township, Cook County, Illinois, 60805, United States",
+        "road": "96th Street",
+        "house_number": "3848",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Evergreen Park",
+        "state": "Illinois",
+        "postcode": "60805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3848, 96th Street, Evergreen Park, Worth Township, Cook County, Illinois, 60805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:47.600458+00:00",
+  "_kind": "geo_samples"
+}

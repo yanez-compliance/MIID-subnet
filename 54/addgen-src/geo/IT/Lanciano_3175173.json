@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lanciano",
+  "geonameid": 3175173,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.222961133792744,
+      "lon": 14.346336952110331,
+      "geoinfo": {
+        "display_name": "Via T. Patini, Colle Cerase, Castel Frentano, Chieti, Abruzzo, 66030, Italy",
+        "road": "Via T. Patini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castel Frentano",
+        "state": "Abruzzo",
+        "postcode": "66030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via T. Patini, Lanciano, Abruzzo, Italy"
+    },
+    {
+      "lat": 42.186631547934105,
+      "lon": 14.389968306644526,
+      "geoinfo": {
+        "display_name": "SP92, Villa Elce, Lanciano, Chieti, Abruzzo, 66044, Italy",
+        "road": "SP92",
+        "house_number": null,
+        "neighbourhood": "Villa Elce",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lanciano",
+        "state": "Abruzzo",
+        "postcode": "66044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP92, Villa Elce, Lanciano, Chieti, Abruzzo, 66044, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:29.300910+00:00",
+  "_kind": "geo_samples"
+}

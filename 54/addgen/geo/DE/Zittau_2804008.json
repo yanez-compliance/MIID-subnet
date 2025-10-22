@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Zittau",
+  "geonameid": 2804008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.87313177612702,
+      "lon": 14.79804145691152,
+      "geoinfo": {
+        "display_name": "Lottersteig, Zittau, Olbersdorf, Görlitz, Saxony, 02763, Germany",
+        "road": "Lottersteig",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zittau",
+        "city_district": null,
+        "city": "Zittau",
+        "state": "Saxony",
+        "postcode": "02763",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lottersteig, Zittau, Saxony, Germany"
+    },
+    {
+      "lat": 50.886366291070466,
+      "lon": 14.743520419756052,
+      "geoinfo": {
+        "display_name": "Hintere Dorfstraße, Bertsdorf, Hörnitz, Bertsdorf-Hörnitz, Olbersdorf, Görlitz, Saxony, 02763, Germany",
+        "road": "Hintere Dorfstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bertsdorf",
+        "city_district": null,
+        "city": "Bertsdorf-Hörnitz",
+        "state": "Saxony",
+        "postcode": "02763",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "119, Hintere Dorfstraße, Bertsdorf, Hörnitz, Bertsdorf-Hörnitz, Olbersdorf, Görlitz, Saxony, 02763, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:12.512923+00:00",
+  "_kind": "geo_samples"
+}

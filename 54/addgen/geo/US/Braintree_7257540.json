@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Braintree",
+  "geonameid": 7257540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.22464667462455,
+      "lon": -70.97400566193973,
+      "geoinfo": {
+        "display_name": "118, Edgemont Road, East Braintree, Braintree, Norfolk County, Massachusetts, 02188, United States",
+        "road": "Edgemont Road",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Braintree",
+        "state": "Massachusetts",
+        "postcode": "02188",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118 Edgemont Road, Braintree, Massachusetts, United States"
+    },
+    {
+      "lat": 42.200199211724055,
+      "lon": -70.97437877612708,
+      "geoinfo": {
+        "display_name": "550, Liberty Street, Oak Ridge Estates, East Braintree, Braintree, Norfolk County, Massachusetts, 02184, United States",
+        "road": "Liberty Street",
+        "house_number": "550",
+        "neighbourhood": "Oak Ridge Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Braintree",
+        "state": "Massachusetts",
+        "postcode": "02184",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "550, Liberty Street, Oak Ridge Estates, East Braintree, Braintree, Norfolk County, Massachusetts, 02184, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:19.849437+00:00",
+  "_kind": "geo_samples"
+}

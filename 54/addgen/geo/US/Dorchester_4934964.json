@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dorchester",
+  "geonameid": 4934964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.29322505338244,
+      "lon": -71.05424752333846,
+      "geoinfo": {
+        "display_name": "74, Train Street, Neponset, Dorchester, Boston, Suffolk County, Massachusetts, 02122, United States",
+        "road": "Train Street",
+        "house_number": "74",
+        "neighbourhood": "Neponset",
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "74 Train Street, Dorchester, Massachusetts, United States"
+    },
+    {
+      "lat": 42.31843672916865,
+      "lon": -71.05109366796891,
+      "geoinfo": {
+        "display_name": "Star Market, 45, William T. Morrissey Boulevard, Savin Hill, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States",
+        "road": "William T. Morrissey Boulevard",
+        "house_number": "45",
+        "neighbourhood": "Savin Hill",
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Star Market, 45, William T. Morrissey Boulevard, Savin Hill, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:15.706215+00:00",
+  "_kind": "geo_samples"
+}

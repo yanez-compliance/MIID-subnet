@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Panzos",
+  "geonameid": 3591676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.381316990880586,
+      "lon": -89.65844146181725,
+      "geoinfo": {
+        "display_name": "Carretera del Polochic, Panzós, Alta Verapaz, Guatemala",
+        "road": "Carretera del Polochic",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panzós",
+        "state": "Alta Verapaz",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Carretera del Polochic, Panzos, Alta Verapaz, Guatemala"
+    },
+    {
+      "lat": 15.40198477459087,
+      "lon": -89.6807397486377,
+      "geoinfo": {
+        "display_name": "Panzós, Alta Verapaz, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alta Verapaz",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "792, Panzós, 50595 Alta Verapaz, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:12.797306+00:00",
+  "_kind": "geo_samples"
+}

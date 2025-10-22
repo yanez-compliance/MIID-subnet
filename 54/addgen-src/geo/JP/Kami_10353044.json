@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kami",
+  "geonameid": 10353044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.560426259703505,
+      "lon": 130.7495102262975,
+      "geoinfo": {
+        "display_name": "Kama, Fukuoka Prefecture, 820-0201, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kama",
+        "state": null,
+        "postcode": "820-0201",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kami, Japan"
+    },
+    {
+      "lat": 33.53218122191289,
+      "lon": 130.77022561278343,
+      "geoinfo": {
+        "display_name": "上, Kama, Fukuoka Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kama",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "468, 上, Kama, 05596 Fukuoka Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:01.029808+00:00",
+  "_kind": "geo_samples"
+}

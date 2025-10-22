@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marina",
+  "geonameid": 5370493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.70090263265942,
+      "lon": -121.81596209795285,
+      "geoinfo": {
+        "display_name": "Monterey County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Marina, California, United States"
+    },
+    {
+      "lat": 36.6774504607698,
+      "lon": -121.78554581242105,
+      "geoinfo": {
+        "display_name": "3167, Bradley Circle, Marina, Monterey County, California, 93933, United States",
+        "road": "Bradley Circle",
+        "house_number": "3167",
+        "neighbourhood": null,
+        "suburb": "Marina",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93933",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3167, Bradley Circle, Marina, Monterey County, California, 93933, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:33.153762+00:00",
+  "_kind": "geo_samples"
+}

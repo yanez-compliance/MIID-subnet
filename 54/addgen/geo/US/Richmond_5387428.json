@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richmond",
+  "geonameid": 5387428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.91047658998503,
+      "lon": -122.3649173658201,
+      "geoinfo": {
+        "display_name": "Richmond Shipyard Number Three, Canal Boulevard, Richmond, Contra Costa County, California, 94801, United States",
+        "road": "Canal Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "California",
+        "postcode": "94801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Canal Boulevard, Richmond, California, United States"
+    },
+    {
+      "lat": 37.905613456058944,
+      "lon": -122.37568441191743,
+      "geoinfo": {
+        "display_name": "Bay Trail, Waterline, Richmond, Contra Costa County, California, 94801, United States",
+        "road": "Bay Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "California",
+        "postcode": "94801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "468, Bay Trail, Waterline, Richmond, Contra Costa County, California, 94801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:36.629596+00:00",
+  "_kind": "geo_samples"
+}

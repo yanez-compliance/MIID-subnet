@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Khoni",
+  "geonameid": 8468820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.319067453706115,
+      "lon": 73.07793962392277,
+      "geoinfo": {
+        "display_name": "Agra Road, Bhiwandi - Nizampur, Bhiwandi Taluka, Thane, Maharashtra, 421302, India",
+        "road": "Agra Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bhiwandi - Nizampur",
+        "state": "Maharashtra",
+        "postcode": "421302",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Agra Road, Khoni, Maharashtra, India"
+    },
+    {
+      "lat": 19.331370400156448,
+      "lon": 73.0735109930219,
+      "geoinfo": {
+        "display_name": "Bhiwandi Taluka, Thane, Maharashtra, 421302, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "421302",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "602, Bhiwandi Taluka, Thane, Maharashtra, 421302, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:31:57.128073+00:00",
+  "_kind": "geo_samples"
+}

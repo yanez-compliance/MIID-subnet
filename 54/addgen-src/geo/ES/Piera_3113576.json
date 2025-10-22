@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Piera",
+  "geonameid": 3113576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.561505868030736,
+      "lon": 1.7399688800108806,
+      "geoinfo": {
+        "display_name": "Camí de la Pobla de Claramunt a Ca n'Aguilera, Ca n'Aguilera, Piera, Anoia, Barcelona, Catalonia, 08784, Spain",
+        "road": "Camí de la Pobla de Claramunt a Ca n'Aguilera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piera",
+        "state": "Catalonia",
+        "postcode": "08784",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de la Pobla de Claramunt a Ca n'Aguilera, Piera, Catalonia, Spain"
+    },
+    {
+      "lat": 41.49502365345416,
+      "lon": 1.788834342753068,
+      "geoinfo": {
+        "display_name": "Carretera de Can Bonastre al Maset, el Maset, Masquefa, Anoia, Barcelona, Catalonia, 08783, Spain",
+        "road": "Carretera de Can Bonastre al Maset",
+        "house_number": null,
+        "neighbourhood": "el Maset",
+        "suburb": null,
+        "city_district": null,
+        "city": "Masquefa",
+        "state": "Catalonia",
+        "postcode": "08783",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "581, Carretera de Can Bonastre al Maset, el Maset, Masquefa, Anoia, Barcelona, Catalonia, 08783, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:45.739184+00:00",
+  "_kind": "geo_samples"
+}

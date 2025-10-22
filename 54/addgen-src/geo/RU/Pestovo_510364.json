@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Pestovo",
+  "geonameid": 510364,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.59642050217079,
+      "lon": 35.84118456955797,
+      "geoinfo": {
+        "display_name": "20, улица Лермонтова, Pestovo, Pestovsky District, Novgorod Oblast, Northwestern Federal District, 174510, Russia",
+        "road": "улица Лермонтова",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pestovo",
+        "state": "Novgorod Oblast",
+        "postcode": "174510",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "20 улица Лермонтова, Pestovo, Novgorod Oblast, Russia"
+    },
+    {
+      "lat": 58.58490539511135,
+      "lon": 35.856713558776185,
+      "geoinfo": {
+        "display_name": "Pestovsky District, Novgorod Oblast, Northwestern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Novgorod Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "943, Pestovo, 61534 Novgorod Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:39.113904+00:00",
+  "_kind": "geo_samples"
+}

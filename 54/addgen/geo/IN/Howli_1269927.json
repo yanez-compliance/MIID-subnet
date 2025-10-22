@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Howli",
+  "geonameid": 1269927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.419096403374567,
+      "lon": 90.95472611792462,
+      "geoinfo": {
+        "display_name": "Barpeta, Assam, 781316, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Assam",
+        "postcode": "781316",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Howli, Assam, India"
+    },
+    {
+      "lat": 26.418060359938874,
+      "lon": 90.98822444792964,
+      "geoinfo": {
+        "display_name": "NH27, Barpeta Road, Howly, Barpeta, Assam, 781313, India",
+        "road": "NH27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Howly",
+        "state": "Assam",
+        "postcode": "781313",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH27, Barpeta Road, Howly, Barpeta, Assam, 781313, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:20.446425+00:00",
+  "_kind": "geo_samples"
+}

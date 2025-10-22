@@ -1,0 +1,47 @@
+{
+  "country_code": "IR",
+  "country": "Iran",
+  "city": "Dorūd",
+  "geonameid": 135878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.481976896549455,
+      "lon": 49.07648920276296,
+      "geoinfo": {
+        "display_name": "بلوار بنی هاشم, شهرک قدس(ضرغام), Heshmatabad, Central District, Dorud County, Lorestan Province, 68816-56481, Iran",
+        "road": "بلوار بنی هاشم",
+        "house_number": null,
+        "neighbourhood": "شهرک قدس(ضرغام)",
+        "suburb": null,
+        "city_district": null,
+        "city": "Heshmatabad",
+        "state": "Lorestan Province",
+        "postcode": "68816-56481",
+        "country": "Iran",
+        "country_code": "ir"
+      },
+      "address": "بلوار بنی هاشم, Dorūd, Lorestan Province, Iran"
+    },
+    {
+      "lat": 33.47820843051858,
+      "lon": 49.10137261225517,
+      "geoinfo": {
+        "display_name": "صنایع دفاع, Bonakabad, Heshmatabad, Central District, Dorud County, Lorestan Province, Iran",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "صنایع دفاع",
+        "suburb": null,
+        "city_district": null,
+        "city": "Heshmatabad",
+        "state": "Lorestan Province",
+        "postcode": null,
+        "country": "Iran",
+        "country_code": "ir"
+      },
+      "address": "503, صنایع دفاع, Dorūd, 12234 Lorestan Province, Iran"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:47.447763+00:00",
+  "_kind": "geo_samples"
+}

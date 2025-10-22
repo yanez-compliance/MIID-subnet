@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Creek",
+  "geonameid": 5804953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.836785286753766,
+      "lon": -122.13698196061696,
+      "geoinfo": {
+        "display_name": "Clearview, Snohomish County, Washington, 98296, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clearview",
+        "state": "Washington",
+        "postcode": "98296",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Creek, Washington, United States"
+    },
+    {
+      "lat": 47.82208916169518,
+      "lon": -122.17536050514289,
+      "geoinfo": {
+        "display_name": "19434, 43rd Avenue Southeast, Snohomish County, Washington, 98012, United States",
+        "road": "43rd Avenue Southeast",
+        "house_number": "19434",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19434, 43rd Avenue Southeast, Snohomish County, Washington, 98012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:43.717307+00:00",
+  "_kind": "geo_samples"
+}

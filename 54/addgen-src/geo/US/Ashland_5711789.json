@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashland",
+  "geonameid": 5711789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.19892170824694,
+      "lon": -122.66309873030211,
+      "geoinfo": {
+        "display_name": "911, East Hills Drive, Ashland, Jackson County, Oregon, 95520, United States",
+        "road": "East Hills Drive",
+        "house_number": "911",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Oregon",
+        "postcode": "95520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "911 East Hills Drive, Ashland, Oregon, United States"
+    },
+    {
+      "lat": 42.17507382062535,
+      "lon": -122.6554756660379,
+      "geoinfo": {
+        "display_name": "326, Crowson Road, Ashland, Jackson County, Oregon, 97520, United States",
+        "road": "Crowson Road",
+        "house_number": "326",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Oregon",
+        "postcode": "97520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "326, Crowson Road, Ashland, Jackson County, Oregon, 97520, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:48.353091+00:00",
+  "_kind": "geo_samples"
+}

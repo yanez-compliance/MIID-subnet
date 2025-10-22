@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Denderleeuw",
+  "geonameid": 2799647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.8798755116272,
+      "lon": 4.084303631421875,
+      "geoinfo": {
+        "display_name": "7, Denderweg, Denderleeuw, Aalst, East Flanders, 9470, Belgium",
+        "road": "Denderweg",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denderleeuw",
+        "state": "East Flanders",
+        "postcode": "9470",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "7 Denderweg, Denderleeuw, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.87694382136624,
+      "lon": 4.015411756903915,
+      "geoinfo": {
+        "display_name": "Vondelbaan, Denderhoutem, Haaltert, Aalst, East Flanders, 9450, Belgium",
+        "road": "Vondelbaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denderhoutem",
+        "state": "East Flanders",
+        "postcode": "9450",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "489, Vondelbaan, Denderhoutem, Haaltert, Aalst, East Flanders, 9450, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:50.947286+00:00",
+  "_kind": "geo_samples"
+}

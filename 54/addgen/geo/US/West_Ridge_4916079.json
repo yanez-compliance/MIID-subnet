@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Ridge",
+  "geonameid": 4916079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.99615999288751,
+      "lon": -87.71643327279278,
+      "geoinfo": {
+        "display_name": "North Lincoln Avenue, North Park, Chicago, Jefferson Township, Cook County, Illinois, 60659, United States",
+        "road": "North Lincoln Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "North Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60659",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Lincoln Avenue, West Ridge, Illinois, United States"
+    },
+    {
+      "lat": 42.02537552671485,
+      "lon": -87.66188317407837,
+      "geoinfo": {
+        "display_name": "Sheridan Road, Rogers Park, Evanston, Evanston Township, Cook County, Illinois, 60626, United States",
+        "road": "Sheridan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rogers Park",
+        "city_district": null,
+        "city": "Evanston",
+        "state": "Illinois",
+        "postcode": "60626",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "243, Sheridan Road, Rogers Park, Evanston, Evanston Township, Cook County, Illinois, 60626, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:55.462284+00:00",
+  "_kind": "geo_samples"
+}

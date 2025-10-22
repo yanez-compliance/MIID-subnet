@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Windsor",
+  "geonameid": 4843353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.814636111332405,
+      "lon": -72.57716283641321,
+      "geoinfo": {
+        "display_name": "491, Quarry Brook Drive, South Windsor, Capitol Planning Region, Connecticut, 06074, United States",
+        "road": "Quarry Brook Drive",
+        "house_number": "491",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Windsor",
+        "state": "Connecticut",
+        "postcode": "06074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "491 Quarry Brook Drive, South Windsor, Connecticut, United States"
+    },
+    {
+      "lat": 41.816101877418326,
+      "lon": -72.64677686118898,
+      "geoinfo": {
+        "display_name": "Captain John Bissell Trail, Wilson, Windsor, Capitol Planning Region, Connecticut, 06101, United States",
+        "road": "Captain John Bissell Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Windsor",
+        "state": "Connecticut",
+        "postcode": "06101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "399, Captain John Bissell Trail, Wilson, Windsor, Capitol Planning Region, Connecticut, 06101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:39.818358+00:00",
+  "_kind": "geo_samples"
+}

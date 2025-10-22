@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Jarosław",
+  "geonameid": 770380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.02537686935286,
+      "lon": 22.724954267251334,
+      "geoinfo": {
+        "display_name": "1M, Sobiecin, gmina Jarosław, Jarosław County, Subcarpathian Voivodeship, 37-500, Poland",
+        "road": null,
+        "house_number": "1M",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sobiecin",
+        "state": "Subcarpathian Voivodeship",
+        "postcode": "37-500",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Jarosław, Subcarpathian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.027152695575104,
+      "lon": 22.617885363163467,
+      "geoinfo": {
+        "display_name": "94, Tywonia, gmina Pawłosiów, Jarosław County, Subcarpathian Voivodeship, Poland",
+        "road": "94",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tywonia",
+        "state": "Subcarpathian Voivodeship",
+        "postcode": null,
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "94, Tywonia, gmina Pawłosiów, Jarosław County, 38721 Subcarpathian Voivodeship, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T02:52:37.416087+00:00",
+  "_kind": "geo_samples"
+}

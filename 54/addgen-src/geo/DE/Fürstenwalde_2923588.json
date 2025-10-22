@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fürstenwalde",
+  "geonameid": 2923588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.34518969262608,
+      "lon": 13.993725209534094,
+      "geoinfo": {
+        "display_name": "L 36, Markgrafpieske, Spreenhagen, Oder-Spree, Brandenburg, 15528, Germany",
+        "road": "L 36",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spreenhagen",
+        "state": "Brandenburg",
+        "postcode": "15528",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 36, Fürstenwalde, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.3509833970264,
+      "lon": 14.006447378525447,
+      "geoinfo": {
+        "display_name": "11, Kiesweg, Fürstenwalde/Spree, Spreenhagen, Oder-Spree, Brandenburg, 15517, Germany",
+        "road": "Kiesweg",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fürstenwalde/Spree",
+        "state": "Brandenburg",
+        "postcode": "15517",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Kiesweg, Fürstenwalde, 15517 Brandenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:18.535291+00:00",
+  "_kind": "geo_samples"
+}

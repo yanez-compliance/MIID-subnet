@@ -1,0 +1,47 @@
+{
+  "country_code": "GR",
+  "country": "Greece",
+  "city": "Vrilissia",
+  "geonameid": 6324534,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.03534941885678,
+      "lon": 23.819639643006457,
+      "geoinfo": {
+        "display_name": "Αττική Οδός, Polydroso, Municipality of Marousi, Regional Unit of North Athens, Attica, 15125, Greece",
+        "road": "Αττική Οδός",
+        "house_number": null,
+        "neighbourhood": "Polydroso",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Attica",
+        "postcode": "15125",
+        "country": "Greece",
+        "country_code": "gr"
+      },
+      "address": "Αττική Οδός, Vrilissia, Attica, Greece"
+    },
+    {
+      "lat": 38.065198965454776,
+      "lon": 23.82361644316191,
+      "geoinfo": {
+        "display_name": "Kifissia, Municipality of Kifisia, Regional Unit of North Athens, Attica, 145 62, Greece",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kifissia",
+        "city_district": null,
+        "city": null,
+        "state": "Attica",
+        "postcode": "145 62",
+        "country": "Greece",
+        "country_code": "gr"
+      },
+      "address": "Kifissia, Municipality of Kifisia, Regional Unit of North Athens, Attica, 145 62, Greece"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:02.965802+00:00",
+  "_kind": "geo_samples"
+}

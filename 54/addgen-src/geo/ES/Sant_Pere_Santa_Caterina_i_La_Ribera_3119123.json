@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sant Pere, Santa Caterina i La Ribera",
+  "geonameid": 3119123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.36702790368973,
+      "lon": 2.230077341321429,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Sant Pere, Santa Caterina i La Ribera, Catalonia, Spain"
+    },
+    {
+      "lat": 41.417824788446666,
+      "lon": 2.1638395330171756,
+      "geoinfo": {
+        "display_name": "Túnel de la Rovira, Can Baró, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08032, Spain",
+        "road": "Túnel de la Rovira",
+        "house_number": null,
+        "neighbourhood": "Can Baró",
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08032",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "855, Túnel de la Rovira, Can Baró, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08032, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:54.473448+00:00",
+  "_kind": "geo_samples"
+}

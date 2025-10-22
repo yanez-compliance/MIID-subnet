@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ladera Ranch",
+  "geonameid": 5364199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.53898436698422,
+      "lon": -117.61097234382986,
+      "geoinfo": {
+        "display_name": "Chiquita Canyon Drive, Los Patrones, Ladera Ranch, Orange County, California, 92694, United States",
+        "road": "Chiquita Canyon Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Los Patrones",
+        "city_district": null,
+        "city": "Ladera Ranch",
+        "state": "California",
+        "postcode": "92694",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chiquita Canyon Drive, Ladera Ranch, California, United States"
+    },
+    {
+      "lat": 33.599507968658784,
+      "lon": -117.61125825219213,
+      "geoinfo": {
+        "display_name": "Foothill Transportation Corridor, Rancho Santa Margarita, Orange County, California, 92692, United States",
+        "road": "Foothill Transportation Corridor",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Santa Margarita",
+        "state": "California",
+        "postcode": "92692",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "837, Foothill Transportation Corridor, Rancho Santa Margarita, Orange County, California, 92692, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:49.130658+00:00",
+  "_kind": "geo_samples"
+}

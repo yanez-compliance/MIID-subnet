@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Eltham",
+  "geonameid": 2167445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.75006735134149,
+      "lon": 145.13681307938504,
+      "geoinfo": {
+        "display_name": "29, Fitzsimons Lane, Templestowe, Melbourne, City of Manningham, Victoria, 3106, Australia",
+        "road": "Fitzsimons Lane",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "Templestowe",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3106",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "29 Fitzsimons Lane, Eltham, Victoria, Australia"
+    },
+    {
+      "lat": -37.73671657427693,
+      "lon": 145.11000165709652,
+      "geoinfo": {
+        "display_name": "6, Roseburn Court, Lower Plenty, Melbourne, City of Banyule, Victoria, 3093, Australia",
+        "road": "Roseburn Court",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Lower Plenty",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3093",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "6, Roseburn Court, Lower Plenty, Melbourne, City of Banyule, Victoria, 3093, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:30.330668+00:00",
+  "_kind": "geo_samples"
+}

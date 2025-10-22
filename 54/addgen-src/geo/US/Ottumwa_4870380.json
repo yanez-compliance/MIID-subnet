@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ottumwa",
+  "geonameid": 4870380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.01102098498703,
+      "lon": -92.36397971903602,
+      "geoinfo": {
+        "display_name": "US 34;IA 163, Wapello County, Iowa, United States",
+        "road": "US 34;IA 163",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 34;IA 163, Ottumwa, Iowa, United States"
+    },
+    {
+      "lat": 41.02572928335889,
+      "lon": -92.39822739263937,
+      "geoinfo": {
+        "display_name": "1227, North Elm Street, Ottumwa, Wapello County, Iowa, 52501, United States",
+        "road": "North Elm Street",
+        "house_number": "1227",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ottumwa",
+        "state": "Iowa",
+        "postcode": "52501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1227, North Elm Street, Ottumwa, Wapello County, Iowa, 52501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:53.606716+00:00",
+  "_kind": "geo_samples"
+}

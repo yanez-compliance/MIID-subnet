@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carteret",
+  "geonameid": 5096316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.562978183118,
+      "lon": -74.25918319645515,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike, Avenel, Port Reading, Woodbridge Township, Middlesex County, New Jersey, 07064, United States",
+        "road": "New Jersey Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Avenel",
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "07064",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "New Jersey Turnpike, Carteret, New Jersey, United States"
+    },
+    {
+      "lat": 40.566113087397405,
+      "lon": -74.1983162839899,
+      "geoinfo": {
+        "display_name": "West Shore Expressway West Service Road, Fresh Kills, Staten Island, Richmond County, New York, 10312, United States",
+        "road": "West Shore Expressway West Service Road",
+        "house_number": null,
+        "neighbourhood": "Fresh Kills",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "926, West Shore Expressway West Service Road, Fresh Kills, Staten Island, Richmond County, New York, 10312, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:21.048086+00:00",
+  "_kind": "geo_samples"
+}

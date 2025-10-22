@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Myers",
+  "geonameid": 4155995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.657607842093856,
+      "lon": -81.81582090396621,
+      "geoinfo": {
+        "display_name": "4656, Nottingham Drive, Fort Myers, Lee County, Florida, 33905, United States",
+        "road": "Nottingham Drive",
+        "house_number": "4656",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Myers",
+        "state": "Florida",
+        "postcode": "33905",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4656 Nottingham Drive, Fort Myers, Florida, United States"
+    },
+    {
+      "lat": 26.58672686997702,
+      "lon": -81.85052636263319,
+      "geoinfo": {
+        "display_name": "Fort Myers, Lee County, Florida, 33907, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Myers",
+        "state": "Florida",
+        "postcode": "33907",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "501, Fort Myers, Lee County, Florida, 33907, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:28.482199+00:00",
+  "_kind": "geo_samples"
+}

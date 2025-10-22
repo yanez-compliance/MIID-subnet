@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Bucha",
+  "geonameid": 711350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.54770432870546,
+      "lon": 30.207459648018755,
+      "geoinfo": {
+        "display_name": "5, Bohdana Khmelnytskoho Boulevard, Bucha, Bucha Urban Hromada, Bucha district, Kyiv Oblast, 08292, Ukraine",
+        "road": "Bohdana Khmelnytskoho Boulevard",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bucha",
+        "state": "Kyiv Oblast",
+        "postcode": "08292",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "5 Bohdana Khmelnytskoho Boulevard, Bucha, Kyiv Oblast, Ukraine"
+    },
+    {
+      "lat": 50.57113421731111,
+      "lon": 30.18673608104106,
+      "geoinfo": {
+        "display_name": "Долина вулиця, Hostomel Settlement Hromada, Bucha district, Kyiv Oblast, 08289, Ukraine",
+        "road": "Долина вулиця",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kyiv Oblast",
+        "postcode": "08289",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "918, Долина вулиця, Hostomel Settlement Hromada, Bucha district, Kyiv Oblast, 08289, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:12.771705+00:00",
+  "_kind": "geo_samples"
+}

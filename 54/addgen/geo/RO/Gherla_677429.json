@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Gherla",
+  "geonameid": 677429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.03970244821991,
+      "lon": 23.955879765672773,
+      "geoinfo": {
+        "display_name": "Mintiu Gherlii, Cluj, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Gherla, Romania"
+    },
+    {
+      "lat": 47.013826072723845,
+      "lon": 23.906751969662288,
+      "geoinfo": {
+        "display_name": "Strada Tudor Vladimirescu, Cocoșvar, Gherla, Cluj, 405300, Romania",
+        "road": "Strada Tudor Vladimirescu",
+        "house_number": null,
+        "neighbourhood": "Cocoșvar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gherla",
+        "state": null,
+        "postcode": "405300",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "711, Strada Tudor Vladimirescu, Cocoșvar, Gherla, Cluj, 405300, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:39.983014+00:00",
+  "_kind": "geo_samples"
+}

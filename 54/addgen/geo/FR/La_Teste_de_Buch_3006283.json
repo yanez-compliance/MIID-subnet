@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Teste-de-Buch",
+  "geonameid": 3006283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.65767594255623,
+      "lon": -1.1865232708898161,
+      "geoinfo": {
+        "display_name": "1, Allée des Tourterelles, Pereire, Arcachon, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33120, France",
+        "road": "Allée des Tourterelles",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Pereire",
+        "city_district": null,
+        "city": "Arcachon",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1 Allée des Tourterelles, La Teste-de-Buch, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.65252739904446,
+      "lon": -1.183718305325217,
+      "geoinfo": {
+        "display_name": "31, Allée des Arènes, Les Abatilles, Arcachon, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33120, France",
+        "road": "Allée des Arènes",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": "Les Abatilles",
+        "city_district": null,
+        "city": "Arcachon",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "31, Allée des Arènes, Les Abatilles, Arcachon, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33120, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:17:27.496158+00:00",
+  "_kind": "geo_samples"
+}

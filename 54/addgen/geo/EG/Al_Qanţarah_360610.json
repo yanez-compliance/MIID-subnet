@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Qanţarah",
+  "geonameid": 360610,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 30.88308126143385,
+      "lon": 32.33790593452348,
+      "geoinfo": {
+        "display_name": "Port Said, 41632, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Port Said",
+        "postcode": "41632",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Qanţarah, Port Said, Egypt"
+    },
+    {
+      "lat": 30.894355009775463,
+      "lon": 32.31394486638659,
+      "geoinfo": {
+        "display_name": "Port Said, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Port Said",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "439, Al Qanţarah, 33038 Port Said, Egypt"
+    },
+    {
+      "lat": 30.890276866985072,
+      "lon": 32.28482228391637,
+      "geoinfo": {
+        "display_name": "Madrasa Al Biadia Street, Port Said, 41524, Egypt",
+        "road": "Madrasa Al Biadia Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Port Said",
+        "postcode": "41524",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "334, Madrasa Al Biadia Street, Port Said, 41524, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:51.052646+00:00",
+  "_kind": "geo_samples"
+}

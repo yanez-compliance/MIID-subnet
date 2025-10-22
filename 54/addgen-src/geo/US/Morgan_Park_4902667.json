@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morgan Park",
+  "geonameid": 4902667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.68996882706701,
+      "lon": -87.68289563651435,
+      "geoinfo": {
+        "display_name": "2434, West 112th Street, Morgan Park, Chicago, Lake Township, Cook County, Illinois, 60655, United States",
+        "road": "West 112th Street",
+        "house_number": "2434",
+        "neighbourhood": null,
+        "suburb": "Morgan Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60655",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2434 West 112th Street, Morgan Park, Illinois, United States"
+    },
+    {
+      "lat": 41.662807411209506,
+      "lon": -87.63143791109853,
+      "geoinfo": {
+        "display_name": "354, West 127th Street, Andrews and Hurds Subdivision, West Pullman, Chicago, Lake Township, Cook County, Illinois, 60628, United States",
+        "road": "West 127th Street",
+        "house_number": "354",
+        "neighbourhood": "Andrews and Hurds Subdivision",
+        "suburb": "West Pullman",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60628",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "354, West 127th Street, Andrews and Hurds Subdivision, West Pullman, Chicago, Lake Township, Cook County, Illinois, 60628, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:42.937290+00:00",
+  "_kind": "geo_samples"
+}

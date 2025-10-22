@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Nanterre",
+  "geonameid": 2990970,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.923178801403736,
+      "lon": 2.249940097695232,
+      "geoinfo": {
+        "display_name": "Place du Souvenir et de la Résistance, Centre, Colombes, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92700, France",
+        "road": "Place du Souvenir et de la Résistance",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centre",
+        "city_district": null,
+        "city": "Colombes",
+        "state": null,
+        "postcode": "92700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Place du Souvenir et de la Résistance, Nanterre, France"
+    },
+    {
+      "lat": 48.92884925315676,
+      "lon": 2.1738888779704837,
+      "geoinfo": {
+        "display_name": "3, Rue Joseph Douard, Houilles, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78800, France",
+        "road": "Rue Joseph Douard",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houilles",
+        "state": "Ile-de-France",
+        "postcode": "78800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3, Rue Joseph Douard, Houilles, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78800, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:54.079459+00:00",
+  "_kind": "geo_samples"
+}

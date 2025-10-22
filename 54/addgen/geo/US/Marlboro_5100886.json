@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marlboro",
+  "geonameid": 5100886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.34109083019093,
+      "lon": -74.25923174625989,
+      "geoinfo": {
+        "display_name": "263, Bradwick Way, Rosemont Estates, Marlboro Township, Monmouth County, New Jersey, 07746, United States",
+        "road": "Bradwick Way",
+        "house_number": "263",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marlboro Township",
+        "state": "New Jersey",
+        "postcode": "07746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "263 Bradwick Way, Marlboro, New Jersey, United States"
+    },
+    {
+      "lat": 40.3354794480388,
+      "lon": -74.25350324886172,
+      "geoinfo": {
+        "display_name": "26, Rockwell Circle, Country Estates, Herberts Corner, Marlboro Township, Monmouth County, New Jersey, 07746, United States",
+        "road": "Rockwell Circle",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marlboro Township",
+        "state": "New Jersey",
+        "postcode": "07746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "26, Rockwell Circle, Country Estates, Herberts Corner, Marlboro Township, Monmouth County, New Jersey, 07746, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:47.045645+00:00",
+  "_kind": "geo_samples"
+}

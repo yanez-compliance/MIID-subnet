@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vic",
+  "geonameid": 3106050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.9658281097863,
+      "lon": 2.274985172010654,
+      "geoinfo": {
+        "display_name": "Gurb, Osona, Barcelona, Catalonia, 08500, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gurb",
+        "state": "Catalonia",
+        "postcode": "08500",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Vic, Catalonia, Spain"
+    },
+    {
+      "lat": 41.88608896248121,
+      "lon": 2.2510305752163173,
+      "geoinfo": {
+        "display_name": "Carretera de Mont-rodon, el Gurri, Taradell, Osona, Barcelona, Catalonia, 08552, Spain",
+        "road": "Carretera de Mont-rodon",
+        "house_number": null,
+        "neighbourhood": "el Gurri",
+        "suburb": null,
+        "city_district": null,
+        "city": "Taradell",
+        "state": "Catalonia",
+        "postcode": "08552",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "786, Carretera de Mont-rodon, el Gurri, Taradell, Osona, Barcelona, Catalonia, 08552, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:48.227933+00:00",
+  "_kind": "geo_samples"
+}

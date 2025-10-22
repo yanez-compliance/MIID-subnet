@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newport",
+  "geonameid": 4302529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.13503610067366,
+      "lon": -84.49435927021129,
+      "geoinfo": {
+        "display_name": "Avondale, Cincinnati, Hamilton County, Ohio, 45267, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Avondale",
+        "city_district": null,
+        "city": "Cincinnati",
+        "state": "Ohio",
+        "postcode": "45267",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Avondale, Newport, Ohio, United States"
+    },
+    {
+      "lat": 39.09089291483599,
+      "lon": -84.44910583743899,
+      "geoinfo": {
+        "display_name": "111, Dixie Place, Fort Thomas, Campbell County, Kentucky, 41075, United States",
+        "road": "Dixie Place",
+        "house_number": "111",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Thomas",
+        "state": "Kentucky",
+        "postcode": "41075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "111, Dixie Place, Fort Thomas, Campbell County, Kentucky, 41075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:46.034311+00:00",
+  "_kind": "geo_samples"
+}

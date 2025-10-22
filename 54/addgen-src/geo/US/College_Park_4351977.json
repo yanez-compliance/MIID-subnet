@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "College Park",
+  "geonameid": 4351977,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.98680024536258,
+      "lon": -76.95604342894671,
+      "geoinfo": {
+        "display_name": "Adelphi Road, College Park, Prince George's County, Maryland, 20742, United States",
+        "road": "Adelphi Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "College Park",
+        "state": "Maryland",
+        "postcode": "20742",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Adelphi Road, College Park, Maryland, United States"
+    },
+    {
+      "lat": 38.96450679249448,
+      "lon": -76.91293032735338,
+      "geoinfo": {
+        "display_name": "6319, 61st Avenue, Riverdale Heights, Riverdale Park, Prince George's County, Maryland, 20737, United States",
+        "road": "61st Avenue",
+        "house_number": "6319",
+        "neighbourhood": "Riverdale Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverdale Park",
+        "state": "Maryland",
+        "postcode": "20737",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6319, 61st Avenue, Riverdale Heights, Riverdale Park, Prince George's County, Maryland, 20737, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:20.052645+00:00",
+  "_kind": "geo_samples"
+}

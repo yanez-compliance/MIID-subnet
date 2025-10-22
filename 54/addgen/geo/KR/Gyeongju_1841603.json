@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Gyeongju",
+  "geonameid": 1841603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.80545242975267,
+      "lon": 129.2010971338636,
+      "geoinfo": {
+        "display_name": "Bae-dong, Hwangnam-dong, Gyeongju-si, North Gyeongsang, 38173, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gyeongju-si",
+        "state": null,
+        "postcode": "38173",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Gyeongju, South Korea"
+    },
+    {
+      "lat": 35.81786666872929,
+      "lon": 129.17049047299287,
+      "geoinfo": {
+        "display_name": "Seondo-dong, Gyeongju-si, 38057, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Seondo-dong",
+        "city": "Gyeongju-si",
+        "state": null,
+        "postcode": "38057",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "331, Seondo-dong, 38057 Gyeongju, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:02.724192+00:00",
+  "_kind": "geo_samples"
+}

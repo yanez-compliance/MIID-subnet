@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clifton",
+  "geonameid": 5417258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.06444459029348,
+      "lon": -108.44916677791099,
+      "geoinfo": {
+        "display_name": "32 1/2 Road, Mesa County, Colorado, 81520, United States",
+        "road": "32 1/2 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "81520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "32 1/2 Road, Clifton, Colorado, United States"
+    },
+    {
+      "lat": 39.08070905596289,
+      "lon": -108.48047893873373,
+      "geoinfo": {
+        "display_name": "I 70 Business Loop, Ol' Sun Subdivision, Grand Junction, Mesa County, Colorado, 81504, United States",
+        "road": "I 70 Business Loop",
+        "house_number": null,
+        "neighbourhood": "Ol' Sun Subdivision",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Junction",
+        "state": "Colorado",
+        "postcode": "81504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 70 Business Loop, Ol' Sun Subdivision, Grand Junction, Mesa County, Colorado, 81504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:36.222044+00:00",
+  "_kind": "geo_samples"
+}

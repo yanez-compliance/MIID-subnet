@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ramos Arizpe",
+  "geonameid": 3991043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.55708336090493,
+      "lon": -100.96291889636838,
+      "geoinfo": {
+        "display_name": "Calle Manzanilla, Ramos Arizpe, Coahuila, 25900, Mexico",
+        "road": "Calle Manzanilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramos Arizpe",
+        "state": "Coahuila",
+        "postcode": "25900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Manzanilla, Ramos Arizpe, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.51926159713366,
+      "lon": -100.96757113849633,
+      "geoinfo": {
+        "display_name": "Ramos Arizpe, Coahuila, 25900, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramos Arizpe",
+        "state": "Coahuila",
+        "postcode": "25900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "172, Ramos Arizpe, Coahuila, 25900, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:08.115957+00:00",
+  "_kind": "geo_samples"
+}

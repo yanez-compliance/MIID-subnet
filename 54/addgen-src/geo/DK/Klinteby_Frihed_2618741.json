@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Klinteby Frihed",
+  "geonameid": 2618741,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 55.17104408358958,
+      "lon": 11.568772117490088,
+      "geoinfo": {
+        "display_name": "Denmark",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Klinteby Frihed, Region Zealand, Denmark"
+    },
+    {
+      "lat": 55.19629891405046,
+      "lon": 11.592737712668464,
+      "geoinfo": {
+        "display_name": "Strandbakken, Klinteby Frihed, Naestved Municipality, Region Zealand, Denmark",
+        "road": "Strandbakken",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Region Zealand",
+        "postcode": null,
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Strandbakken, Klinteby Frihed, Region Zealand, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-16T12:58:46.673646+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Yartsevo",
+  "geonameid": 468866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.070079261743906,
+      "lon": 32.69843707163512,
+      "geoinfo": {
+        "display_name": "10, Школьная улица, Yartsevo, Yartsevsky District, Smolensk Oblast, Central Federal District, 215800, Russia",
+        "road": "Школьная улица",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yartsevo",
+        "state": "Smolensk Oblast",
+        "postcode": "215800",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "10 Школьная улица, Yartsevo, Smolensk Oblast, Russia"
+    },
+    {
+      "lat": 55.055723861355425,
+      "lon": 32.74250585923456,
+      "geoinfo": {
+        "display_name": "Yartsevsky District, Smolensk Oblast, Central Federal District, 215805, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Smolensk Oblast",
+        "postcode": "215805",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "272, Yartsevo, 215805 Smolensk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:43:12.896345+00:00",
+  "_kind": "geo_samples"
+}

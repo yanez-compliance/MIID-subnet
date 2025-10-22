@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Châtelineau",
+  "geonameid": 2800445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.434772809244244,
+      "lon": 4.522411769387725,
+      "geoinfo": {
+        "display_name": "27, Rue Achille Delattre, Châtelet, Charleroi, Hainaut, Wallonia, 6200, Belgium",
+        "road": "Rue Achille Delattre",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Châtelet",
+        "state": "Hainaut",
+        "postcode": "6200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "27 Rue Achille Delattre, Châtelineau, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.411733208599344,
+      "lon": 4.5881181114128875,
+      "geoinfo": {
+        "display_name": "9, Rue de la Batte, Le Calvaire, Aiseau, Aiseau-Presles, Charleroi, Hainaut, Wallonia, 6250, Belgium",
+        "road": "Rue de la Batte",
+        "house_number": "9",
+        "neighbourhood": "Le Calvaire",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aiseau",
+        "state": "Hainaut",
+        "postcode": "6250",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "9, Rue de la Batte, Le Calvaire, Aiseau, Aiseau-Presles, Charleroi, Hainaut, Wallonia, 6250, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:49.266965+00:00",
+  "_kind": "geo_samples"
+}

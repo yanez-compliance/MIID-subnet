@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kapotnya",
+  "geonameid": 553034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.661221812175995,
+      "lon": 37.79551506457955,
+      "geoinfo": {
+        "display_name": "25Б, улица Верхние Поля, Lyublino District, Moscow, Central Federal District, 109559, Russia",
+        "road": "улица Верхние Поля",
+        "house_number": "25Б",
+        "neighbourhood": null,
+        "suburb": "Lyublino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "109559",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "25Б улица Верхние Поля, Kapotnya, Moscow, Russia"
+    },
+    {
+      "lat": 55.64077405692552,
+      "lon": 37.805046306912914,
+      "geoinfo": {
+        "display_name": "улица Капотня, Kapotnya District, Moscow, Central Federal District, 109429, Russia",
+        "road": "улица Капотня",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kapotnya District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "109429",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "850, улица Капотня, Kapotnya District, Moscow, Central Federal District, 109429, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:15.463483+00:00",
+  "_kind": "geo_samples"
+}

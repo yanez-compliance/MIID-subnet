@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oceanside",
+  "geonameid": 5129603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.63180079359323,
+      "lon": -73.63434973285084,
+      "geoinfo": {
+        "display_name": "3266, Judith Lane, Oceanside, Town of Hempstead, Nassau County, New York, 11572, United States",
+        "road": "Judith Lane",
+        "house_number": "3266",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oceanside",
+        "state": "New York",
+        "postcode": "11572",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3266 Judith Lane, Oceanside, New York, United States"
+    },
+    {
+      "lat": 40.64232593496105,
+      "lon": -73.60478438584445,
+      "geoinfo": {
+        "display_name": "11, Bonaparte Place, Baldwin Harbor, Baldwin, Town of Hempstead, Nassau County, New York, 11510, United States",
+        "road": "Bonaparte Place",
+        "house_number": "11",
+        "neighbourhood": "Baldwin Harbor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baldwin",
+        "state": "New York",
+        "postcode": "11510",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11, Bonaparte Place, Baldwin Harbor, Baldwin, Town of Hempstead, Nassau County, New York, 11510, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:01.618745+00:00",
+  "_kind": "geo_samples"
+}

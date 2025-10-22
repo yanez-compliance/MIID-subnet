@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longgang",
+  "geonameid": 1802550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.66719639845414,
+      "lon": 120.35491710774109,
+      "geoinfo": {
+        "display_name": "Longgang, Longkou City, Yantai, Shandong, 265700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longkou City",
+        "state": "Shandong",
+        "postcode": "265700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longgang, Shandong, China"
+    },
+    {
+      "lat": 37.647748836064544,
+      "lon": 120.31796394873501,
+      "geoinfo": {
+        "display_name": "环海中路, 龙口开发区, Longgang, Longkou City, Yantai, Shandong, 265700, China",
+        "road": "环海中路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "龙口开发区",
+        "city_district": null,
+        "city": "Longkou City",
+        "state": "Shandong",
+        "postcode": "265700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "718, 环海中路, 龙口开发区, Longgang, Longkou City, Yantai, Shandong, 265700, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:54:48.214020+00:00",
+  "_kind": "geo_samples"
+}

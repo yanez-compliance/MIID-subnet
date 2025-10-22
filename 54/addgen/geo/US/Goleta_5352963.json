@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Goleta",
+  "geonameid": 5352963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.40780655324135,
+      "lon": -119.7874912052561,
+      "geoinfo": {
+        "display_name": "Santa Barbara County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Goleta, California, United States"
+    },
+    {
+      "lat": 34.4337720234379,
+      "lon": -119.78303597886696,
+      "geoinfo": {
+        "display_name": "4650, Camino del Roble, Santa Barbara County, California, 93110, United States",
+        "road": "Camino del Roble",
+        "house_number": "4650",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4650, Camino del Roble, Santa Barbara County, California, 93110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:10.862584+00:00",
+  "_kind": "geo_samples"
+}

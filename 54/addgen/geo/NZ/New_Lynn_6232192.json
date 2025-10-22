@@ -1,0 +1,47 @@
+{
+  "country_code": "NZ",
+  "country": "New Zealand",
+  "city": "New Lynn",
+  "geonameid": 6232192,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -36.91078504851775,
+      "lon": 174.6505757197066,
+      "geoinfo": {
+        "display_name": "1-7, Glenmall Place, Glen Eden, Waitākere Ranges, Auckland, 0602, New Zealand",
+        "road": "Glenmall Place",
+        "house_number": "1-7",
+        "neighbourhood": null,
+        "suburb": "Glen Eden",
+        "city_district": null,
+        "city": "Waitākere Ranges",
+        "state": "Auckland",
+        "postcode": "0602",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "1-7, Glenmall Place, Glen Eden, Waitākere Ranges, Auckland, 0602, New Zealand"
+    },
+    {
+      "lat": -36.92719510756645,
+      "lon": 174.64360572681218,
+      "geoinfo": {
+        "display_name": "1/7, Mariana Place, Kōnini, Glen Eden, Waitākere Ranges, Auckland, 0604, New Zealand",
+        "road": "Mariana Place",
+        "house_number": "1/7",
+        "neighbourhood": null,
+        "suburb": "Glen Eden",
+        "city_district": null,
+        "city": "Waitākere Ranges",
+        "state": "Auckland",
+        "postcode": "0604",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "1/7, Mariana Place, Kōnini, Glen Eden, Waitākere Ranges, Auckland, 0604, New Zealand"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:39.112851+00:00",
+  "_kind": "geo_samples"
+}

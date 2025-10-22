@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Novato",
+  "geonameid": 5378044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.0972858506138,
+      "lon": -122.52724168530077,
+      "geoinfo": {
+        "display_name": "CA 37, Novato, Marin County, California, 94949, United States",
+        "road": "CA 37",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novato",
+        "state": "California",
+        "postcode": "94949",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CA 37, Novato, California, United States"
+    },
+    {
+      "lat": 38.0908687621016,
+      "lon": -122.51915741296487,
+      "geoinfo": {
+        "display_name": "Montego Key, Bel Marin Keys, Marin County, California, 94949, United States",
+        "road": "Montego Key",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94949",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "058, Montego Key, Bel Marin Keys, Marin County, California, 94949, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:32.296227+00:00",
+  "_kind": "geo_samples"
+}

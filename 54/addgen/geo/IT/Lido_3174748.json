@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lido",
+  "geonameid": 3174748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.43136385452855,
+      "lon": 12.356190353228092,
+      "geoinfo": {
+        "display_name": "Home Venice Apartments - Biennale, 1044, Calle de le Ancore, Castello, Venezia-Murano-Burano, Lido, Venice, Venezia, Veneto, 30122, Italy",
+        "road": "Calle de le Ancore",
+        "house_number": "1044",
+        "neighbourhood": "Castello",
+        "suburb": "Venezia-Murano-Burano",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30122",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "1044 Calle de le Ancore, Lido, Veneto, Italy"
+    },
+    {
+      "lat": 45.42034312325722,
+      "lon": 12.384970474942305,
+      "geoinfo": {
+        "display_name": "Distretto Socio Sanitario del Lido, Piazzale Ravà, Lido-Pellestrina, Lido, Venice, Venezia, Veneto, 30132, Italy",
+        "road": "Piazzale Ravà",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lido-Pellestrina",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30132",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "142, Piazzale Ravà, Lido, 30132 Veneto, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:16.942356+00:00",
+  "_kind": "geo_samples"
+}

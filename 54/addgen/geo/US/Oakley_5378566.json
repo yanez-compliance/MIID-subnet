@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakley",
+  "geonameid": 5378566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.014558843683446,
+      "lon": -121.7210252660119,
+      "geoinfo": {
+        "display_name": "Levee Top Trail, Oakley, Contra Costa County, California, 94561, United States",
+        "road": "Levee Top Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakley",
+        "state": "California",
+        "postcode": "94561",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Levee Top Trail, Oakley, California, United States"
+    },
+    {
+      "lat": 37.974400513048664,
+      "lon": -121.72001609823103,
+      "geoinfo": {
+        "display_name": "151, Celsia Way, Oakley, Contra Costa County, California, 94561, United States",
+        "road": "Celsia Way",
+        "house_number": "151",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakley",
+        "state": "California",
+        "postcode": "94561",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "151, Celsia Way, Oakley, Contra Costa County, California, 94561, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:41.710433+00:00",
+  "_kind": "geo_samples"
+}

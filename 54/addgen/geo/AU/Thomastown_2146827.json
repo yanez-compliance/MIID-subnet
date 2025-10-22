@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Thomastown",
+  "geonameid": 2146827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.678749963639426,
+      "lon": 145.01685422995686,
+      "geoinfo": {
+        "display_name": "35, The Boulevard, Thomastown, Melbourne, City of Whittlesea, Victoria, 3074, Australia",
+        "road": "The Boulevard",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": "Thomastown",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3074",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "35 The Boulevard, Thomastown, Victoria, Australia"
+    },
+    {
+      "lat": -37.693230175314234,
+      "lon": 144.96204027228322,
+      "geoinfo": {
+        "display_name": "14, Hedley Street, Fawkner, Melbourne, City of Merri-bek, Victoria, 3060, Australia",
+        "road": "Hedley Street",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Fawkner",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3060",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "14, Hedley Street, Fawkner, Melbourne, City of Merri-bek, Victoria, 3060, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:49.936867+00:00",
+  "_kind": "geo_samples"
+}

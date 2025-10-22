@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Arbutus Ridge",
+  "geonameid": 5886586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.28486277027369,
+      "lon": -123.21027840064731,
+      "geoinfo": {
+        "display_name": "Metro Vancouver Regional District, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Arbutus Ridge, British Columbia, Canada"
+    },
+    {
+      "lat": 49.26670391446952,
+      "lon": -123.23023602895643,
+      "geoinfo": {
+        "display_name": "Spanish Trail, Electoral Area A, Metro Vancouver Regional District, British Columbia, V6T, Canada",
+        "road": "Spanish Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Electoral Area A",
+        "state": "British Columbia",
+        "postcode": "V6T",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "289, Spanish Trail, Electoral Area A, Metro Vancouver Regional District, British Columbia, V6T, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:10.575169+00:00",
+  "_kind": "geo_samples"
+}

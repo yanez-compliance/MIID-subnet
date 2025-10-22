@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sankt Augustin",
+  "geonameid": 2841648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.76741633273244,
+      "lon": 7.246411477617082,
+      "geoinfo": {
+        "display_name": "Bodelschwinghstraße, Geistingen, Hennef, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53773, Germany",
+        "road": "Bodelschwinghstraße",
+        "house_number": null,
+        "neighbourhood": "Geistingen",
+        "suburb": "Geistingen",
+        "city_district": null,
+        "city": "Hennef",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53773",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bodelschwinghstraße, Sankt Augustin, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.7713564766627,
+      "lon": 7.256655265447648,
+      "geoinfo": {
+        "display_name": "9a, Kolpingstraße, Geistingen, Hennef, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53773, Germany",
+        "road": "Kolpingstraße",
+        "house_number": "9a",
+        "neighbourhood": "Geistingen",
+        "suburb": "Geistingen",
+        "city_district": null,
+        "city": "Hennef",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53773",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9a, Kolpingstraße, Geistingen, Hennef, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53773, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:51.825529+00:00",
+  "_kind": "geo_samples"
+}

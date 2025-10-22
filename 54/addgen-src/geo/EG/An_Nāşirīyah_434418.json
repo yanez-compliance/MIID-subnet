@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "An Nāşirīyah",
+  "geonameid": 434418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.23651864568208,
+      "lon": 31.173686621062508,
+      "geoinfo": {
+        "display_name": "Asyut, 71524, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Asyut",
+        "postcode": "71524",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "An Nāşirīyah, Asyut, Egypt"
+    },
+    {
+      "lat": 27.218309890612495,
+      "lon": 31.222360763059644,
+      "geoinfo": {
+        "display_name": "Al Fayama’a, Asyut, 71785, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Fayama’a",
+        "state": "Asyut",
+        "postcode": "71785",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "457, An Nāşirīyah, 71785 Asyut, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:57.323122+00:00",
+  "_kind": "geo_samples"
+}

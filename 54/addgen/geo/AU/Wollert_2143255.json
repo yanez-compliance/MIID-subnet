@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Wollert",
+  "geonameid": 2143255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.58388152360068,
+      "lon": 145.0789845092957,
+      "geoinfo": {
+        "display_name": "432, Masons Road, Mernda, Melbourne, City of Whittlesea, Victoria, 3754, Australia",
+        "road": "Masons Road",
+        "house_number": "432",
+        "neighbourhood": null,
+        "suburb": "Mernda",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3754",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "432 Masons Road, Wollert, Victoria, Australia"
+    },
+    {
+      "lat": -37.61067849246948,
+      "lon": 145.07251348898112,
+      "geoinfo": {
+        "display_name": "Mortar Ridge, Regency Views, Mernda, Melbourne, City of Whittlesea, Victoria, 3754, Australia",
+        "road": "Mortar Ridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mernda",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3754",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "195, Mortar Ridge, Regency Views, Mernda, Melbourne, City of Whittlesea, Victoria, 3754, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:37.756329+00:00",
+  "_kind": "geo_samples"
+}

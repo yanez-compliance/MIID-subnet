@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Carterton",
+  "geonameid": 2653634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.7816922969362,
+      "lon": -1.6164954046797866,
+      "geoinfo": {
+        "display_name": "Shilton Road, Shilton, West Oxfordshire, Oxfordshire, England, OX18 4PF, United Kingdom",
+        "road": "Shilton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Oxfordshire",
+        "state": "England",
+        "postcode": "OX18 4PF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Shilton Road, Carterton, England, United Kingdom"
+    },
+    {
+      "lat": 51.721494543214156,
+      "lon": -1.5732206834693172,
+      "geoinfo": {
+        "display_name": "Bampton Road, Bampton, West Oxfordshire, Oxfordshire, England, OX18 2RQ, United Kingdom",
+        "road": "Bampton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bampton",
+        "city_district": null,
+        "city": "West Oxfordshire",
+        "state": "England",
+        "postcode": "OX18 2RQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bampton Road, Bampton, West Oxfordshire, Oxfordshire, England, OX18 2RQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:26.550587+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Doetinchem",
+  "geonameid": 2756767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.92877987252851,
+      "lon": 6.275087939618847,
+      "geoinfo": {
+        "display_name": "1, De Kemp, Wijnbergen, Montferland, Gelderland, Netherlands, 7048 AJ, Netherlands",
+        "road": "De Kemp",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wijnbergen",
+        "state": "Gelderland",
+        "postcode": "7048 AJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "1 De Kemp, Doetinchem, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.99406629497101,
+      "lon": 6.2637832976511225,
+      "geoinfo": {
+        "display_name": "2, Loenhorsterweg, Hummelo, Bronckhorst, Gelderland, Netherlands, 6999 DT, Netherlands",
+        "road": "Loenhorsterweg",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hummelo",
+        "state": "Gelderland",
+        "postcode": "6999 DT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "2, Loenhorsterweg, Doetinchem, 6999 DT Gelderland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:49:24.538447+00:00",
+  "_kind": "geo_samples"
+}

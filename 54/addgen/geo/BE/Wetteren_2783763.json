@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Wetteren",
+  "geonameid": 2783763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.99371411135349,
+      "lon": 3.913391533890313,
+      "geoinfo": {
+        "display_name": "112, Adolf Papeleustraat, Boskant, Wetteren, Dendermonde, East Flanders, Flanders, 9230, Belgium",
+        "road": "Adolf Papeleustraat",
+        "house_number": "112",
+        "neighbourhood": "Boskant",
+        "suburb": null,
+        "city_district": "Wetteren",
+        "city": "Wetteren",
+        "state": "East Flanders",
+        "postcode": "9230",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "112 Adolf Papeleustraat, Wetteren, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.03305818642404,
+      "lon": 3.857403164241507,
+      "geoinfo": {
+        "display_name": "16, Bochtenstraat, Laarne, Dendermonde, East Flanders, 9270, Belgium",
+        "road": "Bochtenstraat",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Laarne",
+        "city": "Laarne",
+        "state": "East Flanders",
+        "postcode": "9270",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "16, Bochtenstraat, Laarne, Dendermonde, East Flanders, 9270, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:00:45.822279+00:00",
+  "_kind": "geo_samples"
+}

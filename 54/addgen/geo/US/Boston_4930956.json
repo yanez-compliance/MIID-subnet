@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boston",
+  "geonameid": 4930956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.33358272323198,
+      "lon": -71.03506668182722,
+      "geoinfo": {
+        "display_name": "Monsignor Powers, 120, L Street, City Point, South Boston, Boston, Suffolk County, Massachusetts, 02127, United States",
+        "road": "L Street",
+        "house_number": "120",
+        "neighbourhood": "City Point",
+        "suburb": "South Boston",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "120 L Street, Boston, Massachusetts, United States"
+    },
+    {
+      "lat": 42.33248459470715,
+      "lon": -71.07070142808143,
+      "geoinfo": {
+        "display_name": "85, Southampton Street, Dorchester, Boston, Suffolk County, Massachusetts, 02118, United States",
+        "road": "Southampton Street",
+        "house_number": "85",
+        "neighbourhood": null,
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "85, Southampton Street, Dorchester, Boston, Suffolk County, Massachusetts, 02118, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:55.154693+00:00",
+  "_kind": "geo_samples"
+}

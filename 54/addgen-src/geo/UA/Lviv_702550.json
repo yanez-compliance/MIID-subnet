@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Lviv",
+  "geonameid": 702550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.84393459447294,
+      "lon": 24.070138176547154,
+      "geoinfo": {
+        "display_name": "3, Berezova Street, Kryvchytska koloniia, Lviv, Lviv Urban Hromada, Lviv Raion, Lviv Oblast, 79014, Ukraine",
+        "road": "Berezova Street",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Kryvchytska koloniia",
+        "city_district": null,
+        "city": "Lviv",
+        "state": "Lviv Oblast",
+        "postcode": "79014",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "3 Berezova Street, Lviv, Lviv Oblast, Ukraine"
+    },
+    {
+      "lat": 49.864238197310726,
+      "lon": 24.03744523973833,
+      "geoinfo": {
+        "display_name": "Viacheslava Lypynskoho Street, Zamarstyniv, Lviv, Lviv Urban Hromada, Lviv Raion, Lviv Oblast, 79059, Ukraine",
+        "road": "Viacheslava Lypynskoho Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zamarstyniv",
+        "city_district": null,
+        "city": "Lviv",
+        "state": "Lviv Oblast",
+        "postcode": "79059",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "734, Viacheslava Lypynskoho Street, Zamarstyniv, Lviv, Lviv Urban Hromada, Lviv Raion, Lviv Oblast, 79059, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:54.527437+00:00",
+  "_kind": "geo_samples"
+}

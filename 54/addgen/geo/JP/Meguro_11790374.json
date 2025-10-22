@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Meguro",
+  "geonameid": 11790374,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.63926802186902,
+      "lon": 139.67710702795,
+      "geoinfo": {
+        "display_name": "Shimouma 2, Shimouma, Setagaya, Tokyo, 154-0002, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Shimouma 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Setagaya",
+        "state": null,
+        "postcode": "154-0002",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Shimouma 2, Meguro, Japan"
+    },
+    {
+      "lat": 35.65436053620273,
+      "lon": 139.66352797525576,
+      "geoinfo": {
+        "display_name": "北沢川緑道, Daizawa 4, Daita 2, Daita, Setagaya, Tokyo, 155-0032, Japan",
+        "road": "北沢川緑道",
+        "house_number": null,
+        "neighbourhood": "Daizawa 4",
+        "suburb": "Daita",
+        "city_district": null,
+        "city": "Setagaya",
+        "state": null,
+        "postcode": "155-0032",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "北沢川緑道, Daizawa 4, Daita 2, Daita, Setagaya, Tokyo, 155-0032, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:23.346345+00:00",
+  "_kind": "geo_samples"
+}

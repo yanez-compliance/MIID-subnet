@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Wŏnju",
+  "geonameid": 1833105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.39078560990173,
+      "lon": 127.94761189468956,
+      "geoinfo": {
+        "display_name": "Wonju-si, Gangwon State, 26314, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wonju-si",
+        "state": null,
+        "postcode": "26314",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Wŏnju, South Korea"
+    },
+    {
+      "lat": 37.36268705847506,
+      "lon": 127.99609528407733,
+      "geoinfo": {
+        "display_name": "Saldaeulmoraegi-gil, 소초면, Wonju-si, Gangwon State, 26454, South Korea",
+        "road": "Saldaeulmoraegi-gil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "소초면",
+        "city": "Wonju-si",
+        "state": null,
+        "postcode": "26454",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "324, Saldaeulmoraegi-gil, 26454 Wŏnju, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:37:30.473941+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "LaGrange",
+  "geonameid": 4204230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.02497154467367,
+      "lon": -85.0560879510898,
+      "geoinfo": {
+        "display_name": "Brownwood Avenue, LaGrange, Troup County, Georgia, 30240, United States",
+        "road": "Brownwood Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "LaGrange",
+        "state": "Georgia",
+        "postcode": "30240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brownwood Avenue, LaGrange, Georgia, United States"
+    },
+    {
+      "lat": 33.043254941721734,
+      "lon": -85.08329945918477,
+      "geoinfo": {
+        "display_name": "West Lakeview Drive, Pinehaven Estates, LaGrange, Troup County, Georgia, 30240, United States",
+        "road": "West Lakeview Drive",
+        "house_number": null,
+        "neighbourhood": "Pinehaven Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "LaGrange",
+        "state": "Georgia",
+        "postcode": "30240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "023, West Lakeview Drive, Pinehaven Estates, LaGrange, Troup County, Georgia, 30240, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:32.568143+00:00",
+  "_kind": "geo_samples"
+}

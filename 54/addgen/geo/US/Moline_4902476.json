@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Moline",
+  "geonameid": 4902476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.50441014852222,
+      "lon": -90.53566375317699,
+      "geoinfo": {
+        "display_name": "164, 5th Avenue, Floreciente, Moline, Rock Island County, Illinois, 61265, United States",
+        "road": "5th Avenue",
+        "house_number": "164",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moline",
+        "state": "Illinois",
+        "postcode": "61265",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "164 5th Avenue, Moline, Illinois, United States"
+    },
+    {
+      "lat": 41.477435269268256,
+      "lon": -90.55499882809536,
+      "geoinfo": {
+        "display_name": "3301, 33rd Avenue Court, Schroeder's Oak Knoll, Rock Island, Rock Island County, Illinois, 61201, United States",
+        "road": "33rd Avenue Court",
+        "house_number": "3301",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rock Island",
+        "state": "Illinois",
+        "postcode": "61201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3301, 33rd Avenue Court, Schroeder's Oak Knoll, Rock Island, Rock Island County, Illinois, 61201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:06.541712+00:00",
+  "_kind": "geo_samples"
+}

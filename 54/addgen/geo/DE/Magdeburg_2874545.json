@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Magdeburg",
+  "geonameid": 2874545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.12827942836594,
+      "lon": 11.560566543661453,
+      "geoinfo": {
+        "display_name": "19, Hohe Wiese, Diesdorf, Magdeburg, Saxony-Anhalt, 39110, Germany",
+        "road": "Hohe Wiese",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Diesdorf",
+        "city_district": null,
+        "city": "Magdeburg",
+        "state": "Saxony-Anhalt",
+        "postcode": "39110",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19 Hohe Wiese, Magdeburg, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 52.090961002923535,
+      "lon": 11.634140018852005,
+      "geoinfo": {
+        "display_name": "3, Tannenweg, Hopfengarten, Magdeburg, Saxony-Anhalt, 39120, Germany",
+        "road": "Tannenweg",
+        "house_number": "3",
+        "neighbourhood": "Hopfengarten",
+        "suburb": "Hopfengarten",
+        "city_district": null,
+        "city": "Magdeburg",
+        "state": "Saxony-Anhalt",
+        "postcode": "39120",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3, Tannenweg, Hopfengarten, Magdeburg, Saxony-Anhalt, 39120, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:26.629045+00:00",
+  "_kind": "geo_samples"
+}

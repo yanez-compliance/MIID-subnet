@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Geretsried",
+  "geonameid": 2921139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.82550092239623,
+      "lon": 11.505478382590516,
+      "geoinfo": {
+        "display_name": "Dorfstraße, Rothmühle, Wiesen, Königsdorf, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 82549, Germany",
+        "road": "Dorfstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wiesen",
+        "state": "Bavaria",
+        "postcode": "82549",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dorfstraße, Geretsried, Bavaria, Germany"
+    },
+    {
+      "lat": 47.84853833138144,
+      "lon": 11.521069241817779,
+      "geoinfo": {
+        "display_name": "5, Einöd, Peretshofen, Dietramszell, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 83623, Germany",
+        "road": "Einöd",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peretshofen",
+        "state": "Bavaria",
+        "postcode": "83623",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Einöd, Peretshofen, Dietramszell, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 83623, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:35.606749+00:00",
+  "_kind": "geo_samples"
+}

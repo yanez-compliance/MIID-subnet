@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bastia",
+  "geonameid": 3034640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.705009001087056,
+      "lon": 9.436216407933617,
+      "geoinfo": {
+        "display_name": "274, Rue de l'Alyssum, Paratoghju, Pojo, Bastia, Upper Corsica, Corsica, Metropolitan France, 20200, France",
+        "road": "Rue de l'Alyssum",
+        "house_number": "274",
+        "neighbourhood": "Paratoghju",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bastia",
+        "state": "Corsica",
+        "postcode": "20200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "274 Rue de l'Alyssum, Bastia, Corsica, France"
+    },
+    {
+      "lat": 42.66011228641369,
+      "lon": 9.439537886563219,
+      "geoinfo": {
+        "display_name": "Chemin de Vulpaghju, Volpaghju, Lotissement Volpaghjolu, Furiani, Bastia, Upper Corsica, Corsica, Metropolitan France, 20600, France",
+        "road": "Chemin de Vulpaghju",
+        "house_number": null,
+        "neighbourhood": "Volpaghju",
+        "suburb": null,
+        "city_district": null,
+        "city": "Furiani",
+        "state": "Corsica",
+        "postcode": "20600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "624, Chemin de Vulpaghju, Bastia, 20600 Corsica, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:53.395728+00:00",
+  "_kind": "geo_samples"
+}

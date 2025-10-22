@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shaw",
+  "geonameid": 4140463,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.91169176656762,
+      "lon": -77.07496628266442,
+      "geoinfo": {
+        "display_name": "Georgetown University, 3700, O Street Northwest, Georgetown, Ward 2, Washington, District of Columbia, 20057, United States",
+        "road": "O Street Northwest",
+        "house_number": "3700",
+        "neighbourhood": null,
+        "suburb": "Georgetown",
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3700 O Street Northwest, Shaw, District of Columbia, United States"
+    },
+    {
+      "lat": 38.897721542229114,
+      "lon": -76.99778408049968,
+      "geoinfo": {
+        "display_name": "618, F Street Northeast, Stanton Park, Ward 6, Washington, District of Columbia, 20549, United States",
+        "road": "F Street Northeast",
+        "house_number": "618",
+        "neighbourhood": "Stanton Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20549",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "618, F Street Northeast, Stanton Park, Ward 6, Washington, District of Columbia, 20549, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:54.036611+00:00",
+  "_kind": "geo_samples"
+}

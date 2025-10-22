@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Móstoles",
+  "geonameid": 3116025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.32839349761038,
+      "lon": -3.8712931008166436,
+      "geoinfo": {
+        "display_name": "6, Calle Rubens, El Recreo, Móstoles, Community of Madrid, 28935, Spain",
+        "road": "Calle Rubens",
+        "house_number": "6",
+        "neighbourhood": "El Recreo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Móstoles",
+        "state": "Community of Madrid",
+        "postcode": "28935",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "6 Calle Rubens, Móstoles, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.35188069957432,
+      "lon": -3.851146974264005,
+      "geoinfo": {
+        "display_name": "Norte, Alcorcón, Community of Madrid, 28291, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alcorcón",
+        "state": "Community of Madrid",
+        "postcode": "28291",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "179, Norte, Alcorcón, Community of Madrid, 28291, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:14.812554+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elmhurst",
+  "geonameid": 5116495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.725205021507605,
+      "lon": -73.92472950584575,
+      "geoinfo": {
+        "display_name": "57th Avenue, Queens, Queens County, New York, 11104, United States",
+        "road": "57th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "57th Avenue, Elmhurst, New York, United States"
+    },
+    {
+      "lat": 40.698886569692824,
+      "lon": -73.8599049189904,
+      "geoinfo": {
+        "display_name": "Forest Park Golf Course, 101, Forest Park Drive, Queens, Queens County, New York, 11421, United States",
+        "road": "Forest Park Drive",
+        "house_number": "101",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11421",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Forest Park Golf Course, 101, Forest Park Drive, Queens, Queens County, New York, 11421, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:40.507260+00:00",
+  "_kind": "geo_samples"
+}

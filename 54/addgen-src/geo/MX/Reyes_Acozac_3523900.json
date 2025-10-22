@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Reyes Acozac",
+  "geonameid": 3523900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.764592792585123,
+      "lon": -98.96717455950011,
+      "geoinfo": {
+        "display_name": "Calle Allende, Santa María Ajoloapan, Tecámac, State of Mexico, 55755, Mexico",
+        "road": "Calle Allende",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tecámac",
+        "state": "State of Mexico",
+        "postcode": "55755",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Allende, Reyes Acozac, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.795809990842148,
+      "lon": -98.97787904107307,
+      "geoinfo": {
+        "display_name": "Tecámac, State of Mexico, 55755, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tecámac",
+        "state": "State of Mexico",
+        "postcode": "55755",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "649, Tecámac, State of Mexico, 55755, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:46.613275+00:00",
+  "_kind": "geo_samples"
+}

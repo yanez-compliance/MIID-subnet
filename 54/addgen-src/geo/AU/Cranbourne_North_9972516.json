@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Cranbourne North",
+  "geonameid": 9972516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.08669824767701,
+      "lon": 145.3039375999348,
+      "geoinfo": {
+        "display_name": "Thompsons Road, Cranbourne East, Melbourne, City of Casey, Victoria, 3977, Australia",
+        "road": "Thompsons Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cranbourne East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3977",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Thompsons Road, Cranbourne North, Victoria, Australia"
+    },
+    {
+      "lat": -38.102960430353335,
+      "lon": 145.3175964039929,
+      "geoinfo": {
+        "display_name": "7, Duce Street, Cascades on Clyde, Cranbourne East, Melbourne, City of Casey, Victoria, 3977, Australia",
+        "road": "Duce Street",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Cranbourne East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3977",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "7, Duce Street, Cascades on Clyde, Cranbourne East, Melbourne, City of Casey, Victoria, 3977, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:28.989855+00:00",
+  "_kind": "geo_samples"
+}

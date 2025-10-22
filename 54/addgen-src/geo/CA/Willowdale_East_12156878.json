@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Willowdale East",
+  "geonameid": 12156878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.77664893305897,
+      "lon": -79.41520327401216,
+      "geoinfo": {
+        "display_name": "Skyview Apartments, 5444, Yonge Street, Willowdale West, Willowdale, North York, Toronto, Golden Horseshoe, Ontario, M2N 0C1, Canada",
+        "road": "Yonge Street",
+        "house_number": "5444",
+        "neighbourhood": "Willowdale West",
+        "suburb": "North York",
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M2N 0C1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "5444 Yonge Street, Willowdale East, Ontario, Canada"
+    },
+    {
+      "lat": 43.77230134242239,
+      "lon": -79.33985372953522,
+      "geoinfo": {
+        "display_name": "12, Virgo Starway, Henry Farm, Don Valley North, North York, Toronto, Golden Horseshoe, Ontario, M2J 1M4, Canada",
+        "road": "Virgo Starway",
+        "house_number": "12",
+        "neighbourhood": "Henry Farm",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M2J 1M4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "12, Virgo Starway, Henry Farm, Don Valley North, North York, Toronto, Golden Horseshoe, Ontario, M2J 1M4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:35.432977+00:00",
+  "_kind": "geo_samples"
+}

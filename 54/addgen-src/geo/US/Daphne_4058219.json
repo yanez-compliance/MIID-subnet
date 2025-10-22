@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Daphne",
+  "geonameid": 4058219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.62689705546356,
+      "lon": -87.94491843357417,
+      "geoinfo": {
+        "display_name": "Baldwin County, Alabama, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alabama",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Daphne, Alabama, United States"
+    },
+    {
+      "lat": 30.630137041171636,
+      "lon": -87.90864663867764,
+      "geoinfo": {
+        "display_name": "6740, Park Drive, Daphne, Baldwin County, Alabama, 36526, United States",
+        "road": "Park Drive",
+        "house_number": "6740",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daphne",
+        "state": "Alabama",
+        "postcode": "36526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6740, Park Drive, Daphne, Baldwin County, Alabama, 36526, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:51.143306+00:00",
+  "_kind": "geo_samples"
+}

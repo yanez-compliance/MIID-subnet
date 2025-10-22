@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ciudad Universitaria",
+  "geonameid": 11549993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.468456332245125,
+      "lon": -3.7614033677943763,
+      "geoinfo": {
+        "display_name": "Hipódromo de la Zarzuela, Calle 30, Ciudad Universitaria, Moncloa-Aravaca, Madrid, Community of Madrid, 28035, Spain",
+        "road": "Calle 30",
+        "house_number": null,
+        "neighbourhood": "Ciudad Universitaria",
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 30, Ciudad Universitaria, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.46526123159112,
+      "lon": -3.794763497474353,
+      "geoinfo": {
+        "display_name": "M-40, Moncloa-Aravaca, Madrid, Community of Madrid, 28023, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28023",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Moncloa-Aravaca, Madrid, Community of Madrid, 28023, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:50.978126+00:00",
+  "_kind": "geo_samples"
+}

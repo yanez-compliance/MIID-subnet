@@ -1,0 +1,47 @@
+{
+  "country_code": "LY",
+  "country": "Libya",
+  "city": "Qaryat Sulūq",
+  "geonameid": 81604,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 31.644248207400327,
+      "lon": 20.213160826972832,
+      "geoinfo": {
+        "display_name": "AS sayad district, Benghazi, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "AS sayad district",
+        "city_district": null,
+        "city": "Benghazi",
+        "state": null,
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "199, AS sayad district, 84842 Benghazi, Libya"
+    },
+    {
+      "lat": 31.686012480334995,
+      "lon": 20.2469584041786,
+      "geoinfo": {
+        "display_name": "حي الحوازة, Benghazi, Libya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "حي الحوازة",
+        "city_district": null,
+        "city": "Benghazi",
+        "state": null,
+        "postcode": null,
+        "country": "Libya",
+        "country_code": "ly"
+      },
+      "address": "321, حي الحوازة, 03099 Benghazi, Libya"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:13.218813+00:00",
+  "_kind": "geo_samples"
+}

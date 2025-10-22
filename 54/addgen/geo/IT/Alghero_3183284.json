@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Alghero",
+  "geonameid": 3183284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.58849063486028,
+      "lon": 8.34640302230059,
+      "geoinfo": {
+        "display_name": "Alghero, Sassari, Sardinia, 07041, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alghero",
+        "state": "Sardinia",
+        "postcode": "07041",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Alghero, Sardinia, Italy"
+    },
+    {
+      "lat": 40.5582737447294,
+      "lon": 8.294802261423136,
+      "geoinfo": {
+        "display_name": "Banchina Sanità, Old Alghero, 07041, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Old Alghero",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "07041",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "337, Banchina Sanità, Old Alghero, 07041, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:38.912727+00:00",
+  "_kind": "geo_samples"
+}

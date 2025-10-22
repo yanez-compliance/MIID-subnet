@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Gillis-Waas",
+  "geonameid": 2786694,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.244021162623994,
+      "lon": 4.151177095406083,
+      "geoinfo": {
+        "display_name": "Zandloperstraat, Zandloper, Meerdonk, Sint-Gillis-Waas, Sint-Niklaas, East Flanders, 9170, Belgium",
+        "road": "Zandloperstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Gillis-Waas",
+        "state": "East Flanders",
+        "postcode": "9170",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Zandloperstraat, Sint-Gillis-Waas, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.18494054096412,
+      "lon": 4.083283175774312,
+      "geoinfo": {
+        "display_name": "50, Lijkveldestraat, Kwakkel, Sint-Pauwels, Sint-Gillis-Waas, Sint-Niklaas, East Flanders, 9170, Belgium",
+        "road": "Lijkveldestraat",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Gillis-Waas",
+        "state": "East Flanders",
+        "postcode": "9170",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "50, Lijkveldestraat, Kwakkel, Sint-Pauwels, Sint-Gillis-Waas, Sint-Niklaas, East Flanders, 9170, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:40.983330+00:00",
+  "_kind": "geo_samples"
+}

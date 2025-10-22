@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Santa Cruz",
+  "geonameid": 1688248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.940039271276605,
+      "lon": 120.53681673822096,
+      "geoinfo": {
+        "display_name": "Centro, Purok 1, San Agustin, Lubao, Pampanga, Central Luzon, 2005, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Centro",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lubao",
+        "state": "Pampanga",
+        "postcode": "2005",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Centro, Santa Cruz, Pampanga, Philippines"
+    },
+    {
+      "lat": 14.887631964373409,
+      "lon": 120.60382224868631,
+      "geoinfo": {
+        "display_name": "River Control Road, Sitio Matikling, Lubao, Pampanga, Central Luzon, 2004, Philippines",
+        "road": "River Control Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lubao",
+        "state": "Pampanga",
+        "postcode": "2004",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "725, River Control Road, Sitio Matikling, Lubao, Pampanga, Central Luzon, 2004, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:10.388241+00:00",
+  "_kind": "geo_samples"
+}

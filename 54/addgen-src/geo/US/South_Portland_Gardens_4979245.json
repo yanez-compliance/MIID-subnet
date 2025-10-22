@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Portland Gardens",
+  "geonameid": 4979245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.645019377129394,
+      "lon": -70.30187074379906,
+      "geoinfo": {
+        "display_name": "Perimeter Road, South Portland Gardens, South Portland, Cumberland County, Maine, 04102, United States",
+        "road": "Perimeter Road",
+        "house_number": null,
+        "neighbourhood": "South Portland Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "South Portland",
+        "state": "Maine",
+        "postcode": "04102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Perimeter Road, South Portland Gardens, Maine, United States"
+    },
+    {
+      "lat": 43.62844631388849,
+      "lon": -70.28355209836364,
+      "geoinfo": {
+        "display_name": "1242, Broadway, Cash Corner, South Portland, Cumberland County, Maine, 04106, United States",
+        "road": "Broadway",
+        "house_number": "1242",
+        "neighbourhood": "Cash Corner",
+        "suburb": null,
+        "city_district": null,
+        "city": "South Portland",
+        "state": "Maine",
+        "postcode": "04106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1242, Broadway, Cash Corner, South Portland, Cumberland County, Maine, 04106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:36.278227+00:00",
+  "_kind": "geo_samples"
+}

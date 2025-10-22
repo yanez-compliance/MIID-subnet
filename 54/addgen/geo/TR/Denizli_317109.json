@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Denizli",
+  "geonameid": 317109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.73860114688373,
+      "lon": 29.09972995713604,
+      "geoinfo": {
+        "display_name": "Pamukkale University, 6459 Sokak, Yunusemre Mahallesi, Pamukkale, Denizli, Aegean Region, 20160, Turkey",
+        "road": "6459 Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yunusemre Mahallesi",
+        "city": "Pamukkale",
+        "state": null,
+        "postcode": "20160",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "6459 Sokak, Denizli, Turkey"
+    },
+    {
+      "lat": 37.74802156151208,
+      "lon": 29.045341120307125,
+      "geoinfo": {
+        "display_name": "436 Sokak, Servergazi, Gerzele Mahallesi, Merkezefendi, Denizli, Aegean Region, 20040, Turkey",
+        "road": "436 Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerzele Mahallesi",
+        "city_district": null,
+        "city": "Merkezefendi",
+        "state": null,
+        "postcode": "20040",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "436 Sokak, Servergazi, Gerzele Mahallesi, Merkezefendi, Denizli, Aegean Region, 20040, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:58.792309+00:00",
+  "_kind": "geo_samples"
+}

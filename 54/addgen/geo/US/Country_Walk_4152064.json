@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Country Walk",
+  "geonameid": 4152064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.638617790194917,
+      "lon": -80.46620525494534,
+      "geoinfo": {
+        "display_name": "Southwest 136th Street, Miami-Dade County, Florida, 33196, United States",
+        "road": "Southwest 136th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33196",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 136th Street, Country Walk, Florida, United States"
+    },
+    {
+      "lat": 25.61797126570255,
+      "lon": -80.38588716370303,
+      "geoinfo": {
+        "display_name": "Coast Guard Access Road, Miami-Dade County, Florida, 33177, United States",
+        "road": "Coast Guard Access Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "445, Coast Guard Access Road, Miami-Dade County, Florida, 33177, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:47.674884+00:00",
+  "_kind": "geo_samples"
+}

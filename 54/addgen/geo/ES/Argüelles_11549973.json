@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Argüelles",
+  "geonameid": 11549973,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.43864303947248,
+      "lon": -3.724578009660299,
+      "geoinfo": {
+        "display_name": "Avenida de la Memoria, Ciudad Universitaria, Moncloa-Aravaca, Madrid, Community of Madrid, 28008, Spain",
+        "road": "Avenida de la Memoria",
+        "house_number": null,
+        "neighbourhood": "Ciudad Universitaria",
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28008",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de la Memoria, Argüelles, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.38979848652199,
+      "lon": -3.7426410691792737,
+      "geoinfo": {
+        "display_name": "Calle del Halcón, Vista Alegre, Carabanchel, Madrid, Community of Madrid, 28025, Spain",
+        "road": "Calle del Halcón",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28025",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "029, Calle del Halcón, Vista Alegre, Carabanchel, Madrid, Community of Madrid, 28025, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:43.757625+00:00",
+  "_kind": "geo_samples"
+}

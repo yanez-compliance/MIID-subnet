@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kassel",
+  "geonameid": 2892518,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.35423420798584,
+      "lon": 9.531451656241456,
+      "geoinfo": {
+        "display_name": "9, Weserstraße, Ihringshausen, Fuldatal, Landkreis Kassel, Hesse, 34233, Germany",
+        "road": "Weserstraße",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ihringshausen",
+        "state": "Hesse",
+        "postcode": "34233",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9 Weserstraße, Kassel, Hesse, Germany"
+    },
+    {
+      "lat": 51.346331821025814,
+      "lon": 9.546299046625947,
+      "geoinfo": {
+        "display_name": "Stonsbreite, Wolfsanger-Hasenhecke, Kassel, Hesse, 34125, Germany",
+        "road": "Stonsbreite",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wolfsanger-Hasenhecke",
+        "city_district": null,
+        "city": "Kassel",
+        "state": "Hesse",
+        "postcode": "34125",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "090, Stonsbreite, Wolfsanger-Hasenhecke, Kassel, Hesse, 34125, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:08.302072+00:00",
+  "_kind": "geo_samples"
+}

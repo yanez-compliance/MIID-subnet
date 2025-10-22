@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Dordrecht",
+  "geonameid": 2756669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.813739267712485,
+      "lon": 4.680960576747026,
+      "geoinfo": {
+        "display_name": "11, Hallincqhof, Stadswerven, Dordrecht, South Holland, Netherlands, 3311 DD, Netherlands",
+        "road": "Hallincqhof",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dordrecht",
+        "state": "South Holland",
+        "postcode": "3311 DD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "11 Hallincqhof, Dordrecht, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.776048535820536,
+      "lon": 4.681060088122023,
+      "geoinfo": {
+        "display_name": "Zuilenburg, Sterrenburg, Dordrecht, South Holland, Netherlands, 3328 VA, Netherlands",
+        "road": "Zuilenburg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dordrecht",
+        "state": "South Holland",
+        "postcode": "3328 VA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "602, Zuilenburg, Sterrenburg, Dordrecht, South Holland, Netherlands, 3328 VA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:55.727638+00:00",
+  "_kind": "geo_samples"
+}

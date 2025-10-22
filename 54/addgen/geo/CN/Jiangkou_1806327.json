@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiangkou",
+  "geonameid": 1806327,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.464792711344646,
+      "lon": 119.19585359542593,
+      "geoinfo": {
+        "display_name": "Jiangkou, Hanjiang District, Putian City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiangkou",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiangkou, Fujian, China"
+    },
+    {
+      "lat": 25.482668292925254,
+      "lon": 119.23613990430198,
+      "geoinfo": {
+        "display_name": "Xincuo, Fuqing City, Fujian, 350300, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xincuo",
+        "state": "Fujian",
+        "postcode": "350300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "676, Xincuo, Fuqing City, Fujian, 350300, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:21.670959+00:00",
+  "_kind": "geo_samples"
+}

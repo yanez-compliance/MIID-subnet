@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Novodvinsk",
+  "geonameid": 518909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 64.39164657812297,
+      "lon": 40.79958343879429,
+      "geoinfo": {
+        "display_name": "Novodvinsk, Novodvinsk Urban Okrug, Arkhangelsk Oblast, Northwestern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novodvinsk",
+        "state": "Arkhangelsk Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Novodvinsk, Arkhangelsk Oblast, Russia"
+    },
+    {
+      "lat": 64.4206820229865,
+      "lon": 40.87037463244617,
+      "geoinfo": {
+        "display_name": "Primorsky District, Arkhangelsk Oblast, Northwestern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arkhangelsk Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "306, Novodvinsk, 46177 Arkhangelsk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:37.781000+00:00",
+  "_kind": "geo_samples"
+}

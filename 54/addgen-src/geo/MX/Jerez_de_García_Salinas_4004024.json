@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Jerez de García Salinas",
+  "geonameid": 4004024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.630906088949533,
+      "lon": -102.965050150272,
+      "geoinfo": {
+        "display_name": "Azadones, Jerez, Zacatecas, 99300, Mexico",
+        "road": "Azadones",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jerez",
+        "state": "Zacatecas",
+        "postcode": "99300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Azadones, Jerez de García Salinas, Zacatecas, Mexico"
+    },
+    {
+      "lat": 22.64759809104282,
+      "lon": -103.02823961635431,
+      "geoinfo": {
+        "display_name": "Virginia, Jerez, Zacatecas, 99300, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jerez",
+        "state": "Zacatecas",
+        "postcode": "99300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "996, Virginia, Jerez, Zacatecas, 99300, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:23.093496+00:00",
+  "_kind": "geo_samples"
+}

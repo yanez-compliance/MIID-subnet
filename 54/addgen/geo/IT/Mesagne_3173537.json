@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Mesagne",
+  "geonameid": 3173537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.578624115082064,
+      "lon": 17.779631114742184,
+      "geoinfo": {
+        "display_name": "Via Vecchia Francavilla, Mesagne, Brindisi, Apulia, Italy",
+        "road": "Via Vecchia Francavilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesagne",
+        "state": "Apulia",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Vecchia Francavilla, Mesagne, Apulia, Italy"
+    },
+    {
+      "lat": 40.56628341415969,
+      "lon": 17.820802676677832,
+      "geoinfo": {
+        "display_name": "Contrada Cavallino, Mesagne, Brindisi, Apulia, 72023, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesagne",
+        "state": "Apulia",
+        "postcode": "72023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "888, Contrada Cavallino, Mesagne, Brindisi, Apulia, 72023, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:26.781203+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "San Po Kong",
+  "geonameid": 1819003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.354760665856737,
+      "lon": 114.20444355830932,
+      "geoinfo": {
+        "display_name": "Shatin Pass Road, Mau Tat, Wong Tai Sin District, Sha Tin District, New Territories, Hong Kong, 000000, China",
+        "road": "Shatin Pass Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wong Tai Sin District",
+        "city": "Sha Tin District",
+        "state": "Hong Kong",
+        "postcode": "000000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shatin Pass Road, San Po Kong, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.31835033777545,
+      "lon": 114.18571986757496,
+      "geoinfo": {
+        "display_name": "32, Celestial Avenue, Celestial Heights, 九龍城區 Kowloon City, Kowloon City District, Kowloon, Hong Kong, China",
+        "road": "Celestial Avenue",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "九龍城區 Kowloon City",
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "32, Celestial Avenue, Celestial Heights, 九龍城區 Kowloon City, Kowloon City District, Kowloon, 34687 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:40.100437+00:00",
+  "_kind": "geo_samples"
+}

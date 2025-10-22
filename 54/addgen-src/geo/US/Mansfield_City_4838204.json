@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mansfield City",
+  "geonameid": 4838204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.7723037693628,
+      "lon": -72.24741590662046,
+      "geoinfo": {
+        "display_name": "752, Mansfield City Road, Mansfield City, Eagleville, Mansfield, Capitol Planning Region, Connecticut, 06268, United States",
+        "road": "Mansfield City Road",
+        "house_number": "752",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Connecticut",
+        "postcode": "06268",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "752 Mansfield City Road, Mansfield City, Connecticut, United States"
+    },
+    {
+      "lat": 41.794551077283096,
+      "lon": -72.19470673723107,
+      "geoinfo": {
+        "display_name": "Mulberry Road, Chaffeeville, Mansfield, Capitol Planning Region, Connecticut, 06250, United States",
+        "road": "Mulberry Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Connecticut",
+        "postcode": "06250",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "386, Mulberry Road, Chaffeeville, Mansfield, Capitol Planning Region, Connecticut, 06250, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:33.661300+00:00",
+  "_kind": "geo_samples"
+}

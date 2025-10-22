@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montrose",
+  "geonameid": 5431710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.484419213094434,
+      "lon": -107.92917416342434,
+      "geoinfo": {
+        "display_name": "6215 Road, Montrose County, Colorado, United States",
+        "road": "6215 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6215 Road, Montrose, Colorado, United States"
+    },
+    {
+      "lat": 38.48975421473529,
+      "lon": -107.84245318685089,
+      "geoinfo": {
+        "display_name": "US 50, Montrose County, Colorado, 81401, United States",
+        "road": "US 50",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "81401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 50, Montrose County, Colorado, 81401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:48.961749+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "West Hill",
+  "geonameid": 6178999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.74291922582717,
+      "lon": -79.1569969119157,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "West Hill, Ontario, Canada"
+    },
+    {
+      "lat": 43.78545646340991,
+      "lon": -79.15465564790253,
+      "geoinfo": {
+        "display_name": "15, Irvine Road, Centennial Scarborough, Scarborough—Rouge Park, Scarborough, Toronto, Golden Horseshoe, Ontario, M1C 2A2, Canada",
+        "road": "Irvine Road",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1C 2A2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "15, Irvine Road, Centennial Scarborough, Scarborough—Rouge Park, Scarborough, Toronto, Golden Horseshoe, Ontario, M1C 2A2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:33.101757+00:00",
+  "_kind": "geo_samples"
+}

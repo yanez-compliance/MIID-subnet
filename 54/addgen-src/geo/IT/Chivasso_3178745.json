@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Chivasso",
+  "geonameid": 3178745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.17307295429181,
+      "lon": 7.863726731393983,
+      "geoinfo": {
+        "display_name": "SP590, Cascina Brichetto, San Raffaele Cimena, Turin, Piedmont, 10034, Italy",
+        "road": "SP590",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Raffaele Cimena",
+        "state": "Piedmont",
+        "postcode": "10034",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP590, Chivasso, Piedmont, Italy"
+    },
+    {
+      "lat": 45.21216203048044,
+      "lon": 7.844850572596914,
+      "geoinfo": {
+        "display_name": "Pratoregio, Chivasso, Turin, Piedmont, 10017, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chivasso",
+        "state": "Piedmont",
+        "postcode": "10017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "197, Pratoregio, Chivasso, Turin, Piedmont, 10017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:05.964966+00:00",
+  "_kind": "geo_samples"
+}

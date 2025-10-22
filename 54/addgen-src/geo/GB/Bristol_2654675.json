@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bristol",
+  "geonameid": 2654675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.473112982382624,
+      "lon": -2.5652941256598023,
+      "geoinfo": {
+        "display_name": "KFC, Eastgate Road, Greenbank, Eastville, Bristol, City of Bristol, West of England, England, BS5 6XX, United Kingdom",
+        "road": "Eastgate Road",
+        "house_number": null,
+        "neighbourhood": "Greenbank",
+        "suburb": "Eastville",
+        "city_district": null,
+        "city": "Bristol",
+        "state": "England",
+        "postcode": "BS5 6XX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Eastgate Road, Bristol, England, United Kingdom"
+    },
+    {
+      "lat": 51.465140759066834,
+      "lon": -2.568041996623783,
+      "geoinfo": {
+        "display_name": "31, Woodborough Street, Baptist Mills, Easton, Bristol, City of Bristol, West of England, England, BS5 0JA, United Kingdom",
+        "road": "Woodborough Street",
+        "house_number": "31",
+        "neighbourhood": "Baptist Mills",
+        "suburb": "Easton",
+        "city_district": null,
+        "city": "Bristol",
+        "state": "England",
+        "postcode": "BS5 0JA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "31, Woodborough Street, Baptist Mills, Easton, Bristol, City of Bristol, West of England, England, BS5 0JA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:43.163477+00:00",
+  "_kind": "geo_samples"
+}

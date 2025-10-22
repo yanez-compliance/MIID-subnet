@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Magadan",
+  "geonameid": 2123628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.5567769252843,
+      "lon": 150.73525676787412,
+      "geoinfo": {
+        "display_name": "Magadan Oblast, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Magadan Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Magadan, Magadan Oblast, Russia"
+    },
+    {
+      "lat": 59.55719603803309,
+      "lon": 150.87636565061874,
+      "geoinfo": {
+        "display_name": "Дукчинское шоссе, Кожзавод, Magadan, Magadan Urban District, Magadan Oblast, Far Eastern Federal District, 685007, Russia",
+        "road": "Дукчинское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Кожзавод",
+        "city_district": null,
+        "city": "Magadan",
+        "state": "Magadan Oblast",
+        "postcode": "685007",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "794, Дукчинское шоссе, Кожзавод, Magadan, Magadan Urban District, Magadan Oblast, Far Eastern Federal District, 685007, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:04.401629+00:00",
+  "_kind": "geo_samples"
+}

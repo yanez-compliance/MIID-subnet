@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Gries",
+  "geonameid": 11903642,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.086247335065465,
+      "lon": 15.46609546078583,
+      "geoinfo": {
+        "display_name": "Landeskrankenhaus-Universitätsklinikum Graz, 1, Auenbruggerplatz, Geidorf, Graz, Styria, 8036, Austria",
+        "road": "Auenbruggerplatz",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Geidorf",
+        "city_district": null,
+        "city": "Graz",
+        "state": "Styria",
+        "postcode": "8036",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Landeskrankenhaus-Universitätsklinikum Graz, 1, Auenbruggerplatz, Geidorf, Graz, Styria, 8036, Austria"
+    },
+    {
+      "lat": 47.04483097275389,
+      "lon": 15.474874960022964,
+      "geoinfo": {
+        "display_name": "54a, Johann-Weitzer-Weg, Neufeld, Sankt Peter, Graz, Styria, 8041, Austria",
+        "road": "Johann-Weitzer-Weg",
+        "house_number": "54a",
+        "neighbourhood": "Neufeld",
+        "suburb": "Sankt Peter",
+        "city_district": null,
+        "city": "Graz",
+        "state": "Styria",
+        "postcode": "8041",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "54a, Johann-Weitzer-Weg, Neufeld, Sankt Peter, Graz, Styria, 8041, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:40.411160+00:00",
+  "_kind": "geo_samples"
+}

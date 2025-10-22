@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Reading",
+  "geonameid": 2639577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.4399535938807,
+      "lon": -0.9192401171801525,
+      "geoinfo": {
+        "display_name": "Wokingham Road, Lower Earley, Earley, Borough of Wokingham, England, RG6 7HX, United Kingdom",
+        "road": "Wokingham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lower Earley",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "RG6 7HX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wokingham Road, Reading, England, United Kingdom"
+    },
+    {
+      "lat": 51.44465131156837,
+      "lon": -0.9622286036763875,
+      "geoinfo": {
+        "display_name": "Sheringham Court, Kendrick Road, Spring Gardens, Whitley, Reading, England, RG1 5ED, United Kingdom",
+        "road": "Kendrick Road",
+        "house_number": null,
+        "neighbourhood": "Spring Gardens",
+        "suburb": "Whitley",
+        "city_district": null,
+        "city": "Reading",
+        "state": "England",
+        "postcode": "RG1 5ED",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sheringham Court, Kendrick Road, Spring Gardens, Whitley, Reading, England, RG1 5ED, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:23.354504+00:00",
+  "_kind": "geo_samples"
+}

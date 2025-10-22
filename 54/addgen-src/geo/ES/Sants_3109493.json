@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sants",
+  "geonameid": 3109493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.33568971985944,
+      "lon": 2.1179597540296324,
+      "geoinfo": {
+        "display_name": "Carrer Número 4, la Marina del Prat Vermell, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, 08040, Spain",
+        "road": "Carrer Número 4",
+        "house_number": null,
+        "neighbourhood": "la Marina del Prat Vermell",
+        "suburb": "Sants-Montjuïc",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08040",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer Número 4, Sants, Catalonia, Spain"
+    },
+    {
+      "lat": 41.38083621012768,
+      "lon": 2.1320601123976415,
+      "geoinfo": {
+        "display_name": "165, Avinguda de Madrid, les Corts, Barcelona, Barcelonès, Barcelona, Catalonia, 08028, Spain",
+        "road": "Avinguda de Madrid",
+        "house_number": "165",
+        "neighbourhood": null,
+        "suburb": "les Corts",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08028",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "165, Avinguda de Madrid, les Corts, Barcelona, Barcelonès, Barcelona, Catalonia, 08028, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:41.511340+00:00",
+  "_kind": "geo_samples"
+}

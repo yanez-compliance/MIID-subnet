@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lingao",
+  "geonameid": 1803560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.933169947225196,
+      "lon": 109.69101485085528,
+      "geoinfo": {
+        "display_name": "X311, Lingao County, Hainan Province, China",
+        "road": "X311",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lingao County",
+        "state": "Hainan Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X311, Lingao, Hainan Province, China"
+    },
+    {
+      "lat": 19.89281077098339,
+      "lon": 109.72763450486003,
+      "geoinfo": {
+        "display_name": "Lingao County, Hainan Province, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lingao County",
+        "state": "Hainan Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "123, Lingao County, 73455 Hainan Province, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:55:09.063288+00:00",
+  "_kind": "geo_samples"
+}

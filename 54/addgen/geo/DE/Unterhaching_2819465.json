@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Unterhaching",
+  "geonameid": 2819465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.03462526917975,
+      "lon": 11.569603431503522,
+      "geoinfo": {
+        "display_name": "M 11, Oberhaching, Landkreis München, Bavaria, 82041, Germany",
+        "road": "M 11",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oberhaching",
+        "state": "Bavaria",
+        "postcode": "82041",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "M 11, Unterhaching, Bavaria, Germany"
+    },
+    {
+      "lat": 48.08459799939519,
+      "lon": 11.59998692385101,
+      "geoinfo": {
+        "display_name": "Albert-Schweitzer-Straße, Unterhaching, Landkreis München, Bavaria, 82008, Germany",
+        "road": "Albert-Schweitzer-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Unterhaching",
+        "state": "Bavaria",
+        "postcode": "82008",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "989, Albert-Schweitzer-Straße, Unterhaching, Landkreis München, Bavaria, 82008, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:27.816543+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Baton Rouge",
+  "geonameid": 4315588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.407618548943965,
+      "lon": -91.19108620602796,
+      "geoinfo": {
+        "display_name": "Louisiana State University, Normal Place, University Hills, Baton Rouge, East Baton Rouge Parish, Louisiana, 70803, United States",
+        "road": "Normal Place",
+        "house_number": null,
+        "neighbourhood": "University Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baton Rouge",
+        "state": "Louisiana",
+        "postcode": "70803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Normal Place, Baton Rouge, Louisiana, United States"
+    },
+    {
+      "lat": 30.457494363823646,
+      "lon": -91.21592314522144,
+      "geoinfo": {
+        "display_name": "1277, Oregon Avenue, Port Allen Landing, Port Allen, West Baton Rouge Parish, Louisiana, 70767, United States",
+        "road": "Oregon Avenue",
+        "house_number": "1277",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Allen",
+        "state": "Louisiana",
+        "postcode": "70767",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1277, Oregon Avenue, Port Allen Landing, Port Allen, West Baton Rouge Parish, Louisiana, 70767, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:43.298474+00:00",
+  "_kind": "geo_samples"
+}

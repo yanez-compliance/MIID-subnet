@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mittweida",
+  "geonameid": 2870318,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.011190861682415,
+      "lon": 12.948893729183485,
+      "geoinfo": {
+        "display_name": "17, Grüner Winkel, Erlau, Mittelsachsen, Saxony, 09306, Germany",
+        "road": "Grüner Winkel",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Erlau",
+        "city_district": null,
+        "city": "Erlau",
+        "state": "Saxony",
+        "postcode": "09306",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17 Grüner Winkel, Mittweida, Saxony, Germany"
+    },
+    {
+      "lat": 50.989048158357434,
+      "lon": 12.918153041235826,
+      "geoinfo": {
+        "display_name": "62, Obere Dorfstraße, Frankenau, Mittweida, Mittelsachsen, Saxony, 09648, Germany",
+        "road": "Obere Dorfstraße",
+        "house_number": "62",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mittweida",
+        "state": "Saxony",
+        "postcode": "09648",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "62, Obere Dorfstraße, Frankenau, Mittweida, Mittelsachsen, Saxony, 09648, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:13.876315+00:00",
+  "_kind": "geo_samples"
+}

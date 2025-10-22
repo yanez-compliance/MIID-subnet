@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pasadena",
+  "geonameid": 4364990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.13445325581898,
+      "lon": -76.59936014529588,
+      "geoinfo": {
+        "display_name": "Paul T. Pitcher Memorial Highway, Martindale, Glen Burnie, Anne Arundel County, Maryland, 21060, United States",
+        "road": "Paul T. Pitcher Memorial Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glen Burnie",
+        "state": "Maryland",
+        "postcode": "21060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Paul T. Pitcher Memorial Highway, Pasadena, Maryland, United States"
+    },
+    {
+      "lat": 39.12364176310531,
+      "lon": -76.59984260563898,
+      "geoinfo": {
+        "display_name": "Northway Drive, Glen Burnie, Anne Arundel County, Maryland, 21108, United States",
+        "road": "Northway Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glen Burnie",
+        "state": "Maryland",
+        "postcode": "21108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "027, Northway Drive, Glen Burnie, Anne Arundel County, Maryland, 21108, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:46.973008+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mettmann",
+  "geonameid": 2871535,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.291010745705485,
+      "lon": 6.970498327620567,
+      "geoinfo": {
+        "display_name": "14a, Niederschwarzbach, Obschwarzbach, Mettmann, Kreis Mettmann, North Rhine-Westphalia, 40822, Germany",
+        "road": "Niederschwarzbach",
+        "house_number": "14a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mettmann",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40822",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14a Niederschwarzbach, Mettmann, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.24900072422578,
+      "lon": 7.009744816194127,
+      "geoinfo": {
+        "display_name": "20, Schöllersheider Straße, Gewerbegebiet Ost, Ost, Mettmann, Kreis Mettmann, North Rhine-Westphalia, 40822, Germany",
+        "road": "Schöllersheider Straße",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Ost",
+        "city_district": null,
+        "city": "Mettmann",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40822",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20, Schöllersheider Straße, Gewerbegebiet Ost, Ost, Mettmann, Kreis Mettmann, North Rhine-Westphalia, 40822, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:58.899529+00:00",
+  "_kind": "geo_samples"
+}

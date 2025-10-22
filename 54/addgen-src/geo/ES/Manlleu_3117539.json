@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Manlleu",
+  "geonameid": 3117539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.007584975165415,
+      "lon": 2.288770365973385,
+      "geoinfo": {
+        "display_name": "Carrer Vilamontà, l'Erm, Manlleu, Osona, Barcelona, Catalonia, 08560, Spain",
+        "road": "Carrer Vilamontà",
+        "house_number": null,
+        "neighbourhood": "l'Erm",
+        "suburb": null,
+        "city_district": null,
+        "city": "Manlleu",
+        "state": "Catalonia",
+        "postcode": "08560",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer Vilamontà, Manlleu, Catalonia, Spain"
+    },
+    {
+      "lat": 41.96696843947365,
+      "lon": 2.2872121745327507,
+      "geoinfo": {
+        "display_name": "Plans del Picó, Gurb, Osona, Barcelona, Catalonia, 08560, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gurb",
+        "state": "Catalonia",
+        "postcode": "08560",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "230, Plans del Picó, Gurb, Osona, Barcelona, Catalonia, 08560, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:34.102601+00:00",
+  "_kind": "geo_samples"
+}

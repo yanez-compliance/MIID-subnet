@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Senago",
+  "geonameid": 3166753,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.599175145508404,
+      "lon": 9.073481277885053,
+      "geoinfo": {
+        "display_name": "Via Adige, Resegone-San Primo, Cesate, Milan, Lombardy, 20031, Italy",
+        "road": "Via Adige",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cesate",
+        "state": "Lombardy",
+        "postcode": "20031",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Adige, Senago, Lombardy, Italy"
+    },
+    {
+      "lat": 45.598290958626826,
+      "lon": 9.122597865010425,
+      "geoinfo": {
+        "display_name": "Via Adolfo Valentini, Ceresolo, Pinzano, Limbiate, Monza and Brianza, Lombardy, 20812, Italy",
+        "road": "Via Adolfo Valentini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pinzano",
+        "city_district": null,
+        "city": "Limbiate",
+        "state": "Lombardy",
+        "postcode": "20812",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "701, Via Adolfo Valentini, Ceresolo, Pinzano, Limbiate, Monza and Brianza, Lombardy, 20812, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:34.216986+00:00",
+  "_kind": "geo_samples"
+}

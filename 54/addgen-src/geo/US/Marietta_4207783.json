@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marietta",
+  "geonameid": 4207783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.94497271287118,
+      "lon": -84.53207823481596,
+      "geoinfo": {
+        "display_name": "Victory Drive Southeast, Marietta, Cobb County, Georgia, 30060, United States",
+        "road": "Victory Drive Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marietta",
+        "state": "Georgia",
+        "postcode": "30060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Victory Drive Southeast, Marietta, Georgia, United States"
+    },
+    {
+      "lat": 33.97193346958778,
+      "lon": -84.5499189562307,
+      "geoinfo": {
+        "display_name": "54, Vann Street Northeast, Elizabeth, Marietta, Cobb County, Georgia, 30060, United States",
+        "road": "Vann Street Northeast",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": "Elizabeth",
+        "city_district": null,
+        "city": "Marietta",
+        "state": "Georgia",
+        "postcode": "30060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "54, Vann Street Northeast, Elizabeth, Marietta, Cobb County, Georgia, 30060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:42.610128+00:00",
+  "_kind": "geo_samples"
+}

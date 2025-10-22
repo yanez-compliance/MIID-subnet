@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arcadia",
+  "geonameid": 5324477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.110312009294596,
+      "lon": -118.0637703513717,
+      "geoinfo": {
+        "display_name": "9525, Garibaldi Avenue, Temple City, Los Angeles County, California, 91780, United States",
+        "road": "Garibaldi Avenue",
+        "house_number": "9525",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temple City",
+        "state": "California",
+        "postcode": "91780",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9525 Garibaldi Avenue, Arcadia, California, United States"
+    },
+    {
+      "lat": 34.141001487962015,
+      "lon": -117.99371324719898,
+      "geoinfo": {
+        "display_name": "362, Huntington Drive, Monrovia, Los Angeles County, California, 91016, United States",
+        "road": "Huntington Drive",
+        "house_number": "362",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monrovia",
+        "state": "California",
+        "postcode": "91016",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "362, Huntington Drive, Monrovia, Los Angeles County, California, 91016, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:01.722655+00:00",
+  "_kind": "geo_samples"
+}

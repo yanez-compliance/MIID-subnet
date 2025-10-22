@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Koreatown",
+  "geonameid": 5363748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.05897916407664,
+      "lon": -118.33511723061655,
+      "geoinfo": {
+        "display_name": "4798, West 9th Street, Mid-Wilshire, Los Angeles, Los Angeles County, California, 90019, United States",
+        "road": "West 9th Street",
+        "house_number": "4798",
+        "neighbourhood": null,
+        "suburb": "Mid-Wilshire",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4798 West 9th Street, Koreatown, California, United States"
+    },
+    {
+      "lat": 34.05473986428624,
+      "lon": -118.31337128912867,
+      "geoinfo": {
+        "display_name": "933, South Gramercy Place, Koreatown, Los Angeles, Los Angeles County, California, 90019, United States",
+        "road": "South Gramercy Place",
+        "house_number": "933",
+        "neighbourhood": null,
+        "suburb": "Koreatown",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "933, South Gramercy Place, Koreatown, Los Angeles, Los Angeles County, California, 90019, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:23.966029+00:00",
+  "_kind": "geo_samples"
+}

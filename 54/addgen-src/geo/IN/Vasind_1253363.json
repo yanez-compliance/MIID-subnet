@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Vasind",
+  "geonameid": 1253363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.382538580675124,
+      "lon": 73.25978999296672,
+      "geoinfo": {
+        "display_name": "Kalyan Taluka, Thane, Maharashtra, 421604, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "421604",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Vasind, Maharashtra, India"
+    },
+    {
+      "lat": 19.39544969931894,
+      "lon": 73.23405265457912,
+      "geoinfo": {
+        "display_name": "Mumbai Agra National Highway, Bhiwandi Taluka, Thane, Maharashtra, 421301, India",
+        "road": "Mumbai Agra National Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "421301",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "502, Mumbai Agra National Highway, Bhiwandi Taluka, Thane, Maharashtra, 421301, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:05.282870+00:00",
+  "_kind": "geo_samples"
+}

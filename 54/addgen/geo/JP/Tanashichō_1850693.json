@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tanashichō",
+  "geonameid": 1850693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.74793468222218,
+      "lon": 139.55436368397756,
+      "geoinfo": {
+        "display_name": "Sumiyoshi, Nishitokyo, Tokyo, 202-0006, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nishitokyo",
+        "state": null,
+        "postcode": "202-0006",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tanashichō, Japan"
+    },
+    {
+      "lat": 35.71235697636236,
+      "lon": 139.5459741225843,
+      "geoinfo": {
+        "display_name": "Sekimae 4-chome, Musashino, Tokyo, 180-0014, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sekimae 4-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Musashino",
+        "state": null,
+        "postcode": "180-0014",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sekimae 4-chome, Musashino, Tokyo, 180-0014, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:34.122654+00:00",
+  "_kind": "geo_samples"
+}

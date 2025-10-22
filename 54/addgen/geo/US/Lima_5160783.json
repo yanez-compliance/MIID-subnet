@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lima",
+  "geonameid": 5160783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72679552261462,
+      "lon": -84.08619790424723,
+      "geoinfo": {
+        "display_name": "Franklin Street, Lima, Allen County, Ohio, 45804, United States",
+        "road": "Franklin Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lima",
+        "state": "Ohio",
+        "postcode": "45804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Franklin Street, Lima, Ohio, United States"
+    },
+    {
+      "lat": 40.747529487873685,
+      "lon": -84.14729156935302,
+      "geoinfo": {
+        "display_name": "2108, Carolina Avenue, Lima, Allen County, Ohio, 45805, United States",
+        "road": "Carolina Avenue",
+        "house_number": "2108",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lima",
+        "state": "Ohio",
+        "postcode": "45805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2108, Carolina Avenue, Lima, Allen County, Ohio, 45805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:59.005634+00:00",
+  "_kind": "geo_samples"
+}

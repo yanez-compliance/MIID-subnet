@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Jais",
+  "geonameid": 1269509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.297493853101567,
+      "lon": 81.52139024042243,
+      "geoinfo": {
+        "display_name": "Tiloi, Amethi, Uttar Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Jais, Uttar Pradesh, India"
+    },
+    {
+      "lat": 26.256961800030826,
+      "lon": 81.55529766418859,
+      "geoinfo": {
+        "display_name": "NH128, Jais, Tiloi, Amethi, Uttar Pradesh, 229305, India",
+        "road": "NH128",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jais",
+        "state": "Uttar Pradesh",
+        "postcode": "229305",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH128, Jais, Tiloi, Amethi, Uttar Pradesh, 229305, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:58:59.034599+00:00",
+  "_kind": "geo_samples"
+}

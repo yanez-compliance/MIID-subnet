@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xindian",
+  "geonameid": 12277243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.15677036314083,
+      "lon": 118.34285175151774,
+      "geoinfo": {
+        "display_name": "Suxin Highway, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": "Suxin Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Suxin Highway, Xindian, Jiangsu, China"
+    },
+    {
+      "lat": 34.1590643733839,
+      "lon": 118.3681757371481,
+      "geoinfo": {
+        "display_name": "Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "406, Xinyi City, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:35.803192+00:00",
+  "_kind": "geo_samples"
+}

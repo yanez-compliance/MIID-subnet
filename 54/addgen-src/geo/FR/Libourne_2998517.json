@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Libourne",
+  "geonameid": 2998517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.91458286383469,
+      "lon": -0.18952923959156448,
+      "geoinfo": {
+        "display_name": "Route de Pomerol, Saint-Émilion, Libourne, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33330, France",
+        "road": "Route de Pomerol",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Émilion",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33330",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Pomerol, Libourne, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.91731007778581,
+      "lon": -0.21213131523208395,
+      "geoinfo": {
+        "display_name": "Château Ferrand, Chemin de la Commanderie, Le Verdet, Libourne, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33500, France",
+        "road": "Chemin de la Commanderie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Le Verdet",
+        "city_district": null,
+        "city": "Libourne",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "107, Chemin de la Commanderie, Libourne, 33500 Nouvelle-Aquitaine, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:08:45.468821+00:00",
+  "_kind": "geo_samples"
+}

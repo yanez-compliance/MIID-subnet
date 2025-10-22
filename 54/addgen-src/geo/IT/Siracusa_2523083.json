@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Siracusa",
+  "geonameid": 2523083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.035864724725535,
+      "lon": 15.287071317248198,
+      "geoinfo": {
+        "display_name": "Circolo nautico Maddalena Mare, Via La Maddalena, Masseria Rumania, Isola, Syracuse, Siracusa, Sicily, Italy",
+        "road": "Via La Maddalena",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Syracuse",
+        "state": "Sicily",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via La Maddalena, Siracusa, Sicily, Italy"
+    },
+    {
+      "lat": 37.05189678095172,
+      "lon": 15.276344678751798,
+      "geoinfo": {
+        "display_name": "Traversa Caderini, Villaggio Elios, Carrozzieri, Syracuse, Siracusa, Sicily, Italy",
+        "road": "Traversa Caderini",
+        "house_number": null,
+        "neighbourhood": "Villaggio Elios",
+        "suburb": null,
+        "city_district": null,
+        "city": "Syracuse",
+        "state": "Sicily",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "349, Traversa Caderini, Villaggio Elios, Carrozzieri, Syracuse, Siracusa, 09802 Sicily, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:14.712209+00:00",
+  "_kind": "geo_samples"
+}

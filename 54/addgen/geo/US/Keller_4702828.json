@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Keller",
+  "geonameid": 4702828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.929562077865235,
+      "lon": -97.21971511115532,
+      "geoinfo": {
+        "display_name": "Bear Creek Parkway, Keller, Tarrant County, Texas, 76248, United States",
+        "road": "Bear Creek Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Keller",
+        "state": "Texas",
+        "postcode": "76248",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bear Creek Parkway, Keller, Texas, United States"
+    },
+    {
+      "lat": 32.898875211413696,
+      "lon": -97.22165056632005,
+      "geoinfo": {
+        "display_name": "John Barfield Trail, North Richland Hills, Tarrant County, Texas, 76182, United States",
+        "road": "John Barfield Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Richland Hills",
+        "state": "Texas",
+        "postcode": "76182",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "877, John Barfield Trail, North Richland Hills, Tarrant County, Texas, 76182, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:06.723931+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lübbecke",
+  "geonameid": 2875626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.307007226020225,
+      "lon": 8.640414369321258,
+      "geoinfo": {
+        "display_name": "7, Heekeweg, Lübbecke, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32312, Germany",
+        "road": "Heekeweg",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Lübbecke",
+        "city_district": null,
+        "city": "Lübbecke",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32312",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Heekeweg, Lübbecke, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.31819726429145,
+      "lon": 8.549888047733539,
+      "geoinfo": {
+        "display_name": "Bruchflachweg, Eickel, Blasheim, Lübbecke, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32312, Germany",
+        "road": "Bruchflachweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Blasheim",
+        "city_district": null,
+        "city": "Lübbecke",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32312",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "376, Bruchflachweg, Eickel, Blasheim, Lübbecke, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32312, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:55.673473+00:00",
+  "_kind": "geo_samples"
+}

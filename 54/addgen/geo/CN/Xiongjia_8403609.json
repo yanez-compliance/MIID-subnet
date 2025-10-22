@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiongjia",
+  "geonameid": 8403609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.913889427957113,
+      "lon": 108.44002412974105,
+      "geoinfo": {
+        "display_name": "S103, Xiongjia, Wanzhou, Chongqing, China",
+        "road": "S103",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xiongjia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S103, Xiongjia, Chongqing, China"
+    },
+    {
+      "lat": 30.90554364252992,
+      "lon": 108.4435983188839,
+      "geoinfo": {
+        "display_name": "Xiongjia, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xiongjia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "350, Xiongjia, Wanzhou, 40065 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:22.930002+00:00",
+  "_kind": "geo_samples"
+}

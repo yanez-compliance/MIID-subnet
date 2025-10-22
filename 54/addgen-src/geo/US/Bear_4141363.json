@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bear",
+  "geonameid": 4141363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.63040159426069,
+      "lon": -75.66166194866231,
+      "geoinfo": {
+        "display_name": "Bear, New Castle County, Delaware, 19702, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Delaware",
+        "postcode": "19702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bear, Delaware, United States"
+    },
+    {
+      "lat": 39.623590069636506,
+      "lon": -75.62510614188925,
+      "geoinfo": {
+        "display_name": "1368, River Road, New Castle County, Delaware, 19720, United States",
+        "road": "River Road",
+        "house_number": "1368",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Delaware",
+        "postcode": "19720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1368, River Road, New Castle County, Delaware, 19720, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:02.058920+00:00",
+  "_kind": "geo_samples"
+}

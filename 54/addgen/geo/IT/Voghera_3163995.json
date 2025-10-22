@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Voghera",
+  "geonameid": 3163995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.97507956166365,
+      "lon": 9.035461597393487,
+      "geoinfo": {
+        "display_name": "Strada Ferretta, Codevilla, Pavia, Lombardy, 27058, Italy",
+        "road": "Strada Ferretta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Codevilla",
+        "state": "Lombardy",
+        "postcode": "27058",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Ferretta, Voghera, Lombardy, Italy"
+    },
+    {
+      "lat": 44.998719455863025,
+      "lon": 8.997735966761917,
+      "geoinfo": {
+        "display_name": "Strada Frassolo, Rondò Carducci, Voghera, Pavia, Lombardy, 27058, Italy",
+        "road": "Strada Frassolo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rondò Carducci",
+        "city_district": null,
+        "city": "Voghera",
+        "state": "Lombardy",
+        "postcode": "27058",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "483, Strada Frassolo, Rondò Carducci, Voghera, Pavia, Lombardy, 27058, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:16.903417+00:00",
+  "_kind": "geo_samples"
+}

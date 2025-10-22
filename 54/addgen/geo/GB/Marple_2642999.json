@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Marple",
+  "geonameid": 2642999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.37532231871742,
+      "lon": -2.0758587786504825,
+      "geoinfo": {
+        "display_name": "Windlehurst Road, Hawk Green, Stockport, Greater Manchester, England, SK6 8AG, United Kingdom",
+        "road": "Windlehurst Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stockport",
+        "state": "England",
+        "postcode": "SK6 8AG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Windlehurst Road, Marple, England, United Kingdom"
+    },
+    {
+      "lat": 53.396764444969406,
+      "lon": -2.1210197818250625,
+      "geoinfo": {
+        "display_name": "Half Moon Lane, Offerton Park, Hazel Grove, Stockport, Greater Manchester, England, SK2 5RR, United Kingdom",
+        "road": "Half Moon Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Offerton Park",
+        "city_district": null,
+        "city": "Hazel Grove",
+        "state": "England",
+        "postcode": "SK2 5RR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Half Moon Lane, Offerton Park, Hazel Grove, Stockport, Greater Manchester, England, SK2 5RR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:03.730148+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bethpage",
+  "geonameid": 5108955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.78096885600112,
+      "lon": -73.47517737934446,
+      "geoinfo": {
+        "display_name": "14, Nora Lane, Plainview, Town of Oyster Bay, Nassau County, New York, 11803, United States",
+        "road": "Nora Lane",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainview",
+        "state": "New York",
+        "postcode": "11803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14 Nora Lane, Bethpage, New York, United States"
+    },
+    {
+      "lat": 40.75375876756533,
+      "lon": -73.42534052912274,
+      "geoinfo": {
+        "display_name": "Doctor Frank A Cipriani Drive, Town of Babylon, Suffolk County, New York, 11804, United States",
+        "road": "Doctor Frank A Cipriani Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Babylon",
+        "state": "New York",
+        "postcode": "11804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "500, Doctor Frank A Cipriani Drive, Town of Babylon, Suffolk County, New York, 11804, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:19.622109+00:00",
+  "_kind": "geo_samples"
+}

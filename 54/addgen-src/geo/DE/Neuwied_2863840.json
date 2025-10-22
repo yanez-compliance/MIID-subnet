@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neuwied",
+  "geonameid": 2863840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.42496156265769,
+      "lon": 7.539570174098415,
+      "geoinfo": {
+        "display_name": "21b, Neuwieder Straße, Engers, Neuwied, Landkreis Neuwied, Rhineland-Palatinate, 56566, Germany",
+        "road": "Neuwieder Straße",
+        "house_number": "21b",
+        "neighbourhood": null,
+        "suburb": "Engers",
+        "city_district": null,
+        "city": "Neuwied",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56566",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "21b Neuwieder Straße, Neuwied, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.45716558160825,
+      "lon": 7.442730754054126,
+      "geoinfo": {
+        "display_name": "Modellflugplatz Feldkirchen, Oberdorfstraße, Rodenbach, Neuwied, Landkreis Neuwied, Rhineland-Palatinate, 56567, Germany",
+        "road": "Oberdorfstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rodenbach",
+        "city_district": null,
+        "city": "Neuwied",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56567",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "039, Oberdorfstraße, Neuwied, 56567 Rhineland-Palatinate, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:17.551908+00:00",
+  "_kind": "geo_samples"
+}

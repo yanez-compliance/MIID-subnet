@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Arnavutköy",
+  "geonameid": 751868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.177559809442336,
+      "lon": 28.760990996434735,
+      "geoinfo": {
+        "display_name": "Milli Egemenlik Caddesi, Yunus Emre Mahallesi, Arnavutköy, Istanbul, Marmara Region, 34285, Turkey",
+        "road": "Milli Egemenlik Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yunus Emre Mahallesi",
+        "city_district": null,
+        "city": "Arnavutköy",
+        "state": null,
+        "postcode": "34285",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Milli Egemenlik Caddesi, Arnavutköy, Turkey"
+    },
+    {
+      "lat": 41.21796130307226,
+      "lon": 28.773558918126568,
+      "geoinfo": {
+        "display_name": "Bolluca, Bolluca Mahallesi, Arnavutköy, Istanbul, Marmara Region, 34287, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bolluca",
+        "suburb": "Bolluca Mahallesi",
+        "city_district": null,
+        "city": "Arnavutköy",
+        "state": null,
+        "postcode": "34287",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "444, Bolluca, Bolluca Mahallesi, Arnavutköy, Istanbul, Marmara Region, 34287, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:53:27.824120+00:00",
+  "_kind": "geo_samples"
+}

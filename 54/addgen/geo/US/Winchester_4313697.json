@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winchester",
+  "geonameid": 4313697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.01273838676289,
+      "lon": -84.22810274427822,
+      "geoinfo": {
+        "display_name": "3092, Lexington Road, Winchester, Clark County, Kentucky, 40391, United States",
+        "road": "Lexington Road",
+        "house_number": "3092",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Kentucky",
+        "postcode": "40391",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3092 Lexington Road, Winchester, Kentucky, United States"
+    },
+    {
+      "lat": 37.959867376432676,
+      "lon": -84.17296522678639,
+      "geoinfo": {
+        "display_name": "Cole Road, Clark County, Kentucky, 40391, United States",
+        "road": "Cole Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "40391",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "872, Cole Road, Clark County, Kentucky, 40391, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:44.702522+00:00",
+  "_kind": "geo_samples"
+}

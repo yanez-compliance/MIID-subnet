@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Cabra",
+  "geonameid": 2520645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.49701143842582,
+      "lon": -4.445862539755,
+      "geoinfo": {
+        "display_name": "Polígono Industrial La Atalaya, Cabra, Córdoba, Andalusia, 14940, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cabra",
+        "state": "Andalusia",
+        "postcode": "14940",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Cabra, Andalusia, Spain"
+    },
+    {
+      "lat": 37.443832705536025,
+      "lon": -4.421938953721582,
+      "geoinfo": {
+        "display_name": "CO-7212, Cabra, Córdoba, Andalusia, 14940, Spain",
+        "road": "CO-7212",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cabra",
+        "state": "Andalusia",
+        "postcode": "14940",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CO-7212, Cabra, Córdoba, Andalusia, 14940, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:39.217762+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Mira Taglio",
+  "geonameid": 3173385,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.43364966772435,
+      "lon": 12.08123033833313,
+      "geoinfo": {
+        "display_name": "Via Antonio Fogazzaro, Cazzago, Pianiga, Venezia, Veneto, 30030, Italy",
+        "road": "Via Antonio Fogazzaro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pianiga",
+        "state": "Veneto",
+        "postcode": "30030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Antonio Fogazzaro, Mira Taglio, Veneto, Italy"
+    },
+    {
+      "lat": 45.42251536724643,
+      "lon": 12.116862184196023,
+      "geoinfo": {
+        "display_name": "Via Zanella, Sambruson, Dolo, Venezia, Veneto, 30031, Italy",
+        "road": "Via Zanella",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dolo",
+        "state": "Veneto",
+        "postcode": "30031",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "406, Via Zanella, Sambruson, Dolo, Venezia, Veneto, 30031, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:09.144092+00:00",
+  "_kind": "geo_samples"
+}

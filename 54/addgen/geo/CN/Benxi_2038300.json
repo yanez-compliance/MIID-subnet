@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Benxi",
+  "geonameid": 2038300,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.25301102161591,
+      "lon": 123.77262508595827,
+      "geoinfo": {
+        "display_name": "千金沟, Qianjin Subdistrict, Pingshan District, Benxi City, Liaoning, 117022, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qianjin Subdistrict",
+        "state": "Liaoning",
+        "postcode": "117022",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Benxi, Liaoning, China"
+    },
+    {
+      "lat": 41.32000901544552,
+      "lon": 123.80770765672965,
+      "geoinfo": {
+        "display_name": "Danfu Expressway, Xinming Subdistrict, 小堡, Mingshan District, Benxi City, Liaoning, 117020, China",
+        "road": "Danfu Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xinming Subdistrict",
+        "city_district": null,
+        "city": "Mingshan District",
+        "state": "Liaoning",
+        "postcode": "117020",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "429, Danfu Expressway, Xinming Subdistrict, 小堡, Mingshan District, Benxi City, Liaoning, 117020, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:01:19.605059+00:00",
+  "_kind": "geo_samples"
+}

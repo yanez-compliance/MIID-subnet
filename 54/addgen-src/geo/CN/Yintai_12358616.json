@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yintai",
+  "geonameid": 12358616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.15216653006011,
+      "lon": 109.08308899485075,
+      "geoinfo": {
+        "display_name": "S216, Yintai District, Tongchuan, Shaanxi, China",
+        "road": "S216",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yintai District",
+        "state": "Shaanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S216, Yintai, Shaanxi, China"
+    },
+    {
+      "lat": 35.11954583077954,
+      "lon": 109.08566099867832,
+      "geoinfo": {
+        "display_name": "Yintai District, Tongchuan, Shaanxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yintai District",
+        "state": "Shaanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "494, Yintai District, Tongchuan, 54124 Shaanxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:46.072156+00:00",
+  "_kind": "geo_samples"
+}

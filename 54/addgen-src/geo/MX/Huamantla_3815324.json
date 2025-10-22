@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huamantla",
+  "geonameid": 3815324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.33047546288497,
+      "lon": -97.91409659005376,
+      "geoinfo": {
+        "display_name": "Huamantla, Tlaxcala, 98181, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huamantla",
+        "state": "Tlaxcala",
+        "postcode": "98181",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huamantla, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.34760922650943,
+      "lon": -97.94484299095762,
+      "geoinfo": {
+        "display_name": "Venustiano Carranza, Colonia Acasillados San Martín Notario, Huamantla, Tlaxcala, 98181, Mexico",
+        "road": "Venustiano Carranza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colonia Acasillados San Martín Notario",
+        "state": "Tlaxcala",
+        "postcode": "98181",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "919, Venustiano Carranza, Colonia Acasillados San Martín Notario, Huamantla, Tlaxcala, 98181, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:39.603935+00:00",
+  "_kind": "geo_samples"
+}

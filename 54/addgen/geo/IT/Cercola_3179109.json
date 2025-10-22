@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cercola",
+  "geonameid": 3179109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.86316683230926,
+      "lon": 14.348390504733036,
+      "geoinfo": {
+        "display_name": "Via Giacomo Matteotti, Municipalità 6, Caravita, Cercola, Naples, Campania, 80147, Italy",
+        "road": "Via Giacomo Matteotti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipalità 6",
+        "city_district": null,
+        "city": "Cercola",
+        "state": "Campania",
+        "postcode": "80147",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giacomo Matteotti, Cercola, Campania, Italy"
+    },
+    {
+      "lat": 40.88258989381261,
+      "lon": 14.362272391801786,
+      "geoinfo": {
+        "display_name": "Via Cupa del Pittore, Pollena Trocchia, Naples, Campania, 80013, Italy",
+        "road": "Via Cupa del Pittore",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pollena Trocchia",
+        "state": "Campania",
+        "postcode": "80013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "222, Via Cupa del Pittore, Pollena Trocchia, Naples, Campania, 80013, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:42.131321+00:00",
+  "_kind": "geo_samples"
+}

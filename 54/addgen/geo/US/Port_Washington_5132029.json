@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Washington",
+  "geonameid": 5132029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.836662796018324,
+      "lon": -73.67715350721966,
+      "geoinfo": {
+        "display_name": "55, Beacon Hill Road, Beacon Hill, Port Washington, Town of North Hempstead, Nassau County, New York, 11050, United States",
+        "road": "Beacon Hill Road",
+        "house_number": "55",
+        "neighbourhood": "Beacon Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Washington",
+        "state": "New York",
+        "postcode": "11050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "55 Beacon Hill Road, Port Washington, New York, United States"
+    },
+    {
+      "lat": 40.84090756222688,
+      "lon": -73.66983974780368,
+      "geoinfo": {
+        "display_name": "13, Roslyn West Shore Road, Beacon Hill Colony, Port Washington, Town of North Hempstead, Nassau County, New York, 11050, United States",
+        "road": "Roslyn West Shore Road",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Washington",
+        "state": "New York",
+        "postcode": "11050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13, Roslyn West Shore Road, Beacon Hill Colony, Port Washington, Town of North Hempstead, Nassau County, New York, 11050, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:53.681035+00:00",
+  "_kind": "geo_samples"
+}

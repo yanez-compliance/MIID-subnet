@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenwood Village",
+  "geonameid": 5423908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.6285351638484,
+      "lon": -104.8960723293878,
+      "geoinfo": {
+        "display_name": "East Union Avenue, Denver Tech Center, Denver, Colorado, 80237, United States",
+        "road": "East Union Avenue",
+        "house_number": null,
+        "neighbourhood": "Denver Tech Center",
+        "suburb": null,
+        "city_district": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "postcode": "80237",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Union Avenue, Greenwood Village, Colorado, United States"
+    },
+    {
+      "lat": 39.60526763686785,
+      "lon": -104.9845767824613,
+      "geoinfo": {
+        "display_name": "6173, South Grant Street, Centennial, Arapahoe County, Colorado, 80121, United States",
+        "road": "South Grant Street",
+        "house_number": "6173",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centennial",
+        "state": "Colorado",
+        "postcode": "80121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6173, South Grant Street, Centennial, Arapahoe County, Colorado, 80121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:43.432342+00:00",
+  "_kind": "geo_samples"
+}

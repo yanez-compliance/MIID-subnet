@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orchards",
+  "geonameid": 5805815,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.67958648346302,
+      "lon": -122.5466077929731,
+      "geoinfo": {
+        "display_name": "7802, Northeast 123rd Avenue, Orchards, Sifton, Vancouver, Clark County, Washington, 98682, United States",
+        "road": "Northeast 123rd Avenue",
+        "house_number": "7802",
+        "neighbourhood": null,
+        "suburb": "Orchards",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98682",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7802 Northeast 123rd Avenue, Orchards, Washington, United States"
+    },
+    {
+      "lat": 45.64860028644939,
+      "lon": -122.56932041097069,
+      "geoinfo": {
+        "display_name": "10020, Northeast Oakhurst Drive, Oakbrook, Vancouver, Clark County, Washington, 98662, United States",
+        "road": "Northeast Oakhurst Drive",
+        "house_number": "10020",
+        "neighbourhood": null,
+        "suburb": "Oakbrook",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10020, Northeast Oakhurst Drive, Oakbrook, Vancouver, Clark County, Washington, 98662, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:13.797801+00:00",
+  "_kind": "geo_samples"
+}

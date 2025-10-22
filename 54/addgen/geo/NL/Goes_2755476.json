@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Goes",
+  "geonameid": 2755476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.50024499157623,
+      "lon": 3.9591327830959124,
+      "geoinfo": {
+        "display_name": "Jan Dommissewegeling, Eliwerve, Kapelle, Zeeland, Netherlands, 4474 NP, Netherlands",
+        "road": "Jan Dommissewegeling",
+        "house_number": null,
+        "neighbourhood": "Eliwerve",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kapelle",
+        "state": "Zeeland",
+        "postcode": "4474 NP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Jan Dommissewegeling, Goes, Zeeland, The Netherlands"
+    },
+    {
+      "lat": 51.540332413745375,
+      "lon": 3.9052801961041252,
+      "geoinfo": {
+        "display_name": "Wilhelminadorp, Goes, Zeeland, Netherlands, 4475 AA, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilhelminadorp",
+        "state": "Zeeland",
+        "postcode": "4475 AA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "990, Wilhelminadorp, Goes, Zeeland, Netherlands, 4475 AA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:01.529960+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hough",
+  "geonameid": 5158067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.53410102563753,
+      "lon": -81.67480821697377,
+      "geoinfo": {
+        "display_name": "Cuyahoga County, Ohio, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hough, Ohio, United States"
+    },
+    {
+      "lat": 41.49910569569801,
+      "lon": -81.6373164981479,
+      "geoinfo": {
+        "display_name": "2156, East 74th Street, Fairfax, Cleveland, Cuyahoga County, Ohio, 44103, United States",
+        "road": "East 74th Street",
+        "house_number": "2156",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2156, East 74th Street, Fairfax, Cleveland, Cuyahoga County, Ohio, 44103, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:45.198508+00:00",
+  "_kind": "geo_samples"
+}

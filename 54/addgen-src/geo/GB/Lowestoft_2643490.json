@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Lowestoft",
+  "geonameid": 2643490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.454241712197465,
+      "lon": 1.7039039320220581,
+      "geoinfo": {
+        "display_name": "Castleton Avenue, Carlton Colville, East Suffolk, Suffolk, England, NR33 8FR, United Kingdom",
+        "road": "Castleton Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Suffolk",
+        "state": "England",
+        "postcode": "NR33 8FR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Castleton Avenue, Lowestoft, England, United Kingdom"
+    },
+    {
+      "lat": 52.49134994557797,
+      "lon": 1.7849661617995043,
+      "geoinfo": {
+        "display_name": "England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "880, Lowestoft, 90758 England, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:00.564854+00:00",
+  "_kind": "geo_samples"
+}

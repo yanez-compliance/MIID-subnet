@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "SeaTac",
+  "geonameid": 5809805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.446106713838475,
+      "lon": -122.27213418432588,
+      "geoinfo": {
+        "display_name": "4821, South 175th Street, McMicken Heights, SeaTac, King County, Washington, 98188, United States",
+        "road": "South 175th Street",
+        "house_number": "4821",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "SeaTac",
+        "state": "Washington",
+        "postcode": "98188",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4821 South 175th Street, SeaTac, Washington, United States"
+    },
+    {
+      "lat": 47.43604999621002,
+      "lon": -122.27185864299041,
+      "geoinfo": {
+        "display_name": "4941, South 186th Street, SeaTac, King County, Washington, 98188, United States",
+        "road": "South 186th Street",
+        "house_number": "4941",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "SeaTac",
+        "state": "Washington",
+        "postcode": "98188",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4941, South 186th Street, SeaTac, King County, Washington, 98188, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:20.447228+00:00",
+  "_kind": "geo_samples"
+}

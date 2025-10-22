@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Kemer",
+  "geonameid": 308220,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.633104426449904,
+      "lon": 30.557525755644868,
+      "geoinfo": {
+        "display_name": "Kumluca - Kemer Yolu, Kemer, Antalya, Mediterranean Region, 07229, Turkey",
+        "road": "Kumluca - Kemer Yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kemer",
+        "state": null,
+        "postcode": "07229",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Kumluca - Kemer Yolu, Kemer, Turkey"
+    },
+    {
+      "lat": 36.61350793932284,
+      "lon": 30.612961616283982,
+      "geoinfo": {
+        "display_name": "Antalya, Mediterranean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "243, Antalya, 76676 Mediterranean Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:38.116263+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Sunshine West",
+  "geonameid": 9972578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.8126992843384,
+      "lon": 144.79836950706476,
+      "geoinfo": {
+        "display_name": "Boundary Road, Derrimut, Melbourne, City of Brimbank, Victoria, 3026, Australia",
+        "road": "Boundary Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Derrimut",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3026",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Boundary Road, Sunshine West, Victoria, Australia"
+    },
+    {
+      "lat": -37.81733832030283,
+      "lon": 144.79969552436938,
+      "geoinfo": {
+        "display_name": "Hume Road, Laverton North, Melbourne, City of Wyndham, Victoria, 3026, Australia",
+        "road": "Hume Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Laverton North",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3026",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "213, Hume Road, Laverton North, Melbourne, City of Wyndham, Victoria, 3026, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:09.847490+00:00",
+  "_kind": "geo_samples"
+}

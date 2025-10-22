@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Natick",
+  "geonameid": 4944994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.28490862480254,
+      "lon": -71.29615601717119,
+      "geoinfo": {
+        "display_name": "Nehoiden Golf Course, 91, Dover Road, Wellesley, Norfolk County, Massachusetts, 02481, United States",
+        "road": "Dover Road",
+        "house_number": "91",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wellesley",
+        "state": "Massachusetts",
+        "postcode": "02481",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "91 Dover Road, Natick, Massachusetts, United States"
+    },
+    {
+      "lat": 42.261966785836485,
+      "lon": -71.37685174620017,
+      "geoinfo": {
+        "display_name": "78, Coolidge Street, Sherborn, Middlesex County, Massachusetts, 01770, United States",
+        "road": "Coolidge Street",
+        "house_number": "78",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sherborn",
+        "state": "Massachusetts",
+        "postcode": "01770",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "78, Coolidge Street, Sherborn, Middlesex County, Massachusetts, 01770, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:38.107024+00:00",
+  "_kind": "geo_samples"
+}

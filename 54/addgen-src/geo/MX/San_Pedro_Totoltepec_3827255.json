@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pedro Totoltepec",
+  "geonameid": 3827255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.343719401597834,
+      "lon": -99.58387164813105,
+      "geoinfo": {
+        "display_name": "2, Calle Independencia, San José Guadalupe Otzacatipan, San Nicolas Tolentino, Toluca, State of Mexico, 50230, Mexico",
+        "road": "Calle Independencia",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "San José Guadalupe Otzacatipan",
+        "city_district": null,
+        "city": "San Nicolas Tolentino",
+        "state": "State of Mexico",
+        "postcode": "50230",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "2 Calle Independencia, San Pedro Totoltepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.318122047509455,
+      "lon": -99.53927614803952,
+      "geoinfo": {
+        "display_name": "El Cerrillo Vista Hemosa, Toluca, State of Mexico, 50004, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cerrillo Vista Hemosa",
+        "state": "State of Mexico",
+        "postcode": "50004",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "815, El Cerrillo Vista Hemosa, Toluca, State of Mexico, 50004, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:18.197246+00:00",
+  "_kind": "geo_samples"
+}

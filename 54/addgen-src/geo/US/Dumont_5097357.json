@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dumont",
+  "geonameid": 5097357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.95095207003664,
+      "lon": -73.9892215746872,
+      "geoinfo": {
+        "display_name": "2, Stratford Road, Dumont, Bergen County, New Jersey, 07628, United States",
+        "road": "Stratford Road",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dumont",
+        "state": "New Jersey",
+        "postcode": "07628",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2 Stratford Road, Dumont, New Jersey, United States"
+    },
+    {
+      "lat": 40.943845154696795,
+      "lon": -73.97277085286028,
+      "geoinfo": {
+        "display_name": "310, Highland Street, Cresskill, Bergen County, New Jersey, 07626, United States",
+        "road": "Highland Street",
+        "house_number": "310",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cresskill",
+        "state": "New Jersey",
+        "postcode": "07626",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "310, Highland Street, Cresskill, Bergen County, New Jersey, 07626, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:01.675346+00:00",
+  "_kind": "geo_samples"
+}

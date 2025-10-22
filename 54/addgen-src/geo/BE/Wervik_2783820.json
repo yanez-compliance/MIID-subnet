@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Wervik",
+  "geonameid": 2783820,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.808660450203966,
+      "lon": 3.008570858256959,
+      "geoinfo": {
+        "display_name": "76, Vossaardestraat, Kruiseke, Wervik, Ieper, West Flanders, 8940, Belgium",
+        "road": "Vossaardestraat",
+        "house_number": "76",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wervik",
+        "city": "Wervik",
+        "state": "West Flanders",
+        "postcode": "8940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "76 Vossaardestraat, Wervik, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.78880895916325,
+      "lon": 3.0463764373360447,
+      "geoinfo": {
+        "display_name": "Motestraat, Wervik, Ieper, West Flanders, 8940, Belgium",
+        "road": "Motestraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wervik",
+        "city": "Wervik",
+        "state": "West Flanders",
+        "postcode": "8940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "185, Motestraat, Wervik, Ieper, West Flanders, 8940, Belgium"
+    },
+    {
+      "lat": 50.80414504482551,
+      "lon": 3.082238779871031,
+      "geoinfo": {
+        "display_name": "6, Lage Meers, Geluwe, Wervik, Ieper, West Flanders, 8940, Belgium",
+        "road": "Lage Meers",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wervik",
+        "state": "West Flanders",
+        "postcode": "8940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "6, Lage Meers, Geluwe, Wervik, Ieper, West Flanders, 8940, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:27.903690+00:00",
+  "_kind": "geo_samples"
+}

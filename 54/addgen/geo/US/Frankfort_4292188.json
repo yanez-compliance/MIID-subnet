@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Frankfort",
+  "geonameid": 4292188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.18329011488573,
+      "lon": -84.91662917437618,
+      "geoinfo": {
+        "display_name": "Minuteman Parkway, Frankfort, Franklin County, Kentucky, United States",
+        "road": "Minuteman Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frankfort",
+        "state": "Kentucky",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Minuteman Parkway, Frankfort, Kentucky, United States"
+    },
+    {
+      "lat": 38.158496390142545,
+      "lon": -84.86108772944708,
+      "geoinfo": {
+        "display_name": "I 64, Franklin County, Kentucky, 40601, United States",
+        "road": "I 64",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "40601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 64, Franklin County, Kentucky, 40601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:26.571353+00:00",
+  "_kind": "geo_samples"
+}

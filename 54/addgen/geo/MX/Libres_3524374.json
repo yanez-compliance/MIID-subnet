@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Libres",
+  "geonameid": 3524374,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.437549196081825,
+      "lon": -97.65468049824824,
+      "geoinfo": {
+        "display_name": "Carretera Federal Teziutlán - Acajete, Álvaro Obregón (San Francisco), Ciudad de Libres, Libres, Puebla, 73784, Mexico",
+        "road": "Carretera Federal Teziutlán - Acajete",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad de Libres",
+        "state": "Puebla",
+        "postcode": "73784",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Federal Teziutlán - Acajete, Libres, Puebla, Mexico"
+    },
+    {
+      "lat": 19.48076112709103,
+      "lon": -97.71505227147043,
+      "geoinfo": {
+        "display_name": "Ahuateno, Libres, Puebla, 73783, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Puebla",
+        "postcode": "73783",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "769, Ahuateno, Libres, Puebla, 73783, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:47.247017+00:00",
+  "_kind": "geo_samples"
+}

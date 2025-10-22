@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kolomna",
+  "geonameid": 546230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.03372908436709,
+      "lon": 38.80241899156532,
+      "geoinfo": {
+        "display_name": "Лыжня, городской округ Коломна, Moscow Oblast, Central Federal District, 140402, Russia",
+        "road": "Лыжня",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "140402",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Лыжня, Kolomna, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.03985811491577,
+      "lon": 38.83952725091283,
+      "geoinfo": {
+        "display_name": "Ларцевы Поляны, Kolomna, городской округ Коломна, Moscow Oblast, Central Federal District, 140441, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ларцевы Поляны",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kolomna",
+        "state": "Moscow Oblast",
+        "postcode": "140441",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "714, Ларцевы Поляны, Kolomna, городской округ Коломна, Moscow Oblast, Central Federal District, 140441, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:46.532089+00:00",
+  "_kind": "geo_samples"
+}

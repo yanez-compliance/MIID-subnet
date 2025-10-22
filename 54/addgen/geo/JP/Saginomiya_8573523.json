@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Saginomiya",
+  "geonameid": 8573523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.74070128035686,
+      "lon": 139.67385936424094,
+      "geoinfo": {
+        "display_name": "Kotake cho, Nerima, Tokyo, 176-8521, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "176-8521",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Saginomiya, Japan"
+    },
+    {
+      "lat": 35.68104873269489,
+      "lon": 139.64942020404263,
+      "geoinfo": {
+        "display_name": "Izumi 3, Izumi, Suginami, Tokyo, 168-0063, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Izumi 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suginami",
+        "state": null,
+        "postcode": "168-0063",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Izumi 3, Izumi, Suginami, Tokyo, 168-0063, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:15.969051+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Hsinchu",
+  "geonameid": 1675151,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.825529628107525,
+      "lon": 121.00315647806697,
+      "geoinfo": {
+        "display_name": "China Medical University Hsinchu Hospital, 199, Section 1, Xinglong Road, 斗崙, Zhonglun Village, Zhubei City, Hsinchu County, 30213, Taiwan",
+        "road": "Section 1, Xinglong Road",
+        "house_number": "199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhubei City",
+        "state": null,
+        "postcode": "30213",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "199 Section 1, Xinglong Road, Hsinchu, Taiwan"
+    },
+    {
+      "lat": 24.80901413128699,
+      "lon": 120.9655116410163,
+      "geoinfo": {
+        "display_name": "192號, 北門街, Beimen Village, North District, Hsinchu, 300024, Taiwan",
+        "road": "北門街",
+        "house_number": "192號",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hsinchu",
+        "state": null,
+        "postcode": "300024",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "192號 北門街, Hsinchu, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:35:15.070044+00:00",
+  "_kind": "geo_samples"
+}

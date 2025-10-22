@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Nantong",
+  "geonameid": 8549414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.985404481714088,
+      "lon": 106.88959535543715,
+      "geoinfo": {
+        "display_name": "Wansheng, Qijiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wansheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Nantong, Chongqing, China"
+    },
+    {
+      "lat": 28.951814325365156,
+      "lon": 106.90251946057269,
+      "geoinfo": {
+        "display_name": "Nantong, Wansheng, Qijiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wansheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "669, Nantong, Wansheng, Qijiang District, 32533 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:50.572557+00:00",
+  "_kind": "geo_samples"
+}

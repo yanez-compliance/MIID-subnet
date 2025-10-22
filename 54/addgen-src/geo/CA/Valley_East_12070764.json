@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Valley East",
+  "geonameid": 12070764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.63064473347057,
+      "lon": -80.95456678946981,
+      "geoinfo": {
+        "display_name": "Hanmer, Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, P3P 1T1, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greater Sudbury",
+        "state": "Ontario",
+        "postcode": "P3P 1T1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Valley East, Ontario, Canada"
+    },
+    {
+      "lat": 46.64361028624391,
+      "lon": -81.01028378554241,
+      "geoinfo": {
+        "display_name": "4214, Larocque Avenue, Pinecrest, Val Thérèse, Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, P3P 1A3, Canada",
+        "road": "Larocque Avenue",
+        "house_number": "4214",
+        "neighbourhood": "Pinecrest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Greater Sudbury",
+        "state": "Ontario",
+        "postcode": "P3P 1A3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "4214, Larocque Avenue, Pinecrest, Val Thérèse, Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, P3P 1A3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:55.938940+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shanghai",
+  "geonameid": 1796236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.184103261151215,
+      "lon": 121.48406165193556,
+      "geoinfo": {
+        "display_name": "Shanghai World Expo Exhibition & Convention Center, Shangnan Road, Shanggangxincun, Zhoujiadu, Pudong, Shanghai, 200126, China",
+        "road": "Shangnan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shanggangxincun",
+        "city_district": null,
+        "city": "Pudong",
+        "state": "Shanghai",
+        "postcode": "200126",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shangnan Road, Shanghai, Shanghai, China"
+    },
+    {
+      "lat": 31.263968723984064,
+      "lon": 121.44975988800087,
+      "geoinfo": {
+        "display_name": "Pushan Road, Tanjiaqiao, Gonghexinlu, Jing'an District, Shanghai, 200072, China",
+        "road": "Pushan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gonghexinlu",
+        "city_district": null,
+        "city": "Jing'an District",
+        "state": "Shanghai",
+        "postcode": "200072",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "536, Pushan Road, Tanjiaqiao, Gonghexinlu, Jing'an District, Shanghai, 200072, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:02.166183+00:00",
+  "_kind": "geo_samples"
+}

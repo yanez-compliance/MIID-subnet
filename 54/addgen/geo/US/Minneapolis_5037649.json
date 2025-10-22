@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Minneapolis",
+  "geonameid": 5037649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.010583192259496,
+      "lon": -93.26170507663409,
+      "geoinfo": {
+        "display_name": "2216, Northeast 4th Street, Marshall Terrace, Northeast, Minneapolis, Hennepin County, Minnesota, 55418, United States",
+        "road": "Northeast 4th Street",
+        "house_number": "2216",
+        "neighbourhood": "Marshall Terrace",
+        "suburb": "Northeast",
+        "city_district": null,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "postcode": "55418",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2216 Northeast 4th Street, Minneapolis, Minnesota, United States"
+    },
+    {
+      "lat": 44.94471933864537,
+      "lon": -93.2668604592879,
+      "geoinfo": {
+        "display_name": "3200, Oakland Avenue, Central, Phillips, Minneapolis, Hennepin County, Minnesota, 55407, United States",
+        "road": "Oakland Avenue",
+        "house_number": "3200",
+        "neighbourhood": "Central",
+        "suburb": "Phillips",
+        "city_district": null,
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "postcode": "55407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3200, Oakland Avenue, Central, Phillips, Minneapolis, Hennepin County, Minnesota, 55407, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:51.880102+00:00",
+  "_kind": "geo_samples"
+}

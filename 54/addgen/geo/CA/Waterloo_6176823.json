@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Waterloo",
+  "geonameid": 6176823,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.468701613482544,
+      "lon": -80.53767081528268,
+      "geoinfo": {
+        "display_name": "Lot A, Seagram Drive, Northdale, Waterloo, Region of Waterloo, Ontario, N2L 3E8, Canada",
+        "road": "Seagram Drive",
+        "house_number": null,
+        "neighbourhood": "Northdale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterloo",
+        "state": "Ontario",
+        "postcode": "N2L 3E8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Seagram Drive, Waterloo, Ontario, Canada"
+    },
+    {
+      "lat": 43.4653902017661,
+      "lon": -80.52666454146218,
+      "geoinfo": {
+        "display_name": "Laurel Trail, Uptown, Waterloo, Region of Waterloo, Southwestern Ontario, Ontario, N2L 6M3, Canada",
+        "road": "Laurel Trail",
+        "house_number": null,
+        "neighbourhood": "Uptown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterloo",
+        "state": "Ontario",
+        "postcode": "N2L 6M3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Laurel Trail, Uptown, Waterloo, Region of Waterloo, Southwestern Ontario, Ontario, N2L 6M3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:22:39.573797+00:00",
+  "_kind": "geo_samples"
+}

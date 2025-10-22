@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bremerton",
+  "geonameid": 5788054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.56441038943886,
+      "lon": -122.6796549570175,
+      "geoinfo": {
+        "display_name": "State Highway 3 Northwest, West Park, Bremerton, Kitsap County, Washington, 98312, United States",
+        "road": "State Highway 3 Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bremerton",
+        "state": "Washington",
+        "postcode": "98312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "State Highway 3 Northwest, Bremerton, Washington, United States"
+    },
+    {
+      "lat": 47.562342546605514,
+      "lon": -122.57309309628133,
+      "geoinfo": {
+        "display_name": "5966, East Hillcrest Drive, Waterman, Kitsap County, Washington, 98366, United States",
+        "road": "East Hillcrest Drive",
+        "house_number": "5966",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98366",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5966, East Hillcrest Drive, Waterman, Kitsap County, Washington, 98366, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:41.977153+00:00",
+  "_kind": "geo_samples"
+}

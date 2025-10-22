@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Asti",
+  "geonameid": 3182714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.895794252783354,
+      "lon": 8.24699228393253,
+      "geoinfo": {
+        "display_name": "SS231, Asti, Piedmont, 14100, Italy",
+        "road": "SS231",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Asti",
+        "state": "Piedmont",
+        "postcode": "14100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SS231, Asti, Piedmont, Italy"
+    },
+    {
+      "lat": 44.8861080826899,
+      "lon": 8.161835610518997,
+      "geoinfo": {
+        "display_name": "Revignano, Asti, Piedmont, 14100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Asti",
+        "state": "Piedmont",
+        "postcode": "14100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "648, Revignano, Asti, Piedmont, 14100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:27.884588+00:00",
+  "_kind": "geo_samples"
+}

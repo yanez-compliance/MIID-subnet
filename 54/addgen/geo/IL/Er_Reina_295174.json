@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Er Reina",
+  "geonameid": 295174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.68682797852877,
+      "lon": 35.3320614699826,
+      "geoinfo": {
+        "display_name": "Iksal, Jezreel Subdistrict, North District, 1756103, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iksal",
+        "state": "North District",
+        "postcode": "1756103",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Er Reina, North District, Israel"
+    },
+    {
+      "lat": 32.729809036375805,
+      "lon": 35.28393441062159,
+      "geoinfo": {
+        "display_name": "79, Reine, Jezreel Subdistrict, North District, 1789064, Israel",
+        "road": "79",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reine",
+        "state": "North District",
+        "postcode": "1789064",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "79, Er Reina, 1789064 North District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:30.039268+00:00",
+  "_kind": "geo_samples"
+}

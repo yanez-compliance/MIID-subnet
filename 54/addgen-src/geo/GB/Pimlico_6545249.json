@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Pimlico",
+  "geonameid": 6545249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.45546247796625,
+      "lon": -0.17756926022912867,
+      "geoinfo": {
+        "display_name": "Trinity Road, Windmill Green Estate, Earlsfield, London Borough of Wandsworth, London, Greater London, England, SW18 2EU, United Kingdom",
+        "road": "Trinity Road",
+        "house_number": null,
+        "neighbourhood": "Windmill Green Estate",
+        "suburb": "Earlsfield",
+        "city_district": "London Borough of Wandsworth",
+        "city": "London",
+        "state": "England",
+        "postcode": "SW18 2EU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Trinity Road, Pimlico, England, United Kingdom"
+    },
+    {
+      "lat": 51.48935788213376,
+      "lon": -0.08581618841347588,
+      "geoinfo": {
+        "display_name": "Eliot, East Street, Aylesbury Estate, Walworth, London Borough of Southwark, London, Greater London, England, SE17 2SS, United Kingdom",
+        "road": "East Street",
+        "house_number": null,
+        "neighbourhood": "Aylesbury Estate",
+        "suburb": "Walworth",
+        "city_district": "London Borough of Southwark",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE17 2SS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Eliot, East Street, Aylesbury Estate, Walworth, London Borough of Southwark, London, Greater London, England, SE17 2SS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:36.860867+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Mesa",
+  "geonameid": 5363990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.77674831389385,
+      "lon": -117.03335972065817,
+      "geoinfo": {
+        "display_name": "5347, Swarthmore Street, La Mesa, San Diego County, California, 91942, United States",
+        "road": "Swarthmore Street",
+        "house_number": "5347",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Mesa",
+        "state": "California",
+        "postcode": "91942",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5347 Swarthmore Street, La Mesa, California, United States"
+    },
+    {
+      "lat": 32.80520048881666,
+      "lon": -116.99381977036926,
+      "geoinfo": {
+        "display_name": "769, Sharon Way, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States",
+        "road": "Sharon Way",
+        "house_number": "769",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cajon",
+        "state": "California",
+        "postcode": "92020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "769, Sharon Way, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:43.296107+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Babu",
+  "geonameid": 1817858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.441661562751065,
+      "lon": 111.49546266719784,
+      "geoinfo": {
+        "display_name": "Pinggui, Pinggui District, Hezhou, Guangxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pinggui",
+        "state": "Guangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Babu, Guangxi, China"
+    },
+    {
+      "lat": 24.40413614044671,
+      "lon": 111.53951801505578,
+      "geoinfo": {
+        "display_name": "灵峰南路, Jiangnan Subdistrict, Babu, Babu District, Hezhou, Guangxi, China",
+        "road": "灵峰南路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jiangnan Subdistrict",
+        "city_district": null,
+        "city": "Babu",
+        "state": "Guangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "002, 灵峰南路, Jiangnan Subdistrict, Babu, Babu District, Hezhou, 24302 Guangxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:19.936724+00:00",
+  "_kind": "geo_samples"
+}

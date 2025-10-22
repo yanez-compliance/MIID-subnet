@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Passau",
+  "geonameid": 2855328,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.541314101210716,
+      "lon": 13.429109825694212,
+      "geoinfo": {
+        "display_name": "Neuburg am Inn, Landkreis Passau, Bavaria, 94036, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuburg am Inn",
+        "state": "Bavaria",
+        "postcode": "94036",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Passau, Bavaria, Germany"
+    },
+    {
+      "lat": 48.56162915102494,
+      "lon": 13.37840081756872,
+      "geoinfo": {
+        "display_name": "St 2118, Sperrwies, Passau, Bavaria, 94036, Germany",
+        "road": "St 2118",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sperrwies",
+        "city_district": null,
+        "city": "Passau",
+        "state": "Bavaria",
+        "postcode": "94036",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "St 2118, Sperrwies, Passau, Bavaria, 94036, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:27.557541+00:00",
+  "_kind": "geo_samples"
+}

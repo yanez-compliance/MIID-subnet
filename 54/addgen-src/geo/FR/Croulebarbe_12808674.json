@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Croulebarbe",
+  "geonameid": 12808674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.77619956066142,
+      "lon": 2.345906379485205,
+      "geoinfo": {
+        "display_name": "A 6b, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94240, France",
+        "road": "A 6b",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Haÿ-les-Roses",
+        "state": "Ile-de-France",
+        "postcode": "94240",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 6b, Croulebarbe, Ile-de-France, France"
+    },
+    {
+      "lat": 48.851744654800655,
+      "lon": 2.330613165530101,
+      "geoinfo": {
+        "display_name": "17, Rue du Vieux Colombier, Quartier Notre-Dame-des-Champs, 6th Arrondissement, Paris, Metropolitan France, 75006, France",
+        "road": "Rue du Vieux Colombier",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "6th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75006",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "17, Rue du Vieux Colombier, Quartier Notre-Dame-des-Champs, 6th Arrondissement, Paris, Metropolitan France, 75006, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:49.692736+00:00",
+  "_kind": "geo_samples"
+}

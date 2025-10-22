@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Vernon",
+  "geonameid": 5127835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.8991458865943,
+      "lon": -73.83720310211771,
+      "geoinfo": {
+        "display_name": "453, South 9th Avenue, West Mount Vernon, City of Mount Vernon, Westchester County, New York, 10550, United States",
+        "road": "South 9th Avenue",
+        "house_number": "453",
+        "neighbourhood": "West Mount Vernon",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Mount Vernon",
+        "state": "New York",
+        "postcode": "10550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "453 South 9th Avenue, Mount Vernon, New York, United States"
+    },
+    {
+      "lat": 40.92896223517754,
+      "lon": -73.80490587612107,
+      "geoinfo": {
+        "display_name": "38, Parkview Drive, Town of Eastchester, Westchester County, New York, 10708, United States",
+        "road": "Parkview Drive",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Eastchester",
+        "state": "New York",
+        "postcode": "10708",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "38, Parkview Drive, Town of Eastchester, Westchester County, New York, 10708, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:09.307953+00:00",
+  "_kind": "geo_samples"
+}

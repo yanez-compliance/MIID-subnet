@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Centreville",
+  "geonameid": 4751839,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.841350752770225,
+      "lon": -77.43127021816194,
+      "geoinfo": {
+        "display_name": "Sully Road, Centreville, Fairfax County, Virginia, 20122, United States",
+        "road": "Sully Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centreville",
+        "state": "Virginia",
+        "postcode": "20122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sully Road, Centreville, Virginia, United States"
+    },
+    {
+      "lat": 38.828651426016215,
+      "lon": -77.38366693190135,
+      "geoinfo": {
+        "display_name": "5486, Ashleigh Road, Crystal Springs, Fairfax County, Virginia, 22030, United States",
+        "road": "Ashleigh Road",
+        "house_number": "5486",
+        "neighbourhood": "Crystal Springs",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5486, Ashleigh Road, Crystal Springs, Fairfax County, Virginia, 22030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:48.178155+00:00",
+  "_kind": "geo_samples"
+}

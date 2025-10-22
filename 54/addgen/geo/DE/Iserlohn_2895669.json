@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Iserlohn",
+  "geonameid": 2895669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.34376169435326,
+      "lon": 7.748225181824424,
+      "geoinfo": {
+        "display_name": "Ihmerter Straße, Johannistal, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany",
+        "road": "Ihmerter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemer",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58675",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ihmerter Straße, Iserlohn, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.37008232027252,
+      "lon": 7.688373444176462,
+      "geoinfo": {
+        "display_name": "Langguthstraße, Obergrüne, Iserlohn, Märkischer Kreis, North Rhine-Westphalia, 58644, Germany",
+        "road": "Langguthstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Obergrüne",
+        "city_district": null,
+        "city": "Iserlohn",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58644",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "656, Langguthstraße, Obergrüne, Iserlohn, Märkischer Kreis, North Rhine-Westphalia, 58644, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:45.088034+00:00",
+  "_kind": "geo_samples"
+}

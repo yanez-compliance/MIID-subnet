@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Kroonstad",
+  "geonameid": 986846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.688837199978604,
+      "lon": 27.239909854462702,
+      "geoinfo": {
+        "display_name": "N1, Panorama, Moqhaka Ward 17, Kroonstad, Moqhaka Local Municipality, Fezile Dabi District Municipality, Free State, 9499, South Africa",
+        "road": "N1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Panorama",
+        "city_district": null,
+        "city": "Moqhaka Local Municipality",
+        "state": "Free State",
+        "postcode": "9499",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N1, Kroonstad, Free State, South Africa"
+    },
+    {
+      "lat": -27.67164295091835,
+      "lon": 27.27910576824389,
+      "geoinfo": {
+        "display_name": "Moqhaka Ward 17, Moqhaka Local Municipality, Fezile Dabi District Municipality, Free State, 1499, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moqhaka Ward 17",
+        "city_district": null,
+        "city": "Moqhaka Local Municipality",
+        "state": "Free State",
+        "postcode": "1499",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Moqhaka Ward 17, Kroonstad, 1499 Free State, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:00.477551+00:00",
+  "_kind": "geo_samples"
+}

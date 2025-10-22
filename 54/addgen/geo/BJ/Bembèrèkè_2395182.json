@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Bembèrèkè",
+  "geonameid": 2395182,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 10.253303019244232,
+      "lon": 2.6643917607323666,
+      "geoinfo": {
+        "display_name": "Bembèrèkè, Borgou Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bembèrèkè",
+        "state": "Borgou Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "569, Bembèrèkè, 70866 Borgou Department, Benin"
+    },
+    {
+      "lat": 10.233169942388054,
+      "lon": 2.708102426476162,
+      "geoinfo": {
+        "display_name": "Guéré, Dangou Gourou, Bembèrèkè, Borgou Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Guéré",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bembèrèkè",
+        "state": "Borgou Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "722, Guéré, Bembèrèkè, 05814 Borgou Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:48.226863+00:00",
+  "_kind": "geo_samples"
+}

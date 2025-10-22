@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chahe",
+  "geonameid": 1815856,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.562387732100014,
+      "lon": 117.92301955135576,
+      "geoinfo": {
+        "display_name": "岔河镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Chahe, Jiangsu, China"
+    },
+    {
+      "lat": 34.52542344575846,
+      "lon": 117.84630166627267,
+      "geoinfo": {
+        "display_name": "G310, Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": "G310",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G310, Pizhou, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:21.158427+00:00",
+  "_kind": "geo_samples"
+}

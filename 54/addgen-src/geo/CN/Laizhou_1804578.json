@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Laizhou",
+  "geonameid": 1804578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.19779473787643,
+      "lon": 119.98111939473252,
+      "geoinfo": {
+        "display_name": "Chengkuo, Laizhou, Yantai, Shandong, 261400, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laizhou",
+        "state": "Shandong",
+        "postcode": "261400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Laizhou, Shandong, China"
+    },
+    {
+      "lat": 37.161898023773034,
+      "lon": 119.98591988471249,
+      "geoinfo": {
+        "display_name": "wenchanglu, Laizhou, Yantai, Shandong, 261400, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "wenchanglu",
+        "city_district": null,
+        "city": "Laizhou",
+        "state": "Shandong",
+        "postcode": "261400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "481, wenchanglu, Laizhou, Yantai, Shandong, 261400, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:16.666427+00:00",
+  "_kind": "geo_samples"
+}

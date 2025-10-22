@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mandan",
+  "geonameid": 5690366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.870239029067,
+      "lon": -100.89876768019008,
+      "geoinfo": {
+        "display_name": "State Highway 1806, Harmon, Morton County, North Dakota, United States",
+        "road": "State Highway 1806",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Dakota",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "State Highway 1806, Mandan, North Dakota, United States"
+    },
+    {
+      "lat": 46.81766389807405,
+      "lon": -100.86076818420253,
+      "geoinfo": {
+        "display_name": "24th Avenue Southeast, Mandan, Morton County, North Dakota, 58554, United States",
+        "road": "24th Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mandan",
+        "state": "North Dakota",
+        "postcode": "58554",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24th Avenue Southeast, Mandan, Morton County, North Dakota, 58554, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:14.471498+00:00",
+  "_kind": "geo_samples"
+}

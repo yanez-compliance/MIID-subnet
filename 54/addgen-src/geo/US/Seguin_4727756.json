@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seguin",
+  "geonameid": 4727756,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.568546189683477,
+      "lon": -97.97058350072416,
+      "geoinfo": {
+        "display_name": "South Saunders Street, Seguin, Guadalupe County, Texas, 78155, United States",
+        "road": "South Saunders Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seguin",
+        "state": "Texas",
+        "postcode": "78155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Saunders Street, Seguin, Texas, United States"
+    },
+    {
+      "lat": 29.5530224409447,
+      "lon": -97.927859294454,
+      "geoinfo": {
+        "display_name": "Mueller Lane Private, Guadalupe County, Texas, 78155, United States",
+        "road": "Mueller Lane Private",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "508, Mueller Lane Private, Guadalupe County, Texas, 78155, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:37.078925+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oak Forest",
+  "geonameid": 4904286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.617689781715484,
+      "lon": -87.75035986689646,
+      "geoinfo": {
+        "display_name": "5331, 151st Street, Oak Forest, Bremen Township, Cook County, Illinois, 60452, United States",
+        "road": "151st Street",
+        "house_number": "5331",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oak Forest",
+        "state": "Illinois",
+        "postcode": "60452",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5331 151st Street, Oak Forest, Illinois, United States"
+    },
+    {
+      "lat": 41.62728645969412,
+      "lon": -87.72897992829859,
+      "geoinfo": {
+        "display_name": "Midlothian Park District Recreation Center, 14500, Kostner Avenue, Midlothian, Bremen Township, Cook County, Illinois, 60445, United States",
+        "road": "Kostner Avenue",
+        "house_number": "14500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midlothian",
+        "state": "Illinois",
+        "postcode": "60445",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Midlothian Park District Recreation Center, 14500, Kostner Avenue, Midlothian, Bremen Township, Cook County, Illinois, 60445, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:20.721132+00:00",
+  "_kind": "geo_samples"
+}

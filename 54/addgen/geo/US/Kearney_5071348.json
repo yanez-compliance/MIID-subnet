@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kearney",
+  "geonameid": 5071348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71474175466462,
+      "lon": -99.07668667618921,
+      "geoinfo": {
+        "display_name": "2, Apache Lane, Kearney, Buffalo County, Nebraska, 68847, United States",
+        "road": "Apache Lane",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kearney",
+        "state": "Nebraska",
+        "postcode": "68847",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2 Apache Lane, Kearney, Nebraska, United States"
+    },
+    {
+      "lat": 40.68324858325402,
+      "lon": -99.02698295992604,
+      "geoinfo": {
+        "display_name": "961, Cherry Avenue, Buffalo County, Nebraska, 68847, United States",
+        "road": "Cherry Avenue",
+        "house_number": "961",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nebraska",
+        "postcode": "68847",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "961, Cherry Avenue, Buffalo County, Nebraska, 68847, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:05.920420+00:00",
+  "_kind": "geo_samples"
+}

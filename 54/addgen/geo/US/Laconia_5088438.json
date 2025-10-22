@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laconia",
+  "geonameid": 5088438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.54574184551441,
+      "lon": -71.48485996006234,
+      "geoinfo": {
+        "display_name": "North Main Street, Wildwood Village, Laconia, Belknap County, New Hampshire, 03246, United States",
+        "road": "North Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laconia",
+        "state": "New Hampshire",
+        "postcode": "03246",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Main Street, Laconia, New Hampshire, United States"
+    },
+    {
+      "lat": 43.51096128152883,
+      "lon": -71.52478268514997,
+      "geoinfo": {
+        "display_name": "Bay Road, Sanbornton, Belknap County, New Hampshire, 03289, United States",
+        "road": "Bay Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanbornton",
+        "state": "New Hampshire",
+        "postcode": "03289",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "060, Bay Road, Sanbornton, Belknap County, New Hampshire, 03289, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:20.622844+00:00",
+  "_kind": "geo_samples"
+}

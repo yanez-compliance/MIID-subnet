@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Harlingen",
+  "geonameid": 2754817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.140544425217364,
+      "lon": 5.4151224999675796,
+      "geoinfo": {
+        "display_name": "Rijksweg N31, Dijksterburen, Kimswerd, Súdwest-Fryslân, Frisia, Netherlands, 8821 LA, Netherlands",
+        "road": "Rijksweg N31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kimswerd",
+        "state": "Frisia",
+        "postcode": "8821 LA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Rijksweg N31, Harlingen, Frisia, The Netherlands"
+    },
+    {
+      "lat": 53.15271757344191,
+      "lon": 5.367054418043113,
+      "geoinfo": {
+        "display_name": "Harlingen, Frisia, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harlingen",
+        "state": "Frisia",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "588, Harlingen, 87437 Frisia, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:48:54.384670+00:00",
+  "_kind": "geo_samples"
+}

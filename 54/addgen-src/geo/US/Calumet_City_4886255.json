@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Calumet City",
+  "geonameid": 4886255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.62166534235489,
+      "lon": -87.55624933877907,
+      "geoinfo": {
+        "display_name": "495, Marquette Avenue, Calumet City, Thornton Township, Cook County, Illinois, 60409, United States",
+        "road": "Marquette Avenue",
+        "house_number": "495",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calumet City",
+        "state": "Illinois",
+        "postcode": "60409",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "495 Marquette Avenue, Calumet City, Illinois, United States"
+    },
+    {
+      "lat": 41.58254487170277,
+      "lon": -87.54840336678767,
+      "geoinfo": {
+        "display_name": "West Lake Road, Bernice, Lansing, Thornton Township, Cook County, Illinois, 60438, United States",
+        "road": "West Lake Road",
+        "house_number": null,
+        "neighbourhood": "Bernice",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing",
+        "state": "Illinois",
+        "postcode": "60438",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "750, West Lake Road, Bernice, Lansing, Thornton Township, Cook County, Illinois, 60438, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:04.557098+00:00",
+  "_kind": "geo_samples"
+}

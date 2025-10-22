@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Brossard",
+  "geonameid": 5909629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.425883152048044,
+      "lon": -73.46607633652445,
+      "geoinfo": {
+        "display_name": "Rue Isabelle, Secteur I, Brossard, Urban agglomeration of Longueuil, Montérégie, Quebec, J4Y 2R3, Canada",
+        "road": "Rue Isabelle",
+        "house_number": null,
+        "neighbourhood": "Secteur I",
+        "suburb": null,
+        "city_district": null,
+        "city": "Brossard",
+        "state": "Quebec",
+        "postcode": "J4Y 2R3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Isabelle, Brossard, Quebec, Canada"
+    },
+    {
+      "lat": 45.43644415316193,
+      "lon": -73.43870741444366,
+      "geoinfo": {
+        "display_name": "Autoroute de l'Acier, Brossard, Urban agglomeration of Longueuil, Montérégie, Quebec, J4Y 0B4, Canada",
+        "road": "Autoroute de l'Acier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brossard",
+        "state": "Quebec",
+        "postcode": "J4Y 0B4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Autoroute de l'Acier, Brossard, Urban agglomeration of Longueuil, Montérégie, Quebec, J4Y 0B4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:39.915525+00:00",
+  "_kind": "geo_samples"
+}

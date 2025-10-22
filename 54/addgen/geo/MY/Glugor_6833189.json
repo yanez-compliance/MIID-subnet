@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Glugor",
+  "geonameid": 6833189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.338341543572501,
+      "lon": 100.33454728717237,
+      "geoinfo": {
+        "display_name": "Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Glugor, Penang, Malaysia"
+    },
+    {
+      "lat": 5.341291490615219,
+      "lon": 100.32874665277089,
+      "geoinfo": {
+        "display_name": "Bayan Mutiara, Mukim 13, North-East, George Town, Penang, 11800, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bayan Mutiara",
+        "suburb": "Mukim 13",
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Bayan Mutiara, Mukim 13, North-East, George Town, Penang, 11800, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:11.750731+00:00",
+  "_kind": "geo_samples"
+}

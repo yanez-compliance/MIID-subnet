@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Augusta",
+  "geonameid": 4589368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.52076202862078,
+      "lon": -81.94320431755176,
+      "geoinfo": {
+        "display_name": "317, Belair Road, Pine Valley, Belvedere, Aiken County, South Carolina, 29841, United States",
+        "road": "Belair Road",
+        "house_number": "317",
+        "neighbourhood": "Pine Valley",
+        "suburb": null,
+        "city_district": null,
+        "city": "Belvedere",
+        "state": "South Carolina",
+        "postcode": "29841",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "317 Belair Road, North Augusta, South Carolina, United States"
+    },
+    {
+      "lat": 33.48211328627489,
+      "lon": -81.97913482368175,
+      "geoinfo": {
+        "display_name": "River Levee Trail, Broad Street Historic District, Augusta, Richmond County, Georgia, 30912, United States",
+        "road": "River Levee Trail",
+        "house_number": null,
+        "neighbourhood": "Broad Street Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Augusta",
+        "state": "Georgia",
+        "postcode": "30912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "811, River Levee Trail, Broad Street Historic District, Augusta, Richmond County, Georgia, 30912, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:47.744538+00:00",
+  "_kind": "geo_samples"
+}

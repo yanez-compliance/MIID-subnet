@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Claremore",
+  "geonameid": 4533580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.278389841849645,
+      "lon": -95.63988813650708,
+      "geoinfo": {
+        "display_name": "Flint Road, Claremore, Rogers County, Oklahoma, 74019, United States",
+        "road": "Flint Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Claremore",
+        "state": "Oklahoma",
+        "postcode": "74019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Flint Road, Claremore, Oklahoma, United States"
+    },
+    {
+      "lat": 36.280429354365275,
+      "lon": -95.62203357131187,
+      "geoinfo": {
+        "display_name": "Will Rogers Turnpike, Rogers County, Oklahoma, 74019, United States",
+        "road": "Will Rogers Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": "74019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "200, Will Rogers Turnpike, Rogers County, Oklahoma, 74019, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:19.979066+00:00",
+  "_kind": "geo_samples"
+}

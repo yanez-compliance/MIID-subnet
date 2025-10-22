@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Arzgir",
+  "geonameid": 580716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.359256467892365,
+      "lon": 44.22811974872842,
+      "geoinfo": {
+        "display_name": "1, улица Шаумяна, Arzgir, Arzgirsky District, Stavropol Krai, North Caucasian Federal District, 356570, Russia",
+        "road": "улица Шаумяна",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arzgir",
+        "state": "Stavropol Krai",
+        "postcode": "356570",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "1 улица Шаумяна, Arzgir, Stavropol Krai, Russia"
+    },
+    {
+      "lat": 45.360658576381546,
+      "lon": 44.265695831820544,
+      "geoinfo": {
+        "display_name": "Arzgirsky District, Stavropol Krai, North Caucasian Federal District, 356570, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Stavropol Krai",
+        "postcode": "356570",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "856, Arzgir, 356570 Stavropol Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:49.817480+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chengdu",
+  "geonameid": 1815286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.698295034367156,
+      "lon": 104.05084068075412,
+      "geoinfo": {
+        "display_name": "Southwest Jiaotong University (Jiuli Campus), 2nd Ring Road North 1st Section, Jiulidi, Jinniu District, Chengdu, Sichuan, 610031, China",
+        "road": "2nd Ring Road North 1st Section",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jiulidi",
+        "city_district": null,
+        "city": "Chengdu",
+        "state": "Sichuan",
+        "postcode": "610031",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "2nd Ring Road North 1st Section, Chengdu, Sichuan, China"
+    },
+    {
+      "lat": 30.661954821847807,
+      "lon": 104.02138133850718,
+      "geoinfo": {
+        "display_name": "Caotanglu, Caotang, Qingyang District, Chengdu, Sichuan, 610072, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Caotanglu",
+        "suburb": "Caotang",
+        "city_district": null,
+        "city": "Chengdu",
+        "state": "Sichuan",
+        "postcode": "610072",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "518, Caotanglu, Caotang, Qingyang District, Chengdu, Sichuan, 610072, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:07.591846+00:00",
+  "_kind": "geo_samples"
+}

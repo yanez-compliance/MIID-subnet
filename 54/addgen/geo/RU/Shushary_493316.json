@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Shushary",
+  "geonameid": 493316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.78716085599942,
+      "lon": 30.358159519219065,
+      "geoinfo": {
+        "display_name": "Пулковское, Shushary, Saint Petersburg, Northwestern Federal District, 196605, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Пулковское",
+        "city_district": null,
+        "city": "Shushary",
+        "state": "Saint Petersburg",
+        "postcode": "196605",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Пулковское, Shushary, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.79712108044182,
+      "lon": 30.418378911117447,
+      "geoinfo": {
+        "display_name": "Московское шоссе, Shushary, Saint Petersburg, Northwestern Federal District, 196626, Russia",
+        "road": "Московское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shushary",
+        "state": "Saint Petersburg",
+        "postcode": "196626",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "678, Московское шоссе, Shushary, Saint Petersburg, Northwestern Federal District, 196626, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:44:26.658773+00:00",
+  "_kind": "geo_samples"
+}

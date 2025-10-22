@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Andrews",
+  "geonameid": 4593724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.046963519205356,
+      "lon": -81.12578771728455,
+      "geoinfo": {
+        "display_name": "Harbor Freight Tools, 577, Saint Andrews Road, Saint Andrews, Columbia, Lexington County, South Carolina, 29210, United States",
+        "road": "Saint Andrews Road",
+        "house_number": "577",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbia",
+        "state": "South Carolina",
+        "postcode": "29210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "577 Saint Andrews Road, Saint Andrews, South Carolina, United States"
+    },
+    {
+      "lat": 34.06993501492407,
+      "lon": -81.10771035731904,
+      "geoinfo": {
+        "display_name": "Columbia, Richland County, South Carolina, 29210, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbia",
+        "state": "South Carolina",
+        "postcode": "29210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "682, Columbia, Richland County, South Carolina, 29210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:54.134140+00:00",
+  "_kind": "geo_samples"
+}

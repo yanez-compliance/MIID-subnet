@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Sanya",
+  "geonameid": 1796556,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.254849585455123,
+      "lon": 109.51156859255161,
+      "geoinfo": {
+        "display_name": "Xinfeng Street, Jiyang District, Sanya City, Hainan Province, 572000, China",
+        "road": "Xinfeng Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiyang District",
+        "state": "Hainan Province",
+        "postcode": "572000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xinfeng Street, Sanya, Hainan Province, China"
+    },
+    {
+      "lat": 18.251903674040005,
+      "lon": 109.50850014467267,
+      "geoinfo": {
+        "display_name": "DAHON Bike, 88号, Shangpin Street, Jiyang District, Sanya City, Hainan Province, 572000, China",
+        "road": "Shangpin Street",
+        "house_number": "88号",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiyang District",
+        "state": "Hainan Province",
+        "postcode": "572000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "DAHON Bike, 88号, Shangpin Street, Jiyang District, Sanya City, Hainan Province, 572000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:12.866157+00:00",
+  "_kind": "geo_samples"
+}

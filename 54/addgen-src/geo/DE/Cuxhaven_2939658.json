@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Cuxhaven",
+  "geonameid": 2939658,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.85600172439843,
+      "lon": 8.678541350713003,
+      "geoinfo": {
+        "display_name": "13, Am Querkamp, Süderwisch, Süderwisch-Westerwisch, Cuxhaven, Landkreis Cuxhaven, Lower Saxony, 27474, Germany",
+        "road": "Am Querkamp",
+        "house_number": "13",
+        "neighbourhood": "Süderwisch",
+        "suburb": "Süderwisch-Westerwisch",
+        "city_district": null,
+        "city": "Cuxhaven",
+        "state": "Lower Saxony",
+        "postcode": "27474",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13 Am Querkamp, Cuxhaven, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.865383200617664,
+      "lon": 8.760686924032033,
+      "geoinfo": {
+        "display_name": "Lower Saxony, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lower Saxony",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "755, Cuxhaven, 18570 Lower Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:39.124443+00:00",
+  "_kind": "geo_samples"
+}

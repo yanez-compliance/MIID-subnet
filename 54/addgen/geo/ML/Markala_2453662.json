@@ -1,0 +1,47 @@
+{
+  "country_code": "ML",
+  "country": "Mali",
+  "city": "Markala",
+  "geonameid": 2453662,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 13.649844567696954,
+      "lon": -6.082223247369729,
+      "geoinfo": {
+        "display_name": "Tiongoni, Ségou Cercle, Ségou Region, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tiongoni",
+        "state": "Ségou Region",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "550, Tiongoni, Ségou Cercle, 70267 Ségou Region, Mali"
+    },
+    {
+      "lat": 13.682039333288,
+      "lon": -6.067480073834019,
+      "geoinfo": {
+        "display_name": "Diamarabougou, Markala, Ségou Cercle, Ségou Region, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Diamarabougou",
+        "city_district": null,
+        "city": "Markala",
+        "state": "Ségou Region",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "144, Diamarabougou, Markala, Ségou Cercle, 59794 Ségou Region, Mali"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:16.907141+00:00",
+  "_kind": "geo_samples"
+}

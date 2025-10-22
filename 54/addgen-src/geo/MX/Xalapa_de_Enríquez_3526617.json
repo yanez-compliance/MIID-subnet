@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Xalapa de Enríquez",
+  "geonameid": 3526617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.536150412963437,
+      "lon": -96.92712566911285,
+      "geoinfo": {
+        "display_name": "Calle Vicente Guerrero, Venustiano Carranza, Belisario Domínguez, Xalapa, Veracruz, 91000, Mexico",
+        "road": "Calle Vicente Guerrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xalapa",
+        "state": "Veracruz",
+        "postcode": "91000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Vicente Guerrero, Xalapa de Enríquez, Veracruz, Mexico"
+    },
+    {
+      "lat": 19.536957652880563,
+      "lon": -96.91074630703687,
+      "geoinfo": {
+        "display_name": "Calle Coyoacán, Los Laureles, Xalapa, Veracruz, 91170, Mexico",
+        "road": "Calle Coyoacán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xalapa",
+        "state": "Veracruz",
+        "postcode": "91170",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "700, Calle Coyoacán, Los Laureles, Xalapa, Veracruz, 91170, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:29:54.584750+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New London",
+  "geonameid": 4839416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38924809595461,
+      "lon": -72.12310024550263,
+      "geoinfo": {
+        "display_name": "135, Bloomingdale Road, Quaker Hill, Waterford, Southeastern Connecticut Planning Region, Connecticut, 06385, United States",
+        "road": "Bloomingdale Road",
+        "house_number": "135",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterford",
+        "state": "Connecticut",
+        "postcode": "06385",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "135 Bloomingdale Road, New London, Connecticut, United States"
+    },
+    {
+      "lat": 41.35907696999142,
+      "lon": -72.05157006067441,
+      "geoinfo": {
+        "display_name": "Clarence B. Sharp Highway, Long Hill, Groton, Southeastern Connecticut Planning Region, Connecticut, 06340, United States",
+        "road": "Clarence B. Sharp Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Groton",
+        "state": "Connecticut",
+        "postcode": "06340",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "306, Clarence B. Sharp Highway, Long Hill, Groton, Southeastern Connecticut Planning Region, Connecticut, 06340, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:58.074550+00:00",
+  "_kind": "geo_samples"
+}

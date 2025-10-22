@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chickasha",
+  "geonameid": 4533029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.03872031779427,
+      "lon": -97.88685631602901,
+      "geoinfo": {
+        "display_name": "Grady County, Oklahoma, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chickasha, Oklahoma, United States"
+    },
+    {
+      "lat": 35.08796723281179,
+      "lon": -97.92970405247746,
+      "geoinfo": {
+        "display_name": "North 4th Street, Chickasha, Grady County, Oklahoma, 73018, United States",
+        "road": "North 4th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chickasha",
+        "state": "Oklahoma",
+        "postcode": "73018",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 4th Street, Chickasha, Grady County, Oklahoma, 73018, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:53.177409+00:00",
+  "_kind": "geo_samples"
+}

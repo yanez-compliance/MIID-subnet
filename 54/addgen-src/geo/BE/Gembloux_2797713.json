@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Gembloux",
+  "geonameid": 2797713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.525641349951464,
+      "lon": 4.739526362013854,
+      "geoinfo": {
+        "display_name": "Chemin n°10 de Beuzet, Bossière, Gembloux, Namur, Wallonia, 5032, Belgium",
+        "road": "Chemin n°10 de Beuzet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Bossière",
+        "city": "Gembloux",
+        "state": "Namur",
+        "postcode": "5032",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin n°10 de Beuzet, Gembloux, Namur, Belgium"
+    },
+    {
+      "lat": 50.59574501584509,
+      "lon": 4.681330625652937,
+      "geoinfo": {
+        "display_name": "45B, Rue Georges Balza, Ernage, Gembloux, Namur, Wallonia, 5030, Belgium",
+        "road": "Rue Georges Balza",
+        "house_number": "45B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ernage",
+        "city": "Gembloux",
+        "state": "Namur",
+        "postcode": "5030",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "45B, Rue Georges Balza, Ernage, Gembloux, Namur, Wallonia, 5030, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:41.397342+00:00",
+  "_kind": "geo_samples"
+}

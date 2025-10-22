@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Albacete",
+  "geonameid": 2522258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.971148889173804,
+      "lon": -1.899174626569098,
+      "geoinfo": {
+        "display_name": "Camino de Santa Ana, Urbanización San Juan (Buenavista), Vereda, Albacete, Castile-La Mancha, 02006, Spain",
+        "road": "Camino de Santa Ana",
+        "house_number": null,
+        "neighbourhood": "Urbanización San Juan (Buenavista)",
+        "suburb": "Vereda",
+        "city_district": null,
+        "city": "Albacete",
+        "state": "Castile-La Mancha",
+        "postcode": "02006",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camino de Santa Ana, Albacete, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 39.01382708040851,
+      "lon": -1.875753780113815,
+      "geoinfo": {
+        "display_name": "1-4, Calle B, Parque Empresarial Campollano, Los Llanos, Albacete, Castile-La Mancha, 02007, Spain",
+        "road": "Calle B",
+        "house_number": "1-4",
+        "neighbourhood": null,
+        "suburb": "Los Llanos",
+        "city_district": null,
+        "city": "Albacete",
+        "state": "Castile-La Mancha",
+        "postcode": "02007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "1-4, Calle B, Parque Empresarial Campollano, Los Llanos, Albacete, Castile-La Mancha, 02007, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:53.635615+00:00",
+  "_kind": "geo_samples"
+}

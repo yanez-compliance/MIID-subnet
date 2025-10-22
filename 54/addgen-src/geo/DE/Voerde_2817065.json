@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Voerde",
+  "geonameid": 2817065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.570365810935854,
+      "lon": 6.695310524174189,
+      "geoinfo": {
+        "display_name": "Frankfurter Straße, Möllen, Voerde (Niederrhein), Kreis Wesel, North Rhine-Westphalia, 46562, Germany",
+        "road": "Frankfurter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Möllen",
+        "city_district": null,
+        "city": "Voerde (Niederrhein)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46562",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Frankfurter Straße, Voerde, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.6321274820644,
+      "lon": 6.712155943345437,
+      "geoinfo": {
+        "display_name": "Weseler Straße, Bucholt, Bucholtwelmen, Hünxe, Kreis Wesel, North Rhine-Westphalia, 46569, Germany",
+        "road": "Weseler Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bucholtwelmen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46569",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "889, Weseler Straße, Bucholt, Bucholtwelmen, Hünxe, Kreis Wesel, North Rhine-Westphalia, 46569, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:19.946176+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Footscray",
+  "geonameid": 2166370,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.81467160510173,
+      "lon": 144.86921337538968,
+      "geoinfo": {
+        "display_name": "131, Roberts Street, Yarraville, Melbourne, City of Maribyrnong, Victoria, 3013, Australia",
+        "road": "Roberts Street",
+        "house_number": "131",
+        "neighbourhood": null,
+        "suburb": "Yarraville",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3013",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "131 Roberts Street, Footscray, Victoria, Australia"
+    },
+    {
+      "lat": -37.78198740480683,
+      "lon": 144.8658490400767,
+      "geoinfo": {
+        "display_name": "207, Ballarat Road, Maidstone, Melbourne, City of Maribyrnong, Victoria, 3012, Australia",
+        "road": "Ballarat Road",
+        "house_number": "207",
+        "neighbourhood": null,
+        "suburb": "Maidstone",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3012",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "207, Ballarat Road, Maidstone, Melbourne, City of Maribyrnong, Victoria, 3012, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:49.859729+00:00",
+  "_kind": "geo_samples"
+}

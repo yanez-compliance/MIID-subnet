@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Qina",
+  "geonameid": 350550,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 26.131515612016642,
+      "lon": 32.7465043388206,
+      "geoinfo": {
+        "display_name": "Al Teraa Street, Qena, Egypt",
+        "road": "Al Teraa Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qena",
+        "state": "Qena",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Teraa Street, Qina, Qena, Egypt"
+    },
+    {
+      "lat": 26.181814286117493,
+      "lon": 32.74253878075496,
+      "geoinfo": {
+        "display_name": "Side Masaken Othman Road, Qena, Egypt",
+        "road": "Side Masaken Othman Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qena",
+        "state": "Qena",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "525, Side Masaken Othman Road, Qina, 47886 Qena, Egypt"
+    },
+    {
+      "lat": 26.198346393038058,
+      "lon": 32.696359631681005,
+      "geoinfo": {
+        "display_name": "Nag al Gaziyarea, Qena, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nag al Gaziyarea",
+        "state": "Qena",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "472, Nag al Gaziyarea, 72570 Qena, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:44.875353+00:00",
+  "_kind": "geo_samples"
+}

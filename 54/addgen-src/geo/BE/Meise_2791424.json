@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Meise",
+  "geonameid": 2791424,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.92687377191499,
+      "lon": 4.308225916624263,
+      "geoinfo": {
+        "display_name": "Lindeweg, Wolvertem, Meise, Halle-Vilvoorde, Flemish Brabant, Flanders, 1861, Belgium",
+        "road": "Lindeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meise",
+        "state": "Flemish Brabant",
+        "postcode": "1861",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Lindeweg, Meise, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.937690460465646,
+      "lon": 4.358383955019328,
+      "geoinfo": {
+        "display_name": "C&A, 2, Waardbeekdreef, Biesthoek, Grimbergen, Halle-Vilvoorde, Flemish Brabant, Flanders, 1850, Belgium",
+        "road": "Waardbeekdreef",
+        "house_number": "2",
+        "neighbourhood": "Biesthoek",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grimbergen",
+        "state": "Flemish Brabant",
+        "postcode": "1850",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "C&A, 2, Waardbeekdreef, Biesthoek, Grimbergen, Halle-Vilvoorde, Flemish Brabant, Flanders, 1850, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:55.189109+00:00",
+  "_kind": "geo_samples"
+}

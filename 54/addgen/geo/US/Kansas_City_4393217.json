@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kansas City",
+  "geonameid": 4393217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.07018264483437,
+      "lon": -94.55475197395582,
+      "geoinfo": {
+        "display_name": "2428, East 31st Street, Linwood Square Shopping Center, Kansas City, Jackson County, Missouri, 64109, United States",
+        "road": "East 31st Street",
+        "house_number": "2428",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kansas City",
+        "state": "Missouri",
+        "postcode": "64109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2428 East 31st Street, Kansas City, Missouri, United States"
+    },
+    {
+      "lat": 39.11124368931583,
+      "lon": -94.59891909108096,
+      "geoinfo": {
+        "display_name": "1230, Woodswether Road, Garment District, Downtown Kansas City, Kansas City, Jackson County, Missouri, 64105, United States",
+        "road": "Woodswether Road",
+        "house_number": "1230",
+        "neighbourhood": "Garment District",
+        "suburb": "Downtown Kansas City",
+        "city_district": null,
+        "city": "Kansas City",
+        "state": "Missouri",
+        "postcode": "64105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1230, Woodswether Road, Garment District, Downtown Kansas City, Kansas City, Jackson County, Missouri, 64105, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:43.973230+00:00",
+  "_kind": "geo_samples"
+}

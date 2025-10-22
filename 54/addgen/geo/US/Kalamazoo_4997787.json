@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kalamazoo",
+  "geonameid": 4997787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.32356988782891,
+      "lon": -85.54930962472726,
+      "geoinfo": {
+        "display_name": "2486, Dexter Avenue, Burke Acres, Kalamazoo, Kalamazoo County, Michigan, 49004, United States",
+        "road": "Dexter Avenue",
+        "house_number": "2486",
+        "neighbourhood": "Burke Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalamazoo",
+        "state": "Michigan",
+        "postcode": "49004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2486 Dexter Avenue, Kalamazoo, Michigan, United States"
+    },
+    {
+      "lat": 42.26870423655657,
+      "lon": -85.60146375724214,
+      "geoinfo": {
+        "display_name": "Kazoo School, 1401, Cherry Street, Westnedge Hill Neigborhood, Kalamazoo, Kalamazoo County, Michigan, 49008, United States",
+        "road": "Cherry Street",
+        "house_number": "1401",
+        "neighbourhood": "Westnedge Hill Neigborhood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalamazoo",
+        "state": "Michigan",
+        "postcode": "49008",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1401, Cherry Street, Kalamazoo, 49008 Michigan, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:27.473615+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Elbistan",
+  "geonameid": 315795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.17529486926591,
+      "lon": 37.18158612319444,
+      "geoinfo": {
+        "display_name": "Elbistan, Kahramanmaraş, Mediterranean Region, 46300, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elbistan",
+        "state": null,
+        "postcode": "46300",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Elbistan, Turkey"
+    },
+    {
+      "lat": 38.21459687524802,
+      "lon": 37.1651901045891,
+      "geoinfo": {
+        "display_name": "Cumhuriyet, Esentepe, Karaelbistan, Elbistan, Kahramanmaraş, Mediterranean Region, 46300, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Cumhuriyet",
+        "suburb": "Esentepe",
+        "city_district": null,
+        "city": "Elbistan",
+        "state": null,
+        "postcode": "46300",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "689, Cumhuriyet, 46300 Elbistan, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:57.417234+00:00",
+  "_kind": "geo_samples"
+}

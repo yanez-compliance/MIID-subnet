@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saugus",
+  "geonameid": 4950267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.50284864173027,
+      "lon": -71.0163721565396,
+      "geoinfo": {
+        "display_name": "2, Broadway, Lynnfield, Essex County, Massachusetts, 01940, United States",
+        "road": "Broadway",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynnfield",
+        "state": "Massachusetts",
+        "postcode": "01940",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2 Broadway, Saugus, Massachusetts, United States"
+    },
+    {
+      "lat": 42.45488880201161,
+      "lon": -71.00692987680709,
+      "geoinfo": {
+        "display_name": "14, Eastside Avenue, Pleasant Hills, Saugus, Essex County, Massachusetts, 01906, United States",
+        "road": "Eastside Avenue",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saugus",
+        "state": "Massachusetts",
+        "postcode": "01906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14, Eastside Avenue, Pleasant Hills, Saugus, Essex County, Massachusetts, 01906, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:45.307565+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Colombes",
+  "geonameid": 3024266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.90540946778865,
+      "lon": 2.1920065171492302,
+      "geoinfo": {
+        "display_name": "221, Chemin de Halage, Quartier du Chemin de l'Île, Nanterre, Arrondissement of Nanterre, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92000, France",
+        "road": "Chemin de Halage",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Quartier du Chemin de l'Île",
+        "city_district": null,
+        "city": "Nanterre",
+        "state": "Ile-de-France",
+        "postcode": "92000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Halage, Colombes, Ile-de-France, France"
+    },
+    {
+      "lat": 48.95651989763258,
+      "lon": 2.262651614992221,
+      "geoinfo": {
+        "display_name": "Rue de la République, Argenteuil, Val-d'Oise, Metropolitan France, 95100, France",
+        "road": "Rue de la République",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Argenteuil",
+        "state": null,
+        "postcode": "95100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "492, Rue de la République, Argenteuil, Val-d'Oise, Metropolitan France, 95100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:41.239132+00:00",
+  "_kind": "geo_samples"
+}

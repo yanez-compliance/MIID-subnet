@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Three Lakes",
+  "geonameid": 4175296,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.64688271610061,
+      "lon": -80.42240018626936,
+      "geoinfo": {
+        "display_name": "Southwest 129th Street, Miami-Dade County, Florida, 33186, United States",
+        "road": "Southwest 129th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33186",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 129th Street, Three Lakes, Florida, United States"
+    },
+    {
+      "lat": 25.618674370748575,
+      "lon": -80.38893240080057,
+      "geoinfo": {
+        "display_name": "Miami-Dade County, Florida, 33177, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "334, Three Lakes, 33177 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:27.278286+00:00",
+  "_kind": "geo_samples"
+}

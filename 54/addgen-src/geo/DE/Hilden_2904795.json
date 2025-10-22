@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hilden",
+  "geonameid": 2904795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.159328290571665,
+      "lon": 6.938048645727092,
+      "geoinfo": {
+        "display_name": "98, Richrather Straße, Karnap, Hilden, Kreis Mettmann, North Rhine-Westphalia, 40723, Germany",
+        "road": "Richrather Straße",
+        "house_number": "98",
+        "neighbourhood": null,
+        "suburb": "Karnap",
+        "city_district": null,
+        "city": "Hilden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40723",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "98 Richrather Straße, Hilden, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.140931727839565,
+      "lon": 6.886059447756498,
+      "geoinfo": {
+        "display_name": "Stümpeweg, Garath, Stadtbezirk 10, Dusseldorf, North Rhine-Westphalia, 40595, Germany",
+        "road": "Stümpeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Garath",
+        "city_district": "Stadtbezirk 10",
+        "city": "Dusseldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40595",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Stümpeweg, Garath, Stadtbezirk 10, Dusseldorf, North Rhine-Westphalia, 40595, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:42.917896+00:00",
+  "_kind": "geo_samples"
+}

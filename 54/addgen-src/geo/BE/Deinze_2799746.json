@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Deinze",
+  "geonameid": 2799746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.01868155210489,
+      "lon": 3.547955203743145,
+      "geoinfo": {
+        "display_name": "Vaart Rechts, Vosselare, Deinze, Gent, East Flanders, 9850, Belgium",
+        "road": "Vaart Rechts",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deinze",
+        "state": "East Flanders",
+        "postcode": "9850",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Vaart Rechts, Deinze, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.97243748536846,
+      "lon": 3.4776246188603115,
+      "geoinfo": {
+        "display_name": "Meirekouter, Machelen, Zulte, Gent, East Flanders, 9870, Belgium",
+        "road": "Meirekouter",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Machelen",
+        "state": "East Flanders",
+        "postcode": "9870",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "008, Meirekouter, Machelen, Zulte, Gent, East Flanders, 9870, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:30.733626+00:00",
+  "_kind": "geo_samples"
+}

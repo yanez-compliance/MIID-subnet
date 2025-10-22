@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Quận Năm",
+  "geonameid": 9645073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.751335194336168,
+      "lon": 106.66231223245367,
+      "geoinfo": {
+        "display_name": "Đường Trần Điện, Khu phố 9, Cholon, Ho Chi Minh City, 73000, Vietnam",
+        "road": "Đường Trần Điện",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cholon",
+        "city_district": null,
+        "city": "Ho Chi Minh City",
+        "state": null,
+        "postcode": "73000",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Đường Trần Điện, Quận Năm, Vietnam"
+    },
+    {
+      "lat": 10.785982817223802,
+      "lon": 106.67674946093798,
+      "geoinfo": {
+        "display_name": "Phường Nhiêu Lộc, Thủ Đức, Ho Chi Minh City, 70150, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Phường Nhiêu Lộc",
+        "city_district": null,
+        "city": "Thủ Đức",
+        "state": null,
+        "postcode": "70150",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "596, Phường Nhiêu Lộc, Thủ Đức, Ho Chi Minh City, 70150, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T05:39:59.428333+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tsuyama",
+  "geonameid": 1849519,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.05165360872086,
+      "lon": 134.027758552339,
+      "geoinfo": {
+        "display_name": "Hikami, Tsuyama, Okayama Prefecture, 708-8512, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsuyama",
+        "state": null,
+        "postcode": "708-8512",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tsuyama, Japan"
+    },
+    {
+      "lat": 35.08364437315686,
+      "lon": 133.9673519286381,
+      "geoinfo": {
+        "display_name": "平田, Tsuyama, Okayama Prefecture, 708-0013, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "平田",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsuyama",
+        "state": null,
+        "postcode": "708-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "平田, Tsuyama, Okayama Prefecture, 708-0013, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:43.344767+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tequixquiac",
+  "geonameid": 3515794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.931403786530353,
+      "lon": -99.15403127870954,
+      "geoinfo": {
+        "display_name": "Tequixquiac, Apaxco, State of Mexico, 55650, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tequixquiac",
+        "state": "State of Mexico",
+        "postcode": "55650",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tequixquiac, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.885832743598183,
+      "lon": -99.17334556100651,
+      "geoinfo": {
+        "display_name": "Tequixquiac, State of Mexico, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tequixquiac",
+        "state": "State of Mexico",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "506, Tequixquiac, 01897 State of Mexico, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:05.959293+00:00",
+  "_kind": "geo_samples"
+}

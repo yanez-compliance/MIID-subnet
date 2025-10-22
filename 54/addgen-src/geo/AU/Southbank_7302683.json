@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Southbank",
+  "geonameid": 7302683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.84964684096088,
+      "lon": 144.98021356540383,
+      "geoinfo": {
+        "display_name": "St Kilda Road, Melbourne, City of Port Phillip, Victoria, 3004, Australia",
+        "road": "St Kilda Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3004",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "St Kilda Road, Southbank, Victoria, Australia"
+    },
+    {
+      "lat": -37.85059234586441,
+      "lon": 144.93615498932746,
+      "geoinfo": {
+        "display_name": "Beacon Cove, Port Melbourne, Melbourne, City of Port Phillip, Victoria, 3207, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Beacon Cove",
+        "suburb": "Port Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3207",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "548, Beacon Cove, Port Melbourne, Melbourne, City of Port Phillip, Victoria, 3207, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:56:03.504709+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Monclova",
+  "geonameid": 3995523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.867504585732007,
+      "lon": -101.41912066601645,
+      "geoinfo": {
+        "display_name": "Carretera Candela, Altos Hornos de México S.a. Planta 1, Monclova, Coahuila, 25700, Mexico",
+        "road": "Carretera Candela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monclova",
+        "state": "Coahuila",
+        "postcode": "25700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Candela, Monclova, Coahuila, Mexico"
+    },
+    {
+      "lat": 26.87729600447272,
+      "lon": -101.43468794094167,
+      "geoinfo": {
+        "display_name": "Calle Silvestre Flores, Fraccionamiento Monclova, Monclova, Coahuila, 25700, Mexico",
+        "road": "Calle Silvestre Flores",
+        "house_number": null,
+        "neighbourhood": "Fraccionamiento Monclova",
+        "suburb": null,
+        "city_district": null,
+        "city": "Monclova",
+        "state": "Coahuila",
+        "postcode": "25700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "363, Calle Silvestre Flores, Fraccionamiento Monclova, Monclova, Coahuila, 25700, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:20.893708+00:00",
+  "_kind": "geo_samples"
+}

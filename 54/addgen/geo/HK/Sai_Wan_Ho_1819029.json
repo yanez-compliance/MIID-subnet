@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Sai Wan Ho",
+  "geonameid": 1819029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.26044190577158,
+      "lon": 114.21187250223632,
+      "geoinfo": {
+        "display_name": "Mount Parker Road, Eastern District, Hong Kong Island, Hong Kong, China",
+        "road": "Mount Parker Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eastern District",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Mount Parker Road, Sai Wan Ho, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.303033038843267,
+      "lon": 114.21820254965664,
+      "geoinfo": {
+        "display_name": "13/31, Central Kowloon Bypass, Trunk Road T2, Cha Kwo Ling, Kwun Tong District, Kowloon, Hong Kong, China",
+        "road": "Central Kowloon Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cha Kwo Ling",
+        "city_district": "Kwun Tong District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "13/31, Central Kowloon Bypass, Trunk Road T2, Cha Kwo Ling, Kwun Tong District, Kowloon, Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:41.074016+00:00",
+  "_kind": "geo_samples"
+}

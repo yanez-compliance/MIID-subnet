@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Meoqui",
+  "geonameid": 3996234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.310443646064904,
+      "lon": -105.47607167572654,
+      "geoinfo": {
+        "display_name": "Lomas del Consuelo, Meoqui, Chihuahua, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lomas del Consuelo",
+        "state": "Chihuahua",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Meoqui, Chihuahua, Mexico"
+    },
+    {
+      "lat": 28.27952025828662,
+      "lon": -105.43838789454392,
+      "geoinfo": {
+        "display_name": "Colonia Francisco Portillo (Los Jáquez), Meoqui, Chihuahua, 33137, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colonia Francisco Portillo (Los Jáquez)",
+        "state": "Chihuahua",
+        "postcode": "33137",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "182, Colonia Francisco Portillo (Los Jáquez), Meoqui, Chihuahua, 33137, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:11.732558+00:00",
+  "_kind": "geo_samples"
+}

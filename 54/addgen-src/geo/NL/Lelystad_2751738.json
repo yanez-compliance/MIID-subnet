@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Lelystad",
+  "geonameid": 2751738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.49860404955621,
+      "lon": 5.470718313811114,
+      "geoinfo": {
+        "display_name": "120, Het Bildt, Landstrekenwijk, Lelystad, Flevoland, Netherlands, 8245 CN, Netherlands",
+        "road": "Het Bildt",
+        "house_number": "120",
+        "neighbourhood": "Landstrekenwijk",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lelystad",
+        "state": "Flevoland",
+        "postcode": "8245 CN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "120 Het Bildt, Lelystad, Flevoland, The Netherlands"
+    },
+    {
+      "lat": 52.539641142264415,
+      "lon": 5.478509469281345,
+      "geoinfo": {
+        "display_name": "Zuigerplasdreef, Jagersveld, Lelystad, Flevoland, Netherlands, 8231 SB, Netherlands",
+        "road": "Zuigerplasdreef",
+        "house_number": null,
+        "neighbourhood": "Jagersveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lelystad",
+        "state": "Flevoland",
+        "postcode": "8231 SB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "084, Zuigerplasdreef, Jagersveld, Lelystad, Flevoland, Netherlands, 8231 SB, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:14.807045+00:00",
+  "_kind": "geo_samples"
+}

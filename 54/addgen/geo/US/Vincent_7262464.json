@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vincent",
+  "geonameid": 7262464,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.11246830475576,
+      "lon": -117.94071377814824,
+      "geoinfo": {
+        "display_name": "Irwindale, Los Angeles County, California, 91706, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irwindale",
+        "state": "California",
+        "postcode": "91706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Vincent, California, United States"
+    },
+    {
+      "lat": 34.1232283303673,
+      "lon": -117.96373605186524,
+      "geoinfo": {
+        "display_name": "San Gabriel River Freeway, Irwindale, Los Angeles County, California, 91010, United States",
+        "road": "San Gabriel River Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irwindale",
+        "state": "California",
+        "postcode": "91010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "594, San Gabriel River Freeway, Irwindale, Los Angeles County, California, 91010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:29.497067+00:00",
+  "_kind": "geo_samples"
+}

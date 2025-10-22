@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Deba",
+  "geonameid": 2345029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.211119911748492,
+      "lon": 11.427522079216349,
+      "geoinfo": {
+        "display_name": "Yamaltu/Deba, Gombe State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gombe State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Deba, Gombe State, Nigeria"
+    },
+    {
+      "lat": 10.188953130612935,
+      "lon": 11.401185292493938,
+      "geoinfo": {
+        "display_name": "Lano, Yamaltu/Deba, Gombe State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lano",
+        "state": "Gombe State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "727, Lano, Yamaltu/Deba, 13166 Gombe State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:15.649285+00:00",
+  "_kind": "geo_samples"
+}

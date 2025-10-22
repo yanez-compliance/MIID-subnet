@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Hilversum",
+  "geonameid": 2754064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.23829870752,
+      "lon": 5.221890393142367,
+      "geoinfo": {
+        "display_name": "Zuiderheide, Laren, North Holland, Netherlands, 1251 GM, Netherlands",
+        "road": "Zuiderheide",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laren",
+        "state": "North Holland",
+        "postcode": "1251 GM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Zuiderheide, Hilversum, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.204775184508016,
+      "lon": 5.230620232136263,
+      "geoinfo": {
+        "display_name": "Hilversumsestraatweg, Baarn, Utrecht, Netherlands, 3749 AT, Netherlands",
+        "road": "Hilversumsestraatweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Baarn",
+        "city": "Baarn",
+        "state": "Utrecht",
+        "postcode": "3749 AT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "952, Hilversumsestraatweg, Baarn, Utrecht, Netherlands, 3749 AT, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:51.628821+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huangnihe",
+  "geonameid": 2036734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.590696812775825,
+      "lon": 128.00549558415088,
+      "geoinfo": {
+        "display_name": "Huangnihe, Dunhua City, Yanbian, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dunhua City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huangnihe, Jilin, China"
+    },
+    {
+      "lat": 43.56445943173132,
+      "lon": 128.03025947199163,
+      "geoinfo": {
+        "display_name": "Huangnihe, Dunhua City, Yanbian, Jilin, 133704, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dunhua City",
+        "state": "Jilin",
+        "postcode": "133704",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "996, Huangnihe, Dunhua City, Yanbian, Jilin, 133704, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:52.916542+00:00",
+  "_kind": "geo_samples"
+}

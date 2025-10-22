@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Ascot Vale",
+  "geonameid": 2177576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.78357402873916,
+      "lon": 144.91729798305184,
+      "geoinfo": {
+        "display_name": "Epsom Road, Ascot Vale, Melbourne, City of Moonee Valley, Victoria, 3032, Australia",
+        "road": "Epsom Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ascot Vale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3032",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Epsom Road, Ascot Vale, Victoria, Australia"
+    },
+    {
+      "lat": -37.775610066180086,
+      "lon": 144.93079834104225,
+      "geoinfo": {
+        "display_name": "35, Warrick Street, Ascot Vale, Melbourne, City of Moonee Valley, Victoria, 3032, Australia",
+        "road": "Warrick Street",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": "Ascot Vale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3032",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "35, Warrick Street, Ascot Vale, Melbourne, City of Moonee Valley, Victoria, 3032, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:07.873280+00:00",
+  "_kind": "geo_samples"
+}

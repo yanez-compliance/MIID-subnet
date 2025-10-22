@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Conyers",
+  "geonameid": 4189213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.630776620369595,
+      "lon": -84.0182485854769,
+      "geoinfo": {
+        "display_name": "Box Wood Cr, Conyers, Rockdale County, Georgia, 30013, United States",
+        "road": "Box Wood Cr",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Conyers",
+        "state": "Georgia",
+        "postcode": "30013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Box Wood Cr, Conyers, Georgia, United States"
+    },
+    {
+      "lat": 33.63568430586568,
+      "lon": -84.02747813733396,
+      "geoinfo": {
+        "display_name": "1263, GA 138, Rockdale County, Georgia, 30094, United States",
+        "road": "GA 138",
+        "house_number": "1263",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "GA 138, Conyers, 30094 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:38.895398+00:00",
+  "_kind": "geo_samples"
+}

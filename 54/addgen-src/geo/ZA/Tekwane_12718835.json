@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Tekwane",
+  "geonameid": 12718835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.48559874171865,
+      "lon": 31.123942006689163,
+      "geoinfo": {
+        "display_name": "N4, Mbombela Ward 18, Mbombela, Ehlanzeni District Municipality, Mpumalanga, South Africa",
+        "road": "N4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mbombela Ward 18",
+        "city_district": null,
+        "city": "Mbombela",
+        "state": "Mpumalanga",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N4, Tekwane, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -25.465447776277866,
+      "lon": 31.144666132817456,
+      "geoinfo": {
+        "display_name": "Mbombela Ward 18, Mbombela, Ehlanzeni District Municipality, Mpumalanga, 1214, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mbombela Ward 18",
+        "city_district": null,
+        "city": "Mbombela",
+        "state": "Mpumalanga",
+        "postcode": "1214",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mbombela Ward 18, Mbombela, Ehlanzeni District Municipality, Mpumalanga, 1214, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:57:22.259194+00:00",
+  "_kind": "geo_samples"
+}

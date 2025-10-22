@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Broken Arrow",
+  "geonameid": 4531405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.026114977932565,
+      "lon": -95.75742864827005,
+      "geoinfo": {
+        "display_name": "Camp Russell, East 96th Street, Broken Arrow, Wagoner County, Oklahoma, 74014, United States",
+        "road": "East 96th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Broken Arrow",
+        "state": "Oklahoma",
+        "postcode": "74014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 96th Street, Broken Arrow, Oklahoma, United States"
+    },
+    {
+      "lat": 36.094412453342436,
+      "lon": -95.78128161602672,
+      "geoinfo": {
+        "display_name": "4720, South 176th East Avenue, Oxford Park, Tulsa, Tulsa County, Oklahoma, 74314, United States",
+        "road": "South 176th East Avenue",
+        "house_number": "4720",
+        "neighbourhood": "Oxford Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulsa",
+        "state": "Oklahoma",
+        "postcode": "74314",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4720, South 176th East Avenue, Oxford Park, Tulsa, Tulsa County, Oklahoma, 74314, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:52.284764+00:00",
+  "_kind": "geo_samples"
+}

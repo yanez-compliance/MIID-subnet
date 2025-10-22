@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Aurangābād",
+  "geonameid": 1278148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.758340181602534,
+      "lon": 84.35930000685254,
+      "geoinfo": {
+        "display_name": "NH19;NH139, Aurangabad, Bihar, 824123, India",
+        "road": "NH19;NH139",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurangabad",
+        "state": "Bihar",
+        "postcode": "824123",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH19;NH139, Aurangābād, Bihar, India"
+    },
+    {
+      "lat": 24.728515848093814,
+      "lon": 84.41523717288838,
+      "geoinfo": {
+        "display_name": "Aurangabad, Bihar, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "134, Aurangabad, 92059 Bihar, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:13.520190+00:00",
+  "_kind": "geo_samples"
+}

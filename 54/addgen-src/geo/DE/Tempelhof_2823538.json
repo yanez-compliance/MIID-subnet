@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Tempelhof",
+  "geonameid": 2823538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.442473370587805,
+      "lon": 13.382240110765286,
+      "geoinfo": {
+        "display_name": "34, Richterstraße, Alt-Mariendorf, Mariendorf, Tempelhof-Schöneberg, Berlin, Teltow, 12105, Germany",
+        "road": "Richterstraße",
+        "house_number": "34",
+        "neighbourhood": "Alt-Mariendorf",
+        "suburb": "Mariendorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12105",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "34 Richterstraße, Tempelhof, Germany"
+    },
+    {
+      "lat": 52.42464099920349,
+      "lon": 13.40050600718711,
+      "geoinfo": {
+        "display_name": "4, Faulhornweg, Siedlung Daheim, Mariendorf, Tempelhof-Schöneberg, Berlin, 12107, Germany",
+        "road": "Faulhornweg",
+        "house_number": "4",
+        "neighbourhood": "Siedlung Daheim",
+        "suburb": "Mariendorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12107",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Faulhornweg, Siedlung Daheim, Mariendorf, Tempelhof-Schöneberg, Berlin, 12107, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:11.865786+00:00",
+  "_kind": "geo_samples"
+}

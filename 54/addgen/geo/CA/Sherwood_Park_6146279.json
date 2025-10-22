@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Sherwood Park",
+  "geonameid": 6146279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.533139292963895,
+      "lon": -113.31451542485507,
+      "geoinfo": {
+        "display_name": "Beauvista Drive, Broadmoor Estates, Sherwood Park, Strathcona County, Alberta, T8A 5T2, Canada",
+        "road": "Beauvista Drive",
+        "house_number": null,
+        "neighbourhood": "Broadmoor Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sherwood Park",
+        "state": "Alberta",
+        "postcode": "T8A 5T2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Beauvista Drive, Sherwood Park, Alberta, Canada"
+    },
+    {
+      "lat": 53.496271886680795,
+      "lon": -113.26220388772583,
+      "geoinfo": {
+        "display_name": "Sconadale Road, Sconadale, Strathcona County, Alberta, T8B 6G3, Canada",
+        "road": "Sconadale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alberta",
+        "postcode": "T8B 6G3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sconadale Road, Sconadale, Strathcona County, Alberta, T8B 6G3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:15.292035+00:00",
+  "_kind": "geo_samples"
+}

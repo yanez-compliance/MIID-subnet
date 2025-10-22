@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Castelnau-le-Lez",
+  "geonameid": 3028337,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.62365219767423,
+      "lon": 3.8769058056309498,
+      "geoinfo": {
+        "display_name": "22, Rue des Loutres, Boutonnet, Centre, Montpellier, Hérault, Occitania, Metropolitan France, 34000, France",
+        "road": "Rue des Loutres",
+        "house_number": "22",
+        "neighbourhood": "Boutonnet",
+        "suburb": "Centre",
+        "city_district": null,
+        "city": "Montpellier",
+        "state": "Occitania",
+        "postcode": "34000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "22 Rue des Loutres, Castelnau-le-Lez, Occitania, France"
+    },
+    {
+      "lat": 43.612844843484595,
+      "lon": 3.856051303886829,
+      "geoinfo": {
+        "display_name": "7, Allée des Amaryllis, Les Cévennes, Montpellier, Hérault, Occitania, Metropolitan France, 34967, France",
+        "road": "Allée des Amaryllis",
+        "house_number": "7",
+        "neighbourhood": "Les Cévennes",
+        "suburb": "Les Cévennes",
+        "city_district": null,
+        "city": "Montpellier",
+        "state": "Occitania",
+        "postcode": "34967",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "7, Allée des Amaryllis, Les Cévennes, Montpellier, Hérault, Occitania, Metropolitan France, 34967, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:37.495429+00:00",
+  "_kind": "geo_samples"
+}

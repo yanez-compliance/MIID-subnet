@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Bartın",
+  "geonameid": 751057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.637809651635614,
+      "lon": 32.29922031742718,
+      "geoinfo": {
+        "display_name": "D755, Aladağ, Kocareis, Bartın, Black Sea Region, 74200, Turkey",
+        "road": "D755",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aladağ",
+        "city_district": null,
+        "city": "Bartın",
+        "state": null,
+        "postcode": "74200",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "D755, Bartın, Turkey"
+    },
+    {
+      "lat": 41.625210831137885,
+      "lon": 32.34981376997385,
+      "geoinfo": {
+        "display_name": "Esentepe, Bartın, Black Sea Region, 74200, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Esentepe",
+        "city_district": null,
+        "city": "Bartın",
+        "state": null,
+        "postcode": "74200",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "310, Esentepe, Bartın, Black Sea Region, 74200, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T10:30:01.875995+00:00",
+  "_kind": "geo_samples"
+}

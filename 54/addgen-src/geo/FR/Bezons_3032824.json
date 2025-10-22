@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bezons",
+  "geonameid": 3032824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92034067481316,
+      "lon": 2.191319522893541,
+      "geoinfo": {
+        "display_name": "Hakuna Matata, Boulevard Jean Jaurès, Houilles, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78800, France",
+        "road": "Boulevard Jean Jaurès",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houilles",
+        "state": "Ile-de-France",
+        "postcode": "78800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Jean Jaurès, Bezons, Ile-de-France, France"
+    },
+    {
+      "lat": 48.93978883977286,
+      "lon": 2.2520437988956874,
+      "geoinfo": {
+        "display_name": "Quai de Bezons, Argenteuil, Val-d'Oise, Metropolitan France, 95100, France",
+        "road": "Quai de Bezons",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Argenteuil",
+        "state": null,
+        "postcode": "95100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "070, Quai de Bezons, Argenteuil, Val-d'Oise, Metropolitan France, 95100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:40.753479+00:00",
+  "_kind": "geo_samples"
+}

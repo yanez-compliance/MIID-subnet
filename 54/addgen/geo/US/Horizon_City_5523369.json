@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Horizon City",
+  "geonameid": 5523369,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.708025361988952,
+      "lon": -106.18744936795801,
+      "geoinfo": {
+        "display_name": "Paseo del Este Boulevard, Horizon City, El Paso County, Texas, 79928, United States",
+        "road": "Paseo del Este Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Horizon City",
+        "state": "Texas",
+        "postcode": "79928",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Paseo del Este Boulevard, Horizon City, Texas, United States"
+    },
+    {
+      "lat": 31.70732166080778,
+      "lon": -106.20870892038162,
+      "geoinfo": {
+        "display_name": "Paseo Perlas Drive, El Paso County, Texas, 79228, United States",
+        "road": "Paseo Perlas Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "79228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "447, Paseo Perlas Drive, El Paso County, Texas, 79228, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:08.926524+00:00",
+  "_kind": "geo_samples"
+}

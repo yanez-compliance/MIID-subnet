@@ -1,0 +1,47 @@
+{
+  "country_code": "MZ",
+  "country": "Mozambique",
+  "city": "Manhiça",
+  "geonameid": 1040989,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -25.42920539744582,
+      "lon": 32.8427553539682,
+      "geoinfo": {
+        "display_name": "Manhiça, Maputo Province, Zona Sul, Mozambique",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maputo Province",
+        "postcode": null,
+        "country": "Mozambique",
+        "country_code": "mz"
+      },
+      "address": "Manhiça, Maputo Province, Mozambique"
+    },
+    {
+      "lat": -25.3647134239059,
+      "lon": 32.80977702268675,
+      "geoinfo": {
+        "display_name": "N1, Manhiça, Maputo Province, Zona Sul, Mozambique",
+        "road": "N1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maputo Province",
+        "postcode": null,
+        "country": "Mozambique",
+        "country_code": "mz"
+      },
+      "address": "N1, Manhiça, Maputo Province, 68350 Zona Sul, Mozambique"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:06.330244+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Köpenick",
+  "geonameid": 2885656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.401798971335,
+      "lon": 13.563575625371477,
+      "geoinfo": {
+        "display_name": "100A, Buntzelstraße, Falkenberg, Bohnsdorf, Treptow-Köpenick, Berlin, 12526, Germany",
+        "road": "Buntzelstraße",
+        "house_number": "100A",
+        "neighbourhood": "Falkenberg",
+        "suburb": "Bohnsdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12526",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "100A Buntzelstraße, Köpenick, Germany"
+    },
+    {
+      "lat": 52.42768704156844,
+      "lon": 13.524074036054328,
+      "geoinfo": {
+        "display_name": "Bendemannstraße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany",
+        "road": "Bendemannstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Adlershof",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "857, Bendemannstraße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:20.394802+00:00",
+  "_kind": "geo_samples"
+}

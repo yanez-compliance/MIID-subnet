@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Tor Lupara",
+  "geonameid": 6534284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.006035732802964,
+      "lon": 12.631328844046221,
+      "geoinfo": {
+        "display_name": "La Colonna, 384, Via Nomentana, Tor Lupara, Fonte Nuova, Roma Capitale, Lazio, 00010, Italy",
+        "road": "Via Nomentana",
+        "house_number": "384",
+        "neighbourhood": null,
+        "suburb": "Tor Lupara",
+        "city_district": null,
+        "city": "Fonte Nuova",
+        "state": "Lazio",
+        "postcode": "00010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "384 Via Nomentana, Tor Lupara, Lazio, Italy"
+    },
+    {
+      "lat": 41.96578109538091,
+      "lon": 12.627602171461342,
+      "geoinfo": {
+        "display_name": "Via Palombarese, Guidonia Montecelio, Roma Capitale, Lazio, 00131, Italy",
+        "road": "Via Palombarese",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lazio",
+        "postcode": "00131",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "000, Via Palombarese, Guidonia Montecelio, Roma Capitale, Lazio, 00131, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:00.691668+00:00",
+  "_kind": "geo_samples"
+}

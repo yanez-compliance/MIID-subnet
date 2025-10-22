@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Ozone Park",
+  "geonameid": 5138950,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.66626956876571,
+      "lon": -73.81893480419997,
+      "geoinfo": {
+        "display_name": "122-08, 150th Avenue, South Ozone Park, Queens, Queens County, New York, 11420, United States",
+        "road": "150th Avenue",
+        "house_number": "122-08",
+        "neighbourhood": "South Ozone Park",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "122-08 150th Avenue, South Ozone Park, New York, United States"
+    },
+    {
+      "lat": 40.636772125353986,
+      "lon": -73.7852979952922,
+      "geoinfo": {
+        "display_name": "JFK Access Road, Queens, Queens County, New York, 11430, United States",
+        "road": "JFK Access Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11430",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "646, JFK Access Road, Queens, Queens County, New York, 11430, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:32.601201+00:00",
+  "_kind": "geo_samples"
+}

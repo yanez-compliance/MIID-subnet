@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Herstal",
+  "geonameid": 2795930,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.64666471272345,
+      "lon": 5.567780177041871,
+      "geoinfo": {
+        "display_name": "N3, Pierreuse, Sainte-Marguerite, Liège, Wallonia, 4000, Belgium",
+        "road": "N3",
+        "house_number": null,
+        "neighbourhood": "Pierreuse",
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "N3, Herstal, Liège, Belgium"
+    },
+    {
+      "lat": 50.67744395745464,
+      "lon": 5.56447303743204,
+      "geoinfo": {
+        "display_name": "76, Rue du Cheval Blanc, Å BLANC DJ’VÅ, Rocourt, Liège, Wallonia, 4000, Belgium",
+        "road": "Rue du Cheval Blanc",
+        "house_number": "76",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "76, Rue du Cheval Blanc, Å BLANC DJ’VÅ, Rocourt, Liège, Wallonia, 4000, Belgium"
+    },
+    {
+      "lat": 50.67387551993181,
+      "lon": 5.621805774506726,
+      "geoinfo": {
+        "display_name": "195A, Rue du Bon Air, La Préalle, Herstal, Liège, Wallonia, 4040, Belgium",
+        "road": "Rue du Bon Air",
+        "house_number": "195A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Herstal",
+        "city": "Herstal",
+        "state": "Liège",
+        "postcode": "4040",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "195A, Rue du Bon Air, La Préalle, Herstal, Liège, Wallonia, 4040, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:31.999431+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ennepetal",
+  "geonameid": 2930043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.271883067099566,
+      "lon": 7.403161042727727,
+      "geoinfo": {
+        "display_name": "L 699, Saale, Eicken, Breckerfeld, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58339, Germany",
+        "road": "L 699",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Breckerfeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58339",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 699, Ennepetal, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.27512470638747,
+      "lon": 7.411677665806617,
+      "geoinfo": {
+        "display_name": "L 699, Peddenöde, Ennepetal, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58256, Germany",
+        "road": "L 699",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ennepetal",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58256",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 699, Peddenöde, Ennepetal, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58256, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:52.622635+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Buxar",
+  "geonameid": 1275019,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.567181212419328,
+      "lon": 83.9565447921173,
+      "geoinfo": {
+        "display_name": "Buxar, Bihar, 802101, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buxar",
+        "state": "Bihar",
+        "postcode": "802101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Buxar, Bihar, India"
+    },
+    {
+      "lat": 25.593419097714882,
+      "lon": 83.96805803451916,
+      "geoinfo": {
+        "display_name": "NH31, Bharauli, Ballia, Uttar Pradesh, 277501, India",
+        "road": "NH31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bharauli",
+        "state": "Uttar Pradesh",
+        "postcode": "277501",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH31, Bharauli, Ballia, Uttar Pradesh, 277501, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:03:54.277028+00:00",
+  "_kind": "geo_samples"
+}

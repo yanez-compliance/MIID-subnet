@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beckley",
+  "geonameid": 4798308,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.747685428309396,
+      "lon": -81.16649424310549,
+      "geoinfo": {
+        "display_name": "I 64, Glen Morgan, Beaver, Raleigh County, West Virginia, 25911, United States",
+        "road": "I 64",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beaver",
+        "state": "West Virginia",
+        "postcode": "25911",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 64, Beckley, West Virginia, United States"
+    },
+    {
+      "lat": 37.78685500432014,
+      "lon": -81.21034161552117,
+      "geoinfo": {
+        "display_name": "Crescent Elementary School, Hague Street, Beckley, Raleigh County, West Virginia, 25801, United States",
+        "road": "Hague Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beckley",
+        "state": "West Virginia",
+        "postcode": "25801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "038, Hague Street, Beckley, 25801 West Virginia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:15.248422+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Viterbo",
+  "geonameid": 3164039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.412470316368825,
+      "lon": 12.045802892602877,
+      "geoinfo": {
+        "display_name": "Strada Procoio, Castel d'Asso, Viterbo, Lazio, Italy",
+        "road": "Strada Procoio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viterbo",
+        "state": "Lazio",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Procoio, Viterbo, Lazio, Italy"
+    },
+    {
+      "lat": 42.455096145935116,
+      "lon": 12.138199272676765,
+      "geoinfo": {
+        "display_name": "Strada Pian del Cerro, Viterbo, Lazio, 01100, Italy",
+        "road": "Strada Pian del Cerro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viterbo",
+        "state": "Lazio",
+        "postcode": "01100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "149, Strada Pian del Cerro, Viterbo, Lazio, 01100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:54.230676+00:00",
+  "_kind": "geo_samples"
+}

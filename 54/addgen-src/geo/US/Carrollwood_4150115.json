@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carrollwood",
+  "geonameid": 4150115,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.07804855668312,
+      "lon": -82.47941859849108,
+      "geoinfo": {
+        "display_name": "Shady Shores Drive, Lake Magdalene, Hillsborough County, Florida, 33613, United States",
+        "road": "Shady Shores Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Magdalene",
+        "state": "Florida",
+        "postcode": "33613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Shady Shores Drive, Carrollwood, Florida, United States"
+    },
+    {
+      "lat": 28.076017514744848,
+      "lon": -82.50639509600347,
+      "geoinfo": {
+        "display_name": "14099, North Dale Mabry Highway, Arlington, Northdale, Hillsborough County, Florida, 33618, United States",
+        "road": "North Dale Mabry Highway",
+        "house_number": "14099",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northdale",
+        "state": "Florida",
+        "postcode": "33618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14099, North Dale Mabry Highway, Arlington, Northdale, Hillsborough County, Florida, 33618, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:17.848714+00:00",
+  "_kind": "geo_samples"
+}

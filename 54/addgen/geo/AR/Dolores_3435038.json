@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Dolores",
+  "geonameid": 3435038,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -36.333991534049005,
+      "lon": -57.67615963077206,
+      "geoinfo": {
+        "display_name": "Washington, Solidaridad II, Dolores, Partido de Dolores, Buenos Aires, B7100, Argentina",
+        "road": "Washington",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Solidaridad II",
+        "city_district": null,
+        "city": "Dolores",
+        "state": "Buenos Aires",
+        "postcode": "B7100",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Washington, Dolores, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -36.27922988108655,
+      "lon": -57.658464743531646,
+      "geoinfo": {
+        "display_name": "Camino Canal 9 Sur, El Mirador, Partido de Dolores, Buenos Aires, 7100, Argentina",
+        "road": "Camino Canal 9 Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Mirador",
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "7100",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Camino Canal 9 Sur, El Mirador, Partido de Dolores, Buenos Aires, 7100, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:08.289101+00:00",
+  "_kind": "geo_samples"
+}

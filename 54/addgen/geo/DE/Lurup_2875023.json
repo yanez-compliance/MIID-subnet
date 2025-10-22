@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lurup",
+  "geonameid": 2875023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.59210513433532,
+      "lon": 9.919381705150865,
+      "geoinfo": {
+        "display_name": "A 7, Stellingen, Eimsbüttel, Hamburg, 22525, Germany",
+        "road": "A 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stellingen",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 7, Lurup, Germany"
+    },
+    {
+      "lat": 53.61871085245535,
+      "lon": 9.893688716795774,
+      "geoinfo": {
+        "display_name": "Kornacker, Eidelstedt, Eimsbüttel, Hamburg, 22523, Germany",
+        "road": "Kornacker",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eidelstedt",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22523",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "814, Kornacker, Eidelstedt, Eimsbüttel, Hamburg, 22523, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:01.420587+00:00",
+  "_kind": "geo_samples"
+}

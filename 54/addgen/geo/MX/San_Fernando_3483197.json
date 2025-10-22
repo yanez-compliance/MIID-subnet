@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Fernando",
+  "geonameid": 3483197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.853317259584195,
+      "lon": -98.14267438905414,
+      "geoinfo": {
+        "display_name": "Calle Ponciano Arriaga, San Fernando, Tamaulipas, 87605, Mexico",
+        "road": "Calle Ponciano Arriaga",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando",
+        "state": "Tamaulipas",
+        "postcode": "87605",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Ponciano Arriaga, San Fernando, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 24.840489128652766,
+      "lon": -98.11955265155896,
+      "geoinfo": {
+        "display_name": "San Fernando, Tamaulipas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando",
+        "state": "Tamaulipas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "529, San Fernando, 16995 Tamaulipas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:27:35.596695+00:00",
+  "_kind": "geo_samples"
+}

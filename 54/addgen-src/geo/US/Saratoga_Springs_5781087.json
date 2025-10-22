@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saratoga Springs",
+  "geonameid": 5781087,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.31404806940365,
+      "lon": -111.87024545814667,
+      "geoinfo": {
+        "display_name": "Utah County, Utah, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Saratoga Springs, Utah, United States"
+    },
+    {
+      "lat": 40.33104823686591,
+      "lon": -111.94151791997015,
+      "geoinfo": {
+        "display_name": "Porters Crossing Road, Saratoga Springs, Utah County, Utah, United States",
+        "road": "Porters Crossing Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saratoga Springs",
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "119, Porters Crossing Road, Saratoga Springs, Utah County, 08064 Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:07.995505+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Paris",
+  "geonameid": 4717560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.63108608372533,
+      "lon": -95.59179857384662,
+      "geoinfo": {
+        "display_name": "FM 137, Paris, Lamar County, Texas, United States",
+        "road": "FM 137",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paris",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "FM 137, Paris, Texas, United States"
+    },
+    {
+      "lat": 33.65829942125467,
+      "lon": -95.56845221988004,
+      "geoinfo": {
+        "display_name": "394, 12th Street Southwest, Paris, Lamar County, Texas, 75460, United States",
+        "road": "12th Street Southwest",
+        "house_number": "394",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paris",
+        "state": "Texas",
+        "postcode": "75460",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "394, 12th Street Southwest, Paris, Lamar County, Texas, 75460, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:35.376060+00:00",
+  "_kind": "geo_samples"
+}

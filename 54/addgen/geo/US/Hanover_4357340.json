@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hanover",
+  "geonameid": 4357340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.20306109139116,
+      "lon": -76.75791032352426,
+      "geoinfo": {
+        "display_name": "I 95, Columbia, Howard County, Maryland, 21075, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbia",
+        "state": "Maryland",
+        "postcode": "21075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, Hanover, Maryland, United States"
+    },
+    {
+      "lat": 39.2102926381797,
+      "lon": -76.72030150375947,
+      "geoinfo": {
+        "display_name": "6063, Claire Drive, West Elkridge, Elkridge, Howard County, Maryland, 21075, United States",
+        "road": "Claire Drive",
+        "house_number": "6063",
+        "neighbourhood": "West Elkridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkridge",
+        "state": "Maryland",
+        "postcode": "21075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6063, Claire Drive, West Elkridge, Elkridge, Howard County, Maryland, 21075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:34.873501+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairfield",
+  "geonameid": 4511283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.35857377241948,
+      "lon": -84.56820414617633,
+      "geoinfo": {
+        "display_name": "Joe Nuxhall Way, Fairfield, Butler County, Ohio, 45015, United States",
+        "road": "Joe Nuxhall Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfield",
+        "state": "Ohio",
+        "postcode": "45015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Joe Nuxhall Way, Fairfield, Ohio, United States"
+    },
+    {
+      "lat": 39.36811612912251,
+      "lon": -84.53283368257168,
+      "geoinfo": {
+        "display_name": "Bobmeyer Road, Indian Springs, Hamilton, Butler County, Ohio, 45015, United States",
+        "road": "Bobmeyer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamilton",
+        "state": "Ohio",
+        "postcode": "45015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "486, Bobmeyer Road, Indian Springs, Hamilton, Butler County, Ohio, 45015, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:53.211147+00:00",
+  "_kind": "geo_samples"
+}

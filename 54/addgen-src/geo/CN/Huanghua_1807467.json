@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huanghua",
+  "geonameid": 1807467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.921929699420325,
+      "lon": 119.4530298200102,
+      "geoinfo": {
+        "display_name": "Zhucheng City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huanghua, Shandong, China"
+    },
+    {
+      "lat": 35.84899286115805,
+      "lon": 119.47843088746792,
+      "geoinfo": {
+        "display_name": "S220, Zhucheng City, Weifang, Shandong, China",
+        "road": "S220",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S220, Zhucheng City, Weifang, 32732 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:33.721430+00:00",
+  "_kind": "geo_samples"
+}

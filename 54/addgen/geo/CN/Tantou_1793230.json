@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tantou",
+  "geonameid": 1793230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.058446633559527,
+      "lon": 119.6212604453869,
+      "geoinfo": {
+        "display_name": "Langqi, Mawei District, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Langqi",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tantou, Fujian, China"
+    },
+    {
+      "lat": 26.04798189105619,
+      "lon": 119.60111685828936,
+      "geoinfo": {
+        "display_name": "文石, Changle District, Fuzhou City, Fujian, 350200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changle District",
+        "state": "Fujian",
+        "postcode": "350200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "848, 文石, Changle District, Fuzhou City, Fujian, 350200, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:52:41.103899+00:00",
+  "_kind": "geo_samples"
+}

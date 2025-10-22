@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Bnei Brak",
+  "geonameid": 295514,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.054859601992526,
+      "lon": 34.82001937072056,
+      "geoinfo": {
+        "display_name": "Daniel, Ramat Hen, Ramat Gan, Tel Aviv Subdistrict, Tel-Aviv District, 5223403, Israel",
+        "road": "Daniel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ramat Hen",
+        "city_district": null,
+        "city": "Ramat Gan",
+        "state": "Tel-Aviv District",
+        "postcode": "5223403",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Daniel, Bnei Brak, Tel-Aviv District, Israel"
+    },
+    {
+      "lat": 32.08375026559624,
+      "lon": 34.82370180442117,
+      "geoinfo": {
+        "display_name": "63, HaRoe, Hillel, Ramat Gan, Tel Aviv Subdistrict, Tel-Aviv District, 5239248, Israel",
+        "road": "HaRoe",
+        "house_number": "63",
+        "neighbourhood": null,
+        "suburb": "Hillel",
+        "city_district": null,
+        "city": "Ramat Gan",
+        "state": "Tel-Aviv District",
+        "postcode": "5239248",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "63, HaRoe, Hillel, Ramat Gan, Tel Aviv Subdistrict, Tel-Aviv District, 5239248, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:33.785745+00:00",
+  "_kind": "geo_samples"
+}

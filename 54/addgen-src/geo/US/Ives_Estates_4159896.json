@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ives Estates",
+  "geonameid": 4159896,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.96450349774305,
+      "lon": -80.15753932708017,
+      "geoinfo": {
+        "display_name": "2215, Northeast 204th Street, Highland Lakes, Miami, Miami-Dade County, Florida, 33180, United States",
+        "road": "Northeast 204th Street",
+        "house_number": "2215",
+        "neighbourhood": "Highland Lakes",
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2215 Northeast 204th Street, Ives Estates, Florida, United States"
+    },
+    {
+      "lat": 25.976402427169464,
+      "lon": -80.16158046009747,
+      "geoinfo": {
+        "display_name": "963, Southwest 8th Street, Ro-Len Lake Gardens, Hallandale Beach, Broward County, Florida, 33009, United States",
+        "road": "Southwest 8th Street",
+        "house_number": "963",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hallandale Beach",
+        "state": "Florida",
+        "postcode": "33009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "963, Southwest 8th Street, Ro-Len Lake Gardens, Hallandale Beach, Broward County, Florida, 33009, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:50.882721+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wyckoff",
+  "geonameid": 5106615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.0163739460062,
+      "lon": -74.18182842116921,
+      "geoinfo": {
+        "display_name": "Fieldstone Terrace, Abma's Farm, Wyckoff, Bergen County, New Jersey, 07481, United States",
+        "road": "Fieldstone Terrace",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyckoff",
+        "state": "New Jersey",
+        "postcode": "07481",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fieldstone Terrace, Wyckoff, New Jersey, United States"
+    },
+    {
+      "lat": 41.0296501761204,
+      "lon": -74.1505376747255,
+      "geoinfo": {
+        "display_name": "196, MacIntyre Lane, Allendale, Bergen County, New Jersey, 07401, United States",
+        "road": "MacIntyre Lane",
+        "house_number": "196",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Allendale",
+        "state": "New Jersey",
+        "postcode": "07401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "196, MacIntyre Lane, Allendale, Bergen County, New Jersey, 07401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:07.609366+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Nagasaki",
+  "geonameid": 8573184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.74115987196883,
+      "lon": 139.64156145023318,
+      "geoinfo": {
+        "display_name": "Koyama, Nerima, Tokyo, 176-0022, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "176-0022",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nagasaki, Japan"
+    },
+    {
+      "lat": 35.724953306004494,
+      "lon": 139.6676768050125,
+      "geoinfo": {
+        "display_name": "Dainana Junior High School, Shin-Ome Kaido, Numabukuro 2, Numabukuro, Nakano, Tokyo, 165-0022, Japan",
+        "road": "Shin-Ome Kaido",
+        "house_number": null,
+        "neighbourhood": "Numabukuro 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakano",
+        "state": null,
+        "postcode": "165-0022",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Dainana Junior High School, Shin-Ome Kaido, Numabukuro 2, Numabukuro, Nakano, Tokyo, 165-0022, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:42.629651+00:00",
+  "_kind": "geo_samples"
+}

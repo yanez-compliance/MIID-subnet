@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Silvania",
+  "geonameid": 3668028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.427072623523438,
+      "lon": -74.40570757702929,
+      "geoinfo": {
+        "display_name": "Silvania, Sumapaz, RAP (Especial) Central, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silvania",
+        "state": null,
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Silvania, Colombia"
+    },
+    {
+      "lat": 4.407041976649224,
+      "lon": -74.3866577666538,
+      "geoinfo": {
+        "display_name": "Calle 12, Silvania, Sumapaz, RAP (Especial) Central, Colombia",
+        "road": "Calle 12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silvania",
+        "state": null,
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 12, Silvania, Sumapaz, 55543 RAP (Especial) Central, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:50.726548+00:00",
+  "_kind": "geo_samples"
+}

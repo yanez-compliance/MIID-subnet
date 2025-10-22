@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Luis",
+  "geonameid": 5312913,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.4792845405051,
+      "lon": -114.73469165138974,
+      "geoinfo": {
+        "display_name": "County 24th Street, San Luis, Yuma County, Arizona, 85349, United States",
+        "road": "County 24th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis",
+        "state": "Arizona",
+        "postcode": "85349",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County 24th Street, San Luis, Arizona, United States"
+    },
+    {
+      "lat": 32.52341688058136,
+      "lon": -114.7985891326628,
+      "geoinfo": {
+        "display_name": "County 21st Street South, San Luis, Yuma County, Arizona, 85336, United States",
+        "road": "County 21st Street South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis",
+        "state": "Arizona",
+        "postcode": "85336",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County 21st Street South, San Luis, Yuma County, Arizona, 85336, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:39.151513+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Manchester City Centre",
+  "geonameid": 7281603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.50186783797891,
+      "lon": -2.2396604945273344,
+      "geoinfo": {
+        "display_name": "Heywood Street, Cheetham Hill, Manchester, Greater Manchester, England, M8 0DF, United Kingdom",
+        "road": "Heywood Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cheetham Hill",
+        "city_district": null,
+        "city": "Manchester",
+        "state": "England",
+        "postcode": "M8 0DF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Heywood Street, Manchester City Centre, England, United Kingdom"
+    },
+    {
+      "lat": 53.48958102106611,
+      "lon": -2.2874611651637196,
+      "geoinfo": {
+        "display_name": "Mother Hubbards Salford, 122, Rossall Way, Pendleton, Salford, Greater Manchester, England, M6 5HR, United Kingdom",
+        "road": "Rossall Way",
+        "house_number": "122",
+        "neighbourhood": null,
+        "suburb": "Pendleton",
+        "city_district": null,
+        "city": "Salford",
+        "state": "England",
+        "postcode": "M6 5HR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mother Hubbards Salford, 122, Rossall Way, Pendleton, Salford, Greater Manchester, England, M6 5HR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:41.009364+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Randolph",
+  "geonameid": 4948403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.17153411420423,
+      "lon": -71.06608032203269,
+      "geoinfo": {
+        "display_name": "100, Lafayette Street, Randolph, Norfolk County, Massachusetts, 02368, United States",
+        "road": "Lafayette Street",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Randolph",
+        "state": "Massachusetts",
+        "postcode": "02368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Lafayette Street, Randolph, Massachusetts, United States"
+    },
+    {
+      "lat": 42.16805270564999,
+      "lon": -71.03468778089305,
+      "geoinfo": {
+        "display_name": "9, Regina Road, Randolph, Norfolk County, Massachusetts, 02368, United States",
+        "road": "Regina Road",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Randolph",
+        "state": "Massachusetts",
+        "postcode": "02368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9, Regina Road, Randolph, Norfolk County, Massachusetts, 02368, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:38.743331+00:00",
+  "_kind": "geo_samples"
+}

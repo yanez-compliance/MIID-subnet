@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 4659557,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.523348062218695,
+      "lon": -86.92318871227548,
+      "geoinfo": {
+        "display_name": "4681, Kinneys School Road, Kinneys, Robertson County, Middle Tennessee, Tennessee, 37032, United States",
+        "road": "Kinneys School Road",
+        "house_number": "4681",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4681 Kinneys School Road, Springfield, Tennessee, United States"
+    },
+    {
+      "lat": 36.482347203181945,
+      "lon": -86.92765264691388,
+      "geoinfo": {
+        "display_name": "4781, TN 49, Springfield, Robertson County, Middle Tennessee, Tennessee, 37172, United States",
+        "road": "TN 49",
+        "house_number": "4781",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Tennessee",
+        "postcode": "37172",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4781, TN 49, Springfield, Robertson County, Middle Tennessee, Tennessee, 37172, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:15.071311+00:00",
+  "_kind": "geo_samples"
+}

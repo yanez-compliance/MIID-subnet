@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Longmont",
+  "geonameid": 5579276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.171168034252936,
+      "lon": -105.14509335083645,
+      "geoinfo": {
+        "display_name": "829, Wade Road, Longmont, Boulder County, Colorado, 80503, United States",
+        "road": "Wade Road",
+        "house_number": "829",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longmont",
+        "state": "Colorado",
+        "postcode": "80503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "829 Wade Road, Longmont, Colorado, United States"
+    },
+    {
+      "lat": 40.192453708072485,
+      "lon": -105.13766833715044,
+      "geoinfo": {
+        "display_name": "1917, Kingston Court, Longmont, Boulder County, Colorado, 80503, United States",
+        "road": "Kingston Court",
+        "house_number": "1917",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longmont",
+        "state": "Colorado",
+        "postcode": "80503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1917, Kingston Court, Longmont, Boulder County, Colorado, 80503, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:09.876268+00:00",
+  "_kind": "geo_samples"
+}

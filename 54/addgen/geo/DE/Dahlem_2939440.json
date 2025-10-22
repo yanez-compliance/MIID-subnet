@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dahlem",
+  "geonameid": 2939440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.44030271253906,
+      "lon": 13.235376606220992,
+      "geoinfo": {
+        "display_name": "18, Argentinische Allee, Zehlendorf, Steglitz-Zehlendorf, Berlin, Teltow, 14163, Germany",
+        "road": "Argentinische Allee",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Zehlendorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14163",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "18 Argentinische Allee, Dahlem, Germany"
+    },
+    {
+      "lat": 52.450067212913936,
+      "lon": 13.241555603811168,
+      "geoinfo": {
+        "display_name": "30, Ottmachauer Steig, Waldsiedlung Krumme Lanke, Zehlendorf, Steglitz-Zehlendorf, Berlin, 14163, Germany",
+        "road": "Ottmachauer Steig",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "Zehlendorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14163",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "30, Ottmachauer Steig, Waldsiedlung Krumme Lanke, Zehlendorf, Steglitz-Zehlendorf, Berlin, 14163, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:03.022791+00:00",
+  "_kind": "geo_samples"
+}

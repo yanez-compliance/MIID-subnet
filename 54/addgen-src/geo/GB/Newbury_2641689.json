@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Newbury",
+  "geonameid": 2641689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.37316690288415,
+      "lon": -1.3801605288433931,
+      "geoinfo": {
+        "display_name": "Enborne Street, Enborne, Enborne Row, West Berkshire, England, RG20 0JN, United Kingdom",
+        "road": "Enborne Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Enborne",
+        "city_district": null,
+        "city": "Enborne Row",
+        "state": "England",
+        "postcode": "RG20 0JN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Enborne Street, Newbury, England, United Kingdom"
+    },
+    {
+      "lat": 51.43223996211061,
+      "lon": -1.3208984056118631,
+      "geoinfo": {
+        "display_name": "A339, Shaw cum Donnington, Chieveley, West Berkshire, England, RG14 3AP, United Kingdom",
+        "road": "A339",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shaw cum Donnington",
+        "city_district": null,
+        "city": "Chieveley",
+        "state": "England",
+        "postcode": "RG14 3AP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A339, Shaw cum Donnington, Chieveley, West Berkshire, England, RG14 3AP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:56.655380+00:00",
+  "_kind": "geo_samples"
+}

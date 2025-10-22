@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Aachen",
+  "geonameid": 3247449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.743278732687095,
+      "lon": 6.042404845674931,
+      "geoinfo": {
+        "display_name": "Unterer Backertsweg, Bildchen, Aachen-Mitte, Aachen, Aachen (district), North Rhine-Westphalia, 52074, Germany",
+        "road": "Unterer Backertsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bildchen",
+        "city_district": "Aachen-Mitte",
+        "city": "Aachen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52074",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Unterer Backertsweg, Aachen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.767441392795156,
+      "lon": 6.032788067216786,
+      "geoinfo": {
+        "display_name": "6, Schmiedgasse, Vaalserquartier, Laurensberg, Aachen, Aachen (district), North Rhine-Westphalia, 52074, Germany",
+        "road": "Schmiedgasse",
+        "house_number": "6",
+        "neighbourhood": "Vaalserquartier",
+        "suburb": "Laurensberg",
+        "city_district": null,
+        "city": "Aachen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52074",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6, Schmiedgasse, Aachen, 52074 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:39.455769+00:00",
+  "_kind": "geo_samples"
+}

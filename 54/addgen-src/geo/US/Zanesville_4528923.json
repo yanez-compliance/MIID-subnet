@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Zanesville",
+  "geonameid": 4528923,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94179053256109,
+      "lon": -82.06068949469645,
+      "geoinfo": {
+        "display_name": "Fairview, Muskingum County, Ohio, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Zanesville, Ohio, United States"
+    },
+    {
+      "lat": 39.94575527772867,
+      "lon": -82.02674889604847,
+      "geoinfo": {
+        "display_name": "Gant Park Municipal Stadium, Gant Street, Zanesville, Muskingum County, Ohio, 43701, United States",
+        "road": "Gant Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zanesville",
+        "state": "Ohio",
+        "postcode": "43701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "676, Gant Street, Zanesville, 43701 Ohio, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:14.511888+00:00",
+  "_kind": "geo_samples"
+}

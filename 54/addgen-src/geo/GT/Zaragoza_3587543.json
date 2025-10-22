@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Zaragoza",
+  "geonameid": 3587543,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.63823729503308,
+      "lon": -90.86837520792118,
+      "geoinfo": {
+        "display_name": "San Andrés Itzapa, Zaragoza, Chimaltenango, 04013, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Andrés Itzapa",
+        "state": "Chimaltenango",
+        "postcode": "04013",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Zaragoza, Chimaltenango, Guatemala"
+    },
+    {
+      "lat": 14.609285396927534,
+      "lon": -90.89013864324961,
+      "geoinfo": {
+        "display_name": "San Andrés Itzapa, Chimaltenango, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Andrés Itzapa",
+        "state": "Chimaltenango",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "067, San Andrés Itzapa, 17153 Chimaltenango, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:22.406716+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Farmington",
+  "geonameid": 5467328,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.75222380667879,
+      "lon": -108.26433041882542,
+      "geoinfo": {
+        "display_name": "Troy King Road, Farmington, San Juan County, New Mexico, United States",
+        "road": "Troy King Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmington",
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Troy King Road, Farmington, New Mexico, United States"
+    },
+    {
+      "lat": 36.73282542216665,
+      "lon": -108.17385864025071,
+      "geoinfo": {
+        "display_name": "Riverside Nature Center Xeriscape Garden, Animas River Trail, Farmington, San Juan County, New Mexico, 87401, United States",
+        "road": "Animas River Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmington",
+        "state": "New Mexico",
+        "postcode": "87401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "753, Animas River Trail, Farmington, 87401 New Mexico, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:57.424632+00:00",
+  "_kind": "geo_samples"
+}

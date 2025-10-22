@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Laredo",
+  "geonameid": 3695617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -8.088750480498986,
+      "lon": -78.9525456927976,
+      "geoinfo": {
+        "display_name": "Jirón San Ignacio, Laredo, Province of Trujillo, La Libertad, 13004, Peru",
+        "road": "Jirón San Ignacio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laredo",
+        "state": "La Libertad",
+        "postcode": "13004",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Jirón San Ignacio, Laredo, La Libertad, Peru"
+    },
+    {
+      "lat": -8.114099048105615,
+      "lon": -78.93279775202204,
+      "geoinfo": {
+        "display_name": "Santa Victoria, Laredo, Province of Trujillo, La Libertad, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laredo",
+        "state": "La Libertad",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "745, Santa Victoria, Laredo, Province of Trujillo, 73026 La Libertad, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T08:58:20.598811+00:00",
+  "_kind": "geo_samples"
+}

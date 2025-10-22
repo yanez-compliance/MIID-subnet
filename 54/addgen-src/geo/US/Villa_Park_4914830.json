@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Villa Park",
+  "geonameid": 4914830,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.87329732516792,
+      "lon": -87.98505981646208,
+      "geoinfo": {
+        "display_name": "883, South Michigan Avenue, Villa Park, DuPage County, Illinois, 60181, United States",
+        "road": "South Michigan Avenue",
+        "house_number": "883",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Park",
+        "state": "Illinois",
+        "postcode": "60181",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "883 South Michigan Avenue, Villa Park, Illinois, United States"
+    },
+    {
+      "lat": 41.87817692255833,
+      "lon": -88.01475829687932,
+      "geoinfo": {
+        "display_name": "127, East Washington Boulevard, Lombard, DuPage County, Illinois, 60148, United States",
+        "road": "East Washington Boulevard",
+        "house_number": "127",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lombard",
+        "state": "Illinois",
+        "postcode": "60148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "127, East Washington Boulevard, Lombard, DuPage County, Illinois, 60148, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:51.205770+00:00",
+  "_kind": "geo_samples"
+}

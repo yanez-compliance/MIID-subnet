@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Jardines de la Silla",
+  "geonameid": 8858088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.653609350230006,
+      "lon": -100.17653108389969,
+      "geoinfo": {
+        "display_name": "Privada La Silla, Parque Industrial La Silla, Guadalupe, Nuevo León, 67193, Mexico",
+        "road": "Privada La Silla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guadalupe",
+        "state": "Nuevo León",
+        "postcode": "67193",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Privada La Silla, Jardines de la Silla, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.657257910850323,
+      "lon": -100.19342105787837,
+      "geoinfo": {
+        "display_name": "Calle Julieta, Santa María, Guadalupe, Nuevo León, 67202, Mexico",
+        "road": "Calle Julieta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guadalupe",
+        "state": "Nuevo León",
+        "postcode": "67202",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "721, Calle Julieta, Santa María, Guadalupe, Nuevo León, 67202, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:07.223993+00:00",
+  "_kind": "geo_samples"
+}

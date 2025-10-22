@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Limerick",
+  "geonameid": 5198034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.25981999170699,
+      "lon": -75.5179897459666,
+      "geoinfo": {
+        "display_name": "Neiffer Road, Limerick Center, Limerick, Limerick Township, Montgomery County, Pennsylvania, 19492, United States",
+        "road": "Neiffer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Limerick Township",
+        "state": "Pennsylvania",
+        "postcode": "19492",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Neiffer Road, Limerick, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.24004524558244,
+      "lon": -75.5164456154271,
+      "geoinfo": {
+        "display_name": "Metka Road, Limerick, Limerick Township, Montgomery County, Pennsylvania, 19468, United States",
+        "road": "Metka Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Limerick Township",
+        "state": "Pennsylvania",
+        "postcode": "19468",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "260, Metka Road, Limerick, Limerick Township, Montgomery County, Pennsylvania, 19468, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:38.220697+00:00",
+  "_kind": "geo_samples"
+}

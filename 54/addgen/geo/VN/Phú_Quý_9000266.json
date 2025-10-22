@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Phú Quý",
+  "geonameid": 9000266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.54620173831826,
+      "lon": 108.93391348057308,
+      "geoinfo": {
+        "display_name": "Nguyen Thi Minh Khai Road, Đặc khu Phú Quý, Lâm Đồng Province, Vietnam",
+        "road": "Nguyen Thi Minh Khai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lâm Đồng Province",
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Nguyen Thi Minh Khai Road, Phú Quý, Lâm Đồng Province, Vietnam"
+    },
+    {
+      "lat": 10.560561693915055,
+      "lon": 108.9402899118514,
+      "geoinfo": {
+        "display_name": "Lâm Đồng Province, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lâm Đồng Province",
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "046, Phú Quý, 06429 Lâm Đồng Province, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:49:58.800302+00:00",
+  "_kind": "geo_samples"
+}

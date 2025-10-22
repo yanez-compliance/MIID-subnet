@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bergheim",
+  "geonameid": 2950438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.96191226365032,
+      "lon": 6.625702734033408,
+      "geoinfo": {
+        "display_name": "17, Am Erftverband, Zieverich, Paffendorf, Bergheim, Rhein-Erft-Kreis, North Rhine-Westphalia, 50126, Germany",
+        "road": "Am Erftverband",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Zieverich",
+        "city_district": null,
+        "city": "Bergheim",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50126",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17 Am Erftverband, Bergheim, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.926892711691885,
+      "lon": 6.594090688785157,
+      "geoinfo": {
+        "display_name": "63, Heinrich-Doll-Straße, Berrendorf-Wüllenrath, Elsdorf, Rhein-Erft-Kreis, North Rhine-Westphalia, 50189, Germany",
+        "road": "Heinrich-Doll-Straße",
+        "house_number": "63",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elsdorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50189",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "63, Heinrich-Doll-Straße, Berrendorf-Wüllenrath, Elsdorf, Rhein-Erft-Kreis, North Rhine-Westphalia, 50189, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:12.176350+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aurora",
+  "geonameid": 4883817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.79670516892127,
+      "lon": -88.28846463243566,
+      "geoinfo": {
+        "display_name": "Ronald Reagan Memorial Tollway, Marywood, Aurora Township, Kane County, Illinois, 60502, United States",
+        "road": "Ronald Reagan Memorial Tollway",
+        "house_number": null,
+        "neighbourhood": "Marywood",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ronald Reagan Memorial Tollway, Aurora, Illinois, United States"
+    },
+    {
+      "lat": 41.72095320428227,
+      "lon": -88.30564971108205,
+      "geoinfo": {
+        "display_name": "US 30, Montgomery, Oswego Township, Kendall County, Illinois, 60503, United States",
+        "road": "US 30",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery",
+        "state": "Illinois",
+        "postcode": "60503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 30, Montgomery, Oswego Township, Kendall County, Illinois, 60503, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:56.032949+00:00",
+  "_kind": "geo_samples"
+}

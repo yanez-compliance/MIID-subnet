@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Burlington",
+  "geonameid": 5241248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.48603583301516,
+      "lon": -73.17216204211795,
+      "geoinfo": {
+        "display_name": "373, Berard Drive, South Burlington, Chittenden County, Vermont, 05403, United States",
+        "road": "Berard Drive",
+        "house_number": "373",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Burlington",
+        "state": "Vermont",
+        "postcode": "05403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "373 Berard Drive, South Burlington, Vermont, United States"
+    },
+    {
+      "lat": 44.48111016756466,
+      "lon": -73.1998701160054,
+      "geoinfo": {
+        "display_name": "Outing Club-Main Campus, 8, Colchester Avenue, Burlington, Chittenden County, Vermont, 05401, United States",
+        "road": "Colchester Avenue",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burlington",
+        "state": "Vermont",
+        "postcode": "05401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Outing Club-Main Campus, 8, Colchester Avenue, Burlington, Chittenden County, Vermont, 05401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:50.332459+00:00",
+  "_kind": "geo_samples"
+}

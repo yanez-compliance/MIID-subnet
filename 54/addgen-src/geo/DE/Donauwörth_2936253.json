@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Donauwörth",
+  "geonameid": 2936253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.75532089043762,
+      "lon": 10.78835890106399,
+      "geoinfo": {
+        "display_name": "DON 27, Kaisheim, Landkreis Donau-Ries, Bavaria, 86687, Germany",
+        "road": "DON 27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaisheim",
+        "state": "Bavaria",
+        "postcode": "86687",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "DON 27, Donauwörth, Bavaria, Germany"
+    },
+    {
+      "lat": 48.71911742109613,
+      "lon": 10.810066421784235,
+      "geoinfo": {
+        "display_name": "5, Schenkensteinerstraße, Zirgesheim, Donauwörth, Landkreis Donau-Ries, Bavaria, 86609, Germany",
+        "road": "Schenkensteinerstraße",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Zirgesheim",
+        "city_district": null,
+        "city": "Donauwörth",
+        "state": "Bavaria",
+        "postcode": "86609",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Schenkensteinerstraße, Zirgesheim, Donauwörth, Landkreis Donau-Ries, Bavaria, 86609, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:01.034207+00:00",
+  "_kind": "geo_samples"
+}

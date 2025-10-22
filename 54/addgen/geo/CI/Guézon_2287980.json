@@ -1,0 +1,65 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Guézon",
+  "geonameid": 2287980,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 6.744097755843216,
+      "lon": -7.1554400141899945,
+      "geoinfo": {
+        "display_name": "Route Duékoué-Daloa, Tounkara, Nanandi, Guémon, Montagnes, Côte d'Ivoire",
+        "road": "Route Duékoué-Daloa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanandi",
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Route Duékoué-Daloa, Guézon, Montagnes, Ivory Coast"
+    },
+    {
+      "lat": 6.7195407819860185,
+      "lon": -7.154824091763486,
+      "geoinfo": {
+        "display_name": "Nanandi, Guémon, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanandi",
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "685, Guézon, 06156 Montagnes, Ivory Coast"
+    },
+    {
+      "lat": 6.747442089390885,
+      "lon": -7.150131814473671,
+      "geoinfo": {
+        "display_name": "Tounkara, Guémon, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "421, Guézon, 51114 Montagnes, Ivory Coast"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:42.662433+00:00",
+  "_kind": "geo_samples"
+}

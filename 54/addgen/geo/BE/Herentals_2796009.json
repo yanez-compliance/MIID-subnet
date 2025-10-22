@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Herentals",
+  "geonameid": 2796009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.173204117336795,
+      "lon": 4.7659762565082575,
+      "geoinfo": {
+        "display_name": "Koning Boudewijnsnelweg, Grobbendonk, Turnhout, Antwerp, 2280, Belgium",
+        "road": "Koning Boudewijnsnelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Grobbendonk",
+        "city": "Grobbendonk",
+        "state": "Antwerp",
+        "postcode": "2280",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Koning Boudewijnsnelweg, Herentals, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.195410559465955,
+      "lon": 4.8770957726313044,
+      "geoinfo": {
+        "display_name": "De Bleek, Sint-Jozef-Olen, Olen, Turnhout, Antwerp, 2250, Belgium",
+        "road": "De Bleek",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olen",
+        "state": "Antwerp",
+        "postcode": "2250",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "525, De Bleek, Sint-Jozef-Olen, Olen, Turnhout, Antwerp, 2250, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:19.936187+00:00",
+  "_kind": "geo_samples"
+}

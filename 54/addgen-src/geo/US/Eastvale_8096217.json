@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eastvale",
+  "geonameid": 8096217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.97111200421158,
+      "lon": -117.59793998587108,
+      "geoinfo": {
+        "display_name": "Providence Way, The Campus, Eastvale, Riverside County, California, 92880, United States",
+        "road": "Providence Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastvale",
+        "state": "California",
+        "postcode": "92880",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Providence Way, Eastvale, California, United States"
+    },
+    {
+      "lat": 33.9868321208528,
+      "lon": -117.57838085931344,
+      "geoinfo": {
+        "display_name": "Parkview Street, Ontario Ranch, Ontario, San Bernardino County, California, 91752, United States",
+        "road": "Parkview Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ontario Ranch",
+        "city_district": null,
+        "city": "Ontario",
+        "state": "California",
+        "postcode": "91752",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "407, Parkview Street, Ontario Ranch, Ontario, San Bernardino County, California, 91752, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:17:17.434264+00:00",
+  "_kind": "geo_samples"
+}

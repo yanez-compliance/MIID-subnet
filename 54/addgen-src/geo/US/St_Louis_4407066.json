@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "St. Louis",
+  "geonameid": 4407066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.65097241050546,
+      "lon": -90.23026018892283,
+      "geoinfo": {
+        "display_name": "3836, Aldine Avenue, Jeff-Vander-Lou, Greater Ville, St. Louis, Missouri, 63113, United States",
+        "road": "Aldine Avenue",
+        "house_number": "3836",
+        "neighbourhood": "Jeff-Vander-Lou",
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3836 Aldine Avenue, St. Louis, Missouri, United States"
+    },
+    {
+      "lat": 38.63645642725619,
+      "lon": -90.19783722498121,
+      "geoinfo": {
+        "display_name": "Cole Street, Carr Square, St. Louis, Missouri, 63106, United States",
+        "road": "Cole Street",
+        "house_number": null,
+        "neighbourhood": "Carr Square",
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "144, Cole Street, Carr Square, St. Louis, Missouri, 63106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:36.656505+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shilong",
+  "geonameid": 1795184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.128264010804344,
+      "lon": 113.8337537946091,
+      "geoinfo": {
+        "display_name": "Shilong Town, Dongguan, Guangdong Province, 523295, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dongguan",
+        "state": "Guangdong Province",
+        "postcode": "523295",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shilong, Guangdong Province, China"
+    },
+    {
+      "lat": 23.13233845142351,
+      "lon": 113.84867332097845,
+      "geoinfo": {
+        "display_name": "Boluo County, Huizhou, Guangdong Province, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huizhou",
+        "state": "Guangdong Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "867, Boluo County, Huizhou, 86287 Guangdong Province, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:54.456926+00:00",
+  "_kind": "geo_samples"
+}

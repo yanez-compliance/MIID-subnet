@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Chioggia",
+  "geonameid": 3178784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.23355944780357,
+      "lon": 12.289213271794985,
+      "geoinfo": {
+        "display_name": "Via San Felice, Sottomarina, Chioggia, Venezia, Veneto, 30015, Italy",
+        "road": "Via San Felice",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sottomarina",
+        "city_district": null,
+        "city": "Chioggia",
+        "state": "Veneto",
+        "postcode": "30015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via San Felice, Chioggia, Veneto, Italy"
+    },
+    {
+      "lat": 45.215019686889875,
+      "lon": 12.323496142079387,
+      "geoinfo": {
+        "display_name": "Bocca di porto di Chioggia, 30015, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "30015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "156, Bocca di porto di Chioggia, 30015, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:11.076770+00:00",
+  "_kind": "geo_samples"
+}

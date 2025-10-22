@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lyndhurst",
+  "geonameid": 5100706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82058717191807,
+      "lon": -74.12947149090661,
+      "geoinfo": {
+        "display_name": "NJ 21, Clifton, Passaic County, New Jersey, 07071, United States",
+        "road": "NJ 21",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clifton",
+        "state": "New Jersey",
+        "postcode": "07071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NJ 21, Lyndhurst, New Jersey, United States"
+    },
+    {
+      "lat": 40.82410082808561,
+      "lon": -74.15835623938428,
+      "geoinfo": {
+        "display_name": "187, Vreeland Avenue, Nutley, Essex County, New Jersey, 07110, United States",
+        "road": "Vreeland Avenue",
+        "house_number": "187",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nutley",
+        "state": "New Jersey",
+        "postcode": "07110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "187, Vreeland Avenue, Nutley, Essex County, New Jersey, 07110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:40.081917+00:00",
+  "_kind": "geo_samples"
+}

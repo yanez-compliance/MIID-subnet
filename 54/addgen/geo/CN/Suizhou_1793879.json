@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Suizhou",
+  "geonameid": 1793879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.747278178645626,
+      "lon": 113.33872109432725,
+      "geoinfo": {
+        "display_name": "西城街道, Suizhou, Zengdu District, Suizhou, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "西城街道",
+        "city_district": null,
+        "city": "Suizhou",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "西城街道, Suizhou, Hubei, China"
+    },
+    {
+      "lat": 31.706761134640516,
+      "lon": 113.33706379327721,
+      "geoinfo": {
+        "display_name": "S306, Zengdu District, Sui County, Suizhou, Hubei, China",
+        "road": "S306",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zengdu District",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S306, Zengdu District, Sui County, Suizhou, 57686 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:53.127633+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mill Creek East",
+  "geonameid": 7315418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.83670597665752,
+      "lon": -122.16632363995677,
+      "geoinfo": {
+        "display_name": "177th Place Southeast, Snohomish County, Washington, 98012, United States",
+        "road": "177th Place Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "177th Place Southeast, Mill Creek East, Washington, United States"
+    },
+    {
+      "lat": 47.85398569401076,
+      "lon": -122.22647623769622,
+      "geoinfo": {
+        "display_name": "378, 158th Street Southeast, Snohomish County, Washington, 98012, United States",
+        "road": "158th Street Southeast",
+        "house_number": "378",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "378, 158th Street Southeast, Snohomish County, Washington, 98012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:55.638838+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rendsburg",
+  "geonameid": 2848245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.28524811460059,
+      "lon": 9.70613973800255,
+      "geoinfo": {
+        "display_name": "80, Ohldörp, Stampfmühle, Osterrönfeld, Eiderkanal, Kreis Rendsburg-Eckernförde, Schleswig-Holstein, 24783, Germany",
+        "road": "Ohldörp",
+        "house_number": "80",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Osterrönfeld",
+        "state": "Schleswig-Holstein",
+        "postcode": "24783",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "80 Ohldörp, Rendsburg, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 54.32592963307241,
+      "lon": 9.621000606874201,
+      "geoinfo": {
+        "display_name": "B 77, Rendsburg West, Rendsburg-West, Rendsburg, Kreis Rendsburg-Eckernförde, Schleswig-Holstein, 24768, Germany",
+        "road": "B 77",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rendsburg West",
+        "city_district": "Rendsburg-West",
+        "city": "Rendsburg",
+        "state": "Schleswig-Holstein",
+        "postcode": "24768",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 77, Rendsburg West, Rendsburg-West, Rendsburg, Kreis Rendsburg-Eckernförde, Schleswig-Holstein, 24768, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:35.655591+00:00",
+  "_kind": "geo_samples"
+}

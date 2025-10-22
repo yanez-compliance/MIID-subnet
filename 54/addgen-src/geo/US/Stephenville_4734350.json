@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stephenville",
+  "geonameid": 4734350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.241109508112636,
+      "lon": -98.16733651839976,
+      "geoinfo": {
+        "display_name": "North US Highway 377, Erath County, Texas, United States",
+        "road": "North US Highway 377",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North US Highway 377, Stephenville, Texas, United States"
+    },
+    {
+      "lat": 32.206162437541366,
+      "lon": -98.18173660615906,
+      "geoinfo": {
+        "display_name": "South US Highway 281, Stephenville, Erath County, Texas, 76402, United States",
+        "road": "South US Highway 281",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stephenville",
+        "state": "Texas",
+        "postcode": "76402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South US Highway 281, Stephenville, Erath County, Texas, 76402, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:53.385061+00:00",
+  "_kind": "geo_samples"
+}

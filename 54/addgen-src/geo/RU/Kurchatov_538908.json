@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kurchatov",
+  "geonameid": 538908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.6889043063217,
+      "lon": 35.706276476604295,
+      "geoinfo": {
+        "display_name": "Kurchatov, Макаровский сельсовет, Kurchatovsky District, Kursk Oblast, Central Federal District, 307236, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kurchatov",
+        "state": "Kursk Oblast",
+        "postcode": "307236",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kurchatov, Kursk Oblast, Russia"
+    },
+    {
+      "lat": 51.667246900909674,
+      "lon": 35.73341153990868,
+      "geoinfo": {
+        "display_name": "улица Мезенцево, Дичня, Дичнянский сельсовет, Kurchatovsky District, Kursk Oblast, Central Federal District, 307236, Russia",
+        "road": "улица Мезенцево",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Дичня",
+        "state": "Kursk Oblast",
+        "postcode": "307236",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "562, улица Мезенцево, Дичня, Дичнянский сельсовет, Kurchatovsky District, Kursk Oblast, Central Federal District, 307236, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:36.870690+00:00",
+  "_kind": "geo_samples"
+}

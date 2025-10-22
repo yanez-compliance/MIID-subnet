@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Mori",
+  "geonameid": 1856586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.81251021823239,
+      "lon": 137.91977953928688,
+      "geoinfo": {
+        "display_name": "Iida, Shizuoka Prefecture, 437-0213, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "437-0213",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Mori, Japan"
+    },
+    {
+      "lat": 34.808295910750225,
+      "lon": 137.92480771849642,
+      "geoinfo": {
+        "display_name": "焼津森線, Shuchi County, Iida, Shizuoka Prefecture, 437-0213, Japan",
+        "road": "焼津森線",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "437-0213",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "焼津森線, Shuchi County, Iida, Shizuoka Prefecture, 437-0213, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:50.836982+00:00",
+  "_kind": "geo_samples"
+}

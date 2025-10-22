@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Didim",
+  "geonameid": 297090,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.348978261782015,
+      "lon": 27.22274864495189,
+      "geoinfo": {
+        "display_name": "Didim, Aydın, Aegean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Didim",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Didim, Turkey"
+    },
+    {
+      "lat": 37.35928796251952,
+      "lon": 27.292924583249327,
+      "geoinfo": {
+        "display_name": "Poyraz Caddesi, Altınkum, Didim, Aydın, Aegean Region, 09270, Turkey",
+        "road": "Poyraz Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altınkum",
+        "city_district": null,
+        "city": "Didim",
+        "state": null,
+        "postcode": "09270",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "259, Poyraz Caddesi, Altınkum, Didim, Aydın, Aegean Region, 09270, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:03.522143+00:00",
+  "_kind": "geo_samples"
+}

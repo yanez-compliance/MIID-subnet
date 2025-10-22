@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Corvallis",
+  "geonameid": 5720727,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.52354224581399,
+      "lon": -123.26633570974731,
+      "geoinfo": {
+        "display_name": "Southwest 3rd Street, Dry Creek, Benton County, Oregon, 97333, United States",
+        "road": "Southwest 3rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97333",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 3rd Street, Corvallis, Oregon, United States"
+    },
+    {
+      "lat": 44.55014288330762,
+      "lon": -123.21381387675599,
+      "geoinfo": {
+        "display_name": "Southeast Peoria Road, Linn County, Oregon, United States",
+        "road": "Southeast Peoria Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "649, Southeast Peoria Road, Linn County, 93394 Oregon, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:31.361066+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Midlothian",
+  "geonameid": 4711156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.521350213325775,
+      "lon": -96.99719258313775,
+      "geoinfo": {
+        "display_name": "Midlothian, Ellis County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midlothian",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Midlothian, Texas, United States"
+    },
+    {
+      "lat": 32.44825421416297,
+      "lon": -96.96087883095198,
+      "geoinfo": {
+        "display_name": "3621, Plainview Road, Midlothian, Ellis County, Texas, 76065, United States",
+        "road": "Plainview Road",
+        "house_number": "3621",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midlothian",
+        "state": "Texas",
+        "postcode": "76065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3621, Plainview Road, Midlothian, Ellis County, Texas, 76065, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:22.408666+00:00",
+  "_kind": "geo_samples"
+}

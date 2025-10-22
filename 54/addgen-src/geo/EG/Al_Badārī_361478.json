@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Badārī",
+  "geonameid": 361478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.96416382276099,
+      "lon": 31.397553366329443,
+      "geoinfo": {
+        "display_name": "Beni Feiz, Asyut, 71748, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beni Feiz",
+        "state": "Asyut",
+        "postcode": "71748",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Badārī, Asyut, Egypt"
+    },
+    {
+      "lat": 27.026748504056354,
+      "lon": 31.43197514523195,
+      "geoinfo": {
+        "display_name": "Naj Arab Mitayr, Asyut, 71727, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naj Arab Mitayr",
+        "state": "Asyut",
+        "postcode": "71727",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "201, Naj Arab Mitayr, Asyut, 71727, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:40.476173+00:00",
+  "_kind": "geo_samples"
+}

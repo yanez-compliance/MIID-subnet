@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Mateo",
+  "geonameid": 5392423,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.5532375998714,
+      "lon": -122.27361522962673,
+      "geoinfo": {
+        "display_name": "Edgewater Boulevard, Foster City, San Mateo County, California, 94405, United States",
+        "road": "Edgewater Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foster City",
+        "state": "California",
+        "postcode": "94405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Edgewater Boulevard, San Mateo, California, United States"
+    },
+    {
+      "lat": 37.58959551463617,
+      "lon": -122.2875180248854,
+      "geoinfo": {
+        "display_name": "Foster City, San Mateo County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foster City",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "878, Foster City, San Mateo County, 43748 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:18.019621+00:00",
+  "_kind": "geo_samples"
+}

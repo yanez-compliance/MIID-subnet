@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Englewood",
+  "geonameid": 5421250,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.66877375039739,
+      "lon": -104.96366627516457,
+      "geoinfo": {
+        "display_name": "2634, South Race Street, Denver, Colorado, 80210, United States",
+        "road": "South Race Street",
+        "house_number": "2634",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "postcode": "80210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2634 South Race Street, Englewood, Colorado, United States"
+    },
+    {
+      "lat": 39.62410344510635,
+      "lon": -105.02067153792602,
+      "geoinfo": {
+        "display_name": "2699, West Belleview Avenue, Littleton, Arapahoe County, Colorado, 80123, United States",
+        "road": "West Belleview Avenue",
+        "house_number": "2699",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Littleton",
+        "state": "Colorado",
+        "postcode": "80123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2699, West Belleview Avenue, Littleton, Arapahoe County, Colorado, 80123, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:42.446568+00:00",
+  "_kind": "geo_samples"
+}

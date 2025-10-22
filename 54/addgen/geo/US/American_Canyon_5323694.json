@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "American Canyon",
+  "geonameid": 5323694,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.16931991517546,
+      "lon": -122.2105508325302,
+      "geoinfo": {
+        "display_name": "American Canyon Road, American Canyon, Napa County, California, 94589, United States",
+        "road": "American Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "American Canyon",
+        "state": "California",
+        "postcode": "94589",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "American Canyon Road, American Canyon, California, United States"
+    },
+    {
+      "lat": 38.16465481904616,
+      "lon": -122.22981619616083,
+      "geoinfo": {
+        "display_name": "1401, American Canyon Road, American Canyon, Napa County, California, 94503, United States",
+        "road": "American Canyon Road",
+        "house_number": "1401",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "American Canyon",
+        "state": "California",
+        "postcode": "94503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1401, American Canyon Road, American Canyon, Napa County, California, 94503, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:26.641883+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Clichy",
+  "geonameid": 3024597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.934593271218326,
+      "lon": 2.3416151307116913,
+      "geoinfo": {
+        "display_name": "Quai de Seine, L'Île-Saint-Denis, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93450, France",
+        "road": "Quai de Seine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Île-Saint-Denis",
+        "state": null,
+        "postcode": "93450",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Quai de Seine, Clichy, Ile-de-France, France"
+    },
+    {
+      "lat": 48.901902857823856,
+      "lon": 2.3543271440499556,
+      "geoinfo": {
+        "display_name": "Boulevard Périphérique Extérieur, Quartier de la Goutte-d'Or, 18th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75018, France",
+        "road": "Boulevard Périphérique Extérieur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "18th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75018",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Périphérique Extérieur, Quartier de la Goutte-d'Or, 18th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75018, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:07.494502+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Shendurjana",
+  "geonameid": 1256846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.54476668012321,
+      "lon": 78.24978490253612,
+      "geoinfo": {
+        "display_name": "Zatamziri, Warud, Amravati, Maharashtra, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warud",
+        "state": "Maharashtra",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Shendurjana, Maharashtra, India"
+    },
+    {
+      "lat": 21.544755434167502,
+      "lon": 78.31946666605909,
+      "geoinfo": {
+        "display_name": "ODR53, Pusli, Warud, Amravati, Maharashtra, India",
+        "road": "ODR53",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pusli",
+        "city": "Warud",
+        "state": "Maharashtra",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "ODR53, Pusli, Warud, Amravati, 45273 Maharashtra, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:23.712151+00:00",
+  "_kind": "geo_samples"
+}

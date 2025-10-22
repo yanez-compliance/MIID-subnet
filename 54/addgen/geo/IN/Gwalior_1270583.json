@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Gwalior",
+  "geonameid": 1270583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.262566087972235,
+      "lon": 78.18115913430078,
+      "geoinfo": {
+        "display_name": "MD0308, Mau, Bhadroli, Murar Tahsil, Gwalior, Madhya Pradesh, 474015, India",
+        "road": "MD0308",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mau",
+        "city": "Bhadroli",
+        "state": "Madhya Pradesh",
+        "postcode": "474015",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "MD0308, Gwalior, Madhya Pradesh, India"
+    },
+    {
+      "lat": 26.20276933501573,
+      "lon": 78.20339122541533,
+      "geoinfo": {
+        "display_name": "Gwalior, Gird Tahsil, Gwalior, Madhya Pradesh, 474001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gwalior",
+        "city": "Gwalior",
+        "state": "Madhya Pradesh",
+        "postcode": "474001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "565, Gwalior, Gird Tahsil, Gwalior, Madhya Pradesh, 474001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:28.712760+00:00",
+  "_kind": "geo_samples"
+}

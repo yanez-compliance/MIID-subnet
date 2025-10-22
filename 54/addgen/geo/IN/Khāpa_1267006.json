@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Khāpa",
+  "geonameid": 1267006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.38843242156131,
+      "lon": 78.99455547498057,
+      "geoinfo": {
+        "display_name": "MDR15, Gumgaon, Bhendala, Savner, Nagpur, Maharashtra, India",
+        "road": "MDR15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bhendala",
+        "state": "Maharashtra",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "MDR15, Khāpa, Maharashtra, India"
+    },
+    {
+      "lat": 21.420831572558903,
+      "lon": 78.9804955779578,
+      "geoinfo": {
+        "display_name": "Khapa, Savner, Nagpur, Maharashtra, 441101, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khapa",
+        "state": "Maharashtra",
+        "postcode": "441101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "159, Khapa, Savner, Nagpur, Maharashtra, 441101, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:29.107088+00:00",
+  "_kind": "geo_samples"
+}

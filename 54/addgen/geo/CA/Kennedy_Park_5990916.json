@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kennedy Park",
+  "geonameid": 5990916,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.71649641899864,
+      "lon": -79.21493225820107,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Kennedy Park, Ontario, Canada"
+    },
+    {
+      "lat": 43.72111403055632,
+      "lon": -79.29650866819505,
+      "geoinfo": {
+        "display_name": "25, Sundridge Drive, Clairlea-Birchmount, Scarborough Southwest, Scarborough, Toronto, Golden Horseshoe, Ontario, M1L 2K1, Canada",
+        "road": "Sundridge Drive",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1L 2K1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "25, Sundridge Drive, Clairlea-Birchmount, Scarborough Southwest, Scarborough, Toronto, Golden Horseshoe, Ontario, M1L 2K1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:43.023355+00:00",
+  "_kind": "geo_samples"
+}

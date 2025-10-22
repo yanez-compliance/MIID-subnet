@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Eastbourne",
+  "geonameid": 2650497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.80521765491475,
+      "lon": 0.3054076557217672,
+      "geoinfo": {
+        "display_name": "Snowdon Close, Langney, Eastbourne, East Sussex, England, BN23 8HW, United Kingdom",
+        "road": "Snowdon Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Langney",
+        "city_district": null,
+        "city": "Eastbourne",
+        "state": "England",
+        "postcode": "BN23 8HW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Snowdon Close, Eastbourne, England, United Kingdom"
+    },
+    {
+      "lat": 50.763259116744365,
+      "lon": 0.3098357123756902,
+      "geoinfo": {
+        "display_name": "Roselands, Eastbourne, East Sussex, England, BN22 8NY, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Roselands",
+        "city_district": null,
+        "city": "Eastbourne",
+        "state": "England",
+        "postcode": "BN22 8NY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Roselands, Eastbourne, East Sussex, England, BN22 8NY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:28.844112+00:00",
+  "_kind": "geo_samples"
+}

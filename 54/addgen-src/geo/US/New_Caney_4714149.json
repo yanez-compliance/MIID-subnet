@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Caney",
+  "geonameid": 4714149,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.153447346169475,
+      "lon": -95.21452227045317,
+      "geoinfo": {
+        "display_name": "La Michoacana Meat Market, 20185, Eastex Freeway, New Caney, Montgomery County, Texas, 77357, United States",
+        "road": "Eastex Freeway",
+        "house_number": "20185",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77357",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20185 Eastex Freeway, New Caney, Texas, United States"
+    },
+    {
+      "lat": 30.152353208183392,
+      "lon": -95.25238673106463,
+      "geoinfo": {
+        "display_name": "Russell Drive, Montgomery County, Texas, 77357, United States",
+        "road": "Russell Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77357",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "990, Russell Drive, Montgomery County, Texas, 77357, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:22.651529+00:00",
+  "_kind": "geo_samples"
+}

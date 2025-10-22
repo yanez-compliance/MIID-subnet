@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Pont-à-Celles",
+  "geonameid": 2788765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.48333272786463,
+      "lon": 4.400989893744094,
+      "geoinfo": {
+        "display_name": "Rue Arthur Dubois, Viesville, Pont-à-Celles, Charleroi, Hainaut, Wallonia, 6230, Belgium",
+        "road": "Rue Arthur Dubois",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viesville",
+        "state": "Hainaut",
+        "postcode": "6230",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue Arthur Dubois, Pont-à-Celles, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.52303259758257,
+      "lon": 4.3749808391441585,
+      "geoinfo": {
+        "display_name": "Obaix, Pont-à-Celles, Charleroi, Hainaut, Wallonia, 6230, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Obaix",
+        "state": "Hainaut",
+        "postcode": "6230",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "131, Obaix, Pont-à-Celles, Charleroi, Hainaut, Wallonia, 6230, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:08.972274+00:00",
+  "_kind": "geo_samples"
+}

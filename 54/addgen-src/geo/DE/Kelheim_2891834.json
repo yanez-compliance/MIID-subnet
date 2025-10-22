@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kelheim",
+  "geonameid": 2891834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92365829982626,
+      "lon": 11.939252057329865,
+      "geoinfo": {
+        "display_name": "KEH 15, Herrnsaal, Kelheim, Landkreis Kelheim, Bavaria, 93309, Germany",
+        "road": "KEH 15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kelheim",
+        "state": "Bavaria",
+        "postcode": "93309",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "KEH 15, Kelheim, Bavaria, Germany"
+    },
+    {
+      "lat": 48.90446351213403,
+      "lon": 11.8252870806432,
+      "geoinfo": {
+        "display_name": "Keltenwall, Stausacker, Kelheim, Landkreis Kelheim, Bavaria, 93309, Germany",
+        "road": "Keltenwall",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kelheim",
+        "state": "Bavaria",
+        "postcode": "93309",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "659, Keltenwall, Stausacker, Kelheim, Landkreis Kelheim, Bavaria, 93309, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:33.034235+00:00",
+  "_kind": "geo_samples"
+}

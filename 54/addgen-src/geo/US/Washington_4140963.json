@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Washington",
+  "geonameid": 4140963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.86733051643768,
+      "lon": -77.0494262680554,
+      "geoinfo": {
+        "display_name": "US 1, Arlington County, Virginia, 20310, United States",
+        "road": "US 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 1, Washington, Virginia, United States"
+    },
+    {
+      "lat": 38.916442414504935,
+      "lon": -77.00525384123071,
+      "geoinfo": {
+        "display_name": "1924, Summit Place Northeast, Eckington, Ward 5, Washington, District of Columbia, 20002, United States",
+        "road": "Summit Place Northeast",
+        "house_number": "1924",
+        "neighbourhood": "Eckington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1924, Summit Place Northeast, Eckington, Ward 5, Washington, District of Columbia, 20002, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:58.244552+00:00",
+  "_kind": "geo_samples"
+}

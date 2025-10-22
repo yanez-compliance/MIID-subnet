@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zele",
+  "geonameid": 2783293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.05400938430165,
+      "lon": 3.9748342039859965,
+      "geoinfo": {
+        "display_name": "14, Heikantstraat, Overmere, Berlare, Dendermonde, East Flanders, 9290, Belgium",
+        "road": "Heikantstraat",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berlare",
+        "state": "East Flanders",
+        "postcode": "9290",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "14 Heikantstraat, Zele, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.072152769124244,
+      "lon": 4.016904674786243,
+      "geoinfo": {
+        "display_name": "Wezepoelstraat, Zele, Dendermonde, East Flanders, 9240, Belgium",
+        "road": "Wezepoelstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zele",
+        "state": "East Flanders",
+        "postcode": "9240",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "232, Wezepoelstraat, Zele, Dendermonde, East Flanders, 9240, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:00:42.394382+00:00",
+  "_kind": "geo_samples"
+}

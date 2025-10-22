@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Aldershot",
+  "geonameid": 2657540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.27110690471231,
+      "lon": -0.7595343809280122,
+      "geoinfo": {
+        "display_name": "Farnborough Road, Aldershot, Rushmoor, Hampshire, England, GU11 2HD, United Kingdom",
+        "road": "Farnborough Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rushmoor",
+        "state": "England",
+        "postcode": "GU11 2HD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Farnborough Road, Aldershot, England, United Kingdom"
+    },
+    {
+      "lat": 51.26278044151148,
+      "lon": -0.7187207623359564,
+      "geoinfo": {
+        "display_name": "Prospect Road, Ash, Ash Vale, Guildford, Surrey, England, GU12 5EL, United Kingdom",
+        "road": "Prospect Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ash",
+        "city_district": null,
+        "city": "Guildford",
+        "state": "England",
+        "postcode": "GU12 5EL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Prospect Road, Ash, Ash Vale, Guildford, Surrey, England, GU12 5EL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:08.916565+00:00",
+  "_kind": "geo_samples"
+}

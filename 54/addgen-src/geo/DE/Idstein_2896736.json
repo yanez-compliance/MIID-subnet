@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Idstein",
+  "geonameid": 2896736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.24746677303729,
+      "lon": 8.272254865463681,
+      "geoinfo": {
+        "display_name": "Hohe Straße, Aussiedlerhöfe, Wörsdorf, Idstein, Rheingau-Taunus-Kreis, Hesse, 65510, Germany",
+        "road": "Hohe Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wörsdorf",
+        "state": "Hesse",
+        "postcode": "65510",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hohe Straße, Idstein, Hesse, Germany"
+    },
+    {
+      "lat": 50.24092276478775,
+      "lon": 8.25787658971449,
+      "geoinfo": {
+        "display_name": "66, Hauptstraße, Wörsdorf, Idstein, Rheingau-Taunus-Kreis, Hesse, 65510, Germany",
+        "road": "Hauptstraße",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wörsdorf",
+        "state": "Hesse",
+        "postcode": "65510",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "66, Hauptstraße, Wörsdorf, Idstein, Rheingau-Taunus-Kreis, Hesse, 65510, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:58.356847+00:00",
+  "_kind": "geo_samples"
+}

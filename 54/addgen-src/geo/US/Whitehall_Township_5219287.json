@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Whitehall Township",
+  "geonameid": 5219287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.65370808335954,
+      "lon": -75.53021324513863,
+      "geoinfo": {
+        "display_name": "Peachtree Road, Ruchsville, South Whitehall Township, Lehigh County, Pennsylvania, 18037, United States",
+        "road": "Peachtree Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Whitehall Township",
+        "state": "Pennsylvania",
+        "postcode": "18037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Peachtree Road, Whitehall Township, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.63245808988398,
+      "lon": -75.50221580157103,
+      "geoinfo": {
+        "display_name": "Cardinal Alley, Whitehall, Lehigh County, Pennsylvania, 18052, United States",
+        "road": "Cardinal Alley",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitehall",
+        "state": "Pennsylvania",
+        "postcode": "18052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "999, Cardinal Alley, Whitehall, Lehigh County, Pennsylvania, 18052, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:07.588528+00:00",
+  "_kind": "geo_samples"
+}

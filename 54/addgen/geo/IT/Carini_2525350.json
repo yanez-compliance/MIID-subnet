@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Carini",
+  "geonameid": 2525350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.098504230271296,
+      "lon": 13.200659055185312,
+      "geoinfo": {
+        "display_name": "SP1, Monreale, Palermo, Sicily, 90040, Italy",
+        "road": "SP1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monreale",
+        "state": "Sicily",
+        "postcode": "90040",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP1, Carini, Sicily, Italy"
+    },
+    {
+      "lat": 38.14719489807459,
+      "lon": 13.1729215386363,
+      "geoinfo": {
+        "display_name": "Villagrazia di Carini, Carini, Palermo, Sicily, 90044, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carini",
+        "state": "Sicily",
+        "postcode": "90044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "936, Villagrazia di Carini, Carini, Palermo, Sicily, 90044, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:52.518923+00:00",
+  "_kind": "geo_samples"
+}

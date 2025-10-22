@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Marchena",
+  "geonameid": 2514158,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.32560752616738,
+      "lon": -5.401408109739224,
+      "geoinfo": {
+        "display_name": "Calle Madrid, Marchena, Sevilla, Andalusia, 41620, Spain",
+        "road": "Calle Madrid",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marchena",
+        "state": "Andalusia",
+        "postcode": "41620",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Madrid, Marchena, Andalusia, Spain"
+    },
+    {
+      "lat": 37.33553764393692,
+      "lon": -5.435968888796602,
+      "geoinfo": {
+        "display_name": "Marchena, Sevilla, Andalusia, 41620, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marchena",
+        "state": "Andalusia",
+        "postcode": "41620",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "892, Marchena, Sevilla, Andalusia, 41620, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:52.482118+00:00",
+  "_kind": "geo_samples"
+}

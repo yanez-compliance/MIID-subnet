@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Ünye",
+  "geonameid": 738349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.12460450390326,
+      "lon": 37.23385427012612,
+      "geoinfo": {
+        "display_name": "Gölevi, Ünye, Ordu, Black Sea Region, 52300, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gölevi",
+        "city_district": null,
+        "city": "Ünye",
+        "state": null,
+        "postcode": "52300",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Gölevi, Ünye, Turkey"
+    },
+    {
+      "lat": 41.16771920906465,
+      "lon": 37.273703423457114,
+      "geoinfo": {
+        "display_name": "Ordu, Black Sea Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "630, Ordu, 22909 Black Sea Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:26.134700+00:00",
+  "_kind": "geo_samples"
+}

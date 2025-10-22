@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Frankston East",
+  "geonameid": 2166143,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.115411579383064,
+      "lon": 145.1056121011455,
+      "geoinfo": {
+        "display_name": "Victoria, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Victoria",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Frankston East, Victoria, Australia"
+    },
+    {
+      "lat": -38.09238631539236,
+      "lon": 145.12871032308573,
+      "geoinfo": {
+        "display_name": "92, Railway Parade, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia",
+        "road": "Railway Parade",
+        "house_number": "92",
+        "neighbourhood": null,
+        "suburb": "Seaford",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3198",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "92, Railway Parade, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:27.530563+00:00",
+  "_kind": "geo_samples"
+}

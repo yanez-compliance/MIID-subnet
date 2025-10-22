@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orcutt",
+  "geonameid": 5379609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.84132805838811,
+      "lon": -120.46626880957365,
+      "geoinfo": {
+        "display_name": "Orcutt, Santa Barbara County, California, 93455, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orcutt",
+        "state": "California",
+        "postcode": "93455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Orcutt, California, United States"
+    },
+    {
+      "lat": 34.85678893804273,
+      "lon": -120.44525351631934,
+      "geoinfo": {
+        "display_name": "Elkhorn Lane, Orcutt, Santa Barbara County, California, 93455, United States",
+        "road": "Elkhorn Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orcutt",
+        "state": "California",
+        "postcode": "93455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "502, Elkhorn Lane, Orcutt, Santa Barbara County, California, 93455, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:19.971408+00:00",
+  "_kind": "geo_samples"
+}

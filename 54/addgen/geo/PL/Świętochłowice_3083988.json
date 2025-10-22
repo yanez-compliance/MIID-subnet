@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Świętochłowice",
+  "geonameid": 3083988,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.28228593632893,
+      "lon": 18.89179872944392,
+      "geoinfo": {
+        "display_name": "Zakład Przetwórstwa Mięsnego NIK-POL, 58, Chorzowska, Osiedle Otylia, Nowy Bytom, Ruda Śląska, Metropolis GZM, Silesian Voivodeship, 41-709, Poland",
+        "road": "Chorzowska",
+        "house_number": "58",
+        "neighbourhood": "Osiedle Otylia",
+        "suburb": "Nowy Bytom",
+        "city_district": null,
+        "city": "Ruda Śląska",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-709",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "58 Chorzowska, Świętochłowice, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.29122038405572,
+      "lon": 18.908191023705726,
+      "geoinfo": {
+        "display_name": "11, Powstańców Warszawy, Szyb Marcina, Centrum, Świętochłowice, Metropolis GZM, Silesian Voivodeship, 41-600, Poland",
+        "road": "Powstańców Warszawy",
+        "house_number": "11",
+        "neighbourhood": "Szyb Marcina",
+        "suburb": null,
+        "city_district": "Centrum",
+        "city": "Świętochłowice",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-600",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "11, Powstańców Warszawy, Szyb Marcina, Centrum, Świętochłowice, Metropolis GZM, Silesian Voivodeship, 41-600, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:20.642183+00:00",
+  "_kind": "geo_samples"
+}

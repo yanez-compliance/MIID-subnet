@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Lofthouse",
+  "geonameid": 2643776,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.72180721600044,
+      "lon": -1.4752154241005113,
+      "geoinfo": {
+        "display_name": "Fenton Road, Lee Moor, Stanley, Wakefield, West Yorkshire, England, WF3 4ER, United Kingdom",
+        "road": "Fenton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "England",
+        "postcode": "WF3 4ER",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Fenton Road, Lofthouse, England, United Kingdom"
+    },
+    {
+      "lat": 53.7343826910664,
+      "lon": -1.5067007958661331,
+      "geoinfo": {
+        "display_name": "40, Pawson Street, Robin Hood, Leeds, West Yorkshire, England, WF3 3BH, United Kingdom",
+        "road": "Pawson Street",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "WF3 3BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "40, Pawson Street, Robin Hood, Leeds, West Yorkshire, England, WF3 3BH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:59.360047+00:00",
+  "_kind": "geo_samples"
+}

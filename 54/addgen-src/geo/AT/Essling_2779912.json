@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Essling",
+  "geonameid": 2779912,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.20919314970513,
+      "lon": 16.540228569309875,
+      "geoinfo": {
+        "display_name": "3, Fellnergasse, Schippanisiedlung, KG Essling, Donaustadt, Vienna, 1220, Austria",
+        "road": "Fellnergasse",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "KG Essling",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "3, Fellnergasse, Schippanisiedlung, KG Essling, Donaustadt, Vienna, 1220, Austria"
+    },
+    {
+      "lat": 48.191876859244104,
+      "lon": 16.534067655928922,
+      "geoinfo": {
+        "display_name": "Vorwerkstraße, KG Kaiserebersdorf Herrschaft, Donaustadt, Vienna, 1220, Austria",
+        "road": "Vorwerkstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Kaiserebersdorf Herrschaft",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "337, Vorwerkstraße, KG Kaiserebersdorf Herrschaft, Donaustadt, Vienna, 1220, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:35.929090+00:00",
+  "_kind": "geo_samples"
+}

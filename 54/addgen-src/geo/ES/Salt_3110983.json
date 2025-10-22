@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Salt",
+  "geonameid": 3110983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.99603263273058,
+      "lon": 2.7975507342046115,
+      "geoinfo": {
+        "display_name": "Autopista de la Mediterrània, Sant Gregori, Gironès, Girona, Catalonia, 17007, Spain",
+        "road": "Autopista de la Mediterrània",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Gregori",
+        "state": "Catalonia",
+        "postcode": "17007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista de la Mediterrània, Salt, Catalonia, Spain"
+    },
+    {
+      "lat": 42.016681249123174,
+      "lon": 2.805646128712157,
+      "geoinfo": {
+        "display_name": "Sarrià de Dalt, Sarrià de Ter, Gironès, Girona, Catalonia, 17840, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sarrià de Dalt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sarrià de Ter",
+        "state": "Catalonia",
+        "postcode": "17840",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "804, Sarrià de Dalt, Sarrià de Ter, Gironès, Girona, Catalonia, 17840, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:57.414805+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ferndown",
+  "geonameid": 6691927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.79678447027249,
+      "lon": -1.8784386954332501,
+      "geoinfo": {
+        "display_name": "Ferndown Golf Club, 119, Golf Links Road, Ferndown Town, Dudsbury, Ferndown, Dorset, England, BH22 8BU, United Kingdom",
+        "road": "Golf Links Road",
+        "house_number": "119",
+        "neighbourhood": null,
+        "suburb": "Ferndown Town",
+        "city_district": null,
+        "city": "Ferndown",
+        "state": "England",
+        "postcode": "BH22 8BU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "119 Golf Links Road, Ferndown, England, United Kingdom"
+    },
+    {
+      "lat": 50.79633639235193,
+      "lon": -1.9445000705996518,
+      "geoinfo": {
+        "display_name": "Wimborne Bypass, Colehill, Wimborne Minster, Dorset, England, BH21 2DW, United Kingdom",
+        "road": "Wimborne Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Colehill",
+        "city_district": null,
+        "city": "Wimborne Minster",
+        "state": "England",
+        "postcode": "BH21 2DW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wimborne Bypass, Colehill, Wimborne Minster, Dorset, England, BH21 2DW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:38.957823+00:00",
+  "_kind": "geo_samples"
+}

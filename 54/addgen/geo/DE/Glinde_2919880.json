@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Glinde",
+  "geonameid": 2919880,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.56078439697817,
+      "lon": 10.177328181469182,
+      "geoinfo": {
+        "display_name": "A 24, Barsbüttel, Kreis Stormarn, Schleswig-Holstein, 22885, Germany",
+        "road": "A 24",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barsbüttel",
+        "state": "Schleswig-Holstein",
+        "postcode": "22885",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 24, Glinde, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.58478656536619,
+      "lon": 10.22882189403199,
+      "geoinfo": {
+        "display_name": "Schulstraße, Stellau, Barsbüttel, Kreis Stormarn, Schleswig-Holstein, 22885, Germany",
+        "road": "Schulstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barsbüttel",
+        "state": "Schleswig-Holstein",
+        "postcode": "22885",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "539, Schulstraße, Glinde, 22885 Schleswig-Holstein, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:25.670988+00:00",
+  "_kind": "geo_samples"
+}

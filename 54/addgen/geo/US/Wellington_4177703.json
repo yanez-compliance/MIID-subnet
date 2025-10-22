@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wellington",
+  "geonameid": 4177703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.62056276525167,
+      "lon": -80.23664991460178,
+      "geoinfo": {
+        "display_name": "4080, 120th Avenue South, Wellington, Palm Beach County, Florida, 33467, United States",
+        "road": "120th Avenue South",
+        "house_number": "4080",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wellington",
+        "state": "Florida",
+        "postcode": "33467",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4080 120th Avenue South, Wellington, Florida, United States"
+    },
+    {
+      "lat": 26.68094059013161,
+      "lon": -80.24991763835567,
+      "geoinfo": {
+        "display_name": "Southern Boulevard, Royal Palm Beach, Palm Beach County, Florida, 33414, United States",
+        "road": "Southern Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Royal Palm Beach",
+        "state": "Florida",
+        "postcode": "33414",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "111, Southern Boulevard, Royal Palm Beach, Palm Beach County, Florida, 33414, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:22.177849+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holladay",
+  "geonameid": 5776008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.68981172011833,
+      "lon": -111.82518461506967,
+      "geoinfo": {
+        "display_name": "3730, 2300 East, Smithfield, Holladay, Salt Lake County, Utah, 84109, United States",
+        "road": "2300 East",
+        "house_number": "3730",
+        "neighbourhood": "Smithfield",
+        "suburb": null,
+        "city_district": null,
+        "city": "Holladay",
+        "state": "Utah",
+        "postcode": "84109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3730 2300 East, Holladay, Utah, United States"
+    },
+    {
+      "lat": 40.695896420120214,
+      "lon": -111.83340335629617,
+      "geoinfo": {
+        "display_name": "3504, South 2000 East, Millcreek, Salt Lake County, Utah, 84109, United States",
+        "road": "South 2000 East",
+        "house_number": "3504",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millcreek",
+        "state": "Utah",
+        "postcode": "84109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3504, South 2000 East, Millcreek, Salt Lake County, Utah, 84109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:53.403617+00:00",
+  "_kind": "geo_samples"
+}

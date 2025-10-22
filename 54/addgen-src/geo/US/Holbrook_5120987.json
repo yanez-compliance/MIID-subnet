@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holbrook",
+  "geonameid": 5120987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.83280733834849,
+      "lon": -73.10362815043855,
+      "geoinfo": {
+        "display_name": "Gatelot Avenue School (closed), School Street, Lake Ronkonkoma, Town of Brookhaven, Suffolk County, New York, 11779, United States",
+        "road": "School Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Brookhaven",
+        "state": "New York",
+        "postcode": "11779",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "School Street, Holbrook, New York, United States"
+    },
+    {
+      "lat": 40.78975568055387,
+      "lon": -73.12420651079815,
+      "geoinfo": {
+        "display_name": "Alexander Boulevard, Brentwood, Town of Islip, Suffolk County, New York, 11716, United States",
+        "road": "Alexander Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "New York",
+        "postcode": "11716",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "850, Alexander Boulevard, Brentwood, Town of Islip, Suffolk County, New York, 11716, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:49.245512+00:00",
+  "_kind": "geo_samples"
+}

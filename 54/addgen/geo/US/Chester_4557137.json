@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chester",
+  "geonameid": 4557137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.84752137142624,
+      "lon": -75.32134807028717,
+      "geoinfo": {
+        "display_name": "Greenwich Township, Gloucester County, New Jersey, 08027, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenwich Township",
+        "state": "New Jersey",
+        "postcode": "08027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chester, New Jersey, United States"
+    },
+    {
+      "lat": 39.88859275431877,
+      "lon": -75.34339220675653,
+      "geoinfo": {
+        "display_name": "629, Woodland Avenue, Woodlyn, Ridley Township, Delaware County, Pennsylvania, 19081, United States",
+        "road": "Woodland Avenue",
+        "house_number": "629",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ridley Township",
+        "state": "Pennsylvania",
+        "postcode": "19081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "629, Woodland Avenue, Woodlyn, Ridley Township, Delaware County, Pennsylvania, 19081, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:51.864610+00:00",
+  "_kind": "geo_samples"
+}

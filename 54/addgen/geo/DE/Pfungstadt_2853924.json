@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pfungstadt",
+  "geonameid": 2853924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.799208826363476,
+      "lon": 8.565312140910706,
+      "geoinfo": {
+        "display_name": "B 426, Eich, Eschollbrücken/Eich, Pfungstadt, Landkreis Darmstadt-Dieburg, Hesse, 64319, Germany",
+        "road": "B 426",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Eschollbrücken/Eich",
+        "city": "Eich",
+        "state": "Hesse",
+        "postcode": "64319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 426, Pfungstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.77430889565631,
+      "lon": 8.640616304324887,
+      "geoinfo": {
+        "display_name": "6, Breslauer Straße, Seeheim, Seeheim-Jugenheim, Landkreis Darmstadt-Dieburg, Hesse, 64342, Germany",
+        "road": "Breslauer Straße",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seeheim",
+        "state": "Hesse",
+        "postcode": "64342",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6, Breslauer Straße, Seeheim, Seeheim-Jugenheim, Landkreis Darmstadt-Dieburg, Hesse, 64342, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:24.142564+00:00",
+  "_kind": "geo_samples"
+}

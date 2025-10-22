@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Porto San Giorgio",
+  "geonameid": 3170073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.19239149298171,
+      "lon": 13.84434461049582,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Porto San Giorgio, Marche, Italy"
+    },
+    {
+      "lat": 43.14857634140428,
+      "lon": 13.75681708132611,
+      "geoinfo": {
+        "display_name": "Strada Comunale San Lorenzo, San Lorenzo, Fermo, Marche, 63900, Italy",
+        "road": "Strada Comunale San Lorenzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fermo",
+        "state": "Marche",
+        "postcode": "63900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "437, Strada Comunale San Lorenzo, San Lorenzo, Fermo, Marche, 63900, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:01.327276+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "High Park-Swansea",
+  "geonameid": 12156905,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.60268315394908,
+      "lon": -79.45177157550867,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "High Park-Swansea, Ontario, Canada"
+    },
+    {
+      "lat": 43.604400681392136,
+      "lon": -79.47504891643541,
+      "geoinfo": {
+        "display_name": "Mimico By-The-Lake, Etobicoke—Lakeshore, Etobicoke, Toronto, Golden Horseshoe, Ontario, M8V 4A2, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mimico By-The-Lake",
+        "suburb": "Etobicoke",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M8V 4A2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Mimico By-The-Lake, Etobicoke—Lakeshore, Etobicoke, Toronto, Golden Horseshoe, Ontario, M8V 4A2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:21.819825+00:00",
+  "_kind": "geo_samples"
+}

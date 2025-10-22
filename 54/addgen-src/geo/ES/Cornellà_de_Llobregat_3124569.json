@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Cornellà de Llobregat",
+  "geonameid": 3124569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.36060608632147,
+      "lon": 2.115191348963897,
+      "geoinfo": {
+        "display_name": "Carrer del Cobalt, Centre, Districte I, l'Hospitalet de Llobregat, Barcelonès, Barcelona, Catalonia, 08991, Spain",
+        "road": "Carrer del Cobalt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Districte I",
+        "city": "l'Hospitalet de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08991",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer del Cobalt, Cornellà de Llobregat, Catalonia, Spain"
+    },
+    {
+      "lat": 41.338314553518785,
+      "lon": 2.065752626147218,
+      "geoinfo": {
+        "display_name": "Camí de Cal Pinques, Vinyets i Molí Vell, Sant Boi de Llobregat, Baix Llobregat, Barcelona, Catalonia, 08940, Spain",
+        "road": "Camí de Cal Pinques",
+        "house_number": null,
+        "neighbourhood": "Vinyets i Molí Vell",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Boi de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08940",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "620, Camí de Cal Pinques, Vinyets i Molí Vell, Sant Boi de Llobregat, Baix Llobregat, Barcelona, Catalonia, 08940, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:09.464924+00:00",
+  "_kind": "geo_samples"
+}

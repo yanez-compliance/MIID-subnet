@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainfield",
+  "geonameid": 4906125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.638346088601345,
+      "lon": -88.219056660817,
+      "geoinfo": {
+        "display_name": "Forge Lane, Plainfield, Wheatland Township, Will County, Illinois, 60544, United States",
+        "road": "Forge Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Illinois",
+        "postcode": "60544",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Forge Lane, Plainfield, Illinois, United States"
+    },
+    {
+      "lat": 41.60795857769898,
+      "lon": -88.23639448725015,
+      "geoinfo": {
+        "display_name": "West Lockport Road, Plainfield, Plainfield Township, Will County, Illinois, 60544, United States",
+        "road": "West Lockport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Illinois",
+        "postcode": "60544",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "187, West Lockport Road, Plainfield, Plainfield Township, Will County, Illinois, 60544, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:51.630144+00:00",
+  "_kind": "geo_samples"
+}

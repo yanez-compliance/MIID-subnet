@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Golden Gate",
+  "geonameid": 4156920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.172908758820434,
+      "lon": -81.69467763829594,
+      "geoinfo": {
+        "display_name": "3051, 44th Street Southwest, Golden Gate, Collier County, Florida, 34116, United States",
+        "road": "44th Street Southwest",
+        "house_number": "3051",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3051 44th Street Southwest, Golden Gate, Florida, United States"
+    },
+    {
+      "lat": 26.210483101810418,
+      "lon": -81.72389718490506,
+      "geoinfo": {
+        "display_name": "5857, Napa Woods Way, Golden Gate Estates, Collier County, Florida, 34116, United States",
+        "road": "Napa Woods Way",
+        "house_number": "5857",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5857, Napa Woods Way, Golden Gate Estates, Collier County, Florida, 34116, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:18.008054+00:00",
+  "_kind": "geo_samples"
+}

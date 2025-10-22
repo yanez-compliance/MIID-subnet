@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brighton",
+  "geonameid": 4931353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.35231391240994,
+      "lon": -71.11334915728541,
+      "geoinfo": {
+        "display_name": "Dr. Paul Dudley White Path, Allston, Boston, Suffolk County, Massachusetts, 02446, United States",
+        "road": "Dr. Paul Dudley White Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Allston",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dr. Paul Dudley White Path, Brighton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.35638206564331,
+      "lon": -71.12852020961783,
+      "geoinfo": {
+        "display_name": "Massachusetts Turnpike, Lower Allston, Allston, Boston, Suffolk County, Massachusetts, 02134, United States",
+        "road": "Massachusetts Turnpike",
+        "house_number": null,
+        "neighbourhood": "Lower Allston",
+        "suburb": "Allston",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "670, Massachusetts Turnpike, Lower Allston, Allston, Boston, Suffolk County, Massachusetts, 02134, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:59.144662+00:00",
+  "_kind": "geo_samples"
+}

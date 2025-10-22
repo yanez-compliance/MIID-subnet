@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lynn Haven",
+  "geonameid": 4163049,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.239750795808824,
+      "lon": -85.64543444557587,
+      "geoinfo": {
+        "display_name": "1256, Indiana Avenue, Lynn Haven, Bay County, Florida, 32444, United States",
+        "road": "Indiana Avenue",
+        "house_number": "1256",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynn Haven",
+        "state": "Florida",
+        "postcode": "32444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1256 Indiana Avenue, Lynn Haven, Florida, United States"
+    },
+    {
+      "lat": 30.248525238433327,
+      "lon": -85.67040484447176,
+      "geoinfo": {
+        "display_name": "Arthur Drive, Lynn Haven, Bay County, Florida, 32444, United States",
+        "road": "Arthur Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynn Haven",
+        "state": "Florida",
+        "postcode": "32444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "814, Arthur Drive, Lynn Haven, Bay County, Florida, 32444, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:46.496583+00:00",
+  "_kind": "geo_samples"
+}

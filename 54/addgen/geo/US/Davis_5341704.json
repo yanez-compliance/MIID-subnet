@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Davis",
+  "geonameid": 5341704,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.52903012451265,
+      "lon": -121.77123515482108,
+      "geoinfo": {
+        "display_name": "Solano County, California, 95616, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Davis, California, United States"
+    },
+    {
+      "lat": 38.526644506135035,
+      "lon": -121.70678826279271,
+      "geoinfo": {
+        "display_name": "Mace Boulevard, Solano County, California, 95618, United States",
+        "road": "Mace Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "511, Mace Boulevard, Solano County, California, 95618, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:45.364415+00:00",
+  "_kind": "geo_samples"
+}

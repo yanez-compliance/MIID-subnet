@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Deventer",
+  "geonameid": 2756987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.23560266620684,
+      "lon": 6.1899167264721004,
+      "geoinfo": {
+        "display_name": "Keulenstraat, Bedrijventerrein Het Hanzepark, Kloosterlanden, Deventer, Overijssel, Netherlands, 7418 ET, Netherlands",
+        "road": "Keulenstraat",
+        "house_number": null,
+        "neighbourhood": "Bedrijventerrein Het Hanzepark",
+        "suburb": null,
+        "city_district": null,
+        "city": "Deventer",
+        "state": "Overijssel",
+        "postcode": "7418 ET",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Keulenstraat, Deventer, Overijssel, The Netherlands"
+    },
+    {
+      "lat": 52.272595867445226,
+      "lon": 6.198920915535226,
+      "geoinfo": {
+        "display_name": "Spanjaardsdijk, Schalkhaar, Deventer, Overijssel, Netherlands, 7433 GD, Netherlands",
+        "road": "Spanjaardsdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schalkhaar",
+        "state": "Overijssel",
+        "postcode": "7433 GD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "215, Spanjaardsdijk, Schalkhaar, Deventer, Overijssel, Netherlands, 7433 GD, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:49:30.406805+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Luleå",
+  "geonameid": 604490,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 65.55580565193682,
+      "lon": 22.194418134641037,
+      "geoinfo": {
+        "display_name": "Sjöbrinken, Svartöstan, Luleå, Luleå kommun, Norrbotten County, 974 37, Sweden",
+        "road": "Sjöbrinken",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Svartöstan",
+        "city_district": null,
+        "city": "Luleå",
+        "state": null,
+        "postcode": "974 37",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Sjöbrinken, Luleå, Sweden"
+    },
+    {
+      "lat": 65.54945802845857,
+      "lon": 22.115425015413585,
+      "geoinfo": {
+        "display_name": "Luleå Airport, Lulviksvägen, Luleå, Luleå kommun, Norrbotten County, 972 36, Sweden",
+        "road": "Lulviksvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Luleå",
+        "state": null,
+        "postcode": "972 36",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Luleå Airport, Lulviksvägen, Luleå, Luleå kommun, Norrbotten County, 972 36, Sweden"
+    },
+    {
+      "lat": 65.57925769865258,
+      "lon": 22.1481963311763,
+      "geoinfo": {
+        "display_name": "Isbanan, Tutti-frutti, Södra hamn, Luleå, Luleå kommun, Norrbotten County, 971 28, Sweden",
+        "road": "Isbanan",
+        "house_number": null,
+        "neighbourhood": "Tutti-frutti",
+        "suburb": "Södra hamn",
+        "city_district": null,
+        "city": "Luleå",
+        "state": null,
+        "postcode": "971 28",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Isbanan, Tutti-frutti, Södra hamn, Luleå, Luleå kommun, Norrbotten County, 971 28, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:42.597511+00:00",
+  "_kind": "geo_samples"
+}

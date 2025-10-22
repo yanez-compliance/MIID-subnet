@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glendale",
+  "geonameid": 5118670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71372125516416,
+      "lon": -73.90250315844584,
+      "geoinfo": {
+        "display_name": "62-15, 60th Lane, Middle Village, Queens, Queens County, New York, 11378, United States",
+        "road": "60th Lane",
+        "house_number": "62-15",
+        "neighbourhood": "Middle Village",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11378",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "62-15 60th Lane, Glendale, New York, United States"
+    },
+    {
+      "lat": 40.682723521126206,
+      "lon": -73.84176686152674,
+      "geoinfo": {
+        "display_name": "PS 62 - The Raymond York Elementary School, 103-22, 99th Street, Ozone Park, Queens, Queens County, New York, 11417, United States",
+        "road": "99th Street",
+        "house_number": "103-22",
+        "neighbourhood": "Ozone Park",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11417",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "PS 62 - The Raymond York Elementary School, 103-22, 99th Street, Ozone Park, Queens, Queens County, New York, 11417, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:14.616761+00:00",
+  "_kind": "geo_samples"
+}

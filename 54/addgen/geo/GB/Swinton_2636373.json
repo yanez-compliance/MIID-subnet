@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Swinton",
+  "geonameid": 2636373,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.51786735369468,
+      "lon": -2.3803507666237578,
+      "geoinfo": {
+        "display_name": "Ellesmere Golf Club, Old Clough Lane, Worsley, Salford, Greater Manchester, England, M28 7HZ, United Kingdom",
+        "road": "Old Clough Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salford",
+        "state": "England",
+        "postcode": "M28 7HZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Old Clough Lane, Swinton, England, United Kingdom"
+    },
+    {
+      "lat": 53.49425743701273,
+      "lon": -2.331008657799546,
+      "geoinfo": {
+        "display_name": "Somerset Road, Swinton Park, Eccles, Salford, Greater Manchester, England, M30 9DG, United Kingdom",
+        "road": "Somerset Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Swinton Park",
+        "city_district": null,
+        "city": "Salford",
+        "state": "England",
+        "postcode": "M30 9DG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Somerset Road, Swinton Park, Eccles, Salford, Greater Manchester, England, M30 9DG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:29.182309+00:00",
+  "_kind": "geo_samples"
+}

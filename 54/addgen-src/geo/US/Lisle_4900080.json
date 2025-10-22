@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lisle",
+  "geonameid": 4900080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.81157233977723,
+      "lon": -88.10494386152571,
+      "geoinfo": {
+        "display_name": "Forbes Drive, Lisle, DuPage County, Illinois, 60189, United States",
+        "road": "Forbes Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lisle",
+        "state": "Illinois",
+        "postcode": "60189",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Forbes Drive, Lisle, Illinois, United States"
+    },
+    {
+      "lat": 41.79095253138707,
+      "lon": -88.10018184796675,
+      "geoinfo": {
+        "display_name": "Arlington Road, DuPage County, Illinois, 60540, United States",
+        "road": "Arlington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60540",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "841, Arlington Road, DuPage County, Illinois, 60540, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:41.844060+00:00",
+  "_kind": "geo_samples"
+}

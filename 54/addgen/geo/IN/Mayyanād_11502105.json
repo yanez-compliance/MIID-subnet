@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Mayyanād",
+  "geonameid": 11502105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.857424078314317,
+      "lon": 76.62601327576904,
+      "geoinfo": {
+        "display_name": "Eravipuram, Kollam, Kerala, 691011, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eravipuram",
+        "state": "Kerala",
+        "postcode": "691011",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Mayyanād, Kerala, India"
+    },
+    {
+      "lat": 8.869644535264982,
+      "lon": 76.63230244238413,
+      "geoinfo": {
+        "display_name": "Pazhayattinkuzhi, Kollam, Kerala, 691001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Pazhayattinkuzhi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kollam",
+        "state": "Kerala",
+        "postcode": "691001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "002, Pazhayattinkuzhi, Kollam, Kerala, 691001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:34.889352+00:00",
+  "_kind": "geo_samples"
+}

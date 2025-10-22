@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Heunghae",
+  "geonameid": 1832015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.097757454612285,
+      "lon": 129.31307215848597,
+      "geoinfo": {
+        "display_name": "Chogok-ri, Pohang-si, 37558, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pohang-si",
+        "state": null,
+        "postcode": "37558",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Heunghae, South Korea"
+    },
+    {
+      "lat": 36.10808550527952,
+      "lon": 129.39469522292268,
+      "geoinfo": {
+        "display_name": "Handong-ro, Heunghae-eup, Buk-gu, Pohang-si, 37554, South Korea",
+        "road": "Handong-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pohang-si",
+        "state": null,
+        "postcode": "37554",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "886, Handong-ro, 37554 Heunghae, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:37:21.790536+00:00",
+  "_kind": "geo_samples"
+}

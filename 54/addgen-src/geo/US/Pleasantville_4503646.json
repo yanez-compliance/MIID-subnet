@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pleasantville",
+  "geonameid": 4503646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.36292550734046,
+      "lon": -74.49574023452938,
+      "geoinfo": {
+        "display_name": "Pleasantville, Atlantic County, New Jersey, 08232, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pleasantville",
+        "state": "New Jersey",
+        "postcode": "08232",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pleasantville, New Jersey, United States"
+    },
+    {
+      "lat": 39.35928038725836,
+      "lon": -74.53985219363986,
+      "geoinfo": {
+        "display_name": "Margate Boulevard, Egg Harbor Township, Atlantic County, New Jersey, 08225, United States",
+        "road": "Margate Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Egg Harbor Township",
+        "state": "New Jersey",
+        "postcode": "08225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "422, Margate Boulevard, Egg Harbor Township, Atlantic County, New Jersey, 08225, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:39.096982+00:00",
+  "_kind": "geo_samples"
+}

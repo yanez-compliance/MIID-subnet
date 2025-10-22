@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Golborne",
+  "geonameid": 2648356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.46872358499208,
+      "lon": -2.562230395006397,
+      "geoinfo": {
+        "display_name": "30, Rowan Avenue, Lowton Heath, Lowton St Mary's, Warrington, Greater Manchester, England, WA3 2DD, United Kingdom",
+        "road": "Rowan Avenue",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "Lowton Heath",
+        "city_district": null,
+        "city": "Warrington",
+        "state": "England",
+        "postcode": "WA3 2DD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "30 Rowan Avenue, Golborne, England, United Kingdom"
+    },
+    {
+      "lat": 53.46566332236515,
+      "lon": -2.546498471961844,
+      "geoinfo": {
+        "display_name": "Wilton Lane, Diggle Green, Culcheth and Glazebury, Kenyon, Warrington, England, WA3 4BD, United Kingdom",
+        "road": "Wilton Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Culcheth and Glazebury",
+        "city_district": null,
+        "city": "Kenyon",
+        "state": "England",
+        "postcode": "WA3 4BD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wilton Lane, Diggle Green, Culcheth and Glazebury, Kenyon, Warrington, England, WA3 4BD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:41.861639+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Leningradskaya",
+  "geonameid": 536200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.312754114599365,
+      "lon": 39.39203627284099,
+      "geoinfo": {
+        "display_name": "улица 302-й Дивизии, Leningradskaya, Leningradsky District, Krasnodar Krai, 353740, Russia",
+        "road": "улица 302-й Дивизии",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leningradskaya",
+        "state": "Krasnodar Krai",
+        "postcode": "353740",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица 302-й Дивизии, Leningradskaya, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 46.31036677776576,
+      "lon": 39.389325594910254,
+      "geoinfo": {
+        "display_name": "54, Oktyabrskaya Street, Leningradskaya, Leningradsky District, Krasnodar Krai, 353740, Russia",
+        "road": "Oktyabrskaya Street",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leningradskaya",
+        "state": "Krasnodar Krai",
+        "postcode": "353740",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "54, Oktyabrskaya Street, Leningradskaya, Leningradsky District, Krasnodar Krai, 353740, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:58.461856+00:00",
+  "_kind": "geo_samples"
+}

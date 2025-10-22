@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Almonte",
+  "geonameid": 2521857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.300557432894394,
+      "lon": -6.5054741286678945,
+      "geoinfo": {
+        "display_name": "Las Malatas, Almonte, El Condado, Huelva, Andalusia, 21710, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Almonte",
+        "state": "Andalusia",
+        "postcode": "21710",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Almonte, Andalusia, Spain"
+    },
+    {
+      "lat": 37.24707207167043,
+      "lon": -6.513531448364998,
+      "geoinfo": {
+        "display_name": "Camino de los Llanos, Almonte, El Condado, Huelva, Andalusia, 21730, Spain",
+        "road": "Camino de los Llanos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Almonte",
+        "state": "Andalusia",
+        "postcode": "21730",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "099, Camino de los Llanos, Almonte, El Condado, Huelva, Andalusia, 21730, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:01.328904+00:00",
+  "_kind": "geo_samples"
+}

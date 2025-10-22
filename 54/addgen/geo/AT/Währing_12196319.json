@@ -1,0 +1,65 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Währing",
+  "geonameid": 12196319,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.23550049742142,
+      "lon": 16.342944786409806,
+      "geoinfo": {
+        "display_name": "64, Cottagegasse, Cottageviertel, Upper Döbling, Döbling, Vienna, 1190, Austria",
+        "road": "Cottagegasse",
+        "house_number": "64",
+        "neighbourhood": "Cottageviertel",
+        "suburb": "Upper Döbling",
+        "city_district": "Döbling",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1190",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "64 Cottagegasse, Währing, Austria"
+    },
+    {
+      "lat": 48.26168623417905,
+      "lon": 16.325037842907015,
+      "geoinfo": {
+        "display_name": "Paula-Wessely-Weg, Kleingartenverein Cobenzl, KG Grinzing, Döbling, Vienna, 1190, Austria",
+        "road": "Paula-Wessely-Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Grinzing",
+        "city_district": "Döbling",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1190",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "975, Paula-Wessely-Weg, Kleingartenverein Cobenzl, KG Grinzing, Döbling, Vienna, 1190, Austria"
+    },
+    {
+      "lat": 48.195052449418476,
+      "lon": 16.376543033729796,
+      "geoinfo": {
+        "display_name": "AK Wien, 20-22, Prinz-Eugen-Straße, Wieden, Vienna, 1040, Austria",
+        "road": "Prinz-Eugen-Straße",
+        "house_number": "20-22",
+        "neighbourhood": null,
+        "suburb": "Wieden",
+        "city_district": "Wieden",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1040",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "AK Wien, 20-22, Prinz-Eugen-Straße, Wieden, Vienna, 1040, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:18.073956+00:00",
+  "_kind": "geo_samples"
+}

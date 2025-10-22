@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Izegem",
+  "geonameid": 2795009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.94493547219838,
+      "lon": 3.174008264241427,
+      "geoinfo": {
+        "display_name": "B45, E403, De Tasse, Roeselare, West Flanders, 8800, Belgium",
+        "road": "E403",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Roeselare",
+        "city": "Roeselare",
+        "state": "West Flanders",
+        "postcode": "8800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E403, Izegem, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.897843505325675,
+      "lon": 3.188057081005642,
+      "geoinfo": {
+        "display_name": "21, Wagenmakerstraat, Bosmolens, Izegem, Roeselare, West Flanders, 8870, Belgium",
+        "road": "Wagenmakerstraat",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Izegem",
+        "city": "Izegem",
+        "state": "West Flanders",
+        "postcode": "8870",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "21, Wagenmakerstraat, Bosmolens, Izegem, Roeselare, West Flanders, 8870, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:16.236910+00:00",
+  "_kind": "geo_samples"
+}

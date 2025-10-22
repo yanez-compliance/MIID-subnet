@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunnyvale",
+  "geonameid": 5400075,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.376740229033054,
+      "lon": -122.01825910776749,
+      "geoinfo": {
+        "display_name": "847, Dwight Avenue, Sunnyvale, Santa Clara County, California, 94086, United States",
+        "road": "Dwight Avenue",
+        "house_number": "847",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sunnyvale",
+        "state": "California",
+        "postcode": "94086",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "847 Dwight Avenue, Sunnyvale, California, United States"
+    },
+    {
+      "lat": 37.36567959845411,
+      "lon": -122.05945470611265,
+      "geoinfo": {
+        "display_name": "902, West Cardinal Drive, Sunnyvale, Santa Clara County, California, 94807, United States",
+        "road": "West Cardinal Drive",
+        "house_number": "902",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sunnyvale",
+        "state": "California",
+        "postcode": "94807",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "902, West Cardinal Drive, Sunnyvale, Santa Clara County, California, 94807, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:21.267992+00:00",
+  "_kind": "geo_samples"
+}

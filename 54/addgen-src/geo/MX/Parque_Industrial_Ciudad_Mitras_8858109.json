@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Parque Industrial Ciudad Mitras",
+  "geonameid": 8858109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.775794270150783,
+      "lon": -100.4304699062928,
+      "geoinfo": {
+        "display_name": "García, Nuevo León, 66024, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "66024",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Parque Industrial Ciudad Mitras, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.805231711394875,
+      "lon": -100.43580645831594,
+      "geoinfo": {
+        "display_name": "Calle Valle De Huehuetoca, García, Nuevo León, 66023, Mexico",
+        "road": "Calle Valle De Huehuetoca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "66023",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "743, Calle Valle De Huehuetoca, García, Nuevo León, 66023, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:07.900085+00:00",
+  "_kind": "geo_samples"
+}

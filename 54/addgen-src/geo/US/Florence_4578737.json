@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Florence",
+  "geonameid": 4578737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.204386831045156,
+      "lon": -79.74330156971477,
+      "geoinfo": {
+        "display_name": "Hamlet Street, Woodmont, Florence, Florence County, South Carolina, 29506, United States",
+        "road": "Hamlet Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Florence",
+        "state": "South Carolina",
+        "postcode": "29506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hamlet Street, Florence, South Carolina, United States"
+    },
+    {
+      "lat": 34.19094706983688,
+      "lon": -79.73308671888651,
+      "geoinfo": {
+        "display_name": "Cap Road, Florence County, South Carolina, 29506, United States",
+        "road": "Cap Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "927, Cap Road, Florence County, South Carolina, 29506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:26.280317+00:00",
+  "_kind": "geo_samples"
+}

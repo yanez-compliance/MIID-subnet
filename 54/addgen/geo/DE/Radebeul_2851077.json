@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Radebeul",
+  "geonameid": 2851077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.13500165387971,
+      "lon": 13.672385974189734,
+      "geoinfo": {
+        "display_name": "S 81, Dippelsdorf, Moritzburg, Meissen, Saxony, 01468, Germany",
+        "road": "S 81",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dippelsdorf",
+        "state": "Saxony",
+        "postcode": "01468",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "S 81, Radebeul, Saxony, Germany"
+    },
+    {
+      "lat": 51.0811702804046,
+      "lon": 13.655837214820377,
+      "geoinfo": {
+        "display_name": "155, Meißner Landstraße, Briesnitz, Stetzsch, Cotta, Dresden, Saxony, 01157, Germany",
+        "road": "Meißner Landstraße",
+        "house_number": "155",
+        "neighbourhood": "Briesnitz",
+        "suburb": "Stetzsch",
+        "city_district": "Cotta",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01157",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "155, Meißner Landstraße, Briesnitz, Stetzsch, Cotta, Dresden, Saxony, 01157, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:35.575224+00:00",
+  "_kind": "geo_samples"
+}

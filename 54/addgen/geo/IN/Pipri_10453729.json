@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Pipri",
+  "geonameid": 10453729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.789808864312473,
+      "lon": 78.59974893868589,
+      "geoinfo": {
+        "display_name": "Wardha, Maharashtra, 442001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wardha",
+        "state": "Maharashtra",
+        "postcode": "442001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Pipri, Maharashtra, India"
+    },
+    {
+      "lat": 20.759488929309153,
+      "lon": 78.57326187074011,
+      "geoinfo": {
+        "display_name": "Wardha, Umari, Wardha, Maharashtra, 442001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Umari",
+        "state": "Maharashtra",
+        "postcode": "442001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "800, Pipri, 442001 Maharashtra, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:13.124551+00:00",
+  "_kind": "geo_samples"
+}

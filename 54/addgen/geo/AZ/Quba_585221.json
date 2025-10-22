@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Quba",
+  "geonameid": 585221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 41.39816728766948,
+      "lon": 48.48793365504949,
+      "geoinfo": {
+        "display_name": "Digah, Quba District, 4000, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "4000",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Quba, Azerbaijan"
+    },
+    {
+      "lat": 41.39336805231907,
+      "lon": 48.54663780008823,
+      "geoinfo": {
+        "display_name": "İbrahim Hümmətov küç., Vladimirovka, Quba District, 4011, Azerbaijan",
+        "road": "İbrahim Hümmətov küç.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vladimirovka",
+        "state": null,
+        "postcode": "4011",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "İbrahim Hümmətov küç., Quba, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:51.953233+00:00",
+  "_kind": "geo_samples"
+}

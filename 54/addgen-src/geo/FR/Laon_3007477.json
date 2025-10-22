@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Laon",
+  "geonameid": 3007477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.579013733809276,
+      "lon": 3.6516607094515905,
+      "geoinfo": {
+        "display_name": "3, Rue Montaigne, Zone Industrielle, Laon, Aisne, Hauts-de-France, Metropolitan France, 02000, France",
+        "road": "Rue Montaigne",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Zone Industrielle",
+        "city_district": null,
+        "city": "Laon",
+        "state": "Hauts-de-France",
+        "postcode": "02000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3 Rue Montaigne, Laon, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.566113335180226,
+      "lon": 3.665249190462602,
+      "geoinfo": {
+        "display_name": "Route de Reims, La Maison Bleue, Athies-sous-Laon, Laon, Aisne, Hauts-de-France, Metropolitan France, 02840, France",
+        "road": "Route de Reims",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athies-sous-Laon",
+        "state": "Hauts-de-France",
+        "postcode": "02840",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "326, Route de Reims, La Maison Bleue, Athies-sous-Laon, Laon, Aisne, Hauts-de-France, Metropolitan France, 02840, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:36.784067+00:00",
+  "_kind": "geo_samples"
+}

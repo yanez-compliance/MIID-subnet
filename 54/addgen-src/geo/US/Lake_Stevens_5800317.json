@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Stevens",
+  "geonameid": 5800317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.03489909650585,
+      "lon": -122.02006145378182,
+      "geoinfo": {
+        "display_name": "161st Avenue Northeast, Snohomish County, Washington, United States",
+        "road": "161st Avenue Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "161st Avenue Northeast, Lake Stevens, Washington, United States"
+    },
+    {
+      "lat": 48.01291970305391,
+      "lon": -122.0584947869617,
+      "geoinfo": {
+        "display_name": "Senior Terrace, 1619, 127th Avenue Northeast, Lake Stevens, Snohomish County, Washington, 98258, United States",
+        "road": "127th Avenue Northeast",
+        "house_number": "1619",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Stevens",
+        "state": "Washington",
+        "postcode": "98258",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Senior Terrace, 1619, 127th Avenue Northeast, Lake Stevens, Snohomish County, Washington, 98258, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:53.200275+00:00",
+  "_kind": "geo_samples"
+}

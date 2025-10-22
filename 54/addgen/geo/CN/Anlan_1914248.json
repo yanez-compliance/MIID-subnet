@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Anlan",
+  "geonameid": 1914248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.254496375634407,
+      "lon": 106.62791755777158,
+      "geoinfo": {
+        "display_name": "Shengdengshan, Banan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shengdengshan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Anlan, Chongqing, China"
+    },
+    {
+      "lat": 29.227236279701106,
+      "lon": 106.58143808145203,
+      "geoinfo": {
+        "display_name": "Lanhai Expressway, Anlan, Banan District, Chongqing, China",
+        "road": "Lanhai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anlan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "085, Lanhai Expressway, Anlan, Banan District, 72740 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:49.933362+00:00",
+  "_kind": "geo_samples"
+}

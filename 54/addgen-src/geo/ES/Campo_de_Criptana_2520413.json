@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Campo de Criptana",
+  "geonameid": 2520413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.411882087133876,
+      "lon": -3.0902750449192045,
+      "geoinfo": {
+        "display_name": "CR-1101, Campo de Criptana, Ciudad Real, Castile-La Mancha, Spain",
+        "road": "CR-1101",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campo de Criptana",
+        "state": "Castile-La Mancha",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CR-1101, Campo de Criptana, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 39.37891905845261,
+      "lon": -3.13914296516753,
+      "geoinfo": {
+        "display_name": "CM-420, Campo de Criptana, Ciudad Real, Castile-La Mancha, 13610, Spain",
+        "road": "CM-420",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campo de Criptana",
+        "state": "Castile-La Mancha",
+        "postcode": "13610",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CM-420, Campo de Criptana, Ciudad Real, Castile-La Mancha, 13610, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:06:52.319854+00:00",
+  "_kind": "geo_samples"
+}

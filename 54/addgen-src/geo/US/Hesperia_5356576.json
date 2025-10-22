@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hesperia",
+  "geonameid": 5356576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.410057983466416,
+      "lon": -117.30793396668426,
+      "geoinfo": {
+        "display_name": "Lime Street, Hesperia, San Bernardino County, California, 92345, United States",
+        "road": "Lime Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hesperia",
+        "state": "California",
+        "postcode": "92345",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lime Street, Hesperia, California, United States"
+    },
+    {
+      "lat": 34.43286960686158,
+      "lon": -117.27610441006054,
+      "geoinfo": {
+        "display_name": "17729, Mojave Street, Hesperia, San Bernardino County, California, 92345, United States",
+        "road": "Mojave Street",
+        "house_number": "17729",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hesperia",
+        "state": "California",
+        "postcode": "92345",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17729, Mojave Street, Hesperia, San Bernardino County, California, 92345, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:07.731853+00:00",
+  "_kind": "geo_samples"
+}

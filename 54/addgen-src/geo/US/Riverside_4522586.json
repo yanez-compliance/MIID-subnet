@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Riverside",
+  "geonameid": 4522586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.756830941926694,
+      "lon": -84.1221865419245,
+      "geoinfo": {
+        "display_name": "US 35, Hearthstone, Dayton, Montgomery County, Ohio, 45437, United States",
+        "road": "US 35",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Ohio",
+        "postcode": "45437",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 35, Riverside, Ohio, United States"
+    },
+    {
+      "lat": 39.81682674410659,
+      "lon": -84.11633593505283,
+      "geoinfo": {
+        "display_name": "4199, Walshwood Court, Riverside, Montgomery County, Ohio, 45424, United States",
+        "road": "Walshwood Court",
+        "house_number": "4199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverside",
+        "state": "Ohio",
+        "postcode": "45424",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4199, Walshwood Court, Riverside, Montgomery County, Ohio, 45424, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:54.775797+00:00",
+  "_kind": "geo_samples"
+}

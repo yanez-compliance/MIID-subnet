@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Bagua Grande",
+  "geonameid": 3699484,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -5.756977886570216,
+      "lon": -78.40039081800052,
+      "geoinfo": {
+        "display_name": "Cajaruro, Province of Utcubamba, Amazonas, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cajaruro",
+        "state": "Amazonas",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Bagua Grande, Amazonas, Peru"
+    },
+    {
+      "lat": -5.726766860032897,
+      "lon": -78.41896664932942,
+      "geoinfo": {
+        "display_name": "AM-550, Cajaruro, Province of Utcubamba, Amazonas, Peru",
+        "road": "AM-550",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cajaruro",
+        "state": "Amazonas",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "AM-550, Bagua Grande, 16998 Amazonas, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:01.831976+00:00",
+  "_kind": "geo_samples"
+}

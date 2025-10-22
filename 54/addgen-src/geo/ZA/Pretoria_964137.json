@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Pretoria",
+  "geonameid": 964137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.740655526937573,
+      "lon": 28.225050019160527,
+      "geoinfo": {
+        "display_name": "153, Dumbarton Road, Tshwane Ward 92, Pretoria, City of Tshwane Metropolitan Municipality, Gauteng, 0000, South Africa",
+        "road": "Dumbarton Road",
+        "house_number": "153",
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 92",
+        "city_district": null,
+        "city": "Pretoria",
+        "state": "Gauteng",
+        "postcode": "0000",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "153 Dumbarton Road, Pretoria, Gauteng, South Africa"
+    },
+    {
+      "lat": -25.718370757574082,
+      "lon": 28.22776417959364,
+      "geoinfo": {
+        "display_name": "Gents, Nico Smith Street, Villeria, Tshwane Ward 52, Pretoria, City of Tshwane Metropolitan Municipality, Gauteng, 0121, South Africa",
+        "road": "Nico Smith Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 52",
+        "city_district": null,
+        "city": "Pretoria",
+        "state": "Gauteng",
+        "postcode": "0121",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Gents, Nico Smith Street, Villeria, Tshwane Ward 52, Pretoria, City of Tshwane Metropolitan Municipality, Gauteng, 0121, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:38:05.533992+00:00",
+  "_kind": "geo_samples"
+}

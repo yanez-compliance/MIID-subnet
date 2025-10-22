@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Florence",
+  "geonameid": 4291945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.01704734443255,
+      "lon": -84.60033232319324,
+      "geoinfo": {
+        "display_name": "3420, Dixie Highway, Erlanger, Kenton County, Kentucky, 41018, United States",
+        "road": "Dixie Highway",
+        "house_number": "3420",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erlanger",
+        "state": "Kentucky",
+        "postcode": "41018",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3420 Dixie Highway, Florence, Kentucky, United States"
+    },
+    {
+      "lat": 38.9545233745675,
+      "lon": -84.63321072336937,
+      "geoinfo": {
+        "display_name": "10043, Crescent Drive, Boone County, Kentucky, 41042, United States",
+        "road": "Crescent Drive",
+        "house_number": "10043",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "41042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10043, Crescent Drive, Boone County, Kentucky, 41042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:38.978444+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mira Mesa",
+  "geonameid": 5373497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.89002897924866,
+      "lon": -117.11150261518094,
+      "geoinfo": {
+        "display_name": "San Diego, San Diego County, California, 92137, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92137",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mira Mesa, California, United States"
+    },
+    {
+      "lat": 32.90788594618555,
+      "lon": -117.14905059967657,
+      "geoinfo": {
+        "display_name": "8110, Flanders Drive, Mira Mesa, San Diego, San Diego County, California, 92126, United States",
+        "road": "Flanders Drive",
+        "house_number": "8110",
+        "neighbourhood": null,
+        "suburb": "Mira Mesa",
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8110, Flanders Drive, Mira Mesa, San Diego, San Diego County, California, 92126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:10:37.922204+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Antonio de Padua",
+  "geonameid": 3429244,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.624688418774994,
+      "lon": -58.715184773631265,
+      "geoinfo": {
+        "display_name": "El Jagüel, Villa Udaondo, Partido de Ituzaingó, Buenos Aires, B1715CBC, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Udaondo",
+        "state": "Buenos Aires",
+        "postcode": "B1715CBC",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San Antonio de Padua, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.64817229302338,
+      "lon": -58.74406576854738,
+      "geoinfo": {
+        "display_name": "Vélez Sarsfield, San Pedro, Villa Sambrizzi, Paso del Rey, Partido de Moreno, Buenos Aires, 1742, Argentina",
+        "road": "Vélez Sarsfield",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa Sambrizzi",
+        "city_district": null,
+        "city": "Paso del Rey",
+        "state": "Buenos Aires",
+        "postcode": "1742",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "962, Vélez Sarsfield, San Pedro, Villa Sambrizzi, Paso del Rey, Partido de Moreno, Buenos Aires, 1742, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:34.324997+00:00",
+  "_kind": "geo_samples"
+}

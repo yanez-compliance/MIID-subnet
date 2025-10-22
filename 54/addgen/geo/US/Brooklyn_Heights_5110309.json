@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brooklyn Heights",
+  "geonameid": 5110309,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71301355084891,
+      "lon": -73.98667826850063,
+      "geoinfo": {
+        "display_name": "Junior High School 56, Henry Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+        "road": "Henry Street",
+        "house_number": null,
+        "neighbourhood": "Lower East Side",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Henry Street, Brooklyn Heights, New York, United States"
+    },
+    {
+      "lat": 40.707219823085495,
+      "lon": -74.0217265916414,
+      "geoinfo": {
+        "display_name": "Battery Park City Greenway, Battery Park City, Manhattan, New York County, New York, 10280, United States",
+        "road": "Battery Park City Greenway",
+        "house_number": null,
+        "neighbourhood": "Battery Park City",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10280",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "775, Battery Park City Greenway, Battery Park City, Manhattan, New York County, New York, 10280, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:14.028386+00:00",
+  "_kind": "geo_samples"
+}

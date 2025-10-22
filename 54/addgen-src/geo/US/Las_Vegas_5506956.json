@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Las Vegas",
+  "geonameid": 5506956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.138329662325376,
+      "lon": -115.11745846586395,
+      "geoinfo": {
+        "display_name": "South Eastern Avenue, Winchester, Clark County, Nevada, 89104, United States",
+        "road": "South Eastern Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Nevada",
+        "postcode": "89104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Eastern Avenue, Las Vegas, Nevada, United States"
+    },
+    {
+      "lat": 36.171800076073566,
+      "lon": -115.09727102584968,
+      "geoinfo": {
+        "display_name": "3526, Diamond Head Drive, East Las Vegas, Las Vegas, Clark County, Nevada, 89110, United States",
+        "road": "Diamond Head Drive",
+        "house_number": "3526",
+        "neighbourhood": null,
+        "suburb": "East Las Vegas",
+        "city_district": null,
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "postcode": "89110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3526, Diamond Head Drive, East Las Vegas, Las Vegas, Clark County, Nevada, 89110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:59.391828+00:00",
+  "_kind": "geo_samples"
+}

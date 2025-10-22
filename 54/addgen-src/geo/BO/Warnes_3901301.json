@@ -1,0 +1,65 @@
+{
+  "country_code": "BO",
+  "country": "Bolivia",
+  "city": "Warnes",
+  "geonameid": 3901301,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -17.52181527847842,
+      "lon": -63.19973297123977,
+      "geoinfo": {
+        "display_name": "Municipio Warnes, Provincia Warnes, Santa Cruz, Bolivia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio Warnes",
+        "state": "Santa Cruz",
+        "postcode": null,
+        "country": "Bolivia",
+        "country_code": "bo"
+      },
+      "address": "Warnes, Santa Cruz, Bolivia"
+    },
+    {
+      "lat": -17.500952357582072,
+      "lon": -63.15393593181792,
+      "geoinfo": {
+        "display_name": "Warnes, Centro, Municipio Warnes, Provincia Warnes, Santa Cruz, Bolivia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centro",
+        "city_district": null,
+        "city": "Municipio Warnes",
+        "state": "Santa Cruz",
+        "postcode": null,
+        "country": "Bolivia",
+        "country_code": "bo"
+      },
+      "address": "Centro, Warnes, Santa Cruz, Bolivia"
+    },
+    {
+      "lat": -17.493045634179158,
+      "lon": -63.12920628775037,
+      "geoinfo": {
+        "display_name": "Camino Warnes-La Esperanza, La Esperanza, Villa Karen, Monte Cristo, Municipio Warnes, Provincia Warnes, Santa Cruz, Bolivia",
+        "road": "Camino Warnes-La Esperanza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio Warnes",
+        "state": "Santa Cruz",
+        "postcode": null,
+        "country": "Bolivia",
+        "country_code": "bo"
+      },
+      "address": "Camino Warnes-La Esperanza, Warnes, Santa Cruz, Bolivia"
+    }
+  ],
+  "updated_at": "2025-10-16T10:56:11.170559+00:00",
+  "_kind": "geo_samples"
+}

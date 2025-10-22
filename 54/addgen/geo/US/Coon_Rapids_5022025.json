@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coon Rapids",
+  "geonameid": 5022025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.15303395222305,
+      "lon": -93.27286896549496,
+      "geoinfo": {
+        "display_name": "101st Avenue Northwest, Coon Rapids, Anoka County, Minnesota, 55434, United States",
+        "road": "101st Avenue Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coon Rapids",
+        "state": "Minnesota",
+        "postcode": "55434",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "101st Avenue Northwest, Coon Rapids, Minnesota, United States"
+    },
+    {
+      "lat": 45.12169402669496,
+      "lon": -93.2950841899693,
+      "geoinfo": {
+        "display_name": "Mississippi Boulevard Northwest, Pleasure Creek, Coon Rapids, Anoka County, Minnesota, 55433, United States",
+        "road": "Mississippi Boulevard Northwest",
+        "house_number": null,
+        "neighbourhood": "Pleasure Creek",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coon Rapids",
+        "state": "Minnesota",
+        "postcode": "55433",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "007, Mississippi Boulevard Northwest, Pleasure Creek, Coon Rapids, Anoka County, Minnesota, 55433, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:08.354171+00:00",
+  "_kind": "geo_samples"
+}

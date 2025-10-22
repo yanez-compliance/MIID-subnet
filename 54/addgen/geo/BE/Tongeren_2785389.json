@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Tongeren",
+  "geonameid": 2785389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.80385894030936,
+      "lon": 5.513661629286604,
+      "geoinfo": {
+        "display_name": "28, Bouverdstraat, Ketsingen, Berg, Tongeren-Borgloon, Tongeren, Limburg, 3700, Belgium",
+        "road": "Bouverdstraat",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berg",
+        "state": "Limburg",
+        "postcode": "3700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "28 Bouverdstraat, Tongeren, Limburg, Belgium"
+    },
+    {
+      "lat": 50.785364059373286,
+      "lon": 5.450289843248579,
+      "geoinfo": {
+        "display_name": "Openluchtzwembad, Fonteindreef, Mulken, Tongeren, Tongeren-Borgloon, Tongeren, Limburg, 3700, Belgium",
+        "road": "Fonteindreef",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongeren",
+        "state": "Limburg",
+        "postcode": "3700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "023, Fonteindreef, Tongeren, 3700 Limburg, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:27.279067+00:00",
+  "_kind": "geo_samples"
+}

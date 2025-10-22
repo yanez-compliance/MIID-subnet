@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Country Club",
+  "geonameid": 4152093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.948589418651572,
+      "lon": -80.27025829184332,
+      "geoinfo": {
+        "display_name": "19150, Northwest 42nd Avenue, Riviera Mobile Park, Miami Gardens, Miami-Dade County, Florida, 33055, United States",
+        "road": "Northwest 42nd Avenue",
+        "house_number": "19150",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami Gardens",
+        "state": "Florida",
+        "postcode": "33055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19150 Northwest 42nd Avenue, Country Club, Florida, United States"
+    },
+    {
+      "lat": 25.91716141701283,
+      "lon": -80.32235739242633,
+      "geoinfo": {
+        "display_name": "Shula's Golf Club, 7601, Miami Lakes Drive, Miami Lakes, Miami-Dade County, Florida, 33014, United States",
+        "road": "Miami Lakes Drive",
+        "house_number": "7601",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami Lakes",
+        "state": "Florida",
+        "postcode": "33014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Shula's Golf Club, 7601, Miami Lakes Drive, Miami Lakes, Miami-Dade County, Florida, 33014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:17.576457+00:00",
+  "_kind": "geo_samples"
+}

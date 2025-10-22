@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedrichshain",
+  "geonameid": 2924573,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.52793241543724,
+      "lon": 13.443343576409935,
+      "geoinfo": {
+        "display_name": "Langenbeckstraße, Richard-Sorge-Viertel, Friedrichshain, Friedrichshain-Kreuzberg, Berlin, 10249, Germany",
+        "road": "Langenbeckstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Friedrichshain",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Langenbeckstraße, Friedrichshain, Germany"
+    },
+    {
+      "lat": 52.55074619617615,
+      "lon": 13.499093207944249,
+      "geoinfo": {
+        "display_name": "29, Niehofer Straße, Hohenschönhausen II, Alt-Hohenschönhausen, Lichtenberg, Berlin, 13053, Germany",
+        "road": "Niehofer Straße",
+        "house_number": "29",
+        "neighbourhood": "Hohenschönhausen II",
+        "suburb": "Alt-Hohenschönhausen",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13053",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "29, Niehofer Straße, Hohenschönhausen II, Alt-Hohenschönhausen, Lichtenberg, Berlin, 13053, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:25.971968+00:00",
+  "_kind": "geo_samples"
+}

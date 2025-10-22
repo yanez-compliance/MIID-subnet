@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Yakima",
+  "geonameid": 5816605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.56467017803333,
+      "lon": -120.53476383400663,
+      "geoinfo": {
+        "display_name": "Yakima Air Terminal Airport, Spring Creek Road, Yakima, Yakima County, Washington, 98902, United States",
+        "road": "Spring Creek Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yakima",
+        "state": "Washington",
+        "postcode": "98902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Spring Creek Road, Yakima, Washington, United States"
+    },
+    {
+      "lat": 46.6297927035041,
+      "lon": -120.5263952307194,
+      "geoinfo": {
+        "display_name": "Yakima Greenway, Yakima, Yakima County, Washington, 98942, United States",
+        "road": "Yakima Greenway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yakima",
+        "state": "Washington",
+        "postcode": "98942",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "364, Yakima Greenway, Yakima, Yakima County, Washington, 98942, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:28.899126+00:00",
+  "_kind": "geo_samples"
+}

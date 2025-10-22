@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Harmanli",
+  "geonameid": 730442,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 41.950113887645244,
+      "lon": 25.899466184350167,
+      "geoinfo": {
+        "display_name": "Maritsa Motorway, Druzhba, Harmanli, Haskovo, 6450, Bulgaria",
+        "road": "Maritsa Motorway",
+        "house_number": null,
+        "neighbourhood": "Druzhba",
+        "suburb": null,
+        "city_district": null,
+        "city": "Harmanli",
+        "state": "Haskovo",
+        "postcode": "6450",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "185, Maritsa Motorway, Druzhba, Harmanli, Haskovo, 6450, Bulgaria"
+    },
+    {
+      "lat": 41.91504150041051,
+      "lon": 25.850898466584773,
+      "geoinfo": {
+        "display_name": "Ostar Kamak, Harmanli, Haskovo, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ostar Kamak",
+        "state": "Haskovo",
+        "postcode": null,
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "277, Ostar Kamak, Harmanli, 99475 Haskovo, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:57.971647+00:00",
+  "_kind": "geo_samples"
+}

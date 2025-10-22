@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Pushkin",
+  "geonameid": 504003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.70976467946149,
+      "lon": 30.35507508423323,
+      "geoinfo": {
+        "display_name": "Баболовское шоссе, София, Pushkin, Saint Petersburg, Northwestern Federal District, 196603, Russia",
+        "road": "Баболовское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "София",
+        "city_district": null,
+        "city": "Pushkin",
+        "state": "Saint Petersburg",
+        "postcode": "196603",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Баболовское шоссе, Pushkin, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.75233985080752,
+      "lon": 30.400616910336677,
+      "geoinfo": {
+        "display_name": "Pushkin, Saint Petersburg, Northwestern Federal District, 196605, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pushkin",
+        "state": "Saint Petersburg",
+        "postcode": "196605",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "632, Pushkin, Saint Petersburg, Northwestern Federal District, 196605, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:45.856440+00:00",
+  "_kind": "geo_samples"
+}

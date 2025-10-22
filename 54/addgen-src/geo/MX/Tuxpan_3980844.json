@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tuxpan",
+  "geonameid": 3980844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.54111168951992,
+      "lon": -103.33311833634217,
+      "geoinfo": {
+        "display_name": "Tuxpan, Región Sur, Jalisco, 49920, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "49920",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tuxpan, Jalisco, Mexico"
+    },
+    {
+      "lat": 19.535087870504142,
+      "lon": -103.36872027729656,
+      "geoinfo": {
+        "display_name": "Tuxpan, Región Sur, Jalisco, 49806, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tuxpan",
+        "state": "Jalisco",
+        "postcode": "49806",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "718, Tuxpan, Región Sur, Jalisco, 49806, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:15.584144+00:00",
+  "_kind": "geo_samples"
+}

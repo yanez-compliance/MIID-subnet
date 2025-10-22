@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Santa Cruz",
+  "geonameid": 1688216,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.578084096107375,
+      "lon": 121.01058014975483,
+      "geoinfo": {
+        "display_name": "A. Cagayan Street, 880, Santa Ana, Sixth District, Manila, Capital District, Metro Manila, 1009, Philippines",
+        "road": "A. Cagayan Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Ana",
+        "city_district": "Sixth District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1009",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "A. Cagayan Street, Santa Cruz, Philippines"
+    },
+    {
+      "lat": 14.604555875524651,
+      "lon": 121.02070275491502,
+      "geoinfo": {
+        "display_name": "Progreso, 1st District, San Juan, Eastern Manila District, Metro Manila, 1016, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Progreso",
+        "suburb": null,
+        "city_district": "1st District",
+        "city": "San Juan",
+        "state": null,
+        "postcode": "1016",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Progreso, 1st District, San Juan, Eastern Manila District, Metro Manila, 1016, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:58.427289+00:00",
+  "_kind": "geo_samples"
+}

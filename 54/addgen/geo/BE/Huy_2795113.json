@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Huy",
+  "geonameid": 2795113,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.50187249309099,
+      "lon": 5.216829318513735,
+      "geoinfo": {
+        "display_name": "Marchin, Huy, Liège, Wallonia, 4570, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marchin",
+        "state": "Liège",
+        "postcode": "4570",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Huy, Liège, Belgium"
+    },
+    {
+      "lat": 50.5401278361179,
+      "lon": 5.24932583141028,
+      "geoinfo": {
+        "display_name": "1A, Thier Boutique, Pâturages, Antheit, Wanze, Huy, Liège, Wallonia, 4520, Belgium",
+        "road": "Thier Boutique",
+        "house_number": "1A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wanze",
+        "state": "Liège",
+        "postcode": "4520",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1A, Thier Boutique, Pâturages, Antheit, Wanze, Huy, Liège, Wallonia, 4520, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:25.227949+00:00",
+  "_kind": "geo_samples"
+}

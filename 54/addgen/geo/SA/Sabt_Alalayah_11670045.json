@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Sabt Alalayah",
+  "geonameid": 11670045,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 19.56008086608532,
+      "lon": 42.004805165090936,
+      "geoinfo": {
+        "display_name": "طريق سبت العلاية القوباء, Al Shati, Talala, Balqarn, 'Asir Province, Saudi Arabia",
+        "road": "طريق سبت العلاية القوباء",
+        "house_number": null,
+        "neighbourhood": "Al Shati",
+        "suburb": null,
+        "city_district": null,
+        "city": "Talala",
+        "state": "'Asir Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "893, طريق سبت العلاية القوباء, Al Shati, Talala, Balqarn, 73881 'Asir Province, Saudi Arabia"
+    },
+    {
+      "lat": 19.60365911642602,
+      "lon": 41.92605023469127,
+      "geoinfo": {
+        "display_name": "Sabt Al 'Alayah, Balqarn, 'Asir Province, 67513, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sabt Al 'Alayah",
+        "state": "'Asir Province",
+        "postcode": "67513",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "199, Sabt Al 'Alayah, Balqarn, 'Asir Province, 67513, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:42.488169+00:00",
+  "_kind": "geo_samples"
+}

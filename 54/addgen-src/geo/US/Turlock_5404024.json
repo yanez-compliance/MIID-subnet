@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Turlock",
+  "geonameid": 5404024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.52374488262387,
+      "lon": -120.82051575362908,
+      "geoinfo": {
+        "display_name": "3500, North Quincy Road, Denair, Stanislaus County, California, 95316, United States",
+        "road": "North Quincy Road",
+        "house_number": "3500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denair",
+        "state": "California",
+        "postcode": "95316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3500 North Quincy Road, Turlock, California, United States"
+    },
+    {
+      "lat": 37.51654039631502,
+      "lon": -120.84948794710766,
+      "geoinfo": {
+        "display_name": "Jack in the Box, 2601, Geer Road, Turlock, Stanislaus County, California, 95382, United States",
+        "road": "Geer Road",
+        "house_number": "2601",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Turlock",
+        "state": "California",
+        "postcode": "95382",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jack in the Box, 2601, Geer Road, Turlock, Stanislaus County, California, 95382, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:18.131965+00:00",
+  "_kind": "geo_samples"
+}

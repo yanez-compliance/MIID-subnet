@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hollywood",
+  "geonameid": 4158928,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.019794321279285,
+      "lon": -80.10095673360848,
+      "geoinfo": {
+        "display_name": "Broward County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hollywood, Florida, United States"
+    },
+    {
+      "lat": 25.989207841899653,
+      "lon": -80.1823424424801,
+      "geoinfo": {
+        "display_name": "2400, Southwest 40th Avenue, West Park, Broward County, Florida, 33023, United States",
+        "road": "Southwest 40th Avenue",
+        "house_number": "2400",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Park",
+        "state": "Florida",
+        "postcode": "33023",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2400, Southwest 40th Avenue, West Park, Broward County, Florida, 33023, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:26.530312+00:00",
+  "_kind": "geo_samples"
+}

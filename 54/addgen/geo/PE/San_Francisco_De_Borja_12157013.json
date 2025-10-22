@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "San Francisco De Borja",
+  "geonameid": 12157013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.105447927537048,
+      "lon": -76.99194992812687,
+      "geoinfo": {
+        "display_name": "Jirón Bosovich, El Bosque Etapa Uno, San Borja, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15037, Peru",
+        "road": "Jirón Bosovich",
+        "house_number": null,
+        "neighbourhood": "El Bosque Etapa Uno",
+        "suburb": "San Borja",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15037",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Jirón Bosovich, San Francisco De Borja, Lima, Peru"
+    },
+    {
+      "lat": -12.101806993143313,
+      "lon": -76.98881773573815,
+      "geoinfo": {
+        "display_name": "Paseo del Bosque Street, San Borja, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15037, Peru",
+        "road": "Paseo del Bosque Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Borja",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15037",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "381, Paseo del Bosque Street, San Borja, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15037, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:51.464783+00:00",
+  "_kind": "geo_samples"
+}

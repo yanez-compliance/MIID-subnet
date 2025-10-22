@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Fulham",
+  "geonameid": 2648997,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.51412661981711,
+      "lon": -0.2254624085691038,
+      "geoinfo": {
+        "display_name": "Yonex UK Ltd, 74, Wood Lane, Shepherd's Bush, London Borough of Hammersmith and Fulham, London, Greater London, England, W12 7TP, United Kingdom",
+        "road": "Wood Lane",
+        "house_number": "74",
+        "neighbourhood": null,
+        "suburb": "Shepherd's Bush",
+        "city_district": "London Borough of Hammersmith and Fulham",
+        "city": "London",
+        "state": "England",
+        "postcode": "W12 7TP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "74 Wood Lane, Fulham, England, United Kingdom"
+    },
+    {
+      "lat": 51.50122643811555,
+      "lon": -0.1464500845778478,
+      "geoinfo": {
+        "display_name": "Buckingham Palace Garden, Grosvenor Place, Belgravia, London, Greater London, England, SW1X 7EQ, United Kingdom",
+        "road": "Grosvenor Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Belgravia",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "SW1X 7EQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Buckingham Palace Garden, Grosvenor Place, Belgravia, London, Greater London, England, SW1X 7EQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:13.575631+00:00",
+  "_kind": "geo_samples"
+}

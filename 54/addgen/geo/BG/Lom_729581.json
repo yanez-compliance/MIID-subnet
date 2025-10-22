@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Lom",
+  "geonameid": 729581,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.86716299474161,
+      "lon": 23.2215891045981,
+      "geoinfo": {
+        "display_name": "Ghidici, Dolj, 207456, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "207456",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Lom, Bulgaria"
+    },
+    {
+      "lat": 43.81984093760031,
+      "lon": 23.193647181313704,
+      "geoinfo": {
+        "display_name": "11, кв. Боруна, Lom, Montana, Bulgaria",
+        "road": "11",
+        "house_number": null,
+        "neighbourhood": "кв. Боруна",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lom",
+        "state": "Montana",
+        "postcode": null,
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "11, Lom, Montana, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:48:25.621130+00:00",
+  "_kind": "geo_samples"
+}

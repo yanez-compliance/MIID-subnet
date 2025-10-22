@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Konayev",
+  "geonameid": 1519948,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.88222225430639,
+      "lon": 77.10991834398956,
+      "geoinfo": {
+        "display_name": "Речникова, Qonaev, Almaty Region, Kazakhstan",
+        "road": "Речникова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qonaev",
+        "state": "Almaty Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "093, Речникова, Qonaev, 93429 Almaty Region, Kazakhstan"
+    },
+    {
+      "lat": 43.86544692877047,
+      "lon": 77.10636576998417,
+      "geoinfo": {
+        "display_name": "Qonaev, Almaty Region, 040800, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qonaev",
+        "state": "Almaty Region",
+        "postcode": "040800",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "176, Qonaev, Almaty Region, 040800, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:40.469727+00:00",
+  "_kind": "geo_samples"
+}

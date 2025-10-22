@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ingelheim am Rhein",
+  "geonameid": 2896020,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.936350403237725,
+      "lon": 8.040783510697409,
+      "geoinfo": {
+        "display_name": "Mühle, Appenheim, Gau-Algesheim, Landkreis Mainz-Bingen, Rhineland-Palatinate, 55437, Germany",
+        "road": "Mühle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Appenheim",
+        "state": "Rhineland-Palatinate",
+        "postcode": "55437",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Mühle, Ingelheim am Rhein, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.92720094642935,
+      "lon": 8.042817146310348,
+      "geoinfo": {
+        "display_name": "Weingut Knewitz, 13, Rheinblick, Weingut, Appenheim, Gau-Algesheim, Landkreis Mainz-Bingen, Rhineland-Palatinate, 55437, Germany",
+        "road": "Rheinblick",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Appenheim",
+        "state": "Rhineland-Palatinate",
+        "postcode": "55437",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13, Rheinblick, Ingelheim am Rhein, 55437 Rhineland-Palatinate, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:34.071138+00:00",
+  "_kind": "geo_samples"
+}

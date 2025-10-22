@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Scranton",
+  "geonameid": 5211303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.3744495402806,
+      "lon": -75.65821000428855,
+      "geoinfo": {
+        "display_name": "Connell Junction, Scranton, Lackawanna County, Pennsylvania, 18505, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Scranton",
+        "state": "Pennsylvania",
+        "postcode": "18505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Scranton, Pennsylvania, United States"
+    },
+    {
+      "lat": 41.37753111062336,
+      "lon": -75.65065844526487,
+      "geoinfo": {
+        "display_name": "Cherry Street, Scranton, Lackawanna County, Pennsylvania, 18505, United States",
+        "road": "Cherry Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Scranton",
+        "state": "Pennsylvania",
+        "postcode": "18505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "296, Cherry Street, Scranton, Lackawanna County, Pennsylvania, 18505, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:34.613388+00:00",
+  "_kind": "geo_samples"
+}

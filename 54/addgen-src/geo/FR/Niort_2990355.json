@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Niort",
+  "geonameid": 2990355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.30993579594941,
+      "lon": -0.5116235803791825,
+      "geoinfo": {
+        "display_name": "Chemin du Pourneau, Levée de Sevreau, Saint-Liguaire, Niort, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79000, France",
+        "road": "Chemin du Pourneau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Levée de Sevreau",
+        "city_district": null,
+        "city": "Niort",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "79000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin du Pourneau, Niort, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 46.343588330365435,
+      "lon": -0.4578902103222533,
+      "geoinfo": {
+        "display_name": "9, Rue des Piverts, Cholette, Quartier Nord, Niort, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79000, France",
+        "road": "Rue des Piverts",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Cholette",
+        "city_district": null,
+        "city": "Niort",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "79000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "9, Rue des Piverts, Cholette, Quartier Nord, Niort, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:44.450805+00:00",
+  "_kind": "geo_samples"
+}

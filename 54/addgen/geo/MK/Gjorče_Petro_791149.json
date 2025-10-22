@@ -1,0 +1,65 @@
+{
+  "country_code": "MK",
+  "country": "North Macedonia",
+  "city": "Gjorče Petro",
+  "geonameid": 791149,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 42.01265242206803,
+      "lon": 21.37475346304326,
+      "geoinfo": {
+        "display_name": "9, Petar Čajkovski, Vlae, Karposh, Skopje, Municipality of Karposh, City of Skopje, 1000, North Macedonia",
+        "road": "Petar Čajkovski",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Vlae",
+        "city_district": null,
+        "city": "Skopje",
+        "state": null,
+        "postcode": "1000",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "9, Petar Čajkovski, Vlae, Karposh, Skopje, Municipality of Karposh, City of Skopje, 1000, North Macedonia"
+    },
+    {
+      "lat": 42.020460459503134,
+      "lon": 21.326012561983053,
+      "geoinfo": {
+        "display_name": "Mother Teresa, Gjorche Petrov, Skopje, Municipality of Gjorche Petrov, City of Skopje, 1065, North Macedonia",
+        "road": "Mother Teresa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gjorche Petrov",
+        "city_district": null,
+        "city": "Skopje",
+        "state": null,
+        "postcode": "1065",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "168, Mother Teresa, Gjorche Petrov, Skopje, Municipality of Gjorche Petrov, City of Skopje, 1065, North Macedonia"
+    },
+    {
+      "lat": 41.97659371804096,
+      "lon": 21.365099363984008,
+      "geoinfo": {
+        "display_name": "Нерези, Gorno Nerezi, Municipality of Karposh, City of Skopje, 9100, North Macedonia",
+        "road": "Нерези",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gorno Nerezi",
+        "state": null,
+        "postcode": "9100",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "438, Нерези, Gorno Nerezi, Municipality of Karposh, City of Skopje, 9100, North Macedonia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:01:52.544339+00:00",
+  "_kind": "geo_samples"
+}

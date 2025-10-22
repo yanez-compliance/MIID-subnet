@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cary",
+  "geonameid": 4886738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.184310074596866,
+      "lon": -88.23927846773078,
+      "geoinfo": {
+        "display_name": "Church Road, Barrington Hills, McHenry County, Illinois, 60010, United States",
+        "road": "Church Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Church Road, Cary, Illinois, United States"
+    },
+    {
+      "lat": 42.23126243078863,
+      "lon": -88.21608215027604,
+      "geoinfo": {
+        "display_name": "Crystal Lake Road, Cary, McHenry County, Illinois, 60013, United States",
+        "road": "Crystal Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cary",
+        "state": "Illinois",
+        "postcode": "60013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "065, Crystal Lake Road, Cary, McHenry County, Illinois, 60013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:05.565080+00:00",
+  "_kind": "geo_samples"
+}

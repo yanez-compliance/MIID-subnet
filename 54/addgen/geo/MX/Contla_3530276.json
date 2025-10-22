@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Contla",
+  "geonameid": 3530276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.358022822295073,
+      "lon": -98.13593773368648,
+      "geoinfo": {
+        "display_name": "Santa Cruz Tlaxcala, Tlaxcala, 90640, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tlaxcala",
+        "postcode": "90640",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Contla, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.31120933126318,
+      "lon": -98.13400089311035,
+      "geoinfo": {
+        "display_name": "Avenida Miguel Hidalgo, San José Aztatla, Contla de Juan Cuamatzi, Tlaxcala, 90821, Mexico",
+        "road": "Avenida Miguel Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San José Aztatla",
+        "state": "Tlaxcala",
+        "postcode": "90821",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "904, Avenida Miguel Hidalgo, San José Aztatla, Contla de Juan Cuamatzi, Tlaxcala, 90821, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:05.881670+00:00",
+  "_kind": "geo_samples"
+}

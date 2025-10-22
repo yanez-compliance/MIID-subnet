@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Hong Kong Island",
+  "geonameid": 12747064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.27693784425918,
+      "lon": 114.14275062863311,
+      "geoinfo": {
+        "display_name": "Lugard Road, Victoria Peak, 中西區 Central and Western District, Central and Western District, Hong Kong Island, Hong Kong, China",
+        "road": "Lugard Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "中西區 Central and Western District",
+        "city_district": "Central and Western District",
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lugard Road, Hong Kong Island, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.238152883906686,
+      "lon": 114.20656103558348,
+      "geoinfo": {
+        "display_name": "Wilson Trail Section 1, Repulse Bay, Southern District, Hong Kong Island, Hong Kong, China",
+        "road": "Wilson Trail Section 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Repulse Bay",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wilson Trail Section 1, Repulse Bay, Southern District, Hong Kong Island, 68535 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:17.375009+00:00",
+  "_kind": "geo_samples"
+}

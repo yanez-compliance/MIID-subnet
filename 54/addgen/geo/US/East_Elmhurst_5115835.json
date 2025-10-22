@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Elmhurst",
+  "geonameid": 5115835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.74837242528585,
+      "lon": -73.84572359702616,
+      "geoinfo": {
+        "display_name": "USTA Billie Jean King National Tennis Center, Grand Central Parkway, Queens, Queens County, New York, 11368, United States",
+        "road": "Grand Central Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grand Central Parkway, East Elmhurst, New York, United States"
+    },
+    {
+      "lat": 40.7594302655734,
+      "lon": -73.91364722202657,
+      "geoinfo": {
+        "display_name": "44-12, 31st Avenue, Queens, Queens County, New York, 11103, United States",
+        "road": "31st Avenue",
+        "house_number": "44-12",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "44-12, 31st Avenue, Queens, Queens County, New York, 11103, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:33.287110+00:00",
+  "_kind": "geo_samples"
+}

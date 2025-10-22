@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tama",
+  "geonameid": 6822129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.64443863411747,
+      "lon": 139.45549972843554,
+      "geoinfo": {
+        "display_name": "Renkoji 1-chome, Tama, Tokyo, 206-0021, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Renkoji 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tama",
+        "state": null,
+        "postcode": "206-0021",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Renkoji 1-chome, Tama, Japan"
+    },
+    {
+      "lat": 35.66808736286099,
+      "lon": 139.50942133918892,
+      "geoinfo": {
+        "display_name": "KyuKoshu-kaido Ave., Shiraitodai 2-chome, Fuchu, Tokyo, 183-0011, Japan",
+        "road": "KyuKoshu-kaido Ave.",
+        "house_number": null,
+        "neighbourhood": "Shiraitodai 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuchu",
+        "state": null,
+        "postcode": "183-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "KyuKoshu-kaido Ave., Shiraitodai 2-chome, Fuchu, Tokyo, 183-0011, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:26.249429+00:00",
+  "_kind": "geo_samples"
+}

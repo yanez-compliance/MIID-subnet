@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New City",
+  "geonameid": 4903466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.8115389069371,
+      "lon": -87.64838062626646,
+      "geoinfo": {
+        "display_name": "4640-4666, South Halsted Street, Canaryville, New City, Chicago, Lake Township, Cook County, Illinois, 60609, United States",
+        "road": "South Halsted Street",
+        "house_number": "4640-4666",
+        "neighbourhood": "Canaryville",
+        "suburb": "New City",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60609",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4640-4666 South Halsted Street, New City, Illinois, United States"
+    },
+    {
+      "lat": 41.80362796563131,
+      "lon": -87.65781041056185,
+      "geoinfo": {
+        "display_name": "1302, West 50th Street, Back of the Yards, New City, Chicago, Lake Township, Cook County, Illinois, 60632, United States",
+        "road": "West 50th Street",
+        "house_number": "1302",
+        "neighbourhood": null,
+        "suburb": "New City",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1302, West 50th Street, Back of the Yards, New City, Chicago, Lake Township, Cook County, Illinois, 60632, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:10.080994+00:00",
+  "_kind": "geo_samples"
+}

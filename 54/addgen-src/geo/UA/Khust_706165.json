@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Khust",
+  "geonameid": 706165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.14854913782548,
+      "lon": 23.330886746434178,
+      "geoinfo": {
+        "display_name": "Н-09, Khust Urban Hromada, Khust Raion, 90453, Ukraine",
+        "road": "Н-09",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "90453",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "Н-09, Khust, Ukraine"
+    },
+    {
+      "lat": 48.16620220456873,
+      "lon": 23.240508747836756,
+      "geoinfo": {
+        "display_name": "Kryva, Khust Urban Hromada, Khust Raion, 90412, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kryva",
+        "state": null,
+        "postcode": "90412",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "499, Kryva, Khust Urban Hromada, Khust Raion, 90412, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:53.821629+00:00",
+  "_kind": "geo_samples"
+}

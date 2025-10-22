@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Songjiang",
+  "geonameid": 1794035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.07500908957479,
+      "lon": 121.21948973028323,
+      "geoinfo": {
+        "display_name": "North Renmin Road, Dongjing, Songjiang District, 201602, China",
+        "road": "North Renmin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dongjing",
+        "city": "Songjiang District",
+        "state": null,
+        "postcode": "201602",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "North Renmin Road, Songjiang, China"
+    },
+    {
+      "lat": 31.008131096695084,
+      "lon": 121.25213344768005,
+      "geoinfo": {
+        "display_name": "环城路中山东路, Huancheng Road, Zhongshan, Songjiang District, 201611, China",
+        "road": "Huancheng Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zhongshan",
+        "city": "Songjiang District",
+        "state": null,
+        "postcode": "201611",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "058, Huancheng Road, 201611 Songjiang, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:50.014988+00:00",
+  "_kind": "geo_samples"
+}

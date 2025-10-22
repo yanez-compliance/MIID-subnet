@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pine Hills",
+  "geonameid": 4168459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.5628189960266,
+      "lon": -81.44422656966985,
+      "geoinfo": {
+        "display_name": "Pine Lake Road, Pine Hills, Orange County, Florida, 32808, United States",
+        "road": "Pine Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pine Hills",
+        "state": "Florida",
+        "postcode": "32808",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pine Lake Road, Pine Hills, Florida, United States"
+    },
+    {
+      "lat": 28.574682668129334,
+      "lon": -81.4193092518486,
+      "geoinfo": {
+        "display_name": "Walmart Supercenter, 3101, John Young Parkway, Princeton/Silver Star, Orlando, Orange County, Florida, 32808, United States",
+        "road": "John Young Parkway",
+        "house_number": "3101",
+        "neighbourhood": "Princeton/Silver Star",
+        "suburb": null,
+        "city_district": null,
+        "city": "Orlando",
+        "state": "Florida",
+        "postcode": "32808",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walmart Supercenter, 3101, John Young Parkway, Princeton/Silver Star, Orlando, Orange County, Florida, 32808, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:14.116664+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "South Yarra",
+  "geonameid": 2148876,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.8318934740704,
+      "lon": 144.98153082329003,
+      "geoinfo": {
+        "display_name": "Royal Botanic Gardens, Alexandra Avenue, Melbourne, City of Melbourne, Victoria, 3004, Australia",
+        "road": "Alexandra Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3004",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Alexandra Avenue, South Yarra, Victoria, Australia"
+    },
+    {
+      "lat": -37.82699014781056,
+      "lon": 144.94093851721564,
+      "geoinfo": {
+        "display_name": "155A, Boundary Street, Port Melbourne, Melbourne, City of Port Phillip, Victoria, 3205, Australia",
+        "road": "Boundary Street",
+        "house_number": "155A",
+        "neighbourhood": null,
+        "suburb": "Port Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3205",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "155A, Boundary Street, Port Melbourne, Melbourne, City of Port Phillip, Victoria, 3205, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:35.996499+00:00",
+  "_kind": "geo_samples"
+}

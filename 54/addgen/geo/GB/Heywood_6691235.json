@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Heywood",
+  "geonameid": 6691235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.582348944303696,
+      "lon": -2.159765132061453,
+      "geoinfo": {
+        "display_name": "A627(M), Trub, Castleton, Rochdale, Greater Manchester, England, M24 2SH, United Kingdom",
+        "road": "A627(M)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Trub",
+        "city_district": null,
+        "city": "Rochdale",
+        "state": "England",
+        "postcode": "M24 2SH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A627(M), Heywood, England, United Kingdom"
+    },
+    {
+      "lat": 53.563527080897174,
+      "lon": -2.2168675003252165,
+      "geoinfo": {
+        "display_name": "Rimington Fold, Langley, Middleton, Rochdale, Greater Manchester, England, M24 5JD, United Kingdom",
+        "road": "Rimington Fold",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Langley",
+        "city_district": null,
+        "city": "Middleton",
+        "state": "England",
+        "postcode": "M24 5JD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Rimington Fold, Langley, Middleton, Rochdale, Greater Manchester, England, M24 5JD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:47.930776+00:00",
+  "_kind": "geo_samples"
+}

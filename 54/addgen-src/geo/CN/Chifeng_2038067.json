@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chifeng",
+  "geonameid": 2038067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.30272236805613,
+      "lon": 118.98972877318013,
+      "geoinfo": {
+        "display_name": "西城街道办, Hongshan District, Chifeng City, Inner Mongolia, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "西城街道办",
+        "state": "Inner Mongolia",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Chifeng, Inner Mongolia, China"
+    },
+    {
+      "lat": 42.243314077450016,
+      "lon": 118.922099733651,
+      "geoinfo": {
+        "display_name": "Xinandicun, 西城街道办, Hongshan District, Chifeng City, Inner Mongolia, 024000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "西城街道办",
+        "state": "Inner Mongolia",
+        "postcode": "024000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "392, Xinandicun, 西城街道办, Hongshan District, Chifeng City, Inner Mongolia, 024000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:22.215756+00:00",
+  "_kind": "geo_samples"
+}

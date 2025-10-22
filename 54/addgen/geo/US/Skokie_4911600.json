@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Skokie",
+  "geonameid": 4911600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.03896812787677,
+      "lon": -87.73395926205704,
+      "geoinfo": {
+        "display_name": "12, Dempster Street, Skokie, Niles Township, Cook County, Illinois, 60076, United States",
+        "road": "Dempster Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Skokie",
+        "state": "Illinois",
+        "postcode": "60076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dempster Street, Skokie, Illinois, United States"
+    },
+    {
+      "lat": 42.03292186685337,
+      "lon": -87.72848778202402,
+      "geoinfo": {
+        "display_name": "CVS Pharmacy, 4001, Main Street, Skokie, Niles Township, Cook County, Illinois, 60076, United States",
+        "road": "Main Street",
+        "house_number": "4001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Skokie",
+        "state": "Illinois",
+        "postcode": "60076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CVS Pharmacy, 4001, Main Street, Skokie, Niles Township, Cook County, Illinois, 60076, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:30.076429+00:00",
+  "_kind": "geo_samples"
+}

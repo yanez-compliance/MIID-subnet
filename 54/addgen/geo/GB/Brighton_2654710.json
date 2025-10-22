@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Brighton",
+  "geonameid": 2654710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83930700417341,
+      "lon": -0.17693205320673377,
+      "geoinfo": {
+        "display_name": "Old Shoreham Road, Aldrington, Hove, Brighton and Hove, England, BN3 7BE, United Kingdom",
+        "road": "Old Shoreham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aldrington",
+        "city_district": null,
+        "city": "Hove",
+        "state": "England",
+        "postcode": "BN3 7BE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Old Shoreham Road, Brighton, England, United Kingdom"
+    },
+    {
+      "lat": 50.8163539576955,
+      "lon": -0.1241150283040579,
+      "geoinfo": {
+        "display_name": "Sea Lanes, 300, Madeira Drive, Kemptown, Brighton, Brighton and Hove, England, BN2 1BX, United Kingdom",
+        "road": "Madeira Drive",
+        "house_number": "300",
+        "neighbourhood": null,
+        "suburb": "Kemptown",
+        "city_district": null,
+        "city": "Brighton",
+        "state": "England",
+        "postcode": "BN2 1BX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sea Lanes, 300, Madeira Drive, Kemptown, Brighton, Brighton and Hove, England, BN2 1BX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:46.897986+00:00",
+  "_kind": "geo_samples"
+}

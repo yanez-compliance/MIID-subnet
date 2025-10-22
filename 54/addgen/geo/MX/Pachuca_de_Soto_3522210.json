@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Pachuca de Soto",
+  "geonameid": 3522210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.13638749299535,
+      "lon": -98.7044279462349,
+      "geoinfo": {
+        "display_name": "Camino Real, San Guillermo la Reforma, Mineral de la Reforma, Hidalgo, 42181, Mexico",
+        "road": "Camino Real",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Guillermo la Reforma",
+        "state": "Hidalgo",
+        "postcode": "42181",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino Real, Pachuca de Soto, Hidalgo, Mexico"
+    },
+    {
+      "lat": 20.118553479621873,
+      "lon": -98.69536705530282,
+      "geoinfo": {
+        "display_name": "San Guillermo la Reforma, Mineral de la Reforma, Hidalgo, 42181, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Guillermo la Reforma",
+        "state": "Hidalgo",
+        "postcode": "42181",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "520, San Guillermo la Reforma, Mineral de la Reforma, Hidalgo, 42181, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:23.737284+00:00",
+  "_kind": "geo_samples"
+}

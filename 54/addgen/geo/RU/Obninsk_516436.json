@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Obninsk",
+  "geonameid": 516436,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.12578326843037,
+      "lon": 36.54300944590198,
+      "geoinfo": {
+        "display_name": "26А, Луговая улица, Кривское, сельское поселение Деревня Кривское, Borovsky District, Kaluga Oblast, Central Federal District, 249007, Russia",
+        "road": "Луговая улица",
+        "house_number": "26А",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Кривское",
+        "state": "Kaluga Oblast",
+        "postcode": "249007",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "26А Луговая улица, Obninsk, Kaluga Oblast, Russia"
+    },
+    {
+      "lat": 55.12359025708468,
+      "lon": 36.56344143616512,
+      "geoinfo": {
+        "display_name": "проспект Ленина, Obninsk, Kaluga Oblast, Central Federal District, 249034, Russia",
+        "road": "проспект Ленина",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Obninsk",
+        "state": "Kaluga Oblast",
+        "postcode": "249034",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "287, проспект Ленина, Obninsk, Kaluga Oblast, Central Federal District, 249034, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:45:33.771289+00:00",
+  "_kind": "geo_samples"
+}

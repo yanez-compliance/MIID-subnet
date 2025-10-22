@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Balashov",
+  "geonameid": 579460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.52098234060597,
+      "lon": 43.12888438892954,
+      "geoinfo": {
+        "display_name": "Balashov, городское поселение Балашов, Balashovsky District, Saratov Oblast, Volga Federal District, 412316, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balashov",
+        "state": "Saratov Oblast",
+        "postcode": "412316",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Balashov, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 51.52119819517517,
+      "lon": 43.19573027941942,
+      "geoinfo": {
+        "display_name": "городское поселение Балашов, Balashovsky District, Saratov Oblast, Volga Federal District, 412305, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saratov Oblast",
+        "postcode": "412305",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "943, Balashov, 412305 Saratov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:51.742504+00:00",
+  "_kind": "geo_samples"
+}

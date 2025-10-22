@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Laboulaye",
+  "geonameid": 3852468,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.13436150918834,
+      "lon": -63.39026434547106,
+      "geoinfo": {
+        "display_name": "536, España, La Maitena, Laboulaye, Municipio de Laboulaye, Pedanía La Amarga, Departamento Presidente Roque Sáenz Peña, Córdoba Province, 6120, Argentina",
+        "road": "España",
+        "house_number": "536",
+        "neighbourhood": "La Maitena",
+        "suburb": null,
+        "city_district": "Laboulaye",
+        "city": "Municipio de Laboulaye",
+        "state": "Córdoba Province",
+        "postcode": "6120",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "536 España, Laboulaye, Córdoba Province, Argentina"
+    },
+    {
+      "lat": -34.084282769513585,
+      "lon": -63.40235366897563,
+      "geoinfo": {
+        "display_name": "Pedanía La Amarga, Departamento Presidente Roque Sáenz Peña, Córdoba, X6120, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Córdoba",
+        "postcode": "X6120",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "769, Laboulaye, X6120 Córdoba, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:30.253844+00:00",
+  "_kind": "geo_samples"
+}

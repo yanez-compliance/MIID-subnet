@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Tourcoing",
+  "geonameid": 2972284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.74070278651401,
+      "lon": 3.169094529113183,
+      "geoinfo": {
+        "display_name": "36, Rue de l'Ermitage, Le Pont de Neuville, Malcense Égalité, Tourcoing, Lille, Nord, Hauts-de-France, Metropolitan France, 59200, France",
+        "road": "Rue de l'Ermitage",
+        "house_number": "36",
+        "neighbourhood": "Le Pont de Neuville",
+        "suburb": "Malcense Égalité",
+        "city_district": null,
+        "city": "Tourcoing",
+        "state": "Hauts-de-France",
+        "postcode": "59200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "36 Rue de l'Ermitage, Tourcoing, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.73975775433486,
+      "lon": 3.128835409820323,
+      "geoinfo": {
+        "display_name": "22, Rue Paul Valery, Les Chats Huants, Roncq, Lille, Nord, Hauts-de-France, Metropolitan France, 59223, France",
+        "road": "Rue Paul Valery",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roncq",
+        "state": "Hauts-de-France",
+        "postcode": "59223",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "22, Rue Paul Valery, Les Chats Huants, Roncq, Lille, Nord, Hauts-de-France, Metropolitan France, 59223, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:17.100254+00:00",
+  "_kind": "geo_samples"
+}

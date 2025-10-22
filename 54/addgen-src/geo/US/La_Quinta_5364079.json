@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Quinta",
+  "geonameid": 5364079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.66739827093079,
+      "lon": -116.33780026895862,
+      "geoinfo": {
+        "display_name": "Riverside County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "La Quinta, California, United States"
+    },
+    {
+      "lat": 33.6387583598443,
+      "lon": -116.27242283967409,
+      "geoinfo": {
+        "display_name": "Jack Nicklaus Private Golf Course (PGA West), Northwood, PGA West, La Quinta, Riverside County, California, 92247, United States",
+        "road": "Northwood",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Quinta",
+        "state": "California",
+        "postcode": "92247",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "686, Northwood, La Quinta, 92247 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:45.467117+00:00",
+  "_kind": "geo_samples"
+}

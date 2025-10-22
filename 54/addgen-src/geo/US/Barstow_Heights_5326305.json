@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Barstow Heights",
+  "geonameid": 5326305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.85928613507248,
+      "lon": -117.0466564824814,
+      "geoinfo": {
+        "display_name": "I Street, San Bernardino County, California, 92311, United States",
+        "road": "I Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I Street, Barstow Heights, California, United States"
+    },
+    {
+      "lat": 34.87729481683983,
+      "lon": -117.10965289166073,
+      "geoinfo": {
+        "display_name": "25282, West Main Street, Barstow, San Bernardino County, California, 92311, United States",
+        "road": "West Main Street",
+        "house_number": "25282",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barstow",
+        "state": "California",
+        "postcode": "92311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "25282, West Main Street, Barstow, San Bernardino County, California, 92311, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:58.601243+00:00",
+  "_kind": "geo_samples"
+}

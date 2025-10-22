@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Sequeira",
+  "geonameid": 2734106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.55127550430808,
+      "lon": -7.173587079383552,
+      "geoinfo": {
+        "display_name": "Casal de Cinza, Guarda, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guarda",
+        "state": null,
+        "postcode": null,
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Sequeira, Portugal"
+    },
+    {
+      "lat": 40.591375432715836,
+      "lon": -7.200457902171406,
+      "geoinfo": {
+        "display_name": "Pêra do Moço, Guarda, 6300-160, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guarda",
+        "state": null,
+        "postcode": "6300-160",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Pêra do Moço, Guarda, 6300-160, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:39:24.898868+00:00",
+  "_kind": "geo_samples"
+}

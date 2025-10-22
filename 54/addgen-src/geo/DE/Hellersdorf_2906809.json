@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hellersdorf",
+  "geonameid": 2906809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.53669392191693,
+      "lon": 13.540857789367687,
+      "geoinfo": {
+        "display_name": "24, Martha-Arendsee-Straße, Springpfuhl, Marzahn, Marzahn-Hellersdorf, Berlin, 12681, Germany",
+        "road": "Martha-Arendsee-Straße",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Marzahn",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12681",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24 Martha-Arendsee-Straße, Hellersdorf, Germany"
+    },
+    {
+      "lat": 52.51876346435054,
+      "lon": 13.557533450977658,
+      "geoinfo": {
+        "display_name": "36, Weizenweg, Getreideviertel, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Germany",
+        "road": "Weizenweg",
+        "house_number": "36",
+        "neighbourhood": "Getreideviertel",
+        "suburb": "Biesdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "36, Weizenweg, Getreideviertel, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:10.734287+00:00",
+  "_kind": "geo_samples"
+}

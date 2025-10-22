@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Vimercate",
+  "geonameid": 3164083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.58848136444089,
+      "lon": 9.347520818339516,
+      "geoinfo": {
+        "display_name": "54, Via Quattro Novembre, Cascina Baragiola, Beretta, Concorezzo, Monza and Brianza, Lombardy, 20863, Italy",
+        "road": "Via Quattro Novembre",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concorezzo",
+        "state": "Lombardy",
+        "postcode": "20863",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "54 Via Quattro Novembre, Vimercate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.624009393922734,
+      "lon": 9.315165675130899,
+      "geoinfo": {
+        "display_name": "Via Giuseppe Parini, Cascina del Bruno, Arcore, Monza and Brianza, Lombardy, 20802, Italy",
+        "road": "Via Giuseppe Parini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcore",
+        "state": "Lombardy",
+        "postcode": "20802",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "141, Via Giuseppe Parini, Cascina del Bruno, Arcore, Monza and Brianza, Lombardy, 20802, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:05.382321+00:00",
+  "_kind": "geo_samples"
+}

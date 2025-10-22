@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University of Texas",
+  "geonameid": 4738604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.31379542764849,
+      "lon": -97.76662905622243,
+      "geoinfo": {
+        "display_name": "Austin, Travis County, Texas, 78756, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78756",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "University of Texas, Texas, United States"
+    },
+    {
+      "lat": 30.283932924756137,
+      "lon": -97.74022652509638,
+      "geoinfo": {
+        "display_name": "Homer Rainey Hall, 200, West 21st Street, The Drag, Austin, Travis County, Texas, 78705, United States",
+        "road": "West 21st Street",
+        "house_number": "200",
+        "neighbourhood": "The Drag",
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Homer Rainey Hall, 200, West 21st Street, The Drag, Austin, Travis County, Texas, 78705, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:23.483777+00:00",
+  "_kind": "geo_samples"
+}

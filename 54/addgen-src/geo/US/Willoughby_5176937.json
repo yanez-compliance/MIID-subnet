@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willoughby",
+  "geonameid": 5176937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.60372020763879,
+      "lon": -81.42834553261832,
+      "geoinfo": {
+        "display_name": "35740, Sherwood Lane, Willoughby Hills, Lake County, Ohio, 44094, United States",
+        "road": "Sherwood Lane",
+        "house_number": "35740",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Willoughby Hills",
+        "state": "Ohio",
+        "postcode": "44094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "35740 Sherwood Lane, Willoughby, Ohio, United States"
+    },
+    {
+      "lat": 41.620671715523414,
+      "lon": -81.35994108535773,
+      "geoinfo": {
+        "display_name": "Chillicothe Road, Kirtland, Lake County, Ohio, 44094, United States",
+        "road": "Chillicothe Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirtland",
+        "state": "Ohio",
+        "postcode": "44094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "918, Chillicothe Road, Kirtland, Lake County, Ohio, 44094, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:33.208938+00:00",
+  "_kind": "geo_samples"
+}

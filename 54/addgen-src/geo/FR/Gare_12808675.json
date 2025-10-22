@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gare",
+  "geonameid": 12808675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.813642166513965,
+      "lon": 2.3590170762716327,
+      "geoinfo": {
+        "display_name": "34, Rue du Général Leclerc, La Mairie - Salengro, Le Kremlin-Bicêtre, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94270, France",
+        "road": "Rue du Général Leclerc",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": "La Mairie - Salengro",
+        "city_district": null,
+        "city": "Le Kremlin-Bicêtre",
+        "state": "Ile-de-France",
+        "postcode": "94270",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "34 Rue du Général Leclerc, Gare, Ile-de-France, France"
+    },
+    {
+      "lat": 48.872774613781814,
+      "lon": 2.3613816731221555,
+      "geoinfo": {
+        "display_name": "30, Rue Lucien Sampaix, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Metropolitan France, 75010, France",
+        "road": "Rue Lucien Sampaix",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "10th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75010",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "30, Rue Lucien Sampaix, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Metropolitan France, 75010, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:35.357491+00:00",
+  "_kind": "geo_samples"
+}

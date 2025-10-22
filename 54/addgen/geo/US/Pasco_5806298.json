@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pasco",
+  "geonameid": 5806298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.25790165651653,
+      "lon": -119.09433906681743,
+      "geoinfo": {
+        "display_name": "North Railroad Avenue, Pasco, Franklin County, Washington, 99301, United States",
+        "road": "North Railroad Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pasco",
+        "state": "Washington",
+        "postcode": "99301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Railroad Avenue, Pasco, Washington, United States"
+    },
+    {
+      "lat": 46.23079036055166,
+      "lon": -119.05343169153677,
+      "geoinfo": {
+        "display_name": "3373, Semilla Court, Pasco, Franklin County, Washington, 99301, United States",
+        "road": "Semilla Court",
+        "house_number": "3373",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pasco",
+        "state": "Washington",
+        "postcode": "99301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3373, Semilla Court, Pasco, Franklin County, Washington, 99301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:08.342777+00:00",
+  "_kind": "geo_samples"
+}

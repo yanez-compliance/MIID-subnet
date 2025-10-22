@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Republic",
+  "geonameid": 4405434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.14188346945929,
+      "lon": -93.4567325089293,
+      "geoinfo": {
+        "display_name": "South Farm Road 93, Greene County, Missouri, 65738, United States",
+        "road": "South Farm Road 93",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": "65738",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Farm Road 93, Republic, Missouri, United States"
+    },
+    {
+      "lat": 37.12959506012202,
+      "lon": -93.45855627906928,
+      "geoinfo": {
+        "display_name": "Walmart Supercenter, 1150, North Liberty Avenue, Republic, Greene County, Missouri, 65738, United States",
+        "road": "North Liberty Avenue",
+        "house_number": "1150",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Republic",
+        "state": "Missouri",
+        "postcode": "65738",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walmart Supercenter, 1150, North Liberty Avenue, Republic, Greene County, Missouri, 65738, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:53.186646+00:00",
+  "_kind": "geo_samples"
+}

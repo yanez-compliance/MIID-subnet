@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Darmstadt",
+  "geonameid": 2938913,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.901406540970534,
+      "lon": 8.602342825249918,
+      "geoinfo": {
+        "display_name": "Freiwillige Feuerwehr Weiterstadt, 17, Rudolf-Diesel-Straße, Riedbahn, Weiterstadt, Landkreis Darmstadt-Dieburg, Hesse, 64331, Germany",
+        "road": "Rudolf-Diesel-Straße",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Riedbahn",
+        "city_district": null,
+        "city": null,
+        "state": "Hesse",
+        "postcode": "64331",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17 Rudolf-Diesel-Straße, Darmstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.862125168811836,
+      "lon": 8.647243811346117,
+      "geoinfo": {
+        "display_name": "42, Heidelberger Straße, Bessungen, Darmstadt, Hesse, 64285, Germany",
+        "road": "Heidelberger Straße",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "Bessungen",
+        "city_district": null,
+        "city": "Darmstadt",
+        "state": "Hesse",
+        "postcode": "64285",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "42, Heidelberger Straße, Bessungen, Darmstadt, Hesse, 64285, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:08.323578+00:00",
+  "_kind": "geo_samples"
+}

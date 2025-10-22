@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sant Antoni de Portmany",
+  "geonameid": 2511448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.00753302196214,
+      "lon": 1.2917241176672896,
+      "geoinfo": {
+        "display_name": "Carrer 2 de Punta Galera, Can Germà, Sant Antoni de Portmany, Ibiza, Balearic Islands, 07820, Spain",
+        "road": "Carrer 2 de Punta Galera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Antoni de Portmany",
+        "state": "Balearic Islands",
+        "postcode": "07820",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer 2 de Punta Galera, Sant Antoni de Portmany, Balearic Islands, Spain"
+    },
+    {
+      "lat": 38.979000429010725,
+      "lon": 1.2768859341183756,
+      "geoinfo": {
+        "display_name": "Tanca des Correuer, Vista Mar, Sant Josep de sa Talaia, Ibiza, Balearic Islands, 07829, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Vista Mar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Josep de sa Talaia",
+        "state": "Balearic Islands",
+        "postcode": "07829",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "257, Tanca des Correuer, Vista Mar, Sant Josep de sa Talaia, Ibiza, Balearic Islands, 07829, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:45.435948+00:00",
+  "_kind": "geo_samples"
+}

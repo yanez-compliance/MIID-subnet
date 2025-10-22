@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sayreville",
+  "geonameid": 5104404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.481858968105115,
+      "lon": -74.3644587789505,
+      "geoinfo": {
+        "display_name": "Edison, Middlesex County, New Jersey, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edison",
+        "state": "New Jersey",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sayreville, New Jersey, United States"
+    },
+    {
+      "lat": 40.43937717117039,
+      "lon": -74.33747233136586,
+      "geoinfo": {
+        "display_name": "Capik Scout Camp, Bordentown Avenue, Sayreville Water & Sewer Utilities, Sayreville, Middlesex County, New Jersey, 08872, United States",
+        "road": "Bordentown Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sayreville",
+        "state": "New Jersey",
+        "postcode": "08872",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "481, Bordentown Avenue, Sayreville, 08872 New Jersey, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:36.332493+00:00",
+  "_kind": "geo_samples"
+}

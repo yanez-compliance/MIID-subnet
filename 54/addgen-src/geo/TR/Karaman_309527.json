@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Karaman",
+  "geonameid": 309527,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.196943141460615,
+      "lon": 33.212644929110645,
+      "geoinfo": {
+        "display_name": "Sümer, Karaman, Central Anatolia Region, 70100, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sümer",
+        "city_district": null,
+        "city": "Karaman",
+        "state": null,
+        "postcode": "70100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Sümer, Karaman, Turkey"
+    },
+    {
+      "lat": 37.14944312756308,
+      "lon": 33.25414188518269,
+      "geoinfo": {
+        "display_name": "Yunus, Elmaşehir, Karaman, Central Anatolia Region, 70100, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Yunus",
+        "suburb": "Elmaşehir",
+        "city_district": null,
+        "city": "Karaman",
+        "state": null,
+        "postcode": "70100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "368, Yunus, Elmaşehir, Karaman, Central Anatolia Region, 70100, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T10:27:38.674760+00:00",
+  "_kind": "geo_samples"
+}

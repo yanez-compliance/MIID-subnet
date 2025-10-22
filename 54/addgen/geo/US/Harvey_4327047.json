@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harvey",
+  "geonameid": 4327047,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.868624907590924,
+      "lon": -90.05636394774955,
+      "geoinfo": {
+        "display_name": "2244, Colombo Drive, Harvey, Jefferson Parish, Louisiana, 70058, United States",
+        "road": "Colombo Drive",
+        "house_number": "2244",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harvey",
+        "state": "Louisiana",
+        "postcode": "70058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2244 Colombo Drive, Harvey, Louisiana, United States"
+    },
+    {
+      "lat": 29.89697712676576,
+      "lon": -90.03311466283965,
+      "geoinfo": {
+        "display_name": "809, Holt Place, Terrytown, Jefferson Parish, Louisiana, 70056, United States",
+        "road": "Holt Place",
+        "house_number": "809",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terrytown",
+        "state": "Louisiana",
+        "postcode": "70056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "809, Holt Place, Terrytown, Jefferson Parish, Louisiana, 70056, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:49.956453+00:00",
+  "_kind": "geo_samples"
+}

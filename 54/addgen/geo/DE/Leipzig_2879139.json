@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leipzig",
+  "geonameid": 2879139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.34212684199474,
+      "lon": 12.388479212586605,
+      "geoinfo": {
+        "display_name": "Czermaks Garten, Centre East, Mitte, Leipzig, Saxony, 04103, Germany",
+        "road": "Czermaks Garten",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centre East",
+        "city_district": "Mitte",
+        "city": "Leipzig",
+        "state": "Saxony",
+        "postcode": "04103",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Czermaks Garten, Leipzig, Saxony, Germany"
+    },
+    {
+      "lat": 51.30357890993399,
+      "lon": 12.383146171995262,
+      "geoinfo": {
+        "display_name": "63, Bornaische Straße, Connewitz, Süd, Leipzig, Saxony, 04277, Germany",
+        "road": "Bornaische Straße",
+        "house_number": "63",
+        "neighbourhood": null,
+        "suburb": "Connewitz",
+        "city_district": "Süd",
+        "city": "Leipzig",
+        "state": "Saxony",
+        "postcode": "04277",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "63, Bornaische Straße, Connewitz, Süd, Leipzig, Saxony, 04277, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:12.239154+00:00",
+  "_kind": "geo_samples"
+}

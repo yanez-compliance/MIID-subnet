@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Moratalaz",
+  "geonameid": 3116156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.39414668409413,
+      "lon": -3.6314285357547123,
+      "geoinfo": {
+        "display_name": "Anillo Verde Ciclista, Pavones, Moratalaz, Madrid, Community of Madrid, 28032, Spain",
+        "road": "Anillo Verde Ciclista",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moratalaz",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28032",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Anillo Verde Ciclista, Moratalaz, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40988120389205,
+      "lon": -3.6971042749605645,
+      "geoinfo": {
+        "display_name": "Fundación de los Ferrocarriles Españoles, 44, Calle de Santa Isabel, Lavapiés, Embajadores, Centro, Madrid, Community of Madrid, 28012, Spain",
+        "road": "Calle de Santa Isabel",
+        "house_number": "44",
+        "neighbourhood": "Lavapiés",
+        "suburb": null,
+        "city_district": "Centro",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Fundación de los Ferrocarriles Españoles, 44, Calle de Santa Isabel, Lavapiés, Embajadores, Centro, Madrid, Community of Madrid, 28012, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:56.433840+00:00",
+  "_kind": "geo_samples"
+}

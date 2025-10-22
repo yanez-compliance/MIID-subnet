@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellevue",
+  "geonameid": 5063805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.158047701146124,
+      "lon": -95.94257128620185,
+      "geoinfo": {
+        "display_name": "10354, South 21st Street, Cornhusker Center, Bellevue, Sarpy County, Nebraska, 68123, United States",
+        "road": "South 21st Street",
+        "house_number": "10354",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellevue",
+        "state": "Nebraska",
+        "postcode": "68123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10354 South 21st Street, Bellevue, Nebraska, United States"
+    },
+    {
+      "lat": 41.165955897549836,
+      "lon": -95.8804928928138,
+      "geoinfo": {
+        "display_name": "Hidden Lake Trail, Highland II Precinct, Sarpy County, Nebraska, 68005, United States",
+        "road": "Hidden Lake Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nebraska",
+        "postcode": "68005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "775, Hidden Lake Trail, Highland II Precinct, Sarpy County, Nebraska, 68005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:22.262322+00:00",
+  "_kind": "geo_samples"
+}

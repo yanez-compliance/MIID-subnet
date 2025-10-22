@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zibo",
+  "geonameid": 1785286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.81261788062047,
+      "lon": 118.05673590983416,
+      "geoinfo": {
+        "display_name": "市工商银行, 金晶大道, 体育场街道, Zhangdian District, Zibo, Shandong, 255000, China",
+        "road": "金晶大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "体育场街道",
+        "city_district": null,
+        "city": "Zhangdian District",
+        "state": "Shandong",
+        "postcode": "255000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "金晶大道, Zibo, Shandong, China"
+    },
+    {
+      "lat": 36.774780077833505,
+      "lon": 118.06332616412544,
+      "geoinfo": {
+        "display_name": "朝阳路, Zhangdian District, Zibo, Shandong, China",
+        "road": "朝阳路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhangdian District",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "700, 朝阳路, Zhangdian District, Zibo, 42984 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:08.664697+00:00",
+  "_kind": "geo_samples"
+}

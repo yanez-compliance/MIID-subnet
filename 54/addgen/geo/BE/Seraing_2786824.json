@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Seraing",
+  "geonameid": 2786824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.59768193563178,
+      "lon": 5.446896120606063,
+      "geoinfo": {
+        "display_name": "Les Prairies, Flémalle-Haute, Flémalle, Liège, Wallonia, 4400, Belgium",
+        "road": "Les Prairies",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Flémalle",
+        "state": "Liège",
+        "postcode": "4400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Les Prairies, Seraing, Liège, Belgium"
+    },
+    {
+      "lat": 50.603886174544144,
+      "lon": 5.542002480912745,
+      "geoinfo": {
+        "display_name": "1, Place des Hauts-Fourneaux, Ougrée-Bas, Ougrée, Seraing, Liège, Wallonia, 4102, Belgium",
+        "road": "Place des Hauts-Fourneaux",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ougrée",
+        "city": "Seraing",
+        "state": "Liège",
+        "postcode": "4102",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1, Place des Hauts-Fourneaux, Ougrée-Bas, Ougrée, Seraing, Liège, Wallonia, 4102, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:44.595166+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Noisy-le-Sec",
+  "geonameid": 2990187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92861120569417,
+      "lon": 2.435122051535606,
+      "geoinfo": {
+        "display_name": "39, Avenue Marceau, Paris Campagne, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France",
+        "road": "Avenue Marceau",
+        "house_number": "39",
+        "neighbourhood": "Paris Campagne",
+        "suburb": null,
+        "city_district": null,
+        "city": "Drancy",
+        "state": null,
+        "postcode": "93700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "39 Avenue Marceau, Noisy-le-Sec, Ile-de-France, France"
+    },
+    {
+      "lat": 48.876676638232766,
+      "lon": 2.4923762365354505,
+      "geoinfo": {
+        "display_name": "92, Sentier de la Fontaine au Boucher, Bois Perrier, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France",
+        "road": "Sentier de la Fontaine au Boucher",
+        "house_number": "92",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosny-sous-Bois",
+        "state": null,
+        "postcode": "93110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "92, Sentier de la Fontaine au Boucher, Bois Perrier, Rosny-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93110, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:35.175792+00:00",
+  "_kind": "geo_samples"
+}

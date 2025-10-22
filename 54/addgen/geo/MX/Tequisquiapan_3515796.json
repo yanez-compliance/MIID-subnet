@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tequisquiapan",
+  "geonameid": 3515796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.48264407283688,
+      "lon": -99.90746559056467,
+      "geoinfo": {
+        "display_name": "Tequisquiapan, Querétaro, 76776, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Querétaro",
+        "postcode": "76776",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tequisquiapan, Querétaro, Mexico"
+    },
+    {
+      "lat": 20.554824958693303,
+      "lon": -99.89721110331402,
+      "geoinfo": {
+        "display_name": "Tequisquiapan, Querétaro, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Querétaro",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "264, Tequisquiapan, 25528 Querétaro, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:42.850669+00:00",
+  "_kind": "geo_samples"
+}

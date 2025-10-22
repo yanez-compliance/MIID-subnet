@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Porta Westfalica",
+  "geonameid": 2852577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.20897379209277,
+      "lon": 8.85237618730174,
+      "geoinfo": {
+        "display_name": "A 2, Rehme, Bad Oeynhausen, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32547, Germany",
+        "road": "A 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rehme",
+        "city_district": null,
+        "city": "Bad Oeynhausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32547",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 2, Porta Westfalica, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.22627323840448,
+      "lon": 8.86909391252297,
+      "geoinfo": {
+        "display_name": "5a, Gutsstraße, Costedt, Porta Westfalica, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32457, Germany",
+        "road": "Gutsstraße",
+        "house_number": "5a",
+        "neighbourhood": null,
+        "suburb": "Costedt",
+        "city_district": null,
+        "city": "Porta Westfalica",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32457",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5a, Gutsstraße, Costedt, Porta Westfalica, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32457, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:47.605782+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Duncan",
+  "geonameid": 4535389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.53822003606704,
+      "lon": -97.9823373998321,
+      "geoinfo": {
+        "display_name": "Plato Road, Duncan, Stephens County, Oklahoma, 73533, United States",
+        "road": "Plato Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Duncan",
+        "state": "Oklahoma",
+        "postcode": "73533",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Plato Road, Duncan, Oklahoma, United States"
+    },
+    {
+      "lat": 34.48565269529946,
+      "lon": -97.92558802827172,
+      "geoinfo": {
+        "display_name": "Oklahoma Hills, Stephens County, Oklahoma, 73533, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": "73533",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "545, Oklahoma Hills, Stephens County, Oklahoma, 73533, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:56.901601+00:00",
+  "_kind": "geo_samples"
+}

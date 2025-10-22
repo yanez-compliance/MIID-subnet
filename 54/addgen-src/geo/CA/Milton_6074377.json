@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Milton",
+  "geonameid": 6074377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.48755593251475,
+      "lon": -79.92233371599248,
+      "geoinfo": {
+        "display_name": "Steeles Avenue West, Milton, Halton Region, Golden Horseshoe, Ontario, L9T 9M1, Canada",
+        "road": "Steeles Avenue West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Milton",
+        "state": "Ontario",
+        "postcode": "L9T 9M1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Steeles Avenue West, Milton, Ontario, Canada"
+    },
+    {
+      "lat": 43.51440152247222,
+      "lon": -79.91719689901451,
+      "geoinfo": {
+        "display_name": "Milton, Halton Region, Golden Horseshoe, Ontario, L5T 3H5, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Milton",
+        "state": "Ontario",
+        "postcode": "L5T 3H5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Milton, Halton Region, Golden Horseshoe, Ontario, L5T 3H5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:10.617758+00:00",
+  "_kind": "geo_samples"
+}

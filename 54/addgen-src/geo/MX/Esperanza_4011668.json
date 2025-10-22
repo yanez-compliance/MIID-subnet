@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Esperanza",
+  "geonameid": 4011668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.613122997221158,
+      "lon": -109.89667492951635,
+      "geoinfo": {
+        "display_name": "Cajeme, Sonora, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sonora",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Esperanza, Sonora, Mexico"
+    },
+    {
+      "lat": 27.572378163881652,
+      "lon": -109.9264867436087,
+      "geoinfo": {
+        "display_name": "Esperanza, Cajeme, Sonora, 85065, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Esperanza",
+        "state": "Sonora",
+        "postcode": "85065",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "207, Esperanza, Cajeme, Sonora, 85065, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:38.092853+00:00",
+  "_kind": "geo_samples"
+}

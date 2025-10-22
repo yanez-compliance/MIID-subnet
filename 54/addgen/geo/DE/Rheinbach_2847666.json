@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rheinbach",
+  "geonameid": 2847666,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.60045463633955,
+      "lon": 7.001247540963316,
+      "geoinfo": {
+        "display_name": "Rheinbacher Straße, Ersdorf, Meckenheim, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53340, Germany",
+        "road": "Rheinbacher Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ersdorf",
+        "city": "Meckenheim",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53340",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rheinbacher Straße, Rheinbach, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.619069608238036,
+      "lon": 6.930987985725505,
+      "geoinfo": {
+        "display_name": "Tomburg-Kaserne, Münstereifeler Straße, Rheinbach, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53359, Germany",
+        "road": "Münstereifeler Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rheinbach",
+        "city": "Rheinbach",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53359",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "856, Münstereifeler Straße, Rheinbach, 53359 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:23.707777+00:00",
+  "_kind": "geo_samples"
+}

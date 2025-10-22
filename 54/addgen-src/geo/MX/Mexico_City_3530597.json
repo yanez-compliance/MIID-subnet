@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Mexico City",
+  "geonameid": 3530597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.42797547166186,
+      "lon": -99.16593528089149,
+      "geoinfo": {
+        "display_name": "Avenida Paseo de la Reforma, Cuauhtémoc, Mexico City, Cuauhtémoc, Mexico City, 06500, Mexico",
+        "road": "Avenida Paseo de la Reforma",
+        "house_number": null,
+        "neighbourhood": "Cuauhtémoc",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "06500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Paseo de la Reforma, Mexico City, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.441966999829592,
+      "lon": -99.0977674720367,
+      "geoinfo": {
+        "display_name": "Avenida Asia, Romero Rubio, Mexico City, Venustiano Carranza, Mexico City, 15400, Mexico",
+        "road": "Avenida Asia",
+        "house_number": null,
+        "neighbourhood": "Romero Rubio",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "15400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "037, Avenida Asia, Romero Rubio, Mexico City, Venustiano Carranza, Mexico City, 15400, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:43.536466+00:00",
+  "_kind": "geo_samples"
+}

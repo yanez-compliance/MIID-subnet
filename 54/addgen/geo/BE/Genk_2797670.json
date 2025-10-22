@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Genk",
+  "geonameid": 2797670,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.961241176329544,
+      "lon": 5.57161773288311,
+      "geoinfo": {
+        "display_name": "Zutendaal, Hasselt, Limburg, 3690, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zutendaal",
+        "state": "Limburg",
+        "postcode": "3690",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Genk, Limburg, Belgium"
+    },
+    {
+      "lat": 50.985663616079904,
+      "lon": 5.544182808231555,
+      "geoinfo": {
+        "display_name": "38, Hornsbergstraat, Genk, Hasselt, Limburg, 3600, Belgium",
+        "road": "Hornsbergstraat",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Genk",
+        "state": "Limburg",
+        "postcode": "3600",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "38, Hornsbergstraat, Genk, Hasselt, Limburg, 3600, Belgium"
+    },
+    {
+      "lat": 50.963279146813136,
+      "lon": 5.477044171924041,
+      "geoinfo": {
+        "display_name": "58, Albrecht Rodenbachlaan, Nieuw-Termien, Winterslag, Genk, Hasselt, Limburg, 3600, Belgium",
+        "road": "Albrecht Rodenbachlaan",
+        "house_number": "58",
+        "neighbourhood": "Nieuw-Termien",
+        "suburb": null,
+        "city_district": null,
+        "city": "Winterslag",
+        "state": "Limburg",
+        "postcode": "3600",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "58, Albrecht Rodenbachlaan, Nieuw-Termien, Winterslag, Genk, Hasselt, Limburg, 3600, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:35.896106+00:00",
+  "_kind": "geo_samples"
+}

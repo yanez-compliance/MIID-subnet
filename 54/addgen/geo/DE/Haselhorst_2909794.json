@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Haselhorst",
+  "geonameid": 2909794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.54187378694811,
+      "lon": 13.223441854775038,
+      "geoinfo": {
+        "display_name": "BMW Werk 03.10 Berlin Motorrad, 14-38, Am Juliusturm, Haselhorst, Spandau, Berlin, 13599, Germany",
+        "road": "Am Juliusturm",
+        "house_number": "14-38",
+        "neighbourhood": null,
+        "suburb": "Haselhorst",
+        "city_district": "Spandau",
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13599",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14-38 Am Juliusturm, Haselhorst, Germany"
+    },
+    {
+      "lat": 52.50711522410595,
+      "lon": 13.252318106713835,
+      "geoinfo": {
+        "display_name": "17A, Lyckallee, Siedlung Heerstraße, Westend, Charlottenburg-Wilmersdorf, Berlin, 14055, Germany",
+        "road": "Lyckallee",
+        "house_number": "17A",
+        "neighbourhood": "Siedlung Heerstraße",
+        "suburb": "Westend",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14055",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17A, Lyckallee, Siedlung Heerstraße, Westend, Charlottenburg-Wilmersdorf, Berlin, 14055, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:18.285797+00:00",
+  "_kind": "geo_samples"
+}

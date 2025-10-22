@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Borough Park",
+  "geonameid": 5109790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.66073662789987,
+      "lon": -74.02358677079444,
+      "geoinfo": {
+        "display_name": "Brooklyn, Kings County, New York, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brooklyn, Borough Park, New York, United States"
+    },
+    {
+      "lat": 40.61923741106045,
+      "lon": -74.01862031201047,
+      "geoinfo": {
+        "display_name": "1015, 84th Street, Dyker Heights, Brooklyn, Kings County, New York, 11228, United States",
+        "road": "84th Street",
+        "house_number": "1015",
+        "neighbourhood": "Dyker Heights",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1015, 84th Street, Dyker Heights, Brooklyn, Kings County, New York, 11228, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:25.503037+00:00",
+  "_kind": "geo_samples"
+}

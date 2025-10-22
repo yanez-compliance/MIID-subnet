@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Gulfport",
+  "geonameid": 4450687,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.430209377751382,
+      "lon": -89.10011452361502,
+      "geoinfo": {
+        "display_name": "I 10, Gulfport, Harrison County, Mississippi, 39503, United States",
+        "road": "I 10",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulfport",
+        "state": "Mississippi",
+        "postcode": "39503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 10, West Gulfport, Mississippi, United States"
+    },
+    {
+      "lat": 30.37513855387025,
+      "lon": -89.10555631109477,
+      "geoinfo": {
+        "display_name": "3605, 21st Street, Gulfport, Harrison County, Mississippi, 39501, United States",
+        "road": "21st Street",
+        "house_number": "3605",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulfport",
+        "state": "Mississippi",
+        "postcode": "39501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3605, 21st Street, Gulfport, Harrison County, Mississippi, 39501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:48:14.128308+00:00",
+  "_kind": "geo_samples"
+}

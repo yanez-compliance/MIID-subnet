@@ -1,0 +1,65 @@
+{
+  "country_code": "CR",
+  "country": "Costa Rica",
+  "city": "San Francisco",
+  "geonameid": 3621911,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 9.957766176753498,
+      "lon": -84.14610741651742,
+      "geoinfo": {
+        "display_name": "Calle 148A, Precario La Carpio, Ciudad de San José, San José, San Jose Province, 10107, Costa Rica",
+        "road": "Calle 148A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad de San José",
+        "state": null,
+        "postcode": "10107",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle 148A, San Francisco, Costa Rica"
+    },
+    {
+      "lat": 9.98943056398664,
+      "lon": -84.09897774260737,
+      "geoinfo": {
+        "display_name": "Súper La Amistad, Calle Real, Las Pilas, Rincón de Sabanilla, San Pablo, Heredia Province, 40901, Costa Rica",
+        "road": "Calle Real",
+        "house_number": null,
+        "neighbourhood": "Las Pilas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rincón de Sabanilla",
+        "state": null,
+        "postcode": "40901",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle Real, San Francisco, Costa Rica"
+    },
+    {
+      "lat": 10.023756601843981,
+      "lon": -84.12093164557048,
+      "geoinfo": {
+        "display_name": "Avenida A, Urb. La Gruta, Barva, Heredia Province, 40201, Costa Rica",
+        "road": "Avenida A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barva",
+        "state": null,
+        "postcode": "40201",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Avenida A, San Francisco, Costa Rica"
+    }
+  ],
+  "updated_at": "2025-10-16T12:41:51.269934+00:00",
+  "_kind": "geo_samples"
+}

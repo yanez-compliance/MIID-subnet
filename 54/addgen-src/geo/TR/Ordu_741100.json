@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Ordu",
+  "geonameid": 741100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.940527820466535,
+      "lon": 37.862622549438065,
+      "geoinfo": {
+        "display_name": "Yemişli Mahallesi, Altınordu, Ordu, Black Sea Region, 52210, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yemişli Mahallesi",
+        "city": "Altınordu",
+        "state": null,
+        "postcode": "52210",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Yemişli Mahallesi, Ordu, Turkey"
+    },
+    {
+      "lat": 41.001313502139254,
+      "lon": 37.871307244681574,
+      "geoinfo": {
+        "display_name": "Atatürk Bulvar, Kirazlimanı Mahallesi, Ordu, Altınordu, Ordu, Black Sea Region, 52100, Turkey",
+        "road": "Atatürk Bulvar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kirazlimanı Mahallesi",
+        "city_district": null,
+        "city": "Ordu",
+        "state": null,
+        "postcode": "52100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "595, Atatürk Bulvar, Kirazlimanı Mahallesi, Ordu, Altınordu, Ordu, Black Sea Region, 52100, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:00.877234+00:00",
+  "_kind": "geo_samples"
+}

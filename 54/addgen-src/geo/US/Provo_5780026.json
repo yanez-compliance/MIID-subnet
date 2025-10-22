@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Provo",
+  "geonameid": 5780026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.19365101115689,
+      "lon": -111.67614041969148,
+      "geoinfo": {
+        "display_name": "Utah County, Utah, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Provo, Utah, United States"
+    },
+    {
+      "lat": 40.19489370940634,
+      "lon": -111.64455850871943,
+      "geoinfo": {
+        "display_name": "KFTN-AM (Provo), Veterans Memorial Highway, Utah County, Utah, 84606, United States",
+        "road": "Veterans Memorial Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": "84606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "844, Veterans Memorial Highway, Provo, 84606 Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:55.184113+00:00",
+  "_kind": "geo_samples"
+}

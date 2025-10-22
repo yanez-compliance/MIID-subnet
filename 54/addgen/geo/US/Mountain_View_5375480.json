@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mountain View",
+  "geonameid": 5375480,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.390836896356774,
+      "lon": -122.05338995854565,
+      "geoinfo": {
+        "display_name": "Ferguson Drive, Whisman Station, Mountain View, Santa Clara County, California, 94807, United States",
+        "road": "Ferguson Drive",
+        "house_number": null,
+        "neighbourhood": "Whisman Station",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mountain View",
+        "state": "California",
+        "postcode": "94807",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ferguson Drive, Mountain View, California, United States"
+    },
+    {
+      "lat": 37.3904394819903,
+      "lon": -122.0718142613966,
+      "geoinfo": {
+        "display_name": "Visitor's Parking, Calderon Avenue, Mountain View, Santa Clara County, California, 94041, United States",
+        "road": "Calderon Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mountain View",
+        "state": "California",
+        "postcode": "94041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "473, Calderon Avenue, Mountain View, 94041 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:10.260561+00:00",
+  "_kind": "geo_samples"
+}

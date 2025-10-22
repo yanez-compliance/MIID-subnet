@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Montreuil",
+  "geonameid": 2992090,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.85710009611842,
+      "lon": 2.4458212710220044,
+      "geoinfo": {
+        "display_name": "33, Rue Rapatel, Jean-Moulin - Beaumonts, Montreuil, Bobigny, Seine-Saint-Denis, Metropolitan France, 93100, France",
+        "road": "Rue Rapatel",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "Jean-Moulin - Beaumonts",
+        "city_district": null,
+        "city": "Montreuil",
+        "state": null,
+        "postcode": "93100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "33 Rue Rapatel, Montreuil, France"
+    },
+    {
+      "lat": 48.89649245391157,
+      "lon": 2.452803001042992,
+      "geoinfo": {
+        "display_name": "Rue Saint-Denis, Léo Lagrange, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93130, France",
+        "road": "Rue Saint-Denis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Léo Lagrange",
+        "city_district": null,
+        "city": "Noisy-le-Sec",
+        "state": "Ile-de-France",
+        "postcode": "93130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "059, Rue Saint-Denis, Léo Lagrange, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:57.639986+00:00",
+  "_kind": "geo_samples"
+}

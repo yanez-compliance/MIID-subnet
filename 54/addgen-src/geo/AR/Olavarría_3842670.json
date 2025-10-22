@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Olavarría",
+  "geonameid": 3842670,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -36.91472316924262,
+      "lon": -60.277136970595386,
+      "geoinfo": {
+        "display_name": "Avenida Sarmiento, Olavarría, Partido de Olavarría, Buenos Aires, 7400, Argentina",
+        "road": "Avenida Sarmiento",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olavarría",
+        "state": "Buenos Aires",
+        "postcode": "7400",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida Sarmiento, Olavarría, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -36.872053100680375,
+      "lon": -60.29744858161859,
+      "geoinfo": {
+        "display_name": "Perito Francisco Moreno, Matadero, Olavarría, Partido de Olavarría, Buenos Aires, 7450, Argentina",
+        "road": "Perito Francisco Moreno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Matadero",
+        "city_district": null,
+        "city": "Olavarría",
+        "state": "Buenos Aires",
+        "postcode": "7450",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "561, Perito Francisco Moreno, Matadero, Olavarría, Partido de Olavarría, Buenos Aires, 7450, Argentina"
+    },
+    {
+      "lat": -36.927972943584734,
+      "lon": -60.29008304589946,
+      "geoinfo": {
+        "display_name": "7400, Autopista Luciano Fortabat, Villa Aurora, Olavarría, Partido de Olavarría, Buenos Aires, 7400, Argentina",
+        "road": "Autopista Luciano Fortabat",
+        "house_number": "7400",
+        "neighbourhood": "Villa Aurora",
+        "suburb": "Villa Aurora",
+        "city_district": null,
+        "city": "Olavarría",
+        "state": "Buenos Aires",
+        "postcode": "7400",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "7400, Autopista Luciano Fortabat, Villa Aurora, Olavarría, Partido de Olavarría, Buenos Aires, 7400, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:14.564712+00:00",
+  "_kind": "geo_samples"
+}

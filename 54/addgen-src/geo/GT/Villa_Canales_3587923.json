@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Villa Canales",
+  "geonameid": 3587923,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.526620681503086,
+      "lon": -90.52776714718746,
+      "geoinfo": {
+        "display_name": "Villa Canales, Zona 6, Guatemala Department, 01066, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Canales",
+        "state": "Guatemala Department",
+        "postcode": "01066",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Villa Canales, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.487151250084887,
+      "lon": -90.49175081109537,
+      "geoinfo": {
+        "display_name": "Vía Alterna del Sur, El Durazno, Villa Canales, Zona 5, Guatemala Department, Guatemala",
+        "road": "Vía Alterna del Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Canales",
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "320, Vía Alterna del Sur, El Durazno, Villa Canales, Zona 5, Guatemala Department, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:27.003036+00:00",
+  "_kind": "geo_samples"
+}

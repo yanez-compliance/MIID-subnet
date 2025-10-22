@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pawtucket",
+  "geonameid": 5223869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.88493807525279,
+      "lon": -71.3730083611043,
+      "geoinfo": {
+        "display_name": "41, Prince Street, Darlington, Pawtucket, Providence County, Rhode Island, 02860, United States",
+        "road": "Prince Street",
+        "house_number": "41",
+        "neighbourhood": "Darlington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pawtucket",
+        "state": "Rhode Island",
+        "postcode": "02860",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "41 Prince Street, Pawtucket, Rhode Island, United States"
+    },
+    {
+      "lat": 41.8868353354769,
+      "lon": -71.35832524833192,
+      "geoinfo": {
+        "display_name": "2, Wilson Street, Darlington, Pawtucket, Providence County, Rhode Island, 02861, United States",
+        "road": "Wilson Street",
+        "house_number": "2",
+        "neighbourhood": "Darlington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pawtucket",
+        "state": "Rhode Island",
+        "postcode": "02861",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Wilson Street, Darlington, Pawtucket, Providence County, Rhode Island, 02861, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:33.539654+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jinzhou",
+  "geonameid": 2036427,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.11656986785997,
+      "lon": 121.11114016648968,
+      "geoinfo": {
+        "display_name": "Bao'an Subdistrict, Guta, Guta District, Liaoning, 121000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bao'an Subdistrict",
+        "city_district": null,
+        "city": "Guta",
+        "state": "Liaoning",
+        "postcode": "121000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Bao'an Subdistrict, Jinzhou, Liaoning, China"
+    },
+    {
+      "lat": 41.100833485237295,
+      "lon": 121.18705570656566,
+      "geoinfo": {
+        "display_name": "南广路, Taihe District, Jinzhou City, Liaoning, 121000, China",
+        "road": "南广路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taihe District",
+        "state": "Liaoning",
+        "postcode": "121000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "556, 南广路, Taihe District, Jinzhou City, Liaoning, 121000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:04.265561+00:00",
+  "_kind": "geo_samples"
+}

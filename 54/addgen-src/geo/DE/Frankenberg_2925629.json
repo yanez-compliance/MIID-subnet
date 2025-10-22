@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Frankenberg",
+  "geonameid": 2925629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.03974670248024,
+      "lon": 8.813573137883827,
+      "geoinfo": {
+        "display_name": "B 252, Bottendorf, Burgwald, Landkreis Waldeck-Frankenberg, Hesse, 35099, Germany",
+        "road": "B 252",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bottendorf",
+        "state": "Hesse",
+        "postcode": "35099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 252, Frankenberg, Hesse, Germany"
+    },
+    {
+      "lat": 51.0803349335456,
+      "lon": 8.836956654576683,
+      "geoinfo": {
+        "display_name": "Müllumladestation Geismar, B 253, Geismar, Frankenberg (Eder), Landkreis Waldeck-Frankenberg, Hesse, 35066, Germany",
+        "road": "B 253",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geismar",
+        "state": "Hesse",
+        "postcode": "35066",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Müllumladestation Geismar, B 253, Geismar, Frankenberg (Eder), Landkreis Waldeck-Frankenberg, Hesse, 35066, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:50.246465+00:00",
+  "_kind": "geo_samples"
+}

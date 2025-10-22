@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mühldorf",
+  "geonameid": 2868506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.24114113613782,
+      "lon": 12.533179002445124,
+      "geoinfo": {
+        "display_name": "40, Friedhofstraße, Kriegersiedlung, Mühldorf a. Inn, Landkreis Mühldorf am Inn, Bavaria, 84453, Germany",
+        "road": "Friedhofstraße",
+        "house_number": "40",
+        "neighbourhood": "Kriegersiedlung",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühldorf a. Inn",
+        "state": "Bavaria",
+        "postcode": "84453",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "40 Friedhofstraße, Mühldorf, Bavaria, Germany"
+    },
+    {
+      "lat": 48.28917550652692,
+      "lon": 12.526795312419868,
+      "geoinfo": {
+        "display_name": "Oberhofen, Niederbergkirchen, Rohrbach (VGem), Landkreis Mühldorf am Inn, Bavaria, 84494, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Niederbergkirchen",
+        "state": "Bavaria",
+        "postcode": "84494",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "158, Oberhofen, Niederbergkirchen, Rohrbach (VGem), Landkreis Mühldorf am Inn, Bavaria, 84494, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:23.163380+00:00",
+  "_kind": "geo_samples"
+}

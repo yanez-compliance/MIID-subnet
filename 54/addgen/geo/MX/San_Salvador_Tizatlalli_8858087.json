@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Salvador Tizatlalli",
+  "geonameid": 8858087,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.274023543628356,
+      "lon": -99.60264409274765,
+      "geoinfo": {
+        "display_name": "Universidad Mexiquense, Avenida Los Gobernadores, Las Marinas, Metepec, State of Mexico, 52177, Mexico",
+        "road": "Avenida Los Gobernadores",
+        "house_number": null,
+        "neighbourhood": "Las Marinas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Metepec",
+        "state": "State of Mexico",
+        "postcode": "52177",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Los Gobernadores, San Salvador Tizatlalli, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.293234625104404,
+      "lon": -99.57650572924446,
+      "geoinfo": {
+        "display_name": "Calle Juan Josafat Pichardo, Santa Maria Totoltepec, Toluca, State of Mexico, 50246, Mexico",
+        "road": "Calle Juan Josafat Pichardo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Maria Totoltepec",
+        "state": "State of Mexico",
+        "postcode": "50246",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "881, Calle Juan Josafat Pichardo, Santa Maria Totoltepec, Toluca, State of Mexico, 50246, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:34:58.447410+00:00",
+  "_kind": "geo_samples"
+}

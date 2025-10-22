@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ammanford",
+  "geonameid": 2657345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.75345815405078,
+      "lon": -3.9710155539412573,
+      "geoinfo": {
+        "display_name": "Mawr, Swansea, Wales, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mawr",
+        "city_district": null,
+        "city": null,
+        "state": "Wales",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mawr, Ammanford, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.76079315366154,
+      "lon": -3.997338122953753,
+      "geoinfo": {
+        "display_name": "Garnswllt Road, Mawr, Garnswllt, Swansea, Wales, SA4 8QJ, United Kingdom",
+        "road": "Garnswllt Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mawr",
+        "city_district": null,
+        "city": "Garnswllt",
+        "state": "Wales",
+        "postcode": "SA4 8QJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Garnswllt Road, Mawr, Garnswllt, Swansea, Wales, SA4 8QJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:32.500825+00:00",
+  "_kind": "geo_samples"
+}

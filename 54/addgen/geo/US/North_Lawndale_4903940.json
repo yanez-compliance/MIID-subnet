@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Lawndale",
+  "geonameid": 4903940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.86162976614482,
+      "lon": -87.71929592855908,
+      "geoinfo": {
+        "display_name": "1422, South Ridgeway Avenue, North Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60623, United States",
+        "road": "South Ridgeway Avenue",
+        "house_number": "1422",
+        "neighbourhood": null,
+        "suburb": "North Lawndale",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60623",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1422 South Ridgeway Avenue, North Lawndale, Illinois, United States"
+    },
+    {
+      "lat": 41.880156663171945,
+      "lon": -87.73315113944366,
+      "geoinfo": {
+        "display_name": "16, South Kildare Avenue, Central Park, West Garfield Park, Chicago, West Chicago Township, Cook County, Illinois, 60624, United States",
+        "road": "South Kildare Avenue",
+        "house_number": "16",
+        "neighbourhood": "Central Park",
+        "suburb": "West Garfield Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16, South Kildare Avenue, Central Park, West Garfield Park, Chicago, West Chicago Township, Cook County, Illinois, 60624, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:18.041415+00:00",
+  "_kind": "geo_samples"
+}

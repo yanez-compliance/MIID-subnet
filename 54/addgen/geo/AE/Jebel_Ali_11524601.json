@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Jebel Ali",
+  "geonameid": 11524601,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.018257106251262,
+      "lon": 55.082417963544785,
+      "geoinfo": {
+        "display_name": "420 Street, Jabal Ali, Dubai, United Arab Emirates",
+        "road": "420 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jabal Ali",
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "420 Street, Jebel Ali, Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.011718427533832,
+      "lon": 55.12011559781367,
+      "geoinfo": {
+        "display_name": "Technical, 47 Street, Jebel Ali Industrial Area, Jabal Ali, Dubai, United Arab Emirates",
+        "road": "47 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jebel Ali Industrial Area",
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "47 Street, Jebel Ali, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-16T10:19:08.816160+00:00",
+  "_kind": "geo_samples"
+}

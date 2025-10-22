@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Reading",
+  "geonameid": 5207728,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.322733448767636,
+      "lon": -75.9401967368811,
+      "geoinfo": {
+        "display_name": "East Wyomissing Boulevard, Reading, Berks County, Pennsylvania, 19611, United States",
+        "road": "East Wyomissing Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reading",
+        "state": "Pennsylvania",
+        "postcode": "19611",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Wyomissing Boulevard, Reading, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.32411061886295,
+      "lon": -75.94399832051508,
+      "geoinfo": {
+        "display_name": "Berks Catholic High School, 955, East Wyomissing Boulevard, Reading, Berks County, Pennsylvania, 19611, United States",
+        "road": "East Wyomissing Boulevard",
+        "house_number": "955",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reading",
+        "state": "Pennsylvania",
+        "postcode": "19611",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Berks Catholic High School, 955, East Wyomissing Boulevard, Reading, Berks County, Pennsylvania, 19611, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:32.504841+00:00",
+  "_kind": "geo_samples"
+}

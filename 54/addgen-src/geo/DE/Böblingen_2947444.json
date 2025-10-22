@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Böblingen",
+  "geonameid": 2947444,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.7089560632638,
+      "lon": 9.01374401226498,
+      "geoinfo": {
+        "display_name": "19, Mahdentalstraße, Sindelfingen (Stadt), Sindelfingen, Landkreis Böblingen, Baden-Württemberg, 71065, Germany",
+        "road": "Mahdentalstraße",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sindelfingen (Stadt)",
+        "state": "Baden-Württemberg",
+        "postcode": "71065",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19 Mahdentalstraße, Böblingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.68048125801188,
+      "lon": 8.96516745515291,
+      "geoinfo": {
+        "display_name": "A 81, Dagersheim, Böblingen, Landkreis Böblingen, Baden-Württemberg, 71034, Germany",
+        "road": "A 81",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Böblingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71034",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 81, Dagersheim, Böblingen, Landkreis Böblingen, Baden-Württemberg, 71034, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:11.098409+00:00",
+  "_kind": "geo_samples"
+}

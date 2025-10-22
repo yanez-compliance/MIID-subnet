@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sheboygan",
+  "geonameid": 5272893,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.72755089764338,
+      "lon": -87.72498716606854,
+      "geoinfo": {
+        "display_name": "2532, South 15th Street, Sheboygan, Sheboygan County, Wisconsin, 53081, United States",
+        "road": "South 15th Street",
+        "house_number": "2532",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sheboygan",
+        "state": "Wisconsin",
+        "postcode": "53081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2532 South 15th Street, Sheboygan, Wisconsin, United States"
+    },
+    {
+      "lat": 43.73069708193142,
+      "lon": -87.69213231418544,
+      "geoinfo": {
+        "display_name": "Sheboygan County, Wisconsin, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "466, Sheboygan County, 45913 Wisconsin, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:05.197564+00:00",
+  "_kind": "geo_samples"
+}

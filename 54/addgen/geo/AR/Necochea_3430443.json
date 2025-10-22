@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Necochea",
+  "geonameid": 3430443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.59097528434789,
+      "lon": -58.71923435428329,
+      "geoinfo": {
+        "display_name": "Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Necochea, Argentina"
+    },
+    {
+      "lat": -38.58122036176321,
+      "lon": -58.73703606775574,
+      "geoinfo": {
+        "display_name": "Avenida 10, Necochea, Partido de Necochea, Buenos Aires, B7632FMF, Argentina",
+        "road": "Avenida 10",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Necochea",
+        "state": "Buenos Aires",
+        "postcode": "B7632FMF",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida 10, Necochea, Partido de Necochea, Buenos Aires, B7632FMF, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:27.419096+00:00",
+  "_kind": "geo_samples"
+}

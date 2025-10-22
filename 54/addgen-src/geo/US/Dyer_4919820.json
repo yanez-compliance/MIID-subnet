@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dyer",
+  "geonameid": 4919820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.49902246753439,
+      "lon": -87.49583466730171,
+      "geoinfo": {
+        "display_name": "1320, Flagstone Drive, Rockwell, Dyer, Lake County, Indiana, 46311, United States",
+        "road": "Flagstone Drive",
+        "house_number": "1320",
+        "neighbourhood": "Rockwell",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dyer",
+        "state": "Indiana",
+        "postcode": "46311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1320 Flagstone Drive, Dyer, Indiana, United States"
+    },
+    {
+      "lat": 41.47445757559965,
+      "lon": -87.48808925728852,
+      "geoinfo": {
+        "display_name": "Tate Drive, Schererville, Lake County, Indiana, 46311, United States",
+        "road": "Tate Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schererville",
+        "state": "Indiana",
+        "postcode": "46311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "358, Tate Drive, Schererville, Lake County, Indiana, 46311, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:03.130385+00:00",
+  "_kind": "geo_samples"
+}

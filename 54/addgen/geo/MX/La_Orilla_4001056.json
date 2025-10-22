@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Orilla",
+  "geonameid": 4001056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.95821214616715,
+      "lon": -102.21117279807275,
+      "geoinfo": {
+        "display_name": "Calle Aquiles Serdán, Lotes y Servicios, Lázaro Cárdenas, Michoacán, 60953, Mexico",
+        "road": "Calle Aquiles Serdán",
+        "house_number": null,
+        "neighbourhood": "Lotes y Servicios",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lázaro Cárdenas",
+        "state": "Michoacán",
+        "postcode": "60953",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Aquiles Serdán, La Orilla, Michoacán, Mexico"
+    },
+    {
+      "lat": 17.990888395681342,
+      "lon": -102.25392614324946,
+      "geoinfo": {
+        "display_name": "Calle Crisantemos, San Blas, La Orilla, Lázaro Cárdenas, Michoacán, 60998, Mexico",
+        "road": "Calle Crisantemos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Orilla",
+        "state": "Michoacán",
+        "postcode": "60998",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "272, Calle Crisantemos, San Blas, La Orilla, Lázaro Cárdenas, Michoacán, 60998, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:18.633013+00:00",
+  "_kind": "geo_samples"
+}

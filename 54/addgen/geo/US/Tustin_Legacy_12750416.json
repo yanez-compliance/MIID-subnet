@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tustin Legacy",
+  "geonameid": 12750416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.69757766099702,
+      "lon": -117.83978407176478,
+      "geoinfo": {
+        "display_name": "Armstrong Avenue, Irvine Business Complex, Irvine, Orange County, California, 92606, United States",
+        "road": "Armstrong Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Irvine Business Complex",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Armstrong Avenue, Tustin Legacy, California, United States"
+    },
+    {
+      "lat": 33.73385934688416,
+      "lon": -117.79053588365483,
+      "geoinfo": {
+        "display_name": "2480, Irvine Boulevard, Tustin Ranch, Tustin, Orange County, California, 92782, United States",
+        "road": "Irvine Boulevard",
+        "house_number": "2480",
+        "neighbourhood": null,
+        "suburb": "Tustin Ranch",
+        "city_district": null,
+        "city": "Tustin",
+        "state": "California",
+        "postcode": "92782",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2480, Irvine Boulevard, Tustin Ranch, Tustin, Orange County, California, 92782, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:42.633317+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Castellana",
+  "geonameid": 11549929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.43124855959528,
+      "lon": -3.687000935133872,
+      "geoinfo": {
+        "display_name": "Fuku, 8, Calle del Marqués de Villamejor, Castellana, Salamanca, Madrid, Community of Madrid, 28006, Spain",
+        "road": "Calle del Marqués de Villamejor",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28006",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "8 Calle del Marqués de Villamejor, Castellana, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.45865610013076,
+      "lon": -3.664666343851686,
+      "geoinfo": {
+        "display_name": "Avenida de la Paz, Hispanoamérica, Chamartín, Madrid, Community of Madrid, 28016, Spain",
+        "road": "Avenida de la Paz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chamartín",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28016",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "482, Avenida de la Paz, Hispanoamérica, Chamartín, Madrid, Community of Madrid, 28016, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:09.654161+00:00",
+  "_kind": "geo_samples"
+}

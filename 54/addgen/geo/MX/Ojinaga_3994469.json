@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ojinaga",
+  "geonameid": 3994469,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.582091897969715,
+      "lon": -104.51430160710686,
+      "geoinfo": {
+        "display_name": "Ojinaga, Chihuahua, 32880, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ojinaga",
+        "state": "Chihuahua",
+        "postcode": "32880",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ojinaga, Chihuahua, Mexico"
+    },
+    {
+      "lat": 29.558796858301484,
+      "lon": -104.54589241143505,
+      "geoinfo": {
+        "display_name": "Ojinaga, Chihuahua, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chihuahua",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "813, Ojinaga, 27363 Chihuahua, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:09.913489+00:00",
+  "_kind": "geo_samples"
+}

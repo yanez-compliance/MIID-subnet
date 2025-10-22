@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Monza",
+  "geonameid": 3172629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.59479400528147,
+      "lon": 9.263165625235398,
+      "geoinfo": {
+        "display_name": "4, Via Giovanni Sgambati, Ospedale Nuovo, Cazzaniga, Monza, Monza and Brianza, Lombardy, 20900, Italy",
+        "road": "Via Giovanni Sgambati",
+        "house_number": "4",
+        "neighbourhood": "Ospedale Nuovo",
+        "suburb": "Cazzaniga",
+        "city_district": null,
+        "city": "Monza",
+        "state": "Lombardy",
+        "postcode": "20900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "4 Via Giovanni Sgambati, Monza, Lombardy, Italy"
+    },
+    {
+      "lat": 45.60475207252232,
+      "lon": 9.308904305559896,
+      "geoinfo": {
+        "display_name": "RSA Villa San Clemente, Via Amatore Sciesa, San Fiorano, Villasanta, Monza and Brianza, Lombardy, 20852, Italy",
+        "road": "Via Amatore Sciesa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villasanta",
+        "state": "Lombardy",
+        "postcode": "20852",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "986, Via Amatore Sciesa, Monza, 20852 Lombardy, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:06.944973+00:00",
+  "_kind": "geo_samples"
+}

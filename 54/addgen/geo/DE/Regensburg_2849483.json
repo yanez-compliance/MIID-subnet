@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Regensburg",
+  "geonameid": 2849483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.040149146703975,
+      "lon": 12.136337825024947,
+      "geoinfo": {
+        "display_name": "10, Haidhofweg, Brandlberg, Regensburg, Bavaria, 93055, Germany",
+        "road": "Haidhofweg",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Brandlberg",
+        "city_district": null,
+        "city": "Regensburg",
+        "state": "Bavaria",
+        "postcode": "93055",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10 Haidhofweg, Regensburg, Bavaria, Germany"
+    },
+    {
+      "lat": 49.01228534308558,
+      "lon": 12.165947100683978,
+      "geoinfo": {
+        "display_name": "24, Äußere Wiener Straße, Irlmauth, Regensburg, Bavaria, 93055, Germany",
+        "road": "Äußere Wiener Straße",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Irlmauth",
+        "city_district": null,
+        "city": "Regensburg",
+        "state": "Bavaria",
+        "postcode": "93055",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24, Äußere Wiener Straße, Irlmauth, Regensburg, Bavaria, 93055, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:38.964410+00:00",
+  "_kind": "geo_samples"
+}

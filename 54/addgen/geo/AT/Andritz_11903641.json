@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Andritz",
+  "geonameid": 11903641,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.134780053445425,
+      "lon": 15.467059705147047,
+      "geoinfo": {
+        "display_name": "Rinneggerstraße, Zösenberg, Weinitzen, Bezirk Graz-Umgebung, Styria, 8045, Austria",
+        "road": "Rinneggerstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weinitzen",
+        "state": "Styria",
+        "postcode": "8045",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Rinneggerstraße, Andritz, Styria, Austria"
+    },
+    {
+      "lat": 47.11772756361505,
+      "lon": 15.448737799455436,
+      "geoinfo": {
+        "display_name": "139, Am Pfangberg, Andritz, Graz, Styria, 8045, Austria",
+        "road": "Am Pfangberg",
+        "house_number": "139",
+        "neighbourhood": null,
+        "suburb": "Andritz",
+        "city_district": null,
+        "city": "Graz",
+        "state": "Styria",
+        "postcode": "8045",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "139 Am Pfangberg, Andritz, Styria, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:29:48.503273+00:00",
+  "_kind": "geo_samples"
+}

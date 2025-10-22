@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Hem",
+  "geonameid": 3013549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.668910815583885,
+      "lon": 3.2007803260153995,
+      "geoinfo": {
+        "display_name": "Rue Dominique Larrey, Hem, Lille, Nord, Hauts-de-France, Metropolitan France, 59510, France",
+        "road": "Rue Dominique Larrey",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hem",
+        "state": "Hauts-de-France",
+        "postcode": "59510",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Dominique Larrey, Hem, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.65340065781323,
+      "lon": 3.1479523734863197,
+      "geoinfo": {
+        "display_name": "42, Rue de la Récréation, Sart-Babylone, Recueil, Villeneuve-d'Ascq, Lille, Nord, Hauts-de-France, Metropolitan France, 59491, France",
+        "road": "Rue de la Récréation",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "Recueil",
+        "city_district": null,
+        "city": "Villeneuve-d'Ascq",
+        "state": "Hauts-de-France",
+        "postcode": "59491",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "42, Rue de la Récréation, Sart-Babylone, Recueil, Villeneuve-d'Ascq, Lille, Nord, Hauts-de-France, Metropolitan France, 59491, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:31.267070+00:00",
+  "_kind": "geo_samples"
+}

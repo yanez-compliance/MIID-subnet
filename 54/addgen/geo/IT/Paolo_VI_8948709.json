@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Paolo VI",
+  "geonameid": 8948709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.546249262935,
+      "lon": 17.292773514917357,
+      "geoinfo": {
+        "display_name": "Statte, Taranto, Apulia, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Statte",
+        "state": "Apulia",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Paolo VI, Apulia, Italy"
+    },
+    {
+      "lat": 40.505516879508434,
+      "lon": 17.233503494439976,
+      "geoinfo": {
+        "display_name": "Strada Statale 7 Appia, Taranto, Apulia, 74123, Italy",
+        "road": "Strada Statale 7 Appia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taranto",
+        "state": "Apulia",
+        "postcode": "74123",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale 7 Appia, Taranto, Apulia, 74123, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:21.500357+00:00",
+  "_kind": "geo_samples"
+}

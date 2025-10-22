@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Tena",
+  "geonameid": 3650721,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -0.9796301286045503,
+      "lon": -77.79673422412999,
+      "geoinfo": {
+        "display_name": "Gancho, Ing 67, San Bernardo, Guamaurco, Tena, Napo, 150102, Ecuador",
+        "road": "Ing 67",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tena",
+        "state": "Napo",
+        "postcode": "150102",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Ing 67, Tena, Napo, Ecuador"
+    },
+    {
+      "lat": -1.0142349574183487,
+      "lon": -77.82805818404663,
+      "geoinfo": {
+        "display_name": "Vía Tena - Pano, San Jorge, Guinea Chimbana, Tena, Napo, 150101, Ecuador",
+        "road": "Vía Tena - Pano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tena",
+        "state": "Napo",
+        "postcode": "150101",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Vía Tena - Pano, Tena, Napo, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:07:21.160053+00:00",
+  "_kind": "geo_samples"
+}

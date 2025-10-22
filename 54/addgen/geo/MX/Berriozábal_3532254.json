@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Berriozábal",
+  "geonameid": 3532254,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.78479486816839,
+      "lon": -93.31343294875438,
+      "geoinfo": {
+        "display_name": "Ocozocoautla de Espinosa, Chiapas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Berriozábal, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.791195917084114,
+      "lon": -93.27332306897534,
+      "geoinfo": {
+        "display_name": "Calle Central Sur, Berriozábal, Chiapas, Mexico",
+        "road": "Calle Central Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berriozábal",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "780, Calle Central Sur, Berriozábal, 26226 Chiapas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:24.258563+00:00",
+  "_kind": "geo_samples"
+}

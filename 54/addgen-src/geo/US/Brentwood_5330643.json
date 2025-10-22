@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brentwood",
+  "geonameid": 5330643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.088874744269404,
+      "lon": -118.46213031956063,
+      "geoinfo": {
+        "display_name": "Chalon Road, Los Angeles, Los Angeles County, California, 90049, United States",
+        "road": "Chalon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90049",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chalon Road, Brentwood, California, United States"
+    },
+    {
+      "lat": 34.03118150696885,
+      "lon": -118.50643703386929,
+      "geoinfo": {
+        "display_name": "7th Court, Santa Monica, Los Angeles County, California, 90402, United States",
+        "road": "7th Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Monica",
+        "state": "California",
+        "postcode": "90402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7th Court, Santa Monica, Los Angeles County, California, 90402, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:12.493798+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dongyang",
+  "geonameid": 1791056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.249708079139438,
+      "lon": 120.18763942935296,
+      "geoinfo": {
+        "display_name": "南溪, Jinhua, Zhejiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinhua",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dongyang, Zhejiang, China"
+    },
+    {
+      "lat": 29.29051438569027,
+      "lon": 120.24356610376114,
+      "geoinfo": {
+        "display_name": "翠竹路, Dongyang, Jinhua, Zhejiang, China",
+        "road": "翠竹路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dongyang",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "465, 翠竹路, Dongyang, Jinhua, 03378 Zhejiang, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:42.261289+00:00",
+  "_kind": "geo_samples"
+}

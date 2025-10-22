@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mokena",
+  "geonameid": 4902475,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.542297579310464,
+      "lon": -87.91622262230257,
+      "geoinfo": {
+        "display_name": "Boulder Ridge Drive, Mokena, Will County, Illinois, 60448, United States",
+        "road": "Boulder Ridge Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mokena",
+        "state": "Illinois",
+        "postcode": "60448",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Boulder Ridge Drive, Mokena, Illinois, United States"
+    },
+    {
+      "lat": 41.55659205205027,
+      "lon": -87.92605418675457,
+      "geoinfo": {
+        "display_name": "Haas Road, Homer Glen, Will County, Illinois, 60448, United States",
+        "road": "Haas Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Homer Glen",
+        "state": "Illinois",
+        "postcode": "60448",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "016, Haas Road, Homer Glen, Will County, Illinois, 60448, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:39.698383+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coeur d'Alene",
+  "geonameid": 5589173,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.65735788852418,
+      "lon": -116.75623367704299,
+      "geoinfo": {
+        "display_name": "Silver Beach, Kootenai County, Idaho, 83877, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Idaho",
+        "postcode": "83877",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coeur d'Alene, Idaho, United States"
+    },
+    {
+      "lat": 47.712361377012336,
+      "lon": -116.8128867972721,
+      "geoinfo": {
+        "display_name": "1953, Hogan Street, Coeur d'Alene, Kootenai County, Idaho, 83815, United States",
+        "road": "Hogan Street",
+        "house_number": "1953",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coeur d'Alene",
+        "state": "Idaho",
+        "postcode": "83815",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1953, Hogan Street, Coeur d'Alene, Kootenai County, Idaho, 83815, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:44.127936+00:00",
+  "_kind": "geo_samples"
+}

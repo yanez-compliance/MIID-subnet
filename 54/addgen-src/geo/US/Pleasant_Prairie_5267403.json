@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pleasant Prairie",
+  "geonameid": 5267403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.56466274393308,
+      "lon": -87.93738457152038,
+      "geoinfo": {
+        "display_name": "77th Street, Pleasant Prairie, Kenosha County, Wisconsin, 53142, United States",
+        "road": "77th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pleasant Prairie",
+        "state": "Wisconsin",
+        "postcode": "53142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "77th Street, Pleasant Prairie, Wisconsin, United States"
+    },
+    {
+      "lat": 42.534573038853146,
+      "lon": -87.94820855187773,
+      "geoinfo": {
+        "display_name": "120th Avenue, Pleasant Prairie, Kenosha County, Wisconsin, 53138, United States",
+        "road": "120th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pleasant Prairie",
+        "state": "Wisconsin",
+        "postcode": "53138",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "120th Avenue, Pleasant Prairie, Kenosha County, Wisconsin, 53138, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:01.248399+00:00",
+  "_kind": "geo_samples"
+}

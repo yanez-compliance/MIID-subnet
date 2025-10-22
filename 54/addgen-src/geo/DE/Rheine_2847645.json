@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rheine",
+  "geonameid": 2847645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.2482584653673,
+      "lon": 7.46970590797661,
+      "geoinfo": {
+        "display_name": "Münsterlanddamm, Hauenhorst, Rheine, Kreis Steinfurt, North Rhine-Westphalia, 48432, Germany",
+        "road": "Münsterlanddamm",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rheine",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48432",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Münsterlanddamm, Rheine, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.26300766308218,
+      "lon": 7.447224398968928,
+      "geoinfo": {
+        "display_name": "RadBahn Münsterland, Dorenkamp, Rheine, Kreis Steinfurt, North Rhine-Westphalia, 48431, Germany",
+        "road": "RadBahn Münsterland",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dorenkamp",
+        "city_district": null,
+        "city": "Rheine",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48431",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "723, RadBahn Münsterland, Dorenkamp, Rheine, Kreis Steinfurt, North Rhine-Westphalia, 48431, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:28.369315+00:00",
+  "_kind": "geo_samples"
+}

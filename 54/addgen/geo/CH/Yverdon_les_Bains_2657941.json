@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Yverdon-les-Bains",
+  "geonameid": 2657941,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.778401666196885,
+      "lon": 6.6312069481544444,
+      "geoinfo": {
+        "display_name": "5, Rue des Charmilles, Yverdon-les-Bains, District du Jura-Nord vaudois, Vaud, 1400, Switzerland",
+        "road": "Rue des Charmilles",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yverdon-les-Bains",
+        "city": "Yverdon-les-Bains",
+        "state": "Vaud",
+        "postcode": "1400",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "5 Rue des Charmilles, Yverdon-les-Bains, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.79783175719299,
+      "lon": 6.650702006314877,
+      "geoinfo": {
+        "display_name": "Le Collège, Grandson, District du Jura-Nord vaudois, Vaud, 1422, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grandson",
+        "state": "Vaud",
+        "postcode": "1422",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Yverdon-les-Bains, Vaud, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:04:46.261787+00:00",
+  "_kind": "geo_samples"
+}

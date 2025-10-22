@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tinton Falls",
+  "geonameid": 5105433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.334368974834035,
+      "lon": -74.08132744662312,
+      "geoinfo": {
+        "display_name": "41, Garden Place, Tinton Falls, Monmouth County, New Jersey, 07724, United States",
+        "road": "Garden Place",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tinton Falls",
+        "state": "New Jersey",
+        "postcode": "07724",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "41 Garden Place, Tinton Falls, New Jersey, United States"
+    },
+    {
+      "lat": 40.323287872227176,
+      "lon": -74.07398043851516,
+      "geoinfo": {
+        "display_name": "711, Sycamore Avenue, Winding Brook, Tinton Falls, Monmouth County, New Jersey, 07701, United States",
+        "road": "Sycamore Avenue",
+        "house_number": "711",
+        "neighbourhood": "Winding Brook",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tinton Falls",
+        "state": "New Jersey",
+        "postcode": "07701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "711, Sycamore Avenue, Winding Brook, Tinton Falls, Monmouth County, New Jersey, 07701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:45.961200+00:00",
+  "_kind": "geo_samples"
+}

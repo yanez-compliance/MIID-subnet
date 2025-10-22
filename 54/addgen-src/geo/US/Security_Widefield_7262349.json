@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Security-Widefield",
+  "geonameid": 7262349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.706826753618515,
+      "lon": -104.7366967970302,
+      "geoinfo": {
+        "display_name": "El Paso County, Colorado, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Security-Widefield, Colorado, United States"
+    },
+    {
+      "lat": 38.7244292131766,
+      "lon": -104.71964506997179,
+      "geoinfo": {
+        "display_name": "7458, Highway 85, Fountain, El Paso County, Colorado, 80817, United States",
+        "road": "Highway 85",
+        "house_number": "7458",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fountain",
+        "state": "Colorado",
+        "postcode": "80817",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7458, Highway 85, Fountain, El Paso County, Colorado, 80817, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:39.090920+00:00",
+  "_kind": "geo_samples"
+}

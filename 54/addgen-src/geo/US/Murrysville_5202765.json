@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Murrysville",
+  "geonameid": 5202765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.400816954016406,
+      "lon": -79.70271917523475,
+      "geoinfo": {
+        "display_name": "Pennsylvania Turnpike, The Willows, Pleasant Valley, Paintertown, Penn Township, Westmoreland County, Pennsylvania, 15636, United States",
+        "road": "Pennsylvania Turnpike",
+        "house_number": null,
+        "neighbourhood": "The Willows",
+        "suburb": null,
+        "city_district": null,
+        "city": "Penn Township",
+        "state": "Pennsylvania",
+        "postcode": "15636",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pennsylvania Turnpike, Murrysville, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.46116998564211,
+      "lon": -79.72428175732662,
+      "geoinfo": {
+        "display_name": "691, New Texas Road, Plum, Allegheny County, Pennsylvania, 15239, United States",
+        "road": "New Texas Road",
+        "house_number": "691",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plum",
+        "state": "Pennsylvania",
+        "postcode": "15239",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "691, New Texas Road, Plum, Allegheny County, Pennsylvania, 15239, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:46.497516+00:00",
+  "_kind": "geo_samples"
+}

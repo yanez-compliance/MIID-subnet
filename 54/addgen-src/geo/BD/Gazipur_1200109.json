@@ -1,0 +1,47 @@
+{
+  "country_code": "BD",
+  "country": "Bangladesh",
+  "city": "Gazipur",
+  "geonameid": 1200109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.98765631262668,
+      "lon": 90.42294746750152,
+      "geoinfo": {
+        "display_name": "Gazipur, Gazipur Sadar, Gazipur District, Dhaka Division, 1701, Bangladesh",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gazipur",
+        "state": "Dhaka Division",
+        "postcode": "1701",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "address": "Gazipur, Dhaka Division, Bangladesh"
+    },
+    {
+      "lat": 23.981766710099652,
+      "lon": 90.3788212970774,
+      "geoinfo": {
+        "display_name": "Bhogra, Gazipur, Gazipur Sadar, Gazipur District, Dhaka Division, 1701, Bangladesh",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bhogra",
+        "city_district": null,
+        "city": "Gazipur",
+        "state": "Dhaka Division",
+        "postcode": "1701",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "address": "203, Bhogra, Gazipur, Gazipur Sadar, Gazipur District, Dhaka Division, 1701, Bangladesh"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:43.866051+00:00",
+  "_kind": "geo_samples"
+}

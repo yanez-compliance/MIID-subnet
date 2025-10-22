@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "IJmuiden",
+  "geonameid": 2753376,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.44988712614807,
+      "lon": 4.5554807571622415,
+      "geoinfo": {
+        "display_name": "Beach Inn, 800, Kennemerstrand, IJmuiden aan Zee, IJmuiden, Velsen, North Holland, Netherlands, 1976 GA, Netherlands",
+        "road": "Kennemerstrand",
+        "house_number": "800",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "IJmuiden",
+        "state": "North Holland",
+        "postcode": "1976 GA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "800 Kennemerstrand, IJmuiden, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.45340041406942,
+      "lon": 4.5720911738914065,
+      "geoinfo": {
+        "display_name": "Camping De Duindoorn, Badweg, IJmuiden aan Zee, IJmuiden, Velsen, North Holland, Netherlands, 1976 BZ, Netherlands",
+        "road": "Badweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "IJmuiden",
+        "state": "North Holland",
+        "postcode": "1976 BZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "867, Badweg, IJmuiden, 1976 BZ North Holland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:33.431042+00:00",
+  "_kind": "geo_samples"
+}

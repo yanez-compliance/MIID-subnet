@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maryvale",
+  "geonameid": 5303929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.524138442219325,
+      "lon": -112.16333427146917,
+      "geoinfo": {
+        "display_name": "4880, West Bethany Home Road, Bethany Heights, Glendale, Maricopa County, Arizona, 85301, United States",
+        "road": "West Bethany Home Road",
+        "house_number": "4880",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glendale",
+        "state": "Arizona",
+        "postcode": "85301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4880 West Bethany Home Road, Maryvale, Arizona, United States"
+    },
+    {
+      "lat": 33.51492582808009,
+      "lon": -112.19026357921409,
+      "geoinfo": {
+        "display_name": "6034, West Oregon Avenue, Ironwood Terrace, Glendale, Maricopa County, Arizona, 85301, United States",
+        "road": "West Oregon Avenue",
+        "house_number": "6034",
+        "neighbourhood": "Ironwood Terrace",
+        "suburb": null,
+        "city_district": null,
+        "city": "Glendale",
+        "state": "Arizona",
+        "postcode": "85301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6034, West Oregon Avenue, Ironwood Terrace, Glendale, Maricopa County, Arizona, 85301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:21.868706+00:00",
+  "_kind": "geo_samples"
+}

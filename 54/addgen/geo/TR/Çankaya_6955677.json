@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Çankaya",
+  "geonameid": 6955677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.92488841549059,
+      "lon": 32.80807326389935,
+      "geoinfo": {
+        "display_name": "Cumhurbaşkanlığı Caddesi, Beştepe Mahallesi, Yenimahalle, Ankara, Central Anatolia Region, 06560, Turkey",
+        "road": "Cumhurbaşkanlığı Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Beştepe Mahallesi",
+        "city_district": null,
+        "city": "Yenimahalle",
+        "state": "Ankara",
+        "postcode": "06560",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Cumhurbaşkanlığı Caddesi, Çankaya, Ankara, Turkey"
+    },
+    {
+      "lat": 39.90015488884876,
+      "lon": 32.85942272811001,
+      "geoinfo": {
+        "display_name": "Göreme Sokak, Çankaya Mahallesi, Ankara, Çankaya, Ankara, Central Anatolia Region, 06690, Turkey",
+        "road": "Göreme Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Çankaya Mahallesi",
+        "city_district": null,
+        "city": "Ankara",
+        "state": "Ankara",
+        "postcode": "06690",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "295, Göreme Sokak, Çankaya Mahallesi, Ankara, Çankaya, Ankara, Central Anatolia Region, 06690, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T10:30:33.963707+00:00",
+  "_kind": "geo_samples"
+}

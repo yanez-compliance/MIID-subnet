@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Puerto Peñasco",
+  "geonameid": 3991347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.279071454177604,
+      "lon": -113.54721813010003,
+      "geoinfo": {
+        "display_name": "El Puerto, Rocky Point, Sonora, 83550, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Puerto",
+        "city_district": null,
+        "city": "Rocky Point",
+        "state": "Sonora",
+        "postcode": "83550",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "El Puerto, Puerto Peñasco, Sonora, Mexico"
+    },
+    {
+      "lat": 31.316894888733145,
+      "lon": -113.57891077287543,
+      "geoinfo": {
+        "display_name": "Playa Arenos, Rocky Point, Sonora, 83550, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Playa Arenos",
+        "city_district": null,
+        "city": "Rocky Point",
+        "state": "Sonora",
+        "postcode": "83550",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "012, Playa Arenos, Rocky Point, Sonora, 83550, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:32:41.686599+00:00",
+  "_kind": "geo_samples"
+}

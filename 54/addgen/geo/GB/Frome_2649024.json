@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Frome",
+  "geonameid": 2649024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.212112123553716,
+      "lon": -2.296766828096987,
+      "geoinfo": {
+        "display_name": "Feltham Lane, Feltham Farm, Selwood, East Woodlands, Somerset, England, BA11 5NA, United Kingdom",
+        "road": "Feltham Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Selwood",
+        "city_district": null,
+        "city": "East Woodlands",
+        "state": "England",
+        "postcode": "BA11 5NA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Feltham Lane, Frome, England, United Kingdom"
+    },
+    {
+      "lat": 51.198359747286865,
+      "lon": -2.292766053010175,
+      "geoinfo": {
+        "display_name": "Shepherd's Lane, Selwood, East Woodlands, Somerset, England, BA11 5LN, United Kingdom",
+        "road": "Shepherd's Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Selwood",
+        "city_district": null,
+        "city": "East Woodlands",
+        "state": "England",
+        "postcode": "BA11 5LN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Shepherd's Lane, Selwood, East Woodlands, Somerset, England, BA11 5LN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:35.985688+00:00",
+  "_kind": "geo_samples"
+}

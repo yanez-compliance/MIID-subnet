@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Pathein",
+  "geonameid": 1328421,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 16.77869855695105,
+      "lon": 94.72954608296875,
+      "geoinfo": {
+        "display_name": "Strand Road, No (4) Ward, Pathein, Pathein Township, Pathein, Ayeyarwady, 10011, Myanmar",
+        "road": "Strand Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pathein",
+        "state": "Ayeyarwady",
+        "postcode": "10011",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Strand Road, Pathein, Ayeyarwady, Myanmar"
+    },
+    {
+      "lat": 16.787471083138186,
+      "lon": 94.75598695070283,
+      "geoinfo": {
+        "display_name": "No (3) Ward, Pathein, Pathein Township, Pathein, Ayeyarwady, 10011, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pathein",
+        "state": "Ayeyarwady",
+        "postcode": "10011",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Pathein, Ayeyarwady, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-16T19:38:04.734296+00:00",
+  "_kind": "geo_samples"
+}

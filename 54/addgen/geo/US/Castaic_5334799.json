@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Castaic",
+  "geonameid": 5334799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.469914353742034,
+      "lon": -118.62349718889276,
+      "geoinfo": {
+        "display_name": "Castaic, Los Angeles County, California, 91384, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Castaic",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91384",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Castaic, Castaic, California, United States"
+    },
+    {
+      "lat": 34.49740331558524,
+      "lon": -118.57988703189002,
+      "geoinfo": {
+        "display_name": "Skidmarks, Los Angeles County, California, United States",
+        "road": "Skidmarks",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "773, Skidmarks, Los Angeles County, 20633 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:43.860692+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Zielonka",
+  "geonameid": 753276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.32768585888111,
+      "lon": 21.189487009112586,
+      "geoinfo": {
+        "display_name": "4, Ludwika Waryńskiego, Kobyłka, Wołomin County, Masovian Voivodeship, 05-230, Poland",
+        "road": "Ludwika Waryńskiego",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kobyłka",
+        "state": "Masovian Voivodeship",
+        "postcode": "05-230",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "4 Ludwika Waryńskiego, Zielonka, Masovian Voivodeship, Poland"
+    },
+    {
+      "lat": 52.26588878198717,
+      "lon": 21.140324233347748,
+      "geoinfo": {
+        "display_name": "Stężycka, Kawęczyn-Wygoda, Rembertów, Warsaw, Masovian Voivodeship, 04-461, Poland",
+        "road": "Stężycka",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rembertów",
+        "city_district": null,
+        "city": "Warsaw",
+        "state": "Masovian Voivodeship",
+        "postcode": "04-461",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Stężycka, Kawęczyn-Wygoda, Rembertów, Warsaw, Masovian Voivodeship, 04-461, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:31:26.062676+00:00",
+  "_kind": "geo_samples"
+}

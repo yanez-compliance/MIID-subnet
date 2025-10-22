@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Mladá Boleslav",
+  "geonameid": 3070544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.3724310126182,
+      "lon": 14.894881979857214,
+      "geoinfo": {
+        "display_name": "153, Nepřevázka, okres Mladá Boleslav, Central Bohemia, 293 01, Czechia",
+        "road": null,
+        "house_number": "153",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nepřevázka",
+        "state": "Central Bohemia",
+        "postcode": "293 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Mladá Boleslav, Central Bohemia, Czechia"
+    },
+    {
+      "lat": 50.42087858224045,
+      "lon": 14.925439261630315,
+      "geoinfo": {
+        "display_name": "Škoda Hala M5, Lávka Škoda a.s., Škoda Auto, Mladá Boleslav, okres Mladá Boleslav, Central Bohemia, 293 60, Czechia",
+        "road": "Lávka Škoda a.s.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mladá Boleslav",
+        "city_district": null,
+        "city": "Mladá Boleslav",
+        "state": "Central Bohemia",
+        "postcode": "293 60",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Škoda Hala M5, Lávka Škoda a.s., Škoda Auto, Mladá Boleslav, okres Mladá Boleslav, Central Bohemia, 293 60, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:46.346380+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Benito Juárez",
+  "geonameid": 4003757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.66192811189404,
+      "lon": -100.06071838539533,
+      "geoinfo": {
+        "display_name": "Benito Juárez, Juárez, Nuevo León, 67250, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Benito Juárez",
+        "state": "Nuevo León",
+        "postcode": "67250",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Benito Juárez, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.609570985755152,
+      "lon": -100.07400337994497,
+      "geoinfo": {
+        "display_name": "Avenida del Roble, Valle del Roble, Cadereyta Jiménez, Nuevo León, 67262, Mexico",
+        "road": "Avenida del Roble",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cadereyta Jiménez",
+        "state": "Nuevo León",
+        "postcode": "67262",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "819, Avenida del Roble, Valle del Roble, Cadereyta Jiménez, Nuevo León, 67262, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:17.857801+00:00",
+  "_kind": "geo_samples"
+}

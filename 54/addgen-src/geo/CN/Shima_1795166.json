@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shima",
+  "geonameid": 1795166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.411383460933756,
+      "lon": 117.81943069557205,
+      "geoinfo": {
+        "display_name": "Longhai District, Zhangzhou City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longhai District",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shima, Fujian, China"
+    },
+    {
+      "lat": 24.416811685931076,
+      "lon": 117.80991954398269,
+      "geoinfo": {
+        "display_name": "沈海高速, Bangshan, Longhai District, Zhangzhou City, Fujian, China",
+        "road": "沈海高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longhai District",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "359, 沈海高速, Bangshan, Longhai District, Zhangzhou City, 15091 Fujian, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:44.162704+00:00",
+  "_kind": "geo_samples"
+}

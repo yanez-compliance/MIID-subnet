@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kotlovka",
+  "geonameid": 506043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.65387604906755,
+      "lon": 37.604818508301925,
+      "geoinfo": {
+        "display_name": "Метро «Каховская», Симферопольский бульвар, Zyuzino District, Moscow, Central Federal District, 117149, Russia",
+        "road": "Симферопольский бульвар",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zyuzino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "117149",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Симферопольский бульвар, Kotlovka, Moscow, Russia"
+    },
+    {
+      "lat": 55.68070512078366,
+      "lon": 37.56735546553387,
+      "geoinfo": {
+        "display_name": "Брюки, улица Кржижановского, Akademichesky District, Moscow, Central Federal District, 117997, Russia",
+        "road": "улица Кржижановского",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Akademichesky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "117997",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "793, улица Кржижановского, Kotlovka, 117997 Moscow, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:52.307040+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Atarfe",
+  "geonameid": 2521485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.245973151476456,
+      "lon": -3.6561084627699825,
+      "geoinfo": {
+        "display_name": "Circunvalación de Granada, Cortijo del Aire, Albolote, Comarca de la Vega de Granada, Granada, Andalusia, 18220, Spain",
+        "road": "Circunvalación de Granada",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albolote",
+        "state": "Andalusia",
+        "postcode": "18220",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Circunvalación de Granada, Atarfe, Andalusia, Spain"
+    },
+    {
+      "lat": 37.18699312602472,
+      "lon": -3.6907233715361234,
+      "geoinfo": {
+        "display_name": "Camino del Tercio, Rosaleda, Ronda, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18101, Spain",
+        "road": "Camino del Tercio",
+        "house_number": null,
+        "neighbourhood": "Rosaleda",
+        "suburb": null,
+        "city_district": "Ronda",
+        "city": "Granada",
+        "state": "Andalusia",
+        "postcode": "18101",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "692, Camino del Tercio, Rosaleda, Ronda, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18101, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:59.106587+00:00",
+  "_kind": "geo_samples"
+}

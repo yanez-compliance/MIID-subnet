@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Senekal",
+  "geonameid": 956507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.31139035571758,
+      "lon": 27.638595905727144,
+      "geoinfo": {
+        "display_name": "N5;R70;R707, Setsoto Ward 6, Senekal, Setsoto Local Municipality, Thabo Mofutsanyana District Municipality, Free State, 9600, South Africa",
+        "road": "N5;R70;R707",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Setsoto Ward 6",
+        "city_district": null,
+        "city": "Setsoto Local Municipality",
+        "state": "Free State",
+        "postcode": "9600",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N5;R70;R707, Senekal, Free State, South Africa"
+    },
+    {
+      "lat": -28.334422492826185,
+      "lon": 27.652650504526065,
+      "geoinfo": {
+        "display_name": "S665, Setsoto Ward 6, Setsoto Local Municipality, Thabo Mofutsanyana District Municipality, Free State, South Africa",
+        "road": "S665",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Setsoto Ward 6",
+        "city_district": null,
+        "city": "Setsoto Local Municipality",
+        "state": "Free State",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "S665, Senekal, 13155 Free State, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:37:07.076393+00:00",
+  "_kind": "geo_samples"
+}

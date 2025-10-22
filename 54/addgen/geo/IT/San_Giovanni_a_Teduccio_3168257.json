@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Giovanni a Teduccio",
+  "geonameid": 3168257,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82388271253386,
+      "lon": 14.303884724688062,
+      "geoinfo": {
+        "display_name": "Molo del Progresso, San Giovanni a Teduccio, Municipalità 6, Naples, Campania, 80146, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Giovanni a Teduccio",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80146",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "San Giovanni a Teduccio, San Giovanni a Teduccio, Campania, Italy"
+    },
+    {
+      "lat": 40.807517710529964,
+      "lon": 14.340833692977153,
+      "geoinfo": {
+        "display_name": "Via Roma, Ercolano, Naples, Campania, 80055, Italy",
+        "road": "Via Roma",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ercolano",
+        "state": "Campania",
+        "postcode": "80055",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "335, Via Roma, Ercolano, Naples, Campania, 80055, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:54.517474+00:00",
+  "_kind": "geo_samples"
+}

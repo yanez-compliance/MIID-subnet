@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Chascomús",
+  "geonameid": 3435448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -35.59073660944297,
+      "lon": -58.04269772871586,
+      "geoinfo": {
+        "display_name": "Costanera General Martín Miguel de Güemes, Partido de Chascomús, Buenos Aires, B7130, Argentina",
+        "road": "Costanera General Martín Miguel de Güemes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "B7130",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Costanera General Martín Miguel de Güemes, Chascomús, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -35.55706536749586,
+      "lon": -57.98285407862667,
+      "geoinfo": {
+        "display_name": "Autovía Juan Manuel Fangio, La Esmeralda, Chascomús, Partido de Chascomús, Buenos Aires, 7130, Argentina",
+        "road": "Autovía Juan Manuel Fangio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Esmeralda",
+        "city_district": null,
+        "city": "Chascomús",
+        "state": "Buenos Aires",
+        "postcode": "7130",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "370, Autovía Juan Manuel Fangio, La Esmeralda, Chascomús, Partido de Chascomús, Buenos Aires, 7130, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:11.928515+00:00",
+  "_kind": "geo_samples"
+}

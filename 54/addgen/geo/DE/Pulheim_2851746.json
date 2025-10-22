@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pulheim",
+  "geonameid": 2851746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0061751451868,
+      "lon": 6.853642626836348,
+      "geoinfo": {
+        "display_name": "4, Nordring, Esch, Esch/Auweiler, Chorweiler, Cologne, North Rhine-Westphalia, 50765, Germany",
+        "road": "Nordring",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Esch",
+        "city_district": "Chorweiler",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50765",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Nordring, Pulheim, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.03893356085263,
+      "lon": 6.787982774684224,
+      "geoinfo": {
+        "display_name": "Golf Club Gut Lärchenhof, Am Steinwerk, Stommelerbusch, Pulheim, Rhein-Erft-Kreis, North Rhine-Westphalia, 50259, Germany",
+        "road": "Am Steinwerk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pulheim",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50259",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "812, Am Steinwerk, Pulheim, 50259 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:39.327881+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Obertshausen",
+  "geonameid": 2858763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.09409349673803,
+      "lon": 8.868498048094715,
+      "geoinfo": {
+        "display_name": "Steinheimer Straße, Lämmerspiel, Mühlheim am Main, Landkreis Offenbach, Hesse, 63165, Germany",
+        "road": "Steinheimer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lämmerspiel",
+        "state": "Hesse",
+        "postcode": "63165",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Steinheimer Straße, Obertshausen, Hesse, Germany"
+    },
+    {
+      "lat": 50.0521956860588,
+      "lon": 8.836059529678169,
+      "geoinfo": {
+        "display_name": "Rembrücker Straße, Heusenstamm, Landkreis Offenbach, Hesse, 63150, Germany",
+        "road": "Rembrücker Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heusenstamm",
+        "state": "Hesse",
+        "postcode": "63150",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "204, Rembrücker Straße, Heusenstamm, Landkreis Offenbach, Hesse, 63150, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:18.428365+00:00",
+  "_kind": "geo_samples"
+}

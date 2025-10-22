@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Danville",
+  "geonameid": 4289445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.663632120803086,
+      "lon": -84.72790000880408,
+      "geoinfo": {
+        "display_name": "Lexington Road, Danville, Boyle County, Kentucky, 40422, United States",
+        "road": "Lexington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Danville",
+        "state": "Kentucky",
+        "postcode": "40422",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lexington Road, Danville, Kentucky, United States"
+    },
+    {
+      "lat": 37.612152061129734,
+      "lon": -84.79710685556294,
+      "geoinfo": {
+        "display_name": "Boyle County, Kentucky, 40440, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "40440",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "511, Boyle County, Kentucky, 40440, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:31.780364+00:00",
+  "_kind": "geo_samples"
+}

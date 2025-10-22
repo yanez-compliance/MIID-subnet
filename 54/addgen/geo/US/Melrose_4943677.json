@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Melrose",
+  "geonameid": 4943677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.44403911377134,
+      "lon": -71.05959661903542,
+      "geoinfo": {
+        "display_name": "Oriole Avenue, Windsor at Oak Grove, Melrose, Middlesex County, Massachusetts, 02148, United States",
+        "road": "Oriole Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melrose",
+        "state": "Massachusetts",
+        "postcode": "02148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oriole Avenue, Melrose, Massachusetts, United States"
+    },
+    {
+      "lat": 42.47250043926031,
+      "lon": -71.0261553314577,
+      "geoinfo": {
+        "display_name": "Broadway, Oakland Vale, Saugus, Essex County, Massachusetts, 01906, United States",
+        "road": "Broadway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saugus",
+        "state": "Massachusetts",
+        "postcode": "01906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "888, Broadway, Oakland Vale, Saugus, Essex County, Massachusetts, 01906, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:33.473111+00:00",
+  "_kind": "geo_samples"
+}

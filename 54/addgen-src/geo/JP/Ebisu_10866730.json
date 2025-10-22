@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Ebisu",
+  "geonameid": 10866730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.65946659247165,
+      "lon": 139.69480816875483,
+      "geoinfo": {
+        "display_name": "Maile, 円山坂, Maruyamacho, Shibuya, Tokyo, 150-8507, Japan",
+        "road": "円山坂",
+        "house_number": null,
+        "neighbourhood": "Maruyamacho",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shibuya",
+        "state": null,
+        "postcode": "150-8507",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "円山坂, Ebisu, Japan"
+    },
+    {
+      "lat": 35.64638467395196,
+      "lon": 139.7165579677997,
+      "geoinfo": {
+        "display_name": "新橋通り, Ebisu 1, Ebisu, Shibuya, Tokyo, 150-0000, Japan",
+        "road": "新橋通り",
+        "house_number": null,
+        "neighbourhood": "Ebisu 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shibuya",
+        "state": null,
+        "postcode": "150-0000",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "新橋通り, Ebisu 1, Ebisu, Shibuya, Tokyo, 150-0000, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:29.161636+00:00",
+  "_kind": "geo_samples"
+}

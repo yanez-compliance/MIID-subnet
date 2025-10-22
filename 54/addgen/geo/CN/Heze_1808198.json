@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Heze",
+  "geonameid": 1808198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.242100464065025,
+      "lon": 115.49027527533309,
+      "geoinfo": {
+        "display_name": "人民路, Danyang, Mudan District, Heze, Shandong, 274000, China",
+        "road": "人民路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Danyang",
+        "city_district": null,
+        "city": "Mudan District",
+        "state": "Shandong",
+        "postcode": "274000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "人民路, Heze, Shandong, China"
+    },
+    {
+      "lat": 35.24273581131626,
+      "lon": 115.47845263539958,
+      "geoinfo": {
+        "display_name": "Danyang, Mudan District, Heze, Shandong, 274000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Danyang",
+        "city_district": null,
+        "city": "Mudan District",
+        "state": "Shandong",
+        "postcode": "274000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "916, Danyang, Mudan District, Heze, Shandong, 274000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:27.585070+00:00",
+  "_kind": "geo_samples"
+}

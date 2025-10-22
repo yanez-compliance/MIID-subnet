@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Río de Teapa",
+  "geonameid": 3802739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.73927483336754,
+      "lon": -92.91546379805062,
+      "geoinfo": {
+        "display_name": "Santa Rita, Teapa, Tabasco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tabasco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Río de Teapa, Tabasco, Mexico"
+    },
+    {
+      "lat": 17.793892207621326,
+      "lon": -92.92375484539585,
+      "geoinfo": {
+        "display_name": "Villa el Cielo, Centro, Tabasco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa el Cielo",
+        "city_district": null,
+        "city": null,
+        "state": "Tabasco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "366, Villa el Cielo, Centro, 94313 Tabasco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:06.058246+00:00",
+  "_kind": "geo_samples"
+}

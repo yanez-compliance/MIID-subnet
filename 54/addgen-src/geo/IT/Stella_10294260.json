@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Stella",
+  "geonameid": 10294260,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.84199372816355,
+      "lon": 14.28007205522101,
+      "geoinfo": {
+        "display_name": "Pagano s.r.l., Calata Vittorio Veneto, Mercato, Naples, 80133, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mercato",
+        "city_district": null,
+        "city": "Naples",
+        "state": null,
+        "postcode": "80133",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Mercato, Stella, Campania, Italy"
+    },
+    {
+      "lat": 40.8960127376729,
+      "lon": 14.250469096680899,
+      "geoinfo": {
+        "display_name": "Via Ettore Ciccotti, Miano, Municipalità 7, Naples, Campania, 80145, Italy",
+        "road": "Via Ettore Ciccotti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Miano",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80145",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Ettore Ciccotti, Miano, Municipalità 7, Naples, Campania, 80145, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:25.347147+00:00",
+  "_kind": "geo_samples"
+}

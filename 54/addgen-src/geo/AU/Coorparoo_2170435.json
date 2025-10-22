@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Coorparoo",
+  "geonameid": 2170435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.475909063687258,
+      "lon": 153.06583331549064,
+      "geoinfo": {
+        "display_name": "Bennetts Road, Morningside, Greater Brisbane, Queensland, 4170, Australia",
+        "road": "Bennetts Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Morningside",
+        "city_district": "Morningside",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4170",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Bennetts Road, Coorparoo, Queensland, Australia"
+    },
+    {
+      "lat": -27.509596018314788,
+      "lon": 153.0614886490086,
+      "geoinfo": {
+        "display_name": "44, Lade Street, Coorparoo, City of Brisbane, Queensland, 4151, Australia",
+        "road": "Lade Street",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Coorparoo",
+        "city_district": null,
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4151",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "44, Lade Street, Coorparoo, City of Brisbane, Queensland, 4151, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:44.322487+00:00",
+  "_kind": "geo_samples"
+}

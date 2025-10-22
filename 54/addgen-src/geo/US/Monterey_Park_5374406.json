@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monterey Park",
+  "geonameid": 5374406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.08100184736451,
+      "lon": -118.15274360533994,
+      "geoinfo": {
+        "display_name": "Haruya Ramen, Fremont Avenue, The Alhambra, Alhambra, Los Angeles County, California, 91803, United States",
+        "road": "Fremont Avenue",
+        "house_number": null,
+        "neighbourhood": "The Alhambra",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alhambra",
+        "state": "California",
+        "postcode": "91803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fremont Avenue, Monterey Park, California, United States"
+    },
+    {
+      "lat": 34.09197805880115,
+      "lon": -118.08282284119389,
+      "geoinfo": {
+        "display_name": "8617, Grand Avenue, San Gabriel, Los Angeles County, California, 91770, United States",
+        "road": "Grand Avenue",
+        "house_number": "8617",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Gabriel",
+        "state": "California",
+        "postcode": "91770",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8617, Grand Avenue, San Gabriel, Los Angeles County, California, 91770, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:38.185722+00:00",
+  "_kind": "geo_samples"
+}

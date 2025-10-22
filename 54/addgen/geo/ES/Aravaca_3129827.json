@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Aravaca",
+  "geonameid": 3129827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.464549865986385,
+      "lon": -3.804521304318612,
+      "geoinfo": {
+        "display_name": "Calle de Alsasua, Moncloa-Aravaca, Madrid, Community of Madrid, 28224, Spain",
+        "road": "Calle de Alsasua",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28224",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de Alsasua, Aravaca, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.46815101156316,
+      "lon": -3.7436686765708793,
+      "geoinfo": {
+        "display_name": "Real Club de la Puerta de Hierro, Autovía del Noroeste, Ciudad Universitaria, Moncloa-Aravaca, Madrid, Community of Madrid, 28040, Spain",
+        "road": "Autovía del Noroeste",
+        "house_number": null,
+        "neighbourhood": "Ciudad Universitaria",
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28040",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "235, Autovía del Noroeste, Aravaca, 28040 Community of Madrid, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:07.075214+00:00",
+  "_kind": "geo_samples"
+}

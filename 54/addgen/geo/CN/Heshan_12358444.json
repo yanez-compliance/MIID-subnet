@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Heshan",
+  "geonameid": 12358444,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.50935072620911,
+      "lon": 119.53101796889084,
+      "geoinfo": {
+        "display_name": "Donggang District, Rizhao, Shandong, 276800, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donggang District",
+        "state": "Shandong",
+        "postcode": "276800",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Heshan, Shandong, China"
+    },
+    {
+      "lat": 35.51748964497667,
+      "lon": 119.53595977521984,
+      "geoinfo": {
+        "display_name": "大屯路, Donggang District, Rizhao, Shandong, 276800, China",
+        "road": "大屯路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donggang District",
+        "state": "Shandong",
+        "postcode": "276800",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "145, 大屯路, Donggang District, Rizhao, Shandong, 276800, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:00:40.407489+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Mek’ī",
+  "geonameid": 331163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.126314968444028,
+      "lon": 38.79341512771163,
+      "geoinfo": {
+        "display_name": "East Shewa, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Mek’ī, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 8.14472550483919,
+      "lon": 38.804742895416226,
+      "geoinfo": {
+        "display_name": "Meki, East Shewa, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meki",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "999, Mek’ī, 67313 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:53.498538+00:00",
+  "_kind": "geo_samples"
+}

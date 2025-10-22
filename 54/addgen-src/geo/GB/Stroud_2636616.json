@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stroud",
+  "geonameid": 2636616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.782820294363596,
+      "lon": -2.2161152589629993,
+      "geoinfo": {
+        "display_name": "Edge Lane, Haines Green, Painswick, Edge, Stroud, Gloucestershire, England, GL6 6NE, United Kingdom",
+        "road": "Edge Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Painswick",
+        "state": "England",
+        "postcode": "GL6 6NE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Edge Lane, Stroud, England, United Kingdom"
+    },
+    {
+      "lat": 51.713274936904426,
+      "lon": -2.220242848958132,
+      "geoinfo": {
+        "display_name": "The Black Horse, Marling Close, Littleworth, Minchinhampton, Amberley, Stroud, Gloucestershire, England, GL5 5AQ, United Kingdom",
+        "road": "Marling Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Minchinhampton",
+        "city_district": null,
+        "city": "Stroud",
+        "state": "England",
+        "postcode": "GL5 5AQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Black Horse, Marling Close, Littleworth, Minchinhampton, Amberley, Stroud, Gloucestershire, England, GL5 5AQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:06.701005+00:00",
+  "_kind": "geo_samples"
+}

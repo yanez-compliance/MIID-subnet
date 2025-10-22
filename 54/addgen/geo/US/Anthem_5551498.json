@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Anthem",
+  "geonameid": 5551498,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.85183500632875,
+      "lon": -112.1321481052937,
+      "geoinfo": {
+        "display_name": "Memorial Drive, Anthem, Maricopa County, Arizona, 85086, United States",
+        "road": "Memorial Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anthem",
+        "state": "Arizona",
+        "postcode": "85086",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Memorial Drive, Anthem, Arizona, United States"
+    },
+    {
+      "lat": 33.84329340624409,
+      "lon": -112.18314821756043,
+      "geoinfo": {
+        "display_name": "West Desert Hills Drive, Rio Vista, Phoenix, Maricopa County, Arizona, 85087, United States",
+        "road": "West Desert Hills Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rio Vista",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "754, West Desert Hills Drive, Rio Vista, Phoenix, Maricopa County, Arizona, 85087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:08.486078+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Largo",
+  "geonameid": 4161580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.900447848678237,
+      "lon": -82.77100601147211,
+      "geoinfo": {
+        "display_name": "1833, Lake Avenue Southeast, Largo, Pinellas County, Florida, 33771, United States",
+        "road": "Lake Avenue Southeast",
+        "house_number": "1833",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Largo",
+        "state": "Florida",
+        "postcode": "33771",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1833 Lake Avenue Southeast, Largo, Florida, United States"
+    },
+    {
+      "lat": 27.891688386863308,
+      "lon": -82.81893276909469,
+      "geoinfo": {
+        "display_name": "Wilcox Road, Largo, Pinellas County, Florida, 33774, United States",
+        "road": "Wilcox Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Largo",
+        "state": "Florida",
+        "postcode": "33774",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "035, Wilcox Road, Largo, Pinellas County, Florida, 33774, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:51.392402+00:00",
+  "_kind": "geo_samples"
+}

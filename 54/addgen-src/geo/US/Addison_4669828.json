@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Addison",
+  "geonameid": 4669828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.97184821749755,
+      "lon": -96.80528566272233,
+      "geoinfo": {
+        "display_name": "5990, Westgrove Drive, Dallas, Dallas County, Texas, 75248, United States",
+        "road": "Westgrove Drive",
+        "house_number": "5990",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dallas",
+        "state": "Texas",
+        "postcode": "75248",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5990 Westgrove Drive, Addison, Texas, United States"
+    },
+    {
+      "lat": 32.924586954488795,
+      "lon": -96.80517527765019,
+      "geoinfo": {
+        "display_name": "5930, Lyndon B Johnson Freeway, Dallas, Dallas County, Texas, 75240, United States",
+        "road": "Lyndon B Johnson Freeway",
+        "house_number": "5930",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dallas",
+        "state": "Texas",
+        "postcode": "75240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5930, Lyndon B Johnson Freeway, Dallas, Dallas County, Texas, 75240, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:29.534413+00:00",
+  "_kind": "geo_samples"
+}

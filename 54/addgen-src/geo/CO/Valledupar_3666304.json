@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Valledupar",
+  "geonameid": 3666304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.509550109935407,
+      "lon": -73.26048251237896,
+      "geoinfo": {
+        "display_name": "Valledupar, Cesar, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cesar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Valledupar, Cesar, Colombia"
+    },
+    {
+      "lat": 10.439069333354023,
+      "lon": -73.25233561835569,
+      "geoinfo": {
+        "display_name": "Comuna 3, Perímetro Urbano Valledupar, Valledupar, Cesar, 200004, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Comuna 3",
+        "city": "Perímetro Urbano Valledupar",
+        "state": "Cesar",
+        "postcode": "200004",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Comuna 3, Perímetro Urbano Valledupar, Valledupar, Cesar, 200004, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:01:48.204320+00:00",
+  "_kind": "geo_samples"
+}

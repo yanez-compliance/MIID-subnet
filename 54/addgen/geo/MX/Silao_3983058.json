@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Silao",
+  "geonameid": 3983058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.95245672821188,
+      "lon": -101.44360672655031,
+      "geoinfo": {
+        "display_name": "Dirección General de Policía, Calle Los Encinos, La Via Ii, Loretito, Silao, Silao (Ciudad), Silao de la Victoria, Guanajuato, 36127, Mexico",
+        "road": "Calle Los Encinos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Loretito",
+        "city_district": null,
+        "city": "Silao",
+        "state": "Guanajuato",
+        "postcode": "36127",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Los Encinos, Silao, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.92504635420334,
+      "lon": -101.39202708040496,
+      "geoinfo": {
+        "display_name": "Menores, Silao, Silao de la Victoria, Guanajuato, 36294, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silao",
+        "state": "Guanajuato",
+        "postcode": "36294",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "057, Menores, Silao, Silao de la Victoria, Guanajuato, 36294, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:07.582405+00:00",
+  "_kind": "geo_samples"
+}

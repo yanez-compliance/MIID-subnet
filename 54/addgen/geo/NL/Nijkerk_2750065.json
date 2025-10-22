@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Nijkerk",
+  "geonameid": 2750065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.23625744752106,
+      "lon": 5.508845408585595,
+      "geoinfo": {
+        "display_name": "Nijkerkerstraat, Hoef, Putten, Gelderland, Netherlands, 3882 PE, Netherlands",
+        "road": "Nijkerkerstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Putten",
+        "state": "Gelderland",
+        "postcode": "3882 PE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Nijkerkerstraat, Nijkerk, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 52.195748915165524,
+      "lon": 5.436543681856365,
+      "geoinfo": {
+        "display_name": "Schiermonnikooghof, Waddeneilandenbuurt, Vathorst-De Laak, Amersfoort, Utrecht, Netherlands, 3826 DK, Netherlands",
+        "road": "Schiermonnikooghof",
+        "house_number": null,
+        "neighbourhood": "Waddeneilandenbuurt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Amersfoort",
+        "state": "Utrecht",
+        "postcode": "3826 DK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "206, Schiermonnikooghof, Waddeneilandenbuurt, Vathorst-De Laak, Amersfoort, Utrecht, Netherlands, 3826 DK, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:21.254159+00:00",
+  "_kind": "geo_samples"
+}

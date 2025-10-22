@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Verdun",
+  "geonameid": 2969958,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.16380848370928,
+      "lon": 5.33845565289034,
+      "geoinfo": {
+        "display_name": "Rue de l'Égalité, Thierville-sur-Meuse, Verdun, Meuse, Grand Est, Metropolitan France, 55840, France",
+        "road": "Rue de l'Égalité",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thierville-sur-Meuse",
+        "state": "Grand Est",
+        "postcode": "55840",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de l'Égalité, Verdun, Grand Est, France"
+    },
+    {
+      "lat": 49.152292559634574,
+      "lon": 5.344019552684804,
+      "geoinfo": {
+        "display_name": "D 225, Verdun, Meuse, Grand Est, Metropolitan France, 55100, France",
+        "road": "D 225",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Verdun",
+        "state": "Grand Est",
+        "postcode": "55100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 225, Verdun, Meuse, Grand Est, Metropolitan France, 55100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:12.894899+00:00",
+  "_kind": "geo_samples"
+}

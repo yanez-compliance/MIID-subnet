@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sucy-en-Brie",
+  "geonameid": 2973745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.77557246007677,
+      "lon": 2.5014019290566214,
+      "geoinfo": {
+        "display_name": "Le Bas de Sucy, Sucy-en-Brie, Créteil, Val-de-Marne, Metropolitan France, 94370, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Le Bas de Sucy",
+        "city_district": null,
+        "city": "Sucy-en-Brie",
+        "state": null,
+        "postcode": "94370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Le Bas de Sucy, Sucy-en-Brie, France"
+    },
+    {
+      "lat": 48.77529525635972,
+      "lon": 2.493872509338963,
+      "geoinfo": {
+        "display_name": "Route du Fief Cordelier, Port de Bonneuil, Bonneuil-sur-Marne, Créteil, Val-de-Marne, Metropolitan France, 94380, France",
+        "road": "Route du Fief Cordelier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bonneuil-sur-Marne",
+        "state": null,
+        "postcode": "94380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "465, Route du Fief Cordelier, Port de Bonneuil, Bonneuil-sur-Marne, Créteil, Val-de-Marne, Metropolitan France, 94380, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:50.147607+00:00",
+  "_kind": "geo_samples"
+}

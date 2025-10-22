@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Portsmouth",
+  "geonameid": 2639996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.79451462240893,
+      "lon": -1.0615582130125585,
+      "geoinfo": {
+        "display_name": "Claydon Avenue, Milton, Portsmouth, England, PO4 8RJ, United Kingdom",
+        "road": "Claydon Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Milton",
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "England",
+        "postcode": "PO4 8RJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Claydon Avenue, Portsmouth, England, United Kingdom"
+    },
+    {
+      "lat": 50.75624261661028,
+      "lon": -1.0708006243397947,
+      "geoinfo": {
+        "display_name": "Southsea, Portsmouth, England, PO5 3DU, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southsea",
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "England",
+        "postcode": "PO5 3DU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Southsea, Portsmouth, England, PO5 3DU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:03.000275+00:00",
+  "_kind": "geo_samples"
+}

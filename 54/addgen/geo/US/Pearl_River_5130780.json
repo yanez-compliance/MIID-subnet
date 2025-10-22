@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pearl River",
+  "geonameid": 5130780,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.05559726911497,
+      "lon": -74.0195066964449,
+      "geoinfo": {
+        "display_name": "94, South William Street, Pearl River, Town of Orangetown, Rockland County, New York, 10965, United States",
+        "road": "South William Street",
+        "house_number": "94",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pearl River",
+        "state": "New York",
+        "postcode": "10965",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "94 South William Street, Pearl River, New York, United States"
+    },
+    {
+      "lat": 41.03321811148911,
+      "lon": -74.01894915909563,
+      "geoinfo": {
+        "display_name": "515, Stellman Drive, River Vale, Bergen County, New Jersey, 07675, United States",
+        "road": "Stellman Drive",
+        "house_number": "515",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "River Vale",
+        "state": "New Jersey",
+        "postcode": "07675",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "515, Stellman Drive, River Vale, Bergen County, New Jersey, 07675, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:14.489681+00:00",
+  "_kind": "geo_samples"
+}

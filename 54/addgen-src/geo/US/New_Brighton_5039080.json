@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Brighton",
+  "geonameid": 5039080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.05959757148733,
+      "lon": -93.18373921958302,
+      "geoinfo": {
+        "display_name": "West County Road E2, Arden Hills, Ramsey County, Minnesota, 55112, United States",
+        "road": "West County Road E2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arden Hills",
+        "state": "Minnesota",
+        "postcode": "55112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West County Road E2, New Brighton, Minnesota, United States"
+    },
+    {
+      "lat": 45.061550310814475,
+      "lon": -93.17062342543225,
+      "geoinfo": {
+        "display_name": "1639, Lake Valentine Road, Arden Hills, Ramsey County, Minnesota, 55112, United States",
+        "road": "Lake Valentine Road",
+        "house_number": "1639",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arden Hills",
+        "state": "Minnesota",
+        "postcode": "55112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1639, Lake Valentine Road, Arden Hills, Ramsey County, Minnesota, 55112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:17.100103+00:00",
+  "_kind": "geo_samples"
+}

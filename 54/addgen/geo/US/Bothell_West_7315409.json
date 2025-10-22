@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bothell West",
+  "geonameid": 7315409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.82996531973558,
+      "lon": -122.2764647476869,
+      "geoinfo": {
+        "display_name": "33rd Avenue West, Lynnwood, Snohomish County, Washington, 98037, United States",
+        "road": "33rd Avenue West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynnwood",
+        "state": "Washington",
+        "postcode": "98037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33rd Avenue West, Bothell West, Washington, United States"
+    },
+    {
+      "lat": 47.813739845211146,
+      "lon": -122.1928999220363,
+      "geoinfo": {
+        "display_name": "2995, 204th Street Southeast, Thrashers Corner, Bothell, Snohomish County, Washington, 98012, United States",
+        "road": "204th Street Southeast",
+        "house_number": "2995",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bothell",
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2995, 204th Street Southeast, Thrashers Corner, Bothell, Snohomish County, Washington, 98012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:45.113473+00:00",
+  "_kind": "geo_samples"
+}

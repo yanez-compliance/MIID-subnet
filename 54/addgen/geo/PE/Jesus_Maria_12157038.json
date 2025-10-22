@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Jesus Maria",
+  "geonameid": 12157038,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.07756867229804,
+      "lon": -77.08178343150426,
+      "geoinfo": {
+        "display_name": "San Miguel Plaza, 2000, Avenida La Marina, Maranga 2, San Miguel, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15088, Peru",
+        "road": "Avenida La Marina",
+        "house_number": "2000",
+        "neighbourhood": "Maranga 2",
+        "suburb": "San Miguel",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15088",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "2000 Avenida La Marina, Jesus Maria, Lima, Peru"
+    },
+    {
+      "lat": -12.07462122391638,
+      "lon": -77.07206038264542,
+      "geoinfo": {
+        "display_name": "Avenida José Leguía y Meléndez, Pueblo Libre, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15084, Peru",
+        "road": "Avenida José Leguía y Meléndez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pueblo Libre",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15084",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "967, Avenida José Leguía y Meléndez, Pueblo Libre, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15084, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:22.294650+00:00",
+  "_kind": "geo_samples"
+}

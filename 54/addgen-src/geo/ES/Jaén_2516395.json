@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Jaén",
+  "geonameid": 2516395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.77113776710491,
+      "lon": -3.809526093360062,
+      "geoinfo": {
+        "display_name": "PR con Neveral, San Vicente de Paúl, Jaén, Andalusia, 23005, Spain",
+        "road": "PR con Neveral",
+        "house_number": null,
+        "neighbourhood": "San Vicente de Paúl",
+        "suburb": null,
+        "city_district": null,
+        "city": "Jaén",
+        "state": "Andalusia",
+        "postcode": "23005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "PR con Neveral, Jaén, Andalusia, Spain"
+    },
+    {
+      "lat": 37.75905500158864,
+      "lon": -3.835583967314149,
+      "geoinfo": {
+        "display_name": "Senda Ermitilla, Jaén, Andalusia, 23005, Spain",
+        "road": "Senda Ermitilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jaén",
+        "state": "Andalusia",
+        "postcode": "23005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "029, Senda Ermitilla, Jaén, Andalusia, 23005, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:13.487316+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Capannori",
+  "geonameid": 3180733,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.8396876594019,
+      "lon": 10.60518399595786,
+      "geoinfo": {
+        "display_name": "Esselunga, 2, Via Giacomo Puccini, Rughi, Porcari, Lucca, Tuscany, 55016, Italy",
+        "road": "Via Giacomo Puccini",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rughi",
+        "state": "Tuscany",
+        "postcode": "55016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "2 Via Giacomo Puccini, Capannori, Tuscany, Italy"
+    },
+    {
+      "lat": 43.799128051389125,
+      "lon": 10.589692298705323,
+      "geoinfo": {
+        "display_name": "Via dei Francesconi, Centoni, San Ginese di Compito, Capannori, Lucca, Tuscany, 55061, Italy",
+        "road": "Via dei Francesconi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Capannori",
+        "state": "Tuscany",
+        "postcode": "55061",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "215, Via dei Francesconi, Centoni, San Ginese di Compito, Capannori, Lucca, Tuscany, 55061, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:32.406715+00:00",
+  "_kind": "geo_samples"
+}

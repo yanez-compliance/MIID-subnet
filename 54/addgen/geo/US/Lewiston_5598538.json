@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lewiston",
+  "geonameid": 5598538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.43809447767229,
+      "lon": -117.02454173560892,
+      "geoinfo": {
+        "display_name": "Down River Road, North Lewiston, Lewiston, Nez Perce County, Idaho, United States",
+        "road": "Down River Road",
+        "house_number": null,
+        "neighbourhood": "North Lewiston",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lewiston",
+        "state": "Idaho",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Down River Road, Lewiston, Idaho, United States"
+    },
+    {
+      "lat": 46.45082438360207,
+      "lon": -117.05730327130539,
+      "geoinfo": {
+        "display_name": "Whitman County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "714, Whitman County, 50593 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:24.778831+00:00",
+  "_kind": "geo_samples"
+}

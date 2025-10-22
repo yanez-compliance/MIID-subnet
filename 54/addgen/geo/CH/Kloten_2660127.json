@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Kloten",
+  "geonameid": 2660127,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.430264354223866,
+      "lon": 8.571766967669344,
+      "geoinfo": {
+        "display_name": "A11, Glattpark, Glattbrugg, Opfikon, Bezirk Bülach, Zurich, 8152, Switzerland",
+        "road": "A11",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glattpark",
+        "city_district": null,
+        "city": "Glattbrugg",
+        "state": "Zurich",
+        "postcode": "8152",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "A11, Kloten, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.46449917111845,
+      "lon": 8.62902555211939,
+      "geoinfo": {
+        "display_name": "Sandrainweg, Eigental, Kloten, Bezirk Bülach, Zurich, 8302, Switzerland",
+        "road": "Sandrainweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kloten",
+        "state": "Zurich",
+        "postcode": "8302",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Sandrainweg, Kloten, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.43881105630926,
+      "lon": 8.574077699337746,
+      "geoinfo": {
+        "display_name": "1, Im Brünnli, Glattbrugg, Opfikon, Bezirk Bülach, Zurich, 8152, Switzerland",
+        "road": "Im Brünnli",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glattbrugg",
+        "state": "Zurich",
+        "postcode": "8152",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "1, Im Brünnli, Glattbrugg, Opfikon, Bezirk Bülach, Zurich, 8152, Switzerland"
+    },
+    {
+      "lat": 47.459942792571105,
+      "lon": 8.625681723546956,
+      "geoinfo": {
+        "display_name": "Birchwilerstrasse, Gerlisberg, Kloten, Bezirk Bülach, Zurich, 8302, Switzerland",
+        "road": "Birchwilerstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kloten",
+        "state": "Zurich",
+        "postcode": "8302",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "370, Birchwilerstrasse, Gerlisberg, Kloten, Bezirk Bülach, Zurich, 8302, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:51.596521+00:00",
+  "_kind": "geo_samples"
+}

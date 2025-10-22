@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Bermeo",
+  "geonameid": 3128174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.45065593924036,
+      "lon": -2.6900335088367107,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Bermeo, Spain"
+    },
+    {
+      "lat": 43.41710802242603,
+      "lon": -2.7247581563340524,
+      "geoinfo": {
+        "display_name": "2, Zarragoitxi, Bermeo (Centro Urbano-Hirigunea), Bermeo, Biscay, Autonomous Community of the Basque Country, 48370, Spain",
+        "road": "Zarragoitxi",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bermeo",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48370",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "2, Zarragoitxi, Bermeo (Centro Urbano-Hirigunea), Bermeo, Biscay, Autonomous Community of the Basque Country, 48370, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:09.059631+00:00",
+  "_kind": "geo_samples"
+}

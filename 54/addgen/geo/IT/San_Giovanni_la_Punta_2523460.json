@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Giovanni la Punta",
+  "geonameid": 2523460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.563970875494114,
+      "lon": 15.08391164499907,
+      "geoinfo": {
+        "display_name": "Via Gabriele D'Annunzio, Sant'Agata li Battiati, Catania, Sicily, 95056, Italy",
+        "road": "Via Gabriele D'Annunzio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant'Agata li Battiati",
+        "state": "Sicily",
+        "postcode": "95056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Gabriele D'Annunzio, San Giovanni la Punta, Sicily, Italy"
+    },
+    {
+      "lat": 37.566852973248,
+      "lon": 15.063687818098963,
+      "geoinfo": {
+        "display_name": "Via Pippo Ferrara, Gravina di Catania, Catania, Sicily, 95030, Italy",
+        "road": "Via Pippo Ferrara",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gravina di Catania",
+        "state": "Sicily",
+        "postcode": "95030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "620, Via Pippo Ferrara, Gravina di Catania, Catania, Sicily, 95030, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:25.801031+00:00",
+  "_kind": "geo_samples"
+}

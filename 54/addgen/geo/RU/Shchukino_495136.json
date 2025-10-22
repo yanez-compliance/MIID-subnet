@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Shchukino",
+  "geonameid": 495136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.79934785950912,
+      "lon": 37.448026588817065,
+      "geoinfo": {
+        "display_name": "ВНИИ неорганических материалов, Живописная улица, Shchukino District, Moscow, Central Federal District, 123098, Russia",
+        "road": "Живописная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shchukino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "123098",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Живописная улица, Shchukino, Moscow, Russia"
+    },
+    {
+      "lat": 55.78103154234641,
+      "lon": 37.390324135060965,
+      "geoinfo": {
+        "display_name": "9 к1, 2-я Лыковская улица, Троице-Лыково, Strogino District, Moscow, Central Federal District, 123458, Russia",
+        "road": "2-я Лыковская улица",
+        "house_number": "9 к1",
+        "neighbourhood": "Троице-Лыково",
+        "suburb": "Strogino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "123458",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "9 к1, 2-я Лыковская улица, Троице-Лыково, Strogino District, Moscow, Central Federal District, 123458, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:44:31.658180+00:00",
+  "_kind": "geo_samples"
+}

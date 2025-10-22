@@ -1,0 +1,65 @@
+{
+  "country_code": "CR",
+  "country": "Costa Rica",
+  "city": "San José",
+  "geonameid": 3621841,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 10.968591636157718,
+      "lon": -85.09563628578888,
+      "geoinfo": {
+        "display_name": "Delicias, Upala, Alajuela Province, 21305, Costa Rica",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delicias",
+        "state": "Alajuela Province",
+        "postcode": "21305",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "San José, Alajuela Province, Costa Rica"
+    },
+    {
+      "lat": 10.951425929909167,
+      "lon": -85.15271024842984,
+      "geoinfo": {
+        "display_name": "Corredor Noratlántico, Loma Blanca, Popoyoapa, San José, Upala, Alajuela Province, 21303, Costa Rica",
+        "road": "Corredor Noratlántico",
+        "house_number": null,
+        "neighbourhood": "Loma Blanca",
+        "suburb": null,
+        "city_district": null,
+        "city": "San José",
+        "state": "Alajuela Province",
+        "postcode": "21303",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Corredor Noratlántico, San José, Alajuela Province, Costa Rica"
+    },
+    {
+      "lat": 10.918621557860781,
+      "lon": -85.15392366065909,
+      "geoinfo": {
+        "display_name": "Calle Suampito, El Roble, San José, Upala, Alajuela Province, 21303, Costa Rica",
+        "road": "Calle Suampito",
+        "house_number": null,
+        "neighbourhood": "El Roble",
+        "suburb": null,
+        "city_district": null,
+        "city": "San José",
+        "state": "Alajuela Province",
+        "postcode": "21303",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle Suampito, San José, Alajuela Province, Costa Rica"
+    }
+  ],
+  "updated_at": "2025-10-16T12:41:39.812117+00:00",
+  "_kind": "geo_samples"
+}

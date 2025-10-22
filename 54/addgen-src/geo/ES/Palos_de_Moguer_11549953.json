@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Palos de Moguer",
+  "geonameid": 11549953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36302844533305,
+      "lon": -3.7067528220993267,
+      "geoinfo": {
+        "display_name": "PSA Villaverde, M-40, Villaverde Alto, Casco Histórico de Villaverde, Villaverde, Madrid, Community of Madrid, 28041, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaverde",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Palos de Moguer, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.432035527605215,
+      "lon": -3.7320032999379866,
+      "geoinfo": {
+        "display_name": "GR-124 Senda Real, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28008, Spain",
+        "road": "GR-124 Senda Real",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28008",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "GR-124 Senda Real, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28008, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:31.565556+00:00",
+  "_kind": "geo_samples"
+}

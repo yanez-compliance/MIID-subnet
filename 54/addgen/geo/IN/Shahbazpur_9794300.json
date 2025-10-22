@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Shahbazpur",
+  "geonameid": 9794300,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.266177480556202,
+      "lon": 87.27703266861076,
+      "geoinfo": {
+        "display_name": "SubCentre, Dhol Baja, SH60, Forbesganj, Araria District, Bihar, 854318, India",
+        "road": "SH60",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forbesganj",
+        "state": "Bihar",
+        "postcode": "854318",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "SH60, Shahbazpur, Bihar, India"
+    },
+    {
+      "lat": 26.320515837768358,
+      "lon": 87.24307576595773,
+      "geoinfo": {
+        "display_name": "Forbesganj, Araria District, Bihar, 854318, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forbesganj",
+        "state": "Bihar",
+        "postcode": "854318",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "171, Forbesganj, Araria District, Bihar, 854318, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:32:11.182396+00:00",
+  "_kind": "geo_samples"
+}

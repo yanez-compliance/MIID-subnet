@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Long Eaton",
+  "geonameid": 2643697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.88693741531488,
+      "lon": -1.1998073986009221,
+      "geoinfo": {
+        "display_name": "Nottingham Road, Fairham, Barton in Fabis, Rushcliffe, Nottinghamshire, East Midlands, England, NG11 2AF, United Kingdom",
+        "road": "Nottingham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fairham",
+        "city_district": null,
+        "city": "Rushcliffe",
+        "state": "England",
+        "postcode": "NG11 2AF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Nottingham Road, Long Eaton, England, United Kingdom"
+    },
+    {
+      "lat": 52.92667387257117,
+      "lon": -1.2857313168155406,
+      "geoinfo": {
+        "display_name": "Mornington Close, Orchard Park Industrial Estate, Sandiacre, Erewash, Derbyshire, East Midlands, England, NG10 5BP, United Kingdom",
+        "road": "Mornington Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erewash",
+        "state": "England",
+        "postcode": "NG10 5BP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mornington Close, Orchard Park Industrial Estate, Sandiacre, Erewash, Derbyshire, East Midlands, England, NG10 5BP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:53.758263+00:00",
+  "_kind": "geo_samples"
+}

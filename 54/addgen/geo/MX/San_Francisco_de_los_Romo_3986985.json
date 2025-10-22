@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Francisco de los Romo",
+  "geonameid": 3986985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.090467744115653,
+      "lon": -102.28289557434483,
+      "geoinfo": {
+        "display_name": "Pabellón de Arteaga, Aguascalientes, 20668, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Aguascalientes",
+        "postcode": "20668",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Francisco de los Romo, Aguascalientes, Mexico"
+    },
+    {
+      "lat": 22.065834993242024,
+      "lon": -102.25832430659216,
+      "geoinfo": {
+        "display_name": "Carretera Pabellón de Arteaga-San Francisco de los Romo, San Francisco de Los Romo, San Francisco de los Romo, Aguascalientes, 20671, Mexico",
+        "road": "Carretera Pabellón de Arteaga-San Francisco de los Romo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco de Los Romo",
+        "state": "Aguascalientes",
+        "postcode": "20671",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "721, Carretera Pabellón de Arteaga-San Francisco de los Romo, San Francisco de Los Romo, San Francisco de los Romo, Aguascalientes, 20671, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:00.332666+00:00",
+  "_kind": "geo_samples"
+}

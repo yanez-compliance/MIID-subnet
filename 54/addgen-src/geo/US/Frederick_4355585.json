@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Frederick",
+  "geonameid": 4355585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.40409069032688,
+      "lon": -77.44739478974557,
+      "geoinfo": {
+        "display_name": "Himes Avenue, Frederick, Frederick County, Maryland, 21709, United States",
+        "road": "Himes Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frederick",
+        "state": "Maryland",
+        "postcode": "21709",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Himes Avenue, Frederick, Maryland, United States"
+    },
+    {
+      "lat": 39.37370879367497,
+      "lon": -77.39813741935237,
+      "geoinfo": {
+        "display_name": "Urbana Pike, Frederick County, Maryland, 21704, United States",
+        "road": "Urbana Pike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "114, Urbana Pike, Frederick County, Maryland, 21704, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:26.204759+00:00",
+  "_kind": "geo_samples"
+}

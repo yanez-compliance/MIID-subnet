@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Tovuz",
+  "geonameid": 584821,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.972707147796356,
+      "lon": 45.632443415220706,
+      "geoinfo": {
+        "display_name": "Dondar Quscu, Tovuz District, 0060, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dondar Quscu",
+        "state": null,
+        "postcode": "0060",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Tovuz, Azerbaijan"
+    },
+    {
+      "lat": 40.99864565569323,
+      "lon": 45.661424555877346,
+      "geoinfo": {
+        "display_name": "Bakı-Ələt-Qazax-Gürcüstan yolu, Tovuz District, 0060, Azerbaijan",
+        "road": "Bakı-Ələt-Qazax-Gürcüstan yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "0060",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Bakı-Ələt-Qazax-Gürcüstan yolu, Tovuz, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:35.957955+00:00",
+  "_kind": "geo_samples"
+}

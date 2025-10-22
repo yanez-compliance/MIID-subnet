@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Longfield",
+  "geonameid": 2643696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.397696866786426,
+      "lon": 0.31269671934469695,
+      "geoinfo": {
+        "display_name": "Main Road, Longfield Hill, Longfield and New Barn, Longfield, Dartford, Kent, England, DA3 7PW, United Kingdom",
+        "road": "Main Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longfield and New Barn",
+        "city_district": null,
+        "city": "Dartford",
+        "state": "England",
+        "postcode": "DA3 7PW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Main Road, Longfield, England, United Kingdom"
+    },
+    {
+      "lat": 51.40900625674595,
+      "lon": 0.36815431866774406,
+      "geoinfo": {
+        "display_name": "Watling Street, Shears Green, Northfleet, Gravesham, Kent, England, DA11 7NU, United Kingdom",
+        "road": "Watling Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shears Green",
+        "city_district": null,
+        "city": "Gravesham",
+        "state": "England",
+        "postcode": "DA11 7NU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Watling Street, Shears Green, Northfleet, Gravesham, Kent, England, DA11 7NU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:52.374463+00:00",
+  "_kind": "geo_samples"
+}

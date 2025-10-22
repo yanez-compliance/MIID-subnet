@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Boston",
+  "geonameid": 4935304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.39096803315764,
+      "lon": -71.01605902521747,
+      "geoinfo": {
+        "display_name": "McClellan Highway, East Boston, Boston, Suffolk County, Massachusetts, 02150, United States",
+        "road": "McClellan Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East Boston",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "McClellan Highway, East Boston, Massachusetts, United States"
+    },
+    {
+      "lat": 42.34062631956998,
+      "lon": -71.05232585544782,
+      "geoinfo": {
+        "display_name": "150;156, Athens Street, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02205, United States",
+        "road": "Athens Street",
+        "house_number": "150;156",
+        "neighbourhood": null,
+        "suburb": "Seaport",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "150;156, Athens Street, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:19.455623+00:00",
+  "_kind": "geo_samples"
+}

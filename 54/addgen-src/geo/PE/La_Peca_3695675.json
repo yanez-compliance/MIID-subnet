@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "La Peca",
+  "geonameid": 3695675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -5.580722036927842,
+      "lon": -78.4610555278305,
+      "geoinfo": {
+        "display_name": "AM-530, La Palma, Arrayan, La Peca, Province of Bagua, Amazonas, Peru",
+        "road": "AM-530",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arrayan",
+        "state": "Amazonas",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "AM-530, La Peca, Amazonas, Peru"
+    },
+    {
+      "lat": -5.581698851783697,
+      "lon": -78.42468233520125,
+      "geoinfo": {
+        "display_name": "Arrayan, La Peca, Province of Bagua, Amazonas, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arrayan",
+        "state": "Amazonas",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "123, Arrayan, La Peca, Province of Bagua, 34514 Amazonas, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:22.651423+00:00",
+  "_kind": "geo_samples"
+}

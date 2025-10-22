@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "East Helsinki",
+  "geonameid": 12747032,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.17085642713875,
+      "lon": 25.082487168813646,
+      "geoinfo": {
+        "display_name": "23, Puuskakuja, Jollas, Laajasalo, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00850, Finland",
+        "road": "Puuskakuja",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Laajasalo",
+        "city_district": "Southeastern major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00850",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "23, Puuskakuja, Jollas, Laajasalo, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00850, Finland"
+    },
+    {
+      "lat": 60.19044589349224,
+      "lon": 25.019822931441517,
+      "geoinfo": {
+        "display_name": "Itäväylä, Länsi-Herttoniemi, Herttoniemi, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00881, Finland",
+        "road": "Itäväylä",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Herttoniemi",
+        "city_district": "Southeastern major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00881",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "093, Itäväylä, Länsi-Herttoniemi, Herttoniemi, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00881, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:23.976121+00:00",
+  "_kind": "geo_samples"
+}

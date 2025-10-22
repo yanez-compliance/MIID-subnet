@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Crépy-en-Valois",
+  "geonameid": 3022569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.271735488118814,
+      "lon": 2.879465970911856,
+      "geoinfo": {
+        "display_name": "D 332, Béthancourt-en-Valois, Senlis, Oise, Hauts-de-France, Metropolitan France, 60129, France",
+        "road": "D 332",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Béthancourt-en-Valois",
+        "state": "Hauts-de-France",
+        "postcode": "60129",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 332, Crépy-en-Valois, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.22987279127029,
+      "lon": 2.896393821493537,
+      "geoinfo": {
+        "display_name": "DEKRA, 14, Avenue Sadi Carnot, Crépy-en-Valois, Senlis, Oise, Hauts-de-France, Metropolitan France, 60800, France",
+        "road": "Avenue Sadi Carnot",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crépy-en-Valois",
+        "state": "Hauts-de-France",
+        "postcode": "60800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "DEKRA, 14, Avenue Sadi Carnot, Crépy-en-Valois, Senlis, Oise, Hauts-de-France, Metropolitan France, 60800, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:00.681547+00:00",
+  "_kind": "geo_samples"
+}

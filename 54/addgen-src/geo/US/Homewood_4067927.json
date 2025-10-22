@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Homewood",
+  "geonameid": 4067927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.452502582311354,
+      "lon": -86.78920932965752,
+      "geoinfo": {
+        "display_name": "1968, Hickory Road, Vesclub Estates, Biltmore Estates, Vestavia Hills, Jefferson County, Alabama, 35216, United States",
+        "road": "Hickory Road",
+        "house_number": "1968",
+        "neighbourhood": "Vesclub Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vestavia Hills",
+        "state": "Alabama",
+        "postcode": "35216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1968 Hickory Road, Homewood, Alabama, United States"
+    },
+    {
+      "lat": 33.47628393892411,
+      "lon": -86.75025310983827,
+      "geoinfo": {
+        "display_name": "Sherwood Road, Mountain Brook, Jefferson County, Alabama, 35223, United States",
+        "road": "Sherwood Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mountain Brook",
+        "state": "Alabama",
+        "postcode": "35223",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "994, Sherwood Road, Mountain Brook, Jefferson County, Alabama, 35223, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:40:32.771734+00:00",
+  "_kind": "geo_samples"
+}

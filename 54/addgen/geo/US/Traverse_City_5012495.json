@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Traverse City",
+  "geonameid": 5012495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.76314654713406,
+      "lon": -85.62894489210245,
+      "geoinfo": {
+        "display_name": "420, Fifth Street, Kids Creek, Traverse City, Grand Traverse County, Michigan, 49684, United States",
+        "road": "Fifth Street",
+        "house_number": "420",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Traverse City",
+        "state": "Michigan",
+        "postcode": "49684",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "420 Fifth Street, Traverse City, Michigan, United States"
+    },
+    {
+      "lat": 44.74307743692789,
+      "lon": -85.61192782463182,
+      "geoinfo": {
+        "display_name": "Boardman Lake Loop Trail, Boardman Lake Glens, Garfield Township, Grand Traverse County, Michigan, 49684, United States",
+        "road": "Boardman Lake Loop Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garfield Township",
+        "state": "Michigan",
+        "postcode": "49684",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "098, Boardman Lake Loop Trail, Boardman Lake Glens, Garfield Township, Grand Traverse County, Michigan, 49684, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:00.912782+00:00",
+  "_kind": "geo_samples"
+}

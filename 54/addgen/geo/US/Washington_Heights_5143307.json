@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Washington Heights",
+  "geonameid": 5143307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.869142789472164,
+      "lon": -73.92999899700794,
+      "geoinfo": {
+        "display_name": "Henry Hudson Parkway, Inwood, Manhattan Community Board 12, Manhattan, New York County, New York, 10034, United States",
+        "road": "Henry Hudson Parkway",
+        "house_number": null,
+        "neighbourhood": "Inwood",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Henry Hudson Parkway, Washington Heights, New York, United States"
+    },
+    {
+      "lat": 40.81866225570583,
+      "lon": -73.92069815368686,
+      "geoinfo": {
+        "display_name": "Alfred E Smith High School, 333, East 151st Street, The Bronx, Bronx County, New York, 10451, United States",
+        "road": "East 151st Street",
+        "house_number": "333",
+        "neighbourhood": null,
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10451",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Alfred E Smith High School, 333, East 151st Street, The Bronx, Bronx County, New York, 10451, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:02.189261+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manitowoc",
+  "geonameid": 5261585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.048102126605535,
+      "lon": -87.63344407038595,
+      "geoinfo": {
+        "display_name": "Manitowoc County, Wisconsin, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Manitowoc, Wisconsin, United States"
+    },
+    {
+      "lat": 44.06704587961649,
+      "lon": -87.70666205458107,
+      "geoinfo": {
+        "display_name": "I 43, Manitowoc, Manitowoc County, Wisconsin, 54221, United States",
+        "road": "I 43",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manitowoc",
+        "state": "Wisconsin",
+        "postcode": "54221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 43, Manitowoc, Manitowoc County, Wisconsin, 54221, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:13.563966+00:00",
+  "_kind": "geo_samples"
+}

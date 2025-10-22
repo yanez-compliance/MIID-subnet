@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dade",
+  "geonameid": 8400140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.222081667030363,
+      "lon": 108.36720385736858,
+      "geoinfo": {
+        "display_name": "镇大路, Zhendong, Dade, Kaizhou District, Chongqing, China",
+        "road": "镇大路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zhendong",
+        "city_district": null,
+        "city": "Dade",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "镇大路, Dade, Chongqing, China"
+    },
+    {
+      "lat": 31.226442696803826,
+      "lon": 108.33668774019918,
+      "geoinfo": {
+        "display_name": "Dade, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dade",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "689, Dade, Kaizhou District, 26725 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:02:22.563911+00:00",
+  "_kind": "geo_samples"
+}

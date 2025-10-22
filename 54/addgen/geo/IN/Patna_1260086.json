@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Patna",
+  "geonameid": 1260086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.59520472900452,
+      "lon": 85.08678945602612,
+      "geoinfo": {
+        "display_name": "Birla Institute of Technology, Patna, Bailey Road Flyover, Patna, Patna Rural, Patna, Bihar, 800001, India",
+        "road": "Bailey Road Flyover",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Patna",
+        "state": "Bihar",
+        "postcode": "800001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bailey Road Flyover, Patna, Bihar, India"
+    },
+    {
+      "lat": 25.587734669860055,
+      "lon": 85.11208464838654,
+      "geoinfo": {
+        "display_name": "Patna, Patna Rural, Patna, Bihar, 800001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Patna",
+        "state": "Bihar",
+        "postcode": "800001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "801, Patna, Patna Rural, Patna, Bihar, 800001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:19.514062+00:00",
+  "_kind": "geo_samples"
+}

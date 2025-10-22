@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Québec",
+  "geonameid": 6325494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.80718378931502,
+      "lon": -71.18742707181576,
+      "geoinfo": {
+        "display_name": "5847, Rue Saint-Laurent, Vieux-Lévis, Lévis (quartier), Desjardins, Lévis, Chaudière-Appalaches, Quebec, G6V 6E5, Canada",
+        "road": "Rue Saint-Laurent",
+        "house_number": "5847",
+        "neighbourhood": "Vieux-Lévis",
+        "suburb": "Lévis (quartier)",
+        "city_district": "Desjardins",
+        "city": "Lévis",
+        "state": "Quebec",
+        "postcode": "G6V 6E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "5847 Rue Saint-Laurent, Québec, Quebec, Canada"
+    },
+    {
+      "lat": 46.82444245543231,
+      "lon": -71.19191424585445,
+      "geoinfo": {
+        "display_name": "Pointe à Carcy, Vieux-Québec, Vieux-Québec–Cap-Blanc–Colline-Parlementaire, La Cité-Limoilou, Quebec, Urban agglomeration of Québec, Capitale-Nationale, Quebec, G1K 4C4, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vieux-Québec–Cap-Blanc–Colline-Parlementaire",
+        "city_district": "La Cité-Limoilou",
+        "city": "Quebec",
+        "state": "Quebec",
+        "postcode": "G1K 4C4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Pointe à Carcy, Vieux-Québec, Vieux-Québec–Cap-Blanc–Colline-Parlementaire, La Cité-Limoilou, Quebec, Urban agglomeration of Québec, Capitale-Nationale, Quebec, G1K 4C4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:37.626783+00:00",
+  "_kind": "geo_samples"
+}

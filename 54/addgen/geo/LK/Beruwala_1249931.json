@@ -1,0 +1,47 @@
+{
+  "country_code": "LK",
+  "country": "Sri Lanka",
+  "city": "Beruwala",
+  "geonameid": 1249931,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.45842708685481,
+      "lon": 79.95218982249587,
+      "geoinfo": {
+        "display_name": "Moragalla, Beruwala DS Division, Kalutara District, Western Province, 12070, Sri Lanka",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moragalla",
+        "state": "Western Province",
+        "postcode": "12070",
+        "country": "Sri Lanka",
+        "country_code": "lk"
+      },
+      "address": "Beruwala, Western Province, Sri Lanka"
+    },
+    {
+      "lat": 6.497638546034389,
+      "lon": 80.01173291313427,
+      "geoinfo": {
+        "display_name": "Munhena Road, Maggona, Beruwala DS Division, Kalutara District, Western Province, 12060, Sri Lanka",
+        "road": "Munhena Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maggona",
+        "state": "Western Province",
+        "postcode": "12060",
+        "country": "Sri Lanka",
+        "country_code": "lk"
+      },
+      "address": "Munhena Road, Beruwala, Western Province, Sri Lanka"
+    }
+  ],
+  "updated_at": "2025-10-16T18:29:12.703154+00:00",
+  "_kind": "geo_samples"
+}

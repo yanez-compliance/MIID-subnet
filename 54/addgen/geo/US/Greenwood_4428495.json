@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenwood",
+  "geonameid": 4428495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.5436925566188,
+      "lon": -90.20719682405365,
+      "geoinfo": {
+        "display_name": "County Road 150, Greenwood, Leflore County, Mississippi, 38930, United States",
+        "road": "County Road 150",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenwood",
+        "state": "Mississippi",
+        "postcode": "38930",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 150, Greenwood, Mississippi, United States"
+    },
+    {
+      "lat": 33.5101147695239,
+      "lon": -90.21872373424907,
+      "geoinfo": {
+        "display_name": "Greenwood, Leflore County, Mississippi, 38935, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenwood",
+        "state": "Mississippi",
+        "postcode": "38935",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "691, Greenwood, Leflore County, Mississippi, 38935, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:57.407018+00:00",
+  "_kind": "geo_samples"
+}

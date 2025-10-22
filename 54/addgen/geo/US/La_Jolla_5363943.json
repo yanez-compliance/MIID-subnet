@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Jolla",
+  "geonameid": 5363943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.85635289431964,
+      "lon": -117.29670516555493,
+      "geoinfo": {
+        "display_name": "La Jolla, San Diego, San Diego County, California, 92037, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Jolla",
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "La Jolla, La Jolla, California, United States"
+    },
+    {
+      "lat": 32.88042381546149,
+      "lon": -117.26095435840469,
+      "geoinfo": {
+        "display_name": "La Jolla Farms, Torrey Pines, San Diego, San Diego County, California, 92093, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Jolla Farms",
+        "suburb": "Torrey Pines",
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "470, La Jolla Farms, Torrey Pines, San Diego, San Diego County, California, 92093, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:18.374869+00:00",
+  "_kind": "geo_samples"
+}

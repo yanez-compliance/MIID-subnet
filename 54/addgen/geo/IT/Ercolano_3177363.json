@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ercolano",
+  "geonameid": 3177363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.76727260289903,
+      "lon": 14.366145056481058,
+      "geoinfo": {
+        "display_name": "Sant'Antonio, Torre del Greco, Naples, Campania, 80059, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torre del Greco",
+        "state": "Campania",
+        "postcode": "80059",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Ercolano, Campania, Italy"
+    },
+    {
+      "lat": 40.825601678112804,
+      "lon": 14.33088728496387,
+      "geoinfo": {
+        "display_name": "Pizzeria Salvo, Via Farina, San Giorgio a Cremano, Naples, Campania, 80046, Italy",
+        "road": "Via Farina",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Giorgio a Cremano",
+        "state": "Campania",
+        "postcode": "80046",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "651, Via Farina, Ercolano, 80046 Campania, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:08.217892+00:00",
+  "_kind": "geo_samples"
+}

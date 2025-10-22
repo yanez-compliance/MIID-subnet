@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Emiliano Zapata",
+  "geonameid": 8858099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.343448001805324,
+      "lon": -98.96311166184803,
+      "geoinfo": {
+        "display_name": "Avenida de las Torres, Los Reyes Acaquilpan, La Paz, State of Mexico, 09638, Mexico",
+        "road": "Avenida de las Torres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Reyes Acaquilpan",
+        "state": "State of Mexico",
+        "postcode": "09638",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida de las Torres, Emiliano Zapata, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.384077456654,
+      "lon": -98.96906115350049,
+      "geoinfo": {
+        "display_name": "Calle Cedro, Chimalhuacán, State of Mexico, 56343, Mexico",
+        "road": "Calle Cedro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chimalhuacán",
+        "state": "State of Mexico",
+        "postcode": "56343",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "998, Calle Cedro, Chimalhuacán, State of Mexico, 56343, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:04.319808+00:00",
+  "_kind": "geo_samples"
+}

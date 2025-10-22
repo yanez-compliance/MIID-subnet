@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chetumal",
+  "geonameid": 3531023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.48466841503092,
+      "lon": -88.30409319215778,
+      "geoinfo": {
+        "display_name": "Othón P. Blanco, Quintana Roo, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quintana Roo",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Chetumal, Quintana Roo, Mexico"
+    },
+    {
+      "lat": 18.52267145782318,
+      "lon": -88.26123074401151,
+      "geoinfo": {
+        "display_name": "Calderitas, Othón P. Blanco, Quintana Roo, 77960, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calderitas",
+        "state": "Quintana Roo",
+        "postcode": "77960",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "724, Calderitas, Othón P. Blanco, Quintana Roo, 77960, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:16.757333+00:00",
+  "_kind": "geo_samples"
+}

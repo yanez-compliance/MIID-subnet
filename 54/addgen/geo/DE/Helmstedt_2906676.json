@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Helmstedt",
+  "geonameid": 2906676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.234630115122215,
+      "lon": 10.966734265014265,
+      "geoinfo": {
+        "display_name": "Sportplatzstraße, Emmerstedt, Helmstedt, Landkreis Helmstedt, Lower Saxony, 38350, Germany",
+        "road": "Sportplatzstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Emmerstedt",
+        "city_district": "Emmerstedt",
+        "city": "Helmstedt",
+        "state": "Lower Saxony",
+        "postcode": "38350",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Sportplatzstraße, Helmstedt, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.204745187946436,
+      "lon": 10.968717309371975,
+      "geoinfo": {
+        "display_name": "HE-10, B 244, Helmstedt, Wolsdorf, Samtgemeinde Nord-Elm, Landkreis Helmstedt, Lower Saxony, 38379, Germany",
+        "road": "B 244",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Helmstedt",
+        "state": "Lower Saxony",
+        "postcode": "38379",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "HE-10, B 244, Helmstedt, Wolsdorf, Samtgemeinde Nord-Elm, Landkreis Helmstedt, Lower Saxony, 38379, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:28.173069+00:00",
+  "_kind": "geo_samples"
+}

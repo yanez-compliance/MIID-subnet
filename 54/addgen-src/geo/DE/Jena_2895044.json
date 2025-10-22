@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Jena",
+  "geonameid": 2895044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.95040068982998,
+      "lon": 11.542854298001142,
+      "geoinfo": {
+        "display_name": "Marschall-Lannes-Weg, Isserstedt, Jena, Thuringia, 07751, Germany",
+        "road": "Marschall-Lannes-Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Isserstedt",
+        "city": "Jena",
+        "state": "Thuringia",
+        "postcode": "07751",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Marschall-Lannes-Weg, Jena, Thuringia, Germany"
+    },
+    {
+      "lat": 50.93974750092072,
+      "lon": 11.565046148718404,
+      "geoinfo": {
+        "display_name": "Cospedaer Grund, West, Jena-West, Jena, Thuringia, 07743, Germany",
+        "road": "Cospedaer Grund",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West",
+        "city_district": "Jena-West",
+        "city": "Jena",
+        "state": "Thuringia",
+        "postcode": "07743",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "909, Cospedaer Grund, West, Jena-West, Jena, Thuringia, 07743, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:51.836860+00:00",
+  "_kind": "geo_samples"
+}

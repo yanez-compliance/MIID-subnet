@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Quiapo",
+  "geonameid": 1692184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.568047017496374,
+      "lon": 120.95458207558087,
+      "geoinfo": {
+        "display_name": "Manila, Capital District, Metro Manila, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manila",
+        "state": null,
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Quiapo, Philippines"
+    },
+    {
+      "lat": 14.569239060681511,
+      "lon": 121.00052463050933,
+      "geoinfo": {
+        "display_name": "Gregorio del Pilar Street, San Andres Bukid, Fifth District, Manila, Capital District, Metro Manila, 1017, Philippines",
+        "road": "Gregorio del Pilar Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Andres Bukid",
+        "city_district": "Fifth District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1017",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "467, Gregorio del Pilar Street, San Andres Bukid, Fifth District, Manila, Capital District, Metro Manila, 1017, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T05:01:24.614493+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Paramount",
+  "geonameid": 5381110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.909946290956064,
+      "lon": -118.16318450561319,
+      "geoinfo": {
+        "display_name": "13830, Arthur Avenue, Paramount, Los Angeles County, California, 90723, United States",
+        "road": "Arthur Avenue",
+        "house_number": "13830",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paramount",
+        "state": "California",
+        "postcode": "90723",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13830 Arthur Avenue, Paramount, California, United States"
+    },
+    {
+      "lat": 33.86293010359409,
+      "lon": -118.18406873588455,
+      "geoinfo": {
+        "display_name": "5959, Lime Avenue, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States",
+        "road": "Lime Avenue",
+        "house_number": "5959",
+        "neighbourhood": null,
+        "suburb": "North Long Beach",
+        "city_district": null,
+        "city": "Long Beach",
+        "state": "California",
+        "postcode": "90805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5959, Lime Avenue, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:00.350297+00:00",
+  "_kind": "geo_samples"
+}

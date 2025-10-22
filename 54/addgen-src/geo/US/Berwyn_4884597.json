@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Berwyn",
+  "geonameid": 4884597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.838337514746264,
+      "lon": -87.79621479171642,
+      "geoinfo": {
+        "display_name": "6924, 29th Place, Berwyn, Cook County, Illinois, 60402, United States",
+        "road": "29th Place",
+        "house_number": "6924",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berwyn",
+        "state": "Illinois",
+        "postcode": "60402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6924 29th Place, Berwyn, Illinois, United States"
+    },
+    {
+      "lat": 41.86404494411653,
+      "lon": -87.75720764041426,
+      "geoinfo": {
+        "display_name": "West Roosevelt Road, Austin, Chicago, West Chicago Township, Cook County, Illinois, 60644, United States",
+        "road": "West Roosevelt Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Austin",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60644",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "536, West Roosevelt Road, Austin, Chicago, West Chicago Township, Cook County, Illinois, 60644, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:01.619317+00:00",
+  "_kind": "geo_samples"
+}

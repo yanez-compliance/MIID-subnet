@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Belém",
+  "geonameid": 2270978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.7304813576693,
+      "lon": -9.19485493012646,
+      "geoinfo": {
+        "display_name": "Benfica, Lisbon, 1500-215, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Benfica",
+        "city_district": null,
+        "city": "Lisbon",
+        "state": null,
+        "postcode": "1500-215",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Benfica, Belém, Portugal"
+    },
+    {
+      "lat": 38.71056641178319,
+      "lon": -9.205097052656535,
+      "geoinfo": {
+        "display_name": "Estrada de Caselas, Ajuda, Lisbon, 1400-197, Portugal",
+        "road": "Estrada de Caselas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lisbon",
+        "state": null,
+        "postcode": "1400-197",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Estrada de Caselas, Ajuda, Lisbon, 1400-197, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:55.195374+00:00",
+  "_kind": "geo_samples"
+}

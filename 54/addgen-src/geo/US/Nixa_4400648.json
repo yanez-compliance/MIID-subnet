@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nixa",
+  "geonameid": 4400648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.04728182086709,
+      "lon": -93.31937931897457,
+      "geoinfo": {
+        "display_name": "Grace Avenue, Nixa, Christian County, Missouri, 65714, United States",
+        "road": "Grace Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nixa",
+        "state": "Missouri",
+        "postcode": "65714",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grace Avenue, Nixa, Missouri, United States"
+    },
+    {
+      "lat": 37.03986099330724,
+      "lon": -93.25674844615513,
+      "geoinfo": {
+        "display_name": "737, Combs Road, Ozark, Christian County, Missouri, 65714, United States",
+        "road": "Combs Road",
+        "house_number": "737",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ozark",
+        "state": "Missouri",
+        "postcode": "65714",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "737, Combs Road, Ozark, Christian County, Missouri, 65714, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:10.590905+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Houston",
+  "geonameid": 4699066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.766174163289715,
+      "lon": -95.34802682791009,
+      "geoinfo": {
+        "display_name": "Eastex Freeway, Downtown, Houston, Harris County, Texas, 77003, United States",
+        "road": "Eastex Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Downtown",
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eastex Freeway, Houston, Texas, United States"
+    },
+    {
+      "lat": 29.77590013512337,
+      "lon": -95.33195275238995,
+      "geoinfo": {
+        "display_name": "1599, Pannell Street, Fifth Ward, Houston, Harris County, Texas, 77020, United States",
+        "road": "Pannell Street",
+        "house_number": "1599",
+        "neighbourhood": null,
+        "suburb": "Fifth Ward",
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1599, Pannell Street, Fifth Ward, Houston, Harris County, Texas, 77020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:59.620882+00:00",
+  "_kind": "geo_samples"
+}

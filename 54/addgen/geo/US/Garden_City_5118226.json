@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garden City",
+  "geonameid": 5118226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72871408164586,
+      "lon": -73.63582264618766,
+      "geoinfo": {
+        "display_name": "950, Franklin Avenue, Village of Garden City, Town of Hempstead, Nassau County, New York, 11530, United States",
+        "road": "Franklin Avenue",
+        "house_number": "950",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Garden City",
+        "state": "New York",
+        "postcode": "11530",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "950 Franklin Avenue, Garden City, New York, United States"
+    },
+    {
+      "lat": 40.74220347363443,
+      "lon": -73.68702299733981,
+      "geoinfo": {
+        "display_name": "87, Maple Court, Village of New Hyde Park, Town of North Hempstead, Nassau County, New York, 11040, United States",
+        "road": "Maple Court",
+        "house_number": "87",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of New Hyde Park",
+        "state": "New York",
+        "postcode": "11040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "87, Maple Court, Village of New Hyde Park, Town of North Hempstead, Nassau County, New York, 11040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:33.269091+00:00",
+  "_kind": "geo_samples"
+}

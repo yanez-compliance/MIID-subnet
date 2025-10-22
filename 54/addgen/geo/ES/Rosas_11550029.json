@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Rosas",
+  "geonameid": 11550029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.38852454158343,
+      "lon": -3.56779852968391,
+      "geoinfo": {
+        "display_name": "Casco Histórico de Vicálvaro, Vicálvaro, Madrid, Community of Madrid, 28052, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vicálvaro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28052",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Vicálvaro, Rosas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.44690730328847,
+      "lon": -3.6048773817561814,
+      "geoinfo": {
+        "display_name": "Anillo Verde Ciclista, Rosas, San Blas - Canillejas, Madrid, Community of Madrid, 28022, Spain",
+        "road": "Anillo Verde Ciclista",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Blas - Canillejas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28022",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "756, Anillo Verde Ciclista, Rosas, San Blas - Canillejas, Madrid, Community of Madrid, 28022, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:48.150574+00:00",
+  "_kind": "geo_samples"
+}

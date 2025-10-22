@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Santiago Teyahualco",
+  "geonameid": 3827596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.666590667901435,
+      "lon": -99.0971133226179,
+      "geoinfo": {
+        "display_name": "San Pablo de las Salinas, Tultitlán, State of Mexico, 55710, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pablo de las Salinas",
+        "state": "State of Mexico",
+        "postcode": "55710",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Santiago Teyahualco, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.6769879508432,
+      "lon": -99.13956800020104,
+      "geoinfo": {
+        "display_name": "Calle Libramiento 2 de Marzo, Tultepec, State of Mexico, 54960, Mexico",
+        "road": "Calle Libramiento 2 de Marzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tultepec",
+        "state": "State of Mexico",
+        "postcode": "54960",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Libramiento 2 de Marzo, Tultepec, State of Mexico, 54960, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:09.960875+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lanzhou",
+  "geonameid": 1804430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.046691259988,
+      "lon": 103.85933727121657,
+      "geoinfo": {
+        "display_name": "Lanzhou University Yantan Road Campus, 222, 天水南路, Weiyuan Road Subdistrict, Lanzhou, Chengguan District, Lanzhou, Gansu, 730000, China",
+        "road": "天水南路",
+        "house_number": "222",
+        "neighbourhood": null,
+        "suburb": "Weiyuan Road Subdistrict",
+        "city_district": null,
+        "city": "Lanzhou",
+        "state": "Gansu",
+        "postcode": "730000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "222 天水南路, Lanzhou, Gansu, China"
+    },
+    {
+      "lat": 36.09076833845654,
+      "lon": 103.85587625375433,
+      "geoinfo": {
+        "display_name": "Lianhuo Expressway, Yanchang Road Subdistrict, Qingbaishi Subdistrict, Chengguan District, Gansu, 730046, China",
+        "road": "Lianhuo Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yanchang Road Subdistrict",
+        "city_district": null,
+        "city": "Qingbaishi Subdistrict",
+        "state": "Gansu",
+        "postcode": "730046",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "409, Lianhuo Expressway, Yanchang Road Subdistrict, Qingbaishi Subdistrict, Chengguan District, Gansu, 730046, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:55:23.123882+00:00",
+  "_kind": "geo_samples"
+}

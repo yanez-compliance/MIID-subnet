@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Vedado",
+  "geonameid": 3534599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.178729714332768,
+      "lon": -82.3747958822702,
+      "geoinfo": {
+        "display_name": "Havana, La Habana Vieja, Havana, 10000, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Havana",
+        "state": "Havana",
+        "postcode": "10000",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Vedado, Havana, Cuba"
+    },
+    {
+      "lat": 23.141727140504056,
+      "lon": -82.3545564065455,
+      "geoinfo": {
+        "display_name": "110, Chacón, La Habana Vieja, Catedral, Havana, La Habana Vieja, Havana, 10202, Cuba",
+        "road": "Chacón",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Catedral",
+        "city": "Havana",
+        "state": "Havana",
+        "postcode": "10202",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "110, Chacón, La Habana Vieja, Catedral, Havana, La Habana Vieja, Havana, 10202, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:48.021483+00:00",
+  "_kind": "geo_samples"
+}

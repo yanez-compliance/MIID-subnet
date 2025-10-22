@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Linn",
+  "geonameid": 5760009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.385134258262404,
+      "lon": -122.64942810351761,
+      "geoinfo": {
+        "display_name": "19679, Wildwood Drive, Hidden Springs, West Linn, Clackamas County, Oregon, 97068, United States",
+        "road": "Wildwood Drive",
+        "house_number": "19679",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Linn",
+        "state": "Oregon",
+        "postcode": "97068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19679 Wildwood Drive, West Linn, Oregon, United States"
+    },
+    {
+      "lat": 45.386015071784534,
+      "lon": -122.56782203985786,
+      "geoinfo": {
+        "display_name": "South Clackamas River Drive, Clackamas County, Oregon, 97027, United States",
+        "road": "South Clackamas River Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "117, South Clackamas River Drive, Clackamas County, Oregon, 97027, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:59.746718+00:00",
+  "_kind": "geo_samples"
+}

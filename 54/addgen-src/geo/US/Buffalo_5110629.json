@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Buffalo",
+  "geonameid": 5110629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.89146986233265,
+      "lon": -78.84664592315369,
+      "geoinfo": {
+        "display_name": "746, Broadway, Buffalo, Erie County, New York, 14212, United States",
+        "road": "Broadway",
+        "house_number": "746",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buffalo",
+        "state": "New York",
+        "postcode": "14212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "746 Broadway, Buffalo, New York, United States"
+    },
+    {
+      "lat": 42.92973043784456,
+      "lon": -78.87172995017481,
+      "geoinfo": {
+        "display_name": "194, Windsor Avenue, Elmwood Village, West Side, Buffalo, Erie County, New York, 14209, United States",
+        "road": "Windsor Avenue",
+        "house_number": "194",
+        "neighbourhood": "Elmwood Village",
+        "suburb": "West Side",
+        "city_district": null,
+        "city": "Buffalo",
+        "state": "New York",
+        "postcode": "14209",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "194, Windsor Avenue, Elmwood Village, West Side, Buffalo, Erie County, New York, 14209, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:17.782867+00:00",
+  "_kind": "geo_samples"
+}

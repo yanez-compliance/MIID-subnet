@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Malden",
+  "geonameid": 4942939,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.41946078753597,
+      "lon": -71.07440506440949,
+      "geoinfo": {
+        "display_name": "240, Commercial Street, Malden Gaming District, Edgeworth, Malden, Middlesex County, Massachusetts, 02148, United States",
+        "road": "Commercial Street",
+        "house_number": "240",
+        "neighbourhood": "Malden Gaming District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Malden",
+        "state": "Massachusetts",
+        "postcode": "02148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "240 Commercial Street, Malden, Massachusetts, United States"
+    },
+    {
+      "lat": 42.45325519851839,
+      "lon": -71.10782621015498,
+      "geoinfo": {
+        "display_name": "Sheepfold Path, Stoneham, Middlesex County, Massachusetts, 02180, United States",
+        "road": "Sheepfold Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stoneham",
+        "state": "Massachusetts",
+        "postcode": "02180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "592, Sheepfold Path, Stoneham, Middlesex County, Massachusetts, 02180, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:35.291897+00:00",
+  "_kind": "geo_samples"
+}

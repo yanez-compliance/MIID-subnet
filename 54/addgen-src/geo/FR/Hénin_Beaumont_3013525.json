@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Hénin-Beaumont",
+  "geonameid": 3013525,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.42783995051746,
+      "lon": 3.0164063483547614,
+      "geoinfo": {
+        "display_name": "Noyelles-Godault, Lens, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62950, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noyelles-Godault",
+        "state": "Hauts-de-France",
+        "postcode": "62950",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Hénin-Beaumont, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.45181648626897,
+      "lon": 2.936010662956414,
+      "geoinfo": {
+        "display_name": "Rue Branly, Chauffours, Courrières, Lens, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62710, France",
+        "road": "Rue Branly",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Courrières",
+        "state": "Hauts-de-France",
+        "postcode": "62710",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "575, Rue Branly, Chauffours, Courrières, Lens, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62710, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:36.941478+00:00",
+  "_kind": "geo_samples"
+}

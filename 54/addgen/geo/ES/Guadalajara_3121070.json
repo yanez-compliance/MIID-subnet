@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Guadalajara",
+  "geonameid": 3121070,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.58793400642946,
+      "lon": -3.165244037854763,
+      "geoinfo": {
+        "display_name": "Calle El Torvisco, Urbanización El Mapa, El Mapa, Chiloeches, Guadalajara, Castile-La Mancha, 19002, Spain",
+        "road": "Calle El Torvisco",
+        "house_number": null,
+        "neighbourhood": "Urbanización El Mapa",
+        "suburb": null,
+        "city_district": null,
+        "city": "El Mapa",
+        "state": "Castile-La Mancha",
+        "postcode": "19002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle El Torvisco, Guadalajara, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 40.62513129683416,
+      "lon": -3.1318261422780287,
+      "geoinfo": {
+        "display_name": "Mirador del Santo Verde, Carretera de Cuenca, Guadalajara, Castile-La Mancha, 19002, Spain",
+        "road": "Carretera de Cuenca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guadalajara",
+        "state": "Castile-La Mancha",
+        "postcode": "19002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "516, Carretera de Cuenca, Guadalajara, 19002 Castile-La Mancha, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:33.155272+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Deer Valley",
+  "geonameid": 5292387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.643264182925385,
+      "lon": -112.15762722748876,
+      "geoinfo": {
+        "display_name": "Bellair Golf Course, Annette Circle, Deer Valley, Phoenix, Maricopa County, Arizona, 85308, United States",
+        "road": "Annette Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Deer Valley",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85308",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Annette Circle, Deer Valley, Arizona, United States"
+    },
+    {
+      "lat": 33.662317888540514,
+      "lon": -112.15947390854059,
+      "geoinfo": {
+        "display_name": "4576, West Piute Avenue, Deer Valley, Glendale, Maricopa County, Arizona, 85308, United States",
+        "road": "West Piute Avenue",
+        "house_number": "4576",
+        "neighbourhood": null,
+        "suburb": "Deer Valley",
+        "city_district": null,
+        "city": "Glendale",
+        "state": "Arizona",
+        "postcode": "85308",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4576, West Piute Avenue, Deer Valley, 85308 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:07:19.618654+00:00",
+  "_kind": "geo_samples"
+}

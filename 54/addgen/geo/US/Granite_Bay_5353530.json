@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Granite Bay",
+  "geonameid": 5353530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.76452543876631,
+      "lon": -121.12261752916164,
+      "geoinfo": {
+        "display_name": "Placer County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Granite Bay, California, United States"
+    },
+    {
+      "lat": 38.77145721859795,
+      "lon": -121.17885501629081,
+      "geoinfo": {
+        "display_name": "Indian Oaks Lane, Granite Bay, Placer County, California, 95746, United States",
+        "road": "Indian Oaks Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Granite Bay",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "130, Indian Oaks Lane, Granite Bay, Placer County, California, 95746, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:33.218462+00:00",
+  "_kind": "geo_samples"
+}

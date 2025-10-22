@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xuzhou",
+  "geonameid": 10630003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.220444669838024,
+      "lon": 117.24780288142287,
+      "geoinfo": {
+        "display_name": "Daguozhuang, Yunlong District, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Daguozhuang",
+        "city_district": null,
+        "city": "Yunlong District",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Daguozhuang, Xuzhou, Jiangsu, China"
+    },
+    {
+      "lat": 34.19971821816394,
+      "lon": 117.33226361463149,
+      "geoinfo": {
+        "display_name": "Hua-Xu Expressway, Tongshan District, Xuzhou, Jiangsu, 221000, China",
+        "road": "Hua-Xu Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongshan District",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "395, Hua-Xu Expressway, Tongshan District, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:19.873604+00:00",
+  "_kind": "geo_samples"
+}

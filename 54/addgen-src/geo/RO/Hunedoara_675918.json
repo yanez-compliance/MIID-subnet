@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Hunedoara",
+  "geonameid": 675918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.79143828077449,
+      "lon": 22.91349109116384,
+      "geoinfo": {
+        "display_name": "Parcare Angajați ICSH, Hunedoara, 331014, Romania",
+        "road": "Parcare Angajați ICSH",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hunedoara",
+        "state": null,
+        "postcode": "331014",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Parcare Angajați ICSH, Hunedoara, Romania"
+    },
+    {
+      "lat": 45.73565044529122,
+      "lon": 22.882191922799663,
+      "geoinfo": {
+        "display_name": "Teliucul Mic, Hunedoara, 331141, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Teliucul Mic",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hunedoara",
+        "state": null,
+        "postcode": "331141",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "150, Teliucul Mic, Hunedoara, 331141, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:43.441235+00:00",
+  "_kind": "geo_samples"
+}

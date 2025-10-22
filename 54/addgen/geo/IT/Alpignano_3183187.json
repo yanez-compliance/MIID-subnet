@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Alpignano",
+  "geonameid": 3183187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.13749476364623,
+      "lon": 7.524374942219676,
+      "geoinfo": {
+        "display_name": "San Gillio, Turin, Piedmont, 10044, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Gillio",
+        "state": "Piedmont",
+        "postcode": "10044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Alpignano, Piedmont, Italy"
+    },
+    {
+      "lat": 45.105431848053776,
+      "lon": 7.55589160142912,
+      "geoinfo": {
+        "display_name": "Via Druento, Cascina Camandona, Pianezza, Turin, Piedmont, 10044, Italy",
+        "road": "Via Druento",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pianezza",
+        "state": "Piedmont",
+        "postcode": "10044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "652, Via Druento, Cascina Camandona, Pianezza, Turin, Piedmont, 10044, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:58.080244+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainfield",
+  "geonameid": 4840755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.682973957511095,
+      "lon": -71.87003304810327,
+      "geoinfo": {
+        "display_name": "404, Plainfield Pike, Plainfield, Northeastern Connecticut Planning Region, Connecticut, 06374, United States",
+        "road": "Plainfield Pike",
+        "house_number": "404",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Connecticut",
+        "postcode": "06374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "404 Plainfield Pike, Plainfield, Connecticut, United States"
+    },
+    {
+      "lat": 41.695701391982816,
+      "lon": -71.87095299536817,
+      "geoinfo": {
+        "display_name": "164, Gendron Road, Moosup, Plainfield, Northeastern Connecticut Planning Region, Connecticut, 06354, United States",
+        "road": "Gendron Road",
+        "house_number": "164",
+        "neighbourhood": null,
+        "suburb": "Moosup",
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Connecticut",
+        "postcode": "06354",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "164, Gendron Road, Moosup, Plainfield, Northeastern Connecticut Planning Region, Connecticut, 06354, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:31.501352+00:00",
+  "_kind": "geo_samples"
+}

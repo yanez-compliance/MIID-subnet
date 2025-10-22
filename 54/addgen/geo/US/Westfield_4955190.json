@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westfield",
+  "geonameid": 4955190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.11046415905825,
+      "lon": -72.76724880963705,
+      "geoinfo": {
+        "display_name": "15, City View Road, Westfield, Hampden County, Massachusetts, 01086, United States",
+        "road": "City View Road",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westfield",
+        "state": "Massachusetts",
+        "postcode": "01086",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15 City View Road, Westfield, Massachusetts, United States"
+    },
+    {
+      "lat": 42.12749255053866,
+      "lon": -72.71903962439204,
+      "geoinfo": {
+        "display_name": "447, Paper Mill Road, Springfield Hill, Westfield, Hampden County, Massachusetts, 01085, United States",
+        "road": "Paper Mill Road",
+        "house_number": "447",
+        "neighbourhood": "Springfield Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Westfield",
+        "state": "Massachusetts",
+        "postcode": "01085",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "447, Paper Mill Road, Springfield Hill, Westfield, Hampden County, Massachusetts, 01085, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:21.157261+00:00",
+  "_kind": "geo_samples"
+}

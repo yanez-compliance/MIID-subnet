@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saratoga Springs",
+  "geonameid": 5136334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.07862699941962,
+      "lon": -73.84134841963386,
+      "geoinfo": {
+        "display_name": "Washington Street, City of Saratoga Springs, Saratoga County, New York, United States",
+        "road": "Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Saratoga Springs",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Washington Street, Saratoga Springs, New York, United States"
+    },
+    {
+      "lat": 43.10658140762993,
+      "lon": -73.8032144723386,
+      "geoinfo": {
+        "display_name": "Daniels Road, Town of Greenfield, Saratoga County, New York, 12833, United States",
+        "road": "Daniels Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "12833",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "808, Daniels Road, Town of Greenfield, Saratoga County, New York, 12833, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:51.995311+00:00",
+  "_kind": "geo_samples"
+}

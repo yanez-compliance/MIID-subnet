@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weißwasser",
+  "geonameid": 2811698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.46539817682756,
+      "lon": 14.632202403972881,
+      "geoinfo": {
+        "display_name": "Alte Fuhrstraße, Weißwasser/O.L. - Běła Woda, Weißwasser/O.L., Görlitz, Saxony, 02943, Germany",
+        "road": "Alte Fuhrstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weißwasser/O.L. - Běła Woda",
+        "state": "Saxony",
+        "postcode": "02943",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Alte Fuhrstraße, Weißwasser, Saxony, Germany"
+    },
+    {
+      "lat": 51.53716004089642,
+      "lon": 14.687020902432161,
+      "geoinfo": {
+        "display_name": "31, Seeweg, Gora, Gablenz, Gablenz - Jabłońc, Bad Muskau, Görlitz, Saxony, 02953, Germany",
+        "road": "Seeweg",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": "Gablenz",
+        "city_district": null,
+        "city": "Gablenz - Jabłońc",
+        "state": "Saxony",
+        "postcode": "02953",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31, Seeweg, Gora, Gablenz, Gablenz - Jabłońc, Bad Muskau, Görlitz, Saxony, 02953, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:57.660461+00:00",
+  "_kind": "geo_samples"
+}

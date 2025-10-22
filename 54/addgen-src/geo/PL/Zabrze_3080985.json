@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Zabrze",
+  "geonameid": 3080985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.32381058734217,
+      "lon": 18.729688455534586,
+      "geoinfo": {
+        "display_name": "Autostrada Bursztynowa, Żerniki, Gliwice, Metropolis GZM, Silesian Voivodeship, 42-677, Poland",
+        "road": "Autostrada Bursztynowa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Żerniki",
+        "city_district": null,
+        "city": "Gliwice",
+        "state": "Silesian Voivodeship",
+        "postcode": "42-677",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Autostrada Bursztynowa, Zabrze, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.303250915187284,
+      "lon": 18.813192194586954,
+      "geoinfo": {
+        "display_name": "73, Antoniego Rolnika, Zaborze-Wieś, Zaborze, Zaborze Północ, Zabrze, Metropolis GZM, Silesian Voivodeship, 41-806, Poland",
+        "road": "Antoniego Rolnika",
+        "house_number": "73",
+        "neighbourhood": "Zaborze-Wieś",
+        "suburb": "Zaborze",
+        "city_district": "Zaborze Północ",
+        "city": "Zabrze",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-806",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "73, Antoniego Rolnika, Zaborze-Wieś, Zaborze, Zaborze Północ, Zabrze, Metropolis GZM, Silesian Voivodeship, 41-806, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:19.674559+00:00",
+  "_kind": "geo_samples"
+}

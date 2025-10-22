@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "The Gap",
+  "geonameid": 6943585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.432692738640107,
+      "lon": 152.92083574392495,
+      "geoinfo": {
+        "display_name": "277, Mount Nebo Road, Jollys Lookout, City of Brisbane, City of Moreton Bay, Queensland, 4055, Australia",
+        "road": "Mount Nebo Road",
+        "house_number": "277",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Jollys Lookout",
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4055",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "277 Mount Nebo Road, The Gap, Queensland, Australia"
+    },
+    {
+      "lat": -27.437686516049343,
+      "lon": 152.97243057364003,
+      "geoinfo": {
+        "display_name": "Enoggera Creek Bikeway, Saint Johns Wood, Ashgrove, Greater Brisbane, Queensland, 4060, Australia",
+        "road": "Enoggera Creek Bikeway",
+        "house_number": null,
+        "neighbourhood": "Saint Johns Wood",
+        "suburb": null,
+        "city_district": "Ashgrove",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4060",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "824, Enoggera Creek Bikeway, Saint Johns Wood, Ashgrove, Greater Brisbane, Queensland, 4060, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:28.649715+00:00",
+  "_kind": "geo_samples"
+}

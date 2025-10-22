@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pikesville",
+  "geonameid": 4365387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.39924146939036,
+      "lon": -76.71906376836357,
+      "geoinfo": {
+        "display_name": "3603, Dorland Drive, Garrison Farms, Stevenson, Pikesville, Baltimore County, Maryland, 21208, United States",
+        "road": "Dorland Drive",
+        "house_number": "3603",
+        "neighbourhood": null,
+        "suburb": "Stevenson",
+        "city_district": null,
+        "city": "Pikesville",
+        "state": "Maryland",
+        "postcode": "21208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3603 Dorland Drive, Pikesville, Maryland, United States"
+    },
+    {
+      "lat": 39.35551200219679,
+      "lon": -76.67571288839642,
+      "geoinfo": {
+        "display_name": "2900, West Rogers Avenue, Pimlico, Baltimore, Maryland, 21215, United States",
+        "road": "West Rogers Avenue",
+        "house_number": "2900",
+        "neighbourhood": "Pimlico",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21215",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2900, West Rogers Avenue, Pimlico, Baltimore, Maryland, 21215, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:02.046309+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomingdale",
+  "geonameid": 4885156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.930879657363505,
+      "lon": -88.05279825668552,
+      "geoinfo": {
+        "display_name": "Valley View Road, Addison, DuPage County, Illinois, 60101, United States",
+        "road": "Valley View Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Addison",
+        "state": "Illinois",
+        "postcode": "60101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Valley View Road, Bloomingdale, Illinois, United States"
+    },
+    {
+      "lat": 41.941908337949776,
+      "lon": -88.08612153736568,
+      "geoinfo": {
+        "display_name": "2312, Century Point Lane, Glendale Heights, DuPage County, Illinois, 60139, United States",
+        "road": "Century Point Lane",
+        "house_number": "2312",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glendale Heights",
+        "state": "Illinois",
+        "postcode": "60139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2312, Century Point Lane, Glendale Heights, DuPage County, Illinois, 60139, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:23.898905+00:00",
+  "_kind": "geo_samples"
+}

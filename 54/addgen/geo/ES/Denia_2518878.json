@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Denia",
+  "geonameid": 2518878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.81132825158191,
+      "lon": 0.08433383683592027,
+      "geoinfo": {
+        "display_name": "Camí del Coll de Pous, Urbanización Los Lagos, Dénia, la Marina Alta, Alacant / Alicante, Valencian Community, 03749, Spain",
+        "road": "Camí del Coll de Pous",
+        "house_number": null,
+        "neighbourhood": "Urbanización Los Lagos",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dénia",
+        "state": "Valencian Community",
+        "postcode": "03749",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí del Coll de Pous, Denia, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.819522322156935,
+      "lon": 0.10926717244424679,
+      "geoinfo": {
+        "display_name": "Carrer de Espigol, Montgó, Dénia, la Marina Alta, Alacant / Alicante, Valencian Community, 03749, Spain",
+        "road": "Carrer de Espigol",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Montgó",
+        "city_district": null,
+        "city": "Dénia",
+        "state": "Valencian Community",
+        "postcode": "03749",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "913, Carrer de Espigol, Montgó, Dénia, la Marina Alta, Alacant / Alicante, Valencian Community, 03749, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:12.787282+00:00",
+  "_kind": "geo_samples"
+}

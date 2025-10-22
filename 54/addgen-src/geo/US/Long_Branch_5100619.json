@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Long Branch",
+  "geonameid": 5100619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.280831235833666,
+      "lon": -74.02231137424735,
+      "geoinfo": {
+        "display_name": "38, Barbazon Court, West Long Branch, Monmouth County, New Jersey, 07764, United States",
+        "road": "Barbazon Court",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Long Branch",
+        "state": "New Jersey",
+        "postcode": "07764",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "38 Barbazon Court, Long Branch, New Jersey, United States"
+    },
+    {
+      "lat": 40.32906990585865,
+      "lon": -74.02144362121327,
+      "geoinfo": {
+        "display_name": "Seven Bridges Road, Little Silver Point, Little Silver, Long Branch, Monmouth County, New Jersey, 07739, United States",
+        "road": "Seven Bridges Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Little Silver",
+        "city_district": null,
+        "city": "Long Branch",
+        "state": "New Jersey",
+        "postcode": "07739",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "890, Seven Bridges Road, Little Silver Point, Little Silver, Long Branch, Monmouth County, New Jersey, 07739, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:38.958557+00:00",
+  "_kind": "geo_samples"
+}

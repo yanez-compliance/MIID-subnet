@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Tübingen",
+  "geonameid": 2820860,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.51742359537676,
+      "lon": 9.030248182483382,
+      "geoinfo": {
+        "display_name": "Unteres Burgholz, Weststadt, Tübingen, Landkreis Tübingen, Baden-Württemberg, 72070, Germany",
+        "road": "Unteres Burgholz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tübingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72070",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Unteres Burgholz, Tübingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.5174051144554,
+      "lon": 9.110665980998514,
+      "geoinfo": {
+        "display_name": "Teichäcker, Kusterdingen, Landkreis Tübingen, Baden-Württemberg, 72127, Germany",
+        "road": "Teichäcker",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kusterdingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72127",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "315, Teichäcker, Kusterdingen, Landkreis Tübingen, Baden-Württemberg, 72127, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:38.592914+00:00",
+  "_kind": "geo_samples"
+}

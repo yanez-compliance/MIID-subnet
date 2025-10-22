@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mentor",
+  "geonameid": 5162645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.706041138918685,
+      "lon": -81.35021084096599,
+      "geoinfo": {
+        "display_name": "6054, Collins Road, Mentor-on-the-Lake, Mentor, Lake County, Ohio, 44060, United States",
+        "road": "Collins Road",
+        "house_number": "6054",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mentor",
+        "state": "Ohio",
+        "postcode": "44060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6054 Collins Road, Mentor, Ohio, United States"
+    },
+    {
+      "lat": 41.70968855959692,
+      "lon": -81.3420508922587,
+      "geoinfo": {
+        "display_name": "5913, Center Street, Harborview, Mentor, Lake County, Ohio, 44060, United States",
+        "road": "Center Street",
+        "house_number": "5913",
+        "neighbourhood": "Harborview",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mentor",
+        "state": "Ohio",
+        "postcode": "44060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5913, Center Street, Harborview, Mentor, Lake County, Ohio, 44060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:09.262923+00:00",
+  "_kind": "geo_samples"
+}

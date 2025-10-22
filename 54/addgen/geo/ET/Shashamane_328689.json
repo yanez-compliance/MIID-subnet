@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Shashamane",
+  "geonameid": 328689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.215417155195395,
+      "lon": 38.55925499551267,
+      "geoinfo": {
+        "display_name": "Shashamane, West Arsi, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shashamane",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Shashamane, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 7.209729610264863,
+      "lon": 38.61292865590844,
+      "geoinfo": {
+        "display_name": "mainroad, Melka Uda, Shashamane, West Arsi, Oromia Region, Ethiopia",
+        "road": "mainroad",
+        "house_number": null,
+        "neighbourhood": "Melka Uda",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shashamane",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "147, mainroad, Melka Uda, Shashamane, West Arsi, 44663 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:08.644389+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tsubame",
+  "geonameid": 1849788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.644644181179316,
+      "lon": 138.94757180159627,
+      "geoinfo": {
+        "display_name": "1, 石上一丁目, Sanjo, Niigata Prefecture, 959-1228, Japan",
+        "road": "1",
+        "house_number": null,
+        "neighbourhood": "石上一丁目",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanjo",
+        "state": null,
+        "postcode": "959-1228",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "1, Tsubame, Japan"
+    },
+    {
+      "lat": 37.62978191143163,
+      "lon": 138.91343631236882,
+      "geoinfo": {
+        "display_name": "Tsubame, Niigata Prefecture, 959-1232, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsubame",
+        "state": null,
+        "postcode": "959-1232",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tsubame, Niigata Prefecture, 959-1232, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:43.594266+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University Park",
+  "geonameid": 4738606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.85604603932275,
+      "lon": -96.80420434885356,
+      "geoinfo": {
+        "display_name": "7605, Preston Road, University Park, Dallas County, Texas, 75225, United States",
+        "road": "Preston Road",
+        "house_number": "7605",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "University Park",
+        "state": "Texas",
+        "postcode": "75225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7605 Preston Road, University Park, Texas, United States"
+    },
+    {
+      "lat": 32.84261972307738,
+      "lon": -96.79537681047186,
+      "geoinfo": {
+        "display_name": "6108, Golf Drive, University Park, Dallas County, Texas, 75205, United States",
+        "road": "Golf Drive",
+        "house_number": "6108",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "University Park",
+        "state": "Texas",
+        "postcode": "75205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6108, Golf Drive, University Park, Dallas County, Texas, 75205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:52.344068+00:00",
+  "_kind": "geo_samples"
+}

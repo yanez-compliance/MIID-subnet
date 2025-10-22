@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pasing",
+  "geonameid": 2855334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.128254978184195,
+      "lon": 11.447667409167074,
+      "geoinfo": {
+        "display_name": "Pasinger Straße, Heitmeiersiedlung, Lochham, Gräfelfing, Landkreis München, Bavaria, 82166, Germany",
+        "road": "Pasinger Straße",
+        "house_number": null,
+        "neighbourhood": "Heitmeiersiedlung",
+        "suburb": "Lochham",
+        "city_district": null,
+        "city": "Gräfelfing",
+        "state": "Bavaria",
+        "postcode": "82166",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Pasinger Straße, Pasing, Bavaria, Germany"
+    },
+    {
+      "lat": 48.133831379177686,
+      "lon": 11.40244748463386,
+      "geoinfo": {
+        "display_name": "Freihamer Allee, Gut Freiham, 22.4, Aubing-Lochhausen-Langwied, Munich, Bavaria, 81249, Germany",
+        "road": "Freihamer Allee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "22.4",
+        "city_district": "Aubing-Lochhausen-Langwied",
+        "city": "Munich",
+        "state": "Bavaria",
+        "postcode": "81249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Freihamer Allee, Gut Freiham, 22.4, Aubing-Lochhausen-Langwied, Munich, Bavaria, 81249, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:27.744748+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ticul",
+  "geonameid": 3515665,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.401320719591546,
+      "lon": -89.57078526857168,
+      "geoinfo": {
+        "display_name": "Carretera Muna - Felipe Carrillo Puerto, Ticul, Yucatán, Mexico",
+        "road": "Carretera Muna - Felipe Carrillo Puerto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yucatán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Muna - Felipe Carrillo Puerto, Ticul, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.388756493408057,
+      "lon": -89.53830141883026,
+      "geoinfo": {
+        "display_name": "Calle 32, Ticul, Yucatán, 97860, Mexico",
+        "road": "Calle 32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ticul",
+        "state": "Yucatán",
+        "postcode": "97860",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 32, Ticul, Yucatán, 97860, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:26.165665+00:00",
+  "_kind": "geo_samples"
+}

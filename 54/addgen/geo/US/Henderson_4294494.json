@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Henderson",
+  "geonameid": 4294494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.79975616728189,
+      "lon": -87.56880716674384,
+      "geoinfo": {
+        "display_name": "Carriage Homes Park, Henderson County, Kentucky, 42420, United States",
+        "road": "Carriage Homes Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "42420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carriage Homes Park, Henderson, Kentucky, United States"
+    },
+    {
+      "lat": 37.85051384807697,
+      "lon": -87.5724536136468,
+      "geoinfo": {
+        "display_name": "887, Breckenridge Drive, Henderson, Henderson County, Kentucky, 42420, United States",
+        "road": "Breckenridge Drive",
+        "house_number": "887",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Henderson",
+        "state": "Kentucky",
+        "postcode": "42420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "887, Breckenridge Drive, Henderson, Henderson County, Kentucky, 42420, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:49.643235+00:00",
+  "_kind": "geo_samples"
+}

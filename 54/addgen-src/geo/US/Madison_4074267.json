@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison",
+  "geonameid": 4074267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.71544631679693,
+      "lon": -86.74409312848286,
+      "geoinfo": {
+        "display_name": "Hughes Road Greenway, Madison, Madison County, Alabama, 35758, United States",
+        "road": "Hughes Road Greenway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "Alabama",
+        "postcode": "35758",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hughes Road Greenway, Madison, Alabama, United States"
+    },
+    {
+      "lat": 34.710365548125935,
+      "lon": -86.7031758647635,
+      "geoinfo": {
+        "display_name": "Slaughter Road, Huntsville, Madison County, Alabama, 35758, United States",
+        "road": "Slaughter Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntsville",
+        "state": "Alabama",
+        "postcode": "35758",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "793, Slaughter Road, Huntsville, Madison County, Alabama, 35758, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:40:38.652312+00:00",
+  "_kind": "geo_samples"
+}

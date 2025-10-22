@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhaobaoshan",
+  "geonameid": 1784647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.947927218079528,
+      "lon": 121.7095319812091,
+      "geoinfo": {
+        "display_name": "沿江路, 江口小区, 招宝山街道, Zhenhai District, Ningbo, Zhejiang, 315200, China",
+        "road": "沿江路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "招宝山街道",
+        "city_district": null,
+        "city": "Zhenhai District",
+        "state": "Zhejiang",
+        "postcode": "315200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "沿江路, Zhaobaoshan, Zhejiang, China"
+    },
+    {
+      "lat": 29.994077684705964,
+      "lon": 121.68845071413945,
+      "geoinfo": {
+        "display_name": "蛟川街道, Zhenhai District, Ningbo, Zhejiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "蛟川街道",
+        "city_district": null,
+        "city": "Zhenhai District",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "946, 蛟川街道, Zhenhai District, Ningbo, 58363 Zhejiang, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:51.488673+00:00",
+  "_kind": "geo_samples"
+}

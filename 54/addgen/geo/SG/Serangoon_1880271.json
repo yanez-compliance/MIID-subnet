@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Serangoon",
+  "geonameid": 1880271,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3594638987717933,
+      "lon": 103.87746637262723,
+      "geoinfo": {
+        "display_name": "30, Palm Grove Avenue, Hougang, Singapur East, Northeast, Singapore, 548431, Singapore",
+        "road": "Palm Grove Avenue",
+        "house_number": "30",
+        "neighbourhood": "Singapur East",
+        "suburb": "Hougang",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "548431",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "30 Palm Grove Avenue, Serangoon, Singapore"
+    },
+    {
+      "lat": 1.3315344842550294,
+      "lon": 103.88946967419606,
+      "geoinfo": {
+        "display_name": "Opposite Trinity @ Paya Lebar, Paya Lebar Road, Geylang, Singapur East, Southeast, Singapore, 409037, Singapore",
+        "road": "Paya Lebar Road",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Geylang",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "409037",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Paya Lebar Road, Serangoon, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-16T22:50:41.495631+00:00",
+  "_kind": "geo_samples"
+}

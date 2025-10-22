@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Van Buren",
+  "geonameid": 4134716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.42261005859725,
+      "lon": -94.30523918314307,
+      "geoinfo": {
+        "display_name": "Industrial Park Road, Van Buren, Crawford County, Arkansas, 72956, United States",
+        "road": "Industrial Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Van Buren",
+        "state": "Arkansas",
+        "postcode": "72956",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Industrial Park Road, Van Buren, Arkansas, United States"
+    },
+    {
+      "lat": 35.439977063530975,
+      "lon": -94.32988705480975,
+      "geoinfo": {
+        "display_name": "2722, Bryan Road, Van Buren, Crawford County, Arkansas, 72956, United States",
+        "road": "Bryan Road",
+        "house_number": "2722",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Van Buren",
+        "state": "Arkansas",
+        "postcode": "72956",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2722, Bryan Road, Van Buren, Crawford County, Arkansas, 72956, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:06.718459+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Needham",
+  "geonameid": 4945055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.2899342394616,
+      "lon": -71.24685303028717,
+      "geoinfo": {
+        "display_name": "69, Nardone Road, Needham Heights, Needham, Norfolk County, Massachusetts, 02404, United States",
+        "road": "Nardone Road",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": "Needham Heights",
+        "city_district": null,
+        "city": "Needham",
+        "state": "Massachusetts",
+        "postcode": "02404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "69 Nardone Road, Needham, Massachusetts, United States"
+    },
+    {
+      "lat": 42.30581152482938,
+      "lon": -71.23013434433054,
+      "geoinfo": {
+        "display_name": "115;117, Gould Street, Needham Heights, Needham, Norfolk County, Massachusetts, 02494, United States",
+        "road": "Gould Street",
+        "house_number": "115;117",
+        "neighbourhood": null,
+        "suburb": "Needham Heights",
+        "city_district": null,
+        "city": "Needham",
+        "state": "Massachusetts",
+        "postcode": "02494",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "115;117, Gould Street, Needham Heights, Needham, Norfolk County, Massachusetts, 02494, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:12.904102+00:00",
+  "_kind": "geo_samples"
+}

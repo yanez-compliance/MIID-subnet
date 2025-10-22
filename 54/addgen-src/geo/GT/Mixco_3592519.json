@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Mixco",
+  "geonameid": 3592519,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.631711840403572,
+      "lon": -90.59456878457495,
+      "geoinfo": {
+        "display_name": "4a Calle B, Molino de las Flores, Mixco, Zona 2, Guatemala Department, 01901, Guatemala",
+        "road": "4a Calle B",
+        "house_number": null,
+        "neighbourhood": "Molino de las Flores",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mixco",
+        "state": "Guatemala Department",
+        "postcode": "01901",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "4a Calle B, Mixco, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.597192691439808,
+      "lon": -90.62863430633811,
+      "geoinfo": {
+        "display_name": "Mixco, Zona 9, Guatemala Department, 03008, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mixco",
+        "state": "Guatemala Department",
+        "postcode": "03008",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Mixco, Zona 9, Guatemala Department, 03008, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:30.778096+00:00",
+  "_kind": "geo_samples"
+}

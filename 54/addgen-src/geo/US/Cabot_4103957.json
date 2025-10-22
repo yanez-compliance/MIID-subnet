@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cabot",
+  "geonameid": 4103957,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.99038531751753,
+      "lon": -92.03667764503884,
+      "geoinfo": {
+        "display_name": "98, Sunrise Place, Sun Terrace, Cabot, Lonoke County, Arkansas, 72023, United States",
+        "road": "Sunrise Place",
+        "house_number": "98",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cabot",
+        "state": "Arkansas",
+        "postcode": "72023",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "98 Sunrise Place, Cabot, Arkansas, United States"
+    },
+    {
+      "lat": 34.978164279023254,
+      "lon": -91.97683603865013,
+      "geoinfo": {
+        "display_name": "Jerry Lane, Leaning Pines, Lonoke County, Arkansas, 72007, United States",
+        "road": "Jerry Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arkansas",
+        "postcode": "72007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "565, Jerry Lane, Leaning Pines, Lonoke County, Arkansas, 72007, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:40:44.765602+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Upper Arlington",
+  "geonameid": 4526993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.01516616813278,
+      "lon": -83.05073805727194,
+      "geoinfo": {
+        "display_name": "2810, Halstead Road, Upper Arlington, Sharon, Franklin County, Ohio, 43221, United States",
+        "road": "Halstead Road",
+        "house_number": "2810",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Arlington",
+        "state": "Ohio",
+        "postcode": "43221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2810 Halstead Road, Upper Arlington, Ohio, United States"
+    },
+    {
+      "lat": 39.982952567840776,
+      "lon": -83.03313978234529,
+      "geoinfo": {
+        "display_name": "1181, Parkway North, Grandview Yard, Grandview Heights, Franklin County, Ohio, 43212, United States",
+        "road": "Parkway North",
+        "house_number": "1181",
+        "neighbourhood": "Grandview Yard",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grandview Heights",
+        "state": "Ohio",
+        "postcode": "43212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1181, Parkway North, Grandview Yard, Grandview Heights, Franklin County, Ohio, 43212, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:09.352748+00:00",
+  "_kind": "geo_samples"
+}

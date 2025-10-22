@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Staten Island",
+  "geonameid": 5139568,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.53280075987336,
+      "lon": -74.15662919295642,
+      "geoinfo": {
+        "display_name": "Preston Avenue, Woods of Arden, Staten Island, Richmond County, New York, 10312, United States",
+        "road": "Preston Avenue",
+        "house_number": null,
+        "neighbourhood": "Woods of Arden",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Preston Avenue, Staten Island, New York, United States"
+    },
+    {
+      "lat": 40.56417705623119,
+      "lon": -74.1601958617682,
+      "geoinfo": {
+        "display_name": "Arthur Kill Road, Staten Island, Richmond County, New York, 10309, United States",
+        "road": "Arthur Kill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10309",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "305, Arthur Kill Road, Staten Island, Richmond County, New York, 10309, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:38.220207+00:00",
+  "_kind": "geo_samples"
+}

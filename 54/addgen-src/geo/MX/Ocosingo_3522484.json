@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ocosingo",
+  "geonameid": 3522484,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.904872637280484,
+      "lon": -92.0570777584243,
+      "geoinfo": {
+        "display_name": "Ocosingo, Chiapas, 29950, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chiapas",
+        "postcode": "29950",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ocosingo, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.918833676798016,
+      "lon": -92.13527961833148,
+      "geoinfo": {
+        "display_name": "El Refugio, Sibaca, Ocosingo, Chiapas, 29950, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sibaca",
+        "state": "Chiapas",
+        "postcode": "29950",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "590, El Refugio, Sibaca, Ocosingo, Chiapas, 29950, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:35.304582+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Leganés",
+  "geonameid": 3118594,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36273588132508,
+      "lon": -3.734556748980022,
+      "geoinfo": {
+        "display_name": "M-40, Buenavista, Carabanchel, Madrid, Community of Madrid, 28919, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28919",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Leganés, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.35950026147552,
+      "lon": -3.7535164877029215,
+      "geoinfo": {
+        "display_name": "M-40, Buenavista, Carabanchel, Madrid, Community of Madrid, 28054, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28054",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Buenavista, Carabanchel, Madrid, Community of Madrid, 28054, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:29.301656+00:00",
+  "_kind": "geo_samples"
+}

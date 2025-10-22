@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Onex",
+  "geonameid": 2659296,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.18121635118468,
+      "lon": 6.057966099660768,
+      "geoinfo": {
+        "display_name": "Chemin de Greuly, Bernex, Geneva, 1233, Switzerland",
+        "road": "Chemin de Greuly",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernex",
+        "state": "Geneva",
+        "postcode": "1233",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "536, Chemin de Greuly, Bernex, Geneva, 1233, Switzerland"
+    },
+    {
+      "lat": 46.15980528649639,
+      "lon": 6.109807001364213,
+      "geoinfo": {
+        "display_name": "Chemin de Plein-Vent, Arare-Dessus, Plan-les-Ouates, Geneva, 1228, Switzerland",
+        "road": "Chemin de Plein-Vent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plan-les-Ouates",
+        "state": "Geneva",
+        "postcode": "1228",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "722, Chemin de Plein-Vent, Arare-Dessus, Plan-les-Ouates, Geneva, 1228, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:17.601732+00:00",
+  "_kind": "geo_samples"
+}

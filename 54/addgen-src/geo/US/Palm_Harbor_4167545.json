@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palm Harbor",
+  "geonameid": 4167545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.0669648237638,
+      "lon": -82.73491943795945,
+      "geoinfo": {
+        "display_name": "Tampa Road, Palm Harbor, Pinellas County, Florida, 34677, United States",
+        "road": "Tampa Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Harbor",
+        "state": "Florida",
+        "postcode": "34677",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Tampa Road, Palm Harbor, Florida, United States"
+    },
+    {
+      "lat": 28.095986609159585,
+      "lon": -82.76896762694956,
+      "geoinfo": {
+        "display_name": "1120, Ridgegrove Drive West, Wall Springs, Palm Harbor, Pinellas County, Florida, 34683, United States",
+        "road": "Ridgegrove Drive West",
+        "house_number": "1120",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Harbor",
+        "state": "Florida",
+        "postcode": "34683",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1120, Ridgegrove Drive West, Wall Springs, Palm Harbor, Pinellas County, Florida, 34683, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:04.039224+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ancona",
+  "geonameid": 3183089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.57635738158605,
+      "lon": 13.547146723373023,
+      "geoinfo": {
+        "display_name": "Azienda Agricola Lanari, 142, Strada Frazione Varano, Varano, Ancona, 60129, Italy",
+        "road": "Strada Frazione Varano",
+        "house_number": "142",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ancona",
+        "state": null,
+        "postcode": "60129",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "142 Strada Frazione Varano, Ancona, Italy"
+    },
+    {
+      "lat": 43.59288687698308,
+      "lon": 13.489328857845516,
+      "geoinfo": {
+        "display_name": "Via Monte San Vicino, Pinocchio, Ancona, 60127, Italy",
+        "road": "Via Monte San Vicino",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ancona",
+        "state": null,
+        "postcode": "60127",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "040, Via Monte San Vicino, Pinocchio, Ancona, 60127, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:08.363634+00:00",
+  "_kind": "geo_samples"
+}

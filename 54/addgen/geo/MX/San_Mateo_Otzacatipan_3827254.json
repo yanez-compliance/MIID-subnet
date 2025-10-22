@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Mateo Otzacatipan",
+  "geonameid": 3827254,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.376360866271575,
+      "lon": -99.59386089764935,
+      "geoinfo": {
+        "display_name": "Calle Zumpango, Toluca, State of Mexico, 50214, Mexico",
+        "road": "Calle Zumpango",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toluca",
+        "state": "State of Mexico",
+        "postcode": "50214",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Zumpango, San Mateo Otzacatipan, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.29407369914971,
+      "lon": -99.59800338949964,
+      "geoinfo": {
+        "display_name": "Toluca, State of Mexico, 50245, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toluca",
+        "state": "State of Mexico",
+        "postcode": "50245",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "485, Toluca, State of Mexico, 50245, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:51.618012+00:00",
+  "_kind": "geo_samples"
+}

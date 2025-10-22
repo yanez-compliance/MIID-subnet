@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Steinhagen",
+  "geonameid": 2828050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.010219349538424,
+      "lon": 8.36460799865397,
+      "geoinfo": {
+        "display_name": "Patthorster Straße, Brockhagen, Steinhagen, Kreis Gütersloh, North Rhine-Westphalia, 33803, Germany",
+        "road": "Patthorster Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brockhagen",
+        "city_district": null,
+        "city": null,
+        "state": "North Rhine-Westphalia",
+        "postcode": "33803",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Patthorster Straße, Steinhagen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.03665516778367,
+      "lon": 8.42506340623899,
+      "geoinfo": {
+        "display_name": "31b, Petersberg, Amshausen, Steinhagen, Kreis Gütersloh, North Rhine-Westphalia, 33803, Germany",
+        "road": "Petersberg",
+        "house_number": "31b",
+        "neighbourhood": null,
+        "suburb": "Amshausen",
+        "city_district": null,
+        "city": "Amshausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33803",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31b, Petersberg, Amshausen, Steinhagen, Kreis Gütersloh, North Rhine-Westphalia, 33803, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:45.428953+00:00",
+  "_kind": "geo_samples"
+}

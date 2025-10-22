@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rome",
+  "geonameid": 5134295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.205703307545484,
+      "lon": -75.41917114480435,
+      "geoinfo": {
+        "display_name": "Saint Johns Cemetery, East Dominick Street, City of Rome, Oneida County, New York, 13441, United States",
+        "road": "East Dominick Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rome",
+        "state": "New York",
+        "postcode": "13441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Dominick Street, Rome, New York, United States"
+    },
+    {
+      "lat": 43.22368813251476,
+      "lon": -75.40502673673608,
+      "geoinfo": {
+        "display_name": "41, Paine Street, City of Rome, Oneida County, New York, 13441, United States",
+        "road": "Paine Street",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rome",
+        "state": "New York",
+        "postcode": "13441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "41, Paine Street, City of Rome, Oneida County, New York, 13441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:24.568824+00:00",
+  "_kind": "geo_samples"
+}

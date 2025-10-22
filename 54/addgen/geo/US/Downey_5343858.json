@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Downey",
+  "geonameid": 5343858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.94929577941806,
+      "lon": -118.11702236589979,
+      "geoinfo": {
+        "display_name": "10028, Tristan Drive, Downey, Los Angeles County, California, 90240, United States",
+        "road": "Tristan Drive",
+        "house_number": "10028",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Downey",
+        "state": "California",
+        "postcode": "90240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10028 Tristan Drive, Downey, California, United States"
+    },
+    {
+      "lat": 33.954453813770996,
+      "lon": -118.16899125341173,
+      "geoinfo": {
+        "display_name": "Long Beach Freeway, South Gate, Los Angeles County, California, 90201, United States",
+        "road": "Long Beach Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Gate",
+        "state": "California",
+        "postcode": "90201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "162, Long Beach Freeway, South Gate, Los Angeles County, California, 90201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:01.462880+00:00",
+  "_kind": "geo_samples"
+}

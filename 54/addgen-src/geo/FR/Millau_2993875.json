@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Millau",
+  "geonameid": 2993875,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.12881219185096,
+      "lon": 3.0411797007594155,
+      "geoinfo": {
+        "display_name": "Chemin du Ravin du Rieu, Saint-Germain, Millau, Aveyron, Occitania, Metropolitan France, 12100, France",
+        "road": "Chemin du Ravin du Rieu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millau",
+        "state": "Occitania",
+        "postcode": "12100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin du Ravin du Rieu, Millau, Occitania, France"
+    },
+    {
+      "lat": 44.086155732952,
+      "lon": 3.0456986499299186,
+      "geoinfo": {
+        "display_name": "Buech, La Rouquette, Creissels, Millau, Aveyron, Occitania, Metropolitan France, 12100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Buech",
+        "suburb": null,
+        "city_district": null,
+        "city": "Creissels",
+        "state": "Occitania",
+        "postcode": "12100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "666, Buech, La Rouquette, Creissels, Millau, Aveyron, Occitania, Metropolitan France, 12100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:51.762141+00:00",
+  "_kind": "geo_samples"
+}

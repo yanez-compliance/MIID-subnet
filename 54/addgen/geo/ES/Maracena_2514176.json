@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Maracena",
+  "geonameid": 2514176,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.195730697850856,
+      "lon": -3.6312626607218634,
+      "geoinfo": {
+        "display_name": "La Chana, Angustias - Chana - Encina, Chana, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18015, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Chana",
+        "suburb": null,
+        "city_district": "Chana",
+        "city": "Granada",
+        "state": "Andalusia",
+        "postcode": "18015",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "La Chana, Maracena, Andalusia, Spain"
+    },
+    {
+      "lat": 37.168055909518436,
+      "lon": -3.630058187995116,
+      "geoinfo": {
+        "display_name": "Camino de Purchil, Ronda, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18003, Spain",
+        "road": "Camino de Purchil",
+        "house_number": null,
+        "neighbourhood": "Ronda",
+        "suburb": null,
+        "city_district": "Ronda",
+        "city": "Granada",
+        "state": "Andalusia",
+        "postcode": "18003",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "257, Camino de Purchil, Ronda, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18003, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:30.139025+00:00",
+  "_kind": "geo_samples"
+}

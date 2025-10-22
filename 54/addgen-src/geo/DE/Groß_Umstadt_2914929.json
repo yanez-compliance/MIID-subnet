@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Groß-Umstadt",
+  "geonameid": 2914929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.85001003611857,
+      "lon": 8.992557825284452,
+      "geoinfo": {
+        "display_name": "Annelotteweg, Groß-Umstadt, Landkreis Darmstadt-Dieburg, Hesse, 64823, Germany",
+        "road": "Annelotteweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Groß-Umstadt",
+        "state": "Hesse",
+        "postcode": "64823",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Annelotteweg, Groß-Umstadt, Hesse, Germany"
+    },
+    {
+      "lat": 49.904104309361266,
+      "lon": 8.914656370493237,
+      "geoinfo": {
+        "display_name": "Richen, Groß-Umstadt, Landkreis Darmstadt-Dieburg, Hesse, 64823, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richen",
+        "state": "Hesse",
+        "postcode": "64823",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "559, Richen, Groß-Umstadt, Landkreis Darmstadt-Dieburg, Hesse, 64823, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:17.830859+00:00",
+  "_kind": "geo_samples"
+}

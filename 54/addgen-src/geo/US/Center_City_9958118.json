@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Center City",
+  "geonameid": 9958118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.936370792618305,
+      "lon": -75.15216632408733,
+      "geoinfo": {
+        "display_name": "936, South 5th Street, Block Group 1, Philadelphia, PA, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19148, United States",
+        "road": "South 5th Street",
+        "house_number": "936",
+        "neighbourhood": null,
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "936 South 5th Street, Center City, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.96483469558291,
+      "lon": -75.11165551614035,
+      "geoinfo": {
+        "display_name": "Camden Petty Island, Pennsauken Township, Camden County, New Jersey, 08102, United States",
+        "road": "Camden Petty Island",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pennsauken Township",
+        "state": "New Jersey",
+        "postcode": "08102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "983, Camden Petty Island, Pennsauken Township, Camden County, New Jersey, 08102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:13.215784+00:00",
+  "_kind": "geo_samples"
+}

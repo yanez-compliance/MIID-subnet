@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bushwick",
+  "geonameid": 5110918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70975442871055,
+      "lon": -73.91014330447923,
+      "geoinfo": {
+        "display_name": "2013, Himrod Street, Ridgewood, Queens, Queens County, New York, 11385, United States",
+        "road": "Himrod Street",
+        "house_number": "2013",
+        "neighbourhood": "Ridgewood",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11385",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2013 Himrod Street, Bushwick, New York, United States"
+    },
+    {
+      "lat": 40.72575689608283,
+      "lon": -73.89858803824049,
+      "geoinfo": {
+        "display_name": "Long Island Expressway, Queens, Queens County, New York, 11378, United States",
+        "road": "Long Island Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11378",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "337, Long Island Expressway, Queens, Queens County, New York, 11378, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:16.024560+00:00",
+  "_kind": "geo_samples"
+}

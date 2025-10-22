@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Blue Springs",
+  "geonameid": 4377664,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.974217876588696,
+      "lon": -94.28085716388378,
+      "geoinfo": {
+        "display_name": "4600, Southwest 11th Court, Southgate Hills, Blue Springs, Jackson County, Missouri, 64015, United States",
+        "road": "Southwest 11th Court",
+        "house_number": "4600",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blue Springs",
+        "state": "Missouri",
+        "postcode": "64015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4600 Southwest 11th Court, Blue Springs, Missouri, United States"
+    },
+    {
+      "lat": 39.0559364638087,
+      "lon": -94.27181905792332,
+      "geoinfo": {
+        "display_name": "3328, MO 7, Independence, Jackson County, Missouri, 64015, United States",
+        "road": "MO 7",
+        "house_number": "3328",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Independence",
+        "state": "Missouri",
+        "postcode": "64015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3328, MO 7, Independence, Jackson County, Missouri, 64015, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:49.513422+00:00",
+  "_kind": "geo_samples"
+}

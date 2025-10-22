@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stolberg",
+  "geonameid": 2826595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.75206940345537,
+      "lon": 6.263500037178118,
+      "geoinfo": {
+        "display_name": "Kurt-Schumacher-Straße, Fleuth, Mausbach, Stolberg, Aachen (district), North Rhine-Westphalia, 52224, Germany",
+        "road": "Kurt-Schumacher-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stolberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52224",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kurt-Schumacher-Straße, Stolberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.78653287160378,
+      "lon": 6.285177096766576,
+      "geoinfo": {
+        "display_name": "Albertstraße, Volkenrath, Hastenrath, Eschweiler, Aachen (district), North Rhine-Westphalia, 52249, Germany",
+        "road": "Albertstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Volkenrath",
+        "city_district": null,
+        "city": "Eschweiler",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "718, Albertstraße, Stolberg, 52249 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:42.240741+00:00",
+  "_kind": "geo_samples"
+}

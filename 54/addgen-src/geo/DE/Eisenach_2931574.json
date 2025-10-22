@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eisenach",
+  "geonameid": 2931574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.00579936266957,
+      "lon": 10.260697582501917,
+      "geoinfo": {
+        "display_name": "A 4, Deubachshof, Krauthausen, Hainich-Werratal, Wartburgkreis, Thuringia, 99819, Germany",
+        "road": "A 4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Krauthausen",
+        "state": "Thuringia",
+        "postcode": "99819",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 4, Eisenach, Thuringia, Germany"
+    },
+    {
+      "lat": 50.963704808692306,
+      "lon": 10.36394975625633,
+      "geoinfo": {
+        "display_name": "8, Rothenhof, Eisenach, Wartburgkreis, Thuringia, 99817, Germany",
+        "road": "Rothenhof",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Rothenhof",
+        "city_district": null,
+        "city": "Eisenach",
+        "state": "Thuringia",
+        "postcode": "99817",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "8, Rothenhof, Eisenach, Wartburgkreis, Thuringia, 99817, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:14:18.548633+00:00",
+  "_kind": "geo_samples"
+}

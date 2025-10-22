@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Domont",
+  "geonameid": 3021150,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.996727547936665,
+      "lon": 2.359843809525075,
+      "geoinfo": {
+        "display_name": "Allée des Fougères, Saint-Brice-sous-Forêt, Sarcelles, Val-d'Oise, Metropolitan France, 95350, France",
+        "road": "Allée des Fougères",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Brice-sous-Forêt",
+        "state": null,
+        "postcode": "95350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée des Fougères, Domont, France"
+    },
+    {
+      "lat": 49.04415795013176,
+      "lon": 2.308262100641797,
+      "geoinfo": {
+        "display_name": "13, Allée de l'Ortie Blanche, Le Trait d'Union, Bouffémont, Sarcelles, Val-d'Oise, Metropolitan France, 95570, France",
+        "road": "Allée de l'Ortie Blanche",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bouffémont",
+        "state": null,
+        "postcode": "95570",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "13, Allée de l'Ortie Blanche, Le Trait d'Union, Bouffémont, Sarcelles, Val-d'Oise, Metropolitan France, 95570, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:53.318938+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Broxburn",
+  "geonameid": 2654480,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.92209796588802,
+      "lon": -3.4620256305264347,
+      "geoinfo": {
+        "display_name": "M8, Broxburn, West Lothian, Scotland, EH52 5PG, United Kingdom",
+        "road": "M8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Broxburn",
+        "state": "Scotland",
+        "postcode": "EH52 5PG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M8, Broxburn, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.951340685926446,
+      "lon": -3.417757315555659,
+      "geoinfo": {
+        "display_name": "M9, Gateside, City of Edinburgh, Scotland, EH29 9FE, United Kingdom",
+        "road": "M9",
+        "house_number": null,
+        "neighbourhood": "Gateside",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Edinburgh",
+        "state": "Scotland",
+        "postcode": "EH29 9FE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M9, Gateside, City of Edinburgh, Scotland, EH29 9FE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:39.890801+00:00",
+  "_kind": "geo_samples"
+}

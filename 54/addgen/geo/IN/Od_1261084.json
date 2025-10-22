@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Od",
+  "geonameid": 1261084,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.589535117168726,
+      "lon": 73.08864164824558,
+      "geoinfo": {
+        "display_name": "SH83, Khambholaj, Anand Rural Taluka, Anand, Gujarat, 388335, India",
+        "road": "SH83",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khambholaj",
+        "state": "Gujarat",
+        "postcode": "388335",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "SH83, Od, Gujarat, India"
+    },
+    {
+      "lat": 22.66066702548675,
+      "lon": 73.11889876380292,
+      "geoinfo": {
+        "display_name": "Umreth Taluka, Anand, Gujarat, 388220, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gujarat",
+        "postcode": "388220",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "395, Umreth Taluka, Anand, Gujarat, 388220, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:31.355478+00:00",
+  "_kind": "geo_samples"
+}

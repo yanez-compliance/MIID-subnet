@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Chesnay",
+  "geonameid": 3004630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.82844910952944,
+      "lon": 2.1449185673871494,
+      "geoinfo": {
+        "display_name": "Route de Rueil, Le Chesnay, Le Chesnay-Rocquencourt, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78150, France",
+        "road": "Route de Rueil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Le Chesnay",
+        "city_district": null,
+        "city": "Le Chesnay-Rocquencourt",
+        "state": "Ile-de-France",
+        "postcode": "78150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Rueil, Le Chesnay, Ile-de-France, France"
+    },
+    {
+      "lat": 48.83247361012144,
+      "lon": 2.140769645338364,
+      "geoinfo": {
+        "display_name": "Autoroute de Normandie, Le Petit Parc, Le Chesnay, Le Chesnay-Rocquencourt, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78150, France",
+        "road": "Autoroute de Normandie",
+        "house_number": null,
+        "neighbourhood": "Le Petit Parc",
+        "suburb": "Le Chesnay",
+        "city_district": null,
+        "city": "Le Chesnay-Rocquencourt",
+        "state": "Ile-de-France",
+        "postcode": "78150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "618, Autoroute de Normandie, Le Petit Parc, Le Chesnay, Le Chesnay-Rocquencourt, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78150, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:58.522885+00:00",
+  "_kind": "geo_samples"
+}

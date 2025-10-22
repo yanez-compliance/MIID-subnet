@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Aurora",
+  "geonameid": 1689994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 13.373203765586224,
+      "lon": 122.53583226349993,
+      "geoinfo": {
+        "display_name": "San Francisco, Quezon, Calabarzon, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "Quezon",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Aurora, Quezon, Philippines"
+    },
+    {
+      "lat": 13.337869545817194,
+      "lon": 122.52995677105145,
+      "geoinfo": {
+        "display_name": "Route 610, San Francisco, Quezon, Calabarzon, Philippines",
+        "road": "Route 610",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "Quezon",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Route 610, San Francisco, Quezon, 28701 Calabarzon, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:58.329328+00:00",
+  "_kind": "geo_samples"
+}

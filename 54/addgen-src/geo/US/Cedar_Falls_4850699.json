@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cedar Falls",
+  "geonameid": 4850699,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.53249592369958,
+      "lon": -92.42856251440874,
+      "geoinfo": {
+        "display_name": "Avenue of the Saints, Cedar Falls, Black Hawk County, Iowa, 50613, United States",
+        "road": "Avenue of the Saints",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Falls",
+        "state": "Iowa",
+        "postcode": "50613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Avenue of the Saints, Cedar Falls, Iowa, United States"
+    },
+    {
+      "lat": 42.52772135280183,
+      "lon": -92.48440297445758,
+      "geoinfo": {
+        "display_name": "Pheasant Ridge Golf Course, Ryan Drive, Cedar Falls, Black Hawk County, Iowa, 50613, United States",
+        "road": "Ryan Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Falls",
+        "state": "Iowa",
+        "postcode": "50613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "397, Ryan Drive, Cedar Falls, 50613 Iowa, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:34.768553+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Pointe-Claire",
+  "geonameid": 6107325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.40816075765782,
+      "lon": -73.79668402546999,
+      "geoinfo": {
+        "display_name": "Avenue Claremont, Pointe-Claire, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9R 3J2, Canada",
+        "road": "Avenue Claremont",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pointe-Claire",
+        "state": "Quebec",
+        "postcode": "H9R 3J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Avenue Claremont, Pointe-Claire, Quebec, Canada"
+    },
+    {
+      "lat": 45.46918716948534,
+      "lon": -73.82234104375837,
+      "geoinfo": {
+        "display_name": "835, Avenue Selkirk, Pointe-Claire, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9R 5A5, Canada",
+        "road": "Avenue Selkirk",
+        "house_number": "835",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pointe-Claire",
+        "state": "Quebec",
+        "postcode": "H9R 5A5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "835, Avenue Selkirk, Pointe-Claire, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9R 5A5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:52.321360+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Zamość",
+  "geonameid": 753866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.70110140996722,
+      "lon": 23.304546278434252,
+      "geoinfo": {
+        "display_name": "38, Wólka Panieńska, gmina Zamość, Zamość County, Lublin Voivodeship, 22-400, Poland",
+        "road": null,
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wólka Panieńska",
+        "state": "Lublin Voivodeship",
+        "postcode": "22-400",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Zamość, Lublin Voivodeship, Poland"
+    },
+    {
+      "lat": 50.70216171571907,
+      "lon": 23.241353113563324,
+      "geoinfo": {
+        "display_name": "Źródlana, Zamczysko, Osiedle Zamczysko, Zamość, Lublin Voivodeship, 22-400, Poland",
+        "road": "Źródlana",
+        "house_number": null,
+        "neighbourhood": "Zamczysko",
+        "suburb": "Osiedle Zamczysko",
+        "city_district": null,
+        "city": "Zamość",
+        "state": "Lublin Voivodeship",
+        "postcode": "22-400",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Źródlana, Zamczysko, Osiedle Zamczysko, Zamość, Lublin Voivodeship, 22-400, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:31:29.534653+00:00",
+  "_kind": "geo_samples"
+}

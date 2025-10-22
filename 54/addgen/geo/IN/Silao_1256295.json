@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Silao",
+  "geonameid": 1256295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.0881786103386,
+      "lon": 85.39211828322394,
+      "geoinfo": {
+        "display_name": "SubCentre, Bhui, NH120, Rajgir, Silao, Nalanda, Bihar, 803117, India",
+        "road": "NH120",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rajgir",
+        "state": "Bihar",
+        "postcode": "803117",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH120, Silao, Bihar, India"
+    },
+    {
+      "lat": 25.112895451640185,
+      "lon": 85.45843669833992,
+      "geoinfo": {
+        "display_name": "NH120, Silao, Nalanda, Bihar, 803111, India",
+        "road": "NH120",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silao",
+        "state": "Bihar",
+        "postcode": "803111",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH120, Silao, Nalanda, Bihar, 803111, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:56.287746+00:00",
+  "_kind": "geo_samples"
+}

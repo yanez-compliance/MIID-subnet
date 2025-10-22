@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Parras de la Fuente",
+  "geonameid": 3993335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.47735730644974,
+      "lon": -102.18938382594904,
+      "geoinfo": {
+        "display_name": "Parras, Coahuila, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Parras de la Fuente, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.417778716150764,
+      "lon": -102.18792387425415,
+      "geoinfo": {
+        "display_name": "Parras de la Fuente, Parras, Coahuila, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parras de la Fuente",
+        "state": "Coahuila",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "111, Parras de la Fuente, Parras, 78948 Coahuila, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:07.218202+00:00",
+  "_kind": "geo_samples"
+}

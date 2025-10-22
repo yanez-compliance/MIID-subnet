@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Mkushi",
+  "geonameid": 906221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -13.603368160359453,
+      "lon": 29.357681243297865,
+      "geoinfo": {
+        "display_name": "Mkushi District, Central Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Central Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Mkushi, Central Province, Zambia"
+    },
+    {
+      "lat": -13.64167909246183,
+      "lon": 29.36680186461606,
+      "geoinfo": {
+        "display_name": "Great North Road, Katuba, Mkushi District, Central Province, Zambia",
+        "road": "Great North Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katuba",
+        "state": "Central Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Great North Road, Mkushi, Central Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-17T01:28:07.198702+00:00",
+  "_kind": "geo_samples"
+}

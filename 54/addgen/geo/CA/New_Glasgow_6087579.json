@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "New Glasgow",
+  "geonameid": 6087579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.601915328803294,
+      "lon": -62.64891916461086,
+      "geoinfo": {
+        "display_name": "41, Terrace Heights Drive, Terrace Heights, New Glasgow, Town of New Glasgow, Pictou County, Nova Scotia, B2H 1Y3, Canada",
+        "road": "Terrace Heights Drive",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Glasgow",
+        "state": "Nova Scotia",
+        "postcode": "B2H 1Y3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "41 Terrace Heights Drive, New Glasgow, Nova Scotia, Canada"
+    },
+    {
+      "lat": 45.613196972503935,
+      "lon": -62.60412111529969,
+      "geoinfo": {
+        "display_name": "560, Logan Road, Frasers Mountain, Municipality of Pictou County, Pictou County, Nova Scotia, B2H 0C9, Canada",
+        "road": "Logan Road",
+        "house_number": "560",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frasers Mountain",
+        "state": "Nova Scotia",
+        "postcode": "B2H 0C9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "560, Logan Road, Frasers Mountain, Municipality of Pictou County, Pictou County, Nova Scotia, B2H 0C9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:39.132175+00:00",
+  "_kind": "geo_samples"
+}

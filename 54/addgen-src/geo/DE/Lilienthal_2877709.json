@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lilienthal",
+  "geonameid": 2877709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.13114452604333,
+      "lon": 8.945982891829065,
+      "geoinfo": {
+        "display_name": "Am Großen Moordamm, Am Hexenberg, Borgfeld, Bremen-Ost, Bremen, Landkreis Osterholz, Bremen, 28357, Germany",
+        "road": "Am Großen Moordamm",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Borgfeld",
+        "city_district": "Bremen-Ost",
+        "city": "Bremen",
+        "state": "Bremen",
+        "postcode": "28357",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Großen Moordamm, Lilienthal, Bremen, Germany"
+    },
+    {
+      "lat": 53.176327885098374,
+      "lon": 8.869836254560965,
+      "geoinfo": {
+        "display_name": "Oberende, Wührden, Lilienthal, Landkreis Osterholz, Lower Saxony, 28865, Germany",
+        "road": "Oberende",
+        "house_number": null,
+        "neighbourhood": "Oberende",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lilienthal",
+        "state": "Lower Saxony",
+        "postcode": "28865",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "993, Oberende, Wührden, Lilienthal, Landkreis Osterholz, Lower Saxony, 28865, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:08.770837+00:00",
+  "_kind": "geo_samples"
+}

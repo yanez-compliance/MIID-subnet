@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Almenara",
+  "geonameid": 11549965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.47907606464037,
+      "lon": -3.686150611057754,
+      "geoinfo": {
+        "display_name": "Torre Emperador Castellana, 259 D, Paseo de la Castellana, La Paz, Fuencarral-El Pardo, Madrid, Community of Madrid, 28046, Spain",
+        "road": "Paseo de la Castellana",
+        "house_number": "259 D",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28046",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "259 D Paseo de la Castellana, Almenara, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.510724886499034,
+      "lon": -3.6796751278706603,
+      "geoinfo": {
+        "display_name": "22, Calle de Isabel Colbrand, Las Tablas, Valverde, Fuencarral-El Pardo, Madrid, Community of Madrid, 28050, Spain",
+        "road": "Calle de Isabel Colbrand",
+        "house_number": "22",
+        "neighbourhood": "Las Tablas",
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28050",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "22, Calle de Isabel Colbrand, Las Tablas, Valverde, Fuencarral-El Pardo, Madrid, Community of Madrid, 28050, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:27.176767+00:00",
+  "_kind": "geo_samples"
+}

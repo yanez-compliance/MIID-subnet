@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Truckee",
+  "geonameid": 5403676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.33651083498432,
+      "lon": -120.1319261810107,
+      "geoinfo": {
+        "display_name": "Butterfield Drive, Truckee, Nevada County, California, United States",
+        "road": "Butterfield Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Truckee",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Butterfield Drive, Truckee, California, United States"
+    },
+    {
+      "lat": 39.30402930519318,
+      "lon": -120.19156289930035,
+      "geoinfo": {
+        "display_name": "Happy Face, Martiswood Estates, Placer County, California, 96161, United States",
+        "road": "Happy Face",
+        "house_number": null,
+        "neighbourhood": "Martiswood Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "96161",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "661, Happy Face, Martiswood Estates, Placer County, California, 96161, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:24.677724+00:00",
+  "_kind": "geo_samples"
+}

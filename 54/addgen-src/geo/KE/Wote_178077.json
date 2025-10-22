@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Wote",
+  "geonameid": 178077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -1.769591460664875,
+      "lon": 37.58622596619397,
+      "geoinfo": {
+        "display_name": "Makueni Subcounty, Makueni, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Makueni",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Wote, Makueni, Kenya"
+    },
+    {
+      "lat": -1.789778182581841,
+      "lon": 37.62986443971311,
+      "geoinfo": {
+        "display_name": "Wote, Makueni Subcounty, Makueni, 90300, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wote",
+        "state": "Makueni",
+        "postcode": "90300",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "726, Wote, Makueni Subcounty, Makueni, 90300, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:02.764276+00:00",
+  "_kind": "geo_samples"
+}

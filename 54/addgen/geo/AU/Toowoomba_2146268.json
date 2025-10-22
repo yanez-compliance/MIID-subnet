@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Toowoomba",
+  "geonameid": 2146268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.534440750906573,
+      "lon": 151.96639202928444,
+      "geoinfo": {
+        "display_name": "Stuart Street, Mount Lofty, Harlaxton, Toowoomba, Toowoomba Regional, Queensland, 4350, Australia",
+        "road": "Stuart Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mount Lofty",
+        "city_district": "Harlaxton",
+        "city": "Toowoomba",
+        "state": "Queensland",
+        "postcode": "4350",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Stuart Street, Toowoomba, Queensland, Australia"
+    },
+    {
+      "lat": -27.588173561685263,
+      "lon": 151.95970070973075,
+      "geoinfo": {
+        "display_name": "Robyn Street, Centenary Heights, Toowoomba, Toowoomba Regional, Queensland, 4250, Australia",
+        "road": "Robyn Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Centenary Heights",
+        "city": "Toowoomba",
+        "state": "Queensland",
+        "postcode": "4250",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "678, Robyn Street, Centenary Heights, Toowoomba, Toowoomba Regional, Queensland, 4250, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:58.790242+00:00",
+  "_kind": "geo_samples"
+}

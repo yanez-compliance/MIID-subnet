@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Celle-Saint-Cloud",
+  "geonameid": 3010529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.82189350708517,
+      "lon": 2.1351359336889,
+      "geoinfo": {
+        "display_name": "15 bis, Avenue de Vaucresson, Le Chesnay, Le Chesnay-Rocquencourt, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78150, France",
+        "road": "Avenue de Vaucresson",
+        "house_number": "15 bis",
+        "neighbourhood": null,
+        "suburb": "Le Chesnay",
+        "city_district": null,
+        "city": "Le Chesnay-Rocquencourt",
+        "state": "Ile-de-France",
+        "postcode": "78150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "15 bis Avenue de Vaucresson, La Celle-Saint-Cloud, Ile-de-France, France"
+    },
+    {
+      "lat": 48.823454068303185,
+      "lon": 2.1117235894596607,
+      "geoinfo": {
+        "display_name": "Allée des Noyers, Notre-Dame, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78000, France",
+        "road": "Allée des Noyers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Notre-Dame",
+        "city_district": null,
+        "city": "Versailles",
+        "state": "Ile-de-France",
+        "postcode": "78000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "541, Allée des Noyers, Notre-Dame, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:16.685490+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Tianwei",
+  "geonameid": 1667121,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 23.887372381148737,
+      "lon": 120.55902342928199,
+      "geoinfo": {
+        "display_name": "12號, Pinghe Road Section 1, Zhenping, Nanzhen Village, Tianwei Township, Changhua County, 52149, Taiwan",
+        "road": "Pinghe Road Section 1",
+        "house_number": "12號",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Nanzhen Village",
+        "city": "Tianwei Township",
+        "state": null,
+        "postcode": "52149",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "12號 Pinghe Road Section 1, Tianwei, Taiwan"
+    },
+    {
+      "lat": 23.907421094248456,
+      "lon": 120.5467798286482,
+      "geoinfo": {
+        "display_name": "600號, 延平路, Cheluzi, Nangang Village, Yongjing Township, Changhua County, 522, Taiwan",
+        "road": "延平路",
+        "house_number": "600號",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Nangang Village",
+        "city": "Yongjing Township",
+        "state": null,
+        "postcode": "522",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "600號 延平路, Tianwei, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:34:35.951579+00:00",
+  "_kind": "geo_samples"
+}

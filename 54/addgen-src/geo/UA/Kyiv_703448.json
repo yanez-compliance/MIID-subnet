@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Kyiv",
+  "geonameid": 703448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.421374656558264,
+      "lon": 30.48315369250424,
+      "geoinfo": {
+        "display_name": "4, Narodnyi Lane, Zaliznychnyi, Oleksandrivska Slobidka, Solomianskyi district, Kyiv, 03110, Ukraine",
+        "road": "Narodnyi Lane",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Oleksandrivska Slobidka",
+        "city_district": null,
+        "city": "Kyiv",
+        "state": null,
+        "postcode": "03110",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "4 Narodnyi Lane, Kyiv, Ukraine"
+    },
+    {
+      "lat": 50.45571696642171,
+      "lon": 30.532747295267292,
+      "geoinfo": {
+        "display_name": "Parkovyi Bridge, Naberezhne Road, Урядовий квартал, Аскольдова Могила, Klov, Podilskyi district, Kyiv, 01008, Ukraine",
+        "road": "Naberezhne Road",
+        "house_number": null,
+        "neighbourhood": "Урядовий квартал",
+        "suburb": "Klov",
+        "city_district": null,
+        "city": "Kyiv",
+        "state": null,
+        "postcode": "01008",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "847, Naberezhne Road, 01008 Kyiv, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T06:58:19.225242+00:00",
+  "_kind": "geo_samples"
+}

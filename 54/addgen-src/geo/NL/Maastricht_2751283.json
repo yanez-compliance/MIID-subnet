@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Maastricht",
+  "geonameid": 2751283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.80528774197045,
+      "lon": 5.705043370029576,
+      "geoinfo": {
+        "display_name": "5, Oosterweg, Oost-Maarland, Eijsden, Eijsden-Margraten, Limburg, Netherlands, 6245 LC, Netherlands",
+        "road": "Oosterweg",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eijsden",
+        "state": "Limburg",
+        "postcode": "6245 LC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "5 Oosterweg, Maastricht, Limburg, The Netherlands"
+    },
+    {
+      "lat": 50.818044096267855,
+      "lon": 5.680849773027018,
+      "geoinfo": {
+        "display_name": "Poppelmondeweg, Maastricht, Limburg, Netherlands, 6212 NJ, Netherlands",
+        "road": "Poppelmondeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maastricht",
+        "state": "Limburg",
+        "postcode": "6212 NJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "935, Poppelmondeweg, Maastricht, Limburg, Netherlands, 6212 NJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:02.472017+00:00",
+  "_kind": "geo_samples"
+}

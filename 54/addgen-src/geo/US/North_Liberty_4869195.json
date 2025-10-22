@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Liberty",
+  "geonameid": 4869195,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.71740951901899,
+      "lon": -91.6157603364917,
+      "geoinfo": {
+        "display_name": "Iowa Medical and Classification Center, Redhawk Street, Coralville, Johnson County, Iowa, 52317, United States",
+        "road": "Redhawk Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coralville",
+        "state": "Iowa",
+        "postcode": "52317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Redhawk Street, North Liberty, Iowa, United States"
+    },
+    {
+      "lat": 41.78256065776098,
+      "lon": -91.57337479434302,
+      "geoinfo": {
+        "display_name": "Macbride Nature Recreation Area, 3895, Raptor Ridge Road Northeast, Solon, Big Grove Township, Johnson County, Iowa, 52333, United States",
+        "road": "Raptor Ridge Road Northeast",
+        "house_number": "3895",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Solon",
+        "state": "Iowa",
+        "postcode": "52333",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Macbride Nature Recreation Area, 3895, Raptor Ridge Road Northeast, Solon, Big Grove Township, Johnson County, Iowa, 52333, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:46.694199+00:00",
+  "_kind": "geo_samples"
+}

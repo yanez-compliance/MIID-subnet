@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Beisu",
+  "geonameid": 1816560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.13097706959919,
+      "lon": 114.77558058159326,
+      "geoinfo": {
+        "display_name": "Gaocheng District, Shijiazhuang, Hebei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaocheng District",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Beisu, Hebei, China"
+    },
+    {
+      "lat": 38.140047933382746,
+      "lon": 114.85144967011064,
+      "geoinfo": {
+        "display_name": "Wuji County, Shijiazhuang, Hebei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wuji County",
+        "city": "Shijiazhuang",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "235, Wuji County, Shijiazhuang, 21689 Hebei, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:58:01.432969+00:00",
+  "_kind": "geo_samples"
+}

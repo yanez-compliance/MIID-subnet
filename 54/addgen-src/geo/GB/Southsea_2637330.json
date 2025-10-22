@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Southsea",
+  "geonameid": 2637330,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.798091350551985,
+      "lon": -1.0610146418067428,
+      "geoinfo": {
+        "display_name": "Big Yellow Self Storage, Milton Road, Kingston, Milton, Portsmouth, England, PO3 6DW, United Kingdom",
+        "road": "Milton Road",
+        "house_number": null,
+        "neighbourhood": "Kingston",
+        "suburb": "Milton",
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "England",
+        "postcode": "PO3 6DW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Milton Road, Southsea, England, United Kingdom"
+    },
+    {
+      "lat": 50.751370698371936,
+      "lon": -1.099652254464795,
+      "geoinfo": {
+        "display_name": "Seaview, Isle of Wight, England, PO34 5AS, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seaview",
+        "state": "England",
+        "postcode": "PO34 5AS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Seaview, Isle of Wight, England, PO34 5AS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:58.405267+00:00",
+  "_kind": "geo_samples"
+}

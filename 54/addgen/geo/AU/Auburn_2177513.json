@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Auburn",
+  "geonameid": 2177513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.870975146082046,
+      "lon": 151.07097482017952,
+      "geoinfo": {
+        "display_name": "Arthur Street, Strathfield, Inner West, Sydney, Strathfield Municipal Council, New South Wales, 2135, Australia",
+        "road": "Arthur Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Strathfield",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2135",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Arthur Street, Auburn, New South Wales, Australia"
+    },
+    {
+      "lat": -33.81234201116807,
+      "lon": 151.01585801704,
+      "geoinfo": {
+        "display_name": "Thomas Street, Parramatta, Sydney, City of Parramatta Council, New South Wales, 2150, Australia",
+        "road": "Thomas Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2150",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "799, Thomas Street, Parramatta, Sydney, City of Parramatta Council, New South Wales, 2150, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:56.190215+00:00",
+  "_kind": "geo_samples"
+}

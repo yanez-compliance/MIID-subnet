@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Almagro",
+  "geonameid": 11549968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.430579161991744,
+      "lon": -3.664716832013265,
+      "geoinfo": {
+        "display_name": "233, Calle de Alcalá, Fuente del Berro, Salamanca, Madrid, Community of Madrid, 28028, Spain",
+        "road": "Calle de Alcalá",
+        "house_number": "233",
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28028",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "233 Calle de Alcalá, Almagro, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.45884327550641,
+      "lon": -3.6640822810490725,
+      "geoinfo": {
+        "display_name": "Avenida de la Paz, Colina, Ciudad Lineal, Madrid, Community of Madrid, 28016, Spain",
+        "road": "Avenida de la Paz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28016",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "095, Avenida de la Paz, Colina, Ciudad Lineal, Madrid, Community of Madrid, 28016, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:17.290837+00:00",
+  "_kind": "geo_samples"
+}

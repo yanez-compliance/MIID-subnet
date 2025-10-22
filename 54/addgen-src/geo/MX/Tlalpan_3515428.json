@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tlalpan",
+  "geonameid": 3515428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.332481961875246,
+      "lon": -99.13793008278088,
+      "geoinfo": {
+        "display_name": "Retorno 8, Colonia El Centinela, Mexico City, Coyoacán, Mexico City, 04460, Mexico",
+        "road": "Retorno 8",
+        "house_number": null,
+        "neighbourhood": "Colonia El Centinela",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "04460",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Retorno 8, Tlalpan, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.292741954175426,
+      "lon": -99.1779033296621,
+      "geoinfo": {
+        "display_name": "Avenida Insurgentes Sur, Colonia Camiseta Calvario, Barrio San Fernando, Mexico City, Tlalpan, Mexico City, 14000, Mexico",
+        "road": "Avenida Insurgentes Sur",
+        "house_number": null,
+        "neighbourhood": "Colonia Camiseta Calvario",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "14000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "693, Avenida Insurgentes Sur, Colonia Camiseta Calvario, Barrio San Fernando, Mexico City, Tlalpan, Mexico City, 14000, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:49:37.824557+00:00",
+  "_kind": "geo_samples"
+}

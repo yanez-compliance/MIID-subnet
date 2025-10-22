@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sycamore",
+  "geonameid": 4913110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.97763397044151,
+      "lon": -88.73205255009917,
+      "geoinfo": {
+        "display_name": "DeKalb Township, DeKalb County, Illinois, 60178, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60178",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sycamore, Illinois, United States"
+    },
+    {
+      "lat": 41.965620085739246,
+      "lon": -88.6896597415573,
+      "geoinfo": {
+        "display_name": "350, Bethany Road, Sycamore, Cortland Township, DeKalb County, Illinois, 60178, United States",
+        "road": "Bethany Road",
+        "house_number": "350",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sycamore",
+        "state": "Illinois",
+        "postcode": "60178",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "350, Bethany Road, Sycamore, Cortland Township, DeKalb County, Illinois, 60178, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:36.081050+00:00",
+  "_kind": "geo_samples"
+}

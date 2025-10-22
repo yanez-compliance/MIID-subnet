@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ar Riyāḑ",
+  "geonameid": 416047,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.21560513576521,
+      "lon": 30.937574068668674,
+      "geoinfo": {
+        "display_name": "Kafr El Sheikh, 33739, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kafr El Sheikh",
+        "postcode": "33739",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Ar Riyāḑ, Kafr El Sheikh, Egypt"
+    },
+    {
+      "lat": 31.274056819935808,
+      "lon": 30.948934848338176,
+      "geoinfo": {
+        "display_name": "Izbat Sad Abu Ali, Kafr El Sheikh, 33739, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Izbat Sad Abu Ali",
+        "state": "Kafr El Sheikh",
+        "postcode": "33739",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "135, Izbat Sad Abu Ali, Kafr El Sheikh, 33739, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:17.187847+00:00",
+  "_kind": "geo_samples"
+}

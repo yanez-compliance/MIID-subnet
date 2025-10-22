@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winchester",
+  "geonameid": 4794120,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.174402490378824,
+      "lon": -78.18477023512364,
+      "geoinfo": {
+        "display_name": "1741, Handley Avenue, Winchester, Virginia, 22601, United States",
+        "road": "Handley Avenue",
+        "house_number": "1741",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Virginia",
+        "postcode": "22601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1741 Handley Avenue, Winchester, Virginia, United States"
+    },
+    {
+      "lat": 39.22193460791577,
+      "lon": -78.18253073588431,
+      "geoinfo": {
+        "display_name": "236, Woodcrest Drive, North Frederick Terrace, Frederick County, Virginia, 22603, United States",
+        "road": "Woodcrest Drive",
+        "house_number": "236",
+        "neighbourhood": "North Frederick Terrace",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "236, Woodcrest Drive, North Frederick Terrace, Frederick County, Virginia, 22603, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:54.347346+00:00",
+  "_kind": "geo_samples"
+}

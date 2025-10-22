@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Abasolo",
+  "geonameid": 4019869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.42853559674195,
+      "lon": -101.5132472138896,
+      "geoinfo": {
+        "display_name": "Guadalupe, Abasolo, Guanajuato, 36975, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abasolo",
+        "state": "Guanajuato",
+        "postcode": "36975",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Abasolo, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.455274532659903,
+      "lon": -101.50308959875078,
+      "geoinfo": {
+        "display_name": "Calle Colibrí, El Saucillo, Abasolo, Guanajuato, 36973, Mexico",
+        "road": "Calle Colibrí",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abasolo",
+        "state": "Guanajuato",
+        "postcode": "36973",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "549, Calle Colibrí, El Saucillo, Abasolo, Guanajuato, 36973, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:53.500291+00:00",
+  "_kind": "geo_samples"
+}

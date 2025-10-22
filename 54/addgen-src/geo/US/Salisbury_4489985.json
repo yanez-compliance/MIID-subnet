@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salisbury",
+  "geonameid": 4489985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.690125713578624,
+      "lon": -80.51608751216958,
+      "geoinfo": {
+        "display_name": "1998, Calvin Avenue, Milford Terrace, Salisbury, Rowan County, North Carolina, 28147, United States",
+        "road": "Calvin Avenue",
+        "house_number": "1998",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salisbury",
+        "state": "North Carolina",
+        "postcode": "28147",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1998 Calvin Avenue, Salisbury, North Carolina, United States"
+    },
+    {
+      "lat": 35.66047820942273,
+      "lon": -80.42141840903568,
+      "geoinfo": {
+        "display_name": "Rouzer Road, Rowan County, North Carolina, 28146, United States",
+        "road": "Rouzer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "28146",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "739, Rouzer Road, Rowan County, North Carolina, 28146, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:32.118216+00:00",
+  "_kind": "geo_samples"
+}

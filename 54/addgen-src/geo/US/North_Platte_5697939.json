@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Platte",
+  "geonameid": 5697939,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.12989648653314,
+      "lon": -100.8099679485511,
+      "geoinfo": {
+        "display_name": "4006, Aspen Drive, North Platte, Lincoln County, Nebraska, 69101, United States",
+        "road": "Aspen Drive",
+        "house_number": "4006",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Platte",
+        "state": "Nebraska",
+        "postcode": "69101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4006 Aspen Drive, North Platte, Nebraska, United States"
+    },
+    {
+      "lat": 41.07968097149981,
+      "lon": -100.76887043845151,
+      "geoinfo": {
+        "display_name": "US 83, Lincoln County, Nebraska, 69107, United States",
+        "road": "US 83",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nebraska",
+        "postcode": "69107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 83, Lincoln County, Nebraska, 69107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:37.763819+00:00",
+  "_kind": "geo_samples"
+}

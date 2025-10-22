@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kunitachi",
+  "geonameid": 11611617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.64227487162632,
+      "lon": 139.4429165720448,
+      "geoinfo": {
+        "display_name": "桜ケ丘住宅地, Tama, Tokyo, 206-0003, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tama",
+        "state": null,
+        "postcode": "206-0003",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kunitachi, Japan"
+    },
+    {
+      "lat": 35.689412642811895,
+      "lon": 139.38657024101394,
+      "geoinfo": {
+        "display_name": "多摩川サイクリングロード, Fukujimacho 3, Fukujimacho, Tachikawa, Tokyo, 196-0031, Japan",
+        "road": "多摩川サイクリングロード",
+        "house_number": null,
+        "neighbourhood": "Fukujimacho 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tachikawa",
+        "state": null,
+        "postcode": "196-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "多摩川サイクリングロード, Fukujimacho 3, Fukujimacho, Tachikawa, Tokyo, 196-0031, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:17.487599+00:00",
+  "_kind": "geo_samples"
+}

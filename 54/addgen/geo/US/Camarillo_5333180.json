@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Camarillo",
+  "geonameid": 5333180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.18305123671504,
+      "lon": -119.02605219750113,
+      "geoinfo": {
+        "display_name": "Creek Road, Ventura County, California, 93012, United States",
+        "road": "Creek Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Creek Road, Camarillo, California, United States"
+    },
+    {
+      "lat": 34.23001183286346,
+      "lon": -119.04139906166655,
+      "geoinfo": {
+        "display_name": "2188, Sherborne Street, Camarillo, Ventura County, California, 93010, United States",
+        "road": "Sherborne Street",
+        "house_number": "2188",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Camarillo",
+        "state": "California",
+        "postcode": "93010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2188, Sherborne Street, Camarillo, Ventura County, California, 93010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:46.835092+00:00",
+  "_kind": "geo_samples"
+}

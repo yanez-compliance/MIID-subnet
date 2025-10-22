@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Großostheim",
+  "geonameid": 2915196,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.92318549392735,
+      "lon": 9.133493920972287,
+      "geoinfo": {
+        "display_name": "Stadtweg, Niedernberg, Landkreis Miltenberg, Bavaria, 63843, Germany",
+        "road": "Stadtweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Niedernberg",
+        "state": "Bavaria",
+        "postcode": "63843",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Stadtweg, Großostheim, Bavaria, Germany"
+    },
+    {
+      "lat": 49.912800969700896,
+      "lon": 9.100015451973823,
+      "geoinfo": {
+        "display_name": "Eierweg, Großostheim, Landkreis Aschaffenburg, Bavaria, 63762, Germany",
+        "road": "Eierweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Großostheim",
+        "city_district": null,
+        "city": "Großostheim",
+        "state": "Bavaria",
+        "postcode": "63762",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "768, Eierweg, Großostheim, Landkreis Aschaffenburg, Bavaria, 63762, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:38.804520+00:00",
+  "_kind": "geo_samples"
+}

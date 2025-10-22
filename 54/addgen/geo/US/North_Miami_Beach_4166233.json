@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Miami Beach",
+  "geonameid": 4166233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.929778762381567,
+      "lon": -80.17803403355236,
+      "geoinfo": {
+        "display_name": "John F. Kennedy Junior High School, Northeast 167th Street, North Miami Beach, Miami-Dade County, Florida, 33162, United States",
+        "road": "Northeast 167th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Miami Beach",
+        "state": "Florida",
+        "postcode": "33162",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northeast 167th Street, North Miami Beach, Florida, United States"
+    },
+    {
+      "lat": 25.957210467483897,
+      "lon": -80.17446455473308,
+      "geoinfo": {
+        "display_name": "1350, North Drive, Ives Estates, Miami, Miami-Dade County, Florida, 33179, United States",
+        "road": "North Drive",
+        "house_number": "1350",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33179",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1350, North Drive, Ives Estates, Miami, Miami-Dade County, Florida, 33179, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:52.009101+00:00",
+  "_kind": "geo_samples"
+}

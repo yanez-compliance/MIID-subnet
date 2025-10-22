@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cumbernauld",
+  "geonameid": 2651715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.946726032042164,
+      "lon": -3.922371569804323,
+      "geoinfo": {
+        "display_name": "Fannyside Road, Abronhill, North Lanarkshire, Scotland, FK1 3DU, United Kingdom",
+        "road": "Fannyside Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Abronhill",
+        "city_district": null,
+        "city": null,
+        "state": "Scotland",
+        "postcode": "FK1 3DU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Fannyside Road, Cumbernauld, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.904235561682796,
+      "lon": -3.989942546743247,
+      "geoinfo": {
+        "display_name": "Cullochrig Road, Cullochrig (Farm), North Lanarkshire, Scotland, ML6 0PR, United Kingdom",
+        "road": "Cullochrig Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Scotland",
+        "postcode": "ML6 0PR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cullochrig Road, Cullochrig (Farm), North Lanarkshire, Scotland, ML6 0PR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:52.791194+00:00",
+  "_kind": "geo_samples"
+}

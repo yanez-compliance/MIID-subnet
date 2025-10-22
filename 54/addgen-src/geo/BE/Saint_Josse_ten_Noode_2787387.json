@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Saint-Josse-ten-Noode",
+  "geonameid": 2787387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.88494914356428,
+      "lon": 4.381107031896746,
+      "geoinfo": {
+        "display_name": "R21, Laeken - Laken, Brussels, Brussels-Capital, 1020, Belgium",
+        "road": "R21",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brussels",
+        "state": null,
+        "postcode": "1020",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "R21, Saint-Josse-ten-Noode, Belgium"
+    },
+    {
+      "lat": 50.89364445232221,
+      "lon": 4.374948733454498,
+      "geoinfo": {
+        "display_name": "128, Avenue du Roi Albert - Koning Albertlaan, Over-Heembeek, Neder-Over-Heembeek, Brussels, Brussels-Capital, 1120, Belgium",
+        "road": "Avenue du Roi Albert - Koning Albertlaan",
+        "house_number": "128",
+        "neighbourhood": "Over-Heembeek",
+        "suburb": null,
+        "city_district": null,
+        "city": "Brussels",
+        "state": null,
+        "postcode": "1120",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "128, Avenue du Roi Albert - Koning Albertlaan, Over-Heembeek, Neder-Over-Heembeek, Brussels, Brussels-Capital, 1120, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:42.438078+00:00",
+  "_kind": "geo_samples"
+}

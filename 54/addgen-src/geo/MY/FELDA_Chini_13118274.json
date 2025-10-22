@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "FELDA Chini",
+  "geonameid": 13118274,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.3697989508493613,
+      "lon": 102.98650955290879,
+      "geoinfo": {
+        "display_name": "Pekan, Pahang, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Pahang",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "FELDA Chini, Pahang, Malaysia"
+    },
+    {
+      "lat": 3.3634827065062805,
+      "lon": 102.94909881063302,
+      "geoinfo": {
+        "display_name": "Kampung Ulu Gumum, Pekan, Pahang, 26690, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kampung Ulu Gumum",
+        "state": "Pahang",
+        "postcode": "26690",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "608, Kampung Ulu Gumum, Pekan, Pahang, 26690, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:52.797525+00:00",
+  "_kind": "geo_samples"
+}

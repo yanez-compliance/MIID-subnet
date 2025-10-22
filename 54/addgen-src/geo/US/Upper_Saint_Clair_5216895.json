@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Upper Saint Clair",
+  "geonameid": 5216895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3301777555098,
+      "lon": -80.0777509153169,
+      "geoinfo": {
+        "display_name": "Broadlawn Highlands, Upper St. Clair, Allegheny County, Pennsylvania, 15241, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper St. Clair",
+        "state": "Pennsylvania",
+        "postcode": "15241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Upper Saint Clair, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.310630447845035,
+      "lon": -80.06075133043984,
+      "geoinfo": {
+        "display_name": "578, Clifton Road, Jewell, Bethel Park, Allegheny County, Pennsylvania, 15102, United States",
+        "road": "Clifton Road",
+        "house_number": "578",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bethel Park",
+        "state": "Pennsylvania",
+        "postcode": "15102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "578, Clifton Road, Jewell, Bethel Park, Allegheny County, Pennsylvania, 15102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:53.380731+00:00",
+  "_kind": "geo_samples"
+}

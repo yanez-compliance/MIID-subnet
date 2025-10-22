@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "El Kala",
+  "geonameid": 2497988,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.89836617500982,
+      "lon": 8.462059998993382,
+      "geoinfo": {
+        "display_name": "El Kala, Al Qala, El Kala District, El Tarf, 36002, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Kala",
+        "state": "El Tarf",
+        "postcode": "36002",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "El Kala, El Tarf, Algeria"
+    },
+    {
+      "lat": 36.90486498370499,
+      "lon": 8.389548365083133,
+      "geoinfo": {
+        "display_name": "CW 166, Al Qala, El Kala District, El Tarf, Algeria",
+        "road": "CW 166",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Qala",
+        "state": "El Tarf",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "CW 166, Al Qala, El Kala District, 37786 El Tarf, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:13.007040+00:00",
+  "_kind": "geo_samples"
+}

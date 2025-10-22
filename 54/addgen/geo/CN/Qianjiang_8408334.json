@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qianjiang",
+  "geonameid": 8408334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.550505099555185,
+      "lon": 108.7743934759206,
+      "geoinfo": {
+        "display_name": "Zhangnan Expressway, 金桥社区, Chengdong Subdistrict, Qianjiang, Qianjiang District, Chongqing, 409000, China",
+        "road": "Zhangnan Expressway",
+        "house_number": null,
+        "neighbourhood": "金桥社区",
+        "suburb": "Chengdong Subdistrict",
+        "city_district": null,
+        "city": "Qianjiang",
+        "state": "Chongqing",
+        "postcode": "409000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhangnan Expressway, Qianjiang, Chongqing, China"
+    },
+    {
+      "lat": 29.553203595549903,
+      "lon": 108.74771969200407,
+      "geoinfo": {
+        "display_name": "Chengxi Subdistrict, Qianjiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chengxi Subdistrict",
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "044, Chengxi Subdistrict, Qianjiang District, 17171 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:07.221304+00:00",
+  "_kind": "geo_samples"
+}

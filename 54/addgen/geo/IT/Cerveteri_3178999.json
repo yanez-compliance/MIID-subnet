@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cerveteri",
+  "geonameid": 3178999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.01340301542291,
+      "lon": 12.060013534529837,
+      "geoinfo": {
+        "display_name": "Via della Tomba, Cerveteri, Roma Capitale, Lazio, 00052, Italy",
+        "road": "Via della Tomba",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cerveteri",
+        "state": "Lazio",
+        "postcode": "00052",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via della Tomba, Cerveteri, Lazio, Italy"
+    },
+    {
+      "lat": 42.010379885539926,
+      "lon": 12.066228776347028,
+      "geoinfo": {
+        "display_name": "Via del Sasso, Cerveteri, Roma Capitale, Lazio, 00052, Italy",
+        "road": "Via del Sasso",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cerveteri",
+        "state": "Lazio",
+        "postcode": "00052",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "397, Via del Sasso, Cerveteri, Roma Capitale, Lazio, 00052, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:38.510192+00:00",
+  "_kind": "geo_samples"
+}

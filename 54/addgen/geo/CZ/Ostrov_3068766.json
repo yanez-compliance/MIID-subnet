@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Ostrov",
+  "geonameid": 3068766,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.26669489145934,
+      "lon": 12.931947824064034,
+      "geoinfo": {
+        "display_name": "138, Bor, Sadov, okres Karlovy Vary, Karlovy Vary Region, Northwest, 360 01, Czechia",
+        "road": null,
+        "house_number": "138",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bor",
+        "state": "Northwest",
+        "postcode": "360 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Ostrov, Northwest, Czechia"
+    },
+    {
+      "lat": 50.26974414724407,
+      "lon": 12.967816935499425,
+      "geoinfo": {
+        "display_name": "22124, Stráň, Bor, Sadov, okres Karlovy Vary, Karlovy Vary Region, Northwest, 362 72, Czechia",
+        "road": "22124",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bor",
+        "state": "Northwest",
+        "postcode": "362 72",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "22124, Stráň, Bor, Sadov, okres Karlovy Vary, Karlovy Vary Region, Northwest, 362 72, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:46.045049+00:00",
+  "_kind": "geo_samples"
+}

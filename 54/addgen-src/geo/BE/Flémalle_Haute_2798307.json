@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Flémalle-Haute",
+  "geonameid": 2798307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.58987818847299,
+      "lon": 5.4350696999941785,
+      "geoinfo": {
+        "display_name": "Chemin du Château, Chokier, Flémalle-Haute, Flémalle, Liège, Wallonia, 4400, Belgium",
+        "road": "Chemin du Château",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Flémalle",
+        "state": "Liège",
+        "postcode": "4400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin du Château, Flémalle-Haute, Liège, Belgium"
+    },
+    {
+      "lat": 50.63671121279717,
+      "lon": 5.404623732090468,
+      "geoinfo": {
+        "display_name": "Rue des Blancs Bastons, Lexhy, Velroux, Grâce-Hollogne, Liège, Wallonia, 4460, Belgium",
+        "road": "Rue des Blancs Bastons",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grâce-Hollogne",
+        "state": "Liège",
+        "postcode": "4460",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "025, Rue des Blancs Bastons, Lexhy, Velroux, Grâce-Hollogne, Liège, Wallonia, 4460, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:30.783251+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Sassari",
+  "geonameid": 3167096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.699707800217176,
+      "lon": 8.560992182965839,
+      "geoinfo": {
+        "display_name": "Strada Statale 131 Carlo Felice, Gioscari, Sassari, Sardinia, 07100, Italy",
+        "road": "Strada Statale 131 Carlo Felice",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gioscari",
+        "city_district": null,
+        "city": "Sassari",
+        "state": "Sardinia",
+        "postcode": "07100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale 131 Carlo Felice, Sassari, Sardinia, Italy"
+    },
+    {
+      "lat": 40.6967526734509,
+      "lon": 8.515650763599437,
+      "geoinfo": {
+        "display_name": "Mandra di l'Ainu, Sassari, Sardinia, 07049, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sassari",
+        "state": "Sardinia",
+        "postcode": "07049",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "576, Mandra di l'Ainu, Sassari, Sardinia, 07049, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:02.697787+00:00",
+  "_kind": "geo_samples"
+}

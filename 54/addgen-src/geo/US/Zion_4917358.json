@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Zion",
+  "geonameid": 4917358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.456831799165414,
+      "lon": -87.80819228010974,
+      "geoinfo": {
+        "display_name": "Fulton Avenue, Zion, Lake County, Illinois, 60099, United States",
+        "road": "Fulton Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zion",
+        "state": "Illinois",
+        "postcode": "60099",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fulton Avenue, Zion, Illinois, United States"
+    },
+    {
+      "lat": 42.43541841081926,
+      "lon": -87.78764104263924,
+      "geoinfo": {
+        "display_name": "Lake County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "116, Lake County, 68462 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:13.401284+00:00",
+  "_kind": "geo_samples"
+}

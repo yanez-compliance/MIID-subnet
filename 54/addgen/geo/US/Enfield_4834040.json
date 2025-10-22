@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Enfield",
+  "geonameid": 4834040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.96048079720253,
+      "lon": -72.56290411455082,
+      "geoinfo": {
+        "display_name": "9, Diamond Drive, Enfield, Capitol Planning Region, Connecticut, 06082, United States",
+        "road": "Diamond Drive",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Enfield",
+        "state": "Connecticut",
+        "postcode": "06082",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9 Diamond Drive, Enfield, Connecticut, United States"
+    },
+    {
+      "lat": 41.99246940958904,
+      "lon": -72.60578592174625,
+      "geoinfo": {
+        "display_name": "155, Coho Lane, Suffield, Capitol Planning Region, Connecticut, 06078, United States",
+        "road": "Coho Lane",
+        "house_number": "155",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffield",
+        "state": "Connecticut",
+        "postcode": "06078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "155, Coho Lane, Suffield, Capitol Planning Region, Connecticut, 06078, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:18.576165+00:00",
+  "_kind": "geo_samples"
+}

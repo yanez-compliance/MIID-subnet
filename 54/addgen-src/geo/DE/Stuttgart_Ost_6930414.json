@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stuttgart-Ost",
+  "geonameid": 6930414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.81386593270674,
+      "lon": 9.178814799076683,
+      "geoinfo": {
+        "display_name": "SYSWE Systemtechnik Weser-Ems, 293, Heilbronner Straße, Feuerbach-Ost, Feuerbach, Stuttgart, Baden-Württemberg, 70469, Germany",
+        "road": "Heilbronner Straße",
+        "house_number": "293",
+        "neighbourhood": "Feuerbach-Ost",
+        "suburb": "Feuerbach",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "293 Heilbronner Straße, Stuttgart-Ost, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.780817713564154,
+      "lon": 9.174969158539689,
+      "geoinfo": {
+        "display_name": "Universität, Stuttgart-Mitte, Stuttgart, Baden-Württemberg, 70174, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Universität",
+        "suburb": "Stuttgart-Mitte",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70174",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "525, Universität, Stuttgart-Mitte, Stuttgart, Baden-Württemberg, 70174, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:05.614248+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Valencia",
+  "geonameid": 5405288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.4306805276871,
+      "lon": -118.64357934226528,
+      "geoinfo": {
+        "display_name": "Los Angeles County, California, 91383, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91383",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Valencia, California, United States"
+    },
+    {
+      "lat": 34.430361336744205,
+      "lon": -118.61110810540798,
+      "geoinfo": {
+        "display_name": "Valencia, Los Angeles County, California, 91383, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Valencia",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91383",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "038, Valencia, Los Angeles County, California, 91383, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:14.052836+00:00",
+  "_kind": "geo_samples"
+}

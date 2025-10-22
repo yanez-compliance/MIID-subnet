@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Grenchen",
+  "geonameid": 2660512,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.222412330810656,
+      "lon": 7.4094730766635015,
+      "geoinfo": {
+        "display_name": "Stockweg, Bettlachberg, Bettlach, Bezirk Lebern, Amtei Solothurn-Lebern, Solothurn, 2544, Switzerland",
+        "road": "Stockweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bettlach",
+        "state": "Solothurn",
+        "postcode": "2544",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "749, Stockweg, Bettlachberg, Bettlach, Bezirk Lebern, Amtei Solothurn-Lebern, Solothurn, 2544, Switzerland"
+    },
+    {
+      "lat": 47.20625625419983,
+      "lon": 7.4076637077016265,
+      "geoinfo": {
+        "display_name": "Höhenweg, Bettlach, Bezirk Lebern, Amtei Solothurn-Lebern, Solothurn, 2544, Switzerland",
+        "road": "Höhenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bettlach",
+        "state": "Solothurn",
+        "postcode": "2544",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "066, Höhenweg, Bettlach, Bezirk Lebern, Amtei Solothurn-Lebern, Solothurn, 2544, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:40.287118+00:00",
+  "_kind": "geo_samples"
+}

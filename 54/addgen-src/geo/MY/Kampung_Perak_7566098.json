@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kampung Perak",
+  "geonameid": 7566098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.898443008289683,
+      "lon": 102.59246589279107,
+      "geoinfo": {
+        "display_name": "Felda Sungai Tekam Utara, Jerantut, Pahang, 27060, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Felda Sungai Tekam Utara",
+        "state": "Pahang",
+        "postcode": "27060",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Kampung Perak, Pahang, Malaysia"
+    },
+    {
+      "lat": 3.8670246945040785,
+      "lon": 102.57758147171431,
+      "geoinfo": {
+        "display_name": "Jerantut, Pahang, 27060, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Pahang",
+        "postcode": "27060",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "089, Jerantut, Pahang, 27060, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:54:20.338721+00:00",
+  "_kind": "geo_samples"
+}

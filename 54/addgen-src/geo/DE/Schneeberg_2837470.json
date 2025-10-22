@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schneeberg",
+  "geonameid": 2837470,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.569996996033716,
+      "lon": 12.676833062719863,
+      "geoinfo": {
+        "display_name": "Oberer Weg, Zschorlau, Erzgebirgskreis, Saxony, 08321, Germany",
+        "road": "Oberer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zschorlau",
+        "state": "Saxony",
+        "postcode": "08321",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Oberer Weg, Schneeberg, Saxony, Germany"
+    },
+    {
+      "lat": 50.614113963607934,
+      "lon": 12.704661408599518,
+      "geoinfo": {
+        "display_name": "Marksteig, Alberoda, Aue, Aue-Bad Schlema, Erzgebirgskreis, Saxony, 08280, Germany",
+        "road": "Marksteig",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alberoda",
+        "city_district": null,
+        "city": "Aue",
+        "state": "Saxony",
+        "postcode": "08280",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "320, Marksteig, Alberoda, Aue, Aue-Bad Schlema, Erzgebirgskreis, Saxony, 08280, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:13.369901+00:00",
+  "_kind": "geo_samples"
+}

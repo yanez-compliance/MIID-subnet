@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Omagh",
+  "geonameid": 2640967,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.60244848109119,
+      "lon": -7.3761819567530695,
+      "geoinfo": {
+        "display_name": "Omagh, County Tyrone, Northern Ireland, BT78 5PX, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Omagh",
+        "state": "Northern Ireland",
+        "postcode": "BT78 5PX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Omagh, Northern Ireland, United Kingdom"
+    },
+    {
+      "lat": 54.586533416741105,
+      "lon": -7.36752750036471,
+      "geoinfo": {
+        "display_name": "County Tyrone, Northern Ireland, BT78 5PX, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Northern Ireland",
+        "postcode": "BT78 5PX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "339, Omagh, BT78 5PX Northern Ireland, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:59.731807+00:00",
+  "_kind": "geo_samples"
+}

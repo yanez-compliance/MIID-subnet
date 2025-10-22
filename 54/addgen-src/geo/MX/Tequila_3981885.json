@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tequila",
+  "geonameid": 3981885,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.90909640063165,
+      "lon": -103.82038742170295,
+      "geoinfo": {
+        "display_name": "Templo Santo Toribio Romo, Gaviota, Tequila, Región Valles, Jalisco, Mexico",
+        "road": "Gaviota",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tequila",
+        "state": "Jalisco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Gaviota, Tequila, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.917489104479696,
+      "lon": -103.82984570149318,
+      "geoinfo": {
+        "display_name": "Tequila, Región Valles, Jalisco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tequila",
+        "state": "Jalisco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "934, Tequila, Región Valles, 10743 Jalisco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:40.740312+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wissinoming",
+  "geonameid": 5219843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.011515233129806,
+      "lon": -75.07958858783662,
+      "geoinfo": {
+        "display_name": "4619, Ditman Street, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19135, United States",
+        "road": "Ditman Street",
+        "house_number": "4619",
+        "neighbourhood": null,
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19135",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4619 Ditman Street, Wissinoming, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.995241895519534,
+      "lon": -75.02766154939796,
+      "geoinfo": {
+        "display_name": "Public Road, Palmyra, Burlington County, New Jersey, 08077, United States",
+        "road": "Public Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmyra",
+        "state": "New Jersey",
+        "postcode": "08077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "029, Public Road, Palmyra, Burlington County, New Jersey, 08077, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:38.188436+00:00",
+  "_kind": "geo_samples"
+}

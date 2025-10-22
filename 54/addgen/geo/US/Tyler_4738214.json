@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tyler",
+  "geonameid": 4738214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.334703791041235,
+      "lon": -95.29646761861949,
+      "geoinfo": {
+        "display_name": "1313, South Wall Avenue, Azalea Historic District, Tyler, Smith County, Texas, 75701, United States",
+        "road": "South Wall Avenue",
+        "house_number": "1313",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tyler",
+        "state": "Texas",
+        "postcode": "75701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1313 South Wall Avenue, Tyler, Texas, United States"
+    },
+    {
+      "lat": 32.39203592225064,
+      "lon": -95.29845336119041,
+      "geoinfo": {
+        "display_name": "East Northeast Loop 323, Tyler, Smith County, Texas, 75702, United States",
+        "road": "East Northeast Loop 323",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tyler",
+        "state": "Texas",
+        "postcode": "75702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Northeast Loop 323, Tyler, Smith County, Texas, 75702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:15.511291+00:00",
+  "_kind": "geo_samples"
+}

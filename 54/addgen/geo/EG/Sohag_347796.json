@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Sohag",
+  "geonameid": 347796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.58002798808362,
+      "lon": 31.711729124929704,
+      "geoinfo": {
+        "display_name": "Suhaj, 82527, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suhaj",
+        "state": "Suhaj",
+        "postcode": "82527",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Sohag, Suhaj, Egypt"
+    },
+    {
+      "lat": 26.557815237176904,
+      "lon": 31.699531923572813,
+      "geoinfo": {
+        "display_name": "22, Kornish Al Nile Street, Al Kabsh, Suhaj, 82519, Egypt",
+        "road": "Kornish Al Nile Street",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Kabsh",
+        "state": "Suhaj",
+        "postcode": "82519",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "22, Kornish Al Nile Street, Al Kabsh, Suhaj, 82519, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:57.328686+00:00",
+  "_kind": "geo_samples"
+}

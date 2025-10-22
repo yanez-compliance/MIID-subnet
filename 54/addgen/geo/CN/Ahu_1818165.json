@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Ahu",
+  "geonameid": 1818165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.41525239304776,
+      "lon": 118.58511403765348,
+      "geoinfo": {
+        "display_name": "沭泗线, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": "沭泗线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "沭泗线, Ahu, Jiangsu, China"
+    },
+    {
+      "lat": 34.346605032418275,
+      "lon": 118.61313846192013,
+      "geoinfo": {
+        "display_name": "Ahu, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "421, Ahu, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:14.077368+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pearl",
+  "geonameid": 4440559,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.231246310641204,
+      "lon": -90.13745918041477,
+      "geoinfo": {
+        "display_name": "South Pearson Road, Richland, Rankin County, Mississippi, 39218, United States",
+        "road": "South Pearson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richland",
+        "state": "Mississippi",
+        "postcode": "39218",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Pearson Road, Pearl, Mississippi, United States"
+    },
+    {
+      "lat": 32.253496039792026,
+      "lon": -90.13939153641823,
+      "geoinfo": {
+        "display_name": "1868, Twin Pine Drive, Grandview Heights, Pearl, Rankin County, Mississippi, 39208, United States",
+        "road": "Twin Pine Drive",
+        "house_number": "1868",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pearl",
+        "state": "Mississippi",
+        "postcode": "39208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1868, Twin Pine Drive, Grandview Heights, Pearl, Rankin County, Mississippi, 39208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:14.636981+00:00",
+  "_kind": "geo_samples"
+}

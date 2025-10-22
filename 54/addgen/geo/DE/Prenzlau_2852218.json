@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Prenzlau",
+  "geonameid": 2852218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.296779968661646,
+      "lon": 13.8178976155085,
+      "geoinfo": {
+        "display_name": "Berliner Straße, Prenzlau, Uckermark, Brandenburg, 17291, Germany",
+        "road": "Berliner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prenzlau",
+        "state": "Brandenburg",
+        "postcode": "17291",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Berliner Straße, Prenzlau, Brandenburg, Germany"
+    },
+    {
+      "lat": 53.33003929978778,
+      "lon": 13.811949756674055,
+      "geoinfo": {
+        "display_name": "1b, Am Quillow, Klinkow, Prenzlau, Uckerfelde, Uckermark, Brandenburg, 17291, Germany",
+        "road": "Am Quillow",
+        "house_number": "1b",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prenzlau",
+        "state": "Brandenburg",
+        "postcode": "17291",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1b, Am Quillow, Klinkow, Prenzlau, Uckerfelde, Uckermark, Brandenburg, 17291, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:13.214567+00:00",
+  "_kind": "geo_samples"
+}

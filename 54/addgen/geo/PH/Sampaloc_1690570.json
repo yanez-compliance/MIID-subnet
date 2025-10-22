@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Sampaloc",
+  "geonameid": 1690570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.528764474376418,
+      "lon": 121.38512247321522,
+      "geoinfo": {
+        "display_name": "Tanay, Rizal, Calabarzon, 1964, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tanay",
+        "state": "Rizal",
+        "postcode": "1964",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Sampaloc, Rizal, Philippines"
+    },
+    {
+      "lat": 14.562216390033258,
+      "lon": 121.37809638796772,
+      "geoinfo": {
+        "display_name": "Malaanonang, Tanay, Rizal, Calabarzon, 1964, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Malaanonang",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tanay",
+        "state": "Rizal",
+        "postcode": "1964",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "221, Malaanonang, Tanay, Rizal, Calabarzon, 1964, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:04.511983+00:00",
+  "_kind": "geo_samples"
+}

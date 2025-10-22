@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Termoli",
+  "geonameid": 3165773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.9830528709622,
+      "lon": 14.992316083546996,
+      "geoinfo": {
+        "display_name": "Autostrada Adriatica, Termoli, Campobasso, Molise, 86039, Italy",
+        "road": "Autostrada Adriatica",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Termoli",
+        "state": "Molise",
+        "postcode": "86039",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada Adriatica, Termoli, Molise, Italy"
+    },
+    {
+      "lat": 41.976046488976685,
+      "lon": 14.959359687840157,
+      "geoinfo": {
+        "display_name": "San Giacomo degli Schiavoni, Campobasso, Molise, 86039, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Giacomo degli Schiavoni",
+        "state": "Molise",
+        "postcode": "86039",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "517, San Giacomo degli Schiavoni, Campobasso, Molise, 86039, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:27.046587+00:00",
+  "_kind": "geo_samples"
+}

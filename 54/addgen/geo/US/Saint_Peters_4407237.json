@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Peters",
+  "geonameid": 4407237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.76839747743558,
+      "lon": -90.60573324173288,
+      "geoinfo": {
+        "display_name": "23, Eagle Chase Court, Hickory Ridge, Saint Peters, Saint Charles County, Missouri, 63376, United States",
+        "road": "Eagle Chase Court",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Peters",
+        "state": "Missouri",
+        "postcode": "63376",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23 Eagle Chase Court, Saint Peters, Missouri, United States"
+    },
+    {
+      "lat": 38.83656133761763,
+      "lon": -90.61442106629106,
+      "geoinfo": {
+        "display_name": "O’Fallon, Saint Charles County, Missouri, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "O’Fallon",
+        "state": "Missouri",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "640, O’Fallon, Saint Charles County, 41271 Missouri, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:50.107346+00:00",
+  "_kind": "geo_samples"
+}

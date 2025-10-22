@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lawndale",
+  "geonameid": 5197430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.05340451769091,
+      "lon": -75.10105460138688,
+      "geoinfo": {
+        "display_name": "Newtown Avenue, Cheltenham, Cheltenham Township, Montgomery County, Pennsylvania, 19111, United States",
+        "road": "Newtown Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cheltenham Township",
+        "state": "Pennsylvania",
+        "postcode": "19111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Newtown Avenue, Lawndale, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.01974745595462,
+      "lon": -75.06487143061378,
+      "geoinfo": {
+        "display_name": "4322, Van Kirk Street, Wissinoming, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States",
+        "road": "Van Kirk Street",
+        "house_number": "4322",
+        "neighbourhood": "Wissinoming",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4322, Van Kirk Street, Wissinoming, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:23.587697+00:00",
+  "_kind": "geo_samples"
+}

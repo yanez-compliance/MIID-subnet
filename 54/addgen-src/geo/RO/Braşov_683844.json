@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Braşov",
+  "geonameid": 683844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.69129429364762,
+      "lon": 25.612004945983063,
+      "geoinfo": {
+        "display_name": "Centura Brașov, Sanpetru, Zona Metropolitană Brașov, Brașov, 500163, Romania",
+        "road": "Centura Brașov",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanpetru",
+        "state": null,
+        "postcode": "500163",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Centura Brașov, Braşov, Romania"
+    },
+    {
+      "lat": 45.65296586349883,
+      "lon": 25.548004220349842,
+      "geoinfo": {
+        "display_name": "Șoseaua Cristianului, Bartolomeu, Brasov, Zona Metropolitană Brașov, Brașov, 500052, Romania",
+        "road": "Șoseaua Cristianului",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bartolomeu",
+        "city_district": null,
+        "city": "Brasov",
+        "state": null,
+        "postcode": "500052",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "709, Șoseaua Cristianului, 500052 Braşov, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:16.429706+00:00",
+  "_kind": "geo_samples"
+}

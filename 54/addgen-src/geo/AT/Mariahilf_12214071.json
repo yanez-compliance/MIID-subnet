@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Mariahilf",
+  "geonameid": 12214071,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.18397515630512,
+      "lon": 16.346318771998586,
+      "geoinfo": {
+        "display_name": "Arbeitergasse, Gürtel, Margaretengürtel, KG Margareten, Margareten, Vienna, 1050, Austria",
+        "road": "Margaretengürtel",
+        "house_number": null,
+        "neighbourhood": "KG Margareten",
+        "suburb": "Margareten",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1050",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Margaretengürtel, Mariahilf, Austria"
+    },
+    {
+      "lat": 48.200975028456774,
+      "lon": 16.369558108540083,
+      "geoinfo": {
+        "display_name": "Karlsplatz, Innere Stadt, Vienna, 1010, Austria",
+        "road": "Karlsplatz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Innere Stadt",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1010",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Karlsplatz, Mariahilf, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:30:42.870289+00:00",
+  "_kind": "geo_samples"
+}

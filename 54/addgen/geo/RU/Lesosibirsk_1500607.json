@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Lesosibirsk",
+  "geonameid": 1500607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.27005154245589,
+      "lon": 92.46907504545663,
+      "geoinfo": {
+        "display_name": "04К-339, Городищенский сельсовет, Yeniseisk Rayon, Krasnoyarsk Krai, Siberian Federal District, 662549, Russia",
+        "road": "04К-339",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnoyarsk Krai",
+        "postcode": "662549",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "04К-339, Lesosibirsk, Krasnoyarsk Krai, Russia"
+    },
+    {
+      "lat": 58.208564946211844,
+      "lon": 92.47185694352592,
+      "geoinfo": {
+        "display_name": "Мирный, Lesosibirsk, городской округ Лесосибирск, Krasnoyarsk Krai, Siberian Federal District, 662549, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Мирный",
+        "city_district": null,
+        "city": "Lesosibirsk",
+        "state": "Krasnoyarsk Krai",
+        "postcode": "662549",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "946, Мирный, Lesosibirsk, городской округ Лесосибирск, Krasnoyarsk Krai, Siberian Federal District, 662549, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:38:54.528724+00:00",
+  "_kind": "geo_samples"
+}

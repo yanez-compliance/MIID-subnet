@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "IJsselstein",
+  "geonameid": 2753355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.987186125495185,
+      "lon": 5.05083303202164,
+      "geoinfo": {
+        "display_name": "Lekdijk oost, Lopikerkapel, Lopik, Utrecht, Netherlands, 3412 KT, Netherlands",
+        "road": "Lekdijk oost",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lopikerkapel",
+        "state": "Utrecht",
+        "postcode": "3412 KT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Lekdijk oost, IJsselstein, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 51.987035700849994,
+      "lon": 5.038664537422266,
+      "geoinfo": {
+        "display_name": "19A, Kapelsepad, Lopikerkapel, Lopik, Utrecht, Netherlands, 3412 KL, Netherlands",
+        "road": "Kapelsepad",
+        "house_number": "19A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lopikerkapel",
+        "state": "Utrecht",
+        "postcode": "3412 KL",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "19A, Kapelsepad, Lopikerkapel, Lopik, Utrecht, Netherlands, 3412 KL, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:45.108126+00:00",
+  "_kind": "geo_samples"
+}

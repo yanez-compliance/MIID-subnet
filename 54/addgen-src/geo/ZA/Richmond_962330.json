@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Richmond",
+  "geonameid": 962330,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -29.86920233294284,
+      "lon": 30.28309705787022,
+      "geoinfo": {
+        "display_name": "Illovo Drive, Richmond Ward 1, Richmond, Richmond Local Municipality, uMgungundlovu District Municipality, KwaZulu-Natal, 3780, South Africa",
+        "road": "Illovo Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Richmond Ward 1",
+        "city_district": null,
+        "city": "Richmond Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "3780",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Illovo Drive, Richmond, KwaZulu-Natal, South Africa"
+    },
+    {
+      "lat": -29.84018166149395,
+      "lon": 30.29638083602584,
+      "geoinfo": {
+        "display_name": "Richmond Ward 1, Richmond Local Municipality, uMgungundlovu District Municipality, KwaZulu-Natal, 3780, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Richmond Ward 1",
+        "city_district": null,
+        "city": "Richmond Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "3780",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Richmond Ward 1, Richmond Local Municipality, uMgungundlovu District Municipality, KwaZulu-Natal, 3780, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:32.307141+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Gatineau",
+  "geonameid": 5959974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.44833745656995,
+      "lon": -75.74958430604401,
+      "geoinfo": {
+        "display_name": "28, Rue Corbeil, Wrightville, Hull, Gatineau, Outaouais, Quebec, J8Y 5W7, Canada",
+        "road": "Rue Corbeil",
+        "house_number": "28",
+        "neighbourhood": "Wrightville",
+        "suburb": "Hull",
+        "city_district": null,
+        "city": "Gatineau",
+        "state": "Quebec",
+        "postcode": "J8Y 5W7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "28 Rue Corbeil, Gatineau, Quebec, Canada"
+    },
+    {
+      "lat": 45.46044764782912,
+      "lon": -75.65645043479056,
+      "geoinfo": {
+        "display_name": "Ottawa River Pathway, Manor Park, Rockcliffe Park, Rideau-Rockcliffe, Ottawa, Eastern Ontario, Ontario, K1G 3J2, Canada",
+        "road": "Ottawa River Pathway",
+        "house_number": null,
+        "neighbourhood": "Manor Park",
+        "suburb": "Rockcliffe Park",
+        "city_district": "Rideau-Rockcliffe",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K1G 3J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Ottawa River Pathway, Manor Park, Rockcliffe Park, Rideau-Rockcliffe, Ottawa, Eastern Ontario, Ontario, K1G 3J2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:39.035855+00:00",
+  "_kind": "geo_samples"
+}

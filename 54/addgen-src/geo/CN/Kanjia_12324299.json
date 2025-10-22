@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Kanjia",
+  "geonameid": 12324299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.39383331700409,
+      "lon": 119.60746853407716,
+      "geoinfo": {
+        "display_name": "Gaomi City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaomi City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Kanjia, Shandong, China"
+    },
+    {
+      "lat": 36.373625882230286,
+      "lon": 119.55246334034881,
+      "geoinfo": {
+        "display_name": "Gaomi City, Weifang, Shandong, 261513, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaomi City",
+        "state": "Shandong",
+        "postcode": "261513",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "203, Gaomi City, Weifang, Shandong, 261513, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:30.673967+00:00",
+  "_kind": "geo_samples"
+}

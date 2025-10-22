@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Valkeakoski",
+  "geonameid": 632672,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 61.226414942708445,
+      "lon": 24.027908149027304,
+      "geoinfo": {
+        "display_name": "Annila, Valkeakoski, Southern Pirkanmaa, Pirkanmaa, Mainland Finland, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valkeakoski",
+        "state": "Pirkanmaa",
+        "postcode": null,
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "441, Annila, Valkeakoski, Southern Pirkanmaa, Pirkanmaa, 31274 Mainland Finland, Finland"
+    },
+    {
+      "lat": 61.26302042335372,
+      "lon": 24.06118247808706,
+      "geoinfo": {
+        "display_name": "Lumikorpi, Valkeakoski, Southern Pirkanmaa, Pirkanmaa, Mainland Finland, 37600, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lumikorpi",
+        "city_district": null,
+        "city": "Valkeakoski",
+        "state": "Pirkanmaa",
+        "postcode": "37600",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "422, Lumikorpi, Valkeakoski, Southern Pirkanmaa, Pirkanmaa, Mainland Finland, 37600, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:55.104632+00:00",
+  "_kind": "geo_samples"
+}

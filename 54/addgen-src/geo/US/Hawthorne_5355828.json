@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hawthorne",
+  "geonameid": 5355828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.89838203919939,
+      "lon": -118.3784143329681,
+      "geoinfo": {
+        "display_name": "33rd Street, Hawthorne, Los Angeles County, California, 90260, United States",
+        "road": "33rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorne",
+        "state": "California",
+        "postcode": "90260",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33rd Street, Hawthorne, California, United States"
+    },
+    {
+      "lat": 33.946990579993724,
+      "lon": -118.33936622290021,
+      "geoinfo": {
+        "display_name": "District Drive, Hollywood Park, Inglewood, Los Angeles County, California, 90303, United States",
+        "road": "District Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Inglewood",
+        "state": "California",
+        "postcode": "90303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "511, District Drive, Hollywood Park, Inglewood, Los Angeles County, California, 90303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:13.198497+00:00",
+  "_kind": "geo_samples"
+}

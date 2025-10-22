@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orangevale",
+  "geonameid": 5379566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.69255259286943,
+      "lon": -121.23996920373669,
+      "geoinfo": {
+        "display_name": "6944, Almond Avenue, Orangevale, Sacramento County, California, 95662, United States",
+        "road": "Almond Avenue",
+        "house_number": "6944",
+        "neighbourhood": null,
+        "suburb": "Orangevale",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6944 Almond Avenue, Orangevale, California, United States"
+    },
+    {
+      "lat": 38.686543535151195,
+      "lon": -121.26090960006044,
+      "geoinfo": {
+        "display_name": "8106, Sundance Drive, Citrus Heights, Sacramento County, California, 95662, United States",
+        "road": "Sundance Drive",
+        "house_number": "8106",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Citrus Heights",
+        "state": "California",
+        "postcode": "95662",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8106, Sundance Drive, Citrus Heights, Sacramento County, California, 95662, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:45.188699+00:00",
+  "_kind": "geo_samples"
+}

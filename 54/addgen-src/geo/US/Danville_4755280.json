@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Danville",
+  "geonameid": 4755280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.575534158924064,
+      "lon": -79.35194270345677,
+      "geoinfo": {
+        "display_name": "311, Woodside Road, Green Acres, Danville, Virginia, 24540, United States",
+        "road": "Woodside Road",
+        "house_number": "311",
+        "neighbourhood": "Green Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Danville",
+        "state": "Virginia",
+        "postcode": "24540",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "311 Woodside Road, Danville, Virginia, United States"
+    },
+    {
+      "lat": 36.58222507866115,
+      "lon": -79.38058909753612,
+      "geoinfo": {
+        "display_name": "Craghead Street, Danville, Virginia, 24541, United States",
+        "road": "Craghead Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Danville",
+        "state": "Virginia",
+        "postcode": "24541",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "624, Craghead Street, Danville, Virginia, 24541, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:17.325102+00:00",
+  "_kind": "geo_samples"
+}

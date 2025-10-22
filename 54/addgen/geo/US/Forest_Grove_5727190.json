@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Forest Grove",
+  "geonameid": 5727190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.505151730539616,
+      "lon": -123.1380718802126,
+      "geoinfo": {
+        "display_name": "1385, Southwest Stringtown Road, Forest Grove, Washington County, Oregon, 97116, United States",
+        "road": "Southwest Stringtown Road",
+        "house_number": "1385",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forest Grove",
+        "state": "Oregon",
+        "postcode": "97116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1385 Southwest Stringtown Road, Forest Grove, Oregon, United States"
+    },
+    {
+      "lat": 45.51385779507364,
+      "lon": -123.07239927158331,
+      "geoinfo": {
+        "display_name": "Fern Hill Elementary School, 4445, Heather Street, Forest Grove, Washington County, Oregon, 97116, United States",
+        "road": "Heather Street",
+        "house_number": "4445",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forest Grove",
+        "state": "Oregon",
+        "postcode": "97116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fern Hill Elementary School, 4445, Heather Street, Forest Grove, Washington County, Oregon, 97116, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:44.697477+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bela",
+  "geonameid": 1276574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.887814432280777,
+      "lon": 81.97461192910079,
+      "geoinfo": {
+        "display_name": "Pratapgarh, Uttar Pradesh, 230001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pratapgarh",
+        "state": "Uttar Pradesh",
+        "postcode": "230001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bela, Uttar Pradesh, India"
+    },
+    {
+      "lat": 25.94473937043835,
+      "lon": 82.00640045216048,
+      "geoinfo": {
+        "display_name": "NH330, Pratapgarh, Uttar Pradesh, 230001, India",
+        "road": "NH330",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pratapgarh",
+        "state": "Uttar Pradesh",
+        "postcode": "230001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH330, Pratapgarh, Uttar Pradesh, 230001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:54.829154+00:00",
+  "_kind": "geo_samples"
+}

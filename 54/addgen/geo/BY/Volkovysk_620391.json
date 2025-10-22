@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Volkovysk",
+  "geonameid": 620391,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 53.14386812129346,
+      "lon": 24.428015502064586,
+      "geoinfo": {
+        "display_name": "5, вуліца Клары Цэткін, Боркі, Vawkavysk, Vawkavysk District, Hrodna Region, 231891, Belarus",
+        "road": "вуліца Клары Цэткін",
+        "house_number": "5",
+        "neighbourhood": "Боркі",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vawkavysk",
+        "state": "Hrodna Region",
+        "postcode": "231891",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "5 вуліца Клары Цэткін, Volkovysk, Hrodna Region, Belarus"
+    },
+    {
+      "lat": 53.16728147280306,
+      "lon": 24.48627682601989,
+      "geoinfo": {
+        "display_name": "Дапаможная школа-інтэрнат, Заатэхнічная вуліца, Заполле, Vawkavysk, Vawkavysk District, Hrodna Region, 231896, Belarus",
+        "road": "Заатэхнічная вуліца",
+        "house_number": null,
+        "neighbourhood": "Заполле",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vawkavysk",
+        "state": "Hrodna Region",
+        "postcode": "231896",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Заатэхнічная вуліца, Volkovysk, Hrodna Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:08.784068+00:00",
+  "_kind": "geo_samples"
+}

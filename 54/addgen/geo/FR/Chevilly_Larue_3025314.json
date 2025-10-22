@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Chevilly-Larue",
+  "geonameid": 3025314,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.777869785764146,
+      "lon": 2.319086403957956,
+      "geoinfo": {
+        "display_name": "35, Avenue de la République, Les Castors de la Bièvre, Bourg-la-Reine, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92340, France",
+        "road": "Avenue de la République",
+        "house_number": "35",
+        "neighbourhood": "Les Castors de la Bièvre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourg-la-Reine",
+        "state": "Ile-de-France",
+        "postcode": "92340",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "35 Avenue de la République, Chevilly-Larue, Ile-de-France, France"
+    },
+    {
+      "lat": 48.78734182227112,
+      "lon": 2.3953390819106164,
+      "geoinfo": {
+        "display_name": "83, Rue Camille Groult, Paul Froment - Huit Mai 1945, Vitry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94400, France",
+        "road": "Rue Camille Groult",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": "Paul Froment - Huit Mai 1945",
+        "city_district": null,
+        "city": "Vitry-sur-Seine",
+        "state": null,
+        "postcode": "94400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "83, Rue Camille Groult, Paul Froment - Huit Mai 1945, Vitry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:10.220433+00:00",
+  "_kind": "geo_samples"
+}

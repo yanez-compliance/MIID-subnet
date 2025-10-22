@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Brandon",
+  "geonameid": 5907896,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.836544071577926,
+      "lon": -99.90647020185509,
+      "geoinfo": {
+        "display_name": "Koch Fertilizer Canada ULC, East End Industrial Park, Brandon, Manitoba, R7A 7C4, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East End Industrial Park",
+        "city_district": null,
+        "city": "Brandon",
+        "state": "Manitoba",
+        "postcode": "R7A 7C4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "East End Industrial Park, Brandon, Manitoba, Canada"
+    },
+    {
+      "lat": 49.87657612426997,
+      "lon": -99.99246814343365,
+      "geoinfo": {
+        "display_name": "Rural Municipality of Cornwallis, Manitoba, R7A 5Y5, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Manitoba",
+        "postcode": "R7A 5Y5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "557, Brandon, R7A 5Y5 Manitoba, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:14.164338+00:00",
+  "_kind": "geo_samples"
+}

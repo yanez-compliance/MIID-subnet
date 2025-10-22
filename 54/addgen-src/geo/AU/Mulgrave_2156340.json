@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Mulgrave",
+  "geonameid": 2156340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.93939995992929,
+      "lon": 145.1665172785261,
+      "geoinfo": {
+        "display_name": "56, Smith Road, Springvale, Melbourne, City of Greater Dandenong, Victoria, 3171, Australia",
+        "road": "Smith Road",
+        "house_number": "56",
+        "neighbourhood": null,
+        "suburb": "Springvale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3171",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "56 Smith Road, Mulgrave, Victoria, Australia"
+    },
+    {
+      "lat": -37.93166341008685,
+      "lon": 145.23209792179716,
+      "geoinfo": {
+        "display_name": "Stud Road, Rowville, Melbourne, City of Knox, Victoria, 3178, Australia",
+        "road": "Stud Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rowville",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3178",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "795, Stud Road, Rowville, Melbourne, City of Knox, Victoria, 3178, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:20.320780+00:00",
+  "_kind": "geo_samples"
+}

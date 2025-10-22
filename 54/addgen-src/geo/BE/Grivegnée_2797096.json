@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Grivegnée",
+  "geonameid": 2797096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.64005146130374,
+      "lon": 5.577309152981731,
+      "geoinfo": {
+        "display_name": "Centre, Liège, Wallonia, 4000, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Grivegnée, Liège, Belgium"
+    },
+    {
+      "lat": 50.632765834954355,
+      "lon": 5.5900055908325506,
+      "geoinfo": {
+        "display_name": "Rue Basse-Wez, Amercœur, Liège, Wallonia, 4020, Belgium",
+        "road": "Rue Basse-Wez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4020",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "454, Rue Basse-Wez, Amercœur, Liège, Wallonia, 4020, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:16.706388+00:00",
+  "_kind": "geo_samples"
+}

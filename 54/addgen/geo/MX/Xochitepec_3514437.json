@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Xochitepec",
+  "geonameid": 3514437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.749873800151526,
+      "lon": -99.25179239624796,
+      "geoinfo": {
+        "display_name": "Alpuyeca, Xochitepec, Morelos, 62794, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alpuyeca",
+        "state": "Morelos",
+        "postcode": "62794",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Xochitepec, Morelos, Mexico"
+    },
+    {
+      "lat": 18.768248195180448,
+      "lon": -99.18752908236301,
+      "geoinfo": {
+        "display_name": "Privada Murcia, Emiliano Zapata, Morelos, 62772, Mexico",
+        "road": "Privada Murcia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Morelos",
+        "postcode": "62772",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "020, Privada Murcia, Emiliano Zapata, Morelos, 62772, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:27:47.466181+00:00",
+  "_kind": "geo_samples"
+}

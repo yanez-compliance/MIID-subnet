@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bradford",
+  "geonameid": 2654993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.78618474680205,
+      "lon": -1.720729552895997,
+      "geoinfo": {
+        "display_name": "Alma Street, Swain Green, Laisterdyke, Bradford, West Yorkshire, England, BD4 8QE, United Kingdom",
+        "road": "Alma Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Laisterdyke",
+        "city_district": null,
+        "city": "Bradford",
+        "state": "England",
+        "postcode": "BD4 8QE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Alma Street, Bradford, England, United Kingdom"
+    },
+    {
+      "lat": 53.77530774226441,
+      "lon": -1.797269348988793,
+      "geoinfo": {
+        "display_name": "Great Horton Road, Pickles Hill, Horton Bank, Slack Side, Bradford, West Yorkshire, England, BD7 4RL, United Kingdom",
+        "road": "Great Horton Road",
+        "house_number": null,
+        "neighbourhood": "Pickles Hill",
+        "suburb": "Slack Side",
+        "city_district": null,
+        "city": "Bradford",
+        "state": "England",
+        "postcode": "BD7 4RL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Great Horton Road, Pickles Hill, Horton Bank, Slack Side, Bradford, West Yorkshire, England, BD7 4RL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:47.125772+00:00",
+  "_kind": "geo_samples"
+}

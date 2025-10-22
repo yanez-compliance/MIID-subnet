@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yunji",
+  "geonameid": 8416620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.941238868500346,
+      "lon": 107.33934659993064,
+      "geoinfo": {
+        "display_name": "Huazhong, Changshou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huazhong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yunji, Chongqing, China"
+    },
+    {
+      "lat": 29.921774631041615,
+      "lon": 107.33641350958567,
+      "geoinfo": {
+        "display_name": "Panyun Road, Huazhong, Changshou District, Chongqing, China",
+        "road": "Panyun Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huazhong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "765, Panyun Road, Huazhong, Changshou District, 11529 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:03:10.455906+00:00",
+  "_kind": "geo_samples"
+}

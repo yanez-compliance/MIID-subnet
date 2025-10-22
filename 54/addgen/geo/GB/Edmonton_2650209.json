@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Edmonton",
+  "geonameid": 2650209,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.62903890764789,
+      "lon": -0.047178193531054714,
+      "geoinfo": {
+        "display_name": "Lower Edmonton, London Borough of Enfield, London, Greater London, England, N9 8LX, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Enfield",
+        "city": "London",
+        "state": "England",
+        "postcode": "N9 8LX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "London Borough of Enfield, Edmonton, England, United Kingdom"
+    },
+    {
+      "lat": 51.62909397097974,
+      "lon": -0.017126613017048466,
+      "geoinfo": {
+        "display_name": "Valley Side, Chingford, London Borough of Waltham Forest, London, Greater London, England, E4 7SR, United Kingdom",
+        "road": "Valley Side",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chingford",
+        "city_district": "London Borough of Waltham Forest",
+        "city": "London",
+        "state": "England",
+        "postcode": "E4 7SR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Valley Side, Chingford, London Borough of Waltham Forest, London, Greater London, England, E4 7SR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:07.490408+00:00",
+  "_kind": "geo_samples"
+}

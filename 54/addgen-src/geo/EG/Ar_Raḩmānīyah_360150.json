@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ar Raḩmānīyah",
+  "geonameid": 360150,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 31.09324743256786,
+      "lon": 30.685700207487944,
+      "geoinfo": {
+        "display_name": "Elmagd, The Lake, 22744, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmagd",
+        "state": "The Lake",
+        "postcode": "22744",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Ar Raḩmānīyah, The Lake, Egypt"
+    },
+    {
+      "lat": 31.111923252851394,
+      "lon": 30.678664674923677,
+      "geoinfo": {
+        "display_name": "Gamgamun, Kafr El Sheikh, 33612, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gamgamun",
+        "state": "Kafr El Sheikh",
+        "postcode": "33612",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "593, Gamgamun, Kafr El Sheikh, 33612, Egypt"
+    },
+    {
+      "lat": 31.11149393622019,
+      "lon": 30.6447022501124,
+      "geoinfo": {
+        "display_name": "Desouk Al Olwi Bridge, South District, عزبة حسن قبودان, The Lake, 22744, Egypt",
+        "road": "Desouk Al Olwi Bridge",
+        "house_number": null,
+        "neighbourhood": "South District",
+        "suburb": null,
+        "city_district": null,
+        "city": "عزبة حسن قبودان",
+        "state": "The Lake",
+        "postcode": "22744",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "012, Desouk Al Olwi Bridge, South District, عزبة حسن قبودان, The Lake, 22744, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:38.955907+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Dover",
+  "geonameid": 2651048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.132879421816355,
+      "lon": 1.2733212839119128,
+      "geoinfo": {
+        "display_name": "Abbey Road, Elms Vale, Dover, River, Dover, Kent, England, CT17 0LF, United Kingdom",
+        "road": "Abbey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Elms Vale",
+        "city_district": null,
+        "city": "Dover",
+        "state": "England",
+        "postcode": "CT17 0LF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Abbey Road, Dover, England, United Kingdom"
+    },
+    {
+      "lat": 51.09945540622232,
+      "lon": 1.315565853469347,
+      "geoinfo": {
+        "display_name": "Channel Tunnel - Service Tunnel, Aycliffe, Dover, Kent, England, CT15 7AA, United Kingdom",
+        "road": "Channel Tunnel - Service Tunnel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aycliffe",
+        "city_district": null,
+        "city": "Dover",
+        "state": "England",
+        "postcode": "CT15 7AA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Channel Tunnel - Service Tunnel, Aycliffe, Dover, Kent, England, CT15 7AA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:20.603382+00:00",
+  "_kind": "geo_samples"
+}

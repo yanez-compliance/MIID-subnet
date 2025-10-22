@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Mechelen",
+  "geonameid": 2791537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.063828611520144,
+      "lon": 4.483256171950969,
+      "geoinfo": {
+        "display_name": "34, Schouwvelden, Elzestraat, Sint-Katelijne-Waver, Mechelen, Antwerp, Flanders, 2860, Belgium",
+        "road": "Schouwvelden",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Katelijne-Waver",
+        "city": "Sint-Katelijne-Waver",
+        "state": "Antwerp",
+        "postcode": "2860",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "34 Schouwvelden, Mechelen, Antwerp, Belgium"
+    },
+    {
+      "lat": 50.99728394130057,
+      "lon": 4.525947093503189,
+      "geoinfo": {
+        "display_name": "2, Prinsenhoekstraat, Muizen, Mechelen, Antwerp, 2812, Belgium",
+        "road": "Prinsenhoekstraat",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mechelen",
+        "state": "Antwerp",
+        "postcode": "2812",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "2, Prinsenhoekstraat, Muizen, Mechelen, Antwerp, 2812, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:57.553287+00:00",
+  "_kind": "geo_samples"
+}

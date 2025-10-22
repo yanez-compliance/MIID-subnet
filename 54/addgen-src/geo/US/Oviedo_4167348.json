@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oviedo",
+  "geonameid": 4167348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.68748758556469,
+      "lon": -81.19685525481697,
+      "geoinfo": {
+        "display_name": "Fieldstone Circle, Retreat at Lake Charm, Oviedo, Seminole County, Florida, 32765, United States",
+        "road": "Fieldstone Circle",
+        "house_number": null,
+        "neighbourhood": "Retreat at Lake Charm",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oviedo",
+        "state": "Florida",
+        "postcode": "32765",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fieldstone Circle, Oviedo, Florida, United States"
+    },
+    {
+      "lat": 28.666343203457448,
+      "lon": -81.2105957588987,
+      "geoinfo": {
+        "display_name": "144, Clark Street, Oviedo, Seminole County, Florida, 32765, United States",
+        "road": "Clark Street",
+        "house_number": "144",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oviedo",
+        "state": "Florida",
+        "postcode": "32765",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "144, Clark Street, Oviedo, Seminole County, Florida, 32765, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:57.371818+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Fort Erie",
+  "geonameid": 5955815,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.870350523237114,
+      "lon": -78.95377149994906,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Fort Erie, Ontario, Canada"
+    },
+    {
+      "lat": 42.94362532019297,
+      "lon": -78.93063100377776,
+      "geoinfo": {
+        "display_name": "1209, Service 1 Road North, Fort Erie, Niagara Region, Golden Horseshoe, Ontario, L2A 4H7, Canada",
+        "road": "Service 1 Road North",
+        "house_number": "1209",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Erie",
+        "state": "Ontario",
+        "postcode": "L2A 4H7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1209, Service 1 Road North, Fort Erie, Niagara Region, Golden Horseshoe, Ontario, L2A 4H7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:50.401416+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lodi",
+  "geonameid": 5367565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.1516269358001,
+      "lon": -121.24088828769995,
+      "geoinfo": {
+        "display_name": "San Joaquin County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lodi, California, United States"
+    },
+    {
+      "lat": 38.16563157783386,
+      "lon": -121.2986192745687,
+      "geoinfo": {
+        "display_name": "North Lower Sacramento Road, San Joaquin County, California, 95258, United States",
+        "road": "North Lower Sacramento Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95258",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "153, North Lower Sacramento Road, San Joaquin County, California, 95258, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:59.581810+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Murom",
+  "geonameid": 524294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.60069049357089,
+      "lon": 41.98395380990351,
+      "geoinfo": {
+        "display_name": "17Р-1, Стройдеталь, городской округ Муром, Vladimir Oblast, Central Federal District, 602267, Russia",
+        "road": "17Р-1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Стройдеталь",
+        "city_district": null,
+        "city": null,
+        "state": "Vladimir Oblast",
+        "postcode": "602267",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "17Р-1, Murom, Vladimir Oblast, Russia"
+    },
+    {
+      "lat": 55.52876723496543,
+      "lon": 42.00491682865575,
+      "geoinfo": {
+        "display_name": "городской округ Муром, Vladimir Oblast, Central Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Vladimir Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "329, Murom, 69585 Vladimir Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:58.241509+00:00",
+  "_kind": "geo_samples"
+}

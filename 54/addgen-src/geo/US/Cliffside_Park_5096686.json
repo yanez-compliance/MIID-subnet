@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cliffside Park",
+  "geonameid": 5096686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.836402309259725,
+      "lon": -73.98458324683834,
+      "geoinfo": {
+        "display_name": "1066, Glen Road, Fort Lee, Bergen County, New Jersey, 07024, United States",
+        "road": "Glen Road",
+        "house_number": "1066",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Lee",
+        "state": "New Jersey",
+        "postcode": "07024",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1066 Glen Road, Cliffside Park, New Jersey, United States"
+    },
+    {
+      "lat": 40.81659278843985,
+      "lon": -74.0241646319953,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike Eastern Spur, Ridgefield, Bergen County, New Jersey, 97657, United States",
+        "road": "New Jersey Turnpike Eastern Spur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ridgefield",
+        "state": "New Jersey",
+        "postcode": "97657",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "464, New Jersey Turnpike Eastern Spur, Ridgefield, Bergen County, New Jersey, 97657, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:24.932640+00:00",
+  "_kind": "geo_samples"
+}

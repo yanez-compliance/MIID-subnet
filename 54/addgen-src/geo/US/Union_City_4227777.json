@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Union City",
+  "geonameid": 4227777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.57217255913804,
+      "lon": -84.54296804057063,
+      "geoinfo": {
+        "display_name": "Walmart Supercenter, 4735, Jonesboro Road, Union City, Fulton County, Georgia, 30291, United States",
+        "road": "Jonesboro Road",
+        "house_number": "4735",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union City",
+        "state": "Georgia",
+        "postcode": "30291",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4735 Jonesboro Road, Union City, Georgia, United States"
+    },
+    {
+      "lat": 33.58886445776855,
+      "lon": -84.51490121602507,
+      "geoinfo": {
+        "display_name": "6080, Feldwood Road, Bench Mark, Morning Creek Estates, Atlanta, Fulton County, Georgia, 30349, United States",
+        "road": "Feldwood Road",
+        "house_number": "6080",
+        "neighbourhood": "Bench Mark",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30349",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6080, Feldwood Road, Union City, 30349 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:22.619628+00:00",
+  "_kind": "geo_samples"
+}

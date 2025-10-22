@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monroe",
+  "geonameid": 5002344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.922682579646235,
+      "lon": -83.38779427888417,
+      "geoinfo": {
+        "display_name": "555, Hollywood Drive, Monroe, Monroe County, Michigan, 48162, United States",
+        "road": "Hollywood Drive",
+        "house_number": "555",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroe",
+        "state": "Michigan",
+        "postcode": "48162",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555 Hollywood Drive, Monroe, Michigan, United States"
+    },
+    {
+      "lat": 41.905704361459705,
+      "lon": -83.45368699679553,
+      "geoinfo": {
+        "display_name": "East Dunbar Road, Evergreen Acres, Monroe Charter Township, Monroe County, Michigan, 48161, United States",
+        "road": "East Dunbar Road",
+        "house_number": null,
+        "neighbourhood": "Evergreen Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroe Charter Township",
+        "state": "Michigan",
+        "postcode": "48161",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "747, East Dunbar Road, Evergreen Acres, Monroe Charter Township, Monroe County, Michigan, 48161, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:17.371090+00:00",
+  "_kind": "geo_samples"
+}

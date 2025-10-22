@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bethnal Green",
+  "geonameid": 6690989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.52270492393165,
+      "lon": -0.0642674086191418,
+      "geoinfo": {
+        "display_name": "118, Vallance Road, Whitechapel, London Borough of Tower Hamlets, London, Greater London, England, E1 5BW, United Kingdom",
+        "road": "Vallance Road",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": "Whitechapel",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E1 5BW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "118 Vallance Road, Bethnal Green, England, United Kingdom"
+    },
+    {
+      "lat": 51.52798110627728,
+      "lon": -0.05368288861508917,
+      "geoinfo": {
+        "display_name": "Bethnal Green Police Station, 12, Victoria Park Square, Globe Town, Bethnal Green, London Borough of Tower Hamlets, London, Greater London, England, E2 9NZ, United Kingdom",
+        "road": "Victoria Park Square",
+        "house_number": "12",
+        "neighbourhood": "Globe Town",
+        "suburb": "Bethnal Green",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E2 9NZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bethnal Green Police Station, 12, Victoria Park Square, Globe Town, Bethnal Green, London Borough of Tower Hamlets, London, Greater London, England, E2 9NZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:40.397349+00:00",
+  "_kind": "geo_samples"
+}

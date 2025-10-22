@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Viroflay",
+  "geonameid": 2967934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.81000984979344,
+      "lon": 2.1217121077244494,
+      "geoinfo": {
+        "display_name": "Notre-Dame, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78000, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Notre-Dame",
+        "city_district": null,
+        "city": "Versailles",
+        "state": "Ile-de-France",
+        "postcode": "78000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Notre-Dame, Viroflay, Ile-de-France, France"
+    },
+    {
+      "lat": 48.782045174560274,
+      "lon": 2.1264837567082107,
+      "geoinfo": {
+        "display_name": "Route de Sebaque, Satory, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78000, France",
+        "road": "Route de Sebaque",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Satory",
+        "city_district": null,
+        "city": "Versailles",
+        "state": "Ile-de-France",
+        "postcode": "78000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "177, Route de Sebaque, Satory, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:53.635123+00:00",
+  "_kind": "geo_samples"
+}

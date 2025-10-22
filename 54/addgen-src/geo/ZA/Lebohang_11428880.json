@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Lebohang",
+  "geonameid": 11428880,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.368421042903414,
+      "lon": 28.953877556136376,
+      "geoinfo": {
+        "display_name": "R29, Leandra, Govan Mbeki Ward 1, Leslie, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, 2265, South Africa",
+        "road": "R29",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Leandra",
+        "city_district": null,
+        "city": "Govan Mbeki Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": "2265",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R29, Lebohang, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -26.416080503010807,
+      "lon": 28.92897119220018,
+      "geoinfo": {
+        "display_name": "Govan Mbeki Ward 1, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, 2265, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Govan Mbeki Ward 1",
+        "city_district": null,
+        "city": "Govan Mbeki Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": "2265",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Govan Mbeki Ward 1, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, 2265, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:47.795359+00:00",
+  "_kind": "geo_samples"
+}

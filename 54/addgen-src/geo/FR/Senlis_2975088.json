@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Senlis",
+  "geonameid": 2975088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.22070684031496,
+      "lon": 2.5617778733980043,
+      "geoinfo": {
+        "display_name": "Chemin Royal, Aumont-en-Halatte, Senlis, Oise, Hauts-de-France, Metropolitan France, 60300, France",
+        "road": "Chemin Royal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aumont-en-Halatte",
+        "state": "Hauts-de-France",
+        "postcode": "60300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin Royal, Senlis, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.24063208132759,
+      "lon": 2.6170251292982134,
+      "geoinfo": {
+        "display_name": "Route d'Angivillers, Ognon, Chamant, Senlis, Oise, Hauts-de-France, Metropolitan France, 60300, France",
+        "road": "Route d'Angivillers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ognon",
+        "city": "Chamant",
+        "state": "Hauts-de-France",
+        "postcode": "60300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "316, Route d'Angivillers, Ognon, Chamant, Senlis, Oise, Hauts-de-France, Metropolitan France, 60300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:42.263633+00:00",
+  "_kind": "geo_samples"
+}

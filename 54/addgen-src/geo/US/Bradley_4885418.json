@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bradley",
+  "geonameid": 4885418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.16102965997318,
+      "lon": -87.85916850661225,
+      "geoinfo": {
+        "display_name": "East Armour Road, Bourbonnais, Kankakee County, Illinois, 60914, United States",
+        "road": "East Armour Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourbonnais",
+        "state": "Illinois",
+        "postcode": "60914",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Armour Road, Bradley, Illinois, United States"
+    },
+    {
+      "lat": 41.16763281021811,
+      "lon": -87.88557647568383,
+      "geoinfo": {
+        "display_name": "799, Bunker Hill Drive, Bourbonnais, Kankakee County, Illinois, 60914, United States",
+        "road": "Bunker Hill Drive",
+        "house_number": "799",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourbonnais",
+        "state": "Illinois",
+        "postcode": "60914",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "799, Bunker Hill Drive, Bourbonnais, Kankakee County, Illinois, 60914, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:01.819553+00:00",
+  "_kind": "geo_samples"
+}

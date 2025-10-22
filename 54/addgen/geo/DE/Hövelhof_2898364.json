@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hövelhof",
+  "geonameid": 2898364,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.82187811773629,
+      "lon": 8.58940890479915,
+      "geoinfo": {
+        "display_name": "79, Espelner Straße, Espeln, Hövelhof, Kreis Paderborn, North Rhine-Westphalia, 33161, Germany",
+        "road": "Espelner Straße",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hövelhof",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33161",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "79 Espelner Straße, Hövelhof, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.824081022253445,
+      "lon": 8.704836382663192,
+      "geoinfo": {
+        "display_name": "209, Mergelweg, Staumühle, Hövelhof, Kreis Paderborn, North Rhine-Westphalia, 33161, Germany",
+        "road": "Mergelweg",
+        "house_number": "209",
+        "neighbourhood": null,
+        "suburb": "Staumühle",
+        "city_district": null,
+        "city": "Hövelhof",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33161",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "209, Mergelweg, Staumühle, Hövelhof, Kreis Paderborn, North Rhine-Westphalia, 33161, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:11.066810+00:00",
+  "_kind": "geo_samples"
+}

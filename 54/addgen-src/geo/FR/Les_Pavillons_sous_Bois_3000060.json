@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Les Pavillons-sous-Bois",
+  "geonameid": 3000060,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.882131441692536,
+      "lon": 2.455680047355929,
+      "geoinfo": {
+        "display_name": "A 3, Cité de la Renardière, Boissière, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93130, France",
+        "road": "A 3",
+        "house_number": null,
+        "neighbourhood": "Cité de la Renardière",
+        "suburb": "Boissière",
+        "city_district": null,
+        "city": "Noisy-le-Sec",
+        "state": "Ile-de-France",
+        "postcode": "93130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 3, Les Pavillons-sous-Bois, Ile-de-France, France"
+    },
+    {
+      "lat": 48.92810888173889,
+      "lon": 2.500226729455103,
+      "geoinfo": {
+        "display_name": "16, Rue d'Alsace, Nonneville, Aulnay-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93600, France",
+        "road": "Rue d'Alsace",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Nonneville",
+        "city_district": null,
+        "city": "Aulnay-sous-Bois",
+        "state": null,
+        "postcode": "93600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "16, Rue d'Alsace, Nonneville, Aulnay-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93600, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:38.208247+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Doncaster",
+  "geonameid": 2651123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.562357159154615,
+      "lon": -1.1270982738973339,
+      "geoinfo": {
+        "display_name": "Shaftholme Road, Shaftholme, Arksey, Doncaster, South Yorkshire, England, DN5 0TW, United Kingdom",
+        "road": "Shaftholme Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doncaster",
+        "state": "England",
+        "postcode": "DN5 0TW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Shaftholme Road, Doncaster, England, United Kingdom"
+    },
+    {
+      "lat": 53.55656393049918,
+      "lon": -1.0823533260033915,
+      "geoinfo": {
+        "display_name": "Sandall Stones Road, Barnby Dun with Kirk Sandall, Kirk Sandall, Doncaster, South Yorkshire, England, DN3 1RW, United Kingdom",
+        "road": "Sandall Stones Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barnby Dun with Kirk Sandall",
+        "city_district": null,
+        "city": "Doncaster",
+        "state": "England",
+        "postcode": "DN3 1RW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sandall Stones Road, Barnby Dun with Kirk Sandall, Kirk Sandall, Doncaster, South Yorkshire, England, DN3 1RW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:14.586324+00:00",
+  "_kind": "geo_samples"
+}

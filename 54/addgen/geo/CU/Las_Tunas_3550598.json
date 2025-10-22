@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Las Tunas",
+  "geonameid": 3550598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.991260494769723,
+      "lon": -76.94812455178959,
+      "geoinfo": {
+        "display_name": "Las Tunas, 75200, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Tunas",
+        "state": "Las Tunas",
+        "postcode": "75200",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Las Tunas, Las Tunas, Cuba"
+    },
+    {
+      "lat": 20.93794117240616,
+      "lon": -76.93397114586305,
+      "geoinfo": {
+        "display_name": "Las Margaritas, Ciudad de Las Tunas, Las Tunas, 75500, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Las Margaritas",
+        "suburb": null,
+        "city_district": "Ciudad de Las Tunas",
+        "city": "Las Tunas",
+        "state": "Las Tunas",
+        "postcode": "75500",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "599, Las Margaritas, Ciudad de Las Tunas, Las Tunas, 75500, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:50.745478+00:00",
+  "_kind": "geo_samples"
+}

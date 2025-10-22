@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Setauket-East Setauket",
+  "geonameid": 7258965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.93099488872122,
+      "lon": -73.12572292905588,
+      "geoinfo": {
+        "display_name": "16, Huyler Road, Stony Brook, Town of Brookhaven, Suffolk County, New York, 11733, United States",
+        "road": "Huyler Road",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stony Brook",
+        "state": "New York",
+        "postcode": "11733",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16 Huyler Road, Setauket-East Setauket, New York, United States"
+    },
+    {
+      "lat": 40.96398156321312,
+      "lon": -73.12040911454044,
+      "geoinfo": {
+        "display_name": "Old Field Road, Village of Old Field, Setauket, Town of Brookhaven, Suffolk County, New York, 11733, United States",
+        "road": "Old Field Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Brookhaven",
+        "state": "New York",
+        "postcode": "11733",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "830, Old Field Road, Village of Old Field, Setauket, Town of Brookhaven, Suffolk County, New York, 11733, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:52.791307+00:00",
+  "_kind": "geo_samples"
+}

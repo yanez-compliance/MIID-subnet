@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hoover",
+  "geonameid": 4067994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.42957283414825,
+      "lon": -86.83288783744423,
+      "geoinfo": {
+        "display_name": "1041, Shades Crest Road, Highland Crest, Crest Estates, Hoover, Jefferson County, Alabama, 35226, United States",
+        "road": "Shades Crest Road",
+        "house_number": "1041",
+        "neighbourhood": "Highland Crest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hoover",
+        "state": "Alabama",
+        "postcode": "35226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1041 Shades Crest Road, Hoover, Alabama, United States"
+    },
+    {
+      "lat": 33.43791374384044,
+      "lon": -86.8379894161282,
+      "geoinfo": {
+        "display_name": "963, Oaks Drive, Birmingham, Jefferson County, Alabama, 35209, United States",
+        "road": "Oaks Drive",
+        "house_number": "963",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35209",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "963, Oaks Drive, Birmingham, Jefferson County, Alabama, 35209, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:10.325037+00:00",
+  "_kind": "geo_samples"
+}

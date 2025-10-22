@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boynton Beach",
+  "geonameid": 4148677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.538566969141655,
+      "lon": -80.0384235856592,
+      "geoinfo": {
+        "display_name": "Ocean Ridge, Palm Beach County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ocean Ridge",
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Boynton Beach, Florida, United States"
+    },
+    {
+      "lat": 26.51641188568596,
+      "lon": -80.08674344862293,
+      "geoinfo": {
+        "display_name": "2103, Southwest 12th Avenue, Palm Beach Leisureville, Boynton Beach, Palm Beach County, Florida, 33426, United States",
+        "road": "Southwest 12th Avenue",
+        "house_number": "2103",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boynton Beach",
+        "state": "Florida",
+        "postcode": "33426",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2103, Southwest 12th Avenue, Palm Beach Leisureville, Boynton Beach, Palm Beach County, Florida, 33426, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:41:21.866712+00:00",
+  "_kind": "geo_samples"
+}

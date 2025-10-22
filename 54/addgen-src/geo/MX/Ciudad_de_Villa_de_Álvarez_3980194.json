@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad de Villa de Álvarez",
+  "geonameid": 3980194,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.281260686911015,
+      "lon": -103.69805912945684,
+      "geoinfo": {
+        "display_name": "La Capacha, Municipio de Colima, Colima, 28610, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Capacha",
+        "state": "Colima",
+        "postcode": "28610",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad de Villa de Álvarez, Colima, Mexico"
+    },
+    {
+      "lat": 19.27575539299911,
+      "lon": -103.75787908601767,
+      "geoinfo": {
+        "display_name": "Lateral Carretera Villa de Álvarez - Minatitlán, Fraccionamiento Santa Sofía, Villa de Álvarez, Colima, 28950, Mexico",
+        "road": "Lateral Carretera Villa de Álvarez - Minatitlán",
+        "house_number": null,
+        "neighbourhood": "Fraccionamiento Santa Sofía",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa de Álvarez",
+        "state": "Colima",
+        "postcode": "28950",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "505, Lateral Carretera Villa de Álvarez - Minatitlán, Fraccionamiento Santa Sofía, Villa de Álvarez, Colima, 28950, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:12.000229+00:00",
+  "_kind": "geo_samples"
+}

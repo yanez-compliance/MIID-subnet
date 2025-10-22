@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Eupen",
+  "geonameid": 2798573,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.649454272316916,
+      "lon": 6.052288033162176,
+      "geoinfo": {
+        "display_name": "14, Am Wolfshof, Kettenis, Eupen, Verviers, Liège, Wallonia, 4701, Belgium",
+        "road": "Am Wolfshof",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eupen",
+        "state": "Liège",
+        "postcode": "4701",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "14 Am Wolfshof, Eupen, Liège, Belgium"
+    },
+    {
+      "lat": 50.63834356318206,
+      "lon": 6.054460778824945,
+      "geoinfo": {
+        "display_name": "Katharinenweg, Kettenis, Eupen, Verviers, Liège, Wallonia, 4700, Belgium",
+        "road": "Katharinenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eupen",
+        "state": "Liège",
+        "postcode": "4700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "772, Katharinenweg, Kettenis, Eupen, Verviers, Liège, Wallonia, 4700, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:52.525801+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Louisville",
+  "geonameid": 4299276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.24678313785991,
+      "lon": -85.71797623513672,
+      "geoinfo": {
+        "display_name": "Cave, Cave Hill Road, Louisville, Jefferson County, Kentucky, 40204, United States",
+        "road": "Cave Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cave Hill Road, Louisville, Kentucky, United States"
+    },
+    {
+      "lat": 38.224504273228824,
+      "lon": -85.7693327853005,
+      "geoinfo": {
+        "display_name": "1530, South 7th Street, Louisville, Jefferson County, Kentucky, 40208, United States",
+        "road": "South 7th Street",
+        "house_number": "1530",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1530, South 7th Street, Louisville, Jefferson County, Kentucky, 40208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:42.770773+00:00",
+  "_kind": "geo_samples"
+}

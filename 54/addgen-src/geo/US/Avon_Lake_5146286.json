@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Avon Lake",
+  "geonameid": 5146286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.514705631160105,
+      "lon": -82.0123017070356,
+      "geoinfo": {
+        "display_name": "28, Gray Gull Drive, Avon Point, Avon Lake, Lorain County, Ohio, 44012, United States",
+        "road": "Gray Gull Drive",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon Lake",
+        "state": "Ohio",
+        "postcode": "44012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28 Gray Gull Drive, Avon Lake, Ohio, United States"
+    },
+    {
+      "lat": 41.54360822297762,
+      "lon": -82.05574318606837,
+      "geoinfo": {
+        "display_name": "Lorain County, Ohio, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "905, Lorain County, 05435 Ohio, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:02.171445+00:00",
+  "_kind": "geo_samples"
+}

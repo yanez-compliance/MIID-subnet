@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Allentown",
+  "geonameid": 5178127,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.5795205364451,
+      "lon": -75.49655507851597,
+      "geoinfo": {
+        "display_name": "2226, Lehigh Parkway North, South Side, Salisbury, Lehigh County, Pennsylvania, 18103, United States",
+        "road": "Lehigh Parkway North",
+        "house_number": "2226",
+        "neighbourhood": "South Side",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salisbury",
+        "state": "Pennsylvania",
+        "postcode": "18103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2226 Lehigh Parkway North, Allentown, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.63353252041409,
+      "lon": -75.44673144751432,
+      "geoinfo": {
+        "display_name": "1630, North Irving Street, Rittersville, Allentown, Lehigh County, Pennsylvania, 18109, United States",
+        "road": "North Irving Street",
+        "house_number": "1630",
+        "neighbourhood": "Rittersville",
+        "suburb": null,
+        "city_district": null,
+        "city": "Allentown",
+        "state": "Pennsylvania",
+        "postcode": "18109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1630, North Irving Street, Rittersville, Allentown, Lehigh County, Pennsylvania, 18109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:39.201615+00:00",
+  "_kind": "geo_samples"
+}

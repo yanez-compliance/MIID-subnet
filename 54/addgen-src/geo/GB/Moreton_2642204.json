@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Moreton",
+  "geonameid": 2642204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.425651454094535,
+      "lon": -3.0859559613319103,
+      "geoinfo": {
+        "display_name": "Green Lane, Leasowe, Wirral, Liverpool City Region, England, CH45 8NA, United Kingdom",
+        "road": "Green Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leasowe",
+        "state": "England",
+        "postcode": "CH45 8NA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Green Lane, Moreton, England, United Kingdom"
+    },
+    {
+      "lat": 53.43177348005722,
+      "lon": -3.0817348457823357,
+      "geoinfo": {
+        "display_name": "Wirral Way, Wallasey, Wirral, Liverpool City Region, England, CH45 3QS, United Kingdom",
+        "road": "Wirral Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wallasey",
+        "state": "England",
+        "postcode": "CH45 3QS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wirral Way, Wallasey, Wirral, Liverpool City Region, England, CH45 3QS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:15.839433+00:00",
+  "_kind": "geo_samples"
+}

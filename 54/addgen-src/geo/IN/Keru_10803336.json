@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Keru",
+  "geonameid": 10803336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.21485206027876,
+      "lon": 73.08587386542291,
+      "geoinfo": {
+        "display_name": "Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rajasthan",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Keru, Rajasthan, India"
+    },
+    {
+      "lat": 26.18876902499264,
+      "lon": 73.02770163825596,
+      "geoinfo": {
+        "display_name": "Jodhpur Tehsil, Jodhpur, Rajasthan, 342013, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rajasthan",
+        "postcode": "342013",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "678, Jodhpur Tehsil, Jodhpur, Rajasthan, 342013, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:59.264411+00:00",
+  "_kind": "geo_samples"
+}

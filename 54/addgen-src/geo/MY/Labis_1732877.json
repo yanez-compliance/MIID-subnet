@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Labis",
+  "geonameid": 1732877,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.364813571286916,
+      "lon": 103.01643600867918,
+      "geoinfo": {
+        "display_name": "Segamat, Johor, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Labis, Johor, Malaysia"
+    },
+    {
+      "lat": 2.376001494976987,
+      "lon": 102.98508918659137,
+      "geoinfo": {
+        "display_name": "FELDA Chemplak, Segamat, Johor, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "FELDA Chemplak",
+        "state": "Johor",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "924, FELDA Chemplak, Segamat, 74541 Johor, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T08:35:54.384095+00:00",
+  "_kind": "geo_samples"
+}

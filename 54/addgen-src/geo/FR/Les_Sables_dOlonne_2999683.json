@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Les Sables-d'Olonne",
+  "geonameid": 2999683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.45355670499453,
+      "lon": -1.7681158591600517,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Les Sables-d'Olonne, France"
+    },
+    {
+      "lat": 46.53293620339911,
+      "lon": -1.7470179928120009,
+      "geoinfo": {
+        "display_name": "Golf des Olonnes, D 32, Olonne-sur-Mer, Les Sables-d'Olonne, Vendée, Pays de la Loire, Metropolitan France, 85340, France",
+        "road": "D 32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Olonne-sur-Mer",
+        "city_district": null,
+        "city": "Les Sables-d'Olonne",
+        "state": "Pays de la Loire",
+        "postcode": "85340",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Golf des Olonnes, D 32, Olonne-sur-Mer, Les Sables-d'Olonne, Vendée, Pays de la Loire, Metropolitan France, 85340, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:17:13.691907+00:00",
+  "_kind": "geo_samples"
+}

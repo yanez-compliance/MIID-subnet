@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Uchkeken",
+  "geonameid": 479687,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.9482925289816,
+      "lon": 42.48494502058852,
+      "geoinfo": {
+        "display_name": "Октябрьская улица, Первомайское, Первомайское сельское поселение, Malokarachayevsky District, Karachay-Cherkessia, North Caucasian Federal District, 369385, Russia",
+        "road": "Октябрьская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Первомайское",
+        "state": "Karachay-Cherkessia",
+        "postcode": "369385",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Октябрьская улица, Uchkeken, Karachay-Cherkessia, Russia"
+    },
+    {
+      "lat": 43.97585363625622,
+      "lon": 42.54562056065751,
+      "geoinfo": {
+        "display_name": "Краснокурганское сельское поселение, Malokarachayevsky District, Karachay-Cherkessia, North Caucasian Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Karachay-Cherkessia",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "429, Uchkeken, 91933 Karachay-Cherkessia, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:29:25.946852+00:00",
+  "_kind": "geo_samples"
+}

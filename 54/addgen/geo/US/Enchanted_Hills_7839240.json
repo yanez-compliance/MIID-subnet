@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Enchanted Hills",
+  "geonameid": 7839240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.32648209996831,
+      "lon": -106.56372166942705,
+      "geoinfo": {
+        "display_name": "Bernalillo, Sandoval County, New Mexico, 87004, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernalillo",
+        "state": "New Mexico",
+        "postcode": "87004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Enchanted Hills, New Mexico, United States"
+    },
+    {
+      "lat": 35.326646873363934,
+      "lon": -106.54765802279913,
+      "geoinfo": {
+        "display_name": "Santa Ana Circle, Bernalillo, Sandoval County, New Mexico, 87004, United States",
+        "road": "Santa Ana Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernalillo",
+        "state": "New Mexico",
+        "postcode": "87004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "533, Santa Ana Circle, Bernalillo, Sandoval County, New Mexico, 87004, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:55.820215+00:00",
+  "_kind": "geo_samples"
+}

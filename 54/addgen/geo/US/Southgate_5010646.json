@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Southgate",
+  "geonameid": 5010646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.185739119009014,
+      "lon": -83.19886921035672,
+      "geoinfo": {
+        "display_name": "16909, Fordline Street, Southgate, Wayne County, Michigan, 48195, United States",
+        "road": "Fordline Street",
+        "house_number": "16909",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southgate",
+        "state": "Michigan",
+        "postcode": "48195",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16909 Fordline Street, Southgate, Michigan, United States"
+    },
+    {
+      "lat": 42.19881307689217,
+      "lon": -83.19876466543481,
+      "geoinfo": {
+        "display_name": "Eureka Road, Southgate, Wayne County, Michigan, 48174, United States",
+        "road": "Eureka Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southgate",
+        "state": "Michigan",
+        "postcode": "48174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "422, Eureka Road, Southgate, Wayne County, Michigan, 48174, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:56.048431+00:00",
+  "_kind": "geo_samples"
+}

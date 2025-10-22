@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Drancy",
+  "geonameid": 3020839,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92073979911408,
+      "lon": 2.427535649390669,
+      "geoinfo": {
+        "display_name": "Rue de la Station, Paris Campagne, Drancy, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93700, France",
+        "road": "Rue de la Station",
+        "house_number": null,
+        "neighbourhood": "Paris Campagne",
+        "suburb": null,
+        "city_district": null,
+        "city": "Drancy",
+        "state": "Ile-de-France",
+        "postcode": "93700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de la Station, Drancy, Ile-de-France, France"
+    },
+    {
+      "lat": 48.92283899923379,
+      "lon": 2.4510051756824383,
+      "geoinfo": {
+        "display_name": "8, Rue Gaston Landry, Les Oiseaux, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France",
+        "road": "Rue Gaston Landry",
+        "house_number": "8",
+        "neighbourhood": "Les Oiseaux",
+        "suburb": null,
+        "city_district": null,
+        "city": "Drancy",
+        "state": null,
+        "postcode": "93700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8, Rue Gaston Landry, Les Oiseaux, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:57.142162+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Aksum",
+  "geonameid": 344420,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 14.134204384849358,
+      "lon": 38.76183097471614,
+      "geoinfo": {
+        "display_name": "Central Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Aksum, Tigray, Ethiopia"
+    },
+    {
+      "lat": 14.102878903578452,
+      "lon": 38.69597198080986,
+      "geoinfo": {
+        "display_name": "Addi Khankera, Central Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "990, Addi Khankera, Central Tigray, 06384 Tigray, Ethiopia"
+    },
+    {
+      "lat": 14.137374890838084,
+      "lon": 38.7575615954182,
+      "geoinfo": {
+        "display_name": "Gebre Tela, Central Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gebre Tela",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "879, Gebre Tela, Central Tigray, 64079 Tigray, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:49.456520+00:00",
+  "_kind": "geo_samples"
+}

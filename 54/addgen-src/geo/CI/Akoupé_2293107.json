@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Akoupé",
+  "geonameid": 2293107,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.403539887538579,
+      "lon": -3.9066246919700442,
+      "geoinfo": {
+        "display_name": "A8, Akoupé, Mé, Lagunes, Côte d'Ivoire",
+        "road": "A8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akoupé",
+        "state": "Lagunes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "A8, Akoupé, Lagunes, Ivory Coast"
+    },
+    {
+      "lat": 6.404008575275826,
+      "lon": -3.8975818034249174,
+      "geoinfo": {
+        "display_name": "A8, Akoupé, Mé, Côte d'Ivoire",
+        "road": "A8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akoupé",
+        "state": null,
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "A8, Akoupé, 39976 Mé, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:52.630080+00:00",
+  "_kind": "geo_samples"
+}

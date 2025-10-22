@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Lyubertsy",
+  "geonameid": 532615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.69870873505975,
+      "lon": 37.89230183317361,
+      "geoinfo": {
+        "display_name": "3, Коммунистическая улица, Красная горка, Lyubertsy, Lyuberetsky District, Moscow Oblast, Central Federal District, 140013, Russia",
+        "road": "Коммунистическая улица",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Красная горка",
+        "city_district": null,
+        "city": "Lyubertsy",
+        "state": "Moscow Oblast",
+        "postcode": "140013",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "3 Коммунистическая улица, Lyubertsy, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.681116004819536,
+      "lon": 37.94511899204922,
+      "geoinfo": {
+        "display_name": "30 с39, 2-я Вольская улица, Nekrasovka District, Некрасовка, Moscow, Central Federal District, 111674, Russia",
+        "road": "2-я Вольская улица",
+        "house_number": "30 с39",
+        "neighbourhood": null,
+        "suburb": "Nekrasovka District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "111674",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "30 с39, 2-я Вольская улица, Nekrasovka District, Некрасовка, Moscow, Central Federal District, 111674, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:50:13.535254+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Coyula",
+  "geonameid": 4012605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.684694332730857,
+      "lon": -103.22143419226092,
+      "geoinfo": {
+        "display_name": "Circuito Privado de las Flores Poniente, Residencias El Prado, Coyula, Tonalá, Región Centro, Jalisco, 45413, Mexico",
+        "road": "Circuito Privado de las Flores Poniente",
+        "house_number": null,
+        "neighbourhood": "Residencias El Prado",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyula",
+        "state": "Jalisco",
+        "postcode": "45413",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Circuito Privado de las Flores Poniente, Coyula, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.67490384819697,
+      "lon": -103.22277048095552,
+      "geoinfo": {
+        "display_name": "Residencias El Prado, Coyula, Tonalá, Región Centro, Jalisco, 45413, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Residencias El Prado",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyula",
+        "state": "Jalisco",
+        "postcode": "45413",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "914, Residencias El Prado, Coyula, Tonalá, Región Centro, Jalisco, 45413, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:48.045423+00:00",
+  "_kind": "geo_samples"
+}

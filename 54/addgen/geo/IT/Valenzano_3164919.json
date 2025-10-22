@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Valenzano",
+  "geonameid": 3164919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.04214895555274,
+      "lon": 16.880818598077248,
+      "geoinfo": {
+        "display_name": "Via Giuseppe Tatarella, Valenzano San Lorenzo, Valenzano, Bari, Apulia, 70129, Italy",
+        "road": "Via Giuseppe Tatarella",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valenzano",
+        "state": "Apulia",
+        "postcode": "70129",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giuseppe Tatarella, Valenzano, Apulia, Italy"
+    },
+    {
+      "lat": 41.06342049193431,
+      "lon": 16.902589362687813,
+      "geoinfo": {
+        "display_name": "Via Antonio Quaranta, Carbonara di Bari, Municipio 4, Capurso, Bari, Apulia, 70131, Italy",
+        "road": "Via Antonio Quaranta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carbonara di Bari",
+        "city_district": null,
+        "city": "Capurso",
+        "state": "Apulia",
+        "postcode": "70131",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Antonio Quaranta, Carbonara di Bari, Municipio 4, Capurso, Bari, Apulia, 70131, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:04.721050+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Geraldton",
+  "geonameid": 2070998,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.79588096854661,
+      "lon": 114.6177761618683,
+      "geoinfo": {
+        "display_name": "Roebuck Street, Mahomets Flats, Geraldton, City Of Greater Geraldton, Western Australia, 6531, Australia",
+        "road": "Roebuck Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mahomets Flats",
+        "city_district": null,
+        "city": "Geraldton",
+        "state": "Western Australia",
+        "postcode": "6531",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Roebuck Street, Geraldton, Western Australia, Australia"
+    },
+    {
+      "lat": -28.76985788851762,
+      "lon": 114.60613619323097,
+      "geoinfo": {
+        "display_name": "Forrest Street, Geraldton, City Of Greater Geraldton, Western Australia, 6531, Australia",
+        "road": "Forrest Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Geraldton",
+        "city": "Geraldton",
+        "state": "Western Australia",
+        "postcode": "6531",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "255, Forrest Street, Geraldton, City Of Greater Geraldton, Western Australia, 6531, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:43.289408+00:00",
+  "_kind": "geo_samples"
+}

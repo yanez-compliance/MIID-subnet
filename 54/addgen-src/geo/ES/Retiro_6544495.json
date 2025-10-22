@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Retiro",
+  "geonameid": 6544495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.41614868681656,
+      "lon": -3.681285781068844,
+      "geoinfo": {
+        "display_name": "Paseo de Venezuela, Jerónimos, Retiro, Madrid, Community of Madrid, 28009, Spain",
+        "road": "Paseo de Venezuela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Retiro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28009",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Paseo de Venezuela, Retiro, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.39047402730562,
+      "lon": -3.654765307331938,
+      "geoinfo": {
+        "display_name": "Calle el Escritor, Palomeras Bajas, Vallecas, Madrid, Community of Madrid, 28038, Spain",
+        "road": "Calle el Escritor",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28038",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "267, Calle el Escritor, Palomeras Bajas, Vallecas, Madrid, Community of Madrid, 28038, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:18.566485+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middletown",
+  "geonameid": 4838633,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.57544344064353,
+      "lon": -72.65305357864668,
+      "geoinfo": {
+        "display_name": "Chester Bowles Highway, Cromwell, Lower Connecticut River Valley Planning Region, Connecticut, 06459, United States",
+        "road": "Chester Bowles Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cromwell",
+        "state": "Connecticut",
+        "postcode": "06459",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chester Bowles Highway, Middletown, Connecticut, United States"
+    },
+    {
+      "lat": 41.544580277405245,
+      "lon": -72.65775257913685,
+      "geoinfo": {
+        "display_name": "106, Jacobs Terrace, Bretton Heights, Middletown, Lower Connecticut River Valley Planning Region, Connecticut, 06457, United States",
+        "road": "Jacobs Terrace",
+        "house_number": "106",
+        "neighbourhood": "Bretton Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Connecticut",
+        "postcode": "06457",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "106, Jacobs Terrace, Bretton Heights, Middletown, Lower Connecticut River Valley Planning Region, Connecticut, 06457, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:32.120824+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Görlitz",
+  "geonameid": 2918987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.125982510109374,
+      "lon": 14.93981253944265,
+      "geoinfo": {
+        "display_name": "Friedersdorfer Straße, Kunnerwitz, Görlitz, Saxony, 02827, Germany",
+        "road": "Friedersdorfer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kunnerwitz",
+        "city_district": null,
+        "city": "Görlitz",
+        "state": "Saxony",
+        "postcode": "02827",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Friedersdorfer Straße, Görlitz, Saxony, Germany"
+    },
+    {
+      "lat": 51.151322857453614,
+      "lon": 14.944633072880908,
+      "geoinfo": {
+        "display_name": "Rauschwalde, Schlauroth, Görlitz, Saxony, 02827, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rauschwalde",
+        "city_district": null,
+        "city": "Görlitz",
+        "state": "Saxony",
+        "postcode": "02827",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "885, Rauschwalde, Schlauroth, Görlitz, Saxony, 02827, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:58.556957+00:00",
+  "_kind": "geo_samples"
+}

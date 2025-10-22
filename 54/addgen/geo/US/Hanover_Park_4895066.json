@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hanover Park",
+  "geonameid": 4895066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.993757010949274,
+      "lon": -88.10780475511903,
+      "geoinfo": {
+        "display_name": "West Irving Park Road, Schaumburg, Schaumburg Township, Cook County, Illinois, 60193, United States",
+        "road": "West Irving Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schaumburg",
+        "state": "Illinois",
+        "postcode": "60193",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Irving Park Road, Hanover Park, Illinois, United States"
+    },
+    {
+      "lat": 42.02184086684609,
+      "lon": -88.14501769082567,
+      "geoinfo": {
+        "display_name": "Barrington Road, Schaumburg, Hanover Township, Cook County, Illinois, 60107, United States",
+        "road": "Barrington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schaumburg",
+        "state": "Illinois",
+        "postcode": "60107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "709, Barrington Road, Schaumburg, Hanover Township, Cook County, Illinois, 60107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:50.017904+00:00",
+  "_kind": "geo_samples"
+}

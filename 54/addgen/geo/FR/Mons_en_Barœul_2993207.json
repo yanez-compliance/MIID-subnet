@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Mons-en-Barœul",
+  "geonameid": 2993207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.65221932476893,
+      "lon": 3.078977322410715,
+      "geoinfo": {
+        "display_name": "54, Rue Jean Bart, La Madeleine, Lille, Nord, Hauts-de-France, Metropolitan France, 59110, France",
+        "road": "Rue Jean Bart",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Madeleine",
+        "state": "Hauts-de-France",
+        "postcode": "59110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "54 Rue Jean Bart, Mons-en-Barœul, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.59443658838187,
+      "lon": 3.1149872221124992,
+      "geoinfo": {
+        "display_name": "Chemin des Voyettes, Quartier des Arts, Lesquin, Lille, Nord, Hauts-de-France, Metropolitan France, 59810, France",
+        "road": "Chemin des Voyettes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lesquin",
+        "state": "Hauts-de-France",
+        "postcode": "59810",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "515, Chemin des Voyettes, Quartier des Arts, Lesquin, Lille, Nord, Hauts-de-France, Metropolitan France, 59810, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:59.259546+00:00",
+  "_kind": "geo_samples"
+}

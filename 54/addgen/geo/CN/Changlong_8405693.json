@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changlong",
+  "geonameid": 8405693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.324738044068095,
+      "lon": 107.44216946522813,
+      "geoinfo": {
+        "display_name": "Changlong, Dianjiang County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changlong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Changlong, Chongqing, China"
+    },
+    {
+      "lat": 30.330173321824915,
+      "lon": 107.37534652193487,
+      "geoinfo": {
+        "display_name": "北新东路, Guixi, Dianjiang County, Chongqing, China",
+        "road": "北新东路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guixi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "934, 北新东路, Guixi, Dianjiang County, 79834 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:23.794343+00:00",
+  "_kind": "geo_samples"
+}

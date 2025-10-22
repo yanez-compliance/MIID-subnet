@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chicago",
+  "geonameid": 4887398,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.831785530498856,
+      "lon": -87.65158060771107,
+      "geoinfo": {
+        "display_name": "1014, West 34th Place, Bridgeport, Chicago, Cook County, Illinois, 60608, United States",
+        "road": "West 34th Place",
+        "house_number": "1014",
+        "neighbourhood": null,
+        "suburb": "Bridgeport",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1014 West 34th Place, Chicago, Illinois, United States"
+    },
+    {
+      "lat": 41.87224518154046,
+      "lon": -87.68605190122788,
+      "geoinfo": {
+        "display_name": "723, South Western Avenue, Tri-Taylor, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60612, United States",
+        "road": "South Western Avenue",
+        "house_number": "723",
+        "neighbourhood": "Tri-Taylor",
+        "suburb": "Near West Side",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "723, South Western Avenue, Tri-Taylor, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60612, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:12.818846+00:00",
+  "_kind": "geo_samples"
+}

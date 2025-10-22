@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Strathroy",
+  "geonameid": 6158027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.92632862234372,
+      "lon": -81.61765960693612,
+      "geoinfo": {
+        "display_name": "Sutherland Road, Strathroy, Strathroy-Caradoc, Middlesex County, Ontario, N7G 1B1, Canada",
+        "road": "Sutherland Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Strathroy-Caradoc",
+        "state": "Ontario",
+        "postcode": "N7G 1B1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sutherland Road, Strathroy, Ontario, Canada"
+    },
+    {
+      "lat": 42.98245971193485,
+      "lon": -81.61454431505676,
+      "geoinfo": {
+        "display_name": "Second Street, Strathroy, Strathroy-Caradoc, Middlesex County, Ontario, N7G 4K6, Canada",
+        "road": "Second Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Strathroy-Caradoc",
+        "state": "Ontario",
+        "postcode": "N7G 4K6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Second Street, Strathroy, Strathroy-Caradoc, Middlesex County, Ontario, N7G 4K6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:00.206966+00:00",
+  "_kind": "geo_samples"
+}

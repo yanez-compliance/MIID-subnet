@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elizabeth City",
+  "geonameid": 4465088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.28054326862185,
+      "lon": -76.24491989553674,
+      "geoinfo": {
+        "display_name": "Briarwood, Elizabeth City, Pasquotank County, North Carolina, 27909, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Briarwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elizabeth City",
+        "state": "North Carolina",
+        "postcode": "27909",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Briarwood, Elizabeth City, North Carolina, United States"
+    },
+    {
+      "lat": 36.319874944640226,
+      "lon": -76.25994256284147,
+      "geoinfo": {
+        "display_name": "Fletcher Drive, Pasquotank County, North Carolina, 27909, United States",
+        "road": "Fletcher Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27909",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "790, Fletcher Drive, Pasquotank County, North Carolina, 27909, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:42.250686+00:00",
+  "_kind": "geo_samples"
+}

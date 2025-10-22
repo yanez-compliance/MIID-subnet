@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neu-Anspach",
+  "geonameid": 2866280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.3121686530262,
+      "lon": 8.512881305392188,
+      "geoinfo": {
+        "display_name": "Heisterbachstraße, Hausen, Hausen-Arnsbach, Neu Anspach, Neu-Anspach, Hochtaunuskreis, Hesse, 61267, Germany",
+        "road": "Heisterbachstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hausen",
+        "city_district": null,
+        "city": "Neu-Anspach",
+        "state": "Hesse",
+        "postcode": "61267",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Heisterbachstraße, Neu-Anspach, Hesse, Germany"
+    },
+    {
+      "lat": 50.35072768487358,
+      "lon": 8.474996056882702,
+      "geoinfo": {
+        "display_name": "28, An den Tannen, Wilhelmsdorf, Usingen, Hochtaunuskreis, Hesse, 61250, Germany",
+        "road": "An den Tannen",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilhelmsdorf",
+        "state": "Hesse",
+        "postcode": "61250",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "28, An den Tannen, Wilhelmsdorf, Usingen, Hochtaunuskreis, Hesse, 61250, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:38.348681+00:00",
+  "_kind": "geo_samples"
+}

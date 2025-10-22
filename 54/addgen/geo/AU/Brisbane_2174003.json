@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Brisbane",
+  "geonameid": 2174003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.480148276967522,
+      "lon": 153.01011890280398,
+      "geoinfo": {
+        "display_name": "West End State School, 24, Vulture Street, Hill End, West End, Greater Brisbane, Queensland, 4101, Australia",
+        "road": "Vulture Street",
+        "house_number": "24",
+        "neighbourhood": "Hill End",
+        "suburb": "West End",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4101",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "24 Vulture Street, Brisbane, Queensland, Australia"
+    },
+    {
+      "lat": -27.488745832589572,
+      "lon": 153.04545921221882,
+      "geoinfo": {
+        "display_name": "42, Norman Street, East Brisbane, City of Brisbane, Queensland, 4169, Australia",
+        "road": "Norman Street",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "East Brisbane",
+        "city_district": "East Brisbane",
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4169",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "42, Norman Street, Brisbane, 4169 Queensland, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:44.733575+00:00",
+  "_kind": "geo_samples"
+}

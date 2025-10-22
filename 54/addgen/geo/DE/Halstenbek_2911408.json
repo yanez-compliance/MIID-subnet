@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Halstenbek",
+  "geonameid": 2911408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.615827140319944,
+      "lon": 9.844299184584614,
+      "geoinfo": {
+        "display_name": "Halstenbeker Hofladen, 6, Heideweg, Halstenbek, Kreis Pinneberg, Schleswig-Holstein, 25469, Germany",
+        "road": "Heideweg",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Halstenbek",
+        "state": "Schleswig-Holstein",
+        "postcode": "25469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6 Heideweg, Halstenbek, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.66302557810077,
+      "lon": 9.894304532906649,
+      "geoinfo": {
+        "display_name": "Rugenbergener Straße, Ellerbek, Pinnau, Kreis Pinneberg, Schleswig-Holstein, 25474, Germany",
+        "road": "Rugenbergener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellerbek",
+        "state": "Schleswig-Holstein",
+        "postcode": "25474",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "251, Rugenbergener Straße, Ellerbek, Pinnau, Kreis Pinneberg, Schleswig-Holstein, 25474, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:55.301009+00:00",
+  "_kind": "geo_samples"
+}

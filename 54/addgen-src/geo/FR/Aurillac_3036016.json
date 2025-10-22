@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Aurillac",
+  "geonameid": 3036016,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.950662817219104,
+      "lon": 2.3927188189367476,
+      "geoinfo": {
+        "display_name": "Chemin de la Cologne, Naucelles, Aurillac, Cantal, Auvergne-Rhône-Alpes, Metropolitan France, 15250, France",
+        "road": "Chemin de la Cologne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naucelles",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "15250",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de la Cologne, Aurillac, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 44.91493475131672,
+      "lon": 2.4974922348930213,
+      "geoinfo": {
+        "display_name": "3, Impasse de la Guillente, Carnéjac, Giou-de-Mamou, Aurillac, Cantal, Auvergne-Rhône-Alpes, Metropolitan France, 15130, France",
+        "road": "Impasse de la Guillente",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Giou-de-Mamou",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "15130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3, Impasse de la Guillente, Carnéjac, Giou-de-Mamou, Aurillac, Cantal, Auvergne-Rhône-Alpes, Metropolitan France, 15130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:27.552029+00:00",
+  "_kind": "geo_samples"
+}

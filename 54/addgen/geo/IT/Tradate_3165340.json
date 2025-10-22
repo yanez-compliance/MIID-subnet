@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Tradate",
+  "geonameid": 3165340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.67367522447541,
+      "lon": 8.931858496644418,
+      "geoinfo": {
+        "display_name": "Via Giovanni Boccaccio, Carbonate, Como, Lombardy, 22076, Italy",
+        "road": "Via Giovanni Boccaccio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carbonate",
+        "state": "Lombardy",
+        "postcode": "22076",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giovanni Boccaccio, Tradate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.68675647924784,
+      "lon": 8.905125414363035,
+      "geoinfo": {
+        "display_name": "Via Pavia, Tradate, Varese, Lombardy, 21049, Italy",
+        "road": "Via Pavia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tradate",
+        "state": "Lombardy",
+        "postcode": "21049",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "670, Via Pavia, Tradate, Varese, Lombardy, 21049, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:29.128590+00:00",
+  "_kind": "geo_samples"
+}

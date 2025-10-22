@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Roxbury",
+  "geonameid": 4955128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.290523915594704,
+      "lon": -71.16009629438592,
+      "geoinfo": {
+        "display_name": "230, Corey Street, Highland, West Roxbury, Boston, Suffolk County, Massachusetts, 02132, United States",
+        "road": "Corey Street",
+        "house_number": "230",
+        "neighbourhood": "Highland",
+        "suburb": "West Roxbury",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "230 Corey Street, West Roxbury, Massachusetts, United States"
+    },
+    {
+      "lat": 42.319346947171724,
+      "lon": -71.12280351426432,
+      "geoinfo": {
+        "display_name": "Perkins Street, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02245, United States",
+        "road": "Perkins Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jamaica Plain",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555, Perkins Street, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02245, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:38.118741+00:00",
+  "_kind": "geo_samples"
+}

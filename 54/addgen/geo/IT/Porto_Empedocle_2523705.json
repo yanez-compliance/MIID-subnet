@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Porto Empedocle",
+  "geonameid": 2523705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.26428224589646,
+      "lon": 13.525254305767774,
+      "geoinfo": {
+        "display_name": "Ciuccafa, Porto Empedocle, Agrigento, Sicily, 92014, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Porto Empedocle",
+        "state": "Sicily",
+        "postcode": "92014",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Porto Empedocle, Sicily, Italy"
+    },
+    {
+      "lat": 37.31977895669259,
+      "lon": 13.550684374306062,
+      "geoinfo": {
+        "display_name": "Strada Provinciale 02-A, Montaperto, Agrigento, Sicily, 92100, Italy",
+        "road": "Strada Provinciale 02-A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Agrigento",
+        "state": "Sicily",
+        "postcode": "92100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Provinciale 02-A, Montaperto, Agrigento, Sicily, 92100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:39.711635+00:00",
+  "_kind": "geo_samples"
+}

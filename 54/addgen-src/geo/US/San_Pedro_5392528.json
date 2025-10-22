@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Pedro",
+  "geonameid": 5392528,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.69752258957412,
+      "lon": -118.2645452075859,
+      "geoinfo": {
+        "display_name": "Los Angeles, Los Angeles County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "San Pedro, California, United States"
+    },
+    {
+      "lat": 33.74625345838108,
+      "lon": -118.2926171768819,
+      "geoinfo": {
+        "display_name": "San Pedro Gas N' More, 311, North Gaffey Street, San Pedro, Los Angeles, Los Angeles County, California, 90731, United States",
+        "road": "North Gaffey Street",
+        "house_number": "311",
+        "neighbourhood": null,
+        "suburb": "San Pedro",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90731",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "San Pedro Gas N' More, 311, North Gaffey Street, San Pedro, Los Angeles, Los Angeles County, California, 90731, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:48.116720+00:00",
+  "_kind": "geo_samples"
+}

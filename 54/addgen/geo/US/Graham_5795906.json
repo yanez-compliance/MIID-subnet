@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Graham",
+  "geonameid": 5795906,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.09338045976639,
+      "lon": -122.3037251222248,
+      "geoinfo": {
+        "display_name": "17769, 92nd Avenue East, Silver Pointe, Pierce County, Washington, 98375, United States",
+        "road": "92nd Avenue East",
+        "house_number": "17769",
+        "neighbourhood": "Silver Pointe",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98375",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17769 92nd Avenue East, Graham, Washington, United States"
+    },
+    {
+      "lat": 47.090546516766025,
+      "lon": -122.27755403339323,
+      "geoinfo": {
+        "display_name": "11405, 183rd Street East, Lipoma Firs, Pierce County, Washington, 98374, United States",
+        "road": "183rd Street East",
+        "house_number": "11405",
+        "neighbourhood": "Lipoma Firs",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11405, 183rd Street East, Lipoma Firs, Pierce County, Washington, 98374, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:11.617115+00:00",
+  "_kind": "geo_samples"
+}

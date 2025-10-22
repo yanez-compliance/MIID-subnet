@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Lake Tahoe",
+  "geonameid": 5397664,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.975666364790484,
+      "lon": -120.00029810923573,
+      "geoinfo": {
+        "display_name": "El Dorado County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Lake Tahoe, California, United States"
+    },
+    {
+      "lat": 38.9543540221904,
+      "lon": -119.96135750732536,
+      "geoinfo": {
+        "display_name": "Marina Bike, Harlow Acres, Bijou, South Lake Tahoe, El Dorado County, California, 96151, United States",
+        "road": "Marina Bike",
+        "house_number": null,
+        "neighbourhood": "Harlow Acres",
+        "suburb": "Bijou",
+        "city_district": null,
+        "city": "South Lake Tahoe",
+        "state": "California",
+        "postcode": "96151",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "097, Marina Bike, Harlow Acres, Bijou, South Lake Tahoe, El Dorado County, California, 96151, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:10.846494+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Rios Rosas",
+  "geonameid": 11549969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.445158361203525,
+      "lon": -3.7021687357289914,
+      "geoinfo": {
+        "display_name": "12, Calle Maudes, Ríos Rosas, Chamberí, Madrid, Community of Madrid, 28003, Spain",
+        "road": "Calle Maudes",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Chamberí",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28003",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "12 Calle Maudes, Rios Rosas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42264448070343,
+      "lon": -3.702446115265479,
+      "geoinfo": {
+        "display_name": "Nanai, 26, Calle del Barco, Malasaña, Universidad, Centro, Madrid, Community of Madrid, 28004, Spain",
+        "road": "Calle del Barco",
+        "house_number": "26",
+        "neighbourhood": "Malasaña",
+        "suburb": null,
+        "city_district": "Centro",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28004",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Nanai, 26, Calle del Barco, Malasaña, Universidad, Centro, Madrid, Community of Madrid, 28004, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:22.107818+00:00",
+  "_kind": "geo_samples"
+}

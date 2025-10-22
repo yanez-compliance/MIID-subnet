@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Abrantes",
+  "geonameid": 11549996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.357329617921145,
+      "lon": -3.737523155711508,
+      "geoinfo": {
+        "display_name": "Camino Viejo a Carabanchel, Poligono Industrial Prado Overa, Butarque, Leganés, Community of Madrid, 28919, Spain",
+        "road": "Camino Viejo a Carabanchel",
+        "house_number": null,
+        "neighbourhood": "Poligono Industrial Prado Overa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leganés",
+        "state": "Community of Madrid",
+        "postcode": "28919",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camino Viejo a Carabanchel, Abrantes, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.36855581646248,
+      "lon": -3.7457635040411508,
+      "geoinfo": {
+        "display_name": "Calle del Cidro, Buenavista, Carabanchel, Madrid, Community of Madrid, 28044, Spain",
+        "road": "Calle del Cidro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28044",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "169, Calle del Cidro, Buenavista, Carabanchel, Madrid, Community of Madrid, 28044, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:35.184890+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sennan",
+  "geonameid": 6825500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.36066298637289,
+      "lon": 135.23369838385693,
+      "geoinfo": {
+        "display_name": "Shinmachi, Hannan, Osaka Prefecture, 599-0203, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Shinmachi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hannan",
+        "state": null,
+        "postcode": "599-0203",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Shinmachi, Sennan, Japan"
+    },
+    {
+      "lat": 34.31929787686729,
+      "lon": 135.290669148969,
+      "geoinfo": {
+        "display_name": "Sennan, Osaka Prefecture, 590-0515, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sennan",
+        "state": null,
+        "postcode": "590-0515",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sennan, Osaka Prefecture, 590-0515, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:44.802019+00:00",
+  "_kind": "geo_samples"
+}

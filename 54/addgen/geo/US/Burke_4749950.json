@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burke",
+  "geonameid": 4749950,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.78739637477932,
+      "lon": -77.25032963339724,
+      "geoinfo": {
+        "display_name": "6050, Selwood Place, Burke, Fairfax County, Virginia, 22152, United States",
+        "road": "Selwood Place",
+        "house_number": "6050",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burke",
+        "state": "Virginia",
+        "postcode": "22152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6050 Selwood Place, Burke, Virginia, United States"
+    },
+    {
+      "lat": 38.82718238899326,
+      "lon": -77.25631379169953,
+      "geoinfo": {
+        "display_name": "4420, Starr Jordan Drive, Woods of Ilda, Long Branch, Fairfax County, Virginia, 22003, United States",
+        "road": "Starr Jordan Drive",
+        "house_number": "4420",
+        "neighbourhood": "Woods of Ilda",
+        "suburb": null,
+        "city_district": null,
+        "city": "Long Branch",
+        "state": "Virginia",
+        "postcode": "22003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4420, Starr Jordan Drive, Woods of Ilda, Long Branch, Fairfax County, Virginia, 22003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:11.337537+00:00",
+  "_kind": "geo_samples"
+}

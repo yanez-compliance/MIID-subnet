@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairhaven",
+  "geonameid": 4936087,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.62316358349366,
+      "lon": -70.88408097112415,
+      "geoinfo": {
+        "display_name": "Pope Beach, Fairhaven, Bristol County, Massachusetts, 02719, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairhaven",
+        "state": "Massachusetts",
+        "postcode": "02719",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fairhaven, Massachusetts, United States"
+    },
+    {
+      "lat": 41.60865693055175,
+      "lon": -70.88652845204149,
+      "geoinfo": {
+        "display_name": "Bristol County, Massachusetts, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Massachusetts",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "791, Bristol County, 78436 Massachusetts, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:04.568363+00:00",
+  "_kind": "geo_samples"
+}

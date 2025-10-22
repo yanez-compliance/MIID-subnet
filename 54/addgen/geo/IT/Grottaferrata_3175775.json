@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Grottaferrata",
+  "geonameid": 3175775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.80021110710801,
+      "lon": 12.65166245768908,
+      "geoinfo": {
+        "display_name": "casa di luvian, Via di Sant'Andrea, Grottaferrata, Roma Capitale, Lazio, 00046, Italy",
+        "road": "Via di Sant'Andrea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grottaferrata",
+        "state": "Lazio",
+        "postcode": "00046",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via di Sant'Andrea, Grottaferrata, Lazio, Italy"
+    },
+    {
+      "lat": 41.82256945180669,
+      "lon": 12.683286863876122,
+      "geoinfo": {
+        "display_name": "Via di Santa Croce, Frascati, Roma Capitale, Lazio, 00044, Italy",
+        "road": "Via di Santa Croce",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frascati",
+        "state": "Lazio",
+        "postcode": "00044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "068, Via di Santa Croce, Frascati, Roma Capitale, Lazio, 00044, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:46.350840+00:00",
+  "_kind": "geo_samples"
+}

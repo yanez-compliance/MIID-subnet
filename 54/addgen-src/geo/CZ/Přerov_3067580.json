@@ -1,0 +1,83 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Přerov",
+  "geonameid": 3067580,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 49.453230283411365,
+      "lon": 17.393569837156445,
+      "geoinfo": {
+        "display_name": "ev.4, Přerov V-Dluhonice, Dluhonice, Přerov, okres Přerov, Olomouc Region, Central Moravia, 750 02, Czechia",
+        "road": null,
+        "house_number": "ev.4",
+        "neighbourhood": null,
+        "suburb": "Dluhonice",
+        "city_district": null,
+        "city": "Přerov",
+        "state": "Central Moravia",
+        "postcode": "750 02",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Dluhonice, Přerov, Central Moravia, Czechia"
+    },
+    {
+      "lat": 49.48244418321796,
+      "lon": 17.495305493743654,
+      "geoinfo": {
+        "display_name": "Grymov, okres Přerov, Olomouc Region, Central Moravia, 751 21, Czechia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grymov",
+        "city_district": null,
+        "city": "Grymov",
+        "state": "Central Moravia",
+        "postcode": "751 21",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Grymov, okres Přerov, Olomouc Region, Central Moravia, 751 21, Czechia"
+    },
+    {
+      "lat": 49.494833884354314,
+      "lon": 17.46721024795282,
+      "geoinfo": {
+        "display_name": "D1, Buk, okres Přerov, Olomouc Region, Central Moravia, 751 21, Czechia",
+        "road": "D1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Buk",
+        "city_district": null,
+        "city": "Buk",
+        "state": "Central Moravia",
+        "postcode": "751 21",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "D1, Buk, okres Přerov, Olomouc Region, Central Moravia, 751 21, Czechia"
+    },
+    {
+      "lat": 49.455307984500635,
+      "lon": 17.408196198003825,
+      "geoinfo": {
+        "display_name": "ev.6, Přerov V-Dluhonice, Dluhonice, Přerov, okres Přerov, Olomouc Region, Central Moravia, 750 02, Czechia",
+        "road": null,
+        "house_number": "ev.6",
+        "neighbourhood": null,
+        "suburb": "Dluhonice",
+        "city_district": null,
+        "city": "Přerov",
+        "state": "Central Moravia",
+        "postcode": "750 02",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "ev.6, Přerov V-Dluhonice, Dluhonice, Přerov, okres Přerov, Olomouc Region, Central Moravia, 750 02, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:02.590443+00:00",
+  "_kind": "geo_samples"
+}

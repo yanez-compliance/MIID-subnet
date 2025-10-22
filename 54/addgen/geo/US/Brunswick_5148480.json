@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brunswick",
+  "geonameid": 5148480,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.2524173398462,
+      "lon": -81.85843611051696,
+      "geoinfo": {
+        "display_name": "4861, Locust Lane, Brunswick, Medina County, Ohio, 44212, United States",
+        "road": "Locust Lane",
+        "house_number": "4861",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brunswick",
+        "state": "Ohio",
+        "postcode": "44212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4861 Locust Lane, Brunswick, Ohio, United States"
+    },
+    {
+      "lat": 41.27255383522547,
+      "lon": -81.87839758086716,
+      "geoinfo": {
+        "display_name": "Boston Road, Liverpool Township, Medina County, Ohio, 44136, United States",
+        "road": "Boston Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "027, Boston Road, Liverpool Township, Medina County, Ohio, 44136, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:17.694940+00:00",
+  "_kind": "geo_samples"
+}

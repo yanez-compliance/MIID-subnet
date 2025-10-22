@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lebbeke",
+  "geonameid": 2793144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.031550349585714,
+      "lon": 4.163630976276597,
+      "geoinfo": {
+        "display_name": "89, Kloosterstraat, Hof ten Rode, Baasrode, Dendermonde, East Flanders, 9200, Belgium",
+        "road": "Kloosterstraat",
+        "house_number": "89",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dendermonde",
+        "state": "East Flanders",
+        "postcode": "9200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "89 Kloosterstraat, Lebbeke, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.96803419886398,
+      "lon": 4.138145874963656,
+      "geoinfo": {
+        "display_name": "Kapellebaan, Baardegem, Aalst, East Flanders, 9310, Belgium",
+        "road": "Kapellebaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalst",
+        "state": "East Flanders",
+        "postcode": "9310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "611, Kapellebaan, Baardegem, Aalst, East Flanders, 9310, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:14.048460+00:00",
+  "_kind": "geo_samples"
+}

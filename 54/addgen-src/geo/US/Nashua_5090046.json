@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nashua",
+  "geonameid": 5090046,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.76890662311339,
+      "lon": -71.45234221717769,
+      "geoinfo": {
+        "display_name": "Nashua Swim and Tennis Club, 140, Lock Street, Thoreau's Landing, Ward 3, Nashua, Hillsborough County, New Hampshire, 03064, United States",
+        "road": "Lock Street",
+        "house_number": "140",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ward 3",
+        "city": "Nashua",
+        "state": "New Hampshire",
+        "postcode": "03064",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "140 Lock Street, Nashua, New Hampshire, United States"
+    },
+    {
+      "lat": 42.74599796784913,
+      "lon": -71.43473967692886,
+      "geoinfo": {
+        "display_name": "16, Hickory Street, Hudson, Hillsborough County, New Hampshire, 03051, United States",
+        "road": "Hickory Street",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hudson",
+        "state": "New Hampshire",
+        "postcode": "03051",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16, Hickory Street, Hudson, Hillsborough County, New Hampshire, 03051, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:17.420307+00:00",
+  "_kind": "geo_samples"
+}

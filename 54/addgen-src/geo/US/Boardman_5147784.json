@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boardman",
+  "geonameid": 5147784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.04531278772344,
+      "lon": -80.66366975994941,
+      "geoinfo": {
+        "display_name": "Eastern Drive, The Willows, Boardman, Mahoning County, Ohio, 44512, United States",
+        "road": "Eastern Drive",
+        "house_number": null,
+        "neighbourhood": "The Willows",
+        "suburb": null,
+        "city_district": null,
+        "city": "Boardman",
+        "state": "Ohio",
+        "postcode": "44512",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eastern Drive, Boardman, Ohio, United States"
+    },
+    {
+      "lat": 41.03867052477127,
+      "lon": -80.62896878745175,
+      "geoinfo": {
+        "display_name": "1727, Mathews Road, Matthews Square, Boardman, Mahoning County, Ohio, 44514, United States",
+        "road": "Mathews Road",
+        "house_number": "1727",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boardman",
+        "state": "Ohio",
+        "postcode": "44514",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1727, Mathews Road, Matthews Square, Boardman, Mahoning County, Ohio, 44514, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:04.001910+00:00",
+  "_kind": "geo_samples"
+}

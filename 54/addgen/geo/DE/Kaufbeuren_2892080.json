@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kaufbeuren",
+  "geonameid": 2892080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.85862543592356,
+      "lon": 10.648638114638503,
+      "geoinfo": {
+        "display_name": "Trimm-Dich-Pfad, Hirschzell, Kaufbeuren, Bavaria, 87600, Germany",
+        "road": "Trimm-Dich-Pfad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hirschzell",
+        "city_district": null,
+        "city": "Kaufbeuren",
+        "state": "Bavaria",
+        "postcode": "87600",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Trimm-Dich-Pfad, Kaufbeuren, Bavaria, Germany"
+    },
+    {
+      "lat": 47.8537817061606,
+      "lon": 10.648148893840142,
+      "geoinfo": {
+        "display_name": "Bärenseestraße, Hirschzell, Kaufbeuren, Bavaria, 87600, Germany",
+        "road": "Bärenseestraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hirschzell",
+        "city_district": null,
+        "city": "Kaufbeuren",
+        "state": "Bavaria",
+        "postcode": "87600",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "587, Bärenseestraße, Hirschzell, Kaufbeuren, Bavaria, 87600, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:27.075493+00:00",
+  "_kind": "geo_samples"
+}

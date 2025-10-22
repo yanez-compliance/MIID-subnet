@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Akitsu",
+  "geonameid": 13192008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.79008427895389,
+      "lon": 139.47331107782375,
+      "geoinfo": {
+        "display_name": "東町, Tokorozawa, Saitama Prefecture, 359-1116, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tokorozawa",
+        "state": null,
+        "postcode": "359-1116",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Akitsu, Japan"
+    },
+    {
+      "lat": 35.75449360918471,
+      "lon": 139.487703221398,
+      "geoinfo": {
+        "display_name": "Ontacho 1, Ontacho, Higashimurayama, Tokyo, 189-0011, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ontacho 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Higashimurayama",
+        "state": null,
+        "postcode": "189-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Ontacho 1, Ontacho, Higashimurayama, Tokyo, 189-0011, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:08:45.751827+00:00",
+  "_kind": "geo_samples"
+}

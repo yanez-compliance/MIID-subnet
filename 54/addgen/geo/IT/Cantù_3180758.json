@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cantù",
+  "geonameid": 3180758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.713270951561924,
+      "lon": 9.099604488883267,
+      "geoinfo": {
+        "display_name": "Via dei Partigiani, Asnago di Cantù, Cantù, Como, Lombardy, 22072, Italy",
+        "road": "Via dei Partigiani",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Asnago di Cantù",
+        "city_district": null,
+        "city": "Cantù",
+        "state": "Lombardy",
+        "postcode": "22072",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via dei Partigiani, Cantù, Lombardy, Italy"
+    },
+    {
+      "lat": 45.77069100025638,
+      "lon": 9.104707149356626,
+      "geoinfo": {
+        "display_name": "Trecallo, Como, Lombardy, 22100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Trecallo",
+        "city_district": null,
+        "city": "Como",
+        "state": "Lombardy",
+        "postcode": "22100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "686, Trecallo, Como, Lombardy, 22100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:58:35.346812+00:00",
+  "_kind": "geo_samples"
+}

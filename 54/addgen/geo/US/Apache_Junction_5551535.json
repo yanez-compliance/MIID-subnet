@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Apache Junction",
+  "geonameid": 5551535,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.40574941958862,
+      "lon": -111.58808950285766,
+      "geoinfo": {
+        "display_name": "511, South Mountain Road, Mesa, Maricopa County, Arizona, 85208, United States",
+        "road": "South Mountain Road",
+        "house_number": "511",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesa",
+        "state": "Arizona",
+        "postcode": "85208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "511 South Mountain Road, Apache Junction, Arizona, United States"
+    },
+    {
+      "lat": 33.44408243021243,
+      "lon": -111.55450231479782,
+      "geoinfo": {
+        "display_name": "Apache Junction, Pinal County, Arizona, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apache Junction",
+        "state": "Arizona",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "143, Apache Junction, Pinal County, 25516 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:01.953494+00:00",
+  "_kind": "geo_samples"
+}

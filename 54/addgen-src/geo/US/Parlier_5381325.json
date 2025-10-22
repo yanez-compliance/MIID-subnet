@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parlier",
+  "geonameid": 5381325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.60546299715499,
+      "lon": -119.56495336642331,
+      "geoinfo": {
+        "display_name": "12532, East Manning Avenue, Fresno County, California, 93648, United States",
+        "road": "East Manning Avenue",
+        "house_number": "12532",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12532 East Manning Avenue, Parlier, California, United States"
+    },
+    {
+      "lat": 36.612329028969555,
+      "lon": -119.48454578224991,
+      "geoinfo": {
+        "display_name": "8457, South Lac Jac Avenue, Fresno County, California, 93648, United States",
+        "road": "South Lac Jac Avenue",
+        "house_number": "8457",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8457, South Lac Jac Avenue, Fresno County, California, 93648, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:23.557685+00:00",
+  "_kind": "geo_samples"
+}

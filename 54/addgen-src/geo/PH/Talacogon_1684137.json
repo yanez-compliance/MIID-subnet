@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Talacogon",
+  "geonameid": 1684137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.461692330508228,
+      "lon": 125.7693026547044,
+      "geoinfo": {
+        "display_name": "San Luis-Talacogon Road, San Nicolas, Talacogon, Agusan del Sur, Caraga, 8510, Philippines",
+        "road": "San Luis-Talacogon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Talacogon",
+        "state": "Agusan del Sur",
+        "postcode": "8510",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "San Luis-Talacogon Road, Talacogon, Agusan del Sur, Philippines"
+    },
+    {
+      "lat": 8.463107081107518,
+      "lon": 125.74321090378164,
+      "geoinfo": {
+        "display_name": "Baylo, San Luis, Agusan del Sur, Caraga, 8511, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis",
+        "state": "Agusan del Sur",
+        "postcode": "8511",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "796, Baylo, San Luis, Agusan del Sur, Caraga, 8511, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T09:01:31.253166+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mühlacker",
+  "geonameid": 2868788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.93492608311777,
+      "lon": 8.77615406951984,
+      "geoinfo": {
+        "display_name": "Seufzerallee, Enzberg, Kieselbronn, GVV Neulingen, Enzkreis, Baden-Württemberg, 75249, Germany",
+        "road": "Seufzerallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Enzberg",
+        "state": "Baden-Württemberg",
+        "postcode": "75249",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Seufzerallee, Mühlacker, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.95181435674317,
+      "lon": 8.808654228706505,
+      "geoinfo": {
+        "display_name": "Sengachweg, Ötisheim, VVG der Stadt Mühlacker, Enzkreis, Baden-Württemberg, 75443, Germany",
+        "road": "Sengachweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ötisheim",
+        "state": "Baden-Württemberg",
+        "postcode": "75443",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "271, Sengachweg, Ötisheim, VVG der Stadt Mühlacker, Enzkreis, Baden-Württemberg, 75443, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:10.311033+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weinheim",
+  "geonameid": 2812174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.53196221703969,
+      "lon": 8.662363398186015,
+      "geoinfo": {
+        "display_name": "31, Hubestraße, Lützelsachsen, Weinheim, Rhein-Neckar-Kreis, Baden-Württemberg, 69469, Germany",
+        "road": "Hubestraße",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weinheim",
+        "state": "Baden-Württemberg",
+        "postcode": "69469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31 Hubestraße, Weinheim, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.54344890389962,
+      "lon": 8.61164385362294,
+      "geoinfo": {
+        "display_name": "A 659, Viernheim, Kreis Bergstraße, Hesse, 68519, Germany",
+        "road": "A 659",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viernheim",
+        "state": "Hesse",
+        "postcode": "68519",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 659, Viernheim, Kreis Bergstraße, Hesse, 68519, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:49.109453+00:00",
+  "_kind": "geo_samples"
+}

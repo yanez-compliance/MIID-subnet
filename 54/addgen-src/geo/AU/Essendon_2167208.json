@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Essendon",
+  "geonameid": 2167208,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.747769852078214,
+      "lon": 144.9022065629776,
+      "geoinfo": {
+        "display_name": "19, Braemar Street, Essendon, Melbourne, City of Moonee Valley, Victoria, 3040, Australia",
+        "road": "Braemar Street",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Essendon",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3040",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "19 Braemar Street, Essendon, Victoria, Australia"
+    },
+    {
+      "lat": -37.76514544976762,
+      "lon": 144.87203460894287,
+      "geoinfo": {
+        "display_name": "Maribyrnong River Trail, Avondale Heights, Melbourne, City of Moonee Valley, Victoria, 3034, Australia",
+        "road": "Maribyrnong River Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Avondale Heights",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3034",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "996, Maribyrnong River Trail, Avondale Heights, Melbourne, City of Moonee Valley, Victoria, 3034, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:01.008667+00:00",
+  "_kind": "geo_samples"
+}

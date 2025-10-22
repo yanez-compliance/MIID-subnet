@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Calexico",
+  "geonameid": 5332698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.69613231090192,
+      "lon": -115.4677489709987,
+      "geoinfo": {
+        "display_name": "Calexico, Imperial County, California, 92231, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calexico",
+        "state": "California",
+        "postcode": "92231",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Calexico, California, United States"
+    },
+    {
+      "lat": 32.68709047719317,
+      "lon": -115.51958613034202,
+      "geoinfo": {
+        "display_name": "Camacho Road, Imperial County, California, 92224, United States",
+        "road": "Camacho Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92224",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "455, Camacho Road, Imperial County, California, 92224, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:49.576382+00:00",
+  "_kind": "geo_samples"
+}

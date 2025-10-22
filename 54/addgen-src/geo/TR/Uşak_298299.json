@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Uşak",
+  "geonameid": 298299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.67861592780441,
+      "lon": 29.38420244143163,
+      "geoinfo": {
+        "display_name": "2. Çoşkun Sokak, Dikilitaş Mahallesi, Uşak, Aegean Region, 64200, Turkey",
+        "road": "2. Çoşkun Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dikilitaş Mahallesi",
+        "city_district": null,
+        "city": "Uşak",
+        "state": null,
+        "postcode": "64200",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "2. Çoşkun Sokak, Uşak, Turkey"
+    },
+    {
+      "lat": 38.70155812338491,
+      "lon": 29.40057154426945,
+      "geoinfo": {
+        "display_name": "Bozkurt Mahallesi, Uşak, Aegean Region, 64400, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bozkurt Mahallesi",
+        "city_district": null,
+        "city": "Uşak",
+        "state": null,
+        "postcode": "64400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "523, Bozkurt Mahallesi, Uşak, Aegean Region, 64400, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:10.252785+00:00",
+  "_kind": "geo_samples"
+}

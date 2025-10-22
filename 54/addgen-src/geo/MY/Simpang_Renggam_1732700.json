@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Simpang Renggam",
+  "geonameid": 1732700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.8138140565441,
+      "lon": 103.33188817679606,
+      "geoinfo": {
+        "display_name": "Simpang Renggam, Kluang, Johor, 86200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Simpang Renggam",
+        "state": "Johor",
+        "postcode": "86200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Simpang Renggam, Johor, Malaysia"
+    },
+    {
+      "lat": 1.7881024570706554,
+      "lon": 103.32597191574696,
+      "geoinfo": {
+        "display_name": "Kluang, Johor, 86200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": "86200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "073, Simpang Renggam, 86200 Johor, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:25.669117+00:00",
+  "_kind": "geo_samples"
+}

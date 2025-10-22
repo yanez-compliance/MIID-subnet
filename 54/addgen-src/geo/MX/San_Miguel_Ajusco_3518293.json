@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Miguel Ajusco",
+  "geonameid": 3518293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.179720917060493,
+      "lon": -99.19834246241977,
+      "geoinfo": {
+        "display_name": "El Arco Amarillo, Tlalpan, Mexico City, 14713, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "14713",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Miguel Ajusco, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.22803126032998,
+      "lon": -99.23148416293483,
+      "geoinfo": {
+        "display_name": "El Oyamel, Tlalpan, San Miguel Ajusco, Mexico City, 14735, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Ajusco",
+        "state": "Mexico City",
+        "postcode": "14735",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "795, El Oyamel, Tlalpan, San Miguel Ajusco, Mexico City, 14735, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:57.839659+00:00",
+  "_kind": "geo_samples"
+}

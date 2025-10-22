@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Arras",
+  "geonameid": 3036784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.32999630158651,
+      "lon": 2.7623041345779544,
+      "geoinfo": {
+        "display_name": "D 49 E1, Écurie, Arras, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62223, France",
+        "road": "D 49 E1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Écurie",
+        "state": "Hauts-de-France",
+        "postcode": "62223",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 49 E1, Arras, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.29430884855731,
+      "lon": 2.8044221427333547,
+      "geoinfo": {
+        "display_name": "CASE France NSO - Agence d'Arras, 4, Avenue d'Immercourt, Saint-Laurent-Blangy, Arras, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62223, France",
+        "road": "Avenue d'Immercourt",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Laurent-Blangy",
+        "state": "Hauts-de-France",
+        "postcode": "62223",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "CASE France NSO - Agence d'Arras, 4, Avenue d'Immercourt, Saint-Laurent-Blangy, Arras, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62223, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:57.196708+00:00",
+  "_kind": "geo_samples"
+}

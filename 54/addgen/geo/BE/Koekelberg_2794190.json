@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Koekelberg",
+  "geonameid": 2794190,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.87378703711292,
+      "lon": 4.27849346181345,
+      "geoinfo": {
+        "display_name": "E40, Groot-Bijgaarden, Dilbeek, Halle-Vilvoorde, Flemish Brabant, Flanders, 1702, Belgium",
+        "road": "E40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dilbeek",
+        "state": "Flemish Brabant",
+        "postcode": "1702",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E40, Koekelberg, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.845416901480064,
+      "lon": 4.383279498673645,
+      "geoinfo": {
+        "display_name": "54, Rue Archimède - Archimedesstraat, Quartier des Squares - Wijk van de Squares, Brussels, Brussels-Capital, 1000, Belgium",
+        "road": "Rue Archimède - Archimedesstraat",
+        "house_number": "54",
+        "neighbourhood": "Quartier des Squares - Wijk van de Squares",
+        "suburb": null,
+        "city_district": "Brussels",
+        "city": "Brussels",
+        "state": null,
+        "postcode": "1000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "54, Rue Archimède - Archimedesstraat, Quartier des Squares - Wijk van de Squares, Brussels, Brussels-Capital, 1000, Belgium"
+    },
+    {
+      "lat": 50.844724731629945,
+      "lon": 4.2743149670148695,
+      "geoinfo": {
+        "display_name": "142, Ninoofsesteenweg, Kaudenaarde, Dilbeek, Halle-Vilvoorde, Flemish Brabant, Flanders, 1700, Belgium",
+        "road": "Ninoofsesteenweg",
+        "house_number": "142",
+        "neighbourhood": "Kaudenaarde",
+        "suburb": null,
+        "city_district": "Dilbeek",
+        "city": "Dilbeek",
+        "state": "Flemish Brabant",
+        "postcode": "1700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "142, Ninoofsesteenweg, Kaudenaarde, Dilbeek, Halle-Vilvoorde, Flemish Brabant, Flanders, 1700, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:55.908114+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TN",
+  "country": "Tunisia",
+  "city": "Hammam Sousse",
+  "geonameid": 2470579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.86741869967651,
+      "lon": 10.606169450101644,
+      "geoinfo": {
+        "display_name": "Beckers Pizza, Boulevard 14 Janvier 2011, Sousse, بير موسى, معتمدية حمام سوسة, Sousse, 4051, Tunisia",
+        "road": "Boulevard 14 Janvier 2011",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sousse",
+        "state": "Sousse",
+        "postcode": "4051",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "Boulevard 14 Janvier 2011, Hammam Sousse, Sousse, Tunisia"
+    },
+    {
+      "lat": 35.893977048599965,
+      "lon": 10.60792682340977,
+      "geoinfo": {
+        "display_name": "Port El Kantaoui, القنطاوي, معتمدية حمام سوسة, Sousse, 4089, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Port El Kantaoui",
+        "city_district": null,
+        "city": null,
+        "state": "Sousse",
+        "postcode": "4089",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "370, Port El Kantaoui, القنطاوي, معتمدية حمام سوسة, Sousse, 4089, Tunisia"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:16.603603+00:00",
+  "_kind": "geo_samples"
+}

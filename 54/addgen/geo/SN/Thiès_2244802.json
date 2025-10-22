@@ -1,0 +1,47 @@
+{
+  "country_code": "SN",
+  "country": "Senegal",
+  "city": "Thiès",
+  "geonameid": 2244802,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 14.777274253096852,
+      "lon": -16.944108822928257,
+      "geoinfo": {
+        "display_name": "Thiès, Commune de Thiès Ouest, Arrondissement de Thiès Sud, Département de Thiès, Thiès Region, 21000, Senegal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Commune de Thiès Ouest",
+        "city_district": null,
+        "city": "Thiès",
+        "state": null,
+        "postcode": "21000",
+        "country": "Senegal",
+        "country_code": "sn"
+      },
+      "address": "675, Thiès, Commune de Thiès Ouest, Arrondissement de Thiès Sud, Département de Thiès, Thiès Region, 21000, Senegal"
+    },
+    {
+      "lat": 14.782882150363555,
+      "lon": -16.887380805174484,
+      "geoinfo": {
+        "display_name": "Pèykouk, Communauté rurale de Fandène, Arrondissement de Keur Moussa, Département de Thiès, Thiès Region, 20001, Senegal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Communauté rurale de Fandène",
+        "state": null,
+        "postcode": "20001",
+        "country": "Senegal",
+        "country_code": "sn"
+      },
+      "address": "443, Pèykouk, Communauté rurale de Fandène, Arrondissement de Keur Moussa, Département de Thiès, Thiès Region, 20001, Senegal"
+    }
+  ],
+  "updated_at": "2025-10-19T05:58:00.373618+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jitai",
+  "geonameid": 12324507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.743542449131766,
+      "lon": 118.75460090894654,
+      "geoinfo": {
+        "display_name": "Changle County, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jitai, Shandong, China"
+    },
+    {
+      "lat": 36.759535192810844,
+      "lon": 118.77904511585541,
+      "geoinfo": {
+        "display_name": "Shouguang City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shouguang City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "767, Shouguang City, Weifang, 54545 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:23.082488+00:00",
+  "_kind": "geo_samples"
+}

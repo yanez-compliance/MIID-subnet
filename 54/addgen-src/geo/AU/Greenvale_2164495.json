@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Greenvale",
+  "geonameid": 2164495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.64367673909289,
+      "lon": 144.85824005865385,
+      "geoinfo": {
+        "display_name": "Former Greenvale Sanatorium, Providence Road, Greenvale, Melbourne, City of Hume, Victoria, 3059, Australia",
+        "road": "Providence Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greenvale",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3059",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Providence Road, Greenvale, Victoria, Australia"
+    },
+    {
+      "lat": -37.672557954896874,
+      "lon": 144.87628211164437,
+      "geoinfo": {
+        "display_name": "66, Trinity Boulevard, Cambridge Gardens, Attwood, Melbourne, City of Hume, Victoria, 3049, Australia",
+        "road": "Trinity Boulevard",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": "Attwood",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3049",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "66, Trinity Boulevard, Cambridge Gardens, Attwood, Melbourne, City of Hume, Victoria, 3049, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:23.282991+00:00",
+  "_kind": "geo_samples"
+}

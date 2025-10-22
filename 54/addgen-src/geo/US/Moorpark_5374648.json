@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Moorpark",
+  "geonameid": 5374648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.27166801442521,
+      "lon": -118.88140889199376,
+      "geoinfo": {
+        "display_name": "4498, North Ashtree Street, Moorpark, Ventura County, California, 93021, United States",
+        "road": "North Ashtree Street",
+        "house_number": "4498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moorpark",
+        "state": "California",
+        "postcode": "93021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4498 North Ashtree Street, Moorpark, California, United States"
+    },
+    {
+      "lat": 34.24115957888465,
+      "lon": -118.88622048192518,
+      "geoinfo": {
+        "display_name": "12664, Santa Rosa Road, Ventura County, California, 93012, United States",
+        "road": "Santa Rosa Road",
+        "house_number": "12664",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12664, Santa Rosa Road, Ventura County, California, 93012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:55.738322+00:00",
+  "_kind": "geo_samples"
+}

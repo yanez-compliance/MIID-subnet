@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Delfzijl",
+  "geonameid": 2757340,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 53.3687287820168,
+      "lon": 6.928723096038523,
+      "geoinfo": {
+        "display_name": "Delfzijl, Eemsdelta, Groningen, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delfzijl",
+        "state": "Groningen",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Delfzijl, Groningen, The Netherlands"
+    },
+    {
+      "lat": 53.314322886204664,
+      "lon": 6.945230870319684,
+      "geoinfo": {
+        "display_name": "Schaappad, Oosterhorn, Weiwerd, Farmsum, Eemsdelta, Groningen, Netherlands, 9936 HT, Netherlands",
+        "road": "Schaappad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmsum",
+        "state": "Groningen",
+        "postcode": "9936 HT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "373, Schaappad, Oosterhorn, Weiwerd, Farmsum, Eemsdelta, Groningen, Netherlands, 9936 HT, Netherlands"
+    },
+    {
+      "lat": 53.35284012743271,
+      "lon": 6.864543069662352,
+      "geoinfo": {
+        "display_name": "N33, Holwierde, Eemsdelta, Groningen, Netherlands, 9905 RZ, Netherlands",
+        "road": "N33",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holwierde",
+        "state": "Groningen",
+        "postcode": "9905 RZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "N33, Holwierde, Eemsdelta, Groningen, Netherlands, 9905 RZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:48.436535+00:00",
+  "_kind": "geo_samples"
+}

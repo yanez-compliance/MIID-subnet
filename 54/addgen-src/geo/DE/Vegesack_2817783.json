@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Vegesack",
+  "geonameid": 2817783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.17005070181454,
+      "lon": 8.630872578958908,
+      "geoinfo": {
+        "display_name": "Hermann-Fortmann-Straße, Alt-Aumund, Vegesack, Bremen-Nord, Bremen, 28759, Germany",
+        "road": "Hermann-Fortmann-Straße",
+        "house_number": null,
+        "neighbourhood": "Alt-Aumund",
+        "suburb": "Vegesack",
+        "city_district": "Bremen-Nord",
+        "city": "Bremen",
+        "state": "Bremen",
+        "postcode": "28759",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hermann-Fortmann-Straße, Vegesack, Bremen, Germany"
+    },
+    {
+      "lat": 53.2029557129013,
+      "lon": 8.659098995782141,
+      "geoinfo": {
+        "display_name": "Stundenweg, Leuchtenburg, Schwanewede, Landkreis Osterholz, Lower Saxony, 28790, Germany",
+        "road": "Stundenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schwanewede",
+        "state": "Lower Saxony",
+        "postcode": "28790",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "708, Stundenweg, Leuchtenburg, Schwanewede, Landkreis Osterholz, Lower Saxony, 28790, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:22.813870+00:00",
+  "_kind": "geo_samples"
+}

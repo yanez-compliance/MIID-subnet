@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gaogou",
+  "geonameid": 1810553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.01481646740781,
+      "lon": 119.17655930449263,
+      "geoinfo": {
+        "display_name": "G233;S236, Lianshui County, Huai'an, Jiangsu, 223400, China",
+        "road": "G233;S236",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lianshui County",
+        "state": "Jiangsu",
+        "postcode": "223400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G233;S236, Gaogou, Jiangsu, China"
+    },
+    {
+      "lat": 34.02035900323573,
+      "lon": 119.16830084399311,
+      "geoinfo": {
+        "display_name": "Y223, Lianshui County, Huai'an, Jiangsu, 223400, China",
+        "road": "Y223",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lianshui County",
+        "state": "Jiangsu",
+        "postcode": "223400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Y223, Lianshui County, Huai'an, Jiangsu, 223400, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:51.601992+00:00",
+  "_kind": "geo_samples"
+}

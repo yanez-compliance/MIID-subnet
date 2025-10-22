@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Josefstadt",
+  "geonameid": 12214073,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.20452347647018,
+      "lon": 16.3815011060162,
+      "geoinfo": {
+        "display_name": "2a, Am Heumarkt, Botschaftsviertel, KG Landstraße, Landstraße, Vienna, 1030, Austria",
+        "road": "Am Heumarkt",
+        "house_number": "2a",
+        "neighbourhood": "Botschaftsviertel",
+        "suburb": "KG Landstraße",
+        "city_district": "Landstraße",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1030",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "2a, Am Heumarkt, Botschaftsviertel, KG Landstraße, Landstraße, Vienna, 1030, Austria"
+    },
+    {
+      "lat": 48.19563118942434,
+      "lon": 16.382524231410674,
+      "geoinfo": {
+        "display_name": "Lindner Hotel am Belvedere, 12, Rennweg, KG Landstraße, Landstraße, Vienna, 1030, Austria",
+        "road": "Rennweg",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "KG Landstraße",
+        "city_district": "Landstraße",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1030",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Lindner Hotel am Belvedere, 12, Rennweg, KG Landstraße, Landstraße, Vienna, 1030, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:44.214634+00:00",
+  "_kind": "geo_samples"
+}

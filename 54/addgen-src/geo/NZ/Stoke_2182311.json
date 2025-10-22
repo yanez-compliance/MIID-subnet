@@ -1,0 +1,47 @@
+{
+  "country_code": "NZ",
+  "country": "New Zealand",
+  "city": "Stoke",
+  "geonameid": 2182311,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -41.31468233436597,
+      "lon": 173.21594661528,
+      "geoinfo": {
+        "display_name": "8, Hammill Grove, Stoke, Nelson, 7011, New Zealand",
+        "road": "Hammill Grove",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Stoke",
+        "city_district": null,
+        "city": "Nelson",
+        "state": "Nelson",
+        "postcode": "7011",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "8 Hammill Grove, Stoke, Nelson, New Zealand"
+    },
+    {
+      "lat": -41.33016459954613,
+      "lon": 173.20133358107938,
+      "geoinfo": {
+        "display_name": "Great Taste Trail, Nelson, 7020, New Zealand",
+        "road": "Great Taste Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nelson",
+        "state": "Nelson",
+        "postcode": "7020",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "Great Taste Trail, Stoke, Nelson, New Zealand"
+    }
+  ],
+  "updated_at": "2025-10-16T20:51:45.656430+00:00",
+  "_kind": "geo_samples"
+}

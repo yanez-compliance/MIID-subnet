@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Modica",
+  "geonameid": 2524119,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.85607412097012,
+      "lon": 14.75495758631359,
+      "geoinfo": {
+        "display_name": "Via Guglielmo Oberdan, Dente, Modica Alta, Modica, Ragusa, Sicily, Italy",
+        "road": "Via Guglielmo Oberdan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Modica Alta",
+        "city_district": null,
+        "city": "Modica",
+        "state": "Sicily",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Guglielmo Oberdan, Modica, Sicily, Italy"
+    },
+    {
+      "lat": 36.83908933006086,
+      "lon": 14.781656896155718,
+      "geoinfo": {
+        "display_name": "Sacro Cuore, Modica, Ragusa, Sicily, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sacro Cuore",
+        "city_district": null,
+        "city": "Modica",
+        "state": "Sicily",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "594, Sacro Cuore, Modica, Ragusa, 05134 Sicily, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:38.164113+00:00",
+  "_kind": "geo_samples"
+}

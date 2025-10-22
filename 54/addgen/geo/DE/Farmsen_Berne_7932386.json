@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Farmsen-Berne",
+  "geonameid": 7932386,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.6116810054092,
+      "lon": 10.12379470016546,
+      "geoinfo": {
+        "display_name": "242, Berner Heerweg, Gartenstadt Farmsen, Farmsen-Berne, Wandsbek, Hamburg, 22159, Germany",
+        "road": "Berner Heerweg",
+        "house_number": "242",
+        "neighbourhood": "Gartenstadt Farmsen",
+        "suburb": "Farmsen-Berne",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22159",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "242 Berner Heerweg, Farmsen-Berne, Germany"
+    },
+    {
+      "lat": 53.61968198407514,
+      "lon": 10.182777721040011,
+      "geoinfo": {
+        "display_name": "Eichberg, Rahlstedt, Wandsbek, Hamburg, 22143, Germany",
+        "road": "Eichberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rahlstedt",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22143",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "959, Eichberg, Rahlstedt, Wandsbek, Hamburg, 22143, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:53.053124+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Bresso",
+  "geonameid": 3181548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.577307033775774,
+      "lon": 9.18004066154317,
+      "geoinfo": {
+        "display_name": "A Stefano Strada e Luigi Tonelli, Via Valassina, Incirano, Paderno Dugnano, Zona Omogenea Milano Nord, Milan, Lombardy, 20037, Italy",
+        "road": "Via Valassina",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Incirano",
+        "city_district": null,
+        "city": "Paderno Dugnano",
+        "state": "Lombardy",
+        "postcode": "20037",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Valassina, Bresso, Lombardy, Italy"
+    },
+    {
+      "lat": 45.52169153506097,
+      "lon": 9.145433077218623,
+      "geoinfo": {
+        "display_name": "Via Trento e Trieste, Novate Milanese, Milan, Lombardy, 20026, Italy",
+        "road": "Via Trento e Trieste",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novate Milanese",
+        "state": "Lombardy",
+        "postcode": "20026",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "037, Via Trento e Trieste, Novate Milanese, Milan, Lombardy, 20026, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:58:51.040778+00:00",
+  "_kind": "geo_samples"
+}

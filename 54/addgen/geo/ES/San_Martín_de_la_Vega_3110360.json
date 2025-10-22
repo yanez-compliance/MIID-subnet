@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "San Martín de la Vega",
+  "geonameid": 3110360,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.232492008427585,
+      "lon": -3.5297418161424226,
+      "geoinfo": {
+        "display_name": "Carretera de Morata, Vallequillas Sur, Vallequillas, San Martín de la Vega, Community of Madrid, Spain",
+        "road": "Carretera de Morata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Martín de la Vega",
+        "state": "Community of Madrid",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Morata, San Martín de la Vega, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.16272846188284,
+      "lon": -3.566923147160899,
+      "geoinfo": {
+        "display_name": "Camino del Soto de la Chopera, Casas El Tejar, Ciempozuelos, Community of Madrid, 28359, Spain",
+        "road": "Camino del Soto de la Chopera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciempozuelos",
+        "state": "Community of Madrid",
+        "postcode": "28359",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "361, Camino del Soto de la Chopera, Casas El Tejar, Ciempozuelos, Community of Madrid, 28359, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:06.022932+00:00",
+  "_kind": "geo_samples"
+}

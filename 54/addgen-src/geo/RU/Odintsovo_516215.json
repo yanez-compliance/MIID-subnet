@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Odintsovo",
+  "geonameid": 516215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.66963417989967,
+      "lon": 37.268665264753096,
+      "geoinfo": {
+        "display_name": "8, Mozhayskoye Highway, Odintsovo, Одинцовский городской округ, Moscow Oblast, Central Federal District, 143005, Russia",
+        "road": "Mozhayskoye Highway",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Odintsovo",
+        "state": "Moscow Oblast",
+        "postcode": "143005",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "8 Mozhayskoye Highway, Odintsovo, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.693269903389506,
+      "lon": 37.227566283755685,
+      "geoinfo": {
+        "display_name": "Одинцовский городской округ, Moscow Oblast, Central Federal District, 143009, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143009",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "065, Одинцовский городской округ, Moscow Oblast, Central Federal District, 143009, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:26.370389+00:00",
+  "_kind": "geo_samples"
+}

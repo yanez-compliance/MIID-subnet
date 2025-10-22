@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Beihai",
+  "geonameid": 1816705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.466865115167693,
+      "lon": 109.11138664089887,
+      "geoinfo": {
+        "display_name": "Yima Subdistrict, Haicheng District, Beihai, Guangxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yima Subdistrict",
+        "city": "Haicheng District",
+        "state": "Guangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yima Subdistrict, Beihai, Guangxi, China"
+    },
+    {
+      "lat": 21.472559106953756,
+      "lon": 109.08862867430022,
+      "geoinfo": {
+        "display_name": "Haijiao Subdistrict, Beihai, Haicheng District, Beihai, Guangxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Haijiao Subdistrict",
+        "city_district": null,
+        "city": "Beihai",
+        "state": "Guangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "959, Haijiao Subdistrict, Beihai, Haicheng District, Beihai, 17818 Guangxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:00.782038+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Center",
+  "geonameid": 4903858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.93697326371318,
+      "lon": -87.6391684781023,
+      "geoinfo": {
+        "display_name": "352-360, West Wellington Avenue, Lakeview East, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+        "road": "West Wellington Avenue",
+        "house_number": "352-360",
+        "neighbourhood": "Lakeview East",
+        "suburb": "Lake View",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60657",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "352-360 West Wellington Avenue, North Center, Illinois, United States"
+    },
+    {
+      "lat": 41.91937765442033,
+      "lon": -87.64250988803805,
+      "geoinfo": {
+        "display_name": "2034, North Mohawk Street, Mid-North District, Lincoln Park, Chicago, Cook County, Illinois, 60614, United States",
+        "road": "North Mohawk Street",
+        "house_number": "2034",
+        "neighbourhood": "Mid-North District",
+        "suburb": "Lincoln Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60614",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2034, North Mohawk Street, Mid-North District, Lincoln Park, Chicago, Cook County, Illinois, 60614, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:40.839917+00:00",
+  "_kind": "geo_samples"
+}

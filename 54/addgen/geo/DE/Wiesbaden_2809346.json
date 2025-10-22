@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wiesbaden",
+  "geonameid": 2809346,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.06240358914465,
+      "lon": 8.241968662436228,
+      "geoinfo": {
+        "display_name": "69, Biebricher Allee, Südost, Wiesbaden, Hesse, 65187, Germany",
+        "road": "Biebricher Allee",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": "Südost",
+        "city_district": null,
+        "city": "Wiesbaden",
+        "state": "Hesse",
+        "postcode": "65187",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "69 Biebricher Allee, Wiesbaden, Hesse, Germany"
+    },
+    {
+      "lat": 50.07259629342773,
+      "lon": 8.240132412698287,
+      "geoinfo": {
+        "display_name": "Adolfsallee, Mitte, Wiesbaden, Hesse, 65185, Germany",
+        "road": "Adolfsallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mitte",
+        "city_district": "Mitte",
+        "city": "Wiesbaden",
+        "state": "Hesse",
+        "postcode": "65185",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "515, Adolfsallee, Mitte, Wiesbaden, Hesse, 65185, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:09.380346+00:00",
+  "_kind": "geo_samples"
+}

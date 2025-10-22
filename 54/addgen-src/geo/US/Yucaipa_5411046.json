@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Yucaipa",
+  "geonameid": 5411046,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.02370641026172,
+      "lon": -117.04398270048789,
+      "geoinfo": {
+        "display_name": "Yucaipa, San Bernardino County, California, 92399, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yucaipa",
+        "state": "California",
+        "postcode": "92399",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Yucaipa, California, United States"
+    },
+    {
+      "lat": 34.06221770820756,
+      "lon": -117.06099268690359,
+      "geoinfo": {
+        "display_name": "Crafton Hills Ridge Trail, San Bernardino County, California, 92399, United States",
+        "road": "Crafton Hills Ridge Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92399",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "871, Crafton Hills Ridge Trail, San Bernardino County, California, 92399, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:44.804065+00:00",
+  "_kind": "geo_samples"
+}

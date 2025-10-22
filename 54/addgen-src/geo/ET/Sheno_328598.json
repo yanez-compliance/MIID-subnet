@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Sheno",
+  "geonameid": 328598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.31536638772199,
+      "lon": 39.307220109177116,
+      "geoinfo": {
+        "display_name": "Golba Mika'El Bete Kristiyan, North Shewa (Amhara Region), Amhara Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Sheno, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 9.363674079785618,
+      "lon": 39.30363244364516,
+      "geoinfo": {
+        "display_name": "North Shewa (Oromia Region), Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "849, Sheno, 60711 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:51.101338+00:00",
+  "_kind": "geo_samples"
+}

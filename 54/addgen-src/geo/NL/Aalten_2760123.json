@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Aalten",
+  "geonameid": 2760123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.91346052152198,
+      "lon": 6.616687904951801,
+      "geoinfo": {
+        "display_name": "14, Kriegerdijk, Aalten, Gelderland, Netherlands, 7121 KE, Netherlands",
+        "road": "Kriegerdijk",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalten",
+        "state": "Gelderland",
+        "postcode": "7121 KE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "14 Kriegerdijk, Aalten, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.914958854591696,
+      "lon": 6.636292984713481,
+      "geoinfo": {
+        "display_name": "Boshoeveweg, Aalten, Gelderland, Netherlands, 7121 KP, Netherlands",
+        "road": "Boshoeveweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalten",
+        "state": "Gelderland",
+        "postcode": "7121 KP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "426, Boshoeveweg, Aalten, Gelderland, Netherlands, 7121 KP, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:01.914697+00:00",
+  "_kind": "geo_samples"
+}

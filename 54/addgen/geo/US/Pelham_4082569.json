@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pelham",
+  "geonameid": 4082569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.25698169442786,
+      "lon": -86.77675733279182,
+      "geoinfo": {
+        "display_name": "Oxford Way, Pelham, Shelby County, Alabama, 35124, United States",
+        "road": "Oxford Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pelham",
+        "state": "Alabama",
+        "postcode": "35124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oxford Way, Pelham, Alabama, United States"
+    },
+    {
+      "lat": 33.293019649008215,
+      "lon": -86.83508426027122,
+      "geoinfo": {
+        "display_name": "598, Elm Street, Helena, Shelby County, Alabama, 35080, United States",
+        "road": "Elm Street",
+        "house_number": "598",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Helena",
+        "state": "Alabama",
+        "postcode": "35080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "598, Elm Street, Helena, Shelby County, Alabama, 35080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:02.314769+00:00",
+  "_kind": "geo_samples"
+}

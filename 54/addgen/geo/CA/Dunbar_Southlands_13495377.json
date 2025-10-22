@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Dunbar-Southlands",
+  "geonameid": 13495377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.21966582221403,
+      "lon": -123.19360887664031,
+      "geoinfo": {
+        "display_name": "Musqueam Golf & Learning Academy, 3904, West 51st Avenue, Dunbar-Southlands, Vancouver, Metro Vancouver Regional District, British Columbia, V6N, Canada",
+        "road": "West 51st Avenue",
+        "house_number": "3904",
+        "neighbourhood": null,
+        "suburb": "Dunbar-Southlands",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6N",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3904 West 51st Avenue, Dunbar-Southlands, British Columbia, Canada"
+    },
+    {
+      "lat": 49.24819009527956,
+      "lon": -123.24988556248944,
+      "geoinfo": {
+        "display_name": "Foreshore Trail, Electoral Area A, Metro Vancouver Regional District, British Columbia, V6S 0H3, Canada",
+        "road": "Foreshore Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Electoral Area A",
+        "state": "British Columbia",
+        "postcode": "V6S 0H3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Foreshore Trail, Electoral Area A, Metro Vancouver Regional District, British Columbia, V6S 0H3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:54.671319+00:00",
+  "_kind": "geo_samples"
+}

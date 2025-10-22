@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Buckhall",
+  "geonameid": 4749627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.73252333190841,
+      "lon": -77.40893803322292,
+      "geoinfo": {
+        "display_name": "6903, Yates Ford Road, Bent Tree Estates, Prince William County, Virginia, 20111, United States",
+        "road": "Yates Ford Road",
+        "house_number": "6903",
+        "neighbourhood": "Bent Tree Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6903 Yates Ford Road, Buckhall, Virginia, United States"
+    },
+    {
+      "lat": 38.73813627388447,
+      "lon": -77.39738455504045,
+      "geoinfo": {
+        "display_name": "Steeple Chase Lane, Morningside, Prince William County, Virginia, 20111, United States",
+        "road": "Steeple Chase Lane",
+        "house_number": null,
+        "neighbourhood": "Morningside",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "928, Steeple Chase Lane, Morningside, Prince William County, Virginia, 20111, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:43.422612+00:00",
+  "_kind": "geo_samples"
+}

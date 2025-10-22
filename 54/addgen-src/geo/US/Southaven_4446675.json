@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Southaven",
+  "geonameid": 4446675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.9803642024825,
+      "lon": -90.06387738754216,
+      "geoinfo": {
+        "display_name": "Horn Lake Road, Southaven, DeSoto County, Mississippi, 38651, United States",
+        "road": "Horn Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southaven",
+        "state": "Mississippi",
+        "postcode": "38651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Horn Lake Road, Southaven, Mississippi, United States"
+    },
+    {
+      "lat": 34.96476149317651,
+      "lon": -90.00602816018609,
+      "geoinfo": {
+        "display_name": "Interstate Boulevard, Horn Lake, DeSoto County, Mississippi, 38671, United States",
+        "road": "Interstate Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Horn Lake",
+        "state": "Mississippi",
+        "postcode": "38671",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "825, Interstate Boulevard, Horn Lake, DeSoto County, Mississippi, 38671, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:04.724490+00:00",
+  "_kind": "geo_samples"
+}

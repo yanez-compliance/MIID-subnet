@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dallas",
+  "geonameid": 5722064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.90635597651122,
+      "lon": -123.33754628757688,
+      "geoinfo": {
+        "display_name": "2495, Southwest Oakwood Drive, Dallas, Polk County, Oregon, 97338, United States",
+        "road": "Southwest Oakwood Drive",
+        "house_number": "2495",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dallas",
+        "state": "Oregon",
+        "postcode": "97338",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2495 Southwest Oakwood Drive, Dallas, Oregon, United States"
+    },
+    {
+      "lat": 44.949786347770825,
+      "lon": -123.30453559664251,
+      "geoinfo": {
+        "display_name": "Perrydale Road, Dallas, Polk County, Oregon, 97338, United States",
+        "road": "Perrydale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dallas",
+        "state": "Oregon",
+        "postcode": "97338",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "625, Perrydale Road, Dallas, Polk County, Oregon, 97338, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:05.063616+00:00",
+  "_kind": "geo_samples"
+}

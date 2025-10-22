@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sue",
+  "geonameid": 10267168,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.635953473767536,
+      "lon": 130.4991339176349,
+      "geoinfo": {
+        "display_name": "Hisayama, Kasuya County, Fukuoka Prefecture, 811-2414, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hisayama",
+        "state": null,
+        "postcode": "811-2414",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sue, Japan"
+    },
+    {
+      "lat": 33.566808056664165,
+      "lon": 130.4878387720378,
+      "geoinfo": {
+        "display_name": "Hibarigaoka 1-chome, Umi, Kasuya County, Fukuoka Prefecture, 816-0921, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hibarigaoka 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Umi",
+        "state": null,
+        "postcode": "816-0921",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hibarigaoka 1-chome, Umi, Kasuya County, Fukuoka Prefecture, 816-0921, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:27.179169+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Şabyā",
+  "geonameid": 102651,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 17.174204318666156,
+      "lon": 42.63174324875514,
+      "geoinfo": {
+        "display_name": "King Abdullah bin Abdulaziz, Al Faisaliyah, Sabya, Jazan Province, 85454, Saudi Arabia",
+        "road": "King Abdullah bin Abdulaziz",
+        "house_number": null,
+        "neighbourhood": "Al Faisaliyah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sabya",
+        "state": "Jazan Province",
+        "postcode": "85454",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "King Abdullah bin Abdulaziz, Şabyā, Jazan Province, Saudi Arabia"
+    },
+    {
+      "lat": 17.144977671727244,
+      "lon": 42.67001763646682,
+      "geoinfo": {
+        "display_name": "Khawajiyah, Al Majd, Sabya, Jazan Province, 85534, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Khawajiyah",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jazan Province",
+        "postcode": "85534",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Khawajiyah, Şabyā, Jazan Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:18:12.500644+00:00",
+  "_kind": "geo_samples"
+}

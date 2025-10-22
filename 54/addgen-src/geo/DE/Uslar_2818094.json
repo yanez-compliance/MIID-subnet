@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Uslar",
+  "geonameid": 2818094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.62778440376623,
+      "lon": 9.656201503581915,
+      "geoinfo": {
+        "display_name": "Bruchweg, Schoningen, Uslar, Landkreis Northeim, Lower Saxony, 37170, Germany",
+        "road": "Bruchweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uslar",
+        "state": "Lower Saxony",
+        "postcode": "37170",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bruchweg, Uslar, Lower Saxony, Germany"
+    },
+    {
+      "lat": 51.62114060777672,
+      "lon": 9.632792577226335,
+      "geoinfo": {
+        "display_name": "L 3392, Vernawahlshausen, Wesertal, Landkreis Kassel, Hesse, 34399, Germany",
+        "road": "L 3392",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vernawahlshausen",
+        "state": "Hesse",
+        "postcode": "34399",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 3392, Vernawahlshausen, Wesertal, Landkreis Kassel, Hesse, 34399, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:20.713594+00:00",
+  "_kind": "geo_samples"
+}

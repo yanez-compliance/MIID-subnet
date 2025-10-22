@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orange",
+  "geonameid": 4716805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.137699695364624,
+      "lon": -93.7387744934645,
+      "geoinfo": {
+        "display_name": "Bland Lane, Orange, Orange County, Texas, United States",
+        "road": "Bland Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orange",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bland Lane, Orange, Texas, United States"
+    },
+    {
+      "lat": 30.052993766285827,
+      "lon": -93.74499736286397,
+      "geoinfo": {
+        "display_name": "Sabine River Works, Cove, Orange County, Texas, 77630, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cove",
+        "state": "Texas",
+        "postcode": "77630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "629, Orange, 77630 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:23.684042+00:00",
+  "_kind": "geo_samples"
+}

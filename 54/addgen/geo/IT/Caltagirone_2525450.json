@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Caltagirone",
+  "geonameid": 2525450,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.243259711706564,
+      "lon": 14.54354701234282,
+      "geoinfo": {
+        "display_name": "SP214, Caltagirone, Catania, Sicily, 95041, Italy",
+        "road": "SP214",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caltagirone",
+        "state": "Sicily",
+        "postcode": "95041",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP214, Caltagirone, Sicily, Italy"
+    },
+    {
+      "lat": 37.26353064498227,
+      "lon": 14.551545668340042,
+      "geoinfo": {
+        "display_name": "Caltagirone, Catania, Sicily, 95041, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caltagirone",
+        "state": "Sicily",
+        "postcode": "95041",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "534, Caltagirone, Catania, Sicily, 95041, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:55.929972+00:00",
+  "_kind": "geo_samples"
+}

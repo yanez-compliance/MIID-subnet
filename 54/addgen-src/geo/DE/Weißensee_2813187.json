@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weißensee",
+  "geonameid": 2813187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.57957736367435,
+      "lon": 13.43676418813818,
+      "geoinfo": {
+        "display_name": "Fliederweg, KGA Dreieck Nord II, Heinersdorf, Pankow, Berlin, 13089, Germany",
+        "road": "Fliederweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Heinersdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13089",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Fliederweg, Weißensee, Germany"
+    },
+    {
+      "lat": 52.534405283800524,
+      "lon": 13.439035025063628,
+      "geoinfo": {
+        "display_name": "Bötzow-Grundschule, 38, John-Schehr-Straße, Grüne Stadt, Prenzlauer Berg, Pankow, Berlin, 10407, Germany",
+        "road": "John-Schehr-Straße",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": "Prenzlauer Berg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10407",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bötzow-Grundschule, 38, John-Schehr-Straße, Grüne Stadt, Prenzlauer Berg, Pankow, Berlin, 10407, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:35.518809+00:00",
+  "_kind": "geo_samples"
+}

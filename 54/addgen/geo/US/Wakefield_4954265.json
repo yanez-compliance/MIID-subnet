@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wakefield",
+  "geonameid": 4954265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.52933213220027,
+      "lon": -71.05007122357743,
+      "geoinfo": {
+        "display_name": "Reedy Meadow Golf Course, 195, Summer Street, Lynnfield, Essex County, Massachusetts, 01940, United States",
+        "road": "Summer Street",
+        "house_number": "195",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynnfield",
+        "state": "Massachusetts",
+        "postcode": "01940",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "195 Summer Street, Wakefield, Massachusetts, United States"
+    },
+    {
+      "lat": 42.51722697125176,
+      "lon": -71.01397207098928,
+      "geoinfo": {
+        "display_name": "1036, Summer Street, Lynnfield, Essex County, Massachusetts, 01940, United States",
+        "road": "Summer Street",
+        "house_number": "1036",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynnfield",
+        "state": "Massachusetts",
+        "postcode": "01940",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1036, Summer Street, Lynnfield, Essex County, Massachusetts, 01940, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:29.182116+00:00",
+  "_kind": "geo_samples"
+}

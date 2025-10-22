@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nicetown-Tioga",
+  "geonameid": 5203393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.02933427488426,
+      "lon": -75.13502497374543,
+      "geoinfo": {
+        "display_name": "633, Lindley Avenue, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19141, United States",
+        "road": "Lindley Avenue",
+        "house_number": "633",
+        "neighbourhood": null,
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19141",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "633 Lindley Avenue, Nicetown-Tioga, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.97884300240339,
+      "lon": -75.18377848819317,
+      "geoinfo": {
+        "display_name": "1450, North Myrtlewood Street, Brewerytown, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19121, United States",
+        "road": "North Myrtlewood Street",
+        "house_number": "1450",
+        "neighbourhood": "Brewerytown",
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1450, North Myrtlewood Street, Brewerytown, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:23.791061+00:00",
+  "_kind": "geo_samples"
+}

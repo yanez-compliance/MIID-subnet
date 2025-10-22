@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wilton",
+  "geonameid": 5144736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.18435464153065,
+      "lon": -73.75677342914503,
+      "geoinfo": {
+        "display_name": "32, Woodard Road, Wilton, Town of Wilton, Saratoga County, New York, 12831, United States",
+        "road": "Woodard Road",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilton",
+        "state": "New York",
+        "postcode": "12831",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "32 Woodard Road, Wilton, New York, United States"
+    },
+    {
+      "lat": 43.19007444239022,
+      "lon": -73.72450738291312,
+      "geoinfo": {
+        "display_name": "55, Blanchard Road, Town of Wilton, Saratoga County, New York, 12831, United States",
+        "road": "Blanchard Road",
+        "house_number": "55",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "12831",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "55, Blanchard Road, Town of Wilton, Saratoga County, New York, 12831, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:51.163890+00:00",
+  "_kind": "geo_samples"
+}

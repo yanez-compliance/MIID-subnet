@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Pasir Ris New Town",
+  "geonameid": 1884385,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.348616234076299,
+      "lon": 103.98561400566926,
+      "geoinfo": {
+        "display_name": "CIAS Building, 50, Airport Boulevard, Singapur East, Changi, Southeast, Singapore, 819658, Singapore",
+        "road": "Airport Boulevard",
+        "house_number": "50",
+        "neighbourhood": "Singapur East",
+        "suburb": "Changi",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "819658",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "CIAS Building, 50, Airport Boulevard, Singapur East, Changi, Southeast, Singapore, 819658, Singapore"
+    },
+    {
+      "lat": 1.3865930069621806,
+      "lon": 103.91056087750641,
+      "geoinfo": {
+        "display_name": "171B, Sengkang East Drive, Sengkang, Singapur East, Northeast, Singapore, 542171, Singapore",
+        "road": "Sengkang East Drive",
+        "house_number": "171B",
+        "neighbourhood": "Singapur East",
+        "suburb": "Sengkang",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "542171",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "171B, Sengkang East Drive, Sengkang, Singapur East, Northeast, Singapore, 542171, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:05.987131+00:00",
+  "_kind": "geo_samples"
+}

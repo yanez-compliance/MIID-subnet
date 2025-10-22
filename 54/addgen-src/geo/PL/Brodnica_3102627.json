@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Brodnica",
+  "geonameid": 3102627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.23294899175346,
+      "lon": 19.406555485442897,
+      "geoinfo": {
+        "display_name": "22H, Moczadła, gmina Brodnica, Brodnica County, Kuyavian-Pomeranian Voivodeship, 87-300, Poland",
+        "road": null,
+        "house_number": "22H",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moczadła",
+        "state": "Kuyavian-Pomeranian Voivodeship",
+        "postcode": "87-300",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Brodnica, Kuyavian-Pomeranian Voivodeship, Poland"
+    },
+    {
+      "lat": 53.262024872137516,
+      "lon": 19.331629834535438,
+      "geoinfo": {
+        "display_name": "543, Budy, Szabda, gmina Brodnica, Brodnica County, Kuyavian-Pomeranian Voivodeship, Poland",
+        "road": "543",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Budy",
+        "state": "Kuyavian-Pomeranian Voivodeship",
+        "postcode": null,
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "543, Budy, Szabda, gmina Brodnica, Brodnica County, 44008 Kuyavian-Pomeranian Voivodeship, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T09:12:36.049341+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Baar",
+  "geonameid": 2661653,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.20321583991251,
+      "lon": 8.565679622852189,
+      "geoinfo": {
+        "display_name": "Baarerstrasse, Neuheim, Zug, 6345, Switzerland",
+        "road": "Baarerstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuheim",
+        "state": "Zug",
+        "postcode": "6345",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Baarerstrasse, Baar, Zug, Switzerland"
+    },
+    {
+      "lat": 47.190471021138414,
+      "lon": 8.555705771787485,
+      "geoinfo": {
+        "display_name": "Höllstrasse, Baar, Zug, 6345, Switzerland",
+        "road": "Höllstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baar",
+        "state": "Zug",
+        "postcode": "6345",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Höllstrasse, Baar, Zug, Switzerland"
+    },
+    {
+      "lat": 47.21499917500968,
+      "lon": 8.579729879333025,
+      "geoinfo": {
+        "display_name": "61, Sihlbruggstrasse, Sarbach, Neuheim, Zug, 6340, Switzerland",
+        "road": "Sihlbruggstrasse",
+        "house_number": "61",
+        "neighbourhood": "Sarbach",
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuheim",
+        "state": "Zug",
+        "postcode": "6340",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "61, Sihlbruggstrasse, Sarbach, Neuheim, Zug, 6340, Switzerland"
+    },
+    {
+      "lat": 47.186412805753015,
+      "lon": 8.543129914384677,
+      "geoinfo": {
+        "display_name": "Aegeristrasse, Geissbüel, Inwil, Baar, Zug, 6341, Switzerland",
+        "road": "Aegeristrasse",
+        "house_number": null,
+        "neighbourhood": "Geissbüel",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baar",
+        "state": "Zug",
+        "postcode": "6341",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "774, Aegeristrasse, Geissbüel, Inwil, Baar, Zug, 6341, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T01:26:48.865190+00:00",
+  "_kind": "geo_samples"
+}

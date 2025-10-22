@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Kampong Pasir Ris",
+  "geonameid": 1880574,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3610313067497173,
+      "lon": 103.89886396308698,
+      "geoinfo": {
+        "display_name": "Hock Chuan Seng, 16, Defu Lane 1, Hougang, Singapur East, Northeast, Singapore, 539356, Singapore",
+        "road": "Defu Lane 1",
+        "house_number": "16",
+        "neighbourhood": "Singapur East",
+        "suburb": "Hougang",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "539356",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Hock Chuan Seng, 16, Defu Lane 1, Hougang, Singapur East, Northeast, Singapore, 539356, Singapore"
+    },
+    {
+      "lat": 1.3741711105709535,
+      "lon": 103.92825114568515,
+      "geoinfo": {
+        "display_name": "Tampines Industrial Crescent, Paya Lebar, Singapur East, Northeast, Singapore, 528606, Singapore",
+        "road": "Tampines Industrial Crescent",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Paya Lebar",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "528606",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "565, Tampines Industrial Crescent, Paya Lebar, Singapur East, Northeast, Singapore, 528606, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:24.172219+00:00",
+  "_kind": "geo_samples"
+}

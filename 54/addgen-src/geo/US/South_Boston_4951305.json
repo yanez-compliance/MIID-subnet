@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Boston",
+  "geonameid": 4951305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.3122556461115,
+      "lon": -71.0447581971179,
+      "geoinfo": {
+        "display_name": "Boston HarborWalk, Dorchester, Boston, Suffolk County, Massachusetts, 02125, United States",
+        "road": "Boston HarborWalk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dorchester",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Boston HarborWalk, South Boston, Massachusetts, United States"
+    },
+    {
+      "lat": 42.351600166526744,
+      "lon": -71.05400870101379,
+      "geoinfo": {
+        "display_name": "Fidelity Investments, 245, Summer Street, Leather District, Downtown Boston, Boston, Suffolk County, Massachusetts, 02111, United States",
+        "road": "Summer Street",
+        "house_number": "245",
+        "neighbourhood": "Leather District",
+        "suburb": "Downtown Boston",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fidelity Investments, 245, Summer Street, Leather District, Downtown Boston, Boston, Suffolk County, Massachusetts, 02111, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:25.847994+00:00",
+  "_kind": "geo_samples"
+}

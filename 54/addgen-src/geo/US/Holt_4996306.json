@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holt",
+  "geonameid": 4996306,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.63698729324143,
+      "lon": -84.5154247828402,
+      "geoinfo": {
+        "display_name": "1883, Hall Street, Delhi Charter Township, Ingham County, Michigan, 48842, United States",
+        "road": "Hall Street",
+        "house_number": "1883",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delhi Charter Township",
+        "state": "Michigan",
+        "postcode": "48842",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1883 Hall Street, Holt, Michigan, United States"
+    },
+    {
+      "lat": 42.663249020720954,
+      "lon": -84.52112339673683,
+      "geoinfo": {
+        "display_name": "Dell Road, Delhi Charter Township, Ingham County, Michigan, 48911, United States",
+        "road": "Dell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delhi Charter Township",
+        "state": "Michigan",
+        "postcode": "48911",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "556, Dell Road, Delhi Charter Township, Ingham County, Michigan, 48911, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:33.719184+00:00",
+  "_kind": "geo_samples"
+}

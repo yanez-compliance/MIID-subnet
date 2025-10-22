@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Limoges",
+  "geonameid": 2998286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.82725111092932,
+      "lon": 1.2070109286529045,
+      "geoinfo": {
+        "display_name": "Rue Raymond Couty, Le Moulin Blanc, Le Mas Loge, Limoges, Haute-Vienne, Nouvelle-Aquitaine, Metropolitan France, 87170, France",
+        "road": "Rue Raymond Couty",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Limoges",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "87170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Raymond Couty, Limoges, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 45.835767958058256,
+      "lon": 1.2301807950714094,
+      "geoinfo": {
+        "display_name": "Campus Maurois, Allée André Maurois, La Borie, Limoges, Haute-Vienne, Nouvelle-Aquitaine, Metropolitan France, 87000, France",
+        "road": "Allée André Maurois",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Borie",
+        "city_district": null,
+        "city": "Limoges",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "87000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "255, Allée André Maurois, Limoges, 87000 Nouvelle-Aquitaine, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:38.659549+00:00",
+  "_kind": "geo_samples"
+}

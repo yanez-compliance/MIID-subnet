@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Umred",
+  "geonameid": 1253807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.83630553745221,
+      "lon": 79.342908881798,
+      "geoinfo": {
+        "display_name": "NH353D;NH247, Umred, Bhiwapur Taluka, Nagpur, Maharashtra, 441201, India",
+        "road": "NH353D;NH247",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Umred",
+        "state": "Maharashtra",
+        "postcode": "441201",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH353D;NH247, Umred, Maharashtra, India"
+    },
+    {
+      "lat": 20.83421935428322,
+      "lon": 79.28991881968714,
+      "geoinfo": {
+        "display_name": "Kumbhari, Umred, Nagpur, Maharashtra, 441203, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Umred",
+        "state": "Maharashtra",
+        "postcode": "441203",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "985, Kumbhari, Umred, Nagpur, Maharashtra, 441203, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:58.573781+00:00",
+  "_kind": "geo_samples"
+}

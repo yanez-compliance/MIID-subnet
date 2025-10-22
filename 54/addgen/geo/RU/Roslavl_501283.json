@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Roslavl’",
+  "geonameid": 501283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.93692063108785,
+      "lon": 32.87318786461744,
+      "geoinfo": {
+        "display_name": "15, 1-й переулок Ленина, Roslavl, Roslavlsky District, Smolensk Oblast, Central Federal District, 216501, Russia",
+        "road": "1-й переулок Ленина",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roslavl",
+        "state": "Smolensk Oblast",
+        "postcode": "216501",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "15 1-й переулок Ленина, Roslavl’, Smolensk Oblast, Russia"
+    },
+    {
+      "lat": 53.927678495835885,
+      "lon": 32.91745984409763,
+      "geoinfo": {
+        "display_name": "Паточная, Roslavlsky District, Smolensk Oblast, Central Federal District, 216500, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Smolensk Oblast",
+        "postcode": "216500",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "349, Паточная, Roslavlsky District, Smolensk Oblast, Central Federal District, 216500, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:38.116053+00:00",
+  "_kind": "geo_samples"
+}

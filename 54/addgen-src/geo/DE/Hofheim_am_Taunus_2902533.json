@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hofheim am Taunus",
+  "geonameid": 2902533,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.10393278452337,
+      "lon": 8.460167605162175,
+      "geoinfo": {
+        "display_name": "Reifenberger Straße, Hofheim am Taunus, Main-Taunus-Kreis, Hesse, 65719, Germany",
+        "road": "Reifenberger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hofheim am Taunus",
+        "state": "Hesse",
+        "postcode": "65719",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Reifenberger Straße, Hofheim am Taunus, Hesse, Germany"
+    },
+    {
+      "lat": 50.103817421127594,
+      "lon": 8.513900380180743,
+      "geoinfo": {
+        "display_name": "A 66, Unterliederbach, West, Frankfurt, Hesse, 65929, Germany",
+        "road": "A 66",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Unterliederbach",
+        "city_district": "West",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "postcode": "65929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 66, Hofheim am Taunus, 65929 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:50.023196+00:00",
+  "_kind": "geo_samples"
+}

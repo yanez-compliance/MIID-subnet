@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sudley",
+  "geonameid": 4788145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.774086701833134,
+      "lon": -77.50680395004207,
+      "geoinfo": {
+        "display_name": "Sears, Sudley Road, Iron Gate, Prince William County, Virginia, 20110, United States",
+        "road": "Sudley Road",
+        "house_number": null,
+        "neighbourhood": "Iron Gate",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sudley Road, Sudley, Virginia, United States"
+    },
+    {
+      "lat": 38.78941705533954,
+      "lon": -77.5168825972135,
+      "geoinfo": {
+        "display_name": "Bluebell Family Dental, 7740, Donegan Drive, Country Scene, Manassas, Prince William County, Virginia, 20109, United States",
+        "road": "Donegan Drive",
+        "house_number": "7740",
+        "neighbourhood": "Country Scene",
+        "suburb": null,
+        "city_district": null,
+        "city": "Manassas",
+        "state": "Virginia",
+        "postcode": "20109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bluebell Family Dental, 7740, Donegan Drive, Country Scene, Manassas, Prince William County, Virginia, 20109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:13.801510+00:00",
+  "_kind": "geo_samples"
+}

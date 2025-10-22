@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Menden",
+  "geonameid": 2871983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.46692160512717,
+      "lon": 7.773663938259192,
+      "geoinfo": {
+        "display_name": "Fröndenberger Straße, Bösperde, Menden (Sauerland), Märkischer Kreis, North Rhine-Westphalia, 58708, Germany",
+        "road": "Fröndenberger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bösperde",
+        "city_district": null,
+        "city": "Menden (Sauerland)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58708",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Fröndenberger Straße, Menden, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.409800065034034,
+      "lon": 7.741905753163615,
+      "geoinfo": {
+        "display_name": "Landhausen, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemer",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58675",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "051, Landhausen, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:53.871140+00:00",
+  "_kind": "geo_samples"
+}

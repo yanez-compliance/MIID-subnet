@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wellesley",
+  "geonameid": 4954738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.267670758276694,
+      "lon": -71.31995071674135,
+      "geoinfo": {
+        "display_name": "100, Eliot Street, South Natick, Natick, Middlesex County, Massachusetts, 01500, United States",
+        "road": "Eliot Street",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": "South Natick",
+        "city_district": null,
+        "city": "Natick",
+        "state": "Massachusetts",
+        "postcode": "01500",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Eliot Street, Wellesley, Massachusetts, United States"
+    },
+    {
+      "lat": 42.33218050059083,
+      "lon": -71.31231159062575,
+      "geoinfo": {
+        "display_name": "Winter Street, Weston, Middlesex County, Massachusetts, 02428, United States",
+        "road": "Winter Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weston",
+        "state": "Massachusetts",
+        "postcode": "02428",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "970, Winter Street, Weston, Middlesex County, Massachusetts, 02428, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:34.439938+00:00",
+  "_kind": "geo_samples"
+}

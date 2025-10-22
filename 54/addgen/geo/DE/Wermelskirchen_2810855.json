@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wermelskirchen",
+  "geonameid": 2810855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.1195582650895,
+      "lon": 7.175665508334751,
+      "geoinfo": {
+        "display_name": "Döllersweg, Beutelshufe, Wermelskirchen, Rheinisch-Bergischer Kreis, North Rhine-Westphalia, 42929, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Döllersweg",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wermelskirchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Döllersweg, Wermelskirchen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.11885151186368,
+      "lon": 7.210847055471397,
+      "geoinfo": {
+        "display_name": "38, Hinterhufe, Wermelskirchen, Rheinisch-Bergischer Kreis, North Rhine-Westphalia, 42929, Germany",
+        "road": "Hinterhufe",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wermelskirchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "38, Hinterhufe, Wermelskirchen, Rheinisch-Bergischer Kreis, North Rhine-Westphalia, 42929, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:43.340071+00:00",
+  "_kind": "geo_samples"
+}

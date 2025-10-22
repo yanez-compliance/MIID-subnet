@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Balcarce",
+  "geonameid": 3436177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.839044790673235,
+      "lon": -58.25797434402728,
+      "geoinfo": {
+        "display_name": "422, 6 - Combate de Montevideo, Independencia, San José de Balcarce, Partido de Balcarce, Buenos Aires, 7620, Argentina",
+        "road": "6 - Combate de Montevideo",
+        "house_number": "422",
+        "neighbourhood": null,
+        "suburb": "Independencia",
+        "city_district": null,
+        "city": "San José de Balcarce",
+        "state": "Buenos Aires",
+        "postcode": "7620",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "422 6 - Combate de Montevideo, Balcarce, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -37.8333680686322,
+      "lon": -58.21183354047538,
+      "geoinfo": {
+        "display_name": "Barrio Pologna (El Cruce), Partido de Balcarce, Buenos Aires, B7620EMA, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio Pologna (El Cruce)",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "B7620EMA",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "587, Barrio Pologna (El Cruce), Partido de Balcarce, Buenos Aires, B7620EMA, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:00.431503+00:00",
+  "_kind": "geo_samples"
+}

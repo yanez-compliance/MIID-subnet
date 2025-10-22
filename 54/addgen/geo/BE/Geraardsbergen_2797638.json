@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Geraardsbergen",
+  "geonameid": 2797638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.75859669730502,
+      "lon": 3.9285450037749214,
+      "geoinfo": {
+        "display_name": "Boschkauterweg, Moerbeke, Geraardsbergen, Aalst, East Flanders, Flanders, 9500, Belgium",
+        "road": "Boschkauterweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Moerbeke",
+        "city": "Geraardsbergen",
+        "state": "East Flanders",
+        "postcode": "9500",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Boschkauterweg, Geraardsbergen, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.74233670213724,
+      "lon": 3.932433747756882,
+      "geoinfo": {
+        "display_name": "O.Z.C. Sint-Vincentius, 543, Edingseweg, Viane, Geraardsbergen, Aalst, East Flanders, 9500, Belgium",
+        "road": "Edingseweg",
+        "house_number": "543",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Viane",
+        "city": "Geraardsbergen",
+        "state": "East Flanders",
+        "postcode": "9500",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "O.Z.C. Sint-Vincentius, 543, Edingseweg, Viane, Geraardsbergen, Aalst, East Flanders, 9500, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:58.529325+00:00",
+  "_kind": "geo_samples"
+}

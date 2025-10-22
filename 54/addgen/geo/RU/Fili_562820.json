@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Fili",
+  "geonameid": 562820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.74734087323703,
+      "lon": 37.41250638351187,
+      "geoinfo": {
+        "display_name": "121, Рублёвское шоссе (дублёр), Kuntsevo District, Moscow, Central Federal District, 121552, Russia",
+        "road": "Рублёвское шоссе (дублёр)",
+        "house_number": "121",
+        "neighbourhood": null,
+        "suburb": "Kuntsevo District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "121552",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "121 Рублёвское шоссе (дублёр), Fili, Moscow, Russia"
+    },
+    {
+      "lat": 55.78529202750938,
+      "lon": 37.52237983698069,
+      "geoinfo": {
+        "display_name": "3-й Ходынский проезд, Khodynka Field, Khoroshyovsky District, Moscow, Central Federal District, 125252, Russia",
+        "road": "3-й Ходынский проезд",
+        "house_number": null,
+        "neighbourhood": "Khodynka Field",
+        "suburb": "Khoroshyovsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "125252",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "3-й Ходынский проезд, Khodynka Field, Khoroshyovsky District, Moscow, Central Federal District, 125252, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:05:35.760412+00:00",
+  "_kind": "geo_samples"
+}

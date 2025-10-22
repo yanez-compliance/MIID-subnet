@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Goussainville",
+  "geonameid": 3015490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.00593316520792,
+      "lon": 2.428237102575484,
+      "geoinfo": {
+        "display_name": "D 970, Les Carreaux, Gonesse, Sarcelles, Val-d'Oise, Metropolitan France, 95500, France",
+        "road": "D 970",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Carreaux",
+        "city_district": null,
+        "city": "Gonesse",
+        "state": null,
+        "postcode": "95500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 970, Goussainville, Ile-de-France, France"
+    },
+    {
+      "lat": 48.99449184183875,
+      "lon": 2.4680898262366084,
+      "geoinfo": {
+        "display_name": "Gonesse, Sarcelles, Val-d'Oise, Metropolitan France, 95500, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gonesse",
+        "state": null,
+        "postcode": "95500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "450, Gonesse, Sarcelles, Val-d'Oise, Metropolitan France, 95500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:07.869844+00:00",
+  "_kind": "geo_samples"
+}

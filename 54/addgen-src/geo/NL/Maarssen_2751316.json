@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Maarssen",
+  "geonameid": 2751316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.14281228920407,
+      "lon": 5.039483368554612,
+      "geoinfo": {
+        "display_name": "17, Albert Cuypstraat, Maarssenbroek, Maarssen, Stichtse Vecht, Utrecht, Netherlands, 3601 EW, Netherlands",
+        "road": "Albert Cuypstraat",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Maarssenbroek",
+        "city_district": null,
+        "city": "Maarssen",
+        "state": "Utrecht",
+        "postcode": "3601 EW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "17 Albert Cuypstraat, Maarssen, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.11440265805845,
+      "lon": 5.0735056563054615,
+      "geoinfo": {
+        "display_name": "5A, Sophialaan, Bedrijvengebied Lage Weide, Nieuw Engeland, Schepenbuurt, West, Utrecht, Netherlands, 3542 AR, Netherlands",
+        "road": "Sophialaan",
+        "house_number": "5A",
+        "neighbourhood": "Bedrijvengebied Lage Weide",
+        "suburb": "West",
+        "city_district": "Utrecht",
+        "city": "Utrecht",
+        "state": "Utrecht",
+        "postcode": "3542 AR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "5A, Sophialaan, Bedrijvengebied Lage Weide, Nieuw Engeland, Schepenbuurt, West, Utrecht, Netherlands, 3542 AR, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:18.550254+00:00",
+  "_kind": "geo_samples"
+}

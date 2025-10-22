@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Short Pump",
+  "geonameid": 4785576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.6750974737353,
+      "lon": -77.5950187815658,
+      "geoinfo": {
+        "display_name": "Twin Hickory Road, Bridlewood, Short Pump, Henrico County, Virginia, 23233, United States",
+        "road": "Twin Hickory Road",
+        "house_number": null,
+        "neighbourhood": "Bridlewood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Short Pump",
+        "state": "Virginia",
+        "postcode": "23233",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Twin Hickory Road, Short Pump, Virginia, United States"
+    },
+    {
+      "lat": 37.693624236125444,
+      "lon": -77.60720448356494,
+      "geoinfo": {
+        "display_name": "11805, Park Forest Way, Wyndham, Henrico County, Virginia, 23059, United States",
+        "road": "Park Forest Way",
+        "house_number": "11805",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyndham",
+        "state": "Virginia",
+        "postcode": "23059",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11805, Park Forest Way, Wyndham, Henrico County, Virginia, 23059, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:31.043392+00:00",
+  "_kind": "geo_samples"
+}

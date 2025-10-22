@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Eger",
+  "geonameid": 721239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.91946711931468,
+      "lon": 20.33318146122346,
+      "geoinfo": {
+        "display_name": "24, Eger, Egri járás, Heves, North Hungary, Great Plain and North, 3300, Hungary",
+        "road": "24",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eger",
+        "state": null,
+        "postcode": "3300",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "24, Eger, Hungary"
+    },
+    {
+      "lat": 47.909442715382326,
+      "lon": 20.33441402875341,
+      "geoinfo": {
+        "display_name": "Nagy-Kocs, Eger, Egri járás, Heves, North Hungary, 3300, Hungary",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eger",
+        "state": null,
+        "postcode": "3300",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "876, Nagy-Kocs, Eger, Egri járás, Heves, North Hungary, 3300, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:23.001387+00:00",
+  "_kind": "geo_samples"
+}

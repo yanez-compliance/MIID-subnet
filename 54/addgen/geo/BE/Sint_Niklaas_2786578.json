@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Niklaas",
+  "geonameid": 2786578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.180359849098956,
+      "lon": 4.173519237562048,
+      "geoinfo": {
+        "display_name": "143, Uilenstraat, Uil, Sint-Niklaas, East Flanders, Flanders, 9100, Belgium",
+        "road": "Uilenstraat",
+        "house_number": "143",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Niklaas",
+        "city": "Sint-Niklaas",
+        "state": "East Flanders",
+        "postcode": "9100",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "143 Uilenstraat, Sint-Niklaas, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.192633520435194,
+      "lon": 4.187164503226016,
+      "geoinfo": {
+        "display_name": "27, Kwakkelhoekstraat, Heihoek, Nieuwkerken-Waas, Sint-Niklaas, East Flanders, 9100, Belgium",
+        "road": "Kwakkelhoekstraat",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Niklaas",
+        "state": "East Flanders",
+        "postcode": "9100",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "27, Kwakkelhoekstraat, Heihoek, Nieuwkerken-Waas, Sint-Niklaas, East Flanders, 9100, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:25.842150+00:00",
+  "_kind": "geo_samples"
+}

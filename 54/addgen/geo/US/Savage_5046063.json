@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Savage",
+  "geonameid": 5046063,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.78308388332258,
+      "lon": -93.39072093405615,
+      "geoinfo": {
+        "display_name": "Savage, Scott County, Minnesota, 55379, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Savage",
+        "state": "Minnesota",
+        "postcode": "55379",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Savage, Minnesota, United States"
+    },
+    {
+      "lat": 44.743817066503205,
+      "lon": -93.3532488149181,
+      "geoinfo": {
+        "display_name": "Alabama Avenue South, Savage, Scott County, Minnesota, 55378, United States",
+        "road": "Alabama Avenue South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Savage",
+        "state": "Minnesota",
+        "postcode": "55378",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "163, Alabama Avenue South, Savage, Scott County, Minnesota, 55378, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:47.338019+00:00",
+  "_kind": "geo_samples"
+}

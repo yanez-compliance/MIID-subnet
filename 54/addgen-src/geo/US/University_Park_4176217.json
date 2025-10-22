@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University Park",
+  "geonameid": 4176217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.749934866141704,
+      "lon": -80.34947476974645,
+      "geoinfo": {
+        "display_name": "9535, Southwest 24th Street, Miami, Miami-Dade County, Florida, 33165, United States",
+        "road": "Southwest 24th Street",
+        "house_number": "9535",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9535 Southwest 24th Street, University Park, Florida, United States"
+    },
+    {
+      "lat": 25.769022112892138,
+      "lon": -80.35670289289722,
+      "geoinfo": {
+        "display_name": "West Flagler Street, Fountainbleau, Miami-Dade County, Florida, 33174, United States",
+        "road": "West Flagler Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "140, West Flagler Street, Fountainbleau, Miami-Dade County, Florida, 33174, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:43:38.770048+00:00",
+  "_kind": "geo_samples"
+}

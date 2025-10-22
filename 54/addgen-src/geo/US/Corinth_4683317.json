@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Corinth",
+  "geonameid": 4683317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.12397528089588,
+      "lon": -97.09309910753393,
+      "geoinfo": {
+        "display_name": "Elm Fork Trail, Denton, Denton County, Texas, 76210, United States",
+        "road": "Elm Fork Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denton",
+        "state": "Texas",
+        "postcode": "76210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Elm Fork Trail, Corinth, Texas, United States"
+    },
+    {
+      "lat": 33.185850570747846,
+      "lon": -97.0541616984815,
+      "geoinfo": {
+        "display_name": "Denton County, Texas, 76208, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "76208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, Denton County, Texas, 76208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:39.178853+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Canton",
+  "geonameid": 4186213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.21760429223581,
+      "lon": -84.53822057492488,
+      "geoinfo": {
+        "display_name": "1006, Fieldstone Drive, Canton, Cherokee County, Georgia, 30114, United States",
+        "road": "Fieldstone Drive",
+        "house_number": "1006",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton",
+        "state": "Georgia",
+        "postcode": "30114",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1006 Fieldstone Drive, Canton, Georgia, United States"
+    },
+    {
+      "lat": 34.23800273829835,
+      "lon": -84.47522299714808,
+      "geoinfo": {
+        "display_name": "199, Woodland Road, Canton, Cherokee County, Georgia, 30114, United States",
+        "road": "Woodland Road",
+        "house_number": "199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton",
+        "state": "Georgia",
+        "postcode": "30114",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "199, Woodland Road, Canton, Cherokee County, Georgia, 30114, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:35.238320+00:00",
+  "_kind": "geo_samples"
+}

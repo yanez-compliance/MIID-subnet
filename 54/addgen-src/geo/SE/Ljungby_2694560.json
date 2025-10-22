@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Ljungby",
+  "geonameid": 2694560,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 56.82544085828077,
+      "lon": 13.904289264004277,
+      "geoinfo": {
+        "display_name": "E 4;25, Ljungby, Ljungby kommun, Kronoberg County, 341 26, Sweden",
+        "road": "E 4;25",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ljungby",
+        "state": null,
+        "postcode": "341 26",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "E 4;25, Ljungby, Sweden"
+    },
+    {
+      "lat": 56.84726700320286,
+      "lon": 14.00847922216612,
+      "geoinfo": {
+        "display_name": "25, Gnustorp, Ljungby kommun, Kronoberg County, 341 91, Sweden",
+        "road": "25",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "341 91",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "25, Gnustorp, Ljungby kommun, Kronoberg County, 341 91, Sweden"
+    },
+    {
+      "lat": 56.85065368170744,
+      "lon": 13.946907302274568,
+      "geoinfo": {
+        "display_name": "Gnejsvägen, Annelund, Ljungby, Ljungby kommun, Kronoberg County, 341 40, Sweden",
+        "road": "Gnejsvägen",
+        "house_number": null,
+        "neighbourhood": "Annelund",
+        "suburb": "Annelund",
+        "city_district": null,
+        "city": "Ljungby",
+        "state": null,
+        "postcode": "341 40",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Gnejsvägen, Annelund, Ljungby, Ljungby kommun, Kronoberg County, 341 40, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:10.181107+00:00",
+  "_kind": "geo_samples"
+}

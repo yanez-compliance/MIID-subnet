@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Günzburg",
+  "geonameid": 2913555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.46568749228402,
+      "lon": 10.31854715939717,
+      "geoinfo": {
+        "display_name": "Friedrichsfeldweg, Reisensburg, Nornheim, Günzburg, Landkreis Günzburg, Bavaria, 89312, Germany",
+        "road": "Friedrichsfeldweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reisensburg",
+        "city_district": null,
+        "city": "Günzburg",
+        "state": "Bavaria",
+        "postcode": "89312",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Friedrichsfeldweg, Günzburg, Bavaria, Germany"
+    },
+    {
+      "lat": 48.44540337331645,
+      "lon": 10.24454401706692,
+      "geoinfo": {
+        "display_name": "Interkommunales Gewerbegebiet, Günzburg, Kötz (VGem), Landkreis Günzburg, Bavaria, 89312, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Günzburg",
+        "state": "Bavaria",
+        "postcode": "89312",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "516, Günzburg, 89312 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:39.657396+00:00",
+  "_kind": "geo_samples"
+}

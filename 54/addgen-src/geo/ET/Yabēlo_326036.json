@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Yabēlo",
+  "geonameid": 326036,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.851181220821197,
+      "lon": 38.099048331890565,
+      "geoinfo": {
+        "display_name": "Borena, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Yabēlo, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 4.860545559822542,
+      "lon": 38.047867128788056,
+      "geoinfo": {
+        "display_name": "Yabēlo, Borena, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yabēlo",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "134, Yabēlo, Borena, 90577 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:51.417659+00:00",
+  "_kind": "geo_samples"
+}

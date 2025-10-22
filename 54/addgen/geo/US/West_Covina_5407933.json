@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Covina",
+  "geonameid": 5407933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.069234907787326,
+      "lon": -117.94276756493284,
+      "geoinfo": {
+        "display_name": "730, South Orange Avenue, West Covina, Los Angeles County, California, 91790, United States",
+        "road": "South Orange Avenue",
+        "house_number": "730",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Covina",
+        "state": "California",
+        "postcode": "91790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "730 South Orange Avenue, West Covina, California, United States"
+    },
+    {
+      "lat": 34.10796311666312,
+      "lon": -117.93706360711155,
+      "geoinfo": {
+        "display_name": "Salvatiera Street, Irwindale, Los Angeles County, California, 91706, United States",
+        "road": "Salvatiera Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irwindale",
+        "state": "California",
+        "postcode": "91706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "006, Salvatiera Street, Irwindale, Los Angeles County, California, 91706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:41.700126+00:00",
+  "_kind": "geo_samples"
+}

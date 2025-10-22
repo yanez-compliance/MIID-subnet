@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Choisy-le-Roi",
+  "geonameid": 3025055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.747661045386046,
+      "lon": 2.474092449546475,
+      "geoinfo": {
+        "display_name": "Rue Émile Zola, Quartier des Temps Durables, Limeil-Brévannes, Créteil, Val-de-Marne, Ile-de-France, Metropolitan France, 94450, France",
+        "road": "Rue Émile Zola",
+        "house_number": null,
+        "neighbourhood": "Quartier des Temps Durables",
+        "suburb": null,
+        "city_district": null,
+        "city": "Limeil-Brévannes",
+        "state": "Ile-de-France",
+        "postcode": "94450",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Émile Zola, Choisy-le-Roi, Ile-de-France, France"
+    },
+    {
+      "lat": 48.791710873257436,
+      "lon": 2.449738806913696,
+      "geoinfo": {
+        "display_name": "2, Rue Denfert-Rochereau, Échat - Champeval, Créteil, Val-de-Marne, Metropolitan France, 94000, France",
+        "road": "Rue Denfert-Rochereau",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Échat - Champeval",
+        "city_district": null,
+        "city": "Créteil",
+        "state": null,
+        "postcode": "94000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "2, Rue Denfert-Rochereau, Échat - Champeval, Créteil, Val-de-Marne, Metropolitan France, 94000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:33.280886+00:00",
+  "_kind": "geo_samples"
+}

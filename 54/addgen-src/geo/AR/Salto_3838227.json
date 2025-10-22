@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Salto",
+  "geonameid": 3838227,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.31426193331322,
+      "lon": -60.21704941009058,
+      "geoinfo": {
+        "display_name": "Juan Carlos Salaverry, Salto, Partido de Salto, Buenos Aires, 2741, Argentina",
+        "road": "Juan Carlos Salaverry",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salto",
+        "state": "Buenos Aires",
+        "postcode": "2741",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Juan Carlos Salaverry, Salto, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.32482943598425,
+      "lon": -60.26151833645133,
+      "geoinfo": {
+        "display_name": "Partido de Salto, Buenos Aires, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "623, Salto, 06033 Buenos Aires, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:29.208911+00:00",
+  "_kind": "geo_samples"
+}

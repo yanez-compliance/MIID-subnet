@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Breyten",
+  "geonameid": 1015694,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.299338270918465,
+      "lon": 29.988994901712044,
+      "geoinfo": {
+        "display_name": "Van Riebeeck Street, Msukaligwa Ward 13, Breyten, Msukaligwa, Gert Sibande, Mpumalanga, 2330, South Africa",
+        "road": "Van Riebeeck Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Msukaligwa Ward 13",
+        "city_district": null,
+        "city": "Msukaligwa",
+        "state": "Mpumalanga",
+        "postcode": "2330",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Van Riebeeck Street, Breyten, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -26.310493923678877,
+      "lon": 30.00280842429488,
+      "geoinfo": {
+        "display_name": "Msukaligwa Ward 14, Msukaligwa, Gert Sibande, Mpumalanga, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Msukaligwa Ward 14",
+        "city_district": null,
+        "city": "Msukaligwa",
+        "state": "Mpumalanga",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Msukaligwa Ward 14, Msukaligwa, Gert Sibande, 83488 Mpumalanga, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:42.974549+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Ōgi",
+  "geonameid": 10987664,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.76460321234906,
+      "lon": 139.8248331024529,
+      "geoinfo": {
+        "display_name": "パークNET, Kohokubashi-dori Ave., Ayase 3-chome, Ayase, Adachi, Tokyo, 120-0005, Japan",
+        "road": "Kohokubashi-dori Ave.",
+        "house_number": null,
+        "neighbourhood": "Ayase 3-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Adachi",
+        "state": null,
+        "postcode": "120-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kohokubashi-dori Ave., Ōgi, Japan"
+    },
+    {
+      "lat": 35.75212542807345,
+      "lon": 139.75127866379196,
+      "geoinfo": {
+        "display_name": "Nishi Ogu 8, Nishi Ogu, Arakawa, Tokyo, 114-0004, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nishi Ogu 8",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arakawa",
+        "state": null,
+        "postcode": "114-0004",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nishi Ogu 8, Nishi Ogu, Arakawa, Tokyo, 114-0004, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:29.055391+00:00",
+  "_kind": "geo_samples"
+}

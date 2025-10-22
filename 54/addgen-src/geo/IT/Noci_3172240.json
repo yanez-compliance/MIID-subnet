@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Noci",
+  "geonameid": 3172240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.800761737975364,
+      "lon": 17.107586741375755,
+      "geoinfo": {
+        "display_name": "Via Zona B, Noci, Bari, Apulia, 70015, Italy",
+        "road": "Via Zona B",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noci",
+        "state": "Apulia",
+        "postcode": "70015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Zona B, Noci, Apulia, Italy"
+    },
+    {
+      "lat": 40.82606931167305,
+      "lon": 17.101936978258465,
+      "geoinfo": {
+        "display_name": "SP237, Pin-Pen, Putignano, Bari, Apulia, 70017, Italy",
+        "road": "SP237",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pin-Pen",
+        "city_district": null,
+        "city": "Putignano",
+        "state": "Apulia",
+        "postcode": "70017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP237, Pin-Pen, Putignano, Bari, Apulia, 70017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:23.739275+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Roissy-en-Brie",
+  "geonameid": 2983074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80134413128833,
+      "lon": 2.641612640507269,
+      "geoinfo": {
+        "display_name": "Rue Commenson, Roissy-en-Brie, Torcy, Seine-et-Marne, Metropolitan France, 77680, France",
+        "road": "Rue Commenson",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roissy-en-Brie",
+        "state": null,
+        "postcode": "77680",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Commenson, Roissy-en-Brie, France"
+    },
+    {
+      "lat": 48.76238026881719,
+      "lon": 2.659896409714468,
+      "geoinfo": {
+        "display_name": "Chemin du Christ, La Brunerie, Ozoir-la-Ferrière, Torcy, Seine-et-Marne, Metropolitan France, 77330, France",
+        "road": "Chemin du Christ",
+        "house_number": null,
+        "neighbourhood": "La Brunerie",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ozoir-la-Ferrière",
+        "state": null,
+        "postcode": "77330",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "812, Chemin du Christ, La Brunerie, Ozoir-la-Ferrière, Torcy, Seine-et-Marne, Metropolitan France, 77330, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:43.407728+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Guasave",
+  "geonameid": 4005219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.588155760039623,
+      "lon": -108.47487554824411,
+      "geoinfo": {
+        "display_name": "Calle Los Rosales, Guasave, Sinaloa, 81020, Mexico",
+        "road": "Calle Los Rosales",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guasave",
+        "state": "Sinaloa",
+        "postcode": "81020",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Los Rosales, Guasave, Sinaloa, Mexico"
+    },
+    {
+      "lat": 25.555082318317726,
+      "lon": -108.42257273054834,
+      "geoinfo": {
+        "display_name": "El Burrión, Guasave, Sinaloa, 81000, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Burrión",
+        "state": "Sinaloa",
+        "postcode": "81000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "692, El Burrión, Guasave, Sinaloa, 81000, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:35.512686+00:00",
+  "_kind": "geo_samples"
+}

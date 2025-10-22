@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Chomutov",
+  "geonameid": 3077685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.50386081960188,
+      "lon": 13.417445447823432,
+      "geoinfo": {
+        "display_name": "ev.1617, Jirkov, okres Chomutov, Ústí nad Labem Region, Northwest, 431 11, Czechia",
+        "road": null,
+        "house_number": "ev.1617",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jirkov",
+        "state": "Northwest",
+        "postcode": "431 11",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Chomutov, Northwest, Czechia"
+    },
+    {
+      "lat": 50.44554881894803,
+      "lon": 13.38677792958186,
+      "geoinfo": {
+        "display_name": "508, U koupaliště, Spořice, okres Chomutov, Ústí nad Labem Region, Northwest, 431 01, Czechia",
+        "road": "U koupaliště",
+        "house_number": "508",
+        "neighbourhood": null,
+        "suburb": "Spořice",
+        "city_district": null,
+        "city": "Spořice",
+        "state": "Northwest",
+        "postcode": "431 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "508, U koupaliště, Spořice, okres Chomutov, Ústí nad Labem Region, Northwest, 431 01, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:15.689962+00:00",
+  "_kind": "geo_samples"
+}

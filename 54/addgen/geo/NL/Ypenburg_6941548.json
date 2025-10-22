@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Ypenburg",
+  "geonameid": 6941548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.051706788655295,
+      "lon": 4.365111787838659,
+      "geoinfo": {
+        "display_name": "A13, Boswijk, Leidschenveen-Ypenburg, The Hague, South Holland, Netherlands, 2496 VK, Netherlands",
+        "road": "A13",
+        "house_number": null,
+        "neighbourhood": "Boswijk",
+        "suburb": "Leidschenveen-Ypenburg",
+        "city_district": null,
+        "city": "The Hague",
+        "state": "South Holland",
+        "postcode": "2496 VK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "A13, Ypenburg, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.01517521151124,
+      "lon": 4.400179486064517,
+      "geoinfo": {
+        "display_name": "14, Kooltuin, Oud Delfgauw, Klein Delfgauw, Delfgauw, Pijnacker-Nootdorp, South Holland, Netherlands, 2645 AX, Netherlands",
+        "road": "Kooltuin",
+        "house_number": "14",
+        "neighbourhood": "Oud Delfgauw",
+        "suburb": null,
+        "city_district": null,
+        "city": "Delfgauw",
+        "state": "South Holland",
+        "postcode": "2645 AX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "14, Kooltuin, Oud Delfgauw, Klein Delfgauw, Delfgauw, Pijnacker-Nootdorp, South Holland, Netherlands, 2645 AX, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:00:07.441940+00:00",
+  "_kind": "geo_samples"
+}

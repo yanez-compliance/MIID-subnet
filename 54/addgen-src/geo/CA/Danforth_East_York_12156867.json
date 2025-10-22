@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Danforth East York",
+  "geonameid": 12156867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.683226470477685,
+      "lon": -79.33553348248302,
+      "geoinfo": {
+        "display_name": "Glebeholme Boulevard, Danforth, Toronto—Danforth, East York, Toronto, Golden Horseshoe, Ontario, M4J 1M6, Canada",
+        "road": "Glebeholme Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East York",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4J 1M6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Glebeholme Boulevard, Danforth East York, Ontario, Canada"
+    },
+    {
+      "lat": 43.70692155552978,
+      "lon": -79.33968786181562,
+      "geoinfo": {
+        "display_name": "Catalyst, Thorncliffe Park, Don Valley West, East York, Toronto, Golden Horseshoe, Ontario, M4H 1C5, Canada",
+        "road": "Catalyst",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "East York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4H 1C5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Catalyst, Thorncliffe Park, Don Valley West, East York, Toronto, Golden Horseshoe, Ontario, M4H 1C5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:20.648087+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tysons",
+  "geonameid": 4790534,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.92970421094193,
+      "lon": -77.1862606034296,
+      "geoinfo": {
+        "display_name": "1616, Chain Bridge Road, West McLean, McLean, Fairfax County, Virginia, 22101, United States",
+        "road": "Chain Bridge Road",
+        "house_number": "1616",
+        "neighbourhood": "West McLean",
+        "suburb": null,
+        "city_district": null,
+        "city": "McLean",
+        "state": "Virginia",
+        "postcode": "22101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1616 Chain Bridge Road, Tysons, Virginia, United States"
+    },
+    {
+      "lat": 38.90035915691014,
+      "lon": -77.25654362147746,
+      "geoinfo": {
+        "display_name": "210, Whispering Wind Court Southeast, Vienna, Fairfax County, Virginia, 22180, United States",
+        "road": "Whispering Wind Court Southeast",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vienna",
+        "state": "Virginia",
+        "postcode": "22180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210, Whispering Wind Court Southeast, Vienna, Fairfax County, Virginia, 22180, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:09.025579+00:00",
+  "_kind": "geo_samples"
+}

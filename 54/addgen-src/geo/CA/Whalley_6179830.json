@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Whalley",
+  "geonameid": 6179830,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.17552880200632,
+      "lon": -122.92337675280768,
+      "geoinfo": {
+        "display_name": "Alaska Way, Annieville, Whalley, North Delta, Delta, Metro Vancouver Regional District, British Columbia, V4C 3J2, Canada",
+        "road": "Alaska Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Whalley",
+        "city_district": "North Delta",
+        "city": "Delta",
+        "state": "British Columbia",
+        "postcode": "V4C 3J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Alaska Way, Whalley, British Columbia, Canada"
+    },
+    {
+      "lat": 49.14780573545878,
+      "lon": -122.89595885145097,
+      "geoinfo": {
+        "display_name": "7940, 118 Street, North Delta, Delta, Metro Vancouver Regional District, British Columbia, V4C 6R0, Canada",
+        "road": "118 Street",
+        "house_number": "7940",
+        "neighbourhood": null,
+        "suburb": "North Delta",
+        "city_district": "North Delta",
+        "city": "Delta",
+        "state": "British Columbia",
+        "postcode": "V4C 6R0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "7940, 118 Street, North Delta, Delta, Metro Vancouver Regional District, British Columbia, V4C 6R0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:43.851846+00:00",
+  "_kind": "geo_samples"
+}

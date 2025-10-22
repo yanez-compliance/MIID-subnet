@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fröndenberg",
+  "geonameid": 2924206,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.51018768992923,
+      "lon": 7.770297530177667,
+      "geoinfo": {
+        "display_name": "11, An der Heide, Ostbürener Heide, Ostbüren, Fröndenberg/Ruhr, Kreis Unna, North Rhine-Westphalia, 58730, Germany",
+        "road": "An der Heide",
+        "house_number": "11",
+        "neighbourhood": "Ostbürener Heide",
+        "suburb": "Ostbüren",
+        "city_district": null,
+        "city": "Fröndenberg/Ruhr",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58730",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11 An der Heide, Fröndenberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.51077874003972,
+      "lon": 7.749473097957596,
+      "geoinfo": {
+        "display_name": "1, Am Backenberg, Frömern, Fröndenberg/Ruhr, Kreis Unna, North Rhine-Westphalia, 58730, Germany",
+        "road": "Am Backenberg",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Frömern",
+        "city_district": null,
+        "city": "Fröndenberg/Ruhr",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58730",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Am Backenberg, Frömern, Fröndenberg/Ruhr, Kreis Unna, North Rhine-Westphalia, 58730, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:58.733098+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sonobe",
+  "geonameid": 9891173,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.439419046630604,
+      "lon": 130.48478278931574,
+      "geoinfo": {
+        "display_name": "Chikushino, Fukuoka Prefecture, 811-1232, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chikushino",
+        "state": null,
+        "postcode": "811-1232",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sonobe, Japan"
+    },
+    {
+      "lat": 33.40253387643455,
+      "lon": 130.54057349687892,
+      "geoinfo": {
+        "display_name": "Gion 2-chome, Ogori, Fukuoka Prefecture, 841-0015, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Gion 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ogori",
+        "state": null,
+        "postcode": "841-0015",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Gion 2-chome, Ogori, Fukuoka Prefecture, 841-0015, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:40.071177+00:00",
+  "_kind": "geo_samples"
+}

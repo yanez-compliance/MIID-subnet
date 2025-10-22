@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Simi Valley",
+  "geonameid": 5396003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.29325827593199,
+      "lon": -118.75459807325197,
+      "geoinfo": {
+        "display_name": "Big Sky Trail, Tioga at Big Sky, Simi Valley, Ventura County, California, 93065, United States",
+        "road": "Big Sky Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Simi Valley",
+        "state": "California",
+        "postcode": "93065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Big Sky Trail, Simi Valley, California, United States"
+    },
+    {
+      "lat": 34.2272799120211,
+      "lon": -118.78142218617818,
+      "geoinfo": {
+        "display_name": "Simi Valley, Ventura County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Simi Valley",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "647, Simi Valley, Ventura County, 23779 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:25.462801+00:00",
+  "_kind": "geo_samples"
+}

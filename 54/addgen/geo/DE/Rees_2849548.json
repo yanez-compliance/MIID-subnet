@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rees",
+  "geonameid": 2849548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.76240742255621,
+      "lon": 6.336920475433166,
+      "geoinfo": {
+        "display_name": "Reeserward, Rees, Kreis Kleve, North Rhine-Westphalia, 46459, Germany",
+        "road": "Reeserward",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rees",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46459",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Reeserward, Rees, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.74744238446227,
+      "lon": 6.36336328300181,
+      "geoinfo": {
+        "display_name": "Gasthof zur Jägerruh, Rheinstraße, Mühlenfeld, Niedermörmter, Kalkar, Kreis Kleve, North Rhine-Westphalia, 47546, Germany",
+        "road": "Rheinstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalkar",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47546",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "296, Rheinstraße, Rees, 47546 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:09.619197+00:00",
+  "_kind": "geo_samples"
+}

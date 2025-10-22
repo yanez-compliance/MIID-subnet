@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Cole Harbour",
+  "geonameid": 7280414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.67099549924755,
+      "lon": -63.53189175726793,
+      "geoinfo": {
+        "display_name": "Portland Street, Woodlawn, Dartmouth, Halifax Regional Municipality, Halifax County, Nova Scotia, B2W 2M5, Canada",
+        "road": "Portland Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woodlawn",
+        "city_district": null,
+        "city": "Dartmouth",
+        "state": "Nova Scotia",
+        "postcode": "B2W 2M5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Portland Street, Cole Harbour, Nova Scotia, Canada"
+    },
+    {
+      "lat": 44.68914707900628,
+      "lon": -63.45877385979232,
+      "geoinfo": {
+        "display_name": "60, Glendale Drive, Westphal, Halifax Regional Municipality, Halifax County, Nova Scotia, B2Z 1J1, Canada",
+        "road": "Glendale Drive",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westphal",
+        "state": "Nova Scotia",
+        "postcode": "B2Z 1J1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "60, Glendale Drive, Westphal, Halifax Regional Municipality, Halifax County, Nova Scotia, B2Z 1J1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:44.828512+00:00",
+  "_kind": "geo_samples"
+}

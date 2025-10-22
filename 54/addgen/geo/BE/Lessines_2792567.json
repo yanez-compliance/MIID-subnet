@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lessines",
+  "geonameid": 2792567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.70639490856019,
+      "lon": 3.902818258392288,
+      "geoinfo": {
+        "display_name": "130, Muydt / Rue Notre-Dame, Bois-de-Lessines, Lessines, Ath, Hainaut, Wallonia, 7866, Belgium",
+        "road": "Muydt / Rue Notre-Dame",
+        "house_number": "130",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lessines",
+        "state": "Hainaut",
+        "postcode": "7866",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "130 Muydt / Rue Notre-Dame, Lessines, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.75299438602556,
+      "lon": 3.825201988767461,
+      "geoinfo": {
+        "display_name": "9, Kohoorstraat, Zarlardinge, Geraardsbergen, Brakel, Aalst, East Flanders, 9500, Belgium",
+        "road": "Kohoorstraat",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zarlardinge",
+        "city": "Geraardsbergen",
+        "state": "East Flanders",
+        "postcode": "9500",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "9, Kohoorstraat, Zarlardinge, Geraardsbergen, Brakel, Aalst, East Flanders, 9500, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:08.118130+00:00",
+  "_kind": "geo_samples"
+}

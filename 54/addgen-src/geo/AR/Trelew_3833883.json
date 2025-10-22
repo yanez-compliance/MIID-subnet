@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Trelew",
+  "geonameid": 3833883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -43.254530451662646,
+      "lon": -65.31891478962007,
+      "geoinfo": {
+        "display_name": "201, Edison, Democracia, Trelew, Municipio de Trelew, Departamento Rawson, Chubut Province, U9100, Argentina",
+        "road": "Edison",
+        "house_number": "201",
+        "neighbourhood": null,
+        "suburb": "Democracia",
+        "city_district": null,
+        "city": "Trelew",
+        "state": "Chubut Province",
+        "postcode": "U9100",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "201 Edison, Trelew, Chubut Province, Argentina"
+    },
+    {
+      "lat": -43.265806939194704,
+      "lon": -65.35243282628947,
+      "geoinfo": {
+        "display_name": "4115, Facundo, INTA, Amaya, Trelew, Municipio de Trelew, Departamento Rawson, Chubut, 9100, Argentina",
+        "road": "Facundo",
+        "house_number": "4115",
+        "neighbourhood": "INTA",
+        "suburb": "INTA",
+        "city_district": "Amaya",
+        "city": "Trelew",
+        "state": "Chubut",
+        "postcode": "9100",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "4115, Facundo, INTA, Amaya, Trelew, Municipio de Trelew, Departamento Rawson, Chubut, 9100, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:12.423004+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Shambu",
+  "geonameid": 328709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.541209300614097,
+      "lon": 37.11034399445363,
+      "geoinfo": {
+        "display_name": "B32, Shambu, Horo Guduru, Oromia Region, Ethiopia",
+        "road": "B32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shambu",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "B32, Shambu, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 9.571251542035316,
+      "lon": 37.0717445118308,
+      "geoinfo": {
+        "display_name": "Sekela, Horo Guduru, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sekela",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "755, Shambu, 99738 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:12.202363+00:00",
+  "_kind": "geo_samples"
+}

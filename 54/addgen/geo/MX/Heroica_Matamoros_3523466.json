@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Heroica Matamoros",
+  "geonameid": 3523466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.869265403515907,
+      "lon": -97.4610012619467,
+      "geoinfo": {
+        "display_name": "Matamoros, Tamaulipas, 87450, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matamoros",
+        "state": "Tamaulipas",
+        "postcode": "87450",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Heroica Matamoros, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 25.872695661655534,
+      "lon": -97.51354198397858,
+      "geoinfo": {
+        "display_name": "Calle Laguna del Chairel, Matamoros, Tamaulipas, 87350, Mexico",
+        "road": "Calle Laguna del Chairel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matamoros",
+        "state": "Tamaulipas",
+        "postcode": "87350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "588, Calle Laguna del Chairel, Matamoros, Tamaulipas, 87350, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:34.075614+00:00",
+  "_kind": "geo_samples"
+}

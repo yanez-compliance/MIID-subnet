@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tennō",
+  "geonameid": 1850405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.905619397072535,
+      "lon": 140.00003814584423,
+      "geoinfo": {
+        "display_name": "Katagami, Akita Prefecture, 010-0201, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katagami",
+        "state": null,
+        "postcode": "010-0201",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tennō, Japan"
+    },
+    {
+      "lat": 39.89832499756463,
+      "lon": 139.95489751915014,
+      "geoinfo": {
+        "display_name": "Tenno, Katagami, Akita Prefecture, 010-0341, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Tenno",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katagami",
+        "state": null,
+        "postcode": "010-0341",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tenno, Katagami, Akita Prefecture, 010-0341, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:40.104995+00:00",
+  "_kind": "geo_samples"
+}

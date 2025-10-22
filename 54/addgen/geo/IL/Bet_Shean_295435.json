@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Bet She’an",
+  "geonameid": 295435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.524351244481274,
+      "lon": 35.477273373592396,
+      "geoinfo": {
+        "display_name": "71, Emek HaMaayanot Regional Council, Jezreel Subdistrict, North District, 1080300, Israel",
+        "road": "71",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emek HaMaayanot Regional Council",
+        "state": "North District",
+        "postcode": "1080300",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "71, Bet She’an, North District, Israel"
+    },
+    {
+      "lat": 32.52865275773251,
+      "lon": 35.53266153358634,
+      "geoinfo": {
+        "display_name": "90, Emek HaMaayanot Regional Council, Jezreel Subdistrict, North District, Israel",
+        "road": "90",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emek HaMaayanot Regional Council",
+        "state": "North District",
+        "postcode": null,
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "90, Bet She’an, 77035 North District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:14.360222+00:00",
+  "_kind": "geo_samples"
+}

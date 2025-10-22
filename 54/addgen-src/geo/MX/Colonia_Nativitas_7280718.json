@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Colonia Nativitas",
+  "geonameid": 7280718,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.385420756069045,
+      "lon": -99.16970260701288,
+      "geoinfo": {
+        "display_name": "Calle San Borja, Del Valle, Mexico City, Benito Juárez, Mexico City, 03100, Mexico",
+        "road": "Calle San Borja",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Del Valle",
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "03100",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle San Borja, Colonia Nativitas, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.384301908116903,
+      "lon": -99.10059615102162,
+      "geoinfo": {
+        "display_name": "Escuela Nacional Preparatoria No. 2, 654, Circuito Interior, Colonia Mujeres ilustres, Mexico City, Iztacalco, Mexico City, 08040, Mexico",
+        "road": "Circuito Interior",
+        "house_number": "654",
+        "neighbourhood": "Colonia Mujeres ilustres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "08040",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Escuela Nacional Preparatoria No. 2, 654, Circuito Interior, Colonia Mujeres ilustres, Mexico City, Iztacalco, Mexico City, 08040, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:03.603307+00:00",
+  "_kind": "geo_samples"
+}

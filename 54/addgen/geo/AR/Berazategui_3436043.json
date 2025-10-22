@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Berazategui",
+  "geonameid": 3436043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.76653440883302,
+      "lon": -58.2432709699534,
+      "geoinfo": {
+        "display_name": "Calle 4 A, Barrio 12 de Octubre, Berazategui, Partido de Berazategui, Buenos Aires, 1880, Argentina",
+        "road": "Calle 4 A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barrio 12 de Octubre",
+        "city_district": null,
+        "city": "Berazategui",
+        "state": "Buenos Aires",
+        "postcode": "1880",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Calle 4 A, Berazategui, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.778583530077036,
+      "lon": -58.17672171340031,
+      "geoinfo": {
+        "display_name": "Calle 39 A, Plátanos, Partido de Berazategui, Buenos Aires, 1885, Argentina",
+        "road": "Calle 39 A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plátanos",
+        "state": "Buenos Aires",
+        "postcode": "1885",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Calle 39 A, Plátanos, Partido de Berazategui, Buenos Aires, 1885, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:04.831333+00:00",
+  "_kind": "geo_samples"
+}

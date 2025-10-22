@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Aylesbury",
+  "geonameid": 2656719,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.80814487820104,
+      "lon": -0.7846235476863201,
+      "geoinfo": {
+        "display_name": "Lancaster Road, Bedgrove, Aylesbury, Buckinghamshire, England, HP21 7HF, United Kingdom",
+        "road": "Lancaster Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bedgrove",
+        "city_district": null,
+        "city": "Aylesbury",
+        "state": "England",
+        "postcode": "HP21 7HF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lancaster Road, Aylesbury, England, United Kingdom"
+    },
+    {
+      "lat": 51.81215148031847,
+      "lon": -0.7773920099737406,
+      "geoinfo": {
+        "display_name": "Bedgrove, Aylesbury, Buckinghamshire, England, HP20 1JT, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bedgrove",
+        "city_district": null,
+        "city": "Aylesbury",
+        "state": "England",
+        "postcode": "HP20 1JT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bedgrove, Aylesbury, Buckinghamshire, England, HP20 1JT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:29.920072+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Dietikon",
+  "geonameid": 2661015,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.44423346280105,
+      "lon": 8.383214733762006,
+      "geoinfo": {
+        "display_name": "Moosweg, Hüttikon, Bezirk Dielsdorf, Zurich, 8115, Switzerland",
+        "road": "Moosweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hüttikon",
+        "state": "Zurich",
+        "postcode": "8115",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Moosweg, Dietikon, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.3975468780407,
+      "lon": 8.450739781016779,
+      "geoinfo": {
+        "display_name": "2, Römergasse, Schlieren, Bezirk Dietikon, Zurich, 8952, Switzerland",
+        "road": "Römergasse",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schlieren",
+        "state": "Zurich",
+        "postcode": "8952",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "2 Römergasse, Dietikon, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.40792022409805,
+      "lon": 8.35696113401894,
+      "geoinfo": {
+        "display_name": "Tobelackerstrasse, Althau, Heitersberg, Spreitenbach, Bezirk Baden, Aargau, 8957, Switzerland",
+        "road": "Tobelackerstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spreitenbach",
+        "state": "Aargau",
+        "postcode": "8957",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "456, Tobelackerstrasse, Althau, Heitersberg, Spreitenbach, Bezirk Baden, Aargau, 8957, Switzerland"
+    },
+    {
+      "lat": 47.39192681486752,
+      "lon": 8.34988427560381,
+      "geoinfo": {
+        "display_name": "Rüchligstrasse, Sunneberg, Hausen, Bellikon, Bezirk Baden, Aargau, 5454, Switzerland",
+        "road": "Rüchligstrasse",
+        "house_number": null,
+        "neighbourhood": "Sunneberg",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellikon",
+        "state": "Aargau",
+        "postcode": "5454",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "340, Rüchligstrasse, Sunneberg, Hausen, Bellikon, Bezirk Baden, Aargau, 5454, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:09:18.205402+00:00",
+  "_kind": "geo_samples"
+}

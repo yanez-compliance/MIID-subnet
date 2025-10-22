@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Büren",
+  "geonameid": 2941570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54468818394341,
+      "lon": 8.543308806227458,
+      "geoinfo": {
+        "display_name": "Talstraße, Büren, Weine, Büren, Kreis Paderborn, North Rhine-Westphalia, 33142, Germany",
+        "road": "Talstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Büren",
+        "city_district": null,
+        "city": "Büren",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33142",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Talstraße, Büren, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.533305710322246,
+      "lon": 8.500913392612702,
+      "geoinfo": {
+        "display_name": "Aschentalweg, Meiste, Rüthen, Kreis Soest, North Rhine-Westphalia, 59602, Germany",
+        "road": "Aschentalweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meiste",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59602",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "197, Aschentalweg, Meiste, Rüthen, Kreis Soest, North Rhine-Westphalia, 59602, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:10.019006+00:00",
+  "_kind": "geo_samples"
+}

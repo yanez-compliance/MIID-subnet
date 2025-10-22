@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Jerónimo",
+  "geonameid": 3519076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.30978193202197,
+      "lon": -99.5890220869977,
+      "geoinfo": {
+        "display_name": "Calle Miguel Hidalgo, San Pedro Totoltepec, Toluca, State of Mexico, 50220, Mexico",
+        "road": "Calle Miguel Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro Totoltepec",
+        "state": "State of Mexico",
+        "postcode": "50220",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Miguel Hidalgo, San Jerónimo, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.311926767940573,
+      "lon": -99.56838836102997,
+      "geoinfo": {
+        "display_name": "10, Calle 16 de Septiembre, San Pedro Totoltepec, Toluca, State of Mexico, 50225, Mexico",
+        "road": "Calle 16 de Septiembre",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro Totoltepec",
+        "state": "State of Mexico",
+        "postcode": "50225",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "10, Calle 16 de Septiembre, San Pedro Totoltepec, Toluca, State of Mexico, 50225, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:07.102261+00:00",
+  "_kind": "geo_samples"
+}

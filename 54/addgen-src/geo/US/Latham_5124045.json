@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Latham",
+  "geonameid": 5124045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.74579470408038,
+      "lon": -73.7329287512142,
+      "geoinfo": {
+        "display_name": "9, Ashington Court, City of Watervliet, Albany County, New York, 12189, United States",
+        "road": "Ashington Court",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Watervliet",
+        "state": "New York",
+        "postcode": "12189",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9 Ashington Court, Latham, New York, United States"
+    },
+    {
+      "lat": 42.75011668562823,
+      "lon": -73.81814476830284,
+      "geoinfo": {
+        "display_name": "802 A, Albany Shaker Road, Town of Colonie, Albany County, New York, 12211, United States",
+        "road": "Albany Shaker Road",
+        "house_number": "802 A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Colonie",
+        "state": "New York",
+        "postcode": "12211",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "802 A, Albany Shaker Road, Town of Colonie, Albany County, New York, 12211, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:55.074368+00:00",
+  "_kind": "geo_samples"
+}

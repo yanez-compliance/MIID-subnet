@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bādshāhpur",
+  "geonameid": 1277955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.372819459130564,
+      "lon": 77.05593670979727,
+      "geoinfo": {
+        "display_name": "Gurugram, Haryana, 122008, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gurugram",
+        "state": "Haryana",
+        "postcode": "122008",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bādshāhpur, Haryana, India"
+    },
+    {
+      "lat": 28.400101227564843,
+      "lon": 77.0027403725665,
+      "geoinfo": {
+        "display_name": "Palm Hills, Gurugram, Haryana, 122015, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Palm Hills",
+        "city_district": null,
+        "city": "Gurugram",
+        "state": "Haryana",
+        "postcode": "122015",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "742, Palm Hills, Gurugram, Haryana, 122015, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:37.143666+00:00",
+  "_kind": "geo_samples"
+}

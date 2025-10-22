@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eving",
+  "geonameid": 2928313,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.57348897539802,
+      "lon": 7.49617494994786,
+      "geoinfo": {
+        "display_name": "128, Auf dem Brink, Kemminghausen, Eving, Dortmund, North Rhine-Westphalia, 44329, Germany",
+        "road": "Auf dem Brink",
+        "house_number": "128",
+        "neighbourhood": null,
+        "suburb": "Kemminghausen",
+        "city_district": "Eving",
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44329",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "128 Auf dem Brink, Eving, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.590121498838556,
+      "lon": 7.446644364638755,
+      "geoinfo": {
+        "display_name": "13, In den Hülsen, Neue Kolonie, Brambauer, Lünen, Kreis Unna, North Rhine-Westphalia, 44536, Germany",
+        "road": "In den Hülsen",
+        "house_number": "13",
+        "neighbourhood": "Neue Kolonie",
+        "suburb": "Brambauer",
+        "city_district": null,
+        "city": "Lünen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44536",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13, In den Hülsen, Neue Kolonie, Brambauer, Lünen, Kreis Unna, North Rhine-Westphalia, 44536, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:41.765287+00:00",
+  "_kind": "geo_samples"
+}

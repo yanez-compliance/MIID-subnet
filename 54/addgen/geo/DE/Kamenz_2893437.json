@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kamenz",
+  "geonameid": 2893437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.30857581345319,
+      "lon": 14.120422319909533,
+      "geoinfo": {
+        "display_name": "Weißiger Straße, Zschornau - Čornow, Kamenz - Kamjenc, Bautzen - Budyšin, Saxony, 01917, Germany",
+        "road": "Weißiger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamenz - Kamjenc",
+        "state": "Saxony",
+        "postcode": "01917",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Weißiger Straße, Kamenz, Saxony, Germany"
+    },
+    {
+      "lat": 51.24812286075123,
+      "lon": 14.04142521633385,
+      "geoinfo": {
+        "display_name": "Schlagweg, Bischheim, Haselbachtal, Bautzen - Budyšin, Saxony, 01920, Germany",
+        "road": "Schlagweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bischheim",
+        "city_district": null,
+        "city": "Haselbachtal",
+        "state": "Saxony",
+        "postcode": "01920",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "340, Schlagweg, Bischheim, Haselbachtal, Bautzen - Budyšin, Saxony, 01920, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:46.668205+00:00",
+  "_kind": "geo_samples"
+}

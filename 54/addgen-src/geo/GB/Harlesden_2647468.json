@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Harlesden",
+  "geonameid": 2647468,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54037071535729,
+      "lon": -0.2316992415611534,
+      "geoinfo": {
+        "display_name": "Willesden Sports Centre, Donnington Road, Willesden Green, Brondesbury, London Borough of Brent, London, Greater London, England, NW10 3QU, United Kingdom",
+        "road": "Donnington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brondesbury",
+        "city_district": "London Borough of Brent",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW10 3QU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Donnington Road, Harlesden, England, United Kingdom"
+    },
+    {
+      "lat": 51.518307678484625,
+      "lon": -0.27286828351780557,
+      "geoinfo": {
+        "display_name": "Norman Way, Noel Road, Park Royal, London Borough of Ealing, London, Greater London, England, W3 0JJ, United Kingdom",
+        "road": "Noel Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Park Royal",
+        "city_district": "London Borough of Ealing",
+        "city": "London",
+        "state": "England",
+        "postcode": "W3 0JJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Norman Way, Noel Road, Park Royal, London Borough of Ealing, London, Greater London, England, W3 0JJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:23.238718+00:00",
+  "_kind": "geo_samples"
+}

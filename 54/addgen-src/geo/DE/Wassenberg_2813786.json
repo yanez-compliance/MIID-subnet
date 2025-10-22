@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wassenberg",
+  "geonameid": 2813786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.14190044365868,
+      "lon": 6.1571501814050364,
+      "geoinfo": {
+        "display_name": "Rödger Bahn, Wassenberg, Kreis Heinsberg, North Rhine-Westphalia, 41849, Germany",
+        "road": "Rödger Bahn",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wassenberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41849",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rödger Bahn, Wassenberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.10365971037933,
+      "lon": 6.223590886175326,
+      "geoinfo": {
+        "display_name": "Fronderath, Gerderath, Erkelenz, Kreis Heinsberg, North Rhine-Westphalia, 41812, Germany",
+        "road": "Fronderath",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erkelenz",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41812",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "212, Fronderath, Gerderath, Erkelenz, Kreis Heinsberg, North Rhine-Westphalia, 41812, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:32.300969+00:00",
+  "_kind": "geo_samples"
+}

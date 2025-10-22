@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Opava",
+  "geonameid": 3068927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.944162337908395,
+      "lon": 17.927109300236147,
+      "geoinfo": {
+        "display_name": "OBI, 51, Hlučínská, Kateřinky, Kateřinky u Opavy, Opava, okres Opava, Moravian-Silesian Region, Moravia-Silesia, 747 05, Czechia",
+        "road": "Hlučínská",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": "Kateřinky",
+        "city_district": null,
+        "city": "Opava",
+        "state": "Moravia-Silesia",
+        "postcode": "747 05",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "51 Hlučínská, Opava, Moravia-Silesia, Czechia"
+    },
+    {
+      "lat": 49.953392944163554,
+      "lon": 17.838154211705636,
+      "geoinfo": {
+        "display_name": "OP-S 25, Severní, Milostovice, Opava, okres Opava, Moravian-Silesian Region, Moravia-Silesia, 747 51, Czechia",
+        "road": "Severní",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Milostovice",
+        "city_district": "Milostovice",
+        "city": "Opava",
+        "state": "Moravia-Silesia",
+        "postcode": "747 51",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "OP-S 25, Severní, Milostovice, Opava, okres Opava, Moravian-Silesian Region, Moravia-Silesia, 747 51, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:12.270803+00:00",
+  "_kind": "geo_samples"
+}

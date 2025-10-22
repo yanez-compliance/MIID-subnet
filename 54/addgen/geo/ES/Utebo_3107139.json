@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Utebo",
+  "geonameid": 3107139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.71245963710835,
+      "lon": -1.0013480593043318,
+      "geoinfo": {
+        "display_name": "Ronda de Toledo, Utebo, Zaragoza, Aragon, 50180, Spain",
+        "road": "Ronda de Toledo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Utebo",
+        "state": "Aragon",
+        "postcode": "50180",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Ronda de Toledo, Utebo, Aragon, Spain"
+    },
+    {
+      "lat": 41.697680021112575,
+      "lon": -0.9988540248404977,
+      "geoinfo": {
+        "display_name": "Urbanización Torreblanca, Garrapinillos, Distrito Rural, Zaragoza, Aragon, 50180, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Garrapinillos",
+        "city_district": "Distrito Rural",
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "postcode": "50180",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "203, Urbanización Torreblanca, Garrapinillos, Distrito Rural, Zaragoza, Aragon, 50180, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:49.188084+00:00",
+  "_kind": "geo_samples"
+}

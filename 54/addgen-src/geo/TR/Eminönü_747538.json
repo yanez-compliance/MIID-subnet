@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Eminönü",
+  "geonameid": 747538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.972751833353065,
+      "lon": 28.972108895252994,
+      "geoinfo": {
+        "display_name": "Istanbul, Fatih, Istanbul, Marmara Region, 34122, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Istanbul",
+        "state": null,
+        "postcode": "34122",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Eminönü, Turkey"
+    },
+    {
+      "lat": 41.02849019103512,
+      "lon": 28.92078592896693,
+      "geoinfo": {
+        "display_name": "Menderes Caddesi, Orta Mahallesi, Bayrampaşa, Istanbul, Marmara Region, 34030, Turkey",
+        "road": "Menderes Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Orta Mahallesi",
+        "city_district": null,
+        "city": "Bayrampaşa",
+        "state": null,
+        "postcode": "34030",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "341, Menderes Caddesi, Orta Mahallesi, Bayrampaşa, Istanbul, Marmara Region, 34030, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:57.559467+00:00",
+  "_kind": "geo_samples"
+}

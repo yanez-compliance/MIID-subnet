@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Pitt Meadows",
+  "geonameid": 6105815,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.2370555917322,
+      "lon": -122.63978347912281,
+      "geoinfo": {
+        "display_name": "210 Street, South Alouette, Maple Ridge, Metro Vancouver Regional District, British Columbia, V4R 2H6, Canada",
+        "road": "210 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Alouette",
+        "city_district": "South Alouette",
+        "city": "Maple Ridge",
+        "state": "British Columbia",
+        "postcode": "V4R 2H6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "210 Street, Pitt Meadows, British Columbia, Canada"
+    },
+    {
+      "lat": 49.23844903329094,
+      "lon": -122.75256857689135,
+      "geoinfo": {
+        "display_name": "Coast Meridian Road, Port Coquitlam, Metro Vancouver Regional District, British Columbia, V3C 6L4, Canada",
+        "road": "Coast Meridian Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Coquitlam",
+        "state": "British Columbia",
+        "postcode": "V3C 6L4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Coast Meridian Road, Port Coquitlam, Metro Vancouver Regional District, British Columbia, V3C 6L4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:48.833774+00:00",
+  "_kind": "geo_samples"
+}

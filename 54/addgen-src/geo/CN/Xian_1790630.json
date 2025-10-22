@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xi’an",
+  "geonameid": 1790630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.27190315938472,
+      "lon": 108.97050726091466,
+      "geoinfo": {
+        "display_name": "西安市第三十九中学, 39, Tangci North Alley, Changlexilu, Xincheng District, Xi'an, Shaanxi, 710000, China",
+        "road": "Tangci North Alley",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": "Changlexilu",
+        "city_district": null,
+        "city": "Xincheng District",
+        "state": "Shaanxi",
+        "postcode": "710000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "39 Tangci North Alley, Xi’an, Shaanxi, China"
+    },
+    {
+      "lat": 34.278101470436035,
+      "lon": 108.90184881968064,
+      "geoinfo": {
+        "display_name": "Lianhu, Fenghe 2nd Alley, 火西村社区, Hongmiaopo, Lianhu District, Xi'an, Shaanxi, 710072, China",
+        "road": "Fenghe 2nd Alley",
+        "house_number": null,
+        "neighbourhood": "火西村社区",
+        "suburb": "Hongmiaopo",
+        "city_district": null,
+        "city": "Lianhu District",
+        "state": "Shaanxi",
+        "postcode": "710072",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lianhu, Fenghe 2nd Alley, 火西村社区, Hongmiaopo, Lianhu District, Xi'an, Shaanxi, 710072, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:52:12.201971+00:00",
+  "_kind": "geo_samples"
+}

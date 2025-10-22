@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neckarsulm",
+  "geonameid": 2866758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.21104407819585,
+      "lon": 9.192551010065856,
+      "geoinfo": {
+        "display_name": "3, Eichenweg, Untereisesheim, Verwaltungsgemeinschaft Neckarsulm, Landkreis Heilbronn, Baden-Württemberg, 74257, Germany",
+        "road": "Eichenweg",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Untereisesheim",
+        "state": "Baden-Württemberg",
+        "postcode": "74257",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Eichenweg, Neckarsulm, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.18989483001757,
+      "lon": 9.259852360189447,
+      "geoinfo": {
+        "display_name": "Häckselplatz Neckarsulm - Erlenbach, Wilfenseeweg, Neckarsulm (Kernstadt), Neckarsulm, Verwaltungsgemeinschaft Neckarsulm, Landkreis Heilbronn, Baden-Württemberg, 74172, Germany",
+        "road": "Wilfenseeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neckarsulm (Kernstadt)",
+        "state": "Baden-Württemberg",
+        "postcode": "74172",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "546, Wilfenseeweg, Neckarsulm, 74172 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:03.017584+00:00",
+  "_kind": "geo_samples"
+}

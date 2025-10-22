@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Workington",
+  "geonameid": 2633553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.64184434761641,
+      "lon": -3.5099654939020914,
+      "geoinfo": {
+        "display_name": "Stainburn Bypass, Schoose, Stainburn, Workington, Cumberland, England, CA14 1XW, United Kingdom",
+        "road": "Stainburn Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Workington",
+        "state": "England",
+        "postcode": "CA14 1XW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Stainburn Bypass, Workington, England, United Kingdom"
+    },
+    {
+      "lat": 54.622999899856374,
+      "lon": -3.5879684507342673,
+      "geoinfo": {
+        "display_name": "Salterbeck, Harrington, Workington, Cumberland, England, CA14 5HD, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Salterbeck",
+        "city_district": null,
+        "city": "Workington",
+        "state": "England",
+        "postcode": "CA14 5HD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Salterbeck, Harrington, Workington, Cumberland, England, CA14 5HD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:25.712145+00:00",
+  "_kind": "geo_samples"
+}

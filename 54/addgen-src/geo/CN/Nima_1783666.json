@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Nima",
+  "geonameid": 1783666,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.98265644479563,
+      "lon": 102.09308517281215,
+      "geoinfo": {
+        "display_name": "Nima, Maqu County, Gannan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nima",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Nima, Gansu, China"
+    },
+    {
+      "lat": 33.970534008050784,
+      "lon": 102.08322830832796,
+      "geoinfo": {
+        "display_name": "碌采线, Maqu, Nima, Maqu County, Gannan, Gansu, China",
+        "road": "碌采线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maqu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "625, 碌采线, Maqu, Nima, Maqu County, Gannan, 75009 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:57.530750+00:00",
+  "_kind": "geo_samples"
+}

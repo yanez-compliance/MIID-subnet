@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Lutsk",
+  "geonameid": 702569,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.7471173138671,
+      "lon": 25.401609579520848,
+      "geoinfo": {
+        "display_name": "22-А к1, вулиця Князя Володимира, Lypyny, Підгайцівська сільська громада, Lutsk Raion, Volyn Oblast, 45601, Ukraine",
+        "road": "вулиця Князя Володимира",
+        "house_number": "22-А к1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lypyny",
+        "state": "Volyn Oblast",
+        "postcode": "45601",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "22-А к1 вулиця Князя Володимира, Lutsk, Volyn Oblast, Ukraine"
+    },
+    {
+      "lat": 50.74766497445357,
+      "lon": 25.391089178056507,
+      "geoinfo": {
+        "display_name": "29а, Teremnivska Street, Teremno, Lutsk, Lutsk Urban Hromada, Lutsk Raion, Volyn Oblast, 43008, Ukraine",
+        "road": "Teremnivska Street",
+        "house_number": "29а",
+        "neighbourhood": null,
+        "suburb": "Teremno",
+        "city_district": null,
+        "city": "Lutsk",
+        "state": "Volyn Oblast",
+        "postcode": "43008",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "29а, Teremnivska Street, Teremno, Lutsk, Lutsk Urban Hromada, Lutsk Raion, Volyn Oblast, 43008, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:49.981627+00:00",
+  "_kind": "geo_samples"
+}

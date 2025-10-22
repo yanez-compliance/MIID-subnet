@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Makindu",
+  "geonameid": 188123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -2.2472325205175427,
+      "lon": 37.847890169817454,
+      "geoinfo": {
+        "display_name": "Kibwezi West, Makueni, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Makueni",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Makindu, Makueni, Kenya"
+    },
+    {
+      "lat": -2.244682542717931,
+      "lon": 37.82005772355371,
+      "geoinfo": {
+        "display_name": "Makindu, Kibwezi West, Makueni, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Makindu",
+        "state": "Makueni",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "959, Makindu, Kibwezi West, 69977 Makueni, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:05.174270+00:00",
+  "_kind": "geo_samples"
+}

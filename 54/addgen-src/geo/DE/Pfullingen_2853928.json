@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pfullingen",
+  "geonameid": 2853928,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.492043891187954,
+      "lon": 9.243278435097555,
+      "geoinfo": {
+        "display_name": "Achalm, Reutlingen (Kernstadt), Reutlingen, Landkreis Reutlingen, Baden-Württemberg, 72766, Germany",
+        "road": "Achalm",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reutlingen (Kernstadt)",
+        "city_district": null,
+        "city": "Reutlingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72766",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Achalm, Pfullingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.48609248152467,
+      "lon": 9.209903593198005,
+      "geoinfo": {
+        "display_name": "17, Maximilianstraße, Reutlingen (Kernstadt), Reutlingen, Landkreis Reutlingen, Baden-Württemberg, 72762, Germany",
+        "road": "Maximilianstraße",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Reutlingen (Kernstadt)",
+        "city_district": null,
+        "city": "Reutlingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72762",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17, Maximilianstraße, Reutlingen (Kernstadt), Reutlingen, Landkreis Reutlingen, Baden-Württemberg, 72762, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:24.049250+00:00",
+  "_kind": "geo_samples"
+}

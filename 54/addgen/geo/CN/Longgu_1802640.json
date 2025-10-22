@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longgu",
+  "geonameid": 1802640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.900476833733634,
+      "lon": 116.82779140873832,
+      "geoinfo": {
+        "display_name": "S348, Pei County, Xuzhou, Jiangsu, 221000, China",
+        "road": "S348",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pei County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S348, Longgu, Jiangsu, China"
+    },
+    {
+      "lat": 34.92106308231866,
+      "lon": 116.84139775561952,
+      "geoinfo": {
+        "display_name": "龙固镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "431, 龙固镇, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:54:51.791269+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Carei",
+  "geonameid": 682685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.722489714539826,
+      "lon": 22.456434525697492,
+      "geoinfo": {
+        "display_name": "Cămin, Satu Mare, 447081, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "447081",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Carei, Romania"
+    },
+    {
+      "lat": 47.6771276258035,
+      "lon": 22.506449182846886,
+      "geoinfo": {
+        "display_name": "Centura Carei, Carei, Satu Mare, 445100, Romania",
+        "road": "Centura Carei",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carei",
+        "state": null,
+        "postcode": "445100",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "588, Centura Carei, Carei, Satu Mare, 445100, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:45:48.984378+00:00",
+  "_kind": "geo_samples"
+}

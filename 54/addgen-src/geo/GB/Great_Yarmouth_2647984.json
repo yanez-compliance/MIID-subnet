@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Great Yarmouth",
+  "geonameid": 2647984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.619641221390864,
+      "lon": 1.7082894513655762,
+      "geoinfo": {
+        "display_name": "New Road, Runham Vauxhall, Great Yarmouth, Norfolk, England, NR30 1TD, United Kingdom",
+        "road": "New Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Runham Vauxhall",
+        "city_district": null,
+        "city": "Great Yarmouth",
+        "state": "England",
+        "postcode": "NR30 1TD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "New Road, Great Yarmouth, England, United Kingdom"
+    },
+    {
+      "lat": 52.64061036116516,
+      "lon": 1.7691111517180018,
+      "geoinfo": {
+        "display_name": "Newtown, Great Yarmouth, Norfolk, England, NR30 4BJ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Newtown",
+        "city_district": null,
+        "city": "Great Yarmouth",
+        "state": "England",
+        "postcode": "NR30 4BJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Newtown, Great Yarmouth, Norfolk, England, NR30 4BJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:28.863978+00:00",
+  "_kind": "geo_samples"
+}

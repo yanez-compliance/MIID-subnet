@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Missoula",
+  "geonameid": 5666639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.84839430458029,
+      "lon": -114.01103163409282,
+      "geoinfo": {
+        "display_name": "South Avenue West, Lewis & Clark, Missoula, Missoula County, Montana, 59804, United States",
+        "road": "South Avenue West",
+        "house_number": null,
+        "neighbourhood": "Lewis & Clark",
+        "suburb": null,
+        "city_district": null,
+        "city": "Missoula",
+        "state": "Montana",
+        "postcode": "59804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Avenue West, Missoula, Montana, United States"
+    },
+    {
+      "lat": 46.876724348412026,
+      "lon": -114.03671912051189,
+      "geoinfo": {
+        "display_name": "790, North Davis Street, River Road, Missoula, Missoula County, Montana, 59801, United States",
+        "road": "North Davis Street",
+        "house_number": "790",
+        "neighbourhood": "River Road",
+        "suburb": null,
+        "city_district": null,
+        "city": "Missoula",
+        "state": "Montana",
+        "postcode": "59801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "790, North Davis Street, River Road, Missoula, Missoula County, Montana, 59801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:29.432951+00:00",
+  "_kind": "geo_samples"
+}

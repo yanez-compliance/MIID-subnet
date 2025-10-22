@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seagoville",
+  "geonameid": 4727605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.62158218987357,
+      "lon": -96.49462221053693,
+      "geoinfo": {
+        "display_name": "Kaufman Street, Seagoville, Kaufman County, Texas, 75159, United States",
+        "road": "Kaufman Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seagoville",
+        "state": "Texas",
+        "postcode": "75159",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kaufman Street, Seagoville, Texas, United States"
+    },
+    {
+      "lat": 32.618036916749354,
+      "lon": -96.55802534019399,
+      "geoinfo": {
+        "display_name": "West Malloy Bridge Road, Seagoville, Dallas County, Texas, 75159, United States",
+        "road": "West Malloy Bridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seagoville",
+        "state": "Texas",
+        "postcode": "75159",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "287, West Malloy Bridge Road, Seagoville, Dallas County, Texas, 75159, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:30.461044+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Massy",
+  "geonameid": 2995206,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.7127311377222,
+      "lon": 2.2980397263968695,
+      "geoinfo": {
+        "display_name": "7, Route de Longjumeau, Les Quatre Fourchettes, Chilly-Mazarin, Palaiseau, Essonne, Metropolitan France, 91380, France",
+        "road": "Route de Longjumeau",
+        "house_number": "7",
+        "neighbourhood": "Les Quatre Fourchettes",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilly-Mazarin",
+        "state": null,
+        "postcode": "91380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "7 Route de Longjumeau, Massy, Ile-de-France, France"
+    },
+    {
+      "lat": 48.69680859415866,
+      "lon": 2.245898817352104,
+      "geoinfo": {
+        "display_name": "Avenue de la Plesse, Courtabœuf 8, Villiers, Villebon-sur-Yvette, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91140, France",
+        "road": "Avenue de la Plesse",
+        "house_number": null,
+        "neighbourhood": "Courtabœuf 8",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villebon-sur-Yvette",
+        "state": "Ile-de-France",
+        "postcode": "91140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de la Plesse, Courtabœuf 8, Villiers, Villebon-sur-Yvette, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91140, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:08.117646+00:00",
+  "_kind": "geo_samples"
+}

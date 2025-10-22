@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Carugate",
+  "geonameid": 3180389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.525097044149334,
+      "lon": 9.315565826936181,
+      "geoinfo": {
+        "display_name": "134, Via Monza, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy",
+        "road": "Via Monza",
+        "house_number": "134",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cernusco sul Naviglio",
+        "state": "Lombardy",
+        "postcode": "20063",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "134 Via Monza, Carugate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.563155845954356,
+      "lon": 9.308227862003836,
+      "geoinfo": {
+        "display_name": "Autostrada Serenissima, San Rocco, Sant'Albino, Brugherio, Monza and Brianza, Lombardy, 20861, Italy",
+        "road": "Autostrada Serenissima",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Rocco",
+        "city_district": null,
+        "city": "Brugherio",
+        "state": "Lombardy",
+        "postcode": "20861",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "875, Autostrada Serenissima, San Rocco, Sant'Albino, Brugherio, Monza and Brianza, Lombardy, 20861, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:45.723989+00:00",
+  "_kind": "geo_samples"
+}

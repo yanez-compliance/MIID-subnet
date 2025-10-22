@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Progreso de Alvaro Obregon",
+  "geonameid": 3521103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.240428359985223,
+      "lon": -99.17815869892104,
+      "geoinfo": {
+        "display_name": "Dos Cerros, Colonia Veracruz, Mixquiahuala de Juárez, Hidalgo, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colonia Veracruz",
+        "state": "Hidalgo",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Progreso de Alvaro Obregon, Hidalgo, Mexico"
+    },
+    {
+      "lat": 20.24879909176661,
+      "lon": -99.22877864757884,
+      "geoinfo": {
+        "display_name": "Tunititlán, Chilcuautla, Hidalgo, 42752, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tunititlán",
+        "state": "Hidalgo",
+        "postcode": "42752",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "486, Tunititlán, Chilcuautla, Hidalgo, 42752, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:08.760488+00:00",
+  "_kind": "geo_samples"
+}

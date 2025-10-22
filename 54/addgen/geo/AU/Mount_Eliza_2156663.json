@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Mount Eliza",
+  "geonameid": 2156663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.189810793367464,
+      "lon": 145.11907733035392,
+      "geoinfo": {
+        "display_name": "105, Mather Road, Mount Eliza, Melbourne, Shire of Mornington Peninsula, Victoria, 3930, Australia",
+        "road": "Mather Road",
+        "house_number": "105",
+        "neighbourhood": null,
+        "suburb": "Mount Eliza",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3930",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "105 Mather Road, Mount Eliza, Victoria, Australia"
+    },
+    {
+      "lat": -38.17240075549628,
+      "lon": 145.0614686332872,
+      "geoinfo": {
+        "display_name": "Victoria, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Victoria",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "395, Mount Eliza, 85511 Victoria, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:15.516621+00:00",
+  "_kind": "geo_samples"
+}

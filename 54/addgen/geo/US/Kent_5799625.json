@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kent",
+  "geonameid": 5799625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.42364681100584,
+      "lon": -122.23041761054313,
+      "geoinfo": {
+        "display_name": "Hexcel, 81st Avenue South, Kent, King County, Washington, 98055, United States",
+        "road": "81st Avenue South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kent",
+        "state": "Washington",
+        "postcode": "98055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "81st Avenue South, Kent, Washington, United States"
+    },
+    {
+      "lat": 47.34386532080922,
+      "lon": -122.23037443835689,
+      "geoinfo": {
+        "display_name": "4156, B Place Northwest, North Auburn, Auburn, King County, Washington, 98001, United States",
+        "road": "B Place Northwest",
+        "house_number": "4156",
+        "neighbourhood": null,
+        "suburb": "North Auburn",
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Washington",
+        "postcode": "98001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4156, B Place Northwest, North Auburn, Auburn, King County, Washington, 98001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:10.378232+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Petersburg",
+  "geonameid": 4778626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.24317285221282,
+      "lon": -77.44010892324305,
+      "geoinfo": {
+        "display_name": "4300, Hickory Road, River Road Terrace, Ettrick, Chesterfield County, Virginia, 23803, United States",
+        "road": "Hickory Road",
+        "house_number": "4300",
+        "neighbourhood": "River Road Terrace",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ettrick",
+        "state": "Virginia",
+        "postcode": "23803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4300 Hickory Road, Petersburg, Virginia, United States"
+    },
+    {
+      "lat": 37.211869041552674,
+      "lon": -77.34989444491615,
+      "geoinfo": {
+        "display_name": "2651, North Stedman Drive, Spring Garden Mobile Home Park, Petersburg, Virginia, 23803, United States",
+        "road": "North Stedman Drive",
+        "house_number": "2651",
+        "neighbourhood": "Spring Garden Mobile Home Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Petersburg",
+        "state": "Virginia",
+        "postcode": "23803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2651, North Stedman Drive, Spring Garden Mobile Home Park, Petersburg, Virginia, 23803, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:27.448040+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hamburg",
+  "geonameid": 2911298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.56076424783545,
+      "lon": 10.01700300277448,
+      "geoinfo": {
+        "display_name": "Gebäude E, Lohmühlenstraße, St. Georg, Hamburg-Mitte, Hamburg, 22087, Germany",
+        "road": "Lohmühlenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "St. Georg",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22087",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lohmühlenstraße, Hamburg, Germany"
+    },
+    {
+      "lat": 53.51134573846467,
+      "lon": 9.984529942124924,
+      "geoinfo": {
+        "display_name": "1, Am Veringhof, Reiherstiegviertel, Wilhelmsburg, Hamburg-Mitte, Hamburg, 21107, Germany",
+        "road": "Am Veringhof",
+        "house_number": "1",
+        "neighbourhood": "Reiherstiegviertel",
+        "suburb": "Wilhelmsburg",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21107",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Am Veringhof, Reiherstiegviertel, Wilhelmsburg, Hamburg-Mitte, Hamburg, 21107, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:51.719109+00:00",
+  "_kind": "geo_samples"
+}

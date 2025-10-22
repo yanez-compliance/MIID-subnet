@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clinton Township",
+  "geonameid": 4989133,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.57048081167558,
+      "lon": -82.91028189466898,
+      "geoinfo": {
+        "display_name": "Little Mack Avenue, Clinton Township, Macomb County, Michigan, 48035, United States",
+        "road": "Little Mack Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clinton Township",
+        "state": "Michigan",
+        "postcode": "48035",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Little Mack Avenue, Clinton Township, Michigan, United States"
+    },
+    {
+      "lat": 42.60625055168052,
+      "lon": -82.95353100010043,
+      "geoinfo": {
+        "display_name": "Walgreens, 16741, Canal Road, Clinton Township, Macomb County, Michigan, 48038, United States",
+        "road": "Canal Road",
+        "house_number": "16741",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clinton Township",
+        "state": "Michigan",
+        "postcode": "48038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walgreens, 16741, Canal Road, Clinton Township, Macomb County, Michigan, 48038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:04.990054+00:00",
+  "_kind": "geo_samples"
+}

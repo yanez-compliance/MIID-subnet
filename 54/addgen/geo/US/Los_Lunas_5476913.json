@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Los Lunas",
+  "geonameid": 5476913,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.79676791427278,
+      "lon": -106.72440156876918,
+      "geoinfo": {
+        "display_name": "Las Rosas Drive, Los Lunas, Valencia County, New Mexico, 87031, United States",
+        "road": "Las Rosas Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Lunas",
+        "state": "New Mexico",
+        "postcode": "87031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Las Rosas Drive, Los Lunas, New Mexico, United States"
+    },
+    {
+      "lat": 34.791392544834245,
+      "lon": -106.73193445158756,
+      "geoinfo": {
+        "display_name": "1301, Carson Drive, Los Lunas, Valencia County, New Mexico, 87031, United States",
+        "road": "Carson Drive",
+        "house_number": "1301",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Lunas",
+        "state": "New Mexico",
+        "postcode": "87031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1301, Carson Drive, Los Lunas, Valencia County, New Mexico, 87031, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:00.301885+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ukiah",
+  "geonameid": 5404476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.12300836296312,
+      "lon": -123.17891342106337,
+      "geoinfo": {
+        "display_name": "Talmage, Mendocino County, California, 95481, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Talmage",
+        "state": "California",
+        "postcode": "95481",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ukiah, California, United States"
+    },
+    {
+      "lat": 39.14157385731262,
+      "lon": -123.24970060927971,
+      "geoinfo": {
+        "display_name": "Mendocino County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "068, Ukiah, 17449 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:28.202580+00:00",
+  "_kind": "geo_samples"
+}

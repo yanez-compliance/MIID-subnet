@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Terrytown",
+  "geonameid": 4343327,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.899625108498007,
+      "lon": -90.04115789395789,
+      "geoinfo": {
+        "display_name": "1608, Carol Sue Avenue, Terrytown, Jefferson Parish, Louisiana, 70056, United States",
+        "road": "Carol Sue Avenue",
+        "house_number": "1608",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terrytown",
+        "state": "Louisiana",
+        "postcode": "70056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1608 Carol Sue Avenue, Terrytown, Louisiana, United States"
+    },
+    {
+      "lat": 29.924503997911998,
+      "lon": -90.05889607280848,
+      "geoinfo": {
+        "display_name": "Mississippi River Trail, Gretna Terminal, Gretna, Jefferson Parish, Louisiana, 70130, United States",
+        "road": "Mississippi River Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gretna",
+        "state": "Louisiana",
+        "postcode": "70130",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "262, Mississippi River Trail, Gretna Terminal, Gretna, Jefferson Parish, Louisiana, 70130, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:08.167533+00:00",
+  "_kind": "geo_samples"
+}

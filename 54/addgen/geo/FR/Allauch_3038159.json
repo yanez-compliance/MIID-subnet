@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Allauch",
+  "geonameid": 3038159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.334002047157696,
+      "lon": 5.458291999946326,
+      "geoinfo": {
+        "display_name": "Résidence Les Bartavelles, La Poncha, 13th Arrondissement, Allauch, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13190, France",
+        "road": "Résidence Les Bartavelles",
+        "house_number": null,
+        "neighbourhood": "La Poncha",
+        "suburb": "13th Arrondissement",
+        "city_district": null,
+        "city": "Allauch",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Résidence Les Bartavelles, Allauch, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.312627394858076,
+      "lon": 5.512942020542703,
+      "geoinfo": {
+        "display_name": "Pluvence, La Treille, 11th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13011, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Pluvence",
+        "suburb": "11th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13011",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Pluvence, La Treille, 11th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13011, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:32.633419+00:00",
+  "_kind": "geo_samples"
+}

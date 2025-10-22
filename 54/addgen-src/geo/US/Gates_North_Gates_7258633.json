@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gates-North Gates",
+  "geonameid": 7258633,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.15777722466495,
+      "lon": -77.72788530987486,
+      "geoinfo": {
+        "display_name": "NY 531, Gates, Town of Gates, Monroe County, New York, 14624, United States",
+        "road": "NY 531",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gates",
+        "state": "New York",
+        "postcode": "14624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NY 531, Gates-North Gates, New York, United States"
+    },
+    {
+      "lat": 43.14008545492562,
+      "lon": -77.74494270363651,
+      "geoinfo": {
+        "display_name": "51, Ivy Bridge Way, Coldwater, City of Rochester, Town of Gates, Monroe County, New York, 14624, United States",
+        "road": "Ivy Bridge Way",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rochester",
+        "state": "New York",
+        "postcode": "14624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "51, Ivy Bridge Way, Coldwater, City of Rochester, Town of Gates, Monroe County, New York, 14624, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:08.155941+00:00",
+  "_kind": "geo_samples"
+}

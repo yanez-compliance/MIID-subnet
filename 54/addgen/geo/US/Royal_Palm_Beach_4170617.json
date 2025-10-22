@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Royal Palm Beach",
+  "geonameid": 4170617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.686028704368262,
+      "lon": -80.22246781478536,
+      "geoinfo": {
+        "display_name": "Lamstein Lane, Royal Palm Beach, Palm Beach County, Florida, 33411, United States",
+        "road": "Lamstein Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Royal Palm Beach",
+        "state": "Florida",
+        "postcode": "33411",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lamstein Lane, Royal Palm Beach, Florida, United States"
+    },
+    {
+      "lat": 26.734567135396684,
+      "lon": -80.24935376708997,
+      "geoinfo": {
+        "display_name": "40th Street North, The Acreage, Palm Beach County, Florida, 33411, United States",
+        "road": "40th Street North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33411",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "40th Street North, The Acreage, Palm Beach County, Florida, 33411, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:42:50.405355+00:00",
+  "_kind": "geo_samples"
+}

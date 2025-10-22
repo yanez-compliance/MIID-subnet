@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bell",
+  "geonameid": 5327298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.9929849214774,
+      "lon": -118.14641088342981,
+      "geoinfo": {
+        "display_name": "East 26th Street, Simons, Commerce, Los Angeles County, California, 90040, United States",
+        "road": "East 26th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Commerce",
+        "state": "California",
+        "postcode": "90040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 26th Street, Bell, California, United States"
+    },
+    {
+      "lat": 33.98365086386605,
+      "lon": -118.17277694834273,
+      "geoinfo": {
+        "display_name": "5132, East 60th Street, Walker, Maywood, Los Angeles County, California, 90270, United States",
+        "road": "East 60th Street",
+        "house_number": "5132",
+        "neighbourhood": "Walker",
+        "suburb": null,
+        "city_district": null,
+        "city": "Maywood",
+        "state": "California",
+        "postcode": "90270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5132, East 60th Street, Walker, Maywood, Los Angeles County, California, 90270, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:42.164001+00:00",
+  "_kind": "geo_samples"
+}

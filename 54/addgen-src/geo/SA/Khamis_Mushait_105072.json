@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Khamis Mushait",
+  "geonameid": 105072,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 18.310661624391397,
+      "lon": 42.76745561317712,
+      "geoinfo": {
+        "display_name": "طريق الملك فهد, Ash Sharafiyah, Khamis Mushayt, 'Asir Province, 62435, Saudi Arabia",
+        "road": "طريق الملك فهد",
+        "house_number": null,
+        "neighbourhood": "Ash Sharafiyah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Khamis Mushayt",
+        "state": "'Asir Province",
+        "postcode": "62435",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "629, طريق الملك فهد, Ash Sharafiyah, Khamis Mushayt, 'Asir Province, 62435, Saudi Arabia"
+    },
+    {
+      "lat": 18.31367325956989,
+      "lon": 42.75585871823731,
+      "geoinfo": {
+        "display_name": "Al Aziziyah, Khamis Mushayt, 'Asir Province, 62435, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Al Aziziyah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Khamis Mushayt",
+        "state": "'Asir Province",
+        "postcode": "62435",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "360, Al Aziziyah, Khamis Mushayt, 'Asir Province, 62435, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:04.585280+00:00",
+  "_kind": "geo_samples"
+}

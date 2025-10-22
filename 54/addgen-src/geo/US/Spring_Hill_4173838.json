@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spring Hill",
+  "geonameid": 4173838,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.516129297472425,
+      "lon": -82.54131488639449,
+      "geoinfo": {
+        "display_name": "Hagerty, Camm Road, Spring Hill, Hernando County, Florida, 34613, United States",
+        "road": "Camm Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring Hill",
+        "state": "Florida",
+        "postcode": "34613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Camm Road, Spring Hill, Florida, United States"
+    },
+    {
+      "lat": 28.462204117575904,
+      "lon": -82.51128929146508,
+      "geoinfo": {
+        "display_name": "13049, Antelope Street, Spring Hill, Hernando County, Florida, 34609, United States",
+        "road": "Antelope Street",
+        "house_number": "13049",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring Hill",
+        "state": "Florida",
+        "postcode": "34609",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13049, Antelope Street, Spring Hill, Hernando County, Florida, 34609, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:17.390839+00:00",
+  "_kind": "geo_samples"
+}

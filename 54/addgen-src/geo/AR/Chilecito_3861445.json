@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Chilecito",
+  "geonameid": 3861445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -29.17784896272539,
+      "lon": -67.51736299818089,
+      "geoinfo": {
+        "display_name": "RP 15, Barrio Hipólito Yrigoyen, Chilecito, Departamento Chilecito, La Rioja, F5360, Argentina",
+        "road": "RP 15",
+        "house_number": null,
+        "neighbourhood": "Barrio Hipólito Yrigoyen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilecito",
+        "state": "La Rioja",
+        "postcode": "F5360",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "RP 15, Chilecito, La Rioja, Argentina"
+    },
+    {
+      "lat": -29.186006193519848,
+      "lon": -67.47473433129863,
+      "geoinfo": {
+        "display_name": "San Miguel, Departamento Chilecito, La Rioja, F5360, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Miguel",
+        "city_district": null,
+        "city": null,
+        "state": "La Rioja",
+        "postcode": "F5360",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "489, San Miguel, Departamento Chilecito, La Rioja, F5360, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:38.598628+00:00",
+  "_kind": "geo_samples"
+}

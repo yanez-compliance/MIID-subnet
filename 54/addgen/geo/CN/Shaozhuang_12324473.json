@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaozhuang",
+  "geonameid": 12324473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.764264038135565,
+      "lon": 118.28703948999579,
+      "geoinfo": {
+        "display_name": "Linzi District, Zibo, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zibo",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shaozhuang, Shandong, China"
+    },
+    {
+      "lat": 36.74882464015026,
+      "lon": 118.34320055883869,
+      "geoinfo": {
+        "display_name": "徐州路, Qingzhou City, Weifang, Shandong, China",
+        "road": "徐州路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "112, 徐州路, Qingzhou City, Weifang, 51301 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:53.798156+00:00",
+  "_kind": "geo_samples"
+}

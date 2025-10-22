@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Salt Lake",
+  "geonameid": 5781794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70362475024252,
+      "lon": -111.87849864277483,
+      "geoinfo": {
+        "display_name": "451, Granite Avenue, South Salt Lake, Salt Lake County, Utah, 84115, United States",
+        "road": "Granite Avenue",
+        "house_number": "451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Salt Lake",
+        "state": "Utah",
+        "postcode": "84115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "451 Granite Avenue, South Salt Lake, Utah, United States"
+    },
+    {
+      "lat": 40.72855433349528,
+      "lon": -111.93383029165128,
+      "geoinfo": {
+        "display_name": "Glendale Golf Course, 2100, Jordan River Parkway, Glendale, Salt Lake City, Salt Lake County, Utah, 84119, United States",
+        "road": "Jordan River Parkway",
+        "house_number": "2100",
+        "neighbourhood": "Glendale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "postcode": "84119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Glendale Golf Course, 2100, Jordan River Parkway, Glendale, Salt Lake City, Salt Lake County, Utah, 84119, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:38.460475+00:00",
+  "_kind": "geo_samples"
+}

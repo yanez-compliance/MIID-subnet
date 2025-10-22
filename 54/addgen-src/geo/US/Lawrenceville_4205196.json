@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lawrenceville",
+  "geonameid": 4205196,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.92005001941398,
+      "lon": -84.00071265234904,
+      "geoinfo": {
+        "display_name": "J.M. Tull-Gwinnett Family YMCA, 2985, Sugarloaf Parkway, Lawrenceville, Gwinnett County, Georgia, 30045, United States",
+        "road": "Sugarloaf Parkway",
+        "house_number": "2985",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lawrenceville",
+        "state": "Georgia",
+        "postcode": "30045",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2985 Sugarloaf Parkway, Lawrenceville, Georgia, United States"
+    },
+    {
+      "lat": 33.986217805543966,
+      "lon": -83.96609633449576,
+      "geoinfo": {
+        "display_name": "703, Progress Center Avenue Northeast, Gwinnett County, Georgia, 30043, United States",
+        "road": "Progress Center Avenue Northeast",
+        "house_number": "703",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "703, Progress Center Avenue Northeast, Gwinnett County, Georgia, 30043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:49.555059+00:00",
+  "_kind": "geo_samples"
+}

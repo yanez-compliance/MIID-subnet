@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shilin",
+  "geonameid": 6825277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.802464160712347,
+      "lon": 103.36922847234784,
+      "geoinfo": {
+        "display_name": "Shilin, Kunming, Yunnan, 652200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kunming",
+        "state": "Yunnan",
+        "postcode": "652200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shilin, Yunnan, China"
+    },
+    {
+      "lat": 24.832222829192983,
+      "lon": 103.35799825753791,
+      "geoinfo": {
+        "display_name": "Beida, Kunming, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kunming",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "593, Beida, Kunming, 30810 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:43.198321+00:00",
+  "_kind": "geo_samples"
+}

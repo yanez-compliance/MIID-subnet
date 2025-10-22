@@ -1,0 +1,65 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "San Lorenzo de Esmeraldas",
+  "geonameid": 3651694,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.2880104743999865,
+      "lon": -78.82290493624984,
+      "geoinfo": {
+        "display_name": "San Lorenzo, Esmeraldas, 080550, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Lorenzo",
+        "state": "Esmeraldas",
+        "postcode": "080550",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "San Lorenzo de Esmeraldas, Esmeraldas, Ecuador"
+    },
+    {
+      "lat": 1.3140376320846914,
+      "lon": -78.80652915107515,
+      "geoinfo": {
+        "display_name": "Cía Cayapas, San Lorenzo, Esmeraldas, 080550, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Lorenzo",
+        "state": "Esmeraldas",
+        "postcode": "080550",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "843, Cía Cayapas, San Lorenzo, Esmeraldas, 080550, Ecuador"
+    },
+    {
+      "lat": 1.2851521471093272,
+      "lon": -78.83001311812723,
+      "geoinfo": {
+        "display_name": "Calle B, San Lorenzo, Esmeraldas, 080550, Ecuador",
+        "road": "Calle B",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Lorenzo",
+        "state": "Esmeraldas",
+        "postcode": "080550",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "854, Calle B, San Lorenzo, Esmeraldas, 080550, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:31.379118+00:00",
+  "_kind": "geo_samples"
+}

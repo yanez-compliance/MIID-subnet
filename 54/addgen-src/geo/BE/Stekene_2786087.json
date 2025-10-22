@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Stekene",
+  "geonameid": 2786087,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.19472296104415,
+      "lon": 4.091931413519298,
+      "geoinfo": {
+        "display_name": "36, Zandstraat, Sint-Pauwels, Sint-Gillis-Waas, Sint-Niklaas, East Flanders, 9170, Belgium",
+        "road": "Zandstraat",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Gillis-Waas",
+        "state": "East Flanders",
+        "postcode": "9170",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "36 Zandstraat, Stekene, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.180258663223945,
+      "lon": 3.989086171060702,
+      "geoinfo": {
+        "display_name": "15, Rodehoekstraat, Klein-Sinaai, Stekene, Sint-Niklaas, East Flanders, 9190, Belgium",
+        "road": "Rodehoekstraat",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Stekene",
+        "city": "Stekene",
+        "state": "East Flanders",
+        "postcode": "9190",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "15, Rodehoekstraat, Klein-Sinaai, Stekene, Sint-Niklaas, East Flanders, 9190, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:38.885786+00:00",
+  "_kind": "geo_samples"
+}

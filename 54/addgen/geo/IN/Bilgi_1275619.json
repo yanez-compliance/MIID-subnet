@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bilgi",
+  "geonameid": 1275619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.309730915817806,
+      "lon": 75.63204102183008,
+      "geoinfo": {
+        "display_name": "NH52, Badagandi, Bilagi, Bagalkote, Karnataka, 587128, India",
+        "road": "NH52",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Badagandi",
+        "state": "Karnataka",
+        "postcode": "587128",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH52, Bilgi, Karnataka, India"
+    },
+    {
+      "lat": 16.368002048805035,
+      "lon": 75.57960738688261,
+      "geoinfo": {
+        "display_name": "SH124, Siddapura, Bilagi, Bagalkote, Karnataka, India",
+        "road": "SH124",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siddapura",
+        "state": "Karnataka",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "SH124, Bilgi, 06726 Karnataka, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:04:14.454451+00:00",
+  "_kind": "geo_samples"
+}

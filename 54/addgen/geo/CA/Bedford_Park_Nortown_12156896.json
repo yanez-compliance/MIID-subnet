@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Bedford Park-Nortown",
+  "geonameid": 12156896,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.748044009821136,
+      "lon": -79.41024725802114,
+      "geoinfo": {
+        "display_name": "Don Valley Golf Course, 4200, Yonge Street, Bedford Park-Nortown, Eglinton—Lawrence, North York, Toronto, Golden Horseshoe, Ontario, M2P 1N9, Canada",
+        "road": "Yonge Street",
+        "house_number": "4200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M2P 1N9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "4200 Yonge Street, Bedford Park-Nortown, Ontario, Canada"
+    },
+    {
+      "lat": 43.74988821989702,
+      "lon": -79.46667690058871,
+      "geoinfo": {
+        "display_name": "Toronto Research Centre, Sheppard Avenue West, Downsview, York Centre, North York, Toronto, Golden Horseshoe, Ontario, M3K 2C9, Canada",
+        "road": "Sheppard Avenue West",
+        "house_number": null,
+        "neighbourhood": "Downsview",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3K 2C9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Toronto Research Centre, Sheppard Avenue West, Downsview, York Centre, North York, Toronto, Golden Horseshoe, Ontario, M3K 2C9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:56.714333+00:00",
+  "_kind": "geo_samples"
+}

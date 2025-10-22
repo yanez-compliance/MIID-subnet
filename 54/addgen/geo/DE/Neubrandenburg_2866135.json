@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neubrandenburg",
+  "geonameid": 2866135,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.54509144746844,
+      "lon": 13.312077466787104,
+      "geoinfo": {
+        "display_name": "3, Steinstraße, Fritscheshof, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Germany",
+        "road": "Steinstraße",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Fritscheshof",
+        "city_district": null,
+        "city": "Neubrandenburg",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "17036",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Steinstraße, Neubrandenburg, Mecklenburg-Vorpommern, Germany"
+    },
+    {
+      "lat": 53.57802469909854,
+      "lon": 13.327396482700355,
+      "geoinfo": {
+        "display_name": "K 73, Ihlenfeld, Neuenkirchen, Neverin, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17039, Germany",
+        "road": "K 73",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ihlenfeld",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "17039",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 73, Neubrandenburg, 17039 Mecklenburg-Vorpommern, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:48.656484+00:00",
+  "_kind": "geo_samples"
+}

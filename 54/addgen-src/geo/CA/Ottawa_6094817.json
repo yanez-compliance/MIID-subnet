@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Ottawa",
+  "geonameid": 6094817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.39963717660258,
+      "lon": -75.6509521706634,
+      "geoinfo": {
+        "display_name": "Children's Hospital of Eastern Ontario, 401, Smyth Road, Faircrest Heights, Alta Vista, Ottawa, Eastern Ontario, Ontario, K1H 8L2, Canada",
+        "road": "Smyth Road",
+        "house_number": "401",
+        "neighbourhood": "Faircrest Heights",
+        "suburb": "Alta Vista",
+        "city_district": "Alta Vista",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K1H 8L2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "401 Smyth Road, Ottawa, Ontario, Canada"
+    },
+    {
+      "lat": 45.37974678775274,
+      "lon": -75.73772686130057,
+      "geoinfo": {
+        "display_name": "1398, Laperrière Avenue, Carlington, River, Ottawa, Eastern Ontario, Ontario, K1Z 7P9, Canada",
+        "road": "Laperrière Avenue",
+        "house_number": "1398",
+        "neighbourhood": null,
+        "suburb": "Carlington",
+        "city_district": "River",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K1Z 7P9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1398, Laperrière Avenue, Carlington, River, Ottawa, Eastern Ontario, Ontario, K1Z 7P9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:24.148056+00:00",
+  "_kind": "geo_samples"
+}

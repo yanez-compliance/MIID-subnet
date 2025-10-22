@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Algeciras",
+  "geonameid": 2522013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.155500831337385,
+      "lon": -5.462179221211109,
+      "geoinfo": {
+        "display_name": "Colegio Los Pinos, Calle Arbol de Navidad, Colonia San Miguel, Algeciras, Campo de Gibraltar, Cádiz, Andalusia, 11205, Spain",
+        "road": "Calle Arbol de Navidad",
+        "house_number": null,
+        "neighbourhood": "Colonia San Miguel",
+        "suburb": null,
+        "city_district": null,
+        "city": "Algeciras",
+        "state": "Andalusia",
+        "postcode": "11205",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Arbol de Navidad, Algeciras, Andalusia, Spain"
+    },
+    {
+      "lat": 36.13256028184289,
+      "lon": -5.436842597127915,
+      "geoinfo": {
+        "display_name": "Berth 3, Zona de Maniobra, Puerto de Algeciras, Algeciras, Campo de Gibraltar, Cádiz, Andalusia, 11201, Spain",
+        "road": "Zona de Maniobra",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Algeciras",
+        "state": "Andalusia",
+        "postcode": "11201",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Berth 3, Zona de Maniobra, Puerto de Algeciras, Algeciras, Campo de Gibraltar, Cádiz, Andalusia, 11201, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:19.717151+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Budapest XI. kerület",
+  "geonameid": 7284824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.47129292300514,
+      "lon": 19.057017627697615,
+      "geoinfo": {
+        "display_name": "Hevesy György út, Infopark, Lágymányos, 11th district, Budapest, Central Hungary, 1117, Hungary",
+        "road": "Hevesy György út",
+        "house_number": null,
+        "neighbourhood": "Infopark",
+        "suburb": "Lágymányos",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1117",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "Hevesy György út, Budapest XI. kerület, Hungary"
+    },
+    {
+      "lat": 47.478945692284405,
+      "lon": 19.011226397086983,
+      "geoinfo": {
+        "display_name": "32, Rákó utca, Sasad, 11th district, Budapest, Central Hungary, 1112, Hungary",
+        "road": "Rákó utca",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Sasad",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1112",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "32, Rákó utca, Sasad, 11th district, Budapest, Central Hungary, 1112, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T02:59:07.279853+00:00",
+  "_kind": "geo_samples"
+}

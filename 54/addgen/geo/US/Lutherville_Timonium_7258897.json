@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lutherville-Timonium",
+  "geonameid": 7258897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.47531048214086,
+      "lon": -76.64122001499996,
+      "geoinfo": {
+        "display_name": "10515, York Road, Cockeysville, Baltimore County, Maryland, 21030, United States",
+        "road": "York Road",
+        "house_number": "10515",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cockeysville",
+        "state": "Maryland",
+        "postcode": "21030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10515 York Road, Lutherville-Timonium, Maryland, United States"
+    },
+    {
+      "lat": 39.40093244434207,
+      "lon": -76.63253355643063,
+      "geoinfo": {
+        "display_name": "1001, Boyce Avenue, Ruxton Ridge, Ruxton, Baltimore County, Maryland, 21204, United States",
+        "road": "Boyce Avenue",
+        "house_number": "1001",
+        "neighbourhood": "Ruxton Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ruxton",
+        "state": "Maryland",
+        "postcode": "21204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1001, Boyce Avenue, Ruxton Ridge, Ruxton, Baltimore County, Maryland, 21204, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:53.116407+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Mataró",
+  "geonameid": 3117164,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.541693456434466,
+      "lon": 2.4523121115926294,
+      "geoinfo": {
+        "display_name": "Carrer Fèlix Campllonch, l'Havana, Mataró, Maresme, Barcelona, Catalonia, 08301, Spain",
+        "road": "Carrer Fèlix Campllonch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mataró",
+        "state": "Catalonia",
+        "postcode": "08301",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer Fèlix Campllonch, Mataró, Catalonia, Spain"
+    },
+    {
+      "lat": 41.50748501221695,
+      "lon": 2.4268997450636496,
+      "geoinfo": {
+        "display_name": "les Ribes, les Sènies, Cabrera de Mar, Maresme, Barcelona, Catalonia, 08349, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "les Sènies",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cabrera de Mar",
+        "state": "Catalonia",
+        "postcode": "08349",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "948, les Ribes, les Sènies, Cabrera de Mar, Maresme, Barcelona, Catalonia, 08349, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:11.876901+00:00",
+  "_kind": "geo_samples"
+}

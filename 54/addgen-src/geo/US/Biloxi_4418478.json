@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Biloxi",
+  "geonameid": 4418478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.389968654666564,
+      "lon": -88.8696942989401,
+      "geoinfo": {
+        "display_name": "Beach Boulevard, Biloxi, Harrison County, Mississippi, 39533, United States",
+        "road": "Beach Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Biloxi",
+        "state": "Mississippi",
+        "postcode": "39533",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Beach Boulevard, Biloxi, Mississippi, United States"
+    },
+    {
+      "lat": 30.415473371466273,
+      "lon": -88.84803288737882,
+      "geoinfo": {
+        "display_name": "319, Lovers Lane, Ocean Springs, Jackson County, Mississippi, United States",
+        "road": "Lovers Lane",
+        "house_number": "319",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ocean Springs",
+        "state": "Mississippi",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "319, Lovers Lane, Ocean Springs, Jackson County, 02029 Mississippi, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:26.802267+00:00",
+  "_kind": "geo_samples"
+}

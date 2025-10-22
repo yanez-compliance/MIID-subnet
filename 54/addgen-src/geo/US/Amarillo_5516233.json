@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Amarillo",
+  "geonameid": 5516233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.25197713090287,
+      "lon": -101.84880094130398,
+      "geoinfo": {
+        "display_name": "4110, Broadway Drive, Amarillo, Potter County, Texas, 79108, United States",
+        "road": "Broadway Drive",
+        "house_number": "4110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amarillo",
+        "state": "Texas",
+        "postcode": "79108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4110 Broadway Drive, Amarillo, Texas, United States"
+    },
+    {
+      "lat": 35.192537829280646,
+      "lon": -101.81983837409243,
+      "geoinfo": {
+        "display_name": "I 40;US 287, Glenwood Addition, Amarillo, Potter County, Texas, 79120, United States",
+        "road": "I 40;US 287",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amarillo",
+        "state": "Texas",
+        "postcode": "79120",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 40;US 287, Glenwood Addition, Amarillo, Potter County, Texas, 79120, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:23.065906+00:00",
+  "_kind": "geo_samples"
+}

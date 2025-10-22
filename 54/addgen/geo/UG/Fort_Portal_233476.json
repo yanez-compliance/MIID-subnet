@@ -1,0 +1,47 @@
+{
+  "country_code": "UG",
+  "country": "Uganda",
+  "city": "Fort Portal",
+  "geonameid": 233476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 0.6504561903524958,
+      "lon": 30.26806908747974,
+      "geoinfo": {
+        "display_name": "Harukooto A, Fort Portal City, Western Region, Uganda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Portal City",
+        "state": "Western Region",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "Fort Portal, Western Region, Uganda"
+    },
+    {
+      "lat": 0.6235771282932665,
+      "lon": 30.29825892599287,
+      "geoinfo": {
+        "display_name": "Kamwenghe Road, Kasiisi, Kabarole, Western Region, Uganda",
+        "road": "Kamwenghe Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kasiisi",
+        "state": "Kabarole",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "858, Kamwenghe Road, Fort Portal, 35424 Kabarole, Uganda"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:16.383328+00:00",
+  "_kind": "geo_samples"
+}

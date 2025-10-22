@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Uerdingen",
+  "geonameid": 2820447,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.34307018534246,
+      "lon": 6.680815979870344,
+      "geoinfo": {
+        "display_name": "10-12, Bataverstraße, Linn, Krefeld-Uerdingen, Krefeld, North Rhine-Westphalia, 47809, Germany",
+        "road": "Bataverstraße",
+        "house_number": "10-12",
+        "neighbourhood": null,
+        "suburb": "Linn",
+        "city_district": "Krefeld-Uerdingen",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47809",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10-12 Bataverstraße, Uerdingen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.37036009746689,
+      "lon": 6.6688108214450565,
+      "geoinfo": {
+        "display_name": "Deichstraße, Hohenbudberg, Uerdingen, Krefeld-Uerdingen, Krefeld, North Rhine-Westphalia, 47829, Germany",
+        "road": "Deichstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hohenbudberg",
+        "city_district": "Krefeld-Uerdingen",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47829",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "566, Deichstraße, Hohenbudberg, Uerdingen, Krefeld-Uerdingen, Krefeld, North Rhine-Westphalia, 47829, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:49.019907+00:00",
+  "_kind": "geo_samples"
+}

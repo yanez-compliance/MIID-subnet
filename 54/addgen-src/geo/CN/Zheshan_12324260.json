@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zheshan",
+  "geonameid": 12324260,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.17007808011978,
+      "lon": 118.91493046731053,
+      "geoinfo": {
+        "display_name": "金钱庄村, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zheshan, Shandong, China"
+    },
+    {
+      "lat": 36.1837987307864,
+      "lon": 118.95807471686041,
+      "geoinfo": {
+        "display_name": "Anqiu City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anqiu City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "900, Anqiu City, Weifang, 64955 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:04:00.550027+00:00",
+  "_kind": "geo_samples"
+}

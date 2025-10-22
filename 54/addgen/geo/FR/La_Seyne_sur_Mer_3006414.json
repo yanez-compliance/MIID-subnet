@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Seyne-sur-Mer",
+  "geonameid": 3006414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.08575991463721,
+      "lon": 5.883245037779214,
+      "geoinfo": {
+        "display_name": "F, HLM la Maurelle, La Maurelle, La Seyne-sur-Mer, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83500, France",
+        "road": "HLM la Maurelle",
+        "house_number": "F",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Seyne-sur-Mer",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "F HLM la Maurelle, La Seyne-sur-Mer, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.144992822277054,
+      "lon": 5.889037668504395,
+      "geoinfo": {
+        "display_name": "Rue des Olivades, Chemin de Saint-Honorat, Les Bonnes Herbes, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83196, France",
+        "road": "Rue des Olivades",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Bonnes Herbes",
+        "city_district": null,
+        "city": "Toulon",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83196",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "571, Rue des Olivades, Chemin de Saint-Honorat, Les Bonnes Herbes, Toulon, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83196, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:12.224449+00:00",
+  "_kind": "geo_samples"
+}

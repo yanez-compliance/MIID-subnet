@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Solna",
+  "geonameid": 2675397,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.385659863011774,
+      "lon": 18.063466450797357,
+      "geoinfo": {
+        "display_name": "62b, Stockholmsvägen, Söderskogen, Mörby, Stocksund, Danderyds kommun, Stockholm County, 182 75, Sweden",
+        "road": "Stockholmsvägen",
+        "house_number": "62b",
+        "neighbourhood": "Söderskogen",
+        "suburb": "Mörby",
+        "city_district": null,
+        "city": "Danderyds kommun",
+        "state": null,
+        "postcode": "182 75",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "62b Stockholmsvägen, Solna, Sweden"
+    },
+    {
+      "lat": 59.38097772199722,
+      "lon": 18.059858580569013,
+      "geoinfo": {
+        "display_name": "Trastvägen, Söderskogen, Stocksund, Danderyds kommun, Stockholm County, 182 07, Sweden",
+        "road": "Trastvägen",
+        "house_number": null,
+        "neighbourhood": "Söderskogen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Danderyds kommun",
+        "state": null,
+        "postcode": "182 07",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Trastvägen, Söderskogen, Stocksund, Danderyds kommun, Stockholm County, 182 07, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T09:48:31.528233+00:00",
+  "_kind": "geo_samples"
+}

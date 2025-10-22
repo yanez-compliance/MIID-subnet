@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wenden",
+  "geonameid": 2811278,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.93446842952723,
+      "lon": 7.870613514791482,
+      "geoinfo": {
+        "display_name": "Siegener Straße, Löffelberg, Hünsborn, Wenden, Kreis Olpe, North Rhine-Westphalia, 57482, Germany",
+        "road": "Siegener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wenden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57482",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Siegener Straße, Wenden, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.991916808950336,
+      "lon": 7.816417570319887,
+      "geoinfo": {
+        "display_name": "Gelbschlade, Saßmicke, Olpe, Kreis Olpe, North Rhine-Westphalia, 57462, Germany",
+        "road": "Gelbschlade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olpe",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57462",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "760, Gelbschlade, Saßmicke, Olpe, Kreis Olpe, North Rhine-Westphalia, 57462, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:54.149196+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Apolda",
+  "geonameid": 2955770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.011790735125665,
+      "lon": 11.505312144859694,
+      "geoinfo": {
+        "display_name": "Ringpromenade, Wohngebiet \"Am Schötener Bache\", Schöten, Apolda, Landkreis Weimarer Land, Thuringia, 99510, Germany",
+        "road": "Ringpromenade",
+        "house_number": null,
+        "neighbourhood": "Wohngebiet \"Am Schötener Bache\"",
+        "suburb": null,
+        "city_district": null,
+        "city": "Apolda",
+        "state": "Thuringia",
+        "postcode": "99510",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ringpromenade, Apolda, Thuringia, Germany"
+    },
+    {
+      "lat": 51.05360387051715,
+      "lon": 11.535762042886867,
+      "geoinfo": {
+        "display_name": "K 107, Wickerstedt, Bad Sulza, Landkreis Weimarer Land, Thuringia, 99518, Germany",
+        "road": "K 107",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wickerstedt",
+        "city": "Bad Sulza",
+        "state": "Thuringia",
+        "postcode": "99518",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 107, Wickerstedt, Bad Sulza, Landkreis Weimarer Land, Thuringia, 99518, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:48.828064+00:00",
+  "_kind": "geo_samples"
+}

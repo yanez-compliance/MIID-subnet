@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Universal City",
+  "geonameid": 5404794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.097652389955776,
+      "lon": -118.37275230405389,
+      "geoinfo": {
+        "display_name": "Hollywood Boulevard, Los Angeles, Los Angeles County, California, 90069, United States",
+        "road": "Hollywood Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hollywood Boulevard, Universal City, California, United States"
+    },
+    {
+      "lat": 34.13261328506097,
+      "lon": -118.30566368889767,
+      "geoinfo": {
+        "display_name": "Brush Canyon Trail, Los Feliz Neighborhood Council District, Los Angeles, Los Angeles County, California, 90068, United States",
+        "road": "Brush Canyon Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "561, Brush Canyon Trail, Los Feliz Neighborhood Council District, Los Angeles, Los Angeles County, California, 90068, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:22.007560+00:00",
+  "_kind": "geo_samples"
+}

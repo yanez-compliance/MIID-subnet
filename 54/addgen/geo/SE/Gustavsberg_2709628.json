@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Gustavsberg",
+  "geonameid": 2709628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.32802763597502,
+      "lon": 18.33706898427052,
+      "geoinfo": {
+        "display_name": "Gamla Skärgårdsvägen, Västra Ekedal, Gustavsberg, Värmdö kommun, Stockholm County, 134 31, Sweden",
+        "road": "Gamla Skärgårdsvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gustavsberg",
+        "state": null,
+        "postcode": "134 31",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Gamla Skärgårdsvägen, Gustavsberg, Sweden"
+    },
+    {
+      "lat": 59.338578438680095,
+      "lon": 18.32200621478321,
+      "geoinfo": {
+        "display_name": "24B, Lillebovägen, Kil, Nacka kommun, Stockholm County, 132 36, Sweden",
+        "road": "Lillebovägen",
+        "house_number": "24B",
+        "neighbourhood": null,
+        "suburb": "Kil",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "132 36",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "24B, Lillebovägen, Kil, Nacka kommun, Stockholm County, 132 36, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:46.613420+00:00",
+  "_kind": "geo_samples"
+}

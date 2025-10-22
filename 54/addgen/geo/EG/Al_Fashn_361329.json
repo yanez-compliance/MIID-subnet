@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Fashn",
+  "geonameid": 361329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.836364983107824,
+      "lon": 30.926012626554183,
+      "geoinfo": {
+        "display_name": "Al Hiba al Sharqi, Bani Sweif, 62621, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Hiba al Sharqi",
+        "state": "Bani Sweif",
+        "postcode": "62621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Fashn, Bani Sweif, Egypt"
+    },
+    {
+      "lat": 28.80851216585098,
+      "lon": 30.904096233689017,
+      "geoinfo": {
+        "display_name": "Turad Al Nile Street, Al Fashn, Bani Sweif, 62621, Egypt",
+        "road": "Turad Al Nile Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Fashn",
+        "state": "Bani Sweif",
+        "postcode": "62621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "513, Turad Al Nile Street, Al Fashn, Bani Sweif, 62621, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:14.347813+00:00",
+  "_kind": "geo_samples"
+}

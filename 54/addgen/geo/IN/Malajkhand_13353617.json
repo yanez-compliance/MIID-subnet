@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Malajkhand",
+  "geonameid": 13353617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.048096860425744,
+      "lon": 80.7570641391381,
+      "geoinfo": {
+        "display_name": "Birsa Tahsil, Balaghat, Madhya Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Madhya Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Malajkhand, Madhya Pradesh, India"
+    },
+    {
+      "lat": 22.057412634980697,
+      "lon": 80.75074026531189,
+      "geoinfo": {
+        "display_name": "Tingipur, Birsa Tahsil, Balaghat, Madhya Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Tingipur",
+        "city": null,
+        "state": "Madhya Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "251, Tingipur, Birsa Tahsil, Balaghat, 46074 Madhya Pradesh, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:54:43.313736+00:00",
+  "_kind": "geo_samples"
+}

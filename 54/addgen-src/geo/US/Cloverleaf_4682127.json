@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cloverleaf",
+  "geonameid": 4682127,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.754808740320776,
+      "lon": -95.17802274146341,
+      "geoinfo": {
+        "display_name": "101 Street, Harris County, Texas, 77015, United States",
+        "road": "101 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "101 Street, Cloverleaf, Texas, United States"
+    },
+    {
+      "lat": 29.778964168041508,
+      "lon": -95.19532018155685,
+      "geoinfo": {
+        "display_name": "13045, Knollcrest Street, Houston, Harris County, Texas, 77015, United States",
+        "road": "Knollcrest Street",
+        "house_number": "13045",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13045, Knollcrest Street, Houston, Harris County, Texas, 77015, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:27.072921+00:00",
+  "_kind": "geo_samples"
+}

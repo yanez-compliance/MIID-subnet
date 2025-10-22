@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Temple",
+  "geonameid": 4735966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.108976577131816,
+      "lon": -97.39081939275506,
+      "geoinfo": {
+        "display_name": "H K Dodgen Loop, Temple, Bell County, Texas, 76502, United States",
+        "road": "H K Dodgen Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temple",
+        "state": "Texas",
+        "postcode": "76502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "H K Dodgen Loop, Temple, Texas, United States"
+    },
+    {
+      "lat": 31.082876193361297,
+      "lon": -97.35754503239009,
+      "geoinfo": {
+        "display_name": "1734, South 19th Street, Temple, Bell County, Texas, 76504, United States",
+        "road": "South 19th Street",
+        "house_number": "1734",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temple",
+        "state": "Texas",
+        "postcode": "76504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1734, South 19th Street, Temple, Bell County, Texas, 76504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:40.943061+00:00",
+  "_kind": "geo_samples"
+}

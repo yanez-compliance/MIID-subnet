@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Swadlincote",
+  "geonameid": 2636465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.76332291923799,
+      "lon": -1.5084778096796947,
+      "geoinfo": {
+        "display_name": "Heath Lane, Ashby-de-la-Zouch, North West Leicestershire, Leicestershire, East Midlands, England, DE11 8AA, United Kingdom",
+        "road": "Heath Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North West Leicestershire",
+        "state": "England",
+        "postcode": "DE11 8AA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Heath Lane, Swadlincote, England, United Kingdom"
+    },
+    {
+      "lat": 52.799263988707395,
+      "lon": -1.5229776075156902,
+      "geoinfo": {
+        "display_name": "Greysitch Lane, Bretby, Swadlincote, South Derbyshire, Derbyshire, East Midlands, England, DE15 0RH, United Kingdom",
+        "road": "Greysitch Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bretby",
+        "city_district": null,
+        "city": "South Derbyshire",
+        "state": "England",
+        "postcode": "DE15 0RH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Greysitch Lane, Bretby, Swadlincote, South Derbyshire, Derbyshire, East Midlands, England, DE15 0RH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:10.375262+00:00",
+  "_kind": "geo_samples"
+}

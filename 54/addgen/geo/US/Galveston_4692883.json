@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Galveston",
+  "geonameid": 4692883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.26836116571516,
+      "lon": -94.77724305743806,
+      "geoinfo": {
+        "display_name": "Galveston, Galveston County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galveston",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Galveston, Texas, United States"
+    },
+    {
+      "lat": 29.298831756813,
+      "lon": -94.82284652285453,
+      "geoinfo": {
+        "display_name": "4555, Harborside Drive, Galveston, Galveston County, Texas, 77554, United States",
+        "road": "Harborside Drive",
+        "house_number": "4555",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galveston",
+        "state": "Texas",
+        "postcode": "77554",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4555, Harborside Drive, Galveston, Galveston County, Texas, 77554, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:28.179074+00:00",
+  "_kind": "geo_samples"
+}

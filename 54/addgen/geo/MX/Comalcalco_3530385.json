@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Comalcalco",
+  "geonameid": 3530385,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.269201772028655,
+      "lon": -93.26623609350733,
+      "geoinfo": {
+        "display_name": "Comalcalco, Tabasco, 86640, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tabasco",
+        "postcode": "86640",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Comalcalco, Tabasco, Mexico"
+    },
+    {
+      "lat": 18.227033726306605,
+      "lon": -93.22641855065525,
+      "geoinfo": {
+        "display_name": "Oriente 4ta. Sección (Tripa Ciega), Oriente 5ta. Sección (La Candelaria), Comalcalco, Tabasco, 86654, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oriente 5ta. Sección (La Candelaria)",
+        "state": "Tabasco",
+        "postcode": "86654",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "471, Comalcalco, 86654 Tabasco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:50.675117+00:00",
+  "_kind": "geo_samples"
+}

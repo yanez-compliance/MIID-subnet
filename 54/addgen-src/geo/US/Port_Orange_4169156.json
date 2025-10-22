@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Orange",
+  "geonameid": 4169156,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.153585936996237,
+      "lon": -80.95259679815611,
+      "geoinfo": {
+        "display_name": "Halifax Estates, Daytona Beach Shores, Volusia County, Florida, 32127, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daytona Beach Shores",
+        "state": "Florida",
+        "postcode": "32127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Port Orange, Florida, United States"
+    },
+    {
+      "lat": 29.13692607759246,
+      "lon": -80.99246529869639,
+      "geoinfo": {
+        "display_name": "4188, Dairy Court, Port Orange, Volusia County, Florida, 32127, United States",
+        "road": "Dairy Court",
+        "house_number": "4188",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Orange",
+        "state": "Florida",
+        "postcode": "32127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4188, Dairy Court, Port Orange, Volusia County, Florida, 32127, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:16.116621+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rhawnhurst",
+  "geonameid": 5208117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.04139780339526,
+      "lon": -75.08357253003513,
+      "geoinfo": {
+        "display_name": "6306, Summerdale Avenue, Volunteertown, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States",
+        "road": "Summerdale Avenue",
+        "house_number": "6306",
+        "neighbourhood": "Volunteertown",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6306 Summerdale Avenue, Rhawnhurst, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.08627002990588,
+      "lon": -75.05428208843482,
+      "geoinfo": {
+        "display_name": "1033, Bloomfield Avenue, Vereeville, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States",
+        "road": "Bloomfield Avenue",
+        "house_number": "1033",
+        "neighbourhood": "Vereeville",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1033, Bloomfield Avenue, Vereeville, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:03.141345+00:00",
+  "_kind": "geo_samples"
+}

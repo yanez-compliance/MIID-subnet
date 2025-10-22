@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Blois",
+  "geonameid": 3032213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.57659294701919,
+      "lon": 1.2827332855174314,
+      "geoinfo": {
+        "display_name": "Allée de Bury, Ouest, Blois, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41000, France",
+        "road": "Allée de Bury",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ouest",
+        "city_district": null,
+        "city": "Blois",
+        "state": "Centre-Val de Loire",
+        "postcode": "41000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée de Bury, Blois, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.57099748980411,
+      "lon": 1.3838286005404732,
+      "geoinfo": {
+        "display_name": "Chemin rural de Peziers, ZAC des Sablons, Vineuil, Blois, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41350, France",
+        "road": "Chemin rural de Peziers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vineuil",
+        "state": "Centre-Val de Loire",
+        "postcode": "41350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "040, Chemin rural de Peziers, ZAC des Sablons, Vineuil, Blois, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41350, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:14.618346+00:00",
+  "_kind": "geo_samples"
+}

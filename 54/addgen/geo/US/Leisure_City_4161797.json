@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Leisure City",
+  "geonameid": 4161797,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.51590381516829,
+      "lon": -80.38780248423983,
+      "geoinfo": {
+        "display_name": "Southwest Florida Avenue, Miami-Dade County, Florida, 33039, United States",
+        "road": "Southwest Florida Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest Florida Avenue, Leisure City, Florida, United States"
+    },
+    {
+      "lat": 25.48401745373355,
+      "lon": -80.39082003360559,
+      "geoinfo": {
+        "display_name": "Homestead Air Reserve Base, Southwest 117th Avenue, Miami-Dade County, Florida, 33039, United States",
+        "road": "Southwest 117th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Homestead Air Reserve Base, Southwest 117th Avenue, Miami-Dade County, Florida, 33039, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:42:20.406254+00:00",
+  "_kind": "geo_samples"
+}

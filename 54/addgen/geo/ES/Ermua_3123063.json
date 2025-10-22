@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ermua",
+  "geonameid": 3123063,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.1883547314121,
+      "lon": -2.5584101789816045,
+      "geoinfo": {
+        "display_name": "BI-3342, Sallobente, Besoita, Berriz, Biscay, Autonomous Community of the Basque Country, 48250, Spain",
+        "road": "BI-3342",
+        "house_number": null,
+        "neighbourhood": "Sallobente",
+        "suburb": null,
+        "city_district": null,
+        "city": "Berriz",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48250",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-3342, Ermua, Autonomous Community of the Basque Country, Spain"
+    },
+    {
+      "lat": 43.200998119677685,
+      "lon": -2.459229726825061,
+      "geoinfo": {
+        "display_name": "Gorosta Balle, Maaspe, Gorosta, Eibar, Debabarrena, Gipuzkoa, Autonomous Community of the Basque Country, 20600, Spain",
+        "road": "Gorosta Balle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gorosta",
+        "city_district": null,
+        "city": "Eibar",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "20600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "099, Gorosta Balle, Maaspe, Gorosta, Eibar, Debabarrena, Gipuzkoa, Autonomous Community of the Basque Country, 20600, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:09.727256+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kenmore",
+  "geonameid": 5799587,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.776727143250646,
+      "lon": -122.26958222618788,
+      "geoinfo": {
+        "display_name": "20322, 55th Avenue Northeast, Kenmore, King County, Washington, 98028, United States",
+        "road": "55th Avenue Northeast",
+        "house_number": "20322",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kenmore",
+        "state": "Washington",
+        "postcode": "98028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20322 55th Avenue Northeast, Kenmore, Washington, United States"
+    },
+    {
+      "lat": 47.73879471488381,
+      "lon": -122.218262295956,
+      "geoinfo": {
+        "display_name": "9209, Northeast 152nd Place, Stonehedge Village, Wayne, Bothell, King County, Washington, 98011, United States",
+        "road": "Northeast 152nd Place",
+        "house_number": "9209",
+        "neighbourhood": "Stonehedge Village",
+        "suburb": "Wayne",
+        "city_district": null,
+        "city": "Bothell",
+        "state": "Washington",
+        "postcode": "98011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9209, Northeast 152nd Place, Stonehedge Village, Wayne, Bothell, King County, Washington, 98011, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:47.102358+00:00",
+  "_kind": "geo_samples"
+}

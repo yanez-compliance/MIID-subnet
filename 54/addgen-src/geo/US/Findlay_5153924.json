@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Findlay",
+  "geonameid": 5153924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.01185401984579,
+      "lon": -83.64977446683284,
+      "geoinfo": {
+        "display_name": "117, East Yates Avenue, Findlay, Hancock County, Ohio, 45840, United States",
+        "road": "East Yates Avenue",
+        "house_number": "117",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Findlay",
+        "state": "Ohio",
+        "postcode": "45840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "117 East Yates Avenue, Findlay, Ohio, United States"
+    },
+    {
+      "lat": 41.056162735644406,
+      "lon": -83.70297309126842,
+      "geoinfo": {
+        "display_name": "US 224;SR 15, Hancock County, Ohio, 45840, United States",
+        "road": "US 224;SR 15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 224;SR 15, Findlay, Ohio, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:09.189651+00:00",
+  "_kind": "geo_samples"
+}

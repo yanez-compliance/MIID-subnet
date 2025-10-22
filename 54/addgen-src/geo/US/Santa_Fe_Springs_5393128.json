@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Fe Springs",
+  "geonameid": 5393128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.94890226514493,
+      "lon": -118.0617196050854,
+      "geoinfo": {
+        "display_name": "Santa Fe Springs Road, Santa Fe Springs, Los Angeles County, California, 90606, United States",
+        "road": "Santa Fe Springs Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Fe Springs",
+        "state": "California",
+        "postcode": "90606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Fe Springs Road, Santa Fe Springs, California, United States"
+    },
+    {
+      "lat": 33.95615576614116,
+      "lon": -118.07643457909101,
+      "geoinfo": {
+        "display_name": "9248, Arlee Avenue, Fulton Wells, Santa Fe Springs, Los Angeles County, California, 90670, United States",
+        "road": "Arlee Avenue",
+        "house_number": "9248",
+        "neighbourhood": null,
+        "suburb": "Fulton Wells",
+        "city_district": null,
+        "city": "Santa Fe Springs",
+        "state": "California",
+        "postcode": "90670",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9248, Arlee Avenue, Fulton Wells, Santa Fe Springs, Los Angeles County, California, 90670, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:55.492871+00:00",
+  "_kind": "geo_samples"
+}

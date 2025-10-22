@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Peniche",
+  "geonameid": 2264923,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.346706416409816,
+      "lon": -9.390852667033911,
+      "geoinfo": {
+        "display_name": "Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Peniche, Portugal"
+    },
+    {
+      "lat": 39.352391166994195,
+      "lon": -9.363186128639747,
+      "geoinfo": {
+        "display_name": "Estádio do Grupo Desportivo de Peniche, Avenida Monsenhor Manuel Bastos Rodrigues de Sousa, Peniche, Leiria, 2520-303, Portugal",
+        "road": "Avenida Monsenhor Manuel Bastos Rodrigues de Sousa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Peniche",
+        "city": "Peniche",
+        "state": null,
+        "postcode": "2520-303",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "951, Avenida Monsenhor Manuel Bastos Rodrigues de Sousa, 2520-303 Peniche, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:30.534640+00:00",
+  "_kind": "geo_samples"
+}

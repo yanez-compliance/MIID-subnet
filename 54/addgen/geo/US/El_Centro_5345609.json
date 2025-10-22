@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Centro",
+  "geonameid": 5345609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.78504824690217,
+      "lon": -115.54669723013963,
+      "geoinfo": {
+        "display_name": "780, South 2nd Street, El Centro, Imperial County, California, 92243, United States",
+        "road": "South 2nd Street",
+        "house_number": "780",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Centro",
+        "state": "California",
+        "postcode": "92243",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "780 South 2nd Street, El Centro, California, United States"
+    },
+    {
+      "lat": 32.80030429005032,
+      "lon": -115.60294369917965,
+      "geoinfo": {
+        "display_name": "2000, Nichols Road, Wilsie, Imperial County, California, 92243, United States",
+        "road": "Nichols Road",
+        "house_number": "2000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92243",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2000, Nichols Road, Wilsie, Imperial County, California, 92243, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:05.068611+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Dreta de l'Eixample",
+  "geonameid": 6690786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.393073745357775,
+      "lon": 2.182910932773721,
+      "geoinfo": {
+        "display_name": "02-076, Carrer de Nàpols, el Fort Pienc, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08003, Spain",
+        "road": "Carrer de Nàpols",
+        "house_number": null,
+        "neighbourhood": "el Fort Pienc",
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08003",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer de Nàpols, Dreta de l'Eixample, Catalonia, Spain"
+    },
+    {
+      "lat": 41.37825206989422,
+      "lon": 2.1653663875903817,
+      "geoinfo": {
+        "display_name": "36, Carrer de la Cera, el Raval, Old Town, Barcelona, Barcelonès, Barcelona, Catalonia, 08001, Spain",
+        "road": "Carrer de la Cera",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": "Old Town",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "36, Carrer de la Cera, el Raval, Old Town, Barcelona, Barcelonès, Barcelona, Catalonia, 08001, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:08.984157+00:00",
+  "_kind": "geo_samples"
+}

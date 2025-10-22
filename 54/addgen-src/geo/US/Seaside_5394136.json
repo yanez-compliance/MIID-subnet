@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seaside",
+  "geonameid": 5394136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.65042714209843,
+      "lon": -121.86182467052173,
+      "geoinfo": {
+        "display_name": "Monterey County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seaside, California, United States"
+    },
+    {
+      "lat": 36.6321775382091,
+      "lon": -121.86536283517253,
+      "geoinfo": {
+        "display_name": "Sand City, Monterey County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sand City",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "534, Sand City, Monterey County, 89668 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:11.971700+00:00",
+  "_kind": "geo_samples"
+}

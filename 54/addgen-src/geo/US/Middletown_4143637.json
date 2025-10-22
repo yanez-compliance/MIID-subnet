@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middletown",
+  "geonameid": 4143637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.45527557237299,
+      "lon": -75.74936372456764,
+      "geoinfo": {
+        "display_name": "School Drive, Middletown, New Castle County, Delaware, United States",
+        "road": "School Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Delaware",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "School Drive, Middletown, Delaware, United States"
+    },
+    {
+      "lat": 39.46065651634219,
+      "lon": -75.69422468168925,
+      "geoinfo": {
+        "display_name": "Nesting Lane, Middletown, New Castle County, Delaware, 19709, United States",
+        "road": "Nesting Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Delaware",
+        "postcode": "19709",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "453, Nesting Lane, Middletown, New Castle County, Delaware, 19709, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:41:09.974573+00:00",
+  "_kind": "geo_samples"
+}

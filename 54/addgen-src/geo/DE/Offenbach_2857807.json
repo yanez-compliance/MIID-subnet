@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Offenbach",
+  "geonameid": 2857807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.08976948010117,
+      "lon": 8.82147108546343,
+      "geoinfo": {
+        "display_name": "B 448, Waldhof, Bieber, Offenbach am Main, Hesse, 63073, Germany",
+        "road": "B 448",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Waldhof",
+        "city_district": null,
+        "city": "Offenbach am Main",
+        "state": "Hesse",
+        "postcode": "63073",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 448, Offenbach, Hesse, Germany"
+    },
+    {
+      "lat": 50.0610472880699,
+      "lon": 8.749059820875356,
+      "geoinfo": {
+        "display_name": "7, Schönbornring, Gravenbruch, Neu-Isenburg, Landkreis Offenbach, Hesse, 63263, Germany",
+        "road": "Schönbornring",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gravenbruch",
+        "city": "Gravenbruch",
+        "state": "Hesse",
+        "postcode": "63263",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7, Schönbornring, Gravenbruch, Neu-Isenburg, Landkreis Offenbach, Hesse, 63263, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:05.515024+00:00",
+  "_kind": "geo_samples"
+}

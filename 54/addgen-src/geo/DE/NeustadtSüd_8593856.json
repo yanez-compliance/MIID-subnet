@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neustadt/Süd",
+  "geonameid": 8593856,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.93727771645506,
+      "lon": 6.898671966491413,
+      "geoinfo": {
+        "display_name": "400, Aachener Straße, Braunsfeld, Lindenthal, Cologne, North Rhine-Westphalia, 50933, Germany",
+        "road": "Aachener Straße",
+        "house_number": "400",
+        "neighbourhood": null,
+        "suburb": "Braunsfeld",
+        "city_district": "Lindenthal",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50933",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "400 Aachener Straße, Neustadt/Süd, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.95181181319177,
+      "lon": 6.959466756294564,
+      "geoinfo": {
+        "display_name": "46, Schillingstraße, Agnesviertel, Neustadt/Nord, Innenstadt, Cologne, North Rhine-Westphalia, 50670, Germany",
+        "road": "Schillingstraße",
+        "house_number": "46",
+        "neighbourhood": "Agnesviertel",
+        "suburb": "Neustadt/Nord",
+        "city_district": "Innenstadt",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50670",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "46, Schillingstraße, Agnesviertel, Neustadt/Nord, Innenstadt, Cologne, North Rhine-Westphalia, 50670, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:00.004090+00:00",
+  "_kind": "geo_samples"
+}

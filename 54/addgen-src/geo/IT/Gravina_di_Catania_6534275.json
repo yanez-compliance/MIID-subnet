@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Gravina di Catania",
+  "geonameid": 6534275,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.549491313486534,
+      "lon": 15.061745468255019,
+      "geoinfo": {
+        "display_name": "Via Giuseppe Ungaretti, Gravina di Catania, Catania, Sicily, 95030, Italy",
+        "road": "Via Giuseppe Ungaretti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gravina di Catania",
+        "state": "Sicily",
+        "postcode": "95030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giuseppe Ungaretti, Gravina di Catania, Sicily, Italy"
+    },
+    {
+      "lat": 37.55091370237349,
+      "lon": 15.1175213522387,
+      "geoinfo": {
+        "display_name": "Via Sgroppillo / Via Badalà, Motta, Aci Castello, Catania, Sicily, 95027, Italy",
+        "road": "Via Sgroppillo / Via Badalà",
+        "house_number": null,
+        "neighbourhood": "Motta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aci Castello",
+        "state": "Sicily",
+        "postcode": "95027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "569, Via Sgroppillo / Via Badalà, Motta, Aci Castello, Catania, Sicily, 95027, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:03.736449+00:00",
+  "_kind": "geo_samples"
+}

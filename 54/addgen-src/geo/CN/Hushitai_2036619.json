@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hushitai",
+  "geonameid": 2036619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.9389916604339,
+      "lon": 123.4740582957789,
+      "geoinfo": {
+        "display_name": "Shenbei New District, Shenbei, Liaoning, 110122, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shenbei",
+        "state": "Liaoning",
+        "postcode": "110122",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hushitai, Liaoning, China"
+    },
+    {
+      "lat": 41.94128970929089,
+      "lon": 123.4445379857421,
+      "geoinfo": {
+        "display_name": "蒲北路, Shenbei New District, Shenbei, Liaoning, 110122, China",
+        "road": "蒲北路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shenbei",
+        "state": "Liaoning",
+        "postcode": "110122",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "043, 蒲北路, Shenbei New District, Shenbei, Liaoning, 110122, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:10.888640+00:00",
+  "_kind": "geo_samples"
+}

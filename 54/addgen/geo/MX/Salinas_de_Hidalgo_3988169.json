@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Salinas de Hidalgo",
+  "geonameid": 3988169,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.63216203649568,
+      "lon": -101.69525424797777,
+      "geoinfo": {
+        "display_name": "Calle San Juan, Salinas de Hidalgo, Salinas, San Luis Potosí, Mexico",
+        "road": "Calle San Juan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salinas de Hidalgo",
+        "state": "San Luis Potosí",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle San Juan, Salinas de Hidalgo, San Luis Potosí, Mexico"
+    },
+    {
+      "lat": 22.653716272180493,
+      "lon": -101.69502103156525,
+      "geoinfo": {
+        "display_name": "El Jacalón, La Reforma, Salinas, San Luis Potosí, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Reforma",
+        "state": "San Luis Potosí",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "341, Salinas de Hidalgo, 12143 San Luis Potosí, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:51.588082+00:00",
+  "_kind": "geo_samples"
+}

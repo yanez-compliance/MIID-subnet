@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chitarpur",
+  "geonameid": 1274073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.56883847856019,
+      "lon": 85.67212314880807,
+      "geoinfo": {
+        "display_name": "NH320, Murubanda, Chitarpur, Ramgarh, Jharkhand, 825101, India",
+        "road": "NH320",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chitarpur",
+        "state": "Jharkhand",
+        "postcode": "825101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH320, Chitarpur, Jharkhand, India"
+    },
+    {
+      "lat": 23.53892437625313,
+      "lon": 85.62366217467032,
+      "geoinfo": {
+        "display_name": "Dulmi, Ramgarh, Jharkhand, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dulmi",
+        "state": "Jharkhand",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "102, Chitarpur, 44091 Jharkhand, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:42.407649+00:00",
+  "_kind": "geo_samples"
+}

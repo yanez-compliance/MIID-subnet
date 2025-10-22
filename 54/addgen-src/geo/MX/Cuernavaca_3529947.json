@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cuernavaca",
+  "geonameid": 3529947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.95215506245344,
+      "lon": -99.24288382124197,
+      "geoinfo": {
+        "display_name": "Privada Rinconada Tabachín, Jardines de Tlaltenango, Tlaltenango, Cuernavaca, Morelos, 62160, Mexico",
+        "road": "Privada Rinconada Tabachín",
+        "house_number": null,
+        "neighbourhood": "Jardines de Tlaltenango",
+        "suburb": "Tlaltenango",
+        "city_district": null,
+        "city": "Cuernavaca",
+        "state": "Morelos",
+        "postcode": "62160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Privada Rinconada Tabachín, Cuernavaca, Morelos, Mexico"
+    },
+    {
+      "lat": 18.9133974253572,
+      "lon": -99.23043203229828,
+      "geoinfo": {
+        "display_name": "Segunda Privada Francisco Leyva, Las Palmas, Cuernavaca, Morelos, 62000, Mexico",
+        "road": "Segunda Privada Francisco Leyva",
+        "house_number": null,
+        "neighbourhood": "Las Palmas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuernavaca",
+        "state": "Morelos",
+        "postcode": "62000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "199, Segunda Privada Francisco Leyva, Las Palmas, Cuernavaca, Morelos, 62000, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:06.549868+00:00",
+  "_kind": "geo_samples"
+}

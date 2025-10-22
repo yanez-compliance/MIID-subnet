@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Juan",
+  "geonameid": 4726440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.20334504659965,
+      "lon": -98.12137188957686,
+      "geoinfo": {
+        "display_name": "1234, TX 495, Laguna Park Colonia, Alamo, Hidalgo County, Texas, 78516, United States",
+        "road": "TX 495",
+        "house_number": "1234",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alamo",
+        "state": "Texas",
+        "postcode": "78516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1234 TX 495, San Juan, Texas, United States"
+    },
+    {
+      "lat": 26.22298836682766,
+      "lon": -98.12416393974425,
+      "geoinfo": {
+        "display_name": "East Nolana Loop, San Juan, Hidalgo County, Texas, 48542, United States",
+        "road": "East Nolana Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan",
+        "state": "Texas",
+        "postcode": "48542",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "731, East Nolana Loop, San Juan, Hidalgo County, Texas, 48542, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:47.321074+00:00",
+  "_kind": "geo_samples"
+}

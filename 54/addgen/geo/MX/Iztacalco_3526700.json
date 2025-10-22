@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Iztacalco",
+  "geonameid": 3526700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.388453900829752,
+      "lon": -99.09946405259709,
+      "geoinfo": {
+        "display_name": "Avenida Río Churubusco, Colonia Mujeres ilustres, Mexico City, Iztacalco, Mexico City, 08000, Mexico",
+        "road": "Avenida Río Churubusco",
+        "house_number": null,
+        "neighbourhood": "Colonia Mujeres ilustres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "08000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Río Churubusco, Iztacalco, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.39249186089555,
+      "lon": -99.14435015981294,
+      "geoinfo": {
+        "display_name": "Calle José Simón Bolívar, Colonia Miguel Alemán, Mexico City, Benito Juárez, Mexico City, 03410, Mexico",
+        "road": "Calle José Simón Bolívar",
+        "house_number": null,
+        "neighbourhood": "Colonia Miguel Alemán",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "03410",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "805, Calle José Simón Bolívar, Colonia Miguel Alemán, Mexico City, Benito Juárez, Mexico City, 03410, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:50.271564+00:00",
+  "_kind": "geo_samples"
+}

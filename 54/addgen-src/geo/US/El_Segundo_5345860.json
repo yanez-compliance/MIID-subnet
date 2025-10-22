@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Segundo",
+  "geonameid": 5345860,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.9178209220662,
+      "lon": -118.41676960366654,
+      "geoinfo": {
+        "display_name": "126, West Franklin Avenue, El Segundo, Los Angeles County, California, 90245, United States",
+        "road": "West Franklin Avenue",
+        "house_number": "126",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Segundo",
+        "state": "California",
+        "postcode": "90245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "126 West Franklin Avenue, El Segundo, California, United States"
+    },
+    {
+      "lat": 33.96231147882134,
+      "lon": -118.41162906136623,
+      "geoinfo": {
+        "display_name": "6913, West 84th Place, Westchester, Los Angeles, Los Angeles County, California, 90045, United States",
+        "road": "West 84th Place",
+        "house_number": "6913",
+        "neighbourhood": null,
+        "suburb": "Westchester",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90045",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6913, West 84th Place, Westchester, Los Angeles, Los Angeles County, California, 90045, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:21.095102+00:00",
+  "_kind": "geo_samples"
+}

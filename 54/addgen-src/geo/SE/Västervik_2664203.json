@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Västervik",
+  "geonameid": 2664203,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.744947534319685,
+      "lon": 16.676448846893145,
+      "geoinfo": {
+        "display_name": "Båtvägen, Västervik, Västerviks kommun, Kalmar County, 593 50, Sweden",
+        "road": "Båtvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Västervik",
+        "state": null,
+        "postcode": "593 50",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Båtvägen, Västervik, Sweden"
+    },
+    {
+      "lat": 57.75336505106512,
+      "lon": 16.585035239171642,
+      "geoinfo": {
+        "display_name": "Segersborgsgatan, Kvännaren, Jenny, Västervik, Västerviks kommun, Kalmar County, 593 37, Sweden",
+        "road": "Segersborgsgatan",
+        "house_number": null,
+        "neighbourhood": "Kvännaren",
+        "suburb": "Jenny",
+        "city_district": null,
+        "city": "Västervik",
+        "state": null,
+        "postcode": "593 37",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Segersborgsgatan, Kvännaren, Jenny, Västervik, Västerviks kommun, Kalmar County, 593 37, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:46.269426+00:00",
+  "_kind": "geo_samples"
+}

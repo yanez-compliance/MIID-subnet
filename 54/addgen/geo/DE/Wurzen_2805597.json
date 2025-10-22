@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wurzen",
+  "geonameid": 2805597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.40378599040722,
+      "lon": 12.72838249365338,
+      "geoinfo": {
+        "display_name": "K 8311, Nischwitz, Thallwitz, Landkreis Leipzig, Saxony, 04808, Germany",
+        "road": "K 8311",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nischwitz",
+        "state": "Saxony",
+        "postcode": "04808",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 8311, Wurzen, Saxony, Germany"
+    },
+    {
+      "lat": 51.36520561673387,
+      "lon": 12.735492248665999,
+      "geoinfo": {
+        "display_name": "24, Bahnhofstraße, Süd, Altstadt, Wurzen, Landkreis Leipzig, Saxony, 04808, Germany",
+        "road": "Bahnhofstraße",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Altstadt",
+        "city_district": "Wurzen",
+        "city": "Wurzen",
+        "state": "Saxony",
+        "postcode": "04808",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24, Bahnhofstraße, Süd, Altstadt, Wurzen, Landkreis Leipzig, Saxony, 04808, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:17.594682+00:00",
+  "_kind": "geo_samples"
+}

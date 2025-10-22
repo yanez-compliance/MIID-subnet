@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Barri Gòtic",
+  "geonameid": 6544577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35845256118571,
+      "lon": 2.2232899352545252,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Barri Gòtic, Catalonia, Spain"
+    },
+    {
+      "lat": 41.41504207989066,
+      "lon": 2.177712163843972,
+      "geoinfo": {
+        "display_name": "9, Carrer del Trobador, el Guinardó, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08041, Spain",
+        "road": "Carrer del Trobador",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "9, Carrer del Trobador, el Guinardó, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08041, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:51.363245+00:00",
+  "_kind": "geo_samples"
+}

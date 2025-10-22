@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Marzahn",
+  "geonameid": 2873074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.5254371410161,
+      "lon": 13.52308398943629,
+      "geoinfo": {
+        "display_name": "Allee der Kosmonauten, Friedrichsfelde Ost, Marzahn, Marzahn-Hellersdorf, Berlin, 12681, Germany",
+        "road": "Allee der Kosmonauten",
+        "house_number": null,
+        "neighbourhood": "Friedrichsfelde Ost",
+        "suburb": "Marzahn",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12681",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Allee der Kosmonauten, Marzahn, Germany"
+    },
+    {
+      "lat": 52.50526761465293,
+      "lon": 13.5382550044813,
+      "geoinfo": {
+        "display_name": "125, Am Tierpark, Alt-Friedrichsfelde, Friedrichsfelde, Lichtenberg, Berlin, 10319, Germany",
+        "road": "Am Tierpark",
+        "house_number": "125",
+        "neighbourhood": "Alt-Friedrichsfelde",
+        "suburb": "Friedrichsfelde",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "125, Am Tierpark, Alt-Friedrichsfelde, Friedrichsfelde, Lichtenberg, Berlin, 10319, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:42.733258+00:00",
+  "_kind": "geo_samples"
+}

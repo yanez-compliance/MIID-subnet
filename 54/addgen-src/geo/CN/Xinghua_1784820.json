@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xinghua",
+  "geonameid": 1784820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.95530518141059,
+      "lon": 119.86797893504006,
+      "geoinfo": {
+        "display_name": "Xinghua, Taizhou, Jiangsu, 225700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinghua",
+        "state": "Jiangsu",
+        "postcode": "225700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xinghua, Jiangsu, China"
+    },
+    {
+      "lat": 32.8983796810286,
+      "lon": 119.82239696598292,
+      "geoinfo": {
+        "display_name": "临城, Xinghua, Taizhou, Jiangsu, 225700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "临城",
+        "city_district": null,
+        "city": "Xinghua",
+        "state": "Jiangsu",
+        "postcode": "225700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "895, 临城, Xinghua, Taizhou, Jiangsu, 225700, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:51:00.197701+00:00",
+  "_kind": "geo_samples"
+}

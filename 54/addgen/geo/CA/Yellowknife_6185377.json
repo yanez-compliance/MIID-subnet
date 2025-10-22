@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Yellowknife",
+  "geonameid": 6185377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 62.42602752474147,
+      "lon": -114.36326944195733,
+      "geoinfo": {
+        "display_name": "Yellowknife, North Slave Region, Northwest Territories, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yellowknife",
+        "state": "Northwest Territories",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Yellowknife, Northwest Territories, Canada"
+    },
+    {
+      "lat": 62.463884572274246,
+      "lon": -114.34820902891525,
+      "geoinfo": {
+        "display_name": "3539, McDonald Drive, The Rock, Old Town, Yellowknife, North Slave Region, Northwest Territories, X1A 2H2, Canada",
+        "road": "McDonald Drive",
+        "house_number": "3539",
+        "neighbourhood": "The Rock",
+        "suburb": null,
+        "city_district": null,
+        "city": "Yellowknife",
+        "state": "Northwest Territories",
+        "postcode": "X1A 2H2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3539, McDonald Drive, The Rock, Old Town, Yellowknife, North Slave Region, Northwest Territories, X1A 2H2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:32.773285+00:00",
+  "_kind": "geo_samples"
+}

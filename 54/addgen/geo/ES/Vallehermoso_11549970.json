@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vallehermoso",
+  "geonameid": 11549970,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.44468350225374,
+      "lon": -3.7069919271328327,
+      "geoinfo": {
+        "display_name": "Avenida de Filipinas, Vallehermoso, Chamberí, Madrid, Community of Madrid, 28003, Spain",
+        "road": "Avenida de Filipinas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chamberí",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28003",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de Filipinas, Vallehermoso, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.458323574097115,
+      "lon": -3.7196373537042287,
+      "geoinfo": {
+        "display_name": "Carretera de la Dehesa de la Villa, Ciudad Universitaria, Moncloa-Aravaca, Madrid, Community of Madrid, 28040, Spain",
+        "road": "Carretera de la Dehesa de la Villa",
+        "house_number": null,
+        "neighbourhood": "Ciudad Universitaria",
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28040",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "518, Carretera de la Dehesa de la Villa, Ciudad Universitaria, Moncloa-Aravaca, Madrid, Community of Madrid, 28040, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:23.119426+00:00",
+  "_kind": "geo_samples"
+}

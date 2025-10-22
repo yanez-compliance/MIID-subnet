@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Dorado",
+  "geonameid": 4109785,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.180706658193714,
+      "lon": -92.6683198927798,
+      "geoinfo": {
+        "display_name": "Union Rd 293, El Dorado, Union County, Arkansas, 71730, United States",
+        "road": "Union Rd 293",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Dorado",
+        "state": "Arkansas",
+        "postcode": "71730",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Union Rd 293, El Dorado, Arkansas, United States"
+    },
+    {
+      "lat": 33.19007690937951,
+      "lon": -92.62062675842688,
+      "geoinfo": {
+        "display_name": "US 82, El Dorado, Union County, Arkansas, 71730, United States",
+        "road": "US 82",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Dorado",
+        "state": "Arkansas",
+        "postcode": "71730",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 82, El Dorado, Union County, Arkansas, 71730, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:03.439835+00:00",
+  "_kind": "geo_samples"
+}

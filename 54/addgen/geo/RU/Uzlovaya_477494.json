@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Uzlovaya",
+  "geonameid": 477494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.000150950870626,
+      "lon": 38.14095396762569,
+      "geoinfo": {
+        "display_name": "улица 221 км, Uzlovaya, городское поселение Узловая, Uzlovsky District, Tula Oblast, Central Federal District, 301605, Russia",
+        "road": "улица 221 км",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uzlovaya",
+        "state": "Tula Oblast",
+        "postcode": "301605",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица 221 км, Uzlovaya, Tula Oblast, Russia"
+    },
+    {
+      "lat": 53.96389753967297,
+      "lon": 38.22022808318226,
+      "geoinfo": {
+        "display_name": "10, Первомайская улица, Mayskiy, Каменецкое сельское поселение, Uzlovsky District, Tula Oblast, Central Federal District, 301633, Russia",
+        "road": "Первомайская улица",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mayskiy",
+        "state": "Tula Oblast",
+        "postcode": "301633",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "10, Первомайская улица, Mayskiy, Каменецкое сельское поселение, Uzlovsky District, Tula Oblast, Central Federal District, 301633, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:38.915157+00:00",
+  "_kind": "geo_samples"
+}

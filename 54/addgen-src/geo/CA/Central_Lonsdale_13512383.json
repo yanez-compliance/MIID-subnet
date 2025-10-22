@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Central Lonsdale",
+  "geonameid": 13512383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.31195265281382,
+      "lon": -123.06549738320456,
+      "geoinfo": {
+        "display_name": "409, East 6th Street, Keith-Lynn, Moodyville, North Vancouver, Metro Vancouver Regional District, British Columbia, V7L, Canada",
+        "road": "East 6th Street",
+        "house_number": "409",
+        "neighbourhood": "Keith-Lynn",
+        "suburb": "Moodyville",
+        "city_district": null,
+        "city": "North Vancouver",
+        "state": "British Columbia",
+        "postcode": "V7L",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "409 East 6th Street, Central Lonsdale, British Columbia, Canada"
+    },
+    {
+      "lat": 49.290241930955006,
+      "lon": -123.06456431294534,
+      "geoinfo": {
+        "display_name": "Commissioner Street, Grandview-Woodland, Vancouver, Metro Vancouver Regional District, British Columbia, V5L, Canada",
+        "road": "Commissioner Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grandview-Woodland",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5L",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "646, Commissioner Street, Grandview-Woodland, Vancouver, Metro Vancouver Regional District, British Columbia, V5L, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:23:27.312680+00:00",
+  "_kind": "geo_samples"
+}

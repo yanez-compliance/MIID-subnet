@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hendersonville",
+  "geonameid": 4628735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.27320989479657,
+      "lon": -86.6080278644499,
+      "geoinfo": {
+        "display_name": "170, Lasabre Drive, Hendersonville, Sumner County, Middle Tennessee, Tennessee, 37075, United States",
+        "road": "Lasabre Drive",
+        "house_number": "170",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hendersonville",
+        "state": "Tennessee",
+        "postcode": "37075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "170 Lasabre Drive, Hendersonville, Tennessee, United States"
+    },
+    {
+      "lat": 36.34272576634047,
+      "lon": -86.64652315990517,
+      "geoinfo": {
+        "display_name": "1009, Forestpointe Drive, Sumner County, Middle Tennessee, Tennessee, 37075, United States",
+        "road": "Forestpointe Drive",
+        "house_number": "1009",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1009, Forestpointe Drive, Sumner County, Middle Tennessee, Tennessee, 37075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:23.050200+00:00",
+  "_kind": "geo_samples"
+}

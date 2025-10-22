@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Centralniy",
+  "geonameid": 8504960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.92184940800033,
+      "lon": 30.387520626558175,
+      "geoinfo": {
+        "display_name": "Свято-Троицкая Александро-Невская Лавра, Архирейская дорожка, округ Лиговка-Ямская, Saint Petersburg, Northwestern Federal District, 191317, Russia",
+        "road": "Архирейская дорожка",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "округ Лиговка-Ямская",
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "191317",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Свято-Троицкая Александро-Невская Лавра, Архирейская дорожка, округ Лиговка-Ямская, Saint Petersburg, Northwestern Federal District, 191317, Russia"
+    },
+    {
+      "lat": 59.90001327059526,
+      "lon": 30.420641231095438,
+      "geoinfo": {
+        "display_name": "4, Большой Смоленский проспект, Smolenskoe, округ Невская застава, Saint Petersburg, Northwestern Federal District, 192029, Russia",
+        "road": "Большой Смоленский проспект",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Smolenskoe",
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "192029",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "4, Большой Смоленский проспект, Smolenskoe, округ Невская застава, Saint Petersburg, Northwestern Federal District, 192029, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:01.564286+00:00",
+  "_kind": "geo_samples"
+}

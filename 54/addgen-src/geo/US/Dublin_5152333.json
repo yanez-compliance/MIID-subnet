@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dublin",
+  "geonameid": 5152333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.08373252175699,
+      "lon": -83.12832997153299,
+      "geoinfo": {
+        "display_name": "798, Rings Road, Dublin, Washington Township, Franklin County, Ohio, 43017, United States",
+        "road": "Rings Road",
+        "house_number": "798",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dublin",
+        "state": "Ohio",
+        "postcode": "43017",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "798 Rings Road, Dublin, Ohio, United States"
+    },
+    {
+      "lat": 40.073517115043195,
+      "lon": -83.08494415714175,
+      "geoinfo": {
+        "display_name": "2559, West Case Road, Northwest Columbus, Columbus, Franklin County, Ohio, 43235, United States",
+        "road": "West Case Road",
+        "house_number": "2559",
+        "neighbourhood": null,
+        "suburb": "Northwest Columbus",
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Ohio",
+        "postcode": "43235",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2559, West Case Road, Northwest Columbus, Columbus, Franklin County, Ohio, 43235, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:48.115467+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manchester",
+  "geonameid": 4396915,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.5714992323938,
+      "lon": -90.5205687920667,
+      "geoinfo": {
+        "display_name": "696, Shallowford Drive, Big Bend Woods, Manchester, Saint Louis County, Missouri, 63021, United States",
+        "road": "Shallowford Drive",
+        "house_number": "696",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manchester",
+        "state": "Missouri",
+        "postcode": "63021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "696 Shallowford Drive, Manchester, Missouri, United States"
+    },
+    {
+      "lat": 38.584731010431454,
+      "lon": -90.54180242172863,
+      "geoinfo": {
+        "display_name": "243, Ries Road, Ballwin, Saint Louis County, Missouri, 63021, United States",
+        "road": "Ries Road",
+        "house_number": "243",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ballwin",
+        "state": "Missouri",
+        "postcode": "63021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "243, Ries Road, Ballwin, Saint Louis County, Missouri, 63021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:39.438158+00:00",
+  "_kind": "geo_samples"
+}

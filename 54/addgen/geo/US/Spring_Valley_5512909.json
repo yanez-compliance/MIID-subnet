@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spring Valley",
+  "geonameid": 5512909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.10676136371232,
+      "lon": -115.27460061373003,
+      "geoinfo": {
+        "display_name": "Peace Way, Spring Valley, Clark County, Nevada, 89184, United States",
+        "road": "Peace Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring Valley",
+        "state": "Nevada",
+        "postcode": "89184",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Peace Way, Spring Valley, Nevada, United States"
+    },
+    {
+      "lat": 36.10435323377857,
+      "lon": -115.26698128822524,
+      "geoinfo": {
+        "display_name": "8055, Slip Point Avenue, Buffalo Ranch, Spring Valley, Clark County, Nevada, 89147, United States",
+        "road": "Slip Point Avenue",
+        "house_number": "8055",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring Valley",
+        "state": "Nevada",
+        "postcode": "89147",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8055, Slip Point Avenue, Buffalo Ranch, Spring Valley, Clark County, Nevada, 89147, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:05.125308+00:00",
+  "_kind": "geo_samples"
+}

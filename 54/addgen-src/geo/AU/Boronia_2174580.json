@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Boronia",
+  "geonameid": 2174580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.85244288993269,
+      "lon": 145.28268884151578,
+      "geoinfo": {
+        "display_name": "19, Woodmason Road, Boronia, Melbourne, City of Knox, Victoria, 3155, Australia",
+        "road": "Woodmason Road",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Boronia",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3155",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "19 Woodmason Road, Boronia, Victoria, Australia"
+    },
+    {
+      "lat": -37.835662506782135,
+      "lon": 145.2496388784639,
+      "geoinfo": {
+        "display_name": "Dickasons Road, Heathmont, Melbourne, City of Maroondah, Victoria, 3135, Australia",
+        "road": "Dickasons Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Heathmont",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3135",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "063, Dickasons Road, Heathmont, Melbourne, City of Maroondah, Victoria, 3135, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:16.632684+00:00",
+  "_kind": "geo_samples"
+}

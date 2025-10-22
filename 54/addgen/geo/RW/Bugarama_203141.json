@@ -1,0 +1,65 @@
+{
+  "country_code": "RW",
+  "country": "Rwanda",
+  "city": "Bugarama",
+  "geonameid": 203141,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -2.70430982612449,
+      "lon": 29.038785556065847,
+      "geoinfo": {
+        "display_name": "G.S. Kibangira, DR2, Kizura, Bugarama, Rusizi, Western Province, Rwanda",
+        "road": "DR2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bugarama",
+        "state": "Western Province",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "DR2, Bugarama, Western Province, Rwanda"
+    },
+    {
+      "lat": -2.6720355506513553,
+      "lon": 29.03467902487811,
+      "geoinfo": {
+        "display_name": "Kizura, Gikundamvura, Rusizi, Western Province, Rwanda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kizura",
+        "state": "Western Province",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "Bugarama, Western Province, Rwanda"
+    },
+    {
+      "lat": -2.693503009891865,
+      "lon": 29.021510879453345,
+      "geoinfo": {
+        "display_name": "Pera, Bugarama, Rusizi, Western Province, Rwanda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pera",
+        "city_district": null,
+        "city": "Bugarama",
+        "state": "Western Province",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "Pera, Bugarama, Western Province, Rwanda"
+    }
+  ],
+  "updated_at": "2025-10-16T22:17:23.426295+00:00",
+  "_kind": "geo_samples"
+}

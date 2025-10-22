@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Maturín",
+  "geonameid": 3778045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.784874543293958,
+      "lon": -63.164380631555055,
+      "geoinfo": {
+        "display_name": "Santa Elena, Maturin, Parroquia Boquerón, Municipio Maturín, Monagas State, 6201, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Elena",
+        "city_district": null,
+        "city": "Maturin",
+        "state": "Monagas State",
+        "postcode": "6201",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Santa Elena, Maturín, Monagas State, Venezuela"
+    },
+    {
+      "lat": 9.762466327744614,
+      "lon": -63.14264205123653,
+      "geoinfo": {
+        "display_name": "Carreterra 1, El Silencio, Maturin, Parroquia Las Cocuizas, Municipio Maturín, Monagas State, 6201, Venezuela",
+        "road": "Carreterra 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Silencio",
+        "city_district": null,
+        "city": "Maturin",
+        "state": "Monagas State",
+        "postcode": "6201",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Carreterra 1, El Silencio, Maturin, Parroquia Las Cocuizas, Municipio Maturín, Monagas State, 6201, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:40.102700+00:00",
+  "_kind": "geo_samples"
+}

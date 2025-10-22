@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunrise Manor",
+  "geonameid": 5513343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.19211625908835,
+      "lon": -115.07837890979157,
+      "geoinfo": {
+        "display_name": "Kell Lane, Sunrise Manor, Clark County, Nevada, 89110, United States",
+        "road": "Kell Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sunrise Manor",
+        "state": "Nevada",
+        "postcode": "89110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kell Lane, Sunrise Manor, Nevada, United States"
+    },
+    {
+      "lat": 36.23025654146698,
+      "lon": -115.06500943571702,
+      "geoinfo": {
+        "display_name": "Clark County, Nevada, 89115, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nevada",
+        "postcode": "89115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "935, Clark County, Nevada, 89115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:19.121598+00:00",
+  "_kind": "geo_samples"
+}

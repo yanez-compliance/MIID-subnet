@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coralville",
+  "geonameid": 4852640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.68386994782005,
+      "lon": -91.59905290291906,
+      "geoinfo": {
+        "display_name": "Advance Auto Parts, 2nd Street, Coralville, Johnson County, Iowa, 52241, United States",
+        "road": "2nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coralville",
+        "state": "Iowa",
+        "postcode": "52241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2nd Street, Coralville, Iowa, United States"
+    },
+    {
+      "lat": 41.69669705699207,
+      "lon": -91.61670326801644,
+      "geoinfo": {
+        "display_name": "3151, Heartland Drive, Coralville, Johnson County, Iowa, 52241, United States",
+        "road": "Heartland Drive",
+        "house_number": "3151",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coralville",
+        "state": "Iowa",
+        "postcode": "52241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3151, Heartland Drive, Coralville, Johnson County, Iowa, 52241, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:41.574092+00:00",
+  "_kind": "geo_samples"
+}

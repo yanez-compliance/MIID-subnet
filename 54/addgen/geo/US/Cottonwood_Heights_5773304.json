@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cottonwood Heights",
+  "geonameid": 5773304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.5789797608151,
+      "lon": -111.78563737373905,
+      "geoinfo": {
+        "display_name": "Little Cottonwood Road, Cottonwood Heights, Salt Lake County, Utah, 84093, United States",
+        "road": "Little Cottonwood Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cottonwood Heights",
+        "state": "Utah",
+        "postcode": "84093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Little Cottonwood Road, Cottonwood Heights, Utah, United States"
+    },
+    {
+      "lat": 40.63066044642031,
+      "lon": -111.812555485523,
+      "geoinfo": {
+        "display_name": "2804, Palma Way, Mill Hollow Estates, Cottonwood Heights, Salt Lake County, Utah, 84121, United States",
+        "road": "Palma Way",
+        "house_number": "2804",
+        "neighbourhood": "Mill Hollow Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cottonwood Heights",
+        "state": "Utah",
+        "postcode": "84121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2804, Palma Way, Mill Hollow Estates, Cottonwood Heights, Salt Lake County, Utah, 84121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:20.202167+00:00",
+  "_kind": "geo_samples"
+}

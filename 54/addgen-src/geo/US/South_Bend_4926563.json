@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Bend",
+  "geonameid": 4926563,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.67053387073609,
+      "lon": -86.22736305115089,
+      "geoinfo": {
+        "display_name": "1429, East South Street, Edgewater, South Bend, Saint Joseph County, Indiana, 46615, United States",
+        "road": "East South Street",
+        "house_number": "1429",
+        "neighbourhood": "Edgewater",
+        "suburb": null,
+        "city_district": null,
+        "city": "South Bend",
+        "state": "Indiana",
+        "postcode": "46615",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1429 East South Street, South Bend, Indiana, United States"
+    },
+    {
+      "lat": 41.68684974354113,
+      "lon": -86.20891392919388,
+      "geoinfo": {
+        "display_name": "Morris Park Country Club, McKinley Avenue, South Bend, Saint Joseph County, Indiana, 46615, United States",
+        "road": "McKinley Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Bend",
+        "state": "Indiana",
+        "postcode": "46615",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "854, McKinley Avenue, South Bend, 46615 Indiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:45.884442+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Plaisir",
+  "geonameid": 2986930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.832557100353824,
+      "lon": 1.9544585722704013,
+      "geoinfo": {
+        "display_name": "Passage Paul Langevin, Résidence Villiers, Plaisir, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78370, France",
+        "road": "Passage Paul Langevin",
+        "house_number": null,
+        "neighbourhood": "Résidence Villiers",
+        "suburb": null,
+        "city_district": null,
+        "city": "Plaisir",
+        "state": "Ile-de-France",
+        "postcode": "78370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Passage Paul Langevin, Plaisir, Ile-de-France, France"
+    },
+    {
+      "lat": 48.8259102410008,
+      "lon": 1.9289563862271963,
+      "geoinfo": {
+        "display_name": "Chemin du Pont de Poissy, Quartier de la Gare, Le Clos, Plaisir, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78370, France",
+        "road": "Chemin du Pont de Poissy",
+        "house_number": null,
+        "neighbourhood": "Quartier de la Gare",
+        "suburb": "Le Clos",
+        "city_district": null,
+        "city": "Plaisir",
+        "state": "Ile-de-France",
+        "postcode": "78370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "893, Chemin du Pont de Poissy, Quartier de la Gare, Le Clos, Plaisir, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78370, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:31.910335+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Magog",
+  "geonameid": 6064180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.23159554887349,
+      "lon": -72.1815157532364,
+      "geoinfo": {
+        "display_name": "86, Rue de l'Hermitage, Magog, Memphrémagog, Quebec, J1X 0M8, Canada",
+        "road": "Rue de l'Hermitage",
+        "house_number": "86",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Magog",
+        "state": "Quebec",
+        "postcode": "J1X 0M8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "86 Rue de l'Hermitage, Magog, Quebec, Canada"
+    },
+    {
+      "lat": 45.26634276737722,
+      "lon": -72.09557467397636,
+      "geoinfo": {
+        "display_name": "Autoroute Joseph-Armand-Bombardier, Sainte-Catherine-de-Hatley, Memphrémagog, Estrie, Quebec, J1X 5H8, Canada",
+        "road": "Autoroute Joseph-Armand-Bombardier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Catherine-de-Hatley",
+        "state": "Quebec",
+        "postcode": "J1X 5H8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "220, Autoroute Joseph-Armand-Bombardier, Magog, J1X 5H8 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:02.016365+00:00",
+  "_kind": "geo_samples"
+}

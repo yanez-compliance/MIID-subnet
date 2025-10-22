@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Belfast",
+  "geonameid": 2655984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.56588468063263,
+      "lon": -5.923761288437538,
+      "geoinfo": {
+        "display_name": "Ballynafeigh, Belfast, Belfast City District, County Down, Northern Ireland, BT7 3EN, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ballynafeigh",
+        "city_district": null,
+        "city": "Belfast",
+        "state": "Northern Ireland",
+        "postcode": "BT7 3EN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ballynafeigh, Belfast, Northern Ireland, United Kingdom"
+    },
+    {
+      "lat": 54.58537316683459,
+      "lon": -5.925349665658044,
+      "geoinfo": {
+        "display_name": "104, University Avenue, The Holyland, Willowfield, The Holyland, Belfast, Belfast City District, County Antrim, Northern Ireland, BT7 1GB, United Kingdom",
+        "road": "University Avenue",
+        "house_number": "104",
+        "neighbourhood": null,
+        "suburb": "Willowfield",
+        "city_district": null,
+        "city": "Belfast",
+        "state": "Northern Ireland",
+        "postcode": "BT7 1GB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "104, University Avenue, The Holyland, Willowfield, The Holyland, Belfast, Belfast City District, County Antrim, Northern Ireland, BT7 1GB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:56.435683+00:00",
+  "_kind": "geo_samples"
+}

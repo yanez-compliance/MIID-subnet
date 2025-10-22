@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "South Riverdale",
+  "geonameid": 12156820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.64217021729558,
+      "lon": -79.32063886640447,
+      "geoinfo": {
+        "display_name": "Leslie Street, South Riverdale, Toronto—Danforth, Toronto, Golden Horseshoe, Ontario, L0S 1M0, Canada",
+        "road": "Leslie Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "L0S 1M0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Leslie Street, South Riverdale, Ontario, Canada"
+    },
+    {
+      "lat": 43.649921540082914,
+      "lon": -79.32818991799594,
+      "geoinfo": {
+        "display_name": "Unwin Avenue, South Riverdale, Toronto—Danforth, Toronto, Golden Horseshoe, Ontario, M4M 3H9, Canada",
+        "road": "Unwin Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4M 3H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Unwin Avenue, South Riverdale, Toronto—Danforth, Toronto, Golden Horseshoe, Ontario, M4M 3H9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:12.052086+00:00",
+  "_kind": "geo_samples"
+}

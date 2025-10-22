@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Banbury",
+  "geonameid": 2656406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.04619279784747,
+      "lon": -1.327309108364206,
+      "geoinfo": {
+        "display_name": "Chatsworth Drive, Cherwell Heights, Banbury, Bodicote, Cherwell District, Oxfordshire, England, OX16 9TP, United Kingdom",
+        "road": "Chatsworth Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cherwell Heights",
+        "city_district": null,
+        "city": "Cherwell District",
+        "state": "England",
+        "postcode": "OX16 9TP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Chatsworth Drive, Banbury, England, United Kingdom"
+    },
+    {
+      "lat": 52.09708632533815,
+      "lon": -1.384163367917738,
+      "geoinfo": {
+        "display_name": "B4100, Shotteswell CP, Stratford-on-Avon, Warwickshire, England, OX17 1JE, United Kingdom",
+        "road": "B4100",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stratford-on-Avon",
+        "state": "England",
+        "postcode": "OX17 1JE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "B4100, Banbury, OX17 1JE England, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:00.642367+00:00",
+  "_kind": "geo_samples"
+}

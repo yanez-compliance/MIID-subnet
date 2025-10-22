@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rego Park",
+  "geonameid": 5133640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.73436734617006,
+      "lon": -73.84627613773704,
+      "geoinfo": {
+        "display_name": "110-34, 63rd Drive, Forest Hills, Queens, Queens County, New York, 11375, United States",
+        "road": "63rd Drive",
+        "house_number": "110-34",
+        "neighbourhood": "Forest Hills",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11375",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110-34 63rd Drive, Rego Park, New York, United States"
+    },
+    {
+      "lat": 40.747183773101845,
+      "lon": -73.87596892806732,
+      "geoinfo": {
+        "display_name": "40-51, Denman Street, Queens, Queens County, New York, 11373, United States",
+        "road": "Denman Street",
+        "house_number": "40-51",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11373",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "40-51, Denman Street, Queens, Queens County, New York, 11373, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:20.542824+00:00",
+  "_kind": "geo_samples"
+}

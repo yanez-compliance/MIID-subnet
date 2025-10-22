@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Güstrow",
+  "geonameid": 2913433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.83705333583727,
+      "lon": 12.187957738517062,
+      "geoinfo": {
+        "display_name": "Strenz Ausbau, Lüssow, Güstrow-Land, Landkreis Rostock, Mecklenburg-Vorpommern, 18276, Germany",
+        "road": "Strenz Ausbau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lüssow",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "18276",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Strenz Ausbau, Güstrow, Mecklenburg-Vorpommern, Germany"
+    },
+    {
+      "lat": 53.791357073520764,
+      "lon": 12.228010546509584,
+      "geoinfo": {
+        "display_name": "Primerburg, Güstrow, Landkreis Rostock, Mecklenburg-Vorpommern, 18273, Germany",
+        "road": "Primerburg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Primerburg",
+        "city_district": null,
+        "city": "Güstrow",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "18273",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "646, Primerburg, Güstrow, Landkreis Rostock, Mecklenburg-Vorpommern, 18273, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:03.083661+00:00",
+  "_kind": "geo_samples"
+}

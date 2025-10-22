@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vinaròs",
+  "geonameid": 3104584,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.436450633414836,
+      "lon": 0.44456622319965106,
+      "geoinfo": {
+        "display_name": "Camí d'Aiguadoliva, Benicarló, el Baix Maestrat, Castelló / Castellón, Valencian Community, 12580, Spain",
+        "road": "Camí d'Aiguadoliva",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Benicarló",
+        "state": "Valencian Community",
+        "postcode": "12580",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí d'Aiguadoliva, Vinaròs, Valencian Community, Spain"
+    },
+    {
+      "lat": 40.47205518579432,
+      "lon": 0.4862248167533868,
+      "geoinfo": {
+        "display_name": "Passeig Fora del Forat, Dones de la Mar, Vinaròs, el Baix Maestrat, Castelló / Castellón, Valencian Community, 12500, Spain",
+        "road": "Passeig Fora del Forat",
+        "house_number": null,
+        "neighbourhood": "Dones de la Mar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vinaròs",
+        "state": "Valencian Community",
+        "postcode": "12500",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "105, Passeig Fora del Forat, Dones de la Mar, Vinaròs, el Baix Maestrat, Castelló / Castellón, Valencian Community, 12500, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:25.318961+00:00",
+  "_kind": "geo_samples"
+}

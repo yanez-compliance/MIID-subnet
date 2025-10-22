@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tukwila",
+  "geonameid": 5814043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.461268650829474,
+      "lon": -122.26548929485337,
+      "geoinfo": {
+        "display_name": "I 5, Tukwila, King County, Washington, 98188, United States",
+        "road": "I 5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tukwila",
+        "state": "Washington",
+        "postcode": "98188",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 5, Tukwila, Washington, United States"
+    },
+    {
+      "lat": 47.44285977906704,
+      "lon": -122.30340745471698,
+      "geoinfo": {
+        "display_name": "Air Cargo Road, McVan, SeaTac, King County, Washington, 98158, United States",
+        "road": "Air Cargo Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "SeaTac",
+        "state": "Washington",
+        "postcode": "98158",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "130, Air Cargo Road, McVan, SeaTac, King County, Washington, 98158, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:54.929358+00:00",
+  "_kind": "geo_samples"
+}

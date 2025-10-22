@@ -1,0 +1,65 @@
+{
+  "country_code": "PS",
+  "country": "Palestinian Territory",
+  "city": "Banī Na‘īm",
+  "geonameid": 284431,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 31.5326550884045,
+      "lon": 35.19438324302946,
+      "geoinfo": {
+        "display_name": "Bani Naim, Area A, West Bank, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bani Naim",
+        "state": null,
+        "postcode": null,
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "Banī Na‘īm, Palestinian Territory"
+    },
+    {
+      "lat": 31.485722509681896,
+      "lon": 35.17182659663503,
+      "geoinfo": {
+        "display_name": "מלאכי אברהם, Area C, Judea and Samaria, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Judea and Samaria",
+        "postcode": null,
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "Banī Na‘īm, Judea and Samaria, Palestinian Territory"
+    },
+    {
+      "lat": 31.509313068888346,
+      "lon": 35.13195698997465,
+      "geoinfo": {
+        "display_name": "60, Giv'at Gal, Area C, Judea and Samaria, 150, Palestinian Territories",
+        "road": "60",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Giv'at Gal",
+        "city_district": null,
+        "city": null,
+        "state": "Judea and Samaria",
+        "postcode": "150",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "60, Banī Na‘īm, Judea and Samaria, Palestinian Territory"
+    }
+  ],
+  "updated_at": "2025-10-16T21:18:11.352624+00:00",
+  "_kind": "geo_samples"
+}

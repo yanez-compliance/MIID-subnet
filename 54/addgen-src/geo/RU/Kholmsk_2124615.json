@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kholmsk",
+  "geonameid": 2124615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.074511376769955,
+      "lon": 142.04892201136127,
+      "geoinfo": {
+        "display_name": "12Б, Лесозаводская улица, III микрорайон, Kholmsk, Kholmsky District, Sakhalin Oblast, Far Eastern Federal District, 694620, Russia",
+        "road": "Лесозаводская улица",
+        "house_number": "12Б",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kholmsk",
+        "state": "Sakhalin Oblast",
+        "postcode": "694620",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "12Б Лесозаводская улица, Kholmsk, Sakhalin Oblast, Russia"
+    },
+    {
+      "lat": 47.04443850952135,
+      "lon": 141.99409139300656,
+      "geoinfo": {
+        "display_name": "Kholmsky District, Sakhalin Oblast, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sakhalin Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "905, Kholmsk, 57953 Sakhalin Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:54:22.422123+00:00",
+  "_kind": "geo_samples"
+}

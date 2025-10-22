@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Scarsdale",
+  "geonameid": 5136433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.00799189814788,
+      "lon": -73.82761969064042,
+      "geoinfo": {
+        "display_name": "451, Underhill Road, Village of Scarsdale, Town of Greenburgh, Westchester County, New York, 10583, United States",
+        "road": "Underhill Road",
+        "house_number": "451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Scarsdale",
+        "state": "New York",
+        "postcode": "10583",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "451 Underhill Road, Scarsdale, New York, United States"
+    },
+    {
+      "lat": 41.018515444266185,
+      "lon": -73.82734487917695,
+      "geoinfo": {
+        "display_name": "Olympic Lane, Village of Ardsley, Town of Greenburgh, Westchester County, New York, 10502, United States",
+        "road": "Olympic Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Ardsley",
+        "state": "New York",
+        "postcode": "10502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "309, Olympic Lane, Village of Ardsley, Town of Greenburgh, Westchester County, New York, 10502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:29.879910+00:00",
+  "_kind": "geo_samples"
+}

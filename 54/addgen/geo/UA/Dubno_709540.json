@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Dubno",
+  "geonameid": 709540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.39841244786097,
+      "lon": 25.720443142164182,
+      "geoinfo": {
+        "display_name": "Dubno, Dubno Urban Hromada, Dubno Raion, Rivne Oblast, 35601-35604, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dubno",
+        "state": "Rivne Oblast",
+        "postcode": "35601-35604",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "Dubno, Rivne Oblast, Ukraine"
+    },
+    {
+      "lat": 50.44628039349747,
+      "lon": 25.720158769256845,
+      "geoinfo": {
+        "display_name": "Pryvilne Rural Hromada, Dubno Raion, Rivne Oblast, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rivne Oblast",
+        "postcode": null,
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "685, Pryvilne Rural Hromada, Dubno Raion, 15660 Rivne Oblast, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:38.441271+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Kreuznach",
+  "geonameid": 2953416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.84620185597693,
+      "lon": 7.840291687796503,
+      "geoinfo": {
+        "display_name": "37, Oberer Mühlweg, Bad Kreuznach, Landkreis Bad Kreuznach, Rhineland-Palatinate, 55545, Germany",
+        "road": "Oberer Mühlweg",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Kreuznach",
+        "state": "Rhineland-Palatinate",
+        "postcode": "55545",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "37 Oberer Mühlweg, Bad Kreuznach, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.88007671670855,
+      "lon": 7.847027023192016,
+      "geoinfo": {
+        "display_name": "K 48, Breitenfelser Hof, Guldental, Langenlonsheim-Stromberg, Landkreis Bad Kreuznach, Rhineland-Palatinate, 55452, Germany",
+        "road": "K 48",
+        "house_number": null,
+        "neighbourhood": "Breitenfelser Hof",
+        "suburb": null,
+        "city_district": null,
+        "city": "Guldental",
+        "state": "Rhineland-Palatinate",
+        "postcode": "55452",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 48, Breitenfelser Hof, Guldental, Langenlonsheim-Stromberg, Landkreis Bad Kreuznach, Rhineland-Palatinate, 55452, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:09.028885+00:00",
+  "_kind": "geo_samples"
+}

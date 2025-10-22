@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Tan Valley",
+  "geonameid": 7310164,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.20127717662489,
+      "lon": -111.5742922451304,
+      "geoinfo": {
+        "display_name": "West Empire Road, Circle Cross Ranch, San Tan Valley, Pinal County, Arizona, 85144, United States",
+        "road": "West Empire Road",
+        "house_number": null,
+        "neighbourhood": "Circle Cross Ranch",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Tan Valley",
+        "state": "Arizona",
+        "postcode": "85144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Empire Road, San Tan Valley, Arizona, United States"
+    },
+    {
+      "lat": 33.178592950528426,
+      "lon": -111.52573613884385,
+      "geoinfo": {
+        "display_name": "East Roberts Road, Pinal County, Arizona, 85143, United States",
+        "road": "East Roberts Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "316, East Roberts Road, Pinal County, Arizona, 85143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:33.398304+00:00",
+  "_kind": "geo_samples"
+}

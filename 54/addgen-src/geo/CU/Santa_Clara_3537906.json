@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Santa Clara",
+  "geonameid": 3537906,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.374810101725494,
+      "lon": -79.98882177666138,
+      "geoinfo": {
+        "display_name": "José Martí, Ciudad de Santa Clara, Santa Clara, Villa Clara, 50300, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "José Martí",
+        "city_district": "Ciudad de Santa Clara",
+        "city": "Santa Clara",
+        "state": "Villa Clara",
+        "postcode": "50300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "José Martí, Santa Clara, Villa Clara, Cuba"
+    },
+    {
+      "lat": 22.392256362203923,
+      "lon": -80.00714006966021,
+      "geoinfo": {
+        "display_name": "El Mamey 120, Santa Clara, Villa Clara, 50300, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clara",
+        "state": "Villa Clara",
+        "postcode": "50300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "El Mamey 120, Santa Clara, Villa Clara, 50300, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:13.975803+00:00",
+  "_kind": "geo_samples"
+}

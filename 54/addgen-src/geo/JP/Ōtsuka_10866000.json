@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Ōtsuka",
+  "geonameid": 10866000,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.699807255917165,
+      "lon": 139.76942878181072,
+      "geoinfo": {
+        "display_name": "Kumagai Building, 3, Kanda Myojin-dori Avenue, Soto-Kanda 1-chome, Soto-Kanda, Chiyoda, Tokyo, 102-0000, Japan",
+        "road": "Kanda Myojin-dori Avenue",
+        "house_number": "3",
+        "neighbourhood": "Soto-Kanda 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiyoda",
+        "state": null,
+        "postcode": "102-0000",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kumagai Building, 3, Kanda Myojin-dori Avenue, Soto-Kanda 1-chome, Soto-Kanda, Chiyoda, Tokyo, 102-0000, Japan"
+    },
+    {
+      "lat": 35.697140080691725,
+      "lon": 139.76266708637831,
+      "geoinfo": {
+        "display_name": "Nihon University, Ochanomizu Naka-dori, Kanda-Surugadai 3, Kanda-Surugadai, Chiyoda, Tokyo, 102-0000, Japan",
+        "road": "Ochanomizu Naka-dori",
+        "house_number": null,
+        "neighbourhood": "Kanda-Surugadai 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiyoda",
+        "state": null,
+        "postcode": "102-0000",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nihon University, Ochanomizu Naka-dori, Kanda-Surugadai 3, Kanda-Surugadai, Chiyoda, Tokyo, 102-0000, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:22.049147+00:00",
+  "_kind": "geo_samples"
+}

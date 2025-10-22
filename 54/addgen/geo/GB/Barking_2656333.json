@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Barking",
+  "geonameid": 2656333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.531648132992,
+      "lon": 0.1483722208294329,
+      "geoinfo": {
+        "display_name": "New Road, Dagenham, London Borough of Barking and Dagenham, London, Greater London, England, RM9 6YS, United Kingdom",
+        "road": "New Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dagenham",
+        "city_district": "London Borough of Barking and Dagenham",
+        "city": "London",
+        "state": "England",
+        "postcode": "RM9 6YS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "New Road, Barking, England, United Kingdom"
+    },
+    {
+      "lat": 51.54756627131818,
+      "lon": 0.044749236198178666,
+      "geoinfo": {
+        "display_name": "Bluebell Avenue, Manor Park, London Borough of Newham, London, Greater London, England, E12 6UL, United Kingdom",
+        "road": "Bluebell Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Manor Park",
+        "city_district": "London Borough of Newham",
+        "city": "London",
+        "state": "England",
+        "postcode": "E12 6UL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bluebell Avenue, Manor Park, London Borough of Newham, London, Greater London, England, E12 6UL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:05.190123+00:00",
+  "_kind": "geo_samples"
+}

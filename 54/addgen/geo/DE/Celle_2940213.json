@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Celle",
+  "geonameid": 2940213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.6319719448975,
+      "lon": 10.02887175208768,
+      "geoinfo": {
+        "display_name": "Aller Radweg, Neustadt/Heese, Celle, Landkreis Celle, Lower Saxony, 29225, Germany",
+        "road": "Aller Radweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Neustadt/Heese",
+        "city": "Celle",
+        "state": "Lower Saxony",
+        "postcode": "29225",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Aller Radweg, Celle, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.6436199696009,
+      "lon": 10.05680707920617,
+      "geoinfo": {
+        "display_name": "Groß Hehlener Kirchweg, Klein Hehlen, Celle, Landkreis Celle, Lower Saxony, 29223, Germany",
+        "road": "Groß Hehlener Kirchweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Klein Hehlen",
+        "city_district": "Klein Hehlen",
+        "city": "Celle",
+        "state": "Lower Saxony",
+        "postcode": "29223",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "242, Groß Hehlener Kirchweg, Klein Hehlen, Celle, Landkreis Celle, Lower Saxony, 29223, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:15.768980+00:00",
+  "_kind": "geo_samples"
+}

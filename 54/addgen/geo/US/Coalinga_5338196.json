@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coalinga",
+  "geonameid": 5338196,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.11314711130646,
+      "lon": -120.3155039426977,
+      "geoinfo": {
+        "display_name": "Fresno County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coalinga, California, United States"
+    },
+    {
+      "lat": 36.16573212418891,
+      "lon": -120.3650212349985,
+      "geoinfo": {
+        "display_name": "Coalinga Plant, Fresno Coalinga Road, Coalinga, Fresno County, California, United States",
+        "road": "Fresno Coalinga Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coalinga",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "868, Fresno Coalinga Road, Coalinga, 65296 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:53.383272+00:00",
+  "_kind": "geo_samples"
+}

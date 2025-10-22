@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Bern",
+  "geonameid": 2661552,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.94092816285537,
+      "lon": 7.401056241794289,
+      "geoinfo": {
+        "display_name": "Freiburgstrasse, Bümpliz, Stadtteil VI, Bern, Bern-Mittelland administrative district, Bernese Mittelland administrative region, Bern, 3018, Switzerland",
+        "road": "Freiburgstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Stadtteil VI",
+        "city": "Bern",
+        "state": "Bern",
+        "postcode": "3018",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "684, Freiburgstrasse, Bümpliz, Stadtteil VI, Bern, Bern-Mittelland administrative district, Bernese Mittelland administrative region, Bern, 3018, Switzerland"
+    },
+    {
+      "lat": 46.909136093966865,
+      "lon": 7.461424068436628,
+      "geoinfo": {
+        "display_name": "Gurtenstrasse, Gurtendorf, Wabern, Köniz, Bern-Mittelland administrative district, Bernese Mittelland administrative region, Bern, 3122, Switzerland",
+        "road": "Gurtenstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wabern",
+        "city_district": null,
+        "city": "Köniz",
+        "state": "Bern",
+        "postcode": "3122",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "600, Gurtenstrasse, Gurtendorf, Wabern, Köniz, Bern-Mittelland administrative district, Bernese Mittelland administrative region, Bern, 3122, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:45.076512+00:00",
+  "_kind": "geo_samples"
+}

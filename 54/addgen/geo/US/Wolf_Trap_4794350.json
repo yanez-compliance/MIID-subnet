@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wolf Trap",
+  "geonameid": 4794350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.92953309668658,
+      "lon": -77.28462762333119,
+      "geoinfo": {
+        "display_name": "Brookhill Lane, Wolf Trap, Fairfax County, Virginia, 22182, United States",
+        "road": "Brookhill Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wolf Trap",
+        "state": "Virginia",
+        "postcode": "22182",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brookhill Lane, Wolf Trap, Virginia, United States"
+    },
+    {
+      "lat": 38.93836205209559,
+      "lon": -77.25190298785762,
+      "geoinfo": {
+        "display_name": "8851, Glenridge Court, Tysons, Fairfax County, Virginia, 22182, United States",
+        "road": "Glenridge Court",
+        "house_number": "8851",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tysons",
+        "state": "Virginia",
+        "postcode": "22182",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8851, Glenridge Court, Tysons, Fairfax County, Virginia, 22182, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:00.359563+00:00",
+  "_kind": "geo_samples"
+}

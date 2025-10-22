@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Easley",
+  "geonameid": 4577263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.839774730305905,
+      "lon": -82.55940141549038,
+      "geoinfo": {
+        "display_name": "SC 153, Perry Hills, Pickens County, South Carolina, 29640, United States",
+        "road": "SC 153",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "SC 153, Easley, South Carolina, United States"
+    },
+    {
+      "lat": 34.79307436666636,
+      "lon": -82.59363536375942,
+      "geoinfo": {
+        "display_name": "Pelzer Highway, Wyatt Acres, Easley, Pickens County, South Carolina, 29642, United States",
+        "road": "Pelzer Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Easley",
+        "state": "South Carolina",
+        "postcode": "29642",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "760, Pelzer Highway, Wyatt Acres, Easley, Pickens County, South Carolina, 29642, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:41.036892+00:00",
+  "_kind": "geo_samples"
+}

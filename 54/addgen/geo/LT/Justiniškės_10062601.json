@@ -1,0 +1,65 @@
+{
+  "country_code": "LT",
+  "country": "Lithuania",
+  "city": "Justiniškės",
+  "geonameid": 10062601,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 54.71929375584289,
+      "lon": 25.233040039681168,
+      "geoinfo": {
+        "display_name": "Čiobiškio st., Laisvės pr., Šeškinė, Šeškinės seniūnija, Vilnius, Vilnius city municipality, Vilnius County, 05263, Lithuania",
+        "road": "Laisvės pr.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Šeškinė",
+        "city_district": null,
+        "city": "Vilnius",
+        "state": "Vilnius County",
+        "postcode": "05263",
+        "country": "Lithuania",
+        "country_code": "lt"
+      },
+      "address": "Laisvės pr., Justiniškės, Vilnius County, Lithuania"
+    },
+    {
+      "lat": 54.70977242916162,
+      "lon": 25.206093354536698,
+      "geoinfo": {
+        "display_name": "31, Mozūriškių g., Justiniškės, Justiniškių seniūnija, Vilnius, Vilnius city municipality, Vilnius County, 05214, Lithuania",
+        "road": "Mozūriškių g.",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": "Justiniškės",
+        "city_district": null,
+        "city": "Vilnius",
+        "state": "Vilnius County",
+        "postcode": "05214",
+        "country": "Lithuania",
+        "country_code": "lt"
+      },
+      "address": "31 Mozūriškių g., Justiniškės, Vilnius County, Lithuania"
+    },
+    {
+      "lat": 54.71094143577685,
+      "lon": 25.202284657687137,
+      "geoinfo": {
+        "display_name": "55, Sidaronių g., Justiniškės, Justiniškių seniūnija, Vilnius, Vilnius city municipality, Vilnius County, 06264, Lithuania",
+        "road": "Sidaronių g.",
+        "house_number": "55",
+        "neighbourhood": null,
+        "suburb": "Justiniškės",
+        "city_district": null,
+        "city": "Vilnius",
+        "state": "Vilnius County",
+        "postcode": "06264",
+        "country": "Lithuania",
+        "country_code": "lt"
+      },
+      "address": "55 Sidaronių g., Justiniškės, Vilnius County, Lithuania"
+    }
+  ],
+  "updated_at": "2025-10-16T18:36:54.213133+00:00",
+  "_kind": "geo_samples"
+}

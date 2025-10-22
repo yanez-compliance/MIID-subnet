@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "South Parkdale",
+  "geonameid": 12156819,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.6001567417068,
+      "lon": -79.46193310224174,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "South Parkdale, Ontario, Canada"
+    },
+    {
+      "lat": 43.609138112266486,
+      "lon": -79.39100076463636,
+      "geoinfo": {
+        "display_name": "Beach Road, St Lawrence-East Bayfront-The Islands, Spadina—Fort York, Toronto, Golden Horseshoe, Ontario, M5J 2E9, Canada",
+        "road": "Beach Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5J 2E9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Beach Road, St Lawrence-East Bayfront-The Islands, Spadina—Fort York, Toronto, Golden Horseshoe, Ontario, M5J 2E9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:48.430225+00:00",
+  "_kind": "geo_samples"
+}

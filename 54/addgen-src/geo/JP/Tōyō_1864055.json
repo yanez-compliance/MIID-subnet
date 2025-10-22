@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tōyō",
+  "geonameid": 1864055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.67728329835478,
+      "lon": 139.81680477861067,
+      "geoinfo": {
+        "display_name": "Yotsume-dori Avenue, Sengoku 2, Sengoku, Koto, Tokyo, 135-0013, Japan",
+        "road": "Yotsume-dori Avenue",
+        "house_number": null,
+        "neighbourhood": "Sengoku 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koto",
+        "state": null,
+        "postcode": "135-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yotsume-dori Avenue, Tōyō, Japan"
+    },
+    {
+      "lat": 35.679291931105766,
+      "lon": 139.84449606167576,
+      "geoinfo": {
+        "display_name": "Higashi suna 3, Higashi suna, Koto, Tokyo, 136-0074, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Higashi suna 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koto",
+        "state": null,
+        "postcode": "136-0074",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Higashi suna 3, Higashi suna, Koto, Tokyo, 136-0074, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:55.030680+00:00",
+  "_kind": "geo_samples"
+}

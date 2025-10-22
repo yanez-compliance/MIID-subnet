@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Menomonie",
+  "geonameid": 5262634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.86604445281306,
+      "lon": -91.95937670369365,
+      "geoinfo": {
+        "display_name": "County Road P, Dogtown, Town of Menomonie, Dunn County, Wisconsin, United States",
+        "road": "County Road P",
+        "house_number": null,
+        "neighbourhood": "Dogtown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Menomonie",
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road P, Menomonie, Wisconsin, United States"
+    },
+    {
+      "lat": 44.878315563667215,
+      "lon": -91.93663689346835,
+      "geoinfo": {
+        "display_name": "394, River Road, Scenic Heights, Menomonie, Dunn County, Wisconsin, 54751, United States",
+        "road": "River Road",
+        "house_number": "394",
+        "neighbourhood": "Scenic Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Menomonie",
+        "state": "Wisconsin",
+        "postcode": "54751",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "394, River Road, Scenic Heights, Menomonie, Dunn County, Wisconsin, 54751, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:59.989955+00:00",
+  "_kind": "geo_samples"
+}

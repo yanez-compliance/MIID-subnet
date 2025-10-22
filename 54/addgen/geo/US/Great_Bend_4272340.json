@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Great Bend",
+  "geonameid": 4272340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.39557460861676,
+      "lon": -98.73307029162511,
+      "geoinfo": {
+        "display_name": "Northeast 20 Avenue, Barton County, Kansas, United States",
+        "road": "Northeast 20 Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northeast 20 Avenue, Great Bend, Kansas, United States"
+    },
+    {
+      "lat": 38.389296980891956,
+      "lon": -98.76587854754773,
+      "geoinfo": {
+        "display_name": "North Main Street, Barton County, Kansas, 67530, United States",
+        "road": "North Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "67530",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "647, North Main Street, Barton County, Kansas, 67530, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:05.632559+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Heiligenhaus",
+  "geonameid": 2907585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.329454970432614,
+      "lon": 6.993464477013056,
+      "geoinfo": {
+        "display_name": "Kaufland, 38-44, Velberter Straße, Migua, Hetterscheidt, Heiligenhaus, Kreis Mettmann, North Rhine-Westphalia, 42579, Germany",
+        "road": "Velberter Straße",
+        "house_number": "38-44",
+        "neighbourhood": "Migua",
+        "suburb": "Hetterscheidt",
+        "city_district": null,
+        "city": "Heiligenhaus",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42579",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "38-44 Velberter Straße, Heiligenhaus, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.31282251598213,
+      "lon": 7.006484024980293,
+      "geoinfo": {
+        "display_name": "49, Flandersbach, Rohdenhaus, Flandersbach, Wülfrath, Kreis Mettmann, North Rhine-Westphalia, 42489, Germany",
+        "road": "Flandersbach",
+        "house_number": "49",
+        "neighbourhood": null,
+        "suburb": "Rohdenhaus",
+        "city_district": null,
+        "city": "Wülfrath",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "49, Flandersbach, Rohdenhaus, Flandersbach, Wülfrath, Kreis Mettmann, North Rhine-Westphalia, 42489, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:09.634351+00:00",
+  "_kind": "geo_samples"
+}

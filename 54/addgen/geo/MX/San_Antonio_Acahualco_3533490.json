@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Antonio Acahualco",
+  "geonameid": 3533490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.291438669543627,
+      "lon": -99.74916119669423,
+      "geoinfo": {
+        "display_name": "San Miguel Zinacantepec, Zinacantepec, State of Mexico, 51350, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Zinacantepec",
+        "state": "State of Mexico",
+        "postcode": "51350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Antonio Acahualco, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.297451445787953,
+      "lon": -99.80262510168812,
+      "geoinfo": {
+        "display_name": "Almoloya de Juárez, State of Mexico, 51360, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "51360",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "468, Almoloya de Juárez, State of Mexico, 51360, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:20.303073+00:00",
+  "_kind": "geo_samples"
+}

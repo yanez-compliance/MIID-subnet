@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vincentown",
+  "geonameid": 4504618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.96244022444557,
+      "lon": -74.72538546988092,
+      "geoinfo": {
+        "display_name": "Scratch Ridge, Southampton Township, Burlington County, New Jersey, 08011, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southampton Township",
+        "state": "New Jersey",
+        "postcode": "08011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Vincentown, New Jersey, United States"
+    },
+    {
+      "lat": 39.953989723520934,
+      "lon": -74.74357913898758,
+      "geoinfo": {
+        "display_name": "2247, Main Street, Southampton Township, Burlington County, New Jersey, 08088, United States",
+        "road": "Main Street",
+        "house_number": "2247",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southampton Township",
+        "state": "New Jersey",
+        "postcode": "08088",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2247, Main Street, Southampton Township, Burlington County, New Jersey, 08088, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:16.089002+00:00",
+  "_kind": "geo_samples"
+}

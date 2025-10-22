@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 4561407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94014795880591,
+      "lon": -75.32612650306001,
+      "geoinfo": {
+        "display_name": "Scenic Road, Springfield Township, Delaware County, Pennsylvania, 19064, United States",
+        "road": "Scenic Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield Township",
+        "state": "Pennsylvania",
+        "postcode": "19064",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Scenic Road, Springfield, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.93462806906681,
+      "lon": -75.29047429173225,
+      "geoinfo": {
+        "display_name": "Bridge Street, Kellyville, Upper Darby, Delaware County, Pennsylvania, 19026, United States",
+        "road": "Bridge Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Darby",
+        "state": "Pennsylvania",
+        "postcode": "19026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "820, Bridge Street, Kellyville, Upper Darby, Delaware County, Pennsylvania, 19026, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:03.980117+00:00",
+  "_kind": "geo_samples"
+}

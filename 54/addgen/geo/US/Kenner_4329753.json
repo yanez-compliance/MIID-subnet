@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kenner",
+  "geonameid": 4329753,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.005685906064876,
+      "lon": -90.20560874549352,
+      "geoinfo": {
+        "display_name": "5900, Veterans Memorial Boulevard, Metairie, Jefferson Parish, Louisiana, 70003, United States",
+        "road": "Veterans Memorial Boulevard",
+        "house_number": "5900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Metairie",
+        "state": "Louisiana",
+        "postcode": "70003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5900 Veterans Memorial Boulevard, Kenner, Louisiana, United States"
+    },
+    {
+      "lat": 30.0276595823223,
+      "lon": -90.27108284327932,
+      "geoinfo": {
+        "display_name": "Loyola Drive, Kenner, Jefferson Parish, Louisiana, 70065, United States",
+        "road": "Loyola Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kenner",
+        "state": "Louisiana",
+        "postcode": "70065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "344, Loyola Drive, Kenner, Jefferson Parish, Louisiana, 70065, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:42.910640+00:00",
+  "_kind": "geo_samples"
+}

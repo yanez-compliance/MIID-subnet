@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Verne",
+  "geonameid": 5364134,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.088538482901065,
+      "lon": -117.78372858352567,
+      "geoinfo": {
+        "display_name": "1695, McKinley Avenue, Pomona, Los Angeles County, California, 91768, United States",
+        "road": "McKinley Avenue",
+        "house_number": "1695",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pomona",
+        "state": "California",
+        "postcode": "91768",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1695 McKinley Avenue, La Verne, California, United States"
+    },
+    {
+      "lat": 34.13230516393806,
+      "lon": -117.80232244580807,
+      "geoinfo": {
+        "display_name": "Sycamore Canyon Road, San Dimas, Los Angeles County, California, 91773, United States",
+        "road": "Sycamore Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Dimas",
+        "state": "California",
+        "postcode": "91773",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "419, Sycamore Canyon Road, San Dimas, Los Angeles County, California, 91773, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:10.773441+00:00",
+  "_kind": "geo_samples"
+}

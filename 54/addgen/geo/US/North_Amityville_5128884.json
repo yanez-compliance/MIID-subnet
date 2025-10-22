@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Amityville",
+  "geonameid": 5128884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.693240374722045,
+      "lon": -73.42154854758087,
+      "geoinfo": {
+        "display_name": "8, Hatcher Court, North Amityville, Town of Babylon, Suffolk County, New York, 11701, United States",
+        "road": "Hatcher Court",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Amityville",
+        "state": "New York",
+        "postcode": "11701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8 Hatcher Court, North Amityville, New York, United States"
+    },
+    {
+      "lat": 40.68425002576826,
+      "lon": -73.42344207129892,
+      "geoinfo": {
+        "display_name": "County Line Road, Village of Amityville, Town of Babylon, Suffolk County, New York, 11701, United States",
+        "road": "County Line Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Amityville",
+        "state": "New York",
+        "postcode": "11701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "990, County Line Road, Village of Amityville, Town of Babylon, Suffolk County, New York, 11701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:34.664848+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Dorking",
+  "geonameid": 2651095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.20998273865176,
+      "lon": -0.30906018659375145,
+      "geoinfo": {
+        "display_name": "Blackbrook Road, Holmwood, North Holmwood, Mole Valley, Surrey, England, RH5 4DR, United Kingdom",
+        "road": "Blackbrook Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Holmwood",
+        "city_district": null,
+        "city": "Mole Valley",
+        "state": "England",
+        "postcode": "RH5 4DR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Blackbrook Road, Dorking, England, United Kingdom"
+    },
+    {
+      "lat": 51.211667467131946,
+      "lon": -0.3491249093184387,
+      "geoinfo": {
+        "display_name": "Logmore Lane, Holmwood, Westcott, Mole Valley, Surrey, England, RH4 3JN, United Kingdom",
+        "road": "Logmore Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Holmwood",
+        "city_district": null,
+        "city": "Mole Valley",
+        "state": "England",
+        "postcode": "RH4 3JN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Logmore Lane, Holmwood, Westcott, Mole Valley, Surrey, England, RH4 3JN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:42.689158+00:00",
+  "_kind": "geo_samples"
+}

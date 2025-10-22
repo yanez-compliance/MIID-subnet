@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Newton",
+  "geonameid": 6087790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.15627813739968,
+      "lon": -122.83827439284677,
+      "geoinfo": {
+        "display_name": "84 Avenue, Whalley, Surrey, Metro Vancouver Regional District, British Columbia, V3W 0V5, Canada",
+        "road": "84 Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Whalley",
+        "city_district": null,
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V3W 0V5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "84 Avenue, Newton, British Columbia, Canada"
+    },
+    {
+      "lat": 49.12944614403372,
+      "lon": -122.80927413328129,
+      "geoinfo": {
+        "display_name": "14895, 69A Avenue, Sullivan, Newton, Surrey, Metro Vancouver Regional District, British Columbia, V3S 8Y8, Canada",
+        "road": "69A Avenue",
+        "house_number": "14895",
+        "neighbourhood": null,
+        "suburb": "Sullivan",
+        "city_district": null,
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V3S 8Y8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "14895, 69A Avenue, Sullivan, Newton, Surrey, Metro Vancouver Regional District, British Columbia, V3S 8Y8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:08.914290+00:00",
+  "_kind": "geo_samples"
+}

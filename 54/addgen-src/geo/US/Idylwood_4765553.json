@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Idylwood",
+  "geonameid": 4765553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.90876966238757,
+      "lon": -77.19713228720217,
+      "geoinfo": {
+        "display_name": "2028, Pimmit Drive, Southampton Forest, Pimmit Hills, Fairfax County, Virginia, 22043, United States",
+        "road": "Pimmit Drive",
+        "house_number": "2028",
+        "neighbourhood": "Southampton Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pimmit Hills",
+        "state": "Virginia",
+        "postcode": "22043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2028 Pimmit Drive, Idylwood, Virginia, United States"
+    },
+    {
+      "lat": 38.92932169872499,
+      "lon": -77.17625246133161,
+      "geoinfo": {
+        "display_name": "1516, Emerson Avenue, Bryn Mawr, McLean, Fairfax County, Virginia, 22101, United States",
+        "road": "Emerson Avenue",
+        "house_number": "1516",
+        "neighbourhood": "Bryn Mawr",
+        "suburb": null,
+        "city_district": null,
+        "city": "McLean",
+        "state": "Virginia",
+        "postcode": "22101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1516, Emerson Avenue, Bryn Mawr, McLean, Fairfax County, Virginia, 22101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:09.147466+00:00",
+  "_kind": "geo_samples"
+}

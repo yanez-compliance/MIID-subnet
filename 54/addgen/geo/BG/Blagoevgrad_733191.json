@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Blagoevgrad",
+  "geonameid": 733191,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.05494946050187,
+      "lon": 23.07087725502177,
+      "geoinfo": {
+        "display_name": "Barakovo, Kocherinovo, Kyustendil, 2710, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barakovo",
+        "state": "Kyustendil",
+        "postcode": "2710",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "Blagoevgrad, Kyustendil, Bulgaria"
+    },
+    {
+      "lat": 41.99574898540273,
+      "lon": 23.066209296466386,
+      "geoinfo": {
+        "display_name": "Skuba, 1061, Blagoevgrad, 2700, Bulgaria",
+        "road": "1061",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blagoevgrad",
+        "state": "Blagoevgrad",
+        "postcode": "2700",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "1061, Blagoevgrad, Blagoevgrad, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:48:33.737954+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Villa Hidalgo",
+  "geonameid": 3980169,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.65875028629831,
+      "lon": -102.55018570420955,
+      "geoinfo": {
+        "display_name": "Villa Hidalgo, Región Altos Norte, Jalisco, 47250, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "47250",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Villa Hidalgo, Jalisco, Mexico"
+    },
+    {
+      "lat": 21.658958216954435,
+      "lon": -102.63093905320943,
+      "geoinfo": {
+        "display_name": "Villa Hidalgo, Región Altos Norte, Jalisco, 47258, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Hidalgo",
+        "state": "Jalisco",
+        "postcode": "47258",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "054, Villa Hidalgo, Región Altos Norte, Jalisco, 47258, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:28.196586+00:00",
+  "_kind": "geo_samples"
+}

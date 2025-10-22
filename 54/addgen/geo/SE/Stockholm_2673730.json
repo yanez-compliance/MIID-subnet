@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Stockholm",
+  "geonameid": 2673730,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 59.286944696147906,
+      "lon": 18.085694525597447,
+      "geoinfo": {
+        "display_name": "9, Fågelkärrsvägen, Gamla Enskede, Enskede-Årsta-Vantörs stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 122 34, Sweden",
+        "road": "Fågelkärrsvägen",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Gamla Enskede",
+        "city_district": "Enskede-Årsta-Vantörs stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "122 34",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "9 Fågelkärrsvägen, Stockholm, Sweden"
+    },
+    {
+      "lat": 59.353640684228026,
+      "lon": 18.10141936604582,
+      "geoinfo": {
+        "display_name": "Kolargatan, Gasverket, Hjorthagen, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 115 40, Sweden",
+        "road": "Kolargatan",
+        "house_number": null,
+        "neighbourhood": "Gasverket",
+        "suburb": "Hjorthagen",
+        "city_district": "Norra innerstadens stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "115 40",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Kolargatan, Gasverket, Hjorthagen, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 115 40, Sweden"
+    },
+    {
+      "lat": 59.32157214834887,
+      "lon": 18.149748916683137,
+      "geoinfo": {
+        "display_name": "34, Blockhusringen, Blockhusudden, Djurgården, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 115 25, Sweden",
+        "road": "Blockhusringen",
+        "house_number": "34",
+        "neighbourhood": "Blockhusudden",
+        "suburb": "Djurgården",
+        "city_district": "Norra innerstadens stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "115 25",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "34, Blockhusringen, Blockhusudden, Djurgården, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 115 25, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:51.158938+00:00",
+  "_kind": "geo_samples"
+}

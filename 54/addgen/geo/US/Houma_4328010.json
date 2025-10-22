@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Houma",
+  "geonameid": 4328010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.577217038199354,
+      "lon": -90.67736779399868,
+      "geoinfo": {
+        "display_name": "Moffet Road, Mechanicville, Houma, Terrebonne Parish, Louisiana, 70363, United States",
+        "road": "Moffet Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houma",
+        "state": "Louisiana",
+        "postcode": "70363",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Moffet Road, Houma, Louisiana, United States"
+    },
+    {
+      "lat": 29.60171374776227,
+      "lon": -90.73416730222256,
+      "geoinfo": {
+        "display_name": "114, Henderson Street, Houma, Terrebonne Parish, Louisiana, 70364, United States",
+        "road": "Henderson Street",
+        "house_number": "114",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houma",
+        "state": "Louisiana",
+        "postcode": "70364",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "114, Henderson Street, Houma, Terrebonne Parish, Louisiana, 70364, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:01.014832+00:00",
+  "_kind": "geo_samples"
+}

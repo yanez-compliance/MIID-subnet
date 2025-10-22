@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Burgdorf",
+  "geonameid": 2941405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.446531648947115,
+      "lon": 9.983101766476588,
+      "geoinfo": {
+        "display_name": "1, Tiefenauweg, Heeßel, Burgdorf, Region Hannover, Lower Saxony, 31303, Germany",
+        "road": "Tiefenauweg",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Heeßel",
+        "city_district": null,
+        "city": "Burgdorf",
+        "state": "Lower Saxony",
+        "postcode": "31303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Tiefenauweg, Burgdorf, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.42820305720541,
+      "lon": 10.04803353670924,
+      "geoinfo": {
+        "display_name": "Justizvollzugsanstalt Burgdorf, Peiner Weg, Burgdorf, Region Hannover, Lower Saxony, 31303, Germany",
+        "road": "Peiner Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burgdorf",
+        "state": "Lower Saxony",
+        "postcode": "31303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "306, Peiner Weg, Burgdorf, 31303 Lower Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:43.730340+00:00",
+  "_kind": "geo_samples"
+}

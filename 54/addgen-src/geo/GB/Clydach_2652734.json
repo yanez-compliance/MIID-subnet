@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Clydach",
+  "geonameid": 2652734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.68055576075023,
+      "lon": -3.899398460458749,
+      "geoinfo": {
+        "display_name": "Birchgrove, Ynystawe, Swansea, Wales, SA7 0AE, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Birchgrove",
+        "city_district": null,
+        "city": "Ynystawe",
+        "state": "Wales",
+        "postcode": "SA7 0AE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Birchgrove, Clydach, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.68580577889064,
+      "lon": -3.862451478744033,
+      "geoinfo": {
+        "display_name": "Birchgrove, Swansea, Wales, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Birchgrove",
+        "city_district": null,
+        "city": "Swansea",
+        "state": "Wales",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "840, Birchgrove, Swansea, 33335 Wales, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:08.666422+00:00",
+  "_kind": "geo_samples"
+}

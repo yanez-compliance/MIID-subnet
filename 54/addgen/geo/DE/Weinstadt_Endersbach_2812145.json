@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weinstadt-Endersbach",
+  "geonameid": 2812145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80084384963708,
+      "lon": 9.350790433323471,
+      "geoinfo": {
+        "display_name": "5, Seemühle, Im See, Seemühle, Stetten, Weinstadt, Rems-Murr-Kreis, Baden-Württemberg, 71384, Germany",
+        "road": "Seemühle",
+        "house_number": "5",
+        "neighbourhood": "Im See",
+        "suburb": null,
+        "city_district": null,
+        "city": "Stetten",
+        "state": "Baden-Württemberg",
+        "postcode": "71384",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5 Seemühle, Weinstadt-Endersbach, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.84036968132655,
+      "lon": 9.407052142102923,
+      "geoinfo": {
+        "display_name": "Hohe Straße, Waiblingen, Weinstadt, Rems-Murr-Kreis, Baden-Württemberg, 71404, Germany",
+        "road": "Hohe Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waiblingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71404",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "823, Hohe Straße, Waiblingen, Weinstadt, Rems-Murr-Kreis, Baden-Württemberg, 71404, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:50.306621+00:00",
+  "_kind": "geo_samples"
+}

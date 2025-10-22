@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Navalcarnero",
+  "geonameid": 3115659,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.296862569534355,
+      "lon": -4.066418942935593,
+      "geoinfo": {
+        "display_name": "Valdecepar, Navalcarnero, Community of Madrid, 28610, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navalcarnero",
+        "state": "Community of Madrid",
+        "postcode": "28610",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Navalcarnero, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.271380808442075,
+      "lon": -4.009043428542649,
+      "geoinfo": {
+        "display_name": "M-404, Covadonga, Fuente Pila, Navalcarnero, Community of Madrid, 28600, Spain",
+        "road": "M-404",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navalcarnero",
+        "state": "Community of Madrid",
+        "postcode": "28600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-404, Covadonga, Fuente Pila, Navalcarnero, Community of Madrid, 28600, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:14.440219+00:00",
+  "_kind": "geo_samples"
+}

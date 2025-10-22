@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Boppard",
+  "geonameid": 2946366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.207785828154336,
+      "lon": 7.615073455871465,
+      "geoinfo": {
+        "display_name": "Rheingoldweg, Boppard-Buchenau, Weiler, Boppard, Rhein-Hunsrück-Kreis, Rhineland-Palatinate, 56154, Germany",
+        "road": "Rheingoldweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Boppard-Buchenau",
+        "city_district": null,
+        "city": "Boppard",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56154",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rheingoldweg, Boppard, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.245225423149705,
+      "lon": 7.589801190937267,
+      "geoinfo": {
+        "display_name": "B 42, Filsen, Loreley, Rhein-Lahn-Kreis, Rhineland-Palatinate, 56341, Germany",
+        "road": "B 42",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Filsen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56341",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 42, Boppard, 56341 Rhineland-Palatinate, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:48.929522+00:00",
+  "_kind": "geo_samples"
+}

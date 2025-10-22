@@ -1,0 +1,47 @@
+{
+  "country_code": "TH",
+  "country": "Thailand",
+  "city": "Ko Samui",
+  "geonameid": 1154689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.549465133531946,
+      "lon": 99.91405375006592,
+      "geoinfo": {
+        "display_name": "Nathon, Ko Samui, Surat Thani Province, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nathon",
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "Ko Samui, Thailand"
+    },
+    {
+      "lat": 9.570184595818308,
+      "lon": 99.9601136607059,
+      "geoinfo": {
+        "display_name": "Baan Tai, Ko Samui, Surat Thani Province, 84330, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baan Tai",
+        "state": null,
+        "postcode": "84330",
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "272, Baan Tai, Ko Samui, Surat Thani Province, 84330, Thailand"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:45.433063+00:00",
+  "_kind": "geo_samples"
+}

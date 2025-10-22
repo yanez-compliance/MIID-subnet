@@ -1,0 +1,65 @@
+{
+  "country_code": "PS",
+  "country": "Palestinian Territory",
+  "city": "Yaţţā",
+  "geonameid": 281292,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 31.439507973180895,
+      "lon": 35.08606115801418,
+      "geoinfo": {
+        "display_name": "Western Musalla, Yatta, Area A, West Bank, 797, Palestinian Territories",
+        "road": "Western Musalla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yatta",
+        "state": null,
+        "postcode": "797",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "378, Western Musalla, 797 Yaţţā, Palestinian Territory"
+    },
+    {
+      "lat": 31.417696357445507,
+      "lon": 35.0951206384399,
+      "geoinfo": {
+        "display_name": "Area C, Judea and Samaria, 797, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Judea and Samaria",
+        "postcode": "797",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "093, Yaţţā, 797 Judea and Samaria, Palestinian Territory"
+    },
+    {
+      "lat": 31.413102060385672,
+      "lon": 35.0770337324784,
+      "geoinfo": {
+        "display_name": "asamou - yatta, As Samu', Area A, West Bank, 797, Palestinian Territories",
+        "road": "asamou - yatta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "As Samu'",
+        "state": null,
+        "postcode": "797",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "947, asamou - yatta, 797 Yaţţā, Palestinian Territory"
+    }
+  ],
+  "updated_at": "2025-10-19T05:39:38.064713+00:00",
+  "_kind": "geo_samples"
+}

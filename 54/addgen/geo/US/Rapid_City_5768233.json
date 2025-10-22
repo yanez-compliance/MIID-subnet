@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rapid City",
+  "geonameid": 5768233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.077771092144374,
+      "lon": -103.21025879596793,
+      "geoinfo": {
+        "display_name": "East Main Street, Rapid City, Pennington County, South Dakota, 57701, United States",
+        "road": "East Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rapid City",
+        "state": "South Dakota",
+        "postcode": "57701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Main Street, Rapid City, South Dakota, United States"
+    },
+    {
+      "lat": 44.087345355028965,
+      "lon": -103.17461454902069,
+      "geoinfo": {
+        "display_name": "East Philadelphia Street, Auto Salvage Yard, Rapid City, Pennington County, South Dakota, 57703, United States",
+        "road": "East Philadelphia Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rapid City",
+        "state": "South Dakota",
+        "postcode": "57703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "801, East Philadelphia Street, Auto Salvage Yard, Rapid City, Pennington County, South Dakota, 57703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:04.520208+00:00",
+  "_kind": "geo_samples"
+}

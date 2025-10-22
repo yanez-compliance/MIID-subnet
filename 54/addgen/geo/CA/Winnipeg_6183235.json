@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Winnipeg",
+  "geonameid": 6183235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.89211362929319,
+      "lon": -97.12083539166923,
+      "geoinfo": {
+        "display_name": "St. Boniface Post Office, 208, Provencher Boulevard, Central St. Boniface, St. Boniface, Winnipeg, Manitoba, R2H 0H3, Canada",
+        "road": "Provencher Boulevard",
+        "house_number": "208",
+        "neighbourhood": "Central St. Boniface",
+        "suburb": "Central St. Boniface",
+        "city_district": "St. Boniface",
+        "city": "Winnipeg",
+        "state": "Manitoba",
+        "postcode": "R2H 0H3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "208 Provencher Boulevard, Winnipeg, Manitoba, Canada"
+    },
+    {
+      "lat": 49.92779285444679,
+      "lon": -97.1346796876603,
+      "geoinfo": {
+        "display_name": "417, Bannerman Avenue, St. John’s, Mynarski, Winnipeg, Manitoba, R2W 1C4, Canada",
+        "road": "Bannerman Avenue",
+        "house_number": "417",
+        "neighbourhood": "St. John’s",
+        "suburb": "Mynarski",
+        "city_district": "Mynarski",
+        "city": "Winnipeg",
+        "state": "Manitoba",
+        "postcode": "R2W 1C4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "417, Bannerman Avenue, St. John’s, Mynarski, Winnipeg, Manitoba, R2W 1C4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:36.302640+00:00",
+  "_kind": "geo_samples"
+}

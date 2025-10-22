@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changchun",
+  "geonameid": 2038180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.868453799810524,
+      "lon": 125.30681594078942,
+      "geoinfo": {
+        "display_name": "Mudan Street, 桂林路, Guilin Subdistrict, Chaoyang District, Changchun City, Luyuan, Jilin, 130000, China",
+        "road": "Mudan Street",
+        "house_number": null,
+        "neighbourhood": "桂林路",
+        "suburb": "Guilin Subdistrict",
+        "city_district": null,
+        "city": "Changchun City",
+        "state": "Jilin",
+        "postcode": "130000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Mudan Street, Changchun, Jilin, China"
+    },
+    {
+      "lat": 43.87719814581188,
+      "lon": 125.34540590951319,
+      "geoinfo": {
+        "display_name": "Binhe Lu, 永安门, Quan'an Subdistrict, Nanguan District, Changchun City, Jilin, 130000, China",
+        "road": "Binhe Lu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Quan'an Subdistrict",
+        "city_district": null,
+        "city": "Nanguan District",
+        "state": "Jilin",
+        "postcode": "130000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "153, Binhe Lu, 永安门, Quan'an Subdistrict, Nanguan District, Changchun City, Jilin, 130000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:01:15.692937+00:00",
+  "_kind": "geo_samples"
+}

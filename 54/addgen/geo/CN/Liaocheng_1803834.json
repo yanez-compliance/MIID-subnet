@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Liaocheng",
+  "geonameid": 1803834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.442110649033935,
+      "lon": 115.9872785686207,
+      "geoinfo": {
+        "display_name": "Liuyuan, Dongchangfu District, Liaocheng, Shandong, 252000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Liuyuan",
+        "city_district": null,
+        "city": "Dongchangfu District",
+        "state": "Shandong",
+        "postcode": "252000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Liuyuan, Liaocheng, Shandong, China"
+    },
+    {
+      "lat": 36.45689977663029,
+      "lon": 115.98254204979179,
+      "geoinfo": {
+        "display_name": "东昌路辅路, Gulou, Dongchangfu District, Liaocheng, Shandong, 252000, China",
+        "road": "东昌路辅路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gulou",
+        "city_district": null,
+        "city": "Dongchangfu District",
+        "state": "Shandong",
+        "postcode": "252000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "012, 东昌路辅路, Gulou, Dongchangfu District, Liaocheng, Shandong, 252000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:36.616045+00:00",
+  "_kind": "geo_samples"
+}

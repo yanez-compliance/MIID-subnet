@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "East End-Danforth",
+  "geonameid": 12156890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.64938472550296,
+      "lon": -79.27296582504394,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "East End-Danforth, Ontario, Canada"
+    },
+    {
+      "lat": 43.66758945110676,
+      "lon": -79.29697271062224,
+      "geoinfo": {
+        "display_name": "13, Lee Avenue, The Beaches, Beaches—East York, Toronto, Golden Horseshoe, Ontario, M4E 1E5, Canada",
+        "road": "Lee Avenue",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4E 1E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "13, Lee Avenue, The Beaches, Beaches—East York, Toronto, Golden Horseshoe, Ontario, M4E 1E5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:22.741885+00:00",
+  "_kind": "geo_samples"
+}

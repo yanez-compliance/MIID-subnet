@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Al-`Ula",
+  "geonameid": 108841,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 26.628385779430708,
+      "lon": 37.96232868854628,
+      "geoinfo": {
+        "display_name": "AlUla, Al Ula, Medina Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "AlUla",
+        "state": "Medina Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Al-`Ula, Medina Province, Saudi Arabia"
+    },
+    {
+      "lat": 26.637421138860805,
+      "lon": 37.89597789770963,
+      "geoinfo": {
+        "display_name": "375, Al Ula, Medina Province, 20115, Saudi Arabia",
+        "road": "375",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Medina Province",
+        "postcode": "20115",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "375, Al-`Ula, Medina Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:18:45.735056+00:00",
+  "_kind": "geo_samples"
+}

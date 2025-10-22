@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ada",
+  "geonameid": 4529096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.744170228210784,
+      "lon": -96.661518024019,
+      "geoinfo": {
+        "display_name": "Idlewile Drive, Ada, Pontotoc County, Oklahoma, 74820, United States",
+        "road": "Idlewile Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ada",
+        "state": "Oklahoma",
+        "postcode": "74820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Idlewile Drive, Ada, Oklahoma, United States"
+    },
+    {
+      "lat": 34.79426723501399,
+      "lon": -96.7068610680496,
+      "geoinfo": {
+        "display_name": "N3540 Road, Pontotoc County, Oklahoma, 74820, United States",
+        "road": "N3540 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": "74820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "N3540 Road, Ada, 74820 Oklahoma, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:01.799033+00:00",
+  "_kind": "geo_samples"
+}

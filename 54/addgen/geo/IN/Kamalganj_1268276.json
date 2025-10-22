@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kamalganj",
+  "geonameid": 1268276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.223399507854595,
+      "lon": 79.6329706822449,
+      "geoinfo": {
+        "display_name": "Farrukhabad, Uttar Pradesh, 209724, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": "209724",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kamalganj, Uttar Pradesh, India"
+    },
+    {
+      "lat": 27.25186996049044,
+      "lon": 79.6659806694243,
+      "geoinfo": {
+        "display_name": "Kamalganj, Farrukhabad, Uttar Pradesh, 209724, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamalganj",
+        "state": "Uttar Pradesh",
+        "postcode": "209724",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "142, Kamalganj, Farrukhabad, Uttar Pradesh, 209724, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:29.260261+00:00",
+  "_kind": "geo_samples"
+}

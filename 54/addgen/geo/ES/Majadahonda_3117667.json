@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Majadahonda",
+  "geonameid": 3117667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.48471660116709,
+      "lon": -3.8928329792620517,
+      "geoinfo": {
+        "display_name": "Camino de Tejar, Majadahonda, Community of Madrid, 28230, Spain",
+        "road": "Camino de Tejar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Majadahonda",
+        "state": "Community of Madrid",
+        "postcode": "28230",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camino de Tejar, Majadahonda, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.47906819987772,
+      "lon": -3.8241130134936157,
+      "geoinfo": {
+        "display_name": "Carretera particular de la Zarzuela, Fuencarral-El Pardo, Madrid, Community of Madrid, 28221, Spain",
+        "road": "Carretera particular de la Zarzuela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28221",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "991, Carretera particular de la Zarzuela, Fuencarral-El Pardo, Madrid, Community of Madrid, 28221, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:24.939182+00:00",
+  "_kind": "geo_samples"
+}

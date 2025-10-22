@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bristol",
+  "geonameid": 5221077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.693736236515385,
+      "lon": -71.22551608882937,
+      "geoinfo": {
+        "display_name": "Coggeshall, Warren, Bristol County, Rhode Island, 02809, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Coggeshall",
+        "suburb": null,
+        "city_district": null,
+        "city": "Warren",
+        "state": "Rhode Island",
+        "postcode": "02809",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coggeshall, Bristol, Rhode Island, United States"
+    },
+    {
+      "lat": 41.70562580487602,
+      "lon": -71.28433434865428,
+      "geoinfo": {
+        "display_name": "21, Patricia Ann Drive, Bristol, Bristol County, Rhode Island, 02809, United States",
+        "road": "Patricia Ann Drive",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Rhode Island",
+        "postcode": "02809",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21, Patricia Ann Drive, Bristol, Bristol County, Rhode Island, 02809, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:13.466557+00:00",
+  "_kind": "geo_samples"
+}

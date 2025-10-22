@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Overbrook",
+  "geonameid": 4560179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.962999144090816,
+      "lon": -75.26210490236741,
+      "geoinfo": {
+        "display_name": "36, Victory Avenue, Stonehurst, Upper Darby, Delaware County, Pennsylvania, 19082, United States",
+        "road": "Victory Avenue",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Darby",
+        "state": "Pennsylvania",
+        "postcode": "19082",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36 Victory Avenue, Overbrook, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.95412632952767,
+      "lon": -75.2416123811395,
+      "geoinfo": {
+        "display_name": "5939, Larchwood Avenue, Cobbs Creek, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19143, United States",
+        "road": "Larchwood Avenue",
+        "house_number": "5939",
+        "neighbourhood": "Cobbs Creek",
+        "suburb": "West Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5939, Larchwood Avenue, Cobbs Creek, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:15.049114+00:00",
+  "_kind": "geo_samples"
+}

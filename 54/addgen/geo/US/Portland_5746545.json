@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Portland",
+  "geonameid": 5746545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.567611196927515,
+      "lon": -122.6717530720547,
+      "geoinfo": {
+        "display_name": "6213, North Commercial Avenue, Piedmont, Portland, Multnomah County, Oregon, 97217, United States",
+        "road": "North Commercial Avenue",
+        "house_number": "6213",
+        "neighbourhood": null,
+        "suburb": "Piedmont",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97217",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6213 North Commercial Avenue, Portland, Oregon, United States"
+    },
+    {
+      "lat": 45.51014436763183,
+      "lon": -122.66790709451193,
+      "geoinfo": {
+        "display_name": "Vera Katz Eastbank Esplanade, Hosford-Abernethy, Portland, Multnomah County, Oregon, 97258, United States",
+        "road": "Vera Katz Eastbank Esplanade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hosford-Abernethy",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97258",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "860, Vera Katz Eastbank Esplanade, Hosford-Abernethy, Portland, Multnomah County, Oregon, 97258, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:34.888158+00:00",
+  "_kind": "geo_samples"
+}

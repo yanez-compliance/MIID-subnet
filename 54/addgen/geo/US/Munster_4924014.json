@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Munster",
+  "geonameid": 4924014,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.56997545828164,
+      "lon": -87.52043900272696,
+      "geoinfo": {
+        "display_name": "280, Beverly Place, Hollywood, Munster, North Township, Lake County, Indiana, 46321, United States",
+        "road": "Beverly Place",
+        "house_number": "280",
+        "neighbourhood": "Hollywood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Munster",
+        "state": "Indiana",
+        "postcode": "46321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "280 Beverly Place, Munster, Indiana, United States"
+    },
+    {
+      "lat": 41.563036072685975,
+      "lon": -87.56219351600541,
+      "geoinfo": {
+        "display_name": "18271, Rose Avenue, Oakglen, Lansing, Thornton Township, Cook County, Illinois, 60438, United States",
+        "road": "Rose Avenue",
+        "house_number": "18271",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing",
+        "state": "Illinois",
+        "postcode": "60438",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18271, Rose Avenue, Oakglen, Lansing, Thornton Township, Cook County, Illinois, 60438, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:48.928518+00:00",
+  "_kind": "geo_samples"
+}

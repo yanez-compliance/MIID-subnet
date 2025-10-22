@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Lalibela",
+  "geonameid": 332288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 12.055205680004903,
+      "lon": 39.084233718723674,
+      "geoinfo": {
+        "display_name": "Biet Ambessa, North Wollo Zone, Amhara Region, 6500, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Amhara Region",
+        "postcode": "6500",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Lalibela, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 12.00049501481884,
+      "lon": 39.04903640622735,
+      "geoinfo": {
+        "display_name": "Nakutolab, North Wollo Zone, Amhara Region, 6500, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakutolab",
+        "state": "Amhara Region",
+        "postcode": "6500",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "372, Lalibela, 6500 Amhara Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:57.794718+00:00",
+  "_kind": "geo_samples"
+}

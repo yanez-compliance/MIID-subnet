@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dengbu",
+  "geonameid": 7328899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.176498505934056,
+      "lon": 116.84291163585476,
+      "geoinfo": {
+        "display_name": "S422, 张公桥农场, Maquan, Yujiang District, Yingtan, Jiangxi, China",
+        "road": "S422",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "张公桥农场",
+        "city_district": null,
+        "city": "Maquan",
+        "state": "Jiangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S422, Dengbu, Jiangxi, China"
+    },
+    {
+      "lat": 28.2336003135042,
+      "lon": 116.77539778390145,
+      "geoinfo": {
+        "display_name": "G320, Yangxi, Yujiang District, Yingtan, Jiangxi, China",
+        "road": "G320",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yangxi",
+        "state": "Jiangxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G320, Yangxi, Yujiang District, Yingtan, 04497 Jiangxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:49.102025+00:00",
+  "_kind": "geo_samples"
+}

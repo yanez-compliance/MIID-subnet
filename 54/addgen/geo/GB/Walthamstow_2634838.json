@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Walthamstow",
+  "geonameid": 2634838,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.62372086931514,
+      "lon": -0.02756253413975863,
+      "geoinfo": {
+        "display_name": "169, Waltham Way, Chingford Mount, London Borough of Waltham Forest, London, Greater London, England, E4 8AR, United Kingdom",
+        "road": "Waltham Way",
+        "house_number": "169",
+        "neighbourhood": "Chingford Mount",
+        "suburb": null,
+        "city_district": "London Borough of Waltham Forest",
+        "city": "London",
+        "state": "England",
+        "postcode": "E4 8AR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "169 Waltham Way, Walthamstow, England, United Kingdom"
+    },
+    {
+      "lat": 51.60710936111289,
+      "lon": -0.04905726525004571,
+      "geoinfo": {
+        "display_name": "Angel Edmonton Road, Meridian Water, London Borough of Enfield, London, Greater London, England, N17 0UT, United Kingdom",
+        "road": "Angel Edmonton Road",
+        "house_number": null,
+        "neighbourhood": "Meridian Water",
+        "suburb": null,
+        "city_district": "London Borough of Enfield",
+        "city": "London",
+        "state": "England",
+        "postcode": "N17 0UT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Angel Edmonton Road, Meridian Water, London Borough of Enfield, London, Greater London, England, N17 0UT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:25.546622+00:00",
+  "_kind": "geo_samples"
+}

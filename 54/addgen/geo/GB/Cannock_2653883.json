@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cannock",
+  "geonameid": 2653883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.67629304415562,
+      "lon": -1.9763538555638553,
+      "geoinfo": {
+        "display_name": "Norton Terrace, Norton Canes, Cannock Chase, Staffordshire, England, WS11 9RY, United Kingdom",
+        "road": "Norton Terrace",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Norton Canes",
+        "city_district": null,
+        "city": "Cannock Chase",
+        "state": "England",
+        "postcode": "WS11 9RY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Norton Terrace, Cannock, England, United Kingdom"
+    },
+    {
+      "lat": 52.72538828710558,
+      "lon": -2.0226449225726832,
+      "geoinfo": {
+        "display_name": "Pye Green, Hednesford, Cannock Chase, Staffordshire, England, WS12 4XJ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pye Green",
+        "city_district": null,
+        "city": "Cannock Chase",
+        "state": "England",
+        "postcode": "WS12 4XJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Pye Green, Hednesford, Cannock Chase, Staffordshire, England, WS12 4XJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:40.311082+00:00",
+  "_kind": "geo_samples"
+}

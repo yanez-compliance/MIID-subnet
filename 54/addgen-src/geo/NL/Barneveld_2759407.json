@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Barneveld",
+  "geonameid": 2759407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.10049230103008,
+      "lon": 5.5638290931686605,
+      "geoinfo": {
+        "display_name": "219, Postweg, Nederwoud, Lunteren, Ede, Gelderland, Netherlands, 6741 MK, Netherlands",
+        "road": "Postweg",
+        "house_number": "219",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lunteren",
+        "state": "Gelderland",
+        "postcode": "6741 MK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "219 Postweg, Barneveld, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 52.09682085236087,
+      "lon": 5.5896298115915,
+      "geoinfo": {
+        "display_name": "17, Loenhorsterweg, Lunteren, Ede, Gelderland, Netherlands, 6741 NB, Netherlands",
+        "road": "Loenhorsterweg",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lunteren",
+        "state": "Gelderland",
+        "postcode": "6741 NB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "17, Loenhorsterweg, Lunteren, Ede, Gelderland, Netherlands, 6741 NB, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:50:02.303941+00:00",
+  "_kind": "geo_samples"
+}

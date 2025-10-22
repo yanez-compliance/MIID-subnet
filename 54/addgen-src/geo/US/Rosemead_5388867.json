@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rosemead",
+  "geonameid": 5388867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.07816836216086,
+      "lon": -118.08225844885193,
+      "geoinfo": {
+        "display_name": "3899, Walnut Grove Avenue, Rosemead, Los Angeles County, California, 91770, United States",
+        "road": "Walnut Grove Avenue",
+        "house_number": "3899",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosemead",
+        "state": "California",
+        "postcode": "91770",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3899 Walnut Grove Avenue, Rosemead, California, United States"
+    },
+    {
+      "lat": 34.0799535649573,
+      "lon": -118.04219588940136,
+      "geoinfo": {
+        "display_name": "Hickson Street, El Monte, Los Angeles County, California, 91731, United States",
+        "road": "Hickson Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Monte",
+        "state": "California",
+        "postcode": "91731",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "181, Hickson Street, El Monte, Los Angeles County, California, 91731, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:20.925741+00:00",
+  "_kind": "geo_samples"
+}

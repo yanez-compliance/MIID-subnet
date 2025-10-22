@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Milan",
+  "geonameid": 3173435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.46651989510274,
+      "lon": 9.15592548065102,
+      "geoinfo": {
+        "display_name": "Piazza Piemonte, Washington, Municipio 7, Milan, Lombardy, 20145, Italy",
+        "road": "Piazza Piemonte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 7",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20145",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Piazza Piemonte, Milan, Lombardy, Italy"
+    },
+    {
+      "lat": 45.44243760964619,
+      "lon": 9.18536043112138,
+      "geoinfo": {
+        "display_name": "Via Giovanni Battista Boeri, Tibaldi, Municipio 5, Milan, Lombardy, 20136, Italy",
+        "road": "Via Giovanni Battista Boeri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 5",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20136",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giovanni Battista Boeri, Tibaldi, Municipio 5, Milan, Lombardy, 20136, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:12.558444+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Albert Lea",
+  "geonameid": 5016024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.64590779825726,
+      "lon": -93.40756291495065,
+      "geoinfo": {
+        "display_name": "West Main Street, Albert Lea, Freeborn County, Minnesota, 56007, United States",
+        "road": "West Main Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albert Lea",
+        "state": "Minnesota",
+        "postcode": "56007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Main Street, Albert Lea, Minnesota, United States"
+    },
+    {
+      "lat": 43.629547879976144,
+      "lon": -93.33933102837189,
+      "geoinfo": {
+        "display_name": "South Shore Drive, Albert Lea, Freeborn County, Minnesota, 56007, United States",
+        "road": "South Shore Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albert Lea",
+        "state": "Minnesota",
+        "postcode": "56007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "273, South Shore Drive, Albert Lea, Freeborn County, Minnesota, 56007, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:37.294315+00:00",
+  "_kind": "geo_samples"
+}

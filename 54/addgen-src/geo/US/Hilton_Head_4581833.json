@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hilton Head",
+  "geonameid": 4581833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.2195297051866,
+      "lon": -80.79761698499657,
+      "geoinfo": {
+        "display_name": "Buckingham Landing, Beaufort County, South Carolina, 29925, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29925",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hilton Head, South Carolina, United States"
+    },
+    {
+      "lat": 32.21107807577165,
+      "lon": -80.79354688292862,
+      "geoinfo": {
+        "display_name": "Mariners Cove, Beaufort County, South Carolina, 29925, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mariners Cove",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29925",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "034, Mariners Cove, Beaufort County, South Carolina, 29925, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:51.719645+00:00",
+  "_kind": "geo_samples"
+}

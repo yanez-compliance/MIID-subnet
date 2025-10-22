@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Meridian",
+  "geonameid": 4435764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.364829348409835,
+      "lon": -88.65253562950905,
+      "geoinfo": {
+        "display_name": "MS 19, Meridian, Lauderdale County, Mississippi, 39301, United States",
+        "road": "MS 19",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meridian",
+        "state": "Mississippi",
+        "postcode": "39301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "MS 19, Meridian, Mississippi, United States"
+    },
+    {
+      "lat": 32.37167707840295,
+      "lon": -88.71670251605326,
+      "geoinfo": {
+        "display_name": "3793, 15th Street, Meridian, Lauderdale County, Mississippi, 39307, United States",
+        "road": "15th Street",
+        "house_number": "3793",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meridian",
+        "state": "Mississippi",
+        "postcode": "39307",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3793, 15th Street, Meridian, Lauderdale County, Mississippi, 39307, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:57.677238+00:00",
+  "_kind": "geo_samples"
+}

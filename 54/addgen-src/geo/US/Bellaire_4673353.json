@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellaire",
+  "geonameid": 4673353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.725217215633737,
+      "lon": -95.41870372944351,
+      "geoinfo": {
+        "display_name": "Einstein Bros. Bagels, 5300, Kirby Drive, Greenway / Upper Kirby, Houston, Harris County, Texas, 77005, United States",
+        "road": "Kirby Drive",
+        "house_number": "5300",
+        "neighbourhood": "Greenway / Upper Kirby",
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5300 Kirby Drive, Bellaire, Texas, United States"
+    },
+    {
+      "lat": 29.721137102724292,
+      "lon": -95.45702400741037,
+      "geoinfo": {
+        "display_name": "Houston Community College West Loop Campus, 5601, West Loop South, Greenway / Upper Kirby, Houston, Harris County, Texas, 77081, United States",
+        "road": "West Loop South",
+        "house_number": "5601",
+        "neighbourhood": "Greenway / Upper Kirby",
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Houston Community College West Loop Campus, 5601, West Loop South, Greenway / Upper Kirby, Houston, Harris County, Texas, 77081, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:10.201767+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Reus",
+  "geonameid": 3111933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.17942670180424,
+      "lon": 1.1290670869114512,
+      "geoinfo": {
+        "display_name": "Camí de les Aixemoreres, Reus, Baix Camp, Tarragona, Catalonia, 43470, Spain",
+        "road": "Camí de les Aixemoreres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reus",
+        "state": "Catalonia",
+        "postcode": "43470",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de les Aixemoreres, Reus, Catalonia, Spain"
+    },
+    {
+      "lat": 41.122442002423064,
+      "lon": 1.1325062655942828,
+      "geoinfo": {
+        "display_name": "Camí Fondo, Vila-seca, Tarragonès, Tarragona, Catalonia, 43480, Spain",
+        "road": "Camí Fondo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vila-seca",
+        "state": "Catalonia",
+        "postcode": "43480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "876, Camí Fondo, Vila-seca, Tarragonès, Tarragona, Catalonia, 43480, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:01.056275+00:00",
+  "_kind": "geo_samples"
+}

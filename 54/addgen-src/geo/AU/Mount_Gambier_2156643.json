@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Mount Gambier",
+  "geonameid": 2156643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.79413831370161,
+      "lon": 140.79094485981634,
+      "geoinfo": {
+        "display_name": "Riddoch Highway, Suttontown, The District Council of Grant, South Australia, 5291, Australia",
+        "road": "Riddoch Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Suttontown",
+        "city": null,
+        "state": "South Australia",
+        "postcode": "5291",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Riddoch Highway, Mount Gambier, South Australia, Australia"
+    },
+    {
+      "lat": -37.81887251954907,
+      "lon": 140.76819666731296,
+      "geoinfo": {
+        "display_name": "Jubilee Highway West, Mount Gambier, City of Mount Gambier, South Australia, 5290, Australia",
+        "road": "Jubilee Highway West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Gambier",
+        "state": "South Australia",
+        "postcode": "5290",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "941, Jubilee Highway West, Mount Gambier, City of Mount Gambier, South Australia, 5290, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:11.958865+00:00",
+  "_kind": "geo_samples"
+}

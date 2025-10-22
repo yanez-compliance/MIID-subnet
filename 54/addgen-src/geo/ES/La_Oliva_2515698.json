@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Oliva",
+  "geonameid": 2515698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.63069773755462,
+      "lon": -13.904765849631318,
+      "geoinfo": {
+        "display_name": "Calle del Pino, Villaverde, La Oliva, Las Palmas, Canary Islands, 35640, Spain",
+        "road": "Calle del Pino",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villaverde",
+        "state": null,
+        "postcode": "35640",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle del Pino, La Oliva, Spain"
+    },
+    {
+      "lat": 28.568734519696378,
+      "lon": -13.94779902406,
+      "geoinfo": {
+        "display_name": "La Matilla, Puerto del Rosario, Las Palmas, Canary Islands, 35613, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puerto del Rosario",
+        "state": null,
+        "postcode": "35613",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "986, La Matilla, Puerto del Rosario, Las Palmas, Canary Islands, 35613, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:01.972264+00:00",
+  "_kind": "geo_samples"
+}

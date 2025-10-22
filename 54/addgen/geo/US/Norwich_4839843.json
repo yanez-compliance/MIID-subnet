@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norwich",
+  "geonameid": 4839843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.50947101351017,
+      "lon": -72.13159085984573,
+      "geoinfo": {
+        "display_name": "229, Old Salem Road, The Village at Briar Hill, Norwich, Southeastern Connecticut Planning Region, Connecticut, 06360, United States",
+        "road": "Old Salem Road",
+        "house_number": "229",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norwich",
+        "state": "Connecticut",
+        "postcode": "06360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "229 Old Salem Road, Norwich, Connecticut, United States"
+    },
+    {
+      "lat": 41.52327962588421,
+      "lon": -72.02486148035906,
+      "geoinfo": {
+        "display_name": "60, Miller Road, Preston, Southeastern Connecticut Planning Region, Connecticut, 06365, United States",
+        "road": "Miller Road",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Preston",
+        "state": "Connecticut",
+        "postcode": "06365",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "60, Miller Road, Preston, Southeastern Connecticut Planning Region, Connecticut, 06365, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:35.896587+00:00",
+  "_kind": "geo_samples"
+}

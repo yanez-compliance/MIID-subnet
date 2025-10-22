@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kitamoto",
+  "geonameid": 6822164,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.02162811085222,
+      "lon": 139.56555330701778,
+      "geoinfo": {
+        "display_name": "Ken-O Expressway, 大字加納, Okegawa, Saitama Prefecture, 363-0001, Japan",
+        "road": "Ken-O Expressway",
+        "house_number": null,
+        "neighbourhood": "大字加納",
+        "suburb": null,
+        "city_district": null,
+        "city": "Okegawa",
+        "state": null,
+        "postcode": "363-0001",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Ken-O Expressway, Kitamoto, Japan"
+    },
+    {
+      "lat": 36.070392607649005,
+      "lon": 139.5352392126666,
+      "geoinfo": {
+        "display_name": "郷地, Konosu, Saitama Prefecture, 365-0027, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Konosu",
+        "state": null,
+        "postcode": "365-0027",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "郷地, Konosu, Saitama Prefecture, 365-0027, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:55.228576+00:00",
+  "_kind": "geo_samples"
+}

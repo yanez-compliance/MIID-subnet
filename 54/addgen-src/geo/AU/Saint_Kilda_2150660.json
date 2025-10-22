@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Saint Kilda",
+  "geonameid": 2150660,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.863751750475735,
+      "lon": 144.93642392156434,
+      "geoinfo": {
+        "display_name": "Victoria, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Victoria",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Saint Kilda, Victoria, Australia"
+    },
+    {
+      "lat": -37.84902674846684,
+      "lon": 144.9531181424361,
+      "geoinfo": {
+        "display_name": "60, Ashworth Street, Albert Park, Melbourne, City of Port Phillip, Victoria, 3206, Australia",
+        "road": "Ashworth Street",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": "Albert Park",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3206",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "60, Ashworth Street, Albert Park, Melbourne, City of Port Phillip, Victoria, 3206, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:11.166852+00:00",
+  "_kind": "geo_samples"
+}

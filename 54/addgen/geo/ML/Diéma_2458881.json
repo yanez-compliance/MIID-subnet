@@ -1,0 +1,47 @@
+{
+  "country_code": "ML",
+  "country": "Mali",
+  "city": "Diéma",
+  "geonameid": 2458881,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 14.541737298364028,
+      "lon": -9.199127055811516,
+      "geoinfo": {
+        "display_name": "Diéma, Diéma Cercle, Kayes, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diéma",
+        "state": "Kayes",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "Diéma, Kayes, Mali"
+    },
+    {
+      "lat": 14.558277268126009,
+      "lon": -9.156019464770582,
+      "geoinfo": {
+        "display_name": "RN3, Diéma Cercle, Kayes, Mali",
+        "road": "RN3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kayes",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "RN3, Diéma, Kayes, Mali"
+    }
+  ],
+  "updated_at": "2025-10-16T19:33:53.475103+00:00",
+  "_kind": "geo_samples"
+}

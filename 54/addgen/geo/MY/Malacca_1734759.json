@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Malacca",
+  "geonameid": 1734759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.237176102257225,
+      "lon": 102.25802992064806,
+      "geoinfo": {
+        "display_name": "Jalan Merpati, Taman Melaka Baru, Hang Tuah Jaya Municipal Council, Central Malacca, Malacca, 75350, Malaysia",
+        "road": "Jalan Merpati",
+        "house_number": null,
+        "neighbourhood": "Taman Melaka Baru",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Malacca",
+        "postcode": "75350",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Merpati, Malacca, Malacca, Malaysia"
+    },
+    {
+      "lat": 2.2255519907055854,
+      "lon": 102.2112317125054,
+      "geoinfo": {
+        "display_name": "Taman Pokok Mangga, Malacca City, Central Malacca, Malacca, 75250, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Pokok Mangga",
+        "suburb": null,
+        "city_district": null,
+        "city": "Malacca City",
+        "state": "Malacca",
+        "postcode": "75250",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "370, Taman Pokok Mangga, Malacca City, Central Malacca, Malacca, 75250, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:55.998040+00:00",
+  "_kind": "geo_samples"
+}

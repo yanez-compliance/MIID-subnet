@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Florence",
+  "geonameid": 3176959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.743491889707485,
+      "lon": 11.243638973484131,
+      "geoinfo": {
+        "display_name": "Via Suor Maria Celeste, Mulino, Quartiere 3, Cascine del Riccio, Florence, Tuscany, 50124, Italy",
+        "road": "Via Suor Maria Celeste",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Quartiere 3",
+        "city_district": null,
+        "city": "Florence",
+        "state": "Tuscany",
+        "postcode": "50124",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Suor Maria Celeste, Florence, Tuscany, Italy"
+    },
+    {
+      "lat": 43.76953077634452,
+      "lon": 11.287267230691453,
+      "geoinfo": {
+        "display_name": "117/2, Via Aretina, Bellariva, Quartiere 2, Florence, Tuscany, 50136, Italy",
+        "road": "Via Aretina",
+        "house_number": "117/2",
+        "neighbourhood": "Bellariva",
+        "suburb": "Quartiere 2",
+        "city_district": null,
+        "city": "Florence",
+        "state": "Tuscany",
+        "postcode": "50136",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "117/2, Via Aretina, Bellariva, Quartiere 2, Florence, Tuscany, 50136, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:11.531113+00:00",
+  "_kind": "geo_samples"
+}

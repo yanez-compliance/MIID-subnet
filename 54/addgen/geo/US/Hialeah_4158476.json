@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hialeah",
+  "geonameid": 4158476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.823969078150135,
+      "lon": -80.26385740171817,
+      "geoinfo": {
+        "display_name": "860, Northeast 1st Place, Hialeah, Miami-Dade County, Florida, 33010, United States",
+        "road": "Northeast 1st Place",
+        "house_number": "860",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hialeah",
+        "state": "Florida",
+        "postcode": "33010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "860 Northeast 1st Place, Hialeah, Florida, United States"
+    },
+    {
+      "lat": 25.837936615925628,
+      "lon": -80.23729302941044,
+      "geoinfo": {
+        "display_name": "Northwest 24th Avenue, Brownsville, Miami-Dade County, Florida, 33142, United States",
+        "road": "Northwest 24th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northwest 24th Avenue, Brownsville, Miami-Dade County, Florida, 33142, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:47.257872+00:00",
+  "_kind": "geo_samples"
+}

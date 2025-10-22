@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Vellmar",
+  "geonameid": 3207197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.32102259093023,
+      "lon": 9.497813466966907,
+      "geoinfo": {
+        "display_name": "Martin-Luther-King-Schule, 4-6, Schillerstraße, Schillerviertel, Nord (Holland), Kassel, Hesse, 34117, Germany",
+        "road": "Schillerstraße",
+        "house_number": "4-6",
+        "neighbourhood": "Schillerviertel",
+        "suburb": "Nord (Holland)",
+        "city_district": null,
+        "city": "Kassel",
+        "state": "Hesse",
+        "postcode": "34117",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4-6 Schillerstraße, Vellmar, Hesse, Germany"
+    },
+    {
+      "lat": 51.364023374937545,
+      "lon": 9.467592331643427,
+      "geoinfo": {
+        "display_name": "68, Kreuzbreite, Obervellmar, Vellmar, Landkreis Kassel, Hesse, 34246, Germany",
+        "road": "Kreuzbreite",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": "Obervellmar",
+        "city_district": null,
+        "city": "Vellmar",
+        "state": "Hesse",
+        "postcode": "34246",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "68, Kreuzbreite, Obervellmar, Vellmar, Landkreis Kassel, Hesse, 34246, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:54.843846+00:00",
+  "_kind": "geo_samples"
+}

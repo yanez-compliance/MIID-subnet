@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Sayula",
+  "geonameid": 3983216,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.87122112215925,
+      "lon": -103.56566333101455,
+      "geoinfo": {
+        "display_name": "Boulevard Juan Rulfo, Usmajac, Sayula, Región Sur, Jalisco, 49330, Mexico",
+        "road": "Boulevard Juan Rulfo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Usmajac",
+        "state": "Jalisco",
+        "postcode": "49330",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Boulevard Juan Rulfo, Sayula, Jalisco, Mexico"
+    },
+    {
+      "lat": 19.851786713381646,
+      "lon": -103.59771704501448,
+      "geoinfo": {
+        "display_name": "Sayula, Región Sur, Jalisco, 49313, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "49313",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "038, Sayula, Región Sur, Jalisco, 49313, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:31.440851+00:00",
+  "_kind": "geo_samples"
+}

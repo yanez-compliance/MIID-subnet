@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Huntington",
+  "geonameid": 4921725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.91780236544618,
+      "lon": -85.47587623501855,
+      "geoinfo": {
+        "display_name": "West 600 North, Huntington County, Indiana, 46750, United States",
+        "road": "West 600 North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46750",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 600 North, Huntington, Indiana, United States"
+    },
+    {
+      "lat": 40.896350519537336,
+      "lon": -85.53481381937601,
+      "geoinfo": {
+        "display_name": "465, Hauenstein Road, Huntington County, Indiana, 46750, United States",
+        "road": "Hauenstein Road",
+        "house_number": "465",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46750",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "465, Hauenstein Road, Huntington County, Indiana, 46750, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:58.618321+00:00",
+  "_kind": "geo_samples"
+}

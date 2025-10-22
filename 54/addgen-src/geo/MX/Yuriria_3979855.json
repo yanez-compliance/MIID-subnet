@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Yuriria",
+  "geonameid": 3979855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.2143547638926,
+      "lon": -101.14031684526783,
+      "geoinfo": {
+        "display_name": "10, Calzada de Guadalupe, Guadalupana, Yuriria, Guanajuato, 38947, Mexico",
+        "road": "Calzada de Guadalupe",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuriria",
+        "state": "Guanajuato",
+        "postcode": "38947",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "10 Calzada de Guadalupe, Yuriria, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.20091167609582,
+      "lon": -101.0856720959629,
+      "geoinfo": {
+        "display_name": "Yuriria, Guanajuato, 38943, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuriria",
+        "state": "Guanajuato",
+        "postcode": "38943",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "777, Yuriria, Guanajuato, 38943, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:32.466663+00:00",
+  "_kind": "geo_samples"
+}

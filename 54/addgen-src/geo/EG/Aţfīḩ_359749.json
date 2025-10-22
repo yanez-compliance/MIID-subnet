@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Aţfīḩ",
+  "geonameid": 359749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.377676046993642,
+      "lon": 31.249274701229798,
+      "geoinfo": {
+        "display_name": "Giza, 12958, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Giza",
+        "postcode": "12958",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Aţfīḩ, Giza, Egypt"
+    },
+    {
+      "lat": 29.420037476855605,
+      "lon": 31.24592482544826,
+      "geoinfo": {
+        "display_name": "Minyat Sultan, Giza, 12957, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Minyat Sultan",
+        "state": "Giza",
+        "postcode": "12957",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "184, Minyat Sultan, Giza, 12957, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:27.723323+00:00",
+  "_kind": "geo_samples"
+}

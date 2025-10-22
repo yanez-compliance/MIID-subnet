@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Karow",
+  "geonameid": 2892705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.61587756773373,
+      "lon": 13.47297265199209,
+      "geoinfo": {
+        "display_name": "51A, Frundsbergstraße, Alt-Karow, Karow, Pankow, Berlin, 13125, Germany",
+        "road": "Frundsbergstraße",
+        "house_number": "51A",
+        "neighbourhood": "Alt-Karow",
+        "suburb": "Karow",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13125",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "51A Frundsbergstraße, Karow, Germany"
+    },
+    {
+      "lat": 52.60621690168623,
+      "lon": 13.423010863763386,
+      "geoinfo": {
+        "display_name": "36, Schweizer Tal, Buchholz-West, Französisch Buchholz, Pankow, Berlin, 13127, Germany",
+        "road": "Schweizer Tal",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": "Französisch Buchholz",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13127",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "36, Schweizer Tal, Buchholz-West, Französisch Buchholz, Pankow, Berlin, 13127, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:24.210524+00:00",
+  "_kind": "geo_samples"
+}

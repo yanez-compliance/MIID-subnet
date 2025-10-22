@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Częstochowa",
+  "geonameid": 3100946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.8057146116946,
+      "lon": 19.10715943386107,
+      "geoinfo": {
+        "display_name": "70, Jana III Sobieskiego, Trzech Wieszczów, Częstochowa, Silesian Voivodeship, 42-217, Poland",
+        "road": "Jana III Sobieskiego",
+        "house_number": "70",
+        "neighbourhood": null,
+        "suburb": "Trzech Wieszczów",
+        "city_district": null,
+        "city": "Częstochowa",
+        "state": "Silesian Voivodeship",
+        "postcode": "42-217",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "70 Jana III Sobieskiego, Częstochowa, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.774735968817595,
+      "lon": 19.172377562662113,
+      "geoinfo": {
+        "display_name": "Huta, Kucelin, Zawodzie-Dąbie, Częstochowa, Silesian Voivodeship, 42-208, Poland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Huta",
+        "suburb": null,
+        "city_district": "Zawodzie-Dąbie",
+        "city": "Częstochowa",
+        "state": "Silesian Voivodeship",
+        "postcode": "42-208",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Huta, Kucelin, Zawodzie-Dąbie, Częstochowa, Silesian Voivodeship, 42-208, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:23.530392+00:00",
+  "_kind": "geo_samples"
+}

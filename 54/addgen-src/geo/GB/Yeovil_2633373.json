@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Yeovil",
+  "geonameid": 2633373,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.90482309947943,
+      "lon": -2.626100666238275,
+      "geoinfo": {
+        "display_name": "Dorchester Road, Prowle's Cross, Closworth, Stoford, Somerset, England, BA22 9RE, United Kingdom",
+        "road": "Dorchester Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Closworth",
+        "city_district": null,
+        "city": "Stoford",
+        "state": "England",
+        "postcode": "BA22 9RE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Dorchester Road, Yeovil, England, United Kingdom"
+    },
+    {
+      "lat": 50.97755867836045,
+      "lon": -2.6592505600026124,
+      "geoinfo": {
+        "display_name": "Oakley Lane, Chilthorne Domer, Somerset, England, BA22 8RQ, United Kingdom",
+        "road": "Oakley Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilthorne Domer",
+        "state": "England",
+        "postcode": "BA22 8RQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Oakley Lane, Chilthorne Domer, Somerset, England, BA22 8RQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:22.216788+00:00",
+  "_kind": "geo_samples"
+}

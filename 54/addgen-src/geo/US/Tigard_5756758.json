@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tigard",
+  "geonameid": 5756758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.40330620973162,
+      "lon": -122.76698156741904,
+      "geoinfo": {
+        "display_name": "Tigard High School, 9000, Southwest Durham Road, Cook Park, Tigard, Washington County, Oregon, 97224, United States",
+        "road": "Southwest Durham Road",
+        "house_number": "9000",
+        "neighbourhood": null,
+        "suburb": "Cook Park",
+        "city_district": null,
+        "city": "Tigard",
+        "state": "Oregon",
+        "postcode": "97224",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9000 Southwest Durham Road, Tigard, Oregon, United States"
+    },
+    {
+      "lat": 45.4259110794566,
+      "lon": -122.82259634614323,
+      "geoinfo": {
+        "display_name": "Southwest Mitchell Court, Scholls / Summerlake, Tigard, Washington County, Oregon, 97224, United States",
+        "road": "Southwest Mitchell Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Scholls / Summerlake",
+        "city_district": null,
+        "city": "Tigard",
+        "state": "Oregon",
+        "postcode": "97224",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "607, Southwest Mitchell Court, Scholls / Summerlake, Tigard, Washington County, Oregon, 97224, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:46.243377+00:00",
+  "_kind": "geo_samples"
+}

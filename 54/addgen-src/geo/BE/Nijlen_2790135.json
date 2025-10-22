@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Nijlen",
+  "geonameid": 2790135,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.151944163373926,
+      "lon": 4.6393225702195044,
+      "geoinfo": {
+        "display_name": "2, Fazantenweg, Kessel, Nijlen, Mechelen, Antwerp, Flanders, 2560, Belgium",
+        "road": "Fazantenweg",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nijlen",
+        "state": "Antwerp",
+        "postcode": "2560",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "2 Fazantenweg, Nijlen, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.160055242468935,
+      "lon": 4.6870750805668315,
+      "geoinfo": {
+        "display_name": "Hellevoortstraat, Lillo, Nijlen, Mechelen, Antwerp, 2560, Belgium",
+        "road": "Hellevoortstraat",
+        "house_number": null,
+        "neighbourhood": "Lillo",
+        "suburb": null,
+        "city_district": "Nijlen",
+        "city": "Nijlen",
+        "state": "Antwerp",
+        "postcode": "2560",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "580, Hellevoortstraat, Lillo, Nijlen, Mechelen, Antwerp, 2560, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:12.982727+00:00",
+  "_kind": "geo_samples"
+}

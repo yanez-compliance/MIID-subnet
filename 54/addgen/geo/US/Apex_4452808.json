@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Apex",
+  "geonameid": 4452808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.71367256798967,
+      "lon": -78.8285190870896,
+      "geoinfo": {
+        "display_name": "1181, Burma Street, Pinnacle Park, Apex, Wake County, North Carolina, 27539, United States",
+        "road": "Burma Street",
+        "house_number": "1181",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apex",
+        "state": "North Carolina",
+        "postcode": "27539",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1181 Burma Street, Apex, North Carolina, United States"
+    },
+    {
+      "lat": 35.767389942027975,
+      "lon": -78.86314903004605,
+      "geoinfo": {
+        "display_name": "105, Whitehaven Lane, Devereaux, Cary, Wake County, North Carolina, 27519, United States",
+        "road": "Whitehaven Lane",
+        "house_number": "105",
+        "neighbourhood": "Devereaux",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cary",
+        "state": "North Carolina",
+        "postcode": "27519",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "105, Whitehaven Lane, Devereaux, Cary, Wake County, North Carolina, 27519, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:30.316729+00:00",
+  "_kind": "geo_samples"
+}

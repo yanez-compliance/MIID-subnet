@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Poronaysk",
+  "geonameid": 2121909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.21868981117588,
+      "lon": 143.08857836097388,
+      "geoinfo": {
+        "display_name": "Сахалинская улица, Poronaysk, Poronaysky District, Sakhalin Oblast, Far Eastern Federal District, 694241, Russia",
+        "road": "Сахалинская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poronaysk",
+        "state": "Sakhalin Oblast",
+        "postcode": "694241",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Сахалинская улица, Poronaysk, Sakhalin Oblast, Russia"
+    },
+    {
+      "lat": 49.20064780669366,
+      "lon": 143.11816016081727,
+      "geoinfo": {
+        "display_name": "Poronaysky District, Sakhalin Oblast, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sakhalin Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "099, Poronaysk, 77184 Sakhalin Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:55:43.406049+00:00",
+  "_kind": "geo_samples"
+}

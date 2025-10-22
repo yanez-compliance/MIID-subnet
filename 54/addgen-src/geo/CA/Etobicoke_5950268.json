@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Etobicoke",
+  "geonameid": 5950268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.67886214045479,
+      "lon": -79.57309389833996,
+      "geoinfo": {
+        "display_name": "107, Willowridge Road, Willowridge-Martingrove-Richview, Etobicoke North, Etobicoke, Toronto, Golden Horseshoe, Ontario, M9R 3T9, Canada",
+        "road": "Willowridge Road",
+        "house_number": "107",
+        "neighbourhood": "Willowridge-Martingrove-Richview",
+        "suburb": "Etobicoke",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M9R 3T9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "107 Willowridge Road, Etobicoke, Ontario, Canada"
+    },
+    {
+      "lat": 43.64583085338366,
+      "lon": -79.53074732978386,
+      "geoinfo": {
+        "display_name": "5005, Dundas Street West, Etobicoke City Centre, Etobicoke—Lakeshore, Etobicoke, Toronto, Golden Horseshoe, Ontario, M9A 1C1, Canada",
+        "road": "Dundas Street West",
+        "house_number": "5005",
+        "neighbourhood": "Etobicoke City Centre",
+        "suburb": "Etobicoke",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M9A 1C1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "5005, Dundas Street West, Etobicoke City Centre, Etobicoke—Lakeshore, Etobicoke, Toronto, Golden Horseshoe, Ontario, M9A 1C1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:20.903139+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kursk",
+  "geonameid": 538560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.704904206640656,
+      "lon": 36.15615823615565,
+      "geoinfo": {
+        "display_name": "Детская школа искусств № 6, Заводская улица, КЗТЗ, Сеймский округ, Kursk, Kursk Oblast, Central Federal District, 305000, Russia",
+        "road": "Заводская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "КЗТЗ",
+        "city_district": "Сеймский округ",
+        "city": "Kursk",
+        "state": "Kursk Oblast",
+        "postcode": "305000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Заводская улица, Kursk, Kursk Oblast, Russia"
+    },
+    {
+      "lat": 51.73310828859904,
+      "lon": 36.17775634503268,
+      "geoinfo": {
+        "display_name": "47А, улица Карла Либкнехта, Казацкая, Центральный округ, Kursk, Kursk Oblast, Central Federal District, 305001, Russia",
+        "road": "улица Карла Либкнехта",
+        "house_number": "47А",
+        "neighbourhood": null,
+        "suburb": "Казацкая",
+        "city_district": "Центральный округ",
+        "city": "Kursk",
+        "state": "Kursk Oblast",
+        "postcode": "305001",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "47А, улица Карла Либкнехта, Казацкая, Центральный округ, Kursk, Kursk Oblast, Central Federal District, 305001, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:10.453541+00:00",
+  "_kind": "geo_samples"
+}

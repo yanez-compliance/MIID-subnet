@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Saint Louis",
+  "geonameid": 4237579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.63213751603569,
+      "lon": -90.13207770533147,
+      "geoinfo": {
+        "display_name": "North 15th Street, East St. Louis, Saint Clair County, Illinois, 62205, United States",
+        "road": "North 15th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East St. Louis",
+        "state": "Illinois",
+        "postcode": "62205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 15th Street, East Saint Louis, Illinois, United States"
+    },
+    {
+      "lat": 38.60273382741698,
+      "lon": -90.1953236509498,
+      "geoinfo": {
+        "display_name": "2077, South Wharf Street, Kosciusko, St. Louis, Missouri, 63104, United States",
+        "road": "South Wharf Street",
+        "house_number": "2077",
+        "neighbourhood": "Kosciusko",
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2077, South Wharf Street, Kosciusko, St. Louis, Missouri, 63104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:06.042761+00:00",
+  "_kind": "geo_samples"
+}

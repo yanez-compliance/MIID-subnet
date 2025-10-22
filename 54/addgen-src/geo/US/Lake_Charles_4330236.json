@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Charles",
+  "geonameid": 4330236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.19228238380031,
+      "lon": -93.24108064788007,
+      "geoinfo": {
+        "display_name": "3616, Holly Hill Road, Lake Charles, Calcasieu Parish, Louisiana, 70605, United States",
+        "road": "Holly Hill Road",
+        "house_number": "3616",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Charles",
+        "state": "Louisiana",
+        "postcode": "70605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3616 Holly Hill Road, Lake Charles, Louisiana, United States"
+    },
+    {
+      "lat": 30.23976274072985,
+      "lon": -93.21122443088599,
+      "geoinfo": {
+        "display_name": "698, Jackson Street, Lake Charles, Calcasieu Parish, Louisiana, 70601, United States",
+        "road": "Jackson Street",
+        "house_number": "698",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Charles",
+        "state": "Louisiana",
+        "postcode": "70601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "698, Jackson Street, Lake Charles, Calcasieu Parish, Louisiana, 70601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:49.877290+00:00",
+  "_kind": "geo_samples"
+}

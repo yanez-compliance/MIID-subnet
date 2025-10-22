@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Myeik",
+  "geonameid": 1309611,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.449315386756949,
+      "lon": 98.56752716417841,
+      "geoinfo": {
+        "display_name": "Pa Htaw, Kyunsu Township, Myeik District, Tanintharyi Region, 14059, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pa Htaw",
+        "state": "Tanintharyi Region",
+        "postcode": "14059",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Myeik, Tanintharyi Region, Myanmar"
+    },
+    {
+      "lat": 12.459611499756397,
+      "lon": 98.57590435050342,
+      "geoinfo": {
+        "display_name": "Pahtaw-Pahtet Main Road, Pa Htet, Kyunsu Township, Myeik District, Tanintharyi Region, 14059, Myanmar",
+        "road": "Pahtaw-Pahtet Main Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pa Htet",
+        "state": "Tanintharyi Region",
+        "postcode": "14059",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Pahtaw-Pahtet Main Road, Myeik, Tanintharyi Region, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-16T19:37:30.723786+00:00",
+  "_kind": "geo_samples"
+}

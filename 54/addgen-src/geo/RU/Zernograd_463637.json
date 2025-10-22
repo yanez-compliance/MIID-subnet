@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Zernograd",
+  "geonameid": 463637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.83067383663281,
+      "lon": 40.36961800387573,
+      "geoinfo": {
+        "display_name": "Zernograd, Зерноградское городское поселение, Zernogradsky District, Rostov Oblast, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zernograd",
+        "state": "Rostov Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Zernograd, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 46.82314349826448,
+      "lon": 40.300772289867844,
+      "geoinfo": {
+        "display_name": "подъезд к г.Зерноград, Плодопитомник, Zernograd, Зерноградское городское поселение, Zernogradsky District, Rostov Oblast, 347740, Russia",
+        "road": "подъезд к г.Зерноград",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Плодопитомник",
+        "city_district": null,
+        "city": "Zernograd",
+        "state": "Rostov Oblast",
+        "postcode": "347740",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "301, подъезд к г.Зерноград, Плодопитомник, Zernograd, Зерноградское городское поселение, Zernogradsky District, Rostov Oblast, 347740, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:27:29.924698+00:00",
+  "_kind": "geo_samples"
+}

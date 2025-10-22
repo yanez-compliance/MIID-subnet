@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Sandown",
+  "geonameid": 2638568,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.62977618351362,
+      "lon": -1.131388619755308,
+      "geoinfo": {
+        "display_name": "Yaverland, Sandown, Isle of Wight, England, PO36 8QS, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandown",
+        "state": "England",
+        "postcode": "PO36 8QS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sandown, England, United Kingdom"
+    },
+    {
+      "lat": 50.683866986260874,
+      "lon": -1.1958146146145003,
+      "geoinfo": {
+        "display_name": "Downs Road, Knighton, Newchurch, Isle of Wight, England, PO36 0NT, United Kingdom",
+        "road": "Downs Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newchurch",
+        "state": "England",
+        "postcode": "PO36 0NT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Downs Road, Knighton, Newchurch, Isle of Wight, England, PO36 0NT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:39.905440+00:00",
+  "_kind": "geo_samples"
+}

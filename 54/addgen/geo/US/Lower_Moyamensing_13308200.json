@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lower Moyamensing",
+  "geonameid": 13308200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.8964484113445,
+      "lon": -75.16622379345766,
+      "geoinfo": {
+        "display_name": "South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19112, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Philadelphia, Lower Moyamensing, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.88228572971126,
+      "lon": -75.13872630323979,
+      "geoinfo": {
+        "display_name": "Delaware View Avenue, Westville, Gloucester County, New Jersey, 08093, United States",
+        "road": "Delaware View Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westville",
+        "state": "New Jersey",
+        "postcode": "08093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "676, Delaware View Avenue, Westville, Gloucester County, New Jersey, 08093, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:33.855564+00:00",
+  "_kind": "geo_samples"
+}

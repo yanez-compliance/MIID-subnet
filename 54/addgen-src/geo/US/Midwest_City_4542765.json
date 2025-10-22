@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Midwest City",
+  "geonameid": 4542765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.47242493179332,
+      "lon": -97.42033526769407,
+      "geoinfo": {
+        "display_name": "Twilight Drive, Midwest City, Oklahoma County, Oklahoma, 73110, United States",
+        "road": "Twilight Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midwest City",
+        "state": "Oklahoma",
+        "postcode": "73110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Twilight Drive, Midwest City, Oklahoma, United States"
+    },
+    {
+      "lat": 35.460646864800715,
+      "lon": -97.39160571891999,
+      "geoinfo": {
+        "display_name": "Calico Corners, 2212, Felix Place, Midwest City, Oklahoma County, Oklahoma, 73110, United States",
+        "road": "Felix Place",
+        "house_number": "2212",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midwest City",
+        "state": "Oklahoma",
+        "postcode": "73110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Calico Corners, 2212, Felix Place, Midwest City, Oklahoma County, Oklahoma, 73110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:59.156867+00:00",
+  "_kind": "geo_samples"
+}

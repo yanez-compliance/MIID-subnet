@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lumberton",
+  "geonameid": 4477525,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.608425486100714,
+      "lon": -79.02055444713568,
+      "geoinfo": {
+        "display_name": "1707, Maryland Street, Lumberton, Robeson County, North Carolina, 28358, United States",
+        "road": "Maryland Street",
+        "house_number": "1707",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lumberton",
+        "state": "North Carolina",
+        "postcode": "28358",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1707 Maryland Street, Lumberton, North Carolina, United States"
+    },
+    {
+      "lat": 34.59316549724812,
+      "lon": -79.03433933377276,
+      "geoinfo": {
+        "display_name": "Turner Park, Lumberton, Robeson County, North Carolina, 28359, United States",
+        "road": "Turner Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lumberton",
+        "state": "North Carolina",
+        "postcode": "28359",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, Turner Park, Lumberton, Robeson County, North Carolina, 28359, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:21.714788+00:00",
+  "_kind": "geo_samples"
+}

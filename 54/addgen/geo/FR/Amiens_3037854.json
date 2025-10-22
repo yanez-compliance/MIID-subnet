@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Amiens",
+  "geonameid": 3037854,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.92877484661265,
+      "lon": 2.3112575243339255,
+      "geoinfo": {
+        "display_name": "N 25, Amiens, Somme, Hauts-de-France, Metropolitan France, 80000, France",
+        "road": "N 25",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amiens",
+        "state": "Hauts-de-France",
+        "postcode": "80000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "N 25, Amiens, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.877538502793044,
+      "lon": 2.310356190659305,
+      "geoinfo": {
+        "display_name": "1, Allée des Cèdres, Amiens, Somme, Hauts-de-France, Metropolitan France, 80000, France",
+        "road": "Allée des Cèdres",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amiens",
+        "state": "Hauts-de-France",
+        "postcode": "80000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1, Allée des Cèdres, Amiens, Somme, Hauts-de-France, Metropolitan France, 80000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:08.587130+00:00",
+  "_kind": "geo_samples"
+}

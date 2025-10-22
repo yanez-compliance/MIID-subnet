@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chichén-Itzá",
+  "geonameid": 3530978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.63948596235389,
+      "lon": -88.58347885051273,
+      "geoinfo": {
+        "display_name": "Tinum, Yucatán, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yucatán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Chichén-Itzá, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.70657532942976,
+      "lon": -88.57773220266755,
+      "geoinfo": {
+        "display_name": "Calle 3, Privada Piste, Pisté, Tinum, Yucatán, 97757, Mexico",
+        "road": "Calle 3",
+        "house_number": null,
+        "neighbourhood": "Privada Piste",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pisté",
+        "state": "Yucatán",
+        "postcode": "97757",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 3, Chichén-Itzá, 97757 Yucatán, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:43.285424+00:00",
+  "_kind": "geo_samples"
+}

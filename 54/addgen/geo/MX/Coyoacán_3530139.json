@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Coyoacán",
+  "geonameid": 3530139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.360649980408834,
+      "lon": -99.17255755708506,
+      "geoinfo": {
+        "display_name": "Instituto para la Atención y Prevención de las Adicciones en la Ciudad de México, 234, Avenida Río Mixcoac, Colonia Acacias, Mexico City, Benito Juárez, Mexico City, 03240, Mexico",
+        "road": "Avenida Río Mixcoac",
+        "house_number": "234",
+        "neighbourhood": "Colonia Acacias",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "03240",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "234 Avenida Río Mixcoac, Coyoacán, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.352433374194405,
+      "lon": -99.16498341247294,
+      "geoinfo": {
+        "display_name": "Calle Vicente Guerrero, Coyoacán, Mexico City, Coyoacán, Mexico City, 04100, Mexico",
+        "road": "Calle Vicente Guerrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Coyoacán",
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "04100",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "410, Calle Vicente Guerrero, Coyoacán, Mexico City, Coyoacán, Mexico City, 04100, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:26.330390+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Rancho Dominguez",
+  "geonameid": 5344817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.89707631901412,
+      "lon": -118.19417022706621,
+      "geoinfo": {
+        "display_name": "4481, East San Luis Street, East Compton, Compton, Los Angeles County, California, 90221, United States",
+        "road": "East San Luis Street",
+        "house_number": "4481",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Compton",
+        "state": "California",
+        "postcode": "90221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4481 East San Luis Street, East Rancho Dominguez, California, United States"
+    },
+    {
+      "lat": 33.87786358372621,
+      "lon": -118.23333143604849,
+      "geoinfo": {
+        "display_name": "724, West Carob Street, Compton, Los Angeles County, California, 90220, United States",
+        "road": "West Carob Street",
+        "house_number": "724",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Compton",
+        "state": "California",
+        "postcode": "90220",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "724, West Carob Street, Compton, Los Angeles County, California, 90220, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:09:02.647316+00:00",
+  "_kind": "geo_samples"
+}

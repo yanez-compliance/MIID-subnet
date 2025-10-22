@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Lake",
+  "geonameid": 4154008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.12665554944088,
+      "lon": -82.68900353848811,
+      "geoinfo": {
+        "display_name": "East Lake, Pinellas County, Florida, 34688, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Lake",
+        "state": "Florida",
+        "postcode": "34688",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Lake, Florida, United States"
+    },
+    {
+      "lat": 28.138265216846214,
+      "lon": -82.69886408740618,
+      "geoinfo": {
+        "display_name": "Wentworth Golf Club, 2990, Wentworth Way, Tarpon Springs, Pinellas County, Florida, 34688, United States",
+        "road": "Wentworth Way",
+        "house_number": "2990",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tarpon Springs",
+        "state": "Florida",
+        "postcode": "34688",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wentworth Golf Club, 2990, Wentworth Way, Tarpon Springs, Pinellas County, Florida, 34688, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:09.558144+00:00",
+  "_kind": "geo_samples"
+}

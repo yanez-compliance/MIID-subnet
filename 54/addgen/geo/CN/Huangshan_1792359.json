@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huangshan",
+  "geonameid": 1792359,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.73774077196733,
+      "lon": 118.35194878481454,
+      "geoinfo": {
+        "display_name": "Tunguang, Tunxi District, Huangshan, Anhui, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huangshan",
+        "state": "Anhui",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huangshan, Anhui, China"
+    },
+    {
+      "lat": 29.74261213747532,
+      "lon": 118.28419926065014,
+      "geoinfo": {
+        "display_name": "Xintan, Tunxi District, Huangshan, Anhui, 245000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huangshan",
+        "state": "Anhui",
+        "postcode": "245000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "531, Xintan, Tunxi District, Huangshan, Anhui, 245000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:37.783288+00:00",
+  "_kind": "geo_samples"
+}

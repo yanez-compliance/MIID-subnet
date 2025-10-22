@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Tielt",
+  "geonameid": 2785476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.97206063626192,
+      "lon": 3.2961986993108705,
+      "geoinfo": {
+        "display_name": "Kazandstraat, Pittem, Tielt, West Flanders, 8740, Belgium",
+        "road": "Kazandstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pittem",
+        "city": "Pittem",
+        "state": "West Flanders",
+        "postcode": "8740",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Kazandstraat, Tielt, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.99415079586472,
+      "lon": 3.3458594006539872,
+      "geoinfo": {
+        "display_name": "21, Leukemeersenstraat, Tielt, West Flanders, 8700, Belgium",
+        "road": "Leukemeersenstraat",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Tielt",
+        "city": "Tielt",
+        "state": "West Flanders",
+        "postcode": "8700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "21, Leukemeersenstraat, Tielt, West Flanders, 8700, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:26.391732+00:00",
+  "_kind": "geo_samples"
+}

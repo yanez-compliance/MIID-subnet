@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxnard",
+  "geonameid": 5380184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.181110991465594,
+      "lon": -119.13262381031637,
+      "geoinfo": {
+        "display_name": "Ventura County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oxnard, California, United States"
+    },
+    {
+      "lat": 34.23850163602646,
+      "lon": -119.1632954247737,
+      "geoinfo": {
+        "display_name": "384, Walnut Drive, El Rio, Oxnard, Ventura County, California, 93036, United States",
+        "road": "Walnut Drive",
+        "house_number": "384",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxnard",
+        "state": "California",
+        "postcode": "93036",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "384, Walnut Drive, El Rio, Oxnard, Ventura County, California, 93036, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:36.027055+00:00",
+  "_kind": "geo_samples"
+}

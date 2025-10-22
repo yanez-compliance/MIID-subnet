@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Grimma",
+  "geonameid": 2917325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.268301314625596,
+      "lon": 12.74855128062847,
+      "geoinfo": {
+        "display_name": "B 107, Pauschwitz, Grimma, Trebsen/Mulde, Landkreis Leipzig, Saxony, 04687, Germany",
+        "road": "B 107",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pauschwitz",
+        "city_district": "Grimma",
+        "city": "Trebsen/Mulde",
+        "state": "Saxony",
+        "postcode": "04687",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 107, Grimma, Saxony, Germany"
+    },
+    {
+      "lat": 51.201000634827466,
+      "lon": 12.752457138499532,
+      "geoinfo": {
+        "display_name": "Zur Schaddelmühle, Schaddel, Großbothen, Grimma, Landkreis Leipzig, Saxony, 04668, Germany",
+        "road": "Zur Schaddelmühle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Großbothen",
+        "city": "Grimma",
+        "state": "Saxony",
+        "postcode": "04668",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "211, Zur Schaddelmühle, Schaddel, Großbothen, Grimma, Landkreis Leipzig, Saxony, 04668, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:43.038475+00:00",
+  "_kind": "geo_samples"
+}

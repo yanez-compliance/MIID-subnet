@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pontiac",
+  "geonameid": 5006166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.64661083184035,
+      "lon": -83.2775888453844,
+      "geoinfo": {
+        "display_name": "Court Street, Pontiac, Oakland County, Michigan, 48342, United States",
+        "road": "Court Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pontiac",
+        "state": "Michigan",
+        "postcode": "48342",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Court Street, Pontiac, Michigan, United States"
+    },
+    {
+      "lat": 42.62310217266167,
+      "lon": -83.24719834959272,
+      "geoinfo": {
+        "display_name": "698, Ashburnham Street, Bloomfield Orchards, Oak Grove, Auburn Hills, Oakland County, Michigan, 48326, United States",
+        "road": "Ashburnham Street",
+        "house_number": "698",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn Hills",
+        "state": "Michigan",
+        "postcode": "48326",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "698, Ashburnham Street, Bloomfield Orchards, Oak Grove, Auburn Hills, Oakland County, Michigan, 48326, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:41.173807+00:00",
+  "_kind": "geo_samples"
+}

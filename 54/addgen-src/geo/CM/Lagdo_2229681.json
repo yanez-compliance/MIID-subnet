@@ -1,0 +1,47 @@
+{
+  "country_code": "CM",
+  "country": "Cameroon",
+  "city": "Lagdo",
+  "geonameid": 2229681,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 9.061925530586576,
+      "lon": 13.645372780823488,
+      "geoinfo": {
+        "display_name": "Carrefour lieu dit barrière, Lagdo 2, Lagdo, Bénoué, North, Cameroon",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lagdo",
+        "state": "North",
+        "postcode": null,
+        "country": "Cameroon",
+        "country_code": "cm"
+      },
+      "address": "Lagdo, North, Cameroon"
+    },
+    {
+      "lat": 9.05739422797613,
+      "lon": 13.69106620916046,
+      "geoinfo": {
+        "display_name": "D87, Gounougou, Bibemi, Bénoué, North, Cameroon",
+        "road": "D87",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bibemi",
+        "state": "North",
+        "postcode": null,
+        "country": "Cameroon",
+        "country_code": "cm"
+      },
+      "address": "D87, Lagdo, North, Cameroon"
+    }
+  ],
+  "updated_at": "2025-10-16T12:13:03.654708+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bretten",
+  "geonameid": 2944200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.067063269929555,
+      "lon": 8.677789520921225,
+      "geoinfo": {
+        "display_name": "3, Im Tal, Neibsheim, Bretten, Verwaltungsgemeinschaft Bretten, Landkreis Karlsruhe, Baden-Württemberg, 75015, Germany",
+        "road": "Im Tal",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bretten",
+        "state": "Baden-Württemberg",
+        "postcode": "75015",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Im Tal, Bretten, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.02326004452152,
+      "lon": 8.708862916148354,
+      "geoinfo": {
+        "display_name": "Ruiter Straße, Bergmühle, Bretten, Verwaltungsgemeinschaft Bretten, Landkreis Karlsruhe, Baden-Württemberg, 75015, Germany",
+        "road": "Ruiter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bretten",
+        "state": "Baden-Württemberg",
+        "postcode": "75015",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "991, Ruiter Straße, Bergmühle, Bretten, Verwaltungsgemeinschaft Bretten, Landkreis Karlsruhe, Baden-Württemberg, 75015, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:23.154095+00:00",
+  "_kind": "geo_samples"
+}

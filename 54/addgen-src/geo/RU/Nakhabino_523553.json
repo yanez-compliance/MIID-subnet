@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Nakhabino",
+  "geonameid": 523553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.84708765775203,
+      "lon": 37.202581224989274,
+      "geoinfo": {
+        "display_name": "Советская улица, Nakhabino, Krasnogorsky District, Moscow Oblast, Central Federal District, 143432, Russia",
+        "road": "Советская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakhabino",
+        "state": "Moscow Oblast",
+        "postcode": "143432",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Советская улица, Nakhabino, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.86570700048457,
+      "lon": 37.17750571758389,
+      "geoinfo": {
+        "display_name": "Тушинский поселок, Nakhabino, Krasnogorsky District, Moscow Oblast, Central Federal District, 143430, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Тушинский поселок",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakhabino",
+        "state": "Moscow Oblast",
+        "postcode": "143430",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "273, Тушинский поселок, Nakhabino, Krasnogorsky District, Moscow Oblast, Central Federal District, 143430, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:30.011402+00:00",
+  "_kind": "geo_samples"
+}

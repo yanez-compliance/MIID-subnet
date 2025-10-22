@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Macas",
+  "geonameid": 3654541,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -2.3235593780985218,
+      "lon": -78.11146524435102,
+      "geoinfo": {
+        "display_name": "Sevilla Rural, Sevilla Don Bosco, Morona, Morona Santiago, 140141, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sevilla Don Bosco",
+        "state": "Morona Santiago",
+        "postcode": "140141",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Macas, Morona Santiago, Ecuador"
+    },
+    {
+      "lat": -2.3182440344357924,
+      "lon": -78.12488281304189,
+      "geoinfo": {
+        "display_name": "Avenida Desidero Andramuño, MACAS, Macas, Morona, Morona Santiago, 140141, Ecuador",
+        "road": "Avenida Desidero Andramuño",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Macas",
+        "state": "Morona Santiago",
+        "postcode": "140141",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Avenida Desidero Andramuño, Macas, Morona Santiago, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:07:37.083180+00:00",
+  "_kind": "geo_samples"
+}

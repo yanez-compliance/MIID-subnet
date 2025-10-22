@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kensington-Cedar Cottage",
+  "geonameid": 5991085,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.265304759253866,
+      "lon": -123.05319375521054,
+      "geoinfo": {
+        "display_name": "East 5th Avenue, Hastings-Sunrise, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada",
+        "road": "East 5th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hastings-Sunrise",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5M",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "East 5th Avenue, Kensington-Cedar Cottage, British Columbia, Canada"
+    },
+    {
+      "lat": 49.26007383611663,
+      "lon": -123.0540967005732,
+      "geoinfo": {
+        "display_name": "East 11th Avenue, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada",
+        "road": "East 11th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Renfrew-Collingwood",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5M",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "East 11th Avenue, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:11.357404+00:00",
+  "_kind": "geo_samples"
+}

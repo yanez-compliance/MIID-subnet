@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Colwyn Bay",
+  "geonameid": 2652513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.335234437115226,
+      "lon": -3.7163818592881506,
+      "geoinfo": {
+        "display_name": "Colwyn Bay, Conwy, Wales, LL29 8GA, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colwyn Bay",
+        "state": "Wales",
+        "postcode": "LL29 8GA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Colwyn Bay, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.26110752131777,
+      "lon": -3.754785985635523,
+      "geoinfo": {
+        "display_name": "B5381, Betws yn Rhos, Pentrefelin, Llansanffraid Glan Conwy, Conwy, Wales, LL28 5PE, United Kingdom",
+        "road": "B5381",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Betws yn Rhos",
+        "city_district": null,
+        "city": "Pentrefelin",
+        "state": "Wales",
+        "postcode": "LL28 5PE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "B5381, Betws yn Rhos, Pentrefelin, Llansanffraid Glan Conwy, Conwy, Wales, LL28 5PE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:25.215475+00:00",
+  "_kind": "geo_samples"
+}

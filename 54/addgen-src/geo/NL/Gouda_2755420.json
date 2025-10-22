@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Gouda",
+  "geonameid": 2755420,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.014707661606536,
+      "lon": 4.7102720270720395,
+      "geoinfo": {
+        "display_name": "13, Kazernestraat, Binnenstad, Gouda, South Holland, Netherlands, 2801 GK, Netherlands",
+        "road": "Kazernestraat",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gouda",
+        "state": "South Holland",
+        "postcode": "2801 GK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "13 Kazernestraat, Gouda, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.01274519749566,
+      "lon": 4.7562685318399724,
+      "geoinfo": {
+        "display_name": "Grote Lot, Haastrecht, Krimpenerwaard, South Holland, Netherlands, 2807 JA, Netherlands",
+        "road": "Grote Lot",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haastrecht",
+        "state": "South Holland",
+        "postcode": "2807 JA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "152, Grote Lot, Gouda, 2807 JA South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.02858496531176,
+      "lon": 4.7053190084618315,
+      "geoinfo": {
+        "display_name": "Ridder van Catsweg, Plaswijck, Gouda, South Holland, Netherlands, 2804 BA, Netherlands",
+        "road": "Ridder van Catsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gouda",
+        "state": "South Holland",
+        "postcode": "2804 BA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "486, Ridder van Catsweg, Plaswijck, Gouda, South Holland, Netherlands, 2804 BA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:43.869114+00:00",
+  "_kind": "geo_samples"
+}

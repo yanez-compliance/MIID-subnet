@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Herzele",
+  "geonameid": 2795908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.849567362770806,
+      "lon": 3.8891470885469652,
+      "geoinfo": {
+        "display_name": "1, Hekkestraat, Sint-Lievens-Esse, Herzele, Aalst, East Flanders, 9550, Belgium",
+        "road": "Hekkestraat",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Lievens-Esse",
+        "state": "East Flanders",
+        "postcode": "9550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1 Hekkestraat, Herzele, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.8717904865098,
+      "lon": 3.8640210024209667,
+      "geoinfo": {
+        "display_name": "Klippelstraat, Sint-Lievens-Esse, Herzele, Aalst, East Flanders, Flanders, 9550, Belgium",
+        "road": "Klippelstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Lievens-Esse",
+        "state": "East Flanders",
+        "postcode": "9550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "408, Klippelstraat, Sint-Lievens-Esse, Herzele, Aalst, East Flanders, Flanders, 9550, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:55.063205+00:00",
+  "_kind": "geo_samples"
+}

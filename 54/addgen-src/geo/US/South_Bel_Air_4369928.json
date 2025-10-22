@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Bel Air",
+  "geonameid": 4369928,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.531527296256215,
+      "lon": -76.33956532791412,
+      "geoinfo": {
+        "display_name": "6, Hunter Drive, Homestead Village, Bel Air, Harford County, Maryland, 21014, United States",
+        "road": "Hunter Drive",
+        "house_number": "6",
+        "neighbourhood": "Homestead Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bel Air",
+        "state": "Maryland",
+        "postcode": "21014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6 Hunter Drive, South Bel Air, Maryland, United States"
+    },
+    {
+      "lat": 39.56558318367001,
+      "lon": -76.37696683721568,
+      "geoinfo": {
+        "display_name": "1851, Trudeau Drive, Forest Lakes, Harford County, Maryland, 21050, United States",
+        "road": "Trudeau Drive",
+        "house_number": "1851",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1851, Trudeau Drive, Forest Lakes, Harford County, Maryland, 21050, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:40.867121+00:00",
+  "_kind": "geo_samples"
+}

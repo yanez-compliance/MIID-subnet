@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Florida",
+  "geonameid": 3682393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.362335916122263,
+      "lon": -76.23938655848369,
+      "geoinfo": {
+        "display_name": "La Diana, Florida, Sur, Valle del Cauca, RAP Pacífico, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Diana",
+        "state": "Valle del Cauca",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Florida, Valle del Cauca, Colombia"
+    },
+    {
+      "lat": 3.3318789526276817,
+      "lon": -76.24731933257833,
+      "geoinfo": {
+        "display_name": "31, Cabecera municipal Florida, Florida, Sur, Valle del Cauca, RAP Pacífico, Colombia",
+        "road": "31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cabecera municipal Florida",
+        "state": "Valle del Cauca",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "31, Cabecera municipal Florida, Florida, Sur, Valle del Cauca, 29369 RAP Pacífico, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:20.201604+00:00",
+  "_kind": "geo_samples"
+}

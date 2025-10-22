@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xihu",
+  "geonameid": 12450949,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.07694654528515,
+      "lon": 106.37856998568401,
+      "geoinfo": {
+        "display_name": "Xihu, Jiangjin District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xihu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xihu, Chongqing, China"
+    },
+    {
+      "lat": 29.101724403485626,
+      "lon": 106.43866391287494,
+      "geoinfo": {
+        "display_name": "Songbai, Jiangjin District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Songbai",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "697, Songbai, Jiangjin District, 56738 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:14.815027+00:00",
+  "_kind": "geo_samples"
+}

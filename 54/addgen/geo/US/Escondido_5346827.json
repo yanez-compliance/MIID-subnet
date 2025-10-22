@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Escondido",
+  "geonameid": 5346827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.12662169985618,
+      "lon": -117.10768568236021,
+      "geoinfo": {
+        "display_name": "CA 78, Escondido, San Diego County, California, 92029, United States",
+        "road": "CA 78",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Escondido",
+        "state": "California",
+        "postcode": "92029",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CA 78, Escondido, California, United States"
+    },
+    {
+      "lat": 33.15610643876652,
+      "lon": -117.0703199648598,
+      "geoinfo": {
+        "display_name": "1441, Rosada Glen, Escondido, San Diego County, California, 92027, United States",
+        "road": "Rosada Glen",
+        "house_number": "1441",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Escondido",
+        "state": "California",
+        "postcode": "92027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1441, Rosada Glen, Escondido, San Diego County, California, 92027, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:09:08.798573+00:00",
+  "_kind": "geo_samples"
+}

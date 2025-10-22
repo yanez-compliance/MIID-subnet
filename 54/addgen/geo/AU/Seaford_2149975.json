@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Seaford",
+  "geonameid": 2149975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.11986176279853,
+      "lon": 145.12945333763096,
+      "geoinfo": {
+        "display_name": "80A, Rosslyn Avenue, Kananook, Seaford, Melbourne, City of Frankston, Victoria, 3198, Australia",
+        "road": "Rosslyn Avenue",
+        "house_number": "80A",
+        "neighbourhood": "Kananook",
+        "suburb": "Seaford",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3198",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "80A Rosslyn Avenue, Seaford, Victoria, Australia"
+    },
+    {
+      "lat": -38.10677654313627,
+      "lon": 145.0843502475797,
+      "geoinfo": {
+        "display_name": "Victoria, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Victoria",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "924, Seaford, 63183 Victoria, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:52.898805+00:00",
+  "_kind": "geo_samples"
+}

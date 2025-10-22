@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Baeza",
+  "geonameid": 2521413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.00428250259546,
+      "lon": -3.4644903499507556,
+      "geoinfo": {
+        "display_name": "Baeza, Jaén, Andalusia, 23440, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baeza",
+        "state": "Andalusia",
+        "postcode": "23440",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Baeza, Andalusia, Spain"
+    },
+    {
+      "lat": 37.98384084524064,
+      "lon": -3.488829858378869,
+      "geoinfo": {
+        "display_name": "Autovía del Olivar, Baeza, Jaén, Andalusia, 23520, Spain",
+        "road": "Autovía del Olivar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baeza",
+        "state": "Andalusia",
+        "postcode": "23520",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "716, Autovía del Olivar, Baeza, Jaén, Andalusia, 23520, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:03.228689+00:00",
+  "_kind": "geo_samples"
+}

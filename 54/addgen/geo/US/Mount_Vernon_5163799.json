@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Vernon",
+  "geonameid": 5163799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.396475115156484,
+      "lon": -82.51995201562491,
+      "geoinfo": {
+        "display_name": "12602, Old Delaware Road, Clinton Township, Knox County, Ohio, 43050, United States",
+        "road": "Old Delaware Road",
+        "house_number": "12602",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "43050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12602 Old Delaware Road, Mount Vernon, Ohio, United States"
+    },
+    {
+      "lat": 40.39838245065324,
+      "lon": -82.50686032275317,
+      "geoinfo": {
+        "display_name": "Mount Vernon, Knox County, Ohio, 43050, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Vernon",
+        "state": "Ohio",
+        "postcode": "43050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "058, Mount Vernon, Knox County, Ohio, 43050, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:36.441049+00:00",
+  "_kind": "geo_samples"
+}

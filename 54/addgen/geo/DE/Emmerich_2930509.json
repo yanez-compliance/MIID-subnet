@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Emmerich",
+  "geonameid": 2930509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.84485656594104,
+      "lon": 6.2561616913093125,
+      "geoinfo": {
+        "display_name": "37, Sweder-Hopp-Straße, Leegmeer, Klein-Netterden, Emmerich on the Rhine, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 46446, Germany",
+        "road": "Sweder-Hopp-Straße",
+        "house_number": "37",
+        "neighbourhood": "Leegmeer",
+        "suburb": null,
+        "city_district": null,
+        "city": "Emmerich on the Rhine",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46446",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "37 Sweder-Hopp-Straße, Emmerich, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.831518899081075,
+      "lon": 6.2499864837223225,
+      "geoinfo": {
+        "display_name": "Hafen Emmerich, Parkring, Emmerich on the Rhine, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 46446, Germany",
+        "road": "Parkring",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emmerich on the Rhine",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46446",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "387, Parkring, Emmerich, 46446 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:00.181981+00:00",
+  "_kind": "geo_samples"
+}

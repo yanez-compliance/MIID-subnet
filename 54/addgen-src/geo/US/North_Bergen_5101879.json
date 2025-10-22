@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Bergen",
+  "geonameid": 5101879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.79533463615837,
+      "lon": -74.03978312899994,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike Eastern Spur, North Bergen, Hudson County, New Jersey, 07094, United States",
+        "road": "New Jersey Turnpike Eastern Spur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Bergen",
+        "state": "New Jersey",
+        "postcode": "07094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "New Jersey Turnpike Eastern Spur, North Bergen, New Jersey, United States"
+    },
+    {
+      "lat": 40.814491751461844,
+      "lon": -73.99585482591333,
+      "geoinfo": {
+        "display_name": "304, Delano Place, Fairview, Bergen County, New Jersey, 07022, United States",
+        "road": "Delano Place",
+        "house_number": "304",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairview",
+        "state": "New Jersey",
+        "postcode": "07022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "304, Delano Place, Fairview, Bergen County, New Jersey, 07022, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:42.756725+00:00",
+  "_kind": "geo_samples"
+}

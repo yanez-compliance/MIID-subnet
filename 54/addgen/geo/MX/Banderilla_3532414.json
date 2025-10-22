@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Banderilla",
+  "geonameid": 3532414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.562348580370795,
+      "lon": -96.96152838668803,
+      "geoinfo": {
+        "display_name": "Colonia Zamora, Tlalnelhuayocan, Veracruz, 91230, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlalnelhuayocan",
+        "state": "Veracruz",
+        "postcode": "91230",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Banderilla, Veracruz, Mexico"
+    },
+    {
+      "lat": 19.60508587129179,
+      "lon": -96.917284181737,
+      "geoinfo": {
+        "display_name": "Libramiento Xalapa, Vista Hermosa Segunda Manzana, Jilotepec, Veracruz, 91380, Mexico",
+        "road": "Libramiento Xalapa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jilotepec",
+        "state": "Veracruz",
+        "postcode": "91380",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "729, Libramiento Xalapa, Vista Hermosa Segunda Manzana, Jilotepec, Veracruz, 91380, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:27.815130+00:00",
+  "_kind": "geo_samples"
+}

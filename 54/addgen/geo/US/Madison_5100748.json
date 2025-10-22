@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison",
+  "geonameid": 5100748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.75833954621816,
+      "lon": -74.41732688623793,
+      "geoinfo": {
+        "display_name": "Saint Vincent Martyr School, Green Village Road, Madison, Morris County, New Jersey, 07940, United States",
+        "road": "Green Village Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "New Jersey",
+        "postcode": "07940",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Green Village Road, Madison, New Jersey, United States"
+    },
+    {
+      "lat": 40.77448816248664,
+      "lon": -74.44156541715924,
+      "geoinfo": {
+        "display_name": "2, Twombly Lane, Loantaka Estates, Madison, Morris County, New Jersey, 07940, United States",
+        "road": "Twombly Lane",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "New Jersey",
+        "postcode": "07940",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Twombly Lane, Loantaka Estates, Madison, Morris County, New Jersey, 07940, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:48.568071+00:00",
+  "_kind": "geo_samples"
+}

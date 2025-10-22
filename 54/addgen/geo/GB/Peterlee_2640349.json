@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Peterlee",
+  "geonameid": 2640349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.73954815134906,
+      "lon": -1.3977519165438885,
+      "geoinfo": {
+        "display_name": "A181, Wheatley Hill, County Durham, North East, England, TS28 5LX, United Kingdom",
+        "road": "A181",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wheatley Hill",
+        "state": "England",
+        "postcode": "TS28 5LX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A181, Peterlee, England, United Kingdom"
+    },
+    {
+      "lat": 54.74323740489086,
+      "lon": -1.3092289552205651,
+      "geoinfo": {
+        "display_name": "Hesleden Road, Monk Hesleden, Castle Eden, County Durham, North East, England, TS27 4PB, United Kingdom",
+        "road": "Hesleden Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Eden",
+        "state": "England",
+        "postcode": "TS27 4PB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hesleden Road, Monk Hesleden, Castle Eden, County Durham, North East, England, TS27 4PB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:28.235113+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Slutsk",
+  "geonameid": 621741,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 52.99043987338553,
+      "lon": 27.545504270782597,
+      "geoinfo": {
+        "display_name": "Н9518, Навадворцы, Кіраўскі сельскі Савет, Slutsk District, Minsk Region, 223601, Belarus",
+        "road": "Н9518",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Кіраўскі сельскі Савет",
+        "state": "Minsk Region",
+        "postcode": "223601",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Н9518, Slutsk, Minsk Region, Belarus"
+    },
+    {
+      "lat": 52.99181115557339,
+      "lon": 27.554622208956232,
+      "geoinfo": {
+        "display_name": "вуліца Радзюка, Навадворцы, Кіраўскі сельскі Савет, Slutsk District, Minsk Region, 223601, Belarus",
+        "road": "вуліца Радзюка",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Кіраўскі сельскі Савет",
+        "state": "Minsk Region",
+        "postcode": "223601",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "вуліца Радзюка, Slutsk, Minsk Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:16.776004+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ames",
+  "geonameid": 4846834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.01791208717711,
+      "lon": -93.59403761233574,
+      "geoinfo": {
+        "display_name": "Freel Drive, Ames, Story County, Iowa, 50010, United States",
+        "road": "Freel Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ames",
+        "state": "Iowa",
+        "postcode": "50010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Freel Drive, Ames, Iowa, United States"
+    },
+    {
+      "lat": 42.0578067586466,
+      "lon": -93.58696458201085,
+      "geoinfo": {
+        "display_name": "Old Bloomington Road, Franklin Township, Story County, Iowa, 50010, United States",
+        "road": "Old Bloomington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": "50010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "006, Old Bloomington Road, Franklin Township, Story County, Iowa, 50010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:51.727205+00:00",
+  "_kind": "geo_samples"
+}

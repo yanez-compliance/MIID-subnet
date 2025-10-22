@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Soignies",
+  "geonameid": 2786420,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.5623238938363,
+      "lon": 4.025697302001184,
+      "geoinfo": {
+        "display_name": "Rue Ramée, Ferme de la Motte, Neufvilles, Soignies, Hainaut, Wallonia, 7063, Belgium",
+        "road": "Rue Ramée",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Neufvilles",
+        "city": "Soignies",
+        "state": "Hainaut",
+        "postcode": "7063",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue Ramée, Soignies, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.58894194181665,
+      "lon": 4.007133307943697,
+      "geoinfo": {
+        "display_name": "Chemin du Stiquot, Louvignies, Chaussée-Notre-Dame-Louvignies, Soignies, Hainaut, Wallonia, 7063, Belgium",
+        "road": "Chemin du Stiquot",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Chaussée-Notre-Dame-Louvignies",
+        "city": "Soignies",
+        "state": "Hainaut",
+        "postcode": "7063",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "555, Chemin du Stiquot, Louvignies, Chaussée-Notre-Dame-Louvignies, Soignies, Hainaut, Wallonia, 7063, Belgium"
+    },
+    {
+      "lat": 50.5353468667205,
+      "lon": 4.064140477779437,
+      "geoinfo": {
+        "display_name": "Chemin Marguerite, Ferme de la Place au Bô, Sirieux, Thieusies, Soignies, Hainaut, Wallonia, 7061, Belgium",
+        "road": "Chemin Marguerite",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Thieusies",
+        "city": "Soignies",
+        "state": "Hainaut",
+        "postcode": "7061",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "396, Chemin Marguerite, Ferme de la Place au Bô, Sirieux, Thieusies, Soignies, Hainaut, Wallonia, 7061, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:35.996590+00:00",
+  "_kind": "geo_samples"
+}

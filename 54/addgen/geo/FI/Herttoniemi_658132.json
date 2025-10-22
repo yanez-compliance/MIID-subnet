@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Herttoniemi",
+  "geonameid": 658132,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.22091960286108,
+      "lon": 24.97658372826561,
+      "geoinfo": {
+        "display_name": "Vanhankaupungin vedenpuhdistuslaitos, 1, Jokiniementie, Koskela, Central major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00650, Finland",
+        "road": "Jokiniementie",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Koskela",
+        "city_district": "Central major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00650",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Vanhankaupungin vedenpuhdistuslaitos, 1, Jokiniementie, Koskela, Central major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00650, Finland"
+    },
+    {
+      "lat": 60.22531828750195,
+      "lon": 25.07992299342966,
+      "geoinfo": {
+        "display_name": "Jyskyjärvenpolku, Myllypuro, Vartiokylä, Eastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00920, Finland",
+        "road": "Jyskyjärvenpolku",
+        "house_number": null,
+        "neighbourhood": "Myllypuro",
+        "suburb": "Vartiokylä",
+        "city_district": "Eastern major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00920",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "504, Jyskyjärvenpolku, Myllypuro, Vartiokylä, Eastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00920, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:13.233460+00:00",
+  "_kind": "geo_samples"
+}

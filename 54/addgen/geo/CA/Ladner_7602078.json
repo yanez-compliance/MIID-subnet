@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Ladner",
+  "geonameid": 7602078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.06480780499985,
+      "lon": -123.08904274475957,
+      "geoinfo": {
+        "display_name": "34B Avenue, Delta, Metro Vancouver Regional District, British Columbia, V4L 2N5, Canada",
+        "road": "34B Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delta",
+        "state": "British Columbia",
+        "postcode": "V4L 2N5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "34B Avenue, Ladner, British Columbia, Canada"
+    },
+    {
+      "lat": 49.114343681175164,
+      "lon": -123.03470215920495,
+      "geoinfo": {
+        "display_name": "68 Street, Delta, Metro Vancouver Regional District, British Columbia, V4G 0A2, Canada",
+        "road": "68 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delta",
+        "state": "British Columbia",
+        "postcode": "V4G 0A2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "68 Street, Delta, Metro Vancouver Regional District, British Columbia, V4G 0A2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:16.208608+00:00",
+  "_kind": "geo_samples"
+}

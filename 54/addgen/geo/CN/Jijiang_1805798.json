@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jijiang",
+  "geonameid": 1805798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.2951889563809,
+      "lon": 106.22590996166765,
+      "geoinfo": {
+        "display_name": "S107, Jiangjin, Jiangjin District, Chongqing, China",
+        "road": "S107",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiangjin",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S107, Jijiang, Chongqing, China"
+    },
+    {
+      "lat": 29.266352978880228,
+      "lon": 106.29215410539692,
+      "geoinfo": {
+        "display_name": "Xipeng, Jiulongpo District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiulongpo District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "883, Xipeng, Jiulongpo District, 71629 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:44.389519+00:00",
+  "_kind": "geo_samples"
+}

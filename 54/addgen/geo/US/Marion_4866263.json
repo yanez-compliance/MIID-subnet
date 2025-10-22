@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marion",
+  "geonameid": 4866263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.02118292060257,
+      "lon": -91.6313128636478,
+      "geoinfo": {
+        "display_name": "West Side Sewing, 4100, 1st Avenue East, Kenwood Park, Cedar Rapids, Linn County, Iowa, 52402, United States",
+        "road": "1st Avenue East",
+        "house_number": "4100",
+        "neighbourhood": "Kenwood Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cedar Rapids",
+        "state": "Iowa",
+        "postcode": "52402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4100 1st Avenue East, Marion, Iowa, United States"
+    },
+    {
+      "lat": 42.06555903203839,
+      "lon": -91.56082360018465,
+      "geoinfo": {
+        "display_name": "Indian Creek Way, Linn County, Iowa, 52302, United States",
+        "road": "Indian Creek Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": "52302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "448, Indian Creek Way, Linn County, Iowa, 52302, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:53.892573+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vigo",
+  "geonameid": 3105976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.22280616509735,
+      "lon": -8.675950078519131,
+      "geoinfo": {
+        "display_name": "Paseo do Lagares, A Ponte, As Fontiñas, Cabral, Vigo, Pontevedra, Galicia, 36215, Spain",
+        "road": "Paseo do Lagares",
+        "house_number": null,
+        "neighbourhood": "A Ponte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vigo",
+        "state": "Galicia",
+        "postcode": "36215",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Paseo do Lagares, Vigo, Galicia, Spain"
+    },
+    {
+      "lat": 42.211695615251955,
+      "lon": -8.751221229965468,
+      "geoinfo": {
+        "display_name": "Rúa Covelo, A Arqueta, O Cristo da Vitoria, Vigo, Pontevedra, Galicia, 36209, Spain",
+        "road": "Rúa Covelo",
+        "house_number": null,
+        "neighbourhood": "A Arqueta",
+        "suburb": "O Cristo da Vitoria",
+        "city_district": null,
+        "city": "Vigo",
+        "state": "Galicia",
+        "postcode": "36209",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "326, Rúa Covelo, A Arqueta, O Cristo da Vitoria, Vigo, Pontevedra, Galicia, 36209, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:54.536367+00:00",
+  "_kind": "geo_samples"
+}

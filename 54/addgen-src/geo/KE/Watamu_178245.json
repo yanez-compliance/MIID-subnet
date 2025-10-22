@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Watamu",
+  "geonameid": 178245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -3.3682071073279216,
+      "lon": 39.99780850131595,
+      "geoinfo": {
+        "display_name": "Turtle Bay Road, Dabaso ward, Kilifi North, Kilifi County, 80202, Kenya",
+        "road": "Turtle Bay Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dabaso ward",
+        "state": "Kilifi County",
+        "postcode": "80202",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Turtle Bay Road, Watamu, Kilifi County, Kenya"
+    },
+    {
+      "lat": -3.3786452883780878,
+      "lon": 40.00241069205087,
+      "geoinfo": {
+        "display_name": "Dongokundu, Dabaso ward, Kilifi North, Kilifi County, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dabaso ward",
+        "state": "Kilifi County",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "830, Dongokundu, Dabaso ward, Kilifi North, 67203 Kilifi County, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:43.736109+00:00",
+  "_kind": "geo_samples"
+}

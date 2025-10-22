@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Crest Hill",
+  "geonameid": 4889107,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.53083418753471,
+      "lon": -88.09151600612279,
+      "geoinfo": {
+        "display_name": "394, Division Street, Joliet, Will County, Illinois, 60435, United States",
+        "road": "Division Street",
+        "house_number": "394",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joliet",
+        "state": "Illinois",
+        "postcode": "60435",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "394 Division Street, Crest Hill, Illinois, United States"
+    },
+    {
+      "lat": 41.56395199830676,
+      "lon": -88.06782833224518,
+      "geoinfo": {
+        "display_name": "132, North Avenue, Will County, Illinois, 60441, United States",
+        "road": "North Avenue",
+        "house_number": "132",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "132, North Avenue, Will County, Illinois, 60441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:13.334229+00:00",
+  "_kind": "geo_samples"
+}

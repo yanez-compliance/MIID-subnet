@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Qiryat Ata",
+  "geonameid": 293845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.82548308927335,
+      "lon": 35.12896379428561,
+      "geoinfo": {
+        "display_name": "781, Zvulun Regional Council, Haifa Subdistrict, Haifa District, 2820313, Israel",
+        "road": "781",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zvulun Regional Council",
+        "state": "Haifa District",
+        "postcode": "2820313",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "781, Qiryat Ata, Haifa District, Israel"
+    },
+    {
+      "lat": 32.808023655354525,
+      "lon": 35.08128060227734,
+      "geoinfo": {
+        "display_name": "שוק קרית אתא, Keren Kayemet LeIsrael, Naveh Hen, Kiryat Ata, Haifa Subdistrict, Haifa District, 2703124, Israel",
+        "road": "Keren Kayemet LeIsrael",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Naveh Hen",
+        "city_district": null,
+        "city": "Kiryat Ata",
+        "state": "Haifa District",
+        "postcode": "2703124",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "258, Keren Kayemet LeIsrael, Qiryat Ata, 2703124 Haifa District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:53.242803+00:00",
+  "_kind": "geo_samples"
+}

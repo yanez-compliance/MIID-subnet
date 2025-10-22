@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Arcella",
+  "geonameid": 12188755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.46000182652383,
+      "lon": 11.901386494066612,
+      "geoinfo": {
+        "display_name": "Via Pietro Mascagni, Bagnoli, Castagnara, Cadoneghe, Province of Padua, Veneto, 35010, Italy",
+        "road": "Via Pietro Mascagni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castagnara",
+        "state": "Veneto",
+        "postcode": "35010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pietro Mascagni, Arcella, Veneto, Italy"
+    },
+    {
+      "lat": 45.44720487611427,
+      "lon": 11.924662528993217,
+      "geoinfo": {
+        "display_name": "Via Rigotti, Cadoneghe, Province of Padua, Veneto, 35010, Italy",
+        "road": "Via Rigotti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cadoneghe",
+        "state": "Veneto",
+        "postcode": "35010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "346, Via Rigotti, Cadoneghe, Province of Padua, Veneto, 35010, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:16.308847+00:00",
+  "_kind": "geo_samples"
+}

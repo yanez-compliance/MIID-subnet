@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pachino",
+  "geonameid": 2523938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.720012193090305,
+      "lon": 15.110132843634869,
+      "geoinfo": {
+        "display_name": "Contrada Camporeale, Tre Colli, Pachino, Siracusa, Sicily, 96018, Italy",
+        "road": "Contrada Camporeale",
+        "house_number": null,
+        "neighbourhood": "Tre Colli",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pachino",
+        "state": "Sicily",
+        "postcode": "96018",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Contrada Camporeale, Pachino, Sicily, Italy"
+    },
+    {
+      "lat": 36.73311872165812,
+      "lon": 15.140520184982092,
+      "geoinfo": {
+        "display_name": "Marzamemi, Pachino, Siracusa, Sicily, 96018, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pachino",
+        "state": "Sicily",
+        "postcode": "96018",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "015, Marzamemi, Pachino, Siracusa, Sicily, 96018, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:19.486020+00:00",
+  "_kind": "geo_samples"
+}

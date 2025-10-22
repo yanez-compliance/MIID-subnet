@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kevelaer",
+  "geonameid": 2891258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.574281794347804,
+      "lon": 6.29195014027052,
+      "geoinfo": {
+        "display_name": "35, Kasteelenbend, Wetten, Kevelaer, Kreis Kleve, North Rhine-Westphalia, 47625, Germany",
+        "road": "Kasteelenbend",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wetten",
+        "city": "Kevelaer",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47625",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "35 Kasteelenbend, Kevelaer, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.5924864407525,
+      "lon": 6.195226085697376,
+      "geoinfo": {
+        "display_name": "Wemb, Weeze, Kreis Kleve, North Rhine-Westphalia, 47652, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wemb",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47652",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "168, Wemb, Weeze, Kreis Kleve, North Rhine-Westphalia, 47652, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:04.833248+00:00",
+  "_kind": "geo_samples"
+}

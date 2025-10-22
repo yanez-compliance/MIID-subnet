@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Victoria",
+  "geonameid": 4739157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.767461842973834,
+      "lon": -96.98427772166558,
+      "geoinfo": {
+        "display_name": "Dudley Street, Victoria, Victoria County, Texas, 77901, United States",
+        "road": "Dudley Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Victoria",
+        "state": "Texas",
+        "postcode": "77901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dudley Street, Victoria, Texas, United States"
+    },
+    {
+      "lat": 28.812732237526983,
+      "lon": -97.0304937547829,
+      "geoinfo": {
+        "display_name": "Mc Cright Drive, Victoria, Victoria County, Texas, 77901, United States",
+        "road": "Mc Cright Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Victoria",
+        "state": "Texas",
+        "postcode": "77901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "657, Mc Cright Drive, Victoria, Victoria County, Texas, 77901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:38.093756+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Jonquière",
+  "geonameid": 7303786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.38270531355908,
+      "lon": -71.29128599908205,
+      "geoinfo": {
+        "display_name": "Arrondissement de Jonquière, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arrondissement de Jonquière",
+        "city_district": null,
+        "city": "Saguenay",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Arrondissement de Jonquière, Jonquière, Quebec, Canada"
+    },
+    {
+      "lat": 48.453886503301064,
+      "lon": -71.22492830906539,
+      "geoinfo": {
+        "display_name": "Chemin de St Léonard, Arrondissement de Jonquière, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, G7X 4J6, Canada",
+        "road": "Chemin de St Léonard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arrondissement de Jonquière",
+        "city_district": null,
+        "city": "Saguenay",
+        "state": "Quebec",
+        "postcode": "G7X 4J6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Chemin de St Léonard, Arrondissement de Jonquière, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, G7X 4J6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:38.697031+00:00",
+  "_kind": "geo_samples"
+}

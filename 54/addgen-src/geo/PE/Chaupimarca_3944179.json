@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Chaupimarca",
+  "geonameid": 3944179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -10.366916226574254,
+      "lon": -76.44427587889056,
+      "geoinfo": {
+        "display_name": "Paucar, Province of Daniel Carrión, Pasco, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paucar",
+        "state": "Pasco",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Chaupimarca, Pasco, Peru"
+    },
+    {
+      "lat": -10.434436319355319,
+      "lon": -76.43750060279743,
+      "geoinfo": {
+        "display_name": "PA-103, Mito, Chacayán, Province of Daniel Carrión, Pasco, Peru",
+        "road": "PA-103",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chacayán",
+        "state": "Pasco",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "PA-103, Chaupimarca, 64799 Pasco, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:15.861728+00:00",
+  "_kind": "geo_samples"
+}

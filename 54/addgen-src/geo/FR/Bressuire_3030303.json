@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bressuire",
+  "geonameid": 3030303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.808768271180014,
+      "lon": -0.44718138516230727,
+      "geoinfo": {
+        "display_name": "Jeanne d'Arc, Saint-Sauveur, Bressuire, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79300, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Saint-Sauveur",
+        "city": "Bressuire",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "79300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Saint-Sauveur, Bressuire, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 46.850379771228575,
+      "lon": -0.48307495777158055,
+      "geoinfo": {
+        "display_name": "13, Allée du Houx, Saint-Porchaire, Bressuire, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79300, France",
+        "road": "Allée du Houx",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Saint-Porchaire",
+        "city": "Bressuire",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "79300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "13, Allée du Houx, Saint-Porchaire, Bressuire, Deux-Sèvres, Nouvelle-Aquitaine, Metropolitan France, 79300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:05.700784+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Grangemouth",
+  "geonameid": 2648215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.01063063146729,
+      "lon": -3.6552437574390395,
+      "geoinfo": {
+        "display_name": "Grangemouth Road, Kinneil, Bo'ness, Falkirk, Scotland, EH51 0QA, United Kingdom",
+        "road": "Grangemouth Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kinneil",
+        "city_district": null,
+        "city": "Bo'ness",
+        "state": "Scotland",
+        "postcode": "EH51 0QA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Grangemouth Road, Grangemouth, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.03290776161222,
+      "lon": -3.680449770896607,
+      "geoinfo": {
+        "display_name": "Kersiebank, Grangemouth, Falkirk, Scotland, FK3 9ES, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kersiebank",
+        "city_district": null,
+        "city": "Grangemouth",
+        "state": "Scotland",
+        "postcode": "FK3 9ES",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Kersiebank, Grangemouth, Falkirk, Scotland, FK3 9ES, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:07.274530+00:00",
+  "_kind": "geo_samples"
+}

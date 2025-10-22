@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Greenacre",
+  "geonameid": 8348574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.89592019186137,
+      "lon": 151.05386143802127,
+      "geoinfo": {
+        "display_name": "Tennyson Road, Greenacre, Sydney, Canterbury-Bankstown Council, New South Wales, 2190, Australia",
+        "road": "Tennyson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greenacre",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2190",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Tennyson Road, Greenacre, New South Wales, Australia"
+    },
+    {
+      "lat": -33.89707626313446,
+      "lon": 151.0277265369475,
+      "geoinfo": {
+        "display_name": "Rowe Drive, Potts Hill, Sydney, Canterbury-Bankstown Council, New South Wales, 2143, Australia",
+        "road": "Rowe Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Potts Hill",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2143",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "566, Rowe Drive, Potts Hill, Sydney, Canterbury-Bankstown Council, New South Wales, 2143, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:23.457982+00:00",
+  "_kind": "geo_samples"
+}

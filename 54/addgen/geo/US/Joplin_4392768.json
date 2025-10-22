@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Joplin",
+  "geonameid": 4392768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.088139218762535,
+      "lon": -94.46711236542045,
+      "geoinfo": {
+        "display_name": "277, South Woodmont Drive, Rustwood Acres, Joplin, Jasper County, Missouri, 64801, United States",
+        "road": "South Woodmont Drive",
+        "house_number": "277",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joplin",
+        "state": "Missouri",
+        "postcode": "64801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "277 South Woodmont Drive, Joplin, Missouri, United States"
+    },
+    {
+      "lat": 37.04376476053575,
+      "lon": -94.50027147668068,
+      "geoinfo": {
+        "display_name": "East 43rd Street, Leawood, Newton County, Missouri, 64804, United States",
+        "road": "East 43rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leawood",
+        "state": "Missouri",
+        "postcode": "64804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 43rd Street, Leawood, Newton County, Missouri, 64804, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:06.984517+00:00",
+  "_kind": "geo_samples"
+}

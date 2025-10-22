@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Karuri",
+  "geonameid": 193624,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -1.1405155738473336,
+      "lon": 36.740309020293125,
+      "geoinfo": {
+        "display_name": "Cianda ward, Kiambaa, Kiambu, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cianda ward",
+        "state": "Kiambu",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Karuri, Kiambu, Kenya"
+    },
+    {
+      "lat": -1.208718131542758,
+      "lon": 36.77898368199332,
+      "geoinfo": {
+        "display_name": "Ndenderu ward, Kiambaa, Kiambu, 43563, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ndenderu ward",
+        "state": "Kiambu",
+        "postcode": "43563",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "400, Ndenderu ward, Kiambaa, Kiambu, 43563, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:47.099283+00:00",
+  "_kind": "geo_samples"
+}

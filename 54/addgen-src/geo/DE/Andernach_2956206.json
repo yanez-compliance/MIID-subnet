@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Andernach",
+  "geonameid": 2956206,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.455003561937446,
+      "lon": 7.358571911612371,
+      "geoinfo": {
+        "display_name": "49, Schlossstraße, Namedy, Andernach, Landkreis Mayen-Koblenz, Rhineland-Palatinate, 56626, Germany",
+        "road": "Schlossstraße",
+        "house_number": "49",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Andernach",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56626",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "49 Schlossstraße, Andernach, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.471803531570046,
+      "lon": 7.380017187773851,
+      "geoinfo": {
+        "display_name": "Bergenacker Weg, Bachhof, Leutesdorf, Bad Hönningen, Landkreis Neuwied, Rhineland-Palatinate, 56599, Germany",
+        "road": "Bergenacker Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leutesdorf",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56599",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "745, Bergenacker Weg, Bachhof, Leutesdorf, Bad Hönningen, Landkreis Neuwied, Rhineland-Palatinate, 56599, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:23.186928+00:00",
+  "_kind": "geo_samples"
+}

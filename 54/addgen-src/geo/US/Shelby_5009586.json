@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shelby",
+  "geonameid": 5009586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.696986284498664,
+      "lon": -83.03506092633909,
+      "geoinfo": {
+        "display_name": "Van Dyke Avenue, Shelby Charter Township, Macomb County, Michigan, 48317, United States",
+        "road": "Van Dyke Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shelby Charter Township",
+        "state": "Michigan",
+        "postcode": "48317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Van Dyke Avenue, Shelby, Michigan, United States"
+    },
+    {
+      "lat": 42.684610182805685,
+      "lon": -82.9898542916755,
+      "geoinfo": {
+        "display_name": "Royal Park Avenue, Royal Park Estates, Shelby Charter Township, Macomb County, Michigan, 48315, United States",
+        "road": "Royal Park Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shelby Charter Township",
+        "state": "Michigan",
+        "postcode": "48315",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "109, Royal Park Avenue, Royal Park Estates, Shelby Charter Township, Macomb County, Michigan, 48315, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:48.685209+00:00",
+  "_kind": "geo_samples"
+}

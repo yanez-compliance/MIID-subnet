@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garden City",
+  "geonameid": 5445439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.99017424069978,
+      "lon": -100.84352887809594,
+      "geoinfo": {
+        "display_name": "2498, Cherokee Road, Garden City, Finney County, Kansas, 67846, United States",
+        "road": "Cherokee Road",
+        "house_number": "2498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garden City",
+        "state": "Kansas",
+        "postcode": "67846",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2498 Cherokee Road, Garden City, Kansas, United States"
+    },
+    {
+      "lat": 37.97998589160261,
+      "lon": -100.87756509386723,
+      "geoinfo": {
+        "display_name": "1625, North 9th Street, Garden City, Finney County, Kansas, 67846, United States",
+        "road": "North 9th Street",
+        "house_number": "1625",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garden City",
+        "state": "Kansas",
+        "postcode": "67846",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1625, North 9th Street, Garden City, Finney County, Kansas, 67846, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:53.723455+00:00",
+  "_kind": "geo_samples"
+}

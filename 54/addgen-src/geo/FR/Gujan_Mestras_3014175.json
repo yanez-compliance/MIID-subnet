@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gujan-Mestras",
+  "geonameid": 3014175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.67577318214595,
+      "lon": -1.0647772712858938,
+      "geoinfo": {
+        "display_name": "Chenal de Touze, Metropolitan France, 33470, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "33470",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Gujan-Mestras, France"
+    },
+    {
+      "lat": 44.61921491605864,
+      "lon": -1.015111458881389,
+      "geoinfo": {
+        "display_name": "Avenue de Bordeaux, Le Teich, Arcachon, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33470, France",
+        "road": "Avenue de Bordeaux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Teich",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33470",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "614, Avenue de Bordeaux, Le Teich, Arcachon, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33470, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:40.628505+00:00",
+  "_kind": "geo_samples"
+}

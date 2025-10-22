@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rancho Palos Verdes",
+  "geonameid": 5386035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.73413607572191,
+      "lon": -118.34003041746604,
+      "geoinfo": {
+        "display_name": "3432, Seaglen Drive, Rancho Palos Verdes, Los Angeles County, California, 90275, United States",
+        "road": "Seaglen Drive",
+        "house_number": "3432",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Palos Verdes",
+        "state": "California",
+        "postcode": "90275",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3432 Seaglen Drive, Rancho Palos Verdes, California, United States"
+    },
+    {
+      "lat": 33.77025466946667,
+      "lon": -118.35081528390431,
+      "geoinfo": {
+        "display_name": "Lower Blackwater Canyon Road, Rolling Hills, Los Angeles County, California, 90274, United States",
+        "road": "Lower Blackwater Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rolling Hills",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "90274",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "228, Lower Blackwater Canyon Road, Rolling Hills, Los Angeles County, California, 90274, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:46.774162+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Apple Valley",
+  "geonameid": 5324363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.537827420775756,
+      "lon": -117.1900804965024,
+      "geoinfo": {
+        "display_name": "Navajo Road, Apple Valley, San Bernardino County, California, 92307, United States",
+        "road": "Navajo Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apple Valley",
+        "state": "California",
+        "postcode": "92307",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Navajo Road, Apple Valley, California, United States"
+    },
+    {
+      "lat": 34.48415458399518,
+      "lon": -117.15276227999738,
+      "geoinfo": {
+        "display_name": "Chipmunk Road, Lone Wolf Colony, San Bernardino County, California, United States",
+        "road": "Chipmunk Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "216, Chipmunk Road, Lone Wolf Colony, San Bernardino County, 86529 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:57.596808+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Teramo",
+  "geonameid": 3165803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.64867661525344,
+      "lon": 13.676745292061797,
+      "geoinfo": {
+        "display_name": "Strada Statale 80 del Gran Sasso d'Italia, Madonna della Cona, Teramo, Abruzzo, 64100, Italy",
+        "road": "Strada Statale 80 del Gran Sasso d'Italia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Madonna della Cona",
+        "city_district": null,
+        "city": "Teramo",
+        "state": "Abruzzo",
+        "postcode": "64100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale 80 del Gran Sasso d'Italia, Teramo, Abruzzo, Italy"
+    },
+    {
+      "lat": 42.6577307325261,
+      "lon": 13.67255341559551,
+      "geoinfo": {
+        "display_name": "Fornaci, Torricella Sicura, Teramo, Abruzzo, 64100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torricella Sicura",
+        "state": "Abruzzo",
+        "postcode": "64100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "496, Fornaci, Torricella Sicura, Teramo, Abruzzo, 64100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:30.611699+00:00",
+  "_kind": "geo_samples"
+}

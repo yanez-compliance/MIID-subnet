@@ -1,0 +1,65 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Kogon Shahri",
+  "geonameid": 1217180,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 39.70134596015397,
+      "lon": 64.57815724030924,
+      "geoinfo": {
+        "display_name": "Nurabad street, Chapyk, Kogon District, Bukhara Region, 706100, Uzbekistan",
+        "road": "Nurabad street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chapyk",
+        "state": "Bukhara Region",
+        "postcode": "706100",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Nurabad street, Kogon Shahri, Bukhara Region, Uzbekistan"
+    },
+    {
+      "lat": 39.70438201186075,
+      "lon": 64.59916461125144,
+      "geoinfo": {
+        "display_name": "Kurgancha, Kogon District, Bukhara Region, 706100, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kurgancha",
+        "state": "Bukhara Region",
+        "postcode": "706100",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "191, Kurgancha, Kogon District, Bukhara Region, 706100, Uzbekistan"
+    },
+    {
+      "lat": 39.70933749039144,
+      "lon": 64.58434789533482,
+      "geoinfo": {
+        "display_name": "G'uzor-Nukus avtoshossesi, Siyozi-poyon, Kogon City, Kogon District, Bukhara Region, 706100, Uzbekistan",
+        "road": "G'uzor-Nukus avtoshossesi",
+        "house_number": null,
+        "neighbourhood": "Siyozi-poyon",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kogon City",
+        "state": "Bukhara Region",
+        "postcode": "706100",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "485, G'uzor-Nukus avtoshossesi, Siyozi-poyon, Kogon City, Kogon District, Bukhara Region, 706100, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:31:55.646459+00:00",
+  "_kind": "geo_samples"
+}

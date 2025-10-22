@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Nusle",
+  "geonameid": 3069247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.05963261625661,
+      "lon": 14.44003289958933,
+      "geoinfo": {
+        "display_name": "Vazební věznice a ÚPVZD Praha Pankrác, Soudní, Pankrác, Nusle, Prague, obvod Praha 4, Capital City of Prague, Prague, 140 63, Czechia",
+        "road": "Soudní",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nusle",
+        "city_district": "obvod Praha 4",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "140 63",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Soudní, Nusle, Prague, Czechia"
+    },
+    {
+      "lat": 50.04784764935514,
+      "lon": 14.419811507226068,
+      "geoinfo": {
+        "display_name": "Ke Hlásce, Podolí, Prague, obvod Praha 4, Capital City of Prague, Prague, 147 00, Czechia",
+        "road": "Ke Hlásce",
+        "house_number": null,
+        "neighbourhood": "Podolí",
+        "suburb": "Prague",
+        "city_district": "obvod Praha 4",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "147 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Ke Hlásce, Podolí, Prague, obvod Praha 4, Capital City of Prague, Prague, 147 00, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:18.219011+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BW",
+  "country": "Botswana",
+  "city": "Mogoditshane",
+  "geonameid": 933331,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": -24.60676998801892,
+      "lon": 25.85441250978429,
+      "geoinfo": {
+        "display_name": "Mogoditshane, Kweneng District, Botswana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mogoditshane",
+        "state": "Kweneng District",
+        "postcode": null,
+        "country": "Botswana",
+        "country_code": "bw"
+      },
+      "address": "Mogoditshane, Kweneng District, Botswana"
+    },
+    {
+      "lat": -24.641577871681662,
+      "lon": 25.88109196754241,
+      "geoinfo": {
+        "display_name": "Molepolole Road, Gaborone, Kweneng District, Botswana",
+        "road": "Molepolole Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaborone",
+        "state": "Kweneng District",
+        "postcode": null,
+        "country": "Botswana",
+        "country_code": "bw"
+      },
+      "address": "Molepolole Road, Mogoditshane, Kweneng District, Botswana"
+    }
+  ],
+  "updated_at": "2025-10-16T11:29:03.209609+00:00",
+  "_kind": "geo_samples"
+}

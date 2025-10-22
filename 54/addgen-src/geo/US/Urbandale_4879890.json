@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Urbandale",
+  "geonameid": 4879890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.62780880482051,
+      "lon": -93.73618720825188,
+      "geoinfo": {
+        "display_name": "86th Street, Omega Place, Urbandale, Polk County, Iowa, 50322, United States",
+        "road": "86th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbandale",
+        "state": "Iowa",
+        "postcode": "50322",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "86th Street, Urbandale, Iowa, United States"
+    },
+    {
+      "lat": 41.59422548236941,
+      "lon": -93.7047713680172,
+      "geoinfo": {
+        "display_name": "Walnut Creek Community Church, 900, 64th Street, Longley Place, Windsor Heights, Polk County, Iowa, 50324, United States",
+        "road": "64th Street",
+        "house_number": "900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Windsor Heights",
+        "state": "Iowa",
+        "postcode": "50324",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walnut Creek Community Church, 900, 64th Street, Longley Place, Windsor Heights, Polk County, Iowa, 50324, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:59.664439+00:00",
+  "_kind": "geo_samples"
+}

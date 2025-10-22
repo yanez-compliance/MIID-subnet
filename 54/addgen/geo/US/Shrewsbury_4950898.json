@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shrewsbury",
+  "geonameid": 4950898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.2657542643552,
+      "lon": -71.71704467078828,
+      "geoinfo": {
+        "display_name": "53, Hemingway Street, Shrewsbury, Worcester County, Massachusetts, 01545, United States",
+        "road": "Hemingway Street",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shrewsbury",
+        "state": "Massachusetts",
+        "postcode": "01545",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "53 Hemingway Street, Shrewsbury, Massachusetts, United States"
+    },
+    {
+      "lat": 42.31621235555892,
+      "lon": -71.72785668618478,
+      "geoinfo": {
+        "display_name": "I 290, Shrewsbury, Worcester County, Massachusetts, 01545, United States",
+        "road": "I 290",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shrewsbury",
+        "state": "Massachusetts",
+        "postcode": "01545",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 290, Shrewsbury, Worcester County, Massachusetts, 01545, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:23.682380+00:00",
+  "_kind": "geo_samples"
+}

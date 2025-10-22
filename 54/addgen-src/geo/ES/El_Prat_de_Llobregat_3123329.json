@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Prat de Llobregat",
+  "geonameid": 3123329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.287360085987075,
+      "lon": 2.1170149583123825,
+      "geoinfo": {
+        "display_name": "Camí de la Ricarda, el Prat de Llobregat, Baix Llobregat, Barcelona, Catalonia, 08820, Spain",
+        "road": "Camí de la Ricarda",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "el Prat de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08820",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de la Ricarda, El Prat de Llobregat, Catalonia, Spain"
+    },
+    {
+      "lat": 41.31593221948993,
+      "lon": 2.140935762024676,
+      "geoinfo": {
+        "display_name": "SEUR, Carrer de Cal Nyepa, ZAL Port (Prat), el Prat de Llobregat, Baix Llobregat, Barcelona, Catalonia, 08820, Spain",
+        "road": "Carrer de Cal Nyepa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "ZAL Port (Prat)",
+        "city": "el Prat de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08820",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "989, Carrer de Cal Nyepa, El Prat de Llobregat, 08820 Catalonia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:59.902171+00:00",
+  "_kind": "geo_samples"
+}

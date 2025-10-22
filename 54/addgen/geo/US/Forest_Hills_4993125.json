@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Forest Hills",
+  "geonameid": 4993125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.94805226606492,
+      "lon": -85.5375933345033,
+      "geoinfo": {
+        "display_name": "5372, Ada Drive Southeast, Ada, Ada Township, Kent County, Michigan, 49301, United States",
+        "road": "Ada Drive Southeast",
+        "house_number": "5372",
+        "neighbourhood": null,
+        "suburb": "Ada Township",
+        "city_district": null,
+        "city": null,
+        "state": "Michigan",
+        "postcode": "49301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5372 Ada Drive Southeast, Forest Hills, Michigan, United States"
+    },
+    {
+      "lat": 42.93318322658344,
+      "lon": -85.49463888539552,
+      "geoinfo": {
+        "display_name": "Laraway Woods Southeast, Cascade Charter Township, Kent County, Michigan, 49355, United States",
+        "road": "Laraway Woods Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cascade Charter Township",
+        "city_district": null,
+        "city": null,
+        "state": "Michigan",
+        "postcode": "49355",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "371, Laraway Woods Southeast, Cascade Charter Township, Kent County, Michigan, 49355, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:50.284856+00:00",
+  "_kind": "geo_samples"
+}

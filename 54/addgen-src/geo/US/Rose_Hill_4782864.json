@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rose Hill",
+  "geonameid": 4782864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.79647430119655,
+      "lon": -77.1235679987381,
+      "geoinfo": {
+        "display_name": "5584, La Vista Drive, Winslow Hills, Rose Hill, Fairfax County, Virginia, 22310, United States",
+        "road": "La Vista Drive",
+        "house_number": "5584",
+        "neighbourhood": "Winslow Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rose Hill",
+        "state": "Virginia",
+        "postcode": "22310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5584 La Vista Drive, Rose Hill, Virginia, United States"
+    },
+    {
+      "lat": 38.820779037572855,
+      "lon": -77.08980369231504,
+      "geoinfo": {
+        "display_name": "3508, Aspinwall Lane, Chapel Hill, Douglas MacArthur, Alexandria, Virginia, 22304, United States",
+        "road": "Aspinwall Lane",
+        "house_number": "3508",
+        "neighbourhood": "Chapel Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alexandria",
+        "state": "Virginia",
+        "postcode": "22304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3508, Aspinwall Lane, Chapel Hill, Douglas MacArthur, Alexandria, Virginia, 22304, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:57.975658+00:00",
+  "_kind": "geo_samples"
+}

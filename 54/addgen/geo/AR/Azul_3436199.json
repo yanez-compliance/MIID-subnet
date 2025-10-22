@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Azul",
+  "geonameid": 3436199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -36.75686609683666,
+      "lon": -59.861636472153776,
+      "geoinfo": {
+        "display_name": "Chile, S.O.E.M.P.A., Socoa, Azul, Partido de Azul, Buenos Aires, 7300, Argentina",
+        "road": "Chile",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "S.O.E.M.P.A.",
+        "city_district": null,
+        "city": "Azul",
+        "state": "Buenos Aires",
+        "postcode": "7300",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Chile, Azul, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -36.78326337888087,
+      "lon": -59.81777924969077,
+      "geoinfo": {
+        "display_name": "Partido de Azul, Buenos Aires, 7300, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "7300",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "777, Azul, 7300 Buenos Aires, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:45:14.787604+00:00",
+  "_kind": "geo_samples"
+}

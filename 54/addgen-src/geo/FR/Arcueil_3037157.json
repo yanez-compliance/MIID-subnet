@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Arcueil",
+  "geonameid": 3037157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.806773132323954,
+      "lon": 2.3920984145014277,
+      "geoinfo": {
+        "display_name": "4B, Avenue de la République, Marat - Parmentier, Ivry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94200, France",
+        "road": "Avenue de la République",
+        "house_number": "4B",
+        "neighbourhood": null,
+        "suburb": "Marat - Parmentier",
+        "city_district": null,
+        "city": "Ivry-sur-Seine",
+        "state": "Ile-de-France",
+        "postcode": "94200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "4B Avenue de la République, Arcueil, Ile-de-France, France"
+    },
+    {
+      "lat": 48.7974554331898,
+      "lon": 2.321707235361553,
+      "geoinfo": {
+        "display_name": "2, Rue Charles Michels, Bagneux, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92220, France",
+        "road": "Rue Charles Michels",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagneux",
+        "state": "Ile-de-France",
+        "postcode": "92220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "2, Rue Charles Michels, Bagneux, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:20.805050+00:00",
+  "_kind": "geo_samples"
+}

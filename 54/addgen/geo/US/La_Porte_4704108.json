@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Porte",
+  "geonameid": 4704108,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.688885015845973,
+      "lon": -95.0120255700962,
+      "geoinfo": {
+        "display_name": "La Porte, Harris County, Texas, 77571, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Porte",
+        "state": "Texas",
+        "postcode": "77571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "La Porte, Texas, United States"
+    },
+    {
+      "lat": 29.63261392523436,
+      "lon": -95.02459813977997,
+      "geoinfo": {
+        "display_name": "698, Primrose, La Porte, Harris County, Texas, 77571, United States",
+        "road": "Primrose",
+        "house_number": "698",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Porte",
+        "state": "Texas",
+        "postcode": "77571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "698, Primrose, La Porte, Harris County, Texas, 77571, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:14.234591+00:00",
+  "_kind": "geo_samples"
+}

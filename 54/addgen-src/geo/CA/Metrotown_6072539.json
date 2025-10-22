@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Metrotown",
+  "geonameid": 6072539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.214989774335116,
+      "lon": -123.0135939062431,
+      "geoinfo": {
+        "display_name": "4065, Rumble Street, Suncrest, Metrotown, Burnaby, Metro Vancouver Regional District, British Columbia, V5J 1Z3, Canada",
+        "road": "Rumble Street",
+        "house_number": "4065",
+        "neighbourhood": "Suncrest",
+        "suburb": "Metrotown",
+        "city_district": null,
+        "city": "Burnaby",
+        "state": "British Columbia",
+        "postcode": "V5J 1Z3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "4065 Rumble Street, Metrotown, British Columbia, Canada"
+    },
+    {
+      "lat": 49.22988660028241,
+      "lon": -123.03612471841643,
+      "geoinfo": {
+        "display_name": "3238, East 44th Avenue, Killarney, Vancouver, Metro Vancouver Regional District, British Columbia, V5R, Canada",
+        "road": "East 44th Avenue",
+        "house_number": "3238",
+        "neighbourhood": null,
+        "suburb": "Killarney",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5R",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3238, East 44th Avenue, Killarney, Vancouver, Metro Vancouver Regional District, British Columbia, V5R, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:28.186571+00:00",
+  "_kind": "geo_samples"
+}

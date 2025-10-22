@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Robina",
+  "geonameid": 8348930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.060817624632858,
+      "lon": 153.37736735378476,
+      "geoinfo": {
+        "display_name": "Robina, Gold Coast City, Queensland, 4226, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Robina",
+        "city_district": "Robina",
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4226",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Robina, Robina, Queensland, Australia"
+    },
+    {
+      "lat": -28.08239970007442,
+      "lon": 153.3993420112274,
+      "geoinfo": {
+        "display_name": "Olympus Drive, Robina Dales, Robina, Gold Coast City, Queensland, 4230, Australia",
+        "road": "Olympus Drive",
+        "house_number": null,
+        "neighbourhood": "Robina Dales",
+        "suburb": "Robina",
+        "city_district": "Robina",
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4230",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "653, Olympus Drive, Robina Dales, Robina, Gold Coast City, Queensland, 4230, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:48.085782+00:00",
+  "_kind": "geo_samples"
+}

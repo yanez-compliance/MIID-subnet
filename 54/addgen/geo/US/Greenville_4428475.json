@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenville",
+  "geonameid": 4428475,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.425941804378525,
+      "lon": -91.06202420092856,
+      "geoinfo": {
+        "display_name": "Belle Aire Street, Greenville Gravel, Greenville, Washington County, Mississippi, 38701, United States",
+        "road": "Belle Aire Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenville",
+        "state": "Mississippi",
+        "postcode": "38701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Belle Aire Street, Greenville, Mississippi, United States"
+    },
+    {
+      "lat": 33.43645670690427,
+      "lon": -91.04979966657444,
+      "geoinfo": {
+        "display_name": "Washington County, Mississippi, 38703, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mississippi",
+        "postcode": "38703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "408, Washington County, Mississippi, 38703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:53.914972+00:00",
+  "_kind": "geo_samples"
+}

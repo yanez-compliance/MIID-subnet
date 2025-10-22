@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Germain-en-Laye",
+  "geonameid": 2979783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.876148579846905,
+      "lon": 2.109884337993203,
+      "geoinfo": {
+        "display_name": "Allée Van Gogh, Les Plains Champs, Le Port-Marly, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78560, France",
+        "road": "Allée Van Gogh",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Port-Marly",
+        "state": "Ile-de-France",
+        "postcode": "78560",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée Van Gogh, Saint-Germain-en-Laye, Ile-de-France, France"
+    },
+    {
+      "lat": 48.864278139765574,
+      "lon": 2.1008586048585527,
+      "geoinfo": {
+        "display_name": "Terrasse, Marly-le-Roi, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78160, France",
+        "road": "Terrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marly-le-Roi",
+        "state": "Ile-de-France",
+        "postcode": "78160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "013, Terrasse, Marly-le-Roi, Saint-Germain-en-Laye, Yvelines, Ile-de-France, Metropolitan France, 78160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:32.297389+00:00",
+  "_kind": "geo_samples"
+}

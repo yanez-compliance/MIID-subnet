@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Huddinge",
+  "geonameid": 2704620,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 59.256582090180146,
+      "lon": 17.979318201955248,
+      "geoinfo": {
+        "display_name": "Milstensvägen, Milsten, Snättringe, Huddinge kommun, Stockholm County, 141 39, Sweden",
+        "road": "Milstensvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Snättringe",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "141 39",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Milstensvägen, Huddinge, Sweden"
+    },
+    {
+      "lat": 59.272656866080695,
+      "lon": 18.01163086959878,
+      "geoinfo": {
+        "display_name": "Huddingevägen, Älvsjö, Enskede-Årsta-Vantörs stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 125 81, Sweden",
+        "road": "Huddingevägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Älvsjö",
+        "city_district": "Enskede-Årsta-Vantörs stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "125 81",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Huddingevägen, Älvsjö, Enskede-Årsta-Vantörs stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 125 81, Sweden"
+    },
+    {
+      "lat": 59.25701431534379,
+      "lon": 17.991589741133588,
+      "geoinfo": {
+        "display_name": "2, Mantalsvägen, Skogsäng, Snättringe, Huddinge kommun, Stockholm County, 141 39, Sweden",
+        "road": "Mantalsvägen",
+        "house_number": "2",
+        "neighbourhood": "Skogsäng",
+        "suburb": "Snättringe",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "141 39",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "2, Mantalsvägen, Skogsäng, Snättringe, Huddinge kommun, Stockholm County, 141 39, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:20.718859+00:00",
+  "_kind": "geo_samples"
+}

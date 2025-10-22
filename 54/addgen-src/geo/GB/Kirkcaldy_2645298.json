@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Kirkcaldy",
+  "geonameid": 2645298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.110859475361416,
+      "lon": -3.176233954447936,
+      "geoinfo": {
+        "display_name": "45, Raith Drive, Linktown, Kirkcaldy West, Kirkcaldy, Fife, Scotland, KY2 5NS, United Kingdom",
+        "road": "Raith Drive",
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": "Linktown",
+        "city_district": null,
+        "city": "Kirkcaldy",
+        "state": "Scotland",
+        "postcode": "KY2 5NS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "45 Raith Drive, Kirkcaldy, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.0912861300443,
+      "lon": -3.1306246093794106,
+      "geoinfo": {
+        "display_name": "Seafield, Kirkcaldy West, Kirkcaldy, Fife, Scotland, KY1 1SB, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seafield",
+        "city_district": null,
+        "city": "Kirkcaldy",
+        "state": "Scotland",
+        "postcode": "KY1 1SB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Seafield, Kirkcaldy West, Kirkcaldy, Fife, Scotland, KY1 1SB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:51.641563+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yuci",
+  "geonameid": 1785974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.70666082050149,
+      "lon": 112.69158746649653,
+      "geoinfo": {
+        "display_name": "榆东线, 晋中经济开发区, Yuci District, Jinzhong, Shanxi, 030031, China",
+        "road": "榆东线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "晋中经济开发区",
+        "city_district": null,
+        "city": "Jinzhong",
+        "state": "Shanxi",
+        "postcode": "030031",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "榆东线, Yuci, Shanxi, China"
+    },
+    {
+      "lat": 37.65688662276143,
+      "lon": 112.77855681411081,
+      "geoinfo": {
+        "display_name": "Yuci District, Jinzhong, Shanxi, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinzhong",
+        "state": "Shanxi",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "801, Yuci District, Jinzhong, 74503 Shanxi, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:16.828088+00:00",
+  "_kind": "geo_samples"
+}

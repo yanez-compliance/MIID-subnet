@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Parella",
+  "geonameid": 11288649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.081975361701396,
+      "lon": 7.6302443581314074,
+      "geoinfo": {
+        "display_name": "Via Gianfrancesco Re, Parella, Circoscrizione 4, Turin, Piedmont, 10146, Italy",
+        "road": "Via Gianfrancesco Re",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parella",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10146",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Gianfrancesco Re, Parella, Piedmont, Italy"
+    },
+    {
+      "lat": 45.07746670789366,
+      "lon": 7.620068684759447,
+      "geoinfo": {
+        "display_name": "Via Angelo Mosso, Alta Parella, Circoscrizione 4, Turin, Piedmont, 10146, Italy",
+        "road": "Via Angelo Mosso",
+        "house_number": null,
+        "neighbourhood": "Alta Parella",
+        "suburb": "Circoscrizione 4",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10146",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Angelo Mosso, Alta Parella, Circoscrizione 4, Turin, Piedmont, 10146, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:28.559463+00:00",
+  "_kind": "geo_samples"
+}

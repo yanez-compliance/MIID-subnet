@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gresham",
+  "geonameid": 5729485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.535830308803895,
+      "lon": -122.39796388356886,
+      "geoinfo": {
+        "display_name": "835, 257th Drive, Town Center, Troutdale, Multnomah County, Oregon, 97060, United States",
+        "road": "257th Drive",
+        "house_number": "835",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troutdale",
+        "state": "Oregon",
+        "postcode": "97060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "835 257th Drive, Gresham, Oregon, United States"
+    },
+    {
+      "lat": 45.468680649074734,
+      "lon": -122.46697253456595,
+      "geoinfo": {
+        "display_name": "Southeast 190th Drive, Gresham Pleasant Valley, Pleasant Valley, Gresham, Multnomah County, Oregon, 97089, United States",
+        "road": "Southeast 190th Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pleasant Valley",
+        "city_district": null,
+        "city": "Gresham",
+        "state": "Oregon",
+        "postcode": "97089",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southeast 190th Drive, Gresham Pleasant Valley, Pleasant Valley, Gresham, Multnomah County, Oregon, 97089, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:27.560920+00:00",
+  "_kind": "geo_samples"
+}

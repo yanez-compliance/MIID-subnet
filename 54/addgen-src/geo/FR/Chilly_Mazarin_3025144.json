@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Chilly-Mazarin",
+  "geonameid": 3025144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.71780666693204,
+      "lon": 2.2744396976314123,
+      "geoinfo": {
+        "display_name": "Route de Massy, Massy, Palaiseau, Essonne, Metropolitan France, 91300, France",
+        "road": "Route de Massy",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massy",
+        "state": null,
+        "postcode": "91300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Massy, Chilly-Mazarin, France"
+    },
+    {
+      "lat": 48.694211517303295,
+      "lon": 2.331894892605448,
+      "geoinfo": {
+        "display_name": "Rue des Pinsons, Z. I. Les Sables, Morangis, Palaiseau, Essonne, Metropolitan France, 91420, France",
+        "road": "Rue des Pinsons",
+        "house_number": null,
+        "neighbourhood": "Z. I. Les Sables",
+        "suburb": null,
+        "city_district": null,
+        "city": "Morangis",
+        "state": null,
+        "postcode": "91420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "577, Rue des Pinsons, Z. I. Les Sables, Morangis, Palaiseau, Essonne, Metropolitan France, 91420, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:06.647858+00:00",
+  "_kind": "geo_samples"
+}

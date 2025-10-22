@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Uruma",
+  "geonameid": 6822153,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.370751604357697,
+      "lon": 127.84472677308821,
+      "geoinfo": {
+        "display_name": "Agena, Uruma, Okinawa Prefecture, 904-2292, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uruma",
+        "state": null,
+        "postcode": "904-2292",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Uruma, Japan"
+    },
+    {
+      "lat": 26.37005181939304,
+      "lon": 127.81920442759129,
+      "geoinfo": {
+        "display_name": "McDonald's, 沖縄県沖縄市登川1-9-15, National Highway Route 329, Noborikawa 1-chome, Okinawa, Okinawa Prefecture, 904-2142, Japan",
+        "road": "National Highway Route 329",
+        "house_number": "沖縄県沖縄市登川1-9-15",
+        "neighbourhood": "Noborikawa 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Okinawa",
+        "state": null,
+        "postcode": "904-2142",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 329, 904-2142 Uruma, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:39.732045+00:00",
+  "_kind": "geo_samples"
+}

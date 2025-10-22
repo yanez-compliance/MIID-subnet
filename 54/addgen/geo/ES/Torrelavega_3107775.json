@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Torrelavega",
+  "geonameid": 3107775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.338773330592446,
+      "lon": -4.078143955154559,
+      "geoinfo": {
+        "display_name": "Carretera de Puente San Miguel a Torres, Mijarojos, Santiago de Cartes, Cartes, Cantabria, 39311, Spain",
+        "road": "Carretera de Puente San Miguel a Torres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santiago de Cartes",
+        "state": "Cantabria",
+        "postcode": "39311",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Puente San Miguel a Torres, Torrelavega, Cantabria, Spain"
+    },
+    {
+      "lat": 43.32886836599867,
+      "lon": -4.082705884616061,
+      "geoinfo": {
+        "display_name": "Sierra Elsa, Cartes, Cantabria, 39311, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cartes",
+        "state": "Cantabria",
+        "postcode": "39311",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "306, Torrelavega, 39311 Cantabria, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:41.130355+00:00",
+  "_kind": "geo_samples"
+}

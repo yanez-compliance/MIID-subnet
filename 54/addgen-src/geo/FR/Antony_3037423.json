@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Antony",
+  "geonameid": 3037423,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.78711415716922,
+      "lon": 2.284925466284823,
+      "geoinfo": {
+        "display_name": "Rue de l'Abbé Grandjean, Fontenay-aux-Roses, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92260, France",
+        "road": "Rue de l'Abbé Grandjean",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fontenay-aux-Roses",
+        "state": "Ile-de-France",
+        "postcode": "92260",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de l'Abbé Grandjean, Antony, Ile-de-France, France"
+    },
+    {
+      "lat": 48.77652326267974,
+      "lon": 2.2847934366294678,
+      "geoinfo": {
+        "display_name": "20, Rue Pierre Curie, Sceaux, Antony, Hauts-de-Seine, Metropolitan France, 92330, France",
+        "road": "Rue Pierre Curie",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sceaux",
+        "state": null,
+        "postcode": "92330",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "20, Rue Pierre Curie, Sceaux, Antony, Hauts-de-Seine, Metropolitan France, 92330, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:52.209269+00:00",
+  "_kind": "geo_samples"
+}

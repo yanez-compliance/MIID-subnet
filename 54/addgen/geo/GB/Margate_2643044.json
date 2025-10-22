@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Margate",
+  "geonameid": 2643044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.414839146033415,
+      "lon": 1.3461334535819314,
+      "geoinfo": {
+        "display_name": "Westbrook, Margate, Thanet, Kent, England, CT9 5DG, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westbrook",
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT9 5DG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Westbrook, Margate, England, United Kingdom"
+    },
+    {
+      "lat": 51.37108330400121,
+      "lon": 1.358541139792739,
+      "geoinfo": {
+        "display_name": "Shottendane Road, Garlinge, Margate, Thanet, Kent, England, CT9 4NH, United Kingdom",
+        "road": "Shottendane Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Garlinge",
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT9 4NH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Shottendane Road, Garlinge, Margate, Thanet, Kent, England, CT9 4NH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:31.819621+00:00",
+  "_kind": "geo_samples"
+}

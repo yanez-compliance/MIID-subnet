@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Daule",
+  "geonameid": 3658501,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -1.8199955324953487,
+      "lon": -79.99585043138417,
+      "geoinfo": {
+        "display_name": "Valdivia, Daule, Guayas, 091902, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daule",
+        "state": "Guayas",
+        "postcode": "091902",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Daule, Guayas, Ecuador"
+    },
+    {
+      "lat": -1.889012536028486,
+      "lon": -80.00280695776627,
+      "geoinfo": {
+        "display_name": "Magro, Daule, Guayas, 090608, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Magro",
+        "city_district": null,
+        "city": "Daule",
+        "state": "Guayas",
+        "postcode": "090608",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Magro, Daule, Guayas, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:08:03.185632+00:00",
+  "_kind": "geo_samples"
+}

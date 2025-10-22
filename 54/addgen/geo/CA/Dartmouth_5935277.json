@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Dartmouth",
+  "geonameid": 5935277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.66960745348505,
+      "lon": -63.53134515225625,
+      "geoinfo": {
+        "display_name": "166, Norm Newman Drive, Green Village, Portland Estates, Dartmouth, Halifax Regional Municipality, Halifax County, Nova Scotia, B2W 6M3, Canada",
+        "road": "Norm Newman Drive",
+        "house_number": "166",
+        "neighbourhood": "Green Village",
+        "suburb": "Portland Estates",
+        "city_district": null,
+        "city": "Dartmouth",
+        "state": "Nova Scotia",
+        "postcode": "B2W 6M3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "166 Norm Newman Drive, Dartmouth, Nova Scotia, Canada"
+    },
+    {
+      "lat": 44.65556741988486,
+      "lon": -63.63601741176342,
+      "geoinfo": {
+        "display_name": "42, Rufus Avenue, Fairview Estates, Halifax, Halifax Regional Municipality, Halifax County, Nova Scotia, B3N 2L7, Canada",
+        "road": "Rufus Avenue",
+        "house_number": "42",
+        "neighbourhood": "Fairview Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Halifax",
+        "state": "Nova Scotia",
+        "postcode": "B3N 2L7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "42, Rufus Avenue, Fairview Estates, Halifax, Halifax Regional Municipality, Halifax County, Nova Scotia, B3N 2L7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:24.711345+00:00",
+  "_kind": "geo_samples"
+}

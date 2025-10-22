@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Petrogradka",
+  "geonameid": 8504948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.965387004985985,
+      "lon": 30.300694039785647,
+      "geoinfo": {
+        "display_name": "37, улица Подковырова, Petrograd Side, округ Аптекарский остров, Saint Petersburg, Northwestern Federal District, 197022, Russia",
+        "road": "улица Подковырова",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": "Petrograd Side",
+        "city_district": "округ Аптекарский остров",
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "197022",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "37 улица Подковырова, Petrogradka, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.94185946056604,
+      "lon": 30.345679770183143,
+      "geoinfo": {
+        "display_name": "26, Моховая улица, Saint Petersburg, Литейный округ, Saint Petersburg, Northwestern Federal District, 191028, Russia",
+        "road": "Моховая улица",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "191028",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "26, Моховая улица, Saint Petersburg, Литейный округ, Saint Petersburg, Northwestern Federal District, 191028, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:07.919219+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manchester",
+  "geonameid": 4838174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.739304365601186,
+      "lon": -72.55156358389213,
+      "geoinfo": {
+        "display_name": "Alba Pavan Preserve, 421, Bush Hill Road, Manchester, Capitol Planning Region, Connecticut, 06040, United States",
+        "road": "Bush Hill Road",
+        "house_number": "421",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manchester",
+        "state": "Connecticut",
+        "postcode": "06040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "421 Bush Hill Road, Manchester, Connecticut, United States"
+    },
+    {
+      "lat": 41.79048879173925,
+      "lon": -72.53907349597753,
+      "geoinfo": {
+        "display_name": "325, Hilliard Street, Hilliardville, Manchester, Capitol Planning Region, Connecticut, 06042, United States",
+        "road": "Hilliard Street",
+        "house_number": "325",
+        "neighbourhood": "Hilliardville",
+        "suburb": null,
+        "city_district": null,
+        "city": "Manchester",
+        "state": "Connecticut",
+        "postcode": "06042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "325, Hilliard Street, Hilliardville, Manchester, Capitol Planning Region, Connecticut, 06042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:30.111914+00:00",
+  "_kind": "geo_samples"
+}

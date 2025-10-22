@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Zweibrücken",
+  "geonameid": 2803620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.26212885670221,
+      "lon": 7.3660103111564785,
+      "geoinfo": {
+        "display_name": "25, Nordpfad, Kreuzberg, Stadtmitte, Zweibrücken, Rhineland-Palatinate, 66482, Germany",
+        "road": "Nordpfad",
+        "house_number": "25",
+        "neighbourhood": "Kreuzberg",
+        "suburb": null,
+        "city_district": "Stadtmitte",
+        "city": "Zweibrücken",
+        "state": "Rhineland-Palatinate",
+        "postcode": "66482",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25 Nordpfad, Zweibrücken, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.2066599547354,
+      "lon": 7.39882573776098,
+      "geoinfo": {
+        "display_name": "Zweibruecken Airport, Monbijou, Dietrichingen, Zweibrücken-Land, Südwestpfalz, Rhineland-Palatinate, 66484, Germany",
+        "road": "Monbijou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dietrichingen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "66484",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "738, Monbijou, Zweibrücken, 66484 Rhineland-Palatinate, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:13:51.218511+00:00",
+  "_kind": "geo_samples"
+}

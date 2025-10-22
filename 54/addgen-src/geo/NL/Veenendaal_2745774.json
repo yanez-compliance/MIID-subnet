@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Veenendaal",
+  "geonameid": 2745774,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.9990089819641,
+      "lon": 5.565019954275245,
+      "geoinfo": {
+        "display_name": "Kampjesweg, Rhenen, Utrecht, Netherlands, 3911 ST, Netherlands",
+        "road": "Kampjesweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rhenen",
+        "city": "Rhenen",
+        "state": "Utrecht",
+        "postcode": "3911 ST",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Kampjesweg, Veenendaal, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.04173757911682,
+      "lon": 5.494359319760807,
+      "geoinfo": {
+        "display_name": "4, Schoolweg, Overberg, Utrechtse Heuvelrug, Utrecht, Netherlands, 3959 AW, Netherlands",
+        "road": "Schoolweg",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Overberg",
+        "state": "Utrecht",
+        "postcode": "3959 AW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "4, Schoolweg, Overberg, Utrechtse Heuvelrug, Utrecht, Netherlands, 3959 AW, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:53.672881+00:00",
+  "_kind": "geo_samples"
+}

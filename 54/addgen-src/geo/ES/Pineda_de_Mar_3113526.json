@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pineda de Mar",
+  "geonameid": 3113526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.63859550024131,
+      "lon": 2.675291758323203,
+      "geoinfo": {
+        "display_name": "Autopista del Maresme, Montessol, les Creus, Pineda de Mar, Maresme, Barcelona, Catalonia, 08397, Spain",
+        "road": "Autopista del Maresme",
+        "house_number": null,
+        "neighbourhood": "Montessol",
+        "suburb": "les Creus",
+        "city_district": null,
+        "city": "Pineda de Mar",
+        "state": "Catalonia",
+        "postcode": "08397",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista del Maresme, Pineda de Mar, Catalonia, Spain"
+    },
+    {
+      "lat": 41.60725861726058,
+      "lon": 2.676190944624552,
+      "geoinfo": {
+        "display_name": "el Sot de la Torre, Can Feliu de Merola, les Creus, Pineda de Mar, Maresme, Barcelona, Catalonia, 08397, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Can Feliu de Merola",
+        "suburb": "les Creus",
+        "city_district": null,
+        "city": "Pineda de Mar",
+        "state": "Catalonia",
+        "postcode": "08397",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "720, el Sot de la Torre, Can Feliu de Merola, les Creus, Pineda de Mar, Maresme, Barcelona, Catalonia, 08397, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:42.159264+00:00",
+  "_kind": "geo_samples"
+}

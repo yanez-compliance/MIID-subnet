@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Werl",
+  "geonameid": 2810878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.58087725706575,
+      "lon": 7.875781034402728,
+      "geoinfo": {
+        "display_name": "Lindfeldweg, Pröbsting, Hilbeck, Werl, Kreis Soest, North Rhine-Westphalia, 59457, Germany",
+        "road": "Lindfeldweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hilbeck",
+        "city": "Werl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59457",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lindfeldweg, Werl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.532301278550996,
+      "lon": 7.905147924188571,
+      "geoinfo": {
+        "display_name": "Wickeder Straße, Werl, Kreis Soest, North Rhine-Westphalia, 59457, Germany",
+        "road": "Wickeder Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Werl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59457",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "898, Wickeder Straße, Werl, Kreis Soest, North Rhine-Westphalia, 59457, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:50.556437+00:00",
+  "_kind": "geo_samples"
+}

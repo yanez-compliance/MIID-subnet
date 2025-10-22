@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Arar",
+  "geonameid": 108512,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 30.998244634122596,
+      "lon": 41.01369314530145,
+      "geoinfo": {
+        "display_name": "شارع الملك عبدالله بن عبدالعزيز, `Ar`ar, Arar, Northern Borders Province, 73241, Saudi Arabia",
+        "road": "شارع الملك عبدالله بن عبدالعزيز",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "`Ar`ar",
+        "state": "Northern Borders Province",
+        "postcode": "73241",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "369, شارع الملك عبدالله بن عبدالعزيز, Arar, 73241 Northern Borders Province, Saudi Arabia"
+    },
+    {
+      "lat": 30.96716398605499,
+      "lon": 41.01358520526028,
+      "geoinfo": {
+        "display_name": "Al Musa'idiyah, `Ar`ar, Arar, Northern Borders Province, 73241, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Al Musa'idiyah",
+        "city_district": null,
+        "city": "`Ar`ar",
+        "state": "Northern Borders Province",
+        "postcode": "73241",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "594, Al Musa'idiyah, Arar, 73241 Northern Borders Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:13.942328+00:00",
+  "_kind": "geo_samples"
+}

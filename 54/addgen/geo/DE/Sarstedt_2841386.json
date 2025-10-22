@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sarstedt",
+  "geonameid": 2841386,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.27946817833131,
+      "lon": 9.844526620669926,
+      "geoinfo": {
+        "display_name": "B 6, Gleidingen, Laatzen, Region Hannover, Lower Saxony, 30880, Germany",
+        "road": "B 6",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gleidingen",
+        "city_district": null,
+        "city": "Laatzen",
+        "state": "Lower Saxony",
+        "postcode": "30880",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 6, Sarstedt, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.24768068919264,
+      "lon": 9.819328632302364,
+      "geoinfo": {
+        "display_name": "Lehr- und Forschungsgut der Stiftung Tierärztliche Hochschule, Hopfenberg, Ruthe, Sarstedt, Landkreis Hildesheim, Lower Saxony, 31157, Germany",
+        "road": "Hopfenberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ruthe",
+        "city": "Sarstedt",
+        "state": "Lower Saxony",
+        "postcode": "31157",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "822, Hopfenberg, Sarstedt, 31157 Lower Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:11.670441+00:00",
+  "_kind": "geo_samples"
+}

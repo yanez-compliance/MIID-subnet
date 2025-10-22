@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Ville-Émard",
+  "geonameid": 12626134,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.46103777431138,
+      "lon": -73.59322364732597,
+      "geoinfo": {
+        "display_name": "2127, Rue Denonville, Côte-St-Paul, Le Sud-Ouest, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4E 3P2, Canada",
+        "road": "Rue Denonville",
+        "house_number": "2127",
+        "neighbourhood": "Côte-St-Paul",
+        "suburb": "Le Sud-Ouest",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H4E 3P2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2127 Rue Denonville, Ville-Émard, Quebec, Canada"
+    },
+    {
+      "lat": 45.4238898418486,
+      "lon": -73.60948175487603,
+      "geoinfo": {
+        "display_name": "760, Rue Gamelin, LaSalle, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H8P 1E5, Canada",
+        "road": "Rue Gamelin",
+        "house_number": "760",
+        "neighbourhood": null,
+        "suburb": "LaSalle",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H8P 1E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "760, Rue Gamelin, LaSalle, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H8P 1E5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:39:14.183986+00:00",
+  "_kind": "geo_samples"
+}

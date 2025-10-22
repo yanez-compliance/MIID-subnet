@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Khagaria",
+  "geonameid": 1267189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.476787778463247,
+      "lon": 86.48594606791788,
+      "geoinfo": {
+        "display_name": "Khagaria, Bihar, 851204, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khagaria",
+        "state": "Bihar",
+        "postcode": "851204",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Khagaria, Bihar, India"
+    },
+    {
+      "lat": 25.5036596760032,
+      "lon": 86.45143056538805,
+      "geoinfo": {
+        "display_name": "SubCentre, Kutubpur, MDR, Khagaria, Bihar, 851204, India",
+        "road": "MDR",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khagaria",
+        "state": "Bihar",
+        "postcode": "851204",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "166, MDR, Khagaria, 851204 Bihar, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:33.969747+00:00",
+  "_kind": "geo_samples"
+}

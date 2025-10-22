@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuling",
+  "geonameid": 1791119,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.484423699839184,
+      "lon": 108.26139852802429,
+      "geoinfo": {
+        "display_name": "Xinxiang, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinxiang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wuling, Chongqing, China"
+    },
+    {
+      "lat": 30.52748901850711,
+      "lon": 108.26320020785218,
+      "geoinfo": {
+        "display_name": "Wuling, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wuling",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "845, Wuling, Wanzhou, 82171 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:19.825995+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Severna Park",
+  "geonameid": 4369224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.043576000345226,
+      "lon": -76.53034703136437,
+      "geoinfo": {
+        "display_name": "1275, Buckingham Road, Rugby Hall Estates, Severn Heights, Severna Park, Anne Arundel County, Maryland, 21012, United States",
+        "road": "Buckingham Road",
+        "house_number": "1275",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Severna Park",
+        "state": "Maryland",
+        "postcode": "21012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1275 Buckingham Road, Severna Park, Maryland, United States"
+    },
+    {
+      "lat": 39.059043963758604,
+      "lon": -76.53458898518849,
+      "geoinfo": {
+        "display_name": "Jones Elementary School, Old County Road, Severn Heights, Severna Park, Anne Arundel County, Maryland, 21012, United States",
+        "road": "Old County Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Severna Park",
+        "state": "Maryland",
+        "postcode": "21012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "609, Old County Road, Severna Park, 21012 Maryland, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:34.759028+00:00",
+  "_kind": "geo_samples"
+}

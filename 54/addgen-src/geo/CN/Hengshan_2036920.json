@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hengshan",
+  "geonameid": 2036920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.23447441694009,
+      "lon": 130.86053408181215,
+      "geoinfo": {
+        "display_name": "Hengshan, Hengshan District, Jixi, Heilongjiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hengshan",
+        "state": "Heilongjiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hengshan, Heilongjiang, China"
+    },
+    {
+      "lat": 45.18706741323862,
+      "lon": 130.89541918329513,
+      "geoinfo": {
+        "display_name": "Huamulin, 义安村, Hengshan District, Jixi, Heilongjiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Huamulin",
+        "city_district": null,
+        "city": "义安村",
+        "state": "Heilongjiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "453, Huamulin, 义安村, Hengshan District, Jixi, 81190 Heilongjiang, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:00:16.452474+00:00",
+  "_kind": "geo_samples"
+}

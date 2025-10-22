@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Marque",
+  "geonameid": 4704027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.372280181379285,
+      "lon": -95.00852161020332,
+      "geoinfo": {
+        "display_name": "Volney Street, La Marque, Galveston County, Texas, 77568, United States",
+        "road": "Volney Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Marque",
+        "state": "Texas",
+        "postcode": "77568",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Volney Street, La Marque, Texas, United States"
+    },
+    {
+      "lat": 29.385648238314825,
+      "lon": -94.99392603348446,
+      "geoinfo": {
+        "display_name": "7486, Meadowlark Lane, Texas City, Galveston County, Texas, 77591, United States",
+        "road": "Meadowlark Lane",
+        "house_number": "7486",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texas City",
+        "state": "Texas",
+        "postcode": "77591",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7486, Meadowlark Lane, Texas City, Galveston County, Texas, 77591, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:05.064524+00:00",
+  "_kind": "geo_samples"
+}

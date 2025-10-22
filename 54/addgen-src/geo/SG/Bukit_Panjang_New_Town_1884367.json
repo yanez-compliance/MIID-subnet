@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Bukit Panjang New Town",
+  "geonameid": 1884367,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3973520005605256,
+      "lon": 103.75308665887047,
+      "geoinfo": {
+        "display_name": "391J, Woodlands Road, Sungei Kadut, Northwest, Singapore, 729641, Singapore",
+        "road": "Woodlands Road",
+        "house_number": "391J",
+        "neighbourhood": null,
+        "suburb": "Sungei Kadut",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "729641",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "391J, Woodlands Road, Sungei Kadut, Northwest, Singapore, 729641, Singapore"
+    },
+    {
+      "lat": 1.3617919548284416,
+      "lon": 103.78363265657767,
+      "geoinfo": {
+        "display_name": "Bukit Timah Expressway, Central Water Catchment, Northwest, Singapore, 679056, Singapore",
+        "road": "Bukit Timah Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Central Water Catchment",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "679056",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "178, Bukit Timah Expressway, Central Water Catchment, Northwest, Singapore, 679056, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T09:49:59.029878+00:00",
+  "_kind": "geo_samples"
+}

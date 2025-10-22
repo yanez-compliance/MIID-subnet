@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "At Tall al Kabīr",
+  "geonameid": 359710,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 30.56469799775492,
+      "lon": 31.74517580218087,
+      "geoinfo": {
+        "display_name": "Al Zaheriya, Eastern, 41626, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Zaheriya",
+        "state": "Eastern",
+        "postcode": "41626",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Zaheriya, Eastern, 41626, Egypt"
+    },
+    {
+      "lat": 30.54144659170994,
+      "lon": 31.800899879116688,
+      "geoinfo": {
+        "display_name": "Al Tal Al Saghir Road, Al Ismailiya, 41625, Egypt",
+        "road": "Al Tal Al Saghir Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Al Ismailiya",
+        "postcode": "41625",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "739, Al Tal Al Saghir Road, Al Ismailiya, 41625, Egypt"
+    },
+    {
+      "lat": 30.543511782638525,
+      "lon": 31.789982835983228,
+      "geoinfo": {
+        "display_name": "Al Tal Al Saghir Road, Eastern, 41625, Egypt",
+        "road": "Al Tal Al Saghir Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Eastern",
+        "postcode": "41625",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "859, Al Tal Al Saghir Road, Eastern, 41625, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:27.792357+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Knoxville",
+  "geonameid": 4634946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.93938834269215,
+      "lon": -83.87863306572378,
+      "geoinfo": {
+        "display_name": "Toll Road, Knoxville, Knox County, East Tennessee, Tennessee, 37920, United States",
+        "road": "Toll Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Knoxville",
+        "state": "Tennessee",
+        "postcode": "37920",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Toll Road, Knoxville, Tennessee, United States"
+    },
+    {
+      "lat": 35.93952784025148,
+      "lon": -83.92889062447784,
+      "geoinfo": {
+        "display_name": "River Bluff, Knoxville, Knox County, East Tennessee, Tennessee, 37996, United States",
+        "road": "River Bluff",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Knoxville",
+        "state": "Tennessee",
+        "postcode": "37996",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "630, River Bluff, Knoxville, Knox County, East Tennessee, Tennessee, 37996, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:20.697304+00:00",
+  "_kind": "geo_samples"
+}

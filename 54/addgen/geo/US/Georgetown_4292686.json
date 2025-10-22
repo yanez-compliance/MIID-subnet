@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Georgetown",
+  "geonameid": 4292686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.2161381992345,
+      "lon": -84.54297507948843,
+      "geoinfo": {
+        "display_name": "199, Creek View Court, Morgan Mill, Georgetown, Scott County, Kentucky, 40324, United States",
+        "road": "Creek View Court",
+        "house_number": "199",
+        "neighbourhood": "Morgan Mill",
+        "suburb": "Morgan Mill",
+        "city_district": null,
+        "city": "Georgetown",
+        "state": "Kentucky",
+        "postcode": "40324",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "199 Creek View Court, Georgetown, Kentucky, United States"
+    },
+    {
+      "lat": 38.17217525425221,
+      "lon": -84.58189691644667,
+      "geoinfo": {
+        "display_name": "Ironworks Road, Scott County, Kentucky, United States",
+        "road": "Ironworks Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "180, Ironworks Road, Scott County, 55821 Kentucky, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:33.076686+00:00",
+  "_kind": "geo_samples"
+}

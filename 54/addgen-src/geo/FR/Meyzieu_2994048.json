@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Meyzieu",
+  "geonameid": 2994048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.788088116770396,
+      "lon": 4.977814287397504,
+      "geoinfo": {
+        "display_name": "Chemin de Halage, Les Marais, Meyzieu, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69330, France",
+        "road": "Chemin de Halage",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Marais",
+        "city_district": null,
+        "city": "Meyzieu",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69330",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Halage, Meyzieu, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.7482683204215,
+      "lon": 5.016381535253821,
+      "geoinfo": {
+        "display_name": "Genas, Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69740, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Genas",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69740",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "755, Genas, Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69740, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:28.104353+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Blanquefort",
+  "geonameid": 3032340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.88710590879679,
+      "lon": -0.6297222683448463,
+      "geoinfo": {
+        "display_name": "Rue du Collège Technique, Le Vigean, Eysines, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33320, France",
+        "road": "Rue du Collège Technique",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Le Vigean",
+        "city_district": null,
+        "city": "Eysines",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33320",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du Collège Technique, Blanquefort, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.90618996701786,
+      "lon": -0.6107932246885523,
+      "geoinfo": {
+        "display_name": "Château Dehez, Rue du Déhez, Dehez, Le Déhès, Blanquefort, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33290, France",
+        "road": "Rue du Déhez",
+        "house_number": null,
+        "neighbourhood": "Dehez",
+        "suburb": null,
+        "city_district": null,
+        "city": "Blanquefort",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33290",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "789, Rue du Déhez, Blanquefort, 33290 Nouvelle-Aquitaine, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:46.558855+00:00",
+  "_kind": "geo_samples"
+}

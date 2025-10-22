@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ann Arbor",
+  "geonameid": 4984247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.28002582949657,
+      "lon": -83.69476668822595,
+      "geoinfo": {
+        "display_name": "498, Meadow Creek Drive, Ann Arbor Charter Township, Washtenaw County, Michigan, 48105, United States",
+        "road": "Meadow Creek Drive",
+        "house_number": "498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ann Arbor Charter Township",
+        "state": "Michigan",
+        "postcode": "48105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "498 Meadow Creek Drive, Ann Arbor, Michigan, United States"
+    },
+    {
+      "lat": 42.24742075009242,
+      "lon": -83.71184979490859,
+      "geoinfo": {
+        "display_name": "Buhr Park Outdoor Ice Arena, Manchester Road, Ann Arbor, Washtenaw County, Michigan, 48104, United States",
+        "road": "Manchester Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ann Arbor",
+        "state": "Michigan",
+        "postcode": "48104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206, Manchester Road, Ann Arbor, 48104 Michigan, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:13.573010+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wildwood",
+  "geonameid": 4414749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.55927393207361,
+      "lon": -90.61861682014553,
+      "geoinfo": {
+        "display_name": "1700, Chimney Top Farms Road, Wildwood, Saint Louis County, Missouri, 63038, United States",
+        "road": "Chimney Top Farms Road",
+        "house_number": "1700",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wildwood",
+        "state": "Missouri",
+        "postcode": "63038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1700 Chimney Top Farms Road, Wildwood, Missouri, United States"
+    },
+    {
+      "lat": 38.565273665160845,
+      "lon": -90.6674230985039,
+      "geoinfo": {
+        "display_name": "Glencoe Road, Wildwood, Saint Louis County, Missouri, 63038, United States",
+        "road": "Glencoe Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wildwood",
+        "state": "Missouri",
+        "postcode": "63038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "065, Glencoe Road, Wildwood, Saint Louis County, Missouri, 63038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:39.924772+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Socorro",
+  "geonameid": 3667887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.503954051959475,
+      "lon": -73.24999575595133,
+      "geoinfo": {
+        "display_name": "Baraya, El Socorro, Comunera, Santander, 683551, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Socorro",
+        "state": "Santander",
+        "postcode": "683551",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Socorro, Santander, Colombia"
+    },
+    {
+      "lat": 6.452604461371367,
+      "lon": -73.29197882245543,
+      "geoinfo": {
+        "display_name": "Socorro - Simacota, Socorro, El Socorro, Comunera, Santander, RAP Gran Santander, 683551, Colombia",
+        "road": "Socorro - Simacota",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Socorro",
+        "state": "Santander",
+        "postcode": "683551",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "500, Socorro - Simacota, Socorro, El Socorro, Comunera, Santander, RAP Gran Santander, 683551, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:50.773794+00:00",
+  "_kind": "geo_samples"
+}

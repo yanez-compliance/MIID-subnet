@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Dedovsk",
+  "geonameid": 566854,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.885242197165,
+      "lon": 37.13285173599479,
+      "geoinfo": {
+        "display_name": "Нефедьево, муниципальный округ Истра, Moscow Oblast, Central Federal District, 143532, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143532",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Dedovsk, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.89372586776098,
+      "lon": 37.08695704457233,
+      "geoinfo": {
+        "display_name": "39, СНТ «Старт», муниципальный округ Истра, Moscow Oblast, Central Federal District, 143590, Russia",
+        "road": null,
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143590",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "39, Dedovsk, 143590 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:59.384424+00:00",
+  "_kind": "geo_samples"
+}

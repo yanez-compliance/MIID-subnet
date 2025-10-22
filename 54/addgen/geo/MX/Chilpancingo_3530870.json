@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chilpancingo",
+  "geonameid": 3530870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.55230302700433,
+      "lon": -99.49680438210011,
+      "geoinfo": {
+        "display_name": "Calle Procopio I. García Luna, Chilpancingo, Chilpancingo de los Bravo, Guerrero, 39000, Mexico",
+        "road": "Calle Procopio I. García Luna",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilpancingo",
+        "state": "Guerrero",
+        "postcode": "39000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Procopio I. García Luna, Chilpancingo, Guerrero, Mexico"
+    },
+    {
+      "lat": 17.540844118182626,
+      "lon": -99.52599407138027,
+      "geoinfo": {
+        "display_name": "Chilpancingo, Chilpancingo de los Bravo, Guerrero, 39030, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilpancingo",
+        "state": "Guerrero",
+        "postcode": "39030",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "088, Chilpancingo, Chilpancingo de los Bravo, Guerrero, 39030, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:09.846078+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Flores",
+  "geonameid": 3595725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.903247402327978,
+      "lon": -89.91125997822361,
+      "geoinfo": {
+        "display_name": "0 Avenida C, La Democracia, San Benito, Petén, 01701, Guatemala",
+        "road": "0 Avenida C",
+        "house_number": null,
+        "neighbourhood": "La Democracia",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Benito",
+        "state": "Petén",
+        "postcode": "01701",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "0 Avenida C, Flores, Petén, Guatemala"
+    },
+    {
+      "lat": 16.93966582810383,
+      "lon": -89.88419298133869,
+      "geoinfo": {
+        "display_name": "Museo de San Miguel, Carretera a San Miguel, El Arrozal, San Miguel, Flores, Petén, 17001, Guatemala",
+        "road": "Carretera a San Miguel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Flores",
+        "state": "Petén",
+        "postcode": "17001",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "592, Carretera a San Miguel, Flores, 17001 Petén, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:07.560488+00:00",
+  "_kind": "geo_samples"
+}

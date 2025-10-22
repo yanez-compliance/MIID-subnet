@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Bukit Gambir",
+  "geonameid": 1778385,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.1745297543647926,
+      "lon": 102.67763571920482,
+      "geoinfo": {
+        "display_name": "Muar, Johor, 84700, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": "84700",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Bukit Gambir, Johor, Malaysia"
+    },
+    {
+      "lat": 2.2208550002300425,
+      "lon": 102.68874786751373,
+      "geoinfo": {
+        "display_name": "Gerisek, Tangkak, Johor, 84700, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gerisek",
+        "state": "Johor",
+        "postcode": "84700",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "648, Gerisek, Tangkak, Johor, 84700, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:55.559327+00:00",
+  "_kind": "geo_samples"
+}

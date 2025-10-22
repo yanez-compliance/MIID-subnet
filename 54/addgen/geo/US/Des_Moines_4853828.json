@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Des Moines",
+  "geonameid": 4853828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.62353707239609,
+      "lon": -93.56122472644515,
+      "geoinfo": {
+        "display_name": "3116, East 29th Street, Douglas Acres, Des Moines, Polk County, Iowa, 50317, United States",
+        "road": "East 29th Street",
+        "house_number": "3116",
+        "neighbourhood": "Douglas Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Des Moines",
+        "state": "Iowa",
+        "postcode": "50317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3116 East 29th Street, Des Moines, Iowa, United States"
+    },
+    {
+      "lat": 41.58987217264059,
+      "lon": -93.55192661722737,
+      "geoinfo": {
+        "display_name": "134, East 33rd Street, Laurel Hill, Des Moines, Polk County, Iowa, 50317, United States",
+        "road": "East 33rd Street",
+        "house_number": "134",
+        "neighbourhood": "Laurel Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Des Moines",
+        "state": "Iowa",
+        "postcode": "50317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "134, East 33rd Street, Laurel Hill, Des Moines, Polk County, Iowa, 50317, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:54.539251+00:00",
+  "_kind": "geo_samples"
+}

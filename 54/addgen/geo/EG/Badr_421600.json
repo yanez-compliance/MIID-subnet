@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Badr",
+  "geonameid": 421600,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 30.555114648971205,
+      "lon": 30.743064387302805,
+      "geoinfo": {
+        "display_name": "The Lake, 22777, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "The Lake",
+        "postcode": "22777",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Badr, The Lake, Egypt"
+    },
+    {
+      "lat": 30.60569106747028,
+      "lon": 30.699937463133914,
+      "geoinfo": {
+        "display_name": "Qaryat Ayn Jalut, The Lake, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qaryat Ayn Jalut",
+        "state": "The Lake",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "179, Qaryat Ayn Jalut, 39998 The Lake, Egypt"
+    },
+    {
+      "lat": 30.573290669125672,
+      "lon": 30.70317758606826,
+      "geoinfo": {
+        "display_name": "20, Moustafa Kamel Street, Al Salam Village, Badr, The Lake, 22777, Egypt",
+        "road": "Moustafa Kamel Street",
+        "house_number": "20",
+        "neighbourhood": "Al Salam Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Badr",
+        "state": "The Lake",
+        "postcode": "22777",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "20, Moustafa Kamel Street, Al Salam Village, Badr, The Lake, 22777, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:14.283436+00:00",
+  "_kind": "geo_samples"
+}

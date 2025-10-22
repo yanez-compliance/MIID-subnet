@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Battle Ground",
+  "geonameid": 5786485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.76391678880707,
+      "lon": -122.49176671158388,
+      "geoinfo": {
+        "display_name": "17641, Northeast Risto Road, Greater Brush Prairie, Battle Ground, Clark County, Washington, 98604, United States",
+        "road": "Northeast Risto Road",
+        "house_number": "17641",
+        "neighbourhood": null,
+        "suburb": "Greater Brush Prairie",
+        "city_district": null,
+        "city": "Battle Ground",
+        "state": "Washington",
+        "postcode": "98604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17641 Northeast Risto Road, Battle Ground, Washington, United States"
+    },
+    {
+      "lat": 45.805792868727366,
+      "lon": -122.48966478329814,
+      "geoinfo": {
+        "display_name": "Battle Ground Lake State Park Campground, Northeast 249th Street, Crawford, Clark County, Washington, 98604, United States",
+        "road": "Northeast 249th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Battle Ground Lake State Park Campground, Northeast 249th Street, Crawford, Clark County, Washington, 98604, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:03.021311+00:00",
+  "_kind": "geo_samples"
+}

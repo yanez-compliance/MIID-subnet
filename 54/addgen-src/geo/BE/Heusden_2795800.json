@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Heusden",
+  "geonameid": 2795800,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.041215978013845,
+      "lon": 5.282039612881229,
+      "geoinfo": {
+        "display_name": "102, Koerselsebaan, Heusden, Heusden-Zolder, Hasselt, Limburg, 3550, Belgium",
+        "road": "Koerselsebaan",
+        "house_number": "102",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Heusden",
+        "city": "Heusden-Zolder",
+        "state": "Limburg",
+        "postcode": "3550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "102 Koerselsebaan, Heusden, Limburg, Belgium"
+    },
+    {
+      "lat": 51.058666215545706,
+      "lon": 5.2225187114047005,
+      "geoinfo": {
+        "display_name": "BNP Paribas Fortis, 127, Koolmijnlaan, Beringen, Hasselt, Limburg, 3580, Belgium",
+        "road": "Koolmijnlaan",
+        "house_number": "127",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Beringen",
+        "city": "Beringen",
+        "state": "Limburg",
+        "postcode": "3580",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "BNP Paribas Fortis, 127, Koolmijnlaan, Beringen, Hasselt, Limburg, 3580, Belgium"
+    },
+    {
+      "lat": 51.03868222555945,
+      "lon": 5.324345598059065,
+      "geoinfo": {
+        "display_name": "348, Koolmijnlaan, Zolder, Heusden-Zolder, Hasselt, Limburg, 3550, Belgium",
+        "road": "Koolmijnlaan",
+        "house_number": "348",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heusden-Zolder",
+        "state": "Limburg",
+        "postcode": "3550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "348, Koolmijnlaan, Zolder, Heusden-Zolder, Hasselt, Limburg, 3550, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:27.927543+00:00",
+  "_kind": "geo_samples"
+}

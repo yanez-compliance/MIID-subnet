@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cicero",
+  "geonameid": 4888015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.83494218880365,
+      "lon": -87.73093018472655,
+      "geoinfo": {
+        "display_name": "West 32nd Street, South Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60623, United States",
+        "road": "West 32nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Lawndale",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60623",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 32nd Street, Cicero, Illinois, United States"
+    },
+    {
+      "lat": 41.837524190777685,
+      "lon": -87.7504253521117,
+      "geoinfo": {
+        "display_name": "Woodbine Elementary School, 3003, South 50th Court, Cicero, Cook County, Illinois, 60804, United States",
+        "road": "South 50th Court",
+        "house_number": "3003",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cicero",
+        "state": "Illinois",
+        "postcode": "60804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Woodbine Elementary School, 3003, South 50th Court, Cicero, Cook County, Illinois, 60804, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:08.870359+00:00",
+  "_kind": "geo_samples"
+}

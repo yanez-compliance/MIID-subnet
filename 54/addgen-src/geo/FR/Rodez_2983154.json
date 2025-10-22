@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Rodez",
+  "geonameid": 2983154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.36402647257413,
+      "lon": 2.6329946230750516,
+      "geoinfo": {
+        "display_name": "FRANCE BOISSONS, 41, Allée de la Citoyenne Sorgue, Parc d'activités d'Arsac, Sainte-Radegonde, Rodez, Aveyron, Occitania, Metropolitan France, 12850, France",
+        "road": "Allée de la Citoyenne Sorgue",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Radegonde",
+        "state": "Occitania",
+        "postcode": "12850",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "41 Allée de la Citoyenne Sorgue, Rodez, Occitania, France"
+    },
+    {
+      "lat": 44.359178007797716,
+      "lon": 2.595539650842988,
+      "geoinfo": {
+        "display_name": "Rue de Cantaranne, Zone industrielle Cantaranne, Onet-le-Château, Rodez, Aveyron, Occitania, Metropolitan France, 12850, France",
+        "road": "Rue de Cantaranne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Onet-le-Château",
+        "city_district": null,
+        "city": null,
+        "state": "Occitania",
+        "postcode": "12850",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "268, Rue de Cantaranne, Zone industrielle Cantaranne, Onet-le-Château, Rodez, Aveyron, Occitania, Metropolitan France, 12850, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:47.979508+00:00",
+  "_kind": "geo_samples"
+}

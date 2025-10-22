@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Vlotho",
+  "geonameid": 2817105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.15791823996126,
+      "lon": 8.904477043239584,
+      "geoinfo": {
+        "display_name": "Krückebergstraße, Kalldorf, Kalletal, Kreis Lippe, North Rhine-Westphalia, 32689, Germany",
+        "road": "Krückebergstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kalldorf",
+        "city_district": null,
+        "city": "Kalldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32689",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Krückebergstraße, Vlotho, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.193694045092585,
+      "lon": 8.885556817387473,
+      "geoinfo": {
+        "display_name": "Tannenbrink, Uffeln, Vlotho, Kreis Herford, North Rhine-Westphalia, 32602, Germany",
+        "road": "Tannenbrink",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Uffeln",
+        "city_district": null,
+        "city": "Vlotho",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32602",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "169, Tannenbrink, Uffeln, Vlotho, Kreis Herford, North Rhine-Westphalia, 32602, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:23.479496+00:00",
+  "_kind": "geo_samples"
+}

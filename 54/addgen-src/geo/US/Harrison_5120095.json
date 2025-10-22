@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harrison",
+  "geonameid": 5120095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.00577108055594,
+      "lon": -73.72570315667592,
+      "geoinfo": {
+        "display_name": "Maple Moor Golf Course, 1128, North Street, City of White Plains, Westchester County, New York, 10605, United States",
+        "road": "North Street",
+        "house_number": "1128",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of White Plains",
+        "state": "New York",
+        "postcode": "10605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1128 North Street, Harrison, New York, United States"
+    },
+    {
+      "lat": 40.970990526385314,
+      "lon": -73.71439652115771,
+      "geoinfo": {
+        "display_name": "1, Landolfe Place, Town/Village of Harrison, Westchester County, New York, 10528, United States",
+        "road": "Landolfe Place",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town/Village of Harrison",
+        "state": "New York",
+        "postcode": "10528",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1, Landolfe Place, Town/Village of Harrison, Westchester County, New York, 10528, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:51.343518+00:00",
+  "_kind": "geo_samples"
+}

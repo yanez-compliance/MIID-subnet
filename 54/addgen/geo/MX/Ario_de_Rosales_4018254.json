@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ario de Rosales",
+  "geonameid": 4018254,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.221877482809592,
+      "lon": -101.74352549549056,
+      "geoinfo": {
+        "display_name": "Ario, Michoacán, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Michoacán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ario de Rosales, Michoacán, Mexico"
+    },
+    {
+      "lat": 19.204651235060002,
+      "lon": -101.71356669815707,
+      "geoinfo": {
+        "display_name": "Quiroga - Tepalcatepec, Ario de Rosales, Ario, Michoacán, Mexico",
+        "road": "Quiroga - Tepalcatepec",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ario de Rosales",
+        "state": "Michoacán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "114, Quiroga - Tepalcatepec, Ario de Rosales, Ario, 98247 Michoacán, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:59.998119+00:00",
+  "_kind": "geo_samples"
+}

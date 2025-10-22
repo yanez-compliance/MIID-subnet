@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Northeim",
+  "geonameid": 2861814,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.719063532000476,
+      "lon": 10.015827372865107,
+      "geoinfo": {
+        "display_name": "22, Pascheburgring, An der Pascheburg, Langenholtensen, Northeim, Landkreis Northeim, Lower Saxony, 37154, Germany",
+        "road": "Pascheburgring",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Langenholtensen",
+        "city": "Northeim",
+        "state": "Lower Saxony",
+        "postcode": "37154",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "22 Pascheburgring, Northeim, Lower Saxony, Germany"
+    },
+    {
+      "lat": 51.69287932116898,
+      "lon": 9.958528936284472,
+      "geoinfo": {
+        "display_name": "Angerstraße, Höckelheim, Northeim, Landkreis Northeim, Lower Saxony, 37154, Germany",
+        "road": "Angerstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northeim",
+        "state": "Lower Saxony",
+        "postcode": "37154",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "253, Angerstraße, Höckelheim, Northeim, Landkreis Northeim, Lower Saxony, 37154, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:43.595704+00:00",
+  "_kind": "geo_samples"
+}

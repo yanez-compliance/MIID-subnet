@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Moncada",
+  "geonameid": 2513703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.55034747332324,
+      "lon": -0.3758394975663646,
+      "geoinfo": {
+        "display_name": "Camí Fondo, Foios, l'Horta Nord, Valencia, Valencian Community, 46115, Spain",
+        "road": "Camí Fondo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foios",
+        "state": "Valencian Community",
+        "postcode": "46115",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí Fondo, Moncada, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.56819372454875,
+      "lon": -0.4263043662473045,
+      "geoinfo": {
+        "display_name": "Urbanització La Lloma del Calderer, Bétera, el Camp de Túria, Valencia, Valencian Community, 46112, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Urbanització La Lloma del Calderer",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bétera",
+        "state": "Valencian Community",
+        "postcode": "46112",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "871, Urbanització La Lloma del Calderer, Bétera, el Camp de Túria, Valencia, Valencian Community, 46112, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:06:14.254666+00:00",
+  "_kind": "geo_samples"
+}

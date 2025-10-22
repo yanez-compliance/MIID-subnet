@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Acqui Terme",
+  "geonameid": 3183490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.65734927708896,
+      "lon": 8.467385139553834,
+      "geoinfo": {
+        "display_name": "Strada Zani, Case Angogna, Acqui Terme, Alessandria, Piedmont, 15011, Italy",
+        "road": "Strada Zani",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acqui Terme",
+        "state": "Piedmont",
+        "postcode": "15011",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Zani, Acqui Terme, Piedmont, Italy"
+    },
+    {
+      "lat": 44.7172313302306,
+      "lon": 8.492733654750397,
+      "geoinfo": {
+        "display_name": "Cassine, Alessandria, Piedmont, 15019, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cassine",
+        "state": "Piedmont",
+        "postcode": "15019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "279, Cassine, Alessandria, Piedmont, 15019, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:14.921437+00:00",
+  "_kind": "geo_samples"
+}

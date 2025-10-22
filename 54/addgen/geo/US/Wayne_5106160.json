@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wayne",
+  "geonameid": 5106160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.95697504181767,
+      "lon": -74.27220527885282,
+      "geoinfo": {
+        "display_name": "28, Eldorado Drive, Wayne, Passaic County, New Jersey, 07470, United States",
+        "road": "Eldorado Drive",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wayne",
+        "state": "New Jersey",
+        "postcode": "07470",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28 Eldorado Drive, Wayne, New Jersey, United States"
+    },
+    {
+      "lat": 40.8881312230357,
+      "lon": -74.2893915178367,
+      "geoinfo": {
+        "display_name": "6, Glenroy Road South, Fairfield, Essex County, New Jersey, 07004, United States",
+        "road": "Glenroy Road South",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfield",
+        "state": "New Jersey",
+        "postcode": "07004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6, Glenroy Road South, Fairfield, Essex County, New Jersey, 07004, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:13.507445+00:00",
+  "_kind": "geo_samples"
+}

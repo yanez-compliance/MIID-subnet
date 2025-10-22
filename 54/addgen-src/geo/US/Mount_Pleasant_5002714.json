@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Pleasant",
+  "geonameid": 5002714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.62042901963523,
+      "lon": -84.77447737255498,
+      "geoinfo": {
+        "display_name": "Mount Pleasant Country Club, 3686, East River Road, Mount Pleasant, Isabella County, Michigan, 48858, United States",
+        "road": "East River Road",
+        "house_number": "3686",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Pleasant",
+        "state": "Michigan",
+        "postcode": "48858",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3686 East River Road, Mount Pleasant, Michigan, United States"
+    },
+    {
+      "lat": 43.57579870571815,
+      "lon": -84.81587352736331,
+      "geoinfo": {
+        "display_name": "Union Charter Township, Isabella County, Michigan, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union Charter Township",
+        "state": "Michigan",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "108, Union Charter Township, Isabella County, 04693 Michigan, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:22.141671+00:00",
+  "_kind": "geo_samples"
+}

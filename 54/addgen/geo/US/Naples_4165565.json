@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Naples",
+  "geonameid": 4165565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.156366561094664,
+      "lon": -81.82022225706868,
+      "geoinfo": {
+        "display_name": "Coquina Sands, Naples, Collier County, Florida, 34102, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Coquina Sands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Naples",
+        "state": "Florida",
+        "postcode": "34102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coquina Sands, Naples, Florida, United States"
+    },
+    {
+      "lat": 26.13736754770676,
+      "lon": -81.78142580547755,
+      "geoinfo": {
+        "display_name": "1806, Tamiami Trail, East Naples, Collier County, Florida, 34112, United States",
+        "road": "Tamiami Trail",
+        "house_number": "1806",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Naples",
+        "state": "Florida",
+        "postcode": "34112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1806, Tamiami Trail, East Naples, Collier County, Florida, 34112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:53.404182+00:00",
+  "_kind": "geo_samples"
+}

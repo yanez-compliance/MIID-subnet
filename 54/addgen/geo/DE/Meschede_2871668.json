@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Meschede",
+  "geonameid": 2871668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.31951944261869,
+      "lon": 8.320463281327006,
+      "geoinfo": {
+        "display_name": "K 43, Meschede, Hochsauerlandkreis, North Rhine-Westphalia, 59872, Germany",
+        "road": "K 43",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meschede",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59872",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 43, Meschede, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.34764713189518,
+      "lon": 8.332404142722444,
+      "geoinfo": {
+        "display_name": "Wehrstapel, Meschede, Hochsauerlandkreis, North Rhine-Westphalia, 59872, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meschede",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59872",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "946, Wehrstapel, Meschede, Hochsauerlandkreis, North Rhine-Westphalia, 59872, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:17.541963+00:00",
+  "_kind": "geo_samples"
+}

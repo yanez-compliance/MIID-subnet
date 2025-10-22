@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Secunda",
+  "geonameid": 956767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.51224915282421,
+      "lon": 29.150996111167625,
+      "geoinfo": {
+        "display_name": "Nelson Mandela Drive, Govan Mbeki Ward 18, Secunda, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, South Africa",
+        "road": "Nelson Mandela Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Govan Mbeki Ward 18",
+        "city_district": null,
+        "city": "Secunda",
+        "state": "Mpumalanga",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Nelson Mandela Drive, Secunda, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -26.536708230968983,
+      "lon": 29.126897193456585,
+      "geoinfo": {
+        "display_name": "Govan Mbeki Ward 5, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Govan Mbeki Ward 5",
+        "city_district": null,
+        "city": "Govan Mbeki Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Govan Mbeki Ward 5, Govan Mbeki Local Municipality, Gert Sibande, 45246 Mpumalanga, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:37:13.174462+00:00",
+  "_kind": "geo_samples"
+}

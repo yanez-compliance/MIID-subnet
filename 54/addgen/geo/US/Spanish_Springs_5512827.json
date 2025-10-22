@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spanish Springs",
+  "geonameid": 5512827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.65538102841033,
+      "lon": -119.73760829675267,
+      "geoinfo": {
+        "display_name": "Eagle Canyon Drive, Spanish Springs, Washoe County, Nevada, 89510, United States",
+        "road": "Eagle Canyon Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spanish Springs",
+        "state": "Nevada",
+        "postcode": "89510",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eagle Canyon Drive, Spanish Springs, Nevada, United States"
+    },
+    {
+      "lat": 39.6423166658262,
+      "lon": -119.69240639875292,
+      "geoinfo": {
+        "display_name": "288, Saintsbury Court, Sparks, Washoe County, Nevada, 89441, United States",
+        "road": "Saintsbury Court",
+        "house_number": "288",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sparks",
+        "state": "Nevada",
+        "postcode": "89441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "288, Saintsbury Court, Sparks, Washoe County, Nevada, 89441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:13:05.942678+00:00",
+  "_kind": "geo_samples"
+}

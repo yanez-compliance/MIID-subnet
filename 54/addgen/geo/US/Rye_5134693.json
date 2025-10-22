@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rye",
+  "geonameid": 5134693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.972983402230234,
+      "lon": -73.69012896239563,
+      "geoinfo": {
+        "display_name": "Old Post Road, City of Rye, Westchester County, New York, 10580, United States",
+        "road": "Old Post Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rye",
+        "state": "New York",
+        "postcode": "10580",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Old Post Road, Rye, New York, United States"
+    },
+    {
+      "lat": 40.96119962426458,
+      "lon": -73.7186626404449,
+      "geoinfo": {
+        "display_name": "27, Rose Avenue, Town/Village of Harrison, Westchester County, New York, 10528, United States",
+        "road": "Rose Avenue",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town/Village of Harrison",
+        "state": "New York",
+        "postcode": "10528",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27, Rose Avenue, Town/Village of Harrison, Westchester County, New York, 10528, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:26.150144+00:00",
+  "_kind": "geo_samples"
+}

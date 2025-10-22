@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pacific Palisades",
+  "geonameid": 5380378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.025685803504615,
+      "lon": -118.51520232553096,
+      "geoinfo": {
+        "display_name": "Santa Monica Beach Path, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90402, United States",
+        "road": "Santa Monica Beach Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Monica",
+        "state": "California",
+        "postcode": "90402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Monica Beach Path, Pacific Palisades, California, United States"
+    },
+    {
+      "lat": 34.023052516196174,
+      "lon": -118.55439660948744,
+      "geoinfo": {
+        "display_name": "Inceville, Los Angeles, Los Angeles County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "689, Inceville, Los Angeles, Los Angeles County, 09731 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:10.329522+00:00",
+  "_kind": "geo_samples"
+}

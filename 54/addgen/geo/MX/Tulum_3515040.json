@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tulum",
+  "geonameid": 3515040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.191283298114353,
+      "lon": -87.4709618642401,
+      "geoinfo": {
+        "display_name": "14 Sur, Tulum, Quintana Roo, 77765, Mexico",
+        "road": "14 Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulum",
+        "state": "Quintana Roo",
+        "postcode": "77765",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "14 Sur, Tulum, Quintana Roo, Mexico"
+    },
+    {
+      "lat": 20.191479994781762,
+      "lon": -87.49218425062085,
+      "geoinfo": {
+        "display_name": "Tulum, Quintana Roo, 77765, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulum",
+        "state": "Quintana Roo",
+        "postcode": "77765",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "328, Tulum, Quintana Roo, 77765, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:54.793010+00:00",
+  "_kind": "geo_samples"
+}

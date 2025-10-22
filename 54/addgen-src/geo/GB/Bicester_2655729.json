@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bicester",
+  "geonameid": 2655729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.9190476377887,
+      "lon": -1.1097138447034487,
+      "geoinfo": {
+        "display_name": "Launton Road, Stratton Audley, Cherwell District, Oxfordshire, England, OX27 9BF, United Kingdom",
+        "road": "Launton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stratton Audley",
+        "city_district": null,
+        "city": "Cherwell District",
+        "state": "England",
+        "postcode": "OX27 9BF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Launton Road, Bicester, England, United Kingdom"
+    },
+    {
+      "lat": 51.85759806706137,
+      "lon": -1.144418191093183,
+      "geoinfo": {
+        "display_name": "Merton Road, Merton, Cherwell District, Oxfordshire, England, OX25 2ND, United Kingdom",
+        "road": "Merton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cherwell District",
+        "state": "England",
+        "postcode": "OX25 2ND",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Merton Road, Merton, Cherwell District, Oxfordshire, England, OX25 2ND, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:15.965145+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ontario",
+  "geonameid": 5379439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.099235412067536,
+      "lon": -117.67376639690335,
+      "geoinfo": {
+        "display_name": "1322, West Arrow Highway, Upland, San Bernardino County, California, 91786, United States",
+        "road": "West Arrow Highway",
+        "house_number": "1322",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upland",
+        "state": "California",
+        "postcode": "91786",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1322 West Arrow Highway, Ontario, California, United States"
+    },
+    {
+      "lat": 34.057286773392974,
+      "lon": -117.59866064037111,
+      "geoinfo": {
+        "display_name": "Ontario International Airport, Ontario Boulevard, Ontario, San Bernardino County, California, 91761, United States",
+        "road": "Ontario Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ontario",
+        "state": "California",
+        "postcode": "91761",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "855, Ontario Boulevard, Ontario, 91761 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:16.262362+00:00",
+  "_kind": "geo_samples"
+}

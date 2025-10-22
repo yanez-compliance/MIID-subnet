@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pradolongo",
+  "geonameid": 11550004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3574543640554,
+      "lon": -3.666520221151887,
+      "geoinfo": {
+        "display_name": "Calle 20, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Calle 20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 20, Pradolongo, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.39762566391788,
+      "lon": -3.7415344711253304,
+      "geoinfo": {
+        "display_name": "Farmacia Maria Teresa Barrios Alonso, 419, Calle de Gallur, Cármenes, Latina, Madrid, Community of Madrid, 28047, Spain",
+        "road": "Calle de Gallur",
+        "house_number": "419",
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28047",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Farmacia Maria Teresa Barrios Alonso, 419, Calle de Gallur, Cármenes, Latina, Madrid, Community of Madrid, 28047, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:37.811571+00:00",
+  "_kind": "geo_samples"
+}

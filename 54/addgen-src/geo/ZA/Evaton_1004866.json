@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Evaton",
+  "geonameid": 1004866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.54497512725277,
+      "lon": 27.847632839207467,
+      "geoinfo": {
+        "display_name": "Evaton Road, Sebokeng Unit 8, Emfuleni Ward 29, Emfuleni Local Municipality, Sedibeng District Municipality, Gauteng, 1985, South Africa",
+        "road": "Evaton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sebokeng Unit 8",
+        "city_district": "Emfuleni Ward 29",
+        "city": "Emfuleni Local Municipality",
+        "state": "Gauteng",
+        "postcode": "1985",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Evaton Road, Evaton, Gauteng, South Africa"
+    },
+    {
+      "lat": -26.535522694201926,
+      "lon": 27.87569615824098,
+      "geoinfo": {
+        "display_name": "Sebokeng Unit 6, Emfuleni Ward 38, Emfuleni Local Municipality, Sedibeng District Municipality, Gauteng, 1984, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sebokeng Unit 6",
+        "city_district": "Emfuleni Ward 38",
+        "city": "Emfuleni Local Municipality",
+        "state": "Gauteng",
+        "postcode": "1984",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Sebokeng Unit 6, Evaton, 1984 Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:19.951307+00:00",
+  "_kind": "geo_samples"
+}

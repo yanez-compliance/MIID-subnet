@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Sunshine Coast",
+  "geonameid": 10630449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.6916189471073,
+      "lon": 153.08054507986847,
+      "geoinfo": {
+        "display_name": "Janderra Street, Buderim, Sunshine Coast Regional, Queensland, 4556, Australia",
+        "road": "Janderra Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Buderim",
+        "city": "Sunshine Coast Regional",
+        "state": "Queensland",
+        "postcode": "4556",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Janderra Street, Sunshine Coast, Queensland, Australia"
+    },
+    {
+      "lat": -26.64561232517833,
+      "lon": 153.11887550319065,
+      "geoinfo": {
+        "display_name": "Alexandra Headland, Sunshine Coast Regional, Queensland, 4572, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alexandra Headland",
+        "city_district": "Alexandra Headland",
+        "city": "Sunshine Coast Regional",
+        "state": "Queensland",
+        "postcode": "4572",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "104, Alexandra Headland, Sunshine Coast Regional, Queensland, 4572, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:50.587252+00:00",
+  "_kind": "geo_samples"
+}

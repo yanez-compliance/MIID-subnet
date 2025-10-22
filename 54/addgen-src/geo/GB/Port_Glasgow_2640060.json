@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Port Glasgow",
+  "geonameid": 2640060,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.97700181601954,
+      "lon": -4.6893106113945215,
+      "geoinfo": {
+        "display_name": "Moss Road, Colgrain, Argyll and Bute, Scotland, G82 5HG, United Kingdom",
+        "road": "Moss Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colgrain",
+        "state": "Scotland",
+        "postcode": "G82 5HG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moss Road, Port Glasgow, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.91234174953631,
+      "lon": -4.661751857137833,
+      "geoinfo": {
+        "display_name": "Auchenbothie Road, Slaemuir, Port Glasgow, Inverclyde, Scotland, PA13 4SL, United Kingdom",
+        "road": "Auchenbothie Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Slaemuir",
+        "city_district": null,
+        "city": "Port Glasgow",
+        "state": "Scotland",
+        "postcode": "PA13 4SL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Auchenbothie Road, Slaemuir, Port Glasgow, Inverclyde, Scotland, PA13 4SL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:22.699505+00:00",
+  "_kind": "geo_samples"
+}

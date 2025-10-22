@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Teplice",
+  "geonameid": 3064288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.642395785238406,
+      "lon": 13.809414158670144,
+      "geoinfo": {
+        "display_name": "Za drahou, Teplice-Řetenice, Teplice, okres Teplice, Ústí nad Labem Region, Northwest, 415 03, Czechia",
+        "road": "Za drahou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Teplice-Řetenice",
+        "city_district": null,
+        "city": "Teplice",
+        "state": "Northwest",
+        "postcode": "415 03",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Za drahou, Teplice, Northwest, Czechia"
+    },
+    {
+      "lat": 50.657479802688776,
+      "lon": 13.850944942165139,
+      "geoinfo": {
+        "display_name": "292, Mírová, Sobědruhy, Teplice, okres Teplice, Ústí nad Labem Region, Northwest, 415 10, Czechia",
+        "road": "Mírová",
+        "house_number": "292",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teplice",
+        "state": "Northwest",
+        "postcode": "415 10",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "292, Mírová, Sobědruhy, Teplice, okres Teplice, Ústí nad Labem Region, Northwest, 415 10, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:53.871416+00:00",
+  "_kind": "geo_samples"
+}

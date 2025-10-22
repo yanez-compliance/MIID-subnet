@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Xã Long Hải",
+  "geonameid": 1562278,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.365522998797509,
+      "lon": 107.25937265667625,
+      "geoinfo": {
+        "display_name": "Freshwater Pass, Phước Hải, Ho Chi Minh City, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ho Chi Minh City",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Xã Long Hải, Vietnam"
+    },
+    {
+      "lat": 10.358811842202257,
+      "lon": 107.20774083883303,
+      "geoinfo": {
+        "display_name": "Vũng Tàu, Ho Chi Minh City, 78207, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vũng Tàu",
+        "state": null,
+        "postcode": "78207",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "343, Vũng Tàu, Ho Chi Minh City, 78207, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:11.018082+00:00",
+  "_kind": "geo_samples"
+}

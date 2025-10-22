@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Remuna",
+  "geonameid": 1258229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.544557903852994,
+      "lon": 86.8503263876146,
+      "geoinfo": {
+        "display_name": "Remuna, Baleshwar, Odisha, 756019, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Odisha",
+        "postcode": "756019",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Remuna, Odisha, India"
+    },
+    {
+      "lat": 21.51764945118732,
+      "lon": 86.90462524542404,
+      "geoinfo": {
+        "display_name": "Balasore, Sahadevkhunta, Baleshwar, Odisha, 756001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balasore",
+        "state": "Odisha",
+        "postcode": "756001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "905, Balasore, Sahadevkhunta, Baleshwar, Odisha, 756001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:17.457112+00:00",
+  "_kind": "geo_samples"
+}

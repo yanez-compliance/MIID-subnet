@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kirov",
+  "geonameid": 548408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.57264157755711,
+      "lon": 49.6312385430123,
+      "geoinfo": {
+        "display_name": "улица Ивана Попова, Ленинский район, Kirov, городской округ Киров, Kirov Oblast, Volga Federal District, 610000, Russia",
+        "road": "улица Ивана Попова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ленинский район",
+        "city": "Kirov",
+        "state": "Kirov Oblast",
+        "postcode": "610000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Ивана Попова, Kirov, Kirov Oblast, Russia"
+    },
+    {
+      "lat": 58.62969910877888,
+      "lon": 49.63948195370073,
+      "geoinfo": {
+        "display_name": "47, Октябрьский проспект, Октябрьский район, Kirov, городской округ Киров, Kirov Oblast, Volga Federal District, 610000, Russia",
+        "road": "Октябрьский проспект",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Октябрьский район",
+        "city": "Kirov",
+        "state": "Kirov Oblast",
+        "postcode": "610000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "47, Октябрьский проспект, Октябрьский район, Kirov, городской округ Киров, Kirov Oblast, Volga Federal District, 610000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:31.628273+00:00",
+  "_kind": "geo_samples"
+}

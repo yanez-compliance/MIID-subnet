@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ebbw Vale",
+  "geonameid": 2650285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.81158608499864,
+      "lon": -3.2209907309495165,
+      "geoinfo": {
+        "display_name": "Reservoir Road, Rassau, Blaenau Gwent, Wales, NP23 5DW, United Kingdom",
+        "road": "Reservoir Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rassau",
+        "city_district": null,
+        "city": null,
+        "state": "Wales",
+        "postcode": "NP23 5DW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Reservoir Road, Ebbw Vale, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.80951194041913,
+      "lon": -3.1659564926337787,
+      "geoinfo": {
+        "display_name": "18, Clydach Dingle, Twyn Cynhordy, Brynmawr, Blaenau Gwent, Wales, NP23 4RR, United Kingdom",
+        "road": "Clydach Dingle",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Twyn Cynhordy",
+        "city_district": null,
+        "city": "Brynmawr",
+        "state": "Wales",
+        "postcode": "NP23 4RR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "18, Clydach Dingle, Twyn Cynhordy, Brynmawr, Blaenau Gwent, Wales, NP23 4RR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:28.898964+00:00",
+  "_kind": "geo_samples"
+}

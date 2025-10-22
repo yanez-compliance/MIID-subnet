@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bakersfield",
+  "geonameid": 5325738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.4084217000504,
+      "lon": -118.98468106006067,
+      "geoinfo": {
+        "display_name": "River Boulevard, Bakersfield, Kern County, California, 93305, United States",
+        "road": "River Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bakersfield",
+        "state": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "River Boulevard, Bakersfield, California, United States"
+    },
+    {
+      "lat": 35.36995105062119,
+      "lon": -118.9822477994809,
+      "geoinfo": {
+        "display_name": "1488, Eureka Street, Bakersfield, Kern County, California, 93305, United States",
+        "road": "Eureka Street",
+        "house_number": "1488",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bakersfield",
+        "state": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1488, Eureka Street, Bakersfield, Kern County, California, 93305, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:34.815711+00:00",
+  "_kind": "geo_samples"
+}

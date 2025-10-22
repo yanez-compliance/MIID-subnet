@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tulantongo",
+  "geonameid": 3817714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.54657832079427,
+      "lon": -98.85147159111007,
+      "geoinfo": {
+        "display_name": "Los Reyes - San Salvador, Texcoco, State of Mexico, 56050, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Reyes - San Salvador",
+        "state": "State of Mexico",
+        "postcode": "56050",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tulantongo, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.524150310046135,
+      "lon": -98.92098277916578,
+      "geoinfo": {
+        "display_name": "Atenco, State of Mexico, 56203, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "56203",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "119, Atenco, State of Mexico, 56203, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:47.552070+00:00",
+  "_kind": "geo_samples"
+}

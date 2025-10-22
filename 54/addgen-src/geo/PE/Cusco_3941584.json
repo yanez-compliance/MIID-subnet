@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Cusco",
+  "geonameid": 3941584,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.544348823036298,
+      "lon": -72.00645159342939,
+      "geoinfo": {
+        "display_name": "Ccocha Ccochayoc, Santiago, Province of Cusco, Cusco, 00801, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santiago",
+        "state": "Cusco",
+        "postcode": "00801",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Cusco, Cusco, Peru"
+    },
+    {
+      "lat": -13.518973826946404,
+      "lon": -71.93249727409058,
+      "geoinfo": {
+        "display_name": "San Sebastián, Province of Cusco, Cusco, 08002, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Sebastián",
+        "city_district": null,
+        "city": "San Sebastián",
+        "state": "Cusco",
+        "postcode": "08002",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "516, San Sebastián, Province of Cusco, Cusco, 08002, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:16.086645+00:00",
+  "_kind": "geo_samples"
+}

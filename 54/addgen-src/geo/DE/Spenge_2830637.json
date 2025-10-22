@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Spenge",
+  "geonameid": 2830637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.12086047006851,
+      "lon": 8.464418586083523,
+      "geoinfo": {
+        "display_name": "71, Sunderfeld, Spenge, Kreis Herford, North Rhine-Westphalia, 32139, Germany",
+        "road": "Sunderfeld",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spenge",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32139",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "71 Sunderfeld, Spenge, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.13675596071601,
+      "lon": 8.425587241106086,
+      "geoinfo": {
+        "display_name": "11, Hofstraße, Wallenbrück, Spenge, Kreis Herford, North Rhine-Westphalia, 32139, Germany",
+        "road": "Hofstraße",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Wallenbrück",
+        "city_district": null,
+        "city": "Spenge",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32139",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Hofstraße, Wallenbrück, Spenge, Kreis Herford, North Rhine-Westphalia, 32139, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:47.517934+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Decatur",
+  "geonameid": 4236895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.85244189572042,
+      "lon": -88.9185396559021,
+      "geoinfo": {
+        "display_name": "Decatur, Macon County, Illinois, 61521, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Decatur",
+        "state": "Illinois",
+        "postcode": "61521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Decatur, Illinois, United States"
+    },
+    {
+      "lat": 39.836283988329974,
+      "lon": -88.9411800840314,
+      "geoinfo": {
+        "display_name": "South Jasper Street, Decatur, Macon County, Illinois, 62521, United States",
+        "road": "South Jasper Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Decatur",
+        "state": "Illinois",
+        "postcode": "62521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "579, South Jasper Street, Decatur, Macon County, Illinois, 62521, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:11.640915+00:00",
+  "_kind": "geo_samples"
+}

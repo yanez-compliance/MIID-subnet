@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alief",
+  "geonameid": 4670249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.70887845214154,
+      "lon": -95.57231320673661,
+      "geoinfo": {
+        "display_name": "11046, Bandlon Drive, Little Saigon, Alief, Houston, Harris County, Texas, 77072, United States",
+        "road": "Bandlon Drive",
+        "house_number": "11046",
+        "neighbourhood": "Little Saigon",
+        "suburb": "Alief",
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11046 Bandlon Drive, Alief, Texas, United States"
+    },
+    {
+      "lat": 29.72631779244858,
+      "lon": -95.5715642308395,
+      "geoinfo": {
+        "display_name": "Wilcrest Drive, Westchase, Houston, Harris County, Texas, 77042, United States",
+        "road": "Wilcrest Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westchase",
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "895, Wilcrest Drive, Westchase, Houston, Harris County, Texas, 77042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:47.740987+00:00",
+  "_kind": "geo_samples"
+}

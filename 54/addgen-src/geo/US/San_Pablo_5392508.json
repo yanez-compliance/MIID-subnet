@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Pablo",
+  "geonameid": 5392508,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.96696665109083,
+      "lon": -122.32531482883364,
+      "geoinfo": {
+        "display_name": "3085, Rollingwood Drive, Rollingwood, Contra Costa County, California, 94806, United States",
+        "road": "Rollingwood Drive",
+        "house_number": "3085",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94806",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3085 Rollingwood Drive, San Pablo, California, United States"
+    },
+    {
+      "lat": 37.979069329300394,
+      "lon": -122.37939386109628,
+      "geoinfo": {
+        "display_name": "Richmond, Contra Costa County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "163, Richmond, Contra Costa County, 67895 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:44.103506+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Brant",
+  "geonameid": 5907983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.11382199990326,
+      "lon": -80.37660800458052,
+      "geoinfo": {
+        "display_name": "Cleaver Road, Brant County, Ontario, N3R 0B8, Canada",
+        "road": "Cleaver Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": "N3R 0B8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Cleaver Road, Brant, Ontario, Canada"
+    },
+    {
+      "lat": 43.09919293600676,
+      "lon": -80.32562500983822,
+      "geoinfo": {
+        "display_name": "699, Shellard Lane, Brant County, Ontario, N3T 5L5, Canada",
+        "road": "Shellard Lane",
+        "house_number": "699",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": "N3T 5L5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "699, Shellard Lane, Brant County, Ontario, N3T 5L5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:04.768043+00:00",
+  "_kind": "geo_samples"
+}

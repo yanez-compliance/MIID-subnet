@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Ersheng",
+  "geonameid": 1914256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.503543393482275,
+      "lon": 106.75574200152475,
+      "geoinfo": {
+        "display_name": "Mudong, Banan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mudong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Ersheng, Chongqing, China"
+    },
+    {
+      "lat": 29.429153276425094,
+      "lon": 106.78426244155037,
+      "geoinfo": {
+        "display_name": "Bei'er Road, Ersheng, Banan District, Chongqing, China",
+        "road": "Bei'er Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ersheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "047, Bei'er Road, Ersheng, Banan District, 66248 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:52.399225+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pedro Garza García",
+  "geonameid": 4005937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.62007143054525,
+      "lon": -100.42166956676171,
+      "geoinfo": {
+        "display_name": "Lomas las Cuevas Prietas, Santa Catarina, Nuevo León, 66233, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "66233",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Pedro Garza García, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.66398019695173,
+      "lon": -100.41295560912067,
+      "geoinfo": {
+        "display_name": "Calle Diego Saldívar, San Pedro Garza García, Nuevo León, 66238, Mexico",
+        "road": "Calle Diego Saldívar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro Garza García",
+        "state": "Nuevo León",
+        "postcode": "66238",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "050, Calle Diego Saldívar, San Pedro Garza García, Nuevo León, 66238, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:34:09.883682+00:00",
+  "_kind": "geo_samples"
+}

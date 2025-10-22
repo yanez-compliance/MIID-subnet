@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Port Macquarie",
+  "geonameid": 2152659,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.420136718748026,
+      "lon": 152.8770904641781,
+      "geoinfo": {
+        "display_name": "Edgewater Holiday Park, Hastings River Drive, Hibbard, Port Macquarie, Port Macquarie-Hastings Council, New South Wales, 2444, Australia",
+        "road": "Hastings River Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Macquarie",
+        "state": "New South Wales",
+        "postcode": "2444",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Hastings River Drive, Port Macquarie, New South Wales, Australia"
+    },
+    {
+      "lat": -31.415777527439143,
+      "lon": 152.95042001926691,
+      "geoinfo": {
+        "display_name": "New South Wales, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "708, Port Macquarie, 59481 New South Wales, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:58.663929+00:00",
+  "_kind": "geo_samples"
+}

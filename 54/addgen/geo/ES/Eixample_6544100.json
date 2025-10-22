@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Eixample",
+  "geonameid": 6544100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.37831251411404,
+      "lon": 2.1411124358176923,
+      "geoinfo": {
+        "display_name": "Passeig de Sant Antoni, Sants, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, 08014, Spain",
+        "road": "Passeig de Sant Antoni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sants-Montjuïc",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08014",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Passeig de Sant Antoni, Eixample, Catalonia, Spain"
+    },
+    {
+      "lat": 41.3924279557432,
+      "lon": 2.2021235333053224,
+      "geoinfo": {
+        "display_name": "Ronda Litoral, el Poblenou, la Vila Olímpica del Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08005, Spain",
+        "road": "Ronda Litoral",
+        "house_number": null,
+        "neighbourhood": "el Poblenou",
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "202, Ronda Litoral, el Poblenou, la Vila Olímpica del Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08005, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:51.592207+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Zwolle",
+  "geonameid": 2743477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.47261472444368,
+      "lon": 6.1164820104143605,
+      "geoinfo": {
+        "display_name": "Van Schaikpad, Ittersumerbroek, Ittersum, Zwolle, Overijssel, Netherlands, 8015 AV, Netherlands",
+        "road": "Van Schaikpad",
+        "house_number": null,
+        "neighbourhood": "Ittersumerbroek",
+        "suburb": null,
+        "city_district": null,
+        "city": "Zwolle",
+        "state": "Overijssel",
+        "postcode": "8015 AV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Van Schaikpad, Zwolle, Overijssel, The Netherlands"
+    },
+    {
+      "lat": 52.51782289494501,
+      "lon": 6.021661203980464,
+      "geoinfo": {
+        "display_name": "Vreugderijkerpad, Westenholte, Zwolle, Overijssel, Netherlands, 8042 PT, Netherlands",
+        "road": "Vreugderijkerpad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westenholte",
+        "city_district": null,
+        "city": "Zwolle",
+        "state": "Overijssel",
+        "postcode": "8042 PT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "219, Vreugderijkerpad, Westenholte, Zwolle, Overijssel, Netherlands, 8042 PT, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:47:19.414793+00:00",
+  "_kind": "geo_samples"
+}

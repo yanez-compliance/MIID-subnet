@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jefferson City",
+  "geonameid": 4392388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.6049831001614,
+      "lon": -92.1984947258241,
+      "geoinfo": {
+        "display_name": "Callaway County, Missouri, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jefferson City, Missouri, United States"
+    },
+    {
+      "lat": 38.5821725146844,
+      "lon": -92.19927752596858,
+      "geoinfo": {
+        "display_name": "635, Conrad Street, Jefferson City, Cole County, Missouri, 65109, United States",
+        "road": "Conrad Street",
+        "house_number": "635",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jefferson City",
+        "state": "Missouri",
+        "postcode": "65109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "635, Conrad Street, Jefferson City, Cole County, Missouri, 65109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:03.524065+00:00",
+  "_kind": "geo_samples"
+}

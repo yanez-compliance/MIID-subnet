@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oyten",
+  "geonameid": 2855794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.01311722190504,
+      "lon": 9.056643687312748,
+      "geoinfo": {
+        "display_name": "Breslauer Straße, Uesen, Achim, Landkreis Verden, Lower Saxony, 28832, Germany",
+        "road": "Breslauer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Uesen",
+        "city_district": null,
+        "city": "Achim",
+        "state": "Lower Saxony",
+        "postcode": "28832",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Breslauer Straße, Oyten, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.062764605835355,
+      "lon": 9.073288804134517,
+      "geoinfo": {
+        "display_name": "Grenzweg, Schaphusen, Oyten, Ottersberg, Landkreis Verden, Lower Saxony, 28876, Germany",
+        "road": "Grenzweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oyten",
+        "state": "Lower Saxony",
+        "postcode": "28876",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "949, Grenzweg, Schaphusen, Oyten, Ottersberg, Landkreis Verden, Lower Saxony, 28876, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:31.327594+00:00",
+  "_kind": "geo_samples"
+}

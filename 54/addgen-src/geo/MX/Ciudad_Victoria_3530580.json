@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Victoria",
+  "geonameid": 3530580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.766989130892277,
+      "lon": -99.17197529993845,
+      "geoinfo": {
+        "display_name": "Calle Genaral Francisco Higuera Jiménez, Ciudad Victoria, Victoria, Tamaulipas, 87019, Mexico",
+        "road": "Calle Genaral Francisco Higuera Jiménez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Victoria",
+        "state": "Tamaulipas",
+        "postcode": "87019",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Genaral Francisco Higuera Jiménez, Ciudad Victoria, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 23.712112083500312,
+      "lon": -99.11742620743351,
+      "geoinfo": {
+        "display_name": "Ciudad Victoria, Victoria, Tamaulipas, 87080, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Victoria",
+        "state": "Tamaulipas",
+        "postcode": "87080",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "481, Ciudad Victoria, Victoria, Tamaulipas, 87080, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:02.620086+00:00",
+  "_kind": "geo_samples"
+}

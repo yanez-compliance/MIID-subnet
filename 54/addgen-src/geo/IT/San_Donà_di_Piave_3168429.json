@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Donà di Piave",
+  "geonameid": 3168429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.61308025754837,
+      "lon": 12.580049216144163,
+      "geoinfo": {
+        "display_name": "Via Argine Destro, Chiesanuova, San Donà di Piave, Venezia, Veneto, 30027, Italy",
+        "road": "Via Argine Destro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Donà di Piave",
+        "state": "Veneto",
+        "postcode": "30027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Argine Destro, San Donà di Piave, Veneto, Italy"
+    },
+    {
+      "lat": 45.619033209052354,
+      "lon": 12.509435902982284,
+      "geoinfo": {
+        "display_name": "Via Casera, Musile di Piave, Venezia, Veneto, 30024, Italy",
+        "road": "Via Casera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Musile di Piave",
+        "state": "Veneto",
+        "postcode": "30024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "696, Via Casera, Musile di Piave, Venezia, Veneto, 30024, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:31.477238+00:00",
+  "_kind": "geo_samples"
+}

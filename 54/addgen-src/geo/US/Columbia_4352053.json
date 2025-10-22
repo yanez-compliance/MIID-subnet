@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Columbia",
+  "geonameid": 4352053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.24897652960517,
+      "lon": -76.79036496609893,
+      "geoinfo": {
+        "display_name": "8320, Academy Road, Worthington, Ellicott City, Howard County, Maryland, 21043, United States",
+        "road": "Academy Road",
+        "house_number": "8320",
+        "neighbourhood": "Worthington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellicott City",
+        "state": "Maryland",
+        "postcode": "21043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8320 Academy Road, Columbia, Maryland, United States"
+    },
+    {
+      "lat": 39.23651142242882,
+      "lon": -76.78578266577881,
+      "geoinfo": {
+        "display_name": "4823, Bonnie View Court, Worthington, Ellicott City, Howard County, Maryland, 21043, United States",
+        "road": "Bonnie View Court",
+        "house_number": "4823",
+        "neighbourhood": "Worthington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellicott City",
+        "state": "Maryland",
+        "postcode": "21043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4823, Bonnie View Court, Worthington, Ellicott City, Howard County, Maryland, 21043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:13.749212+00:00",
+  "_kind": "geo_samples"
+}

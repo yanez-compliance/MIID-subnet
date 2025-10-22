@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Cape Town",
+  "geonameid": 3369157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.95215234219145,
+      "lon": 18.426014469823983,
+      "geoinfo": {
+        "display_name": "Tafelberg Road, Cape Town Ward 77, Cape Town, City of Cape Town, Western Cape, 9001, South Africa",
+        "road": "Tafelberg Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cape Town Ward 77",
+        "city_district": null,
+        "city": "Cape Town",
+        "state": "Western Cape",
+        "postcode": "9001",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Tafelberg Road, Cape Town, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.902519247315155,
+      "lon": 18.465290408984636,
+      "geoinfo": {
+        "display_name": "Metro Industrial Township, Cape Town Ward 55, Milnerton, City of Cape Town, Western Cape, 7425, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Metro Industrial Township",
+        "city_district": null,
+        "city": "Milnerton",
+        "state": "Western Cape",
+        "postcode": "7425",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Metro Industrial Township, Cape Town Ward 55, Milnerton, City of Cape Town, Western Cape, 7425, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:39:48.967775+00:00",
+  "_kind": "geo_samples"
+}

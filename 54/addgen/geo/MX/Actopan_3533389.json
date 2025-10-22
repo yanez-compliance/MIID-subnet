@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Actopan",
+  "geonameid": 3533389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.278084321039305,
+      "lon": -98.93576009705956,
+      "geoinfo": {
+        "display_name": "Actopan, Hidalgo, 42500, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Actopan",
+        "state": "Hidalgo",
+        "postcode": "42500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Actopan, Hidalgo, Mexico"
+    },
+    {
+      "lat": 20.30343474835184,
+      "lon": -98.93899676421441,
+      "geoinfo": {
+        "display_name": "Calle José María Morales, Dajiedhi, Actopan, Hidalgo, 42500, Mexico",
+        "road": "Calle José María Morales",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dajiedhi",
+        "state": "Hidalgo",
+        "postcode": "42500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "639, Calle José María Morales, Dajiedhi, Actopan, Hidalgo, 42500, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:02.436577+00:00",
+  "_kind": "geo_samples"
+}

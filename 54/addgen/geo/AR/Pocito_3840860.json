@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Pocito",
+  "geonameid": 3840860,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -31.65631279264856,
+      "lon": -68.5588980423428,
+      "geoinfo": {
+        "display_name": "Villa Aberastain, Pocito, San Juan, 5427, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Aberastain",
+        "state": "San Juan",
+        "postcode": "5427",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Pocito, San Juan, Argentina"
+    },
+    {
+      "lat": -31.69083925427538,
+      "lon": -68.55535994031933,
+      "geoinfo": {
+        "display_name": "Callejón Hernández, Alfonso XIII, La Rinconada, Pocito, San Juan, 5429, Argentina",
+        "road": "Callejón Hernández",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alfonso XIII",
+        "city_district": null,
+        "city": "La Rinconada",
+        "state": "San Juan",
+        "postcode": "5429",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "105, Callejón Hernández, Alfonso XIII, La Rinconada, Pocito, San Juan, 5429, Argentina"
+    },
+    {
+      "lat": -31.686643740398974,
+      "lon": -68.58223176236062,
+      "geoinfo": {
+        "display_name": "Boulevard San Martín, La Rinconada, Pocito, San Juan, 5429, Argentina",
+        "road": "Boulevard San Martín",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Rinconada",
+        "state": "San Juan",
+        "postcode": "5429",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "130, Boulevard San Martín, La Rinconada, Pocito, San Juan, 5429, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:58.636180+00:00",
+  "_kind": "geo_samples"
+}

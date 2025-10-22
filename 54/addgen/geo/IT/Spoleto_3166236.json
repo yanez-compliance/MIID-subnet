@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Spoleto",
+  "geonameid": 3166236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.752819863803275,
+      "lon": 12.682403442371049,
+      "geoinfo": {
+        "display_name": "Colle Fabbri, San Martino in Trignano, Spoleto, Perugia, Umbria, 06049, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spoleto",
+        "state": "Umbria",
+        "postcode": "06049",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Spoleto, Umbria, Italy"
+    },
+    {
+      "lat": 42.768733237707735,
+      "lon": 12.726108684374072,
+      "geoinfo": {
+        "display_name": "Via Silvestro Silvestri, Pontebari, San Venanzo, Spoleto, Perugia, Umbria, 06049, Italy",
+        "road": "Via Silvestro Silvestri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spoleto",
+        "state": "Umbria",
+        "postcode": "06049",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "831, Via Silvestro Silvestri, Pontebari, San Venanzo, Spoleto, Perugia, Umbria, 06049, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:52.075389+00:00",
+  "_kind": "geo_samples"
+}

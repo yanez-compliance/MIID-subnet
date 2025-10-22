@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Cherkessk",
+  "geonameid": 569154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.216874232975215,
+      "lon": 42.059407105101855,
+      "geoinfo": {
+        "display_name": "45, улица Попова, Cherkessk, Karachay-Cherkessia, North Caucasian Federal District, 369012, Russia",
+        "road": "улица Попова",
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cherkessk",
+        "state": "Karachay-Cherkessia",
+        "postcode": "369012",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "45 улица Попова, Cherkessk, Karachay-Cherkessia, Russia"
+    },
+    {
+      "lat": 44.18733599373246,
+      "lon": 42.061668641334535,
+      "geoinfo": {
+        "display_name": "Берёзовая улица, Cherkessk, Karachay-Cherkessia, North Caucasian Federal District, 369012, Russia",
+        "road": "Берёзовая улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cherkessk",
+        "state": "Karachay-Cherkessia",
+        "postcode": "369012",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "137, Берёзовая улица, Cherkessk, Karachay-Cherkessia, North Caucasian Federal District, 369012, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:13.350403+00:00",
+  "_kind": "geo_samples"
+}

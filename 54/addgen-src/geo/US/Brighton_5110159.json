@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brighton",
+  "geonameid": 5110159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.12203396798232,
+      "lon": -77.59396122039013,
+      "geoinfo": {
+        "display_name": "1848, Rue de Ville, City of Rochester, Monroe County, New York, 14618, United States",
+        "road": "Rue de Ville",
+        "house_number": "1848",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rochester",
+        "state": "New York",
+        "postcode": "14618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1848 Rue de Ville, Brighton, New York, United States"
+    },
+    {
+      "lat": 43.1650121947145,
+      "lon": -77.52202562828408,
+      "geoinfo": {
+        "display_name": "White Trail, Town of Penfield, Monroe County, New York, 14625, United States",
+        "road": "White Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Penfield",
+        "state": "New York",
+        "postcode": "14625",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "394, White Trail, Town of Penfield, Monroe County, New York, 14625, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:10.385633+00:00",
+  "_kind": "geo_samples"
+}

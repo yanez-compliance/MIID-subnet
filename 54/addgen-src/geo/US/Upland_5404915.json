@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Upland",
+  "geonameid": 5404915,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.11438125701472,
+      "lon": -117.67933362565199,
+      "geoinfo": {
+        "display_name": "1434, Howard Access Road, Upland, San Bernardino County, California, 91786, United States",
+        "road": "Howard Access Road",
+        "house_number": "1434",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upland",
+        "state": "California",
+        "postcode": "91786",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1434 Howard Access Road, Upland, California, United States"
+    },
+    {
+      "lat": 34.08123448018237,
+      "lon": -117.60791875637861,
+      "geoinfo": {
+        "display_name": "2037, 5th Street, Ontario, San Bernardino County, California, 91764, United States",
+        "road": "5th Street",
+        "house_number": "2037",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ontario",
+        "state": "California",
+        "postcode": "91764",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2037, 5th Street, Ontario, San Bernardino County, California, 91764, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:35.577015+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Weston",
+  "geonameid": 6179268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.68023116373873,
+      "lon": -79.53726412384583,
+      "geoinfo": {
+        "display_name": "Eglinton Avenue West, Willowridge-Martingrove-Richview, Etobicoke Centre, Etobicoke, Toronto, Golden Horseshoe, Ontario, M9A 3N2, Canada",
+        "road": "Eglinton Avenue West",
+        "house_number": null,
+        "neighbourhood": "Willowridge-Martingrove-Richview",
+        "suburb": "Etobicoke",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M9A 3N2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Eglinton Avenue West, Weston, Ontario, Canada"
+    },
+    {
+      "lat": 43.71792910866996,
+      "lon": -79.45859029070391,
+      "geoinfo": {
+        "display_name": "50, Samor Road, Yorkdale-Glen Park, Eglinton—Lawrence, North York, Toronto, Golden Horseshoe, Ontario, M6A 1L6, Canada",
+        "road": "Samor Road",
+        "house_number": "50",
+        "neighbourhood": "Yorkdale-Glen Park",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6A 1L6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "50, Samor Road, Yorkdale-Glen Park, Eglinton—Lawrence, North York, Toronto, Golden Horseshoe, Ontario, M6A 1L6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:08.559746+00:00",
+  "_kind": "geo_samples"
+}

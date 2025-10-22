@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenpoint",
+  "geonameid": 5119383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70717023513588,
+      "lon": -73.97789661823698,
+      "geoinfo": {
+        "display_name": "West Street, Brooklyn Navy Yard, Brooklyn, Kings County, New York, 11251, United States",
+        "road": "West Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11251",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Street, Greenpoint, New York, United States"
+    },
+    {
+      "lat": 40.73553486264673,
+      "lon": -73.98667631891696,
+      "geoinfo": {
+        "display_name": "132, East 17th Street, Gramercy, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States",
+        "road": "East 17th Street",
+        "house_number": "132",
+        "neighbourhood": "Gramercy",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "132, East 17th Street, Gramercy, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:29.418806+00:00",
+  "_kind": "geo_samples"
+}

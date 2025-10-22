@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lomita",
+  "geonameid": 5367767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.78519447255073,
+      "lon": -118.31873753999074,
+      "geoinfo": {
+        "display_name": "Narbonne Avenue, Rolling Hills Estates, Harbor Hills, Los Angeles County, California, 90717, United States",
+        "road": "Narbonne Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rolling Hills Estates",
+        "city_district": null,
+        "city": "Harbor Hills",
+        "state": "California",
+        "postcode": "90717",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Narbonne Avenue, Lomita, California, United States"
+    },
+    {
+      "lat": 33.83241120516778,
+      "lon": -118.3055717020275,
+      "geoinfo": {
+        "display_name": "1566, West 216th Street, Los Angeles, Los Angeles County, California, 90501, United States",
+        "road": "West 216th Street",
+        "house_number": "1566",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1566, West 216th Street, Los Angeles, Los Angeles County, California, 90501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:10:18.811453+00:00",
+  "_kind": "geo_samples"
+}

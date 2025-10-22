@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orange",
+  "geonameid": 5379513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.75693305960798,
+      "lon": -117.82588534673175,
+      "geoinfo": {
+        "display_name": "14191, Galy Street, Tustin, Orange County, California, 92780, United States",
+        "road": "Galy Street",
+        "house_number": "14191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tustin",
+        "state": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14191 Galy Street, Orange, California, United States"
+    },
+    {
+      "lat": 33.815997355538364,
+      "lon": -117.8186690522333,
+      "geoinfo": {
+        "display_name": "Santiago Boulevard, Villa Park, Orange County, California, 92861, United States",
+        "road": "Santiago Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Park",
+        "state": "California",
+        "postcode": "92861",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "719, Santiago Boulevard, Villa Park, Orange County, California, 92861, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:52.521971+00:00",
+  "_kind": "geo_samples"
+}

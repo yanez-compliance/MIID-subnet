@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Gràcia",
+  "geonameid": 3121245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.40255050008425,
+      "lon": 2.115504738234641,
+      "geoinfo": {
+        "display_name": "Ronda de Dalt, Sarrià, Sarrià - Sant Gervasi, Barcelona, Barcelonès, Barcelona, Catalonia, 08017, Spain",
+        "road": "Ronda de Dalt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sarrià - Sant Gervasi",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Ronda de Dalt, Gràcia, Catalonia, Spain"
+    },
+    {
+      "lat": 41.43856963837385,
+      "lon": 2.123417387368747,
+      "geoinfo": {
+        "display_name": "Carrer Esparraguet, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08035, Spain",
+        "road": "Carrer Esparraguet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Cugat del Vallès",
+        "state": "Catalonia",
+        "postcode": "08035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "902, Carrer Esparraguet, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08035, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:34.958495+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Astrakhan",
+  "geonameid": 580497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.35388654123851,
+      "lon": 48.01011974111231,
+      "geoinfo": {
+        "display_name": "улица Качалова, Трусовский район, Astrakhan, Astrakhan Oblast, 414000, Russia",
+        "road": "улица Качалова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Трусовский район",
+        "city": "Astrakhan",
+        "state": "Astrakhan Oblast",
+        "postcode": "414000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Качалова, Astrakhan, Astrakhan Oblast, Russia"
+    },
+    {
+      "lat": 46.32527976009686,
+      "lon": 48.094544294617165,
+      "geoinfo": {
+        "display_name": "шоссе Три Протока, Трехпротокский сельсовет, Privolzhsky District, Astrakhan Oblast, 416474, Russia",
+        "road": "шоссе Три Протока",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Astrakhan Oblast",
+        "postcode": "416474",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "091, шоссе Три Протока, Трехпротокский сельсовет, Privolzhsky District, Astrakhan Oblast, 416474, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:36:31.106604+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Homburg",
+  "geonameid": 2899449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.29635330342401,
+      "lon": 7.377328536914857,
+      "geoinfo": {
+        "display_name": "Heimbachstraße, Kirrberg, Homburg, Saarpfalz-Kreis, Saarland, 66424, Germany",
+        "road": "Heimbachstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kirrberg",
+        "city": "Homburg",
+        "state": "Saarland",
+        "postcode": "66424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Heimbachstraße, Homburg, Saarland, Germany"
+    },
+    {
+      "lat": 49.284316456587845,
+      "lon": 7.3183072886157605,
+      "geoinfo": {
+        "display_name": "10, Am Ohligberg, Audenkeller Hof, Schwarzenacker, Einöd, Homburg, Saarpfalz-Kreis, Saarland, 66424, Germany",
+        "road": "Am Ohligberg",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Schwarzenacker",
+        "city_district": "Einöd",
+        "city": "Homburg",
+        "state": "Saarland",
+        "postcode": "66424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10, Am Ohligberg, Audenkeller Hof, Schwarzenacker, Einöd, Homburg, Saarpfalz-Kreis, Saarland, 66424, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:52.208145+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wiehl",
+  "geonameid": 2809517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.95653968066041,
+      "lon": 7.4889575678108224,
+      "geoinfo": {
+        "display_name": "68, Uelpebergstraße, Weiershagen, Bielstein, Wiehl, Oberbergischer Kreis, North Rhine-Westphalia, 51674, Germany",
+        "road": "Uelpebergstraße",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wiehl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51674",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "68 Uelpebergstraße, Wiehl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.9579280452879,
+      "lon": 7.54725819687376,
+      "geoinfo": {
+        "display_name": "42, Tannhäuserstraße, Wiehl, Mühlhausen, Wülfringhausen, Wiehl, Oberbergischer Kreis, North Rhine-Westphalia, 51674, Germany",
+        "road": "Tannhäuserstraße",
+        "house_number": "42",
+        "neighbourhood": "Wiehl",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wiehl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51674",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "42, Tannhäuserstraße, Wiehl, Mühlhausen, Wülfringhausen, Wiehl, Oberbergischer Kreis, North Rhine-Westphalia, 51674, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:29.514887+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Grigny",
+  "geonameid": 3014646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.66938377844024,
+      "lon": 2.3986613878951006,
+      "geoinfo": {
+        "display_name": "ZAC des Noues de Seine, Grigny, Évry, Essonne, Metropolitan France, 91350, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grigny",
+        "state": null,
+        "postcode": "91350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Grigny, Ile-de-France, France"
+    },
+    {
+      "lat": 48.62981306931309,
+      "lon": 2.396915032481341,
+      "geoinfo": {
+        "display_name": "Avenue Irène et Frédéric Joliot-Curie, Ris-Orangis, Évry, Essonne, Metropolitan France, 91130, France",
+        "road": "Avenue Irène et Frédéric Joliot-Curie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ris-Orangis",
+        "state": null,
+        "postcode": "91130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "735, Avenue Irène et Frédéric Joliot-Curie, Ris-Orangis, Évry, Essonne, Metropolitan France, 91130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:53.218225+00:00",
+  "_kind": "geo_samples"
+}

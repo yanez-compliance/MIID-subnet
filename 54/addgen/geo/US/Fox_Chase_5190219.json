@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fox Chase",
+  "geonameid": 5190219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.095731418107356,
+      "lon": -75.05019282901021,
+      "geoinfo": {
+        "display_name": "9112, Verree Road, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States",
+        "road": "Verree Road",
+        "house_number": "9112",
+        "neighbourhood": null,
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9112 Verree Road, Fox Chase, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.07651470568776,
+      "lon": -75.03628941955516,
+      "geoinfo": {
+        "display_name": "2112, Welsh Road, Lagrange, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States",
+        "road": "Welsh Road",
+        "house_number": "2112",
+        "neighbourhood": "Lagrange",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2112, Welsh Road, Lagrange, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:54.401657+00:00",
+  "_kind": "geo_samples"
+}

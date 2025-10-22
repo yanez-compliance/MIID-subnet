@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Arcelia",
+  "geonameid": 4018320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.328908796082096,
+      "lon": -100.28862094514413,
+      "geoinfo": {
+        "display_name": "Avenida Lázaro Cárdenas, Arcelia, Guerrero, Mexico",
+        "road": "Avenida Lázaro Cárdenas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcelia",
+        "state": "Guerrero",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Lázaro Cárdenas, Arcelia, Guerrero, Mexico"
+    },
+    {
+      "lat": 18.33075132667625,
+      "lon": -100.29644588092734,
+      "geoinfo": {
+        "display_name": "Arcelia, Guerrero, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcelia",
+        "state": "Guerrero",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "565, Arcelia, 29497 Guerrero, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:47.904790+00:00",
+  "_kind": "geo_samples"
+}

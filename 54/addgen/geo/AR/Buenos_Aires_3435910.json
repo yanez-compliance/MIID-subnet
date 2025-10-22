@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Buenos Aires",
+  "geonameid": 3435910,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -34.63326772485453,
+      "lon": -58.40083529046848,
+      "geoinfo": {
+        "display_name": "2662, Cátulo Castillo, Parque Patricios, Buenos Aires, Distrito Tecnológico, Comuna 4, Autonomous City of Buenos Aires, 1261, Argentina",
+        "road": "Cátulo Castillo",
+        "house_number": "2662",
+        "neighbourhood": null,
+        "suburb": "Parque Patricios",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "1261",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "2662 Cátulo Castillo, Buenos Aires, Autonomous City of Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.64121729717344,
+      "lon": -58.38579457307803,
+      "geoinfo": {
+        "display_name": "Hospital Neruropsiquiátrico Braulio A. Moyano, Avenida Suárez, Barracas, Buenos Aires, Comuna 4, Autonomous City of Buenos Aires, C1287ABI, Argentina",
+        "road": "Avenida Suárez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barracas",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1287ABI",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Hospital Neruropsiquiátrico Braulio A. Moyano, Avenida Suárez, Barracas, Buenos Aires, Comuna 4, Autonomous City of Buenos Aires, C1287ABI, Argentina"
+    },
+    {
+      "lat": -34.59985284902426,
+      "lon": -58.35615454472876,
+      "geoinfo": {
+        "display_name": "Camino de los Alisos, Puerto Madero, Buenos Aires, Comuna 1, Autonomous City of Buenos Aires, C1107CCC, Argentina",
+        "road": "Camino de los Alisos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Puerto Madero",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1107CCC",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Camino de los Alisos, Puerto Madero, Buenos Aires, Comuna 1, Autonomous City of Buenos Aires, C1107CCC, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:24.531358+00:00",
+  "_kind": "geo_samples"
+}

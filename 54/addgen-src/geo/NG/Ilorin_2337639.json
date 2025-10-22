@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Ilorin",
+  "geonameid": 2337639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.478157622904634,
+      "lon": 4.5408141474984784,
+      "geoinfo": {
+        "display_name": "Ilorin West, Kwara State, 240212, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kwara State",
+        "postcode": "240212",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Ilorin, Kwara State, Nigeria"
+    },
+    {
+      "lat": 8.49423125599738,
+      "lon": 4.553558915746344,
+      "geoinfo": {
+        "display_name": "Ilorin, Ilorin East, Kwara State, 240212, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ilorin",
+        "state": "Kwara State",
+        "postcode": "240212",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "975, Ilorin, Ilorin East, Kwara State, 240212, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:44.594261+00:00",
+  "_kind": "geo_samples"
+}

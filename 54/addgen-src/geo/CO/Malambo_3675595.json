@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Malambo",
+  "geonameid": 3675595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.848000016604221,
+      "lon": -74.77358753578523,
+      "geoinfo": {
+        "display_name": "Estadio de Béisbol Humberto Vasquez, 4B1 F, Carrera 1C Sur, Montecarlo, Villa Esperanza, Malambo, Atlántico, Colombia",
+        "road": "Carrera 1C Sur",
+        "house_number": "4B1 F",
+        "neighbourhood": "Montecarlo",
+        "suburb": null,
+        "city_district": "Villa Esperanza",
+        "city": "Malambo",
+        "state": "Atlántico",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "4B1 F Carrera 1C Sur, Malambo, Atlántico, Colombia"
+    },
+    {
+      "lat": 10.85703513027318,
+      "lon": -74.7858925185518,
+      "geoinfo": {
+        "display_name": "Carrera 1C, Juan XXIII, Malambo, Atlántico, 083010, Colombia",
+        "road": "Carrera 1C",
+        "house_number": null,
+        "neighbourhood": "Juan XXIII",
+        "suburb": null,
+        "city_district": "Juan XXIII",
+        "city": "Malambo",
+        "state": "Atlántico",
+        "postcode": "083010",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 1C, Juan XXIII, Malambo, Atlántico, 083010, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:39.995820+00:00",
+  "_kind": "geo_samples"
+}

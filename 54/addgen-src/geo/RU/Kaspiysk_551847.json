@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kaspiysk",
+  "geonameid": 551847,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.92111069413641,
+      "lon": 47.64412509105827,
+      "geoinfo": {
+        "display_name": "Dagestan, North Caucasian Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Dagestan",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kaspiysk, Dagestan, Russia"
+    },
+    {
+      "lat": 42.84811529884015,
+      "lon": 47.65340259093326,
+      "geoinfo": {
+        "display_name": "Karabudakhkentsky District, Dagestan, North Caucasian Federal District, 368301, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Dagestan",
+        "postcode": "368301",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "605, Kaspiysk, 368301 Dagestan, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:34:29.247945+00:00",
+  "_kind": "geo_samples"
+}

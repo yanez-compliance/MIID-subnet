@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Târgovişte",
+  "geonameid": 665024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.929937081998176,
+      "lon": 25.498399874012588,
+      "geoinfo": {
+        "display_name": "Răzvad, Dâmbovița, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Târgovişte, Romania"
+    },
+    {
+      "lat": 44.92340317421915,
+      "lon": 25.477586715651196,
+      "geoinfo": {
+        "display_name": "Mihai Viteazul, Târgoviște, Dâmbovița, 130135, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mihai Viteazul",
+        "city_district": null,
+        "city": "Târgoviște",
+        "state": null,
+        "postcode": "130135",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "472, Mihai Viteazul, 130135 Târgovişte, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:39.132306+00:00",
+  "_kind": "geo_samples"
+}

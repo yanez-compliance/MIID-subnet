@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kitzingen",
+  "geonameid": 2890158,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.74384555815968,
+      "lon": 10.191019205685272,
+      "geoinfo": {
+        "display_name": "1, conneKT, Gewerbegebiet ConneKT, Kitzingen, Landkreis Kitzingen, Bavaria, 97318, Germany",
+        "road": "conneKT",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kitzingen",
+        "state": "Bavaria",
+        "postcode": "97318",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 conneKT, Kitzingen, Bavaria, Germany"
+    },
+    {
+      "lat": 49.70531104411111,
+      "lon": 10.1350108922659,
+      "geoinfo": {
+        "display_name": "St 2271, Marktsteft, Marktbreit (VGem), Landkreis Kitzingen, Bavaria, 97342, Germany",
+        "road": "St 2271",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marktsteft",
+        "state": "Bavaria",
+        "postcode": "97342",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "St 2271, Marktsteft, Marktbreit (VGem), Landkreis Kitzingen, Bavaria, 97342, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:01.215589+00:00",
+  "_kind": "geo_samples"
+}

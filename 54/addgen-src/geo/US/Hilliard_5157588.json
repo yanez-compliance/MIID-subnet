@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hilliard",
+  "geonameid": 5157588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.03251286064159,
+      "lon": -83.13125102352458,
+      "geoinfo": {
+        "display_name": "Cemetery Road, Hilliard, Norwich Township, Franklin County, Ohio, 43026, United States",
+        "road": "Cemetery Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hilliard",
+        "state": "Ohio",
+        "postcode": "43026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cemetery Road, Hilliard, Ohio, United States"
+    },
+    {
+      "lat": 40.06037065673536,
+      "lon": -83.1294295542009,
+      "geoinfo": {
+        "display_name": "4184, Savannah Grove Lane, Charleston, Columbus, Franklin County, Ohio, 43221, United States",
+        "road": "Savannah Grove Lane",
+        "house_number": "4184",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Ohio",
+        "postcode": "43221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4184, Savannah Grove Lane, Charleston, Columbus, Franklin County, Ohio, 43221, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:57.184551+00:00",
+  "_kind": "geo_samples"
+}

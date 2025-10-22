@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winchester",
+  "geonameid": 4955884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.465842092906755,
+      "lon": -71.1163597016929,
+      "geoinfo": {
+        "display_name": "North Dam Road, Winchester, Middlesex County, Massachusetts, 02180, United States",
+        "road": "North Dam Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Massachusetts",
+        "postcode": "02180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Dam Road, Winchester, Massachusetts, United States"
+    },
+    {
+      "lat": 42.470198360927355,
+      "lon": -71.13396768410284,
+      "geoinfo": {
+        "display_name": "36;40, Holton Street, Montvale, Winchester, Middlesex County, Massachusetts, 01890, United States",
+        "road": "Holton Street",
+        "house_number": "36;40",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Massachusetts",
+        "postcode": "01890",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36;40, Holton Street, Montvale, Winchester, Middlesex County, Massachusetts, 01890, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:48.964083+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Zhytomyr",
+  "geonameid": 686967,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.261884517306854,
+      "lon": 28.74711212738665,
+      "geoinfo": {
+        "display_name": "31, Zhytomyrska Street, Hlybochytsia, Hlybochytsia Rural Hromada, Zhytomyr Raion, Zhytomyr Oblast, 12403, Ukraine",
+        "road": "Zhytomyrska Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hlybochytsia",
+        "state": "Zhytomyr Oblast",
+        "postcode": "12403",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "Zhytomyrska Street, Zhytomyr, Zhytomyr Oblast, Ukraine"
+    },
+    {
+      "lat": 50.276460206748446,
+      "lon": 28.710095950955594,
+      "geoinfo": {
+        "display_name": "Ольгинська церква, Kyiv Road, Мар’янівка, Koroliovskyi Raion, Zhytomyr, Zhytomyr Urban Hromada, Zhytomyr Raion, Zhytomyr Oblast, 10007, Ukraine",
+        "road": "Kyiv Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Мар’янівка",
+        "city_district": null,
+        "city": "Zhytomyr",
+        "state": "Zhytomyr Oblast",
+        "postcode": "10007",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "133, Kyiv Road, Zhytomyr, 10007 Zhytomyr Oblast, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T10:36:45.229327+00:00",
+  "_kind": "geo_samples"
+}

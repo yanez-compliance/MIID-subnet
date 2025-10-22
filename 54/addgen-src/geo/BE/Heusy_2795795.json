@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Heusy",
+  "geonameid": 2795795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.58278890132874,
+      "lon": 5.879453825384956,
+      "geoinfo": {
+        "display_name": "3, Rue Jean Baguette, Mangombroux, Heusy, Verviers, Liège, Wallonia, 4802, Belgium",
+        "road": "Rue Jean Baguette",
+        "house_number": "3",
+        "neighbourhood": "Mangombroux",
+        "suburb": null,
+        "city_district": null,
+        "city": "Verviers",
+        "state": "Liège",
+        "postcode": "4802",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "3 Rue Jean Baguette, Heusy, Liège, Belgium"
+    },
+    {
+      "lat": 50.60013572018604,
+      "lon": 5.887805257130542,
+      "geoinfo": {
+        "display_name": "Vieux Chemin de Limbourg, Verviers, Liège, Wallonia, 4800, Belgium",
+        "road": "Vieux Chemin de Limbourg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Verviers",
+        "city": "Verviers",
+        "state": "Liège",
+        "postcode": "4800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "155, Vieux Chemin de Limbourg, Verviers, Liège, Wallonia, 4800, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:38.978645+00:00",
+  "_kind": "geo_samples"
+}

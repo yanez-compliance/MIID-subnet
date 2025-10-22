@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "York",
+  "geonameid": 4562407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94477511339848,
+      "lon": -76.72980113247206,
+      "geoinfo": {
+        "display_name": "466, Country Club Road, Grantly Hills, Grantley, Spring Garden Township, York County, Pennsylvania, 17403, United States",
+        "road": "Country Club Road",
+        "house_number": "466",
+        "neighbourhood": "Grantly Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring Garden Township",
+        "state": "Pennsylvania",
+        "postcode": "17403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "466 Country Club Road, York, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.96053011633696,
+      "lon": -76.71038727589229,
+      "geoinfo": {
+        "display_name": "East Church Avenue, York, York County, Pennsylvania, 17401, United States",
+        "road": "East Church Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "York",
+        "state": "Pennsylvania",
+        "postcode": "17401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "262, East Church Avenue, York, York County, Pennsylvania, 17401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:14.313252+00:00",
+  "_kind": "geo_samples"
+}

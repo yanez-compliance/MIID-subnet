@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Albardón",
+  "geonameid": 3866425,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.4763880747855,
+      "lon": -68.51822080456482,
+      "geoinfo": {
+        "display_name": "Barrio 2 de Abril, Villa Paula Albarracín de Sarmiento, Chimbas, San Juan, 5413, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio 2 de Abril",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Paula Albarracín de Sarmiento",
+        "state": "San Juan",
+        "postcode": "5413",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Barrio 2 de Abril, Albardón, San Juan, Argentina"
+    },
+    {
+      "lat": -31.403026093308608,
+      "lon": -68.49827958195232,
+      "geoinfo": {
+        "display_name": "Tucumán, Las Lomitas, Albardón, San Juan, Argentina",
+        "road": "Tucumán",
+        "house_number": null,
+        "neighbourhood": "Las Lomitas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Lomitas",
+        "state": "San Juan",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "586, Tucumán, Las Lomitas, Albardón, 51462 San Juan, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:01.664329+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Horikiri",
+  "geonameid": 10920829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.73962968158358,
+      "lon": 139.82534533304732,
+      "geoinfo": {
+        "display_name": "Central Circular Route, Horikiri 1, Horikiri, Katsushika, Tokyo, 124-0006, Japan",
+        "road": "Central Circular Route",
+        "house_number": null,
+        "neighbourhood": "Horikiri 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katsushika",
+        "state": null,
+        "postcode": "124-0006",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Central Circular Route, Horikiri, Japan"
+    },
+    {
+      "lat": 35.70730355594854,
+      "lon": 139.8260254937542,
+      "geoinfo": {
+        "display_name": "Meiji-dori Avenue, Bunka 2, Bunka, Sumida, Tokyo, 131-0044, Japan",
+        "road": "Meiji-dori Avenue",
+        "house_number": null,
+        "neighbourhood": "Bunka 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sumida",
+        "state": null,
+        "postcode": "131-0044",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Meiji-dori Avenue, Bunka 2, Bunka, Sumida, Tokyo, 131-0044, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:12.157288+00:00",
+  "_kind": "geo_samples"
+}

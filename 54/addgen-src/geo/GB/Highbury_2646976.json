@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Highbury",
+  "geonameid": 2646976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.5551828891248,
+      "lon": -0.09763694723854642,
+      "geoinfo": {
+        "display_name": "Highbury Grange, Taverner Square, Highbury, London Borough of Islington, London, Greater London, England, N5 2QF, United Kingdom",
+        "road": "Highbury Grange",
+        "house_number": null,
+        "neighbourhood": "Taverner Square",
+        "suburb": "Highbury",
+        "city_district": "London Borough of Islington",
+        "city": "London",
+        "state": "England",
+        "postcode": "N5 2QF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Highbury Grange, Highbury, England, United Kingdom"
+    },
+    {
+      "lat": 51.5273509081113,
+      "lon": -0.05380609328075466,
+      "geoinfo": {
+        "display_name": "Moore House, Roman Road, Globe Town, Bethnal Green, London Borough of Tower Hamlets, London, Greater London, England, E2 0HR, United Kingdom",
+        "road": "Roman Road",
+        "house_number": null,
+        "neighbourhood": "Globe Town",
+        "suburb": "Bethnal Green",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E2 0HR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moore House, Roman Road, Globe Town, Bethnal Green, London Borough of Tower Hamlets, London, Greater London, England, E2 0HR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:23.994179+00:00",
+  "_kind": "geo_samples"
+}

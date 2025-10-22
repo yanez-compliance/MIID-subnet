@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Inokashira",
+  "geonameid": 10867078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.707784375908375,
+      "lon": 139.55793934493818,
+      "geoinfo": {
+        "display_name": "Inokashira-dori, Nishikubo 2-chome, Musashino, Tokyo, 180-0013, Japan",
+        "road": "Inokashira-dori",
+        "house_number": null,
+        "neighbourhood": "Nishikubo 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Musashino",
+        "state": null,
+        "postcode": "180-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Inokashira-dori, Inokashira, Japan"
+    },
+    {
+      "lat": 35.68799358162811,
+      "lon": 139.57422004986967,
+      "geoinfo": {
+        "display_name": "Mure 6-chome, Mitaka, Tokyo, 181-0002, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mure 6-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mitaka",
+        "state": null,
+        "postcode": "181-0002",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Mure 6-chome, Mitaka, Tokyo, 181-0002, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:34.047206+00:00",
+  "_kind": "geo_samples"
+}

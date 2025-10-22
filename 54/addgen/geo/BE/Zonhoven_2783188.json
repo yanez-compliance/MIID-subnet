@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zonhoven",
+  "geonameid": 2783188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.97738864129971,
+      "lon": 5.413156174657733,
+      "geoinfo": {
+        "display_name": "68, Schrijnbroekweg, Zonhoven, Hasselt, Limburg, 3520, Belgium",
+        "road": "Schrijnbroekweg",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zonhoven",
+        "state": "Limburg",
+        "postcode": "3520",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "68 Schrijnbroekweg, Zonhoven, Limburg, Belgium"
+    },
+    {
+      "lat": 50.99972932199363,
+      "lon": 5.318691327601003,
+      "geoinfo": {
+        "display_name": "Vrunstraat, Zonhoven, Hasselt, Limburg, 3520, Belgium",
+        "road": "Vrunstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zonhoven",
+        "state": "Limburg",
+        "postcode": "3520",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "382, Vrunstraat, Zonhoven, Hasselt, Limburg, 3520, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:08.375758+00:00",
+  "_kind": "geo_samples"
+}

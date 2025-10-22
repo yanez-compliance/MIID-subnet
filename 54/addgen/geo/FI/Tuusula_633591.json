@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Tuusula",
+  "geonameid": 633591,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.39115079897828,
+      "lon": 24.976095989977722,
+      "geoinfo": {
+        "display_name": "2, Välimäkilä, Lahelanpelto, Lahela, Tuusula, Helsinki sub-region, Uusimaa, Mainland Finland, 04330, Finland",
+        "road": "Välimäkilä",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Lahelanpelto",
+        "city_district": null,
+        "city": "Tuusula",
+        "state": "Uusimaa",
+        "postcode": "04330",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "2 Välimäkilä, Tuusula, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.37957886633395,
+      "lon": 25.005409745413903,
+      "geoinfo": {
+        "display_name": "Pähkinämäentie, Pähkinämäki, Riihikallio, Tuusula, Helsinki sub-region, Uusimaa, Mainland Finland, 04320, Finland",
+        "road": "Pähkinämäentie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pähkinämäki",
+        "city_district": null,
+        "city": "Tuusula",
+        "state": "Uusimaa",
+        "postcode": "04320",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Pähkinämäentie, Tuusula, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:57:04.438094+00:00",
+  "_kind": "geo_samples"
+}

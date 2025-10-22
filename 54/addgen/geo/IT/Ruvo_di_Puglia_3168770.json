@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ruvo di Puglia",
+  "geonameid": 3168770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.14087160504112,
+      "lon": 16.441794645954023,
+      "geoinfo": {
+        "display_name": "Via Belluogo, Corato, Bari, Apulia, 70033, Italy",
+        "road": "Via Belluogo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Corato",
+        "state": "Apulia",
+        "postcode": "70033",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Belluogo, Ruvo di Puglia, Apulia, Italy"
+    },
+    {
+      "lat": 41.10997082700091,
+      "lon": 16.437153516929783,
+      "geoinfo": {
+        "display_name": "Ruvo di Puglia, Bari, Apulia, 70033, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ruvo di Puglia",
+        "state": "Apulia",
+        "postcode": "70033",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "144, Ruvo di Puglia, Bari, Apulia, 70033, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:01.961338+00:00",
+  "_kind": "geo_samples"
+}

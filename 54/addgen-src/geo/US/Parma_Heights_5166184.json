@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parma Heights",
+  "geonameid": 5166184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38452378120856,
+      "lon": -81.72357128237735,
+      "geoinfo": {
+        "display_name": "West Ridgewood Drive, Parma, Cuyahoga County, Ohio, 44129, United States",
+        "road": "West Ridgewood Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parma",
+        "state": "Ohio",
+        "postcode": "44129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Ridgewood Drive, Parma Heights, Ohio, United States"
+    },
+    {
+      "lat": 41.36573923519997,
+      "lon": -81.71562295718304,
+      "geoinfo": {
+        "display_name": "State Road, Parma, Cuyahoga County, Ohio, 44133, United States",
+        "road": "State Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parma",
+        "state": "Ohio",
+        "postcode": "44133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "806, State Road, Parma, Cuyahoga County, Ohio, 44133, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:20.248851+00:00",
+  "_kind": "geo_samples"
+}

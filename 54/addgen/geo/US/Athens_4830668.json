@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Athens",
+  "geonameid": 4830668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.790719095696616,
+      "lon": -87.0125924832095,
+      "geoinfo": {
+        "display_name": "US Highway 72, Athens, Limestone County, Alabama, 35611, United States",
+        "road": "US Highway 72",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athens",
+        "state": "Alabama",
+        "postcode": "35611",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US Highway 72, Athens, Alabama, United States"
+    },
+    {
+      "lat": 34.792268735502276,
+      "lon": -86.97200552568349,
+      "geoinfo": {
+        "display_name": "1405, Jefferson Street South, Athens, Limestone County, Alabama, 35611, United States",
+        "road": "Jefferson Street South",
+        "house_number": "1405",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athens",
+        "state": "Alabama",
+        "postcode": "35611",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1405, Jefferson Street South, Athens, Limestone County, Alabama, 35611, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:26.055792+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Etlik",
+  "geonameid": 315153,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.975304073987886,
+      "lon": 32.83106717871722,
+      "geoinfo": {
+        "display_name": "Atadan Caddesi, Aşağı Eğlence Mahallesi, Keçiören, Ankara, Central Anatolia Region, 06010, Turkey",
+        "road": "Atadan Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aşağı Eğlence Mahallesi",
+        "city_district": null,
+        "city": "Keçiören",
+        "state": "Ankara",
+        "postcode": "06010",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Atadan Caddesi, Etlik, Ankara, Turkey"
+    },
+    {
+      "lat": 40.00649159132106,
+      "lon": 32.83322019886017,
+      "geoinfo": {
+        "display_name": "Esertepe Mahallesi, Keçiören, Ankara, Central Anatolia Region, 06220, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Esertepe Mahallesi",
+        "city_district": null,
+        "city": "Keçiören",
+        "state": "Ankara",
+        "postcode": "06220",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "946, Esertepe Mahallesi, Keçiören, Ankara, Central Anatolia Region, 06220, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:32.301169+00:00",
+  "_kind": "geo_samples"
+}

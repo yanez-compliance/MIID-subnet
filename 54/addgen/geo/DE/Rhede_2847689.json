@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rhede",
+  "geonameid": 2847689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.84738813471047,
+      "lon": 6.7436446423525105,
+      "geoinfo": {
+        "display_name": "An der Uerde, Rhede, Kreis Borken, North Rhine-Westphalia, 46414, Germany",
+        "road": "An der Uerde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rhede",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46414",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "An der Uerde, Rhede, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.8692864769117,
+      "lon": 6.716512858771911,
+      "geoinfo": {
+        "display_name": "21a, Am Rötering, Vardingholt, Rhede, Kreis Borken, North Rhine-Westphalia, 46414, Germany",
+        "road": "Am Rötering",
+        "house_number": "21a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rhede",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46414",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "21a, Am Rötering, Vardingholt, Rhede, Kreis Borken, North Rhine-Westphalia, 46414, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:50.024411+00:00",
+  "_kind": "geo_samples"
+}

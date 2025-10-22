@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Ryde",
+  "geonameid": 2150767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.85854952763003,
+      "lon": 151.0872204847154,
+      "geoinfo": {
+        "display_name": "17, George Street, North Strathfield, Inner West, Sydney, City of Canada Bay Council, New South Wales, 2137, Australia",
+        "road": "George Street",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "North Strathfield",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2137",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "17 George Street, Ryde, New South Wales, Australia"
+    },
+    {
+      "lat": -33.80690273663368,
+      "lon": 151.06902437839656,
+      "geoinfo": {
+        "display_name": "740, Victoria Road, Ermington, Sydney, City of Parramatta Council, New South Wales, 2115, Australia",
+        "road": "Victoria Road",
+        "house_number": "740",
+        "neighbourhood": null,
+        "suburb": "Ermington",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2115",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "740, Victoria Road, Ermington, Sydney, City of Parramatta Council, New South Wales, 2115, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:06.624873+00:00",
+  "_kind": "geo_samples"
+}

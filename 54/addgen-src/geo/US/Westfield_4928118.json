@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westfield",
+  "geonameid": 4928118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.00770722864953,
+      "lon": -86.15803179055447,
+      "geoinfo": {
+        "display_name": "15150, Romalong Lane, Westfield, Hamilton County, Indiana, 46032, United States",
+        "road": "Romalong Lane",
+        "house_number": "15150",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westfield",
+        "state": "Indiana",
+        "postcode": "46032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15150 Romalong Lane, Westfield, Indiana, United States"
+    },
+    {
+      "lat": 40.07605170047455,
+      "lon": -86.13025418040125,
+      "geoinfo": {
+        "display_name": "Chad Hittle Drive, Westfield, Hamilton County, Indiana, United States",
+        "road": "Chad Hittle Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westfield",
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "503, Chad Hittle Drive, Westfield, Hamilton County, 01051 Indiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:35.343466+00:00",
+  "_kind": "geo_samples"
+}

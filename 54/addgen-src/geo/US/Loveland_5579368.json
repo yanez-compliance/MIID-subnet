@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Loveland",
+  "geonameid": 5579368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.38095668681217,
+      "lon": -105.05298986522448,
+      "geoinfo": {
+        "display_name": "South Boise Avenue, Loveland, Larimer County, Colorado, 80537, United States",
+        "road": "South Boise Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loveland",
+        "state": "Colorado",
+        "postcode": "80537",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Boise Avenue, Loveland, Colorado, United States"
+    },
+    {
+      "lat": 40.36974257014638,
+      "lon": -105.06329130985891,
+      "geoinfo": {
+        "display_name": "East County Road 16E, Larimer County, Colorado, 86537, United States",
+        "road": "East County Road 16E",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "86537",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East County Road 16E, Larimer County, Colorado, 86537, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:12.087247+00:00",
+  "_kind": "geo_samples"
+}

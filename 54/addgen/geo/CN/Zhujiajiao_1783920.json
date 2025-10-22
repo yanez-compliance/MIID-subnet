@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhujiajiao",
+  "geonameid": 1783920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.094827087881423,
+      "lon": 121.0872650902549,
+      "geoinfo": {
+        "display_name": "Zhujiajiao, Qingpu District, Shanghai, 201713, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingpu District",
+        "state": "Shanghai",
+        "postcode": "201713",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhujiajiao, Shanghai, China"
+    },
+    {
+      "lat": 31.12467952900868,
+      "lon": 121.04063875124473,
+      "geoinfo": {
+        "display_name": "阁游路珠溪路, 阁游路, Zhujiajiao, Qingpu District, Shanghai, 201713, China",
+        "road": "阁游路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingpu District",
+        "state": "Shanghai",
+        "postcode": "201713",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "095, 阁游路, Zhujiajiao, 201713 Shanghai, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:50:35.139690+00:00",
+  "_kind": "geo_samples"
+}

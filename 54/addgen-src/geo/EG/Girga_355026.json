@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Girga",
+  "geonameid": 355026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.31191591344006,
+      "lon": 31.91352317214977,
+      "geoinfo": {
+        "display_name": "Gerga City, Suhaj, 82951, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gerga City",
+        "state": "Suhaj",
+        "postcode": "82951",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Girga, Suhaj, Egypt"
+    },
+    {
+      "lat": 26.359237986509807,
+      "lon": 31.867409894703556,
+      "geoinfo": {
+        "display_name": "Abd Al Moneim Riyad Street, بندار الشرقيه, Al Minshah City, Suhaj, 82743, Egypt",
+        "road": "Abd Al Moneim Riyad Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Minshah City",
+        "state": "Suhaj",
+        "postcode": "82743",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "986, Abd Al Moneim Riyad Street, بندار الشرقيه, Al Minshah City, Suhaj, 82743, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:01.500715+00:00",
+  "_kind": "geo_samples"
+}

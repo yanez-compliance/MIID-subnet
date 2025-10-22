@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Massa",
+  "geonameid": 3173775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.04482707186605,
+      "lon": 10.081398610744966,
+      "geoinfo": {
+        "display_name": "47, Via Frassina, Nazzano, Carrara, Massa-Carrara, Tuscany, 54033, Italy",
+        "road": "Via Frassina",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": "Nazzano",
+        "city_district": null,
+        "city": "Carrara",
+        "state": "Tuscany",
+        "postcode": "54033",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "47 Via Frassina, Massa, Tuscany, Italy"
+    },
+    {
+      "lat": 44.029241837109055,
+      "lon": 10.168201126387492,
+      "geoinfo": {
+        "display_name": "Via dei Tecchioni, Volpigliano, Tombara, San Carlo, Montignoso, Massa-Carrara, Tuscany, 54100, Italy",
+        "road": "Via dei Tecchioni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montignoso",
+        "state": "Tuscany",
+        "postcode": "54100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "154, Via dei Tecchioni, Volpigliano, Tombara, San Carlo, Montignoso, Massa-Carrara, Tuscany, 54100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:15.896905+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Somerset",
+  "geonameid": 5104755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.50019960581225,
+      "lon": -74.50983897479611,
+      "geoinfo": {
+        "display_name": "27, Magnolia Road, Franklin Township, Somerset County, New Jersey, 08873, United States",
+        "road": "Magnolia Road",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin Township",
+        "state": "New Jersey",
+        "postcode": "08873",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27 Magnolia Road, Somerset, New Jersey, United States"
+    },
+    {
+      "lat": 40.50028926636582,
+      "lon": -74.49988916624666,
+      "geoinfo": {
+        "display_name": "71, Layne Road, Somerset, Franklin Township, Somerset County, New Jersey, 08873, United States",
+        "road": "Layne Road",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin Township",
+        "state": "New Jersey",
+        "postcode": "08873",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "71, Layne Road, Somerset, Franklin Township, Somerset County, New Jersey, 08873, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:00.814749+00:00",
+  "_kind": "geo_samples"
+}

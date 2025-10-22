@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Girona",
+  "geonameid": 3121456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.94682287323569,
+      "lon": 2.815143295993417,
+      "geoinfo": {
+        "display_name": "C-65, Palau, Girona, Gironès, Girona, Catalonia, 17458, Spain",
+        "road": "C-65",
+        "house_number": null,
+        "neighbourhood": "Palau",
+        "suburb": null,
+        "city_district": null,
+        "city": "Girona",
+        "state": "Catalonia",
+        "postcode": "17458",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "C-65, Girona, Catalonia, Spain"
+    },
+    {
+      "lat": 41.97969606650976,
+      "lon": 2.8228562294994664,
+      "geoinfo": {
+        "display_name": "Mercat municipal d'Abastaments, Plaça de Salvador Espriu, el Mercadal, Girona, Gironès, Girona, Catalonia, 17002, Spain",
+        "road": "Plaça de Salvador Espriu",
+        "house_number": null,
+        "neighbourhood": "el Mercadal",
+        "suburb": null,
+        "city_district": null,
+        "city": "Girona",
+        "state": "Catalonia",
+        "postcode": "17002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "101, Plaça de Salvador Espriu, Girona, 17002 Catalonia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:12.216977+00:00",
+  "_kind": "geo_samples"
+}

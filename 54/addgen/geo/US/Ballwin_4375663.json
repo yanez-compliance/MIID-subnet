@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ballwin",
+  "geonameid": 4375663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.592766121076025,
+      "lon": -90.54238428597367,
+      "geoinfo": {
+        "display_name": "Starbucks, Olde Towne Plaza, Ballwin, Saint Louis County, Missouri, 63011, United States",
+        "road": "Starbucks",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ballwin",
+        "state": "Missouri",
+        "postcode": "63011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Starbucks, Ballwin, Missouri, United States"
+    },
+    {
+      "lat": 38.63633170169314,
+      "lon": -90.5598303383262,
+      "geoinfo": {
+        "display_name": "15699, Cedarmill Drive, Baxter Lakes, Chesterfield, Saint Louis County, Missouri, 63017, United States",
+        "road": "Cedarmill Drive",
+        "house_number": "15699",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chesterfield",
+        "state": "Missouri",
+        "postcode": "63017",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15699, Cedarmill Drive, Baxter Lakes, Chesterfield, Saint Louis County, Missouri, 63017, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:48.680321+00:00",
+  "_kind": "geo_samples"
+}

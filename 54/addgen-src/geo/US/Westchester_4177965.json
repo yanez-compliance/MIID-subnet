@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westchester",
+  "geonameid": 4177965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.747396359491486,
+      "lon": -80.31982696672256,
+      "geoinfo": {
+        "display_name": "Palmetto Expressway, Miami-Dade County, Florida, 33155, United States",
+        "road": "Palmetto Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Palmetto Expressway, Westchester, Florida, United States"
+    },
+    {
+      "lat": 25.735144690171715,
+      "lon": -80.282583972681,
+      "geoinfo": {
+        "display_name": "3840, Alhambra Court, Florida Pioneer Village, Coral Gables, Miami-Dade County, Florida, 33134, United States",
+        "road": "Alhambra Court",
+        "house_number": "3840",
+        "neighbourhood": "Florida Pioneer Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coral Gables",
+        "state": "Florida",
+        "postcode": "33134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3840, Alhambra Court, Florida Pioneer Village, Coral Gables, Miami-Dade County, Florida, 33134, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:36.264741+00:00",
+  "_kind": "geo_samples"
+}

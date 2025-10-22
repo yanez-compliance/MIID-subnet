@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sohna",
+  "geonameid": 1255870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.2330639160065,
+      "lon": 77.02326092095392,
+      "geoinfo": {
+        "display_name": "NH919, Sohna, Gurugram, Taoru, Nuh, Haryana, 122103, India",
+        "road": "NH919",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sohna",
+        "city": "Gurugram",
+        "state": "Haryana",
+        "postcode": "122103",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH919, Sohna, Haryana, India"
+    },
+    {
+      "lat": 28.273390510942974,
+      "lon": 77.0708689863712,
+      "geoinfo": {
+        "display_name": "Sohna, Gurugram, Haryana, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sohna",
+        "city": "Gurugram",
+        "state": "Haryana",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "262, Sohna, Gurugram, 88452 Haryana, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:12:53.369924+00:00",
+  "_kind": "geo_samples"
+}

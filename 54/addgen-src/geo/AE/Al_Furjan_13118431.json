@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Al Furjan",
+  "geonameid": 13118431,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.018401100397615,
+      "lon": 55.124071069793914,
+      "geoinfo": {
+        "display_name": "Al Furjan, Jabal Ali, Dubai, United Arab Emirates",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Al Furjan",
+        "suburb": "Jabal Ali",
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "Al Furjan, Al Furjan, Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.040675258593076,
+      "lon": 55.147861539497235,
+      "geoinfo": {
+        "display_name": "Al Asayel Street, Jabal Ali 1, Dubai, United Arab Emirates",
+        "road": "Al Asayel Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jabal Ali 1",
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "Al Asayel Street, Al Furjan, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-16T10:19:37.833647+00:00",
+  "_kind": "geo_samples"
+}

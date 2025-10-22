@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Arroyomolinos",
+  "geonameid": 3129356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.233057595079536,
+      "lon": -3.907001658482012,
+      "geoinfo": {
+        "display_name": "Larache, Batres, Community of Madrid, 28939, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Batres",
+        "state": "Community of Madrid",
+        "postcode": "28939",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Arroyomolinos, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.2579340118788,
+      "lon": -3.9496925901148727,
+      "geoinfo": {
+        "display_name": "R-5, Navalcarnero, Community of Madrid, 28939, Spain",
+        "road": "R-5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navalcarnero",
+        "state": "Community of Madrid",
+        "postcode": "28939",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "R-5, Navalcarnero, Community of Madrid, 28939, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:42.549619+00:00",
+  "_kind": "geo_samples"
+}

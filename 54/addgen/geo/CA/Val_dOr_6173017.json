@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Val-d'Or",
+  "geonameid": 6173017,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.05795454675522,
+      "lon": -77.81873522927981,
+      "geoinfo": {
+        "display_name": "Val-d'Or, La Vallée-de-l'Or, Abitibi-Témiscamingue, Quebec, J9P 0E9, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Val-d'Or",
+        "state": "Quebec",
+        "postcode": "J9P 0E9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Val-d'Or, Quebec, Canada"
+    },
+    {
+      "lat": 48.098952277485914,
+      "lon": -77.78171062402366,
+      "geoinfo": {
+        "display_name": "1, Rue La Vérendrye, Bourlamaque, Val-d'Or, La Vallée-de-l'Or, Abitibi-Témiscamingue, Quebec, J9P 1P9, Canada",
+        "road": "Rue La Vérendrye",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Bourlamaque",
+        "city_district": null,
+        "city": "Val-d'Or",
+        "state": "Quebec",
+        "postcode": "J9P 1P9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1, Rue La Vérendrye, Bourlamaque, Val-d'Or, La Vallée-de-l'Or, Abitibi-Témiscamingue, Quebec, J9P 1P9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:13.421335+00:00",
+  "_kind": "geo_samples"
+}

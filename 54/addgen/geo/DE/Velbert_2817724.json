@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Velbert",
+  "geonameid": 2817724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.309896191597666,
+      "lon": 7.06079168105312,
+      "geoinfo": {
+        "display_name": "Hochstraße, Tönisheide, Neviges, Velbert, Kreis Mettmann, North Rhine-Westphalia, 42553, Germany",
+        "road": "Hochstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tönisheide",
+        "city_district": null,
+        "city": "Velbert",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42553",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hochstraße, Velbert, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.31526458560058,
+      "lon": 7.104484802742395,
+      "geoinfo": {
+        "display_name": "Donnenberger Straße, Unter Lünes, Neviges, Velbert, Kreis Mettmann, North Rhine-Westphalia, 42553, Germany",
+        "road": "Donnenberger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Neviges",
+        "city_district": null,
+        "city": "Velbert",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42553",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "663, Donnenberger Straße, Unter Lünes, Neviges, Velbert, Kreis Mettmann, North Rhine-Westphalia, 42553, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:17.024267+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 4787117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.78064721181381,
+      "lon": -77.22850517839234,
+      "geoinfo": {
+        "display_name": "8268, Old Keene Mill Road, West Springfield, Fairfax County, Virginia, 22152, United States",
+        "road": "Old Keene Mill Road",
+        "house_number": "8268",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Springfield",
+        "state": "Virginia",
+        "postcode": "22152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8268 Old Keene Mill Road, Springfield, Virginia, United States"
+    },
+    {
+      "lat": 38.81567873943332,
+      "lon": -77.14857830844771,
+      "geoinfo": {
+        "display_name": "4930, Lincoln Avenue, Lincolnia Park, Lincolnia, Fairfax County, Virginia, 22312, United States",
+        "road": "Lincoln Avenue",
+        "house_number": "4930",
+        "neighbourhood": "Lincolnia Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincolnia",
+        "state": "Virginia",
+        "postcode": "22312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4930, Lincoln Avenue, Lincolnia Park, Lincolnia, Fairfax County, Virginia, 22312, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:27.414947+00:00",
+  "_kind": "geo_samples"
+}

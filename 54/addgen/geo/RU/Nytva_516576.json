@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Nytva",
+  "geonameid": 516576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.921222291592436,
+      "lon": 55.298004199073326,
+      "geoinfo": {
+        "display_name": "Nytva, Nytvensky District, Perm Krai, Volga Federal District, 617000, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nytva",
+        "state": "Perm Krai",
+        "postcode": "617000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Nytva, Perm Krai, Russia"
+    },
+    {
+      "lat": 57.92328373924303,
+      "lon": 55.32020716468117,
+      "geoinfo": {
+        "display_name": "улица Генерала Каменского, Nytva, Nytvensky District, Perm Krai, Volga Federal District, 617000, Russia",
+        "road": "улица Генерала Каменского",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nytva",
+        "state": "Perm Krai",
+        "postcode": "617000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "929, улица Генерала Каменского, Nytva, Nytvensky District, Perm Krai, Volga Federal District, 617000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:45:37.470864+00:00",
+  "_kind": "geo_samples"
+}

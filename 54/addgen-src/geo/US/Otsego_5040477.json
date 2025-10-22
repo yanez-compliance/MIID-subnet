@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Otsego",
+  "geonameid": 5040477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.278312529292364,
+      "lon": -93.61720322787274,
+      "geoinfo": {
+        "display_name": "90th Street Northeast, Otsego, Wright County, Minnesota, 55330, United States",
+        "road": "90th Street Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Otsego",
+        "state": "Minnesota",
+        "postcode": "55330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "90th Street Northeast, Otsego, Minnesota, United States"
+    },
+    {
+      "lat": 45.238254327358575,
+      "lon": -93.55730118540707,
+      "geoinfo": {
+        "display_name": "6102, Quam Avenue Northeast, Saint Michael, Wright County, Minnesota, 55330, United States",
+        "road": "Quam Avenue Northeast",
+        "house_number": "6102",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Michael",
+        "state": "Minnesota",
+        "postcode": "55330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6102, Quam Avenue Northeast, Saint Michael, Wright County, Minnesota, 55330, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:09.414981+00:00",
+  "_kind": "geo_samples"
+}

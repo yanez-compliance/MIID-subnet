@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Kyaikkami",
+  "geonameid": 1317402,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 16.10576070070553,
+      "lon": 97.58785056646558,
+      "geoinfo": {
+        "display_name": "Mudon Township, Mawlamyine District, Mon State, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mon State",
+        "postcode": null,
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "630, Mudon Township, Mawlamyine District, 98445 Mon State, Myanmar"
+    },
+    {
+      "lat": 16.08488816161045,
+      "lon": 97.51935221276443,
+      "geoinfo": {
+        "display_name": "Kyaikkami, Thanbyuzayat Township, Mawlamyine District, Mon State, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kyaikkami",
+        "state": "Mon State",
+        "postcode": null,
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "362, Kyaikkami, Thanbyuzayat Township, Mawlamyine District, 87832 Mon State, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:55.438233+00:00",
+  "_kind": "geo_samples"
+}

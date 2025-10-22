@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint-Lazare",
+  "geonameid": 6138617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.42353075621419,
+      "lon": -74.1835730323589,
+      "geoinfo": {
+        "display_name": "Rue de la Chevauchée, Saint-Lazare, Vaudreuil-Soulanges, Montérégie, Quebec, J7T 2H9, Canada",
+        "road": "Rue de la Chevauchée",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Lazare",
+        "state": "Quebec",
+        "postcode": "J7T 2H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue de la Chevauchée, Saint-Lazare, Quebec, Canada"
+    },
+    {
+      "lat": 45.421887688156964,
+      "lon": -74.17249338707843,
+      "geoinfo": {
+        "display_name": "2958, Rue Sandmere, Saddlebrook, Saint-Lazare, Vaudreuil-Soulanges, Montérégie, Quebec, J7T 2H8, Canada",
+        "road": "Rue Sandmere",
+        "house_number": "2958",
+        "neighbourhood": "Saddlebrook",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Lazare",
+        "state": "Quebec",
+        "postcode": "J7T 2H8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2958, Rue Sandmere, Saddlebrook, Saint-Lazare, Vaudreuil-Soulanges, Montérégie, Quebec, J7T 2H8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:48.235399+00:00",
+  "_kind": "geo_samples"
+}

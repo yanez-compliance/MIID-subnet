@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Hazebrouck",
+  "geonameid": 3013619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.7364943235864,
+      "lon": 2.5461992278836596,
+      "geoinfo": {
+        "display_name": "274, Rue Notre-Dame, Zone commerciale de la Creule, Hazebrouck, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59190, France",
+        "road": "Rue Notre-Dame",
+        "house_number": "274",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hazebrouck",
+        "state": "Hauts-de-France",
+        "postcode": "59190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "274 Rue Notre-Dame, Hazebrouck, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.71446072076502,
+      "lon": 2.6063710924030943,
+      "geoinfo": {
+        "display_name": "Rue de Strazeele, Sec-Bois, Vieux-Berquin, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59232, France",
+        "road": "Rue de Strazeele",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vieux-Berquin",
+        "state": "Hauts-de-France",
+        "postcode": "59232",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "106, Rue de Strazeele, Sec-Bois, Vieux-Berquin, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59232, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:34.824655+00:00",
+  "_kind": "geo_samples"
+}

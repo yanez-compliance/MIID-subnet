@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Montrouge",
+  "geonameid": 2992017,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.78303932141055,
+      "lon": 2.3520250139226153,
+      "geoinfo": {
+        "display_name": "Villejuif, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94800, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villejuif",
+        "state": "Ile-de-France",
+        "postcode": "94800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Montrouge, Ile-de-France, France"
+    },
+    {
+      "lat": 48.78650013006516,
+      "lon": 2.3446250063436165,
+      "geoinfo": {
+        "display_name": "39, Rue Jules Guesde, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94240, France",
+        "road": "Rue Jules Guesde",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Haÿ-les-Roses",
+        "state": null,
+        "postcode": "94240",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "39, Rue Jules Guesde, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94240, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:41.160785+00:00",
+  "_kind": "geo_samples"
+}

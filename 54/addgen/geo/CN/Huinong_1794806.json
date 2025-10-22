@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huinong",
+  "geonameid": 1794806,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.230113258042024,
+      "lon": 106.7701125791467,
+      "geoinfo": {
+        "display_name": "南大街, Nanjie Subdistrict, Huinong District, Shizuishan, Ningxia, China",
+        "road": "南大街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nanjie Subdistrict",
+        "city_district": null,
+        "city": "Shizuishan",
+        "state": "Ningxia",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "南大街, Huinong, Ningxia, China"
+    },
+    {
+      "lat": 39.26457408031008,
+      "lon": 106.80240196700672,
+      "geoinfo": {
+        "display_name": "Bayintaohai, Hainan District, Wuhai City, Inner Mongolia, 016000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hainan District",
+        "state": "Inner Mongolia",
+        "postcode": "016000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "662, Bayintaohai, Hainan District, Wuhai City, Inner Mongolia, 016000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:37.028980+00:00",
+  "_kind": "geo_samples"
+}

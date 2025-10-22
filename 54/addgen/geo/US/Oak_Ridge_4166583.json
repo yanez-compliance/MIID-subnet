@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oak Ridge",
+  "geonameid": 4166583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.471772635980724,
+      "lon": -81.40326750049479,
+      "geoinfo": {
+        "display_name": "5973, Lake Ellenor Drive, Orlando Central Park, Sky Lake, Orange County, Florida, 32809, United States",
+        "road": "Lake Ellenor Drive",
+        "house_number": "5973",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sky Lake",
+        "state": "Florida",
+        "postcode": "32809",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5973 Lake Ellenor Drive, Oak Ridge, Florida, United States"
+    },
+    {
+      "lat": 28.481826422688027,
+      "lon": -81.44119735884597,
+      "geoinfo": {
+        "display_name": "Palm Beach Atlantic University Orlando Campus, 4700, Millenia Boulevard, Millenia, Orlando, Orange County, Florida, 32839, United States",
+        "road": "Millenia Boulevard",
+        "house_number": "4700",
+        "neighbourhood": "Millenia",
+        "suburb": null,
+        "city_district": null,
+        "city": "Orlando",
+        "state": "Florida",
+        "postcode": "32839",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Palm Beach Atlantic University Orlando Campus, 4700, Millenia Boulevard, Millenia, Orlando, Orange County, Florida, 32839, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:56.512288+00:00",
+  "_kind": "geo_samples"
+}

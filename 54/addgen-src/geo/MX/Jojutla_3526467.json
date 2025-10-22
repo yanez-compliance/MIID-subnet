@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Jojutla",
+  "geonameid": 3526467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.596473891093442,
+      "lon": -99.1766194612002,
+      "geoinfo": {
+        "display_name": "Carretera Jantetelco - El Higuerón (Cuota), Jojutla, Morelos, 62919, Mexico",
+        "road": "Carretera Jantetelco - El Higuerón (Cuota)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jojutla",
+        "state": "Morelos",
+        "postcode": "62919",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Jantetelco - El Higuerón (Cuota), Jojutla, Morelos, Mexico"
+    },
+    {
+      "lat": 18.594075533055197,
+      "lon": -99.14043029537918,
+      "geoinfo": {
+        "display_name": "Tlaquiltenango, Morelos, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Morelos",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "450, Tlaquiltenango, 35889 Morelos, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:29:48.480887+00:00",
+  "_kind": "geo_samples"
+}

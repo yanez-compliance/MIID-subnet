@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "L'Amoreaux",
+  "geonameid": 12156843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.80376459030854,
+      "lon": -79.29317407085841,
+      "geoinfo": {
+        "display_name": "Milliken Square Shopping Centre, Milliken Boulevard, Milliken, Scarborough—Agincourt, Scarborough, Toronto, Golden Horseshoe, Ontario, M1V 1S9, Canada",
+        "road": "Milliken Boulevard",
+        "house_number": null,
+        "neighbourhood": "Milliken",
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1V 1S9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Milliken Boulevard, L'Amoreaux, Ontario, Canada"
+    },
+    {
+      "lat": 43.7611965811342,
+      "lon": -79.3264941279204,
+      "geoinfo": {
+        "display_name": "1274, York Mills Road, Fenside-Parkwoods, Don Valley East, North York, Toronto, Golden Horseshoe, Ontario, M3A 1Z5, Canada",
+        "road": "York Mills Road",
+        "house_number": "1274",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3A 1Z5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1274, York Mills Road, Fenside-Parkwoods, Don Valley East, North York, Toronto, Golden Horseshoe, Ontario, M3A 1Z5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:23:03.583049+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "San Benito",
+  "geonameid": 3590389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.898356791808474,
+      "lon": -89.90917097094056,
+      "geoinfo": {
+        "display_name": "Flores, San Benito, Petén, 01701, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Flores",
+        "state": "Petén",
+        "postcode": "01701",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "San Benito, Petén, Guatemala"
+    },
+    {
+      "lat": 16.912930357248136,
+      "lon": -89.93177613317,
+      "geoinfo": {
+        "display_name": "Caminos, 4a Calle, Tikal, Santa Isabel, San Benito, Petén, 01701, Guatemala",
+        "road": "4a Calle",
+        "house_number": null,
+        "neighbourhood": "Tikal",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Benito",
+        "state": "Petén",
+        "postcode": "01701",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Caminos, 4a Calle, Tikal, Santa Isabel, San Benito, Petén, 01701, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:18.329406+00:00",
+  "_kind": "geo_samples"
+}

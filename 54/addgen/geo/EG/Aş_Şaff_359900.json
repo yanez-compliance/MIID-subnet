@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Aş Şaff",
+  "geonameid": 359900,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 29.556225983665072,
+      "lon": 31.237103426794466,
+      "geoinfo": {
+        "display_name": "Giza, 12979, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Giza",
+        "postcode": "12979",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Aş Şaff, Giza, Egypt"
+    },
+    {
+      "lat": 29.571290908640407,
+      "lon": 31.236740397452767,
+      "geoinfo": {
+        "display_name": "Al Wehda Al Sahya Street, Giza, 12891, Egypt",
+        "road": "Al Wehda Al Sahya Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Giza",
+        "postcode": "12891",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "544, Al Wehda Al Sahya Street, Giza, 12891, Egypt"
+    },
+    {
+      "lat": 29.53971449135897,
+      "lon": 31.25475886500307,
+      "geoinfo": {
+        "display_name": "Kafr Qassem Road, Al Saff, Giza, 12872, Egypt",
+        "road": "Kafr Qassem Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Saff",
+        "state": "Giza",
+        "postcode": "12872",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "157, Kafr Qassem Road, Al Saff, Giza, 12872, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:31.930748+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Purificación",
+  "geonameid": 3671208,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.827463825236287,
+      "lon": -74.95077483392248,
+      "geoinfo": {
+        "display_name": "El Progreso, Purificación, Suroriente, Tolima, RAP (Especial) Central, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "El Progreso",
+        "suburb": null,
+        "city_district": null,
+        "city": "Purificación",
+        "state": "Tolima",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "El Progreso, Purificación, Tolima, Colombia"
+    },
+    {
+      "lat": 3.8632302218113073,
+      "lon": -74.9660863100418,
+      "geoinfo": {
+        "display_name": "Carrera 1, Purificación, Suroriente, Tolima, RAP (Especial) Central, Colombia",
+        "road": "Carrera 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Purificación",
+        "state": "Tolima",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 1, Purificación, Suroriente, Tolima, 92775 RAP (Especial) Central, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:20.929556+00:00",
+  "_kind": "geo_samples"
+}

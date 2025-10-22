@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bochum",
+  "geonameid": 2947416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.46775436556008,
+      "lon": 7.25471716296472,
+      "geoinfo": {
+        "display_name": "45, Alarichstraße, Goy, Altenbochum, Bochum-Mitte, Bochum, North Rhine-Westphalia, 44803, Germany",
+        "road": "Alarichstraße",
+        "house_number": "45",
+        "neighbourhood": "Goy",
+        "suburb": "Altenbochum",
+        "city_district": null,
+        "city": "Bochum",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44803",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "45 Alarichstraße, Bochum, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.44395444759051,
+      "lon": 7.220511951771612,
+      "geoinfo": {
+        "display_name": "371, Markstraße, Brenschede, Wiemelhausen, Bochum-Süd, Bochum, North Rhine-Westphalia, 44799, Germany",
+        "road": "Markstraße",
+        "house_number": "371",
+        "neighbourhood": "Brenschede",
+        "suburb": "Wiemelhausen",
+        "city_district": null,
+        "city": "Bochum",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44799",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "371, Markstraße, Brenschede, Wiemelhausen, Bochum-Süd, Bochum, North Rhine-Westphalia, 44799, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:52.821744+00:00",
+  "_kind": "geo_samples"
+}

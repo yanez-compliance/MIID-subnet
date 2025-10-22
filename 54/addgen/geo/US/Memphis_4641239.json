@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Memphis",
+  "geonameid": 4641239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.139070653293054,
+      "lon": -90.01017202665666,
+      "geoinfo": {
+        "display_name": "1521, Court Avenue, Stonewall Place, Midtown, Memphis, Shelby County, West Tennessee, Tennessee, 38104, United States",
+        "road": "Court Avenue",
+        "house_number": "1521",
+        "neighbourhood": null,
+        "suburb": "Midtown",
+        "city_district": null,
+        "city": "Memphis",
+        "state": "Tennessee",
+        "postcode": "38104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1521 Court Avenue, Memphis, Tennessee, United States"
+    },
+    {
+      "lat": 35.16976248153651,
+      "lon": -90.0362966626635,
+      "geoinfo": {
+        "display_name": "1069, Thomas Street, Harbor Town, Memphis, Shelby County, West Tennessee, Tennessee, 38107, United States",
+        "road": "Thomas Street",
+        "house_number": "1069",
+        "neighbourhood": null,
+        "suburb": "Harbor Town",
+        "city_district": null,
+        "city": "Memphis",
+        "state": "Tennessee",
+        "postcode": "38107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1069, Thomas Street, Harbor Town, Memphis, Shelby County, West Tennessee, Tennessee, 38107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:44.124609+00:00",
+  "_kind": "geo_samples"
+}

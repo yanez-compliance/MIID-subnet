@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Veendam",
+  "geonameid": 2745783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.108362427213315,
+      "lon": 6.811999232637756,
+      "geoinfo": {
+        "display_name": "Veendammerweg, Borgercompagnie, Veendam, Groningen, Netherlands, 9631 TL, Netherlands",
+        "road": "Veendammerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borgercompagnie",
+        "state": "Groningen",
+        "postcode": "9631 TL",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Veendammerweg, Veendam, Groningen, The Netherlands"
+    },
+    {
+      "lat": 53.131130613359176,
+      "lon": 6.928509625182204,
+      "geoinfo": {
+        "display_name": "59, Beneden Veensloot, Meeden, Midden-Groningen, Groningen, Netherlands, 9651 CJ, Netherlands",
+        "road": "Beneden Veensloot",
+        "house_number": "59",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meeden",
+        "state": "Groningen",
+        "postcode": "9651 CJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "59, Beneden Veensloot, Meeden, Midden-Groningen, Groningen, Netherlands, 9651 CJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:08.002087+00:00",
+  "_kind": "geo_samples"
+}

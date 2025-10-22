@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Hillside",
+  "geonameid": 8349243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.69887535899754,
+      "lon": 144.70401774150173,
+      "geoinfo": {
+        "display_name": "206-388, Beattys Road, Fraser Rise, Melbourne, City of Melton, Victoria, 3336, Australia",
+        "road": "Beattys Road",
+        "house_number": "206-388",
+        "neighbourhood": null,
+        "suburb": "Fraser Rise",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3336",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "206-388 Beattys Road, Hillside, Victoria, Australia"
+    },
+    {
+      "lat": -37.69351565141501,
+      "lon": 144.71210464518472,
+      "geoinfo": {
+        "display_name": "Sirianni Boulevard, Aldo, Fraser Rise, Melbourne, City of Melton, Victoria, 3336, Australia",
+        "road": "Sirianni Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fraser Rise",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3336",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "375, Sirianni Boulevard, Aldo, Fraser Rise, Melbourne, City of Melton, Victoria, 3336, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:56:18.071012+00:00",
+  "_kind": "geo_samples"
+}

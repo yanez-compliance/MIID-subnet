@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al-'Ubūr",
+  "geonameid": 12451089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.21156957923023,
+      "lon": 31.434668545183893,
+      "geoinfo": {
+        "display_name": "The Crossing, Al Qalyubiya, 02000, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "The Crossing",
+        "state": "Al Qalyubiya",
+        "postcode": "02000",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al-'Ubūr, Al Qalyubiya, Egypt"
+    },
+    {
+      "lat": 30.19514006147623,
+      "lon": 31.44855646315537,
+      "geoinfo": {
+        "display_name": "Block 12016, Northern Extension, El Obour, Al Qalyubiya, 11785, Egypt",
+        "road": "Block 12016",
+        "house_number": null,
+        "neighbourhood": "Northern Extension",
+        "suburb": null,
+        "city_district": null,
+        "city": "El Obour",
+        "state": "Al Qalyubiya",
+        "postcode": "11785",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Block 12016, Northern Extension, El Obour, Al Qalyubiya, 11785, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:23.920910+00:00",
+  "_kind": "geo_samples"
+}

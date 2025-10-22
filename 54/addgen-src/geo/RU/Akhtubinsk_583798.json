@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Akhtubinsk",
+  "geonameid": 583798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.24178558028858,
+      "lon": 46.163220825457834,
+      "geoinfo": {
+        "display_name": "10, улица Величко, Akhtubinsk, городское поселение Ахтубинск, Akhtubinsky District, Astrakhan Oblast, 416500, Russia",
+        "road": "улица Величко",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akhtubinsk",
+        "state": "Astrakhan Oblast",
+        "postcode": "416500",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "10 улица Величко, Akhtubinsk, Astrakhan Oblast, Russia"
+    },
+    {
+      "lat": 48.295073988560475,
+      "lon": 46.21446545058851,
+      "geoinfo": {
+        "display_name": "Ахтубинск-7, Akhtubinsk, городское поселение Ахтубинск, Akhtubinsky District, Astrakhan Oblast, 416500, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ахтубинск-7",
+        "city_district": null,
+        "city": "Akhtubinsk",
+        "state": "Astrakhan Oblast",
+        "postcode": "416500",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Ахтубинск-7, Akhtubinsk, городское поселение Ахтубинск, Akhtubinsky District, Astrakhan Oblast, 416500, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:54.654283+00:00",
+  "_kind": "geo_samples"
+}

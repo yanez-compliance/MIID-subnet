@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clinton",
+  "geonameid": 4422133,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.33575819003956,
+      "lon": -90.33600751480569,
+      "geoinfo": {
+        "display_name": "Mississippi College, Capitol Street, Byrd Heights, Clinton, Hinds County, Mississippi, 39056, United States",
+        "road": "Capitol Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clinton",
+        "state": "Mississippi",
+        "postcode": "39056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Capitol Street, Clinton, Mississippi, United States"
+    },
+    {
+      "lat": 32.375304722889425,
+      "lon": -90.29330427113591,
+      "geoinfo": {
+        "display_name": "Clinton, Hinds County, Mississippi, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clinton",
+        "state": "Mississippi",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "172, Clinton, Hinds County, 43176 Mississippi, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:59.207986+00:00",
+  "_kind": "geo_samples"
+}

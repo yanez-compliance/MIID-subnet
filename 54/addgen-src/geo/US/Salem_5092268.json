@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salem",
+  "geonameid": 5092268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.81767088989324,
+      "lon": -71.16034316130576,
+      "geoinfo": {
+        "display_name": "Salem Road, Atkinson Heights, Atkinson, Rockingham County, New Hampshire, 03811, United States",
+        "road": "Salem Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atkinson",
+        "state": "New Hampshire",
+        "postcode": "03811",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Salem Road, Salem, New Hampshire, United States"
+    },
+    {
+      "lat": 42.78824424103561,
+      "lon": -71.1884512654856,
+      "geoinfo": {
+        "display_name": "Paradise Place, Wilson Corners, Salem, Rockingham County, New Hampshire, 03079, United States",
+        "road": "Paradise Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salem",
+        "state": "New Hampshire",
+        "postcode": "03079",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "215, Paradise Place, Wilson Corners, Salem, Rockingham County, New Hampshire, 03079, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:31.832685+00:00",
+  "_kind": "geo_samples"
+}

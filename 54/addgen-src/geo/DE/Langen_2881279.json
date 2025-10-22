@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Langen",
+  "geonameid": 2881279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.02901894706937,
+      "lon": 8.640249479703817,
+      "geoinfo": {
+        "display_name": "Breitseeschneise, Buchschlag, Dreieich, Landkreis Offenbach, Hesse, 63303, Germany",
+        "road": "Breitseeschneise",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buchschlag",
+        "state": "Hesse",
+        "postcode": "63303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Breitseeschneise, Langen, Hesse, Germany"
+    },
+    {
+      "lat": 49.94688439586772,
+      "lon": 8.689521424364042,
+      "geoinfo": {
+        "display_name": "Hanauer Steinschneise, Wixhausen, Darmstadt, Hesse, 64291, Germany",
+        "road": "Hanauer Steinschneise",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wixhausen",
+        "city": "Darmstadt",
+        "state": "Hesse",
+        "postcode": "64291",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "397, Hanauer Steinschneise, Wixhausen, Darmstadt, Hesse, 64291, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:15.553025+00:00",
+  "_kind": "geo_samples"
+}

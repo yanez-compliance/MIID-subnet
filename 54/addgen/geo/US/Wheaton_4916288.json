@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wheaton",
+  "geonameid": 4916288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.82896194353662,
+      "lon": -88.11373992424772,
+      "geoinfo": {
+        "display_name": "Butterfield Road, Danada Farms, Wheaton, DuPage County, Illinois, 60189, United States",
+        "road": "Butterfield Road",
+        "house_number": null,
+        "neighbourhood": "Danada Farms",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wheaton",
+        "state": "Illinois",
+        "postcode": "60189",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Butterfield Road, Wheaton, Illinois, United States"
+    },
+    {
+      "lat": 41.861123380981795,
+      "lon": -88.07865583737005,
+      "geoinfo": {
+        "display_name": "53, North Ott Avenue, Glen Ellyn, DuPage County, Illinois, 60137, United States",
+        "road": "North Ott Avenue",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glen Ellyn",
+        "state": "Illinois",
+        "postcode": "60137",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "53, North Ott Avenue, Glen Ellyn, DuPage County, Illinois, 60137, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:05.350828+00:00",
+  "_kind": "geo_samples"
+}

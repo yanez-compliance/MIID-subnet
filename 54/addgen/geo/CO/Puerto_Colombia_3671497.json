@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Puerto Colombia",
+  "geonameid": 3671497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.025542541260887,
+      "lon": -74.94087753838511,
+      "geoinfo": {
+        "display_name": "Salgar, Puerto Colombia, Atlántico, 081001, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salgar",
+        "state": "Atlántico",
+        "postcode": "081001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Puerto Colombia, Atlántico, Colombia"
+    },
+    {
+      "lat": 11.01787317516,
+      "lon": -74.93240636007515,
+      "geoinfo": {
+        "display_name": "Calle 9, Salgar, Puerto Colombia, Atlántico, 081001, Colombia",
+        "road": "Calle 9",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salgar",
+        "state": "Atlántico",
+        "postcode": "081001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 9, Salgar, Puerto Colombia, Atlántico, 081001, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:43.750127+00:00",
+  "_kind": "geo_samples"
+}

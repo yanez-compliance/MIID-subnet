@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Neubau",
+  "geonameid": 12214072,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.21483815656811,
+      "lon": 16.37042984908971,
+      "geoinfo": {
+        "display_name": "8, Werdertorgasse, Textilviertel, Innere Stadt, Vienna, 1010, Austria",
+        "road": "Werdertorgasse",
+        "house_number": "8",
+        "neighbourhood": "Textilviertel",
+        "suburb": "Innere Stadt",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1010",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "8, Werdertorgasse, Textilviertel, Innere Stadt, Vienna, 1010, Austria"
+    },
+    {
+      "lat": 48.238750486429915,
+      "lon": 16.368153185688918,
+      "geoinfo": {
+        "display_name": "32-38, Adalbert-Stifter-Straße, KG Brigittenau, Brigittenau, Vienna, 1200, Austria",
+        "road": "Adalbert-Stifter-Straße",
+        "house_number": "32-38",
+        "neighbourhood": "KG Brigittenau",
+        "suburb": "Brigittenau",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1200",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "32-38, Adalbert-Stifter-Straße, KG Brigittenau, Brigittenau, Vienna, 1200, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:48.878657+00:00",
+  "_kind": "geo_samples"
+}

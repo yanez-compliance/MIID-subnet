@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hadleigh",
+  "geonameid": 2647679,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54722333380988,
+      "lon": 0.5861460179365385,
+      "geoinfo": {
+        "display_name": "Round Hill Road, Hadleigh, Castle Point, Essex, England, SS7 1PR, United Kingdom",
+        "road": "Round Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Point",
+        "state": "England",
+        "postcode": "SS7 1PR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Round Hill Road, Hadleigh, England, United Kingdom"
+    },
+    {
+      "lat": 51.55038872850401,
+      "lon": 0.568489604811834,
+      "geoinfo": {
+        "display_name": "Boyce Hill Golf Course, Badger Path, Benfleet, Castle Point, Essex, England, SS7 1PH, United Kingdom",
+        "road": "Badger Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Point",
+        "state": "England",
+        "postcode": "SS7 1PH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Boyce Hill Golf Course, Badger Path, Benfleet, Castle Point, Essex, England, SS7 1PH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:51.156981+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tepatitlán de Morelos",
+  "geonameid": 3981984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.81744757128768,
+      "lon": -102.802240450842,
+      "geoinfo": {
+        "display_name": "Calle del Pochote, Tepatitlán de Morelos, Región Altos Sur, Jalisco, 47675, Mexico",
+        "road": "Calle del Pochote",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tepatitlán de Morelos",
+        "state": "Jalisco",
+        "postcode": "47675",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle del Pochote, Tepatitlán de Morelos, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.780763051415676,
+      "lon": -102.76253169138896,
+      "geoinfo": {
+        "display_name": "Tepatitlán de Morelos, Región Altos Sur, Jalisco, 47698, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tepatitlán de Morelos",
+        "state": "Jalisco",
+        "postcode": "47698",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "828, Tepatitlán de Morelos, Región Altos Sur, Jalisco, 47698, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:22.978226+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Monte Rosello",
+  "geonameid": 12188754,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.735077488408976,
+      "lon": 8.596714773374607,
+      "geoinfo": {
+        "display_name": "Sassari, Sardinia, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sassari",
+        "state": "Sardinia",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Monte Rosello, Sardinia, Italy"
+    },
+    {
+      "lat": 40.711523591130906,
+      "lon": 8.544521671518574,
+      "geoinfo": {
+        "display_name": "Strada Statale 131 Carlo Felice, Monserrato, Sassari, Sardinia, 07100, Italy",
+        "road": "Strada Statale 131 Carlo Felice",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Monserrato",
+        "city_district": null,
+        "city": "Sassari",
+        "state": "Sardinia",
+        "postcode": "07100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale 131 Carlo Felice, Monserrato, Sassari, Sardinia, 07100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:21.744025+00:00",
+  "_kind": "geo_samples"
+}

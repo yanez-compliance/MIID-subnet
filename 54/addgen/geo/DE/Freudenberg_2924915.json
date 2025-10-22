@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Freudenberg",
+  "geonameid": 2924915,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.86598160414609,
+      "lon": 7.828107561722958,
+      "geoinfo": {
+        "display_name": "1, K 88, Erlenhof, Hinhausen, Harbach, Kirchen (Sieg), Landkreis Altenkirchen (Westerwald), Rhineland-Palatinate, 57572, Germany",
+        "road": "K 88",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hinhausen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "57572",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 K 88, Freudenberg, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.92766264823093,
+      "lon": 7.87205097687684,
+      "geoinfo": {
+        "display_name": "Olper Straße, Bockseifen, Büschergrund, Wenden, Kreis Olpe, North Rhine-Westphalia, 57482, Germany",
+        "road": "Olper Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bockseifen",
+        "city_district": null,
+        "city": "Wenden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57482",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "764, Olper Straße, Bockseifen, Büschergrund, Wenden, Kreis Olpe, North Rhine-Westphalia, 57482, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:03.577962+00:00",
+  "_kind": "geo_samples"
+}

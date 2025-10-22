@@ -1,0 +1,47 @@
+{
+  "country_code": "UG",
+  "country": "Uganda",
+  "city": "Buhimba",
+  "geonameid": 234496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.345089638328827,
+      "lon": 31.29645682786889,
+      "geoinfo": {
+        "display_name": "Fort Portal Road, Kahoro, Kikuube, Western Region, Uganda",
+        "road": "Fort Portal Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kahoro",
+        "state": "Kikuube",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "Fort Portal Road, Buhimba, Kikuube, Uganda"
+    },
+    {
+      "lat": 1.3378068770288682,
+      "lon": 31.34113226663907,
+      "geoinfo": {
+        "display_name": "Kipoogo, Kikuube, Western Region, Uganda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kipoogo",
+        "state": "Kikuube",
+        "postcode": null,
+        "country": "Uganda",
+        "country_code": "ug"
+      },
+      "address": "483, Buhimba, 85197 Kikuube, Uganda"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:23.759316+00:00",
+  "_kind": "geo_samples"
+}

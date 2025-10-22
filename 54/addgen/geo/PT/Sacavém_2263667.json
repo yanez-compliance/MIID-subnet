@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Sacavém",
+  "geonameid": 2263667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.82059462618734,
+      "lon": -9.128128192739165,
+      "geoinfo": {
+        "display_name": "Avenida Salgueiro Maia, Bairro Alto do Moínho, Quinta do Arneiro, Camarate, Unhos e Apelação, Loures, Lisbon, 2680-383, Portugal",
+        "road": "Avenida Salgueiro Maia",
+        "house_number": null,
+        "neighbourhood": "Bairro Alto do Moínho",
+        "suburb": null,
+        "city_district": "Camarate, Unhos e Apelação",
+        "city": "Loures",
+        "state": null,
+        "postcode": "2680-383",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Avenida Salgueiro Maia, Sacavém, Portugal"
+    },
+    {
+      "lat": 38.79056789656204,
+      "lon": -9.07622061196589,
+      "geoinfo": {
+        "display_name": "Portela, Loures, Lisbon, 2685-223, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loures",
+        "state": null,
+        "postcode": "2685-223",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Portela, Loures, Lisbon, 2685-223, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T09:17:34.879733+00:00",
+  "_kind": "geo_samples"
+}

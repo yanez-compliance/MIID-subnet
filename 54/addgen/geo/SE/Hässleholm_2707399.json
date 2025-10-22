@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Hässleholm",
+  "geonameid": 2707399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.16647638800866,
+      "lon": 13.729096534071266,
+      "geoinfo": {
+        "display_name": "Helsingborgsvägen, Fredentorp, Pugahus, Hässleholm, Hässleholms kommun, Skåne County, 281 49, Sweden",
+        "road": "Helsingborgsvägen",
+        "house_number": null,
+        "neighbourhood": "Fredentorp",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hässleholm",
+        "state": null,
+        "postcode": "281 49",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Helsingborgsvägen, Hässleholm, Sweden"
+    },
+    {
+      "lat": 56.13012248982492,
+      "lon": 13.742639822578052,
+      "geoinfo": {
+        "display_name": "Hovdalavägen, Björkviken, Tormestorp, Hässleholms kommun, Skåne County, 281 46, Sweden",
+        "road": "Hovdalavägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tormestorp",
+        "state": null,
+        "postcode": "281 46",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "909, Hovdalavägen, 281 46 Hässleholm, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:29.805714+00:00",
+  "_kind": "geo_samples"
+}

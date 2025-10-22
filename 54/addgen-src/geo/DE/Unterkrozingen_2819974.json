@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Unterkrozingen",
+  "geonameid": 2819974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.91111984741632,
+      "lon": 7.625689569387908,
+      "geoinfo": {
+        "display_name": "23, Freiburger Straße, Gewerbepark Breisgau, Bremgarten, Hartheim am Rhein, VVG der Stadt Bad Krozingen, Landkreis Breisgau-Hochschwarzwald, Baden-Württemberg, 79427, Germany",
+        "road": "Freiburger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Bremgarten",
+        "city": "Hartheim am Rhein",
+        "state": "Baden-Württemberg",
+        "postcode": "79427",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Freiburger Straße, Unterkrozingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 47.91738525583813,
+      "lon": 7.751754390083569,
+      "geoinfo": {
+        "display_name": "17, Schmiege, Ehrenstetten, Ehrenkirchen, VVG der Gemeinde Ehrenkirchen, Landkreis Breisgau-Hochschwarzwald, Baden-Württemberg, 79238, Germany",
+        "road": "Schmiege",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ehrenstetten",
+        "state": "Baden-Württemberg",
+        "postcode": "79238",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17, Schmiege, Ehrenstetten, Ehrenkirchen, VVG der Gemeinde Ehrenkirchen, Landkreis Breisgau-Hochschwarzwald, Baden-Württemberg, 79238, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:24.329157+00:00",
+  "_kind": "geo_samples"
+}

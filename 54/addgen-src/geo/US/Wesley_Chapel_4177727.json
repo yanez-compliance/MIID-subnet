@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wesley Chapel",
+  "geonameid": 4177727,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.260908692687646,
+      "lon": -82.32264726224233,
+      "geoinfo": {
+        "display_name": "Scarlet Cedar Drive, Boyette Road Subdivision, Wesley Chapel, Pasco County, Florida, 33545, United States",
+        "road": "Scarlet Cedar Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wesley Chapel",
+        "state": "Florida",
+        "postcode": "33545",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Scarlet Cedar Drive, Wesley Chapel, Florida, United States"
+    },
+    {
+      "lat": 28.247698177578464,
+      "lon": -82.30567470762558,
+      "geoinfo": {
+        "display_name": "6201, Sushi Court, Chapel Pines, Wesley Chapel, Pasco County, Florida, 33545, United States",
+        "road": "Sushi Court",
+        "house_number": "6201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wesley Chapel",
+        "state": "Florida",
+        "postcode": "33545",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6201, Sushi Court, Chapel Pines, Wesley Chapel, Pasco County, Florida, 33545, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:43:44.635532+00:00",
+  "_kind": "geo_samples"
+}

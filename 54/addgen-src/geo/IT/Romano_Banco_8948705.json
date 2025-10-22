@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Romano Banco",
+  "geonameid": 8948705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.410197643273456,
+      "lon": 9.135275216893266,
+      "geoinfo": {
+        "display_name": "Via Bruno Buozzi, Cascina Bazzana, Assago, Milan, Lombardy, 20057, Italy",
+        "road": "Via Bruno Buozzi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Assago",
+        "state": "Lombardy",
+        "postcode": "20057",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Bruno Buozzi, Romano Banco, Lombardy, Italy"
+    },
+    {
+      "lat": 45.4667353589194,
+      "lon": 9.096125441978534,
+      "geoinfo": {
+        "display_name": "Via Pompeo Marchesi, Parco Bosco In Città, Municipio 7, Milan, Lombardy, 20153, Italy",
+        "road": "Via Pompeo Marchesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 7",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20153",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pompeo Marchesi, Parco Bosco In Città, Municipio 7, Milan, Lombardy, 20153, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:07.176173+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Sahagun",
+  "geonameid": 3530587,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.809513633127395,
+      "lon": -98.5861573078955,
+      "geoinfo": {
+        "display_name": "Carretera Pachuca - Cd. Sahagún, Tlanalapa, Hidalgo, 43990, Mexico",
+        "road": "Carretera Pachuca - Cd. Sahagún",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlanalapa",
+        "state": "Hidalgo",
+        "postcode": "43990",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Pachuca - Cd. Sahagún, Ciudad Sahagun, Hidalgo, Mexico"
+    },
+    {
+      "lat": 19.761164516454457,
+      "lon": -98.60764447678498,
+      "geoinfo": {
+        "display_name": "Axapusco, State of Mexico, 43990, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "43990",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "838, Axapusco, State of Mexico, 43990, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:36.434682+00:00",
+  "_kind": "geo_samples"
+}

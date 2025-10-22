@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Kutná Hora",
+  "geonameid": 3072463,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.9535262411198,
+      "lon": 15.212034305231926,
+      "geoinfo": {
+        "display_name": "33351, Miskovice, Hořany, Miskovice, okres Kutná Hora, Central Bohemia, 285 01, Czechia",
+        "road": "33351",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Miskovice",
+        "city_district": null,
+        "city": "Hořany",
+        "state": "Central Bohemia",
+        "postcode": "285 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "33351, Kutná Hora, Central Bohemia, Czechia"
+    },
+    {
+      "lat": 49.99201545943895,
+      "lon": 15.279680303189508,
+      "geoinfo": {
+        "display_name": "U sloupu, Hlízov, okres Kutná Hora, Central Bohemia, 285 32, Czechia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hlízov",
+        "city_district": null,
+        "city": "Hlízov",
+        "state": "Central Bohemia",
+        "postcode": "285 32",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "U sloupu, Hlízov, okres Kutná Hora, Central Bohemia, 285 32, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:18.790610+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Destelbergen",
+  "geonameid": 2799496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.07344824062295,
+      "lon": 3.8390005929017255,
+      "geoinfo": {
+        "display_name": "232, Haenhoutstraat, Destelbergen, Gent, East Flanders, 9070, Belgium",
+        "road": "Haenhoutstraat",
+        "house_number": "232",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Destelbergen",
+        "state": "East Flanders",
+        "postcode": "9070",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "232 Haenhoutstraat, Destelbergen, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.064795715057485,
+      "lon": 3.7971202381100877,
+      "geoinfo": {
+        "display_name": "6, Bergenkruislaan, Destelbergen, Gent, East Flanders, 9070, Belgium",
+        "road": "Bergenkruislaan",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Destelbergen",
+        "state": "East Flanders",
+        "postcode": "9070",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "6, Bergenkruislaan, Destelbergen, Gent, East Flanders, 9070, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:27.222031+00:00",
+  "_kind": "geo_samples"
+}

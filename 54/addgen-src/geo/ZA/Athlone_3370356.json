@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Athlone",
+  "geonameid": 3370356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.93144697783641,
+      "lon": 18.52215072321961,
+      "geoinfo": {
+        "display_name": "Jan Smuts Drive, Cape Town Ward 53, Cape Town, City of Cape Town, Western Cape, 7455, South Africa",
+        "road": "Jan Smuts Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cape Town Ward 53",
+        "city_district": null,
+        "city": "Cape Town",
+        "state": "Western Cape",
+        "postcode": "7455",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Jan Smuts Drive, Athlone, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.95842387600943,
+      "lon": 18.486465914230493,
+      "geoinfo": {
+        "display_name": "Arundel Road, Park Estate, Cape Town Ward 58, Cape Town, City of Cape Town, Western Cape, 7700, South Africa",
+        "road": "Arundel Road",
+        "house_number": null,
+        "neighbourhood": "Park Estate",
+        "suburb": "Cape Town Ward 58",
+        "city_district": null,
+        "city": "Cape Town",
+        "state": "Western Cape",
+        "postcode": "7700",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Arundel Road, Park Estate, Cape Town Ward 58, Cape Town, City of Cape Town, Western Cape, 7700, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:59.870219+00:00",
+  "_kind": "geo_samples"
+}

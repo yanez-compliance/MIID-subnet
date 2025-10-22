@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Balyanā",
+  "geonameid": 361435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.26895396527251,
+      "lon": 32.020499176747855,
+      "geoinfo": {
+        "display_name": "Suhaj, 82818, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Suhaj",
+        "postcode": "82818",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Balyanā, Suhaj, Egypt"
+    },
+    {
+      "lat": 26.22994750147331,
+      "lon": 32.00050025938077,
+      "geoinfo": {
+        "display_name": "Al Blina City, Qena, 82811, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Blina City",
+        "state": "Qena",
+        "postcode": "82811",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "061, Al Blina City, Qena, 82811, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:42.873013+00:00",
+  "_kind": "geo_samples"
+}

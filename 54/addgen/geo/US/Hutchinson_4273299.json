@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hutchinson",
+  "geonameid": 4273299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.03362291322736,
+      "lon": -97.91819662210898,
+      "geoinfo": {
+        "display_name": "Hutchinson Zoo, 6, Emerson Loop, Hutchinson, Reno County, Kansas, 67501, United States",
+        "road": "Emerson Loop",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hutchinson",
+        "state": "Kansas",
+        "postcode": "67501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6 Emerson Loop, Hutchinson, Kansas, United States"
+    },
+    {
+      "lat": 38.08281009557096,
+      "lon": -97.89015179283427,
+      "geoinfo": {
+        "display_name": "East 26th Avenue, Hutchinson, Reno County, Kansas, 67502, United States",
+        "road": "East 26th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hutchinson",
+        "state": "Kansas",
+        "postcode": "67502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 26th Avenue, Hutchinson, Reno County, Kansas, 67502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:23.841014+00:00",
+  "_kind": "geo_samples"
+}

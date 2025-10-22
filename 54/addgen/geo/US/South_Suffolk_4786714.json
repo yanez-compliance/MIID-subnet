@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Suffolk",
+  "geonameid": 4786714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.704717564263404,
+      "lon": -76.54443516647784,
+      "geoinfo": {
+        "display_name": "Suffolk, Virginia, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffolk",
+        "state": "Virginia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Suffolk, Virginia, United States"
+    },
+    {
+      "lat": 36.74499431327332,
+      "lon": -76.56290059783748,
+      "geoinfo": {
+        "display_name": "Bachand Woodworking, 1000, Wilroy Road, Wilroy Acres, Suffolk, Virginia, 23434, United States",
+        "road": "Wilroy Road",
+        "house_number": "1000",
+        "neighbourhood": "Wilroy Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffolk",
+        "state": "Virginia",
+        "postcode": "23434",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bachand Woodworking, 1000, Wilroy Road, Wilroy Acres, Suffolk, Virginia, 23434, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:01.666679+00:00",
+  "_kind": "geo_samples"
+}

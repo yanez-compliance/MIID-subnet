@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Vught",
+  "geonameid": 2745154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.64783373373958,
+      "lon": 5.222109234287564,
+      "geoinfo": {
+        "display_name": "4, Loonse Baan, Helvoirt, Vught, North Brabant, Netherlands, 5268 KT, Netherlands",
+        "road": "Loonse Baan",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Helvoirt",
+        "state": "North Brabant",
+        "postcode": "5268 KT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "4 Loonse Baan, Vught, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.68802029638847,
+      "lon": 5.318291189448079,
+      "geoinfo": {
+        "display_name": "1L, Van Veldekekade, Bazeldonk, Zuidoost, 's-Hertogenbosch, North Brabant, Netherlands, 5216 KS, Netherlands",
+        "road": "Van Veldekekade",
+        "house_number": "1L",
+        "neighbourhood": "Bazeldonk",
+        "suburb": null,
+        "city_district": null,
+        "city": "'s-Hertogenbosch",
+        "state": "North Brabant",
+        "postcode": "5216 KS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "1L, Van Veldekekade, Bazeldonk, Zuidoost, 's-Hertogenbosch, North Brabant, Netherlands, 5216 KS, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:46.080057+00:00",
+  "_kind": "geo_samples"
+}

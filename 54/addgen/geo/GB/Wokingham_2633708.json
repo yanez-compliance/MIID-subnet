@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wokingham",
+  "geonameid": 2633708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.43938790035427,
+      "lon": -0.8468353156555204,
+      "geoinfo": {
+        "display_name": "Wokingham Road, St. Nicholas, Hurst, Hurst, Borough of Wokingham, England, RG10 0RT, United Kingdom",
+        "road": "Wokingham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "St. Nicholas, Hurst",
+        "city_district": null,
+        "city": "Hurst",
+        "state": "England",
+        "postcode": "RG10 0RT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wokingham Road, Wokingham, England, United Kingdom"
+    },
+    {
+      "lat": 51.414484926396405,
+      "lon": -0.8722153912158186,
+      "geoinfo": {
+        "display_name": "Simon's Lane, Sindlesham, Winnersh, Borough of Wokingham, England, RG41 3NB, United Kingdom",
+        "road": "Simon's Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sindlesham",
+        "state": "England",
+        "postcode": "RG41 3NB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Simon's Lane, Sindlesham, Winnersh, Borough of Wokingham, England, RG41 3NB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:06.210506+00:00",
+  "_kind": "geo_samples"
+}

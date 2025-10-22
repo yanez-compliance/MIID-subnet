@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kearns",
+  "geonameid": 5776727,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.645103357038295,
+      "lon": -112.00489178025933,
+      "geoinfo": {
+        "display_name": "Cougar Lane, Country Hills, Kearns, Salt Lake County, Utah, 84118, United States",
+        "road": "Cougar Lane",
+        "house_number": null,
+        "neighbourhood": "Country Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kearns",
+        "state": "Utah",
+        "postcode": "84118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cougar Lane, Kearns, Utah, United States"
+    },
+    {
+      "lat": 40.67919156986098,
+      "lon": -112.0027353572724,
+      "geoinfo": {
+        "display_name": "4217, John Robert Circle, West Valley City, Salt Lake County, Utah, 84120, United States",
+        "road": "John Robert Circle",
+        "house_number": "4217",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Valley City",
+        "state": "Utah",
+        "postcode": "84120",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4217, John Robert Circle, West Valley City, Salt Lake County, Utah, 84120, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:50.703292+00:00",
+  "_kind": "geo_samples"
+}

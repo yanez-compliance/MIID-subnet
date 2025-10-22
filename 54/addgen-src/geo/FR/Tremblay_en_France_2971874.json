@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Tremblay-en-France",
+  "geonameid": 2971874,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.93837179421914,
+      "lon": 2.596816020502993,
+      "geoinfo": {
+        "display_name": "Rue de Meaux, Vaujours, Le Raincy, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93410, France",
+        "road": "Rue de Meaux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vaujours",
+        "state": "Ile-de-France",
+        "postcode": "93410",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Meaux, Tremblay-en-France, Ile-de-France, France"
+    },
+    {
+      "lat": 48.973349947837114,
+      "lon": 2.611621666572399,
+      "geoinfo": {
+        "display_name": "Route du Mesnil-Amelot, Mitry-Mory, Meaux, Seine-et-Marne, Ile-de-France, Metropolitan France, 77290, France",
+        "road": "Route du Mesnil-Amelot",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mitry-Mory",
+        "state": "Ile-de-France",
+        "postcode": "77290",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "250, Route du Mesnil-Amelot, Mitry-Mory, Meaux, Seine-et-Marne, Ile-de-France, Metropolitan France, 77290, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:13.550474+00:00",
+  "_kind": "geo_samples"
+}

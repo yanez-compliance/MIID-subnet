@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Siping",
+  "geonameid": 2034714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.15204041884376,
+      "lon": 124.3271250216295,
+      "geoinfo": {
+        "display_name": "Pingxi, Tiexi District, Siping City, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siping City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Siping, Jilin, China"
+    },
+    {
+      "lat": 43.124131744301465,
+      "lon": 124.37988594162262,
+      "geoinfo": {
+        "display_name": "环城公路, Tiedong District, Siping City, Jilin, China",
+        "road": "环城公路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siping City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "080, 环城公路, Tiedong District, Siping City, 59525 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:23.634100+00:00",
+  "_kind": "geo_samples"
+}

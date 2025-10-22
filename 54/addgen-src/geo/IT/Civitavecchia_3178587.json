@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Civitavecchia",
+  "geonameid": 3178587,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.06931500982135,
+      "lon": 11.799696960034455,
+      "geoinfo": {
+        "display_name": "Punta del Pecoraro, Civitavecchia, Roma Capitale, Lazio, 00053, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Punta del Pecoraro",
+        "city_district": null,
+        "city": "Civitavecchia",
+        "state": "Lazio",
+        "postcode": "00053",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Punta del Pecoraro, Civitavecchia, Lazio, Italy"
+    },
+    {
+      "lat": 42.10914761597329,
+      "lon": 11.776754071044419,
+      "geoinfo": {
+        "display_name": "strada statale 1 Aurelia Nord, Civitavecchia, Roma Capitale, Lazio, 00053, Italy",
+        "road": "strada statale 1 Aurelia Nord",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Civitavecchia",
+        "state": "Lazio",
+        "postcode": "00053",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "strada statale 1 Aurelia Nord, Civitavecchia, Roma Capitale, Lazio, 00053, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:40.846899+00:00",
+  "_kind": "geo_samples"
+}

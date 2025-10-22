@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Amandsberg",
+  "geonameid": 2786743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.069768011128765,
+      "lon": 3.7655719089401267,
+      "geoinfo": {
+        "display_name": "4, Julius Vuylstekestraat, Westveld, Sint-Amandsberg, Ghent, Gent, East Flanders, 9040, Belgium",
+        "road": "Julius Vuylstekestraat",
+        "house_number": "4",
+        "neighbourhood": "Westveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9040",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "4 Julius Vuylstekestraat, Sint-Amandsberg, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.08880192651157,
+      "lon": 3.7455673845416455,
+      "geoinfo": {
+        "display_name": "31;31B, Singel, Havengebied Gent - North Sea Port, Ghent, Gent, East Flanders, 9000, Belgium",
+        "road": "Singel",
+        "house_number": "31;31B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ghent",
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "31;31B, Singel, Havengebied Gent - North Sea Port, Ghent, Gent, East Flanders, 9000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:00:53.598104+00:00",
+  "_kind": "geo_samples"
+}

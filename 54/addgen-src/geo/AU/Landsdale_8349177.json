@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Landsdale",
+  "geonameid": 8349177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.804531212286683,
+      "lon": 115.87578355839224,
+      "geoinfo": {
+        "display_name": "Alexander Drive, Cullacabardee, City of Swan, Western Australia, 6077, Australia",
+        "road": "Alexander Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cullacabardee",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6077",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Alexander Drive, Landsdale, Western Australia, Australia"
+    },
+    {
+      "lat": -31.81713059249891,
+      "lon": 115.89309524776041,
+      "geoinfo": {
+        "display_name": "Park Street, Cullacabardee, City of Swan, Western Australia, 6066, Australia",
+        "road": "Park Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cullacabardee",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6066",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "097, Park Street, Cullacabardee, City of Swan, Western Australia, 6066, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:02.656226+00:00",
+  "_kind": "geo_samples"
+}

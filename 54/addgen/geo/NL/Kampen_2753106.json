@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Kampen",
+  "geonameid": 2753106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.58526865022909,
+      "lon": 5.943120069728264,
+      "geoinfo": {
+        "display_name": "Kamperzeedijk, Grafhorst, Kampen, Overijssel, Netherlands, 8271 RN, Netherlands",
+        "road": "Kamperzeedijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grafhorst",
+        "state": "Overijssel",
+        "postcode": "8271 RN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Kamperzeedijk, Kampen, Overijssel, The Netherlands"
+    },
+    {
+      "lat": 52.531542206237496,
+      "lon": 5.923522930169019,
+      "geoinfo": {
+        "display_name": "Venedijk Noord, De Bongerd, Stationskwartier, Kampen, Overijssel, Netherlands, 8266 LX, Netherlands",
+        "road": "Venedijk Noord",
+        "house_number": null,
+        "neighbourhood": "De Bongerd",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kampen",
+        "state": "Overijssel",
+        "postcode": "8266 LX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "360, Venedijk Noord, De Bongerd, Stationskwartier, Kampen, Overijssel, Netherlands, 8266 LX, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:26.019281+00:00",
+  "_kind": "geo_samples"
+}

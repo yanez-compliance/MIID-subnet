@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Las Vegas",
+  "geonameid": 5509403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.17184103425746,
+      "lon": -115.11886212222443,
+      "geoinfo": {
+        "display_name": "Walnut Avenue, East Las Vegas, Las Vegas, Clark County, Nevada, 89101, United States",
+        "road": "Walnut Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East Las Vegas",
+        "city_district": null,
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "postcode": "89101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walnut Avenue, North Las Vegas, Nevada, United States"
+    },
+    {
+      "lat": 36.18152405608469,
+      "lon": -115.13869090999982,
+      "geoinfo": {
+        "display_name": "East Washington Avenue, Cultural Corridor, Las Vegas, Clark County, Nevada, 89101, United States",
+        "road": "East Washington Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cultural Corridor",
+        "city_district": null,
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "postcode": "89101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "259, East Washington Avenue, Cultural Corridor, Las Vegas, Clark County, Nevada, 89101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:15.224668+00:00",
+  "_kind": "geo_samples"
+}

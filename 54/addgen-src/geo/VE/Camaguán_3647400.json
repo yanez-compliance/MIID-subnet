@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Camaguán",
+  "geonameid": 3647400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.098725018574418,
+      "lon": -67.56459681969584,
+      "geoinfo": {
+        "display_name": "El Toco, Parroquia Camaguán, Municipio Camaguán, Guarico State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Toco",
+        "state": "Guarico State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Camaguán, Guarico State, Venezuela"
+    },
+    {
+      "lat": 8.068339952619265,
+      "lon": -67.5962712665975,
+      "geoinfo": {
+        "display_name": "Parroquia La Unión, Municipio Arismendi, Barinas State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Barinas State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "895, Camaguán, 88514 Barinas State, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:19.446082+00:00",
+  "_kind": "geo_samples"
+}

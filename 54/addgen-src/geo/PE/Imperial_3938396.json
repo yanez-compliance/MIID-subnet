@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Imperial",
+  "geonameid": 3938396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.04896557150361,
+      "lon": -76.35840375813426,
+      "geoinfo": {
+        "display_name": "Cerro Candela, Imperial, Cerro Alegre, Imperial, Province of Cañete, Lima, 15701, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Cerro Candela",
+        "suburb": "Imperial",
+        "city_district": null,
+        "city": "Imperial",
+        "state": "Lima",
+        "postcode": "15701",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Cerro Candela, Imperial, Lima, Peru"
+    },
+    {
+      "lat": -13.09161607539902,
+      "lon": -76.35948711671166,
+      "geoinfo": {
+        "display_name": "Hualcará, San Vicente de Cañete, Province of Cañete, Lima, 15701, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Vicente de Cañete",
+        "state": "Lima",
+        "postcode": "15701",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "834, Hualcará, San Vicente de Cañete, Province of Cañete, Lima, 15701, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:32.481199+00:00",
+  "_kind": "geo_samples"
+}

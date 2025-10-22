@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yizhuang",
+  "geonameid": 1786408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.1258230785172,
+      "lon": 117.55643586012467,
+      "geoinfo": {
+        "display_name": "Yizhuang, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yizhuang, Jiangsu, China"
+    },
+    {
+      "lat": 34.1853713283356,
+      "lon": 117.59971371502081,
+      "geoinfo": {
+        "display_name": "S252, Tongshan District, Xuzhou, Jiangsu, 221000, China",
+        "road": "S252",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongshan District",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S252, Tongshan District, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:58.188307+00:00",
+  "_kind": "geo_samples"
+}

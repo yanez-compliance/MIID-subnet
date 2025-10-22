@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhongshan",
+  "geonameid": 1908018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.950780342625826,
+      "lon": 105.90444959136316,
+      "geoinfo": {
+        "display_name": "Zhongshan, Qin'an County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhongshan",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhongshan, Gansu, China"
+    },
+    {
+      "lat": 34.94036070971569,
+      "lon": 105.86570583446493,
+      "geoinfo": {
+        "display_name": "X454, Zhongshan, Qin'an County, Tianshui, Gansu, China",
+        "road": "X454",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhongshan",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X454, Zhongshan, Qin'an County, Tianshui, 56286 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:42.803219+00:00",
+  "_kind": "geo_samples"
+}

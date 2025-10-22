@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Harderwijk",
+  "geonameid": 2754848,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.33814844154052,
+      "lon": 5.646666311502444,
+      "geoinfo": {
+        "display_name": "Rijksweg A28, Tweelingstad, Harderwijk, Gelderland, Netherlands, 3843 XE, Netherlands",
+        "road": "Rijksweg A28",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Harderwijk",
+        "city": "Harderwijk",
+        "state": "Gelderland",
+        "postcode": "3843 XE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Rijksweg A28, Harderwijk, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 52.355155390302826,
+      "lon": 5.584136663243904,
+      "geoinfo": {
+        "display_name": "Harderwijk, Gelderland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Harderwijk",
+        "city": "Harderwijk",
+        "state": "Gelderland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "881, Harderwijk, 64520 Gelderland, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:37.237304+00:00",
+  "_kind": "geo_samples"
+}

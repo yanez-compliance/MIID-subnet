@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cleveland",
+  "geonameid": 5150529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.455327039066695,
+      "lon": -81.6898586273628,
+      "geoinfo": {
+        "display_name": "Steelyard Drive, Tremont, Cleveland, Cuyahoga County, Ohio, 44109, United States",
+        "road": "Steelyard Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Steelyard Drive, Cleveland, Ohio, United States"
+    },
+    {
+      "lat": 41.48398387478777,
+      "lon": -81.7098657860083,
+      "geoinfo": {
+        "display_name": "Momocho, 1835, Fulton Road, Hingetown, Ohio City, Cleveland, Cuyahoga County, Ohio, 44113, United States",
+        "road": "Fulton Road",
+        "house_number": "1835",
+        "neighbourhood": "Hingetown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Momocho, 1835, Fulton Road, Hingetown, Ohio City, Cleveland, Cuyahoga County, Ohio, 44113, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:25.417461+00:00",
+  "_kind": "geo_samples"
+}

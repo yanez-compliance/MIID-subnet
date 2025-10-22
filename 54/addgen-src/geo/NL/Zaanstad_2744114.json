@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Zaanstad",
+  "geonameid": 2744114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.43733020325306,
+      "lon": 4.863149463554153,
+      "geoinfo": {
+        "display_name": "88, Kerkstraat, Oostzaan, North Holland, Netherlands, 1511 EK, Netherlands",
+        "road": "Kerkstraat",
+        "house_number": "88",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oostzaan",
+        "state": "North Holland",
+        "postcode": "1511 EK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "88 Kerkstraat, Zaanstad, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.45131704168403,
+      "lon": 4.779433482581163,
+      "geoinfo": {
+        "display_name": "186B, J.J. Allanstraat, Westzaan, Zaanstad, North Holland, Netherlands, 1551 RR, Netherlands",
+        "road": "J.J. Allanstraat",
+        "house_number": "186B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westzaan",
+        "state": "North Holland",
+        "postcode": "1551 RR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "186B, J.J. Allanstraat, Westzaan, Zaanstad, North Holland, Netherlands, 1551 RR, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:26.611472+00:00",
+  "_kind": "geo_samples"
+}

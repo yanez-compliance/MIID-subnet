@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Dolores Hidalgo",
+  "geonameid": 4023117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.168113418378,
+      "lon": -100.91692723251987,
+      "geoinfo": {
+        "display_name": "Calle Lago de Yuriria, Los Olivos, Dolores Hidalgo, Guanajuato, 37803, Mexico",
+        "road": "Calle Lago de Yuriria",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dolores Hidalgo",
+        "state": "Guanajuato",
+        "postcode": "37803",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Lago de Yuriria, Dolores Hidalgo, Guanajuato, Mexico"
+    },
+    {
+      "lat": 21.136292412578566,
+      "lon": -100.95702101147312,
+      "geoinfo": {
+        "display_name": "El Jardin De La Loma, Dolores Hidalgo, Guanajuato, 37806, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dolores Hidalgo",
+        "state": "Guanajuato",
+        "postcode": "37806",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "497, El Jardin De La Loma, Dolores Hidalgo, Guanajuato, 37806, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:34:49.235445+00:00",
+  "_kind": "geo_samples"
+}

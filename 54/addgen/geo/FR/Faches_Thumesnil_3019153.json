@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Faches-Thumesnil",
+  "geonameid": 3019153,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.60612883765345,
+      "lon": 3.0922648670739146,
+      "geoinfo": {
+        "display_name": "201, Rue Roger Salengro, Ronchin, Lille, Nord, Hauts-de-France, Metropolitan France, 59790, France",
+        "road": "Rue Roger Salengro",
+        "house_number": "201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ronchin",
+        "state": "Hauts-de-France",
+        "postcode": "59790",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "201 Rue Roger Salengro, Faches-Thumesnil, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.618873246197786,
+      "lon": 3.0717537598319917,
+      "geoinfo": {
+        "display_name": "6, Cour Cacan, Faubourg de Douai, Lille-Moulins, Lille, Nord, Hauts-de-France, Metropolitan France, 59024, France",
+        "road": "Cour Cacan",
+        "house_number": "6",
+        "neighbourhood": "Faubourg de Douai",
+        "suburb": "Lille-Moulins",
+        "city_district": "Lille",
+        "city": "Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59024",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "6, Cour Cacan, Faubourg de Douai, Lille-Moulins, Lille, Nord, Hauts-de-France, Metropolitan France, 59024, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:18:02.076910+00:00",
+  "_kind": "geo_samples"
+}

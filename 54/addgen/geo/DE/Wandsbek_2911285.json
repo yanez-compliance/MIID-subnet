@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wandsbek",
+  "geonameid": 2911285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.58660234443162,
+      "lon": 10.099299482548707,
+      "geoinfo": {
+        "display_name": "ELBTOR mobile VW Nutzfahrzeuge, 29, Am Stadtrand, Wandsbek, Hamburg, 22047, Germany",
+        "road": "Am Stadtrand",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "Wandsbek",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22047",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "29 Am Stadtrand, Wandsbek, Germany"
+    },
+    {
+      "lat": 53.55803544987552,
+      "lon": 10.053296760412485,
+      "geoinfo": {
+        "display_name": "Lohhof, Hamm, Hamburg-Mitte, Hamburg, 20535, Germany",
+        "road": "Lohhof",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hamm",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20535",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "795, Lohhof, Hamm, Hamburg-Mitte, Hamburg, 20535, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:20.957463+00:00",
+  "_kind": "geo_samples"
+}

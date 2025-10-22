@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Atwater Village",
+  "geonameid": 5325186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.11137244584796,
+      "lon": -118.29139067186094,
+      "geoinfo": {
+        "display_name": "Los Feliz Boulevard, Los Feliz Neighborhood Council District, Los Feliz, Los Angeles, Los Angeles County, California, 90027, United States",
+        "road": "Los Feliz Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Los Feliz",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Los Feliz Boulevard, Atwater Village, California, United States"
+    },
+    {
+      "lat": 34.08613855901744,
+      "lon": -118.29063091775173,
+      "geoinfo": {
+        "display_name": "Normal Avenue, Bicycle District, East Hollywood, Los Angeles, Los Angeles County, California, 90029, United States",
+        "road": "Normal Avenue",
+        "house_number": null,
+        "neighbourhood": "Bicycle District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90029",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "940, Normal Avenue, Bicycle District, East Hollywood, Los Angeles, Los Angeles County, California, 90029, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:30.509425+00:00",
+  "_kind": "geo_samples"
+}

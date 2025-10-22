@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Concord",
+  "geonameid": 4933743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.45846182410214,
+      "lon": -71.29437934304237,
+      "geoinfo": {
+        "display_name": "66, Old Bedford Road, Lincoln, Middlesex County, Massachusetts, 01773, United States",
+        "road": "Old Bedford Road",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "Massachusetts",
+        "postcode": "01773",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "66 Old Bedford Road, Concord, Massachusetts, United States"
+    },
+    {
+      "lat": 42.454719062771616,
+      "lon": -71.37017283126093,
+      "geoinfo": {
+        "display_name": "82, Oak Road, Concord, Middlesex County, Massachusetts, 01742, United States",
+        "road": "Oak Road",
+        "house_number": "82",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "Massachusetts",
+        "postcode": "01742",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "82, Oak Road, Concord, Middlesex County, Massachusetts, 01742, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:02.754279+00:00",
+  "_kind": "geo_samples"
+}

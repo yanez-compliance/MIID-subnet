@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Redhill",
+  "geonameid": 2639545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.25899606435945,
+      "lon": -0.2212224990651588,
+      "geoinfo": {
+        "display_name": "M25, Rose Cottage, Lower Kingswood, Reigate and Banstead, Surrey, England, KT20 7NW, United Kingdom",
+        "road": "M25",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reigate and Banstead",
+        "state": "England",
+        "postcode": "KT20 7NW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M25, Redhill, England, United Kingdom"
+    },
+    {
+      "lat": 51.23082152033744,
+      "lon": -0.10839203411853392,
+      "geoinfo": {
+        "display_name": "Castlehill farm, Bletchingley, Tandridge, Surrey, England, RH1 4LD, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bletchingley",
+        "city_district": null,
+        "city": "Bletchingley",
+        "state": "England",
+        "postcode": "RH1 4LD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Castlehill farm, Bletchingley, Tandridge, Surrey, England, RH1 4LD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:59.955683+00:00",
+  "_kind": "geo_samples"
+}

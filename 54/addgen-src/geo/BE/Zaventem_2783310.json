@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zaventem",
+  "geonameid": 2783310,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.87001279399663,
+      "lon": 4.494125372672769,
+      "geoinfo": {
+        "display_name": "Weiveldlaan, Zaventem, Halle-Vilvoorde, Flemish Brabant, Flanders, 1930, Belgium",
+        "road": "Weiveldlaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zaventem",
+        "city": "Zaventem",
+        "state": "Flemish Brabant",
+        "postcode": "1930",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Weiveldlaan, Zaventem, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.89976160808236,
+      "lon": 4.447833553004036,
+      "geoinfo": {
+        "display_name": "Diegem, Machelen, Halle-Vilvoorde, Flemish Brabant, Flanders, 1831, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diegem",
+        "state": "Flemish Brabant",
+        "postcode": "1831",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "640, Zaventem, 1831 Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.844949050853856,
+      "lon": 4.497028909986859,
+      "geoinfo": {
+        "display_name": "3, Nachtegalenlaan - Avenue des Rossignols, Oppem, Wezembeek-Oppem, Halle-Vilvoorde, Flemish Brabant, Flanders, 1970, Belgium",
+        "road": "Nachtegalenlaan - Avenue des Rossignols",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wezembeek-Oppem",
+        "state": "Flemish Brabant",
+        "postcode": "1970",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "3, Nachtegalenlaan - Avenue des Rossignols, Oppem, Wezembeek-Oppem, Halle-Vilvoorde, Flemish Brabant, Flanders, 1970, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:20.685440+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willowbrook",
+  "geonameid": 5409768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.92215181603576,
+      "lon": -118.29979373403596,
+      "geoinfo": {
+        "display_name": "1371, West 122nd Street, West Athens, Los Angeles County, California, 90044, United States",
+        "road": "West 122nd Street",
+        "house_number": "1371",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "90044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1371 West 122nd Street, Willowbrook, California, United States"
+    },
+    {
+      "lat": 33.94583107418966,
+      "lon": -118.25423655388632,
+      "geoinfo": {
+        "display_name": "Central & Century, South Central Avenue, Los Angeles, Los Angeles County, California, 90002, United States",
+        "road": "South Central Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "285, South Central Avenue, Willowbrook, 90002 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:28.680325+00:00",
+  "_kind": "geo_samples"
+}

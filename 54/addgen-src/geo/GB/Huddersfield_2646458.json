@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Huddersfield",
+  "geonameid": 2646458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.619461200312806,
+      "lon": -1.735071445451689,
+      "geoinfo": {
+        "display_name": "Field Lane, Kirkburton, Farnley Tyas, Kirklees, West Yorkshire, England, HD4 6UJ, United Kingdom",
+        "road": "Field Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirklees",
+        "state": "England",
+        "postcode": "HD4 6UJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Field Lane, Huddersfield, England, United Kingdom"
+    },
+    {
+      "lat": 53.68837195535088,
+      "lon": -1.794294775195658,
+      "geoinfo": {
+        "display_name": "35, Crowtrees Lane, Field Lane, Brighouse, Calderdale, West Yorkshire, England, HD6 3LR, United Kingdom",
+        "road": "Crowtrees Lane",
+        "house_number": "35",
+        "neighbourhood": "Field Lane",
+        "suburb": null,
+        "city_district": null,
+        "city": "Calderdale",
+        "state": "England",
+        "postcode": "HD6 3LR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "35, Crowtrees Lane, Field Lane, Brighouse, Calderdale, West Yorkshire, England, HD6 3LR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:02.102940+00:00",
+  "_kind": "geo_samples"
+}

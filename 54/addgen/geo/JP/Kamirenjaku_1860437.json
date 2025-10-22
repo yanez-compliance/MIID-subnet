@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kamirenjaku",
+  "geonameid": 1860437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.66575129508232,
+      "lon": 139.57367276143196,
+      "geoinfo": {
+        "display_name": "Nakahara, Mitaka, Tokyo, 181-0005, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mitaka",
+        "state": null,
+        "postcode": "181-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kamirenjaku, Japan"
+    },
+    {
+      "lat": 35.68847366570099,
+      "lon": 139.60426769729128,
+      "geoinfo": {
+        "display_name": "Kugayama 5, Suginami, Tokyo, 168-0081, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kugayama 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suginami",
+        "state": null,
+        "postcode": "168-0081",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kugayama 5, Suginami, Tokyo, 168-0081, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:25.870675+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Triggiano",
+  "geonameid": 3165178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.08960490334255,
+      "lon": 16.96931904555073,
+      "geoinfo": {
+        "display_name": "Strada Vicinale Monte, Triggiano, Bari, Apulia, 70045, Italy",
+        "road": "Strada Vicinale Monte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Triggiano",
+        "state": "Apulia",
+        "postcode": "70045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Vicinale Monte, Triggiano, Apulia, Italy"
+    },
+    {
+      "lat": 41.09412478394218,
+      "lon": 16.93491414996479,
+      "geoinfo": {
+        "display_name": "Municipio 1, Bari, Apulia, 70019, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 1",
+        "city_district": null,
+        "city": "Bari",
+        "state": "Apulia",
+        "postcode": "70019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Municipio 1, Bari, Apulia, 70019, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:51.768010+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Alanya",
+  "geonameid": 324190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.51780951021179,
+      "lon": 32.04071357401247,
+      "geoinfo": {
+        "display_name": "Billur Sitesi, Tosmur, Alanya, Antalya, Mediterranean Region, 07425, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": "07425",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Alanya, Turkey"
+    },
+    {
+      "lat": 36.513811200256264,
+      "lon": 31.961187268339547,
+      "geoinfo": {
+        "display_name": "Antalya, Mediterranean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "354, Antalya, 52960 Mediterranean Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:14.027528+00:00",
+  "_kind": "geo_samples"
+}

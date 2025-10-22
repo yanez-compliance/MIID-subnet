@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Beloeil",
+  "geonameid": 5898138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.597841843877035,
+      "lon": -73.2055639637382,
+      "geoinfo": {
+        "display_name": "Maisons Bonneville, 601, Rue de l'Industrie, Beloeil, La Vallée-du-Richelieu, Montérégie, Quebec, J3G 0S5, Canada",
+        "road": "Rue de l'Industrie",
+        "house_number": "601",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beloeil",
+        "state": "Quebec",
+        "postcode": "J3G 0S5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "601 Rue de l'Industrie, Beloeil, Quebec, Canada"
+    },
+    {
+      "lat": 45.54828843409864,
+      "lon": -73.20006771390113,
+      "geoinfo": {
+        "display_name": "Rue Bellevue, Otterburn Park, La Vallée-du-Richelieu, Montérégie, Quebec, J3H 1Z3, Canada",
+        "road": "Rue Bellevue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Otterburn Park",
+        "state": "Quebec",
+        "postcode": "J3H 1Z3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Bellevue, Otterburn Park, La Vallée-du-Richelieu, Montérégie, Quebec, J3H 1Z3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:51.800753+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Breña",
+  "geonameid": 12165736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.028596179033125,
+      "lon": -77.06141567006338,
+      "geoinfo": {
+        "display_name": "Calle Los Naranjos, Perú 1ra Zona, San Martín de Porres, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15101, Peru",
+        "road": "Calle Los Naranjos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Martín de Porres",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15101",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle Los Naranjos, Breña, Lima, Peru"
+    },
+    {
+      "lat": -12.088449459318602,
+      "lon": -77.04420344872536,
+      "geoinfo": {
+        "display_name": "Jirón Sinchi Roca, Risso, Lince, Province of Lima, Lima Metropolitan Area, Lima, 51015, Peru",
+        "road": "Jirón Sinchi Roca",
+        "house_number": null,
+        "neighbourhood": "Risso",
+        "suburb": "Lince",
+        "city_district": null,
+        "city": null,
+        "state": "Lima",
+        "postcode": "51015",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "192, Jirón Sinchi Roca, Risso, Lince, Province of Lima, Lima Metropolitan Area, Lima, 51015, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:45.157017+00:00",
+  "_kind": "geo_samples"
+}

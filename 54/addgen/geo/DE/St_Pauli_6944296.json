@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "St. Pauli",
+  "geonameid": 6944296,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.55863095594361,
+      "lon": 9.97563849163475,
+      "geoinfo": {
+        "display_name": "16, Karolinenstraße, Karolinenviertel, St. Pauli, Hamburg-Mitte, Hamburg, 20357, Germany",
+        "road": "Karolinenstraße",
+        "house_number": "16",
+        "neighbourhood": "Karolinenviertel",
+        "suburb": "St. Pauli",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20357",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Karolinenstraße, St. Pauli, Germany"
+    },
+    {
+      "lat": 53.54123616100588,
+      "lon": 9.909290206074955,
+      "geoinfo": {
+        "display_name": "A 7, Othmarschen, Altona, Hamburg, 22605, Germany",
+        "road": "A 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Othmarschen",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22605",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 7, Othmarschen, Altona, Hamburg, 22605, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:49.482606+00:00",
+  "_kind": "geo_samples"
+}

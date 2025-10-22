@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ismailia",
+  "geonameid": 361055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.618438137528685,
+      "lon": 32.316300587450506,
+      "geoinfo": {
+        "display_name": "Al Qobtan Moustafa Alwi Street, Al Osra District, Al Ismailiya, 41526, Egypt",
+        "road": "Al Qobtan Moustafa Alwi Street",
+        "house_number": null,
+        "neighbourhood": "Al Osra District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Ismailiya",
+        "state": "Al Ismailiya",
+        "postcode": "41526",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Qobtan Moustafa Alwi Street, Ismailia, Al Ismailiya, Egypt"
+    },
+    {
+      "lat": 30.611169636637758,
+      "lon": 32.31622398580539,
+      "geoinfo": {
+        "display_name": "Al Maadeya Street, Al Ismailiya, 41526, Egypt",
+        "road": "Al Maadeya Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Ismailiya",
+        "state": "Al Ismailiya",
+        "postcode": "41526",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "053, Al Maadeya Street, Al Ismailiya, 41526, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:32.847207+00:00",
+  "_kind": "geo_samples"
+}

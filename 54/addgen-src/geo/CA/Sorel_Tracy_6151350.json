@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Sorel-Tracy",
+  "geonameid": 6151350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.044425844346115,
+      "lon": -73.15439285810598,
+      "geoinfo": {
+        "display_name": "Tracy, Sorel-Tracy, Pierre-De Saurel, Montérégie, Quebec, J3R 5S4, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tracy",
+        "city_district": null,
+        "city": "Sorel-Tracy",
+        "state": "Quebec",
+        "postcode": "J3R 5S4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Tracy, Sorel-Tracy, Quebec, Canada"
+    },
+    {
+      "lat": 46.06498184697227,
+      "lon": -73.10715089856242,
+      "geoinfo": {
+        "display_name": "Rang Saint-Michel, Saint-Ignace-de-Loyola, D'Autray, Lanaudière, Quebec, J3P 3S2, Canada",
+        "road": "Rang Saint-Michel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ignace-de-Loyola",
+        "state": "Quebec",
+        "postcode": "J3P 3S2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rang Saint-Michel, Saint-Ignace-de-Loyola, D'Autray, Lanaudière, Quebec, J3P 3S2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:32.976096+00:00",
+  "_kind": "geo_samples"
+}

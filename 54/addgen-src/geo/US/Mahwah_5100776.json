@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mahwah",
+  "geonameid": 5100776,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.05860541383838,
+      "lon": -74.11925792790746,
+      "geoinfo": {
+        "display_name": "Porcelanosa Ramsey, 600, NJ 17, Ramsey, Bergen County, New Jersey, 07446, United States",
+        "road": "NJ 17",
+        "house_number": "600",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramsey",
+        "state": "New Jersey",
+        "postcode": "07446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "600 NJ 17, Mahwah, New Jersey, United States"
+    },
+    {
+      "lat": 41.057473161550746,
+      "lon": -74.1582186360969,
+      "geoinfo": {
+        "display_name": "76, Sun Valley Road, Ramsey, Bergen County, New Jersey, 07446, United States",
+        "road": "Sun Valley Road",
+        "house_number": "76",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramsey",
+        "state": "New Jersey",
+        "postcode": "07446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "76, Sun Valley Road, Ramsey, Bergen County, New Jersey, 07446, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:43.579678+00:00",
+  "_kind": "geo_samples"
+}

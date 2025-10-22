@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mundelein",
+  "geonameid": 4903184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.25785930391997,
+      "lon": -88.00844700254449,
+      "geoinfo": {
+        "display_name": "344, South Prairie Avenue, Mundelein, Lake County, Illinois, 60060, United States",
+        "road": "South Prairie Avenue",
+        "house_number": "344",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mundelein",
+        "state": "Illinois",
+        "postcode": "60060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "344 South Prairie Avenue, Mundelein, Illinois, United States"
+    },
+    {
+      "lat": 42.278798914703806,
+      "lon": -87.96175707900451,
+      "geoinfo": {
+        "display_name": "500, West Rockland Road, Libertyville, Lake County, Illinois, 60048, United States",
+        "road": "West Rockland Road",
+        "house_number": "500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Libertyville",
+        "state": "Illinois",
+        "postcode": "60048",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "500, West Rockland Road, Libertyville, Lake County, Illinois, 60048, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:38.170712+00:00",
+  "_kind": "geo_samples"
+}

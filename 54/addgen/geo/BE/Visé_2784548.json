@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Visé",
+  "geonameid": 2784548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.775804249907075,
+      "lon": 5.675675649389374,
+      "geoinfo": {
+        "display_name": "Chemin des Meuniers, Lixhe, Visé, Liège, Wallonia, 4600, Belgium",
+        "road": "Chemin des Meuniers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Visé",
+        "state": "Liège",
+        "postcode": "4600",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin des Meuniers, Visé, Liège, Belgium"
+    },
+    {
+      "lat": 50.75053173604862,
+      "lon": 5.709229730515166,
+      "geoinfo": {
+        "display_name": "Viséweg, Moelingen - Mouland, Voeren - Fourons, Tongeren, Limburg, 3790, Belgium",
+        "road": "Viséweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moelingen - Mouland",
+        "state": "Limburg",
+        "postcode": "3790",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "041, Viséweg, Moelingen - Mouland, Voeren - Fourons, Tongeren, Limburg, 3790, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:18.895306+00:00",
+  "_kind": "geo_samples"
+}

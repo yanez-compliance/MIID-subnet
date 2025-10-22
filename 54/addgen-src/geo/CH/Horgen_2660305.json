@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Horgen",
+  "geonameid": 2660305,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.299087756942995,
+      "lon": 8.59350336221081,
+      "geoinfo": {
+        "display_name": "Seestrasse, Wyden, Erlenbach (ZH), Bezirk Meilen, Zurich, 8703, Switzerland",
+        "road": "Seestrasse",
+        "house_number": null,
+        "neighbourhood": "Wyden",
+        "suburb": null,
+        "city_district": null,
+        "city": "Erlenbach (ZH)",
+        "state": "Zurich",
+        "postcode": "8703",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Seestrasse, Horgen, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.272629956024225,
+      "lon": 8.540606726907473,
+      "geoinfo": {
+        "display_name": "Birchstrasse, Unterrengg / Schwyzerhof, Im Tobel, Langnau am Albis, Bezirk Horgen, Zurich, 8135, Switzerland",
+        "road": "Birchstrasse",
+        "house_number": null,
+        "neighbourhood": "Unterrengg / Schwyzerhof",
+        "suburb": null,
+        "city_district": null,
+        "city": "Langnau am Albis",
+        "state": "Zurich",
+        "postcode": "8135",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Birchstrasse, Horgen, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.29963203980964,
+      "lon": 8.573945180823205,
+      "geoinfo": {
+        "display_name": "Ludretikon, Thalwil, Bezirk Horgen, Zurich, 8800, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ludretikon",
+        "suburb": null,
+        "city_district": null,
+        "city": "Thalwil",
+        "state": "Zurich",
+        "postcode": "8800",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "714, Ludretikon, Thalwil, Bezirk Horgen, Zurich, 8800, Switzerland"
+    },
+    {
+      "lat": 47.225398434207456,
+      "lon": 8.611133450097642,
+      "geoinfo": {
+        "display_name": "Zugerstrasse, Hirzel, Horgen, Bezirk Horgen, Zurich, 8810, Switzerland",
+        "road": "Zugerstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Horgen",
+        "state": "Zurich",
+        "postcode": "8810",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "694, Zugerstrasse, Hirzel, Horgen, Bezirk Horgen, Zurich, 8810, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:08:52.119152+00:00",
+  "_kind": "geo_samples"
+}

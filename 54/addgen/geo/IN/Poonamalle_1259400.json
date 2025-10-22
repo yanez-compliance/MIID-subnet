@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Poonamalle",
+  "geonameid": 1259400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 13.077487480936895,
+      "lon": 80.14381251718751,
+      "geoinfo": {
+        "display_name": "Ayanambakkam, Ambattur, Thiruvallur, Tamil Nadu, 600077, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ayanambakkam",
+        "state": "Tamil Nadu",
+        "postcode": "600077",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Poonamalle, Tamil Nadu, India"
+    },
+    {
+      "lat": 13.030216353356382,
+      "lon": 80.14920869112011,
+      "geoinfo": {
+        "display_name": "Chennai Bypass Expressway, CMWSSB Division 153, Ward 153, Zone 11 Valasaravakkam, Chennai, Ambattur, Thiruvallur, Tamil Nadu, 600122, India",
+        "road": "Chennai Bypass Expressway",
+        "house_number": null,
+        "neighbourhood": "CMWSSB Division 153",
+        "suburb": "Zone 11 Valasaravakkam",
+        "city_district": null,
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postcode": "600122",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Chennai Bypass Expressway, CMWSSB Division 153, Ward 153, Zone 11 Valasaravakkam, Chennai, Ambattur, Thiruvallur, Tamil Nadu, 600122, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:15:10.240939+00:00",
+  "_kind": "geo_samples"
+}

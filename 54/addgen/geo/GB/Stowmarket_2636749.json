@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stowmarket",
+  "geonameid": 2636749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.2029585361918,
+      "lon": 1.0366324435270233,
+      "geoinfo": {
+        "display_name": "Church Road, Mid Suffolk, Suffolk, England, IP14 4BG, United Kingdom",
+        "road": "Church Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mid Suffolk",
+        "state": "England",
+        "postcode": "IP14 4BG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Road, Stowmarket, England, United Kingdom"
+    },
+    {
+      "lat": 52.2023633927172,
+      "lon": 0.9897336488143106,
+      "geoinfo": {
+        "display_name": "Spikes Lane, Haughley, Suffolk, England, IP14 3QF, United Kingdom",
+        "road": "Spikes Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haughley",
+        "state": "England",
+        "postcode": "IP14 3QF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Spikes Lane, Haughley, Suffolk, England, IP14 3QF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:52.522416+00:00",
+  "_kind": "geo_samples"
+}

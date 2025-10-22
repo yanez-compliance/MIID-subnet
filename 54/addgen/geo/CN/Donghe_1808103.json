@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Donghe",
+  "geonameid": 1808103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.25063014012098,
+      "lon": 106.33978395001316,
+      "geoinfo": {
+        "display_name": "土地窝, Wangcang County, Guangyuan, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "土地窝",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Donghe, Sichuan, China"
+    },
+    {
+      "lat": 32.24102935608442,
+      "lon": 106.3187503942985,
+      "geoinfo": {
+        "display_name": "Wangcang County, Guangyuan, Sichuan, 628200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wangcang County",
+        "state": "Sichuan",
+        "postcode": "628200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "857, Wangcang County, Guangyuan, Sichuan, 628200, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:01.702033+00:00",
+  "_kind": "geo_samples"
+}

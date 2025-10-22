@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sandy Springs",
+  "geonameid": 4221333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.896509191014395,
+      "lon": -84.35568309755048,
+      "geoinfo": {
+        "display_name": "5165, South Trimble Road Northeast, Ridgeview Forest, Atlanta, Fulton County, Georgia, 30342, United States",
+        "road": "South Trimble Road Northeast",
+        "house_number": "5165",
+        "neighbourhood": "Ridgeview Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30342",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5165 South Trimble Road Northeast, Sandy Springs, Georgia, United States"
+    },
+    {
+      "lat": 33.93842697689864,
+      "lon": -84.38868302589154,
+      "geoinfo": {
+        "display_name": "6691, Castleton Drive Northwest, Atlanta, Fulton County, Georgia, 30328, United States",
+        "road": "Castleton Drive Northwest",
+        "house_number": "6691",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30328",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6691, Castleton Drive Northwest, Atlanta, Fulton County, Georgia, 30328, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:46.123280+00:00",
+  "_kind": "geo_samples"
+}

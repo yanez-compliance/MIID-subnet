@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Langford",
+  "geonameid": 6049388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.41270835544221,
+      "lon": -123.53353775987446,
+      "geoinfo": {
+        "display_name": "3603, Happy Valley Road, Langford, Capital Regional District, British Columbia, V9C 0R2, Canada",
+        "road": "Happy Valley Road",
+        "house_number": "3603",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Langford",
+        "state": "British Columbia",
+        "postcode": "V9C 0R2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3603 Happy Valley Road, Langford, British Columbia, Canada"
+    },
+    {
+      "lat": 48.463279543731,
+      "lon": -123.51518441580399,
+      "geoinfo": {
+        "display_name": "Lakeview Glen, Hidden Valley Mobile Home Park, Langford, Capital Regional District, British Columbia, V9B 4H2, Canada",
+        "road": "Lakeview Glen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Langford",
+        "state": "British Columbia",
+        "postcode": "V9B 4H2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Lakeview Glen, Hidden Valley Mobile Home Park, Langford, Capital Regional District, British Columbia, V9B 4H2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:24.595331+00:00",
+  "_kind": "geo_samples"
+}

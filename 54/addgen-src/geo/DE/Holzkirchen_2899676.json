@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Holzkirchen",
+  "geonameid": 2899676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.84665390619956,
+      "lon": 11.72085603737239,
+      "geoinfo": {
+        "display_name": "B 318, Lochham, Warngau, Landkreis Miesbach, Bavaria, 83627, Germany",
+        "road": "B 318",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warngau",
+        "state": "Bavaria",
+        "postcode": "83627",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 318, Holzkirchen, Bavaria, Germany"
+    },
+    {
+      "lat": 47.877087865154856,
+      "lon": 11.717858527016128,
+      "geoinfo": {
+        "display_name": "TÜV Süd, 1, Industriestraße, Gewerbegebiet Holzkirchen-Ost, Marschall, Holzkirchen, Landkreis Miesbach, Bavaria, 83607, Germany",
+        "road": "Industriestraße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holzkirchen",
+        "state": "Bavaria",
+        "postcode": "83607",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "TÜV Süd, 1, Industriestraße, Gewerbegebiet Holzkirchen-Ost, Marschall, Holzkirchen, Landkreis Miesbach, Bavaria, 83607, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:10.392078+00:00",
+  "_kind": "geo_samples"
+}

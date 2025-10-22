@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Arrecife",
+  "geonameid": 2521570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.94394715472365,
+      "lon": -13.515136081811951,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Arrecife, Spain"
+    },
+    {
+      "lat": 28.986068005578677,
+      "lon": -13.55443000618516,
+      "geoinfo": {
+        "display_name": "Maneje, Arrecife, Las Palmas, Canary Islands, 35507, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maneje",
+        "city_district": null,
+        "city": "Arrecife",
+        "state": null,
+        "postcode": "35507",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "798, Maneje, Arrecife, Las Palmas, Canary Islands, 35507, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:17.052246+00:00",
+  "_kind": "geo_samples"
+}

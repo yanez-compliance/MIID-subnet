@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Edegem",
+  "geonameid": 2799007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.17412935419966,
+      "lon": 4.395852641639635,
+      "geoinfo": {
+        "display_name": "R11, De Bist, Wilrijk, Antwerp, Flanders, 2610, Belgium",
+        "road": "R11",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2610",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "R11, Edegem, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.155264458084666,
+      "lon": 4.4019436004009584,
+      "geoinfo": {
+        "display_name": "Doornstraat, Edegem, Antwerp, Flanders, 2650, Belgium",
+        "road": "Doornstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edegem",
+        "state": "Antwerp",
+        "postcode": "2650",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "165, Doornstraat, Edegem, Antwerp, Flanders, 2650, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:38.869460+00:00",
+  "_kind": "geo_samples"
+}

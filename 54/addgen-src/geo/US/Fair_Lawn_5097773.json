@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fair Lawn",
+  "geonameid": 5097773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.94852677478714,
+      "lon": -74.13803343242678,
+      "geoinfo": {
+        "display_name": "Dunkin', 23-08, Maple Avenue, Fair Lawn, Bergen County, New Jersey, 07410, United States",
+        "road": "Maple Avenue",
+        "house_number": "23-08",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fair Lawn",
+        "state": "New Jersey",
+        "postcode": "07410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23-08 Maple Avenue, Fair Lawn, New Jersey, United States"
+    },
+    {
+      "lat": 40.970054490381905,
+      "lon": -74.15709975712325,
+      "geoinfo": {
+        "display_name": "NJ 208, Hawthorne, Passaic County, New Jersey, 07506, United States",
+        "road": "NJ 208",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorne",
+        "state": "New Jersey",
+        "postcode": "07506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NJ 208, Hawthorne, Passaic County, New Jersey, 07506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:02.932644+00:00",
+  "_kind": "geo_samples"
+}

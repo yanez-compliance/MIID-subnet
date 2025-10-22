@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Miraflores",
+  "geonameid": 3934876,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.13064802971221,
+      "lon": -77.02252655152178,
+      "geoinfo": {
+        "display_name": "Luis Fernán Bedoya Reyes Expressway, San Antonio, Miraflores, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15048, Peru",
+        "road": "Luis Fernán Bedoya Reyes Expressway",
+        "house_number": null,
+        "neighbourhood": "San Antonio",
+        "suburb": "Miraflores",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15048",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Luis Fernán Bedoya Reyes Expressway, Miraflores, Lima, Peru"
+    },
+    {
+      "lat": -12.139453938979237,
+      "lon": -77.06104389132759,
+      "geoinfo": {
+        "display_name": "Lima, Province of Lima, Lima Metropolitan Area, Lima, 15001, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15001",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "842, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15001, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:17.097711+00:00",
+  "_kind": "geo_samples"
+}

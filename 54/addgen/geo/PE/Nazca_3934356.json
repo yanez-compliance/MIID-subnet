@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Nazca",
+  "geonameid": 3934356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -14.802378832982502,
+      "lon": -74.97315478244462,
+      "geoinfo": {
+        "display_name": "Mina La Espanola, Achaco Bajo, Nazca, Province of Nasca, Ica, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nazca",
+        "state": "Ica",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Nazca, Ica, Peru"
+    },
+    {
+      "lat": -14.864955132059563,
+      "lon": -74.93521499296328,
+      "geoinfo": {
+        "display_name": "Vista Alegre, Province of Nasca, Ica, 11401, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vista Alegre",
+        "state": "Ica",
+        "postcode": "11401",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "052, Vista Alegre, Province of Nasca, Ica, 11401, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:13.275224+00:00",
+  "_kind": "geo_samples"
+}

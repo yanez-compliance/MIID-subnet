@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Würselen",
+  "geonameid": 2805644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.82823604762472,
+      "lon": 6.146125531469509,
+      "geoinfo": {
+        "display_name": "Maischlackweg, Elchenrath, Würselen, Aachen (district), North Rhine-Westphalia, 52146, Germany",
+        "road": "Maischlackweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Elchenrath",
+        "city_district": null,
+        "city": "Würselen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52146",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Maischlackweg, Würselen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.832334003644576,
+      "lon": 6.117620093984183,
+      "geoinfo": {
+        "display_name": "20, Am Förderturm, Morsbach, Würselen, Aachen (district), North Rhine-Westphalia, 52146, Germany",
+        "road": "Am Förderturm",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Morsbach",
+        "city_district": null,
+        "city": "Würselen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52146",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20, Am Förderturm, Würselen, 52146 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:15.266004+00:00",
+  "_kind": "geo_samples"
+}

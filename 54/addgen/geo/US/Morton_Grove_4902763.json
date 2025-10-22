@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morton Grove",
+  "geonameid": 4902763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.03253173971769,
+      "lon": -87.77635190013133,
+      "geoinfo": {
+        "display_name": "8316, Austin Avenue, Morton Grove, Niles Township, Cook County, Illinois, 60053, United States",
+        "road": "Austin Avenue",
+        "house_number": "8316",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morton Grove",
+        "state": "Illinois",
+        "postcode": "60053",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8316 Austin Avenue, Morton Grove, Illinois, United States"
+    },
+    {
+      "lat": 42.058505727633175,
+      "lon": -87.82512830898648,
+      "geoinfo": {
+        "display_name": "Washington Road, Glenview, Maine Township, Cook County, Illinois, 60025, United States",
+        "road": "Washington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glenview",
+        "state": "Illinois",
+        "postcode": "60025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "502, Washington Road, Glenview, Maine Township, Cook County, Illinois, 60025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:35.879626+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Denain",
+  "geonameid": 3021605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.310347104782686,
+      "lon": 3.4241185127876532,
+      "geoinfo": {
+        "display_name": "D 40, Haulchin, Valenciennes, Nord, Hauts-de-France, Metropolitan France, 59121, France",
+        "road": "D 40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haulchin",
+        "state": "Hauts-de-France",
+        "postcode": "59121",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 40, Denain, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.328586955609765,
+      "lon": 3.4396086726972586,
+      "geoinfo": {
+        "display_name": "Rue du Chauffour, Rouvignies, Valenciennes, Nord, Hauts-de-France, Metropolitan France, 59220, France",
+        "road": "Rue du Chauffour",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rouvignies",
+        "state": "Hauts-de-France",
+        "postcode": "59220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "846, Rue du Chauffour, Rouvignies, Valenciennes, Nord, Hauts-de-France, Metropolitan France, 59220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:11.741858+00:00",
+  "_kind": "geo_samples"
+}

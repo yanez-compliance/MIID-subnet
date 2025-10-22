@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lauda-Königshofen",
+  "geonameid": 3274966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.60222669482757,
+      "lon": 9.719465537335314,
+      "geoinfo": {
+        "display_name": "L 512, Grünsfeld, Verwaltungsgemeinschaft Grünsfeld, Main-Tauber-Kreis, Baden-Württemberg, 97947, Germany",
+        "road": "L 512",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grünsfeld",
+        "state": "Baden-Württemberg",
+        "postcode": "97947",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 512, Lauda-Königshofen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.58283523194186,
+      "lon": 9.767500917412177,
+      "geoinfo": {
+        "display_name": "K 2802, Kützbrunn, Grünsfeld, Verwaltungsgemeinschaft Grünsfeld, Main-Tauber-Kreis, Baden-Württemberg, 97947, Germany",
+        "road": "K 2802",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grünsfeld",
+        "state": "Baden-Württemberg",
+        "postcode": "97947",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 2802, Lauda-Königshofen, 97947 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:40.944497+00:00",
+  "_kind": "geo_samples"
+}

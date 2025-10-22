@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Tam Kỳ",
+  "geonameid": 1567148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.565718651964257,
+      "lon": 108.48867720845809,
+      "geoinfo": {
+        "display_name": "Tam Kỳ Ward, Đà Nẵng, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tam Kỳ Ward",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Tam Kỳ, Vietnam"
+    },
+    {
+      "lat": 15.589586378697165,
+      "lon": 108.50036505373504,
+      "geoinfo": {
+        "display_name": "Quảng Phú Ward, Đà Nẵng, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Quảng Phú Ward",
+        "city": "Đà Nẵng",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "528, Quảng Phú Ward, 22591 Đà Nẵng, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:36.240020+00:00",
+  "_kind": "geo_samples"
+}

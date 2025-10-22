@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Eboli",
+  "geonameid": 3177438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.59402279249104,
+      "lon": 15.095515357804354,
+      "geoinfo": {
+        "display_name": "Via Piana Di Vicario, Eboli, Salerno, Campania, Italy",
+        "road": "Via Piana Di Vicario",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eboli",
+        "state": "Campania",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Piana Di Vicario, Eboli, Campania, Italy"
+    },
+    {
+      "lat": 40.62317997035234,
+      "lon": 15.063791605158379,
+      "geoinfo": {
+        "display_name": "Via Spartaco, Eboli, Salerno, Campania, 84025, Italy",
+        "road": "Via Spartaco",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eboli",
+        "state": "Campania",
+        "postcode": "84025",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "314, Via Spartaco, Eboli, Salerno, Campania, 84025, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:54.035789+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Troitsk",
+  "geonameid": 481608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.494554930941824,
+      "lon": 37.27826225087578,
+      "geoinfo": {
+        "display_name": "10 км, Troitsk, Moscow, Central Federal District, 108841, Russia",
+        "road": "10 км",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troitsk",
+        "state": "Moscow",
+        "postcode": "108841",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "10 км, Troitsk, Moscow, Russia"
+    },
+    {
+      "lat": 55.50431365124963,
+      "lon": 37.243069227391615,
+      "geoinfo": {
+        "display_name": "Изумрудная долина, Филимонковский район, Moscow, Central Federal District, 108807, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Филимонковский район",
+        "city_district": null,
+        "city": null,
+        "state": "Moscow",
+        "postcode": "108807",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "778, Изумрудная долина, Филимонковский район, Moscow, Central Federal District, 108807, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:30.944058+00:00",
+  "_kind": "geo_samples"
+}

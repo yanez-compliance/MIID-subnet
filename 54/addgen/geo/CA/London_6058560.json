@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "London",
+  "geonameid": 6058560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.01755636208436,
+      "lon": -81.20156587639038,
+      "geoinfo": {
+        "display_name": "Cheapside Street, London, Southwestern Ontario, Ontario, N5Y 5R6, Canada",
+        "road": "Cheapside Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "London",
+        "state": "Ontario",
+        "postcode": "N5Y 5R6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Cheapside Street, London, Ontario, Canada"
+    },
+    {
+      "lat": 42.95659249230308,
+      "lon": -81.2212790145423,
+      "geoinfo": {
+        "display_name": "Western Counties Road, London, Southwestern Ontario, Ontario, N6C 0A7, Canada",
+        "road": "Western Counties Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "London",
+        "state": "Ontario",
+        "postcode": "N6C 0A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Western Counties Road, London, Southwestern Ontario, Ontario, N6C 0A7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:58.638469+00:00",
+  "_kind": "geo_samples"
+}

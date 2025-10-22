@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaji",
+  "geonameid": 1796385,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.903471098060656,
+      "lon": 118.12366515960633,
+      "geoinfo": {
+        "display_name": "Huai-Xu Expressway, Suining County, Xuzhou, Jiangsu, 221000, China",
+        "road": "Huai-Xu Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suining County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huai-Xu Expressway, Shaji, Jiangsu, China"
+    },
+    {
+      "lat": 33.88249760128308,
+      "lon": 118.15149459163736,
+      "geoinfo": {
+        "display_name": "Suining County, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suining County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "864, Suining County, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:21.856660+00:00",
+  "_kind": "geo_samples"
+}

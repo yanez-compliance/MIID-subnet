@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Yongkang",
+  "geonameid": 1665221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 23.051273094237903,
+      "lon": 120.24469485187286,
+      "geoinfo": {
+        "display_name": "Shuiyang Road, 鹽行國中重劃區, Sanmin Village, Yongkang District, Tainan, 710, Taiwan",
+        "road": "Shuiyang Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "鹽行國中重劃區",
+        "city_district": null,
+        "city": "Tainan",
+        "state": null,
+        "postcode": "710",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "Shuiyang Road, Yongkang, Taiwan"
+    },
+    {
+      "lat": 23.052842274966167,
+      "lon": 120.2426067489884,
+      "geoinfo": {
+        "display_name": "391號, Ren’ai Street, Sanmin Village, Yongkang District, Tainan, 710, Taiwan",
+        "road": "Ren’ai Street",
+        "house_number": "391號",
+        "neighbourhood": null,
+        "suburb": "Sanmin Village",
+        "city_district": null,
+        "city": "Tainan",
+        "state": null,
+        "postcode": "710",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "391號 Ren’ai Street, Yongkang, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:33:59.874129+00:00",
+  "_kind": "geo_samples"
+}

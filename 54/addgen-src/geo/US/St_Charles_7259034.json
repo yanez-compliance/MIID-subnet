@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "St. Charles",
+  "geonameid": 7259034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.61096681317317,
+      "lon": -76.90746066089439,
+      "geoinfo": {
+        "display_name": "838, Copley Avenue, Carrington, Saint Charles, Waldorf, Charles County, Maryland, 20602, United States",
+        "road": "Copley Avenue",
+        "house_number": "838",
+        "neighbourhood": "Carrington",
+        "suburb": "Saint Charles",
+        "city_district": null,
+        "city": "Waldorf",
+        "state": "Maryland",
+        "postcode": "20602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "838 Copley Avenue, St. Charles, Maryland, United States"
+    },
+    {
+      "lat": 38.593534760628465,
+      "lon": -76.96734195336023,
+      "geoinfo": {
+        "display_name": "4389, Bowtie Place, Hope Acres, Waldorf, Charles County, Maryland, 20695, United States",
+        "road": "Bowtie Place",
+        "house_number": "4389",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waldorf",
+        "state": "Maryland",
+        "postcode": "20695",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4389, Bowtie Place, Hope Acres, Waldorf, Charles County, Maryland, 20695, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:25.800428+00:00",
+  "_kind": "geo_samples"
+}

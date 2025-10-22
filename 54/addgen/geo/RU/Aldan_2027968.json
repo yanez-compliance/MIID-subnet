@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Aldan",
+  "geonameid": 2027968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.64215716835301,
+      "lon": 125.45986562026859,
+      "geoinfo": {
+        "display_name": "Aldansky Ulus, Sakha Republic, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sakha Republic",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Aldan, Sakha Republic, Russia"
+    },
+    {
+      "lat": 58.580586329894636,
+      "lon": 125.44368523013529,
+      "geoinfo": {
+        "display_name": "Leninskiy, городское поселение Ленинский, Aldansky Ulus, Sakha Republic, Far Eastern Federal District, 678944, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leninskiy",
+        "state": "Sakha Republic",
+        "postcode": "678944",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "676, Aldan, 678944 Sakha Republic, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:29:53.325416+00:00",
+  "_kind": "geo_samples"
+}

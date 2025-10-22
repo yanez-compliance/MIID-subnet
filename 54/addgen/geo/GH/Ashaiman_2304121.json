@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Ashaiman",
+  "geonameid": 2304121,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 5.7232375507740425,
+      "lon": -0.028527308959412197,
+      "geoinfo": {
+        "display_name": "Kpone-Katamanso Municipal District, Greater Accra Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Greater Accra Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Ashaiman, Greater Accra Region, Ghana"
+    },
+    {
+      "lat": 5.664438817505829,
+      "lon": -0.014997371536670367,
+      "geoinfo": {
+        "display_name": "Community 7, Tema, Tema Metropolitan District, Greater Accra Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Community 7",
+        "city_district": null,
+        "city": "Tema",
+        "state": "Greater Accra Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Community 7, Ashaiman, Greater Accra Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:49:19.883873+00:00",
+  "_kind": "geo_samples"
+}

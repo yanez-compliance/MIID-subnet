@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Aylmer",
+  "geonameid": 6354934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.42776308443312,
+      "lon": -75.79686415634463,
+      "geoinfo": {
+        "display_name": "Rue Robert-Pilon, Aylmer, Gatineau, Outaouais, Quebec, J8Y 1L7, Canada",
+        "road": "Rue Robert-Pilon",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aylmer",
+        "city_district": null,
+        "city": "Gatineau",
+        "state": "Quebec",
+        "postcode": "J8Y 1L7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Robert-Pilon, Aylmer, Quebec, Canada"
+    },
+    {
+      "lat": 45.393032831571674,
+      "lon": -75.79733048563824,
+      "geoinfo": {
+        "display_name": "83, Rue Jean-Gascon, Aylmer, Gatineau, Outaouais, Quebec, J9H 6Y3, Canada",
+        "road": "Rue Jean-Gascon",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": "Aylmer",
+        "city_district": null,
+        "city": "Gatineau",
+        "state": "Quebec",
+        "postcode": "J9H 6Y3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "83, Rue Jean-Gascon, Aylmer, Gatineau, Outaouais, Quebec, J9H 6Y3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:41.147631+00:00",
+  "_kind": "geo_samples"
+}

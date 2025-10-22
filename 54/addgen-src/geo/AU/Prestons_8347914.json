@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Prestons",
+  "geonameid": 8347914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.93852180850909,
+      "lon": 150.86149220135587,
+      "geoinfo": {
+        "display_name": "Yarrunga Street, Prestons, Sydney, Liverpool City Council, New South Wales, 2170, Australia",
+        "road": "Yarrunga Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Prestons",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2170",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Yarrunga Street, Prestons, New South Wales, Australia"
+    },
+    {
+      "lat": -33.97533582885837,
+      "lon": 150.85152440447644,
+      "geoinfo": {
+        "display_name": "Allen Avenue, Edmondson Park, Sydney, Liverpool City Council, New South Wales, 2174, Australia",
+        "road": "Allen Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Edmondson Park",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2174",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "778, Allen Avenue, Edmondson Park, Sydney, Liverpool City Council, New South Wales, 2174, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:19.752840+00:00",
+  "_kind": "geo_samples"
+}

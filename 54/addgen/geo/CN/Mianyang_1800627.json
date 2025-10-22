@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Mianyang",
+  "geonameid": 1800627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.49401607762086,
+      "lon": 104.65234147212418,
+      "geoinfo": {
+        "display_name": "Fucheng District, Mianyang, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mianyang",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Mianyang, Sichuan, China"
+    },
+    {
+      "lat": 31.466864793850547,
+      "lon": 104.72200420764798,
+      "geoinfo": {
+        "display_name": "绵阳中学, 元通路, Chaoyang, Fucheng District, Mianyang, Sichuan, 621000, China",
+        "road": "元通路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chaoyang",
+        "city_district": null,
+        "city": "Mianyang",
+        "state": "Sichuan",
+        "postcode": "621000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "095, 元通路, Mianyang, 621000 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:21.453534+00:00",
+  "_kind": "geo_samples"
+}

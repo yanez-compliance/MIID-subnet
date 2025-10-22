@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gaojia",
+  "geonameid": 1810509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.04509958172336,
+      "lon": 107.88959336975896,
+      "geoinfo": {
+        "display_name": "Yinbai Expressway, Longkong, Fengdu County, Chongqing, China",
+        "road": "Yinbai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longkong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yinbai Expressway, Gaojia, Chongqing, China"
+    },
+    {
+      "lat": 30.001464690475807,
+      "lon": 107.8356588923662,
+      "geoinfo": {
+        "display_name": "Gaojia, Fengdu County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaojia",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "956, Gaojia, Fengdu County, 12790 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:41.389646+00:00",
+  "_kind": "geo_samples"
+}

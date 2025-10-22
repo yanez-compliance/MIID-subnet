@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Kam Tin",
+  "geonameid": 1819685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.440498393310193,
+      "lon": 114.04108181634795,
+      "geoinfo": {
+        "display_name": "Long Ho Road, Kai Tei, Yeung Uk Tsuen, Tai Kei Leng Village, Yuen Long District, New Territories, Hong Kong, China",
+        "road": "Long Ho Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuen Long District",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Long Ho Road, Kam Tin, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.48149647092091,
+      "lon": 114.07358248520511,
+      "geoinfo": {
+        "display_name": "Shek Wu Wai, 賴家村, Mai Po San Tsuen, Yuen Long District, New Territories, Hong Kong, 518017, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuen Long District",
+        "state": "Hong Kong",
+        "postcode": "518017",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "017, Kam Tin, 518017 Hong Kong, Hong Kong"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:54.338199+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Jamundí",
+  "geonameid": 3680387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.251346439025015,
+      "lon": -76.50060261673103,
+      "geoinfo": {
+        "display_name": "INPEC Complejo Carcelario y Penitenciario de Jamundí - COJAM Jamundi, Carretera A Bocas Del Palo, Jamundí, Sur, Valle del Cauca, RAP Pacífico, 764001, Colombia",
+        "road": "Carretera A Bocas Del Palo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jamundí",
+        "state": "Valle del Cauca",
+        "postcode": "764001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carretera A Bocas Del Palo, Jamundí, Valle del Cauca, Colombia"
+    },
+    {
+      "lat": 3.289864323684772,
+      "lon": -76.53333658039845,
+      "geoinfo": {
+        "display_name": "Pance, Cali, Sur, Valle del Cauca, RAP Pacífico, 764001, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Valle del Cauca",
+        "postcode": "764001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "356, Pance, Cali, Sur, Valle del Cauca, RAP Pacífico, 764001, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:47.258442+00:00",
+  "_kind": "geo_samples"
+}

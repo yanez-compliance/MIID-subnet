@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Forney",
+  "geonameid": 4691833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.758160187072185,
+      "lon": -96.45499684670403,
+      "geoinfo": {
+        "display_name": "116, Redbud Drive, Forney, Kaufman County, Texas, 75126, United States",
+        "road": "Redbud Drive",
+        "house_number": "116",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forney",
+        "state": "Texas",
+        "postcode": "75126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "116 Redbud Drive, Forney, Texas, United States"
+    },
+    {
+      "lat": 32.7759068082426,
+      "lon": -96.43815809903988,
+      "geoinfo": {
+        "display_name": "Brightling Bend, Devonshire, Kaufman County, Texas, 75126, United States",
+        "road": "Brightling Bend",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "75126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "717, Brightling Bend, Devonshire, Kaufman County, Texas, 75126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:24.637005+00:00",
+  "_kind": "geo_samples"
+}

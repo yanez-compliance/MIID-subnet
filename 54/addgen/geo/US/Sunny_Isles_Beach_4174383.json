@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunny Isles Beach",
+  "geonameid": 4174383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.98644721090408,
+      "lon": -80.10427324839566,
+      "geoinfo": {
+        "display_name": "Beverly Beach, Hollywood, Broward County, Florida, 33019, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hollywood",
+        "state": "Florida",
+        "postcode": "33019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sunny Isles Beach, Florida, United States"
+    },
+    {
+      "lat": 25.932938921109535,
+      "lon": -80.13950033324002,
+      "geoinfo": {
+        "display_name": "3283, Northeast 166th Street, Eastern Shores, North Miami Beach, Miami-Dade County, Florida, 33160, United States",
+        "road": "Northeast 166th Street",
+        "house_number": "3283",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Miami Beach",
+        "state": "Florida",
+        "postcode": "33160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3283, Northeast 166th Street, Eastern Shores, North Miami Beach, Miami-Dade County, Florida, 33160, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:18.487219+00:00",
+  "_kind": "geo_samples"
+}

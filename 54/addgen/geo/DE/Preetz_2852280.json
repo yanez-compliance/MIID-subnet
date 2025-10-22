@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Preetz",
+  "geonameid": 2852280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.27601293246269,
+      "lon": 10.270163372595345,
+      "geoinfo": {
+        "display_name": "Steenbarg, Rosenfeld, Rastorf, Preetz-Land, Kreis Plön, Schleswig-Holstein, 24211, Germany",
+        "road": "Steenbarg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosenfeld",
+        "state": "Schleswig-Holstein",
+        "postcode": "24211",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Steenbarg, Preetz, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 54.278422677666256,
+      "lon": 10.274567878971297,
+      "geoinfo": {
+        "display_name": "10, Rastorfer Weg, Rosenfeld, Rastorf, Preetz-Land, Kreis Plön, Schleswig-Holstein, 24211, Germany",
+        "road": "Rastorfer Weg",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosenfeld",
+        "state": "Schleswig-Holstein",
+        "postcode": "24211",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10, Rastorfer Weg, Rosenfeld, Rastorf, Preetz-Land, Kreis Plön, Schleswig-Holstein, 24211, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:33.933542+00:00",
+  "_kind": "geo_samples"
+}

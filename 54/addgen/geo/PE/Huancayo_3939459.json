@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Huancayo",
+  "geonameid": 3939459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.042393925409842,
+      "lon": -75.23787935535866,
+      "geoinfo": {
+        "display_name": "Jirón Los Opalos, El Tambo, Province of Huancayo, Junín, 12000, Peru",
+        "road": "Jirón Los Opalos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Tambo",
+        "state": "Junín",
+        "postcode": "12000",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Jirón Los Opalos, Huancayo, Junín, Peru"
+    },
+    {
+      "lat": -12.093339182222712,
+      "lon": -75.17829056474662,
+      "geoinfo": {
+        "display_name": "Azapampa Este, Chilca, Province of Huancayo, Junín, 12001, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Azapampa Este",
+        "city_district": null,
+        "city": "Chilca",
+        "state": "Junín",
+        "postcode": "12001",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "415, Azapampa Este, Chilca, Province of Huancayo, Junín, 12001, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:08.487155+00:00",
+  "_kind": "geo_samples"
+}

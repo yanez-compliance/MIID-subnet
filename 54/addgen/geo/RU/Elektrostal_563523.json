@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Elektrostal’",
+  "geonameid": 563523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.77947565168097,
+      "lon": 38.38039316345556,
+      "geoinfo": {
+        "display_name": "Горелый лес, Elektrostal, Moscow Oblast, Central Federal District, 144010, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "144010",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Elektrostal’, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.82355679856959,
+      "lon": 38.46574050222351,
+      "geoinfo": {
+        "display_name": "Пионер, «Восток», Elektrostal, Moscow Oblast, Central Federal District, 144011, Russia",
+        "road": "«Восток»",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elektrostal",
+        "state": "Moscow Oblast",
+        "postcode": "144011",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "841, «Восток», Elektrostal’, 144011 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:39.043872+00:00",
+  "_kind": "geo_samples"
+}

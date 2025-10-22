@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Adachi",
+  "geonameid": 10987897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.78826023130038,
+      "lon": 139.7843790890635,
+      "geoinfo": {
+        "display_name": "Iko 1-chome, Iko, Adachi, Tokyo, 123-0842, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Iko 1-chome",
+        "suburb": "Iko",
+        "city_district": null,
+        "city": "Adachi",
+        "state": null,
+        "postcode": "123-0842",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Iko 1-chome, Adachi, Japan"
+    },
+    {
+      "lat": 35.75797500388653,
+      "lon": 139.777494667654,
+      "geoinfo": {
+        "display_name": "Central Circular Route, Umeda 1-chome, Motokinishimachi, Adachi, Tokyo, 123-0852, Japan",
+        "road": "Central Circular Route",
+        "house_number": null,
+        "neighbourhood": "Umeda 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Adachi",
+        "state": null,
+        "postcode": "123-0852",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Central Circular Route, Umeda 1-chome, Motokinishimachi, Adachi, Tokyo, 123-0852, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:57.496146+00:00",
+  "_kind": "geo_samples"
+}

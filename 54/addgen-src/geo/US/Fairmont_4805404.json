@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairmont",
+  "geonameid": 4805404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.47708657849567,
+      "lon": -80.19152764978853,
+      "geoinfo": {
+        "display_name": "Country Club Road, Bendolph, Marion County, West Virginia, 26554, United States",
+        "road": "Country Club Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "West Virginia",
+        "postcode": "26554",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Country Club Road, Fairmont, West Virginia, United States"
+    },
+    {
+      "lat": 39.524215331773675,
+      "lon": -80.14241980541033,
+      "geoinfo": {
+        "display_name": "Hawkinberry Hollow Road, Sanford, Baxter, Marion County, West Virginia, 26560, United States",
+        "road": "Hawkinberry Hollow Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baxter",
+        "state": "West Virginia",
+        "postcode": "26560",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "473, Hawkinberry Hollow Road, Sanford, Baxter, Marion County, West Virginia, 26560, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:12.620344+00:00",
+  "_kind": "geo_samples"
+}

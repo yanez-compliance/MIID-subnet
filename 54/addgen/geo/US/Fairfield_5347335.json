@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairfield",
+  "geonameid": 5347335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.26649439124381,
+      "lon": -122.02047146389117,
+      "geoinfo": {
+        "display_name": "824, Finch Way, Dover Terrace, Fairfield, Solano County, California, 94533, United States",
+        "road": "Finch Way",
+        "house_number": "824",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfield",
+        "state": "California",
+        "postcode": "94533",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "824 Finch Way, Fairfield, California, United States"
+    },
+    {
+      "lat": 38.23795368280326,
+      "lon": -122.07128249753738,
+      "geoinfo": {
+        "display_name": "2200, North Watney Way, Fairfield, Solano County, California, 94534, United States",
+        "road": "North Watney Way",
+        "house_number": "2200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfield",
+        "state": "California",
+        "postcode": "94534",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2200, North Watney Way, Fairfield, Solano County, California, 94534, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:26.775723+00:00",
+  "_kind": "geo_samples"
+}

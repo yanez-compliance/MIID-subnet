@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomfield",
+  "geonameid": 5095779,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.80134110440322,
+      "lon": -74.16439086247502,
+      "geoinfo": {
+        "display_name": "Passaic Avenue, Belleville, Essex County, New Jersey, 07109, United States",
+        "road": "Passaic Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleville",
+        "state": "New Jersey",
+        "postcode": "07109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Passaic Avenue, Bloomfield, New Jersey, United States"
+    },
+    {
+      "lat": 40.78645825951427,
+      "lon": -74.21046516207963,
+      "geoinfo": {
+        "display_name": "83, Carteret Street, Bloomfield, Essex County, New Jersey, 07003, United States",
+        "road": "Carteret Street",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomfield",
+        "state": "New Jersey",
+        "postcode": "07003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "83, Carteret Street, Bloomfield, Essex County, New Jersey, 07003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:13.289895+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Temse",
+  "geonameid": 2785778,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.144379531090394,
+      "lon": 4.22705298160993,
+      "geoinfo": {
+        "display_name": "5, Rupelmondestraat, Vierstraat, Temse, Sint-Niklaas, East Flanders, 9140, Belgium",
+        "road": "Rupelmondestraat",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Temse",
+        "city": "Temse",
+        "state": "East Flanders",
+        "postcode": "9140",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "5 Rupelmondestraat, Temse, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.15989440026588,
+      "lon": 4.240352195576563,
+      "geoinfo": {
+        "display_name": "E17, Bazel, Beveren-Kruibeke-Zwijndrecht, Sint-Niklaas, East Flanders, 9150, Belgium",
+        "road": "E17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bazel",
+        "state": "East Flanders",
+        "postcode": "9150",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E17, Bazel, Beveren-Kruibeke-Zwijndrecht, Sint-Niklaas, East Flanders, 9150, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:22.474630+00:00",
+  "_kind": "geo_samples"
+}

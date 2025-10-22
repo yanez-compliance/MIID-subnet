@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ibiza",
+  "geonameid": 2516479,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.868669348449245,
+      "lon": 1.4123855869691058,
+      "geoinfo": {
+        "display_name": "Puig des Corb Marí, Sant Francesc de s'Estany, Sant Josep de sa Talaia, Ibiza, Balearic Islands, 07818, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Josep de sa Talaia",
+        "state": "Balearic Islands",
+        "postcode": "07818",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Ibiza, Balearic Islands, Spain"
+    },
+    {
+      "lat": 38.90945682061177,
+      "lon": 1.4559198205738986,
+      "geoinfo": {
+        "display_name": "41, Carrer de Barbaria, s'Illa Plana, Ibiza, Balearic Islands, 07800, Spain",
+        "road": "Carrer de Barbaria",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ibiza",
+        "state": "Balearic Islands",
+        "postcode": "07800",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "41, Carrer de Barbaria, s'Illa Plana, Ibiza, Balearic Islands, 07800, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:55.438071+00:00",
+  "_kind": "geo_samples"
+}

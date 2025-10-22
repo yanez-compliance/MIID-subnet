@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Venice",
+  "geonameid": 4176380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.09444161187725,
+      "lon": -82.44696176462543,
+      "geoinfo": {
+        "display_name": "Nassau Street South, Venice, Sarasota County, Florida, 34285, United States",
+        "road": "Nassau Street South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Venice",
+        "state": "Florida",
+        "postcode": "34285",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nassau Street South, Venice, Florida, United States"
+    },
+    {
+      "lat": 27.08556394659724,
+      "lon": -82.4961233342304,
+      "geoinfo": {
+        "display_name": "Sarasota County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "794, Sarasota County, 21436 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:55.911276+00:00",
+  "_kind": "geo_samples"
+}

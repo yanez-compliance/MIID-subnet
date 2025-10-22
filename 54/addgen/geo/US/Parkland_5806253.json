@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parkland",
+  "geonameid": 5806253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.18873777012505,
+      "lon": -122.42863235418122,
+      "geoinfo": {
+        "display_name": "East D Street, Tacoma, Pierce County, Washington, 98408, United States",
+        "road": "East D Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tacoma",
+        "state": "Washington",
+        "postcode": "98408",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East D Street, Parkland, Washington, United States"
+    },
+    {
+      "lat": 47.151611227219774,
+      "lon": -122.44467050686127,
+      "geoinfo": {
+        "display_name": "11543, 8th Avenue Court South, Pierce County, Washington, 98444, United States",
+        "road": "8th Avenue Court South",
+        "house_number": "11543",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11543, 8th Avenue Court South, Pierce County, Washington, 98444, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:47.440096+00:00",
+  "_kind": "geo_samples"
+}

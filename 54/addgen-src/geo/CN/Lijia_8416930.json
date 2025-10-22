@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lijia",
+  "geonameid": 8416930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.714640302901557,
+      "lon": 106.51517832846669,
+      "geoinfo": {
+        "display_name": "Beibei District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lijia, Chongqing, China"
+    },
+    {
+      "lat": 29.691173604961183,
+      "lon": 106.4691281873139,
+      "geoinfo": {
+        "display_name": "礼仁街, Lijia, Yubei District, Chongqing, China",
+        "road": "礼仁街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lijia",
+        "city_district": null,
+        "city": "Yubei District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "147, 礼仁街, Lijia, Yubei District, 27076 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:03:16.668869+00:00",
+  "_kind": "geo_samples"
+}

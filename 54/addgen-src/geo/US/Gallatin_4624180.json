@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gallatin",
+  "geonameid": 4624180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.38501224822869,
+      "lon": -86.46456201317373,
+      "geoinfo": {
+        "display_name": "384, Trail Drive, Gallatin, Sumner County, Middle Tennessee, Tennessee, 37066, United States",
+        "road": "Trail Drive",
+        "house_number": "384",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gallatin",
+        "state": "Tennessee",
+        "postcode": "37066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "384 Trail Drive, Gallatin, Tennessee, United States"
+    },
+    {
+      "lat": 36.402794826792714,
+      "lon": -86.45903382303814,
+      "geoinfo": {
+        "display_name": "Center Street, Gallatin, Sumner County, Middle Tennessee, Tennessee, 37066, United States",
+        "road": "Center Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gallatin",
+        "state": "Tennessee",
+        "postcode": "37066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "935, Center Street, Gallatin, Sumner County, Middle Tennessee, Tennessee, 37066, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:19.413345+00:00",
+  "_kind": "geo_samples"
+}

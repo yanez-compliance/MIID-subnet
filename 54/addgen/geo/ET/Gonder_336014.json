@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Gonder",
+  "geonameid": 336014,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 12.587776386099053,
+      "lon": 37.44242849376881,
+      "geoinfo": {
+        "display_name": "Tewodros Campus, Bahir Dar - Gonder Road, Maraki, Gonder, North Gondar, Amhara Region, 6200, Ethiopia",
+        "road": "Bahir Dar - Gonder Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maraki",
+        "city_district": null,
+        "city": "Gonder",
+        "state": "Amhara Region",
+        "postcode": "6200",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Bahir Dar - Gonder Road, Gonder, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 12.60976010244854,
+      "lon": 37.43815536500194,
+      "geoinfo": {
+        "display_name": "Maraki, Cincilla, North Gondar, Amhara Region, 6200, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maraki",
+        "city_district": null,
+        "city": "Cincilla",
+        "state": "Amhara Region",
+        "postcode": "6200",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "996, Maraki, Gonder, 6200 Amhara Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:03.131229+00:00",
+  "_kind": "geo_samples"
+}

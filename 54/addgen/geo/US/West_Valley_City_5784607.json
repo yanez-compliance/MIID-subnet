@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Valley City",
+  "geonameid": 5784607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.680742866436255,
+      "lon": -111.9616560664075,
+      "geoinfo": {
+        "display_name": "4152, Alice Way, West Valley City, Salt Lake County, Utah, 84119, United States",
+        "road": "Alice Way",
+        "house_number": "4152",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Valley City",
+        "state": "Utah",
+        "postcode": "84119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4152 Alice Way, West Valley City, Utah, United States"
+    },
+    {
+      "lat": 40.67427205315047,
+      "lon": -112.05393860073313,
+      "geoinfo": {
+        "display_name": "Smithson Circle, Chaparral Estates, West Valley City, Salt Lake County, Utah, 84044, United States",
+        "road": "Smithson Circle",
+        "house_number": null,
+        "neighbourhood": "Chaparral Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Valley City",
+        "state": "Utah",
+        "postcode": "84044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "959, Smithson Circle, Chaparral Estates, West Valley City, Salt Lake County, Utah, 84044, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:14.015364+00:00",
+  "_kind": "geo_samples"
+}

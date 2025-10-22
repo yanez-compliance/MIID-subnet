@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tuscaloosa",
+  "geonameid": 4094455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.19781063912483,
+      "lon": -87.56101209118869,
+      "geoinfo": {
+        "display_name": "1996, 17th Street, Ingleside Village, West End, Tuscaloosa, Tuscaloosa County, Alabama, 35401, United States",
+        "road": "17th Street",
+        "house_number": "1996",
+        "neighbourhood": "Ingleside Village",
+        "suburb": "West End",
+        "city_district": null,
+        "city": "Tuscaloosa",
+        "state": "Alabama",
+        "postcode": "35401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1996 17th Street, Tuscaloosa, Alabama, United States"
+    },
+    {
+      "lat": 33.22007147015433,
+      "lon": -87.6020196053989,
+      "geoinfo": {
+        "display_name": "4574, Carter Drive, Northport, Tuscaloosa County, Alabama, 35476, United States",
+        "road": "Carter Drive",
+        "house_number": "4574",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northport",
+        "state": "Alabama",
+        "postcode": "35476",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4574, Carter Drive, Northport, Tuscaloosa County, Alabama, 35476, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:56.115688+00:00",
+  "_kind": "geo_samples"
+}

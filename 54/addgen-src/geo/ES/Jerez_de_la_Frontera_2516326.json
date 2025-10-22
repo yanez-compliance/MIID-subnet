@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Jerez de la Frontera",
+  "geonameid": 2516326,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.69922510930991,
+      "lon": -6.16593829061016,
+      "geoinfo": {
+        "display_name": "Jerez, Campiña de Jerez, Cádiz, Andalusia, 11404, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jerez",
+        "state": "Andalusia",
+        "postcode": "11404",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Jerez de la Frontera, Andalusia, Spain"
+    },
+    {
+      "lat": 36.65311742587791,
+      "lon": -6.125420134070644,
+      "geoinfo": {
+        "display_name": "Calle Costa de Marfil, Polígono Industrial El Portal, Jerez, Campiña de Jerez, Cádiz, Andalusia, 11406, Spain",
+        "road": "Calle Costa de Marfil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jerez",
+        "state": "Andalusia",
+        "postcode": "11406",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "939, Calle Costa de Marfil, Polígono Industrial El Portal, Jerez, Campiña de Jerez, Cádiz, Andalusia, 11406, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:52.584215+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morristown",
+  "geonameid": 5101427,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.78318172591882,
+      "lon": -74.47644753299018,
+      "geoinfo": {
+        "display_name": "83, Erskine Drive, Morristown, Morris County, New Jersey, 07960, United States",
+        "road": "Erskine Drive",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morristown",
+        "state": "New Jersey",
+        "postcode": "07960",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "83 Erskine Drive, Morristown, New Jersey, United States"
+    },
+    {
+      "lat": 40.75969998532953,
+      "lon": -74.48570229178245,
+      "geoinfo": {
+        "display_name": "James Street, New Vernon, Harding Township, Morris County, New Jersey, 07960, United States",
+        "road": "James Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harding Township",
+        "state": "New Jersey",
+        "postcode": "07960",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "302, James Street, New Vernon, Harding Township, Morris County, New Jersey, 07960, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:24.641980+00:00",
+  "_kind": "geo_samples"
+}

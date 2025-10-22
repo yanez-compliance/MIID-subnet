@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Västerås",
+  "geonameid": 2664454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.59326060551302,
+      "lon": 16.478784251514757,
+      "geoinfo": {
+        "display_name": "Tackjärnsgatan, Hacksta, Västerås, Västerås kommun, Västmanland County, 724 74, Sweden",
+        "road": "Tackjärnsgatan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hacksta",
+        "city_district": null,
+        "city": "Västerås",
+        "state": null,
+        "postcode": "724 74",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Tackjärnsgatan, Västerås, Sweden"
+    },
+    {
+      "lat": 59.61202120958092,
+      "lon": 16.596528553903944,
+      "geoinfo": {
+        "display_name": "13, Björkgatan, Skiljebo, Västerås, Västerås kommun, Västmanland County, 723 41, Sweden",
+        "road": "Björkgatan",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Skiljebo",
+        "city_district": null,
+        "city": "Västerås",
+        "state": null,
+        "postcode": "723 41",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "13, Björkgatan, Skiljebo, Västerås, Västerås kommun, Västmanland County, 723 41, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:40.728213+00:00",
+  "_kind": "geo_samples"
+}

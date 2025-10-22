@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lauderdale Lakes",
+  "geonameid": 4161616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.164211150358177,
+      "lon": -80.21093318827994,
+      "geoinfo": {
+        "display_name": "Oakland Park Boulevard & Northwest 46th Avenue, West Oakland Park Boulevard, Lauderdale Lakes, Broward County, Florida, 33311, United States",
+        "road": "West Oakland Park Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lauderdale Lakes",
+        "state": "Florida",
+        "postcode": "33311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Oakland Park Boulevard, Lauderdale Lakes, Florida, United States"
+    },
+    {
+      "lat": 26.154840915804524,
+      "lon": -80.16657249450077,
+      "geoinfo": {
+        "display_name": "I 95, Middle River, Broward County, Florida, 33311, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, Middle River, Broward County, Florida, 33311, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:55.804345+00:00",
+  "_kind": "geo_samples"
+}

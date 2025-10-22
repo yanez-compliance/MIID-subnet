@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Al Mubarraz",
+  "geonameid": 109101,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.405862387272915,
+      "lon": 49.61380115567438,
+      "geoinfo": {
+        "display_name": "Al-Hofuf, Al Ahsa Governorate, Eastern Province, 36343, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Hofuf",
+        "state": "Eastern Province",
+        "postcode": "36343",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Al Mubarraz, Eastern Province, Saudi Arabia"
+    },
+    {
+      "lat": 25.410889417169496,
+      "lon": 49.582550432312196,
+      "geoinfo": {
+        "display_name": "Al Mubarraz, Al Ahsa Governorate, Eastern Province, 36341, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Al Mubarraz",
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Ahsa Governorate",
+        "state": "Eastern Province",
+        "postcode": "36341",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Al Mubarraz, Al Mubarraz, Eastern Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:18:55.632245+00:00",
+  "_kind": "geo_samples"
+}

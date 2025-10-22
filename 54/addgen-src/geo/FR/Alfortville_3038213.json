@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Alfortville",
+  "geonameid": 3038213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80557237990402,
+      "lon": 2.4751415827062306,
+      "geoinfo": {
+        "display_name": "22, Rue d'Alsace Lorraine, Saint-Maur Créteil, Saint-Maur-des-Fossés, Nogent-sur-Marne, Val-de-Marne, Ile-de-France, Metropolitan France, 94100, France",
+        "road": "Rue d'Alsace Lorraine",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Saint-Maur Créteil",
+        "city_district": null,
+        "city": "Saint-Maur-des-Fossés",
+        "state": "Ile-de-France",
+        "postcode": "94100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "22 Rue d'Alsace Lorraine, Alfortville, Ile-de-France, France"
+    },
+    {
+      "lat": 48.80893818108401,
+      "lon": 2.4674867181899343,
+      "geoinfo": {
+        "display_name": "49, Boulevard des Bagaudes, Saint-Maur Créteil, Saint-Maur-des-Fossés, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94100, France",
+        "road": "Boulevard des Bagaudes",
+        "house_number": "49",
+        "neighbourhood": null,
+        "suburb": "Saint-Maur Créteil",
+        "city_district": null,
+        "city": "Saint-Maur-des-Fossés",
+        "state": null,
+        "postcode": "94100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "49, Boulevard des Bagaudes, Saint-Maur Créteil, Saint-Maur-des-Fossés, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:01.006928+00:00",
+  "_kind": "geo_samples"
+}

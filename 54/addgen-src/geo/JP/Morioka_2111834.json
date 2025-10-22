@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Morioka",
+  "geonameid": 2111834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.681472773249965,
+      "lon": 141.2014233041964,
+      "geoinfo": {
+        "display_name": "Morioka, Iwate Prefecture, 020-0803, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morioka",
+        "state": null,
+        "postcode": "020-0803",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Morioka, Japan"
+    },
+    {
+      "lat": 39.708554666905805,
+      "lon": 141.11842717416286,
+      "geoinfo": {
+        "display_name": "Nakayashikicho, Morioka, Iwate Prefecture, 020-0063, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nakayashikicho",
+        "suburb": null,
+        "city_district": null,
+        "city": "Morioka",
+        "state": null,
+        "postcode": "020-0063",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nakayashikicho, Morioka, Iwate Prefecture, 020-0063, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:27.632229+00:00",
+  "_kind": "geo_samples"
+}

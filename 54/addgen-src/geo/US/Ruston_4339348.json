@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ruston",
+  "geonameid": 4339348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.54942659305391,
+      "lon": -92.63711180934301,
+      "geoinfo": {
+        "display_name": "315, Arkansas Street, Wynnwood, Ruston, Lincoln Parish, Louisiana, 71270, United States",
+        "road": "Arkansas Street",
+        "house_number": "315",
+        "neighbourhood": "Wynnwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ruston",
+        "state": "Louisiana",
+        "postcode": "71270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "315 Arkansas Street, Ruston, Louisiana, United States"
+    },
+    {
+      "lat": 32.50514423730974,
+      "lon": -92.63666249469794,
+      "geoinfo": {
+        "display_name": "Ruston Sports Complex, McAllister Street, Ruston, Lincoln Parish, Louisiana, 71270, United States",
+        "road": "McAllister Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ruston",
+        "state": "Louisiana",
+        "postcode": "71270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "346, McAllister Street, Ruston, 71270 Louisiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:03.890509+00:00",
+  "_kind": "geo_samples"
+}

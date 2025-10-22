@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Kinna",
+  "geonameid": 2700839,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.48159279851078,
+      "lon": 12.696189439051452,
+      "geoinfo": {
+        "display_name": "Örby kyrka, Skenevägen, Örby, Marks kommun, Västra Götaland County, 511 58, Sweden",
+        "road": "Skenevägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Örby",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "511 58",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Skenevägen, Kinna, Sweden"
+    },
+    {
+      "lat": 57.506393828676,
+      "lon": 12.631229288175014,
+      "geoinfo": {
+        "display_name": "Håberg, Marks kommun, Västra Götaland County, 511 61, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "511 61",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Håberg, Marks kommun, Västra Götaland County, 511 61, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:20.784118+00:00",
+  "_kind": "geo_samples"
+}

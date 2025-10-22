@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pájara",
+  "geonameid": 2513026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.343603507176784,
+      "lon": -14.077805170188384,
+      "geoinfo": {
+        "display_name": "FV-30, Tuineje, Toto, Pájara, Las Palmas, Canary Islands, 35628, Spain",
+        "road": "FV-30",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pájara",
+        "state": null,
+        "postcode": "35628",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "FV-30, Pájara, Spain"
+    },
+    {
+      "lat": 28.33507045158223,
+      "lon": -14.087840852260532,
+      "geoinfo": {
+        "display_name": "Pájara, Las Palmas, Canary Islands, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pájara",
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "288, Pájara, Las Palmas, 36847 Canary Islands, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:06.162623+00:00",
+  "_kind": "geo_samples"
+}

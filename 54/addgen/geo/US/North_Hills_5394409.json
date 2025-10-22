@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Hills",
+  "geonameid": 5394409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.2355143020589,
+      "lon": -118.46886977702398,
+      "geoinfo": {
+        "display_name": "15424, Nordhoff Street, North Hills East, North Hills East Neighborhood Council District, Los Angeles, Los Angeles County, California, 91343, United States",
+        "road": "Nordhoff Street",
+        "house_number": "15424",
+        "neighbourhood": "North Hills East",
+        "suburb": "North Hills East Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91343",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15424 Nordhoff Street, North Hills, California, United States"
+    },
+    {
+      "lat": 34.23981243391908,
+      "lon": -118.52195878125818,
+      "geoinfo": {
+        "display_name": "9327, Balcom Avenue, Northridge East Neighborhood Council District, Los Angeles, Los Angeles County, California, 91325, United States",
+        "road": "Balcom Avenue",
+        "house_number": "9327",
+        "neighbourhood": null,
+        "suburb": "Northridge East Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91325",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9327, Balcom Avenue, Northridge East Neighborhood Council District, Los Angeles, Los Angeles County, California, 91325, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:12.575581+00:00",
+  "_kind": "geo_samples"
+}

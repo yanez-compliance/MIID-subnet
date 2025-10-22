@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manhattan",
+  "geonameid": 4274994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.18269579962489,
+      "lon": -96.52744680215027,
+      "geoinfo": {
+        "display_name": "Manhattan River Trails, Manhattan, Pottawatomie County, Kansas, 66502, United States",
+        "road": "Manhattan River Trails",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manhattan",
+        "state": "Kansas",
+        "postcode": "66502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Manhattan River Trails, Manhattan, Kansas, United States"
+    },
+    {
+      "lat": 39.14111387921833,
+      "lon": -96.58854384635066,
+      "geoinfo": {
+        "display_name": "1848, Henton Road, Riley County, Kansas, 66502, United States",
+        "road": "Henton Road",
+        "house_number": "1848",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "66502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1848, Henton Road, Riley County, Kansas, 66502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:42.301385+00:00",
+  "_kind": "geo_samples"
+}

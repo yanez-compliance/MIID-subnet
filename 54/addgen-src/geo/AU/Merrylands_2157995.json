@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Merrylands",
+  "geonameid": 2157995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.83828471752738,
+      "lon": 150.96282898731468,
+      "geoinfo": {
+        "display_name": "Josephine Street, Merrylands West, Sydney, Cumberland City Council, New South Wales, 2160, Australia",
+        "road": "Josephine Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Merrylands West",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2160",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Josephine Street, Merrylands, New South Wales, Australia"
+    },
+    {
+      "lat": -33.86290125449842,
+      "lon": 151.01089900368396,
+      "geoinfo": {
+        "display_name": "Wellington Road, South Granville, Sydney, Cumberland City Council, New South Wales, 2142, Australia",
+        "road": "Wellington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Granville",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2142",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "559, Wellington Road, South Granville, Sydney, Cumberland City Council, New South Wales, 2142, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:07.422978+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Redding",
+  "geonameid": 5570160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.630506675159104,
+      "lon": -122.38283698884312,
+      "geoinfo": {
+        "display_name": "Tahoe Court, Redding, Shasta County, California, 96003, United States",
+        "road": "Tahoe Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redding",
+        "state": "California",
+        "postcode": "96003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Tahoe Court, Redding, California, United States"
+    },
+    {
+      "lat": 40.57792744591074,
+      "lon": -122.36863337216548,
+      "geoinfo": {
+        "display_name": "Park Marina Drive, Redding, Shasta County, California, 96003, United States",
+        "road": "Park Marina Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redding",
+        "state": "California",
+        "postcode": "96003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "269, Park Marina Drive, Redding, Shasta County, California, 96003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:03.738297+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Mapastepec",
+  "geonameid": 3523590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.475775920154222,
+      "lon": -92.9139911559417,
+      "geoinfo": {
+        "display_name": "Carretera Tapanatepec - Talismán, Nuevo Milenio Valdivia, Mapastepec, Chiapas, Mexico",
+        "road": "Carretera Tapanatepec - Talismán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nuevo Milenio Valdivia",
+        "city_district": null,
+        "city": "Mapastepec",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Tapanatepec - Talismán, Mapastepec, Chiapas, Mexico"
+    },
+    {
+      "lat": 15.420757092255588,
+      "lon": -92.87833710271723,
+      "geoinfo": {
+        "display_name": "Mapastepec, Chiapas, 30560, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mapastepec",
+        "state": "Chiapas",
+        "postcode": "30560",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "234, Mapastepec, Chiapas, 30560, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:39.525721+00:00",
+  "_kind": "geo_samples"
+}

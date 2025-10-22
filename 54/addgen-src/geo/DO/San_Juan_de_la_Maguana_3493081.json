@@ -1,0 +1,65 @@
+{
+  "country_code": "DO",
+  "country": "Dominican Republic",
+  "city": "San Juan de la Maguana",
+  "geonameid": 3493081,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 18.800761351332667,
+      "lon": -71.18271796848262,
+      "geoinfo": {
+        "display_name": "San Juan de la Maguana, San Juan, 12505, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan de la Maguana",
+        "state": "San Juan",
+        "postcode": "12505",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "San Juan de la Maguana, San Juan, Dominican Republic"
+    },
+    {
+      "lat": 18.839692568720352,
+      "lon": -71.23483065936453,
+      "geoinfo": {
+        "display_name": "Carretera San Juan de la Maguana - Juan de Herrera, Juan de Herrera, San Juan de la Maguana, San Juan, Dominican Republic",
+        "road": "Carretera San Juan de la Maguana - Juan de Herrera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Juan de Herrera",
+        "state": "San Juan",
+        "postcode": null,
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Carretera San Juan de la Maguana - Juan de Herrera, San Juan de la Maguana, San Juan, Dominican Republic"
+    },
+    {
+      "lat": 18.802925329895217,
+      "lon": -71.2589011954487,
+      "geoinfo": {
+        "display_name": "Santomé, Córbano, San Juan de la Maguana, San Juan, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Santomé",
+        "suburb": null,
+        "city_district": null,
+        "city": "Córbano",
+        "state": "San Juan",
+        "postcode": null,
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Santomé, San Juan de la Maguana, San Juan, Dominican Republic"
+    }
+  ],
+  "updated_at": "2025-10-16T13:01:15.098800+00:00",
+  "_kind": "geo_samples"
+}

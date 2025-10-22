@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Waldsee",
+  "geonameid": 2953320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.943048528206404,
+      "lon": 9.806400744246321,
+      "geoinfo": {
+        "display_name": "K 7931, Haisterkirch, Bad Waldsee, Verwaltungsgemeinschaft Bad Waldsee, Landkreis Ravensburg, Baden-Württemberg, 88339, Germany",
+        "road": "K 7931",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Waldsee",
+        "state": "Baden-Württemberg",
+        "postcode": "88339",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 7931, Bad Waldsee, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 47.94040146858847,
+      "lon": 9.705678361639755,
+      "geoinfo": {
+        "display_name": "Waldseer Weg, Herdtle, Tannhausen, Aulendorf, Landkreis Ravensburg, Baden-Württemberg, 88326, Germany",
+        "road": "Waldseer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Tannhausen",
+        "city": "Aulendorf",
+        "state": "Baden-Württemberg",
+        "postcode": "88326",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "327, Waldseer Weg, Herdtle, Tannhausen, Aulendorf, Landkreis Ravensburg, Baden-Württemberg, 88326, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:36.962874+00:00",
+  "_kind": "geo_samples"
+}

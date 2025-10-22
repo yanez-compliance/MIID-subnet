@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Townline",
+  "geonameid": 13512416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.061131380615066,
+      "lon": -122.4189315757501,
+      "geoinfo": {
+        "display_name": "Maclure Road, Aberdeen, Abbotsford, Fraser Valley Regional District, British Columbia, V4X 1G8, Canada",
+        "road": "Maclure Road",
+        "house_number": null,
+        "neighbourhood": "Aberdeen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Abbotsford",
+        "state": "British Columbia",
+        "postcode": "V4X 1G8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Maclure Road, Townline, British Columbia, Canada"
+    },
+    {
+      "lat": 49.082963705783854,
+      "lon": -122.30709671119908,
+      "geoinfo": {
+        "display_name": "Bridgeview Street, Abbotsford, Fraser Valley Regional District, British Columbia, V2S 7C2, Canada",
+        "road": "Bridgeview Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abbotsford",
+        "state": "British Columbia",
+        "postcode": "V2S 7C2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Bridgeview Street, Abbotsford, Fraser Valley Regional District, British Columbia, V2S 7C2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:08:21.574542+00:00",
+  "_kind": "geo_samples"
+}

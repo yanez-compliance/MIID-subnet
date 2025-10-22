@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Givatayim",
+  "geonameid": 294999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.074347558898054,
+      "lon": 34.826016229584496,
+      "geoinfo": {
+        "display_name": "Yerushalayim Blvd/HaRo'e, Sderot Jerusalem, Ramat Yitzhak, Ramat Gan, Tel Aviv Subdistrict, Tel-Aviv District, 5236444, Israel",
+        "road": "Sderot Jerusalem",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ramat Yitzhak",
+        "city_district": null,
+        "city": "Ramat Gan",
+        "state": "Tel-Aviv District",
+        "postcode": "5236444",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Sderot Jerusalem, Givatayim, Tel-Aviv District, Israel"
+    },
+    {
+      "lat": 32.06653615587829,
+      "lon": 34.799985703172695,
+      "geoinfo": {
+        "display_name": "5, Nir Am, Bitzaron & Ramat Israel, Tel Aviv, Tel-Aviv, Tel Aviv Subdistrict, Tel-Aviv District, 6701203, Israel",
+        "road": "Nir Am",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Bitzaron & Ramat Israel",
+        "city_district": null,
+        "city": "Tel Aviv",
+        "state": "Tel-Aviv District",
+        "postcode": "6701203",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "5, Nir Am, Bitzaron & Ramat Israel, Tel Aviv, Tel-Aviv, Tel Aviv Subdistrict, Tel-Aviv District, 6701203, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:21.362957+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Mascalucia",
+  "geonameid": 2524236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.5964840154868,
+      "lon": 15.063711605642913,
+      "geoinfo": {
+        "display_name": "Via Ombra, Tremestieri Etneo, Catania, Sicily, 95030, Italy",
+        "road": "Via Ombra",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tremestieri Etneo",
+        "state": "Sicily",
+        "postcode": "95030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Ombra, Mascalucia, Sicily, Italy"
+    },
+    {
+      "lat": 37.54571201298936,
+      "lon": 15.017357992951995,
+      "geoinfo": {
+        "display_name": "Madonna degli Ammalati, Misterbianco, Catania, Sicily, 95045, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Madonna degli Ammalati",
+        "suburb": null,
+        "city_district": null,
+        "city": "Misterbianco",
+        "state": "Sicily",
+        "postcode": "95045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "720, Madonna degli Ammalati, Misterbianco, Catania, Sicily, 95045, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:23.463230+00:00",
+  "_kind": "geo_samples"
+}

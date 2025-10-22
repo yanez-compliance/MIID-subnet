@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Novara",
+  "geonameid": 3172189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.463294525821695,
+      "lon": 8.672329843398192,
+      "geoinfo": {
+        "display_name": "Strada Oleggio, Pernate, Novara, Piedmont, 28066, Italy",
+        "road": "Strada Oleggio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novara",
+        "state": "Piedmont",
+        "postcode": "28066",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Oleggio, Novara, Piedmont, Italy"
+    },
+    {
+      "lat": 45.46260468175277,
+      "lon": 8.62588418036523,
+      "geoinfo": {
+        "display_name": "Veveri, Vignale Nuovo, Novara, Piedmont, 28100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Veveri",
+        "city_district": null,
+        "city": "Novara",
+        "state": "Piedmont",
+        "postcode": "28100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "746, Veveri, Vignale Nuovo, Novara, Piedmont, 28100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:46.108160+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sidney",
+  "geonameid": 5172078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.304657422849935,
+      "lon": -84.16888506613701,
+      "geoinfo": {
+        "display_name": "1058, Target Drive, Sidney, Shelby County, Ohio, 45365, United States",
+        "road": "Target Drive",
+        "house_number": "1058",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sidney",
+        "state": "Ohio",
+        "postcode": "45365",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1058 Target Drive, Sidney, Ohio, United States"
+    },
+    {
+      "lat": 40.278297339512875,
+      "lon": -84.18859140123362,
+      "geoinfo": {
+        "display_name": "737, South Vandemark Road, Sidney, Shelby County, Ohio, 45365, United States",
+        "road": "South Vandemark Road",
+        "house_number": "737",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sidney",
+        "state": "Ohio",
+        "postcode": "45365",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "737, South Vandemark Road, Sidney, Shelby County, Ohio, 45365, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:09.455981+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wenzhou",
+  "geonameid": 1791388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.01905547747139,
+      "lon": 120.67357324306369,
+      "geoinfo": {
+        "display_name": "Lucheng District, Wenzhou, Zhejiang, 325003, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lucheng District",
+        "state": "Zhejiang",
+        "postcode": "325003",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wenzhou, Zhejiang, China"
+    },
+    {
+      "lat": 28.018449704798417,
+      "lon": 120.7056380710227,
+      "geoinfo": {
+        "display_name": "江滨东路, 滨沁华庭, Binjiang, Lucheng District, Wenzhou, Zhejiang, 325002, China",
+        "road": "江滨东路",
+        "house_number": null,
+        "neighbourhood": "滨沁华庭",
+        "suburb": "Binjiang",
+        "city_district": null,
+        "city": "Lucheng District",
+        "state": "Zhejiang",
+        "postcode": "325002",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "533, 江滨东路, 滨沁华庭, Binjiang, Lucheng District, Wenzhou, Zhejiang, 325002, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:52.842941+00:00",
+  "_kind": "geo_samples"
+}

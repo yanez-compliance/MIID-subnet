@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Northampton",
+  "geonameid": 2641430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.26891596191276,
+      "lon": -0.8405409784576018,
+      "geoinfo": {
+        "display_name": "Woodview Pharmacy, 26, Holmecross Road, Thorplands, Northampton, West Northamptonshire, England, NN3 8AW, United Kingdom",
+        "road": "Holmecross Road",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Thorplands",
+        "city_district": null,
+        "city": "Northampton",
+        "state": "England",
+        "postcode": "NN3 8AW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "26 Holmecross Road, Northampton, England, United Kingdom"
+    },
+    {
+      "lat": 52.27330811596747,
+      "lon": -0.893794892969832,
+      "geoinfo": {
+        "display_name": "Culworth Crescent, Sunnyside, Kingsthorpe, Boughton, West Northamptonshire, England, NN2 8NL, United Kingdom",
+        "road": "Culworth Crescent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sunnyside",
+        "city_district": null,
+        "city": "Boughton",
+        "state": "England",
+        "postcode": "NN2 8NL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Culworth Crescent, Sunnyside, Kingsthorpe, Boughton, West Northamptonshire, England, NN2 8NL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:42.869062+00:00",
+  "_kind": "geo_samples"
+}

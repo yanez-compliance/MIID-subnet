@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Preston",
+  "geonameid": 2152558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.74845194364891,
+      "lon": 145.0409612631703,
+      "geoinfo": {
+        "display_name": "318, Bell Street, Heidelberg West, Melbourne, City of Banyule, Victoria, 3081, Australia",
+        "road": "Bell Street",
+        "house_number": "318",
+        "neighbourhood": null,
+        "suburb": "Heidelberg West",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3081",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "318 Bell Street, Preston, Victoria, Australia"
+    },
+    {
+      "lat": -37.7753857088101,
+      "lon": 145.03810450989266,
+      "geoinfo": {
+        "display_name": "Platform 2, Heidelberg Road, Ivanhoe, Melbourne, City of Banyule, Victoria, 3079, Australia",
+        "road": "Heidelberg Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ivanhoe",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3079",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Platform 2, Heidelberg Road, Ivanhoe, Melbourne, City of Banyule, Victoria, 3079, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:16.865318+00:00",
+  "_kind": "geo_samples"
+}

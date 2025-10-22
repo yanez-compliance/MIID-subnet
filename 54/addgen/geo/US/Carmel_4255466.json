@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carmel",
+  "geonameid": 4255466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.00111478749866,
+      "lon": -86.07529582989446,
+      "geoinfo": {
+        "display_name": "East 146th Street, Noblesville, Hamilton County, Indiana, 46042, United States",
+        "road": "East 146th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noblesville",
+        "state": "Indiana",
+        "postcode": "46042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 146th Street, Carmel, Indiana, United States"
+    },
+    {
+      "lat": 39.94366420747369,
+      "lon": -86.09394824256066,
+      "geoinfo": {
+        "display_name": "Saint Elizabeth Seton Church, Seton Drive, Carmel, Hamilton County, Indiana, 46033, United States",
+        "road": "Seton Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmel",
+        "state": "Indiana",
+        "postcode": "46033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "645, Seton Drive, Carmel, 46033 Indiana, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:10.126990+00:00",
+  "_kind": "geo_samples"
+}

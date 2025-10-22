@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Decatur",
+  "geonameid": 4058553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.57524076993395,
+      "lon": -86.98195578100153,
+      "geoinfo": {
+        "display_name": "720, McGlathery Lane Southeast, Decatur, Morgan County, Alabama, 35601, United States",
+        "road": "McGlathery Lane Southeast",
+        "house_number": "720",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Decatur",
+        "state": "Alabama",
+        "postcode": "35601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "720 McGlathery Lane Southeast, Decatur, Alabama, United States"
+    },
+    {
+      "lat": 34.57139686268746,
+      "lon": -86.95256923443966,
+      "geoinfo": {
+        "display_name": "2374, Pennylane Southeast, Brookmeade, Decatur, Morgan County, Alabama, 35601, United States",
+        "road": "Pennylane Southeast",
+        "house_number": "2374",
+        "neighbourhood": "Brookmeade",
+        "suburb": null,
+        "city_district": null,
+        "city": "Decatur",
+        "state": "Alabama",
+        "postcode": "35601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2374, Pennylane Southeast, Brookmeade, Decatur, Morgan County, Alabama, 35601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:33.122031+00:00",
+  "_kind": "geo_samples"
+}

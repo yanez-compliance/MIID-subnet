@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Malabon",
+  "geonameid": 1703320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.635512046304363,
+      "lon": 120.92588703698762,
+      "geoinfo": {
+        "display_name": "Manila, Capital District, Metro Manila, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manila",
+        "state": null,
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Malabon, Philippines"
+    },
+    {
+      "lat": 14.650370812075456,
+      "lon": 120.94397159550444,
+      "geoinfo": {
+        "display_name": "Navotas, C-4 Road, Navotas West, Navotas, Northern Manila District, Metro Manila, 1485, Philippines",
+        "road": "C-4 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navotas",
+        "state": null,
+        "postcode": "1485",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Navotas, C-4 Road, Navotas West, Navotas, Northern Manila District, Metro Manila, 1485, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:02.311824+00:00",
+  "_kind": "geo_samples"
+}

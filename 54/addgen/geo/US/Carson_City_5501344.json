@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carson City",
+  "geonameid": 5501344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.138974419442235,
+      "lon": -119.73409813102813,
+      "geoinfo": {
+        "display_name": "Odyssey, Carson City, Nevada, 89702, United States",
+        "road": "Odyssey",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carson City",
+        "state": "Nevada",
+        "postcode": "89702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Odyssey, Carson City, Nevada, United States"
+    },
+    {
+      "lat": 39.15808080453534,
+      "lon": -119.77286835580087,
+      "geoinfo": {
+        "display_name": "761, San Marcus Drive, Carson City, Nevada, 89703, United States",
+        "road": "San Marcus Drive",
+        "house_number": "761",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carson City",
+        "state": "Nevada",
+        "postcode": "89703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "761, San Marcus Drive, Carson City, Nevada, 89703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:44.554979+00:00",
+  "_kind": "geo_samples"
+}

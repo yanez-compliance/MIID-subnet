@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Afragola",
+  "geonameid": 3183455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.91456683803901,
+      "lon": 14.3000412350588,
+      "geoinfo": {
+        "display_name": "IS \"A.Torrente\", 63g, Via Duca d'Aosta, Casoria, Naples, Campania, 80026, Italy",
+        "road": "Via Duca d'Aosta",
+        "house_number": "63g",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Casoria",
+        "state": "Campania",
+        "postcode": "80026",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "63g Via Duca d'Aosta, Afragola, Campania, Italy"
+    },
+    {
+      "lat": 40.965904668804704,
+      "lon": 14.315474085748912,
+      "geoinfo": {
+        "display_name": "Parco Verde, Caivano, Naples, Campania, 80023, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parco Verde",
+        "city_district": null,
+        "city": "Caivano",
+        "state": "Campania",
+        "postcode": "80023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "667, Parco Verde, Caivano, Naples, Campania, 80023, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:47.903710+00:00",
+  "_kind": "geo_samples"
+}

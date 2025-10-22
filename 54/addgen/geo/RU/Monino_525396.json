@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Monino",
+  "geonameid": 525396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.85157014436961,
+      "lon": 38.254253081172074,
+      "geoinfo": {
+        "display_name": "Bezdedovo, Bogorodsky city district, Moscow Oblast, Central Federal District, 142440, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "142440",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Monino, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.832160437603065,
+      "lon": 38.22703233001955,
+      "geoinfo": {
+        "display_name": "Obukhovo, Bogorodsky city district, Moscow Oblast, Central Federal District, 142440, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Obukhovo",
+        "state": "Moscow Oblast",
+        "postcode": "142440",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "126, Obukhovo, Bogorodsky city district, Moscow Oblast, Central Federal District, 142440, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:28.250892+00:00",
+  "_kind": "geo_samples"
+}

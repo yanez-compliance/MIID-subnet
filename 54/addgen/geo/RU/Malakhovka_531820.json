@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Malakhovka",
+  "geonameid": 531820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.64274951475941,
+      "lon": 37.96629434670534,
+      "geoinfo": {
+        "display_name": "Московское производственное объединение по выпуску алмазного инструмента, Южно-Лыткаринская автодорога, КП «Кирилловская слобода», Yegorovo, Zhilino-2, Lyuberetsky District, Moscow Oblast, Central Federal District, 140072, Russia",
+        "road": "Южно-Лыткаринская автодорога",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yegorovo",
+        "state": "Moscow Oblast",
+        "postcode": "140072",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Южно-Лыткаринская автодорога, Malakhovka, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.663802150118705,
+      "lon": 37.97666653253505,
+      "geoinfo": {
+        "display_name": "Заводская улица, посёлок КСЗ, Kraskovo, Lyuberetsky District, Moscow Oblast, Central Federal District, 140050, Russia",
+        "road": "Заводская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "посёлок КСЗ",
+        "city_district": null,
+        "city": "Kraskovo",
+        "state": "Moscow Oblast",
+        "postcode": "140050",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "777, Заводская улица, посёлок КСЗ, Kraskovo, Lyuberetsky District, Moscow Oblast, Central Federal District, 140050, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:39.748961+00:00",
+  "_kind": "geo_samples"
+}

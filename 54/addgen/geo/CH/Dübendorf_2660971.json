@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Dübendorf",
+  "geonameid": 2660971,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.38361948381899,
+      "lon": 8.585973741896424,
+      "geoinfo": {
+        "display_name": "225a, Tobelhofstrasse, Hottingen, Kreis 7, Zurich, District Zurich, Zurich, 8044, Switzerland",
+        "road": "Tobelhofstrasse",
+        "house_number": "225a",
+        "neighbourhood": null,
+        "suburb": "Hottingen",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8044",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "225a Tobelhofstrasse, Dübendorf, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.38998083008911,
+      "lon": 8.649107858024037,
+      "geoinfo": {
+        "display_name": "Heidenrietstrasse, Im Schossacher, Gfenn, Dübendorf, Bezirk Uster, Zurich, 8603, Switzerland",
+        "road": "Heidenrietstrasse",
+        "house_number": null,
+        "neighbourhood": "Im Schossacher",
+        "suburb": "Gfenn",
+        "city_district": null,
+        "city": "Dübendorf",
+        "state": "Zurich",
+        "postcode": "8603",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Heidenrietstrasse, Dübendorf, Zurich, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:06:18.281235+00:00",
+  "_kind": "geo_samples"
+}

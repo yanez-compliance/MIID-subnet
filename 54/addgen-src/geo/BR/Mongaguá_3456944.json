@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Mongaguá",
+  "geonameid": 3456944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -24.050410407590437,
+      "lon": -46.60837588849279,
+      "geoinfo": {
+        "display_name": "Mongaguá, Região Imediata de Santos, Região Metropolitana da Baixada Santista, Região Geográfica Intermediária de São Paulo, São Paulo, Southeast Region, 11730-000, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mongaguá",
+        "city": "Mongaguá",
+        "state": "São Paulo",
+        "postcode": "11730-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Mongaguá, Mongaguá, São Paulo, Brazil"
+    },
+    {
+      "lat": -24.10283111737239,
+      "lon": -46.575851037538094,
+      "geoinfo": {
+        "display_name": "São Paulo, Southeast Region, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "São Paulo",
+        "postcode": null,
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "807, São Paulo, 62223 Southeast Region, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T01:20:50.627940+00:00",
+  "_kind": "geo_samples"
+}

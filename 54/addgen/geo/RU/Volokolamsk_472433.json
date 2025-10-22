@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Volokolamsk",
+  "geonameid": 472433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.029174439618465,
+      "lon": 35.965234517620935,
+      "geoinfo": {
+        "display_name": "13, переулок Панфилова, Volokolamsk, Volokolamsky District, Moscow Oblast, Central Federal District, 143600, Russia",
+        "road": "переулок Панфилова",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Volokolamsk",
+        "state": "Moscow Oblast",
+        "postcode": "143600",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "13 переулок Панфилова, Volokolamsk, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 56.01138002519348,
+      "lon": 36.031954037906544,
+      "geoinfo": {
+        "display_name": "Novorizhskoye Highway, Volokolamsky District, Moscow Oblast, Central Federal District, 143628, Russia",
+        "road": "Novorizhskoye Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143628",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "281, Novorizhskoye Highway, Volokolamsky District, Moscow Oblast, Central Federal District, 143628, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:53.517000+00:00",
+  "_kind": "geo_samples"
+}

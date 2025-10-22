@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Tacna",
+  "geonameid": 3928128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -18.015941928867825,
+      "lon": -70.28766262672991,
+      "geoinfo": {
+        "display_name": "Para, Tacna, Province of Tacna, Tacna, 23006, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tacna",
+        "state": "Tacna",
+        "postcode": "23006",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Tacna, Tacna, Peru"
+    },
+    {
+      "lat": -18.004574349143244,
+      "lon": -70.28843986090449,
+      "geoinfo": {
+        "display_name": "J, Villa Belen, Ciudad Perdida, Tacna, Province of Tacna, Tacna, 23006, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Villa Belen",
+        "suburb": "Ciudad Perdida",
+        "city_district": null,
+        "city": "Tacna",
+        "state": "Tacna",
+        "postcode": "23006",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "950, J, Villa Belen, Ciudad Perdida, Tacna, Province of Tacna, Tacna, 23006, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:48.248390+00:00",
+  "_kind": "geo_samples"
+}

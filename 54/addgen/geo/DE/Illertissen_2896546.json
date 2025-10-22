@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Illertissen",
+  "geonameid": 2896546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.19508925568112,
+      "lon": 10.051894173551643,
+      "geoinfo": {
+        "display_name": "Wain, Vereinbarte Verwaltungsgemeinschaft Schwendi-Wain, Landkreis Biberach, Baden-Württemberg, 89165, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wain",
+        "state": "Baden-Württemberg",
+        "postcode": "89165",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Illertissen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.24704101371741,
+      "lon": 10.127078181329635,
+      "geoinfo": {
+        "display_name": "Nachtweide, Tiefenbach, Illertissen, Landkreis Neu-Ulm, Bavaria, 89257, Germany",
+        "road": "Nachtweide",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Illertissen",
+        "state": "Bavaria",
+        "postcode": "89257",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "976, Nachtweide, Tiefenbach, Illertissen, Landkreis Neu-Ulm, Bavaria, 89257, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:50.965776+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rio Rico",
+  "geonameid": 5311433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.47087474844317,
+      "lon": -110.97226654136445,
+      "geoinfo": {
+        "display_name": "1189, Desert Dawn Drive, Rio Rico, Santa Cruz County, Arizona, 85648, United States",
+        "road": "Desert Dawn Drive",
+        "house_number": "1189",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1189 Desert Dawn Drive, Rio Rico, Arizona, United States"
+    },
+    {
+      "lat": 31.493001625484936,
+      "lon": -110.93742859900608,
+      "geoinfo": {
+        "display_name": "Santa Cruz County, Arizona, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "441, Santa Cruz County, 16770 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:34.716808+00:00",
+  "_kind": "geo_samples"
+}

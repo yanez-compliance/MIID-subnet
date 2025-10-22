@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lincoln",
+  "geonameid": 5366375,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.8778266529713,
+      "lon": -121.26566937960571,
+      "geoinfo": {
+        "display_name": "Oak Tree Lane, Lincoln, Placer County, California, 95648, United States",
+        "road": "Oak Tree Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "California",
+        "postcode": "95648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oak Tree Lane, Lincoln, California, United States"
+    },
+    {
+      "lat": 38.91392051070386,
+      "lon": -121.28401670195235,
+      "geoinfo": {
+        "display_name": "McCourtney Road, Lincoln, Placer County, California, 95648, United States",
+        "road": "McCourtney Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "California",
+        "postcode": "95648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "767, McCourtney Road, Lincoln, Placer County, California, 95648, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:54.677455+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wilmington",
+  "geonameid": 4955840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.567877557203154,
+      "lon": -71.15774524181042,
+      "geoinfo": {
+        "display_name": "Waltham Street, North Wilmington, Wilmington, Middlesex County, Massachusetts, 01887, United States",
+        "road": "Waltham Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilmington",
+        "state": "Massachusetts",
+        "postcode": "01887",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Waltham Street, Wilmington, Massachusetts, United States"
+    },
+    {
+      "lat": 42.54504360240294,
+      "lon": -71.1833821174892,
+      "geoinfo": {
+        "display_name": "15, Castle Drive, Wilmington, Middlesex County, Massachusetts, 01887, United States",
+        "road": "Castle Drive",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilmington",
+        "state": "Massachusetts",
+        "postcode": "01887",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15, Castle Drive, Wilmington, Middlesex County, Massachusetts, 01887, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:27.083339+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Broad Ripple",
+  "geonameid": 4254957,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.83837345097294,
+      "lon": -86.1465168991225,
+      "geoinfo": {
+        "display_name": "4533, Broadway Street, Oliver Johnson's Woods, Meridian Kessler, Indianapolis, Marion County, Indiana, 46205, United States",
+        "road": "Broadway Street",
+        "house_number": "4533",
+        "neighbourhood": "Oliver Johnson's Woods",
+        "suburb": "Meridian Kessler",
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4533 Broadway Street, Broad Ripple, Indiana, United States"
+    },
+    {
+      "lat": 39.8890819689124,
+      "lon": -86.12826928851206,
+      "geoinfo": {
+        "display_name": "1905, Randall Road, Ravenswood, Indianapolis, Marion County, Indiana, 46240, United States",
+        "road": "Randall Road",
+        "house_number": "1905",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1905, Randall Road, Ravenswood, Indianapolis, Marion County, Indiana, 46240, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:40.648509+00:00",
+  "_kind": "geo_samples"
+}

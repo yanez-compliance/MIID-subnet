@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norfolk",
+  "geonameid": 5073965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.0173269583945,
+      "lon": -97.3908842042234,
+      "geoinfo": {
+        "display_name": "1318, South Victory Road, Norfolk, Madison County, Nebraska, 68701, United States",
+        "road": "South Victory Road",
+        "house_number": "1318",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norfolk",
+        "state": "Nebraska",
+        "postcode": "68701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1318 South Victory Road, Norfolk, Nebraska, United States"
+    },
+    {
+      "lat": 42.04670867616406,
+      "lon": -97.46275888045164,
+      "geoinfo": {
+        "display_name": "3599, Tennis Court Drive, Norfolk, Madison County, Nebraska, 68701, United States",
+        "road": "Tennis Court Drive",
+        "house_number": "3599",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norfolk",
+        "state": "Nebraska",
+        "postcode": "68701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3599, Tennis Court Drive, Norfolk, Madison County, Nebraska, 68701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:33.313382+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Hoogstraten",
+  "geonameid": 2795398,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.38299651434121,
+      "lon": 4.741688074487064,
+      "geoinfo": {
+        "display_name": "Hoogstraatse Dreef, Hoogstraten, Rijkevorsel, Turnhout, Antwerp, 2310, Belgium",
+        "road": "Hoogstraatse Dreef",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hoogstraten",
+        "city": "Rijkevorsel",
+        "state": "Antwerp",
+        "postcode": "2310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Hoogstraatse Dreef, Hoogstraten, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.38278014835874,
+      "lon": 4.75755151346764,
+      "geoinfo": {
+        "display_name": "Achtel, Rijkevorsel, Turnhout, Antwerp, 2310, Belgium",
+        "road": "Achtel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rijkevorsel",
+        "state": "Antwerp",
+        "postcode": "2310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "290, Achtel, Rijkevorsel, Turnhout, Antwerp, 2310, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:51.507762+00:00",
+  "_kind": "geo_samples"
+}

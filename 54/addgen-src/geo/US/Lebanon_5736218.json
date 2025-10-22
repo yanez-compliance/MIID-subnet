@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lebanon",
+  "geonameid": 5736218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.55122600643112,
+      "lon": -122.90382786919932,
+      "geoinfo": {
+        "display_name": "Samaritan Lebanon Community Hospital, 525, Main Street, Lebanon, Linn County, Oregon, 97355, United States",
+        "road": "Main Street",
+        "house_number": "525",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lebanon",
+        "state": "Oregon",
+        "postcode": "97355",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "525 Main Street, Lebanon, Oregon, United States"
+    },
+    {
+      "lat": 44.536896071666625,
+      "lon": -122.87526988001011,
+      "geoinfo": {
+        "display_name": "Saltmarsh Lane, Linn County, Oregon, 97355, United States",
+        "road": "Saltmarsh Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97355",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "363, Saltmarsh Lane, Linn County, Oregon, 97355, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:39.168720+00:00",
+  "_kind": "geo_samples"
+}

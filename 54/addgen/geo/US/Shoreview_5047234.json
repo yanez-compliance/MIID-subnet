@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shoreview",
+  "geonameid": 5047234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.06517977159107,
+      "lon": -93.12115161158005,
+      "geoinfo": {
+        "display_name": "4142, Mackubin Street, Shoreview, Ramsey County, Minnesota, 55126, United States",
+        "road": "Mackubin Street",
+        "house_number": "4142",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shoreview",
+        "state": "Minnesota",
+        "postcode": "55126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4142 Mackubin Street, Shoreview, Minnesota, United States"
+    },
+    {
+      "lat": 45.06094333542624,
+      "lon": -93.14486046196407,
+      "geoinfo": {
+        "display_name": "I 694;US 10, Grass Lake, Shoreview, Ramsey County, Minnesota, 55112, United States",
+        "road": "I 694;US 10",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grass Lake",
+        "city_district": null,
+        "city": "Shoreview",
+        "state": "Minnesota",
+        "postcode": "55112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 694;US 10, Grass Lake, Shoreview, Ramsey County, Minnesota, 55112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:08.579658+00:00",
+  "_kind": "geo_samples"
+}

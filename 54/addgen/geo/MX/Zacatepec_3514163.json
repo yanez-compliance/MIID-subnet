@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Zacatepec",
+  "geonameid": 3514163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.67343844664948,
+      "lon": -99.16368070676678,
+      "geoinfo": {
+        "display_name": "Avenida Amador Salazar, Tlaltizapan, Tlaltizapán de Zapata, Morelos, 62778, Mexico",
+        "road": "Avenida Amador Salazar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaltizapan",
+        "state": "Morelos",
+        "postcode": "62778",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Amador Salazar, Zacatepec, Morelos, Mexico"
+    },
+    {
+      "lat": 18.67074333983625,
+      "lon": -99.16474010187089,
+      "geoinfo": {
+        "display_name": "Avenida Amador Salazar, Tlaltizapan, Jojutla, Morelos, 62778, Mexico",
+        "road": "Avenida Amador Salazar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaltizapan",
+        "state": "Morelos",
+        "postcode": "62778",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "748, Avenida Amador Salazar, Tlaltizapan, Jojutla, Morelos, 62778, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:27.961499+00:00",
+  "_kind": "geo_samples"
+}

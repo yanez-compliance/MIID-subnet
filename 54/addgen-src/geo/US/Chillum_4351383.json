@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chillum",
+  "geonameid": 4351383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.9561117420081,
+      "lon": -76.95067948057647,
+      "geoinfo": {
+        "display_name": "3921, Longfellow Street, Castle Manor, Hyattsville, Prince George's County, Maryland, 20781, United States",
+        "road": "Longfellow Street",
+        "house_number": "3921",
+        "neighbourhood": "Castle Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hyattsville",
+        "state": "Maryland",
+        "postcode": "20781",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3921 Longfellow Street, Chillum, Maryland, United States"
+    },
+    {
+      "lat": 38.98582577140322,
+      "lon": -76.97464918129205,
+      "geoinfo": {
+        "display_name": "2282, Phelps Road, Adelphi Park, Lewisdale, Adelphi, Prince George's County, Maryland, 20783, United States",
+        "road": "Phelps Road",
+        "house_number": "2282",
+        "neighbourhood": "Adelphi Park",
+        "suburb": "Lewisdale",
+        "city_district": null,
+        "city": "Adelphi",
+        "state": "Maryland",
+        "postcode": "20783",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2282, Phelps Road, Adelphi Park, Lewisdale, Adelphi, Prince George's County, Maryland, 20783, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:10.066566+00:00",
+  "_kind": "geo_samples"
+}

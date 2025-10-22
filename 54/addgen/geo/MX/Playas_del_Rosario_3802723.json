@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Playas del Rosario",
+  "geonameid": 3802723,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.843136848613533,
+      "lon": -92.88874184192362,
+      "geoinfo": {
+        "display_name": "Playas del Rosario, Centro, Tabasco, 86288, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Playas del Rosario",
+        "state": "Tabasco",
+        "postcode": "86288",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Playas del Rosario, Tabasco, Mexico"
+    },
+    {
+      "lat": 17.85048402073358,
+      "lon": -92.8894889837109,
+      "geoinfo": {
+        "display_name": "Centro, Tabasco, 86289, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tabasco",
+        "postcode": "86289",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "392, Playas del Rosario, 86289 Tabasco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:28.847989+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Piqua",
+  "geonameid": 5166819,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.1602940407823,
+      "lon": -84.21044484588714,
+      "geoinfo": {
+        "display_name": "Edison Drive, Piqua, Miami County, Ohio, 45356, United States",
+        "road": "Edison Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piqua",
+        "state": "Ohio",
+        "postcode": "45356",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Edison Drive, Piqua, Ohio, United States"
+    },
+    {
+      "lat": 40.11016564201302,
+      "lon": -84.27896611168192,
+      "geoinfo": {
+        "display_name": "4032, Bausman Road, Miami County, Ohio, 45356, United States",
+        "road": "Bausman Road",
+        "house_number": "4032",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45356",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4032, Bausman Road, Miami County, Ohio, 45356, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:43.573706+00:00",
+  "_kind": "geo_samples"
+}

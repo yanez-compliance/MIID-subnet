@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Steveston",
+  "geonameid": 7602285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.129963001967475,
+      "lon": -123.20233998175904,
+      "geoinfo": {
+        "display_name": "Scotch Pond Trail/Hunter's Trail, Gulf of Georgia, Steveston, Richmond, Metro Vancouver Regional District, British Columbia, V7E 3J1, Canada",
+        "road": "Scotch Pond Trail/Hunter's Trail",
+        "house_number": null,
+        "neighbourhood": "Gulf of Georgia",
+        "suburb": "Steveston",
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7E 3J1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Scotch Pond Trail/Hunter's Trail, Steveston, British Columbia, Canada"
+    },
+    {
+      "lat": 49.112103757114554,
+      "lon": -123.17883459073691,
+      "geoinfo": {
+        "display_name": "Roberts Bank Trail, Delta, Metro Vancouver Regional District, British Columbia, V7E 1T6, Canada",
+        "road": "Roberts Bank Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delta",
+        "state": "British Columbia",
+        "postcode": "V7E 1T6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Roberts Bank Trail, Delta, Metro Vancouver Regional District, British Columbia, V7E 1T6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:50.456377+00:00",
+  "_kind": "geo_samples"
+}

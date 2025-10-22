@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Logan",
+  "geonameid": 5198748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.99063567466561,
+      "lon": -75.14594518800396,
+      "geoinfo": {
+        "display_name": "2540, North 8th Street, Hartranft, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19133, United States",
+        "road": "North 8th Street",
+        "house_number": "2540",
+        "neighbourhood": "Hartranft",
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2540 North 8th Street, Logan, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.04949853188977,
+      "lon": -75.184406919245,
+      "geoinfo": {
+        "display_name": "20, Good Street, West Mount Airy, Northwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19119, United States",
+        "road": "Good Street",
+        "house_number": "20",
+        "neighbourhood": "West Mount Airy",
+        "suburb": "Northwest Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20, Good Street, West Mount Airy, Northwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19119, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:28.889193+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Maracaibo",
+  "geonameid": 3633009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.661759050588671,
+      "lon": -71.57269819357833,
+      "geoinfo": {
+        "display_name": "Parroquia Olegario Villalobos, Municipio Maracaibo, Zulia State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Zulia State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Maracaibo, Zulia State, Venezuela"
+    },
+    {
+      "lat": 10.665940409171016,
+      "lon": -71.6212936270941,
+      "geoinfo": {
+        "display_name": "Parroquia Chiquinquirá, Municipio Maracaibo, Zulia State, 4002, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Zulia State",
+        "postcode": "4002",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "877, Maracaibo, 4002 Zulia State, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:51:02.015747+00:00",
+  "_kind": "geo_samples"
+}

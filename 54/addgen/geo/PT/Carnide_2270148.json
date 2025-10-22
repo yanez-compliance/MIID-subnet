@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Carnide",
+  "geonameid": 2270148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.778965140950106,
+      "lon": -9.217512760096787,
+      "geoinfo": {
+        "display_name": "Rua Cidade de Lisboa, Bairro Casalinho da Azenha, Pontinha e Famões, Odivelas, Lisbon, 1675-010, Portugal",
+        "road": "Rua Cidade de Lisboa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pontinha e Famões",
+        "city": "Odivelas",
+        "state": null,
+        "postcode": "1675-010",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Cidade de Lisboa, Carnide, Portugal"
+    },
+    {
+      "lat": 38.80044530153166,
+      "lon": -9.170955196682836,
+      "geoinfo": {
+        "display_name": "Rua Cândida Aires de Magalhães, Bairro da Codivel, Odivelas, Lisbon, 2675-233, Portugal",
+        "road": "Rua Cândida Aires de Magalhães",
+        "house_number": null,
+        "neighbourhood": "Bairro da Codivel",
+        "suburb": null,
+        "city_district": "Odivelas",
+        "city": "Odivelas",
+        "state": null,
+        "postcode": "2675-233",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Cândida Aires de Magalhães, Bairro da Codivel, Odivelas, Lisbon, 2675-233, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:48.215069+00:00",
+  "_kind": "geo_samples"
+}

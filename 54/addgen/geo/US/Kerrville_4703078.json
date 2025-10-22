@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kerrville",
+  "geonameid": 4703078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.073491119365098,
+      "lon": -99.15449420387384,
+      "geoinfo": {
+        "display_name": "1284, Hilltop Road, Mount Wesley, Kerrville, Kerr County, Texas, 78028, United States",
+        "road": "Hilltop Road",
+        "house_number": "1284",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kerrville",
+        "state": "Texas",
+        "postcode": "78028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1284 Hilltop Road, Kerrville, Texas, United States"
+    },
+    {
+      "lat": 30.078359888046126,
+      "lon": -99.11933645603852,
+      "geoinfo": {
+        "display_name": "Mesa Vista Lane, Kerr County, Texas, 78028, United States",
+        "road": "Mesa Vista Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "233, Mesa Vista Lane, Kerr County, Texas, 78028, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:10.275469+00:00",
+  "_kind": "geo_samples"
+}

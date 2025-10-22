@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oschatz",
+  "geonameid": 2856944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.330684332179345,
+      "lon": 13.114259944464047,
+      "geoinfo": {
+        "display_name": "Merkwitzer Straße, Terpitz, Liebschützberg, Nordsachsen, Saxony, 04758, Germany",
+        "road": "Merkwitzer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terpitz",
+        "state": "Saxony",
+        "postcode": "04758",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Merkwitzer Straße, Oschatz, Saxony, Germany"
+    },
+    {
+      "lat": 51.31459452356099,
+      "lon": 13.092803807209693,
+      "geoinfo": {
+        "display_name": "19, Oschatzer Straße, Merkwitz, Oschatz, Nordsachsen, Saxony, 04758, Germany",
+        "road": "Oschatzer Straße",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oschatz",
+        "state": "Saxony",
+        "postcode": "04758",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19, Oschatzer Straße, Merkwitz, Oschatz, Nordsachsen, Saxony, 04758, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:34.887103+00:00",
+  "_kind": "geo_samples"
+}

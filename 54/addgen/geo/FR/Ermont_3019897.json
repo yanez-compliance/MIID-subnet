@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Ermont",
+  "geonameid": 3019897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.01282887067085,
+      "lon": 2.2569705050288356,
+      "geoinfo": {
+        "display_name": "83, Rue de l'Yser, Saint-Prix, Sarcelles, Val-d'Oise, Metropolitan France, 95390, France",
+        "road": "Rue de l'Yser",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Prix",
+        "state": null,
+        "postcode": "95390",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "83 Rue de l'Yser, Ermont, France"
+    },
+    {
+      "lat": 48.98966476856238,
+      "lon": 2.314973102981347,
+      "geoinfo": {
+        "display_name": "32, Rue de Pontoise, Les Parcs de Montmorency, Montmorency, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95160, France",
+        "road": "Rue de Pontoise",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montmorency",
+        "state": "Ile-de-France",
+        "postcode": "95160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "32, Rue de Pontoise, Les Parcs de Montmorency, Montmorency, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:43.507690+00:00",
+  "_kind": "geo_samples"
+}

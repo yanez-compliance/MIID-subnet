@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Doncaster East",
+  "geonameid": 2168605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.80792677917197,
+      "lon": 145.1601847584744,
+      "geoinfo": {
+        "display_name": "10, Devon Drive, Blackburn North, Melbourne, City of Whitehorse, Victoria, 3130, Australia",
+        "road": "Devon Drive",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Blackburn North",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3130",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "10 Devon Drive, Doncaster East, Victoria, Australia"
+    },
+    {
+      "lat": -37.75451920979404,
+      "lon": 145.11634372176982,
+      "geoinfo": {
+        "display_name": "6, Riverwood Lane, Templestowe Lower, Melbourne, City of Manningham, Victoria, 3107, Australia",
+        "road": "Riverwood Lane",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Templestowe Lower",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "6, Riverwood Lane, Templestowe Lower, Melbourne, City of Manningham, Victoria, 3107, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:37.351767+00:00",
+  "_kind": "geo_samples"
+}

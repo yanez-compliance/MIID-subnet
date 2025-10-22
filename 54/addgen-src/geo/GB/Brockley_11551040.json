@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Brockley",
+  "geonameid": 11551040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.46789299269736,
+      "lon": -0.04393078672365862,
+      "geoinfo": {
+        "display_name": "104, Pepys Road, Telegraph Hill, New Cross Gate, London Borough of Lewisham, London, Greater London, England, SE14 5SG, United Kingdom",
+        "road": "Pepys Road",
+        "house_number": "104",
+        "neighbourhood": "Telegraph Hill",
+        "suburb": "New Cross Gate",
+        "city_district": "London Borough of Lewisham",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE14 5SG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "104 Pepys Road, Brockley, England, United Kingdom"
+    },
+    {
+      "lat": 51.46761457317664,
+      "lon": -0.029075885095034632,
+      "geoinfo": {
+        "display_name": "Ashby Road, New Cross, London Borough of Lewisham, London, Greater London, England, SE4 1PX, United Kingdom",
+        "road": "Ashby Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New Cross",
+        "city_district": "London Borough of Lewisham",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE4 1PX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ashby Road, New Cross, London Borough of Lewisham, London, Greater London, England, SE4 1PX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:54.365948+00:00",
+  "_kind": "geo_samples"
+}

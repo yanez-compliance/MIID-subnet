@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Cessnock",
+  "geonameid": 2171845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.81096643637231,
+      "lon": 151.33212293440036,
+      "geoinfo": {
+        "display_name": "O'Connors Road, Nulkaba, Cessnock City Council, New South Wales, 2325, Australia",
+        "road": "O'Connors Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nulkaba",
+        "state": "New South Wales",
+        "postcode": "2325",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "O'Connors Road, Cessnock, New South Wales, Australia"
+    },
+    {
+      "lat": -32.81284141711665,
+      "lon": 151.35372112714865,
+      "geoinfo": {
+        "display_name": "Wine Country Drive, Nulkaba, Cessnock City Council, New South Wales, 2325, Australia",
+        "road": "Wine Country Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nulkaba",
+        "state": "New South Wales",
+        "postcode": "2325",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "519, Wine Country Drive, Nulkaba, Cessnock City Council, New South Wales, 2325, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:52.381393+00:00",
+  "_kind": "geo_samples"
+}

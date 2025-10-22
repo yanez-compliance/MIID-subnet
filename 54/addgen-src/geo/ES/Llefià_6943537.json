@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Llefià",
+  "geonameid": 6943537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.441929300793866,
+      "lon": 2.221165264095357,
+      "geoinfo": {
+        "display_name": "Carrer de Londres, Sant Joan de Llefià, Districte 4, Badalona, Barcelonès, Barcelona, Catalonia, 08914, Spain",
+        "road": "Carrer de Londres",
+        "house_number": null,
+        "neighbourhood": "Sant Joan de Llefià",
+        "suburb": null,
+        "city_district": "Districte 4",
+        "city": "Badalona",
+        "state": "Catalonia",
+        "postcode": "08914",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer de Londres, Llefià, Catalonia, Spain"
+    },
+    {
+      "lat": 41.40344395290105,
+      "lon": 2.1969816916421467,
+      "geoinfo": {
+        "display_name": "Carrer de Sancho d'Avila, el Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08018, Spain",
+        "road": "Carrer de Sancho d'Avila",
+        "house_number": null,
+        "neighbourhood": "el Poblenou",
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08018",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "683, Carrer de Sancho d'Avila, el Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08018, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:13.489676+00:00",
+  "_kind": "geo_samples"
+}

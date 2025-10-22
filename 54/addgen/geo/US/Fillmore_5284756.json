@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fillmore",
+  "geonameid": 5284756,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.42489791826596,
+      "lon": -118.96064280764294,
+      "geoinfo": {
+        "display_name": "Ventura County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fillmore, California, United States"
+    },
+    {
+      "lat": 34.41063002868104,
+      "lon": -118.92844528214192,
+      "geoinfo": {
+        "display_name": "Hinckley Lane, North Fillmore, Fillmore, Ventura County, California, 93016, United States",
+        "road": "Hinckley Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fillmore",
+        "state": "California",
+        "postcode": "93016",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "306, Hinckley Lane, North Fillmore, Fillmore, Ventura County, California, 93016, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:08.458668+00:00",
+  "_kind": "geo_samples"
+}

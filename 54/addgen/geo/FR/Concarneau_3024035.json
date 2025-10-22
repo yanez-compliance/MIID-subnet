@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Concarneau",
+  "geonameid": 3024035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.890213232412385,
+      "lon": -3.931863170239056,
+      "geoinfo": {
+        "display_name": "Route du Pont de Lanadan, Lanadan Creiz, Concarneau, Quimper, Finistère, Brittany, Metropolitan France, 29900, France",
+        "road": "Route du Pont de Lanadan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concarneau",
+        "state": "Brittany",
+        "postcode": "29900",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route du Pont de Lanadan, Concarneau, Brittany, France"
+    },
+    {
+      "lat": 47.838435972962316,
+      "lon": -3.9247251265819254,
+      "geoinfo": {
+        "display_name": "Karreg Mélanson, Metropolitan France, 29900, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "29900",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "362, Karreg Mélanson, Metropolitan France, 29900, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:22.857067+00:00",
+  "_kind": "geo_samples"
+}

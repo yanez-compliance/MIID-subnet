@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Cajon",
+  "geonameid": 5345529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.78725071288594,
+      "lon": -116.94897965926758,
+      "geoinfo": {
+        "display_name": "975, East Washington Avenue, El Cajon, San Diego County, California, 92020, United States",
+        "road": "East Washington Avenue",
+        "house_number": "975",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cajon",
+        "state": "California",
+        "postcode": "92020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "975 East Washington Avenue, El Cajon, California, United States"
+    },
+    {
+      "lat": 32.802136027847915,
+      "lon": -116.99393672899518,
+      "geoinfo": {
+        "display_name": "2216, Tampa Avenue, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States",
+        "road": "Tampa Avenue",
+        "house_number": "2216",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cajon",
+        "state": "California",
+        "postcode": "92020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2216, Tampa Avenue, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:01.441361+00:00",
+  "_kind": "geo_samples"
+}

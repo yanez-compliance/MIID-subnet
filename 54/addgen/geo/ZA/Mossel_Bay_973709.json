@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Mossel Bay",
+  "geonameid": 973709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.19443352887775,
+      "lon": 22.19806479957978,
+      "geoinfo": {
+        "display_name": "Mossel Bay, George, Western Cape, 6500, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6500",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mossel Bay, Western Cape, South Africa"
+    },
+    {
+      "lat": -34.193420422643726,
+      "lon": 22.170584594845288,
+      "geoinfo": {
+        "display_name": "Da Nova, Mossel Bay Ward 6, Mossel Bay Local Municipality, George, Western Cape, 6500, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Da Nova",
+        "city_district": "Mossel Bay Local Municipality",
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6500",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Da Nova, Mossel Bay Ward 6, Mossel Bay Local Municipality, George, Western Cape, 6500, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:16.258927+00:00",
+  "_kind": "geo_samples"
+}

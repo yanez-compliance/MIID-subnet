@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Edina",
+  "geonameid": 5025264,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.86897131788318,
+      "lon": -93.36563817851707,
+      "geoinfo": {
+        "display_name": "5599, Dewey Hill Road, Dewey Hill, Edina, Hennepin County, Minnesota, 55439, United States",
+        "road": "Dewey Hill Road",
+        "house_number": "5599",
+        "neighbourhood": "Dewey Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Edina",
+        "state": "Minnesota",
+        "postcode": "55439",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5599 Dewey Hill Road, Edina, Minnesota, United States"
+    },
+    {
+      "lat": 44.91193667046363,
+      "lon": -93.37128396310781,
+      "geoinfo": {
+        "display_name": "Mirror Lakes Drive, Edina, Hennepin County, Minnesota, 55436, United States",
+        "road": "Mirror Lakes Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edina",
+        "state": "Minnesota",
+        "postcode": "55436",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "031, Mirror Lakes Drive, Edina, Hennepin County, Minnesota, 55436, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:57.251577+00:00",
+  "_kind": "geo_samples"
+}

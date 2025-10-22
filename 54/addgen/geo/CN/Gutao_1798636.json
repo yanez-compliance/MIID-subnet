@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gutao",
+  "geonameid": 1798636,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.17225034560185,
+      "lon": 112.19587518308145,
+      "geoinfo": {
+        "display_name": "Jingkun Expressway, Gutao, Pingyao County, Jinzhong, Shanxi, 031100, China",
+        "road": "Jingkun Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinzhong",
+        "state": "Shanxi",
+        "postcode": "031100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jingkun Expressway, Gutao, Shanxi, China"
+    },
+    {
+      "lat": 37.17071582289882,
+      "lon": 112.1609984331659,
+      "geoinfo": {
+        "display_name": "Pingyao County, Jinzhong, Shanxi, 031100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinzhong",
+        "state": "Shanxi",
+        "postcode": "031100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "673, Pingyao County, Jinzhong, Shanxi, 031100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:25.901294+00:00",
+  "_kind": "geo_samples"
+}

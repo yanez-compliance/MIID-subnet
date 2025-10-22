@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Epping",
+  "geonameid": 2167280,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.76278863589426,
+      "lon": 151.10658741791852,
+      "geoinfo": {
+        "display_name": "M2 Hills Motorway, Marsfield, Sydney, Council of the City of Ryde, New South Wales, 2122, Australia",
+        "road": "M2 Hills Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marsfield",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2122",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "M2 Hills Motorway, Epping, New South Wales, Australia"
+    },
+    {
+      "lat": -33.78713590204062,
+      "lon": 151.05214027100507,
+      "geoinfo": {
+        "display_name": "71, Cox Crescent, Dundas Valley, Sydney, City of Parramatta Council, New South Wales, 2117, Australia",
+        "road": "Cox Crescent",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": "Dundas Valley",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2117",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "71, Cox Crescent, Dundas Valley, Sydney, City of Parramatta Council, New South Wales, 2117, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:53.287211+00:00",
+  "_kind": "geo_samples"
+}

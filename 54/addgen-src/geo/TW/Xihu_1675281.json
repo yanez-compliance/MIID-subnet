@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Xihu",
+  "geonameid": 1675281,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 23.97475315717502,
+      "lon": 120.46815979132374,
+      "geoinfo": {
+        "display_name": "141號, 員鹿路四段535巷, Shanliao, Xiliao Village, Xihu Township, Changhua County, 51445, Taiwan",
+        "road": "員鹿路四段535巷",
+        "house_number": "141號",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Xiliao Village",
+        "city": "Xihu Township",
+        "state": null,
+        "postcode": "51445",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "141號 員鹿路四段535巷, Xihu, Taiwan"
+    },
+    {
+      "lat": 23.944513074998582,
+      "lon": 120.47914983403827,
+      "geoinfo": {
+        "display_name": "80號, 草埔路, Fanpozhuang, Fanpo Village, Xihu Township, Changhua County, 51450, Taiwan",
+        "road": "草埔路",
+        "house_number": "80號",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fanpo Village",
+        "city": "Xihu Township",
+        "state": null,
+        "postcode": "51450",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "80號 草埔路, Xihu, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:35:23.039770+00:00",
+  "_kind": "geo_samples"
+}

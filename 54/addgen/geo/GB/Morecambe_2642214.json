@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Morecambe",
+  "geonameid": 2642214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.070923694606535,
+      "lon": -2.905806096296099,
+      "geoinfo": {
+        "display_name": "England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Morecambe, England, United Kingdom"
+    },
+    {
+      "lat": 54.0750097112053,
+      "lon": -2.7943333336290483,
+      "geoinfo": {
+        "display_name": "Bay Gateway, Shefferlands, Slyne-with-Hest, Slyne, Lancaster, Lancashire, England, LA2 6BJ, United Kingdom",
+        "road": "Bay Gateway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Slyne-with-Hest",
+        "city_district": null,
+        "city": "Lancaster",
+        "state": "England",
+        "postcode": "LA2 6BJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bay Gateway, Shefferlands, Slyne-with-Hest, Slyne, Lancaster, Lancashire, England, LA2 6BJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:19.627977+00:00",
+  "_kind": "geo_samples"
+}

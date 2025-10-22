@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Genzano di Roma",
+  "geonameid": 3176203,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.69824439091324,
+      "lon": 12.689254952822582,
+      "geoinfo": {
+        "display_name": "Via della Selva, Zona Artigianale, Montecagnoletto, Genzano di Roma, Roma Capitale, Lazio, 00045, Italy",
+        "road": "Via della Selva",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zona Artigianale",
+        "city_district": null,
+        "city": "Genzano di Roma",
+        "state": "Lazio",
+        "postcode": "00045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via della Selva, Genzano di Roma, Lazio, Italy"
+    },
+    {
+      "lat": 41.669675787471704,
+      "lon": 12.662888101404388,
+      "geoinfo": {
+        "display_name": "Via Montegiove Vecchio, Lanuvio, Roma Capitale, Lazio, 00075, Italy",
+        "road": "Via Montegiove Vecchio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lanuvio",
+        "state": "Lazio",
+        "postcode": "00075",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "911, Via Montegiove Vecchio, Lanuvio, Roma Capitale, Lazio, 00075, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:48.364771+00:00",
+  "_kind": "geo_samples"
+}

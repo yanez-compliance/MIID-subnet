@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Miguel Topilejo",
+  "geonameid": 3515259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.18119444157108,
+      "lon": -99.18218701458164,
+      "geoinfo": {
+        "display_name": "El Sicomoro, Tlalpan, Mexico City, 14713, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "14713",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Miguel Topilejo, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.213872531118376,
+      "lon": -99.0998289378129,
+      "geoinfo": {
+        "display_name": "Camino al Cerro Tepetongo, Colonia Villa San Isidro, Rancho la Flor, Xochimilco, Mexico City, 16880, Mexico",
+        "road": "Camino al Cerro Tepetongo",
+        "house_number": null,
+        "neighbourhood": "Colonia Villa San Isidro",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "16880",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "850, Camino al Cerro Tepetongo, Colonia Villa San Isidro, Rancho la Flor, Xochimilco, Mexico City, 16880, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:32.158458+00:00",
+  "_kind": "geo_samples"
+}

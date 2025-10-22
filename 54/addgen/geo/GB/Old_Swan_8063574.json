@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Old Swan",
+  "geonameid": 8063574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.39975136521352,
+      "lon": -2.9325622290095996,
+      "geoinfo": {
+        "display_name": "Bishopgate Street, Sandown Park, Wavertree, Liverpool, Liverpool City Region, England, L15 1EN, United Kingdom",
+        "road": "Bishopgate Street",
+        "house_number": null,
+        "neighbourhood": "Sandown Park",
+        "suburb": "Wavertree",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L15 1EN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bishopgate Street, Old Swan, England, United Kingdom"
+    },
+    {
+      "lat": 53.38982884689441,
+      "lon": -2.9378536279730283,
+      "geoinfo": {
+        "display_name": "Church war menorial, Ullet Road, Wavertree, Liverpool, Liverpool City Region, England, L17 2AS, United Kingdom",
+        "road": "Ullet Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wavertree",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L17 2AS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church war menorial, Ullet Road, Wavertree, Liverpool, Liverpool City Region, England, L17 2AS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:25.919931+00:00",
+  "_kind": "geo_samples"
+}

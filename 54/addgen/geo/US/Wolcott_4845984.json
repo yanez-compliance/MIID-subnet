@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wolcott",
+  "geonameid": 4845984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.60444559030993,
+      "lon": -72.9811004250995,
+      "geoinfo": {
+        "display_name": "74, Center Street, Wolcott, Naugatuck Valley Planning Region, Connecticut, 06716, United States",
+        "road": "Center Street",
+        "house_number": "74",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wolcott",
+        "state": "Connecticut",
+        "postcode": "06716",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "74 Center Street, Wolcott, Connecticut, United States"
+    },
+    {
+      "lat": 41.60475135387088,
+      "lon": -72.9480299991235,
+      "geoinfo": {
+        "display_name": "Wolcott, Naugatuck Valley Planning Region, Connecticut, 06716, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wolcott",
+        "state": "Connecticut",
+        "postcode": "06716",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "034, Wolcott, Naugatuck Valley Planning Region, Connecticut, 06716, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:48.206584+00:00",
+  "_kind": "geo_samples"
+}

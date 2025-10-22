@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Damme",
+  "geonameid": 2939167,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.53649903279746,
+      "lon": 8.13184869047421,
+      "geoinfo": {
+        "display_name": "Gramker Straße, Gramke, Holdorf, Landkreis Vechta, Lower Saxony, 49451, Germany",
+        "road": "Gramker Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holdorf",
+        "state": "Lower Saxony",
+        "postcode": "49451",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Gramker Straße, Damme, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.485223374129426,
+      "lon": 8.163502953978089,
+      "geoinfo": {
+        "display_name": "Greven, Vörden, Neuenkirchen-Vörden, Landkreis Vechta, Lower Saxony, 49434, Germany",
+        "road": "Greven",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Vörden",
+        "city": "Neuenkirchen-Vörden",
+        "state": "Lower Saxony",
+        "postcode": "49434",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "635, Greven, Vörden, Neuenkirchen-Vörden, Landkreis Vechta, Lower Saxony, 49434, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:38.977088+00:00",
+  "_kind": "geo_samples"
+}

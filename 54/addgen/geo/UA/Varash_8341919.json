@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Varash",
+  "geonameid": 8341919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.36749490749793,
+      "lon": 25.858958554198107,
+      "geoinfo": {
+        "display_name": "вулиця Хлібороб, Околиця, Stara Rafalivka, Varash Urban Hromada, Varash Raion, Rivne Oblast, 34354, Ukraine",
+        "road": "вулиця Хлібороб",
+        "house_number": null,
+        "neighbourhood": "Околиця",
+        "suburb": null,
+        "city_district": null,
+        "city": "Stara Rafalivka",
+        "state": "Rivne Oblast",
+        "postcode": "34354",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "вулиця Хлібороб, Varash, Rivne Oblast, Ukraine"
+    },
+    {
+      "lat": 51.3643940178693,
+      "lon": 25.802701795678573,
+      "geoinfo": {
+        "display_name": "О-031169, Kolodii, Manevychi Settlement Hromada, Kamin-Kashyrskyi Raion, Volyn Oblast, 44630, Ukraine",
+        "road": "О-031169",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kolodii",
+        "state": "Volyn Oblast",
+        "postcode": "44630",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "О-031169, Varash, 44630 Volyn Oblast, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:02.515335+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Savigny-le-Temple",
+  "geonameid": 2975536,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.59472288851249,
+      "lon": 2.5712204859797616,
+      "geoinfo": {
+        "display_name": "Avenue Pierre Mendès France, Savigny-le-Temple, Melun, Seine-et-Marne, Metropolitan France, 77176, France",
+        "road": "Avenue Pierre Mendès France",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Savigny-le-Temple",
+        "state": null,
+        "postcode": "77176",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue Pierre Mendès France, Savigny-le-Temple, France"
+    },
+    {
+      "lat": 48.56719090952508,
+      "lon": 2.555220226533982,
+      "geoinfo": {
+        "display_name": "D 50, Nandy, Melun, Seine-et-Marne, Metropolitan France, 77176, France",
+        "road": "D 50",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nandy",
+        "state": null,
+        "postcode": "77176",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 50, Nandy, Melun, Seine-et-Marne, Metropolitan France, 77176, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:44.205903+00:00",
+  "_kind": "geo_samples"
+}

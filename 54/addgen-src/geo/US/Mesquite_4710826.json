@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mesquite",
+  "geonameid": 4710826,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.776739099254826,
+      "lon": -96.58536722695214,
+      "geoinfo": {
+        "display_name": "810, Yosemite Trail, Mesquite, Dallas County, Texas, 75149, United States",
+        "road": "Yosemite Trail",
+        "house_number": "810",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesquite",
+        "state": "Texas",
+        "postcode": "75149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "810 Yosemite Trail, Mesquite, Texas, United States"
+    },
+    {
+      "lat": 32.797676943492704,
+      "lon": -96.63006444517829,
+      "geoinfo": {
+        "display_name": "Mesquite Heritage Trail, Mesquite, Dallas County, Texas, 75150, United States",
+        "road": "Mesquite Heritage Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesquite",
+        "state": "Texas",
+        "postcode": "75150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "973, Mesquite Heritage Trail, Mesquite, Dallas County, Texas, 75150, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:18.597132+00:00",
+  "_kind": "geo_samples"
+}

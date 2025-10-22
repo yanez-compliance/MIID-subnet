@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Oshawa",
+  "geonameid": 6094578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.90946711369522,
+      "lon": -78.86444740044875,
+      "geoinfo": {
+        "display_name": "112, Sutherland Avenue, O'Neill, Oshawa, Durham Region, Golden Horseshoe, Ontario, L1G 4T2, Canada",
+        "road": "Sutherland Avenue",
+        "house_number": "112",
+        "neighbourhood": "O'Neill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oshawa",
+        "state": "Ontario",
+        "postcode": "L1G 4T2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "112 Sutherland Avenue, Oshawa, Ontario, Canada"
+    },
+    {
+      "lat": 43.86841301190808,
+      "lon": -78.88665330261774,
+      "geoinfo": {
+        "display_name": "CN Oshawa Yard, Thornton Road South, Stevenson, Oshawa, Durham Region, Golden Horseshoe, Ontario, L1J 6W8, Canada",
+        "road": "Thornton Road South",
+        "house_number": null,
+        "neighbourhood": "Stevenson",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oshawa",
+        "state": "Ontario",
+        "postcode": "L1J 6W8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "CN Oshawa Yard, Thornton Road South, Stevenson, Oshawa, Durham Region, Golden Horseshoe, Ontario, L1J 6W8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:37.510924+00:00",
+  "_kind": "geo_samples"
+}

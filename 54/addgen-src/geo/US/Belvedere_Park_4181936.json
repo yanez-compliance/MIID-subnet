@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Belvedere Park",
+  "geonameid": 4181936,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.78439401486427,
+      "lon": -84.24829847718058,
+      "geoinfo": {
+        "display_name": "336, Northern Avenue, Scottdale, DeKalb County, Georgia, 30002, United States",
+        "road": "Northern Avenue",
+        "house_number": "336",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Scottdale",
+        "state": "Georgia",
+        "postcode": "30002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "336 Northern Avenue, Belvedere Park, Georgia, United States"
+    },
+    {
+      "lat": 33.77570392172856,
+      "lon": -84.23466587473894,
+      "geoinfo": {
+        "display_name": "George Luther Drive, Scottdale, DeKalb County, Georgia, 30032, United States",
+        "road": "George Luther Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Scottdale",
+        "state": "Georgia",
+        "postcode": "30032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "802, George Luther Drive, Scottdale, DeKalb County, Georgia, 30032, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:34.511852+00:00",
+  "_kind": "geo_samples"
+}

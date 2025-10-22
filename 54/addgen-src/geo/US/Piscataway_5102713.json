@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Piscataway",
+  "geonameid": 5102713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.514215868409714,
+      "lon": -74.44364662472033,
+      "geoinfo": {
+        "display_name": "Rutgers Livingston Campus, Joyce Kilmer Avenue, Piscataway Township, Middlesex County, New Jersey, 08854, United States",
+        "road": "Joyce Kilmer Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piscataway Township",
+        "state": "New Jersey",
+        "postcode": "08854",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Joyce Kilmer Avenue, Piscataway, New Jersey, United States"
+    },
+    {
+      "lat": 40.50021707313408,
+      "lon": -74.45248486669418,
+      "geoinfo": {
+        "display_name": "13, Prosper Street, New Brunswick, Middlesex County, New Jersey, 08901, United States",
+        "road": "Prosper Street",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Brunswick",
+        "state": "New Jersey",
+        "postcode": "08901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13, Prosper Street, New Brunswick, Middlesex County, New Jersey, 08901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:35.056009+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Freital",
+  "geonameid": 2925017,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.99183612530181,
+      "lon": 13.653868346834324,
+      "geoinfo": {
+        "display_name": "10, Wartburgstraße, Schweinsdorf, Freital, Sächsische Schweiz-Osterzgebirge, Saxony, 01705, Germany",
+        "road": "Wartburgstraße",
+        "house_number": "10",
+        "neighbourhood": "Schweinsdorf",
+        "suburb": "Schweinsdorf",
+        "city_district": null,
+        "city": "Freital",
+        "state": "Saxony",
+        "postcode": "01705",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10 Wartburgstraße, Freital, Saxony, Germany"
+    },
+    {
+      "lat": 50.96997643396716,
+      "lon": 13.605542533833145,
+      "geoinfo": {
+        "display_name": "Somsdorf, Freital, Sächsische Schweiz-Osterzgebirge, Saxony, 01705, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Somsdorf",
+        "city_district": null,
+        "city": "Freital",
+        "state": "Saxony",
+        "postcode": "01705",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "086, Somsdorf, Freital, Sächsische Schweiz-Osterzgebirge, Saxony, 01705, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:28.541038+00:00",
+  "_kind": "geo_samples"
+}

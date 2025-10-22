@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bowling Green",
+  "geonameid": 5147968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.36213378878625,
+      "lon": -83.66248258493908,
+      "geoinfo": {
+        "display_name": "Sand Ridge Road, Bowling Green, Wood County, Ohio, 43402, United States",
+        "road": "Sand Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bowling Green",
+        "state": "Ohio",
+        "postcode": "43402",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sand Ridge Road, Bowling Green, Ohio, United States"
+    },
+    {
+      "lat": 41.36187750025399,
+      "lon": -83.6198039190318,
+      "geoinfo": {
+        "display_name": "I 75, Bowling Green, Wood County, Ohio, 43403, United States",
+        "road": "I 75",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bowling Green",
+        "state": "Ohio",
+        "postcode": "43403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 75, Bowling Green, Wood County, Ohio, 43403, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:49.389464+00:00",
+  "_kind": "geo_samples"
+}

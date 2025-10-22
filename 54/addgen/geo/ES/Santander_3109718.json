@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Santander",
+  "geonameid": 3109718,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.48626974479059,
+      "lon": -3.770319436636993,
+      "geoinfo": {
+        "display_name": "Cabo Menor, Cueto, Santander, Cantabria, 39012, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santander",
+        "state": "Cantabria",
+        "postcode": "39012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Santander, Cantabria, Spain"
+    },
+    {
+      "lat": 43.49355604616093,
+      "lon": -3.817783043855548,
+      "geoinfo": {
+        "display_name": "Camino de la Peña del Uro, Santander, Cantabria, 39012, Spain",
+        "road": "Camino de la Peña del Uro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santander",
+        "state": "Cantabria",
+        "postcode": "39012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "851, Camino de la Peña del Uro, Santander, Cantabria, 39012, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:21.057147+00:00",
+  "_kind": "geo_samples"
+}

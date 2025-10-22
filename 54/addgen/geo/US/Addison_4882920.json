@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Addison",
+  "geonameid": 4882920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.90836375337478,
+      "lon": -87.97878476661992,
+      "geoinfo": {
+        "display_name": "Ardmore Avenue, Villa Park, Addison Township, DuPage County, Illinois, 60101, United States",
+        "road": "Ardmore Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Park",
+        "state": "Illinois",
+        "postcode": "60101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ardmore Avenue, Addison, Illinois, United States"
+    },
+    {
+      "lat": 41.964598602869486,
+      "lon": -88.01217311397409,
+      "geoinfo": {
+        "display_name": "451, South Walnut Street, Itasca, Addison Township, DuPage County, Illinois, 60143, United States",
+        "road": "South Walnut Street",
+        "house_number": "451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Itasca",
+        "state": "Illinois",
+        "postcode": "60143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "451, South Walnut Street, Itasca, Addison Township, DuPage County, Illinois, 60143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:05.640412+00:00",
+  "_kind": "geo_samples"
+}

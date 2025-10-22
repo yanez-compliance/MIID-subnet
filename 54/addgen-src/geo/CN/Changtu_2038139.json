@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changtu",
+  "geonameid": 2038139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.81105227758468,
+      "lon": 124.08304393299373,
+      "geoinfo": {
+        "display_name": "Manjing, Changtu, Changtu County, Liaoning, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Manjing",
+        "city_district": null,
+        "city": "Changtu",
+        "state": "Liaoning",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Manjing, Changtu, Liaoning, China"
+    },
+    {
+      "lat": 42.772596647295,
+      "lon": 124.10326762370093,
+      "geoinfo": {
+        "display_name": "文化大街, Changtu, Changtu County, Liaoning, China",
+        "road": "文化大街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changtu",
+        "state": "Liaoning",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "844, 文化大街, Changtu, Changtu County, 46741 Liaoning, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:25.487554+00:00",
+  "_kind": "geo_samples"
+}

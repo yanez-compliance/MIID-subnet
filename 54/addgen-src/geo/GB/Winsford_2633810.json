@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Winsford",
+  "geonameid": 2633810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.183077192098544,
+      "lon": -2.489133144869523,
+      "geoinfo": {
+        "display_name": "Clive Back Lane, Clive Green, Clive, Winsford, Cheshire West and Chester, England, CW7 3NX, United Kingdom",
+        "road": "Clive Back Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winsford",
+        "state": "England",
+        "postcode": "CW7 3NX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Clive Back Lane, Winsford, England, United Kingdom"
+    },
+    {
+      "lat": 53.165180976844255,
+      "lon": -2.4877784300084036,
+      "geoinfo": {
+        "display_name": "Lee Green Lane, Church Minshull, Cheshire East, England, CW7 4EB, United Kingdom",
+        "road": "Lee Green Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Church Minshull",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "CW7 4EB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lee Green Lane, Church Minshull, Cheshire East, England, CW7 4EB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:32.074045+00:00",
+  "_kind": "geo_samples"
+}

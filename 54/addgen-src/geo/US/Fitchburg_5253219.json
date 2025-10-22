@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fitchburg",
+  "geonameid": 5253219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.9517588912882,
+      "lon": -89.47621273843346,
+      "geoinfo": {
+        "display_name": "Badger State Trail, Fitchburg, Dane County, Wisconsin, United States",
+        "road": "Badger State Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fitchburg",
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Badger State Trail, Fitchburg, Wisconsin, United States"
+    },
+    {
+      "lat": 42.933740975771265,
+      "lon": -89.4958074955521,
+      "geoinfo": {
+        "display_name": "1451, Sayles Trail, Town of Montrose, Town of Oregon, Dane County, Wisconsin, 53508, United States",
+        "road": "Sayles Trail",
+        "house_number": "1451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Oregon",
+        "state": "Wisconsin",
+        "postcode": "53508",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1451, Sayles Trail, Town of Montrose, Town of Oregon, Dane County, Wisconsin, 53508, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:51.275402+00:00",
+  "_kind": "geo_samples"
+}

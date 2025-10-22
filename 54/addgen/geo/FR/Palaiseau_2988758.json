@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Palaiseau",
+  "geonameid": 2988758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.706447839814736,
+      "lon": 2.2022501588679484,
+      "geoinfo": {
+        "display_name": "129, Rue Aristide Briand, Les Gâtines, Le Guichet, Orsay, Palaiseau, Essonne, Metropolitan France, 91400, France",
+        "road": "Rue Aristide Briand",
+        "house_number": "129",
+        "neighbourhood": "Les Gâtines",
+        "suburb": "Le Guichet",
+        "city_district": null,
+        "city": "Orsay",
+        "state": null,
+        "postcode": "91400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "129 Rue Aristide Briand, Palaiseau, France"
+    },
+    {
+      "lat": 48.67816276748843,
+      "lon": 2.260751190411587,
+      "geoinfo": {
+        "display_name": "Chemin de la Tremblaye, Saulx-les-Chartreux, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91160, France",
+        "road": "Chemin de la Tremblaye",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saulx-les-Chartreux",
+        "state": "Ile-de-France",
+        "postcode": "91160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "196, Chemin de la Tremblaye, Saulx-les-Chartreux, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:12.720762+00:00",
+  "_kind": "geo_samples"
+}

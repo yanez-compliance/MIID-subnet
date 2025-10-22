@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Reisterstown",
+  "geonameid": 4366647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.440420714928,
+      "lon": -76.80355627701472,
+      "geoinfo": {
+        "display_name": "25, Timber Grove Road, Reisterstown Townhouse Apartments, Owings Mills, Baltimore County, Maryland, 21117, United States",
+        "road": "Timber Grove Road",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Owings Mills",
+        "state": "Maryland",
+        "postcode": "21117",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "25 Timber Grove Road, Reisterstown, Maryland, United States"
+    },
+    {
+      "lat": 39.43712870899584,
+      "lon": -76.8080585061669,
+      "geoinfo": {
+        "display_name": "27, Delight Road, Delight, Reisterstown, Baltimore County, Maryland, 21136, United States",
+        "road": "Delight Road",
+        "house_number": "27",
+        "neighbourhood": "Delight",
+        "suburb": null,
+        "city_district": null,
+        "city": "Reisterstown",
+        "state": "Maryland",
+        "postcode": "21136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27, Delight Road, Delight, Reisterstown, Baltimore County, Maryland, 21136, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:08.025323+00:00",
+  "_kind": "geo_samples"
+}

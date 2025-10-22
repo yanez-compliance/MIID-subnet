@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Springfield Lakes",
+  "geonameid": 6693094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.689949387119388,
+      "lon": 152.95278388159227,
+      "geoinfo": {
+        "display_name": "Springfield Greenbank Arterial, Greenbank, Greater Brisbane, Queensland, 4124, Australia",
+        "road": "Springfield Greenbank Arterial",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Greenbank",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4124",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Springfield Greenbank Arterial, Springfield Lakes, Queensland, Australia"
+    },
+    {
+      "lat": -27.632538313724673,
+      "lon": 152.8971136668713,
+      "geoinfo": {
+        "display_name": "Fiona Street, Bellbird Park, Greater Brisbane, Queensland, 4300, Australia",
+        "road": "Fiona Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bellbird Park",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4300",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "487, Fiona Street, Bellbird Park, Greater Brisbane, Queensland, 4300, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:16.090132+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Morges",
+  "geonameid": 2659587,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.516809001728134,
+      "lon": 6.481270597436392,
+      "geoinfo": {
+        "display_name": "Sentier de la Morges, Morges, District de Morges, Vaud, 1110, Switzerland",
+        "road": "Sentier de la Morges",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morges",
+        "state": "Vaud",
+        "postcode": "1110",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Sentier de la Morges, Morges, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.47926913249398,
+      "lon": 6.512289314386654,
+      "geoinfo": {
+        "display_name": "Morges, District de Morges, Vaud, 1110, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morges",
+        "state": "Vaud",
+        "postcode": "1110",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Morges, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.521201653518034,
+      "lon": 6.561580604683115,
+      "geoinfo": {
+        "display_name": "75, Chemin des Clos, Le Motty, Renges, Ecublens, District de l'Ouest lausannois, Vaud, 1024, Switzerland",
+        "road": "Chemin des Clos",
+        "house_number": "75",
+        "neighbourhood": "Le Motty",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ecublens",
+        "state": "Vaud",
+        "postcode": "1024",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "75, Chemin des Clos, Le Motty, Renges, Ecublens, District de l'Ouest lausannois, Vaud, 1024, Switzerland"
+    },
+    {
+      "lat": 46.478162662024296,
+      "lon": 6.488219161138936,
+      "geoinfo": {
+        "display_name": "Saint-Prex, District de Morges, Vaud, 1162, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Prex",
+        "state": "Vaud",
+        "postcode": "1162",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "684, Saint-Prex, District de Morges, Vaud, 1162, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:21.562461+00:00",
+  "_kind": "geo_samples"
+}

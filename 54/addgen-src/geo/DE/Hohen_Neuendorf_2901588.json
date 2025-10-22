@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hohen Neuendorf",
+  "geonameid": 2901588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.70414058420129,
+      "lon": 13.24090546358771,
+      "geoinfo": {
+        "display_name": "Veltener Chaussee, Pinnow, Borgsdorf, Hohen Neuendorf, Oberhavel, Brandenburg, 16556, Germany",
+        "road": "Veltener Chaussee",
+        "house_number": null,
+        "neighbourhood": "Pinnow",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hohen Neuendorf",
+        "state": "Brandenburg",
+        "postcode": "16556",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Veltener Chaussee, Hohen Neuendorf, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.6600649556962,
+      "lon": 13.32301946705674,
+      "geoinfo": {
+        "display_name": "Bieselheider Weg, Schönfließ, Mühlenbecker Land, Oberhavel, Brandenburg, 16567, Germany",
+        "road": "Bieselheider Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühlenbecker Land",
+        "state": "Brandenburg",
+        "postcode": "16567",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "125, Bieselheider Weg, Schönfließ, Mühlenbecker Land, Oberhavel, Brandenburg, 16567, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:30.040815+00:00",
+  "_kind": "geo_samples"
+}

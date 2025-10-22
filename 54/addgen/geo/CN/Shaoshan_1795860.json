@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaoshan",
+  "geonameid": 1795860,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.88083079014039,
+      "lon": 112.49563636816286,
+      "geoinfo": {
+        "display_name": "建时村, Xiangxiang, Xiangtan, Hunan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xiangxiang",
+        "state": "Hunan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shaoshan, Hunan, China"
+    },
+    {
+      "lat": 27.950334365176946,
+      "lon": 112.50014480465988,
+      "geoinfo": {
+        "display_name": "G354, Yanglin, Shaoshan, Xiangtan, Hunan, China",
+        "road": "G354",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaoshan",
+        "state": "Hunan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G354, Yanglin, Shaoshan, Xiangtan, 63649 Hunan, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:53:33.972847+00:00",
+  "_kind": "geo_samples"
+}

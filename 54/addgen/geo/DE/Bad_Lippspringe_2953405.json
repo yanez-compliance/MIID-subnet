@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Lippspringe",
+  "geonameid": 2953405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.760918168427374,
+      "lon": 8.821029920939173,
+      "geoinfo": {
+        "display_name": "Josefstraße, Bad Lippspringe, Kreis Paderborn, North Rhine-Westphalia, 33175, Germany",
+        "road": "Josefstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Lippspringe",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33175",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Josefstraße, Bad Lippspringe, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.78850508243525,
+      "lon": 8.804344734526445,
+      "geoinfo": {
+        "display_name": "5, Cecilienallee, Bad Lippspringe, Kreis Paderborn, North Rhine-Westphalia, 33175, Germany",
+        "road": "Cecilienallee",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Lippspringe",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33175",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Cecilienallee, Bad Lippspringe, Kreis Paderborn, North Rhine-Westphalia, 33175, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:16.028648+00:00",
+  "_kind": "geo_samples"
+}

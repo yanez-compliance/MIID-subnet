@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Sector 1",
+  "geonameid": 11048317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.46209915038725,
+      "lon": 26.071901706245523,
+      "geoinfo": {
+        "display_name": "Bl. 10A3, 103, Strada Turda, Grivița, Sector 1, Bucharest, 011326, Romania",
+        "road": "Strada Turda",
+        "house_number": "103",
+        "neighbourhood": null,
+        "suburb": "Grivița",
+        "city_district": "Sector 1",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "011326",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "103 Strada Turda, Sector 1, Romania"
+    },
+    {
+      "lat": 44.502458663740406,
+      "lon": 26.074953214132854,
+      "geoinfo": {
+        "display_name": "Bulevardul Ion Ionescu de la Brad, Băneasa, Sector 1, Bucharest, 013801, Romania",
+        "road": "Bulevardul Ion Ionescu de la Brad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Băneasa",
+        "city_district": "Sector 1",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "013801",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Bulevardul Ion Ionescu de la Brad, Băneasa, Sector 1, Bucharest, 013801, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T09:25:42.590265+00:00",
+  "_kind": "geo_samples"
+}

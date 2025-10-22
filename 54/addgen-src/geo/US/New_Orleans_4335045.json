@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Orleans",
+  "geonameid": 4335045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.940394699354794,
+      "lon": -90.07745068347008,
+      "geoinfo": {
+        "display_name": "1735, Martin Luther King Jr Boulevard, Central City Historic District, Garden District, New Orleans, Orleans Parish, Louisiana, 70113, United States",
+        "road": "Martin Luther King Jr Boulevard",
+        "house_number": "1735",
+        "neighbourhood": null,
+        "suburb": "Garden District",
+        "city_district": null,
+        "city": "New Orleans",
+        "state": "Louisiana",
+        "postcode": "70113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1735 Martin Luther King Jr Boulevard, New Orleans, Louisiana, United States"
+    },
+    {
+      "lat": 29.918404144096694,
+      "lon": -90.09435755843555,
+      "geoinfo": {
+        "display_name": "3900, Annunciation Street, Garden District, New Orleans, Orleans Parish, Louisiana, 70115, United States",
+        "road": "Annunciation Street",
+        "house_number": "3900",
+        "neighbourhood": null,
+        "suburb": "Garden District",
+        "city_district": null,
+        "city": "New Orleans",
+        "state": "Louisiana",
+        "postcode": "70115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3900, Annunciation Street, Garden District, New Orleans, Orleans Parish, Louisiana, 70115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:03.495203+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Worth Corridor",
+  "geonameid": 4161424,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.614798482850663,
+      "lon": -80.09498536855098,
+      "geoinfo": {
+        "display_name": "Mar-Mak Drive, Lake Worth Corridor, Palm Beach County, Florida, 33461, United States",
+        "road": "Mar-Mak Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33461",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mar-Mak Drive, Lake Worth Corridor, Florida, United States"
+    },
+    {
+      "lat": 26.624274380915004,
+      "lon": -80.09610453557613,
+      "geoinfo": {
+        "display_name": "2611, Waterview Circle, Palm Springs, Palm Beach County, Florida, 33461, United States",
+        "road": "Waterview Circle",
+        "house_number": "2611",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Springs",
+        "state": "Florida",
+        "postcode": "33461",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2611, Waterview Circle, Palm Springs, Palm Beach County, Florida, 33461, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:06.268120+00:00",
+  "_kind": "geo_samples"
+}

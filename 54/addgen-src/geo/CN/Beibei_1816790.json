@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Beibei",
+  "geonameid": 1816790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.864448108766013,
+      "lon": 106.45442137449552,
+      "geoinfo": {
+        "display_name": "排路村, Beibei District, Chongqing, 400704, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "排路村",
+        "state": "Chongqing",
+        "postcode": "400704",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Beibei, Chongqing, China"
+    },
+    {
+      "lat": 29.833346181934978,
+      "lon": 106.39254369855655,
+      "geoinfo": {
+        "display_name": "缙云支线, Baiyun, Beibei District, Chongqing, 400715, China",
+        "road": "缙云支线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baiyun",
+        "state": "Chongqing",
+        "postcode": "400715",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "139, 缙云支线, Baiyun, Beibei District, Chongqing, 400715, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:58:13.788723+00:00",
+  "_kind": "geo_samples"
+}

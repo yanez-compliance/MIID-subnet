@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Altona-Nord",
+  "geonameid": 11669493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.53692790807991,
+      "lon": 9.919780171290537,
+      "geoinfo": {
+        "display_name": "A 7, Waltershof, Hamburg-Mitte, Hamburg, 21129, Germany",
+        "road": "A 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Waltershof",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21129",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 7, Altona-Nord, Germany"
+    },
+    {
+      "lat": 53.55759255448094,
+      "lon": 9.943841692254137,
+      "geoinfo": {
+        "display_name": "Karl-Möller-Sportplatz, Helenenstraße, Altona-Nord, Altona, Hamburg, 22765, Germany",
+        "road": "Helenenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altona-Nord",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22765",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "933, Helenenstraße, 22765 Altona-Nord, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:47.303564+00:00",
+  "_kind": "geo_samples"
+}

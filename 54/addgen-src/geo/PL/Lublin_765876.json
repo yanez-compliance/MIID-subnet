@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Lublin",
+  "geonameid": 765876,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.29289313111773,
+      "lon": 22.566019046895025,
+      "geoinfo": {
+        "display_name": "15, Aroniowa, Elizówka, gmina Niemce, Lublin County, Lublin Voivodeship, 21-003, Poland",
+        "road": "Aroniowa",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elizówka",
+        "state": "Lublin Voivodeship",
+        "postcode": "21-003",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "15 Aroniowa, Lublin, Lublin Voivodeship, Poland"
+    },
+    {
+      "lat": 51.260523492898045,
+      "lon": 22.50836300028685,
+      "geoinfo": {
+        "display_name": "Aleja Warszawska, Sławin, Lublin, Lublin Voivodeship, 20-826, Poland",
+        "road": "Aleja Warszawska",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sławin",
+        "city_district": null,
+        "city": "Lublin",
+        "state": "Lublin Voivodeship",
+        "postcode": "20-826",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Aleja Warszawska, Sławin, Lublin, Lublin Voivodeship, 20-826, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:31:46.782201+00:00",
+  "_kind": "geo_samples"
+}

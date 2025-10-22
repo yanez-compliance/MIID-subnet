@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guofu",
+  "geonameid": 1809338,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.85510782884501,
+      "lon": 106.60389868668156,
+      "geoinfo": {
+        "display_name": "Jiaotong Road, Guofu, Qijiang District, Chongqing, China",
+        "road": "Jiaotong Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guofu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiaotong Road, Guofu, Chongqing, China"
+    },
+    {
+      "lat": 28.83373723178534,
+      "lon": 106.58403760225258,
+      "geoinfo": {
+        "display_name": "Niuchang, Qijiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Niuchang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "870, Niuchang, Qijiang District, 63007 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:38.194379+00:00",
+  "_kind": "geo_samples"
+}

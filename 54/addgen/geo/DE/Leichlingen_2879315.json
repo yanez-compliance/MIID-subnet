@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leichlingen",
+  "geonameid": 2879315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.087758006179534,
+      "lon": 7.025673646987397,
+      "geoinfo": {
+        "display_name": "Lucasweg, Bergisch Neukirchen, Stadtbezirk II, Leverkusen, North Rhine-Westphalia, 51381, Germany",
+        "road": "Lucasweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bergisch Neukirchen",
+        "city_district": "Stadtbezirk II",
+        "city": "Leverkusen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51381",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lucasweg, Leichlingen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.077398662789946,
+      "lon": 6.993983910144433,
+      "geoinfo": {
+        "display_name": "23, Heribertstraße, Opladen, Stadtbezirk II, Leverkusen, North Rhine-Westphalia, 51379, Germany",
+        "road": "Heribertstraße",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Opladen",
+        "city_district": "Stadtbezirk II",
+        "city": "Leverkusen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51379",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "23, Heribertstraße, Opladen, Stadtbezirk II, Leverkusen, North Rhine-Westphalia, 51379, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:55.605541+00:00",
+  "_kind": "geo_samples"
+}

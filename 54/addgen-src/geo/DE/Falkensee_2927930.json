@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Falkensee",
+  "geonameid": 2927930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.53631972600827,
+      "lon": 13.088781366156258,
+      "geoinfo": {
+        "display_name": "Potsdamer Straße, Dallgow-Döberitz, Havelland, Brandenburg, 14624, Germany",
+        "road": "Potsdamer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dallgow-Döberitz",
+        "state": "Brandenburg",
+        "postcode": "14624",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Potsdamer Straße, Falkensee, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.57144152650142,
+      "lon": 13.089272947177655,
+      "geoinfo": {
+        "display_name": "Falkenhagener Straße, Falkenhain, Falkensee, Havelland, Brandenburg, 14612, Germany",
+        "road": "Falkenhagener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Falkenhain",
+        "city_district": null,
+        "city": "Falkensee",
+        "state": "Brandenburg",
+        "postcode": "14612",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "200, Falkenhagener Straße, Falkenhain, Falkensee, Havelland, Brandenburg, 14612, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:23.415907+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Merseburg",
+  "geonameid": 2871736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.3937611323805,
+      "lon": 11.969814536803062,
+      "geoinfo": {
+        "display_name": "Straße C, Dow Olefinverbund GmbH Standort Schkopau, Korbetha, Schkopau, Saalekreis, Saxony-Anhalt, 06258, Germany",
+        "road": "Straße C",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schkopau",
+        "state": "Saxony-Anhalt",
+        "postcode": "06258",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Straße C, Merseburg, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.376449929330164,
+      "lon": 11.94668344210843,
+      "geoinfo": {
+        "display_name": "L 172, Knapendorf, Merseburg, Schkopau, Saalekreis, Saxony-Anhalt, 06258, Germany",
+        "road": "L 172",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Knapendorf",
+        "city_district": "Merseburg",
+        "city": "Schkopau",
+        "state": "Saxony-Anhalt",
+        "postcode": "06258",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 172, Knapendorf, Merseburg, Schkopau, Saalekreis, Saxony-Anhalt, 06258, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:35.196957+00:00",
+  "_kind": "geo_samples"
+}

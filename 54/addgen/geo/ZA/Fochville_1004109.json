@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Fochville",
+  "geonameid": 1004109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.4923471959485,
+      "lon": 27.523198244912567,
+      "geoinfo": {
+        "display_name": "Loopspruit Lane, Green's Park, Merafong City Ward 21, Merafong City Local Municipality, West Rand District Municipality, Gauteng, 2515, South Africa",
+        "road": "Loopspruit Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Green's Park",
+        "city_district": null,
+        "city": "Merafong City Local Municipality",
+        "state": "Gauteng",
+        "postcode": "2515",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Loopspruit Lane, Fochville, Gauteng, South Africa"
+    },
+    {
+      "lat": -26.503788082304695,
+      "lon": 27.52500609541343,
+      "geoinfo": {
+        "display_name": "Merafong City Ward 21, Merafong City Local Municipality, West Rand District Municipality, Gauteng, 2515, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Merafong City Ward 21",
+        "city_district": null,
+        "city": "Merafong City Local Municipality",
+        "state": "Gauteng",
+        "postcode": "2515",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Merafong City Ward 21, Merafong City Local Municipality, West Rand District Municipality, Gauteng, 2515, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:28.241781+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bensalem",
+  "geonameid": 5179995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.116777834544195,
+      "lon": -74.98784495077092,
+      "geoinfo": {
+        "display_name": "Byberry, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19053, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Byberry",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19053",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Byberry, Bensalem, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.122804779797676,
+      "lon": -74.91090869587973,
+      "geoinfo": {
+        "display_name": "Gibson Road, Newportville Terrace, Bensalem Township, Bucks County, Pennsylvania, 19020, United States",
+        "road": "Gibson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bensalem Township",
+        "state": "Pennsylvania",
+        "postcode": "19020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "055, Gibson Road, Newportville Terrace, Bensalem Township, Bucks County, Pennsylvania, 19020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:31.643913+00:00",
+  "_kind": "geo_samples"
+}

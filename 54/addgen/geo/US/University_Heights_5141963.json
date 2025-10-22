@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "University Heights",
+  "geonameid": 5141963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.867201842083624,
+      "lon": -73.96235950081027,
+      "geoinfo": {
+        "display_name": "2nd Street, Coytesville, Englewood Cliffs, Bergen County, New Jersey, 07024, United States",
+        "road": "2nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Englewood Cliffs",
+        "state": "New Jersey",
+        "postcode": "07024",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2nd Street, University Heights, New Jersey, United States"
+    },
+    {
+      "lat": 40.85762422665609,
+      "lon": -73.95702168225198,
+      "geoinfo": {
+        "display_name": "Blue, Coytesville, Fort Lee, Bergen County, New Jersey, 07024, United States",
+        "road": "Blue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Lee",
+        "state": "New Jersey",
+        "postcode": "07024",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "383, Blue, Coytesville, Fort Lee, Bergen County, New Jersey, 07024, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:33.415851+00:00",
+  "_kind": "geo_samples"
+}

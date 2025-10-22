@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Back Mountain",
+  "geonameid": 5178800,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35018639767599,
+      "lon": -76.02783337983111,
+      "geoinfo": {
+        "display_name": "PA 415, The Village at Greenbriar, Harveys Lake, Luzerne County, Pennsylvania, 18612, United States",
+        "road": "PA 415",
+        "house_number": null,
+        "neighbourhood": "The Village at Greenbriar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Harveys Lake",
+        "state": "Pennsylvania",
+        "postcode": "18612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "PA 415, Back Mountain, Pennsylvania, United States"
+    },
+    {
+      "lat": 41.34502924213526,
+      "lon": -75.98902127382176,
+      "geoinfo": {
+        "display_name": "65, Country Club Road, Yalick Farms, Back Mountain, Dallas Township, Luzerne County, Pennsylvania, 18612, United States",
+        "road": "Country Club Road",
+        "house_number": "65",
+        "neighbourhood": "Yalick Farms",
+        "suburb": "Back Mountain",
+        "city_district": null,
+        "city": "Dallas Township",
+        "state": "Pennsylvania",
+        "postcode": "18612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "65, Country Club Road, Yalick Farms, Back Mountain, Dallas Township, Luzerne County, Pennsylvania, 18612, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:59.590327+00:00",
+  "_kind": "geo_samples"
+}

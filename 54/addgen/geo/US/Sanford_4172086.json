@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sanford",
+  "geonameid": 4172086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.798071970132437,
+      "lon": -81.25854688929572,
+      "geoinfo": {
+        "display_name": "1056, Valencia Street, Bel-Air, Sanford, Seminole County, Florida, 32771, United States",
+        "road": "Valencia Street",
+        "house_number": "1056",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanford",
+        "state": "Florida",
+        "postcode": "32771",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1056 Valencia Street, Sanford, Florida, United States"
+    },
+    {
+      "lat": 28.762527102769646,
+      "lon": -81.25354159715903,
+      "geoinfo": {
+        "display_name": "East Lake Mary Boulevard, Sanford, Seminole County, Florida, 32773, United States",
+        "road": "East Lake Mary Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanford",
+        "state": "Florida",
+        "postcode": "32773",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "956, East Lake Mary Boulevard, Sanford, Seminole County, Florida, 32773, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:23.442102+00:00",
+  "_kind": "geo_samples"
+}

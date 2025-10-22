@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brigham City",
+  "geonameid": 5771960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.53139250158581,
+      "lon": -112.05419225679645,
+      "geoinfo": {
+        "display_name": "Watery Lane, Brigham City, Box Elder County, Utah, 84302, United States",
+        "road": "Watery Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brigham City",
+        "state": "Utah",
+        "postcode": "84302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Watery Lane, Brigham City, Utah, United States"
+    },
+    {
+      "lat": 41.50986344208471,
+      "lon": -111.99473650064616,
+      "geoinfo": {
+        "display_name": "12, North Highland Boulevard, Brigham City, Box Elder County, Utah, 84302, United States",
+        "road": "North Highland Boulevard",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brigham City",
+        "state": "Utah",
+        "postcode": "84302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12, North Highland Boulevard, Brigham City, Box Elder County, Utah, 84302, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:18.837392+00:00",
+  "_kind": "geo_samples"
+}

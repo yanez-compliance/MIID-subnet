@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Easton",
+  "geonameid": 4935623,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.047092072883714,
+      "lon": -71.18061889276527,
+      "geoinfo": {
+        "display_name": "795, Maple Street, Mansfield, Bristol County, Massachusetts, 02334, United States",
+        "road": "Maple Street",
+        "house_number": "795",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mansfield",
+        "state": "Massachusetts",
+        "postcode": "02334",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "795 Maple Street, Easton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.0605105696067,
+      "lon": -71.10984972448117,
+      "geoinfo": {
+        "display_name": "29, Harrison Avenue, North Easton, Easton, Bristol County, Massachusetts, 02356, United States",
+        "road": "Harrison Avenue",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Easton",
+        "state": "Massachusetts",
+        "postcode": "02356",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29, Harrison Avenue, North Easton, Easton, Bristol County, Massachusetts, 02356, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:06.395632+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Erding",
+  "geonameid": 2929715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.320948560836456,
+      "lon": 11.913379234651382,
+      "geoinfo": {
+        "display_name": "In den Hacken, Erding, Siglfing, Erding, Landkreis Erding, Bavaria, 85435, Germany",
+        "road": "In den Hacken",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erding",
+        "state": "Bavaria",
+        "postcode": "85435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "In den Hacken, Erding, Bavaria, Germany"
+    },
+    {
+      "lat": 48.26667612089063,
+      "lon": 11.893014513467195,
+      "geoinfo": {
+        "display_name": "1, Wiflinger Straße, Aufhausen, Altenerding, Erding, Landkreis Erding, Bavaria, 85435, Germany",
+        "road": "Wiflinger Straße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Altenerding",
+        "city_district": null,
+        "city": "Erding",
+        "state": "Bavaria",
+        "postcode": "85435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Wiflinger Straße, Aufhausen, Altenerding, Erding, Landkreis Erding, Bavaria, 85435, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:18.311221+00:00",
+  "_kind": "geo_samples"
+}

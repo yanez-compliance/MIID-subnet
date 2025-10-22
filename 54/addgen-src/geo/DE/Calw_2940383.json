@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Calw",
+  "geonameid": 2940383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.720530241711764,
+      "lon": 8.689164476577199,
+      "geoinfo": {
+        "display_name": "26, Dorfwiesenstraße, Weltenschwann, Altburg, Calw, Verwaltungsgemeinschaft Calw, Landkreis Calw, Baden-Württemberg, 75365, Germany",
+        "road": "Dorfwiesenstraße",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calw",
+        "state": "Baden-Württemberg",
+        "postcode": "75365",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "26 Dorfwiesenstraße, Calw, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.725910838199006,
+      "lon": 8.72666698412036,
+      "geoinfo": {
+        "display_name": "Schinderbach, Uhlandstraße, Hirsau, Calw, Verwaltungsgemeinschaft Calw, Landkreis Calw, Baden-Württemberg, 75365, Germany",
+        "road": "Uhlandstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calw",
+        "state": "Baden-Württemberg",
+        "postcode": "75365",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "274, Uhlandstraße, Calw, 75365 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:21.345206+00:00",
+  "_kind": "geo_samples"
+}

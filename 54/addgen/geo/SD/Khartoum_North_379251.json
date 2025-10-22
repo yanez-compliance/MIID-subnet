@@ -1,0 +1,47 @@
+{
+  "country_code": "SD",
+  "country": "Sudan",
+  "city": "Khartoum North",
+  "geonameid": 379251,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 15.626823539836742,
+      "lon": 32.541563642531344,
+      "geoinfo": {
+        "display_name": "اسطنبول للحلويات, Martyr Mohammed Hashim Matar Road, Halfia Elmouluk, Bahri, Al Khartum, 13311, Sudan",
+        "road": "Martyr Mohammed Hashim Matar Road",
+        "house_number": null,
+        "neighbourhood": "Halfia Elmouluk",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahri",
+        "state": "Al Khartum",
+        "postcode": "13311",
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "Martyr Mohammed Hashim Matar Road, Khartoum North, Al Khartum, Sudan"
+    },
+    {
+      "lat": 15.651879540669924,
+      "lon": 32.57632824993399,
+      "geoinfo": {
+        "display_name": "Bahri, Al Khartum, 11012, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahri",
+        "state": "Al Khartum",
+        "postcode": "11012",
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "Khartoum North, Al Khartum, Sudan"
+    }
+  ],
+  "updated_at": "2025-10-16T22:44:21.030482+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Selma",
+  "geonameid": 4089114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.4075803248089,
+      "lon": -87.02452462276135,
+      "geoinfo": {
+        "display_name": "769, Selma Avenue, Water Avenue Historic District, Selma, Dallas County, Alabama, 36701, United States",
+        "road": "Selma Avenue",
+        "house_number": "769",
+        "neighbourhood": "Water Avenue Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Selma",
+        "state": "Alabama",
+        "postcode": "36701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "769 Selma Avenue, Selma, Alabama, United States"
+    },
+    {
+      "lat": 32.4168027348288,
+      "lon": -87.00457794577893,
+      "geoinfo": {
+        "display_name": "2501, Etheredge Avenue, Selma, Dallas County, Alabama, 36703, United States",
+        "road": "Etheredge Avenue",
+        "house_number": "2501",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Selma",
+        "state": "Alabama",
+        "postcode": "36703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2501, Etheredge Avenue, Selma, Dallas County, Alabama, 36703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:24.517188+00:00",
+  "_kind": "geo_samples"
+}

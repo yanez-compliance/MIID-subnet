@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Mont-Saint-Hilaire",
+  "geonameid": 6077340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.55320577897458,
+      "lon": -73.22323252830321,
+      "geoinfo": {
+        "display_name": "29, Rue De La Salle, Beloeil, La Vallée-du-Richelieu, Montérégie, Quebec, J3G 3P6, Canada",
+        "road": "Rue De La Salle",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beloeil",
+        "state": "Quebec",
+        "postcode": "J3G 3P6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "29 Rue De La Salle, Mont-Saint-Hilaire, Quebec, Canada"
+    },
+    {
+      "lat": 45.54785024923009,
+      "lon": -73.2237295607694,
+      "geoinfo": {
+        "display_name": "Cantine La Fringale, Boulevard Laurier, McMasterville, La Vallée-du-Richelieu, Montérégie, Quebec, J3G 6T7, Canada",
+        "road": "Boulevard Laurier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McMasterville",
+        "state": "Quebec",
+        "postcode": "J3G 6T7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Cantine La Fringale, Boulevard Laurier, McMasterville, La Vallée-du-Richelieu, Montérégie, Quebec, J3G 6T7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:05.424260+00:00",
+  "_kind": "geo_samples"
+}

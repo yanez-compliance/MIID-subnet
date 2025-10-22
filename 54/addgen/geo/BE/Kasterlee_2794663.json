@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Kasterlee",
+  "geonameid": 2794663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.23427576981166,
+      "lon": 4.926974206004886,
+      "geoinfo": {
+        "display_name": "Smalle Broeken, Lichtaart, Kasterlee, Turnhout, Antwerp, Flanders, 2460, Belgium",
+        "road": "Smalle Broeken",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kasterlee",
+        "state": "Antwerp",
+        "postcode": "2460",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Smalle Broeken, Kasterlee, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.201921350259084,
+      "lon": 4.957986123283468,
+      "geoinfo": {
+        "display_name": "46, Rundsvoort, Ten Aard, Geel, Turnhout, Antwerp, Flanders, 2440, Belgium",
+        "road": "Rundsvoort",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geel",
+        "state": "Antwerp",
+        "postcode": "2440",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "46, Rundsvoort, Ten Aard, Geel, Turnhout, Antwerp, Flanders, 2440, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:21.532595+00:00",
+  "_kind": "geo_samples"
+}

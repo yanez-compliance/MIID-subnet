@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Uusikaupunki",
+  "geonameid": 633221,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.81691778719807,
+      "lon": 21.382485290426835,
+      "geoinfo": {
+        "display_name": "Suomela, Hiu, Uusikaupunki, Vakka-Suomi sub-region, Southwest Finland, Mainland Finland, 23500, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hiu",
+        "city_district": "Uusikaupunki",
+        "city": "Uusikaupunki",
+        "state": "Southwest Finland",
+        "postcode": "23500",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Hiu, Uusikaupunki, Southwest Finland, Finland"
+    },
+    {
+      "lat": 60.80059642675404,
+      "lon": 21.346124918212826,
+      "geoinfo": {
+        "display_name": "Hangontie, Uusikaupunki, Vakka-Suomi sub-region, Southwest Finland, Mainland Finland, Finland",
+        "road": "Hangontie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Uusikaupunki",
+        "city": "Uusikaupunki",
+        "state": "Southwest Finland",
+        "postcode": null,
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Hangontie, Uusikaupunki, Southwest Finland, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:56:56.434429+00:00",
+  "_kind": "geo_samples"
+}

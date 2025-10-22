@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lochristi",
+  "geonameid": 2792235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.05381920514807,
+      "lon": 3.8451632949666377,
+      "geoinfo": {
+        "display_name": "Groenstraat, Laarne, Dendermonde, East Flanders, 9270, Belgium",
+        "road": "Groenstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Laarne",
+        "city": "Laarne",
+        "state": "East Flanders",
+        "postcode": "9270",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Groenstraat, Lochristi, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.120701487909145,
+      "lon": 3.7998213168631216,
+      "geoinfo": {
+        "display_name": "20, Nokerstraat, Desteldonk, Ghent, Gent, East Flanders, Flanders, 9042, Belgium",
+        "road": "Nokerstraat",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Desteldonk",
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9042",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "20, Nokerstraat, Desteldonk, Ghent, Gent, East Flanders, Flanders, 9042, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:32.064569+00:00",
+  "_kind": "geo_samples"
+}

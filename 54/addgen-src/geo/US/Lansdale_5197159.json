@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lansdale",
+  "geonameid": 5197159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.25148229044372,
+      "lon": -75.29071823146573,
+      "geoinfo": {
+        "display_name": "518, Iron Street, Lansdale, Montgomery County, Pennsylvania, 19446, United States",
+        "road": "Iron Street",
+        "house_number": "518",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansdale",
+        "state": "Pennsylvania",
+        "postcode": "19446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "518 Iron Street, Lansdale, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.22256384315037,
+      "lon": -75.26800112463023,
+      "geoinfo": {
+        "display_name": "Pennbrook Middle School, 1201, North Wales Road, North Wales, Montgomery County, Pennsylvania, 19454, United States",
+        "road": "North Wales Road",
+        "house_number": "1201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Wales",
+        "state": "Pennsylvania",
+        "postcode": "19454",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pennbrook Middle School, 1201, North Wales Road, North Wales, Montgomery County, Pennsylvania, 19454, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:05.064167+00:00",
+  "_kind": "geo_samples"
+}

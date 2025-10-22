@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Greenwood",
+  "geonameid": 4902900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.72071293631106,
+      "lon": -87.68499316777373,
+      "geoinfo": {
+        "display_name": "West 95th Street, Evergreen Park, Worth Township, Cook County, Illinois, 60805, United States",
+        "road": "West 95th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Evergreen Park",
+        "state": "Illinois",
+        "postcode": "60805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 95th Street, Mount Greenwood, Illinois, United States"
+    },
+    {
+      "lat": 41.72922395465076,
+      "lon": -87.7503722452287,
+      "geoinfo": {
+        "display_name": "5158, 90th Street, Oak Lawn, Worth Township, Cook County, Illinois, 60453, United States",
+        "road": "90th Street",
+        "house_number": "5158",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oak Lawn",
+        "state": "Illinois",
+        "postcode": "60453",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5158, 90th Street, Oak Lawn, Worth Township, Cook County, Illinois, 60453, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:53.868131+00:00",
+  "_kind": "geo_samples"
+}

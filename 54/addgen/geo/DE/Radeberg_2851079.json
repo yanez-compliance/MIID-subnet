@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Radeberg",
+  "geonameid": 2851079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.09729258860328,
+      "lon": 13.85712772799166,
+      "geoinfo": {
+        "display_name": "7, Dresdner Heide, Loschwitz, Dresden, Saxony, 01099, Germany",
+        "road": "7",
+        "house_number": null,
+        "neighbourhood": "Dresdner Heide",
+        "suburb": null,
+        "city_district": "Loschwitz",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7, Radeberg, Saxony, Germany"
+    },
+    {
+      "lat": 51.1133667417705,
+      "lon": 13.98085331639099,
+      "geoinfo": {
+        "display_name": "Alte Arnsdorfer Straße, Kleinröhrsdorf, Großröhrsdorf, Bautzen - Budyšin, Saxony, 01900, Germany",
+        "road": "Alte Arnsdorfer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kleinröhrsdorf",
+        "city_district": null,
+        "city": "Großröhrsdorf",
+        "state": "Saxony",
+        "postcode": "01900",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "364, Alte Arnsdorfer Straße, Kleinröhrsdorf, Großröhrsdorf, Bautzen - Budyšin, Saxony, 01900, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:53.668399+00:00",
+  "_kind": "geo_samples"
+}

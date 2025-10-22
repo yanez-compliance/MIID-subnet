@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kazan",
+  "geonameid": 551487,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.781047989853455,
+      "lon": 49.15632484155131,
+      "geoinfo": {
+        "display_name": "15, Masguta Latypova Street, Kaluga, Вахитовский район, Kazan, городской округ Казань, Tatarstan, Volga Federal District, 420097, Russia",
+        "road": "Masguta Latypova Street",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Kaluga",
+        "city_district": "Вахитовский район",
+        "city": "Kazan",
+        "state": "Tatarstan",
+        "postcode": "420097",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "15 Masguta Latypova Street, Kazan, Tatarstan, Russia"
+    },
+    {
+      "lat": 55.79552807844223,
+      "lon": 49.155729374146105,
+      "geoinfo": {
+        "display_name": "улица Вишневского, Подлужная слобода, Вахитовский район, Kazan, городской округ Казань, Tatarstan, Volga Federal District, 420097, Russia",
+        "road": "улица Вишневского",
+        "house_number": null,
+        "neighbourhood": "Подлужная слобода",
+        "suburb": null,
+        "city_district": "Вахитовский район",
+        "city": "Kazan",
+        "state": "Tatarstan",
+        "postcode": "420097",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "157, улица Вишневского, Подлужная слобода, Вахитовский район, Kazan, городской округ Казань, Tatarstan, Volga Federal District, 420097, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:34:23.410970+00:00",
+  "_kind": "geo_samples"
+}

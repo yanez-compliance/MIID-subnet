@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Maholi",
+  "geonameid": 1264356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.67762613417661,
+      "lon": 80.50756551708034,
+      "geoinfo": {
+        "display_name": "Misrikh, Sitapur, Uttar Pradesh, 261141, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Misrikh",
+        "state": "Uttar Pradesh",
+        "postcode": "261141",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Maholi, Uttar Pradesh, India"
+    },
+    {
+      "lat": 27.67767694124999,
+      "lon": 80.43121947743192,
+      "geoinfo": {
+        "display_name": "NH30, Misrikh, Sitapur, Uttar Pradesh, India",
+        "road": "NH30",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Misrikh",
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH30, Misrikh, Sitapur, 00964 Uttar Pradesh, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:01.700555+00:00",
+  "_kind": "geo_samples"
+}

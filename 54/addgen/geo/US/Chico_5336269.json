@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chico",
+  "geonameid": 5336269,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.76276148092945,
+      "lon": -121.87465314294207,
+      "geoinfo": {
+        "display_name": "301, Denali Drive, Chico, Butte County, California, 95973, United States",
+        "road": "Denali Drive",
+        "house_number": "301",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chico",
+        "state": "California",
+        "postcode": "95973",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "301 Denali Drive, Chico, California, United States"
+    },
+    {
+      "lat": 39.724273498982406,
+      "lon": -121.80381580520172,
+      "geoinfo": {
+        "display_name": "Baney Lane, Chico, Butte County, California, 95928, United States",
+        "road": "Baney Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chico",
+        "state": "California",
+        "postcode": "95928",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "724, Baney Lane, Chico, Butte County, California, 95928, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:47.363971+00:00",
+  "_kind": "geo_samples"
+}

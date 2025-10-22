@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Sitionuevo",
+  "geonameid": 3667918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.78892044837806,
+      "lon": -74.69946977169303,
+      "geoinfo": {
+        "display_name": "Sitionuevo, Magdalena, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sitionuevo",
+        "state": "Magdalena",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Sitionuevo, Magdalena, Colombia"
+    },
+    {
+      "lat": 10.78449993162152,
+      "lon": -74.75370779244159,
+      "geoinfo": {
+        "display_name": "Calle 4, Sabanagrande, Atlántico, Colombia",
+        "road": "Calle 4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sabanagrande",
+        "state": "Atlántico",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 4, Sabanagrande, 45361 Atlántico, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:47.088060+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Arriaga",
+  "geonameid": 3816739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.190863945643883,
+      "lon": -93.89978258995419,
+      "geoinfo": {
+        "display_name": "Arriaga, Chiapas, 30450, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arriaga",
+        "state": "Chiapas",
+        "postcode": "30450",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Arriaga, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.215941077157634,
+      "lon": -93.88417879329879,
+      "geoinfo": {
+        "display_name": "Carretera Libramiento de Arriaga, Arriaga, Chiapas, 30450, Mexico",
+        "road": "Carretera Libramiento de Arriaga",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arriaga",
+        "state": "Chiapas",
+        "postcode": "30450",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "082, Carretera Libramiento de Arriaga, Arriaga, Chiapas, 30450, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:09.743483+00:00",
+  "_kind": "geo_samples"
+}

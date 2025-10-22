@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Daimiel",
+  "geonameid": 2518924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.072523704330266,
+      "lon": -3.57314107827197,
+      "geoinfo": {
+        "display_name": "Daimiel, Ciudad Real, Castile-La Mancha, 13250, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daimiel",
+        "state": "Castile-La Mancha",
+        "postcode": "13250",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Daimiel, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 39.04948079363111,
+      "lon": -3.6344215877455337,
+      "geoinfo": {
+        "display_name": "N-430, Daimiel, Ciudad Real, Castile-La Mancha, Spain",
+        "road": "N-430",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daimiel",
+        "state": "Castile-La Mancha",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-430, Daimiel, Ciudad Real, 91261 Castile-La Mancha, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:05.553879+00:00",
+  "_kind": "geo_samples"
+}

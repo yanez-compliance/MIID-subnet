@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tehuacán",
+  "geonameid": 3516109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.46819888978957,
+      "lon": -97.3826857644179,
+      "geoinfo": {
+        "display_name": "Calle 11 Norte, Tehuacán, Puebla, 75740, Mexico",
+        "road": "Calle 11 Norte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tehuacán",
+        "state": "Puebla",
+        "postcode": "75740",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 11 Norte, Tehuacán, Puebla, Mexico"
+    },
+    {
+      "lat": 18.44926445147451,
+      "lon": -97.41939399907666,
+      "geoinfo": {
+        "display_name": "Calle Michoacán, Tehuacán, Puebla, 75857, Mexico",
+        "road": "Calle Michoacán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tehuacán",
+        "state": "Puebla",
+        "postcode": "75857",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "821, Calle Michoacán, Tehuacán, Puebla, 75857, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:35.688180+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Matsue",
+  "geonameid": 1857550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.45674665532436,
+      "lon": 133.08251024372242,
+      "geoinfo": {
+        "display_name": "よしの医院, National Highway Route 9, Higashitsudacho, Matsue, Shimane Prefecture, 690-0017, Japan",
+        "road": "National Highway Route 9",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matsue",
+        "state": null,
+        "postcode": "690-0017",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 9, Matsue, Japan"
+    },
+    {
+      "lat": 35.51787762483778,
+      "lon": 133.0342581076991,
+      "geoinfo": {
+        "display_name": "南側, Matsue, Shimane Prefecture, 690-0859, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "南側",
+        "suburb": null,
+        "city_district": null,
+        "city": "Matsue",
+        "state": null,
+        "postcode": "690-0859",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "南側, Matsue, Shimane Prefecture, 690-0859, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:30.843239+00:00",
+  "_kind": "geo_samples"
+}

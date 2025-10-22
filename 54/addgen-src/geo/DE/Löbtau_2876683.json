@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Löbtau",
+  "geonameid": 2876683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0511028891698,
+      "lon": 13.703812933405231,
+      "geoinfo": {
+        "display_name": "B0030, Fröbelstraße, Cotta, Friedrichstadt, Cotta, Dresden, Saxony, 01159, Germany",
+        "road": "Fröbelstraße",
+        "house_number": null,
+        "neighbourhood": "Cotta",
+        "suburb": "Friedrichstadt",
+        "city_district": "Cotta",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01159",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Fröbelstraße, Löbtau, Saxony, Germany"
+    },
+    {
+      "lat": 51.03005851463053,
+      "lon": 13.646127392145473,
+      "geoinfo": {
+        "display_name": "Kohlsdorfer Landstraße, Altfranken, Dresden, Saxony, 01156, Germany",
+        "road": "Kohlsdorfer Landstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altfranken",
+        "city_district": null,
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01156",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "836, Kohlsdorfer Landstraße, Altfranken, Dresden, Saxony, 01156, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:08.859379+00:00",
+  "_kind": "geo_samples"
+}

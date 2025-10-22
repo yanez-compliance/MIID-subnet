@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coconut Grove",
+  "geonameid": 4151460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.72014944377201,
+      "lon": -80.20891774046368,
+      "geoinfo": {
+        "display_name": "Miami, Miami-Dade County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coconut Grove, Florida, United States"
+    },
+    {
+      "lat": 25.729507758600484,
+      "lon": -80.26870809006927,
+      "geoinfo": {
+        "display_name": "724, San Esteban Avenue, Italian Village, Coral Gables, Miami-Dade County, Florida, 33146, United States",
+        "road": "San Esteban Avenue",
+        "house_number": "724",
+        "neighbourhood": "Italian Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coral Gables",
+        "state": "Florida",
+        "postcode": "33146",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "724, San Esteban Avenue, Italian Village, Coral Gables, Miami-Dade County, Florida, 33146, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:53.995240+00:00",
+  "_kind": "geo_samples"
+}

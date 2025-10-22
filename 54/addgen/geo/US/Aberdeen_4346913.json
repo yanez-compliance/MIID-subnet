@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aberdeen",
+  "geonameid": 4346913,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.51901802470198,
+      "lon": -76.16787614656786,
+      "geoinfo": {
+        "display_name": "211, Hemlock Lane, Hillcrest Manor, Aberdeen, Harford County, Maryland, 21001, United States",
+        "road": "Hemlock Lane",
+        "house_number": "211",
+        "neighbourhood": "Hillcrest Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aberdeen",
+        "state": "Maryland",
+        "postcode": "21001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "211 Hemlock Lane, Aberdeen, Maryland, United States"
+    },
+    {
+      "lat": 39.49036439962462,
+      "lon": -76.11189324608097,
+      "geoinfo": {
+        "display_name": "Plumb Point Loop West, Aberdeen Proving Ground, Harford County, Maryland, 21005, United States",
+        "road": "Plumb Point Loop West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aberdeen Proving Ground",
+        "state": "Maryland",
+        "postcode": "21005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "200, Plumb Point Loop West, Aberdeen Proving Ground, Harford County, Maryland, 21005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:54.793620+00:00",
+  "_kind": "geo_samples"
+}

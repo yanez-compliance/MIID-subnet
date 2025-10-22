@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ramsbottom",
+  "geonameid": 2639668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.66219800647445,
+      "lon": -2.335203916347433,
+      "geoinfo": {
+        "display_name": "Moor Road, Stubbins, Borough of Rossendale, Lancashire, England, BL8 4NZ, United Kingdom",
+        "road": "Moor Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borough of Rossendale",
+        "state": "England",
+        "postcode": "BL8 4NZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moor Road, Ramsbottom, England, United Kingdom"
+    },
+    {
+      "lat": 53.65236833226127,
+      "lon": -2.2534623026240808,
+      "geoinfo": {
+        "display_name": "Cheesden, Rochdale, Greater Manchester, England, OL12 7TY, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rochdale",
+        "state": "England",
+        "postcode": "OL12 7TY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cheesden, Rochdale, Greater Manchester, England, OL12 7TY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:04.476689+00:00",
+  "_kind": "geo_samples"
+}

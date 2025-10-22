@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Fulton",
+  "geonameid": 12541728,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.59247792830546,
+      "lon": -84.66660374914998,
+      "geoinfo": {
+        "display_name": "5979, Palmetto Cascade Highway, South Fulton, Fulton County, Georgia, 30213, United States",
+        "road": "Palmetto Cascade Highway",
+        "house_number": "5979",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Fulton",
+        "state": "Georgia",
+        "postcode": "30213",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5979 Palmetto Cascade Highway, South Fulton, Georgia, United States"
+    },
+    {
+      "lat": 33.61123601523566,
+      "lon": -84.6542228871621,
+      "geoinfo": {
+        "display_name": "Castleton Drive, Lester, South Fulton, Fulton County, Georgia, United States",
+        "road": "Castleton Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lester",
+        "city_district": null,
+        "city": "South Fulton",
+        "state": "Georgia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "185, Castleton Drive, Lester, South Fulton, Fulton County, 15592 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:24.190186+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bry-sur-Marne",
+  "geonameid": 3029706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.821596140266635,
+      "lon": 2.497420300987727,
+      "geoinfo": {
+        "display_name": "39, Rue Jules Ferry, Champigny-sur-Marne, Nogent-sur-Marne, Val-de-Marne, Ile-de-France, Metropolitan France, 94500, France",
+        "road": "Rue Jules Ferry",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Champigny-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "94500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "39 Rue Jules Ferry, Bry-sur-Marne, Ile-de-France, France"
+    },
+    {
+      "lat": 48.8539930502154,
+      "lon": 2.544134807753861,
+      "geoinfo": {
+        "display_name": "40, Quai de la Rive Charmante, Rive Charmante, Quartier Nord, Noisy-le-Grand, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93160, France",
+        "road": "Quai de la Rive Charmante",
+        "house_number": "40",
+        "neighbourhood": "Rive Charmante",
+        "suburb": "Quartier Nord",
+        "city_district": null,
+        "city": "Noisy-le-Grand",
+        "state": null,
+        "postcode": "93160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "40, Quai de la Rive Charmante, Rive Charmante, Quartier Nord, Noisy-le-Grand, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93160, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:06.491604+00:00",
+  "_kind": "geo_samples"
+}

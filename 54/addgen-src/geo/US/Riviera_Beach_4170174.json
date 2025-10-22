@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Riviera Beach",
+  "geonameid": 4170174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.785745085284503,
+      "lon": -80.09698479507288,
+      "geoinfo": {
+        "display_name": "3943, Byron Drive, Riviera Beach, Palm Beach County, Florida, 33404, United States",
+        "road": "Byron Drive",
+        "house_number": "3943",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riviera Beach",
+        "state": "Florida",
+        "postcode": "33404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3943 Byron Drive, Riviera Beach, Florida, United States"
+    },
+    {
+      "lat": 26.76153983629783,
+      "lon": -80.06471996675829,
+      "geoinfo": {
+        "display_name": "54th Street, West Palm Beach, Palm Beach County, Florida, 33407, United States",
+        "road": "54th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Palm Beach",
+        "state": "Florida",
+        "postcode": "33407",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "54th Street, West Palm Beach, Palm Beach County, Florida, 33407, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:31.853318+00:00",
+  "_kind": "geo_samples"
+}

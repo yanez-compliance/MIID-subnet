@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beaumont",
+  "geonameid": 4672989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.06975692544345,
+      "lon": -94.09345895481736,
+      "geoinfo": {
+        "display_name": "1901, Park Street, Beaumont, Jefferson County, Texas, 77701, United States",
+        "road": "Park Street",
+        "house_number": "1901",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beaumont",
+        "state": "Texas",
+        "postcode": "77701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1901 Park Street, Beaumont, Texas, United States"
+    },
+    {
+      "lat": 30.046274575982448,
+      "lon": -94.12275974114105,
+      "geoinfo": {
+        "display_name": "3255, Elmira Street, West Oakland, Beaumont, Jefferson County, Texas, 77705, United States",
+        "road": "Elmira Street",
+        "house_number": "3255",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beaumont",
+        "state": "Texas",
+        "postcode": "77705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3255, Elmira Street, West Oakland, Beaumont, Jefferson County, Texas, 77705, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:56.223512+00:00",
+  "_kind": "geo_samples"
+}

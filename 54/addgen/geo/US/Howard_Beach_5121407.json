@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Howard Beach",
+  "geonameid": 5121407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.61935146950624,
+      "lon": -73.81070049010742,
+      "geoinfo": {
+        "display_name": "Queens, Queens County, New York, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Queens, Howard Beach, New York, United States"
+    },
+    {
+      "lat": 40.66752305083464,
+      "lon": -73.79258765538177,
+      "geoinfo": {
+        "display_name": "133-39, 146th Street, Queens, Queens County, New York, 11436, United States",
+        "road": "146th Street",
+        "house_number": "133-39",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11436",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "133-39, 146th Street, Queens, Queens County, New York, 11436, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:55.097983+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Marchienne-au-Pont",
+  "geonameid": 2791735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.38772052616199,
+      "lon": 4.355824643753564,
+      "geoinfo": {
+        "display_name": "Quai de Sambre, Landelies, Montigny-le-Tilleul, Charleroi, Hainaut, Wallonia, 6111, Belgium",
+        "road": "Quai de Sambre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montigny-le-Tilleul",
+        "state": "Hainaut",
+        "postcode": "6111",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Quai de Sambre, Marchienne-au-Pont, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.408585592670256,
+      "lon": 4.42286160708486,
+      "geoinfo": {
+        "display_name": "Marcinelle Usine de Thy-Marcinelle, Rue de Marchienne, Marcinelle, Charleroi, Hainaut, Wallonia, 6001, Belgium",
+        "road": "Rue de Marchienne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6001",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "200, Rue de Marchienne, Marchienne-au-Pont, 6001 Hainaut, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:28.578065+00:00",
+  "_kind": "geo_samples"
+}

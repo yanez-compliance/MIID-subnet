@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Temecula",
+  "geonameid": 5401395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.46168490245253,
+      "lon": -117.11241150128478,
+      "geoinfo": {
+        "display_name": "45594, Piute Street, Wolf Valley Estates, Wolf Creek, Temecula, Riverside County, California, 92592, United States",
+        "road": "Piute Street",
+        "house_number": "45594",
+        "neighbourhood": null,
+        "suburb": "Wolf Creek",
+        "city_district": null,
+        "city": "Temecula",
+        "state": "California",
+        "postcode": "92592",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "45594 Piute Street, Temecula, California, United States"
+    },
+    {
+      "lat": 33.46844844203801,
+      "lon": -117.17165526971822,
+      "geoinfo": {
+        "display_name": "Via Tornado, Temecula, Riverside County, California, 92590, United States",
+        "road": "Via Tornado",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temecula",
+        "state": "California",
+        "postcode": "92590",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "371, Via Tornado, Temecula, Riverside County, California, 92590, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:24.800391+00:00",
+  "_kind": "geo_samples"
+}

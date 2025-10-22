@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Aku",
+  "geonameid": 2350886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.744115568532013,
+      "lon": 7.308784056678555,
+      "geoinfo": {
+        "display_name": "Uzo-Uwani, Enugu State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Enugu State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Aku, Enugu State, Nigeria"
+    },
+    {
+      "lat": 6.723690009389577,
+      "lon": 7.351507712148917,
+      "geoinfo": {
+        "display_name": "Nsukka, Enugu State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nsukka",
+        "state": "Enugu State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "104, Nsukka, 39752 Enugu State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:59.594156+00:00",
+  "_kind": "geo_samples"
+}

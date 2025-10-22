@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newburyport",
+  "geonameid": 4945256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.79156936022602,
+      "lon": -70.84168740495483,
+      "geoinfo": {
+        "display_name": "Spencer-Pierce-Little Farm, Eliza Little Trail, Newbury, Essex County, Massachusetts, 01951, United States",
+        "road": "Eliza Little Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newbury",
+        "state": "Massachusetts",
+        "postcode": "01951",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eliza Little Trail, Newburyport, Massachusetts, United States"
+    },
+    {
+      "lat": 42.84082666061969,
+      "lon": -70.88491915566689,
+      "geoinfo": {
+        "display_name": "125, Elm Street, Salisbury, Essex County, Massachusetts, 01952, United States",
+        "road": "Elm Street",
+        "house_number": "125",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salisbury",
+        "state": "Massachusetts",
+        "postcode": "01952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "125, Elm Street, Salisbury, Essex County, Massachusetts, 01952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:12.450669+00:00",
+  "_kind": "geo_samples"
+}

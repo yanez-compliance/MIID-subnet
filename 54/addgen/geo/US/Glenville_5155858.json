@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glenville",
+  "geonameid": 5155858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.5573738036835,
+      "lon": -81.66265285175676,
+      "geoinfo": {
+        "display_name": "Cuyahoga County, Ohio, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Glenville, Ohio, United States"
+    },
+    {
+      "lat": 41.532696583899366,
+      "lon": -81.58683866689071,
+      "geoinfo": {
+        "display_name": "1676, Hayden Avenue, East Cleveland, Cuyahoga County, Ohio, 44112, United States",
+        "road": "Hayden Avenue",
+        "house_number": "1676",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Cleveland",
+        "state": "Ohio",
+        "postcode": "44112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1676, Hayden Avenue, East Cleveland, Cuyahoga County, Ohio, 44112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:53.396743+00:00",
+  "_kind": "geo_samples"
+}

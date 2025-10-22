@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sömmerda",
+  "geonameid": 2831403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.15889456328274,
+      "lon": 11.056868015820339,
+      "geoinfo": {
+        "display_name": "B 176, Sömmerda, Straußfurt, Landkreis Sömmerda, Thuringia, 99610, Germany",
+        "road": "B 176",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sömmerda",
+        "state": "Thuringia",
+        "postcode": "99610",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 176, Sömmerda, Thuringia, Germany"
+    },
+    {
+      "lat": 51.19612829006491,
+      "lon": 11.096387863964289,
+      "geoinfo": {
+        "display_name": "L 2133, Schönstedt, Scherndorf, Weißensee, Landkreis Sömmerda, Thuringia, 99631, Germany",
+        "road": "L 2133",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Schönstedt",
+        "city_district": null,
+        "city": "Weißensee",
+        "state": "Thuringia",
+        "postcode": "99631",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 2133, Schönstedt, Scherndorf, Weißensee, Landkreis Sömmerda, Thuringia, 99631, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:43.989997+00:00",
+  "_kind": "geo_samples"
+}

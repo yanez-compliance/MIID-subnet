@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Perth",
+  "geonameid": 2640358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.422954107691666,
+      "lon": -3.4684229882096234,
+      "geoinfo": {
+        "display_name": "A9, Tulloch, Perth, Perth and Kinross, Scotland, PH1 3XQ, United Kingdom",
+        "road": "A9",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tulloch",
+        "city_district": null,
+        "city": "Perth",
+        "state": "Scotland",
+        "postcode": "PH1 3XQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A9, Perth, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.36082260383523,
+      "lon": -3.459163977741998,
+      "geoinfo": {
+        "display_name": "Kirkton of Mailer Road, Craigend, Perth, Perth and Kinross, Scotland, PH2 0ST, United Kingdom",
+        "road": "Kirkton of Mailer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perth",
+        "state": "Scotland",
+        "postcode": "PH2 0ST",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Kirkton of Mailer Road, Craigend, Perth, Perth and Kinross, Scotland, PH2 0ST, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:20.391926+00:00",
+  "_kind": "geo_samples"
+}

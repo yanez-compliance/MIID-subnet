@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Benito Juarez",
+  "geonameid": 3827406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.361380538576284,
+      "lon": -99.18304598922607,
+      "geoinfo": {
+        "display_name": "Torre Diamante, 1658, Avenida Insurgentes Sur, Guadalupe Inn, Mexico City, Álvaro Obregón, Tlacopac, Mexico City, 01020, Mexico",
+        "road": "Avenida Insurgentes Sur",
+        "house_number": "1658",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "01020",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "1658 Avenida Insurgentes Sur, Benito Juarez, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.40663012499647,
+      "lon": -99.19693381379655,
+      "geoinfo": {
+        "display_name": "Calle General Miguel Quintana, Ampliación Daniel Garza, Mexico City, Miguel Hidalgo, Mexico City, 11840, Mexico",
+        "road": "Calle General Miguel Quintana",
+        "house_number": null,
+        "neighbourhood": "Ampliación Daniel Garza",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "11840",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "602, Calle General Miguel Quintana, Ampliación Daniel Garza, Mexico City, Miguel Hidalgo, Mexico City, 11840, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:02.476855+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alameda de Osuna",
+  "geonameid": 3120030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.48536292347677,
+      "lon": -3.576752796242875,
+      "geoinfo": {
+        "display_name": "14R, M-111, Barajas, Madrid, Community of Madrid, 28042, Spain",
+        "road": "M-111",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28042",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-111, Alameda de Osuna, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.48271100587137,
+      "lon": -3.625833407197402,
+      "geoinfo": {
+        "display_name": "Glorieta de Isidro González Velázquez, Las Cárcavas - San Antonio, Valdefuentes, Hortaleza, Madrid, Community of Madrid, 28055, Spain",
+        "road": "Glorieta de Isidro González Velázquez",
+        "house_number": null,
+        "neighbourhood": "Las Cárcavas - San Antonio",
+        "suburb": "Hortaleza",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28055",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "796, Glorieta de Isidro González Velázquez, Las Cárcavas - San Antonio, Valdefuentes, Hortaleza, Madrid, Community of Madrid, 28055, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:24.243354+00:00",
+  "_kind": "geo_samples"
+}

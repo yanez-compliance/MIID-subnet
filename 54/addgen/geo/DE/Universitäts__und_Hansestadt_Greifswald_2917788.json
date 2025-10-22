@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Universitäts- und Hansestadt Greifswald",
+  "geonameid": 2917788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.08353000119899,
+      "lon": 13.375509290314536,
+      "geoinfo": {
+        "display_name": "26, Brandteichstraße, Technologiepark, Industriegebiet, Greifswald, Vorpommern-Greifswald, Mecklenburg-Vorpommern, 17489, Germany",
+        "road": "Brandteichstraße",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Industriegebiet",
+        "city_district": null,
+        "city": "Greifswald",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "17489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "26 Brandteichstraße, Universitäts- und Hansestadt Greifswald, Mecklenburg-Vorpommern, Germany"
+    },
+    {
+      "lat": 54.0846686368056,
+      "lon": 13.328986276244244,
+      "geoinfo": {
+        "display_name": "Chausseestraße, Fettenvorstadt, Greifswald, Landhagen, Vorpommern-Greifswald, Mecklenburg-Vorpommern, 17489, Germany",
+        "road": "Chausseestraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fettenvorstadt",
+        "city_district": null,
+        "city": "Greifswald",
+        "state": "Mecklenburg-Vorpommern",
+        "postcode": "17489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "809, Chausseestraße, Universitäts- und Hansestadt Greifswald, 17489 Mecklenburg-Vorpommern, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:07.583522+00:00",
+  "_kind": "geo_samples"
+}

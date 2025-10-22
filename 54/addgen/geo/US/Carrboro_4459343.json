@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carrboro",
+  "geonameid": 4459343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.95143490452262,
+      "lon": -79.08037073058618,
+      "geoinfo": {
+        "display_name": "8470, Rogers Road, Eubanks-Rogers, Fox Meadow, Carrboro, Orange County, North Carolina, 27516, United States",
+        "road": "Rogers Road",
+        "house_number": "8470",
+        "neighbourhood": "Eubanks-Rogers",
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrboro",
+        "state": "North Carolina",
+        "postcode": "27516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8470 Rogers Road, Carrboro, North Carolina, United States"
+    },
+    {
+      "lat": 35.92569665252724,
+      "lon": -79.05418876104773,
+      "geoinfo": {
+        "display_name": "Bolin Creek Trail, Bolin, Chapel Hill, Orange County, North Carolina, 27515, United States",
+        "road": "Bolin Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bolin",
+        "city_district": null,
+        "city": "Chapel Hill",
+        "state": "North Carolina",
+        "postcode": "27515",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "539, Bolin Creek Trail, Bolin, Chapel Hill, Orange County, North Carolina, 27515, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:19.695923+00:00",
+  "_kind": "geo_samples"
+}

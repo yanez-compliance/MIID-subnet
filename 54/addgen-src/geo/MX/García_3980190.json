@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "García",
+  "geonameid": 3980190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.85681564846205,
+      "lon": -100.60079617074243,
+      "geoinfo": {
+        "display_name": "El Palmital, García, Nuevo León, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "García, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.809173192302946,
+      "lon": -100.57645230411056,
+      "geoinfo": {
+        "display_name": "Miguel Hidalgo, Centro, 6 de Mayo, García, Nuevo León, 66025, Mexico",
+        "road": "Miguel Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "García",
+        "state": "Nuevo León",
+        "postcode": "66025",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Miguel Hidalgo, Centro, 6 de Mayo, García, Nuevo León, 66025, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:35.570689+00:00",
+  "_kind": "geo_samples"
+}

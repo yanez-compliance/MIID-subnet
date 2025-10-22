@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Heguan",
+  "geonameid": 12324304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.89741892524634,
+      "lon": 118.54508712222454,
+      "geoinfo": {
+        "display_name": "Mashi Road, Qingzhou City, Weifang, Shandong, China",
+        "road": "Mashi Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Mashi Road, Heguan, Shandong, China"
+    },
+    {
+      "lat": 36.873345857345434,
+      "lon": 118.56880474626286,
+      "geoinfo": {
+        "display_name": "邢屯-邵树公路, Qingzhou City, Weifang, Shandong, China",
+        "road": "邢屯-邵树公路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingzhou City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "630, 邢屯-邵树公路, Qingzhou City, Weifang, 64821 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:00:29.548138+00:00",
+  "_kind": "geo_samples"
+}

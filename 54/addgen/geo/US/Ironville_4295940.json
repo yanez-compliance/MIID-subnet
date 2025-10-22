@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ironville",
+  "geonameid": 4295940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.47411002771053,
+      "lon": -82.70715203569583,
+      "geoinfo": {
+        "display_name": "Boyd County, Kentucky, 41102, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "41102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ironville, Kentucky, United States"
+    },
+    {
+      "lat": 38.48926654437924,
+      "lon": -82.66102576454213,
+      "geoinfo": {
+        "display_name": "293, Providence Hill Drive, Ashland, Boyd County, Kentucky, 41101, United States",
+        "road": "Providence Hill Drive",
+        "house_number": "293",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Kentucky",
+        "postcode": "41101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "293, Providence Hill Drive, Ashland, Boyd County, Kentucky, 41101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:43.080268+00:00",
+  "_kind": "geo_samples"
+}

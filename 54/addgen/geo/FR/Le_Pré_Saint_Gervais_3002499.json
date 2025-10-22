@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Pré-Saint-Gervais",
+  "geonameid": 3002499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.9030872400561,
+      "lon": 2.4650175567175405,
+      "geoinfo": {
+        "display_name": "Orpi Cœur De Bondy, Rue de Paris, La Folie, Quartier de Noisy-le-Sec II, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93000, France",
+        "road": "Rue de Paris",
+        "house_number": null,
+        "neighbourhood": "La Folie",
+        "suburb": "Quartier de Noisy-le-Sec II",
+        "city_district": null,
+        "city": "Noisy-le-Sec",
+        "state": "Ile-de-France",
+        "postcode": "93000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Paris, Le Pré-Saint-Gervais, Ile-de-France, France"
+    },
+    {
+      "lat": 48.8514946846653,
+      "lon": 2.429339240283684,
+      "geoinfo": {
+        "display_name": "99, Rue François Arago, Croix de Chavaux, Bobillot, Montreuil, Bobigny, Seine-Saint-Denis, Metropolitan France, 93100, France",
+        "road": "Rue François Arago",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": "Bobillot",
+        "city_district": null,
+        "city": "Montreuil",
+        "state": null,
+        "postcode": "93100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "99, Rue François Arago, Croix de Chavaux, Bobillot, Montreuil, Bobigny, Seine-Saint-Denis, Metropolitan France, 93100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:57.364342+00:00",
+  "_kind": "geo_samples"
+}

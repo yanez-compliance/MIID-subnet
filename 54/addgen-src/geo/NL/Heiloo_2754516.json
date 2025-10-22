@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Heiloo",
+  "geonameid": 2754516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.612302093926516,
+      "lon": 4.72562387193262,
+      "geoinfo": {
+        "display_name": "Laarzenpad, Blockhovepark, Heiloo, North Holland, Netherlands, 1851 AX, Netherlands",
+        "road": "Laarzenpad",
+        "house_number": null,
+        "neighbourhood": "Blockhovepark",
+        "suburb": null,
+        "city_district": null,
+        "city": "Heiloo",
+        "state": "North Holland",
+        "postcode": "1851 AX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Laarzenpad, Heiloo, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.63053513643642,
+      "lon": 4.668934698929456,
+      "geoinfo": {
+        "display_name": "Tambach Staalwerken, 3B, Krommedijk, Egmond aan den Hoef, Bergen, North Holland, Netherlands, 1934 PP, Netherlands",
+        "road": "Krommedijk",
+        "house_number": "3B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergen",
+        "state": "North Holland",
+        "postcode": "1934 PP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Tambach Staalwerken, 3B, Krommedijk, Egmond aan den Hoef, Bergen, North Holland, Netherlands, 1934 PP, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:57.365455+00:00",
+  "_kind": "geo_samples"
+}

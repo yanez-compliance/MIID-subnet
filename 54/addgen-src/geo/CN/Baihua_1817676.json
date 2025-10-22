@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Baihua",
+  "geonameid": 1817676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.088632467365336,
+      "lon": 104.6546317234876,
+      "geoinfo": {
+        "display_name": "Cuiping District, Yibin, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Baihua, Sichuan, China"
+    },
+    {
+      "lat": 29.08997658360875,
+      "lon": 104.63912183207708,
+      "geoinfo": {
+        "display_name": "Baihua, Cuiping District, Yibin, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baihua",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "637, Baihua, Cuiping District, Yibin, 33510 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:00.686939+00:00",
+  "_kind": "geo_samples"
+}

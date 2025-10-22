@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Rizal",
+  "geonameid": 1691606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.750468911534501,
+      "lon": 121.08695378654976,
+      "geoinfo": {
+        "display_name": "Sampaloc, Pantabangan, Nueva Ecija, Central Luzon, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pantabangan",
+        "state": "Nueva Ecija",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Rizal, Nueva Ecija, Philippines"
+    },
+    {
+      "lat": 15.68414815692848,
+      "lon": 121.13307801974346,
+      "geoinfo": {
+        "display_name": "San Esteban, Rizal, Nueva Ecija, Central Luzon, 3127, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rizal",
+        "state": "Nueva Ecija",
+        "postcode": "3127",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "555, San Esteban, Rizal, Nueva Ecija, Central Luzon, 3127, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:17.575100+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Raleigh",
+  "geonameid": 4498303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.785878702219065,
+      "lon": -78.6918581718972,
+      "geoinfo": {
+        "display_name": "Lexington Drive, College Manor, Method, Raleigh, Wake County, North Carolina, 27606, United States",
+        "road": "Lexington Drive",
+        "house_number": null,
+        "neighbourhood": "College Manor",
+        "suburb": "Method",
+        "city_district": null,
+        "city": "Raleigh",
+        "state": "North Carolina",
+        "postcode": "27606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lexington Drive, West Raleigh, North Carolina, United States"
+    },
+    {
+      "lat": 35.80929133766975,
+      "lon": -78.67370327847817,
+      "geoinfo": {
+        "display_name": "1572, Nottingham Road, Sunset Hills, Oberlin, Raleigh, Wake County, North Carolina, 27607, United States",
+        "road": "Nottingham Road",
+        "house_number": "1572",
+        "neighbourhood": "Sunset Hills",
+        "suburb": "Oberlin",
+        "city_district": null,
+        "city": "Raleigh",
+        "state": "North Carolina",
+        "postcode": "27607",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1572, Nottingham Road, Sunset Hills, Oberlin, Raleigh, Wake County, North Carolina, 27607, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:45.976607+00:00",
+  "_kind": "geo_samples"
+}

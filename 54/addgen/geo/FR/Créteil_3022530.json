@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Créteil",
+  "geonameid": 3022530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80486745575049,
+      "lon": 2.5273217153403698,
+      "geoinfo": {
+        "display_name": "Rue Gabriel Péri, Bords de Marne - Coteaux Nord, Chennevières-sur-Marne, Créteil, Val-de-Marne, Ile-de-France, Metropolitan France, 94430, France",
+        "road": "Rue Gabriel Péri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bords de Marne - Coteaux Nord",
+        "city_district": null,
+        "city": "Chennevières-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "94430",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Gabriel Péri, Créteil, Ile-de-France, France"
+    },
+    {
+      "lat": 48.815736445746495,
+      "lon": 2.476197330579784,
+      "geoinfo": {
+        "display_name": "Quai Gabriel Péri, Palissy, Joinville-le-Pont, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94340, France",
+        "road": "Quai Gabriel Péri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Palissy",
+        "city_district": null,
+        "city": "Joinville-le-Pont",
+        "state": null,
+        "postcode": "94340",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "177, Quai Gabriel Péri, Palissy, Joinville-le-Pont, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94340, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:01.409970+00:00",
+  "_kind": "geo_samples"
+}

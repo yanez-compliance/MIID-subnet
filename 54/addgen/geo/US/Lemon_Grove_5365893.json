@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lemon Grove",
+  "geonameid": 5365893,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.72537924456933,
+      "lon": -117.04168302258114,
+      "geoinfo": {
+        "display_name": "1925, La Corta Street, Lemon Grove, San Diego County, California, 91945, United States",
+        "road": "La Corta Street",
+        "house_number": "1925",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lemon Grove",
+        "state": "California",
+        "postcode": "91945",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1925 La Corta Street, Lemon Grove, California, United States"
+    },
+    {
+      "lat": 32.74557656683252,
+      "lon": -117.07597401586615,
+      "geoinfo": {
+        "display_name": "3664, Spa Street, Oak Park, San Diego, San Diego County, California, 92115, United States",
+        "road": "Spa Street",
+        "house_number": "3664",
+        "neighbourhood": "Oak Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Diego",
+        "state": "California",
+        "postcode": "92115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3664, Spa Street, Oak Park, San Diego, San Diego County, California, 92115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:25.671263+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kanmaki",
+  "geonameid": 9633110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.53498644577295,
+      "lon": 135.7459668830702,
+      "geoinfo": {
+        "display_name": "Abe, Koryo, Kitakatsuragi County, Nara Prefecture, 635-0814, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Koryo",
+        "state": null,
+        "postcode": "635-0814",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kanmaki, Japan"
+    },
+    {
+      "lat": 34.52183857008558,
+      "lon": 135.70078801206242,
+      "geoinfo": {
+        "display_name": "Someno, Katsuragi, Nara Prefecture, 639-0276, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Someno",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katsuragi",
+        "state": null,
+        "postcode": "639-0276",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Someno, Katsuragi, Nara Prefecture, 639-0276, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:01.559558+00:00",
+  "_kind": "geo_samples"
+}

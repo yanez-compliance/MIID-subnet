@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xianning",
+  "geonameid": 1790396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.85044865803923,
+      "lon": 114.35242584825355,
+      "geoinfo": {
+        "display_name": "Xian'an District, Xianning, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xianning",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xianning, Hubei, China"
+    },
+    {
+      "lat": 29.84375566298644,
+      "lon": 114.36456276534612,
+      "geoinfo": {
+        "display_name": "咸通高速, Xian'an District, Xianning, Hubei, China",
+        "road": "咸通高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xianning",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "478, 咸通高速, Xian'an District, Xianning, 55667 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:29.519908+00:00",
+  "_kind": "geo_samples"
+}

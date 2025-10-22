@@ -1,0 +1,83 @@
+{
+  "country_code": "UY",
+  "country": "Uruguay",
+  "city": "Melo",
+  "geonameid": 3441702,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": -32.3470228117833,
+      "lon": -54.170081245633384,
+      "geoinfo": {
+        "display_name": "Barrio Castro, Melo, Cerro Largo, 37000, Uruguay",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio Castro",
+        "suburb": null,
+        "city_district": null,
+        "city": "Melo",
+        "state": "Cerro Largo",
+        "postcode": "37000",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "751, Barrio Castro, Melo, Cerro Largo, 37000, Uruguay"
+    },
+    {
+      "lat": -32.394700923518656,
+      "lon": -54.129893859334004,
+      "geoinfo": {
+        "display_name": "Ruta 8 Brigadier General Juan Antonio Lavalleja, Barrio Popular, Cerro Largo, 37000, Uruguay",
+        "road": "Ruta 8 Brigadier General Juan Antonio Lavalleja",
+        "house_number": null,
+        "neighbourhood": "Barrio Popular",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cerro Largo",
+        "postcode": "37000",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "Ruta 8 Brigadier General Juan Antonio Lavalleja, Melo, 37000 Cerro Largo, Uruguay"
+    },
+    {
+      "lat": -32.372043424366936,
+      "lon": -54.20025518488308,
+      "geoinfo": {
+        "display_name": "Hipódromo, Melo, Cerro Largo, 37000, Uruguay",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hipódromo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Melo",
+        "state": "Cerro Largo",
+        "postcode": "37000",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "906, Hipódromo, Melo, Cerro Largo, 37000, Uruguay"
+    },
+    {
+      "lat": -32.39196782749947,
+      "lon": -54.11920906062657,
+      "geoinfo": {
+        "display_name": "507, Vecinal 1, Cerro Largo, 37000, Uruguay",
+        "road": null,
+        "house_number": "507",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cerro Largo",
+        "postcode": "37000",
+        "country": "Uruguay",
+        "country_code": "uy"
+      },
+      "address": "507, Melo, 37000 Cerro Largo, Uruguay"
+    }
+  ],
+  "updated_at": "2025-10-19T06:38:43.225338+00:00",
+  "_kind": "geo_samples"
+}

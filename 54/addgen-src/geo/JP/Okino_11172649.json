@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Okino",
+  "geonameid": 11172649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.85050523069512,
+      "lon": 130.8012202125542,
+      "geoinfo": {
+        "display_name": "Kakizemachi, Higashi Ward, Kumamoto, Kumamoto Prefecture, 860-8601, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Higashi Ward",
+        "city_district": null,
+        "city": "Kumamoto",
+        "state": null,
+        "postcode": "860-8601",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Higashi Ward, Okino, Japan"
+    },
+    {
+      "lat": 32.840856176764994,
+      "lon": 130.7678660735323,
+      "geoinfo": {
+        "display_name": "Kaminabe 4-chome, Higashi Ward, Kumamoto, Kumamoto Prefecture, 860-8601, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kaminabe 4-chome",
+        "suburb": "Higashi Ward",
+        "city_district": null,
+        "city": "Kumamoto",
+        "state": null,
+        "postcode": "860-8601",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kaminabe 4-chome, Higashi Ward, Kumamoto, Kumamoto Prefecture, 860-8601, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:19.026885+00:00",
+  "_kind": "geo_samples"
+}

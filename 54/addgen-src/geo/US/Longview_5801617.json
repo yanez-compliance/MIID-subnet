@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Longview",
+  "geonameid": 5801617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.11384695494383,
+      "lon": -122.9628813841352,
+      "geoinfo": {
+        "display_name": "Weyerhaeuser, Cowlitz County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Longview, Washington, United States"
+    },
+    {
+      "lat": 46.10593151723437,
+      "lon": -122.93561787382914,
+      "geoinfo": {
+        "display_name": "161, East Mill Road, Cowlitz County, Washington, 98632, United States",
+        "road": "East Mill Road",
+        "house_number": "161",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "161, East Mill Road, Cowlitz County, Washington, 98632, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:59.213721+00:00",
+  "_kind": "geo_samples"
+}

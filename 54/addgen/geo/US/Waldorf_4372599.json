@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waldorf",
+  "geonameid": 4372599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.649461956252445,
+      "lon": -76.97722893106535,
+      "geoinfo": {
+        "display_name": "9778, Leighland Court, Waldorf, Charles County, Maryland, 20603, United States",
+        "road": "Leighland Court",
+        "house_number": "9778",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waldorf",
+        "state": "Maryland",
+        "postcode": "20603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9778 Leighland Court, Waldorf, Maryland, United States"
+    },
+    {
+      "lat": 38.591415454144894,
+      "lon": -76.90649221720547,
+      "geoinfo": {
+        "display_name": "1097, Saint Pauls Drive, Saint Charles, Charles County, Maryland, 20602, United States",
+        "road": "Saint Pauls Drive",
+        "house_number": "1097",
+        "neighbourhood": null,
+        "suburb": "Saint Charles",
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1097, Saint Pauls Drive, Saint Charles, Charles County, Maryland, 20602, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:21.989407+00:00",
+  "_kind": "geo_samples"
+}

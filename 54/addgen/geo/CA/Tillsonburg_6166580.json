@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Tillsonburg",
+  "geonameid": 6166580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.854251708376786,
+      "lon": -80.78171196156083,
+      "geoinfo": {
+        "display_name": "Concession Street East, South-West Oxford, Oxford County, Ontario, N4G 0G5, Canada",
+        "road": "Concession Street East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South-West Oxford",
+        "state": "Ontario",
+        "postcode": "N4G 0G5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Concession Street East, Tillsonburg, Ontario, Canada"
+    },
+    {
+      "lat": 42.85859389338535,
+      "lon": -80.70353624389034,
+      "geoinfo": {
+        "display_name": "Harvest Avenue, Tillsonburg, Oxford County, Southwestern Ontario, Ontario, N4G 2J2, Canada",
+        "road": "Harvest Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tillsonburg",
+        "state": "Ontario",
+        "postcode": "N4G 2J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Harvest Avenue, Tillsonburg, Oxford County, Southwestern Ontario, Ontario, N4G 2J2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:36.578044+00:00",
+  "_kind": "geo_samples"
+}

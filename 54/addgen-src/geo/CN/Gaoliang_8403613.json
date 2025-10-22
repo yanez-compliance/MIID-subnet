@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gaoliang",
+  "geonameid": 8403613,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.806537174333037,
+      "lon": 108.33898592391674,
+      "geoinfo": {
+        "display_name": "Hurong Expressway, Huangni, Taibai Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": "Hurong Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taibai Subdistrict",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hurong Expressway, Gaoliang, Chongqing, China"
+    },
+    {
+      "lat": 30.792017832769652,
+      "lon": 108.3354998510577,
+      "geoinfo": {
+        "display_name": "X061, Pailou Subdistrict, Huangni, 九池街道, Wanzhou, Chongqing, 404000, China",
+        "road": "X061",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pailou Subdistrict",
+        "city_district": null,
+        "city": "九池街道",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X061, Pailou Subdistrict, Huangni, 九池街道, Wanzhou, Chongqing, 404000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:16.690009+00:00",
+  "_kind": "geo_samples"
+}

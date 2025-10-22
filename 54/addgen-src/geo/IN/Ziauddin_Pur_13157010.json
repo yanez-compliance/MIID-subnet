@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ziauddin Pur",
+  "geonameid": 13157010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.74414200247186,
+      "lon": 77.28778283801053,
+      "geoinfo": {
+        "display_name": "Loni Road, Karawal Nagar Tehsil, Loni, Ghaziabad, Uttar Pradesh, 110094, India",
+        "road": "Loni Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Karawal Nagar Tehsil",
+        "city_district": null,
+        "city": "Ghaziabad",
+        "state": "Uttar Pradesh",
+        "postcode": "110094",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Loni Road, Karawal Nagar Tehsil, Loni, Ghaziabad, Uttar Pradesh, 110094, India"
+    },
+    {
+      "lat": 28.675648544551546,
+      "lon": 77.28699503076433,
+      "geoinfo": {
+        "display_name": "Raj Block, Vivek Vihar Tehsil, Shahdara, Delhi, 110032, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Raj Block",
+        "suburb": "Vivek Vihar Tehsil",
+        "city_district": "Shahdara",
+        "city": "Delhi",
+        "state": null,
+        "postcode": "110032",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "180, Raj Block, Vivek Vihar Tehsil, Shahdara, Delhi, 110032, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:34.315467+00:00",
+  "_kind": "geo_samples"
+}

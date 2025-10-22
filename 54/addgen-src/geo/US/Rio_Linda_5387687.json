@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rio Linda",
+  "geonameid": 5387687,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.73032164495629,
+      "lon": -121.44643106327503,
+      "geoinfo": {
+        "display_name": "Sacramento County, California, 95673, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95673",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rio Linda, California, United States"
+    },
+    {
+      "lat": 38.686338749432345,
+      "lon": -121.39188857990418,
+      "geoinfo": {
+        "display_name": "6558, 32nd Street, Sacramento County, California, 95660, United States",
+        "road": "32nd Street",
+        "house_number": "6558",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6558, 32nd Street, Sacramento County, California, 95660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:08.919397+00:00",
+  "_kind": "geo_samples"
+}

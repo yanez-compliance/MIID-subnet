@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Sanarate",
+  "geonameid": 3590406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.810835533566499,
+      "lon": -90.20159650158882,
+      "geoinfo": {
+        "display_name": "Nuevo Amatillo, Sanarate, El Progreso, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanarate",
+        "state": "El Progreso",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Sanarate, El Progreso, Guatemala"
+    },
+    {
+      "lat": 14.765375676264133,
+      "lon": -90.22407115514999,
+      "geoinfo": {
+        "display_name": "RD PRO-12, Coyotera, Puente Río Plátanos, Sanarate, El Progreso, Guatemala",
+        "road": "RD PRO-12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puente Río Plátanos",
+        "state": "El Progreso",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "RD PRO-12, Coyotera, Puente Río Plátanos, Sanarate, 10870 El Progreso, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:05.601970+00:00",
+  "_kind": "geo_samples"
+}

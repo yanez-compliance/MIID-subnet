@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tempe",
+  "geonameid": 5317058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.410827988468405,
+      "lon": -111.88172760775662,
+      "geoinfo": {
+        "display_name": "2350, West Broadway Road, Mesa, Maricopa County, Arizona, 85202, United States",
+        "road": "West Broadway Road",
+        "house_number": "2350",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mesa",
+        "state": "Arizona",
+        "postcode": "85202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2350 West Broadway Road, Tempe, Arizona, United States"
+    },
+    {
+      "lat": 33.398090838542196,
+      "lon": -111.8988050262674,
+      "geoinfo": {
+        "display_name": "2045, Cairo Drive, Tempe, Maricopa County, Arizona, 85282, United States",
+        "road": "Cairo Drive",
+        "house_number": "2045",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tempe",
+        "state": "Arizona",
+        "postcode": "85282",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2045, Cairo Drive, Tempe, Maricopa County, Arizona, 85282, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:31.244282+00:00",
+  "_kind": "geo_samples"
+}

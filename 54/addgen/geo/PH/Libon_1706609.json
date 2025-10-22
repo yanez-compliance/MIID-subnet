@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Libon",
+  "geonameid": 1706609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 13.325148943157718,
+      "lon": 123.45477147193587,
+      "geoinfo": {
+        "display_name": "Lanigay, Polangui, Albay, Bicol Region, 4506, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Polangui",
+        "state": "Albay",
+        "postcode": "4506",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Libon, Albay, Philippines"
+    },
+    {
+      "lat": 13.27740492430578,
+      "lon": 123.418751895082,
+      "geoinfo": {
+        "display_name": "Paclas, Libon, Albay, Bicol Region, 4507, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Paclas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Libon",
+        "state": "Albay",
+        "postcode": "4507",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "599, Paclas, Libon, Albay, Bicol Region, 4507, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:36:10.193887+00:00",
+  "_kind": "geo_samples"
+}

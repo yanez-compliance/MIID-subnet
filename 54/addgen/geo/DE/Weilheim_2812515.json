@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weilheim",
+  "geonameid": 2812515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.80551587025417,
+      "lon": 11.173055224625257,
+      "geoinfo": {
+        "display_name": "F 3, Gandershofen, Obereberfing, Polling, Huglfing (VGem), Landkreis Weilheim-Schongau, Bavaria, 82398, Germany",
+        "road": "F 3",
+        "house_number": null,
+        "neighbourhood": "Gandershofen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Obereberfing",
+        "state": "Bavaria",
+        "postcode": "82398",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "F 3, Weilheim, Bavaria, Germany"
+    },
+    {
+      "lat": 47.8068651174219,
+      "lon": 11.112372794364122,
+      "geoinfo": {
+        "display_name": "B 472, Aich, Polling, Landkreis Weilheim-Schongau, Bavaria, 82380, Germany",
+        "road": "B 472",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Polling",
+        "state": "Bavaria",
+        "postcode": "82380",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 472, Weilheim, 82380 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:55.834878+00:00",
+  "_kind": "geo_samples"
+}

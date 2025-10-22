@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mönchengladbach",
+  "geonameid": 2869894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.17725583351336,
+      "lon": 6.430623233594805,
+      "geoinfo": {
+        "display_name": "132a, Seilerweg, Dahl, Nord, Mönchengladbach, North Rhine-Westphalia, 41069, Germany",
+        "road": "Seilerweg",
+        "house_number": "132a",
+        "neighbourhood": null,
+        "suburb": "Dahl",
+        "city_district": "Nord",
+        "city": "Mönchengladbach",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41069",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "132a Seilerweg, Mönchengladbach, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.16578429688551,
+      "lon": 6.418179913620154,
+      "geoinfo": {
+        "display_name": "11, In der Aue, Morr, Schrievers, Süd, Mönchengladbach, North Rhine-Westphalia, 41239, Germany",
+        "road": "In der Aue",
+        "house_number": "11",
+        "neighbourhood": "Morr",
+        "suburb": "Schrievers",
+        "city_district": "Süd",
+        "city": "Mönchengladbach",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41239",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, In der Aue, Morr, Schrievers, Süd, Mönchengladbach, North Rhine-Westphalia, 41239, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:22.723771+00:00",
+  "_kind": "geo_samples"
+}

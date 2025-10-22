@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pendino",
+  "geonameid": 12070063,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.84616298770706,
+      "lon": 14.267026675993362,
+      "geoinfo": {
+        "display_name": "Via Nuova Marina, Mercato, Municipalità 2, Naples, Campania, 80142, Italy",
+        "road": "Via Nuova Marina",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mercato",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80142",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Nuova Marina, Pendino, Campania, Italy"
+    },
+    {
+      "lat": 40.87641937009543,
+      "lon": 14.294212835486677,
+      "geoinfo": {
+        "display_name": "Via Cupa del Principe, Poggioreale, Municipalità 4, Naples, Campania, 80143, Italy",
+        "road": "Via Cupa del Principe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Poggioreale",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80143",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Cupa del Principe, Poggioreale, Municipalità 4, Naples, Campania, 80143, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:12.959125+00:00",
+  "_kind": "geo_samples"
+}

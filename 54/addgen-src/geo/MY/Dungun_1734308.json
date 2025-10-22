@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Dungun",
+  "geonameid": 1734308,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.794947151142069,
+      "lon": 103.38322237698316,
+      "geoinfo": {
+        "display_name": "Dungun, Terengganu, 23000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dungun",
+        "state": "Terengganu",
+        "postcode": "23000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Dungun, Terengganu, Malaysia"
+    },
+    {
+      "lat": 4.7573263243430235,
+      "lon": 103.4403987727678,
+      "geoinfo": {
+        "display_name": "Kampung Teluk Lipat, Dungun, Terengganu, 23000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kampung Teluk Lipat",
+        "city_district": null,
+        "city": "Dungun",
+        "state": "Terengganu",
+        "postcode": "23000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "341, Kampung Teluk Lipat, Dungun, Terengganu, 23000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:47.980147+00:00",
+  "_kind": "geo_samples"
+}

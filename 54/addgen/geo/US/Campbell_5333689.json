@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Campbell",
+  "geonameid": 5333689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.28773569314248,
+      "lon": -121.93957623354528,
+      "geoinfo": {
+        "display_name": "East Campbell Avenue, Campbell, Santa Clara County, California, 95008, United States",
+        "road": "East Campbell Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campbell",
+        "state": "California",
+        "postcode": "95008",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Campbell Avenue, Campbell, California, United States"
+    },
+    {
+      "lat": 37.31752388988395,
+      "lon": -121.90877026052928,
+      "geoinfo": {
+        "display_name": "1297, Parkmoor Avenue, Buena Vista, San Jose, Santa Clara County, California, 95126, United States",
+        "road": "Parkmoor Avenue",
+        "house_number": "1297",
+        "neighbourhood": null,
+        "suburb": "Buena Vista",
+        "city_district": null,
+        "city": "San Jose",
+        "state": "California",
+        "postcode": "95126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1297, Parkmoor Avenue, Buena Vista, San Jose, Santa Clara County, California, 95126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:33.057444+00:00",
+  "_kind": "geo_samples"
+}

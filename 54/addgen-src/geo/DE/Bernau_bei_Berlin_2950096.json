@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bernau bei Berlin",
+  "geonameid": 2950096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.66949580914962,
+      "lon": 13.554672133156325,
+      "geoinfo": {
+        "display_name": "4, Nuthering, Friedenstal, Bernau, Barnim, Brandenburg, 16321, Germany",
+        "road": "Nuthering",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Friedenstal",
+        "city_district": null,
+        "city": "Bernau",
+        "state": "Brandenburg",
+        "postcode": "16321",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Nuthering, Bernau bei Berlin, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.63976856988936,
+      "lon": 13.618389279942617,
+      "geoinfo": {
+        "display_name": "Helenenauer Weg, Elisenau, Blumberg, Ahrensfelde, Barnim, Brandenburg, 16356, Germany",
+        "road": "Helenenauer Weg",
+        "house_number": null,
+        "neighbourhood": "Elisenau",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ahrensfelde",
+        "state": "Brandenburg",
+        "postcode": "16356",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "511, Helenenauer Weg, Elisenau, Blumberg, Ahrensfelde, Barnim, Brandenburg, 16356, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:59.809916+00:00",
+  "_kind": "geo_samples"
+}

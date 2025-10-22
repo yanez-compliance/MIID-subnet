@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Orizaba",
+  "geonameid": 3522307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.827705228075565,
+      "lon": -97.08585383658904,
+      "geoinfo": {
+        "display_name": "Calle Venustiano Carranza, Novillero Chico, Jalapilla, Rafael Delgado, Veracruz, 94410, Mexico",
+        "road": "Calle Venustiano Carranza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rafael Delgado",
+        "state": "Veracruz",
+        "postcode": "94410",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Venustiano Carranza, Orizaba, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.859872823618502,
+      "lon": -97.11777486469539,
+      "geoinfo": {
+        "display_name": "Calle Poniente 32, Salvador Gonzalo García, Orizaba, Veracruz, 94300, Mexico",
+        "road": "Calle Poniente 32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orizaba",
+        "state": "Veracruz",
+        "postcode": "94300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Poniente 32, Salvador Gonzalo García, Orizaba, Veracruz, 94300, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:29:20.429434+00:00",
+  "_kind": "geo_samples"
+}

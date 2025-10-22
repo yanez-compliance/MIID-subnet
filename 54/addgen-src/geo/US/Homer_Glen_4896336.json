@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Homer Glen",
+  "geonameid": 4896336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.55668074495275,
+      "lon": -87.93403003977039,
+      "geoinfo": {
+        "display_name": "11901, Virginia Lane, Homer Glen, Will County, Illinois, 60448, United States",
+        "road": "Virginia Lane",
+        "house_number": "11901",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Homer Glen",
+        "state": "Illinois",
+        "postcode": "60448",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11901 Virginia Lane, Homer Glen, Illinois, United States"
+    },
+    {
+      "lat": 41.56139978821198,
+      "lon": -87.96234987736922,
+      "geoinfo": {
+        "display_name": "West Chicago Bloomington Trail, Will County, Illinois, 60441, United States",
+        "road": "West Chicago Bloomington Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "913, West Chicago Bloomington Trail, Will County, Illinois, 60441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:57.209766+00:00",
+  "_kind": "geo_samples"
+}

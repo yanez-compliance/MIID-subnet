@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Oaxaca",
+  "geonameid": 3522507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.070800406940993,
+      "lon": -96.76596394063539,
+      "geoinfo": {
+        "display_name": "Carretera Ramal a Monte Albán, Oaxaca de Juárez, Oaxaca, 68143, Mexico",
+        "road": "Carretera Ramal a Monte Albán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oaxaca",
+        "postcode": "68143",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Ramal a Monte Albán, Oaxaca, Oaxaca, Mexico"
+    },
+    {
+      "lat": 17.075160455990808,
+      "lon": -96.70905793472578,
+      "geoinfo": {
+        "display_name": "Avenida Belisario Domínguez, Colonia Reforma, Oaxaca City, Oaxaca de Juárez, Oaxaca, 68050, Mexico",
+        "road": "Avenida Belisario Domínguez",
+        "house_number": null,
+        "neighbourhood": "Colonia Reforma",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oaxaca City",
+        "state": "Oaxaca",
+        "postcode": "68050",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "763, Avenida Belisario Domínguez, Colonia Reforma, Oaxaca City, Oaxaca de Juárez, Oaxaca, 68050, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:29:26.478163+00:00",
+  "_kind": "geo_samples"
+}

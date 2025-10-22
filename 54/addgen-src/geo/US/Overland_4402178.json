@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Overland",
+  "geonameid": 4402178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.689221576169004,
+      "lon": -90.38668287005359,
+      "geoinfo": {
+        "display_name": "10272, Bach Boulevard, Overland, Saint Louis County, Missouri, 63132, United States",
+        "road": "Bach Boulevard",
+        "house_number": "10272",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Overland",
+        "state": "Missouri",
+        "postcode": "63132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10272 Bach Boulevard, Overland, Missouri, United States"
+    },
+    {
+      "lat": 38.681874293891056,
+      "lon": -90.32192889493383,
+      "geoinfo": {
+        "display_name": "1899, Eider Court, Hanley Hills, Saint Louis County, Missouri, 63133, United States",
+        "road": "Eider Court",
+        "house_number": "1899",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanley Hills",
+        "state": "Missouri",
+        "postcode": "63133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1899, Eider Court, Hanley Hills, Saint Louis County, Missouri, 63133, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:19.712264+00:00",
+  "_kind": "geo_samples"
+}

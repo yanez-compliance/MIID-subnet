@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Garfield Park",
+  "geonameid": 4890507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.88322208667518,
+      "lon": -87.71333599012311,
+      "geoinfo": {
+        "display_name": "North Schraeder Drive, Fifth City, East Garfield Park, Chicago, West Chicago Township, Cook County, Illinois, 60624, United States",
+        "road": "North Schraeder Drive",
+        "house_number": null,
+        "neighbourhood": "Fifth City",
+        "suburb": "East Garfield Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Schraeder Drive, East Garfield Park, Illinois, United States"
+    },
+    {
+      "lat": 41.910393074838815,
+      "lon": -87.7370292708471,
+      "geoinfo": {
+        "display_name": "4435-4439, West Grand Avenue, Beat 2523, Chicago, Jefferson Township, Cook County, Illinois, 60639, United States",
+        "road": "West Grand Avenue",
+        "house_number": "4435-4439",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60639",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4435-4439, West Grand Avenue, Beat 2523, Chicago, Jefferson Township, Cook County, Illinois, 60639, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:24.941582+00:00",
+  "_kind": "geo_samples"
+}

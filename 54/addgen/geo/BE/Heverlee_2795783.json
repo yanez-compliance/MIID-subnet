@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Heverlee",
+  "geonameid": 2795783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.87866709736785,
+      "lon": 4.63265825019746,
+      "geoinfo": {
+        "display_name": "Nieuwstraat, Bertem, Leuven, Flemish Brabant, Flanders, 3060, Belgium",
+        "road": "Nieuwstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bertem",
+        "state": "Flemish Brabant",
+        "postcode": "3060",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Nieuwstraat, Heverlee, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.82545562043861,
+      "lon": 4.692858244448728,
+      "geoinfo": {
+        "display_name": "Vandezande, Onze-Lieve-Vrouwstraat, Vaalbeek, Oud-Heverlee, Leuven, Flemish Brabant, Flanders, 3054, Belgium",
+        "road": "Onze-Lieve-Vrouwstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oud-Heverlee",
+        "state": "Flemish Brabant",
+        "postcode": "3054",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "958, Onze-Lieve-Vrouwstraat, Heverlee, 3054 Flemish Brabant, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:30.488484+00:00",
+  "_kind": "geo_samples"
+}

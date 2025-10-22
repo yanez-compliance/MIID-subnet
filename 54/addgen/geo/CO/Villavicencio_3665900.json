@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Villavicencio",
+  "geonameid": 3665900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.1083562948990515,
+      "lon": -73.6395048158931,
+      "geoinfo": {
+        "display_name": "Calle 8 Sur, Hacienda Rosablanca, Comuna 8, Villavicencio, Meta, RAP (Especial) Central, 500001, Colombia",
+        "road": "Calle 8 Sur",
+        "house_number": null,
+        "neighbourhood": "Hacienda Rosablanca",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villavicencio",
+        "state": "Meta",
+        "postcode": "500001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 8 Sur, Villavicencio, Meta, Colombia"
+    },
+    {
+      "lat": 4.099859322896076,
+      "lon": -73.62322750229889,
+      "geoinfo": {
+        "display_name": "Vía Juan Pablo II, Quintas de San Fernando, Comuna 7, Villavicencio, Meta, RAP (Especial) Central, 500004, Colombia",
+        "road": "Vía Juan Pablo II",
+        "house_number": null,
+        "neighbourhood": "Quintas de San Fernando",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villavicencio",
+        "state": "Meta",
+        "postcode": "500004",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Vía Juan Pablo II, Quintas de San Fernando, Comuna 7, Villavicencio, Meta, RAP (Especial) Central, 500004, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:04:51.729605+00:00",
+  "_kind": "geo_samples"
+}

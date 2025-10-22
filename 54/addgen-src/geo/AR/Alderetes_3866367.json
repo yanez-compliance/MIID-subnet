@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Alderetes",
+  "geonameid": 3866367,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.83796052296685,
+      "lon": -65.12481580852784,
+      "geoinfo": {
+        "display_name": "Alderetes, Departamento Cruz Alta, Tucumán, T4178, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alderetes",
+        "state": "Tucumán",
+        "postcode": "T4178",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Alderetes, Tucumán, Argentina"
+    },
+    {
+      "lat": -26.836606684383476,
+      "lon": -65.16978834551219,
+      "geoinfo": {
+        "display_name": "Guatemala, Banda del Río Salí, Departamento Cruz Alta, Tucumán, T4178, Argentina",
+        "road": "Guatemala",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Banda del Río Salí",
+        "state": "Tucumán",
+        "postcode": "T4178",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "964, Guatemala, Banda del Río Salí, Departamento Cruz Alta, Tucumán, T4178, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:52.138263+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Merrifield",
+  "geonameid": 4772735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.847436746668855,
+      "lon": -77.24511344749222,
+      "geoinfo": {
+        "display_name": "3715, Prosperity Avenue, Wakefield Forest, Wakefield, Fairfax County, Virginia, 22031, United States",
+        "road": "Prosperity Avenue",
+        "house_number": "3715",
+        "neighbourhood": "Wakefield Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "Virginia",
+        "postcode": "22031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3715 Prosperity Avenue, Merrifield, Virginia, United States"
+    },
+    {
+      "lat": 38.874210850007216,
+      "lon": -77.17599954055508,
+      "geoinfo": {
+        "display_name": "6701, James Lee Street, Jefferson Village, Fairfax County, Virginia, 22042, United States",
+        "road": "James Lee Street",
+        "house_number": "6701",
+        "neighbourhood": "Jefferson Village",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6701, James Lee Street, Jefferson Village, Fairfax County, Virginia, 22042, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:08.990470+00:00",
+  "_kind": "geo_samples"
+}

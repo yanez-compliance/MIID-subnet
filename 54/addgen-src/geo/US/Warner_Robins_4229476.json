@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Warner Robins",
+  "geonameid": 4229476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.592185865370595,
+      "lon": -83.65879817511853,
+      "geoinfo": {
+        "display_name": "Russell Parkway, Warner Robins, Houston County, Georgia, 31088, United States",
+        "road": "Russell Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warner Robins",
+        "state": "Georgia",
+        "postcode": "31088",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Russell Parkway, Warner Robins, Georgia, United States"
+    },
+    {
+      "lat": 32.619934425809,
+      "lon": -83.63002295568359,
+      "geoinfo": {
+        "display_name": "432, Cherokee Drive, Warner Robins, Houston County, Georgia, 31093, United States",
+        "road": "Cherokee Drive",
+        "house_number": "432",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warner Robins",
+        "state": "Georgia",
+        "postcode": "31093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "432, Cherokee Drive, Warner Robins, Houston County, Georgia, 31093, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:56.696633+00:00",
+  "_kind": "geo_samples"
+}

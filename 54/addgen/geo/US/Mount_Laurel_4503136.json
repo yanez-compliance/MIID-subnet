@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Laurel",
+  "geonameid": 4503136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.93164140370013,
+      "lon": -74.94383956490007,
+      "geoinfo": {
+        "display_name": "173, Ramblewood Parkway, Twin Ponds at Birchfield, Texas, Mount Laurel Township, Burlington County, New Jersey, 08054, United States",
+        "road": "Ramblewood Parkway",
+        "house_number": "173",
+        "neighbourhood": "Twin Ponds at Birchfield",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Laurel Township",
+        "state": "New Jersey",
+        "postcode": "08054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "173 Ramblewood Parkway, Mount Laurel, New Jersey, United States"
+    },
+    {
+      "lat": 39.95707054253555,
+      "lon": -74.85747215311689,
+      "geoinfo": {
+        "display_name": "22, Phillips Road, Hainesport Township, Burlington County, New Jersey, 08036, United States",
+        "road": "Phillips Road",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hainesport Township",
+        "state": "New Jersey",
+        "postcode": "08036",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22, Phillips Road, Hainesport Township, Burlington County, New Jersey, 08036, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:27.515499+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Las Margaritas",
+  "geonameid": 3524744,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.28113687889635,
+      "lon": -91.99622279781006,
+      "geoinfo": {
+        "display_name": "San Antonio Guacanajate, La Independencia, Chiapas, 30177, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio Guacanajate",
+        "state": "Chiapas",
+        "postcode": "30177",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Las Margaritas, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.28964905333649,
+      "lon": -91.95522770515232,
+      "geoinfo": {
+        "display_name": "Las Margaritas, Chiapas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Margaritas",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "924, Las Margaritas, 52209 Chiapas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:50.936641+00:00",
+  "_kind": "geo_samples"
+}

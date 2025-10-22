@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wenquan",
+  "geonameid": 1791439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.366160344599205,
+      "lon": 108.52961113025401,
+      "geoinfo": {
+        "display_name": "G347, Beipo, Kaizhou District, Chongqing, China",
+        "road": "G347",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beipo",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G347, Wenquan, Chongqing, China"
+    },
+    {
+      "lat": 31.382871271456395,
+      "lon": 108.51428823528748,
+      "geoinfo": {
+        "display_name": "Shunli, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shunli",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "105, Shunli, Kaizhou District, 20196 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:27.013121+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bowthorpe",
+  "geonameid": 6620355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.634170482516325,
+      "lon": 1.2303512674876502,
+      "geoinfo": {
+        "display_name": "7, Savery Close, Clover Hill, Earlham, Norwich, Norfolk, England, NR5 8NJ, United Kingdom",
+        "road": "Savery Close",
+        "house_number": "7",
+        "neighbourhood": "Clover Hill",
+        "suburb": "Earlham",
+        "city_district": null,
+        "city": "Norwich",
+        "state": "England",
+        "postcode": "NR5 8NJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "7 Savery Close, Bowthorpe, England, United Kingdom"
+    },
+    {
+      "lat": 52.64606456260295,
+      "lon": 1.2232882995715348,
+      "geoinfo": {
+        "display_name": "Grove Avenue, New Costessey, Costessey, South Norfolk, Norfolk, England, NR5 0HW, United Kingdom",
+        "road": "Grove Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New Costessey",
+        "city_district": null,
+        "city": "South Norfolk",
+        "state": "England",
+        "postcode": "NR5 0HW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Grove Avenue, New Costessey, Costessey, South Norfolk, Norfolk, England, NR5 0HW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:40.472944+00:00",
+  "_kind": "geo_samples"
+}

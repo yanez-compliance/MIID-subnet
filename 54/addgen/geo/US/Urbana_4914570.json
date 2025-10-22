@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Urbana",
+  "geonameid": 4914570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.14714117016321,
+      "lon": -88.19289124745924,
+      "geoinfo": {
+        "display_name": "Frasca Field, North Cunningham Avenue, Urbana, Champaign County, Illinois, 61802, United States",
+        "road": "North Cunningham Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbana",
+        "state": "Illinois",
+        "postcode": "61802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Cunningham Avenue, Urbana, Illinois, United States"
+    },
+    {
+      "lat": 40.14249124973089,
+      "lon": -88.20794121828644,
+      "geoinfo": {
+        "display_name": "216, Apple Tree Drive, Champaign County, Illinois, 61802, United States",
+        "road": "Apple Tree Drive",
+        "house_number": "216",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "61802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "216, Apple Tree Drive, Champaign County, Illinois, 61802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:44.892830+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hulan Ergi",
+  "geonameid": 2036670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.22795594602037,
+      "lon": 123.65241471590127,
+      "geoinfo": {
+        "display_name": "Tiebei Subdistrict, Changqing, Fularji District, Qiqihar City, Heilongjiang, 161000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tiebei Subdistrict",
+        "city_district": null,
+        "city": "Fularji District",
+        "state": "Heilongjiang",
+        "postcode": "161000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tiebei Subdistrict, Hulan Ergi, Heilongjiang, China"
+    },
+    {
+      "lat": 47.19272861068098,
+      "lon": 123.68593102310201,
+      "geoinfo": {
+        "display_name": "Changqing, Fularji District, Qiqihar City, Heilongjiang, 161000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Changqing",
+        "city": "Fularji District",
+        "state": "Heilongjiang",
+        "postcode": "161000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "460, Changqing, Fularji District, Qiqihar City, Heilongjiang, 161000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:00:12.506131+00:00",
+  "_kind": "geo_samples"
+}

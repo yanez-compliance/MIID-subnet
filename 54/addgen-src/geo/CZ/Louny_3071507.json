@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Louny",
+  "geonameid": 3071507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.345582465100556,
+      "lon": 13.750285188671006,
+      "geoinfo": {
+        "display_name": "D7, Březno u Postoloprt, Postoloprty, okres Louny, Ústí nad Labem Region, Northwest, 439 23, Czechia",
+        "road": "D7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Postoloprty",
+        "state": "Northwest",
+        "postcode": "439 23",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "D7, Louny, Northwest, Czechia"
+    },
+    {
+      "lat": 50.3375961874595,
+      "lon": 13.821283683681171,
+      "geoinfo": {
+        "display_name": "D7, Cítoliby, okres Louny, Ústí nad Labem Region, Northwest, 440 01, Czechia",
+        "road": "D7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cítoliby",
+        "city_district": null,
+        "city": "Cítoliby",
+        "state": "Northwest",
+        "postcode": "440 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "D7, Cítoliby, okres Louny, Ústí nad Labem Region, Northwest, 440 01, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:29.548168+00:00",
+  "_kind": "geo_samples"
+}

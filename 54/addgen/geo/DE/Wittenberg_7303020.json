@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wittenberg",
+  "geonameid": 7303020,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.89031290526185,
+      "lon": 12.645871551468248,
+      "geoinfo": {
+        "display_name": "29, Hoher Weg, Teuchel, Wittenberg, Saxony-Anhalt, 06886, Germany",
+        "road": "Hoher Weg",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "Teuchel",
+        "city_district": "Wittenberg",
+        "city": "Wittenberg",
+        "state": "Saxony-Anhalt",
+        "postcode": "06886",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "29 Hoher Weg, Wittenberg, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.83021664222667,
+      "lon": 12.6362948455899,
+      "geoinfo": {
+        "display_name": "B 2, Eutzsch, Kemberg, Wittenberg, Saxony-Anhalt, 06901, Germany",
+        "road": "B 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eutzsch",
+        "city_district": "Eutzsch",
+        "city": "Kemberg",
+        "state": "Saxony-Anhalt",
+        "postcode": "06901",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 2, Eutzsch, Kemberg, Wittenberg, Saxony-Anhalt, 06901, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:21:02.935106+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Fuente del Berro",
+  "geonameid": 11549945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.4242982891041,
+      "lon": -3.687289222953112,
+      "geoinfo": {
+        "display_name": "Calle de Jorge Juan, Recoletos, Salamanca, Madrid, Community of Madrid, 28001, Spain",
+        "road": "Calle de Jorge Juan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de Jorge Juan, Fuente del Berro, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40373113067136,
+      "lon": -3.680654105140292,
+      "geoinfo": {
+        "display_name": "136, Avenida de la Ciudad de Barcelona, Pacífico, Retiro, Madrid, Community of Madrid, 28007, Spain",
+        "road": "Avenida de la Ciudad de Barcelona",
+        "house_number": "136",
+        "neighbourhood": null,
+        "suburb": "Retiro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "136, Avenida de la Ciudad de Barcelona, Pacífico, Retiro, Madrid, Community of Madrid, 28007, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:16.366854+00:00",
+  "_kind": "geo_samples"
+}

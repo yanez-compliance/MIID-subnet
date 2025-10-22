@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Othmarschen",
+  "geonameid": 2856163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.555873493666525,
+      "lon": 9.897852716965872,
+      "geoinfo": {
+        "display_name": "A 7, Othmarschen, Altona, Hamburg, 22605, Germany",
+        "road": "A 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Othmarschen",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22605",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 7, Othmarschen, Germany"
+    },
+    {
+      "lat": 53.548088521668,
+      "lon": 9.908344471656985,
+      "geoinfo": {
+        "display_name": "128, Trenknerweg, Othmarschen, Altona, Hamburg, 22605, Germany",
+        "road": "Trenknerweg",
+        "house_number": "128",
+        "neighbourhood": null,
+        "suburb": "Othmarschen",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22605",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "128, Trenknerweg, Othmarschen, Altona, Hamburg, 22605, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:04.047468+00:00",
+  "_kind": "geo_samples"
+}

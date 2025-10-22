@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Bonanova",
+  "geonameid": 6545107,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.41720078754372,
+      "lon": 2.134008186000242,
+      "geoinfo": {
+        "display_name": "4X, Carrer de l'Enginyeria, Sant Gervasi - la Bonanova, Barcelona, Barcelonès, Barcelona, Catalonia, 08035, Spain",
+        "road": "Carrer de l'Enginyeria",
+        "house_number": "4X",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "4X Carrer de l'Enginyeria, La Bonanova, Catalonia, Spain"
+    },
+    {
+      "lat": 41.442254780054256,
+      "lon": 2.0982004092335496,
+      "geoinfo": {
+        "display_name": "Carretera de Sant Cugat a Barcelona, Sol i Aire, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08196, Spain",
+        "road": "Carretera de Sant Cugat a Barcelona",
+        "house_number": null,
+        "neighbourhood": "Sol i Aire",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Cugat del Vallès",
+        "state": "Catalonia",
+        "postcode": "08196",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "468, Carretera de Sant Cugat a Barcelona, Sol i Aire, Sant Cugat del Vallès, Vallès Occidental, Barcelona, Catalonia, 08196, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:07.451076+00:00",
+  "_kind": "geo_samples"
+}

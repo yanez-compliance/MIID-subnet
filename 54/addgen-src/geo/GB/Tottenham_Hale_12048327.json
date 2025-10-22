@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Tottenham Hale",
+  "geonameid": 12048327,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.622901605331464,
+      "lon": -0.06546410576996936,
+      "geoinfo": {
+        "display_name": "Victoria Road Post Office, 149, Victoria Road, Lower Edmonton, Edmonton, London Borough of Enfield, London, Greater London, England, N9 9BA, United Kingdom",
+        "road": "Victoria Road",
+        "house_number": "149",
+        "neighbourhood": null,
+        "suburb": "Edmonton",
+        "city_district": "London Borough of Enfield",
+        "city": "London",
+        "state": "England",
+        "postcode": "N9 9BA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "149 Victoria Road, Tottenham Hale, England, United Kingdom"
+    },
+    {
+      "lat": 51.55847681595955,
+      "lon": -0.031898916708547984,
+      "geoinfo": {
+        "display_name": "Lee Canal Towpath, Clapton Park, Homerton, London Borough of Hackney, London, Greater London, England, E9 5PX, United Kingdom",
+        "road": "Lee Canal Towpath",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Homerton",
+        "city_district": "London Borough of Hackney",
+        "city": "London",
+        "state": "England",
+        "postcode": "E9 5PX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lee Canal Towpath, Clapton Park, Homerton, London Borough of Hackney, London, Greater London, England, E9 5PX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:39.264337+00:00",
+  "_kind": "geo_samples"
+}

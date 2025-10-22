@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spring Valley",
+  "geonameid": 5398277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.76296875167948,
+      "lon": -116.96099737075963,
+      "geoinfo": {
+        "display_name": "4601, Avocado Boulevard, Calavo Gardens, La Mesa, San Diego County, California, 91941, United States",
+        "road": "Avocado Boulevard",
+        "house_number": "4601",
+        "neighbourhood": "Calavo Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Mesa",
+        "state": "California",
+        "postcode": "91941",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4601 Avocado Boulevard, Spring Valley, California, United States"
+    },
+    {
+      "lat": 32.70922956601979,
+      "lon": -117.00354356275044,
+      "geoinfo": {
+        "display_name": "9116, Orville Street, Lemon Grove, Spring Valley, San Diego County, California, 91977, United States",
+        "road": "Orville Street",
+        "house_number": "9116",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lemon Grove",
+        "state": "California",
+        "postcode": "91977",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9116, Orville Street, Spring Valley, 91977 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:53.854819+00:00",
+  "_kind": "geo_samples"
+}

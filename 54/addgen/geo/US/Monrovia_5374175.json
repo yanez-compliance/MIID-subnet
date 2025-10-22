@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monrovia",
+  "geonameid": 5374175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.19210938503523,
+      "lon": -117.98864184198875,
+      "geoinfo": {
+        "display_name": "Monrovia, Los Angeles County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monrovia",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Monrovia, California, United States"
+    },
+    {
+      "lat": 34.160887849914594,
+      "lon": -117.97248795451843,
+      "geoinfo": {
+        "display_name": "Sycamore Lane, Bradbury, Los Angeles County, California, 91008, United States",
+        "road": "Sycamore Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bradbury",
+        "state": "California",
+        "postcode": "91008",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "835, Sycamore Lane, Bradbury, Los Angeles County, California, 91008, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:09.902751+00:00",
+  "_kind": "geo_samples"
+}

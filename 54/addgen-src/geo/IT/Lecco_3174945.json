@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lecco",
+  "geonameid": 3174945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.8558570971766,
+      "lon": 9.402769206526926,
+      "geoinfo": {
+        "display_name": "Corso Promessi Sposi, Acquate, Caleotto, Lecco, Lombardy, 23900, Italy",
+        "road": "Corso Promessi Sposi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Caleotto",
+        "city_district": null,
+        "city": "Lecco",
+        "state": "Lombardy",
+        "postcode": "23900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Corso Promessi Sposi, Lecco, Lombardy, Italy"
+    },
+    {
+      "lat": 45.87634405465109,
+      "lon": 9.447339067030551,
+      "geoinfo": {
+        "display_name": "Sentiero Natura, Vecchio Borgo, Lecco, Lombardy, 23900, Italy",
+        "road": "Sentiero Natura",
+        "house_number": null,
+        "neighbourhood": "Vecchio Borgo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lecco",
+        "state": "Lombardy",
+        "postcode": "23900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "755, Sentiero Natura, Vecchio Borgo, Lecco, Lombardy, 23900, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:33.626889+00:00",
+  "_kind": "geo_samples"
+}

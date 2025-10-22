@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Flagstaff",
+  "geonameid": 5294810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.23089326432247,
+      "lon": -111.65966356304634,
+      "geoinfo": {
+        "display_name": "2201, Colton Court, Coyote Springs, Flagstaff, Coconino County, Arizona, 86001, United States",
+        "road": "Colton Court",
+        "house_number": "2201",
+        "neighbourhood": "Coyote Springs",
+        "suburb": "Coyote Springs",
+        "city_district": null,
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "postcode": "86001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2201 Colton Court, Flagstaff, Arizona, United States"
+    },
+    {
+      "lat": 35.19700785852405,
+      "lon": -111.64296716104398,
+      "geoinfo": {
+        "display_name": "111, Sherwood Lane, Cherry Hill, Downtown Flagstaff, Flagstaff, Coconino County, Arizona, 86001, United States",
+        "road": "Sherwood Lane",
+        "house_number": "111",
+        "neighbourhood": "Cherry Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "postcode": "86001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "111, Sherwood Lane, Cherry Hill, Downtown Flagstaff, Flagstaff, Coconino County, Arizona, 86001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:37.756467+00:00",
+  "_kind": "geo_samples"
+}

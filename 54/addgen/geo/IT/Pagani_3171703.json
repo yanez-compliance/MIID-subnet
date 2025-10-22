@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pagani",
+  "geonameid": 3171703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72779543079879,
+      "lon": 14.583676139692793,
+      "geoinfo": {
+        "display_name": "Angri, Salerno, Campania, 84012, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Angri",
+        "state": "Campania",
+        "postcode": "84012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Pagani, Campania, Italy"
+    },
+    {
+      "lat": 40.71490834140757,
+      "lon": 14.571884583674281,
+      "geoinfo": {
+        "display_name": "via Principi Capomazzo, Lettere, Naples, Campania, 80057, Italy",
+        "road": "via Principi Capomazzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lettere",
+        "state": "Campania",
+        "postcode": "80057",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "696, via Principi Capomazzo, Lettere, Naples, Campania, 80057, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:08.507279+00:00",
+  "_kind": "geo_samples"
+}

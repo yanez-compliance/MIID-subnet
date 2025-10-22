@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gevelsberg",
+  "geonameid": 2920757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.33713378804509,
+      "lon": 7.344717892531539,
+      "geoinfo": {
+        "display_name": "1, Niederbröking, Berge, Gevelsberg, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58285, Germany",
+        "road": "Niederbröking",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Berge",
+        "city_district": null,
+        "city": "Gevelsberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58285",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Niederbröking, Gevelsberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.30138600013575,
+      "lon": 7.330728501761508,
+      "geoinfo": {
+        "display_name": "Hembecker Talstraße, Am Knapp, Rahlenbecke, Ennepetal, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58256, Germany",
+        "road": "Hembecker Talstraße",
+        "house_number": null,
+        "neighbourhood": "Am Knapp",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ennepetal",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58256",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "597, Hembecker Talstraße, Am Knapp, Rahlenbecke, Ennepetal, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58256, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:04.565311+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Montargis",
+  "geonameid": 2993024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.999951989727656,
+      "lon": 2.736048373282439,
+      "geoinfo": {
+        "display_name": "Prévoir Assurances, Rue Dom Pedre, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45200, France",
+        "road": "Rue Dom Pedre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montargis",
+        "state": "Centre-Val de Loire",
+        "postcode": "45200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Dom Pedre, Montargis, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.99182681578591,
+      "lon": 2.6942525709559177,
+      "geoinfo": {
+        "display_name": "28, Rue Aristide Briand, Hameau de Gaudry, Villemandeur, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45700, France",
+        "road": "Rue Aristide Briand",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villemandeur",
+        "state": "Centre-Val de Loire",
+        "postcode": "45700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "28, Rue Aristide Briand, Hameau de Gaudry, Villemandeur, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45700, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:30.670538+00:00",
+  "_kind": "geo_samples"
+}

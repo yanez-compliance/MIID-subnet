@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Greiz",
+  "geonameid": 2917737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.68241002653846,
+      "lon": 12.215914806004033,
+      "geoinfo": {
+        "display_name": "Krümmetal, Pohlitz, Mohlsdorf, Greiz, Thuringia, 07973, Germany",
+        "road": "Krümmetal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pohlitz",
+        "city_district": null,
+        "city": "Greiz",
+        "state": "Thuringia",
+        "postcode": "07973",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Krümmetal, Greiz, Thuringia, Germany"
+    },
+    {
+      "lat": 50.645768118862634,
+      "lon": 12.150352749376905,
+      "geoinfo": {
+        "display_name": "1, Wüstenteichstraße, Lindenhäuser, Moschwitz, Greiz, Thuringia, 07973, Germany",
+        "road": "Wüstenteichstraße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moschwitz",
+        "state": "Thuringia",
+        "postcode": "07973",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Wüstenteichstraße, Lindenhäuser, Moschwitz, Greiz, Thuringia, 07973, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:48.527901+00:00",
+  "_kind": "geo_samples"
+}

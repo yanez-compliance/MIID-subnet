@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Lagos",
+  "geonameid": 2332459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.46349992806303,
+      "lon": 3.363756933553098,
+      "geoinfo": {
+        "display_name": "Ijora, Apapa, Lagos State, 101212, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ijora",
+        "city_district": null,
+        "city": null,
+        "state": "Lagos State",
+        "postcode": "101212",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Ijora, Lagos, Lagos State, Nigeria"
+    },
+    {
+      "lat": 6.476644245187895,
+      "lon": 3.3740760065532656,
+      "geoinfo": {
+        "display_name": "Eko Bridge, Iddo, Ebute-Metta, Lagos Mainland, Lagos State, 101001, Nigeria",
+        "road": "Eko Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Iddo",
+        "city_district": null,
+        "city": "Ebute-Metta",
+        "state": "Lagos State",
+        "postcode": "101001",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "997, Eko Bridge, Iddo, Ebute-Metta, Lagos Mainland, Lagos State, 101001, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:32.353031+00:00",
+  "_kind": "geo_samples"
+}

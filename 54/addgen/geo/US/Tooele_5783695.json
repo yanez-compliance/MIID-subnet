@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tooele",
+  "geonameid": 5783695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.55114912217239,
+      "lon": -112.33195968009032,
+      "geoinfo": {
+        "display_name": "1000 North, Tooele, Tooele County, Utah, 84074, United States",
+        "road": "1000 North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tooele",
+        "state": "Utah",
+        "postcode": "84074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1000 North, Tooele, Utah, United States"
+    },
+    {
+      "lat": 40.52047004120899,
+      "lon": -112.29850012564569,
+      "geoinfo": {
+        "display_name": "499, Main Street, Tooele, Tooele County, Utah, 84074, United States",
+        "road": "Main Street",
+        "house_number": "499",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tooele",
+        "state": "Utah",
+        "postcode": "84074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "499, Main Street, Tooele, Tooele County, Utah, 84074, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:56.142237+00:00",
+  "_kind": "geo_samples"
+}

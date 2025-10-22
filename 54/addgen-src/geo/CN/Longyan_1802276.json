@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longyan",
+  "geonameid": 1802276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.05348177073293,
+      "lon": 117.04090608869656,
+      "geoinfo": {
+        "display_name": "Xinluo District, Longyan City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longyan City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longyan, Fujian, China"
+    },
+    {
+      "lat": 25.09684595756501,
+      "lon": 117.04108096278698,
+      "geoinfo": {
+        "display_name": "Nancheng, Xinluo District, Longyan City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nancheng",
+        "city_district": null,
+        "city": "Longyan City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "014, Nancheng, Xinluo District, Longyan City, 46679 Fujian, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:13.099810+00:00",
+  "_kind": "geo_samples"
+}

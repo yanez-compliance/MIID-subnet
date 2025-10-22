@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orange",
+  "geonameid": 5102213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.76953235385956,
+      "lon": -74.2537870364897,
+      "geoinfo": {
+        "display_name": "105, Hillside Avenue, West Orange, Essex County, New Jersey, 07052, United States",
+        "road": "Hillside Avenue",
+        "house_number": "105",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Orange",
+        "state": "New Jersey",
+        "postcode": "07052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "105 Hillside Avenue, Orange, New Jersey, United States"
+    },
+    {
+      "lat": 40.77471870998921,
+      "lon": -74.25698560937586,
+      "geoinfo": {
+        "display_name": "15, Bradford Avenue, Hutton Park, West Orange, Essex County, New Jersey, 07052, United States",
+        "road": "Bradford Avenue",
+        "house_number": "15",
+        "neighbourhood": "Hutton Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Orange",
+        "state": "New Jersey",
+        "postcode": "07052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15, Bradford Avenue, Hutton Park, West Orange, Essex County, New Jersey, 07052, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:26.316613+00:00",
+  "_kind": "geo_samples"
+}

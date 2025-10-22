@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Suitland",
+  "geonameid": 4370616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.841291058527645,
+      "lon": -76.89524877807015,
+      "geoinfo": {
+        "display_name": "6600, Wilkins Place, District Heights, Prince George's County, Maryland, 20747, United States",
+        "road": "Wilkins Place",
+        "house_number": "6600",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "District Heights",
+        "state": "Maryland",
+        "postcode": "20747",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6600 Wilkins Place, Suitland, Maryland, United States"
+    },
+    {
+      "lat": 38.83178862191141,
+      "lon": -76.87962296578627,
+      "geoinfo": {
+        "display_name": "Suitland Parkway, Forest Manor, Forestville, Prince George's County, Maryland, 20747, United States",
+        "road": "Suitland Parkway",
+        "house_number": null,
+        "neighbourhood": "Forest Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Forestville",
+        "state": "Maryland",
+        "postcode": "20747",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "475, Suitland Parkway, Forest Manor, Forestville, Prince George's County, Maryland, 20747, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:27.938362+00:00",
+  "_kind": "geo_samples"
+}

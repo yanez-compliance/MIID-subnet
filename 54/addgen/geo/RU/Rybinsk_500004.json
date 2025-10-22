@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Rybinsk",
+  "geonameid": 500004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.07017113951825,
+      "lon": 38.82942023102535,
+      "geoinfo": {
+        "display_name": "22, улица Харитонова, Васильевское, ГЭС, Rybinsk, городской округ Рыбинск, Yaroslavl Oblast, Central Federal District, 152917, Russia",
+        "road": "улица Харитонова",
+        "house_number": "22",
+        "neighbourhood": "Васильевское",
+        "suburb": "ГЭС",
+        "city_district": null,
+        "city": "Rybinsk",
+        "state": "Yaroslavl Oblast",
+        "postcode": "152917",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "22 улица Харитонова, Rybinsk, Yaroslavl Oblast, Russia"
+    },
+    {
+      "lat": 58.05554218681571,
+      "lon": 38.77382914330478,
+      "geoinfo": {
+        "display_name": "Реабилитационный центр \"Здоровье\", Ulitsa Pyat'desat let VLKSM, Веретье-1, Rybinsk, городской округ Рыбинск, Yaroslavl Oblast, Central Federal District, 152900, Russia",
+        "road": "Ulitsa Pyat'desat let VLKSM",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Веретье-1",
+        "city_district": null,
+        "city": "Rybinsk",
+        "state": "Yaroslavl Oblast",
+        "postcode": "152900",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Реабилитационный центр \"Здоровье\", Ulitsa Pyat'desat let VLKSM, Веретье-1, Rybinsk, городской округ Рыбинск, Yaroslavl Oblast, Central Federal District, 152900, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:24.569393+00:00",
+  "_kind": "geo_samples"
+}

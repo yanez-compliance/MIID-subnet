@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gagny",
+  "geonameid": 3016830,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.895906640171255,
+      "lon": 2.5383019621065053,
+      "geoinfo": {
+        "display_name": "19, Allée d'Origny, Plateau de Franceville, Gagny, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93220, France",
+        "road": "Allée d'Origny",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Plateau de Franceville",
+        "city_district": null,
+        "city": "Gagny",
+        "state": null,
+        "postcode": "93220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "19 Allée d'Origny, Gagny, France"
+    },
+    {
+      "lat": 48.87687352581562,
+      "lon": 2.59399142478467,
+      "geoinfo": {
+        "display_name": "Rue du Onze Novembre, Belle-Île, Castermant, Chelles, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77500, France",
+        "road": "Rue du Onze Novembre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Castermant",
+        "city_district": null,
+        "city": "Chelles",
+        "state": "Ile-de-France",
+        "postcode": "77500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "778, Rue du Onze Novembre, Belle-Île, Castermant, Chelles, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:11.411953+00:00",
+  "_kind": "geo_samples"
+}

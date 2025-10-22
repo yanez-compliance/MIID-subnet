@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison",
+  "geonameid": 4434663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.43826091117403,
+      "lon": -90.07154269367254,
+      "geoinfo": {
+        "display_name": "Natchez Trace Parkway, Tavern Hill, Madison County, Mississippi, 39158, United States",
+        "road": "Natchez Trace Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mississippi",
+        "postcode": "39158",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Natchez Trace Parkway, Madison, Mississippi, United States"
+    },
+    {
+      "lat": 32.429502829951616,
+      "lon": -90.08619347707949,
+      "geoinfo": {
+        "display_name": "Rice Road, Sandalwood, Madison, Madison County, Mississippi, 39158, United States",
+        "road": "Rice Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "Mississippi",
+        "postcode": "39158",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "085, Rice Road, Sandalwood, Madison, Madison County, Mississippi, 39158, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:02.965259+00:00",
+  "_kind": "geo_samples"
+}

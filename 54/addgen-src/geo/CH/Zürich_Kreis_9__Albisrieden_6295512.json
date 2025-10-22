@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 9) / Albisrieden",
+  "geonameid": 6295512,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.3314097961564,
+      "lon": 8.496213881595288,
+      "geoinfo": {
+        "display_name": "2, Mädikon, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland",
+        "road": "Mädikon",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stallikon",
+        "state": "Zurich",
+        "postcode": "8143",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "2, Mädikon, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland"
+    },
+    {
+      "lat": 47.365172358775915,
+      "lon": 8.49538205697005,
+      "geoinfo": {
+        "display_name": "Stadtspital Triemli, 497, Birmensdorferstrasse, Friesenberg, Kreis 3, Zurich, District Zurich, Zurich, 8063, Switzerland",
+        "road": "Birmensdorferstrasse",
+        "house_number": "497",
+        "neighbourhood": null,
+        "suburb": "Kreis 3",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8063",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "497, Birmensdorferstrasse, Zürich (Kreis 9) / Albisrieden, Zurich, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:49.546910+00:00",
+  "_kind": "geo_samples"
+}

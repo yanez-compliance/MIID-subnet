@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monroe",
+  "geonameid": 5803786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.82343169009543,
+      "lon": -121.94979826565363,
+      "geoinfo": {
+        "display_name": "207th Avenue Southeast, Snohomish County, Washington, 98272, United States",
+        "road": "207th Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98272",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "207th Avenue Southeast, Monroe, Washington, United States"
+    },
+    {
+      "lat": 47.87482668732161,
+      "lon": -121.95484227223787,
+      "geoinfo": {
+        "display_name": "13696, 205th Avenue Southeast, Monroe, Snohomish County, Washington, 98272, United States",
+        "road": "205th Avenue Southeast",
+        "house_number": "13696",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroe",
+        "state": "Washington",
+        "postcode": "98272",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13696, 205th Avenue Southeast, Monroe, Snohomish County, Washington, 98272, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:15.068035+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Rocinha",
+  "geonameid": 7538520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -23.009148428091,
+      "lon": -43.26751861938027,
+      "geoinfo": {
+        "display_name": "Rio de Janeiro, Southeast Region, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rio de Janeiro",
+        "postcode": null,
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rocinha, Rio de Janeiro, Brazil"
+    },
+    {
+      "lat": -22.95352680382191,
+      "lon": -43.23961011021373,
+      "geoinfo": {
+        "display_name": "Estrada do Sumaré, Alto da Boa Vista, Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 22460-290, Brazil",
+        "road": "Estrada do Sumaré",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alto da Boa Vista",
+        "city_district": null,
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "postcode": "22460-290",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Estrada do Sumaré, Alto da Boa Vista, Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Southeast Region, 22460-290, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-18T23:35:39.810955+00:00",
+  "_kind": "geo_samples"
+}

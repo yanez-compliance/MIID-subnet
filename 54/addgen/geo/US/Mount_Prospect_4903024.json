@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Prospect",
+  "geonameid": 4903024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.058007247587895,
+      "lon": -87.88295068235044,
+      "geoinfo": {
+        "display_name": "Oakton Community College, 1600, East Golf Road, Des Plaines, Maine Township, Cook County, Illinois, 60016, United States",
+        "road": "East Golf Road",
+        "house_number": "1600",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Des Plaines",
+        "state": "Illinois",
+        "postcode": "60016",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1600 East Golf Road, Mount Prospect, Illinois, United States"
+    },
+    {
+      "lat": 42.05398706590314,
+      "lon": -87.96612214650246,
+      "geoinfo": {
+        "display_name": "Forest View Elementary School, South Deborah Lane, Mount Prospect, Elk Grove Township, Cook County, Illinois, 60056, United States",
+        "road": "South Deborah Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Prospect",
+        "state": "Illinois",
+        "postcode": "60056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "832, South Deborah Lane, Mount Prospect, 60056 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:34.657485+00:00",
+  "_kind": "geo_samples"
+}

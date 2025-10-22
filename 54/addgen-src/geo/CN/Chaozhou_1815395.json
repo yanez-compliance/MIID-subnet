@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chaozhou",
+  "geonameid": 1815395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.64930480576435,
+      "lon": 116.65946714050438,
+      "geoinfo": {
+        "display_name": "北溪路, Xiangqiao District, Chaozhou, Guangdong Province, 521000, China",
+        "road": "北溪路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xiangqiao District",
+        "state": "Guangdong Province",
+        "postcode": "521000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "北溪路, Chaozhou, Guangdong Province, China"
+    },
+    {
+      "lat": 23.664704443790757,
+      "lon": 116.63157068557437,
+      "geoinfo": {
+        "display_name": "新桥路, Xixin, Xiangqiao District, Chaozhou, Guangdong Province, 521000, China",
+        "road": "新桥路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xixin",
+        "city_district": null,
+        "city": "Xiangqiao District",
+        "state": "Guangdong Province",
+        "postcode": "521000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "064, 新桥路, Xixin, Xiangqiao District, Chaozhou, Guangdong Province, 521000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:46.778855+00:00",
+  "_kind": "geo_samples"
+}

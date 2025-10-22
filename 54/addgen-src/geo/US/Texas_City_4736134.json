@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Texas City",
+  "geonameid": 4736134,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.390428301236174,
+      "lon": -94.86034820650059,
+      "geoinfo": {
+        "display_name": "Galveston County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Texas City, Texas, United States"
+    },
+    {
+      "lat": 29.367492229485297,
+      "lon": -94.93704813880579,
+      "geoinfo": {
+        "display_name": "Ave K, Texas City, Galveston County, Texas, 77590, United States",
+        "road": "Ave K",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texas City",
+        "state": "Texas",
+        "postcode": "77590",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "926, Ave K, Texas City, Galveston County, Texas, 77590, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:11.827128+00:00",
+  "_kind": "geo_samples"
+}

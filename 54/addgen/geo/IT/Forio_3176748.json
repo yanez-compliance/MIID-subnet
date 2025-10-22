@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Forio",
+  "geonameid": 3176748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72440243523881,
+      "lon": 13.856333867072125,
+      "geoinfo": {
+        "display_name": "Cuotto, Forio, Naples, Campania, 80075, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forio",
+        "state": "Campania",
+        "postcode": "80075",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Forio, Campania, Italy"
+    },
+    {
+      "lat": 40.70305326097538,
+      "lon": 13.893569480087557,
+      "geoinfo": {
+        "display_name": "Via Sant'Angelo, Serrara, Serrara Fontana, Naples, Campania, 80075, Italy",
+        "road": "Via Sant'Angelo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrara",
+        "state": "Campania",
+        "postcode": "80075",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "066, Via Sant'Angelo, Serrara, Serrara Fontana, Naples, Campania, 80075, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:50.354766+00:00",
+  "_kind": "geo_samples"
+}

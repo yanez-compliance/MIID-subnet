@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedenau",
+  "geonameid": 2924770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.47247456642245,
+      "lon": 13.30849553665488,
+      "geoinfo": {
+        "display_name": "Wiesbadener Straße, Rheingauviertel, Wilmersdorf, Charlottenburg-Wilmersdorf, Berlin, 14197, Germany",
+        "road": "Wiesbadener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wilmersdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14197",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wiesbadener Straße, Friedenau, Germany"
+    },
+    {
+      "lat": 52.443429116275745,
+      "lon": 13.278128310518651,
+      "geoinfo": {
+        "display_name": "15, Hüninger Straße, Dahlem, Steglitz-Zehlendorf, Berlin, Teltow, 14195, Germany",
+        "road": "Hüninger Straße",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Dahlem",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14195",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15, Hüninger Straße, Dahlem, Steglitz-Zehlendorf, Berlin, Teltow, 14195, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:47.479310+00:00",
+  "_kind": "geo_samples"
+}

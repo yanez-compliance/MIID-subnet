@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Pully",
+  "geonameid": 2659127,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.51962435979966,
+      "lon": 6.665034832909889,
+      "geoinfo": {
+        "display_name": "9, Chemin des Coquelicots, Pully, District de Lavaux-Oron, Vaud, 1009, Switzerland",
+        "road": "Chemin des Coquelicots",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pully",
+        "state": "Vaud",
+        "postcode": "1009",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "9 Chemin des Coquelicots, Pully, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.482662480325544,
+      "lon": 6.6586609446273375,
+      "geoinfo": {
+        "display_name": "Pully, District de Lavaux-Oron, Vaud, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pully",
+        "state": "Vaud",
+        "postcode": null,
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Pully, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.47801926024225,
+      "lon": 6.676566990270431,
+      "geoinfo": {
+        "display_name": "Corsy, Lutry, District de Lavaux-Oron, Vaud, 1093, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Corsy",
+        "city_district": null,
+        "city": "Lutry",
+        "state": "Vaud",
+        "postcode": "1093",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "290, Corsy, Lutry, District de Lavaux-Oron, Vaud, 1093, Switzerland"
+    },
+    {
+      "lat": 46.47106101538768,
+      "lon": 6.639037942989051,
+      "geoinfo": {
+        "display_name": "Lausanne, District de Lausanne, Vaud, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lausanne",
+        "state": "Vaud",
+        "postcode": null,
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "858, Lausanne, District de Lausanne, 49212 Vaud, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:56.512676+00:00",
+  "_kind": "geo_samples"
+}

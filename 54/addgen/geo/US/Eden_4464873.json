@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eden",
+  "geonameid": 4464873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.484216302086864,
+      "lon": -79.73378385182546,
+      "geoinfo": {
+        "display_name": "Central Area, Eden, Rockingham County, North Carolina, 27288, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Central Area",
+        "suburb": null,
+        "city_district": null,
+        "city": "Eden",
+        "state": "North Carolina",
+        "postcode": "27288",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Central Area, Eden, North Carolina, United States"
+    },
+    {
+      "lat": 36.498149016094466,
+      "lon": -79.80838694295048,
+      "geoinfo": {
+        "display_name": "138, Ginny Road, Sunset Hills, Rockingham County, North Carolina, 27288, United States",
+        "road": "Ginny Road",
+        "house_number": "138",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27288",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "138, Ginny Road, Sunset Hills, Rockingham County, North Carolina, 27288, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:31.468591+00:00",
+  "_kind": "geo_samples"
+}

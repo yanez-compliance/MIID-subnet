@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Landshut",
+  "geonameid": 2881485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.51120860708019,
+      "lon": 12.117895575220524,
+      "geoinfo": {
+        "display_name": "Feldweg, Obergolding, Tiefenbach, Landkreis Landshut, Bavaria, 84184, Germany",
+        "road": "Feldweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tiefenbach",
+        "state": "Bavaria",
+        "postcode": "84184",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Feldweg, Landshut, Bavaria, Germany"
+    },
+    {
+      "lat": 48.51954803857433,
+      "lon": 12.171986464621503,
+      "geoinfo": {
+        "display_name": "Bründlweg, Ehrnstorf, Berg, Landshut, Bavaria, 84036, Germany",
+        "road": "Bründlweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Berg",
+        "city_district": null,
+        "city": "Landshut",
+        "state": "Bavaria",
+        "postcode": "84036",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "840, Bründlweg, Ehrnstorf, Berg, Landshut, Bavaria, 84036, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:02.788498+00:00",
+  "_kind": "geo_samples"
+}

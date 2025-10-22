@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Bağcılar",
+  "geonameid": 751324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.0263834918717,
+      "lon": 28.8368747377364,
+      "geoinfo": {
+        "display_name": "189. Sokak, Barbaros Mahallesi, Bağcılar, Istanbul, Marmara Region, 34200, Turkey",
+        "road": "189. Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barbaros Mahallesi",
+        "city_district": null,
+        "city": "Bağcılar",
+        "state": null,
+        "postcode": "34200",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "189. Sokak, Bağcılar, Turkey"
+    },
+    {
+      "lat": 41.01428528852355,
+      "lon": 28.892096632767494,
+      "geoinfo": {
+        "display_name": "Göksel Sokağı, Cömertkent, Tozkoparan Mahallesi, Gungoren, Istanbul, Marmara Region, 34173, Turkey",
+        "road": "Göksel Sokağı",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tozkoparan Mahallesi",
+        "city_district": null,
+        "city": "Gungoren",
+        "state": null,
+        "postcode": "34173",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "660, Göksel Sokağı, Cömertkent, Tozkoparan Mahallesi, Gungoren, Istanbul, Marmara Region, 34173, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:25.968507+00:00",
+  "_kind": "geo_samples"
+}

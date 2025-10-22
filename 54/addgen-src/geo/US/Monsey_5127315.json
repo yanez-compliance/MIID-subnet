@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monsey",
+  "geonameid": 5127315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.14667907798278,
+      "lon": -74.08989857492823,
+      "geoinfo": {
+        "display_name": "210, Grandview Avenue, Kiryas Radin, Village of Suffern, Town of Ramapo, Rockland County, New York, 10901, United States",
+        "road": "Grandview Avenue",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Suffern",
+        "state": "New York",
+        "postcode": "10901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210 Grandview Avenue, Monsey, New York, United States"
+    },
+    {
+      "lat": 41.130174283891364,
+      "lon": -74.01825467095226,
+      "geoinfo": {
+        "display_name": "53, Gerardine Place, New City, Town of Clarkstown, Rockland County, New York, 10956, United States",
+        "road": "Gerardine Place",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New City",
+        "state": "New York",
+        "postcode": "10956",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "53, Gerardine Place, New City, Town of Clarkstown, Rockland County, New York, 10956, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:05.817679+00:00",
+  "_kind": "geo_samples"
+}

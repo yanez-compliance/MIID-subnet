@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Heroica Ciudad de Tlaxiaco",
+  "geonameid": 3517285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.26563929344364,
+      "lon": -97.67024290964639,
+      "geoinfo": {
+        "display_name": "Mercado municipal, Camino Antiguo a la Cruz Amarilla, San Bartolo, Tlaxiaco, Oaxaca, 69800, Mexico",
+        "road": "Camino Antiguo a la Cruz Amarilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaxiaco",
+        "state": "Oaxaca",
+        "postcode": "69800",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino Antiguo a la Cruz Amarilla, Heroica Ciudad de Tlaxiaco, Oaxaca, Mexico"
+    },
+    {
+      "lat": 17.276934975131024,
+      "lon": -97.66835629235415,
+      "geoinfo": {
+        "display_name": "Barrio San Miguel, Tlaxiaco, Oaxaca, 69800, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaxiaco",
+        "state": "Oaxaca",
+        "postcode": "69800",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "111, Barrio San Miguel, Tlaxiaco, Oaxaca, 69800, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:49.295601+00:00",
+  "_kind": "geo_samples"
+}

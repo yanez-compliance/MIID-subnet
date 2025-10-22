@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Bílina",
+  "geonameid": 3079348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.567759543709144,
+      "lon": 13.771433487407636,
+      "geoinfo": {
+        "display_name": "25316, Břežánky, Bílina, okres Teplice, Ústí nad Labem Region, Northwest, 417 72, Czechia",
+        "road": "25316",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Břežánky",
+        "city_district": null,
+        "city": "Bílina",
+        "state": "Northwest",
+        "postcode": "417 72",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "25316, Bílina, Northwest, Czechia"
+    },
+    {
+      "lat": 50.52393132690208,
+      "lon": 13.802530578348389,
+      "geoinfo": {
+        "display_name": "92, Razice, Hrobčice, okres Teplice, Ústí nad Labem Region, Northwest, 418 04, Czechia",
+        "road": null,
+        "house_number": "92",
+        "neighbourhood": null,
+        "suburb": "Razice",
+        "city_district": null,
+        "city": "Hrobčice",
+        "state": "Northwest",
+        "postcode": "418 04",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "92, Razice, Hrobčice, okres Teplice, Ústí nad Labem Region, Northwest, 418 04, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:04.299288+00:00",
+  "_kind": "geo_samples"
+}

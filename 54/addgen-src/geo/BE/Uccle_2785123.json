@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Uccle",
+  "geonameid": 2785123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.768575955490164,
+      "lon": 4.355690381249532,
+      "geoinfo": {
+        "display_name": "Perkstraat - Rue de Perk, Holleken, Oplinkebeek, Linkebeek, Halle-Vilvoorde, Flemish Brabant, Flanders, 1630, Belgium",
+        "road": "Perkstraat - Rue de Perk",
+        "house_number": null,
+        "neighbourhood": "Holleken",
+        "suburb": null,
+        "city_district": null,
+        "city": "Linkebeek",
+        "state": "Flemish Brabant",
+        "postcode": "1630",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Perkstraat - Rue de Perk, Uccle, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.80447277312124,
+      "lon": 4.320290253383724,
+      "geoinfo": {
+        "display_name": "23, Avenue Stuart Merrill - Stuart Merrilllaan, Bempt, Forest - Vorst, Brussels-Capital, 1190, Belgium",
+        "road": "Avenue Stuart Merrill - Stuart Merrilllaan",
+        "house_number": "23",
+        "neighbourhood": "Bempt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Forest - Vorst",
+        "state": null,
+        "postcode": "1190",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "23, Avenue Stuart Merrill - Stuart Merrilllaan, Bempt, Forest - Vorst, Brussels-Capital, 1190, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:00:49.582396+00:00",
+  "_kind": "geo_samples"
+}

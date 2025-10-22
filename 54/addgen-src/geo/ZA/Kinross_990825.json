@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Kinross",
+  "geonameid": 990825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.423506493551407,
+      "lon": 29.056581065743213,
+      "geoinfo": {
+        "display_name": "N17, Govan Mbeki Ward 19, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, South Africa",
+        "road": "N17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Govan Mbeki Ward 19",
+        "city_district": null,
+        "city": "Govan Mbeki Local Municipality",
+        "state": "Mpumalanga",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N17, Kinross, Mpumalanga, South Africa"
+    },
+    {
+      "lat": -26.431217209316532,
+      "lon": 29.126227676924167,
+      "geoinfo": {
+        "display_name": "R29, Kinross, Govan Mbeki Ward 1, Secunda, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, 2270, South Africa",
+        "road": "R29",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kinross",
+        "city_district": null,
+        "city": "Secunda",
+        "state": "Mpumalanga",
+        "postcode": "2270",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R29, Kinross, Govan Mbeki Ward 1, Secunda, Govan Mbeki Local Municipality, Gert Sibande, Mpumalanga, 2270, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:53.842739+00:00",
+  "_kind": "geo_samples"
+}

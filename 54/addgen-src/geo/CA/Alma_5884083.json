@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Alma",
+  "geonameid": 5884083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.56061513142979,
+      "lon": -71.71441446382876,
+      "geoinfo": {
+        "display_name": "Rue Scott Ouest, Saint-Georges, Alma, Lac-Saint-Jean-Est, Saguenay–Lac-Saint-Jean, Quebec, G8B 5T7, Canada",
+        "road": "Rue Scott Ouest",
+        "house_number": null,
+        "neighbourhood": "Saint-Georges",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alma",
+        "state": "Quebec",
+        "postcode": "G8B 5T7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Scott Ouest, Alma, Quebec, Canada"
+    },
+    {
+      "lat": 48.57883920990093,
+      "lon": -71.66362503785486,
+      "geoinfo": {
+        "display_name": "Véloroute des Bleuets, De Quen-Est, Grande-Décharge, Alma, Lac-Saint-Jean-Est, Saguenay–Lac-Saint-Jean, Quebec, G8B 5T7, Canada",
+        "road": "Véloroute des Bleuets",
+        "house_number": null,
+        "neighbourhood": "De Quen-Est",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alma",
+        "state": "Quebec",
+        "postcode": "G8B 5T7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Véloroute des Bleuets, De Quen-Est, Grande-Décharge, Alma, Lac-Saint-Jean-Est, Saguenay–Lac-Saint-Jean, Quebec, G8B 5T7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:01.288688+00:00",
+  "_kind": "geo_samples"
+}

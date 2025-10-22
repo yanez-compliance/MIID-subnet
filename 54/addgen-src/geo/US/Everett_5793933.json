@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Everett",
+  "geonameid": 5793933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.962228696050865,
+      "lon": -122.20601434563004,
+      "geoinfo": {
+        "display_name": "Glacier View, Everett, Snohomish County, Washington, 98120, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glacier View",
+        "city_district": null,
+        "city": "Everett",
+        "state": "Washington",
+        "postcode": "98120",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Glacier View, Everett, Washington, United States"
+    },
+    {
+      "lat": 47.99706132160505,
+      "lon": -122.14539989160984,
+      "geoinfo": {
+        "display_name": "63rd Avenue Southeast, Snohomish County, Washington, United States",
+        "road": "63rd Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "63rd Avenue Southeast, Snohomish County, 07629 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:35.925301+00:00",
+  "_kind": "geo_samples"
+}

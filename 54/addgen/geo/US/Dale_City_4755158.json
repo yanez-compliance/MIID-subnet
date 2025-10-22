@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dale City",
+  "geonameid": 4755158,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.63510847685219,
+      "lon": -77.34435003946402,
+      "geoinfo": {
+        "display_name": "4654, Evansdale Road, Evansdale, Dale City, Prince William County, Virginia, 22193, United States",
+        "road": "Evansdale Road",
+        "house_number": "4654",
+        "neighbourhood": "Evansdale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dale City",
+        "state": "Virginia",
+        "postcode": "22193",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4654 Evansdale Road, Dale City, Virginia, United States"
+    },
+    {
+      "lat": 38.61223431070565,
+      "lon": -77.35292470096104,
+      "geoinfo": {
+        "display_name": "Spalding Drive, Montclair, Prince William County, Virginia, 22025, United States",
+        "road": "Spalding Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montclair",
+        "state": "Virginia",
+        "postcode": "22025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "512, Spalding Drive, Montclair, Prince William County, Virginia, 22025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:52.629222+00:00",
+  "_kind": "geo_samples"
+}

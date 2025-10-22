@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Krasnogorsk",
+  "geonameid": 542374,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.8433616931798,
+      "lon": 37.312533139562795,
+      "geoinfo": {
+        "display_name": "улица Кирова, Брусчатый посёлок, Krasnogorsk, Krasnogorsky District, Moscow Oblast, Central Federal District, 143409, Russia",
+        "road": "улица Кирова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Брусчатый посёлок",
+        "city_district": null,
+        "city": "Krasnogorsk",
+        "state": "Moscow Oblast",
+        "postcode": "143409",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Кирова, Krasnogorsk, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.809673938439126,
+      "lon": 37.26768324675675,
+      "geoinfo": {
+        "display_name": "Гореносово, Krasnogorsky District, Moscow Oblast, Central Federal District, 143405, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Гореносово",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143405",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "312, Гореносово, Krasnogorsky District, Moscow Oblast, Central Federal District, 143405, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:32.959425+00:00",
+  "_kind": "geo_samples"
+}

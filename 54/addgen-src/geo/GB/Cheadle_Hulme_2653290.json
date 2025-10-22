@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cheadle Hulme",
+  "geonameid": 2653290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.35930584870514,
+      "lon": -2.1623988711447977,
+      "geoinfo": {
+        "display_name": "2b, Bramley Close, Pownall Green, Bramhall, Stockport, Greater Manchester, England, SK7 2DY, United Kingdom",
+        "road": "Bramley Close",
+        "house_number": "2b",
+        "neighbourhood": "Pownall Green",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bramhall",
+        "state": "England",
+        "postcode": "SK7 2DY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "2b Bramley Close, Cheadle Hulme, England, United Kingdom"
+    },
+    {
+      "lat": 53.40381317548852,
+      "lon": -2.153443428519369,
+      "geoinfo": {
+        "display_name": "The Fight Corner, 50, Higher Hillgate, Heaviley, Cale Green, Hazel Grove, Stockport, Greater Manchester, England, SK1 3PX, United Kingdom",
+        "road": "Higher Hillgate",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": "Cale Green",
+        "city_district": null,
+        "city": "Hazel Grove",
+        "state": "England",
+        "postcode": "SK1 3PX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Fight Corner, 50, Higher Hillgate, Heaviley, Cale Green, Hazel Grove, Stockport, Greater Manchester, England, SK1 3PX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:22.705221+00:00",
+  "_kind": "geo_samples"
+}

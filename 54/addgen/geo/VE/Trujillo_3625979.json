@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Trujillo",
+  "geonameid": 3625979,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.369090037575539,
+      "lon": -70.43636331182033,
+      "geoinfo": {
+        "display_name": "Avenida Ayacucho, Parroquia Cristóbal Mendoza, Municipio Trujillo, Trujillo State, 3150, Venezuela",
+        "road": "Avenida Ayacucho",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Trujillo State",
+        "postcode": "3150",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Avenida Ayacucho, Trujillo, Trujillo State, Venezuela"
+    },
+    {
+      "lat": 9.371109128037196,
+      "lon": -70.4517544364308,
+      "geoinfo": {
+        "display_name": "Parroquia Cristóbal Mendoza, Municipio Trujillo, Trujillo State, 3150, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Trujillo State",
+        "postcode": "3150",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "734, Trujillo, 3150 Trujillo State, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:25.361878+00:00",
+  "_kind": "geo_samples"
+}

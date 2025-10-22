@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Axochiapan",
+  "geonameid": 3532545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.493988026436945,
+      "lon": -98.79281596310057,
+      "geoinfo": {
+        "display_name": "Santa Cruz, Teotlalco, Puebla, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Puebla",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Axochiapan, Puebla, Mexico"
+    },
+    {
+      "lat": 18.523131187958196,
+      "lon": -98.78849797894198,
+      "geoinfo": {
+        "display_name": "Calle Guadalupe Victoria, Quebrantadero, Axochiapan, Morelos, Mexico",
+        "road": "Calle Guadalupe Victoria",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quebrantadero",
+        "state": "Morelos",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "524, Calle Guadalupe Victoria, Quebrantadero, Axochiapan, 81771 Morelos, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:57.581095+00:00",
+  "_kind": "geo_samples"
+}

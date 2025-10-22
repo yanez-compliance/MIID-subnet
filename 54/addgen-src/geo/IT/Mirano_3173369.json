@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Mirano",
+  "geonameid": 3173369,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.49957814395734,
+      "lon": 12.078251780958526,
+      "geoinfo": {
+        "display_name": "180, Via Cavin di Sala, Cavin di Sala, Zianigo, Mirano, Venezia, Veneto, 30035, Italy",
+        "road": "Via Cavin di Sala",
+        "house_number": "180",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mirano",
+        "state": "Veneto",
+        "postcode": "30035",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "180 Via Cavin di Sala, Mirano, Veneto, Italy"
+    },
+    {
+      "lat": 45.484801421180705,
+      "lon": 12.133627545141092,
+      "geoinfo": {
+        "display_name": "Via Gioacchino Rossini, Villaggio dei Fiori, Crea, Spinea, Venezia, Veneto, 30038, Italy",
+        "road": "Via Gioacchino Rossini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaggio dei Fiori",
+        "city_district": null,
+        "city": "Spinea",
+        "state": "Veneto",
+        "postcode": "30038",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "721, Via Gioacchino Rossini, Villaggio dei Fiori, Crea, Spinea, Venezia, Veneto, 30038, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:23.073437+00:00",
+  "_kind": "geo_samples"
+}

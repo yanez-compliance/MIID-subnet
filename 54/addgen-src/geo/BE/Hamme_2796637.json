@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Hamme",
+  "geonameid": 2796637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.10067109389888,
+      "lon": 4.14624574110326,
+      "geoinfo": {
+        "display_name": "57-57a, Buntstraat, Hamme, Dendermonde, East Flanders, 9220, Belgium",
+        "road": "Buntstraat",
+        "house_number": "57-57a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hamme",
+        "city": "Hamme",
+        "state": "East Flanders",
+        "postcode": "9220",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "57-57a Buntstraat, Hamme, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.08745300404258,
+      "lon": 4.148963743772284,
+      "geoinfo": {
+        "display_name": "128, Landbouwstraat, Hamme, Dendermonde, East Flanders, 9220, Belgium",
+        "road": "Landbouwstraat",
+        "house_number": "128",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hamme",
+        "city": "Hamme",
+        "state": "East Flanders",
+        "postcode": "9220",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "128, Landbouwstraat, Hamme, Dendermonde, East Flanders, 9220, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:23.432058+00:00",
+  "_kind": "geo_samples"
+}

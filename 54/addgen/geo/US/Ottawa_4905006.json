@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ottawa",
+  "geonameid": 4905006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.376971969810604,
+      "lon": -88.8075664126826,
+      "geoinfo": {
+        "display_name": "I 80, Ottawa, LaSalle County, Illinois, 61350, United States",
+        "road": "I 80",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ottawa",
+        "state": "Illinois",
+        "postcode": "61350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 80, Ottawa, Illinois, United States"
+    },
+    {
+      "lat": 41.35978520801377,
+      "lon": -88.867584387879,
+      "geoinfo": {
+        "display_name": "East 15th Road, Ottawa, LaSalle County, Illinois, 61350, United States",
+        "road": "East 15th Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ottawa",
+        "state": "Illinois",
+        "postcode": "61350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 15th Road, Ottawa, LaSalle County, Illinois, 61350, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:28.241607+00:00",
+  "_kind": "geo_samples"
+}

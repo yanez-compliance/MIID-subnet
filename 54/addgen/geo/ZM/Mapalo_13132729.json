@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Mapalo",
+  "geonameid": 13132729,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -12.946273307088656,
+      "lon": 28.659338876753296,
+      "geoinfo": {
+        "display_name": "Chipulukusu, Ndola, Ndola District, Copperbelt Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chipulukusu",
+        "city_district": null,
+        "city": "Ndola",
+        "state": "Copperbelt Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "127, Chipulukusu, Ndola, Ndola District, 85573 Copperbelt Province, Zambia"
+    },
+    {
+      "lat": -12.946191688883395,
+      "lon": 28.638256268705554,
+      "geoinfo": {
+        "display_name": "Kalewa Road, Kansenshi, Ndola, Ndola District, Copperbelt Province, Zambia",
+        "road": "Kalewa Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kansenshi",
+        "city_district": null,
+        "city": "Ndola",
+        "state": "Copperbelt Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "101, Kalewa Road, Kansenshi, Ndola, Ndola District, 94342 Copperbelt Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-19T07:58:53.278887+00:00",
+  "_kind": "geo_samples"
+}

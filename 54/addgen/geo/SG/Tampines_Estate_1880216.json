@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Tampines Estate",
+  "geonameid": 1880216,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3742859146217783,
+      "lon": 103.93017668850324,
+      "geoinfo": {
+        "display_name": "16, Tampines Industrial Crescent, Paya Lebar, Singapur East, Northeast, Singapore, 528604, Singapore",
+        "road": "Tampines Industrial Crescent",
+        "house_number": "16",
+        "neighbourhood": "Singapur East",
+        "suburb": "Paya Lebar",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "528604",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "16, Tampines Industrial Crescent, Paya Lebar, Singapur East, Northeast, Singapore, 528604, Singapore"
+    },
+    {
+      "lat": 1.354166614020588,
+      "lon": 103.92961689463637,
+      "geoinfo": {
+        "display_name": "Tampines Street 85, Tampines West, Singapur East, Tampines, Northeast, Singapore, 528510, Singapore",
+        "road": "Tampines Street 85",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Tampines",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "528510",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Tampines Street 85, Tampines West, Singapur East, Tampines, Northeast, Singapore, 528510, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:06.973572+00:00",
+  "_kind": "geo_samples"
+}

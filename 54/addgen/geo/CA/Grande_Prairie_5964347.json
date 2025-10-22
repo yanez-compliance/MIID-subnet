@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Grande Prairie",
+  "geonameid": 5964347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.1617279165247,
+      "lon": -118.85708491744859,
+      "geoinfo": {
+        "display_name": "Grande Prairie, Alberta, T8V 4Z1, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grande Prairie",
+        "state": "Alberta",
+        "postcode": "T8V 4Z1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Grande Prairie, Alberta, Canada"
+    },
+    {
+      "lat": 55.13056777299272,
+      "lon": -118.84173029412028,
+      "geoinfo": {
+        "display_name": "Township Road 711A, County of Grande Prairie, Alberta, T8V 6V3, Canada",
+        "road": "Township Road 711A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alberta",
+        "postcode": "T8V 6V3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Township Road 711A, County of Grande Prairie, Alberta, T8V 6V3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:42.624651+00:00",
+  "_kind": "geo_samples"
+}

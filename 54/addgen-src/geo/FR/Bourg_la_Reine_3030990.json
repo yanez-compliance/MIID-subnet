@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bourg-la-Reine",
+  "geonameid": 3030990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.782947683248345,
+      "lon": 2.346680586218042,
+      "geoinfo": {
+        "display_name": "A 6a, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94240, France",
+        "road": "A 6a",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Haÿ-les-Roses",
+        "state": "Ile-de-France",
+        "postcode": "94240",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 6a, Bourg-la-Reine, Ile-de-France, France"
+    },
+    {
+      "lat": 48.74872340218566,
+      "lon": 2.2786181755446857,
+      "geoinfo": {
+        "display_name": "Rue de Paradis, Verrières-le-Buisson, Palaiseau, Essonne, Metropolitan France, 91370, France",
+        "road": "Rue de Paradis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Verrières-le-Buisson",
+        "state": null,
+        "postcode": "91370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "031, Rue de Paradis, Verrières-le-Buisson, Palaiseau, Essonne, Metropolitan France, 91370, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:36.440710+00:00",
+  "_kind": "geo_samples"
+}

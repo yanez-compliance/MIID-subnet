@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Aoi",
+  "geonameid": 10987894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.761445139732636,
+      "lon": 139.80646578105862,
+      "geoinfo": {
+        "display_name": "Adachi 1-chome, Adachi, Tokyo, 120-0015, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Adachi 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Adachi",
+        "state": null,
+        "postcode": "120-0015",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Adachi 1-chome, Aoi, Japan"
+    },
+    {
+      "lat": 35.76256697349721,
+      "lon": 139.85074943666677,
+      "geoinfo": {
+        "display_name": "Kohokubashi-dori Ave., Kameari 2, Kameari, Katsushika, Tokyo, 125-0061, Japan",
+        "road": "Kohokubashi-dori Ave.",
+        "house_number": null,
+        "neighbourhood": "Kameari 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katsushika",
+        "state": null,
+        "postcode": "125-0061",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kohokubashi-dori Ave., Kameari 2, Kameari, Katsushika, Tokyo, 125-0061, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:32.527325+00:00",
+  "_kind": "geo_samples"
+}

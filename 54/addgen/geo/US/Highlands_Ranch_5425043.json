@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Highlands Ranch",
+  "geonameid": 5425043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.54003396928561,
+      "lon": -104.99366300286421,
+      "geoinfo": {
+        "display_name": "148, West Willowick Circle, Southridge Vista, Highlands Ranch, Douglas County, Colorado, 80129, United States",
+        "road": "West Willowick Circle",
+        "house_number": "148",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Highlands Ranch",
+        "state": "Colorado",
+        "postcode": "80129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "148 West Willowick Circle, Highlands Ranch, Colorado, United States"
+    },
+    {
+      "lat": 39.54060609227967,
+      "lon": -104.93305919589596,
+      "geoinfo": {
+        "display_name": "9666, Adelaide Circle, Douglas County, Colorado, 80130, United States",
+        "road": "Adelaide Circle",
+        "house_number": "9666",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80130",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9666, Adelaide Circle, Douglas County, Colorado, 80130, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:48.627571+00:00",
+  "_kind": "geo_samples"
+}

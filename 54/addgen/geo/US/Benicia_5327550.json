@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Benicia",
+  "geonameid": 5327550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.05988205526779,
+      "lon": -122.15699601920313,
+      "geoinfo": {
+        "display_name": "1638, Shirley Drive, Benicia, Solano County, California, 94510, United States",
+        "road": "Shirley Drive",
+        "house_number": "1638",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Benicia",
+        "state": "California",
+        "postcode": "94510",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1638 Shirley Drive, Benicia, California, United States"
+    },
+    {
+      "lat": 38.04014131148105,
+      "lon": -122.1943377901502,
+      "geoinfo": {
+        "display_name": "McEwen Road, Port Costa, Contra Costa County, California, 94569, United States",
+        "road": "McEwen Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94569",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "470, McEwen Road, Port Costa, Contra Costa County, California, 94569, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:34.888028+00:00",
+  "_kind": "geo_samples"
+}

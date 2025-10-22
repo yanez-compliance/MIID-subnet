@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Juchitepec",
+  "geonameid": 3526355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.083502645590976,
+      "lon": -98.85529524580129,
+      "geoinfo": {
+        "display_name": "Calle Matamoros, Camino a la Mina, San Matías Cuijingo, Juchitepec, State of Mexico, Mexico",
+        "road": "Calle Matamoros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Matías Cuijingo",
+        "state": "State of Mexico",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Matamoros, Juchitepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.13362755535437,
+      "lon": -98.860025020564,
+      "geoinfo": {
+        "display_name": "Tenango del Aire, State of Mexico, 56780, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tenango del Aire",
+        "state": "State of Mexico",
+        "postcode": "56780",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "641, Tenango del Aire, State of Mexico, 56780, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:18.645514+00:00",
+  "_kind": "geo_samples"
+}

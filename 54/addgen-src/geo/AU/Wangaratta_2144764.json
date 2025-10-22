@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Wangaratta",
+  "geonameid": 2144764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -36.37032312611886,
+      "lon": 146.2915250910132,
+      "geoinfo": {
+        "display_name": "Tone Road, Wangaratta, Rural City of Wangaratta, Victoria, 3677, Australia",
+        "road": "Tone Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wangaratta",
+        "state": "Victoria",
+        "postcode": "3677",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Tone Road, Wangaratta, Victoria, Australia"
+    },
+    {
+      "lat": -36.32487818525783,
+      "lon": 146.3373389998796,
+      "geoinfo": {
+        "display_name": "107, Grossman Drive, North Wangaratta, Rural City of Wangaratta, Victoria, 3678, Australia",
+        "road": "Grossman Drive",
+        "house_number": "107",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "North Wangaratta",
+        "city": null,
+        "state": "Victoria",
+        "postcode": "3678",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "107, Grossman Drive, North Wangaratta, Rural City of Wangaratta, Victoria, 3678, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:32.235024+00:00",
+  "_kind": "geo_samples"
+}

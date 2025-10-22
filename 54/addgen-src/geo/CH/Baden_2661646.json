@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Baden",
+  "geonameid": 2661646,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.49970780267901,
+      "lon": 8.304102013819017,
+      "geoinfo": {
+        "display_name": "Grenzstrasse, Tromsberg, Kirchdorf, Obersiggenthal, Bezirk Baden, Aargau, 5415, Switzerland",
+        "road": "Grenzstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirchdorf",
+        "state": "Aargau",
+        "postcode": "5415",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Grenzstrasse, Baden, Aargau, Switzerland"
+    },
+    {
+      "lat": 47.457529290918565,
+      "lon": 8.307588550648127,
+      "geoinfo": {
+        "display_name": "25, Klosterrütistrasse, Neuenhof, Bezirk Baden, Aargau, 5432, Switzerland",
+        "road": "Klosterrütistrasse",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuenhof",
+        "state": "Aargau",
+        "postcode": "5432",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "25 Klosterrütistrasse, Baden, Aargau, Switzerland"
+    },
+    {
+      "lat": 47.502479205969266,
+      "lon": 8.34659221671854,
+      "geoinfo": {
+        "display_name": "9, Im Hof, Unterehrendingen, Ehrendingen, Bezirk Baden, Aargau, 5420, Switzerland",
+        "road": "Im Hof",
+        "house_number": "9",
+        "neighbourhood": "Unterehrendingen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ehrendingen",
+        "state": "Aargau",
+        "postcode": "5420",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "9, Im Hof, Unterehrendingen, Ehrendingen, Bezirk Baden, Aargau, 5420, Switzerland"
+    },
+    {
+      "lat": 47.45521476544274,
+      "lon": 8.348579487902228,
+      "geoinfo": {
+        "display_name": "Landstrasse, Wettingen, Bezirk Baden, Aargau, 5436, Switzerland",
+        "road": "Landstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wettingen",
+        "state": "Aargau",
+        "postcode": "5436",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "362, Landstrasse, Wettingen, Bezirk Baden, Aargau, 5436, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:10.404722+00:00",
+  "_kind": "geo_samples"
+}

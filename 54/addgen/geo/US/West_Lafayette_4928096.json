@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Lafayette",
+  "geonameid": 4928096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.41137362682198,
+      "lon": -86.9479333796181,
+      "geoinfo": {
+        "display_name": "West Lafayette, Tippecanoe County, Indiana, 47907, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Lafayette",
+        "state": "Indiana",
+        "postcode": "47907",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Lafayette, Indiana, United States"
+    },
+    {
+      "lat": 40.44556517029296,
+      "lon": -86.87903979496014,
+      "geoinfo": {
+        "display_name": "North 9th Street Road, Lafayette, Tippecanoe County, Indiana, 47904, United States",
+        "road": "North 9th Street Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lafayette",
+        "state": "Indiana",
+        "postcode": "47904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 9th Street Road, Lafayette, Tippecanoe County, Indiana, 47904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:51.585819+00:00",
+  "_kind": "geo_samples"
+}

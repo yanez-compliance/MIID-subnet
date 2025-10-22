@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westlake",
+  "geonameid": 5176517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.489323142790376,
+      "lon": -81.92646273074908,
+      "geoinfo": {
+        "display_name": "Lake Road, Bay Village, Cuyahoga County, Ohio, 44140, United States",
+        "road": "Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bay Village",
+        "state": "Ohio",
+        "postcode": "44140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Road, Westlake, Ohio, United States"
+    },
+    {
+      "lat": 41.45742867880788,
+      "lon": -81.93062135617089,
+      "geoinfo": {
+        "display_name": "Hilliard Boulevard, Capel Vale, Westlake, Cuyahoga County, Ohio, 44145, United States",
+        "road": "Hilliard Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westlake",
+        "state": "Ohio",
+        "postcode": "44145",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "568, Hilliard Boulevard, Capel Vale, Westlake, Cuyahoga County, Ohio, 44145, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:27.213671+00:00",
+  "_kind": "geo_samples"
+}

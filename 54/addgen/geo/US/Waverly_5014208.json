@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waverly",
+  "geonameid": 5014208,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.768778301833564,
+      "lon": -84.65309627359959,
+      "geoinfo": {
+        "display_name": "West Eaton Highway, Delta Mills, Delta Charter Township, Eaton County, Michigan, 48917, United States",
+        "road": "West Eaton Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Michigan",
+        "postcode": "48917",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Eaton Highway, Waverly, Michigan, United States"
+    },
+    {
+      "lat": 42.75032841237298,
+      "lon": -84.58806463894048,
+      "geoinfo": {
+        "display_name": "West Willow Street, Lansing Charter Township, Ingham County, Michigan, 48917, United States",
+        "road": "West Willow Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing Charter Township",
+        "state": "Michigan",
+        "postcode": "48917",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "953, West Willow Street, Lansing Charter Township, Ingham County, Michigan, 48917, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:12.002210+00:00",
+  "_kind": "geo_samples"
+}

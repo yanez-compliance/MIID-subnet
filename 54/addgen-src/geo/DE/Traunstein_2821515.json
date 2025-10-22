@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Traunstein",
+  "geonameid": 2821515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.88191060958602,
+      "lon": 12.619478875820926,
+      "geoinfo": {
+        "display_name": "Umspannwerk Wolkersdorf, Kotzing, Gemarkung Wolkersdorf, Traunstorf, Traunstein, Landkreis Traunstein, Bavaria, 83278, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Traunstein",
+        "state": "Bavaria",
+        "postcode": "83278",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Traunstein, Bavaria, Germany"
+    },
+    {
+      "lat": 47.899994316430444,
+      "lon": 12.655472828865417,
+      "geoinfo": {
+        "display_name": "Roitwalchen, Gemarkung Kammer, Rettenbach, Traunstein, Landkreis Traunstein, Bavaria, 83278, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gemarkung Kammer",
+        "city_district": null,
+        "city": "Traunstein",
+        "state": "Bavaria",
+        "postcode": "83278",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "494, Gemarkung Kammer, Traunstein, 83278 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:32.606930+00:00",
+  "_kind": "geo_samples"
+}

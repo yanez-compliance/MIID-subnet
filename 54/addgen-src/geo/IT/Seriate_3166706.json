@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Seriate",
+  "geonameid": 3166706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.700780754809195,
+      "lon": 9.737239086837826,
+      "geoinfo": {
+        "display_name": "Pedrengo, Bergamo, Lombardy, 24066, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pedrengo",
+        "state": "Lombardy",
+        "postcode": "24066",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Seriate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.65561256810524,
+      "lon": 9.72537239111925,
+      "geoinfo": {
+        "display_name": "Via Amerigo Vespucci, Grassobbio, Bergamo, Lombardy, 24050, Italy",
+        "road": "Via Amerigo Vespucci",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grassobbio",
+        "state": "Lombardy",
+        "postcode": "24050",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "687, Via Amerigo Vespucci, Grassobbio, Bergamo, Lombardy, 24050, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:59.177397+00:00",
+  "_kind": "geo_samples"
+}

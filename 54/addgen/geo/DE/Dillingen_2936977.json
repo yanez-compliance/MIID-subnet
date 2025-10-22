@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dillingen",
+  "geonameid": 2936977,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.36423975213191,
+      "lon": 6.729345209918096,
+      "geoinfo": {
+        "display_name": "Trierer Straße, Dillingen, Dillingen/Saar, Landkreis Saarlouis, Saarland, 66763, Germany",
+        "road": "Trierer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dillingen",
+        "city": "Dillingen/Saar",
+        "state": "Saarland",
+        "postcode": "66763",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Trierer Straße, Dillingen, Saarland, Germany"
+    },
+    {
+      "lat": 49.3679880557899,
+      "lon": 6.715671736047369,
+      "geoinfo": {
+        "display_name": "51, Stettiner Straße, Pachten, Dillingen/Saar, Landkreis Saarlouis, Saarland, 66763, Germany",
+        "road": "Stettiner Straße",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": "Pachten",
+        "city_district": "Pachten",
+        "city": "Dillingen/Saar",
+        "state": "Saarland",
+        "postcode": "66763",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "51, Stettiner Straße, Pachten, Dillingen/Saar, Landkreis Saarlouis, Saarland, 66763, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:26.865750+00:00",
+  "_kind": "geo_samples"
+}

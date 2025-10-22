@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Los Barrios",
+  "geonameid": 2514824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.16334475866592,
+      "lon": -5.52608880415838,
+      "geoinfo": {
+        "display_name": "Calle Principal, Manantiales del Duque, Los Barrios, Campo de Gibraltar, Cádiz, Andalusia, 11370, Spain",
+        "road": "Calle Principal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Barrios",
+        "state": "Andalusia",
+        "postcode": "11370",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Principal, Los Barrios, Andalusia, Spain"
+    },
+    {
+      "lat": 36.19356584699089,
+      "lon": -5.527661344483942,
+      "geoinfo": {
+        "display_name": "El Jaramillo, Pisos La Viñuela, Cortijo El Bálsamo, Los Barrios, Campo de Gibraltar, Cádiz, Andalusia, 11370, Spain",
+        "road": "El Jaramillo",
+        "house_number": null,
+        "neighbourhood": "Pisos La Viñuela",
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Barrios",
+        "state": "Andalusia",
+        "postcode": "11370",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "028, El Jaramillo, Pisos La Viñuela, Cortijo El Bálsamo, Los Barrios, Campo de Gibraltar, Cádiz, Andalusia, 11370, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:35.832080+00:00",
+  "_kind": "geo_samples"
+}

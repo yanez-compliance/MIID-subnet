@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alfafar",
+  "geonameid": 2522057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.41410055195302,
+      "lon": -0.3860178030347879,
+      "geoinfo": {
+        "display_name": "Plaza Consolat del Mar, Alfafar Parc, Alfafar, l'Horta Sud, Valencia, Valencian Community, 46910, Spain",
+        "road": "Plaza Consolat del Mar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alfafar",
+        "state": "Valencian Community",
+        "postcode": "46910",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Plaza Consolat del Mar, Alfafar, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.44026130432994,
+      "lon": -0.36096228990904144,
+      "geoinfo": {
+        "display_name": "la Font d'en Corts, la Punta, Quatre Carreres, Valencia, Comarca de València, Valencia, Valencian Community, 46013, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "la Font d'en Corts",
+        "suburb": "Quatre Carreres",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46013",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "418, la Font d'en Corts, la Punta, Quatre Carreres, Valencia, Comarca de València, Valencia, Valencian Community, 46013, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:06.737463+00:00",
+  "_kind": "geo_samples"
+}

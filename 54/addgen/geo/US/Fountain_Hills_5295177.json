@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fountain Hills",
+  "geonameid": 5295177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.61420244240535,
+      "lon": -111.71372450327652,
+      "geoinfo": {
+        "display_name": "De Anza Drive, Fountain Hills, Maricopa County, Arizona, 85268, United States",
+        "road": "De Anza Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fountain Hills",
+        "state": "Arizona",
+        "postcode": "85268",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "De Anza Drive, Fountain Hills, Arizona, United States"
+    },
+    {
+      "lat": 33.642038845394936,
+      "lon": -111.67894699396223,
+      "geoinfo": {
+        "display_name": "Mustang Way, Fort McDowell, Maricopa County, Arizona, United States",
+        "road": "Mustang Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort McDowell",
+        "state": "Arizona",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "385, Mustang Way, Fort McDowell, Maricopa County, 62411 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:07:37.777169+00:00",
+  "_kind": "geo_samples"
+}

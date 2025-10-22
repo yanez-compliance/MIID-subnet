@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Avon",
+  "geonameid": 5281730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.78229292858819,
+      "lon": -72.86308894679858,
+      "geoinfo": {
+        "display_name": "West Avon Road, Pine Grove Historic District, West Avon, Avon, Capitol Planning Region, Connecticut, 06001, United States",
+        "road": "West Avon Road",
+        "house_number": null,
+        "neighbourhood": "Pine Grove Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon",
+        "state": "Connecticut",
+        "postcode": "06001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Avon Road, Avon, Connecticut, United States"
+    },
+    {
+      "lat": 41.79830652942947,
+      "lon": -72.87297255427153,
+      "geoinfo": {
+        "display_name": "22, Indian Pipe Trail, Avon, Capitol Planning Region, Connecticut, 06001, United States",
+        "road": "Indian Pipe Trail",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon",
+        "state": "Connecticut",
+        "postcode": "06001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22, Indian Pipe Trail, Avon, Capitol Planning Region, Connecticut, 06001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:31.678120+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Somerton",
+  "geonameid": 5212870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.10238258341617,
+      "lon": -75.04476125838993,
+      "geoinfo": {
+        "display_name": "9855, Jeanes Street, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States",
+        "road": "Jeanes Street",
+        "house_number": "9855",
+        "neighbourhood": null,
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9855 Jeanes Street, Somerton, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.08803260286678,
+      "lon": -75.0453313096199,
+      "geoinfo": {
+        "display_name": "9426, Krewstown Road, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States",
+        "road": "Krewstown Road",
+        "house_number": "9426",
+        "neighbourhood": null,
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9426, Krewstown Road, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:37.664749+00:00",
+  "_kind": "geo_samples"
+}

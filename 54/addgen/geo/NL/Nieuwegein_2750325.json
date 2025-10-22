@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Nieuwegein",
+  "geonameid": 2750325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.05316382621593,
+      "lon": 5.122990588050044,
+      "geoinfo": {
+        "display_name": "6, Laagraven, Nieuwegein, Utrecht, Netherlands, 3439 LG, Netherlands",
+        "road": "Laagraven",
+        "house_number": "6",
+        "neighbourhood": "Laagraven",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nieuwegein",
+        "state": "Utrecht",
+        "postcode": "3439 LG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "6 Laagraven, Nieuwegein, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.02750888099831,
+      "lon": 5.046375293076047,
+      "geoinfo": {
+        "display_name": "Marinus Vermeerplein, IJsselstein, Utrecht, Netherlands, 3402 HZ, Netherlands",
+        "road": "Marinus Vermeerplein",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "IJsselstein",
+        "state": "Utrecht",
+        "postcode": "3402 HZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "355, Marinus Vermeerplein, IJsselstein, Utrecht, Netherlands, 3402 HZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:24.859245+00:00",
+  "_kind": "geo_samples"
+}

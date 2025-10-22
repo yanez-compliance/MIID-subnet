@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ayamonte",
+  "geonameid": 2521456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.24666662968729,
+      "lon": -7.422711097890547,
+      "geoinfo": {
+        "display_name": "Calle Gonzalo de Berceo, Costa Esuri, Ayamonte, Costa Occidental, Huelva, Andalusia, 21400, Spain",
+        "road": "Calle Gonzalo de Berceo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ayamonte",
+        "state": "Andalusia",
+        "postcode": "21400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Gonzalo de Berceo, Ayamonte, Andalusia, Spain"
+    },
+    {
+      "lat": 37.20784385959522,
+      "lon": -7.373725840549087,
+      "geoinfo": {
+        "display_name": "Isla del Pinillo, Ayamonte, Costa Occidental, Huelva, Andalusia, 21400, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ayamonte",
+        "state": "Andalusia",
+        "postcode": "21400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "894, Isla del Pinillo, Ayamonte, Costa Occidental, Huelva, Andalusia, 21400, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:28.699089+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shijiao",
+  "geonameid": 1795299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.93809368714032,
+      "lon": 106.75346498543313,
+      "geoinfo": {
+        "display_name": "S307, Wansheng, Qijiang District, Chongqing, China",
+        "road": "S307",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wansheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S307, Shijiao, Chongqing, China"
+    },
+    {
+      "lat": 28.948709130080488,
+      "lon": 106.71365196208801,
+      "geoinfo": {
+        "display_name": "Qijiang, Sanjiang, Qijiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qijiang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "231, Shijiao, 78650 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:22.205377+00:00",
+  "_kind": "geo_samples"
+}

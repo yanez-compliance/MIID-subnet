@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sheridan",
+  "geonameid": 5838198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.81003952479537,
+      "lon": -106.90402977269738,
+      "geoinfo": {
+        "display_name": "Wildcat Road, Sheridan County, Wyoming, 82801, United States",
+        "road": "Wildcat Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wyoming",
+        "postcode": "82801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wildcat Road, Sheridan, Wyoming, United States"
+    },
+    {
+      "lat": 44.78197904958948,
+      "lon": -106.9125304614704,
+      "geoinfo": {
+        "display_name": "East Ridge Road, Sheridan, Sheridan County, Wyoming, 82801, United States",
+        "road": "East Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sheridan",
+        "state": "Wyoming",
+        "postcode": "82801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "038, East Ridge Road, Sheridan, Sheridan County, Wyoming, 82801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:19.082922+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Imsil",
+  "geonameid": 1843585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.64762666074062,
+      "lon": 127.28108771901557,
+      "geoinfo": {
+        "display_name": "Yongsan-ri, Imsil-gun, Jeonbuk State, 55923, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yongsan-ri",
+        "state": null,
+        "postcode": "55923",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Imsil, South Korea"
+    },
+    {
+      "lat": 35.57969185007873,
+      "lon": 127.25534767278238,
+      "geoinfo": {
+        "display_name": "Hoguk-ro, Ojeong-ri, Imsil-gun, Jeonbuk State, 55930, South Korea",
+        "road": "Hoguk-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ojeong-ri",
+        "state": null,
+        "postcode": "55930",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "594, Hoguk-ro, 55930 Imsil, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:39:37.314937+00:00",
+  "_kind": "geo_samples"
+}

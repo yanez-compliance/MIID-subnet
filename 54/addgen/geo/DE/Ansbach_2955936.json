@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ansbach",
+  "geonameid": 2955936,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.32343972320931,
+      "lon": 10.574603810853045,
+      "geoinfo": {
+        "display_name": "Weiherschlagallee, Weinbergplateau, Hennenbach, Ansbach, Bavaria, 91522, Germany",
+        "road": "Weiherschlagallee",
+        "house_number": null,
+        "neighbourhood": "Weinbergplateau",
+        "suburb": "Hennenbach",
+        "city_district": null,
+        "city": "Ansbach",
+        "state": "Bavaria",
+        "postcode": "91522",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Weiherschlagallee, Ansbach, Bavaria, Germany"
+    },
+    {
+      "lat": 49.31985673114098,
+      "lon": 10.588467231466522,
+      "geoinfo": {
+        "display_name": "14, Pettenkoferstraße, Hennenbach, Ansbach, Bavaria, 91522, Germany",
+        "road": "Pettenkoferstraße",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Hennenbach",
+        "city_district": null,
+        "city": "Ansbach",
+        "state": "Bavaria",
+        "postcode": "91522",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14, Pettenkoferstraße, Hennenbach, Ansbach, Bavaria, 91522, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:19.619930+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Çubuklu",
+  "geonameid": 8623183,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.11432397874155,
+      "lon": 29.082768458213586,
+      "geoinfo": {
+        "display_name": "Orman Yolu, Paşabahçe Mahallesi, Beykoz, Istanbul, Marmara Region, 34800, Turkey",
+        "road": "Orman Yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Paşabahçe Mahallesi",
+        "city_district": null,
+        "city": "Beykoz",
+        "state": null,
+        "postcode": "34800",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Orman Yolu, Çubuklu, Turkey"
+    },
+    {
+      "lat": 41.104066553020715,
+      "lon": 29.041851115794618,
+      "geoinfo": {
+        "display_name": "Reşitpaşa Mahallesi, Sarıyer, Istanbul, Marmara Region, 34467, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reşitpaşa Mahallesi",
+        "city_district": null,
+        "city": "Sarıyer",
+        "state": null,
+        "postcode": "34467",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "723, Reşitpaşa Mahallesi, Sarıyer, Istanbul, Marmara Region, 34467, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:54.851818+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Redmond",
+  "geonameid": 5808079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.69310572119117,
+      "lon": -122.13563531583792,
+      "geoinfo": {
+        "display_name": "152nd Court Northeast, Education Hill, Redmond, King County, Washington, 98052, United States",
+        "road": "152nd Court Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Education Hill",
+        "city_district": null,
+        "city": "Redmond",
+        "state": "Washington",
+        "postcode": "98052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "152nd Court Northeast, Redmond, Washington, United States"
+    },
+    {
+      "lat": 47.64383431673134,
+      "lon": -122.07482888506324,
+      "geoinfo": {
+        "display_name": "19945, Northeast 39th Lane, Timberline, Sammamish, King County, Washington, 98074, United States",
+        "road": "Northeast 39th Lane",
+        "house_number": "19945",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sammamish",
+        "state": "Washington",
+        "postcode": "98074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19945, Northeast 39th Lane, Timberline, Sammamish, King County, Washington, 98074, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:37.838698+00:00",
+  "_kind": "geo_samples"
+}

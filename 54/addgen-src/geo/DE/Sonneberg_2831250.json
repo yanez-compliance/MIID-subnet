@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sonneberg",
+  "geonameid": 2831250,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.35711798354432,
+      "lon": 11.125210608609965,
+      "geoinfo": {
+        "display_name": "alter Kolonnenweg, Sonneberg, Landkreis Sonneberg, Thuringia, 96515, Germany",
+        "road": "alter Kolonnenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sonneberg",
+        "state": "Thuringia",
+        "postcode": "96515",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "alter Kolonnenweg, Sonneberg, Thuringia, Germany"
+    },
+    {
+      "lat": 50.34834615993515,
+      "lon": 11.150716082658581,
+      "geoinfo": {
+        "display_name": "Neustadter Straße, Wolkenrasen II, Hönbach, Sonneberg, Landkreis Sonneberg, Thuringia, 96515, Germany",
+        "road": "Neustadter Straße",
+        "house_number": null,
+        "neighbourhood": "Wolkenrasen II",
+        "suburb": null,
+        "city_district": "Hönbach",
+        "city": "Sonneberg",
+        "state": "Thuringia",
+        "postcode": "96515",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "805, Neustadter Straße, Wolkenrasen II, Hönbach, Sonneberg, Landkreis Sonneberg, Thuringia, 96515, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:48.952372+00:00",
+  "_kind": "geo_samples"
+}

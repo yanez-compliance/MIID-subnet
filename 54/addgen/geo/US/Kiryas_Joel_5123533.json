@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kiryas Joel",
+  "geonameid": 5123533,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.37642407443202,
+      "lon": -74.16318930257513,
+      "geoinfo": {
+        "display_name": "Village of South Blooming Grove, Town of Blooming Grove, Orange County, New York, 10992, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of South Blooming Grove",
+        "state": "New York",
+        "postcode": "10992",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kiryas Joel, New York, United States"
+    },
+    {
+      "lat": 41.37856800352726,
+      "lon": -74.17495048586306,
+      "geoinfo": {
+        "display_name": "1195, NY 208, Worley Heights, Town of Monroe, Town of Blooming Grove, Orange County, New York, 10950, United States",
+        "road": "NY 208",
+        "house_number": "1195",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Monroe",
+        "state": "New York",
+        "postcode": "10950",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1195, NY 208, Worley Heights, Town of Monroe, Town of Blooming Grove, Orange County, New York, 10950, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:43.925160+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Uyovu",
+  "geonameid": 149027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -3.2838202230078113,
+      "lon": 31.550664045968357,
+      "geoinfo": {
+        "display_name": "Busonzo, Bukombe, Geita, Lake Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Busonzo",
+        "state": "Geita",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "Uyovu, Geita, Tanzania"
+    },
+    {
+      "lat": -3.2465608265581896,
+      "lon": 31.550627221136825,
+      "geoinfo": {
+        "display_name": "Biharamulo, Kagera, Lake Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kagera",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "558, Biharamulo, Kagera, 73201 Lake Zone, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T10:32:38.509237+00:00",
+  "_kind": "geo_samples"
+}

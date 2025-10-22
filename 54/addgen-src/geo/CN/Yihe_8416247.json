@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yihe",
+  "geonameid": 8416247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.746815223506516,
+      "lon": 107.1882116388854,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yihe, Chongqing, China"
+    },
+    {
+      "lat": 29.7483688878281,
+      "lon": 107.20325277185327,
+      "geoinfo": {
+        "display_name": "Yihe, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yihe",
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "438, Yihe, Fuling District, 55625 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:07.832844+00:00",
+  "_kind": "geo_samples"
+}

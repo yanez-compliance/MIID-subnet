@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Magna",
+  "geonameid": 5777793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.74680956545593,
+      "lon": -112.11430640534039,
+      "geoinfo": {
+        "display_name": "Salt Lake County, Utah, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Magna, Utah, United States"
+    },
+    {
+      "lat": 40.69275001221519,
+      "lon": -112.09890636858991,
+      "geoinfo": {
+        "display_name": "8617, Soaring Eagle Way, Magna, Salt Lake County, Utah, 84044, United States",
+        "road": "Soaring Eagle Way",
+        "house_number": "8617",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Magna",
+        "state": "Utah",
+        "postcode": "84044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8617, Soaring Eagle Way, Magna, Salt Lake County, Utah, 84044, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:12.748072+00:00",
+  "_kind": "geo_samples"
+}

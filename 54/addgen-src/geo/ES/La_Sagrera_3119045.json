@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Sagrera",
+  "geonameid": 3119045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.43345696997263,
+      "lon": 2.2349942188888727,
+      "geoinfo": {
+        "display_name": "517, Carrer de la Indústria, la Mora, Districte 5, Badalona, Barcelonès, Barcelona, Catalonia, 08912, Spain",
+        "road": "Carrer de la Indústria",
+        "house_number": "517",
+        "neighbourhood": "la Mora",
+        "suburb": null,
+        "city_district": "Districte 5",
+        "city": "Badalona",
+        "state": "Catalonia",
+        "postcode": "08912",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "517 Carrer de la Indústria, La Sagrera, Catalonia, Spain"
+    },
+    {
+      "lat": 41.41622388526618,
+      "lon": 2.172184980301017,
+      "geoinfo": {
+        "display_name": "Carrer de Gènova, el Guinardó, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08041, Spain",
+        "road": "Carrer de Gènova",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "774, Carrer de Gènova, el Guinardó, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08041, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:24.140846+00:00",
+  "_kind": "geo_samples"
+}

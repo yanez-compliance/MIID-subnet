@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Martha Lake",
+  "geonameid": 5802493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.83991798913502,
+      "lon": -122.227803315155,
+      "geoinfo": {
+        "display_name": "17466, 3rd Avenue Southeast, Mill Creek, Snohomish County, Washington, 98012, United States",
+        "road": "3rd Avenue Southeast",
+        "house_number": "17466",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mill Creek",
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17466 3rd Avenue Southeast, Martha Lake, Washington, United States"
+    },
+    {
+      "lat": 47.852001432200176,
+      "lon": -122.23882998276605,
+      "geoinfo": {
+        "display_name": "Snohomish County, Washington, 98087, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "399, Snohomish County, Washington, 98087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:40.017132+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dortmund",
+  "geonameid": 2935517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.49874392600768,
+      "lon": 7.467560271635802,
+      "geoinfo": {
+        "display_name": "Rheinlanddamm, Ruhrallee, Innenstadt Ost, Dortmund, North Rhine-Westphalia, 44139, Germany",
+        "road": "Rheinlanddamm",
+        "house_number": null,
+        "neighbourhood": "Ruhrallee",
+        "suburb": "Innenstadt Ost",
+        "city_district": null,
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44139",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rheinlanddamm, Dortmund, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.48464331932912,
+      "lon": 7.446889742630091,
+      "geoinfo": {
+        "display_name": "Pulverstraße, Hombruch, Renninghausen, Hombruch, Dortmund, North Rhine-Westphalia, 44225, Germany",
+        "road": "Pulverstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hombruch",
+        "city_district": "Hombruch",
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44225",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "814, Pulverstraße, Hombruch, Renninghausen, Hombruch, Dortmund, North Rhine-Westphalia, 44225, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:14.987446+00:00",
+  "_kind": "geo_samples"
+}

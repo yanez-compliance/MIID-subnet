@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kirkland",
+  "geonameid": 5992830,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.44044667065667,
+      "lon": -73.87758976958997,
+      "geoinfo": {
+        "display_name": "67, Rue de Saint-Tropez, Kirkland, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9W 1H9, Canada",
+        "road": "Rue de Saint-Tropez",
+        "house_number": "67",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirkland",
+        "state": "Quebec",
+        "postcode": "H9W 1H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "67 Rue de Saint-Tropez, Kirkland, Quebec, Canada"
+    },
+    {
+      "lat": 45.41306701689208,
+      "lon": -73.89357063457261,
+      "geoinfo": {
+        "display_name": "596, Lakeshore Road, Beaconsfield, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9W 2M4, Canada",
+        "road": "Lakeshore Road",
+        "house_number": "596",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beaconsfield",
+        "state": "Quebec",
+        "postcode": "H9W 2M4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "596, Lakeshore Road, Beaconsfield, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9W 2M4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:46.642787+00:00",
+  "_kind": "geo_samples"
+}

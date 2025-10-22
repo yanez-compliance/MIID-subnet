@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Al Karama",
+  "geonameid": 6691091,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.210574797928768,
+      "lon": 55.26875297226356,
+      "geoinfo": {
+        "display_name": "83b Street, Al Satwa, Dubai, United Arab Emirates",
+        "road": "83b Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Al Satwa",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "83b Street, Al Karama, Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.254279844498434,
+      "lon": 55.30986103251562,
+      "geoinfo": {
+        "display_name": "11 Street, Bur Dubai, Umm Hurair, Dubai, United Arab Emirates",
+        "road": "11 Street",
+        "house_number": null,
+        "neighbourhood": "Bur Dubai",
+        "suburb": "Umm Hurair",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "11 Street, Al Karama, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-16T10:18:03.118787+00:00",
+  "_kind": "geo_samples"
+}

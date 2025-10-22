@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aldine",
+  "geonameid": 4670146,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.91744324764116,
+      "lon": -95.3596777793489,
+      "geoinfo": {
+        "display_name": "1717, Strawn Road, Aldine, Harris County, Texas, 77039, United States",
+        "road": "Strawn Road",
+        "house_number": "1717",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aldine",
+        "state": "Texas",
+        "postcode": "77039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1717 Strawn Road, Aldine, Texas, United States"
+    },
+    {
+      "lat": 29.958277719155753,
+      "lon": -95.35660454771781,
+      "geoinfo": {
+        "display_name": "16410, Luthe Lane, Houston, Harris County, Texas, 77032, United States",
+        "road": "Luthe Lane",
+        "house_number": "16410",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houston",
+        "state": "Texas",
+        "postcode": "77032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16410, Luthe Lane, Houston, Harris County, Texas, 77032, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:32.362236+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San José Guadalupe Otzacatipan",
+  "geonameid": 8858097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.310572020186022,
+      "lon": -99.57847902303833,
+      "geoinfo": {
+        "display_name": "Calle Emiliano Zapata, San Pedro Totoltepec, Toluca, State of Mexico, 50225, Mexico",
+        "road": "Calle Emiliano Zapata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro Totoltepec",
+        "state": "State of Mexico",
+        "postcode": "50225",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Emiliano Zapata, San José Guadalupe Otzacatipan, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.318037103879938,
+      "lon": -99.60893455730721,
+      "geoinfo": {
+        "display_name": "San Mateo Otzacatipan, Toluca, State of Mexico, 50017, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Mateo Otzacatipan",
+        "state": "State of Mexico",
+        "postcode": "50017",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "433, San Mateo Otzacatipan, Toluca, State of Mexico, 50017, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:35:05.308384+00:00",
+  "_kind": "geo_samples"
+}

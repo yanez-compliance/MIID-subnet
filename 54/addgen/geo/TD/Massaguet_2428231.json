@@ -1,0 +1,47 @@
+{
+  "country_code": "TD",
+  "country": "Chad",
+  "city": "Massaguet",
+  "geonameid": 2428231,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 12.433766862693965,
+      "lon": 15.452337648540698,
+      "geoinfo": {
+        "display_name": "Massaguet, Hadjer-Lamis, Chad",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massaguet",
+        "state": "Hadjer-Lamis",
+        "postcode": null,
+        "country": "Chad",
+        "country_code": "td"
+      },
+      "address": "Massaguet, Hadjer-Lamis, Chad"
+    },
+    {
+      "lat": 12.482129661402885,
+      "lon": 15.476313294909753,
+      "geoinfo": {
+        "display_name": "TAH 3, Ngoura, hameau, Ngoura, Hadjer-Lamis, Chad",
+        "road": "TAH 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ngoura",
+        "state": "Hadjer-Lamis",
+        "postcode": null,
+        "country": "Chad",
+        "country_code": "td"
+      },
+      "address": "TAH 3, Massaguet, Hadjer-Lamis, Chad"
+    }
+  ],
+  "updated_at": "2025-10-16T23:11:27.592645+00:00",
+  "_kind": "geo_samples"
+}

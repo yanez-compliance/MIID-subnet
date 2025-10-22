@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Taldykorgan",
+  "geonameid": 1518542,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 45.010321643908696,
+      "lon": 78.3328600971293,
+      "geoinfo": {
+        "display_name": "47, улица Жибек Жолы, Батыс, Taldykorgan, Jetisu Region, 040000, Kazakhstan",
+        "road": "улица Жибек Жолы",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taldykorgan",
+        "state": "Jetisu Region",
+        "postcode": "040000",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "47, улица Жибек Жолы, Taldykorgan, 040000 Jetisu Region, Kazakhstan"
+    },
+    {
+      "lat": 45.044924406591996,
+      "lon": 78.39604084685733,
+      "geoinfo": {
+        "display_name": "Резиденция Акима, Еркинский сельский округ, Taldykorgan, Jetisu Region, 488000, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Еркинский сельский округ",
+        "city": "Taldykorgan",
+        "state": "Jetisu Region",
+        "postcode": "488000",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "877, Еркинский сельский округ, Taldykorgan, 488000 Jetisu Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:55.755473+00:00",
+  "_kind": "geo_samples"
+}

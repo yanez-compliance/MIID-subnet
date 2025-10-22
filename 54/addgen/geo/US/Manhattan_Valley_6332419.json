@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manhattan Valley",
+  "geonameid": 6332419,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.79346797331198,
+      "lon": -73.96251981289846,
+      "geoinfo": {
+        "display_name": "Tarr Family Playground, Central Park Outer Loop, Manhattan Valley, Manhattan, New York County, New York, 10025, United States",
+        "road": "Central Park Outer Loop",
+        "house_number": null,
+        "neighbourhood": "Manhattan Valley",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Central Park Outer Loop, Manhattan Valley, New York, United States"
+    },
+    {
+      "lat": 40.76521406084955,
+      "lon": -73.9359977640581,
+      "geoinfo": {
+        "display_name": "13th Street, Ravenswood, Queens, Queens County, New York, 11106, United States",
+        "road": "13th Street",
+        "house_number": null,
+        "neighbourhood": "Ravenswood",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13th Street, Ravenswood, Queens, Queens County, New York, 11106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:11.741391+00:00",
+  "_kind": "geo_samples"
+}

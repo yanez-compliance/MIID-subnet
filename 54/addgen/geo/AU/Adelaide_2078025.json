@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Adelaide",
+  "geonameid": 2078025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.936608563754625,
+      "lon": 138.562254058634,
+      "geoinfo": {
+        "display_name": "Brooker Terrace, Richmond, Adelaide, City of West Torrens, South Australia, 5033, Australia",
+        "road": "Brooker Terrace",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Richmond",
+        "city_district": null,
+        "city": "Adelaide",
+        "state": "South Australia",
+        "postcode": "5033",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Brooker Terrace, Adelaide, South Australia, Australia"
+    },
+    {
+      "lat": -34.95097705513237,
+      "lon": 138.6424130627365,
+      "geoinfo": {
+        "display_name": "Bevington Road, Glenunga, Adelaide, City of Burnside, South Australia, 5064, Australia",
+        "road": "Bevington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glenunga",
+        "city_district": null,
+        "city": "Adelaide",
+        "state": "South Australia",
+        "postcode": "5064",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "935, Bevington Road, Glenunga, Adelaide, City of Burnside, South Australia, 5064, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:34.221202+00:00",
+  "_kind": "geo_samples"
+}

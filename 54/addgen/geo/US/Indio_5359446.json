@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Indio",
+  "geonameid": 5359446,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.702466002179925,
+      "lon": -116.1776236977229,
+      "geoinfo": {
+        "display_name": "CA 86, Coachella, Riverside County, California, 92236, United States",
+        "road": "CA 86",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coachella",
+        "state": "California",
+        "postcode": "92236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CA 86, Indio, California, United States"
+    },
+    {
+      "lat": 33.7511350174713,
+      "lon": -116.17854679739257,
+      "geoinfo": {
+        "display_name": "Indio, Riverside County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indio",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "004, Indio, Riverside County, 42126 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:15.065827+00:00",
+  "_kind": "geo_samples"
+}

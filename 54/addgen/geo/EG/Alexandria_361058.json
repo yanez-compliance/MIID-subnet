@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Alexandria",
+  "geonameid": 361058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.175681980222397,
+      "lon": 29.957907100866716,
+      "geoinfo": {
+        "display_name": "Alexandria, 21944, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alexandria",
+        "state": "Alexandria",
+        "postcode": "21944",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Alexandria, Alexandria, Egypt"
+    },
+    {
+      "lat": 31.21165436022084,
+      "lon": 29.954636556135,
+      "geoinfo": {
+        "display_name": "119, 14th May Street, Taawoneyat Semouha Housing, Alexandria, 21554, Egypt",
+        "road": "14th May Street",
+        "house_number": "119",
+        "neighbourhood": "Taawoneyat Semouha Housing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alexandria",
+        "state": "Alexandria",
+        "postcode": "21554",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "119, 14th May Street, Taawoneyat Semouha Housing, Alexandria, 21554, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:31.973789+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Zutphen",
+  "geonameid": 2743608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.1399890518354,
+      "lon": 6.204265827227998,
+      "geoinfo": {
+        "display_name": "99, Polsbroek, Waterkwartier, Zutphen, Gelderland, Netherlands, 7201 BX, Netherlands",
+        "road": "Polsbroek",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zutphen",
+        "state": "Gelderland",
+        "postcode": "7201 BX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "99 Polsbroek, Zutphen, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 52.177270238662814,
+      "lon": 6.220921502847527,
+      "geoinfo": {
+        "display_name": "49c, Zutphenseweg, Eefde, Lochem, Gelderland, Netherlands, 7211 EB, Netherlands",
+        "road": "Zutphenseweg",
+        "house_number": "49c",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eefde",
+        "state": "Gelderland",
+        "postcode": "7211 EB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "49c, Zutphenseweg, Zutphen, 7211 EB Gelderland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:58:53.245591+00:00",
+  "_kind": "geo_samples"
+}

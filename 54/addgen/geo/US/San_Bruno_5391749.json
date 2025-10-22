@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Bruno",
+  "geonameid": 5391749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.63249552847626,
+      "lon": -122.40500796005685,
+      "geoinfo": {
+        "display_name": "Tanforan, San Bruno, San Mateo County, California, 94066, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Tanforan",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Bruno",
+        "state": "California",
+        "postcode": "94066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Tanforan, San Bruno, California, United States"
+    },
+    {
+      "lat": 37.64716949189767,
+      "lon": -122.40209796496713,
+      "geoinfo": {
+        "display_name": "201, Wattis Way, South San Francisco, San Mateo County, California, 94080, United States",
+        "road": "Wattis Way",
+        "house_number": "201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South San Francisco",
+        "state": "California",
+        "postcode": "94080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "201, Wattis Way, South San Francisco, San Mateo County, California, 94080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:49.151095+00:00",
+  "_kind": "geo_samples"
+}

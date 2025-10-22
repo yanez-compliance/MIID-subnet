@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Regina",
+  "geonameid": 6119109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.420880060760304,
+      "lon": -104.65937447838884,
+      "geoinfo": {
+        "display_name": "25th Avenue, Regina, Saskatchewan, S4W 0N9, Canada",
+        "road": "25th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Regina",
+        "state": "Saskatchewan",
+        "postcode": "S4W 0N9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "25th Avenue, Regina, Saskatchewan, Canada"
+    },
+    {
+      "lat": 50.45550081427273,
+      "lon": -104.56411592156121,
+      "geoinfo": {
+        "display_name": "Dewdney Avenue, Rothwell Place, Regina, Saskatchewan, S4N 4N0, Canada",
+        "road": "Dewdney Avenue",
+        "house_number": null,
+        "neighbourhood": "Rothwell Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "Regina",
+        "state": "Saskatchewan",
+        "postcode": "S4N 4N0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Dewdney Avenue, Rothwell Place, Regina, Saskatchewan, S4N 4N0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:51.304706+00:00",
+  "_kind": "geo_samples"
+}

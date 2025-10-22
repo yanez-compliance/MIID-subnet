@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Mazinde",
+  "geonameid": 154470,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -4.806428427865523,
+      "lon": 38.188667286387656,
+      "geoinfo": {
+        "display_name": "Mazinde Mheza, Korogwe, Tanga Region, Northern Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mazinde Mheza",
+        "state": "Tanga Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "Mazinde, Tanga Region, Tanzania"
+    },
+    {
+      "lat": -4.814112047553585,
+      "lon": 38.20498743362475,
+      "geoinfo": {
+        "display_name": "Mponde Posho Mills, T2, Mombo, Korogwe, Tanga Region, Northern Zone, Tanzania",
+        "road": "T2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mombo",
+        "state": "Tanga Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "T2, Mazinde, 78568 Tanga Region, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:00.724184+00:00",
+  "_kind": "geo_samples"
+}

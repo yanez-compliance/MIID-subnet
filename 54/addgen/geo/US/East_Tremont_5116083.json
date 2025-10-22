@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Tremont",
+  "geonameid": 5116083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.84734254094589,
+      "lon": -73.89966419862478,
+      "geoinfo": {
+        "display_name": "4197, Park Avenue, Tremont, The Bronx, Bronx County, New York, 10457, United States",
+        "road": "Park Avenue",
+        "house_number": "4197",
+        "neighbourhood": "Tremont",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10457",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4197 Park Avenue, East Tremont, New York, United States"
+    },
+    {
+      "lat": 40.840374389753,
+      "lon": -73.85623489923523,
+      "geoinfo": {
+        "display_name": "1641, Metropolitan Avenue, Parkchester, The Bronx, Bronx County, New York, 10462, United States",
+        "road": "Metropolitan Avenue",
+        "house_number": "1641",
+        "neighbourhood": "Parkchester",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10462",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1641, Metropolitan Avenue, Parkchester, The Bronx, Bronx County, New York, 10462, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:09.791134+00:00",
+  "_kind": "geo_samples"
+}

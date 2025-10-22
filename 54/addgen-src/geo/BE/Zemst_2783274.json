@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zemst",
+  "geonameid": 2783274,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.96007465949079,
+      "lon": 4.5167323854092905,
+      "geoinfo": {
+        "display_name": "45, Nieuwlandstraat, Elewijt, Zemst, Halle-Vilvoorde, Flemish Brabant, Flanders, 1982, Belgium",
+        "road": "Nieuwlandstraat",
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Elewijt",
+        "city": "Zemst",
+        "state": "Flemish Brabant",
+        "postcode": "1982",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "45 Nieuwlandstraat, Zemst, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 51.0133489826593,
+      "lon": 4.426226876897273,
+      "geoinfo": {
+        "display_name": "Heykensweg, Hombeek, Mechelen, Antwerp, Flanders, 2811, Belgium",
+        "road": "Heykensweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mechelen",
+        "state": "Antwerp",
+        "postcode": "2811",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "369, Heykensweg, Hombeek, Mechelen, Antwerp, Flanders, 2811, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:14.625600+00:00",
+  "_kind": "geo_samples"
+}

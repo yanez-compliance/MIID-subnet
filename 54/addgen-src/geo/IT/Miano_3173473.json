@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Miano",
+  "geonameid": 3173473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.87525301874725,
+      "lon": 14.252512983925405,
+      "geoinfo": {
+        "display_name": "Via Lucio Amelio, Stella, Municipalità 3, Naples, Campania, 80144, Italy",
+        "road": "Via Lucio Amelio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stella",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80144",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Lucio Amelio, Miano, Campania, Italy"
+    },
+    {
+      "lat": 40.91869586927841,
+      "lon": 14.227189870877659,
+      "geoinfo": {
+        "display_name": "Via Tiziano, Rione 219, Melito di Napoli, Naples, Campania, 80017, Italy",
+        "road": "Via Tiziano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melito di Napoli",
+        "state": "Campania",
+        "postcode": "80017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Tiziano, Rione 219, Melito di Napoli, Naples, Campania, 80017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:20.701436+00:00",
+  "_kind": "geo_samples"
+}

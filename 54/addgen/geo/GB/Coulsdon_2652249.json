@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Coulsdon",
+  "geonameid": 2652249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.32200999454551,
+      "lon": -0.19755884645977168,
+      "geoinfo": {
+        "display_name": "Lady Neville Ball Court, Avenue Road, Banstead, Reigate and Banstead, Surrey, England, SM7 2PB, United Kingdom",
+        "road": "Avenue Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reigate and Banstead",
+        "state": "England",
+        "postcode": "SM7 2PB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Avenue Road, Coulsdon, England, United Kingdom"
+    },
+    {
+      "lat": 51.29238408417495,
+      "lon": -0.0945066053228189,
+      "geoinfo": {
+        "display_name": "Spencer Road, Caterham-on-the-Hill, Caterham on the Hill, Tandridge, Surrey, England, CR3 5LF, United Kingdom",
+        "road": "Spencer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Caterham-on-the-Hill",
+        "city_district": null,
+        "city": "Caterham on the Hill",
+        "state": "England",
+        "postcode": "CR3 5LF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Spencer Road, Caterham-on-the-Hill, Caterham on the Hill, Tandridge, Surrey, England, CR3 5LF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:27.156610+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Gerisek",
+  "geonameid": 1732858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.251490472633451,
+      "lon": 102.71945316917443,
+      "geoinfo": {
+        "display_name": "Tangkak, Johor, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Gerisek, Johor, Malaysia"
+    },
+    {
+      "lat": 2.1799742819805696,
+      "lon": 102.72131694407892,
+      "geoinfo": {
+        "display_name": "Panchor, Muar, Johor, 84500, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panchor",
+        "state": "Johor",
+        "postcode": "84500",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "273, Panchor, Muar, Johor, 84500, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:29.992979+00:00",
+  "_kind": "geo_samples"
+}

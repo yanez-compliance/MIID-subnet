@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gage Park",
+  "geonameid": 4893365,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.762996893968634,
+      "lon": -87.70156260416441,
+      "geoinfo": {
+        "display_name": "7148, South Troy Street, Chicago Lawn, Chicago, Lake Township, Cook County, Illinois, 60629, United States",
+        "road": "South Troy Street",
+        "house_number": "7148",
+        "neighbourhood": null,
+        "suburb": "Chicago Lawn",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60629",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7148 South Troy Street, Gage Park, Illinois, United States"
+    },
+    {
+      "lat": 41.83359421999228,
+      "lon": -87.69747759623408,
+      "geoinfo": {
+        "display_name": "Kellogg's, 2945, West 31st Street, South Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60623, United States",
+        "road": "West 31st Street",
+        "house_number": "2945",
+        "neighbourhood": null,
+        "suburb": "South Lawndale",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60623",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kellogg's, 2945, West 31st Street, South Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60623, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:22.689490+00:00",
+  "_kind": "geo_samples"
+}

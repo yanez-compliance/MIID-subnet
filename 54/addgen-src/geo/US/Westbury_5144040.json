@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westbury",
+  "geonameid": 5144040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.798626773408635,
+      "lon": -73.57897616654968,
+      "geoinfo": {
+        "display_name": "Village of Old Westbury, Town of Oyster Bay, Nassau County, New York, 11568, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Old Westbury",
+        "state": "New York",
+        "postcode": "11568",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Westbury, New York, United States"
+    },
+    {
+      "lat": 40.78381015948535,
+      "lon": -73.54993308742444,
+      "geoinfo": {
+        "display_name": "North Marginal Road, Birchwood at Jericho, Jericho, Town of Oyster Bay, Nassau County, New York, 11753, United States",
+        "road": "North Marginal Road",
+        "house_number": null,
+        "neighbourhood": "Birchwood at Jericho",
+        "suburb": null,
+        "city_district": null,
+        "city": "Jericho",
+        "state": "New York",
+        "postcode": "11753",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "064, North Marginal Road, Birchwood at Jericho, Jericho, Town of Oyster Bay, Nassau County, New York, 11753, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:59.638238+00:00",
+  "_kind": "geo_samples"
+}

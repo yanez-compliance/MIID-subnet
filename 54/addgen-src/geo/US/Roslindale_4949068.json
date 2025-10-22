@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roslindale",
+  "geonameid": 4949068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.288591070349426,
+      "lon": -71.11623874316487,
+      "geoinfo": {
+        "display_name": "63, Catherine Street, Mount Hope, Roslindale, Boston, Suffolk County, Massachusetts, 02131, United States",
+        "road": "Catherine Street",
+        "house_number": "63",
+        "neighbourhood": "Mount Hope",
+        "suburb": "Roslindale",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02131",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "63 Catherine Street, Roslindale, Massachusetts, United States"
+    },
+    {
+      "lat": 42.28065392418903,
+      "lon": -71.14655798275021,
+      "geoinfo": {
+        "display_name": "185, Stratford Street, Highland, West Roxbury, Boston, Suffolk County, Massachusetts, 02132, United States",
+        "road": "Stratford Street",
+        "house_number": "185",
+        "neighbourhood": "Highland",
+        "suburb": "West Roxbury",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "185, Stratford Street, Highland, West Roxbury, Boston, Suffolk County, Massachusetts, 02132, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:20.103341+00:00",
+  "_kind": "geo_samples"
+}

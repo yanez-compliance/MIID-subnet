@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stafford",
+  "geonameid": 4734005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.596676695515555,
+      "lon": -95.55737694397756,
+      "geoinfo": {
+        "display_name": "3373, 5th Street, Fifth Street, Fort Bend County, Texas, 77477, United States",
+        "road": "5th Street",
+        "house_number": "3373",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77477",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3373 5th Street, Stafford, Texas, United States"
+    },
+    {
+      "lat": 29.626622911496554,
+      "lon": -95.55278032677865,
+      "geoinfo": {
+        "display_name": "Houston Community College Southwest, 10041, Cash Road, Stafford, Fort Bend County, Texas, 77477, United States",
+        "road": "Cash Road",
+        "house_number": "10041",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stafford",
+        "state": "Texas",
+        "postcode": "77477",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Houston Community College Southwest, 10041, Cash Road, Stafford, Fort Bend County, Texas, 77477, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:33.862488+00:00",
+  "_kind": "geo_samples"
+}

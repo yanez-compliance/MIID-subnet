@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Thousand Oaks",
+  "geonameid": 5402405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.19134331020707,
+      "lon": -118.85086757747762,
+      "geoinfo": {
+        "display_name": "1582, El Cerrito Drive, Thousand Oaks, Ventura County, California, 91362, United States",
+        "road": "El Cerrito Drive",
+        "house_number": "1582",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thousand Oaks",
+        "state": "California",
+        "postcode": "91362",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1582 El Cerrito Drive, Thousand Oaks, California, United States"
+    },
+    {
+      "lat": 34.18930728671418,
+      "lon": -118.84487587178252,
+      "geoinfo": {
+        "display_name": "903, Falmouth Street, Thousand Oaks, Ventura County, California, 91362, United States",
+        "road": "Falmouth Street",
+        "house_number": "903",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thousand Oaks",
+        "state": "California",
+        "postcode": "91362",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "903, Falmouth Street, Thousand Oaks, Ventura County, California, 91362, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:28.138365+00:00",
+  "_kind": "geo_samples"
+}

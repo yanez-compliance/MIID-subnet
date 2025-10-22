@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Renton",
+  "geonameid": 5808189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.5217097220183,
+      "lon": -122.1861612177703,
+      "geoinfo": {
+        "display_name": "3332, Edmonds Avenue Northeast, Renton, King County, Washington, 98056, United States",
+        "road": "Edmonds Avenue Northeast",
+        "house_number": "3332",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Renton",
+        "state": "Washington",
+        "postcode": "98056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3332 Edmonds Avenue Northeast, Renton, Washington, United States"
+    },
+    {
+      "lat": 47.51800801711622,
+      "lon": -122.23405714529282,
+      "geoinfo": {
+        "display_name": "Tamill, Seattle, King County, Washington, 98178, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Tamill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Seattle",
+        "state": "Washington",
+        "postcode": "98178",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "530, Tamill, Seattle, King County, Washington, 98178, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:41.429052+00:00",
+  "_kind": "geo_samples"
+}

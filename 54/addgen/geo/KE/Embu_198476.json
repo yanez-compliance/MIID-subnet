@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Embu",
+  "geonameid": 198476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -0.5560466246727718,
+      "lon": 37.488426498348566,
+      "geoinfo": {
+        "display_name": "Embu - Siakago Road, Siakago, Manyatta, Embu, Kenya",
+        "road": "Embu - Siakago Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siakago",
+        "state": "Embu",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Embu - Siakago Road, Embu, Embu, Kenya"
+    },
+    {
+      "lat": -0.5781938223816534,
+      "lon": 37.43739206116528,
+      "geoinfo": {
+        "display_name": "Mwea East, Kirinyaga County, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kirinyaga County",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "769, Embu, 63300 Kirinyaga County, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:19.049684+00:00",
+  "_kind": "geo_samples"
+}

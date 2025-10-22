@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Eeklo",
+  "geonameid": 2798987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.191347680459636,
+      "lon": 3.5689263384278904,
+      "geoinfo": {
+        "display_name": "Stuifzandstraat, Eeklo, East Flanders, 9900, Belgium",
+        "road": "Stuifzandstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eeklo",
+        "state": "East Flanders",
+        "postcode": "9900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Stuifzandstraat, Eeklo, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.161900105675265,
+      "lon": 3.589275496134155,
+      "geoinfo": {
+        "display_name": "Dam, Waarschoot, Lievegem, Gent, East Flanders, 9950, Belgium",
+        "road": "Dam",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Waarschoot",
+        "city": "Lievegem",
+        "state": "East Flanders",
+        "postcode": "9950",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "798, Dam, Waarschoot, Lievegem, Gent, East Flanders, 9950, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:35.286847+00:00",
+  "_kind": "geo_samples"
+}

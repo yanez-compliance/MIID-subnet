@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "East Hastings",
+  "geonameid": 13512549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.280087040748356,
+      "lon": -123.04299573370847,
+      "geoinfo": {
+        "display_name": "2938, East Pender Street, Hastings-Sunrise, Vancouver, Metro Vancouver Regional District, British Columbia, V5K, Canada",
+        "road": "East Pender Street",
+        "house_number": "2938",
+        "neighbourhood": null,
+        "suburb": "Hastings-Sunrise",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5K",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2938 East Pender Street, East Hastings, British Columbia, Canada"
+    },
+    {
+      "lat": 49.25889040950774,
+      "lon": -123.05496390177572,
+      "geoinfo": {
+        "display_name": "Kamloops Street, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada",
+        "road": "Kamloops Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Renfrew-Collingwood",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5M",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "036, Kamloops Street, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:10.959433+00:00",
+  "_kind": "geo_samples"
+}

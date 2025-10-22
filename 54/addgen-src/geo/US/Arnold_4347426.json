@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arnold",
+  "geonameid": 4347426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.06061160366114,
+      "lon": -76.4701123848026,
+      "geoinfo": {
+        "display_name": "Stonington Drive, Stonington, Arnold, Anne Arundel County, Maryland, 21012, United States",
+        "road": "Stonington Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arnold",
+        "state": "Maryland",
+        "postcode": "21012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Stonington Drive, Arnold, Maryland, United States"
+    },
+    {
+      "lat": 39.05289490508084,
+      "lon": -76.48280559350543,
+      "geoinfo": {
+        "display_name": "699, Saber Lane, Ulmstead Estates, Arnold, Anne Arundel County, Maryland, 21012, United States",
+        "road": "Saber Lane",
+        "house_number": "699",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arnold",
+        "state": "Maryland",
+        "postcode": "21012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "699, Saber Lane, Ulmstead Estates, Arnold, Anne Arundel County, Maryland, 21012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:56.955990+00:00",
+  "_kind": "geo_samples"
+}

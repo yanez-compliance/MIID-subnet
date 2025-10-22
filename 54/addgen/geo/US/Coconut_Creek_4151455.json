@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coconut Creek",
+  "geonameid": 4151455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.281481524995332,
+      "lon": -80.20725898018219,
+      "geoinfo": {
+        "display_name": "6161, Northwest 41st Drive, Coral Springs, Broward County, Florida, 33067, United States",
+        "road": "Northwest 41st Drive",
+        "house_number": "6161",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coral Springs",
+        "state": "Florida",
+        "postcode": "33067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6161 Northwest 41st Drive, Coconut Creek, Florida, United States"
+    },
+    {
+      "lat": 26.259867460223415,
+      "lon": -80.22786854717211,
+      "geoinfo": {
+        "display_name": "Pinewalk Drive South, Margate, Broward County, Florida, 33065, United States",
+        "road": "Pinewalk Drive South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Margate",
+        "state": "Florida",
+        "postcode": "33065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "191, Pinewalk Drive South, Margate, Broward County, Florida, 33065, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:21.500684+00:00",
+  "_kind": "geo_samples"
+}

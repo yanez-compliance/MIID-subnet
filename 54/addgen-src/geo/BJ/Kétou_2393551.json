@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Kétou",
+  "geonameid": 2393551,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 7.384626348713529,
+      "lon": 2.609168528242765,
+      "geoinfo": {
+        "display_name": "Kétou, Plateau Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kétou",
+        "state": "Plateau Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Kétou, Plateau Department, Benin"
+    },
+    {
+      "lat": 7.387317564149674,
+      "lon": 2.605674368938035,
+      "geoinfo": {
+        "display_name": "Idenan, Kétou, Plateau Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Idenan",
+        "city_district": null,
+        "city": "Kétou",
+        "state": "Plateau Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Idenan, Kétou, Plateau Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-16T10:52:11.601262+00:00",
+  "_kind": "geo_samples"
+}

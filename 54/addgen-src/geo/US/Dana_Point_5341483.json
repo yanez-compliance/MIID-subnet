@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dana Point",
+  "geonameid": 5341483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.47466045749067,
+      "lon": -117.71163359887078,
+      "geoinfo": {
+        "display_name": "33621, Brigantine Drive, Niguel Shores, Dana Point, Orange County, California, 92629, United States",
+        "road": "Brigantine Drive",
+        "house_number": "33621",
+        "neighbourhood": "Niguel Shores",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dana Point",
+        "state": "California",
+        "postcode": "92629",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33621 Brigantine Drive, Dana Point, California, United States"
+    },
+    {
+      "lat": 33.446813793558604,
+      "lon": -117.66782044655939,
+      "geoinfo": {
+        "display_name": "Capistrano Beach, Dana Point, Orange County, California, 92624, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Capistrano Beach",
+        "city_district": null,
+        "city": "Dana Point",
+        "state": "California",
+        "postcode": "92624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "805, Capistrano Beach, Dana Point, Orange County, California, 92624, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:44.147834+00:00",
+  "_kind": "geo_samples"
+}

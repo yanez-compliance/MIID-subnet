@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hulunbuir",
+  "geonameid": 12548253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.19520604333426,
+      "lon": 119.74879014072536,
+      "geoinfo": {
+        "display_name": "Halaer Street, Fendou, Hailar District, Hulunbuir, Inner Mongolia, 021000, China",
+        "road": "Halaer Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hailar District",
+        "state": "Inner Mongolia",
+        "postcode": "021000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Halaer Street, Hulunbuir, Inner Mongolia, China"
+    },
+    {
+      "lat": 49.20937938980779,
+      "lon": 119.76213341647185,
+      "geoinfo": {
+        "display_name": "Shengli, 胜利街道, Hailar District, Hulunbuir, Inner Mongolia, 021000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shengli",
+        "city_district": null,
+        "city": "Hailar District",
+        "state": "Inner Mongolia",
+        "postcode": "021000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "475, Shengli, 胜利街道, Hailar District, Hulunbuir, Inner Mongolia, 021000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:46.581442+00:00",
+  "_kind": "geo_samples"
+}

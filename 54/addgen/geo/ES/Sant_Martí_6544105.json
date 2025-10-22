@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sant Martí",
+  "geonameid": 6544105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.388700173541366,
+      "lon": 2.2352334282907735,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Sant Martí, Spain"
+    },
+    {
+      "lat": 41.424496853323255,
+      "lon": 2.1661289604499223,
+      "geoinfo": {
+        "display_name": "Carrer de Pedrell, la Font d'en Fargues, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08032, Spain",
+        "road": "Carrer de Pedrell",
+        "house_number": null,
+        "neighbourhood": "la Font d'en Fargues",
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08032",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "609, Carrer de Pedrell, la Font d'en Fargues, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08032, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:14.968279+00:00",
+  "_kind": "geo_samples"
+}

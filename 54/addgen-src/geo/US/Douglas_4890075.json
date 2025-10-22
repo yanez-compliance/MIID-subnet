@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Douglas",
+  "geonameid": 4890075,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.864941056840145,
+      "lon": -87.60951151990324,
+      "geoinfo": {
+        "display_name": "Burnham Harbor, 1559, Dock C, Central Station, Near South Side, Chicago, Cook County, Illinois, 60605, United States",
+        "road": "Dock C",
+        "house_number": "1559",
+        "neighbourhood": "Central Station",
+        "suburb": "Near South Side",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1559 Dock C, Douglas, Illinois, United States"
+    },
+    {
+      "lat": 41.84085960881509,
+      "lon": -87.64835985544738,
+      "geoinfo": {
+        "display_name": "McGuane Park Fieldhouse, 2901, South Poplar Avenue, Bridgeport, Chicago, Cook County, Illinois, 60608, United States",
+        "road": "South Poplar Avenue",
+        "house_number": "2901",
+        "neighbourhood": null,
+        "suburb": "Bridgeport",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "McGuane Park Fieldhouse, 2901, South Poplar Avenue, Bridgeport, Chicago, Cook County, Illinois, 60608, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:14.141862+00:00",
+  "_kind": "geo_samples"
+}

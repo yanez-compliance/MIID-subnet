@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Akhisar",
+  "geonameid": 752489,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.112394691687555,
+      "lon": 29.44145204062497,
+      "geoinfo": {
+        "display_name": "Huzur, İnegöl, Bursa, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Huzur",
+        "city_district": null,
+        "city": "İnegöl",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Huzur, Akhisar, Turkey"
+    },
+    {
+      "lat": 40.08140724374269,
+      "lon": 29.458814303817515,
+      "geoinfo": {
+        "display_name": "Cerrah, İnegöl, Bursa, Marmara Region, 16400, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "İnegöl",
+        "state": null,
+        "postcode": "16400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "674, Cerrah, İnegöl, Bursa, Marmara Region, 16400, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:20.520305+00:00",
+  "_kind": "geo_samples"
+}

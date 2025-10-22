@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Poio",
+  "geonameid": 3113035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.467543972111315,
+      "lon": -8.676330555229681,
+      "geoinfo": {
+        "display_name": "Vilariño, Campañó, Pontevedra, Poio, Pontevedra, Galicia, 36157, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pontevedra",
+        "state": "Galicia",
+        "postcode": "36157",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Poio, Galicia, Spain"
+    },
+    {
+      "lat": 42.451011757975564,
+      "lon": -8.650411743243103,
+      "geoinfo": {
+        "display_name": "Parada de Arriba, O Ribeiro, Campañó, Pontevedra, Galicia, 36163, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Parada de Arriba",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pontevedra",
+        "state": "Galicia",
+        "postcode": "36163",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "569, Parada de Arriba, O Ribeiro, Campañó, Pontevedra, Galicia, 36163, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:02.497656+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Weirton",
+  "geonameid": 5280814,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.38573508032057,
+      "lon": -80.54982572820249,
+      "geoinfo": {
+        "display_name": "Park Drive, Weirton, Weirton District, Brooke County, West Virginia, 26062, United States",
+        "road": "Park Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weirton",
+        "state": "West Virginia",
+        "postcode": "26062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Park Drive, Weirton, West Virginia, United States"
+    },
+    {
+      "lat": 40.421190809494036,
+      "lon": -80.5725552429479,
+      "geoinfo": {
+        "display_name": "110, Hardy Street, Vermont Terrace, Weirton, Butler District, Hancock County, West Virginia, 26062, United States",
+        "road": "Hardy Street",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weirton",
+        "state": "West Virginia",
+        "postcode": "26062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110, Hardy Street, Vermont Terrace, Weirton, Butler District, Hancock County, West Virginia, 26062, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:07.191155+00:00",
+  "_kind": "geo_samples"
+}

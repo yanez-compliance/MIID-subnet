@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Chiyoda",
+  "geonameid": 11749713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.689918349357555,
+      "lon": 139.7820265549533,
+      "geoinfo": {
+        "display_name": "Nihonbashi tomizawacho, Nihonbashi horidomecho, Chuo, Tokyo, 103-0012, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nihonbashi tomizawacho",
+        "suburb": "Nihonbashi horidomecho",
+        "city_district": null,
+        "city": "Chuo",
+        "state": null,
+        "postcode": "103-0012",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nihonbashi tomizawacho, Chiyoda, Japan"
+    },
+    {
+      "lat": 35.67667738687481,
+      "lon": 139.80172476596104,
+      "geoinfo": {
+        "display_name": "Hirano 2, Hirano, Koto, Tokyo, 135-0041, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hirano 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koto",
+        "state": null,
+        "postcode": "135-0041",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hirano 2, Hirano, Koto, Tokyo, 135-0041, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:38.962449+00:00",
+  "_kind": "geo_samples"
+}

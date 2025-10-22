@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lochearn",
+  "geonameid": 4360954,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.304680597465165,
+      "lon": -76.72474798320575,
+      "geoinfo": {
+        "display_name": "I 70, Colonial Park, Woodlawn, Baltimore County, Maryland, 21235, United States",
+        "road": "I 70",
+        "house_number": null,
+        "neighbourhood": "Colonial Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodlawn",
+        "state": "Maryland",
+        "postcode": "21235",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 70, Lochearn, Maryland, United States"
+    },
+    {
+      "lat": 39.36635643035234,
+      "lon": -76.73322629892503,
+      "geoinfo": {
+        "display_name": "911, Windsor Road, Sudbrook Park, Pikesville, Baltimore County, Maryland, 21208, United States",
+        "road": "Windsor Road",
+        "house_number": "911",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pikesville",
+        "state": "Maryland",
+        "postcode": "21208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "911, Windsor Road, Sudbrook Park, Pikesville, Baltimore County, Maryland, 21208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:18.091661+00:00",
+  "_kind": "geo_samples"
+}

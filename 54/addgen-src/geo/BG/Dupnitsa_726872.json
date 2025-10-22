@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Dupnitsa",
+  "geonameid": 726872,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.292162443999864,
+      "lon": 23.095059779717246,
+      "geoinfo": {
+        "display_name": "Blatino, Dupnitsa, Kyustendil, 2844, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blatino",
+        "state": "Kyustendil",
+        "postcode": "2844",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "065, Blatino, Dupnitsa, Kyustendil, 2844, Bulgaria"
+    },
+    {
+      "lat": 42.26395938608624,
+      "lon": 23.17395639814148,
+      "geoinfo": {
+        "display_name": "6204, Himik r.c., Samoranovo, Dupnitsa, Kyustendil, 2620, Bulgaria",
+        "road": "6204",
+        "house_number": null,
+        "neighbourhood": "Himik r.c.",
+        "suburb": null,
+        "city_district": null,
+        "city": "Samoranovo",
+        "state": "Kyustendil",
+        "postcode": "2620",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "6204, Himik r.c., Samoranovo, Dupnitsa, Kyustendil, 2620, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:44.071041+00:00",
+  "_kind": "geo_samples"
+}

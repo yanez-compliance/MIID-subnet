@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Puy-en-Velay",
+  "geonameid": 3002465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.02575119416171,
+      "lon": 3.9195213663299984,
+      "geoinfo": {
+        "display_name": "Chemin du Cros, Le Puy-en-Velay, Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France, 43000, France",
+        "road": "Chemin du Cros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Puy-en-Velay",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "43000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin du Cros, Le Puy-en-Velay, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.063853231710894,
+      "lon": 3.93310862141382,
+      "geoinfo": {
+        "display_name": "17, Chemin de Chanavoux, Fay-la-Triouleyre, Saint-Germain-Laprade, Le Puy-en-Velay, Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France, 43700, France",
+        "road": "Chemin de Chanavoux",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Germain-Laprade",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "43700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "17, Chemin de Chanavoux, Fay-la-Triouleyre, Saint-Germain-Laprade, Le Puy-en-Velay, Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France, 43700, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:20.103524+00:00",
+  "_kind": "geo_samples"
+}

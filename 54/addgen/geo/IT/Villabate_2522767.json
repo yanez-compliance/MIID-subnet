@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Villabate",
+  "geonameid": 2522767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.084119381986376,
+      "lon": 13.475957656510662,
+      "geoinfo": {
+        "display_name": "Bagheria, Palermo, Sicily, 90011, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagheria",
+        "state": "Sicily",
+        "postcode": "90011",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Villabate, Sicily, Italy"
+    },
+    {
+      "lat": 38.058249801047644,
+      "lon": 13.40396521112942,
+      "geoinfo": {
+        "display_name": "Belmonte Mezzagno, Palermo, Sicily, 90031, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belmonte Mezzagno",
+        "state": "Sicily",
+        "postcode": "90031",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "483, Belmonte Mezzagno, Palermo, Sicily, 90031, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:08.125705+00:00",
+  "_kind": "geo_samples"
+}

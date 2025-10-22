@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Pol-sur-Mer",
+  "geonameid": 2977388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0624212983317,
+      "lon": 2.365909146287584,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Saint-Pol-sur-Mer, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.999451407937116,
+      "lon": 2.320644749774233,
+      "geoinfo": {
+        "display_name": "D 2, Le Pont de Petite-Synthe, Cruputte Houck, Dunkerque, Armbouts-Cappel, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France",
+        "road": "D 2",
+        "house_number": null,
+        "neighbourhood": "Le Pont de Petite-Synthe",
+        "suburb": null,
+        "city_district": "Dunkerque",
+        "city": "Armbouts-Cappel",
+        "state": "Hauts-de-France",
+        "postcode": "59380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 2, Le Pont de Petite-Synthe, Cruputte Houck, Dunkerque, Armbouts-Cappel, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:54.511168+00:00",
+  "_kind": "geo_samples"
+}

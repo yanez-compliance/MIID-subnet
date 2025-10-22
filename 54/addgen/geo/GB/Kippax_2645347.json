@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Kippax",
+  "geonameid": 2645347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.747776917473736,
+      "lon": -1.3027450914624312,
+      "geoinfo": {
+        "display_name": "Newton Lane, Newton, Ledsham, Ledston, Fairburn, North Yorkshire, York and North Yorkshire, England, WF10 2BH, United Kingdom",
+        "road": "Newton Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ledsham",
+        "city_district": null,
+        "city": "Ledston",
+        "state": "England",
+        "postcode": "WF10 2BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Newton Lane, Kippax, England, United Kingdom"
+    },
+    {
+      "lat": 53.741319925011176,
+      "lon": -1.309843678833172,
+      "geoinfo": {
+        "display_name": "Starling Avenue, New Fryston, Wakefield, West Yorkshire, England, WF10 2SS, United Kingdom",
+        "road": "Starling Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "England",
+        "postcode": "WF10 2SS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Starling Avenue, New Fryston, Wakefield, West Yorkshire, England, WF10 2SS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:21.181909+00:00",
+  "_kind": "geo_samples"
+}

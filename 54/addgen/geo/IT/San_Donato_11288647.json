@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Donato",
+  "geonameid": 11288647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.07446705427091,
+      "lon": 7.661593294275481,
+      "geoinfo": {
+        "display_name": "Chiesa di Gesù Nazareno, Via Pietro Bagetti, Cit Turin, Circoscrizione 3, Turin, Piedmont, 10138, Italy",
+        "road": "Via Pietro Bagetti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cit Turin",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10138",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pietro Bagetti, San Donato, Piedmont, Italy"
+    },
+    {
+      "lat": 45.04456648111067,
+      "lon": 7.664498576751031,
+      "geoinfo": {
+        "display_name": "Corso Bramante, Molinette, Circoscrizione 8, Turin, Piedmont, 10126, Italy",
+        "road": "Corso Bramante",
+        "house_number": null,
+        "neighbourhood": "Molinette",
+        "suburb": "Circoscrizione 8",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10126",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Corso Bramante, Molinette, Circoscrizione 8, Turin, Piedmont, 10126, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:16.072728+00:00",
+  "_kind": "geo_samples"
+}

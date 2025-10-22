@@ -1,0 +1,65 @@
+{
+  "country_code": "NO",
+  "country": "Norway",
+  "city": "Grimstad",
+  "geonameid": 3155041,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 58.33350747102229,
+      "lon": 8.631903091375499,
+      "geoinfo": {
+        "display_name": "51, Marivoldveien, Marivoll, Grimstad, Agder, 4885, Norway",
+        "road": "Marivoldveien",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grimstad",
+        "state": null,
+        "postcode": "4885",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "51 Marivoldveien, Grimstad, Norway"
+    },
+    {
+      "lat": 58.323408314475174,
+      "lon": 8.54273718189382,
+      "geoinfo": {
+        "display_name": "E 18, Molland, Grimstad, Agder, 4879, Norway",
+        "road": "E 18",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "4879",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "E 18, Grimstad, Norway"
+    },
+    {
+      "lat": 58.37833721127665,
+      "lon": 8.598716908998933,
+      "geoinfo": {
+        "display_name": "Tauleveien, Taule, Grimstad, Agder, 4885, Norway",
+        "road": "Tauleveien",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "4885",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Tauleveien, Grimstad, Norway"
+    }
+  ],
+  "updated_at": "2025-10-16T20:27:35.033409+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Francavilla al Mare",
+  "geonameid": 3176605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.447945867006894,
+      "lon": 14.280293523303978,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Francavilla al Mare, Italy"
+    },
+    {
+      "lat": 42.40777648471953,
+      "lon": 14.291476318317004,
+      "geoinfo": {
+        "display_name": "17, Contrada Quercia Notarrocco, Vallone, Francavilla al Mare, Chieti, Abruzzo, 66023, Italy",
+        "road": "Contrada Quercia Notarrocco",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Francavilla al Mare",
+        "state": "Abruzzo",
+        "postcode": "66023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "17, Contrada Quercia Notarrocco, Vallone, Francavilla al Mare, Chieti, Abruzzo, 66023, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:55.405537+00:00",
+  "_kind": "geo_samples"
+}

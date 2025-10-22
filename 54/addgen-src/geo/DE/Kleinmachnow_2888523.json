@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kleinmachnow",
+  "geonameid": 2888523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.394785538843344,
+      "lon": 13.171604264816526,
+      "geoinfo": {
+        "display_name": "A 115, Stahnsdorf, Teltow, Potsdam-Mittelmark, Brandenburg, 14532, Germany",
+        "road": "A 115",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Stahnsdorf",
+        "city": "Stahnsdorf",
+        "state": "Brandenburg",
+        "postcode": "14532",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 115, Kleinmachnow, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.398639176585284,
+      "lon": 13.249105811619973,
+      "geoinfo": {
+        "display_name": "2a, Spreestraße, Teltow, Potsdam-Mittelmark, Brandenburg, 14513, Germany",
+        "road": "Spreestraße",
+        "house_number": "2a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teltow",
+        "state": "Brandenburg",
+        "postcode": "14513",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2a, Spreestraße, Teltow, Potsdam-Mittelmark, Brandenburg, 14513, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:23.413022+00:00",
+  "_kind": "geo_samples"
+}

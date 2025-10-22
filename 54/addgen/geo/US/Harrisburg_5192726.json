@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harrisburg",
+  "geonameid": 5192726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.25804985945137,
+      "lon": -76.86569404167894,
+      "geoinfo": {
+        "display_name": "Hill Street, Mount Pleasant, Allison Hill, Harrisburg, Dauphin County, Pennsylvania, 17122, United States",
+        "road": "Hill Street",
+        "house_number": null,
+        "neighbourhood": "Mount Pleasant",
+        "suburb": "Allison Hill",
+        "city_district": null,
+        "city": "Harrisburg",
+        "state": "Pennsylvania",
+        "postcode": "17122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hill Street, Harrisburg, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.24551209726618,
+      "lon": -76.8436390957021,
+      "geoinfo": {
+        "display_name": "Gibson Boulevard, Swatara Township, Dauphin County, Pennsylvania, 17104, United States",
+        "road": "Gibson Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Swatara Township",
+        "state": "Pennsylvania",
+        "postcode": "17104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "062, Gibson Boulevard, Swatara Township, Dauphin County, Pennsylvania, 17104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:32.088500+00:00",
+  "_kind": "geo_samples"
+}

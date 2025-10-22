@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Bevere",
+  "geonameid": 2802039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.84551206037259,
+      "lon": 3.5890235617169903,
+      "geoinfo": {
+        "display_name": "Huttegem, Bevere, Oudenaarde, East Flanders, 9700, Belgium",
+        "road": "Huttegem",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oudenaarde",
+        "state": "East Flanders",
+        "postcode": "9700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Huttegem, Bevere, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.851551470262606,
+      "lon": 3.622700759984768,
+      "geoinfo": {
+        "display_name": "Ename, Oudenaarde, East Flanders, Flanders, 9700, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oudenaarde",
+        "state": "East Flanders",
+        "postcode": "9700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "811, Ename, Oudenaarde, East Flanders, Flanders, 9700, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:35.259865+00:00",
+  "_kind": "geo_samples"
+}

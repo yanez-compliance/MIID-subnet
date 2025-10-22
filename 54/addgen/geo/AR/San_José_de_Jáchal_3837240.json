@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San José de Jáchal",
+  "geonameid": 3837240,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -30.23558374810502,
+      "lon": -68.75013778352097,
+      "geoinfo": {
+        "display_name": "Avenida 25 de Mayo, Pismanta II, San José de Jáchal, Jáchal, San Juan, Argentina",
+        "road": "Avenida 25 de Mayo",
+        "house_number": null,
+        "neighbourhood": "Pismanta II",
+        "suburb": null,
+        "city_district": null,
+        "city": "San José de Jáchal",
+        "state": "San Juan",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida 25 de Mayo, San José de Jáchal, San Juan, Argentina"
+    },
+    {
+      "lat": -30.24238326545748,
+      "lon": -68.77073677372496,
+      "geoinfo": {
+        "display_name": "Pismanta V, San José de Jáchal, Jáchal, San Juan, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Pismanta V",
+        "suburb": null,
+        "city_district": null,
+        "city": "San José de Jáchal",
+        "state": "San Juan",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "642, Pismanta V, San José de Jáchal, Jáchal, 83842 San Juan, Argentina"
+    },
+    {
+      "lat": -30.230853812235026,
+      "lon": -68.69959792538722,
+      "geoinfo": {
+        "display_name": "Jáchal, San Juan, 5460, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "San Juan",
+        "postcode": "5460",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "038, Jáchal, San Juan, 5460, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:42.543714+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wickford",
+  "geonameid": 2633976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.65441208426599,
+      "lon": 0.5203453182933607,
+      "geoinfo": {
+        "display_name": "Church Lane, South Hanningfield, Chelmsford, Essex, England, CM3 8HW, United Kingdom",
+        "road": "Church Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Hanningfield",
+        "city_district": null,
+        "city": "Chelmsford",
+        "state": "England",
+        "postcode": "CM3 8HW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Lane, Wickford, England, United Kingdom"
+    },
+    {
+      "lat": 51.62306912402888,
+      "lon": 0.5403698888596575,
+      "geoinfo": {
+        "display_name": "Browns Avenue, Runwell, Chelmsford, Essex, England, SS11 7PT, United Kingdom",
+        "road": "Browns Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Runwell",
+        "city_district": null,
+        "city": "Chelmsford",
+        "state": "England",
+        "postcode": "SS11 7PT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Browns Avenue, Runwell, Chelmsford, Essex, England, SS11 7PT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:43.389139+00:00",
+  "_kind": "geo_samples"
+}

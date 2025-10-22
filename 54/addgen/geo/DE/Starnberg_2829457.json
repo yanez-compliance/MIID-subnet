@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Starnberg",
+  "geonameid": 2829457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.965812040298076,
+      "lon": 11.353918992234124,
+      "geoinfo": {
+        "display_name": "16, Schatzlgasse, Kreuzweg, Berg, Landkreis Starnberg, Bavaria, 82335, Germany",
+        "road": "Schatzlgasse",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kreuzweg",
+        "state": "Bavaria",
+        "postcode": "82335",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Schatzlgasse, Starnberg, Bavaria, Germany"
+    },
+    {
+      "lat": 48.004966153692486,
+      "lon": 11.27904765019313,
+      "geoinfo": {
+        "display_name": "Hadorfer Straße, Perchting, Starnberg, Wörthsee, Landkreis Starnberg, Bavaria, 82319, Germany",
+        "road": "Hadorfer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Starnberg",
+        "state": "Bavaria",
+        "postcode": "82319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "049, Hadorfer Straße, Perchting, Starnberg, Wörthsee, Landkreis Starnberg, Bavaria, 82319, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:36.310605+00:00",
+  "_kind": "geo_samples"
+}

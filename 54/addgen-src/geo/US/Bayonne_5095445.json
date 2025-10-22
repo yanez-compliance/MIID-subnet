@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bayonne",
+  "geonameid": 5095445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.679213210521155,
+      "lon": -74.13235706225876,
+      "geoinfo": {
+        "display_name": "Bayonne, Hudson County, New Jersey, 07002, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bayonne",
+        "state": "New Jersey",
+        "postcode": "07002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bayonne, New Jersey, United States"
+    },
+    {
+      "lat": 40.69624983089377,
+      "lon": -74.10136612251898,
+      "geoinfo": {
+        "display_name": "Greenville, Jersey City, Hudson County, New Jersey, 07305, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jersey City",
+        "state": "New Jersey",
+        "postcode": "07305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "254, Greenville, Jersey City, Hudson County, New Jersey, 07305, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:40.573105+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Old Bridge",
+  "geonameid": 5104835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.39709562236356,
+      "lon": -74.3320845296851,
+      "geoinfo": {
+        "display_name": "31, York Street, Sayerwood South, Brunswick Gardens, Old Bridge, Old Bridge Township, Middlesex County, New Jersey, 08857, United States",
+        "road": "York Street",
+        "house_number": "31",
+        "neighbourhood": "Sayerwood South",
+        "suburb": null,
+        "city_district": null,
+        "city": "Old Bridge Township",
+        "state": "New Jersey",
+        "postcode": "08857",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31 York Street, South Old Bridge, New Jersey, United States"
+    },
+    {
+      "lat": 40.38934178728199,
+      "lon": -74.39393415557882,
+      "geoinfo": {
+        "display_name": "2, South Street, Spotswood, Middlesex County, New Jersey, 08884, United States",
+        "road": "South Street",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spotswood",
+        "state": "New Jersey",
+        "postcode": "08884",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, South Street, Spotswood, Middlesex County, New Jersey, 08884, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:04.221037+00:00",
+  "_kind": "geo_samples"
+}

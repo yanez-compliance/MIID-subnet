@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Plessis-Robinson",
+  "geonameid": 3002650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.81021955764879,
+      "lon": 2.3030603813009387,
+      "geoinfo": {
+        "display_name": "Avenue de la République, Bagneux, Antony, Hauts-de-Seine, Metropolitan France, 92220, France",
+        "road": "Avenue de la République",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagneux",
+        "state": null,
+        "postcode": "92220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de la République, Le Plessis-Robinson, France"
+    },
+    {
+      "lat": 48.76947585461672,
+      "lon": 2.2481816024246655,
+      "geoinfo": {
+        "display_name": "Route Forestière du Plessis-Piquet, Malabry, La Butte Rouge, Châtenay-Malabry, Antony, Hauts-de-Seine, Metropolitan France, 92290, France",
+        "road": "Route Forestière du Plessis-Piquet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Butte Rouge",
+        "city_district": null,
+        "city": "Châtenay-Malabry",
+        "state": null,
+        "postcode": "92290",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "636, Route Forestière du Plessis-Piquet, Malabry, La Butte Rouge, Châtenay-Malabry, Antony, Hauts-de-Seine, Metropolitan France, 92290, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:47.841920+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Terter",
+  "geonameid": 584871,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.316196669229356,
+      "lon": 46.97319015994849,
+      "geoinfo": {
+        "display_name": "R27, Tartar, Tartar District, Azerbaijan",
+        "road": "R27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tartar",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "R27, Terter, Azerbaijan"
+    },
+    {
+      "lat": 40.362098002326285,
+      "lon": 46.95564594639695,
+      "geoinfo": {
+        "display_name": "Hacıqərvənd, Tartar District, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hacıqərvənd",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Terter, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:43.949231+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ţahţā",
+  "geonameid": 347634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.744393319508767,
+      "lon": 31.476370690334235,
+      "geoinfo": {
+        "display_name": "Al Gehad Street, Tahta City, Markaz Tahta, Suhaj, 82621, Egypt",
+        "road": "Al Gehad Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tahta City",
+        "state": "Suhaj",
+        "postcode": "82621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Gehad Street, Ţahţā, Suhaj, Egypt"
+    },
+    {
+      "lat": 26.75654323452628,
+      "lon": 31.457065068100096,
+      "geoinfo": {
+        "display_name": "Nazlat Abu Ras, Markaz Tahta, Suhaj, 82621, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nazlat Abu Ras",
+        "state": "Suhaj",
+        "postcode": "82621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "945, Nazlat Abu Ras, Markaz Tahta, Suhaj, 82621, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:10.085254+00:00",
+  "_kind": "geo_samples"
+}

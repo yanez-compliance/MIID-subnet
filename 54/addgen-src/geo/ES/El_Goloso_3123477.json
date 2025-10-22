@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Goloso",
+  "geonameid": 3123477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.53428978533296,
+      "lon": -3.678736289456617,
+      "geoinfo": {
+        "display_name": "Carretera de Cantoblanco, El Goloso, Fuencarral-El Pardo, Madrid, Community of Madrid, 28049, Spain",
+        "road": "Carretera de Cantoblanco",
+        "house_number": null,
+        "neighbourhood": "El Goloso",
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28049",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Cantoblanco, El Goloso, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.54015205220643,
+      "lon": -3.7356299154555033,
+      "geoinfo": {
+        "display_name": "El Bañil, Fuencarral-El Pardo, Madrid, Community of Madrid, 28049, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28049",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "831, El Bañil, Fuencarral-El Pardo, Madrid, Community of Madrid, 28049, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:01.874780+00:00",
+  "_kind": "geo_samples"
+}

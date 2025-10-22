@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kundli",
+  "geonameid": 10261433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.87998994158078,
+      "lon": 77.11412241549974,
+      "geoinfo": {
+        "display_name": "Kundli Industrial Area, Kundli, Sonipat, Haryana, 131028, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kundli Industrial Area",
+        "city_district": null,
+        "city": "Kundli",
+        "state": "Haryana",
+        "postcode": "131028",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kundli Industrial Area, Kundli, Haryana, India"
+    },
+    {
+      "lat": 28.85087167500617,
+      "lon": 77.13052678512501,
+      "geoinfo": {
+        "display_name": "Alipur Tehsil, North Delhi, Delhi, 131028, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alipur Tehsil",
+        "city_district": "North Delhi",
+        "city": "Delhi",
+        "state": null,
+        "postcode": "131028",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "515, Alipur Tehsil, North Delhi, Delhi, 131028, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:46.087145+00:00",
+  "_kind": "geo_samples"
+}

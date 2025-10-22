@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mariendorf",
+  "geonameid": 2873606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.46141798907501,
+      "lon": 13.422662261703808,
+      "geoinfo": {
+        "display_name": "A 100, Tempelhof, Tempelhof-Schöneberg, Berlin, Teltow, 12099, Germany",
+        "road": "A 100",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tempelhof",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 100, Mariendorf, Germany"
+    },
+    {
+      "lat": 52.45707451085802,
+      "lon": 13.398765314369552,
+      "geoinfo": {
+        "display_name": "Heuschen & Schrouff, Schätzelbergstraße, Tempelhof, Tempelhof-Schöneberg, Berlin, Teltow, 12099, Germany",
+        "road": "Schätzelbergstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tempelhof",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "368, Schätzelbergstraße, 12099 Mariendorf, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:42.657536+00:00",
+  "_kind": "geo_samples"
+}

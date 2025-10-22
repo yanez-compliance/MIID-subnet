@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jinggou",
+  "geonameid": 12324298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.27470766035166,
+      "lon": 119.50498575747352,
+      "geoinfo": {
+        "display_name": "Gaomi City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaomi City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jinggou, Shandong, China"
+    },
+    {
+      "lat": 36.253234503507294,
+      "lon": 119.54943127100304,
+      "geoinfo": {
+        "display_name": "Jinggou, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "233, Jinggou, Weifang, 99680 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:46.984830+00:00",
+  "_kind": "geo_samples"
+}

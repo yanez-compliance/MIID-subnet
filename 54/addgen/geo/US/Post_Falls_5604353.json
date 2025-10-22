@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Post Falls",
+  "geonameid": 5604353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.68259224130266,
+      "lon": -116.96595902535638,
+      "geoinfo": {
+        "display_name": "Kootenai County, Idaho, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Idaho",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Post Falls, Idaho, United States"
+    },
+    {
+      "lat": 47.68794129179275,
+      "lon": -116.95279741499056,
+      "geoinfo": {
+        "display_name": "South Schilling Loop, Kootenai County, Idaho, 83854, United States",
+        "road": "South Schilling Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Idaho",
+        "postcode": "83854",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "648, South Schilling Loop, Kootenai County, Idaho, 83854, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:53.156448+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Phenix City",
+  "geonameid": 4082866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.46974437892862,
+      "lon": -85.03342742233515,
+      "geoinfo": {
+        "display_name": "1191, 28th Avenue, Phenix City, Russell County, Alabama, 36869, United States",
+        "road": "28th Avenue",
+        "house_number": "1191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Phenix City",
+        "state": "Alabama",
+        "postcode": "36869",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1191 28th Avenue, Phenix City, Alabama, United States"
+    },
+    {
+      "lat": 32.460568995553885,
+      "lon": -84.98265422445617,
+      "geoinfo": {
+        "display_name": "Holsey Chapel Christian Methodist Episcopal Church, 8th Avenue, Avondale, Columbus, Muscogee County, Georgia, 31901, United States",
+        "road": "8th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Georgia",
+        "postcode": "31901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Holsey Chapel Christian Methodist Episcopal Church, 8th Avenue, Avondale, Columbus, Muscogee County, Georgia, 31901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:48.166934+00:00",
+  "_kind": "geo_samples"
+}

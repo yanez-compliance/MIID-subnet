@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qionghai",
+  "geonameid": 1806488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.206870196083706,
+      "lon": 110.46513747172813,
+      "geoinfo": {
+        "display_name": "Qionghai City, Hainan Province, 571400, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qionghai City",
+        "state": "Hainan Province",
+        "postcode": "571400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Qionghai, Hainan Province, China"
+    },
+    {
+      "lat": 19.209979265758673,
+      "lon": 110.45070547750373,
+      "geoinfo": {
+        "display_name": "丹岭, Qionghai City, Hainan Province, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qionghai City",
+        "state": "Hainan Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "148, 丹岭, Qionghai City, 99999 Hainan Province, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:07.280236+00:00",
+  "_kind": "geo_samples"
+}

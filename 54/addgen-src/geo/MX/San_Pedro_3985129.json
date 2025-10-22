@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pedro",
+  "geonameid": 3985129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.45758528854776,
+      "lon": -103.2473597300041,
+      "geoinfo": {
+        "display_name": "Noria de Irlanda, Matamoros, Coahuila, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Pedro, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.425080331568815,
+      "lon": -103.2083294434632,
+      "geoinfo": {
+        "display_name": "El Sacrificio, Matamoros, Coahuila, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Sacrificio",
+        "state": "Coahuila",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "399, El Sacrificio, Matamoros, 68608 Coahuila, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:46.422528+00:00",
+  "_kind": "geo_samples"
+}

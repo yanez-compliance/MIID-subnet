@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kreuztal",
+  "geonameid": 2884050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.93171765310361,
+      "lon": 8.016276344612802,
+      "geoinfo": {
+        "display_name": "23, Gerhart-Hauptmann-Weg, Buschhütten, Kreuztal, Kreis Siegen-Wittgenstein, North Rhine-Westphalia, 57223, Germany",
+        "road": "Gerhart-Hauptmann-Weg",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kreuztal",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57223",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "23 Gerhart-Hauptmann-Weg, Kreuztal, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.96614178390932,
+      "lon": 7.955220503014721,
+      "geoinfo": {
+        "display_name": "0216, Hüttentalstraße, Bockenbach, Eichen, Osthelden, Kreuztal, Kreis Siegen-Wittgenstein, North Rhine-Westphalia, 57223, Germany",
+        "road": "Hüttentalstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bockenbach",
+        "city_district": null,
+        "city": "Kreuztal",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57223",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "0216, Hüttentalstraße, Bockenbach, Eichen, Osthelden, Kreuztal, Kreis Siegen-Wittgenstein, North Rhine-Westphalia, 57223, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:16.002978+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Ridgeville",
+  "geonameid": 5164903,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35494665349746,
+      "lon": -81.99014799555121,
+      "geoinfo": {
+        "display_name": "Reed Road, North Ridgeville, Eaton Township, Lorain County, Ohio, 44028, United States",
+        "road": "Reed Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Ridgeville",
+        "state": "Ohio",
+        "postcode": "44028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Reed Road, North Ridgeville, Ohio, United States"
+    },
+    {
+      "lat": 41.42560604351844,
+      "lon": -82.03883295497792,
+      "geoinfo": {
+        "display_name": "4317, Stoney Ridge Road, Highland Park, Avon, Lorain County, Ohio, 44011, United States",
+        "road": "Stoney Ridge Road",
+        "house_number": "4317",
+        "neighbourhood": "Highland Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon",
+        "state": "Ohio",
+        "postcode": "44011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4317, Stoney Ridge Road, Highland Park, Avon, Lorain County, Ohio, 44011, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:09.659898+00:00",
+  "_kind": "geo_samples"
+}

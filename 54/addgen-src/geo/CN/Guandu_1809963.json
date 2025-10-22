@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guandu",
+  "geonameid": 1809963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.121337406353465,
+      "lon": 106.44114836291743,
+      "geoinfo": {
+        "display_name": "Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Guandu, Chongqing, China"
+    },
+    {
+      "lat": 30.0867817194343,
+      "lon": 106.40195182036209,
+      "geoinfo": {
+        "display_name": "Lin'an, Guandu, Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guandu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "211, Guandu, 61264 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:44.250272+00:00",
+  "_kind": "geo_samples"
+}

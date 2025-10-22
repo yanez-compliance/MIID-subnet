@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Vendôme",
+  "geonameid": 2970110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.81376379531729,
+      "lon": 1.0878506147691793,
+      "geoinfo": {
+        "display_name": "Rue Clément Ader, La Planchette, Saint-Ouen, Vendôme, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41100, France",
+        "road": "Rue Clément Ader",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ouen",
+        "state": "Centre-Val de Loire",
+        "postcode": "41100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Clément Ader, Vendôme, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.80513098164503,
+      "lon": 1.0625904306734846,
+      "geoinfo": {
+        "display_name": "26, Rue Anatole France, La Fosse Piquet, Vendôme-Quartiers Nord, Vendôme, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41100, France",
+        "road": "Rue Anatole France",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Vendôme-Quartiers Nord",
+        "city_district": null,
+        "city": "Vendôme",
+        "state": "Centre-Val de Loire",
+        "postcode": "41100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "26, Rue Anatole France, La Fosse Piquet, Vendôme-Quartiers Nord, Vendôme, Loir-et-Cher, Centre-Val de Loire, Metropolitan France, 41100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:45:26.199674+00:00",
+  "_kind": "geo_samples"
+}

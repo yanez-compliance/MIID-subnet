@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hattiesburg",
+  "geonameid": 4429295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.2989615148479,
+      "lon": -89.27865116894995,
+      "geoinfo": {
+        "display_name": "Blankenship Circle, Dixie Pine, Hattiesburg, Forrest County, Mississippi, 39403, United States",
+        "road": "Blankenship Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dixie Pine",
+        "city_district": null,
+        "city": "Hattiesburg",
+        "state": "Mississippi",
+        "postcode": "39403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Blankenship Circle, Hattiesburg, Mississippi, United States"
+    },
+    {
+      "lat": 31.363430661494945,
+      "lon": -89.26934073378483,
+      "geoinfo": {
+        "display_name": "1114, US 11, Petal, Forrest County, Mississippi, 39465, United States",
+        "road": "US 11",
+        "house_number": "1114",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petal",
+        "state": "Mississippi",
+        "postcode": "39465",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 11, Hattiesburg, 39465 Mississippi, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:01.154750+00:00",
+  "_kind": "geo_samples"
+}

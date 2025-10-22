@@ -1,0 +1,83 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Turda",
+  "geonameid": 664460,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 46.53333046602831,
+      "lon": 23.780519718043568,
+      "geoinfo": {
+        "display_name": "Mihai Viteazu, Cluj, 407405, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mihai Viteazu",
+        "state": null,
+        "postcode": "407405",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Turda, Romania"
+    },
+    {
+      "lat": 46.53767201505975,
+      "lon": 23.761085571412032,
+      "geoinfo": {
+        "display_name": "Sânmihaiu de Jos, Mihai Viteazu, Cluj, 407405, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sânmihaiu de Jos",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mihai Viteazu",
+        "state": null,
+        "postcode": "407405",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "463, Sânmihaiu de Jos, Mihai Viteazu, Cluj, 407405, Romania"
+    },
+    {
+      "lat": 46.584568331331624,
+      "lon": 23.808722934278606,
+      "geoinfo": {
+        "display_name": "Drumul Ceanului, Băile Sărate, Turda, Cluj, 401169, Romania",
+        "road": "Drumul Ceanului",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Băile Sărate",
+        "city_district": null,
+        "city": "Turda",
+        "state": null,
+        "postcode": "401169",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "561, Drumul Ceanului, Băile Sărate, Turda, Cluj, 401169, Romania"
+    },
+    {
+      "lat": 46.58767677650873,
+      "lon": 23.834902425923538,
+      "geoinfo": {
+        "display_name": "Hărcana, Turda, Cluj, 401071, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hărcana",
+        "suburb": null,
+        "city_district": null,
+        "city": "Turda",
+        "state": null,
+        "postcode": "401071",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "959, Hărcana, Turda, Cluj, 401071, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:12.936444+00:00",
+  "_kind": "geo_samples"
+}

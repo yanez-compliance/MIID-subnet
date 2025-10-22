@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fuxin",
+  "geonameid": 2037346,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.03804109385437,
+      "lon": 121.65582830855317,
+      "geoinfo": {
+        "display_name": "潜龙路, 玉龙街道, Fuxin, Xihe District, Fuxin City, Liaoning, 123000, China",
+        "road": "潜龙路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "玉龙街道",
+        "city_district": null,
+        "city": "Fuxin",
+        "state": "Liaoning",
+        "postcode": "123000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "潜龙路, Fuxin, Liaoning, China"
+    },
+    {
+      "lat": 42.01086656588659,
+      "lon": 121.67288761797974,
+      "geoinfo": {
+        "display_name": "Hongshu Subdistrict, Taiping, Taiping District, Liaoning, 123000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hongshu Subdistrict",
+        "city_district": null,
+        "city": "Taiping",
+        "state": "Liaoning",
+        "postcode": "123000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "380, Hongshu Subdistrict, Taiping, Taiping District, Liaoning, 123000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:23.728889+00:00",
+  "_kind": "geo_samples"
+}

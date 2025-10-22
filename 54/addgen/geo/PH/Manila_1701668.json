@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Manila",
+  "geonameid": 1701668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.59944558842996,
+      "lon": 120.96218637105736,
+      "geoinfo": {
+        "display_name": "Riles Road, Parola, Tondo, First District, Manila, Capital District, Metro Manila, 1012, Philippines",
+        "road": "Riles Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tondo",
+        "city_district": "First District",
+        "city": "Manila",
+        "state": null,
+        "postcode": "1012",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Riles Road, Manila, Philippines"
+    },
+    {
+      "lat": 14.600391090698427,
+      "lon": 120.93601474802655,
+      "geoinfo": {
+        "display_name": "Manila, Capital District, Metro Manila, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manila",
+        "state": null,
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "596, Manila, Capital District, 34204 Metro Manila, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:09.646495+00:00",
+  "_kind": "geo_samples"
+}

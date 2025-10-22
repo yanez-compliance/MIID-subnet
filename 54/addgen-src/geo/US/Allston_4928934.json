@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Allston",
+  "geonameid": 4928934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.34453308546213,
+      "lon": -71.14318215002324,
+      "geoinfo": {
+        "display_name": "1575, Commonwealth Avenue, Brighton, Boston, Suffolk County, Massachusetts, 02135, United States",
+        "road": "Commonwealth Avenue",
+        "house_number": "1575",
+        "neighbourhood": null,
+        "suburb": "Brighton",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02135",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1575 Commonwealth Avenue, Allston, Massachusetts, United States"
+    },
+    {
+      "lat": 42.349600545964115,
+      "lon": -71.16043957268904,
+      "geoinfo": {
+        "display_name": "16, Brock Street, Brighton, Boston, Suffolk County, Massachusetts, 02135, United States",
+        "road": "Brock Street",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Brighton",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02135",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16, Brock Street, Brighton, Boston, Suffolk County, Massachusetts, 02135, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:56.100385+00:00",
+  "_kind": "geo_samples"
+}

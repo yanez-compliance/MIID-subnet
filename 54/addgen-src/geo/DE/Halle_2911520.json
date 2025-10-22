@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Halle",
+  "geonameid": 2911520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.03988241717303,
+      "lon": 8.386934027536702,
+      "geoinfo": {
+        "display_name": "66, Hauptstraße, Künsebeck, Halle (Westf.), Kreis Gütersloh, North Rhine-Westphalia, 33790, Germany",
+        "road": "Hauptstraße",
+        "house_number": "66",
+        "neighbourhood": null,
+        "suburb": "Künsebeck",
+        "city_district": null,
+        "city": "Halle (Westf.)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33790",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "66 Hauptstraße, Halle, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.03598790275712,
+      "lon": 8.342353535290028,
+      "geoinfo": {
+        "display_name": "Landmannstraße, Bokel, Halle (Westf.), Kreis Gütersloh, North Rhine-Westphalia, 33790, Germany",
+        "road": "Landmannstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bokel",
+        "city_district": null,
+        "city": "Halle (Westf.)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33790",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "131, Landmannstraße, Bokel, Halle (Westf.), Kreis Gütersloh, North Rhine-Westphalia, 33790, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:08.183475+00:00",
+  "_kind": "geo_samples"
+}

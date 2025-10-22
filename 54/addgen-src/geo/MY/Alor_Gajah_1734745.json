@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Alor Gajah",
+  "geonameid": 1734745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.3721029796272477,
+      "lon": 102.19658905343552,
+      "geoinfo": {
+        "display_name": "M8;139, Genting Cheng Estate, Alor Gajah, Malacca, 78000, Malaysia",
+        "road": "M8;139",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alor Gajah",
+        "state": "Malacca",
+        "postcode": "78000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "M8;139, Alor Gajah, Malacca, Malaysia"
+    },
+    {
+      "lat": 2.364264619971985,
+      "lon": 102.22057488334721,
+      "geoinfo": {
+        "display_name": "Taman Sungai Petai Permai 2, Alor Gajah, Malacca, 78000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Sungai Petai Permai 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alor Gajah",
+        "state": "Malacca",
+        "postcode": "78000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Taman Sungai Petai Permai 2, Alor Gajah, Malacca, 78000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:58.270467+00:00",
+  "_kind": "geo_samples"
+}

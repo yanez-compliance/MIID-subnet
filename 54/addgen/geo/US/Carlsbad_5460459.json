@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carlsbad",
+  "geonameid": 5460459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.42236798298693,
+      "lon": -104.18823346685838,
+      "geoinfo": {
+        "display_name": "Eddy County, New Mexico, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carlsbad, New Mexico, United States"
+    },
+    {
+      "lat": 32.44237169755136,
+      "lon": -104.21042024327205,
+      "geoinfo": {
+        "display_name": "1043, East Orchard Lane, Carlsbad, Eddy County, New Mexico, 88220, United States",
+        "road": "East Orchard Lane",
+        "house_number": "1043",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carlsbad",
+        "state": "New Mexico",
+        "postcode": "88220",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1043, East Orchard Lane, Carlsbad, Eddy County, New Mexico, 88220, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:57.620611+00:00",
+  "_kind": "geo_samples"
+}

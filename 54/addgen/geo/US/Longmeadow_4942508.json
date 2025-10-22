@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Longmeadow",
+  "geonameid": 4942508,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.04851924049333,
+      "lon": -72.59267766591202,
+      "geoinfo": {
+        "display_name": "58, Pondside Road, Longmeadow, Hampden County, Massachusetts, 01106, United States",
+        "road": "Pondside Road",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longmeadow",
+        "state": "Massachusetts",
+        "postcode": "01106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "58 Pondside Road, Longmeadow, Massachusetts, United States"
+    },
+    {
+      "lat": 42.026617715749545,
+      "lon": -72.63296073386763,
+      "geoinfo": {
+        "display_name": "129, Hickory Street, Suffield, Capitol Planning Region, Connecticut, 06078, United States",
+        "road": "Hickory Street",
+        "house_number": "129",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffield",
+        "state": "Connecticut",
+        "postcode": "06078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "129, Hickory Street, Suffield, Capitol Planning Region, Connecticut, 06078, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:58.271262+00:00",
+  "_kind": "geo_samples"
+}

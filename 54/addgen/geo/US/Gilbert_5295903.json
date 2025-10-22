@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gilbert",
+  "geonameid": 5295903,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.33359948460447,
+      "lon": -111.77060275124042,
+      "geoinfo": {
+        "display_name": "886, South Colonial Drive, Gilbert, Maricopa County, Arizona, 85296, United States",
+        "road": "South Colonial Drive",
+        "house_number": "886",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gilbert",
+        "state": "Arizona",
+        "postcode": "85296",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "886 South Colonial Drive, Gilbert, Arizona, United States"
+    },
+    {
+      "lat": 33.34988369409772,
+      "lon": -111.83516054454982,
+      "geoinfo": {
+        "display_name": "450, East Elliot Road, Chandler, Maricopa County, Arizona, 85225, United States",
+        "road": "East Elliot Road",
+        "house_number": "450",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chandler",
+        "state": "Arizona",
+        "postcode": "85225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "450, East Elliot Road, Chandler, Maricopa County, Arizona, 85225, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:27.103790+00:00",
+  "_kind": "geo_samples"
+}

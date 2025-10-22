@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Dunkerque",
+  "geonameid": 3020686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.008758660682325,
+      "lon": 2.379183005915549,
+      "geoinfo": {
+        "display_name": "49, Route de Bergues, Coudekerque-Centre, Coudekerque-Branche, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59210, France",
+        "road": "Route de Bergues",
+        "house_number": "49",
+        "neighbourhood": "Coudekerque-Centre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Coudekerque-Branche",
+        "state": "Hauts-de-France",
+        "postcode": "59210",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "49 Route de Bergues, Dunkerque, Hauts-de-France, France"
+    },
+    {
+      "lat": 51.03882598139737,
+      "lon": 2.4450658588373444,
+      "geoinfo": {
+        "display_name": "L'Européenne, Leffrinckoucke, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59495, France",
+        "road": "L'Européenne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leffrinckoucke",
+        "state": "Hauts-de-France",
+        "postcode": "59495",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "355, L'Européenne, Leffrinckoucke, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59495, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:14.897291+00:00",
+  "_kind": "geo_samples"
+}

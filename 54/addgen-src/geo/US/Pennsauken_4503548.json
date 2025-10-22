@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pennsauken",
+  "geonameid": 4503548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94930824369578,
+      "lon": -75.06760092313053,
+      "geoinfo": {
+        "display_name": "Family Dollar, North 41st Street, Merchantville, Pennsauken Township, Camden County, New Jersey, 08109, United States",
+        "road": "North 41st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pennsauken Township",
+        "state": "New Jersey",
+        "postcode": "08109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 41st Street, Pennsauken, New Jersey, United States"
+    },
+    {
+      "lat": 39.94682094468745,
+      "lon": -75.08366628422316,
+      "geoinfo": {
+        "display_name": "Saint Joseph Pro-Cathedral, 2907, Federal Street, Camden, Camden County, New Jersey, 08105, United States",
+        "road": "Federal Street",
+        "house_number": "2907",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Camden",
+        "state": "New Jersey",
+        "postcode": "08105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Saint Joseph Pro-Cathedral, 2907, Federal Street, Camden, Camden County, New Jersey, 08105, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:05.440191+00:00",
+  "_kind": "geo_samples"
+}

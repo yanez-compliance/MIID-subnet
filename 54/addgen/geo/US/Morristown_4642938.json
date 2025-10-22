@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morristown",
+  "geonameid": 4642938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.23345585416693,
+      "lon": -83.34012111907532,
+      "geoinfo": {
+        "display_name": "Hamblen County, East Tennessee, Tennessee, 37814, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37814",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Morristown, Tennessee, United States"
+    },
+    {
+      "lat": 36.194992498539165,
+      "lon": -83.27196967518144,
+      "geoinfo": {
+        "display_name": "BP, Fish Hatchery Road, The Colonies, Tigertown, Morristown, Hamblen County, East Tennessee, Tennessee, 37813, United States",
+        "road": "Fish Hatchery Road",
+        "house_number": null,
+        "neighbourhood": "The Colonies",
+        "suburb": null,
+        "city_district": null,
+        "city": "Morristown",
+        "state": "Tennessee",
+        "postcode": "37813",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "925, Fish Hatchery Road, Morristown, 37813 Tennessee, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:25.108367+00:00",
+  "_kind": "geo_samples"
+}

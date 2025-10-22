@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Grange",
+  "geonameid": 4898846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.78753702668429,
+      "lon": -87.87847090812564,
+      "geoinfo": {
+        "display_name": "South Brainard Avenue, Countryside, Lyons Township, Cook County, Illinois, 60525, United States",
+        "road": "South Brainard Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Countryside",
+        "state": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Brainard Avenue, La Grange, Illinois, United States"
+    },
+    {
+      "lat": 41.84001014027431,
+      "lon": -87.8701791124739,
+      "geoinfo": {
+        "display_name": "1462, Robinhood Lane, La Grange Park, Proviso Township, Cook County, Illinois, 60526, United States",
+        "road": "Robinhood Lane",
+        "house_number": "1462",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Grange Park",
+        "state": "Illinois",
+        "postcode": "60526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1462, Robinhood Lane, La Grange Park, Proviso Township, Cook County, Illinois, 60526, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:00.700887+00:00",
+  "_kind": "geo_samples"
+}

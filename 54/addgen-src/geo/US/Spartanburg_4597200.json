@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spartanburg",
+  "geonameid": 4597200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.975219326481195,
+      "lon": -81.95432132938454,
+      "geoinfo": {
+        "display_name": "499, Houston Street, Hilltop, Spartanburg County, South Carolina, 29303, United States",
+        "road": "Houston Street",
+        "house_number": "499",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hilltop",
+        "state": "South Carolina",
+        "postcode": "29303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "499 Houston Street, Spartanburg, South Carolina, United States"
+    },
+    {
+      "lat": 34.94904731200351,
+      "lon": -81.95136534419238,
+      "geoinfo": {
+        "display_name": "497, Alma Byrd Lane, Summer Place, Spartanburg, Spartanburg County, South Carolina, 29301, United States",
+        "road": "Alma Byrd Lane",
+        "house_number": "497",
+        "neighbourhood": "Summer Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "Spartanburg",
+        "state": "South Carolina",
+        "postcode": "29301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "497, Alma Byrd Lane, Summer Place, Spartanburg, Spartanburg County, South Carolina, 29301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:58.366572+00:00",
+  "_kind": "geo_samples"
+}

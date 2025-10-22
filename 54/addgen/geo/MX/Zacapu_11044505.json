@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Zacapu",
+  "geonameid": 11044505,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.819346412709045,
+      "lon": -101.76034236982971,
+      "geoinfo": {
+        "display_name": "Ingeniero Elider Sánchez Aguilar, Tarejero, Zacapu, Michoacán, 58600, Mexico",
+        "road": "Ingeniero Elider Sánchez Aguilar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tarejero",
+        "state": "Michoacán",
+        "postcode": "58600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ingeniero Elider Sánchez Aguilar, Zacapu, Michoacán, Mexico"
+    },
+    {
+      "lat": 19.831882649789982,
+      "lon": -101.79197652394004,
+      "geoinfo": {
+        "display_name": "La Angostura, Zacapu, Michoacán, 58600, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zacapu",
+        "state": "Michoacán",
+        "postcode": "58600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "668, La Angostura, Zacapu, Michoacán, 58600, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:17.204733+00:00",
+  "_kind": "geo_samples"
+}

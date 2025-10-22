@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Danderyd",
+  "geonameid": 2718000,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 59.40600573857622,
+      "lon": 18.110485640876107,
+      "geoinfo": {
+        "display_name": "Tranholmen, Danderyds kommun, Stockholm County, 115 47, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Danderyds kommun",
+        "state": null,
+        "postcode": "115 47",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Danderyd, Sweden"
+    },
+    {
+      "lat": 59.38588581646383,
+      "lon": 18.10091482618699,
+      "geoinfo": {
+        "display_name": "Braxenvägen, Sticklinge, Lidingö, Lidingö kommun, Stockholm County, 181 30, Sweden",
+        "road": "Braxenvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sticklinge",
+        "city_district": null,
+        "city": "Lidingö",
+        "state": null,
+        "postcode": "181 30",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Braxenvägen, Sticklinge, Lidingö, Lidingö kommun, Stockholm County, 181 30, Sweden"
+    },
+    {
+      "lat": 59.393709659613236,
+      "lon": 18.080662340872735,
+      "geoinfo": {
+        "display_name": "Djursholmsbanan, Djursholm, Danderyds kommun, Stockholm County, 182 69, Sweden",
+        "road": "Djursholmsbanan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Djursholm",
+        "state": null,
+        "postcode": "182 69",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Djursholmsbanan, Djursholm, Danderyds kommun, Stockholm County, 182 69, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:22.851693+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Weslaco",
+  "geonameid": 4740629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.127560583781793,
+      "lon": -97.97849170917179,
+      "geoinfo": {
+        "display_name": "Angela Colonia, Hidalgo County, Texas, 78596, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78596",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Weslaco, Texas, United States"
+    },
+    {
+      "lat": 26.171225902378055,
+      "lon": -97.97986075125266,
+      "geoinfo": {
+        "display_name": "968, East Expressway 83, Weslaco, Hidalgo County, Texas, 78596, United States",
+        "road": "East Expressway 83",
+        "house_number": "968",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weslaco",
+        "state": "Texas",
+        "postcode": "78596",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "968, East Expressway 83, Weslaco, Hidalgo County, Texas, 78596, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:40.944188+00:00",
+  "_kind": "geo_samples"
+}

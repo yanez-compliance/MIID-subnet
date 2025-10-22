@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Buenavista",
+  "geonameid": 11549995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36882770123214,
+      "lon": -3.7229215883021567,
+      "geoinfo": {
+        "display_name": "Calle de Ildefonso González Valencia, Buenavista, Carabanchel, Madrid, Community of Madrid, 28054, Spain",
+        "road": "Calle de Ildefonso González Valencia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28054",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de Ildefonso González Valencia, Buenavista, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.33533802778689,
+      "lon": -3.7775121821493696,
+      "geoinfo": {
+        "display_name": "Calle Río Danubio, Ensanche de San Nicasio, San Nicasio, Leganés, Community of Madrid, 28913, Spain",
+        "road": "Calle Río Danubio",
+        "house_number": null,
+        "neighbourhood": "Ensanche de San Nicasio",
+        "suburb": "San Nicasio",
+        "city_district": null,
+        "city": "Leganés",
+        "state": "Community of Madrid",
+        "postcode": "28913",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "433, Calle Río Danubio, Ensanche de San Nicasio, San Nicasio, Leganés, Community of Madrid, 28913, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:42.498194+00:00",
+  "_kind": "geo_samples"
+}

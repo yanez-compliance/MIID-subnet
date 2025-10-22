@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Limonar",
+  "geonameid": 3549835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.945337094069473,
+      "lon": -81.40374433751421,
+      "geoinfo": {
+        "display_name": "Luis Roque, Limonar, Matanzas, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Limonar",
+        "state": "Matanzas",
+        "postcode": null,
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Limonar, Matanzas, Cuba"
+    },
+    {
+      "lat": 22.946532738897233,
+      "lon": -81.45227552989844,
+      "geoinfo": {
+        "display_name": "Carretera Central, La Defensa, Limonar, Matanzas, 42800, Cuba",
+        "road": "Carretera Central",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Limonar",
+        "state": "Matanzas",
+        "postcode": "42800",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "917, Carretera Central, La Defensa, Limonar, Matanzas, 42800, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:24.236510+00:00",
+  "_kind": "geo_samples"
+}

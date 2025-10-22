@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Honda",
+  "geonameid": 3680840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.188282981852238,
+      "lon": -74.75921215139427,
+      "geoinfo": {
+        "display_name": "Monteroy, Honda, Norte, Tolima, RAP (Especial) Central, 732040, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Honda",
+        "state": "Tolima",
+        "postcode": "732040",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Honda, Tolima, Colombia"
+    },
+    {
+      "lat": 5.2058658002326315,
+      "lon": -74.7396547198264,
+      "geoinfo": {
+        "display_name": "Carrera 15, San Juan de Dios, Honda, Norte, Tolima, RAP (Especial) Central, 732040, Colombia",
+        "road": "Carrera 15",
+        "house_number": null,
+        "neighbourhood": "San Juan de Dios",
+        "suburb": null,
+        "city_district": null,
+        "city": "Honda",
+        "state": "Tolima",
+        "postcode": "732040",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 15, San Juan de Dios, Honda, Norte, Tolima, RAP (Especial) Central, 732040, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:06:20.092809+00:00",
+  "_kind": "geo_samples"
+}

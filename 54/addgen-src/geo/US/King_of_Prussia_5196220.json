@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "King of Prussia",
+  "geonameid": 5196220,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.1087316019841,
+      "lon": -75.3433845980165,
+      "geoinfo": {
+        "display_name": "Bridgeport, Montgomery County, Pennsylvania, 19405, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bridgeport",
+        "state": "Pennsylvania",
+        "postcode": "19405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "King of Prussia, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.124640495555,
+      "lon": -75.40502890428495,
+      "geoinfo": {
+        "display_name": "Kennedy Court, West Norriton Township, Montgomery County, Pennsylvania, 19403, United States",
+        "road": "Kennedy Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Norriton Township",
+        "state": "Pennsylvania",
+        "postcode": "19403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "292, Kennedy Court, West Norriton Township, Montgomery County, Pennsylvania, 19403, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:17.673257+00:00",
+  "_kind": "geo_samples"
+}

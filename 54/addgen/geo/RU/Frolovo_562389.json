@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Frolovo",
+  "geonameid": 562389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.78692184772564,
+      "lon": 43.702738092752874,
+      "geoinfo": {
+        "display_name": "Frolovo, Volgograd Oblast, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frolovo",
+        "state": "Volgograd Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Frolovo, Volgograd Oblast, Russia"
+    },
+    {
+      "lat": 49.77376418367247,
+      "lon": 43.67494808887967,
+      "geoinfo": {
+        "display_name": "улица Урицкого, Frolovo, Volgograd Oblast, 403531, Russia",
+        "road": "улица Урицкого",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frolovo",
+        "state": "Volgograd Oblast",
+        "postcode": "403531",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "926, улица Урицкого, Frolovo, Volgograd Oblast, 403531, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:29.937536+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Port Shepstone",
+  "geonameid": 964406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -30.711330949354725,
+      "lon": 30.44366471366229,
+      "geoinfo": {
+        "display_name": "N2, Hibiscus Coast Ward 12, Hibiscus Coast Local Municipality, Ugu District Municipality, KwaZulu-Natal, 4235, South Africa",
+        "road": "N2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hibiscus Coast Ward 12",
+        "city_district": null,
+        "city": "Hibiscus Coast Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "4235",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N2, Port Shepstone, KwaZulu-Natal, South Africa"
+    },
+    {
+      "lat": -30.734097069228575,
+      "lon": 30.40945109475064,
+      "geoinfo": {
+        "display_name": "Marburg, Hibiscus Coast Ward 17, Hibiscus Coast Local Municipality, Ugu District Municipality, KwaZulu-Natal, 4240, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marburg",
+        "city_district": null,
+        "city": "Hibiscus Coast Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": "4240",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "875, Marburg, Port Shepstone, 4240 KwaZulu-Natal, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:51:30.871943+00:00",
+  "_kind": "geo_samples"
+}

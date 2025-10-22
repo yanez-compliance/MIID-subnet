@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Maguan",
+  "geonameid": 12359299,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.08603646426526,
+      "lon": 106.06848620540084,
+      "geoinfo": {
+        "display_name": "Zhangjiachuan Hui Autonomous County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Maguan, Gansu, China"
+    },
+    {
+      "lat": 35.02861490107123,
+      "lon": 106.03988120395933,
+      "geoinfo": {
+        "display_name": "Yushu, Zhangjiachuan Hui Autonomous County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yushu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "531, Yushu, Zhangjiachuan Hui Autonomous County, Tianshui, 68500 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:56.053091+00:00",
+  "_kind": "geo_samples"
+}

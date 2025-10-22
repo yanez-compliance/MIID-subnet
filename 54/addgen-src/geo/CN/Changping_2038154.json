@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changping",
+  "geonameid": 2038154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.180959721020095,
+      "lon": 116.22097653131004,
+      "geoinfo": {
+        "display_name": "X006, Machikou, Changping District, Beijing, 102249, China",
+        "road": "X006",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changping District",
+        "state": "Beijing",
+        "postcode": "102249",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X006, Changping, Beijing, China"
+    },
+    {
+      "lat": 40.25431486204282,
+      "lon": 116.22860732575589,
+      "geoinfo": {
+        "display_name": "十三陵温馨老年公寓, 神南路, Nanxin, Changping District, Beijing, 102249, China",
+        "road": "神南路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changping District",
+        "state": "Beijing",
+        "postcode": "102249",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "398, 神南路, Changping, 102249 Beijing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:58:09.658961+00:00",
+  "_kind": "geo_samples"
+}

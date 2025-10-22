@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Linares",
+  "geonameid": 3524348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.860643125608917,
+      "lon": -99.58323234848953,
+      "geoinfo": {
+        "display_name": "Jardines de Linares, Linares, Nuevo León, 67700, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linares",
+        "state": "Nuevo León",
+        "postcode": "67700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Linares, Nuevo León, Mexico"
+    },
+    {
+      "lat": 24.879223362862398,
+      "lon": -99.57056426020895,
+      "geoinfo": {
+        "display_name": "Privada Maestra Rosario Castellanos, Linares, Nuevo León, 67700, Mexico",
+        "road": "Privada Maestra Rosario Castellanos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linares",
+        "state": "Nuevo León",
+        "postcode": "67700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "403, Privada Maestra Rosario Castellanos, Linares, Nuevo León, 67700, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:14.362840+00:00",
+  "_kind": "geo_samples"
+}

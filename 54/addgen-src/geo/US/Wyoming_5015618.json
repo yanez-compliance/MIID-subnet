@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wyoming",
+  "geonameid": 5015618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.86991268907285,
+      "lon": -85.69041892085978,
+      "geoinfo": {
+        "display_name": "52nd Street Southwest, Wyoming, Kent County, Michigan, 49418, United States",
+        "road": "52nd Street Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyoming",
+        "state": "Michigan",
+        "postcode": "49418",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "52nd Street Southwest, Wyoming, Michigan, United States"
+    },
+    {
+      "lat": 42.94451182526064,
+      "lon": -85.73502018976893,
+      "geoinfo": {
+        "display_name": "South Standale Trail, Walker, Kent County, Michigan, 49534, United States",
+        "road": "South Standale Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walker",
+        "state": "Michigan",
+        "postcode": "49534",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "378, South Standale Trail, Walker, Kent County, Michigan, 49534, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:15.708927+00:00",
+  "_kind": "geo_samples"
+}

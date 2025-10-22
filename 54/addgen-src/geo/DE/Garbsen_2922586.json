@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Garbsen",
+  "geonameid": 2922586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.43355810771144,
+      "lon": 9.590878051270362,
+      "geoinfo": {
+        "display_name": "20, Ernst-Kohlrautz-Straße, Berenbostel, Ortschaft Garbsen, Garbsen, Region Hannover, Lower Saxony, 30827, Germany",
+        "road": "Ernst-Kohlrautz-Straße",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Berenbostel",
+        "city_district": "Ortschaft Garbsen",
+        "city": "Garbsen",
+        "state": "Lower Saxony",
+        "postcode": "30827",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20 Ernst-Kohlrautz-Straße, Garbsen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.39244647065891,
+      "lon": 9.582901451688764,
+      "geoinfo": {
+        "display_name": "6, Vor den Specken, Seelze-Süd, Almhorst, Seelze, Region Hannover, Lower Saxony, 30926, Germany",
+        "road": "Vor den Specken",
+        "house_number": "6",
+        "neighbourhood": "Seelze-Süd",
+        "suburb": null,
+        "city_district": null,
+        "city": "Seelze",
+        "state": "Lower Saxony",
+        "postcode": "30926",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6, Vor den Specken, Seelze-Süd, Almhorst, Seelze, Region Hannover, Lower Saxony, 30926, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:55.296988+00:00",
+  "_kind": "geo_samples"
+}

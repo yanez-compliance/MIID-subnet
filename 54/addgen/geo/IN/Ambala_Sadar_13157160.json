@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ambala Sadar",
+  "geonameid": 13157160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.359864341999604,
+      "lon": 76.87952466386102,
+      "geoinfo": {
+        "display_name": "Babyal, Ambala Cantt, Ambala, Haryana, 133001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Babyal",
+        "state": "Haryana",
+        "postcode": "133001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Ambala Sadar, Haryana, India"
+    },
+    {
+      "lat": 30.310527349567902,
+      "lon": 76.89557244336491,
+      "geoinfo": {
+        "display_name": "Ambala Cantt, Ambala, Haryana, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Haryana",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "092, Ambala Cantt, Ambala, 52902 Haryana, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:47.867865+00:00",
+  "_kind": "geo_samples"
+}

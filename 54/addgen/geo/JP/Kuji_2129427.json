@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kuji",
+  "geonameid": 2129427,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.18916452273874,
+      "lon": 141.8264088804216,
+      "geoinfo": {
+        "display_name": "Kuji, Iwate Prefecture, 028-0041, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuji",
+        "state": null,
+        "postcode": "028-0041",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kuji, Japan"
+    },
+    {
+      "lat": 40.19203739722471,
+      "lon": 141.73385711399987,
+      "geoinfo": {
+        "display_name": "畑田, Kuji, Iwate Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuji",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "891, 畑田, Kuji, 77291 Iwate Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:13.400223+00:00",
+  "_kind": "geo_samples"
+}

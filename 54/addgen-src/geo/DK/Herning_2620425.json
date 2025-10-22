@@ -1,0 +1,83 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Herning",
+  "geonameid": 2620425,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 56.12814784426728,
+      "lon": 8.93445474210431,
+      "geoinfo": {
+        "display_name": "34, Taksvej, Herning, Herning Municipality, Central Denmark Region, 7400, Denmark",
+        "road": "Taksvej",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Herning",
+        "state": "Central Denmark Region",
+        "postcode": "7400",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "34 Taksvej, Herning, Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 56.155826497934505,
+      "lon": 9.011545507135923,
+      "geoinfo": {
+        "display_name": "Lundvej, Lund Huse, Herning, Herning Municipality, Central Denmark Region, 7400, Denmark",
+        "road": "Lundvej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Herning",
+        "state": "Central Denmark Region",
+        "postcode": "7400",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Lundvej, Herning, Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 56.120652591985966,
+      "lon": 8.922151634999853,
+      "geoinfo": {
+        "display_name": "Mørupvej, Snejbjerg, Herning, Herning Municipality, Central Denmark Region, Denmark",
+        "road": "Mørupvej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Snejbjerg",
+        "city_district": null,
+        "city": "Herning",
+        "state": "Central Denmark Region",
+        "postcode": null,
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "830, Mørupvej, Snejbjerg, Herning, Herning Municipality, 64561 Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 56.145345978266796,
+      "lon": 8.909542305687648,
+      "geoinfo": {
+        "display_name": "Bassumgårdvej, Snejbjerg, Herning Municipality, Central Denmark Region, Denmark",
+        "road": "Bassumgårdvej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Snejbjerg",
+        "city_district": null,
+        "city": null,
+        "state": "Central Denmark Region",
+        "postcode": null,
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "261, Bassumgårdvej, Snejbjerg, Herning Municipality, 22424 Central Denmark Region, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:58.407976+00:00",
+  "_kind": "geo_samples"
+}

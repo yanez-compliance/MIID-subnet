@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 3)",
+  "geonameid": 6295532,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.3189180143298,
+      "lon": 8.501896869328927,
+      "geoinfo": {
+        "display_name": "Neptune, Gratweg, Aegerten, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland",
+        "road": "Gratweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stallikon",
+        "state": "Zurich",
+        "postcode": "8143",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "275, Gratweg, Zürich (Kreis 3), Zurich, Switzerland"
+    },
+    {
+      "lat": 47.3316898692937,
+      "lon": 8.494931511108431,
+      "geoinfo": {
+        "display_name": "Bleikistrasse, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland",
+        "road": "Bleikistrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stallikon",
+        "state": "Zurich",
+        "postcode": "8143",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "791, Bleikistrasse, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:00.091147+00:00",
+  "_kind": "geo_samples"
+}

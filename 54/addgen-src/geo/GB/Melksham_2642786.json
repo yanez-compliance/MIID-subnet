@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Melksham",
+  "geonameid": 2642786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.368308147532694,
+      "lon": -2.1526469423452452,
+      "geoinfo": {
+        "display_name": "B3107, Broughton Gifford, Melksham, Wiltshire, England, SN12 8FS, United Kingdom",
+        "road": "B3107",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Broughton Gifford",
+        "city_district": null,
+        "city": "Melksham",
+        "state": "England",
+        "postcode": "SN12 8FS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "B3107, Melksham, England, United Kingdom"
+    },
+    {
+      "lat": 51.34237445014813,
+      "lon": -2.1715022094733727,
+      "geoinfo": {
+        "display_name": "Whaddon Lane, Whaddon, Hilperton, Wiltshire, England, BA14 7RN, United Kingdom",
+        "road": "Whaddon Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hilperton",
+        "city_district": null,
+        "city": "Hilperton",
+        "state": "England",
+        "postcode": "BA14 7RN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Whaddon Lane, Whaddon, Hilperton, Wiltshire, England, BA14 7RN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:35.199891+00:00",
+  "_kind": "geo_samples"
+}

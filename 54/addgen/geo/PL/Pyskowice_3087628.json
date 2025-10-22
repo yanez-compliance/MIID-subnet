@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Pyskowice",
+  "geonameid": 3087628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.41107016166468,
+      "lon": 18.611654029709946,
+      "geoinfo": {
+        "display_name": "901, Pyskowice, Gliwice County, Metropolis GZM, Silesian Voivodeship, 44-120, Poland",
+        "road": "901",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pyskowice",
+        "state": "Silesian Voivodeship",
+        "postcode": "44-120",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "901, Pyskowice, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.39554773762111,
+      "lon": 18.701494648088342,
+      "geoinfo": {
+        "display_name": "32, Bytomska, Boniowice, gmina Zbrosławice, Tarnowskie Góry County, Metropolis GZM, Silesian Voivodeship, 42-674, Poland",
+        "road": "Bytomska",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boniowice",
+        "state": "Silesian Voivodeship",
+        "postcode": "42-674",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "32, Bytomska, Boniowice, gmina Zbrosławice, Tarnowskie Góry County, Metropolis GZM, Silesian Voivodeship, 42-674, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:34.839341+00:00",
+  "_kind": "geo_samples"
+}

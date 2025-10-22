@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Viña del Mar",
+  "geonameid": 3868121,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -33.012832419662864,
+      "lon": -71.59953654374557,
+      "geoinfo": {
+        "display_name": "Recreo, Viña del Mar, Provincia de Valparaíso, Valparaiso Region, 2580335, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Recreo",
+        "city_district": null,
+        "city": "Viña del Mar",
+        "state": "Valparaiso Region",
+        "postcode": "2580335",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Recreo, Viña del Mar, Valparaiso Region, Chile"
+    },
+    {
+      "lat": -33.03207734145097,
+      "lon": -71.52661255469125,
+      "geoinfo": {
+        "display_name": "640, Riveros Cruz, Miraflores Bajo, Miraflores, Viña del Mar, Provincia de Valparaíso, Valparaiso Region, 2520000, Chile",
+        "road": "Riveros Cruz",
+        "house_number": "640",
+        "neighbourhood": "Miraflores Bajo",
+        "suburb": "Miraflores",
+        "city_district": null,
+        "city": "Viña del Mar",
+        "state": "Valparaiso Region",
+        "postcode": "2520000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "640 Riveros Cruz, Viña del Mar, Valparaiso Region, Chile"
+    }
+  ],
+  "updated_at": "2025-10-16T12:10:33.684605+00:00",
+  "_kind": "geo_samples"
+}

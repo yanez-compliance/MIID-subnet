@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Iona",
+  "geonameid": 4159805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.543347603871474,
+      "lon": -81.93980533201399,
+      "geoinfo": {
+        "display_name": "Schultz Road, Iona, Lee County, Florida, 33908, United States",
+        "road": "Schultz Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iona",
+        "state": "Florida",
+        "postcode": "33908",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Schultz Road, Iona, Florida, United States"
+    },
+    {
+      "lat": 26.54482549783296,
+      "lon": -81.97983783177109,
+      "geoinfo": {
+        "display_name": "Southwest 1st Court, Cape Coral, Lee County, Florida, 33914, United States",
+        "road": "Southwest 1st Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cape Coral",
+        "state": "Florida",
+        "postcode": "33914",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 1st Court, Cape Coral, Lee County, Florida, 33914, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:35.673753+00:00",
+  "_kind": "geo_samples"
+}

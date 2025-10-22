@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Chacabuco",
+  "geonameid": 3861953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.67044428909791,
+      "lon": -60.51347209699487,
+      "geoinfo": {
+        "display_name": "Avenida M. M. Gil, Chacabuco, Partido de Chacabuco, Buenos Aires, 6740, Argentina",
+        "road": "Avenida M. M. Gil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chacabuco",
+        "state": "Buenos Aires",
+        "postcode": "6740",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida M. M. Gil, Chacabuco, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.644518786859734,
+      "lon": -60.48163630757987,
+      "geoinfo": {
+        "display_name": "12 de Febrero, Barrio La Amistad, Chacabuco, Partido de Chacabuco, Buenos Aires, 6740, Argentina",
+        "road": "12 de Febrero",
+        "house_number": null,
+        "neighbourhood": "Barrio La Amistad",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chacabuco",
+        "state": "Buenos Aires",
+        "postcode": "6740",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "12 de Febrero, Barrio La Amistad, Chacabuco, Partido de Chacabuco, Buenos Aires, 6740, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:53.406660+00:00",
+  "_kind": "geo_samples"
+}

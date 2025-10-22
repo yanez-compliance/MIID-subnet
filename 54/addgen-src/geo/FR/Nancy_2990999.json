@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Nancy",
+  "geonameid": 2990999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.69692490040408,
+      "lon": 6.167371674425255,
+      "geoinfo": {
+        "display_name": "44, Boulevard Albert 1er, Beauregard - Boufflers - Buthegnemont - Boudonville, Nancy, Meurthe-et-Moselle, Grand Est, Metropolitan France, 54100, France",
+        "road": "Boulevard Albert 1er",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Beauregard - Boufflers - Buthegnemont - Boudonville",
+        "city_district": null,
+        "city": "Nancy",
+        "state": "Grand Est",
+        "postcode": "54100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "44 Boulevard Albert 1er, Nancy, Grand Est, France"
+    },
+    {
+      "lat": 48.6843424545763,
+      "lon": 6.234473701293085,
+      "geoinfo": {
+        "display_name": "D 2B, Saulxures-lès-Nancy, Nancy, Meurthe-et-Moselle, Grand Est, Metropolitan France, 54420, France",
+        "road": "D 2B",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saulxures-lès-Nancy",
+        "state": "Grand Est",
+        "postcode": "54420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 2B, Saulxures-lès-Nancy, Nancy, Meurthe-et-Moselle, Grand Est, Metropolitan France, 54420, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:38.198329+00:00",
+  "_kind": "geo_samples"
+}

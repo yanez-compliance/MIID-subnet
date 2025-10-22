@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bruckmühl",
+  "geonameid": 2943408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.88349569079521,
+      "lon": 11.94995133136253,
+      "geoinfo": {
+        "display_name": "Am Bergblick, Weihenlinden, Högling, Bruckmühl, Landkreis Rosenheim, Bavaria, 83052, Germany",
+        "road": "Am Bergblick",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bruckmühl",
+        "state": "Bavaria",
+        "postcode": "83052",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Bergblick, Bruckmühl, Bavaria, Germany"
+    },
+    {
+      "lat": 47.909311923891174,
+      "lon": 11.872883946859561,
+      "geoinfo": {
+        "display_name": "Oberwertach, Feldolling, Feldkirchen-Westerham, Landkreis Rosenheim, Bavaria, 83620, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Feldkirchen-Westerham",
+        "state": "Bavaria",
+        "postcode": "83620",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "975, Bruckmühl, 83620 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:50.183611+00:00",
+  "_kind": "geo_samples"
+}

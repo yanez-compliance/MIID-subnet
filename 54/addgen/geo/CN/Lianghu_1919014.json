@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lianghu",
+  "geonameid": 1919014,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.95417835942183,
+      "lon": 120.92540106563243,
+      "geoinfo": {
+        "display_name": "Fenghui, Shangyu District, Shaoxing, Zhejiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shangyu District",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lianghu, Zhejiang, China"
+    },
+    {
+      "lat": 30.026261878120863,
+      "lon": 120.87122617107293,
+      "geoinfo": {
+        "display_name": "新建路, Baiguan, Shangyu District, Shaoxing, Zhejiang, 312300, China",
+        "road": "新建路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baiguan",
+        "city_district": null,
+        "city": "Shangyu District",
+        "state": "Zhejiang",
+        "postcode": "312300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "465, 新建路, Baiguan, Shangyu District, Shaoxing, Zhejiang, 312300, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:48.062506+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willmar",
+  "geonameid": 5052916,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.14609509020414,
+      "lon": -95.06991815314781,
+      "geoinfo": {
+        "display_name": "17th Street Northwest, Willmar, Kandiyohi County, Minnesota, 56201, United States",
+        "road": "17th Street Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Willmar",
+        "state": "Minnesota",
+        "postcode": "56201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17th Street Northwest, Willmar, Minnesota, United States"
+    },
+    {
+      "lat": 45.10114476556242,
+      "lon": -94.99569499518077,
+      "geoinfo": {
+        "display_name": "36th Street Southeast, Kandiyohi County, Minnesota, 56201, United States",
+        "road": "36th Street Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Minnesota",
+        "postcode": "56201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36th Street Southeast, Kandiyohi County, Minnesota, 56201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:03.197363+00:00",
+  "_kind": "geo_samples"
+}

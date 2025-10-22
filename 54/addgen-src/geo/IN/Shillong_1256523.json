@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Shillong",
+  "geonameid": 1256523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.600933315878034,
+      "lon": 91.8570500085191,
+      "geoinfo": {
+        "display_name": "Shillong, Mylliem, East Khasi Hills, Meghalaya, 793001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shillong",
+        "state": "Meghalaya",
+        "postcode": "793001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Shillong, Meghalaya, India"
+    },
+    {
+      "lat": 25.55575675684302,
+      "lon": 91.91016093704393,
+      "geoinfo": {
+        "display_name": "Mawpat, East Khasi Hills, Meghalaya, 793014, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Meghalaya",
+        "postcode": "793014",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "717, Shillong, 793014 Meghalaya, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:45:45.545985+00:00",
+  "_kind": "geo_samples"
+}

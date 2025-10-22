@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carrollton",
+  "geonameid": 4186416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.5863805929169,
+      "lon": -85.04561454276934,
+      "geoinfo": {
+        "display_name": "Crest Haven Drive, Carrollton, Carroll County, Georgia, 30116, United States",
+        "road": "Crest Haven Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrollton",
+        "state": "Georgia",
+        "postcode": "30116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Crest Haven Drive, Carrollton, Georgia, United States"
+    },
+    {
+      "lat": 33.559972033323234,
+      "lon": -85.11649777836368,
+      "geoinfo": {
+        "display_name": "56, Tyus Carrollton Road, Greenwood Estates, Fairlawn Estates, Carroll County, Georgia, 30117, United States",
+        "road": "Tyus Carrollton Road",
+        "house_number": "56",
+        "neighbourhood": "Greenwood Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30117",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "56, Tyus Carrollton Road, Greenwood Estates, Fairlawn Estates, Carroll County, Georgia, 30117, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:38.205045+00:00",
+  "_kind": "geo_samples"
+}

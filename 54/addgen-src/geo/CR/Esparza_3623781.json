@@ -1,0 +1,65 @@
+{
+  "country_code": "CR",
+  "country": "Costa Rica",
+  "city": "Esparza",
+  "geonameid": 3623781,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 9.97973757037368,
+      "lon": -84.6491182717773,
+      "geoinfo": {
+        "display_name": "Calle San Juan, San Juan Grande, Esparza, Puntarenas Province, 60202, Costa Rica",
+        "road": "Calle San Juan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan Grande",
+        "state": null,
+        "postcode": "60202",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle San Juan, Esparza, Costa Rica"
+    },
+    {
+      "lat": 9.988186407025777,
+      "lon": -84.63289353851412,
+      "geoinfo": {
+        "display_name": "Calle Parcelas San Juan Chiquito, San Juan Chiquito, San Juan Grande, Esparza, Puntarenas Province, 60202, Costa Rica",
+        "road": "Calle Parcelas San Juan Chiquito",
+        "house_number": null,
+        "neighbourhood": "San Juan Chiquito",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan Grande",
+        "state": null,
+        "postcode": "60202",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle Parcelas San Juan Chiquito, Esparza, Costa Rica"
+    },
+    {
+      "lat": 9.9743432067889,
+      "lon": -84.62759510482645,
+      "geoinfo": {
+        "display_name": "Calle Lomas del Río, Llanada del Cacao, San Rafael, Esparza, Puntarenas Province, 60204, Costa Rica",
+        "road": "Calle Lomas del Río",
+        "house_number": null,
+        "neighbourhood": "Llanada del Cacao",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Rafael",
+        "state": null,
+        "postcode": "60204",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle Lomas del Río, Esparza, Costa Rica"
+    }
+  ],
+  "updated_at": "2025-10-16T12:42:26.186687+00:00",
+  "_kind": "geo_samples"
+}

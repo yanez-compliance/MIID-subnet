@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Naxi",
+  "geonameid": 1818086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.756620219269767,
+      "lon": 105.37945445723864,
+      "geoinfo": {
+        "display_name": "Xinle, Naxi District, Luzhou, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinle",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Naxi, Sichuan, China"
+    },
+    {
+      "lat": 28.818053795835006,
+      "lon": 105.36140554881588,
+      "geoinfo": {
+        "display_name": "G246, Yongning Subdistrict, Caoxi, Jiangyang District, Luzhou, Sichuan, China",
+        "road": "G246",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yongning Subdistrict",
+        "city_district": null,
+        "city": "Caoxi",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G246, Yongning Subdistrict, Caoxi, Jiangyang District, Luzhou, 98833 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:07.778048+00:00",
+  "_kind": "geo_samples"
+}

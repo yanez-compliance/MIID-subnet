@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Los Angeles",
+  "geonameid": 5344994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.0257075539154,
+      "lon": -118.1557143143146,
+      "geoinfo": {
+        "display_name": "Burger King, 535, South Atlantic Boulevard, Eastmont, East Los Angeles, Los Angeles County, California, 90022, United States",
+        "road": "South Atlantic Boulevard",
+        "house_number": "535",
+        "neighbourhood": null,
+        "suburb": "East Los Angeles",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "90022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "535 South Atlantic Boulevard, East Los Angeles, California, United States"
+    },
+    {
+      "lat": 33.99052153483007,
+      "lon": -118.14799997418453,
+      "geoinfo": {
+        "display_name": "Bandini Boulevard, Commerce, Los Angeles County, California, 90040, United States",
+        "road": "Bandini Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Commerce",
+        "state": "California",
+        "postcode": "90040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "114, Bandini Boulevard, Commerce, Los Angeles County, California, 90040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:48.998426+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Dmitrov",
+  "geonameid": 565955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.31602812007597,
+      "lon": 37.494170185597106,
+      "geoinfo": {
+        "display_name": "46К-0441, Yakhroma, Dmitrovsky District, Moscow Oblast, Central Federal District, 141840, Russia",
+        "road": "46К-0441",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yakhroma",
+        "state": "Moscow Oblast",
+        "postcode": "141840",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "46К-0441, Dmitrov, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 56.37002101596349,
+      "lon": 37.49865298127703,
+      "geoinfo": {
+        "display_name": "СНТ «Каменный Ручей», Dmitrov, Dmitrovsky District, Moscow Oblast, Central Federal District, 141800, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dmitrov",
+        "state": "Moscow Oblast",
+        "postcode": "141800",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "098, Dmitrov, 141800 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:38.996992+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Sitges",
+  "geonameid": 3108877,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.25034692766669,
+      "lon": 1.8297458800520454,
+      "geoinfo": {
+        "display_name": "4, Passeig dels Ametllers, Quintmar, Sitges, Garraf, Barcelona, Catalonia, 08870, Spain",
+        "road": "Passeig dels Ametllers",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sitges",
+        "state": "Catalonia",
+        "postcode": "08870",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "4 Passeig dels Ametllers, Sitges, Catalonia, Spain"
+    },
+    {
+      "lat": 41.21664221322945,
+      "lon": 1.7689539738778601,
+      "geoinfo": {
+        "display_name": "Punta de les Coves, Avinguda de Can Girona, Sitges, Garraf, Barcelona, Catalonia, 08812, Spain",
+        "road": "Avinguda de Can Girona",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sitges",
+        "state": "Catalonia",
+        "postcode": "08812",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "033, Avinguda de Can Girona, Sitges, 08812 Catalonia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:00.604412+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Algonquin",
+  "geonameid": 4883078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.18178628138635,
+      "lon": -88.24860378671961,
+      "geoinfo": {
+        "display_name": "Algonquin Road, Barrington Hills, Fox River Grove, McHenry County, Illinois, 60102, United States",
+        "road": "Algonquin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fox River Grove",
+        "state": "Illinois",
+        "postcode": "60102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Algonquin Road, Algonquin, Illinois, United States"
+    },
+    {
+      "lat": 42.20325520998688,
+      "lon": -88.28133411636853,
+      "geoinfo": {
+        "display_name": "Brown Trail, Cary, McHenry County, Illinois, 60013, United States",
+        "road": "Brown Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cary",
+        "state": "Illinois",
+        "postcode": "60013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "774, Brown Trail, Cary, McHenry County, Illinois, 60013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:58.201462+00:00",
+  "_kind": "geo_samples"
+}

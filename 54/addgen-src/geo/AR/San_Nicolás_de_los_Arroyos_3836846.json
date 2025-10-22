@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Nicolás de los Arroyos",
+  "geonameid": 3836846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.360789823506586,
+      "lon": -60.21588395841035,
+      "geoinfo": {
+        "display_name": "Primavera, Las Viñas, San Nicolás de los Arroyos, Partido de San Nicolás, Buenos Aires, 2900, Argentina",
+        "road": "Primavera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Nicolás de los Arroyos",
+        "state": "Buenos Aires",
+        "postcode": "2900",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Primavera, San Nicolás de los Arroyos, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -33.3037047611754,
+      "lon": -60.24333253174756,
+      "geoinfo": {
+        "display_name": "Buenos Aires, Loteo Castelli, San Nicolás de los Arroyos, Partido de San Nicolás, Buenos Aires, B2900, Argentina",
+        "road": "Buenos Aires",
+        "house_number": null,
+        "neighbourhood": "Loteo Castelli",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Nicolás de los Arroyos",
+        "state": "Buenos Aires",
+        "postcode": "B2900",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "333, Buenos Aires, Loteo Castelli, San Nicolás de los Arroyos, Partido de San Nicolás, Buenos Aires, B2900, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:09.463439+00:00",
+  "_kind": "geo_samples"
+}

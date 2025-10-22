@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Caerphilly",
+  "geonameid": 2654089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.59473525958568,
+      "lon": -3.2604142142312926,
+      "geoinfo": {
+        "display_name": "17, Graigwen Crescent, Aber Valley, Abertridwr, Caerphilly County Borough, Wales, CF83 4AT, United Kingdom",
+        "road": "Graigwen Crescent",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Aber Valley",
+        "city_district": null,
+        "city": "Abertridwr",
+        "state": "Wales",
+        "postcode": "CF83 4AT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "17 Graigwen Crescent, Caerphilly, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.559037357911365,
+      "lon": -3.173995338059514,
+      "geoinfo": {
+        "display_name": "Lisvane, Cardiff, Wales, CF83 3EJ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lisvane",
+        "city_district": null,
+        "city": "Cardiff",
+        "state": "Wales",
+        "postcode": "CF83 3EJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lisvane, Cardiff, Wales, CF83 3EJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:38.650260+00:00",
+  "_kind": "geo_samples"
+}

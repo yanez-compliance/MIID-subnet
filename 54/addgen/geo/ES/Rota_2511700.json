@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Rota",
+  "geonameid": 2511700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.59694781292652,
+      "lon": -6.404192990848973,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Rota, Spain"
+    },
+    {
+      "lat": 36.629112891394634,
+      "lon": -6.322704084365617,
+      "geoinfo": {
+        "display_name": "Flower Street, Rota, Northwest Coast, Cádiz, Andalusia, Spain",
+        "road": "Flower Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rota",
+        "state": "Andalusia",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "747, Flower Street, Rota, Northwest Coast, Cádiz, 27689 Andalusia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:35:50.497246+00:00",
+  "_kind": "geo_samples"
+}

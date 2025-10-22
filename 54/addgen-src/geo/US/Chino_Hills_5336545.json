@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chino Hills",
+  "geonameid": 5336545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.01406973843117,
+      "lon": -117.71270544962138,
+      "geoinfo": {
+        "display_name": "Chino, San Bernardino County, California, 91710, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chino",
+        "state": "California",
+        "postcode": "91710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chino Hills, California, United States"
+    },
+    {
+      "lat": 34.02784769537671,
+      "lon": -117.76348939860809,
+      "geoinfo": {
+        "display_name": "2, Meadow View Drive, Pomona, Los Angeles County, California, 91766, United States",
+        "road": "Meadow View Drive",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pomona",
+        "state": "California",
+        "postcode": "91766",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Meadow View Drive, Pomona, Los Angeles County, California, 91766, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:12.726390+00:00",
+  "_kind": "geo_samples"
+}

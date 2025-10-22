@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sicklerville",
+  "geonameid": 4504118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.74441346732343,
+      "lon": -74.94732338655959,
+      "geoinfo": {
+        "display_name": "Williamstown Road, Williamstown Junction, Winslow Township, Camden County, New Jersey, 08009, United States",
+        "road": "Williamstown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winslow Township",
+        "state": "New Jersey",
+        "postcode": "08009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Williamstown Road, Sicklerville, New Jersey, United States"
+    },
+    {
+      "lat": 39.72787464523698,
+      "lon": -74.97254776436372,
+      "geoinfo": {
+        "display_name": "Sickler Court, Sicklerville, Winslow Township, Camden County, New Jersey, 08081, United States",
+        "road": "Sickler Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winslow Township",
+        "state": "New Jersey",
+        "postcode": "08081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "132, Sickler Court, Sicklerville, Winslow Township, Camden County, New Jersey, 08081, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:12.569743+00:00",
+  "_kind": "geo_samples"
+}

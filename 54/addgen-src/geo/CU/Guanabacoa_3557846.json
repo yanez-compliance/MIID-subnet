@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Guanabacoa",
+  "geonameid": 3557846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.163397748717188,
+      "lon": -82.32424800332888,
+      "geoinfo": {
+        "display_name": "317, Avenida 1ra, Camilo Cienfuegos (Habana del Este), Camilo Cienfuegos, Habana del Este, Havana, 19130, Cuba",
+        "road": "Avenida 1ra",
+        "house_number": "317",
+        "neighbourhood": null,
+        "suburb": "Camilo Cienfuegos (Habana del Este)",
+        "city_district": "Camilo Cienfuegos",
+        "city": null,
+        "state": "Havana",
+        "postcode": "19130",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "317 Avenida 1ra, Guanabacoa, Havana, Cuba"
+    },
+    {
+      "lat": 23.109801094481742,
+      "lon": -82.26150407698519,
+      "geoinfo": {
+        "display_name": "Peñalver – Bacuranao, Guanabacoa, Havana, 10100, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Peñalver – Bacuranao",
+        "suburb": "Guanabacoa",
+        "city_district": null,
+        "city": null,
+        "state": "Havana",
+        "postcode": "10100",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "284, Peñalver – Bacuranao, Guanabacoa, Havana, 10100, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:24.552007+00:00",
+  "_kind": "geo_samples"
+}

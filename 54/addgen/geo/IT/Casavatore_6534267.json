@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Casavatore",
+  "geonameid": 6534267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.90449450135833,
+      "lon": 14.279442682644524,
+      "geoinfo": {
+        "display_name": "Via Rafaelle Viviani, Casavatore, Naples, Campania, 80020, Italy",
+        "road": "Via Rafaelle Viviani",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Casavatore",
+        "state": "Campania",
+        "postcode": "80020",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Rafaelle Viviani, Casavatore, Campania, Italy"
+    },
+    {
+      "lat": 40.87329517016358,
+      "lon": 14.23442075253404,
+      "geoinfo": {
+        "display_name": "Stella, Municipalità 3, Naples, Campania, 80131, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stella",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80131",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Stella, Municipalità 3, Naples, Campania, 80131, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:10.135737+00:00",
+  "_kind": "geo_samples"
+}

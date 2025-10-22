@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Entrevías",
+  "geonameid": 3123115,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.35558687674077,
+      "lon": -3.6627664980209755,
+      "geoinfo": {
+        "display_name": "Calle 26, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Calle 26",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 26, Entrevías, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.411732471636306,
+      "lon": -3.6684308839324173,
+      "geoinfo": {
+        "display_name": "Tesorería General de la Seguridad Social, 7, Calle de los Astros, Estrella, Retiro, Madrid, Community of Madrid, 28007, Spain",
+        "road": "Calle de los Astros",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Retiro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Tesorería General de la Seguridad Social, 7, Calle de los Astros, Estrella, Retiro, Madrid, Community of Madrid, 28007, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:38.484662+00:00",
+  "_kind": "geo_samples"
+}

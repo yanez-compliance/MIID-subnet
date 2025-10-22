@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Budapest XIX. kerület",
+  "geonameid": 7284835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.45447034321018,
+      "lon": 19.11500456971179,
+      "geoinfo": {
+        "display_name": "81, Álmos utca, Wekerletelep, 19th district, Budapest, Central Hungary, 1192, Hungary",
+        "road": "Álmos utca",
+        "house_number": "81",
+        "neighbourhood": null,
+        "suburb": "Wekerletelep",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1192",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "81 Álmos utca, Budapest XIX. kerület, Hungary"
+    },
+    {
+      "lat": 47.45210114903725,
+      "lon": 19.1923803667131,
+      "geoinfo": {
+        "display_name": "Derkovits Gyula utca, Miklóstelep, 18th district, Budapest, Central Hungary, 1183, Hungary",
+        "road": "Derkovits Gyula utca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Miklóstelep",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1183",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "Derkovits Gyula utca, Miklóstelep, 18th district, Budapest, Central Hungary, 1183, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:30.007599+00:00",
+  "_kind": "geo_samples"
+}

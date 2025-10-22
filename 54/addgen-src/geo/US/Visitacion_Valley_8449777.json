@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Visitacion Valley",
+  "geonameid": 8449777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.70750478825498,
+      "lon": -122.35206035434089,
+      "geoinfo": {
+        "display_name": "Brisbane, San Mateo County, California, 94005, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brisbane",
+        "state": "California",
+        "postcode": "94005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Visitacion Valley, California, United States"
+    },
+    {
+      "lat": 37.736565657705675,
+      "lon": -122.43230946855851,
+      "geoinfo": {
+        "display_name": "266, Bemis Street, Glen Park, San Francisco, California, 94112, United States",
+        "road": "Bemis Street",
+        "house_number": "266",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "266, Bemis Street, Glen Park, San Francisco, California, 94112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:17:28.401060+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Ris-Orangis",
+  "geonameid": 2983440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.66059883776864,
+      "lon": 2.412201841334302,
+      "geoinfo": {
+        "display_name": "6 bis, Avenue des Marronniers, Place Nelson Mandela, Ris-Orangis, Évry, Essonne, Metropolitan France, 91130, France",
+        "road": "Avenue des Marronniers",
+        "house_number": "6 bis",
+        "neighbourhood": "Place Nelson Mandela",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ris-Orangis",
+        "state": null,
+        "postcode": "91130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "6 bis Avenue des Marronniers, Ris-Orangis, France"
+    },
+    {
+      "lat": 48.6265611686127,
+      "lon": 2.3678873118288317,
+      "geoinfo": {
+        "display_name": "La Francilienne, Fleury-Mérogis, Évry, Essonne, Ile-de-France, Metropolitan France, 91700, France",
+        "road": "La Francilienne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fleury-Mérogis",
+        "state": "Ile-de-France",
+        "postcode": "91700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "378, La Francilienne, Fleury-Mérogis, Évry, Essonne, Ile-de-France, Metropolitan France, 91700, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:08.703669+00:00",
+  "_kind": "geo_samples"
+}

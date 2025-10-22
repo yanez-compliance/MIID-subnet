@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mühlheim am Main",
+  "geonameid": 2867985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.11432187896397,
+      "lon": 8.845217751461256,
+      "geoinfo": {
+        "display_name": "17A, Zeppelinring, Markwald, Mühlheim am Main, Landkreis Offenbach, Hesse, 63165, Germany",
+        "road": "Zeppelinring",
+        "house_number": "17A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühlheim am Main",
+        "state": "Hesse",
+        "postcode": "63165",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17A Zeppelinring, Mühlheim am Main, Hesse, Germany"
+    },
+    {
+      "lat": 50.116769227072176,
+      "lon": 8.768079639423435,
+      "geoinfo": {
+        "display_name": "10a, Dieburger Straße, Fechenheim, Ost, Frankfurt, Hesse, 60386, Germany",
+        "road": "Dieburger Straße",
+        "house_number": "10a",
+        "neighbourhood": null,
+        "suburb": "Fechenheim",
+        "city_district": "Ost",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "postcode": "60386",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10a, Dieburger Straße, Fechenheim, Ost, Frankfurt, Hesse, 60386, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:55.530519+00:00",
+  "_kind": "geo_samples"
+}

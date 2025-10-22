@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Roses",
+  "geonameid": 3111348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.28549183409347,
+      "lon": 3.172709666270984,
+      "geoinfo": {
+        "display_name": "Mas Boscà, Roses, Upper Empordà, Girona, Catalonia, 17480, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mas Boscà",
+        "suburb": null,
+        "city_district": null,
+        "city": "Roses",
+        "state": "Catalonia",
+        "postcode": "17480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Mas Boscà, Roses, Catalonia, Spain"
+    },
+    {
+      "lat": 42.24548903176626,
+      "lon": 3.1756532096501022,
+      "geoinfo": {
+        "display_name": "Carretera del Far, la Muntanyeta, Roses, Upper Empordà, Girona, Catalonia, 17480, Spain",
+        "road": "Carretera del Far",
+        "house_number": null,
+        "neighbourhood": "la Muntanyeta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Roses",
+        "state": "Catalonia",
+        "postcode": "17480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "733, Carretera del Far, la Muntanyeta, Roses, Upper Empordà, Girona, Catalonia, 17480, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:36.850084+00:00",
+  "_kind": "geo_samples"
+}

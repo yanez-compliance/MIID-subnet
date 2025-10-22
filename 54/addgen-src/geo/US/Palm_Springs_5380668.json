@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palm Springs",
+  "geonameid": 5380668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.79861445919296,
+      "lon": -116.52576574421887,
+      "geoinfo": {
+        "display_name": "Palm Springs, Riverside County, California, 92264, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Springs",
+        "state": "California",
+        "postcode": "92264",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Palm Springs, California, United States"
+    },
+    {
+      "lat": 33.845935585907604,
+      "lon": -116.58187353434313,
+      "geoinfo": {
+        "display_name": "Tramway Road, Palm Springs, Riverside County, California, 92262, United States",
+        "road": "Tramway Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Springs",
+        "state": "California",
+        "postcode": "92262",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "267, Tramway Road, Palm Springs, Riverside County, California, 92262, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:14.369703+00:00",
+  "_kind": "geo_samples"
+}

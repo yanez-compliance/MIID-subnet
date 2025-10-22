@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Frisco",
+  "geonameid": 4692559,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.16427280762106,
+      "lon": -96.85151756823205,
+      "geoinfo": {
+        "display_name": "4222, Castle Bank Lane, Shaddock Estates, Frisco, Denton County, Texas, 75033, United States",
+        "road": "Castle Bank Lane",
+        "house_number": "4222",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frisco",
+        "state": "Texas",
+        "postcode": "75033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4222 Castle Bank Lane, Frisco, Texas, United States"
+    },
+    {
+      "lat": 33.167806028870594,
+      "lon": -96.8333371068143,
+      "geoinfo": {
+        "display_name": "10850, Frisco Street, Frisco, Collin County, Texas, 75034, United States",
+        "road": "Frisco Street",
+        "house_number": "10850",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frisco",
+        "state": "Texas",
+        "postcode": "75034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10850, Frisco Street, Frisco, Collin County, Texas, 75034, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:59.718068+00:00",
+  "_kind": "geo_samples"
+}

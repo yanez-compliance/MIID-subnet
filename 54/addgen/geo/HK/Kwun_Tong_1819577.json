@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Kwun Tong",
+  "geonameid": 1819577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.328859548237638,
+      "lon": 114.21282608522546,
+      "geoinfo": {
+        "display_name": "Choi Ha Road, Ping Shek, Kwun Tong District, Kowloon, Hong Kong, China",
+        "road": "Choi Ha Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ping Shek",
+        "city_district": "Kwun Tong District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Choi Ha Road, Kwun Tong, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.338063014084405,
+      "lon": 114.23318426205664,
+      "geoinfo": {
+        "display_name": "飛雲徑, Fei Ngo Shan, Sai Kung District, Tseng Lan Shue, New Territories, Hong Kong, China",
+        "road": "飛雲徑",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fei Ngo Shan",
+        "city_district": null,
+        "city": "Tseng Lan Shue",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "597, 飛雲徑, Fei Ngo Shan, Sai Kung District, Tseng Lan Shue, New Territories, 85356 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T05:49:55.335726+00:00",
+  "_kind": "geo_samples"
+}

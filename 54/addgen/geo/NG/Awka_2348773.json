@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Awka",
+  "geonameid": 2348773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.220072878069205,
+      "lon": 7.100602068615445,
+      "geoinfo": {
+        "display_name": "Awka, Awka South, Anambra State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Awka",
+        "state": "Anambra State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Awka, Anambra State, Nigeria"
+    },
+    {
+      "lat": 6.213252164796591,
+      "lon": 7.028494863160339,
+      "geoinfo": {
+        "display_name": "Njikoka, Anambra State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Anambra State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "060, Awka, 41624 Anambra State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:37.855891+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Boseong",
+  "geonameid": 11674727,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.750476791029605,
+      "lon": 127.10132688423761,
+      "geoinfo": {
+        "display_name": "Boseong-eup, Boseong-gun, South Jeolla, 59457, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boseong-eup",
+        "state": null,
+        "postcode": "59457",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Boseong, South Korea"
+    },
+    {
+      "lat": 34.75096901173215,
+      "lon": 127.08512476596749,
+      "geoinfo": {
+        "display_name": "Noksaek-ro, Kwaesang-ri, Boseong-gun, South Jeolla, 59457, South Korea",
+        "road": "Noksaek-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kwaesang-ri",
+        "state": null,
+        "postcode": "59457",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "100, Noksaek-ro, 59457 Boseong, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T07:55:01.220183+00:00",
+  "_kind": "geo_samples"
+}

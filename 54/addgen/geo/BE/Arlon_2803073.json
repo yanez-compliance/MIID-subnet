@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Arlon",
+  "geonameid": 2803073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.67694228405543,
+      "lon": 5.84665209582913,
+      "geoinfo": {
+        "display_name": "Rue du Lingenthal, Bonnert, Arlon, Luxembourg, Wallonia, 6700, Belgium",
+        "road": "Rue du Lingenthal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlon",
+        "state": "Luxembourg",
+        "postcode": "6700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue du Lingenthal, Arlon, Luxembourg, Belgium"
+    },
+    {
+      "lat": 49.66021320159822,
+      "lon": 5.7925607052507555,
+      "geoinfo": {
+        "display_name": "Route de Toernich, Sesselich, Arlon, Luxembourg, Wallonia, 6700, Belgium",
+        "road": "Route de Toernich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Arlon",
+        "city": "Arlon",
+        "state": "Luxembourg",
+        "postcode": "6700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "087, Route de Toernich, Sesselich, Arlon, Luxembourg, Wallonia, 6700, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:17.261964+00:00",
+  "_kind": "geo_samples"
+}

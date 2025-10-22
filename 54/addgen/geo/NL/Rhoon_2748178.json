@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Rhoon",
+  "geonameid": 2748178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.83343778567278,
+      "lon": 4.459674161811126,
+      "geoinfo": {
+        "display_name": "7, Veerweg, Rhoon, Albrandswaard, South Holland, Netherlands, 3161 EX, Netherlands",
+        "road": "Veerweg",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rhoon",
+        "state": "South Holland",
+        "postcode": "3161 EX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "7 Veerweg, Rhoon, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.8316290386613,
+      "lon": 4.394904375880333,
+      "geoinfo": {
+        "display_name": "Kerkhofsdijk, Spijkenisse, Nissewaard, South Holland, Netherlands, 3263 SC, Netherlands",
+        "road": "Kerkhofsdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spijkenisse",
+        "state": "South Holland",
+        "postcode": "3263 SC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "120, Kerkhofsdijk, Spijkenisse, Nissewaard, South Holland, Netherlands, 3263 SC, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:11.282984+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shiyan",
+  "geonameid": 8416624,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.057881470619115,
+      "lon": 107.1392157814877,
+      "geoinfo": {
+        "display_name": "Yuwu Road, Shiyan, Changshou District, Chongqing, China",
+        "road": "Yuwu Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shiyan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yuwu Road, Shiyan, Chongqing, China"
+    },
+    {
+      "lat": 30.066462095258746,
+      "lon": 107.20667295844999,
+      "geoinfo": {
+        "display_name": "Shiyan, Changshou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shiyan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "958, Shiyan, Changshou District, 28583 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:14.359813+00:00",
+  "_kind": "geo_samples"
+}

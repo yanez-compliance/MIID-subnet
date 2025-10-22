@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Nerviano",
+  "geonameid": 3172297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.578208159914276,
+      "lon": 9.022724060563805,
+      "geoinfo": {
+        "display_name": "Via Fratelli Bandiera, Lainate, Milan, Lombardy, 20045, Italy",
+        "road": "Via Fratelli Bandiera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lainate",
+        "state": "Lombardy",
+        "postcode": "20045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Fratelli Bandiera, Nerviano, Lombardy, Italy"
+    },
+    {
+      "lat": 45.53971479416776,
+      "lon": 9.035146255224817,
+      "geoinfo": {
+        "display_name": "Corso Sempione, San Giovanni, Cascina Bollani, Passirana, Rho, Milan, Lombardy, 20017, Italy",
+        "road": "Corso Sempione",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rho",
+        "state": "Lombardy",
+        "postcode": "20017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "847, Corso Sempione, San Giovanni, Cascina Bollani, Passirana, Rho, Milan, Lombardy, 20017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:14.752859+00:00",
+  "_kind": "geo_samples"
+}

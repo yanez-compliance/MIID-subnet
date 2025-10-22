@@ -1,0 +1,47 @@
+{
+  "country_code": "NZ",
+  "country": "New Zealand",
+  "city": "Taupo",
+  "geonameid": 2181742,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -38.7035933942655,
+      "lon": 176.07325230247716,
+      "geoinfo": {
+        "display_name": "Rainbow Point, Waipahihi, Taupō District, Waikato, 3378, New Zealand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Waipahihi",
+        "city_district": null,
+        "city": null,
+        "state": "Waikato",
+        "postcode": "3378",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "701, Waipahihi, Taupo, 3378 Waikato, New Zealand"
+    },
+    {
+      "lat": -38.645141381827656,
+      "lon": 176.06897774887,
+      "geoinfo": {
+        "display_name": "Craters of the Moon Pathway, Taupō District, Waikato, 3377, New Zealand",
+        "road": "Craters of the Moon Pathway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Waikato",
+        "postcode": "3377",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "629, Craters of the Moon Pathway, Taupo, 3377 Waikato, New Zealand"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:16.076718+00:00",
+  "_kind": "geo_samples"
+}

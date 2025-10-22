@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Penn Hills",
+  "geonameid": 5205377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.46893595704823,
+      "lon": -79.8202252292768,
+      "geoinfo": {
+        "display_name": "342, Parkridge Drive, Crescent Hills, Penn Hills, Allegheny County, Pennsylvania, 15235, United States",
+        "road": "Parkridge Drive",
+        "house_number": "342",
+        "neighbourhood": "Crescent Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Penn Hills",
+        "state": "Pennsylvania",
+        "postcode": "15235",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "342 Parkridge Drive, Penn Hills, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.537191275053466,
+      "lon": -79.84164023476463,
+      "geoinfo": {
+        "display_name": "2, Mariner Court, Harmarville, Harmar Township, Allegheny County, Pennsylvania, 15238, United States",
+        "road": "Mariner Court",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harmar Township",
+        "state": "Pennsylvania",
+        "postcode": "15238",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Mariner Court, Harmarville, Harmar Township, Allegheny County, Pennsylvania, 15238, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:57.120795+00:00",
+  "_kind": "geo_samples"
+}

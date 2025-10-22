@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Vynohradiv",
+  "geonameid": 688746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.14797570616201,
+      "lon": 23.00938818385057,
+      "geoinfo": {
+        "display_name": "34, Нова вулиця, Vynohradiv, Vynohradiv Urban Hromada, Berehove Raion, 90300, Ukraine",
+        "road": "Нова вулиця",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vynohradiv",
+        "state": null,
+        "postcode": "90300",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "34 Нова вулиця, Vynohradiv, Ukraine"
+    },
+    {
+      "lat": 48.148069394449415,
+      "lon": 22.984881269388296,
+      "geoinfo": {
+        "display_name": "Табірна вулиця, Циганський Табір, Pidvynohradiv, Vynohradiv Urban Hromada, Berehove Raion, Zakarpattia Oblast, 90325, Ukraine",
+        "road": "Табірна вулиця",
+        "house_number": null,
+        "neighbourhood": "Циганський Табір",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pidvynohradiv",
+        "state": "Zakarpattia Oblast",
+        "postcode": "90325",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "350, Табірна вулиця, Циганський Табір, Pidvynohradiv, Vynohradiv Urban Hromada, Berehove Raion, Zakarpattia Oblast, 90325, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:01.394979+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "San Francisco",
+  "geonameid": 1689973,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.336710320847596,
+      "lon": 120.81832575153774,
+      "geoinfo": {
+        "display_name": "Papaya, San Antonio, Nueva Ecija, Central Luzon, 3108, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Nueva Ecija",
+        "postcode": "3108",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "San Francisco, Nueva Ecija, Philippines"
+    },
+    {
+      "lat": 15.375402656555664,
+      "lon": 120.82552052898818,
+      "geoinfo": {
+        "display_name": "Zaragoza - San Antonio Road, Sanggalang, San Francisco, San Antonio, Nueva Ecija, Central Luzon, Philippines",
+        "road": "Zaragoza - San Antonio Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Nueva Ecija",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "243, Zaragoza - San Antonio Road, Sanggalang, San Francisco, San Antonio, Nueva Ecija, 20005 Central Luzon, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:11.579051+00:00",
+  "_kind": "geo_samples"
+}

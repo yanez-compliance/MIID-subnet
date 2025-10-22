@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grand Island",
+  "geonameid": 5069297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.91667639211933,
+      "lon": -98.33510670788503,
+      "geoinfo": {
+        "display_name": "East Bismark Road, Grand Island, Hall County, Nebraska, 68801, United States",
+        "road": "East Bismark Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Island",
+        "state": "Nebraska",
+        "postcode": "68801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Bismark Road, Grand Island, Nebraska, United States"
+    },
+    {
+      "lat": 40.936900377870856,
+      "lon": -98.35850521319954,
+      "geoinfo": {
+        "display_name": "Casey's General Store, North Eddy Street, Grand Island, Hall County, Nebraska, 68802, United States",
+        "road": "North Eddy Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Island",
+        "state": "Nebraska",
+        "postcode": "68802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "380, North Eddy Street, Grand Island, 68802 Nebraska, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:48.386253+00:00",
+  "_kind": "geo_samples"
+}

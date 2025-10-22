@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Germering",
+  "geonameid": 2921039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.10328080698409,
+      "lon": 11.365547795755022,
+      "geoinfo": {
+        "display_name": "Neue Gautinger Straße, Hubertushütte, Krailling, Landkreis Starnberg, Bavaria, 82152, Germany",
+        "road": "Neue Gautinger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Krailling",
+        "state": "Bavaria",
+        "postcode": "82152",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Neue Gautinger Straße, Germering, Bavaria, Germany"
+    },
+    {
+      "lat": 48.13887496943149,
+      "lon": 11.32540697946514,
+      "geoinfo": {
+        "display_name": "Holzkirchner Weg, Puchheim-Ort, Puchheim, Landkreis Fürstenfeldbruck, Bavaria, 82178, Germany",
+        "road": "Holzkirchner Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Puchheim-Ort",
+        "city_district": null,
+        "city": "Puchheim",
+        "state": "Bavaria",
+        "postcode": "82178",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "708, Holzkirchner Weg, Puchheim-Ort, Puchheim, Landkreis Fürstenfeldbruck, Bavaria, 82178, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:32.098508+00:00",
+  "_kind": "geo_samples"
+}

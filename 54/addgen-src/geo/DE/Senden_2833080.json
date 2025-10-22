@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Senden",
+  "geonameid": 2833080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.347862605356106,
+      "lon": 10.0999118958108,
+      "geoinfo": {
+        "display_name": "Haselnussweg, Holzschwang, Neu-Ulm, Landkreis Neu-Ulm, Bavaria, 89233, Germany",
+        "road": "Haselnussweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neu-Ulm",
+        "state": "Bavaria",
+        "postcode": "89233",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Haselnussweg, Senden, Bavaria, Germany"
+    },
+    {
+      "lat": 48.32249657295913,
+      "lon": 9.980692843701148,
+      "geoinfo": {
+        "display_name": "Keltenschanze, L 240, Unterweiler, Ulm, Gemeindeverwaltungsverband Kirchberg-Weihungstal, Alb-Donau-Kreis, Baden-Württemberg, 89079, Germany",
+        "road": "L 240",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Unterweiler",
+        "city": "Ulm",
+        "state": "Baden-Württemberg",
+        "postcode": "89079",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Keltenschanze, L 240, Unterweiler, Ulm, Gemeindeverwaltungsverband Kirchberg-Weihungstal, Alb-Donau-Kreis, Baden-Württemberg, 89079, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:55.685556+00:00",
+  "_kind": "geo_samples"
+}

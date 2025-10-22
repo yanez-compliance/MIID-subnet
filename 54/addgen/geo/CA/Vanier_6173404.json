@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Vanier",
+  "geonameid": 6173404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.44338660846202,
+      "lon": -75.66026397140138,
+      "geoinfo": {
+        "display_name": "Champlain Centre Long Term Care home, 275, Perrier Avenue, Vanier, Rideau-Vanier, Ottawa, Eastern Ontario, Ontario, K1L 5C6, Canada",
+        "road": "Perrier Avenue",
+        "house_number": "275",
+        "neighbourhood": null,
+        "suburb": "Vanier",
+        "city_district": "Rideau-Vanier",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K1L 5C6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "275 Perrier Avenue, Vanier, Ontario, Canada"
+    },
+    {
+      "lat": 45.40198095350737,
+      "lon": -75.65061171538652,
+      "geoinfo": {
+        "display_name": "The Ottawa Hospital - General Campus, 501, Smyth Road, Alta Vista, Ottawa, Eastern Ontario, Ontario, K1H 8L6, Canada",
+        "road": "Smyth Road",
+        "house_number": "501",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Alta Vista",
+        "city": "Ottawa",
+        "state": "Ontario",
+        "postcode": "K1H 8L6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "The Ottawa Hospital - General Campus, 501, Smyth Road, Alta Vista, Ottawa, Eastern Ontario, Ontario, K1H 8L6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:26.909833+00:00",
+  "_kind": "geo_samples"
+}

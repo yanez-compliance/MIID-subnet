@@ -1,0 +1,65 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Bingerville",
+  "geonameid": 2291580,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 5.332715414417792,
+      "lon": -3.8999509003816297,
+      "geoinfo": {
+        "display_name": "La mangrove, Rue Jean Philippe Kraidy, Abatta, Bingerville, Abidjan, Côte d'Ivoire",
+        "road": "Rue Jean Philippe Kraidy",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bingerville",
+        "state": "Abidjan",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Rue Jean Philippe Kraidy, Bingerville, Abidjan, Ivory Coast"
+    },
+    {
+      "lat": 5.389475736205448,
+      "lon": -3.8850937361556843,
+      "geoinfo": {
+        "display_name": "Bingerville, Abidjan, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bingerville",
+        "state": "Abidjan",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "422, Bingerville, 47452 Abidjan, Côte d'Ivoire"
+    },
+    {
+      "lat": 5.329734517225751,
+      "lon": -3.8770056580044328,
+      "geoinfo": {
+        "display_name": "Adjamé, Quartier Scierie GIB, Akwè Djèmin, Bingerville, Abidjan, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Adjamé",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bingerville",
+        "state": "Abidjan",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "981, Adjamé, Bingerville, 89667 Abidjan, Ivory Coast"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:00.594435+00:00",
+  "_kind": "geo_samples"
+}

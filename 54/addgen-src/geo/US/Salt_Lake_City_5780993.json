@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salt Lake City",
+  "geonameid": 5780993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.77810645991806,
+      "lon": -111.94218588876102,
+      "geoinfo": {
+        "display_name": "1801, 400 North, Avondale, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84116, United States",
+        "road": "400 North",
+        "house_number": "1801",
+        "neighbourhood": "Avondale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "postcode": "84116",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1801 400 North, Salt Lake City, Utah, United States"
+    },
+    {
+      "lat": 40.73777003931865,
+      "lon": -111.90213913872978,
+      "geoinfo": {
+        "display_name": "The Whitney Apartments, 375, Whitney Avenue, Ballpark, Salt Lake City, Salt Lake County, Utah, 84115, United States",
+        "road": "Whitney Avenue",
+        "house_number": "375",
+        "neighbourhood": "Ballpark",
+        "suburb": null,
+        "city_district": null,
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "postcode": "84115",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Whitney Apartments, 375, Whitney Avenue, Ballpark, Salt Lake City, Salt Lake County, Utah, 84115, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:16.411502+00:00",
+  "_kind": "geo_samples"
+}

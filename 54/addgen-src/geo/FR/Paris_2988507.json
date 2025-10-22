@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Paris",
+  "geonameid": 2988507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.869698831357915,
+      "lon": 2.3707869097728866,
+      "geoinfo": {
+        "display_name": "54a, Rue du Faubourg du Temple, Quartier de la Folie-Méricourt, 11th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75011, France",
+        "road": "Rue du Faubourg du Temple",
+        "house_number": "54a",
+        "neighbourhood": null,
+        "suburb": "11th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75011",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "54a Rue du Faubourg du Temple, Paris, Ile-de-France, France"
+    },
+    {
+      "lat": 48.853057376365214,
+      "lon": 2.4063833979336136,
+      "geoinfo": {
+        "display_name": "Boxing school, Rue des Maraîchers, Quartier de Charonne, 20th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75020, France",
+        "road": "Rue des Maraîchers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Quartier de Charonne",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75020",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boxing school, Rue des Maraîchers, Quartier de Charonne, 20th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75020, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:05.108285+00:00",
+  "_kind": "geo_samples"
+}

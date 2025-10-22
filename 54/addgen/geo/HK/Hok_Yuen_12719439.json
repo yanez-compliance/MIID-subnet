@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Hok Yuen",
+  "geonameid": 12719439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.28930340075663,
+      "lon": 114.15984246630553,
+      "geoinfo": {
+        "display_name": "Central Pier Number 5, Man Kwong Street, Tamar, Central District, Central and Western District, Hong Kong Island, Hong Kong, China",
+        "road": "Man Kwong Street",
+        "house_number": null,
+        "neighbourhood": "Tamar",
+        "suburb": null,
+        "city_district": "Central and Western District",
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Man Kwong Street, Hok Yuen, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.277803041241523,
+      "lon": 114.21569404252882,
+      "geoinfo": {
+        "display_name": "Hong Pak Country Trail, Kornhill, Eastern District, Hong Kong Island, Hong Kong, China",
+        "road": "Hong Pak Country Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eastern District",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "809, Hong Pak Country Trail, Kornhill, Eastern District, Hong Kong Island, 37569 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:26.864747+00:00",
+  "_kind": "geo_samples"
+}

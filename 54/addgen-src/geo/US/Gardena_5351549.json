@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gardena",
+  "geonameid": 5351549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.90915154321022,
+      "lon": -118.29544559599495,
+      "geoinfo": {
+        "display_name": "1102, West 135th Street, Gardena, Los Angeles County, California, 90247, United States",
+        "road": "West 135th Street",
+        "house_number": "1102",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gardena",
+        "state": "California",
+        "postcode": "90247",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1102 West 135th Street, Gardena, California, United States"
+    },
+    {
+      "lat": 33.8708712135687,
+      "lon": -118.3120161926025,
+      "geoinfo": {
+        "display_name": "177th Street, La Fresa, Torrance, Los Angeles County, California, 90504, United States",
+        "road": "177th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Fresa",
+        "city_district": null,
+        "city": "Torrance",
+        "state": "California",
+        "postcode": "90504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "177th Street, La Fresa, Torrance, Los Angeles County, California, 90504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:19.729776+00:00",
+  "_kind": "geo_samples"
+}

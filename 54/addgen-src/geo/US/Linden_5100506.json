@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Linden",
+  "geonameid": 5100506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.62619453916985,
+      "lon": -74.22195883326985,
+      "geoinfo": {
+        "display_name": "Power Line., Tremley, Linden, Union County, New Jersey, 07036, United States",
+        "road": "Power Line.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linden",
+        "state": "New Jersey",
+        "postcode": "07036",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Power Line., Linden, New Jersey, United States"
+    },
+    {
+      "lat": 40.61424323012586,
+      "lon": -74.29531891389392,
+      "geoinfo": {
+        "display_name": "Rahway Middle School, 1138, Kline Place, Rahway, Union County, New Jersey, 07080, United States",
+        "road": "Kline Place",
+        "house_number": "1138",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rahway",
+        "state": "New Jersey",
+        "postcode": "07080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rahway Middle School, 1138, Kline Place, Rahway, Union County, New Jersey, 07080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:35.827897+00:00",
+  "_kind": "geo_samples"
+}

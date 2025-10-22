@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Việt Yên",
+  "geonameid": 1562818,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.287168241267263,
+      "lon": 106.17442326094007,
+      "geoinfo": {
+        "display_name": "Da Mai, Bắc Ninh Province, 26000, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Da Mai",
+        "city_district": null,
+        "city": null,
+        "state": "Bắc Ninh Province",
+        "postcode": "26000",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Da Mai, Việt Yên, Bắc Ninh Province, Vietnam"
+    },
+    {
+      "lat": 21.27854636235127,
+      "lon": 106.16869241139818,
+      "geoinfo": {
+        "display_name": "Đường Mỹ Độ, Da Mai, My Do, Bắc Ninh Province, 26000, Vietnam",
+        "road": "Đường Mỹ Độ",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Da Mai",
+        "city_district": null,
+        "city": "My Do",
+        "state": "Bắc Ninh Province",
+        "postcode": "26000",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "264, Đường Mỹ Độ, Da Mai, My Do, Bắc Ninh Province, 26000, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:26.866214+00:00",
+  "_kind": "geo_samples"
+}

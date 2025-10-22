@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Lakemba",
+  "geonameid": 2160744,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.92498692132375,
+      "lon": 151.06164264773432,
+      "geoinfo": {
+        "display_name": "142, The Boulevarde, Punchbowl, Sydney, Canterbury-Bankstown Council, New South Wales, 2196, Australia",
+        "road": "The Boulevarde",
+        "house_number": "142",
+        "neighbourhood": null,
+        "suburb": "Punchbowl",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2196",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "142 The Boulevarde, Lakemba, New South Wales, Australia"
+    },
+    {
+      "lat": -33.898983048684734,
+      "lon": 151.08267016034625,
+      "geoinfo": {
+        "display_name": "Water Street, Belfield, Sydney, Strathfield Municipal Council, New South Wales, 2191, Australia",
+        "road": "Water Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Belfield",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2191",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "389, Water Street, Belfield, Sydney, Strathfield Municipal Council, New South Wales, 2191, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:54.429977+00:00",
+  "_kind": "geo_samples"
+}

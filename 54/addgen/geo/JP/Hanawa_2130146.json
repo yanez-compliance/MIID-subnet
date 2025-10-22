@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Hanawa",
+  "geonameid": 2130146,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.15507561279199,
+      "lon": 140.746303087231,
+      "geoinfo": {
+        "display_name": "Kazuno, Akita Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kazuno",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hanawa, Japan"
+    },
+    {
+      "lat": 40.17449355021008,
+      "lon": 140.80789710707418,
+      "geoinfo": {
+        "display_name": "浦志内林道, Kazuno, Akita Prefecture, 018-5201, Japan",
+        "road": "浦志内林道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kazuno",
+        "state": null,
+        "postcode": "018-5201",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "浦志内林道, Kazuno, Akita Prefecture, 018-5201, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:47.284673+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Farragut",
+  "geonameid": 4621846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.88651706084736,
+      "lon": -84.13720514658107,
+      "geoinfo": {
+        "display_name": "10801, Sagemont Lane, Ashford, Farragut, Knox County, East Tennessee, Tennessee, 37934, United States",
+        "road": "Sagemont Lane",
+        "house_number": "10801",
+        "neighbourhood": "Ashford",
+        "suburb": null,
+        "city_district": null,
+        "city": "Farragut",
+        "state": "Tennessee",
+        "postcode": "37934",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10801 Sagemont Lane, Farragut, Tennessee, United States"
+    },
+    {
+      "lat": 35.84498497157074,
+      "lon": -84.16825575537686,
+      "geoinfo": {
+        "display_name": "1398, Appomattox Lane, Jefferson Park, Knox County, East Tennessee, Tennessee, 37922, United States",
+        "road": "Appomattox Lane",
+        "house_number": "1398",
+        "neighbourhood": "Jefferson Park",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37922",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1398, Appomattox Lane, Jefferson Park, Knox County, East Tennessee, Tennessee, 37922, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:16.748238+00:00",
+  "_kind": "geo_samples"
+}

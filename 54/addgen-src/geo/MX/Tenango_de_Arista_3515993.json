@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tenango de Arista",
+  "geonameid": 3515993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.103246618196824,
+      "lon": -99.57643786194502,
+      "geoinfo": {
+        "display_name": "Calle Miguel Hidalgo Oriente, Campesina, Buenos Aires, San Isidro, Tenango del Valle, State of Mexico, 52360, Mexico",
+        "road": "Calle Miguel Hidalgo Oriente",
+        "house_number": null,
+        "neighbourhood": "Campesina",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Isidro",
+        "state": "State of Mexico",
+        "postcode": "52360",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Miguel Hidalgo Oriente, Tenango de Arista, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.12092414867992,
+      "lon": -99.56410827633174,
+      "geoinfo": {
+        "display_name": "Calle Galeana, San Juan La Isla, Rayón, State of Mexico, 52360, Mexico",
+        "road": "Calle Galeana",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan La Isla",
+        "state": "State of Mexico",
+        "postcode": "52360",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "768, Calle Galeana, San Juan La Isla, Rayón, State of Mexico, 52360, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:50.498241+00:00",
+  "_kind": "geo_samples"
+}

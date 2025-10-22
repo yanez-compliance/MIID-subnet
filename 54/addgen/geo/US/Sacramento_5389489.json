@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sacramento",
+  "geonameid": 5389489,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.5922572553565,
+      "lon": -121.45453400870834,
+      "geoinfo": {
+        "display_name": "Levee Path, Elvas, Sacramento, Sacramento County, California, 95815, United States",
+        "road": "Levee Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sacramento",
+        "state": "California",
+        "postcode": "95815",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Levee Path, Sacramento, California, United States"
+    },
+    {
+      "lat": 38.538972495762806,
+      "lon": -121.49013844227065,
+      "geoinfo": {
+        "display_name": "F Lot: Staff Parking, Sutterville Road, Sacramento City College, Sacramento, Sacramento County, California, 95822, United States",
+        "road": "Sutterville Road",
+        "house_number": null,
+        "neighbourhood": "Sacramento City College",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sacramento",
+        "state": "California",
+        "postcode": "95822",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "753, Sutterville Road, Sacramento, 95822 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:45.638806+00:00",
+  "_kind": "geo_samples"
+}

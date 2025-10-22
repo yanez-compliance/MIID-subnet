@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Queens",
+  "geonameid": 5133273,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71387713253052,
+      "lon": -73.80039696486756,
+      "geoinfo": {
+        "display_name": "165-11, Chapin Court, Queens, Queens County, New York, 11432, United States",
+        "road": "Chapin Court",
+        "house_number": "165-11",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11432",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "165-11 Chapin Court, Queens, New York, United States"
+    },
+    {
+      "lat": 40.70893751149169,
+      "lon": -73.86728033624921,
+      "geoinfo": {
+        "display_name": "82nd Street, Queens, Queens County, New York, 11379, United States",
+        "road": "82nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11379",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "82nd Street, Queens, Queens County, New York, 11379, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:08.659668+00:00",
+  "_kind": "geo_samples"
+}

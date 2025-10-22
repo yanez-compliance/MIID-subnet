@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bel-Air",
+  "geonameid": 12808664,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.85910868673188,
+      "lon": 2.3916919082493666,
+      "geoinfo": {
+        "display_name": "David Sintzheim, 8, Boulevard de Ménilmontant, Quartier du Père-Lachaise, 20th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75020, France",
+        "road": "Boulevard de Ménilmontant",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "20th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75020",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8 Boulevard de Ménilmontant, Bel-Air, Ile-de-France, France"
+    },
+    {
+      "lat": 48.809530294650656,
+      "lon": 2.368175219050512,
+      "geoinfo": {
+        "display_name": "Avenue Latérale 3, Petit-Ivry, Ivry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94200, France",
+        "road": "Avenue Latérale 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Petit-Ivry",
+        "city_district": null,
+        "city": "Ivry-sur-Seine",
+        "state": null,
+        "postcode": "94200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue Latérale 3, Petit-Ivry, Ivry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:45.828608+00:00",
+  "_kind": "geo_samples"
+}

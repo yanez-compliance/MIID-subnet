@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Isleworth",
+  "geonameid": 2646004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.50231755889361,
+      "lon": -0.3036234680254189,
+      "geoinfo": {
+        "display_name": "19, Chestnut Grove, London Borough of Ealing, London, Greater London, England, W5 4JT, United Kingdom",
+        "road": "Chestnut Grove",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Ealing",
+        "city": "London",
+        "state": "England",
+        "postcode": "W5 4JT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "19 Chestnut Grove, Isleworth, England, United Kingdom"
+    },
+    {
+      "lat": 51.44222440638999,
+      "lon": -0.34571058587833525,
+      "geoinfo": {
+        "display_name": "30, Second Cross Road, Strawberry Hill, London Borough of Richmond upon Thames, London, Greater London, England, TW2 5RF, United Kingdom",
+        "road": "Second Cross Road",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "Strawberry Hill",
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "TW2 5RF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "30, Second Cross Road, Strawberry Hill, London Borough of Richmond upon Thames, London, Greater London, England, TW2 5RF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:52.329426+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Philadelphia",
+  "geonameid": 4560349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.9614068933224,
+      "lon": -75.21593156546818,
+      "geoinfo": {
+        "display_name": "Philadelphia Juvenile Justice Services Center, North 48th Street, Mill Creek, West Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19139, United States",
+        "road": "North 48th Street",
+        "house_number": null,
+        "neighbourhood": "Mill Creek",
+        "suburb": "West Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 48th Street, Philadelphia, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.9463780204773,
+      "lon": -75.14414456192715,
+      "geoinfo": {
+        "display_name": "Dock Street, Society Hill, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19106, United States",
+        "road": "Dock Street",
+        "house_number": null,
+        "neighbourhood": "Society Hill",
+        "suburb": "Center City",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "563, Dock Street, Society Hill, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:18.682857+00:00",
+  "_kind": "geo_samples"
+}

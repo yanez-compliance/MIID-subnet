@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Billings",
+  "geonameid": 5640350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.77839521277527,
+      "lon": -108.48881892039819,
+      "geoinfo": {
+        "display_name": "I 90;US 212, East Downtown, Billings, Yellowstone County, Montana, 59101, United States",
+        "road": "I 90;US 212",
+        "house_number": null,
+        "neighbourhood": "East Downtown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Billings",
+        "state": "Montana",
+        "postcode": "59101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 90;US 212, Billings, Montana, United States"
+    },
+    {
+      "lat": 45.82645332166923,
+      "lon": -108.4983027805405,
+      "geoinfo": {
+        "display_name": "446, West Wicks Lane, Billings, Yellowstone County, Montana, 59105, United States",
+        "road": "West Wicks Lane",
+        "house_number": "446",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Billings",
+        "state": "Montana",
+        "postcode": "59105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "446, West Wicks Lane, Billings, Yellowstone County, Montana, 59105, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:21.572288+00:00",
+  "_kind": "geo_samples"
+}

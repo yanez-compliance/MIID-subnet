@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Nakano",
+  "geonameid": 8715035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.698705296994845,
+      "lon": 139.6845053289793,
+      "geoinfo": {
+        "display_name": "Kuken-dori, Chuo 1, Chuo, Nakano, Tokyo, 164-0003, Japan",
+        "road": "Kuken-dori",
+        "house_number": null,
+        "neighbourhood": "Chuo 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakano",
+        "state": null,
+        "postcode": "164-0003",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kuken-dori, Nakano, Japan"
+    },
+    {
+      "lat": 35.69027848651549,
+      "lon": 139.71675623816057,
+      "geoinfo": {
+        "display_name": "Yotsuya 4, Yotsuya, Shinjuku, Tokyo, 160-8484, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Yotsuya 4",
+        "suburb": "Yotsuya",
+        "city_district": null,
+        "city": "Shinjuku",
+        "state": null,
+        "postcode": "160-8484",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yotsuya 4, Yotsuya, Shinjuku, Tokyo, 160-8484, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:36.575523+00:00",
+  "_kind": "geo_samples"
+}

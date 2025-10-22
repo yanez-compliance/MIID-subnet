@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ellwangen",
+  "geonameid": 2930889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.972281217157956,
+      "lon": 10.071286172008199,
+      "geoinfo": {
+        "display_name": "L 1073, Schrezheim, Ellwangen, Vereinbarte Verwaltungsgemeinschaft Ellwangen (Jagst), Ostalbkreis, Baden-Württemberg, 73479, Germany",
+        "road": "L 1073",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellwangen",
+        "state": "Baden-Württemberg",
+        "postcode": "73479",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 1073, Ellwangen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.977446048314384,
+      "lon": 10.070308596978572,
+      "geoinfo": {
+        "display_name": "45, Altmannsrot, Schrezheim, Ellwangen, Vereinbarte Verwaltungsgemeinschaft Ellwangen (Jagst), Ostalbkreis, Baden-Württemberg, 73479, Germany",
+        "road": null,
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellwangen",
+        "state": "Baden-Württemberg",
+        "postcode": "73479",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "45, Ellwangen, 73479 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:06.827308+00:00",
+  "_kind": "geo_samples"
+}

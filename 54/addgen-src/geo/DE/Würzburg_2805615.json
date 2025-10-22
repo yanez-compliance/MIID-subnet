@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Würzburg",
+  "geonameid": 2805615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.80580256569551,
+      "lon": 9.9145274233076,
+      "geoinfo": {
+        "display_name": "Dürrbacher Steige, Unterdürrbach, Grombühl, Würzburg, Bavaria, 97080, Germany",
+        "road": "Dürrbacher Steige",
+        "house_number": null,
+        "neighbourhood": "Unterdürrbach",
+        "suburb": "Grombühl",
+        "city_district": null,
+        "city": "Würzburg",
+        "state": "Bavaria",
+        "postcode": "97080",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dürrbacher Steige, Würzburg, Bavaria, Germany"
+    },
+    {
+      "lat": 49.785022029973575,
+      "lon": 9.928881914470185,
+      "geoinfo": {
+        "display_name": "Schießhausstraße, Sanderau, Würzburg, Bavaria, 97072, Germany",
+        "road": "Schießhausstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sanderau",
+        "city_district": null,
+        "city": "Würzburg",
+        "state": "Bavaria",
+        "postcode": "97072",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "071, Schießhausstraße, Sanderau, Würzburg, Bavaria, 97072, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:31.282438+00:00",
+  "_kind": "geo_samples"
+}

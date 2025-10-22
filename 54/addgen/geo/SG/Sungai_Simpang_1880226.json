@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Sungai Simpang",
+  "geonameid": 1880226,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.4095872995946759,
+      "lon": 103.85217903096579,
+      "geoinfo": {
+        "display_name": "Seletar Park Connector, Yishun, Central, Singapore, 798273, Singapore",
+        "road": "Seletar Park Connector",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yishun",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "798273",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "989, Seletar Park Connector, Yishun, Central, Singapore, 798273, Singapore"
+    },
+    {
+      "lat": 1.4492771344251236,
+      "lon": 103.84689014493638,
+      "geoinfo": {
+        "display_name": "Simpang, Northwest, Singapore, 768929, Singapore",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Simpang",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "768929",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "635, Simpang, Northwest, Singapore, 768929, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:14.065243+00:00",
+  "_kind": "geo_samples"
+}

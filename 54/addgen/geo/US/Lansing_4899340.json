@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lansing",
+  "geonameid": 4899340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.58420961245639,
+      "lon": -87.5490427549875,
+      "geoinfo": {
+        "display_name": "Pennsy Greenway, Bernice, Lansing, Thornton Township, Cook County, Illinois, 60438, United States",
+        "road": "Pennsy Greenway",
+        "house_number": null,
+        "neighbourhood": "Bernice",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing",
+        "state": "Illinois",
+        "postcode": "60438",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pennsy Greenway, Lansing, Illinois, United States"
+    },
+    {
+      "lat": 41.56136040247208,
+      "lon": -87.49715178486096,
+      "geoinfo": {
+        "display_name": "8377, Schreiber Drive, Munster, North Township, Lake County, Indiana, 46321, United States",
+        "road": "Schreiber Drive",
+        "house_number": "8377",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Munster",
+        "state": "Indiana",
+        "postcode": "46321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8377, Schreiber Drive, Munster, North Township, Lake County, Indiana, 46321, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:35.653289+00:00",
+  "_kind": "geo_samples"
+}

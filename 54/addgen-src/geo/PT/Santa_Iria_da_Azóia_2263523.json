@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Santa Iria da Azóia",
+  "geonameid": 2263523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.858267718016215,
+      "lon": -9.099494819086525,
+      "geoinfo": {
+        "display_name": "EN 115-5, Granja, Vialonga, Vila Franca de Xira, Lisbon, 2625-607, Portugal",
+        "road": "EN 115-5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vialonga",
+        "state": null,
+        "postcode": "2625-607",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "EN 115-5, Santa Iria da Azóia, Portugal"
+    },
+    {
+      "lat": 38.83159292164023,
+      "lon": -9.075923132558295,
+      "geoinfo": {
+        "display_name": "Pontão da Fima, Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisbon, 2696-801, Portugal",
+        "road": "Pontão da Fima",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Santa Iria de Azoia, São João da Talha e Bobadela",
+        "city": "Loures",
+        "state": null,
+        "postcode": "2696-801",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Pontão da Fima, Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisbon, 2696-801, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:25.030756+00:00",
+  "_kind": "geo_samples"
+}

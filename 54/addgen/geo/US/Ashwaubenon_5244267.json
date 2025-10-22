@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashwaubenon",
+  "geonameid": 5244267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.490109255641364,
+      "lon": -88.04051459221616,
+      "geoinfo": {
+        "display_name": "2000, South Broadway, Ashwaubenon, Brown County, Wisconsin, 54304, United States",
+        "road": "South Broadway",
+        "house_number": "2000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashwaubenon",
+        "state": "Wisconsin",
+        "postcode": "54304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2000 South Broadway, Ashwaubenon, Wisconsin, United States"
+    },
+    {
+      "lat": 44.482955782059896,
+      "lon": -88.00739757188319,
+      "geoinfo": {
+        "display_name": "Beaupre Street, Allouez, Brown County, Wisconsin, 54301, United States",
+        "road": "Beaupre Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Allouez",
+        "state": "Wisconsin",
+        "postcode": "54301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "770, Beaupre Street, Allouez, Brown County, Wisconsin, 54301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:44.532202+00:00",
+  "_kind": "geo_samples"
+}

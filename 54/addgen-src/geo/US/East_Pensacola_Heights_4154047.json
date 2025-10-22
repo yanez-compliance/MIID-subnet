@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Pensacola Heights",
+  "geonameid": 4154047,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.42656742423885,
+      "lon": -87.15120052421017,
+      "geoinfo": {
+        "display_name": "Escambia County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Pensacola Heights, Florida, United States"
+    },
+    {
+      "lat": 30.39893594546969,
+      "lon": -87.19005841155618,
+      "geoinfo": {
+        "display_name": "Pensacola Bay Bridge, Pensacola, Escambia County, Florida, 32520, United States",
+        "road": "Pensacola Bay Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pensacola",
+        "state": "Florida",
+        "postcode": "32520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "614, Pensacola Bay Bridge, Pensacola, Escambia County, Florida, 32520, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:41:45.952326+00:00",
+  "_kind": "geo_samples"
+}

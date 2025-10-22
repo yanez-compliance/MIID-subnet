@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alafaya",
+  "geonameid": 6332439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.564138094516352,
+      "lon": -81.18516890372806,
+      "geoinfo": {
+        "display_name": "East Colonial Drive, Alafaya, Orange County, Florida, 32826, United States",
+        "road": "East Colonial Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alafaya",
+        "state": "Florida",
+        "postcode": "32826",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Colonial Drive, Alafaya, Florida, United States"
+    },
+    {
+      "lat": 28.59771186606716,
+      "lon": -81.20368115827513,
+      "geoinfo": {
+        "display_name": "Gemini Boulevard South, University, Orange County, Florida, 32815, United States",
+        "road": "Gemini Boulevard South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "University",
+        "state": "Florida",
+        "postcode": "32815",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "905, Gemini Boulevard South, University, Orange County, Florida, 32815, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:15.507360+00:00",
+  "_kind": "geo_samples"
+}

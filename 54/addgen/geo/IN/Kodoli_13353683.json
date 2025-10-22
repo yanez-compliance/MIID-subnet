@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kodoli",
+  "geonameid": 13353683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.65171417150815,
+      "lon": 74.04883394942765,
+      "geoinfo": {
+        "display_name": "Satara, Maharashtra, 415002, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Satara",
+        "state": "Maharashtra",
+        "postcode": "415002",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kodoli, Maharashtra, India"
+    },
+    {
+      "lat": 17.677829111506306,
+      "lon": 74.01688117757963,
+      "geoinfo": {
+        "display_name": "Yashodanagar, Satara, Maharashtra, 415002, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Yashodanagar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Satara",
+        "state": "Maharashtra",
+        "postcode": "415002",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "716, Yashodanagar, Satara, Maharashtra, 415002, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:53.668170+00:00",
+  "_kind": "geo_samples"
+}

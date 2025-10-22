@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "l'Alfàs del Pi",
+  "geonameid": 6559503,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.59475292158265,
+      "lon": -0.12190174668402284,
+      "geoinfo": {
+        "display_name": "Carrer de la Serra Cortina, Nucia Park, la Nucia, la Marina Baixa, Alacant / Alicante, Valencian Community, 03530, Spain",
+        "road": "Carrer de la Serra Cortina",
+        "house_number": null,
+        "neighbourhood": "Nucia Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "la Nucia",
+        "state": "Valencian Community",
+        "postcode": "03530",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer de la Serra Cortina, l'Alfàs del Pi, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.578252052257994,
+      "lon": -0.15773859919703864,
+      "geoinfo": {
+        "display_name": "CV-758, Benidorm, la Marina Baixa, Alacant / Alicante, Valencian Community, 03509, Spain",
+        "road": "CV-758",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Benidorm",
+        "state": "Valencian Community",
+        "postcode": "03509",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CV-758, Benidorm, la Marina Baixa, Alacant / Alicante, Valencian Community, 03509, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:00.254270+00:00",
+  "_kind": "geo_samples"
+}

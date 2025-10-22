@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lincoln",
+  "geonameid": 5072006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.79728979883066,
+      "lon": -96.68586069755132,
+      "geoinfo": {
+        "display_name": "1511, South 25th Street, Near South, Lincoln, Lancaster County, Nebraska, 68502, United States",
+        "road": "South 25th Street",
+        "house_number": "1511",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "Nebraska",
+        "postcode": "68502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1511 South 25th Street, Lincoln, Nebraska, United States"
+    },
+    {
+      "lat": 40.77879169195456,
+      "lon": -96.64145234759572,
+      "geoinfo": {
+        "display_name": "3482, Neerpark Drive, Constables Lakeside, Lincoln, Lancaster County, Nebraska, 68506, United States",
+        "road": "Neerpark Drive",
+        "house_number": "3482",
+        "neighbourhood": "Constables Lakeside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "Nebraska",
+        "postcode": "68506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3482, Neerpark Drive, Constables Lakeside, Lincoln, Lancaster County, Nebraska, 68506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:13.767607+00:00",
+  "_kind": "geo_samples"
+}

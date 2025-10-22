@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lauderhill",
+  "geonameid": 4161625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.162010409103978,
+      "lon": -80.17362619515285,
+      "geoinfo": {
+        "display_name": "2250, Northwest 29th Street, Rock Island Village, Broward County, Florida, 33311, United States",
+        "road": "Northwest 29th Street",
+        "house_number": "2250",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2250 Northwest 29th Street, Lauderhill, Florida, United States"
+    },
+    {
+      "lat": 26.113385697167253,
+      "lon": -80.23450894171579,
+      "geoinfo": {
+        "display_name": "East Tropical Way, Plantation Isles, Plantation, Broward County, Florida, 33317, United States",
+        "road": "East Tropical Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plantation",
+        "state": "Florida",
+        "postcode": "33317",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "509, East Tropical Way, Plantation Isles, Plantation, Broward County, Florida, 33317, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:42.661744+00:00",
+  "_kind": "geo_samples"
+}

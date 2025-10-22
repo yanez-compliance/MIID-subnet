@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Agüimes",
+  "geonameid": 2522325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.896077158207046,
+      "lon": -15.453450737202859,
+      "geoinfo": {
+        "display_name": "Avenida Hermanos La Salle, El Pie de la Cuesta, La Goleta, Agüimes, Las Palmas, Canary Islands, 35260, Spain",
+        "road": "Avenida Hermanos La Salle",
+        "house_number": null,
+        "neighbourhood": "El Pie de la Cuesta",
+        "suburb": "La Goleta",
+        "city_district": null,
+        "city": "Agüimes",
+        "state": null,
+        "postcode": "35260",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida Hermanos La Salle, Agüimes, Spain"
+    },
+    {
+      "lat": 27.903635928545057,
+      "lon": -15.4665638658191,
+      "geoinfo": {
+        "display_name": "GC-551, Los Corralillos, Agüimes, Las Palmas, Canary Islands, 35260, Spain",
+        "road": "GC-551",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Los Corralillos",
+        "city_district": null,
+        "city": "Agüimes",
+        "state": null,
+        "postcode": "35260",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "GC-551, Los Corralillos, Agüimes, Las Palmas, Canary Islands, 35260, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:17.760938+00:00",
+  "_kind": "geo_samples"
+}

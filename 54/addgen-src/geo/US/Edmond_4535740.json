@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Edmond",
+  "geonameid": 4535740,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.65618451741254,
+      "lon": -97.49863016447227,
+      "geoinfo": {
+        "display_name": "Chateau, Edmond, Oklahoma County, Oklahoma, 73083, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Chateau",
+        "suburb": null,
+        "city_district": null,
+        "city": "Edmond",
+        "state": "Oklahoma",
+        "postcode": "73083",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chateau, Edmond, Oklahoma, United States"
+    },
+    {
+      "lat": 35.6554839358149,
+      "lon": -97.49163620326271,
+      "geoinfo": {
+        "display_name": "19, South State Street, Terrace Addition, Main Street Addition, Edmond, Oklahoma County, Oklahoma, 73003, United States",
+        "road": "South State Street",
+        "house_number": "19",
+        "neighbourhood": "Terrace Addition",
+        "suburb": "Main Street Addition",
+        "city_district": null,
+        "city": "Edmond",
+        "state": "Oklahoma",
+        "postcode": "73003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19, South State Street, Terrace Addition, Main Street Addition, Edmond, Oklahoma County, Oklahoma, 73003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:25.691406+00:00",
+  "_kind": "geo_samples"
+}

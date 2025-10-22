@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Albolote",
+  "geonameid": 2522208,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.264262323008666,
+      "lon": -3.62133868058518,
+      "geoinfo": {
+        "display_name": "Carretera de El Chaparral (A-44) a GR-3424 (Güevéjar), Güevéjar, Comarca de la Vega de Granada, Granada, Andalusia, 18212, Spain",
+        "road": "Carretera de El Chaparral (A-44) a GR-3424 (Güevéjar)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Güevéjar",
+        "state": "Andalusia",
+        "postcode": "18212",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de El Chaparral (A-44) a GR-3424 (Güevéjar), Albolote, Andalusia, Spain"
+    },
+    {
+      "lat": 37.23942739888578,
+      "lon": -3.6254663920882213,
+      "geoinfo": {
+        "display_name": "Calle Encinar, Peligros, Comarca de la Vega de Granada, Granada, Andalusia, 18210, Spain",
+        "road": "Calle Encinar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peligros",
+        "state": "Andalusia",
+        "postcode": "18210",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "734, Calle Encinar, Peligros, Comarca de la Vega de Granada, Granada, Andalusia, 18210, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:50.015829+00:00",
+  "_kind": "geo_samples"
+}

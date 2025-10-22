@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Menen",
+  "geonameid": 2791343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.814641857694085,
+      "lon": 3.1338676829247465,
+      "geoinfo": {
+        "display_name": "242, Moorselestraat, Menin, Kortrijk, West Flanders, 8930, Belgium",
+        "road": "Moorselestraat",
+        "house_number": "242",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Menin",
+        "state": "West Flanders",
+        "postcode": "8930",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "242 Moorselestraat, Menen, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.777788851072096,
+      "lon": 3.0838866447247404,
+      "geoinfo": {
+        "display_name": "Busbekestraat, Wervik, Ieper, West Flanders, 8940, Belgium",
+        "road": "Busbekestraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wervik",
+        "city": "Wervik",
+        "state": "West Flanders",
+        "postcode": "8940",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "120, Busbekestraat, Wervik, Ieper, West Flanders, 8940, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:10.613423+00:00",
+  "_kind": "geo_samples"
+}

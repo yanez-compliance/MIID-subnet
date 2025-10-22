@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Mostovskoy",
+  "geonameid": 524809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.395067388898774,
+      "lon": 40.81247847667254,
+      "geoinfo": {
+        "display_name": "65, Psebayskaya Street, Mostovskoy, Мостовское городское поселение, Mostovsky District, Krasnodar Krai, 352574, Russia",
+        "road": "Psebayskaya Street",
+        "house_number": "65",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mostovskoy",
+        "state": "Krasnodar Krai",
+        "postcode": "352574",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "65 Psebayskaya Street, Mostovskoy, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 44.42567650504063,
+      "lon": 40.81032496797559,
+      "geoinfo": {
+        "display_name": "Oktyabrskaya Street, Zassovskaya, Зассовское сельское поселение, Labinsky District, Krasnodar Krai, 352531, Russia",
+        "road": "Oktyabrskaya Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zassovskaya",
+        "state": "Krasnodar Krai",
+        "postcode": "352531",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "204, Oktyabrskaya Street, Zassovskaya, Зассовское сельское поселение, Labinsky District, Krasnodar Krai, 352531, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:47.038242+00:00",
+  "_kind": "geo_samples"
+}

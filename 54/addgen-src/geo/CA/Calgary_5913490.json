@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Calgary",
+  "geonameid": 5913490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.04382772106759,
+      "lon": -114.08369610475928,
+      "geoinfo": {
+        "display_name": "Versus, 919, 10 Avenue SW, Connaught, Beltline, Calgary, Alberta, T2R 1A8, Canada",
+        "road": "10 Avenue SW",
+        "house_number": "919",
+        "neighbourhood": "Connaught",
+        "suburb": "Beltline",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T2R 1A8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "919 10 Avenue SW, Calgary, Alberta, Canada"
+    },
+    {
+      "lat": 51.02251566527128,
+      "lon": -114.08485035077172,
+      "geoinfo": {
+        "display_name": "8A Street SW, Elbow Park, Calgary, Alberta, T2T 3A7, Canada",
+        "road": "8A Street SW",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Elbow Park",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T2T 3A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "8A Street SW, Elbow Park, Calgary, Alberta, T2T 3A7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:15.041682+00:00",
+  "_kind": "geo_samples"
+}

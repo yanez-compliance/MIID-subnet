@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neukölln",
+  "geonameid": 2864695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.452074417584456,
+      "lon": 13.443197566807228,
+      "geoinfo": {
+        "display_name": "13, Alt-Britz, Ideal-Siedlung, Britz, Neukölln, Berlin, 12359, Germany",
+        "road": "Alt-Britz",
+        "house_number": "13",
+        "neighbourhood": "Ideal-Siedlung",
+        "suburb": "Britz",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12359",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13 Alt-Britz, Neukölln, Germany"
+    },
+    {
+      "lat": 52.460385090199956,
+      "lon": 13.473271037355454,
+      "geoinfo": {
+        "display_name": "133, Neuköllnische Allee, High-Deck-Siedlung, Neukölln, Berlin, 12057, Germany",
+        "road": "Neuköllnische Allee",
+        "house_number": "133",
+        "neighbourhood": null,
+        "suburb": "Neukölln",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12057",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "133, Neuköllnische Allee, High-Deck-Siedlung, Neukölln, Berlin, 12057, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:45.187433+00:00",
+  "_kind": "geo_samples"
+}

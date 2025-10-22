@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Newtownabbey",
+  "geonameid": 2641520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.66002217315201,
+      "lon": -5.949545672365999,
+      "geoinfo": {
+        "display_name": "Antrim Road, Greencastle, Belfast, Belfast City District, County Antrim, Northern Ireland, BT36 7RW, United Kingdom",
+        "road": "Antrim Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greencastle",
+        "city_district": null,
+        "city": "Belfast",
+        "state": "Northern Ireland",
+        "postcode": "BT36 7RW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Antrim Road, Newtownabbey, Northern Ireland, United Kingdom"
+    },
+    {
+      "lat": 54.64612747175396,
+      "lon": -5.926464190147542,
+      "geoinfo": {
+        "display_name": "Hazelwood College, 70, Whitewell Road, Greencastle, Newtownabbey, Belfast City District, County Antrim, Northern Ireland, BT36 7ES, United Kingdom",
+        "road": "Whitewell Road",
+        "house_number": "70",
+        "neighbourhood": null,
+        "suburb": "Greencastle",
+        "city_district": null,
+        "city": "Newtownabbey",
+        "state": "Northern Ireland",
+        "postcode": "BT36 7ES",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hazelwood College, 70, Whitewell Road, Greencastle, Newtownabbey, Belfast City District, County Antrim, Northern Ireland, BT36 7ES, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:46.413128+00:00",
+  "_kind": "geo_samples"
+}

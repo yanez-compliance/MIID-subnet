@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xingyi",
+  "geonameid": 8406218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.972611975072812,
+      "lon": 107.78059434993541,
+      "geoinfo": {
+        "display_name": "Xingyi, Fengdu County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xingyi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xingyi, Chongqing, China"
+    },
+    {
+      "lat": 29.914703926880577,
+      "lon": 107.81727316613859,
+      "geoinfo": {
+        "display_name": "Fengdu, Fengdu County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fengdu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "472, Fengdu, Fengdu County, 26535 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:46.562256+00:00",
+  "_kind": "geo_samples"
+}

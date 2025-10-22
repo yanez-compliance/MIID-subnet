@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Portsmouth",
+  "geonameid": 4779999,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.841351342360504,
+      "lon": -76.35014423898951,
+      "geoinfo": {
+        "display_name": "313, Park Road, Glenshellah, Portsmouth, Virginia, 23707, United States",
+        "road": "Park Road",
+        "house_number": "313",
+        "neighbourhood": "Glenshellah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "Virginia",
+        "postcode": "23707",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "313 Park Road, Portsmouth, Virginia, United States"
+    },
+    {
+      "lat": 36.8137996705103,
+      "lon": -76.32960601950977,
+      "geoinfo": {
+        "display_name": "3426, Deep Creek Boulevard, Highland Park, Cradock, Portsmouth, Virginia, 23702, United States",
+        "road": "Deep Creek Boulevard",
+        "house_number": "3426",
+        "neighbourhood": "Highland Park",
+        "suburb": "Cradock",
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "Virginia",
+        "postcode": "23702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3426, Deep Creek Boulevard, Highland Park, Cradock, Portsmouth, Virginia, 23702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:59.383346+00:00",
+  "_kind": "geo_samples"
+}

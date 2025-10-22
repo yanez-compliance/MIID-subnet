@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lansing",
+  "geonameid": 4998830,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.755348765467524,
+      "lon": -84.51663452916387,
+      "geoinfo": {
+        "display_name": "North Hayford Avenue, Groesbeck, Lansing Charter Township, Ingham County, Michigan, 48912, United States",
+        "road": "North Hayford Avenue",
+        "house_number": null,
+        "neighbourhood": "Groesbeck",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing Charter Township",
+        "state": "Michigan",
+        "postcode": "48912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Hayford Avenue, Lansing, Michigan, United States"
+    },
+    {
+      "lat": 42.744680314104855,
+      "lon": -84.53704016120679,
+      "geoinfo": {
+        "display_name": "1053, Cady Court, Northtown, Lansing, Ingham County, Michigan, 48906, United States",
+        "road": "Cady Court",
+        "house_number": "1053",
+        "neighbourhood": "Northtown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lansing",
+        "state": "Michigan",
+        "postcode": "48906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1053, Cady Court, Northtown, Lansing, Ingham County, Michigan, 48906, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:15.082540+00:00",
+  "_kind": "geo_samples"
+}

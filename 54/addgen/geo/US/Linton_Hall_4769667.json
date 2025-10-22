@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Linton Hall",
+  "geonameid": 4769667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.76627172925927,
+      "lon": -77.57216809796886,
+      "geoinfo": {
+        "display_name": "Devlin Road, Linton Hall, Prince William County, Virginia, 20136, United States",
+        "road": "Devlin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linton Hall",
+        "state": "Virginia",
+        "postcode": "20136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Devlin Road, Linton Hall, Virginia, United States"
+    },
+    {
+      "lat": 38.78160576808007,
+      "lon": -77.55905816873407,
+      "geoinfo": {
+        "display_name": "6966, Wellington Road, Prince William County, Virginia, 20156, United States",
+        "road": "Wellington Road",
+        "house_number": "6966",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20156",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6966, Wellington Road, Prince William County, Virginia, 20156, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:55.624063+00:00",
+  "_kind": "geo_samples"
+}

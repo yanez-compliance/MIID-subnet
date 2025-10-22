@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Magugu",
+  "geonameid": 155310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -3.9968523984016975,
+      "lon": 35.73971935865982,
+      "geoinfo": {
+        "display_name": "Mapea, Babati, Manyara Region, Northern Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mapea",
+        "state": "Manyara Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "Magugu, Manyara Region, Tanzania"
+    },
+    {
+      "lat": -3.9965536895821216,
+      "lon": 35.78216859602563,
+      "geoinfo": {
+        "display_name": "T5, Matufa, Babati, Manyara Region, Northern Zone, Tanzania",
+        "road": "T5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matufa",
+        "state": "Manyara Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "T5, Matufa, Babati, Manyara Region, 87569 Northern Zone, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:12.064070+00:00",
+  "_kind": "geo_samples"
+}

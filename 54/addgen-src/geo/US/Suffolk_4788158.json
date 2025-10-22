@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Suffolk",
+  "geonameid": 4788158,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.69469160833032,
+      "lon": -76.58656237812427,
+      "geoinfo": {
+        "display_name": "Hosier Road, West Jericho, Russell, Suffolk, Virginia, United States",
+        "road": "Hosier Road",
+        "house_number": null,
+        "neighbourhood": "West Jericho",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffolk",
+        "state": "Virginia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hosier Road, Suffolk, Virginia, United States"
+    },
+    {
+      "lat": 36.71657887148269,
+      "lon": -76.60959917740311,
+      "geoinfo": {
+        "display_name": "Benton Road, Nansemond Square, Suffolk, Virginia, 23434, United States",
+        "road": "Benton Road",
+        "house_number": null,
+        "neighbourhood": "Nansemond Square",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suffolk",
+        "state": "Virginia",
+        "postcode": "23434",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "716, Benton Road, Nansemond Square, Suffolk, Virginia, 23434, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:10.045097+00:00",
+  "_kind": "geo_samples"
+}

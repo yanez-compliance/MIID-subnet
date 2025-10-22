@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Anfu",
+  "geonameid": 1907959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.987406505485424,
+      "lon": 105.61288215296317,
+      "geoinfo": {
+        "display_name": "Mawan, Anfu, Qin'an County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anfu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Anfu, Gansu, China"
+    },
+    {
+      "lat": 34.95190791647483,
+      "lon": 105.61157920189143,
+      "geoinfo": {
+        "display_name": "S207, Qiaotou, Yebao, Qin'an County, Tianshui, Gansu, China",
+        "road": "S207",
+        "house_number": null,
+        "neighbourhood": "Qiaotou",
+        "suburb": null,
+        "city_district": null,
+        "city": "Yebao",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S207, Qiaotou, Yebao, Qin'an County, Tianshui, 31988 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:00.879762+00:00",
+  "_kind": "geo_samples"
+}

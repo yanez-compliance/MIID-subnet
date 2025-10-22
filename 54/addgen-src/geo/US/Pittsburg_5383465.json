@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pittsburg",
+  "geonameid": 5383465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.0524250654668,
+      "lon": -121.85336231161591,
+      "geoinfo": {
+        "display_name": "Contra Costa County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pittsburg, California, United States"
+    },
+    {
+      "lat": 37.998655628948875,
+      "lon": -121.86719482022951,
+      "geoinfo": {
+        "display_name": "1516, Norine Drive, Pittsburg, Contra Costa County, California, 94565, United States",
+        "road": "Norine Drive",
+        "house_number": "1516",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsburg",
+        "state": "California",
+        "postcode": "94565",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1516, Norine Drive, Pittsburg, Contra Costa County, California, 94565, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:34.601716+00:00",
+  "_kind": "geo_samples"
+}

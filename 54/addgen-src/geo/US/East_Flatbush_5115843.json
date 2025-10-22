@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Flatbush",
+  "geonameid": 5115843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.65339151312632,
+      "lon": -73.93006435203856,
+      "geoinfo": {
+        "display_name": "809, Utica Avenue, East Flatbush, Brooklyn Community District 17, Brooklyn, Kings County, New York, 11203, United States",
+        "road": "Utica Avenue",
+        "house_number": "809",
+        "neighbourhood": "East Flatbush",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "809 Utica Avenue, East Flatbush, New York, United States"
+    },
+    {
+      "lat": 40.62520859866085,
+      "lon": -73.8989752944733,
+      "geoinfo": {
+        "display_name": "Canarsie West Connector Greenway, Bergen Beach, Brooklyn, Kings County, New York, 11236, United States",
+        "road": "Canarsie West Connector Greenway",
+        "house_number": null,
+        "neighbourhood": "Bergen Beach",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "758, Canarsie West Connector Greenway, Bergen Beach, Brooklyn, Kings County, New York, 11236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:06.171745+00:00",
+  "_kind": "geo_samples"
+}

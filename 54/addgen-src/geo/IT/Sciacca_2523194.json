@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Sciacca",
+  "geonameid": 2523194,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.463505697569495,
+      "lon": 13.094491795336657,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Sciacca, Italy"
+    },
+    {
+      "lat": 37.541389372443504,
+      "lon": 13.114841306925113,
+      "geoinfo": {
+        "display_name": "Sciacca, Agrigento, Sicily, 92019, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sciacca",
+        "state": "Sicily",
+        "postcode": "92019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "174, Sciacca, Agrigento, Sicily, 92019, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:10.505079+00:00",
+  "_kind": "geo_samples"
+}

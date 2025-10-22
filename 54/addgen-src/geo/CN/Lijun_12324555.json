@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lijun",
+  "geonameid": 12324555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.211210346940206,
+      "lon": 106.12091272598,
+      "geoinfo": {
+        "display_name": "S103, Yongning County, Yinchuan City, Qingtongxia City, Ningxia, China",
+        "road": "S103",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yinchuan City",
+        "state": "Ningxia",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S103, Lijun, Ningxia, China"
+    },
+    {
+      "lat": 38.179559628366135,
+      "lon": 106.10336984144662,
+      "geoinfo": {
+        "display_name": "Shaogang, Qingtongxia City, Wuzhong City, Ningxia, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaogang",
+        "state": "Ningxia",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "509, Shaogang, Qingtongxia City, Wuzhong City, 47502 Ningxia, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:36.017303+00:00",
+  "_kind": "geo_samples"
+}

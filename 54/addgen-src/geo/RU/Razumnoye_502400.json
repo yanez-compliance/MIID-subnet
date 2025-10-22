@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Razumnoye",
+  "geonameid": 502400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.546896907679766,
+      "lon": 36.719271399393,
+      "geoinfo": {
+        "display_name": "Урожайная улица, Razumnoye, городское поселение Разумное, Belgorodsky District, Belgorod Oblast, Central Federal District, 308510, Russia",
+        "road": "Урожайная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Razumnoye",
+        "state": "Belgorod Oblast",
+        "postcode": "308510",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Урожайная улица, Razumnoye, Belgorod Oblast, Russia"
+    },
+    {
+      "lat": 50.56521385640925,
+      "lon": 36.64423042734591,
+      "geoinfo": {
+        "display_name": "Vostochniy District, Belgorod, городской округ Белгород, Belgorod Oblast, Central Federal District, 308006, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Vostochniy District",
+        "city": "Belgorod",
+        "state": "Belgorod Oblast",
+        "postcode": "308006",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "634, Vostochniy District, Belgorod, городской округ Белгород, Belgorod Oblast, Central Federal District, 308006, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:12.560357+00:00",
+  "_kind": "geo_samples"
+}

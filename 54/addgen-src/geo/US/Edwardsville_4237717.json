@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Edwardsville",
+  "geonameid": 4237717,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.805209933540645,
+      "lon": -89.9129901247118,
+      "geoinfo": {
+        "display_name": "Wiese Lane, Edwardsville, Madison County, Illinois, 62025, United States",
+        "road": "Wiese Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edwardsville",
+        "state": "Illinois",
+        "postcode": "62025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wiese Lane, Edwardsville, Illinois, United States"
+    },
+    {
+      "lat": 38.810190502554036,
+      "lon": -89.9081735243298,
+      "geoinfo": {
+        "display_name": "4111, South Peradotti Road, Madison County, Illinois, 62025, United States",
+        "road": "South Peradotti Road",
+        "house_number": "4111",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "62025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4111, South Peradotti Road, Madison County, Illinois, 62025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:34.605056+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Roeselare",
+  "geonameid": 2787889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.90579682695175,
+      "lon": 3.1388450254710394,
+      "geoinfo": {
+        "display_name": "Vlietputstraat, Vossemolen, Rumbeke, Roeselare, West Flanders, 8800, Belgium",
+        "road": "Vlietputstraat",
+        "house_number": null,
+        "neighbourhood": "Vossemolen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Roeselare",
+        "state": "West Flanders",
+        "postcode": "8800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Vlietputstraat, Roeselare, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.98454541896606,
+      "lon": 3.1006354639321687,
+      "geoinfo": {
+        "display_name": "1, Kandelaarstraat, Hooglede, Roeselare, West Flanders, 8830, Belgium",
+        "road": "Kandelaarstraat",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hooglede",
+        "state": "West Flanders",
+        "postcode": "8830",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1, Kandelaarstraat, Hooglede, Roeselare, West Flanders, 8830, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:48.395375+00:00",
+  "_kind": "geo_samples"
+}

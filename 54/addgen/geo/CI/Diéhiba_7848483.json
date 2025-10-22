@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Diéhiba",
+  "geonameid": 7848483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.931592843917509,
+      "lon": -7.382452387747038,
+      "geoinfo": {
+        "display_name": "Guémon, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Diéhiba, Montagnes, Ivory Coast"
+    },
+    {
+      "lat": 6.900352736691256,
+      "lon": -7.441726494993638,
+      "geoinfo": {
+        "display_name": "Guéhiébli, Guémon, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guéhiébli",
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "203, Diéhiba, 61986 Montagnes, Ivory Coast"
+    }
+  ],
+  "updated_at": "2025-10-19T01:28:47.738147+00:00",
+  "_kind": "geo_samples"
+}

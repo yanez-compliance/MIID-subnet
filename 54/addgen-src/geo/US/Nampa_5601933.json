@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nampa",
+  "geonameid": 5601933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.52858859264643,
+      "lon": -116.61184900490973,
+      "geoinfo": {
+        "display_name": "Canyon County, Idaho, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Idaho",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nampa, Idaho, United States"
+    },
+    {
+      "lat": 43.56308581705204,
+      "lon": -116.51124739238499,
+      "geoinfo": {
+        "display_name": "South Happy Valley Road, Nampa, Canyon County, Idaho, 83687, United States",
+        "road": "South Happy Valley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nampa",
+        "state": "Idaho",
+        "postcode": "83687",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "678, South Happy Valley Road, Nampa, Canyon County, Idaho, 83687, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:49.315488+00:00",
+  "_kind": "geo_samples"
+}

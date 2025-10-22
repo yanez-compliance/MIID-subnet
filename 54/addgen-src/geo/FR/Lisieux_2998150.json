@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lisieux",
+  "geonameid": 2998150,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.12966512001367,
+      "lon": 0.275053393049089,
+      "geoinfo": {
+        "display_name": "Chemin de Colandon, Glos, Lisieux, Calvados, Normandy, Metropolitan France, 14100, France",
+        "road": "Chemin de Colandon",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glos",
+        "state": "Normandy",
+        "postcode": "14100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Colandon, Lisieux, Normandy, France"
+    },
+    {
+      "lat": 49.13349160922884,
+      "lon": 0.20352656256520774,
+      "geoinfo": {
+        "display_name": "Rue du Pasteur Henri Orange, La Croix Girard, La Cour de la Reine, Saint-Désir, Lisieux, Calvados, Normandy, Metropolitan France, 14100, France",
+        "road": "Rue du Pasteur Henri Orange",
+        "house_number": null,
+        "neighbourhood": "La Croix Girard",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Désir",
+        "state": "Normandy",
+        "postcode": "14100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "428, Rue du Pasteur Henri Orange, La Croix Girard, La Cour de la Reine, Saint-Désir, Lisieux, Calvados, Normandy, Metropolitan France, 14100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:34.556403+00:00",
+  "_kind": "geo_samples"
+}

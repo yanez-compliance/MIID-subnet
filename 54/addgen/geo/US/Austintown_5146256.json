@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Austintown",
+  "geonameid": 5146256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.101278958162396,
+      "lon": -80.7616013649535,
+      "geoinfo": {
+        "display_name": "5499, Baker Street, Mahoning Heights, Austintown, Mahoning County, Ohio, 44515, United States",
+        "road": "Baker Street",
+        "house_number": "5499",
+        "neighbourhood": "Mahoning Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Austintown",
+        "state": "Ohio",
+        "postcode": "44515",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5499 Baker Street, Austintown, Ohio, United States"
+    },
+    {
+      "lat": 41.13652737211367,
+      "lon": -80.79006002415744,
+      "geoinfo": {
+        "display_name": "Depot Street, Mineral Ridge, Weathersfield Township, Trumbull County, Ohio, 44440, United States",
+        "road": "Depot Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mineral Ridge",
+        "state": "Ohio",
+        "postcode": "44440",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "051, Depot Street, Mineral Ridge, Weathersfield Township, Trumbull County, Ohio, 44440, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:58.297616+00:00",
+  "_kind": "geo_samples"
+}

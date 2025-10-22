@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sens",
+  "geonameid": 2975050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.17773155667347,
+      "lon": 3.3318112407777187,
+      "geoinfo": {
+        "display_name": "28, Rue des Fauvettes, Malay-le-Grand, Sens, Yonne, Bourgogne – Franche-Comté, Metropolitan France, 89100, France",
+        "road": "Rue des Fauvettes",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Malay-le-Grand",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "89100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "28 Rue des Fauvettes, Sens, Bourgogne – Franche-Comté, France"
+    },
+    {
+      "lat": 48.21679810024287,
+      "lon": 3.2770335008052895,
+      "geoinfo": {
+        "display_name": "E.Leclerc, Rue de Saint-Clément, Saint-Denis-lès-Sens, Sens, Yonne, Bourgogne – Franche-Comté, Metropolitan France, 89100, France",
+        "road": "Rue de Saint-Clément",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Denis-lès-Sens",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "89100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "453, Rue de Saint-Clément, Sens, 89100 Bourgogne – Franche-Comté, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:45:39.061016+00:00",
+  "_kind": "geo_samples"
+}

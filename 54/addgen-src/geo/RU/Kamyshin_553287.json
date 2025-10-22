@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kamyshin",
+  "geonameid": 553287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.111980337347134,
+      "lon": 45.46157729692089,
+      "geoinfo": {
+        "display_name": "Kamyshin, Volgograd Oblast, Southern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamyshin",
+        "state": "Volgograd Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kamyshin, Volgograd Oblast, Russia"
+    },
+    {
+      "lat": 50.06962278684855,
+      "lon": 45.392800495226346,
+      "geoinfo": {
+        "display_name": "26, Смоленская улица, Kamyshin, Volgograd Oblast, 403895, Russia",
+        "road": "Смоленская улица",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamyshin",
+        "state": "Volgograd Oblast",
+        "postcode": "403895",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "26, Смоленская улица, Kamyshin, Volgograd Oblast, 403895, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:34:44.202490+00:00",
+  "_kind": "geo_samples"
+}

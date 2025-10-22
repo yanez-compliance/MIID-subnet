@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Manchester",
+  "geonameid": 5089178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.97808145875445,
+      "lon": -71.46745847598804,
+      "geoinfo": {
+        "display_name": "Riverwalk Way, Riverwalk Place, West Side, Manchester, Hillsborough County, New Hampshire, 03101, United States",
+        "road": "Riverwalk Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Side",
+        "city_district": null,
+        "city": "Manchester",
+        "state": "New Hampshire",
+        "postcode": "03101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Riverwalk Way, Manchester, New Hampshire, United States"
+    },
+    {
+      "lat": 43.01106255826176,
+      "lon": -71.39843704287173,
+      "geoinfo": {
+        "display_name": "Londonderry Turnpike, Massabesic, Manchester, Hillsborough County, New Hampshire, 03104, United States",
+        "road": "Londonderry Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manchester",
+        "state": "New Hampshire",
+        "postcode": "03104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "624, Londonderry Turnpike, Massabesic, Manchester, Hillsborough County, New Hampshire, 03104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:24.293443+00:00",
+  "_kind": "geo_samples"
+}

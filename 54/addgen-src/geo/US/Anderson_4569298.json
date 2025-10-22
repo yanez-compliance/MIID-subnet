@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Anderson",
+  "geonameid": 4569298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.52955592882169,
+      "lon": -82.62748015353446,
+      "geoinfo": {
+        "display_name": "144, Elliott Circle, Windsor Place, Anderson, Anderson County, South Carolina, 29621, United States",
+        "road": "Elliott Circle",
+        "house_number": "144",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anderson",
+        "state": "South Carolina",
+        "postcode": "29621",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "144 Elliott Circle, Anderson, South Carolina, United States"
+    },
+    {
+      "lat": 34.48560741812278,
+      "lon": -82.64018622784737,
+      "geoinfo": {
+        "display_name": "Rock Hill Baptist Church, 410, Hall Street, Anderson County, South Carolina, 29624, United States",
+        "road": "Hall Street",
+        "house_number": "410",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29624",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rock Hill Baptist Church, 410, Hall Street, Anderson County, South Carolina, 29624, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:34.025631+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Flatlands",
+  "geonameid": 5117388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.62983112541561,
+      "lon": -73.93070015224644,
+      "geoinfo": {
+        "display_name": "1745, Schenectady Avenue, Flatlands, Brooklyn, Kings County, New York, 11234, United States",
+        "road": "Schenectady Avenue",
+        "house_number": "1745",
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1745 Schenectady Avenue, Flatlands, New York, United States"
+    },
+    {
+      "lat": 40.63238553134813,
+      "lon": -73.99179764234214,
+      "geoinfo": {
+        "display_name": "5118, 14th Avenue, Borough Park, Brooklyn, Kings County, New York, 11219, United States",
+        "road": "14th Avenue",
+        "house_number": "5118",
+        "neighbourhood": "Borough Park",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5118, 14th Avenue, Borough Park, Brooklyn, Kings County, New York, 11219, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:39.623748+00:00",
+  "_kind": "geo_samples"
+}

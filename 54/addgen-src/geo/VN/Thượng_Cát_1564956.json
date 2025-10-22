@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Thượng Cát",
+  "geonameid": 1564956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.08621836626865,
+      "lon": 105.75479184810908,
+      "geoinfo": {
+        "display_name": "Thuong Cat Ward, Hà Nội, 11909, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Thuong Cat Ward",
+        "city_district": null,
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "11909",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Thuong Cat Ward, Thượng Cát, Vietnam"
+    },
+    {
+      "lat": 21.08278433051276,
+      "lon": 105.68546404088299,
+      "geoinfo": {
+        "display_name": "Hoai Duc Commune, Hà Nội, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hoai Duc Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "439, Hoai Duc Commune, 40270 Hà Nội, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:53.347573+00:00",
+  "_kind": "geo_samples"
+}

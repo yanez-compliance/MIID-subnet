@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Buffalo",
+  "geonameid": 5019588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.138116709141805,
+      "lon": -93.8867865105651,
+      "geoinfo": {
+        "display_name": "8th Street Southeast, Rockford Township, Wright County, Minnesota, 55313, United States",
+        "road": "8th Street Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockford Township",
+        "state": "Minnesota",
+        "postcode": "55313",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8th Street Southeast, Buffalo, Minnesota, United States"
+    },
+    {
+      "lat": 45.18061572305462,
+      "lon": -93.93500640584371,
+      "geoinfo": {
+        "display_name": "2298, Bolton Drive Northwest, Chatham Township, Wright County, Minnesota, 55313, United States",
+        "road": "Bolton Drive Northwest",
+        "house_number": "2298",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chatham Township",
+        "state": "Minnesota",
+        "postcode": "55313",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2298, Bolton Drive Northwest, Chatham Township, Wright County, Minnesota, 55313, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:24.280479+00:00",
+  "_kind": "geo_samples"
+}

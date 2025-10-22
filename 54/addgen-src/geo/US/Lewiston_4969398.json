@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lewiston",
+  "geonameid": 4969398,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.07295474324535,
+      "lon": -70.18382453855115,
+      "geoinfo": {
+        "display_name": "Alfred A Plourde Parkway, Lewiston, Androscoggin County, Maine, 04240, United States",
+        "road": "Alfred A Plourde Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lewiston",
+        "state": "Maine",
+        "postcode": "04240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Alfred A Plourde Parkway, Lewiston, Maine, United States"
+    },
+    {
+      "lat": 44.07748721268717,
+      "lon": -70.26366917869184,
+      "geoinfo": {
+        "display_name": "1611, Hotel Road, Auburn, Androscoggin County, Maine, 04210, United States",
+        "road": "Hotel Road",
+        "house_number": "1611",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Maine",
+        "postcode": "04210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1611, Hotel Road, Auburn, Androscoggin County, Maine, 04210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:41.765379+00:00",
+  "_kind": "geo_samples"
+}

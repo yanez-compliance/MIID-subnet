@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Giurgiu",
+  "geonameid": 677106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.92017305683244,
+      "lon": 25.926353604149398,
+      "geoinfo": {
+        "display_name": "Strada Livezilor, Bălanu, Stănești, Giurgiu, 087216, Romania",
+        "road": "Strada Livezilor",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bălanu",
+        "state": null,
+        "postcode": "087216",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Strada Livezilor, Giurgiu, Romania"
+    },
+    {
+      "lat": 43.93000951372124,
+      "lon": 25.961683247425675,
+      "geoinfo": {
+        "display_name": "Strada Gloriei, Giurgiu Nord, Giurgiu, 080000, Romania",
+        "road": "Strada Gloriei",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Giurgiu Nord",
+        "city_district": null,
+        "city": "Giurgiu",
+        "state": null,
+        "postcode": "080000",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "427, Strada Gloriei, Giurgiu Nord, Giurgiu, 080000, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:41:50.442734+00:00",
+  "_kind": "geo_samples"
+}

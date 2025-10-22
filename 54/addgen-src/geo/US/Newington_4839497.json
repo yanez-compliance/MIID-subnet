@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newington",
+  "geonameid": 4839497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.69048480658021,
+      "lon": -72.71262953736799,
+      "geoinfo": {
+        "display_name": "195, Goodale Drive, Newington, Capitol Planning Region, Connecticut, 06111, United States",
+        "road": "Goodale Drive",
+        "house_number": "195",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newington",
+        "state": "Connecticut",
+        "postcode": "06111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "195 Goodale Drive, Newington, Connecticut, United States"
+    },
+    {
+      "lat": 41.6691974440418,
+      "lon": -72.7037387733276,
+      "geoinfo": {
+        "display_name": "145, Stonehill Drive, Rocky Hill, Capitol Planning Region, Connecticut, 06067, United States",
+        "road": "Stonehill Drive",
+        "house_number": "145",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rocky Hill",
+        "state": "Connecticut",
+        "postcode": "06067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "145, Stonehill Drive, Rocky Hill, Capitol Planning Region, Connecticut, 06067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:21.355842+00:00",
+  "_kind": "geo_samples"
+}

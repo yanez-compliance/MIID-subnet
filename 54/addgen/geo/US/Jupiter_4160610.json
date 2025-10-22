@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jupiter",
+  "geonameid": 4160610,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.902961148771737,
+      "lon": -80.07426796190703,
+      "geoinfo": {
+        "display_name": "River Park Drive, Jupiter, Palm Beach County, Florida, 33477, United States",
+        "road": "River Park Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jupiter",
+        "state": "Florida",
+        "postcode": "33477",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "River Park Drive, Jupiter, Florida, United States"
+    },
+    {
+      "lat": 26.941100508251438,
+      "lon": -80.05778091093485,
+      "geoinfo": {
+        "display_name": "Palm Beach County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "160, Palm Beach County, 13497 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:39.244011+00:00",
+  "_kind": "geo_samples"
+}

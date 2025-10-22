@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Oullins",
+  "geonameid": 2988998,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.70665385633115,
+      "lon": 4.811256036214618,
+      "geoinfo": {
+        "display_name": "130, Rue du Perron, Montmein, Oullins, Oullins-Pierre-Bénite, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69600, France",
+        "road": "Rue du Perron",
+        "house_number": "130",
+        "neighbourhood": "Montmein",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oullins-Pierre-Bénite",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "130 Rue du Perron, Oullins, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.73086172350938,
+      "lon": 4.833187242782086,
+      "geoinfo": {
+        "display_name": "Debourg, Parvis René Descartes, Le Bon Lait, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France",
+        "road": "Parvis René Descartes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerland",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Debourg, Parvis René Descartes, Le Bon Lait, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:19.891319+00:00",
+  "_kind": "geo_samples"
+}

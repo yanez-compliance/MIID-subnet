@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Lawn",
+  "geonameid": 4916028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.74134792989573,
+      "lon": -87.74283017815577,
+      "geoinfo": {
+        "display_name": "Value City Furniture, 8310, South Cicero Avenue, Burbank, Stickney Township, Cook County, Illinois, 60459, United States",
+        "road": "South Cicero Avenue",
+        "house_number": "8310",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burbank",
+        "state": "Illinois",
+        "postcode": "60459",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8310 South Cicero Avenue, West Lawn, Illinois, United States"
+    },
+    {
+      "lat": 41.79851397557767,
+      "lon": -87.75255602837974,
+      "geoinfo": {
+        "display_name": "5159, South Laramie Avenue, Garfield Ridge, Chicago, Lake Township, Cook County, Illinois, 60638, United States",
+        "road": "South Laramie Avenue",
+        "house_number": "5159",
+        "neighbourhood": null,
+        "suburb": "Garfield Ridge",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60638",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5159, South Laramie Avenue, Garfield Ridge, Chicago, Lake Township, Cook County, Illinois, 60638, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:58.212213+00:00",
+  "_kind": "geo_samples"
+}

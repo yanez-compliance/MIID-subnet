@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Whitby",
+  "geonameid": 6180170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.92037780475886,
+      "lon": -78.93509602154175,
+      "geoinfo": {
+        "display_name": "432, Taunton Road East, Whitby, Durham Region, Golden Horseshoe, Ontario, L1R 2K5, Canada",
+        "road": "Taunton Road East",
+        "house_number": "432",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitby",
+        "state": "Ontario",
+        "postcode": "L1R 2K5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "432 Taunton Road East, Whitby, Ontario, Canada"
+    },
+    {
+      "lat": 43.92385846854823,
+      "lon": -78.91649253706866,
+      "geoinfo": {
+        "display_name": "Taunton Road East, Whitby, Durham Region, Golden Horseshoe, Ontario, L1R 3L7, Canada",
+        "road": "Taunton Road East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitby",
+        "state": "Ontario",
+        "postcode": "L1R 3L7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Taunton Road East, Whitby, Durham Region, Golden Horseshoe, Ontario, L1R 3L7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:47.472378+00:00",
+  "_kind": "geo_samples"
+}

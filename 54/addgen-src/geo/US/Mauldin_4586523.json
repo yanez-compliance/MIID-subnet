@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mauldin",
+  "geonameid": 4586523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.75610526154962,
+      "lon": -82.28161566527514,
+      "geoinfo": {
+        "display_name": "1199, Old Stage Road, Greenville County, South Carolina, 29681, United States",
+        "road": "Old Stage Road",
+        "house_number": "1199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29681",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1199 Old Stage Road, Mauldin, South Carolina, United States"
+    },
+    {
+      "lat": 34.770621037388615,
+      "lon": -82.31467488928031,
+      "geoinfo": {
+        "display_name": "Ashmore Bridge Road, Woodhedge, Mauldin, Greenville County, South Carolina, 29605, United States",
+        "road": "Ashmore Bridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mauldin",
+        "state": "South Carolina",
+        "postcode": "29605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "975, Ashmore Bridge Road, Woodhedge, Mauldin, Greenville County, South Carolina, 29605, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:55.371025+00:00",
+  "_kind": "geo_samples"
+}

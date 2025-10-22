@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gauting",
+  "geonameid": 2922230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.06652569251537,
+      "lon": 11.331498618056303,
+      "geoinfo": {
+        "display_name": "Am Rain, Unterbrunn, Gauting, Wörthsee, Landkreis Starnberg, Bavaria, 82131, Germany",
+        "road": "Am Rain",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gauting",
+        "state": "Bavaria",
+        "postcode": "82131",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Rain, Gauting, Bavaria, Germany"
+    },
+    {
+      "lat": 48.0584884067977,
+      "lon": 11.318784923746684,
+      "geoinfo": {
+        "display_name": "Oberbrunn, Gauting, Wörthsee, Landkreis Starnberg, Bavaria, 82131, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gauting",
+        "state": "Bavaria",
+        "postcode": "82131",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "856, Oberbrunn, Gauting, Wörthsee, Landkreis Starnberg, Bavaria, 82131, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:35.834314+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Watford",
+  "geonameid": 2634677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.6334215221634,
+      "lon": -0.4214167211631358,
+      "geoinfo": {
+        "display_name": "East Drive, Batchworth, Three Rivers, Hertfordshire, England, HA6 2HX, United Kingdom",
+        "road": "East Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Batchworth",
+        "city_district": null,
+        "city": "Three Rivers",
+        "state": "England",
+        "postcode": "HA6 2HX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "East Drive, Watford, England, United Kingdom"
+    },
+    {
+      "lat": 51.687042087217485,
+      "lon": -0.4173759037807329,
+      "geoinfo": {
+        "display_name": "Kingswood, Garston, Watford, Hertfordshire, England, WD25 7FJ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kingswood",
+        "city_district": null,
+        "city": "Garston",
+        "state": "England",
+        "postcode": "WD25 7FJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Kingswood, Garston, Watford, Hertfordshire, England, WD25 7FJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:58.144804+00:00",
+  "_kind": "geo_samples"
+}

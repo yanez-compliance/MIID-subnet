@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lede",
+  "geonameid": 2793077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.950111584443654,
+      "lon": 3.9517712751752154,
+      "geoinfo": {
+        "display_name": "436, Gentsesteenweg, Erondegem, Erpe-Mere, Aalst, East Flanders, 9420, Belgium",
+        "road": "Gentsesteenweg",
+        "house_number": "436",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erondegem",
+        "state": "East Flanders",
+        "postcode": "9420",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "436 Gentsesteenweg, Lede, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.9748613527504,
+      "lon": 4.041911820428988,
+      "geoinfo": {
+        "display_name": "Aldegondisstraat, Hofstade, Aalst, East Flanders, 9308, Belgium",
+        "road": "Aldegondisstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalst",
+        "state": "East Flanders",
+        "postcode": "9308",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "460, Aldegondisstraat, Hofstade, Aalst, East Flanders, 9308, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:11.681108+00:00",
+  "_kind": "geo_samples"
+}

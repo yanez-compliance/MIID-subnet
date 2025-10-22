@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bexbach",
+  "geonameid": 2949470,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.346703190215386,
+      "lon": 7.288281201086686,
+      "geoinfo": {
+        "display_name": "33, Im Etzel, Kleinottweiler, Bexbach, Saarpfalz-Kreis, Saarland, 66450, Germany",
+        "road": "Im Etzel",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kleinottweiler",
+        "city": "Bexbach",
+        "state": "Saarland",
+        "postcode": "66450",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "33 Im Etzel, Bexbach, Saarland, Germany"
+    },
+    {
+      "lat": 49.34368310574753,
+      "lon": 7.310761415518799,
+      "geoinfo": {
+        "display_name": "Raststätte Homburg (Saar), A 6, Reiskirchen, Homburg, Saarpfalz-Kreis, Saarland, 66424, Germany",
+        "road": "A 6",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reiskirchen",
+        "city_district": "Reiskirchen",
+        "city": "Homburg",
+        "state": "Saarland",
+        "postcode": "66424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Raststätte Homburg (Saar), A 6, Reiskirchen, Homburg, Saarpfalz-Kreis, Saarland, 66424, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:30.119725+00:00",
+  "_kind": "geo_samples"
+}

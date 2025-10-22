@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Devizes",
+  "geonameid": 2651294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.36180612881944,
+      "lon": -1.924799060832786,
+      "geoinfo": {
+        "display_name": "Bishops Cannings, Wiltshire, England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bishops Cannings",
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Devizes, England, United Kingdom"
+    },
+    {
+      "lat": 51.35284145134777,
+      "lon": -1.9847707518080697,
+      "geoinfo": {
+        "display_name": "10, Brickley Lane, Devizes, Wiltshire, England, SN10 3BH, United Kingdom",
+        "road": "Brickley Lane",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Devizes",
+        "state": "England",
+        "postcode": "SN10 3BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "10, Brickley Lane, Devizes, Wiltshire, England, SN10 3BH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:46.044804+00:00",
+  "_kind": "geo_samples"
+}

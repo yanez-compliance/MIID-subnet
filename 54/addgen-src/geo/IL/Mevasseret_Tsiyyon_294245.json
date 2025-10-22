@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Mevasseret Tsiyyon",
+  "geonameid": 294245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.82800368027681,
+      "lon": 35.10843820118089,
+      "geoinfo": {
+        "display_name": "Qatanna, Area B, West Bank, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qatanna",
+        "state": null,
+        "postcode": null,
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "Mevasseret Tsiyyon, Israel"
+    },
+    {
+      "lat": 31.773013817709863,
+      "lon": 35.17689680833842,
+      "geoinfo": {
+        "display_name": "Israel Shuckman Road, Kiryat HaYovel, Jerusalem, Jerusalem Subdistrict, Jerusalem District, 9768112, Israel",
+        "road": "Israel Shuckman Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kiryat HaYovel",
+        "city_district": null,
+        "city": "Jerusalem",
+        "state": "Jerusalem District",
+        "postcode": "9768112",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "838, Israel Shuckman Road, Kiryat HaYovel, Jerusalem, Jerusalem Subdistrict, Jerusalem District, 9768112, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:01.339789+00:00",
+  "_kind": "geo_samples"
+}

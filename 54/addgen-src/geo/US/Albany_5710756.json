@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Albany",
+  "geonameid": 5710756,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.63762378292825,
+      "lon": -123.12482511391234,
+      "geoinfo": {
+        "display_name": "Bryant Drive Southwest, Linn County, Oregon, 97321, United States",
+        "road": "Bryant Drive Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bryant Drive Southwest, Albany, Oregon, United States"
+    },
+    {
+      "lat": 44.628592451844774,
+      "lon": -123.09109849575287,
+      "geoinfo": {
+        "display_name": "1395, Hill Street Southeast, Albany, Linn County, Oregon, 97322, United States",
+        "road": "Hill Street Southeast",
+        "house_number": "1395",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albany",
+        "state": "Oregon",
+        "postcode": "97322",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1395, Hill Street Southeast, Albany, Linn County, Oregon, 97322, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:18.153432+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kamen",
+  "geonameid": 2893438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.61709279845055,
+      "lon": 7.696904750953176,
+      "geoinfo": {
+        "display_name": "267, Kamener Straße, Pelkum, Hamm, North Rhine-Westphalia, 59077, Germany",
+        "road": "Kamener Straße",
+        "house_number": "267",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pelkum",
+        "city": "Hamm",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59077",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "267 Kamener Straße, Kamen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.56753041305415,
+      "lon": 7.676745420893972,
+      "geoinfo": {
+        "display_name": "97, Unnaer Straße, Südkamen, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany",
+        "road": "Unnaer Straße",
+        "house_number": "97",
+        "neighbourhood": null,
+        "suburb": "Südkamen",
+        "city_district": null,
+        "city": "Kamen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59174",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "97, Unnaer Straße, Südkamen, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:12.747864+00:00",
+  "_kind": "geo_samples"
+}

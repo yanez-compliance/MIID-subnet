@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sachse",
+  "geonameid": 4724564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.9533475460206,
+      "lon": -96.57605495850122,
+      "geoinfo": {
+        "display_name": "The Station Boulevard, Pleasant Valley, Sachse, Dallas County, Texas, 75048, United States",
+        "road": "The Station Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sachse",
+        "state": "Texas",
+        "postcode": "75048",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Station Boulevard, Sachse, Texas, United States"
+    },
+    {
+      "lat": 32.933870395104734,
+      "lon": -96.58601140241717,
+      "geoinfo": {
+        "display_name": "Garland, Dallas County, Texas, 75048, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garland",
+        "state": "Texas",
+        "postcode": "75048",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "903, Garland, Dallas County, Texas, 75048, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:03.332131+00:00",
+  "_kind": "geo_samples"
+}

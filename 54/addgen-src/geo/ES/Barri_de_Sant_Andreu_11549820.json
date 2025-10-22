@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Barri de Sant Andreu",
+  "geonameid": 11549820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.40033244960798,
+      "lon": 2.2011128136345612,
+      "geoinfo": {
+        "display_name": "167, Carrer de Llull, el Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08005, Spain",
+        "road": "Carrer de Llull",
+        "house_number": "167",
+        "neighbourhood": "el Poblenou",
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "167, Carrer de Llull, el Poblenou, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08005, Spain"
+    },
+    {
+      "lat": 41.44623597062074,
+      "lon": 2.1476557659032305,
+      "geoinfo": {
+        "display_name": "Carretera Antiga d'Horta a Cerdanyola, Horta, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08031, Spain",
+        "road": "Carretera Antiga d'Horta a Cerdanyola",
+        "house_number": null,
+        "neighbourhood": "Horta",
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08031",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "651, Carretera Antiga d'Horta a Cerdanyola, Horta, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08031, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:05.497013+00:00",
+  "_kind": "geo_samples"
+}

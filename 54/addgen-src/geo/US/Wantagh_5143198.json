@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wantagh",
+  "geonameid": 5143198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.66720900819386,
+      "lon": -73.55070236149126,
+      "geoinfo": {
+        "display_name": "120, Smith Street, Merrick, Town of Hempstead, Nassau County, New York, 11566, United States",
+        "road": "Smith Street",
+        "house_number": "120",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merrick",
+        "state": "New York",
+        "postcode": "11566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "120 Smith Street, Wantagh, New York, United States"
+    },
+    {
+      "lat": 40.696148751875334,
+      "lon": -73.54270237288154,
+      "geoinfo": {
+        "display_name": "2490, Cliff Lane, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States",
+        "road": "Cliff Lane",
+        "house_number": "2490",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellmore",
+        "state": "New York",
+        "postcode": "11710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2490, Cliff Lane, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:42.016037+00:00",
+  "_kind": "geo_samples"
+}

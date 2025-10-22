@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Palm Beach",
+  "geonameid": 4177887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.714835654749514,
+      "lon": -80.05337535013416,
+      "geoinfo": {
+        "display_name": "Anya Apartments, 345, Banyan Boulevard, West Palm Beach, Palm Beach County, Florida, 33401, United States",
+        "road": "Banyan Boulevard",
+        "house_number": "345",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Palm Beach",
+        "state": "Florida",
+        "postcode": "33401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "345 Banyan Boulevard, West Palm Beach, Florida, United States"
+    },
+    {
+      "lat": 26.691514319325996,
+      "lon": -80.05095727479569,
+      "geoinfo": {
+        "display_name": "203, Sunset Road, West Palm Beach, Palm Beach County, Florida, 33401, United States",
+        "road": "Sunset Road",
+        "house_number": "203",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Palm Beach",
+        "state": "Florida",
+        "postcode": "33401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "203, Sunset Road, West Palm Beach, Palm Beach County, Florida, 33401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:43:50.931947+00:00",
+  "_kind": "geo_samples"
+}

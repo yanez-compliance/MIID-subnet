@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Empalme",
+  "geonameid": 4006806,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.93101290715381,
+      "lon": -110.848148958779,
+      "geoinfo": {
+        "display_name": "Empalme, Sonora, 85330, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Empalme",
+        "state": "Sonora",
+        "postcode": "85330",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Empalme, Sonora, Mexico"
+    },
+    {
+      "lat": 27.95334473885718,
+      "lon": -110.85393831825054,
+      "geoinfo": {
+        "display_name": "Guaymas - Empalme, Guaymas, Sonora, 85400, Mexico",
+        "road": "Guaymas - Empalme",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guaymas",
+        "state": "Sonora",
+        "postcode": "85400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "679, Guaymas - Empalme, Guaymas, Sonora, 85400, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:36.358737+00:00",
+  "_kind": "geo_samples"
+}

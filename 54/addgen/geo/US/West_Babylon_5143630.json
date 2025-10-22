@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Babylon",
+  "geonameid": 5143630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71685438646167,
+      "lon": -73.32675159976263,
+      "geoinfo": {
+        "display_name": "14, Hamilton Avenue, North Babylon, Town of Babylon, Suffolk County, New York, 11703, United States",
+        "road": "Hamilton Avenue",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Babylon",
+        "state": "New York",
+        "postcode": "11703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14 Hamilton Avenue, West Babylon, New York, United States"
+    },
+    {
+      "lat": 40.74806354876203,
+      "lon": -73.34491547031311,
+      "geoinfo": {
+        "display_name": "247, West 22nd Street, Deer Park, Town of Babylon, Suffolk County, New York, 11729, United States",
+        "road": "West 22nd Street",
+        "house_number": "247",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deer Park",
+        "state": "New York",
+        "postcode": "11729",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "247, West 22nd Street, Deer Park, Town of Babylon, Suffolk County, New York, 11729, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:51.603342+00:00",
+  "_kind": "geo_samples"
+}

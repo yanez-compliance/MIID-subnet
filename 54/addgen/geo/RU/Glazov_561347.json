@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Glazov",
+  "geonameid": 561347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.11780758908048,
+      "lon": 52.66832428253777,
+      "geoinfo": {
+        "display_name": "Окружное шоссе, Glazov, Udmurtia, Volga Federal District, 427627, Russia",
+        "road": "Окружное шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glazov",
+        "state": "Udmurtia",
+        "postcode": "427627",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Окружное шоссе, Glazov, Udmurtia, Russia"
+    },
+    {
+      "lat": 58.17821990243179,
+      "lon": 52.69473962408399,
+      "geoinfo": {
+        "display_name": "Glazov, Udmurtia, Volga Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glazov",
+        "state": "Udmurtia",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "905, Glazov, Udmurtia, 27201 Volga Federal District, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:35:10.243874+00:00",
+  "_kind": "geo_samples"
+}

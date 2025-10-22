@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fuxing",
+  "geonameid": 8417104,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.82312369131745,
+      "lon": 106.56432518594276,
+      "geoinfo": {
+        "display_name": "Wanbao Avenue, Fuxing, Beibei District, Chongqing, China",
+        "road": "Wanbao Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fuxing",
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wanbao Avenue, Fuxing, Chongqing, China"
+    },
+    {
+      "lat": 29.84086127658994,
+      "lon": 106.54753529974157,
+      "geoinfo": {
+        "display_name": "云生大道, Beibei District, Chongqing, China",
+        "road": "云生大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "051, 云生大道, Beibei District, 54505 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:25.495858+00:00",
+  "_kind": "geo_samples"
+}

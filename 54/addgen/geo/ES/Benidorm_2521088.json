@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Benidorm",
+  "geonameid": 2521088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.514999072975186,
+      "lon": -0.12035836623331642,
+      "geoinfo": {
+        "display_name": "Cara Nord, 03501, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "03501",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Benidorm, Spain"
+    },
+    {
+      "lat": 38.564755549175786,
+      "lon": -0.16727289279119076,
+      "geoinfo": {
+        "display_name": "Finestrat, la Marina Baixa, Alacant / Alicante, Valencian Community, 03509, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Finestrat",
+        "state": "Valencian Community",
+        "postcode": "03509",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "258, Finestrat, la Marina Baixa, Alacant / Alicante, Valencian Community, 03509, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:35.567104+00:00",
+  "_kind": "geo_samples"
+}

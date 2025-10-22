@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bagnolet",
+  "geonameid": 3035403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.85063862776949,
+      "lon": 2.4346049123400983,
+      "geoinfo": {
+        "display_name": "94, Rue de Montreuil, Sorano, Vincennes, Nogent-sur-Marne, Val-de-Marne, Ile-de-France, Metropolitan France, 94300, France",
+        "road": "Rue de Montreuil",
+        "house_number": "94",
+        "neighbourhood": null,
+        "suburb": "Sorano",
+        "city_district": null,
+        "city": "Vincennes",
+        "state": "Ile-de-France",
+        "postcode": "94300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "94 Rue de Montreuil, Bagnolet, Ile-de-France, France"
+    },
+    {
+      "lat": 48.87026379258753,
+      "lon": 2.3586553166693602,
+      "geoinfo": {
+        "display_name": "7D, Villa du Lavoir, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Metropolitan France, 75010, France",
+        "road": "Villa du Lavoir",
+        "house_number": "7D",
+        "neighbourhood": null,
+        "suburb": "10th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75010",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "7D, Villa du Lavoir, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Metropolitan France, 75010, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:29.315999+00:00",
+  "_kind": "geo_samples"
+}

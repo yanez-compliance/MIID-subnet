@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Queensbury",
+  "geonameid": 5133279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.39498894102223,
+      "lon": -73.64914751718555,
+      "geoinfo": {
+        "display_name": "1347, Bay Road, Town of Lake George, Warren County, New York, 12845, United States",
+        "road": "Bay Road",
+        "house_number": "1347",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Lake George",
+        "state": "New York",
+        "postcode": "12845",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1347 Bay Road, Queensbury, New York, United States"
+    },
+    {
+      "lat": 43.34497135142424,
+      "lon": -73.62934010439974,
+      "geoinfo": {
+        "display_name": "29, Victoria Drive, Rolling Ridge, Town of Queensbury, Warren County, New York, 12804, United States",
+        "road": "Victoria Drive",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Queensbury",
+        "state": "New York",
+        "postcode": "12804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29, Victoria Drive, Rolling Ridge, Town of Queensbury, Warren County, New York, 12804, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:57.563030+00:00",
+  "_kind": "geo_samples"
+}

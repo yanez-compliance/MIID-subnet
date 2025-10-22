@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Abington",
+  "geonameid": 5177773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.11449539416356,
+      "lon": -75.09493679827098,
+      "geoinfo": {
+        "display_name": "1533, Stocton Road, Abington Township, Montgomery County, Pennsylvania, 19046, United States",
+        "road": "Stocton Road",
+        "house_number": "1533",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abington Township",
+        "state": "Pennsylvania",
+        "postcode": "19046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1533 Stocton Road, Abington, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.14253602337995,
+      "lon": -75.10357739532785,
+      "geoinfo": {
+        "display_name": "360, Silver Avenue, Willow Grove, Upper Moreland Township, Montgomery County, Pennsylvania, 19090, United States",
+        "road": "Silver Avenue",
+        "house_number": "360",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Moreland Township",
+        "state": "Pennsylvania",
+        "postcode": "19090",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "360, Silver Avenue, Willow Grove, Upper Moreland Township, Montgomery County, Pennsylvania, 19090, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:16.667141+00:00",
+  "_kind": "geo_samples"
+}

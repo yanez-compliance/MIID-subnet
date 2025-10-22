@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Covington",
+  "geonameid": 4288809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.074952450930944,
+      "lon": -84.46098926036073,
+      "geoinfo": {
+        "display_name": "Highland Avenue, Fort Thomas, Campbell County, Kentucky, 41075, United States",
+        "road": "Highland Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Thomas",
+        "state": "Kentucky",
+        "postcode": "41075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Highland Avenue, Covington, Kentucky, United States"
+    },
+    {
+      "lat": 39.09055625339317,
+      "lon": -84.50906976518766,
+      "geoinfo": {
+        "display_name": "John A. Roebling Suspension Bridge, KY 17, RiverCenter, Licking Riverside Historic District, Covington, Kenton County, Kentucky, 45202, United States",
+        "road": "KY 17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Licking Riverside Historic District",
+        "city_district": null,
+        "city": "Covington",
+        "state": "Kentucky",
+        "postcode": "45202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "John A. Roebling Suspension Bridge, KY 17, RiverCenter, Licking Riverside Historic District, Covington, Kenton County, Kentucky, 45202, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:30.912782+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Iselin",
+  "geonameid": 5099738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.575764919445646,
+      "lon": -74.30821891124272,
+      "geoinfo": {
+        "display_name": "198, Nassau Street, Iselin, Woodbridge Township, Middlesex County, New Jersey, 08830, United States",
+        "road": "Nassau Street",
+        "house_number": "198",
+        "neighbourhood": null,
+        "suburb": "Iselin",
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "08830",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "198 Nassau Street, Iselin, New Jersey, United States"
+    },
+    {
+      "lat": 40.6152064382127,
+      "lon": -74.32349837124123,
+      "geoinfo": {
+        "display_name": "Clark, Union County, New Jersey, 07066, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clark",
+        "state": "New Jersey",
+        "postcode": "07066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "460, Clark, Union County, New Jersey, 07066, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:43.222990+00:00",
+  "_kind": "geo_samples"
+}

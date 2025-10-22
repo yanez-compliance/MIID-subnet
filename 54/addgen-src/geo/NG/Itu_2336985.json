@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Itu",
+  "geonameid": 2336985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.217748909853992,
+      "lon": 7.985460257143809,
+      "geoinfo": {
+        "display_name": "Odukpani, Cross River State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cross River State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Itu, Cross River State, Nigeria"
+    },
+    {
+      "lat": 5.19977598567943,
+      "lon": 7.993770418032312,
+      "geoinfo": {
+        "display_name": "Itu, Akwa Ibom State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Itu",
+        "state": "Akwa Ibom State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "923, Itu, 39872 Akwa Ibom State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:53.941321+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fredericksburg",
+  "geonameid": 4760059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.2988819009518,
+      "lon": -77.48751341523365,
+      "geoinfo": {
+        "display_name": "142, Woodland Road, Westwood, Fredericksburg, Virginia, 22401, United States",
+        "road": "Woodland Road",
+        "house_number": "142",
+        "neighbourhood": "Westwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fredericksburg",
+        "state": "Virginia",
+        "postcode": "22401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "142 Woodland Road, Fredericksburg, Virginia, United States"
+    },
+    {
+      "lat": 38.26595316585539,
+      "lon": -77.4399108678803,
+      "geoinfo": {
+        "display_name": "11300, Mansfield Club Drive, Sylvania Heights, Fredericksburg, Spotsylvania County, Virginia, 22408, United States",
+        "road": "Mansfield Club Drive",
+        "house_number": "11300",
+        "neighbourhood": "Sylvania Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fredericksburg",
+        "state": "Virginia",
+        "postcode": "22408",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11300, Mansfield Club Drive, Sylvania Heights, Fredericksburg, Spotsylvania County, Virginia, 22408, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:55.900024+00:00",
+  "_kind": "geo_samples"
+}

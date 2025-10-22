@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Livonia",
+  "geonameid": 4999837,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.38218720551116,
+      "lon": -83.31715108196695,
+      "geoinfo": {
+        "display_name": "Schoolcraft Road, Livonia, Wayne County, Michigan, 48239, United States",
+        "road": "Schoolcraft Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livonia",
+        "state": "Michigan",
+        "postcode": "48239",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Schoolcraft Road, Livonia, Michigan, United States"
+    },
+    {
+      "lat": 42.37676197707643,
+      "lon": -83.41216410349018,
+      "geoinfo": {
+        "display_name": "12901, Newburgh Road, Livonia, Wayne County, Michigan, 48150, United States",
+        "road": "Newburgh Road",
+        "house_number": "12901",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livonia",
+        "state": "Michigan",
+        "postcode": "48150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12901, Newburgh Road, Livonia, Wayne County, Michigan, 48150, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:33.435847+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Hamilton",
+  "geonameid": 5117663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.59050968694482,
+      "lon": -74.02321614874559,
+      "geoinfo": {
+        "display_name": "Brooklyn, Kings County, New York, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brooklyn, Fort Hamilton, New York, United States"
+    },
+    {
+      "lat": 40.61543185124645,
+      "lon": -74.08422433896692,
+      "geoinfo": {
+        "display_name": "428, Vanderbilt Avenue, Fox Hills, Staten Island, Richmond County, New York, 10304, United States",
+        "road": "Vanderbilt Avenue",
+        "house_number": "428",
+        "neighbourhood": "Fox Hills",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "428, Vanderbilt Avenue, Fox Hills, Staten Island, Richmond County, New York, 10304, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:22.174375+00:00",
+  "_kind": "geo_samples"
+}

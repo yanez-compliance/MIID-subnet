@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hobbs",
+  "geonameid": 5471578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.701542588901425,
+      "lon": -103.13335858807359,
+      "geoinfo": {
+        "display_name": "Talon/LPE Hobbs Office, 303, East Taylor Street, Hobbs, Lea County, New Mexico, 88240, United States",
+        "road": "East Taylor Street",
+        "house_number": "303",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hobbs",
+        "state": "New Mexico",
+        "postcode": "88240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "303 East Taylor Street, Hobbs, New Mexico, United States"
+    },
+    {
+      "lat": 32.67211483035165,
+      "lon": -103.12777934348908,
+      "geoinfo": {
+        "display_name": "South Eunice Highway, Hobbs, Lea County, New Mexico, United States",
+        "road": "South Eunice Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hobbs",
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "166, South Eunice Highway, Hobbs, Lea County, 03396 New Mexico, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:01.025209+00:00",
+  "_kind": "geo_samples"
+}

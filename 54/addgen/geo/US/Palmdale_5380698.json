@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palmdale",
+  "geonameid": 5380698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.56675117445653,
+      "lon": -118.07094212920907,
+      "geoinfo": {
+        "display_name": "Cactus Middle School, 33rd Street East, Palmdale, Los Angeles County, California, 93550, United States",
+        "road": "33rd Street East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmdale",
+        "state": "California",
+        "postcode": "93550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33rd Street East, Palmdale, California, United States"
+    },
+    {
+      "lat": 34.606626324558256,
+      "lon": -118.1451412632965,
+      "geoinfo": {
+        "display_name": "West Avenue O 8, Palmdale, Los Angeles County, California, 93551, United States",
+        "road": "West Avenue O 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmdale",
+        "state": "California",
+        "postcode": "93551",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Avenue O 8, Palmdale, Los Angeles County, California, 93551, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:18.813600+00:00",
+  "_kind": "geo_samples"
+}

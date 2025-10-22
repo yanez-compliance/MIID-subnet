@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Roth",
+  "geonameid": 2844265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.242814459327676,
+      "lon": 11.12325913737666,
+      "geoinfo": {
+        "display_name": "Roth, Bavaria, 91154, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roth",
+        "state": "Bavaria",
+        "postcode": "91154",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Roth, Bavaria, Germany"
+    },
+    {
+      "lat": 49.23699449691426,
+      "lon": 11.067701455340485,
+      "geoinfo": {
+        "display_name": "Kreisklinik Roth, 14, Weinbergweg, Kiliansdorf, Roth, Bavaria, 91154, Germany",
+        "road": "Weinbergweg",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roth",
+        "state": "Bavaria",
+        "postcode": "91154",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kreisklinik Roth, 14, Weinbergweg, Kiliansdorf, Roth, Bavaria, 91154, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:21.492855+00:00",
+  "_kind": "geo_samples"
+}

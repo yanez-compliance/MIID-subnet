@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jamaica Plain",
+  "geonameid": 4940764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.30011260661407,
+      "lon": -71.12164929569066,
+      "geoinfo": {
+        "display_name": "Bussey Hill Road, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02130, United States",
+        "road": "Bussey Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jamaica Plain",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02130",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bussey Hill Road, Jamaica Plain, Massachusetts, United States"
+    },
+    {
+      "lat": 42.2784381563253,
+      "lon": -71.09828523428955,
+      "geoinfo": {
+        "display_name": "162, Almont Street, Mattapan, Boston, Suffolk County, Massachusetts, 02126, United States",
+        "road": "Almont Street",
+        "house_number": "162",
+        "neighbourhood": null,
+        "suburb": "Mattapan",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "162, Almont Street, Mattapan, Boston, Suffolk County, Massachusetts, 02126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:30.887017+00:00",
+  "_kind": "geo_samples"
+}

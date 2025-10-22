@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ranst",
+  "geonameid": 2788348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.20811647684485,
+      "lon": 4.537300881722475,
+      "geoinfo": {
+        "display_name": "95, Keerbaan, Centrum, Wommelgem, Antwerp, Flanders, 2160, Belgium",
+        "road": "Keerbaan",
+        "house_number": "95",
+        "neighbourhood": "Centrum",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wommelgem",
+        "state": "Antwerp",
+        "postcode": "2160",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "95 Keerbaan, Ranst, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.1640621365277,
+      "lon": 4.595473075229562,
+      "geoinfo": {
+        "display_name": "10, Tongelweg, Emblem, Ranst, Antwerp, Flanders, 2520, Belgium",
+        "road": "Tongelweg",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ranst",
+        "state": "Antwerp",
+        "postcode": "2520",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "10, Tongelweg, Emblem, Ranst, Antwerp, Flanders, 2520, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:37.589987+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bethany",
+  "geonameid": 5713759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.56207452999129,
+      "lon": -122.8392247200906,
+      "geoinfo": {
+        "display_name": "5957, Northwest Alfalfa Drive, Arbor Oaks, Bethany, Portland, Washington County, Oregon, 97229, United States",
+        "road": "Northwest Alfalfa Drive",
+        "house_number": "5957",
+        "neighbourhood": "Arbor Oaks",
+        "suburb": "Bethany",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5957 Northwest Alfalfa Drive, Bethany, Oregon, United States"
+    },
+    {
+      "lat": 45.55874722252923,
+      "lon": -122.87830405041801,
+      "geoinfo": {
+        "display_name": "5415, Northwest 196th Place, Rock Creek, Portland, Washington County, Oregon, 97229, United States",
+        "road": "Northwest 196th Place",
+        "house_number": "5415",
+        "neighbourhood": null,
+        "suburb": "Rock Creek",
+        "city_district": null,
+        "city": "Portland",
+        "state": "Oregon",
+        "postcode": "97229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5415, Northwest 196th Place, Rock Creek, Portland, Washington County, Oregon, 97229, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:51.936368+00:00",
+  "_kind": "geo_samples"
+}

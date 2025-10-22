@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stuttgart",
+  "geonameid": 2825297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.79367714156749,
+      "lon": 9.11191560141581,
+      "geoinfo": {
+        "display_name": "Lindentalsträßchen, Weilimdorf, Stuttgart-West, Stuttgart, Baden-Württemberg, 70499, Germany",
+        "road": "Lindentalsträßchen",
+        "house_number": null,
+        "neighbourhood": "Weilimdorf",
+        "suburb": "Weilimdorf",
+        "city_district": "Stuttgart-West",
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70499",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lindentalsträßchen, Stuttgart, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.803539900189406,
+      "lon": 9.147599613907815,
+      "geoinfo": {
+        "display_name": "35, Jakob-Kraus-Straße, Hohe Warte, Feuerbach, Stuttgart, Baden-Württemberg, 70469, Germany",
+        "road": "Jakob-Kraus-Straße",
+        "house_number": "35",
+        "neighbourhood": "Hohe Warte",
+        "suburb": "Feuerbach",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "35, Jakob-Kraus-Straße, Hohe Warte, Feuerbach, Stuttgart, Baden-Württemberg, 70469, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:22.942786+00:00",
+  "_kind": "geo_samples"
+}

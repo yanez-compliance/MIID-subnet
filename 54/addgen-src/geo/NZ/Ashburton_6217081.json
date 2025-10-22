@@ -1,0 +1,47 @@
+{
+  "country_code": "NZ",
+  "country": "New Zealand",
+  "city": "Ashburton",
+  "geonameid": 6217081,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -43.857368633152504,
+      "lon": 171.716538195565,
+      "geoinfo": {
+        "display_name": "Rawles Crossing Road, Ashburton District, New Zealand",
+        "road": "Rawles Crossing Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "Rawles Crossing Road, Ashburton, New Zealand"
+    },
+    {
+      "lat": -43.89282774240709,
+      "lon": 171.78740591734038,
+      "geoinfo": {
+        "display_name": "95, Company Road, Newland, Netherby, Ashburton District, Canterbury, 7740, New Zealand",
+        "road": "Company Road",
+        "house_number": "95",
+        "neighbourhood": null,
+        "suburb": "Netherby",
+        "city_district": null,
+        "city": null,
+        "state": "Canterbury",
+        "postcode": "7740",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "95 Company Road, Ashburton, Canterbury, New Zealand"
+    }
+  ],
+  "updated_at": "2025-10-16T20:52:05.834325+00:00",
+  "_kind": "geo_samples"
+}

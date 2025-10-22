@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuduan",
+  "geonameid": 1897997,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.55705020886674,
+      "lon": 117.06168315616416,
+      "geoinfo": {
+        "display_name": "魏庙镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wuduan, Jiangsu, China"
+    },
+    {
+      "lat": 34.54853743099299,
+      "lon": 117.08250492680901,
+      "geoinfo": {
+        "display_name": "Pei County, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pei County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "111, Pei County, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:34.277722+00:00",
+  "_kind": "geo_samples"
+}

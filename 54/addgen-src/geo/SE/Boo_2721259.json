@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Boo",
+  "geonameid": 2721259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.336136918042556,
+      "lon": 18.320662443608555,
+      "geoinfo": {
+        "display_name": "24A, Lillebovägen, Kil, Nacka kommun, Stockholm County, 132 36, Sweden",
+        "road": "Lillebovägen",
+        "house_number": "24A",
+        "neighbourhood": null,
+        "suburb": "Kil",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "132 36",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "24A Lillebovägen, Boo, Sweden"
+    },
+    {
+      "lat": 59.297615163851844,
+      "lon": 18.27539786133515,
+      "geoinfo": {
+        "display_name": "Skutviken, Igelboda, Lännersta, Boo, Nacka kommun, Stockholm County, 133 38, Sweden",
+        "road": "Skutviken",
+        "house_number": null,
+        "neighbourhood": "Igelboda",
+        "suburb": "Lännersta",
+        "city_district": null,
+        "city": "Boo",
+        "state": null,
+        "postcode": "133 38",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Skutviken, Igelboda, Lännersta, Boo, Nacka kommun, Stockholm County, 133 38, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:36.918830+00:00",
+  "_kind": "geo_samples"
+}

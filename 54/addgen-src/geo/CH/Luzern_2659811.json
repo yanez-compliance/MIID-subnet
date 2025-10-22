@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Luzern",
+  "geonameid": 2659811,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.08418549661833,
+      "lon": 8.264311771810709,
+      "geoinfo": {
+        "display_name": "16a, Weiherstrasse, Riffig, Emmenbrücke, Emmen, Lucerne, 6020, Switzerland",
+        "road": "Weiherstrasse",
+        "house_number": "16a",
+        "neighbourhood": "Riffig",
+        "suburb": "Emmenbrücke",
+        "city_district": null,
+        "city": "Emmen",
+        "state": "Lucerne",
+        "postcode": "6020",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "16a Weiherstrasse, Luzern, Lucerne, Switzerland"
+    },
+    {
+      "lat": 47.04857405273972,
+      "lon": 8.265206171959628,
+      "geoinfo": {
+        "display_name": "17, Grossmatte, Littau, Lucerne, 6014, Switzerland",
+        "road": "Grossmatte",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Littau",
+        "city_district": null,
+        "city": "Lucerne",
+        "state": "Lucerne",
+        "postcode": "6014",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "17 Grossmatte, Luzern, Lucerne, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:05:46.262277+00:00",
+  "_kind": "geo_samples"
+}

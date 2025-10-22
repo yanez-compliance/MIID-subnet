@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Albenga",
+  "geonameid": 3183343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.07864953946003,
+      "lon": 8.242223735581009,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Albenga, Italy"
+    },
+    {
+      "lat": 44.06010307505789,
+      "lon": 8.189698711843702,
+      "geoinfo": {
+        "display_name": "Leca, Bastia, Albenga, Savona, Liguria, 17031, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Leca",
+        "city_district": null,
+        "city": "Albenga",
+        "state": "Liguria",
+        "postcode": "17031",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "321, Leca, Bastia, Albenga, Savona, Liguria, 17031, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:52.016882+00:00",
+  "_kind": "geo_samples"
+}

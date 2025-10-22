@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Palmerston",
+  "geonameid": 6301965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.50344751446189,
+      "lon": 130.95484549050306,
+      "geoinfo": {
+        "display_name": "Bridle Road, Marlow Lagoon, City of Palmerston, Northern Territory, 0830, Australia",
+        "road": "Bridle Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marlow Lagoon",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "0830",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Bridle Road, Palmerston, Australia"
+    },
+    {
+      "lat": -12.506251155875416,
+      "lon": 130.96230745733294,
+      "geoinfo": {
+        "display_name": "Archer Drive, Archer, Palmerston, City of Palmerston, Northern Territory, 0830, Australia",
+        "road": "Archer Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Archer",
+        "city_district": null,
+        "city": "Palmerston",
+        "state": null,
+        "postcode": "0830",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "808, Archer Drive, Archer, Palmerston, City of Palmerston, Northern Territory, 0830, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:25.117611+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tamiami",
+  "geonameid": 4174744,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.758606981130296,
+      "lon": -80.40334038201419,
+      "geoinfo": {
+        "display_name": "12830, Southwest 10th Street, University Lakes Mobile Home Park, Miami-Dade County, Florida, 33184, United States",
+        "road": "Southwest 10th Street",
+        "house_number": "12830",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33184",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12830 Southwest 10th Street, Tamiami, Florida, United States"
+    },
+    {
+      "lat": 25.735680641692685,
+      "lon": -80.4100854065619,
+      "geoinfo": {
+        "display_name": "3480, Southwest 132nd Court, Miami, Miami-Dade County, Florida, 33175, United States",
+        "road": "Southwest 132nd Court",
+        "house_number": "3480",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33175",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3480, Southwest 132nd Court, Miami, Miami-Dade County, Florida, 33175, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:43.670348+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Canillejas",
+  "geonameid": 3126558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.415935852356924,
+      "lon": -3.5832018016792913,
+      "geoinfo": {
+        "display_name": "Carretera de Vicálvaro a la Estación de O'Donnell, Rosas, San Blas - Canillejas, Madrid, Community of Madrid, 28821, Spain",
+        "road": "Carretera de Vicálvaro a la Estación de O'Donnell",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Blas - Canillejas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28821",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Vicálvaro a la Estación de O'Donnell, Canillejas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.46231156124319,
+      "lon": -3.5764213059567225,
+      "geoinfo": {
+        "display_name": "Avenida de la Hispanidad, Barajas, Madrid, Community of Madrid, 28042, Spain",
+        "road": "Avenida de la Hispanidad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28042",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "256, Avenida de la Hispanidad, Barajas, Madrid, Community of Madrid, 28042, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:12.632595+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Tiquisate",
+  "geonameid": 3591093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.268521188002246,
+      "lon": -91.32972721006283,
+      "geoinfo": {
+        "display_name": "Tiquisate, Escuintla, 05006, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Escuintla",
+        "postcode": "05006",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Tiquisate, Escuintla, Guatemala"
+    },
+    {
+      "lat": 14.28548876533164,
+      "lon": -91.36181506308546,
+      "geoinfo": {
+        "display_name": "La Fortaleza, Tiquisate, Escuintla, 05006, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Fortaleza",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tiquisate",
+        "state": "Escuintla",
+        "postcode": "05006",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "369, La Fortaleza, Tiquisate, Escuintla, 05006, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:41.199756+00:00",
+  "_kind": "geo_samples"
+}

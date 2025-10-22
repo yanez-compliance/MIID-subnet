@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "la Marina de Port",
+  "geonameid": 11549793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.33034385349702,
+      "lon": 2.1448128568046503,
+      "geoinfo": {
+        "display_name": "la Marina del Prat Vermell, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, 08040, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "la Marina del Prat Vermell",
+        "suburb": "Sants-Montjuïc",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08040",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "la Marina del Prat Vermell, la Marina de Port, Catalonia, Spain"
+    },
+    {
+      "lat": 41.37699904713734,
+      "lon": 2.155600025964385,
+      "geoinfo": {
+        "display_name": "41, Carrer de Rocafort, Sant Antoni, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08015, Spain",
+        "road": "Carrer de Rocafort",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08015",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "41, Carrer de Rocafort, Sant Antoni, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08015, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:14.913093+00:00",
+  "_kind": "geo_samples"
+}

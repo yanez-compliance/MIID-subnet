@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holyoke",
+  "geonameid": 4939783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.23637824728788,
+      "lon": -72.60288979814487,
+      "geoinfo": {
+        "display_name": "355, North Main Street, South Hadley Falls, South Hadley, Hampshire County, Massachusetts, 01075, United States",
+        "road": "North Main Street",
+        "house_number": "355",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Hadley",
+        "state": "Massachusetts",
+        "postcode": "01075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "355 North Main Street, Holyoke, Massachusetts, United States"
+    },
+    {
+      "lat": 42.197189144570864,
+      "lon": -72.6307866600163,
+      "geoinfo": {
+        "display_name": "1920, Northampton Street, Elmwood, Holyoke, Hampden County, Massachusetts, 01040, United States",
+        "road": "Northampton Street",
+        "house_number": "1920",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holyoke",
+        "state": "Massachusetts",
+        "postcode": "01040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1920, Northampton Street, Elmwood, Holyoke, Hampden County, Massachusetts, 01040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:10.005970+00:00",
+  "_kind": "geo_samples"
+}

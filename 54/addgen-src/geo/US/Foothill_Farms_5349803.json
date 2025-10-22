@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Foothill Farms",
+  "geonameid": 5349803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.66771713857042,
+      "lon": -121.33752919085155,
+      "geoinfo": {
+        "display_name": "Auburn Boulevard, Sacramento County, California, 95741, United States",
+        "road": "Auburn Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95741",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Auburn Boulevard, Foothill Farms, California, United States"
+    },
+    {
+      "lat": 38.68002431940763,
+      "lon": -121.38745995989485,
+      "geoinfo": {
+        "display_name": "6210, 34th Street, Sacramento County, California, 95660, United States",
+        "road": "34th Street",
+        "house_number": "6210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6210, 34th Street, Sacramento County, California, 95660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:03.415660+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Worth",
+  "geonameid": 4691930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.70776523802877,
+      "lon": -97.356392342426,
+      "geoinfo": {
+        "display_name": "Texas Christian University, South University Drive, Fort Worth, Tarrant County, Texas, 76129, United States",
+        "road": "South University Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Worth",
+        "state": "Texas",
+        "postcode": "76129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South University Drive, Fort Worth, Texas, United States"
+    },
+    {
+      "lat": 32.73103660033298,
+      "lon": -97.28180883463423,
+      "geoinfo": {
+        "display_name": "Texas Wesleyan University, Binkley Street, Fort Worth, Tarrant County, Texas, 76105, United States",
+        "road": "Binkley Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Worth",
+        "state": "Texas",
+        "postcode": "76105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "676, Binkley Street, Fort Worth, 76105 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:09.319937+00:00",
+  "_kind": "geo_samples"
+}

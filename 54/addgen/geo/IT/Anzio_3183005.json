@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Anzio",
+  "geonameid": 3183005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.442486307263046,
+      "lon": 12.632297501396692,
+      "geoinfo": {
+        "display_name": "Piazzale Marinai d'Italia, Anzio, Roma Capitale, Lazio, 00048, Italy",
+        "road": "Piazzale Marinai d'Italia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anzio",
+        "state": "Lazio",
+        "postcode": "00048",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Piazzale Marinai d'Italia, Anzio, Lazio, Italy"
+    },
+    {
+      "lat": 41.47173091845625,
+      "lon": 12.612548260988994,
+      "geoinfo": {
+        "display_name": "Via del Gabbiano, Anzio, Lido di Marechiaro, Anzio, Roma Capitale, Lazio, 00042, Italy",
+        "road": "Via del Gabbiano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lido di Marechiaro",
+        "city_district": null,
+        "city": "Anzio",
+        "state": "Lazio",
+        "postcode": "00042",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "786, Via del Gabbiano, Anzio, Lido di Marechiaro, Anzio, Roma Capitale, Lazio, 00042, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:44.411624+00:00",
+  "_kind": "geo_samples"
+}

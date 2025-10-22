@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dixon",
+  "geonameid": 4889959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.841017661701834,
+      "lon": -89.47510342687985,
+      "geoinfo": {
+        "display_name": "498, South Dement Avenue, Dixon, Dixon Township, Lee County, Illinois, 61021, United States",
+        "road": "South Dement Avenue",
+        "house_number": "498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dixon",
+        "state": "Illinois",
+        "postcode": "61021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "498 South Dement Avenue, Dixon, Illinois, United States"
+    },
+    {
+      "lat": 41.83894440298185,
+      "lon": -89.53083871260509,
+      "geoinfo": {
+        "display_name": "North Frontage Road, Palmyra Township, Lee County, Illinois, United States",
+        "road": "North Frontage Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "209, North Frontage Road, Palmyra Township, Lee County, 34777 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:03.970259+00:00",
+  "_kind": "geo_samples"
+}

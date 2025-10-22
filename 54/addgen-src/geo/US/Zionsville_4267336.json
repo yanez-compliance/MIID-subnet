@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Zionsville",
+  "geonameid": 4267336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.96544434942371,
+      "lon": -86.2901727163024,
+      "geoinfo": {
+        "display_name": "5141, South Cobblestone Drive, Cobblestone Lakes of Zionville, Zionsville, Boone County, Indiana, 46077, United States",
+        "road": "South Cobblestone Drive",
+        "house_number": "5141",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zionsville",
+        "state": "Indiana",
+        "postcode": "46077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5141 South Cobblestone Drive, Zionsville, Indiana, United States"
+    },
+    {
+      "lat": 39.91927331989061,
+      "lon": -86.25590422620732,
+      "geoinfo": {
+        "display_name": "Indianapolis, Marion County, Indiana, 46268, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46268",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "942, Indianapolis, Marion County, Indiana, 46268, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:18.402881+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Studio City",
+  "geonameid": 5399438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.17879338138158,
+      "lon": -118.39196032039904,
+      "geoinfo": {
+        "display_name": "5938, Radford Avenue, North Hollywood Neighborhood Council District, Los Angeles, Los Angeles County, California, 91607, United States",
+        "road": "Radford Avenue",
+        "house_number": "5938",
+        "neighbourhood": null,
+        "suburb": "North Hollywood Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91607",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5938 Radford Avenue, Studio City, California, United States"
+    },
+    {
+      "lat": 34.112268229509574,
+      "lon": -118.39239239912645,
+      "geoinfo": {
+        "display_name": "405, Castle Place, Trousdale Estates, Beverly Hills, Los Angeles County, California, 90210, United States",
+        "road": "Castle Place",
+        "house_number": "405",
+        "neighbourhood": "Trousdale Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Beverly Hills",
+        "state": "California",
+        "postcode": "90210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "405, Castle Place, Trousdale Estates, Beverly Hills, Los Angeles County, California, 90210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:02.667882+00:00",
+  "_kind": "geo_samples"
+}

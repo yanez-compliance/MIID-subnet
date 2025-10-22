@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Danville",
+  "geonameid": 4889426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.14719892077769,
+      "lon": -87.6008824292609,
+      "geoinfo": {
+        "display_name": "East Voorhees Street, Danville, Vermilion County, Illinois, 61832, United States",
+        "road": "East Voorhees Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Danville",
+        "state": "Illinois",
+        "postcode": "61832",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Voorhees Street, Danville, Illinois, United States"
+    },
+    {
+      "lat": 40.12628350600691,
+      "lon": -87.65726205721884,
+      "geoinfo": {
+        "display_name": "Vermilion Heights, Danville, Vermilion County, Illinois, 61833, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Vermilion Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Danville",
+        "state": "Illinois",
+        "postcode": "61833",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "567, Vermilion Heights, Danville, Vermilion County, Illinois, 61833, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:34.663967+00:00",
+  "_kind": "geo_samples"
+}

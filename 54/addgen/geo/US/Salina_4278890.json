@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salina",
+  "geonameid": 4278890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.84838554776129,
+      "lon": -97.59829632285023,
+      "geoinfo": {
+        "display_name": "1006, East North Street, Salina, Saline County, Kansas, 67401, United States",
+        "road": "East North Street",
+        "house_number": "1006",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salina",
+        "state": "Kansas",
+        "postcode": "67401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1006 East North Street, Salina, Kansas, United States"
+    },
+    {
+      "lat": 38.86339272444932,
+      "lon": -97.65539455598949,
+      "geoinfo": {
+        "display_name": "Cottonwood Lane, Saline County, Kansas, 67401, United States",
+        "road": "Cottonwood Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "67401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "963, Cottonwood Lane, Saline County, Kansas, 67401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:17.899904+00:00",
+  "_kind": "geo_samples"
+}

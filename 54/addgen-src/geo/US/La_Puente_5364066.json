@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Puente",
+  "geonameid": 5364066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.04396028549517,
+      "lon": -117.99118932359656,
+      "geoinfo": {
+        "display_name": "Bassett, Los Angeles County, California, 91746, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "La Puente, California, United States"
+    },
+    {
+      "lat": 34.05936653317198,
+      "lon": -117.95005812739042,
+      "geoinfo": {
+        "display_name": "Edgewood Middle School, 1625, West Durness Street, West Covina, Los Angeles County, California, 91790, United States",
+        "road": "West Durness Street",
+        "house_number": "1625",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Covina",
+        "state": "California",
+        "postcode": "91790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Edgewood Middle School, 1625, West Durness Street, West Covina, Los Angeles County, California, 91790, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:18.602895+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marlborough",
+  "geonameid": 4943170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.36461322713712,
+      "lon": -71.53221429173257,
+      "geoinfo": {
+        "display_name": "401, Hosmer Street, Marlborough, Middlesex County, Massachusetts, 01752, United States",
+        "road": "Hosmer Street",
+        "house_number": "401",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marlborough",
+        "state": "Massachusetts",
+        "postcode": "01752",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "401 Hosmer Street, Marlborough, Massachusetts, United States"
+    },
+    {
+      "lat": 42.337452575375,
+      "lon": -71.52077953994613,
+      "geoinfo": {
+        "display_name": "Panther Trail, Marlborough, Middlesex County, Massachusetts, 01772, United States",
+        "road": "Panther Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marlborough",
+        "state": "Massachusetts",
+        "postcode": "01772",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "400, Panther Trail, Marlborough, Middlesex County, Massachusetts, 01772, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:57.140077+00:00",
+  "_kind": "geo_samples"
+}

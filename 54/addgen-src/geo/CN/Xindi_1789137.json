@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xindi",
+  "geonameid": 1789137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.84572523459478,
+      "lon": 113.43379090699756,
+      "geoinfo": {
+        "display_name": "Honghu City, Hubei, 433200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Honghu City",
+        "state": "Hubei",
+        "postcode": "433200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xindi, Hubei, China"
+    },
+    {
+      "lat": 29.849896343376336,
+      "lon": 113.4896161425972,
+      "geoinfo": {
+        "display_name": "芙蓉大道, Honghu City, Hubei, 433200, China",
+        "road": "芙蓉大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Honghu City",
+        "state": "Hubei",
+        "postcode": "433200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "742, 芙蓉大道, Honghu City, Hubei, 433200, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:53.404263+00:00",
+  "_kind": "geo_samples"
+}

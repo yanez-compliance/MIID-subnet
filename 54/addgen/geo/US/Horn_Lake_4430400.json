@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Horn Lake",
+  "geonameid": 4430400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.93986919177227,
+      "lon": -90.03097077465112,
+      "geoinfo": {
+        "display_name": "2045, Tall Tree Drive, Horn Lake, DeSoto County, Mississippi, 38637, United States",
+        "road": "Tall Tree Drive",
+        "house_number": "2045",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Horn Lake",
+        "state": "Mississippi",
+        "postcode": "38637",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2045 Tall Tree Drive, Horn Lake, Mississippi, United States"
+    },
+    {
+      "lat": 34.97264337285268,
+      "lon": -90.01806271598704,
+      "geoinfo": {
+        "display_name": "Coral Meadows Drive, Southaven, DeSoto County, Mississippi, 38671, United States",
+        "road": "Coral Meadows Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southaven",
+        "state": "Mississippi",
+        "postcode": "38671",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "749, Coral Meadows Drive, Southaven, DeSoto County, Mississippi, 38671, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:00.479229+00:00",
+  "_kind": "geo_samples"
+}

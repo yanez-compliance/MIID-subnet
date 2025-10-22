@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fremont",
+  "geonameid": 5068725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.44073736075083,
+      "lon": -96.49277110177619,
+      "geoinfo": {
+        "display_name": "1236, North C Street, Fremont, Dodge County, Nebraska, 68025, United States",
+        "road": "North C Street",
+        "house_number": "1236",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fremont",
+        "state": "Nebraska",
+        "postcode": "68025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1236 North C Street, Fremont, Nebraska, United States"
+    },
+    {
+      "lat": 41.435182023250945,
+      "lon": -96.53626149077483,
+      "geoinfo": {
+        "display_name": "Fremont Lakes Recreation Road, Dodge County, Nebraska, 68025, United States",
+        "road": "Fremont Lakes Recreation Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nebraska",
+        "postcode": "68025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "661, Fremont Lakes Recreation Road, Dodge County, Nebraska, 68025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:25.806311+00:00",
+  "_kind": "geo_samples"
+}

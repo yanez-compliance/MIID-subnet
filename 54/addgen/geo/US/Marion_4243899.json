@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marion",
+  "geonameid": 4243899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.743788139114905,
+      "lon": -88.96280179095255,
+      "geoinfo": {
+        "display_name": "Mach 1, 2306, The Hill Avenue, Marion, Williamson County, Illinois, 62959, United States",
+        "road": "The Hill Avenue",
+        "house_number": "2306",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marion",
+        "state": "Illinois",
+        "postcode": "62959",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2306 The Hill Avenue, Marion, Illinois, United States"
+    },
+    {
+      "lat": 37.71832948680615,
+      "lon": -88.9095349805402,
+      "geoinfo": {
+        "display_name": "Rix Drive, Marion, Williamson County, Illinois, 62959, United States",
+        "road": "Rix Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marion",
+        "state": "Illinois",
+        "postcode": "62959",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "213, Rix Drive, Marion, Williamson County, Illinois, 62959, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:13.211067+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wasco",
+  "geonameid": 5550368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.61367894441207,
+      "lon": -119.34704878037378,
+      "geoinfo": {
+        "display_name": "Palm Avenue, Wasco, Kern County, California, 92380, United States",
+        "road": "Palm Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wasco",
+        "state": "California",
+        "postcode": "92380",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Palm Avenue, Wasco, California, United States"
+    },
+    {
+      "lat": 35.59823359212524,
+      "lon": -119.29369853268133,
+      "geoinfo": {
+        "display_name": "Poplar Avenue, Myricks Corner, Shafter, Kern County, California, United States",
+        "road": "Poplar Avenue",
+        "house_number": null,
+        "neighbourhood": "Myricks Corner",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shafter",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "762, Poplar Avenue, Myricks Corner, Shafter, Kern County, 54383 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:04.610892+00:00",
+  "_kind": "geo_samples"
+}

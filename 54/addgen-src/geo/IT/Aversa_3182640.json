@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Aversa",
+  "geonameid": 3182640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.97804230514181,
+      "lon": 14.254620113340751,
+      "geoinfo": {
+        "display_name": "Succivo, Caserta, Campania, 09618, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Succivo",
+        "state": "Campania",
+        "postcode": "09618",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Aversa, Campania, Italy"
+    },
+    {
+      "lat": 40.97867558633888,
+      "lon": 14.236102801801676,
+      "geoinfo": {
+        "display_name": "Via S. Auditore, Gricignano di Aversa, Caserta, Campania, 09618, Italy",
+        "road": "Via S. Auditore",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gricignano di Aversa",
+        "state": "Campania",
+        "postcode": "09618",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "677, Via S. Auditore, Gricignano di Aversa, Caserta, Campania, 09618, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:07.949340+00:00",
+  "_kind": "geo_samples"
+}

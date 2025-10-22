@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Riegelsberg",
+  "geonameid": 2847033,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.31172265993727,
+      "lon": 6.987719112832983,
+      "geoinfo": {
+        "display_name": "Josefa Hgd., A 1, Malstatt, Bezirk Mitte, Saarbrücken, Regionalverband Saarbrücken, Saarland, 66115, Germany",
+        "road": "A 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Malstatt",
+        "city_district": null,
+        "city": "Saarbrücken",
+        "state": "Saarland",
+        "postcode": "66115",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 1, Riegelsberg, Saarland, Germany"
+    },
+    {
+      "lat": 49.30696189364091,
+      "lon": 6.914891336635562,
+      "geoinfo": {
+        "display_name": "Überhofer Straße, Etzenhofen, Köllerbach, Püttlingen, Regionalverband Saarbrücken, Saarland, 66346, Germany",
+        "road": "Überhofer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Etzenhofen",
+        "city_district": "Köllerbach",
+        "city": "Püttlingen",
+        "state": "Saarland",
+        "postcode": "66346",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "546, Überhofer Straße, Etzenhofen, Köllerbach, Püttlingen, Regionalverband Saarbrücken, Saarland, 66346, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:30.991673+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zedelgem",
+  "geonameid": 2783308,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.167574570767535,
+      "lon": 3.16609268958717,
+      "geoinfo": {
+        "display_name": "De Watermolen, Sint-Andries, Bruges, Brugge, West Flanders, 8200, Belgium",
+        "road": "De Watermolen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Andries",
+        "city": "Bruges",
+        "state": "West Flanders",
+        "postcode": "8200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "De Watermolen, Zedelgem, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.15808819471033,
+      "lon": 3.13821654574895,
+      "geoinfo": {
+        "display_name": "123, Diksmuidse Heirweg, Zedelgem, Brugge, West Flanders, 8210, Belgium",
+        "road": "Diksmuidse Heirweg",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zedelgem",
+        "city": "Zedelgem",
+        "state": "West Flanders",
+        "postcode": "8210",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "123, Diksmuidse Heirweg, Zedelgem, Brugge, West Flanders, 8210, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:11.903577+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Thornbury",
+  "geonameid": 2146793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.765473868556725,
+      "lon": 145.01724520785075,
+      "geoinfo": {
+        "display_name": "18A, Swift Street, Northcote, Melbourne, City of Darebin, Victoria, 3071, Australia",
+        "road": "Swift Street",
+        "house_number": "18A",
+        "neighbourhood": null,
+        "suburb": "Northcote",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3071",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "18A Swift Street, Thornbury, Victoria, Australia"
+    },
+    {
+      "lat": -37.78854824015252,
+      "lon": 144.97276827706563,
+      "geoinfo": {
+        "display_name": "11, Sutton Street, Carlton North, Melbourne, City of Yarra, Victoria, 3054, Australia",
+        "road": "Sutton Street",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Carlton North",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3054",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "11, Sutton Street, Carlton North, Melbourne, City of Yarra, Victoria, 3054, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:00.481327+00:00",
+  "_kind": "geo_samples"
+}

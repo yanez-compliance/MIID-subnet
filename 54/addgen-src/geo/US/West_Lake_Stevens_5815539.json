@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Lake Stevens",
+  "geonameid": 5815539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.01990911715059,
+      "lon": -122.14907106997232,
+      "geoinfo": {
+        "display_name": "28th Street Northeast, Marysville, Snohomish County, Washington, 98270, United States",
+        "road": "28th Street Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marysville",
+        "state": "Washington",
+        "postcode": "98270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28th Street Northeast, West Lake Stevens, Washington, United States"
+    },
+    {
+      "lat": 47.96646231856621,
+      "lon": -122.07415186860375,
+      "geoinfo": {
+        "display_name": "115th Avenue Southeast, Snohomish County, Washington, 98290, United States",
+        "road": "115th Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98290",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "115th Avenue Southeast, Snohomish County, Washington, 98290, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:55.478834+00:00",
+  "_kind": "geo_samples"
+}

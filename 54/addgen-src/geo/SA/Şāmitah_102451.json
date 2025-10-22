@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Şāmitah",
+  "geonameid": 102451,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 16.582242564288077,
+      "lon": 42.91365128979564,
+      "geoinfo": {
+        "display_name": "Samtah, Al Jaradiyah, Jazan Province, 83736, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Jaradiyah",
+        "state": "Jazan Province",
+        "postcode": "83736",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Şāmitah, Jazan Province, Saudi Arabia"
+    },
+    {
+      "lat": 16.608780118040595,
+      "lon": 42.91309820752765,
+      "geoinfo": {
+        "display_name": "Ashuhada, Samtah, Samitah, Jazan Province, 86384, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ashuhada",
+        "suburb": null,
+        "city_district": null,
+        "city": "Samitah",
+        "state": "Jazan Province",
+        "postcode": "86384",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Ashuhada, Şāmitah, Jazan Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:18:04.506470+00:00",
+  "_kind": "geo_samples"
+}

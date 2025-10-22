@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Huntsville",
+  "geonameid": 4699540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.698851362639015,
+      "lon": -95.54098152881853,
+      "geoinfo": {
+        "display_name": "2801, Wolverton Street, Huntsville, Walker County, Texas, 77340, United States",
+        "road": "Wolverton Street",
+        "house_number": "2801",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntsville",
+        "state": "Texas",
+        "postcode": "77340",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2801 Wolverton Street, Huntsville, Texas, United States"
+    },
+    {
+      "lat": 30.711913619464383,
+      "lon": -95.52942997155581,
+      "geoinfo": {
+        "display_name": "Saint Galilee Church, Boettcher Mill Road, Huntsville, Walker County, Texas, 77340, United States",
+        "road": "Boettcher Mill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntsville",
+        "state": "Texas",
+        "postcode": "77340",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "052, Boettcher Mill Road, Huntsville, 77340 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:29.407297+00:00",
+  "_kind": "geo_samples"
+}

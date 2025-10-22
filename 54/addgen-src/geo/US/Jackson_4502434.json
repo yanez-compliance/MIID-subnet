@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jackson",
+  "geonameid": 4502434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.81409809815795,
+      "lon": -74.8440477903743,
+      "geoinfo": {
+        "display_name": "West Jersey Road, Braddocks Mill, Medford Township, Burlington County, New Jersey, United States",
+        "road": "West Jersey Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford Township",
+        "state": "New Jersey",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Jersey Road, Jackson, New Jersey, United States"
+    },
+    {
+      "lat": 39.74804285586968,
+      "lon": -74.8867392443873,
+      "geoinfo": {
+        "display_name": "251, Stevens Avenue, West Atco, Winslow Township, Camden County, New Jersey, 08004, United States",
+        "road": "Stevens Avenue",
+        "house_number": "251",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winslow Township",
+        "state": "New Jersey",
+        "postcode": "08004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "251, Stevens Avenue, West Atco, Winslow Township, Camden County, New Jersey, 08004, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:12.151063+00:00",
+  "_kind": "geo_samples"
+}

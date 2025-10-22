@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenbelt",
+  "geonameid": 4356847,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.01783684286345,
+      "lon": -76.88514601975741,
+      "geoinfo": {
+        "display_name": "Beltsville, Prince George's County, Maryland, 20770, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beltsville",
+        "state": "Maryland",
+        "postcode": "20770",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Greenbelt, Maryland, United States"
+    },
+    {
+      "lat": 39.01893514533192,
+      "lon": -76.85569595393139,
+      "geoinfo": {
+        "display_name": "8712, Beaver Dam Road, Beltsville, Prince George's County, Maryland, 20705, United States",
+        "road": "Beaver Dam Road",
+        "house_number": "8712",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beltsville",
+        "state": "Maryland",
+        "postcode": "20705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8712, Beaver Dam Road, Beltsville, Prince George's County, Maryland, 20705, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:32.065930+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Courcelles",
+  "geonameid": 2800063,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.45493843322064,
+      "lon": 4.350163795923885,
+      "geoinfo": {
+        "display_name": "2, Rue de Namur, Forrière, Souvret, Courcelles, Charleroi, Hainaut, Wallonia, 6182, Belgium",
+        "road": "Rue de Namur",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Forrière",
+        "city_district": null,
+        "city": "Courcelles",
+        "state": "Hainaut",
+        "postcode": "6182",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "2 Rue de Namur, Courcelles, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.488664991098005,
+      "lon": 4.397042925628927,
+      "geoinfo": {
+        "display_name": "Ligne 119, Viesville, Pont-à-Celles, Charleroi, Hainaut, Wallonia, 6230, Belgium",
+        "road": "Ligne 119",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viesville",
+        "state": "Hainaut",
+        "postcode": "6230",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Ligne 119, Viesville, Pont-à-Celles, Charleroi, Hainaut, Wallonia, 6230, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:02.050909+00:00",
+  "_kind": "geo_samples"
+}

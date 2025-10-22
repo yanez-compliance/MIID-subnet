@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sirsāganj",
+  "geonameid": 1256050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.056458646241044,
+      "lon": 78.70910246930752,
+      "geoinfo": {
+        "display_name": "NH19, Kathfori, Shikohabad, Firozabad, Uttar Pradesh, India",
+        "road": "NH19",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kathfori",
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH19, Sirsāganj, Uttar Pradesh, India"
+    },
+    {
+      "lat": 27.08648721960476,
+      "lon": 78.65938155754657,
+      "geoinfo": {
+        "display_name": "Shikohabad, Firozabad, Uttar Pradesh, 205135, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shikohabad",
+        "state": "Uttar Pradesh",
+        "postcode": "205135",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "580, Shikohabad, Firozabad, Uttar Pradesh, 205135, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:13:03.499046+00:00",
+  "_kind": "geo_samples"
+}

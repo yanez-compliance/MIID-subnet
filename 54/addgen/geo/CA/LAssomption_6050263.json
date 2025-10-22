@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "L'Assomption",
+  "geonameid": 6050263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.808863916585864,
+      "lon": -73.41507662198423,
+      "geoinfo": {
+        "display_name": "L'Assomption, L'Assomption (MRC), Lanaudière, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Assomption",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "L'Assomption, Quebec, Canada"
+    },
+    {
+      "lat": 45.82152488099114,
+      "lon": -73.44692411966507,
+      "geoinfo": {
+        "display_name": "Rue Arboit, L'Assomption, L'Assomption (MRC), Lanaudière, Quebec, J5W 3P4, Canada",
+        "road": "Rue Arboit",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Assomption",
+        "state": "Quebec",
+        "postcode": "J5W 3P4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Arboit, L'Assomption, L'Assomption (MRC), Lanaudière, Quebec, J5W 3P4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:38.034162+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vilyuchinsk",
+  "geonameid": 2118647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.93869103276911,
+      "lon": 158.44978925402773,
+      "geoinfo": {
+        "display_name": "Seldevaya, Vilyuchinsk, Kamchatka Krai, Far Eastern Federal District, 684090, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seldevaya",
+        "city_district": null,
+        "city": null,
+        "state": "Kamchatka Krai",
+        "postcode": "684090",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Seldevaya, Vilyuchinsk, Kamchatka Krai, Russia"
+    },
+    {
+      "lat": 52.91395870533673,
+      "lon": 158.47121548783264,
+      "geoinfo": {
+        "display_name": "Kamchatka Krai, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kamchatka Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "765, Vilyuchinsk, 02053 Kamchatka Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:41:41.819810+00:00",
+  "_kind": "geo_samples"
+}

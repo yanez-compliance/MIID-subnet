@@ -1,0 +1,83 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Barranca",
+  "geonameid": 3946820,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -10.759638301241853,
+      "lon": -77.78462213814045,
+      "geoinfo": {
+        "display_name": "Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Barranca, Peru"
+    },
+    {
+      "lat": -10.720786647846447,
+      "lon": -77.76762971036653,
+      "geoinfo": {
+        "display_name": "Barranca, Province of Barranca, Lima, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barranca",
+        "state": "Lima",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "068, Barranca, Province of Barranca, 50620 Lima, Peru"
+    },
+    {
+      "lat": -10.776115418846084,
+      "lon": -77.77109080321708,
+      "geoinfo": {
+        "display_name": "Cerro Atarraya, Barranca, Province of Barranca, Lima, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barranca",
+        "state": "Lima",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "554, Cerro Atarraya, Barranca, Province of Barranca, 30222 Lima, Peru"
+    },
+    {
+      "lat": -10.765658041279897,
+      "lon": -77.75892955624163,
+      "geoinfo": {
+        "display_name": "Avenida Costanera, Barranca, Province of Barranca, Lima, Peru",
+        "road": "Avenida Costanera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barranca",
+        "state": "Lima",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "174, Avenida Costanera, Barranca, Province of Barranca, 59399 Lima, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:34.145930+00:00",
+  "_kind": "geo_samples"
+}

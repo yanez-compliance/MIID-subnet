@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Menasha",
+  "geonameid": 5262596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.17778319298199,
+      "lon": -88.40216596758809,
+      "geoinfo": {
+        "display_name": "Calumet County, Wisconsin, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Menasha, Wisconsin, United States"
+    },
+    {
+      "lat": 44.21069625903568,
+      "lon": -88.40368466836401,
+      "geoinfo": {
+        "display_name": "Firelane 2, Village of Harrison, Calumet County, Wisconsin, 54952, United States",
+        "road": "Firelane 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Harrison",
+        "state": "Wisconsin",
+        "postcode": "54952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Firelane 2, Village of Harrison, Calumet County, Wisconsin, 54952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:54.051952+00:00",
+  "_kind": "geo_samples"
+}

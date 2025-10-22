@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Peoria",
+  "geonameid": 4890549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.65925371516854,
+      "lon": -89.60845007797747,
+      "geoinfo": {
+        "display_name": "Wesley, Creve Coeur, Tazewell County, Illinois, 61610, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Creve Coeur",
+        "state": "Illinois",
+        "postcode": "61610",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Peoria, Illinois, United States"
+    },
+    {
+      "lat": 40.67462390633529,
+      "lon": -89.54266112864447,
+      "geoinfo": {
+        "display_name": "Assembly of God Church, East Washington Street, East Peoria, Tazewell County, Illinois, 61611, United States",
+        "road": "East Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Peoria",
+        "state": "Illinois",
+        "postcode": "61611",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "295, East Washington Street, East Peoria, 61611 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:16.445505+00:00",
+  "_kind": "geo_samples"
+}

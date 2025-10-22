@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Évry",
+  "geonameid": 3019256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.62529942945666,
+      "lon": 2.43045484569475,
+      "geoinfo": {
+        "display_name": "48, Cours Blaise Pascal, Droits de l'Homme, Évry-Centre, Évry, Évry-Courcouronnes, Évry, Essonne, Ile-de-France, Metropolitan France, 91000, France",
+        "road": "Cours Blaise Pascal",
+        "house_number": "48",
+        "neighbourhood": "Droits de l'Homme",
+        "suburb": null,
+        "city_district": null,
+        "city": "Évry",
+        "state": "Ile-de-France",
+        "postcode": "91000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "48 Cours Blaise Pascal, Évry, Ile-de-France, France"
+    },
+    {
+      "lat": 48.613243934982286,
+      "lon": 2.4334794956749866,
+      "geoinfo": {
+        "display_name": "Rue de la Bièvre, Les Grands Coquibus, Les Aunettes, Évry, Évry-Courcouronnes, Évry, Essonne, Metropolitan France, 91000, France",
+        "road": "Rue de la Bièvre",
+        "house_number": null,
+        "neighbourhood": "Les Grands Coquibus",
+        "suburb": null,
+        "city_district": null,
+        "city": "Évry",
+        "state": null,
+        "postcode": "91000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "599, Rue de la Bièvre, Les Grands Coquibus, Les Aunettes, Évry, Évry-Courcouronnes, Évry, Essonne, Metropolitan France, 91000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:07.794122+00:00",
+  "_kind": "geo_samples"
+}

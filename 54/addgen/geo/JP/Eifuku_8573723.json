@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Eifuku",
+  "geonameid": 8573723,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.68665722594716,
+      "lon": 139.6713162822175,
+      "geoinfo": {
+        "display_name": "栄町公園, Honan dori, Yayoicho 4, Yayoicho, Nakano, Tokyo, 164-0013, Japan",
+        "road": "Honan dori",
+        "house_number": null,
+        "neighbourhood": "Yayoicho 4",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nakano",
+        "state": null,
+        "postcode": "164-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Honan dori, Eifuku, Japan"
+    },
+    {
+      "lat": 35.67808504062338,
+      "lon": 139.67862537594647,
+      "geoinfo": {
+        "display_name": "Pony, Koshu Kaido, Hatagaya 2, Hatagaya, Shibuya, Tokyo, 151-0072, Japan",
+        "road": "Koshu Kaido",
+        "house_number": null,
+        "neighbourhood": "Hatagaya 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shibuya",
+        "state": null,
+        "postcode": "151-0072",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Pony, Koshu Kaido, Hatagaya 2, Hatagaya, Shibuya, Tokyo, 151-0072, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:20.124391+00:00",
+  "_kind": "geo_samples"
+}

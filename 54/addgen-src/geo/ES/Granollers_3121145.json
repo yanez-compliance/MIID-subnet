@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Granollers",
+  "geonameid": 3121145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.59337199573941,
+      "lon": 2.310139802515354,
+      "geoinfo": {
+        "display_name": "Autopista de la Mediterrània, la Roca Dos, la Roca del Vallès, Vallès Oriental, Barcelona, Catalonia, 08402, Spain",
+        "road": "Autopista de la Mediterrània",
+        "house_number": null,
+        "neighbourhood": "la Roca Dos",
+        "suburb": null,
+        "city_district": null,
+        "city": "la Roca del Vallès",
+        "state": "Catalonia",
+        "postcode": "08402",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista de la Mediterrània, Granollers, Catalonia, Spain"
+    },
+    {
+      "lat": 41.61733393981862,
+      "lon": 2.2773802041103646,
+      "geoinfo": {
+        "display_name": "Avinguda de Canovelles, Can Palots, Canovelles, Vallès Oriental, Barcelona, Catalonia, 08420, Spain",
+        "road": "Avinguda de Canovelles",
+        "house_number": null,
+        "neighbourhood": "Can Palots",
+        "suburb": null,
+        "city_district": null,
+        "city": "Canovelles",
+        "state": "Catalonia",
+        "postcode": "08420",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "149, Avinguda de Canovelles, Can Palots, Canovelles, Vallès Oriental, Barcelona, Catalonia, 08420, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:31.279694+00:00",
+  "_kind": "geo_samples"
+}

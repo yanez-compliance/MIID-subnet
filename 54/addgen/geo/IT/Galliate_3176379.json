@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Galliate",
+  "geonameid": 3176379,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.48211444810153,
+      "lon": 8.73745951839168,
+      "geoinfo": {
+        "display_name": "Via Vulpiate, Quara, Galliate, Novara, Piedmont, 28068, Italy",
+        "road": "Via Vulpiate",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galliate",
+        "state": "Piedmont",
+        "postcode": "28068",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Vulpiate, Galliate, Piedmont, Italy"
+    },
+    {
+      "lat": 45.50140103203421,
+      "lon": 8.656882419787138,
+      "geoinfo": {
+        "display_name": "Via Giacomo Matteotti, Cameri, Novara, Piedmont, 28062, Italy",
+        "road": "Via Giacomo Matteotti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cameri",
+        "state": "Piedmont",
+        "postcode": "28062",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "696, Via Giacomo Matteotti, Cameri, Novara, Piedmont, 28062, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:57.034266+00:00",
+  "_kind": "geo_samples"
+}

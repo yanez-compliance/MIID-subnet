@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Terrace",
+  "geonameid": 6162949,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.480958030170285,
+      "lon": -128.56765073485383,
+      "geoinfo": {
+        "display_name": "Highway 37, Queensway, Terrace, Regional District of Kitimat-Stikine, British Columbia, V8G 3W8, Canada",
+        "road": "Highway 37",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queensway",
+        "city_district": null,
+        "city": "Terrace",
+        "state": "British Columbia",
+        "postcode": "V8G 3W8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Highway 37, Terrace, British Columbia, Canada"
+    },
+    {
+      "lat": 54.53575928036013,
+      "lon": -128.62115998999928,
+      "geoinfo": {
+        "display_name": "Gibbs Road, Terrace, Regional District of Kitimat-Stikine, British Columbia, V8G 5P5, Canada",
+        "road": "Gibbs Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Terrace",
+        "state": "British Columbia",
+        "postcode": "V8G 5P5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Gibbs Road, Terrace, Regional District of Kitimat-Stikine, British Columbia, V8G 5P5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:18.868402+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Tarma",
+  "geonameid": 3927758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -11.404010994009514,
+      "lon": -75.72648607165775,
+      "geoinfo": {
+        "display_name": "Paccha, Tarma, Province of Tarma, Junín, 12651, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tarma",
+        "state": "Junín",
+        "postcode": "12651",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Tarma, Junín, Peru"
+    },
+    {
+      "lat": -11.391063226221421,
+      "lon": -75.6672022344255,
+      "geoinfo": {
+        "display_name": "Acobamba, Province of Tarma, Junín, 12651, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acobamba",
+        "state": "Junín",
+        "postcode": "12651",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "888, Acobamba, Province of Tarma, Junín, 12651, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:44.297203+00:00",
+  "_kind": "geo_samples"
+}

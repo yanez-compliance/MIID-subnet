@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Haven",
+  "geonameid": 4839704,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.406362516459836,
+      "lon": -72.8266866684491,
+      "geoinfo": {
+        "display_name": "994, Clintonville Road, Wallingford, South Central Connecticut Planning Region, Connecticut, 06492, United States",
+        "road": "Clintonville Road",
+        "house_number": "994",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wallingford",
+        "state": "Connecticut",
+        "postcode": "06492",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "994 Clintonville Road, North Haven, Connecticut, United States"
+    },
+    {
+      "lat": 41.41279466524564,
+      "lon": -72.89111484632532,
+      "geoinfo": {
+        "display_name": "Hogan Road, Hamden, South Central Connecticut Planning Region, Connecticut, 06518, United States",
+        "road": "Hogan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamden",
+        "state": "Connecticut",
+        "postcode": "06518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "990, Hogan Road, Hamden, South Central Connecticut Planning Region, Connecticut, 06518, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:40.893607+00:00",
+  "_kind": "geo_samples"
+}

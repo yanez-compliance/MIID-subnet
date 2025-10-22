@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newark",
+  "geonameid": 5101798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72834331657096,
+      "lon": -74.12754068635276,
+      "geoinfo": {
+        "display_name": "Roanoke Avenue, Newark, Essex County, New Jersey, 07105, United States",
+        "road": "Roanoke Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "New Jersey",
+        "postcode": "07105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Roanoke Avenue, Newark, New Jersey, United States"
+    },
+    {
+      "lat": 40.776495269136106,
+      "lon": -74.17796675162683,
+      "geoinfo": {
+        "display_name": "789, North 6th Street, Newark, Essex County, New Jersey, 07107, United States",
+        "road": "North 6th Street",
+        "house_number": "789",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "New Jersey",
+        "postcode": "07107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "789, North 6th Street, Newark, Essex County, New Jersey, 07107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:52.228680+00:00",
+  "_kind": "geo_samples"
+}

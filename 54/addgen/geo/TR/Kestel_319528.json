@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Kestel",
+  "geonameid": 319528,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.53229645215756,
+      "lon": 32.1151962362211,
+      "geoinfo": {
+        "display_name": "Yaylalı, Alanya, Antalya, Mediterranean Region, 07450, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": "07450",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Kestel, Turkey"
+    },
+    {
+      "lat": 36.47650186231073,
+      "lon": 32.1146912634732,
+      "geoinfo": {
+        "display_name": "Bahçeci Sokak, Alanya, Antalya, Mediterranean Region, 07450, Turkey",
+        "road": "Bahçeci Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": "07450",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "601, Bahçeci Sokak, Alanya, Antalya, Mediterranean Region, 07450, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:53.889654+00:00",
+  "_kind": "geo_samples"
+}

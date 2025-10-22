@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Blacksburg",
+  "geonameid": 4747845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.18594171076249,
+      "lon": -80.40233572489574,
+      "geoinfo": {
+        "display_name": "US 460, Myers Acres, Montgomery County, Virginia, 24070, United States",
+        "road": "US 460",
+        "house_number": null,
+        "neighbourhood": "Myers Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "24070",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 460, Blacksburg, Virginia, United States"
+    },
+    {
+      "lat": 37.243228735024694,
+      "lon": -80.39709941126107,
+      "geoinfo": {
+        "display_name": "2781, Wrights Way, Kessler Park, Montgomery County, Virginia, 24063, United States",
+        "road": "Wrights Way",
+        "house_number": "2781",
+        "neighbourhood": "Kessler Park",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "24063",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2781, Wrights Way, Kessler Park, Montgomery County, Virginia, 24063, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:44.088894+00:00",
+  "_kind": "geo_samples"
+}

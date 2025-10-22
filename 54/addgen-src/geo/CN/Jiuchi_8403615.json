@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiuchi",
+  "geonameid": 8403615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.788743614611,
+      "lon": 108.34191772713297,
+      "geoinfo": {
+        "display_name": "X061, Pailou Subdistrict, Huangni, 九池街道, Wanzhou, Chongqing, 404000, China",
+        "road": "X061",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pailou Subdistrict",
+        "city_district": null,
+        "city": "九池街道",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X061, Jiuchi, Chongqing, China"
+    },
+    {
+      "lat": 30.804928272568564,
+      "lon": 108.34784708811502,
+      "geoinfo": {
+        "display_name": "Gaosuntang, Taibai Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gaosuntang",
+        "city_district": null,
+        "city": "Taibai Subdistrict",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "247, Gaosuntang, Taibai Subdistrict, Wanzhou, Chongqing, 404000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:10.958681+00:00",
+  "_kind": "geo_samples"
+}

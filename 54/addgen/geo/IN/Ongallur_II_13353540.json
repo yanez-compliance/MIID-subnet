@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ongallur-II",
+  "geonameid": 13353540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.765236355136485,
+      "lon": 76.18808843323538,
+      "geoinfo": {
+        "display_name": "Pattambi, Palakkad, Kerala, 979303, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kerala",
+        "postcode": "979303",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Ongallur-II, Kerala, India"
+    },
+    {
+      "lat": 10.787491642645461,
+      "lon": 76.18314633666036,
+      "geoinfo": {
+        "display_name": "Mele Pattambi, Pattambi, Palakkad, Kerala, 679303, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mele Pattambi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pattambi",
+        "state": "Kerala",
+        "postcode": "679303",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "611, Mele Pattambi, Pattambi, Palakkad, Kerala, 679303, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:08.349180+00:00",
+  "_kind": "geo_samples"
+}

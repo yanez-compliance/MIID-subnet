@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Brilon",
+  "geonameid": 2944079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.42995881543131,
+      "lon": 8.531823917974314,
+      "geoinfo": {
+        "display_name": "Schützenring, Scharfenberg, Brilon, Hochsauerlandkreis, North Rhine-Westphalia, 59929, Germany",
+        "road": "Schützenring",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brilon",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schützenring, Brilon, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.38361238793477,
+      "lon": 8.543407405781448,
+      "geoinfo": {
+        "display_name": "An der Lohne, Brilon (Kernstadt), Brilon, Hochsauerlandkreis, North Rhine-Westphalia, 59929, Germany",
+        "road": "An der Lohne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brilon (Kernstadt)",
+        "city_district": null,
+        "city": "Brilon",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "252, An der Lohne, Brilon (Kernstadt), Brilon, Hochsauerlandkreis, North Rhine-Westphalia, 59929, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:39.155610+00:00",
+  "_kind": "geo_samples"
+}

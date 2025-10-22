@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yuyao",
+  "geonameid": 1785545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.04659528042947,
+      "lon": 121.10864177698966,
+      "geoinfo": {
+        "display_name": "丰南公寓, 阳明街道, Yuyao, Ningbo, Zhejiang, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "阳明街道",
+        "city_district": null,
+        "city": "Yuyao",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "阳明街道, Yuyao, Zhejiang, China"
+    },
+    {
+      "lat": 30.05787351196183,
+      "lon": 121.19120960848646,
+      "geoinfo": {
+        "display_name": "Ziling Road, Fengshan, 凤山街道, Yuyao, Ningbo, Zhejiang, China",
+        "road": "Ziling Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fengshan",
+        "city_district": null,
+        "city": "Yuyao",
+        "state": "Zhejiang",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "673, Ziling Road, Fengshan, 凤山街道, Yuyao, Ningbo, 20042 Zhejiang, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:52.143765+00:00",
+  "_kind": "geo_samples"
+}

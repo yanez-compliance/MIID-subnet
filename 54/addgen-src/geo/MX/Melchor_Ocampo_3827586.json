@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Melchor Ocampo",
+  "geonameid": 3827586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.74649957316367,
+      "lon": -99.14798526177415,
+      "geoinfo": {
+        "display_name": "Cuautitlán, State of Mexico, 54783, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "54783",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Melchor Ocampo, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.726795378955135,
+      "lon": -99.14281494086703,
+      "geoinfo": {
+        "display_name": "Avenida Niños Héroes, Cuautitlán, State of Mexico, 54890, Mexico",
+        "road": "Avenida Niños Héroes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "54890",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "910, Avenida Niños Héroes, Cuautitlán, State of Mexico, 54890, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:06.341608+00:00",
+  "_kind": "geo_samples"
+}

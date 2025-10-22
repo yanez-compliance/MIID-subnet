@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Clementi Housing Estate",
+  "geonameid": 1884384,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.348306575380523,
+      "lon": 103.7349682805215,
+      "geoinfo": {
+        "display_name": "Pan-Island Expressway, Tengah, Southwest, Singapore, 600308, Singapore",
+        "road": "Pan-Island Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tengah",
+        "city_district": "Southwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "600308",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "230, Pan-Island Expressway, Tengah, Southwest, Singapore, 600308, Singapore"
+    },
+    {
+      "lat": 1.3080997468787885,
+      "lon": 103.78563920159334,
+      "geoinfo": {
+        "display_name": "26, Ghim Moh Link, Ghim Moh Valley, Queenstown, Singapore, 270026, Singapore",
+        "road": "Ghim Moh Link",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Queenstown",
+        "city_district": null,
+        "city": "Singapore",
+        "state": null,
+        "postcode": "270026",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "26, Ghim Moh Link, Ghim Moh Valley, Queenstown, Singapore, 270026, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:54.179814+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Rosa Beach",
+  "geonameid": 4172094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.408382513950126,
+      "lon": -86.25798624178495,
+      "geoinfo": {
+        "display_name": "Santa Rosa Beach, Walton County, Florida, 32459, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa Beach",
+        "state": "Florida",
+        "postcode": "32459",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Rosa Beach, Florida, United States"
+    },
+    {
+      "lat": 30.413150504579274,
+      "lon": -86.2315827561714,
+      "geoinfo": {
+        "display_name": "169, Crawfish Alley, Santa Rosa Beach, Walton County, Florida, 32459, United States",
+        "road": "Crawfish Alley",
+        "house_number": "169",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa Beach",
+        "state": "Florida",
+        "postcode": "32459",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "169, Crawfish Alley, Santa Rosa Beach, Walton County, Florida, 32459, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:35.520912+00:00",
+  "_kind": "geo_samples"
+}

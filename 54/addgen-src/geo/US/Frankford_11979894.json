@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Frankford",
+  "geonameid": 11979894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.320262683231796,
+      "lon": -76.54295369901763,
+      "geoinfo": {
+        "display_name": "Herring Run Recreation Center, 5001, Sinclair Lane, Frankford, Baltimore, Maryland, 21206, United States",
+        "road": "Sinclair Lane",
+        "house_number": "5001",
+        "neighbourhood": "Frankford",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21206",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5001 Sinclair Lane, Frankford, Maryland, United States"
+    },
+    {
+      "lat": 39.31917066935127,
+      "lon": -76.51632448274735,
+      "geoinfo": {
+        "display_name": "7915, Philadelphia Road, Hamiltowne, Rosedale, Baltimore County, Maryland, 21237, United States",
+        "road": "Philadelphia Road",
+        "house_number": "7915",
+        "neighbourhood": "Hamiltowne",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosedale",
+        "state": "Maryland",
+        "postcode": "21237",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7915, Philadelphia Road, Hamiltowne, Rosedale, Baltimore County, Maryland, 21237, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:02.475660+00:00",
+  "_kind": "geo_samples"
+}

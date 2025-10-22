@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "La Chaux-de-Fonds",
+  "geonameid": 2660076,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.08261353371199,
+      "lon": 6.858186367230079,
+      "geoinfo": {
+        "display_name": "16, Boinod, La Chaux-de-Fonds, Neuchâtel, 2300, Switzerland",
+        "road": "Boinod",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Chaux-de-Fonds",
+        "state": "Neuchâtel",
+        "postcode": "2300",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "16 Boinod, La Chaux-de-Fonds, Neuchâtel, Switzerland"
+    },
+    {
+      "lat": 47.091481295918555,
+      "lon": 6.843320379988252,
+      "geoinfo": {
+        "display_name": "Route de l'Orée-du-Bois, Le Cerisier, La Chaux-de-Fonds, Neuchâtel, 2300, Switzerland",
+        "road": "Route de l'Orée-du-Bois",
+        "house_number": null,
+        "neighbourhood": "Le Cerisier",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Chaux-de-Fonds",
+        "state": "Neuchâtel",
+        "postcode": "2300",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Route de l'Orée-du-Bois, La Chaux-de-Fonds, Neuchâtel, Switzerland"
+    },
+    {
+      "lat": 47.08747493925394,
+      "lon": 6.886858662166159,
+      "geoinfo": {
+        "display_name": "C.F, La Grand'Combe, Fontaines (NE), Val-de-Ruz, Neuchâtel, 2053, Switzerland",
+        "road": "La Grand'Combe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fontaines (NE)",
+        "city": "Val-de-Ruz",
+        "state": "Neuchâtel",
+        "postcode": "2053",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "897, La Grand'Combe, La Chaux-de-Fonds, 2053 Neuchâtel, Switzerland"
+    },
+    {
+      "lat": 47.07463461897446,
+      "lon": 6.879569839630652,
+      "geoinfo": {
+        "display_name": "|, Route de la Vue-des-Alpes, Les Loges, Fontaines (NE), Val-de-Ruz, Neuchâtel, 2052, Switzerland",
+        "road": "Route de la Vue-des-Alpes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fontaines (NE)",
+        "city": "Val-de-Ruz",
+        "state": "Neuchâtel",
+        "postcode": "2052",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "761, |, Route de la Vue-des-Alpes, Les Loges, Fontaines (NE), Val-de-Ruz, Neuchâtel, 2052, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:40.169626+00:00",
+  "_kind": "geo_samples"
+}

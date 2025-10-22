@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Parafield Gardens",
+  "geonameid": 8349238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.77618151272609,
+      "lon": 138.61384565767867,
+      "geoinfo": {
+        "display_name": "Martins Road, Parafield Gardens, Adelaide, City of Salisbury, South Australia, 5107, Australia",
+        "road": "Martins Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parafield Gardens",
+        "city_district": null,
+        "city": "Adelaide",
+        "state": "South Australia",
+        "postcode": "5107",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Martins Road, Parafield Gardens, South Australia, Australia"
+    },
+    {
+      "lat": -34.78644066755132,
+      "lon": 138.56349946350187,
+      "geoinfo": {
+        "display_name": "Dry Creek, Adelaide, City of Salisbury, South Australia, 5094, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dry Creek",
+        "city_district": null,
+        "city": "Adelaide",
+        "state": "South Australia",
+        "postcode": "5094",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "514, Dry Creek, Adelaide, City of Salisbury, South Australia, 5094, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:57.512130+00:00",
+  "_kind": "geo_samples"
+}

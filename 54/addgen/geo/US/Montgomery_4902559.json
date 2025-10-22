@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montgomery",
+  "geonameid": 4902559,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.71917804718894,
+      "lon": -88.29059026142755,
+      "geoinfo": {
+        "display_name": "Goodwin Drive, Montgomery, Oswego Township, Kendall County, Illinois, 60503, United States",
+        "road": "Goodwin Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery",
+        "state": "Illinois",
+        "postcode": "60503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Goodwin Drive, Montgomery, Illinois, United States"
+    },
+    {
+      "lat": 41.71016317210767,
+      "lon": -88.29290924314806,
+      "geoinfo": {
+        "display_name": "Oswego, Oswego Township, Kendall County, Illinois, 60503, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oswego",
+        "state": "Illinois",
+        "postcode": "60503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "679, Oswego, Oswego Township, Kendall County, Illinois, 60503, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:28.906099+00:00",
+  "_kind": "geo_samples"
+}

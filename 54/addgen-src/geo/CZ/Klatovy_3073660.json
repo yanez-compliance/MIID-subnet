@@ -1,0 +1,83 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Klatovy",
+  "geonameid": 3073660,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 49.417621608012126,
+      "lon": 13.334699003243646,
+      "geoinfo": {
+        "display_name": "191, Ostřetice, okres Klatovy, Plzeň Region, Southwest, 339 01, Czechia",
+        "road": "191",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ostřetice",
+        "city_district": null,
+        "city": "Ostřetice",
+        "state": "Southwest",
+        "postcode": "339 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "191, Klatovy, Southwest, Czechia"
+    },
+    {
+      "lat": 49.388764178490575,
+      "lon": 13.33211108465967,
+      "geoinfo": {
+        "display_name": "1861, Slavošovice u Klatov, Bolešiny, okres Klatovy, Plzeň Region, 339 01, Czechia",
+        "road": "1861",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Slavošovice u Klatov",
+        "city_district": null,
+        "city": "Bolešiny",
+        "state": null,
+        "postcode": "339 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "1861, Slavošovice u Klatov, Bolešiny, okres Klatovy, Plzeň Region, 339 01, Czechia"
+    },
+    {
+      "lat": 49.41034845705056,
+      "lon": 13.318889338489914,
+      "geoinfo": {
+        "display_name": "19122, Chaloupky, Klatovy, Pihovice, Klatovy, okres Klatovy, Plzeň Region, Southwest, 339 01, Czechia",
+        "road": "19122",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Klatovy",
+        "city_district": null,
+        "city": "Klatovy",
+        "state": "Southwest",
+        "postcode": "339 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "19122, Chaloupky, Klatovy, Pihovice, Klatovy, okres Klatovy, Plzeň Region, Southwest, 339 01, Czechia"
+    },
+    {
+      "lat": 49.38286866219032,
+      "lon": 13.243240574689253,
+      "geoinfo": {
+        "display_name": "6, Poborovice, Bezděkov, okres Klatovy, Plzeň Region, 339 01, Czechia",
+        "road": null,
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Poborovice",
+        "state": null,
+        "postcode": "339 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "6, Poborovice, Bezděkov, okres Klatovy, Plzeň Region, 339 01, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:34.433632+00:00",
+  "_kind": "geo_samples"
+}

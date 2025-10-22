@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Merced",
+  "geonameid": 5372253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.29668945552399,
+      "lon": -120.43237372485547,
+      "geoinfo": {
+        "display_name": "3042, CA 140, Merced, Merced County, California, 95340, United States",
+        "road": "CA 140",
+        "house_number": "3042",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merced",
+        "state": "California",
+        "postcode": "95340",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3042 CA 140, Merced, California, United States"
+    },
+    {
+      "lat": 37.29106717144979,
+      "lon": -120.45050979707226,
+      "geoinfo": {
+        "display_name": "North Parsons Avenue, Merced, Merced County, California, 95341, United States",
+        "road": "North Parsons Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merced",
+        "state": "California",
+        "postcode": "95341",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "197, North Parsons Avenue, Merced, Merced County, California, 95341, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:40.512737+00:00",
+  "_kind": "geo_samples"
+}

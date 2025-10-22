@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakton",
+  "geonameid": 4776970,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.85219345458514,
+      "lon": -77.33369753995618,
+      "geoinfo": {
+        "display_name": "Jermantown Road, Fairfax, Virginia, 22030, United States",
+        "road": "Jermantown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfax",
+        "state": "Virginia",
+        "postcode": "22030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jermantown Road, Oakton, Virginia, United States"
+    },
+    {
+      "lat": 38.86088162713761,
+      "lon": -77.35243690667986,
+      "geoinfo": {
+        "display_name": "I 66, Random Hills, Fair Oaks, Fairfax County, Virginia, 22035, United States",
+        "road": "I 66",
+        "house_number": null,
+        "neighbourhood": "Random Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fair Oaks",
+        "state": "Virginia",
+        "postcode": "22035",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 66, Random Hills, Fair Oaks, Fairfax County, Virginia, 22035, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:30.535335+00:00",
+  "_kind": "geo_samples"
+}

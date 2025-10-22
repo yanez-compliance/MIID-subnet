@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Ampang",
+  "geonameid": 1735168,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.184326762548228,
+      "lon": 101.78216477663484,
+      "geoinfo": {
+        "display_name": "Taman Kelab Ukay, Bukit Antarabangsa, Ulu Kelang, Ampang Jaya Municipal Council, Gombak, Selangor, 54200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Kelab Ukay",
+        "suburb": "Bukit Antarabangsa",
+        "city_district": "Ulu Kelang",
+        "city": "Ampang Jaya Municipal Council",
+        "state": "Selangor",
+        "postcode": "54200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Taman Kelab Ukay, Ampang, Selangor, Malaysia"
+    },
+    {
+      "lat": 3.124673080776298,
+      "lon": 101.74019408050239,
+      "geoinfo": {
+        "display_name": "Jalan 10/91, Maluri, Cheras, Kuala Lumpur, 51500, Malaysia",
+        "road": "Jalan 10/91",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maluri",
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "51500",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan 10/91, Maluri, Cheras, Kuala Lumpur, 51500, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:23.472218+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gulou",
+  "geonameid": 8417600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.14762395130687,
+      "lon": 106.17066253573904,
+      "geoinfo": {
+        "display_name": "G212, Dashi, Hechuan District, Chongqing, China",
+        "road": "G212",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dashi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G212, Gulou, Chongqing, China"
+    },
+    {
+      "lat": 30.16686584591386,
+      "lon": 106.1316112140807,
+      "geoinfo": {
+        "display_name": "Yongxing, Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yongxing",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "614, Yongxing, Hechuan District, 61100 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:03:26.846130+00:00",
+  "_kind": "geo_samples"
+}

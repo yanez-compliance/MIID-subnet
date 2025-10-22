@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Katsushika",
+  "geonameid": 8469284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.71417108300929,
+      "lon": 139.85545705508443,
+      "geoinfo": {
+        "display_name": "Shinkoiwa 1, Shinkoiwa, Katsushika, Tokyo, 124-0024, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Shinkoiwa 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Katsushika",
+        "state": null,
+        "postcode": "124-0024",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Shinkoiwa 1, Katsushika, Japan"
+    },
+    {
+      "lat": 35.73622704722087,
+      "lon": 139.82055100366267,
+      "geoinfo": {
+        "display_name": "Sumida 5, Sumida, Tokyo, 131-0031, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sumida 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sumida",
+        "state": null,
+        "postcode": "131-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sumida 5, Sumida, Tokyo, 131-0031, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:26.863298+00:00",
+  "_kind": "geo_samples"
+}

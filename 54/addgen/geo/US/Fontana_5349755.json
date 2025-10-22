@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fontana",
+  "geonameid": 5349755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.08693323866277,
+      "lon": -117.41606329326427,
+      "geoinfo": {
+        "display_name": "17802, Pine Avenue, Bloomington, San Bernardino County, California, 92335, United States",
+        "road": "Pine Avenue",
+        "house_number": "17802",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "California",
+        "postcode": "92335",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17802 Pine Avenue, Fontana, California, United States"
+    },
+    {
+      "lat": 34.09699696246781,
+      "lon": -117.48165179619683,
+      "geoinfo": {
+        "display_name": "14799, Valencia Avenue, Kaiser, San Bernardino County, California, 92335, United States",
+        "road": "Valencia Avenue",
+        "house_number": "14799",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92335",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14799, Valencia Avenue, Kaiser, San Bernardino County, California, 92335, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:33.592226+00:00",
+  "_kind": "geo_samples"
+}

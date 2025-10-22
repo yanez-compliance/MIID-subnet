@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lafayette",
+  "geonameid": 4330145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.2255055819213,
+      "lon": -92.04331211848118,
+      "geoinfo": {
+        "display_name": "Colonial Drive, Lafayette, Lafayette Parish, Louisiana, 70506, United States",
+        "road": "Colonial Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lafayette",
+        "state": "Louisiana",
+        "postcode": "70506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Colonial Drive, Lafayette, Louisiana, United States"
+    },
+    {
+      "lat": 30.220723886023634,
+      "lon": -92.01737820081965,
+      "geoinfo": {
+        "display_name": "178, East Convent Street, Arbolada Addition, Lafayette, Lafayette Parish, Louisiana, 70501, United States",
+        "road": "East Convent Street",
+        "house_number": "178",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lafayette",
+        "state": "Louisiana",
+        "postcode": "70501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "178, East Convent Street, Arbolada Addition, Lafayette, Lafayette Parish, Louisiana, 70501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:56.434687+00:00",
+  "_kind": "geo_samples"
+}

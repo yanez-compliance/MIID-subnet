@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Iloilo",
+  "geonameid": 1711005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.683375545248996,
+      "lon": 122.54207799788088,
+      "geoinfo": {
+        "display_name": "Iloilo South Coastal Road, Juntado Subdivision, Molo, Iloilo City, Western Visayas, 5000, Philippines",
+        "road": "Iloilo South Coastal Road",
+        "house_number": null,
+        "neighbourhood": "Juntado Subdivision",
+        "suburb": "Molo",
+        "city_district": null,
+        "city": "Iloilo City",
+        "state": null,
+        "postcode": "5000",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Iloilo South Coastal Road, Iloilo, Philippines"
+    },
+    {
+      "lat": 10.688294595935066,
+      "lon": 122.57267912124632,
+      "geoinfo": {
+        "display_name": "Ortiz Wharf, Gomez Street, City Proper, Iloilo City, Western Visayas, 5000, Philippines",
+        "road": "Gomez Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "City Proper",
+        "city_district": null,
+        "city": "Iloilo City",
+        "state": null,
+        "postcode": "5000",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "546, Gomez Street, 5000 Iloilo, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:28:52.143688+00:00",
+  "_kind": "geo_samples"
+}

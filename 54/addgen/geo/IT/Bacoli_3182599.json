@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Bacoli",
+  "geonameid": 3182599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7723238317993,
+      "lon": 14.090757444427148,
+      "geoinfo": {
+        "display_name": "Miseno, Bacoli, Naples, Campania, 80070, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bacoli",
+        "state": "Campania",
+        "postcode": "80070",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Bacoli, Campania, Italy"
+    },
+    {
+      "lat": 40.82617697357113,
+      "lon": 14.091407296856715,
+      "geoinfo": {
+        "display_name": "Portus Julius, Via Miliscola, Arco Felice, Lucrino, Pozzuoli, Naples, Campania, 80078, Italy",
+        "road": "Via Miliscola",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pozzuoli",
+        "state": "Campania",
+        "postcode": "80078",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "716, Via Miliscola, Bacoli, 80078 Campania, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:01.349420+00:00",
+  "_kind": "geo_samples"
+}

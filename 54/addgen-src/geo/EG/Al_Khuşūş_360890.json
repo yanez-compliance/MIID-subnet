@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Khuşūş",
+  "geonameid": 360890,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 30.158407910107226,
+      "lon": 31.319471324906885,
+      "geoinfo": {
+        "display_name": "12, Al Qadeseya Street, Al Khusus, Al Qalyubiya, 13774, Egypt",
+        "road": "Al Qadeseya Street",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Khusus",
+        "state": "Al Qalyubiya",
+        "postcode": "13774",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "12 Al Qadeseya Street, Al Khuşūş, Al Qalyubiya, Egypt"
+    },
+    {
+      "lat": 30.17950874132086,
+      "lon": 31.33908489498185,
+      "geoinfo": {
+        "display_name": "Shubra al Khayma, Al Qalyubiya, 13697, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shubra al Khayma",
+        "state": "Al Qalyubiya",
+        "postcode": "13697",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "942, Shubra al Khayma, Al Qalyubiya, 13697, Egypt"
+    },
+    {
+      "lat": 30.154412425476504,
+      "lon": 31.32077642071751,
+      "geoinfo": {
+        "display_name": "11, Kamal Al Saghir Street, Al Khusus, Al Qalyubiya, 13774, Egypt",
+        "road": "Kamal Al Saghir Street",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Khusus",
+        "state": "Al Qalyubiya",
+        "postcode": "13774",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "11, Kamal Al Saghir Street, Al Khusus, Al Qalyubiya, 13774, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:58.222319+00:00",
+  "_kind": "geo_samples"
+}

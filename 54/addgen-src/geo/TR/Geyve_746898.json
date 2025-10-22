@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Geyve",
+  "geonameid": 746898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.507293030784325,
+      "lon": 30.323834807116725,
+      "geoinfo": {
+        "display_name": "D150, Geyve, Sakarya, Marmara Region, Turkey",
+        "road": "D150",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geyve",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "D150, Geyve, Turkey"
+    },
+    {
+      "lat": 40.50266174175412,
+      "lon": 30.26252703759425,
+      "geoinfo": {
+        "display_name": "Çeltikler, Geyve, Sakarya, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Çeltikler",
+        "city_district": null,
+        "city": "Geyve",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "436, Çeltikler, Geyve, Sakarya, 10163 Marmara Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:49.212308+00:00",
+  "_kind": "geo_samples"
+}

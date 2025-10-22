@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Beloit",
+  "geonameid": 5245387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.50006347047919,
+      "lon": -89.0499062646268,
+      "geoinfo": {
+        "display_name": "968, Euclid Avenue, Beloit, Rock County, Wisconsin, 53511, United States",
+        "road": "Euclid Avenue",
+        "house_number": "968",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beloit",
+        "state": "Wisconsin",
+        "postcode": "53511",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "968 Euclid Avenue, Beloit, Wisconsin, United States"
+    },
+    {
+      "lat": 42.47971211618673,
+      "lon": -88.99633573507892,
+      "geoinfo": {
+        "display_name": "Turtle Creek Welcome Center (Southbound Only), I 39;I 90;US 51, South Beloit, Roscoe Township, Winnebago County, Illinois, 61080, United States",
+        "road": "I 39;I 90;US 51",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Beloit",
+        "state": "Illinois",
+        "postcode": "61080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Turtle Creek Welcome Center (Southbound Only), I 39;I 90;US 51, South Beloit, Roscoe Township, Winnebago County, Illinois, 61080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:50.495603+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pozuelo de Alarcón",
+  "geonameid": 3112989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.43169776800046,
+      "lon": -3.8332765429312246,
+      "geoinfo": {
+        "display_name": "M-503, Distrito Municipal II (sin urbanizaciones), Urbanización Monte Claro, Pozuelo de Alarcón, Community of Madrid, 28223, Spain",
+        "road": "M-503",
+        "house_number": null,
+        "neighbourhood": "Distrito Municipal II (sin urbanizaciones)",
+        "suburb": "Urbanización Monte Claro",
+        "city_district": null,
+        "city": "Pozuelo de Alarcón",
+        "state": "Community of Madrid",
+        "postcode": "28223",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-503, Pozuelo de Alarcón, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.44521668937406,
+      "lon": -3.7698298248215276,
+      "geoinfo": {
+        "display_name": "M-503, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28023, Spain",
+        "road": "M-503",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28023",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-503, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28023, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:05.930746+00:00",
+  "_kind": "geo_samples"
+}

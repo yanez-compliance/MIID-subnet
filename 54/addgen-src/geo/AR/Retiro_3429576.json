@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Retiro",
+  "geonameid": 3429576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.55433911877826,
+      "lon": -58.36081003647479,
+      "geoinfo": {
+        "display_name": "Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Retiro, Argentina"
+    },
+    {
+      "lat": -34.60286660434576,
+      "lon": -58.38115396837358,
+      "geoinfo": {
+        "display_name": "Rapipago, Pasaje Obelisco Norte, Microcentro, San Nicolás, Buenos Aires, Comuna 1, Autonomous City of Buenos Aires, C1009ABK, Argentina",
+        "road": "Pasaje Obelisco Norte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Nicolás",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1009ABK",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Rapipago, Pasaje Obelisco Norte, Microcentro, San Nicolás, Buenos Aires, Comuna 1, Autonomous City of Buenos Aires, C1009ABK, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:37.607103+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "NO",
+  "country": "Norway",
+  "city": "Nesttun",
+  "geonameid": 3144631,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 60.30287344535116,
+      "lon": 5.425550202780227,
+      "geoinfo": {
+        "display_name": "345, Totlandsvegen, Fjellbirkeland, Fana, Bergen, Vestland, 5226, Norway",
+        "road": "Totlandsvegen",
+        "house_number": "345",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fana",
+        "city": "Bergen",
+        "state": null,
+        "postcode": "5226",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "345 Totlandsvegen, Nesttun, Norway"
+    },
+    {
+      "lat": 60.29904623955259,
+      "lon": 5.409948948220316,
+      "geoinfo": {
+        "display_name": "Osvegen, Stigen, Fana, Bergen, Vestland, 5227, Norway",
+        "road": "Osvegen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fana",
+        "city": "Bergen",
+        "state": null,
+        "postcode": "5227",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Osvegen, Nesttun, Norway"
+    },
+    {
+      "lat": 60.31594754529865,
+      "lon": 5.442515044331538,
+      "geoinfo": {
+        "display_name": "Riple snuplass, Totlandsvegen, Nedre Totland, Fana, Bergen, Vestland, 5229, Norway",
+        "road": "Totlandsvegen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fana",
+        "city": "Bergen",
+        "state": null,
+        "postcode": "5229",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Totlandsvegen, Nesttun, Norway"
+    }
+  ],
+  "updated_at": "2025-10-16T20:27:23.054252+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Simpsonville",
+  "geonameid": 4595864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.72529385063964,
+      "lon": -82.2320891271479,
+      "geoinfo": {
+        "display_name": "345, Heritage Point Drive, Heritage Point, Simpsonville, Greenville County, South Carolina, 29681, United States",
+        "road": "Heritage Point Drive",
+        "house_number": "345",
+        "neighbourhood": "Heritage Point",
+        "suburb": null,
+        "city_district": null,
+        "city": "Simpsonville",
+        "state": "South Carolina",
+        "postcode": "29681",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "345 Heritage Point Drive, Simpsonville, South Carolina, United States"
+    },
+    {
+      "lat": 34.73302656504279,
+      "lon": -82.23627070244578,
+      "geoinfo": {
+        "display_name": "196, Lake Sunshine, Powderhorn, Greenville County, South Carolina, 29681, United States",
+        "road": "Lake Sunshine",
+        "house_number": "196",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29681",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "196, Lake Sunshine, Powderhorn, Greenville County, South Carolina, 29681, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:01.130864+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Alicia",
+  "geonameid": 1731486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.74683559982394,
+      "lon": 121.66955294669503,
+      "geoinfo": {
+        "display_name": "Gumbuan, Isabela, Cagayan Valley, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gumbuan",
+        "state": "Isabela",
+        "postcode": null,
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Alicia, Isabela, Philippines"
+    },
+    {
+      "lat": 16.799824617804337,
+      "lon": 121.7291464700201,
+      "geoinfo": {
+        "display_name": "San Fernando, Isabela, Cagayan Valley, 3306, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando",
+        "state": "Isabela",
+        "postcode": "3306",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "187, San Fernando, Isabela, Cagayan Valley, 3306, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:29:01.130815+00:00",
+  "_kind": "geo_samples"
+}

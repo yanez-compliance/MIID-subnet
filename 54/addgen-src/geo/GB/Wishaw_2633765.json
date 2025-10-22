@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wishaw",
+  "geonameid": 2633765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.760484681149585,
+      "lon": -3.8745165221490585,
+      "geoinfo": {
+        "display_name": "Wishaw Road, Bogside, Newmains, North Lanarkshire, Scotland, ML2 8HB, United Kingdom",
+        "road": "Wishaw Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newmains",
+        "state": "Scotland",
+        "postcode": "ML2 8HB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wishaw Road, Wishaw, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.79760193830741,
+      "lon": -3.904263057196266,
+      "geoinfo": {
+        "display_name": "Coltness, Bellside, North Lanarkshire, Scotland, ML2 8TP, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Coltness",
+        "city_district": null,
+        "city": "Bellside",
+        "state": "Scotland",
+        "postcode": "ML2 8TP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Coltness, Bellside, North Lanarkshire, Scotland, ML2 8TP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:42.062014+00:00",
+  "_kind": "geo_samples"
+}

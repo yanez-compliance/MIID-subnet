@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Blagnac",
+  "geonameid": 3032469,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.66287941431884,
+      "lon": 1.3935022313857792,
+      "geoinfo": {
+        "display_name": "Chemin des Ramiers, Beauzelle, Toulouse, Haute-Garonne, Occitania, Metropolitan France, 31700, France",
+        "road": "Chemin des Ramiers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beauzelle",
+        "state": "Occitania",
+        "postcode": "31700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Ramiers, Blagnac, Occitania, France"
+    },
+    {
+      "lat": 43.62692007557069,
+      "lon": 1.4210701674278297,
+      "geoinfo": {
+        "display_name": "Boulevard de Genève, Sept Deniers, Minimes / Barrière de Paris / Ponts-Jumeaux / La Vache / Raisin / Fondeyre, Toulouse, Haute-Garonne, Occitania, Metropolitan France, 31200, France",
+        "road": "Boulevard de Genève",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sept Deniers",
+        "city_district": null,
+        "city": "Toulouse",
+        "state": "Occitania",
+        "postcode": "31200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "917, Boulevard de Genève, Sept Deniers, Minimes / Barrière de Paris / Ponts-Jumeaux / La Vache / Raisin / Fondeyre, Toulouse, Haute-Garonne, Occitania, Metropolitan France, 31200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:25.472792+00:00",
+  "_kind": "geo_samples"
+}

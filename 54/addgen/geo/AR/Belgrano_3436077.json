@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Belgrano",
+  "geonameid": 3436077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.56247867901291,
+      "lon": -58.45443550365714,
+      "geoinfo": {
+        "display_name": "Galería Plaza Belgrano, Echeverría, Barrio Chino, Belgrano, Buenos Aires, Comuna 13, Autonomous City of Buenos Aires, C1428AEE, Argentina",
+        "road": "Echeverría",
+        "house_number": null,
+        "neighbourhood": "Barrio Chino",
+        "suburb": "Belgrano",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1428AEE",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Echeverría, Belgrano, Autonomous City of Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.55648432243227,
+      "lon": -58.416821926725156,
+      "geoinfo": {
+        "display_name": "Avenida Costanera Rafael Obligado, Palermo, Buenos Aires, Comuna 14, Autonomous City of Buenos Aires, C1425ABX, Argentina",
+        "road": "Avenida Costanera Rafael Obligado",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Palermo",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1425ABX",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida Costanera Rafael Obligado, Palermo, Buenos Aires, Comuna 14, Autonomous City of Buenos Aires, C1425ABX, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:56.930524+00:00",
+  "_kind": "geo_samples"
+}

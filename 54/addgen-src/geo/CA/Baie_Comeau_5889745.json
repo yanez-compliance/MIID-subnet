@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Baie-Comeau",
+  "geonameid": 5889745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.228015247046436,
+      "lon": -68.18129888145255,
+      "geoinfo": {
+        "display_name": "Baie-Comeau, Manicouagan, Côte-Nord, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baie-Comeau",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Baie-Comeau, Quebec, Canada"
+    },
+    {
+      "lat": 49.19114063907447,
+      "lon": -68.19084657390634,
+      "geoinfo": {
+        "display_name": "Manicouagan, Côte-Nord, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "478, Baie-Comeau, 13325 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:07.763732+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Paul",
+  "geonameid": 5045360,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.975905511657295,
+      "lon": -93.09377943676989,
+      "geoinfo": {
+        "display_name": "Trout Brook Regional Trail, North End, Saint Paul, Ramsey County, Minnesota, 55155, United States",
+        "road": "Trout Brook Regional Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "North End",
+        "city_district": null,
+        "city": "Saint Paul",
+        "state": "Minnesota",
+        "postcode": "55155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Trout Brook Regional Trail, Saint Paul, Minnesota, United States"
+    },
+    {
+      "lat": 44.91885899983256,
+      "lon": -93.123840033812,
+      "geoinfo": {
+        "display_name": "Lilydale Road, Lilydale, Dakota County, Minnesota, 55102, United States",
+        "road": "Lilydale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lilydale",
+        "state": "Minnesota",
+        "postcode": "55102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "889, Lilydale Road, Lilydale, Dakota County, Minnesota, 55102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:23.063024+00:00",
+  "_kind": "geo_samples"
+}

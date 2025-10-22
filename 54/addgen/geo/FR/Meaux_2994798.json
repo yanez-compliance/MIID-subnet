@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Meaux",
+  "geonameid": 2994798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.997235790273876,
+      "lon": 2.8935580508223895,
+      "geoinfo": {
+        "display_name": "Rue de la Ville, Chambry, Meaux, Seine-et-Marne, Metropolitan France, 77910, France",
+        "road": "Rue de la Ville",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chambry",
+        "state": null,
+        "postcode": "77910",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de la Ville, Meaux, France"
+    },
+    {
+      "lat": 48.96308314678658,
+      "lon": 2.9091663107155203,
+      "geoinfo": {
+        "display_name": "Rue de la Bauve, Meaux, Seine-et-Marne, Metropolitan France, 77100, France",
+        "road": "Rue de la Bauve",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meaux",
+        "state": null,
+        "postcode": "77100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "350, Rue de la Bauve, Meaux, Seine-et-Marne, Metropolitan France, 77100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:32.659704+00:00",
+  "_kind": "geo_samples"
+}

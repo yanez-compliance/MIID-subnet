@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhonggulou",
+  "geonameid": 8403614,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.811124374064608,
+      "lon": 108.3866677017394,
+      "geoinfo": {
+        "display_name": "北滨大道, Pailou Subdistrict, Gaosuntang Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": "北滨大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pailou Subdistrict",
+        "city_district": null,
+        "city": "Gaosuntang Subdistrict",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "北滨大道, Zhonggulou, Chongqing, China"
+    },
+    {
+      "lat": 30.84699607618478,
+      "lon": 108.40596191436784,
+      "geoinfo": {
+        "display_name": "Pipaping, Zhonggulou Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pipaping",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "820, Pipaping, Zhonggulou Subdistrict, Wanzhou, Chongqing, 404000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:58:52.978293+00:00",
+  "_kind": "geo_samples"
+}

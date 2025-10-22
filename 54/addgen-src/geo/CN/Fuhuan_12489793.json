@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fuhuan",
+  "geonameid": 12489793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.796154508369995,
+      "lon": 106.73921367770257,
+      "geoinfo": {
+        "display_name": "Yuxi Road, Qijiang District, Chongqing, China",
+        "road": "Yuxi Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yuxi Road, Fuhuan, Chongqing, China"
+    },
+    {
+      "lat": 28.858877463591927,
+      "lon": 106.78243338804685,
+      "geoinfo": {
+        "display_name": "Wansheng, Qijiang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wansheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "726, Wansheng, Qijiang District, 26527 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:38.746658+00:00",
+  "_kind": "geo_samples"
+}

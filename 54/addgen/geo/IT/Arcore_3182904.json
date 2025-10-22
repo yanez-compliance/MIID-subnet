@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Arcore",
+  "geonameid": 3182904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.65301647164932,
+      "lon": 9.31573758016312,
+      "geoinfo": {
+        "display_name": "Via Silvio Pellico, California, Lesmo, Monza and Brianza, Lombardy, 20855, Italy",
+        "road": "Via Silvio Pellico",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lesmo",
+        "state": "Lombardy",
+        "postcode": "20855",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Silvio Pellico, Arcore, Lombardy, Italy"
+    },
+    {
+      "lat": 45.66742046409099,
+      "lon": 9.317936198768315,
+      "geoinfo": {
+        "display_name": "Via Don Consonni, Campofiorenzo, Casatenovo, Lecco, Lombardy, 20856, Italy",
+        "road": "Via Don Consonni",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campofiorenzo",
+        "state": "Lombardy",
+        "postcode": "20856",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "272, Via Don Consonni, Campofiorenzo, Casatenovo, Lecco, Lombardy, 20856, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:35.150950+00:00",
+  "_kind": "geo_samples"
+}

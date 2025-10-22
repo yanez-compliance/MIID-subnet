@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Mubarakpur",
+  "geonameid": 1262678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.090392787276564,
+      "lon": 83.31663175476366,
+      "geoinfo": {
+        "display_name": "Mubarakpur, Azamgarh, Uttar Pradesh, 233300, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mubarakpur",
+        "state": "Uttar Pradesh",
+        "postcode": "233300",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Mubarakpur, Uttar Pradesh, India"
+    },
+    {
+      "lat": 26.10101558154842,
+      "lon": 83.25038569873759,
+      "geoinfo": {
+        "display_name": "Azamgarh, Uttar Pradesh, 276001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Azamgarh",
+        "state": "Uttar Pradesh",
+        "postcode": "276001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "712, Azamgarh, Uttar Pradesh, 276001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:01.313673+00:00",
+  "_kind": "geo_samples"
+}

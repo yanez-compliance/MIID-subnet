@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Cham",
+  "geonameid": 2940204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.184908905466,
+      "lon": 12.665615574905624,
+      "geoinfo": {
+        "display_name": "Höfen, Tasching, Cham, Landkreis Cham, Bavaria, 93413, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cham",
+        "state": "Bavaria",
+        "postcode": "93413",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Cham, Bavaria, Germany"
+    },
+    {
+      "lat": 49.19920484701561,
+      "lon": 12.647235117747838,
+      "geoinfo": {
+        "display_name": "Von-Pfeilschifter-Straße, Janahof, Scharlau, Cham, Landkreis Cham, Bavaria, 93413, Germany",
+        "road": "Von-Pfeilschifter-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Janahof",
+        "city_district": null,
+        "city": "Cham",
+        "state": "Bavaria",
+        "postcode": "93413",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "691, Von-Pfeilschifter-Straße, Janahof, Scharlau, Cham, Landkreis Cham, Bavaria, 93413, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:14:47.023328+00:00",
+  "_kind": "geo_samples"
+}

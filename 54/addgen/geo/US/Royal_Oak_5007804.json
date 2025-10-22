@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Royal Oak",
+  "geonameid": 5007804,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.49551618080473,
+      "lon": -83.18371551206832,
+      "geoinfo": {
+        "display_name": "BP, 2576, Coolidge Highway, Berkley, Oakland County, Michigan, 48072, United States",
+        "road": "Coolidge Highway",
+        "house_number": "2576",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkley",
+        "state": "Michigan",
+        "postcode": "48072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2576 Coolidge Highway, Royal Oak, Michigan, United States"
+    },
+    {
+      "lat": 42.4962346628688,
+      "lon": -83.10652785916564,
+      "geoinfo": {
+        "display_name": "27760, Brush Street, Madison Heights, Oakland County, Michigan, 48071, United States",
+        "road": "Brush Street",
+        "house_number": "27760",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison Heights",
+        "state": "Michigan",
+        "postcode": "48071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27760, Brush Street, Madison Heights, Oakland County, Michigan, 48071, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:25.797040+00:00",
+  "_kind": "geo_samples"
+}

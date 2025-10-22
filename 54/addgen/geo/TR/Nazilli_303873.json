@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Nazilli",
+  "geonameid": 303873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.89674419993718,
+      "lon": 28.27870626917254,
+      "geoinfo": {
+        "display_name": "Bamboo, D320, İsabeyli, Nazilli, Aydın, Aegean Region, 09900, Turkey",
+        "road": "D320",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nazilli",
+        "state": null,
+        "postcode": "09900",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "D320, Nazilli, Turkey"
+    },
+    {
+      "lat": 37.8799430154508,
+      "lon": 28.296772116092967,
+      "geoinfo": {
+        "display_name": "Nazilli, Aydın, Aegean Region, 09900, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nazilli",
+        "state": null,
+        "postcode": "09900",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "300, Nazilli, Aydın, Aegean Region, 09900, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:04:58.732223+00:00",
+  "_kind": "geo_samples"
+}

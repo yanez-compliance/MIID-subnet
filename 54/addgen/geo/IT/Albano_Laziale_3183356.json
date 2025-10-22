@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Albano Laziale",
+  "geonameid": 3183356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.73657074034608,
+      "lon": 12.711864578086782,
+      "geoinfo": {
+        "display_name": "512b, Rocca di Papa, Roma Capitale, Lazio, 00074, Italy",
+        "road": "512b",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rocca di Papa",
+        "state": "Lazio",
+        "postcode": "00074",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "512b, Albano Laziale, Lazio, Italy"
+    },
+    {
+      "lat": 41.74849146675139,
+      "lon": 12.675957984505642,
+      "geoinfo": {
+        "display_name": "Via Spiaggia del Lago, Castel Gandolfo, Roma Capitale, Lazio, 00073, Italy",
+        "road": "Via Spiaggia del Lago",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castel Gandolfo",
+        "state": "Lazio",
+        "postcode": "00073",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "995, Via Spiaggia del Lago, Castel Gandolfo, Roma Capitale, Lazio, 00073, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:00.702565+00:00",
+  "_kind": "geo_samples"
+}

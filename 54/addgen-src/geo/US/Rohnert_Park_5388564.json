@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rohnert Park",
+  "geonameid": 5388564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.357510865211474,
+      "lon": -122.67837948493795,
+      "geoinfo": {
+        "display_name": "887, Keiser Avenue, Rohnert Park, Sonoma County, California, 94928, United States",
+        "road": "Keiser Avenue",
+        "house_number": "887",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rohnert Park",
+        "state": "California",
+        "postcode": "94928",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "887 Keiser Avenue, Rohnert Park, California, United States"
+    },
+    {
+      "lat": 38.305361792543366,
+      "lon": -122.73159009689488,
+      "geoinfo": {
+        "display_name": "48, Balma Lane, Washoe, Petaluma, Sonoma County, California, 94931, United States",
+        "road": "Balma Lane",
+        "house_number": "48",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petaluma",
+        "state": "California",
+        "postcode": "94931",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "48, Balma Lane, Washoe, Petaluma, Sonoma County, California, 94931, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:58.282706+00:00",
+  "_kind": "geo_samples"
+}

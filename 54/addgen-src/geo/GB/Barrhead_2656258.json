@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Barrhead",
+  "geonameid": 2656258,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.799127838849365,
+      "lon": -4.378085849946833,
+      "geoinfo": {
+        "display_name": "Aurs Road, Dovecothall, Barrhead, East Renfrewshire, Scotland, G78 2NU, United Kingdom",
+        "road": "Aurs Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dovecothall",
+        "city_district": null,
+        "city": "Barrhead",
+        "state": "Scotland",
+        "postcode": "G78 2NU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Aurs Road, Barrhead, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.766018271934314,
+      "lon": -4.403754842433074,
+      "geoinfo": {
+        "display_name": "Walton Road, Neilston, East Renfrewshire, Scotland, G77 6QQ, United Kingdom",
+        "road": "Walton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neilston",
+        "state": "Scotland",
+        "postcode": "G77 6QQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Walton Road, Neilston, East Renfrewshire, Scotland, G77 6QQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:29.539706+00:00",
+  "_kind": "geo_samples"
+}

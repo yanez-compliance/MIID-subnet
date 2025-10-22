@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Colchester",
+  "geonameid": 5235024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.56250790152869,
+      "lon": -73.11899940882059,
+      "geoinfo": {
+        "display_name": "Thelma Drive, Colchester, Chittenden County, Vermont, United States",
+        "road": "Thelma Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Vermont",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Thelma Drive, Colchester, Vermont, United States"
+    },
+    {
+      "lat": 44.58590536548501,
+      "lon": -73.16608366568329,
+      "geoinfo": {
+        "display_name": "6463, Roosevelt Highway, Chimney Corner, Colchester, Chittenden County, Vermont, 05446, United States",
+        "road": "Roosevelt Highway",
+        "house_number": "6463",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Vermont",
+        "postcode": "05446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6463, Roosevelt Highway, Chimney Corner, Colchester, Chittenden County, Vermont, 05446, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:52.860131+00:00",
+  "_kind": "geo_samples"
+}

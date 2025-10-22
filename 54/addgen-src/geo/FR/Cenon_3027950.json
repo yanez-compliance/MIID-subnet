@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cenon",
+  "geonameid": 3027950,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.846407044316564,
+      "lon": -0.5377329393312988,
+      "geoinfo": {
+        "display_name": "Boulevard de l'Entre-Deux-Mers, Cenon, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33150, France",
+        "road": "Boulevard de l'Entre-Deux-Mers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cenon",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard de l'Entre-Deux-Mers, Cenon, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.875177866307475,
+      "lon": -0.5795475951193002,
+      "geoinfo": {
+        "display_name": "12, Avenue de Chavailles, Le Tasta, Bruges, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33520, France",
+        "road": "Avenue de Chavailles",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Le Tasta",
+        "city_district": null,
+        "city": "Bruges",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33520",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "12, Avenue de Chavailles, Le Tasta, Bruges, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33520, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:22.742435+00:00",
+  "_kind": "geo_samples"
+}

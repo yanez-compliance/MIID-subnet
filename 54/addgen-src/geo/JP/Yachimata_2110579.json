@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yachimata",
+  "geonameid": 2110579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.63023434510125,
+      "lon": 140.30384873442296,
+      "geoinfo": {
+        "display_name": "Yachimata, Chiba Prefecture, 289-1113, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yachimata",
+        "state": null,
+        "postcode": "289-1113",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yachimata, Japan"
+    },
+    {
+      "lat": 35.628615447795795,
+      "lon": 140.3423418485369,
+      "geoinfo": {
+        "display_name": "武勝, Sammu, Chiba Prefecture, 283-0831, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "武勝",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sammu",
+        "state": null,
+        "postcode": "283-0831",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "武勝, Sammu, Chiba Prefecture, 283-0831, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:24.371533+00:00",
+  "_kind": "geo_samples"
+}

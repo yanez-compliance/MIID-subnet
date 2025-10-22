@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kent",
+  "geonameid": 5159537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.13019988764174,
+      "lon": -81.37335916844333,
+      "geoinfo": {
+        "display_name": "Mogadore Road, Brimfield Station, Kent, Brimfield Township, Portage County, Ohio, 44240, United States",
+        "road": "Mogadore Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kent",
+        "state": "Ohio",
+        "postcode": "44240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mogadore Road, Kent, Ohio, United States"
+    },
+    {
+      "lat": 41.19117712101266,
+      "lon": -81.33627944854578,
+      "geoinfo": {
+        "display_name": "1597, Overlook Road, Twin Lakes, Franklin Township, Portage County, Ohio, 44240, United States",
+        "road": "Overlook Road",
+        "house_number": "1597",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1597, Overlook Road, Twin Lakes, Franklin Township, Portage County, Ohio, 44240, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:51.394827+00:00",
+  "_kind": "geo_samples"
+}

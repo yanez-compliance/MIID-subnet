@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Albany",
+  "geonameid": 5322850,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.859719278307075,
+      "lon": -122.33700062596269,
+      "geoinfo": {
+        "display_name": "Berkeley, Alameda County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkeley",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Albany, California, United States"
+    },
+    {
+      "lat": 37.882968413957954,
+      "lon": -122.32818377854232,
+      "geoinfo": {
+        "display_name": "Mad Mark's Castle, Bay Trail, Albany, Alameda County, California, 94804, United States",
+        "road": "Bay Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albany",
+        "state": "California",
+        "postcode": "94804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "604, Bay Trail, Albany, 94804 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:11.073913+00:00",
+  "_kind": "geo_samples"
+}

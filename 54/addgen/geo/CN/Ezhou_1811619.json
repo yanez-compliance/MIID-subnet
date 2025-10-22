@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Ezhou",
+  "geonameid": 1811619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.402919792681537,
+      "lon": 114.79061471705295,
+      "geoinfo": {
+        "display_name": "武鄂高速, Putuan Township, Echeng District, Ezhou, Hubei, China",
+        "road": "武鄂高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Echeng District",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "武鄂高速, Ezhou, Hubei, China"
+    },
+    {
+      "lat": 30.37490037699287,
+      "lon": 114.86943975447883,
+      "geoinfo": {
+        "display_name": "Echeng District, Ezhou, Hubei, 436000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Echeng District",
+        "state": "Hubei",
+        "postcode": "436000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "289, Echeng District, Ezhou, Hubei, 436000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:48.640637+00:00",
+  "_kind": "geo_samples"
+}

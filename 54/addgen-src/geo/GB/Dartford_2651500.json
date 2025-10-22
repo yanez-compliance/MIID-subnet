@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Dartford",
+  "geonameid": 2651500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.43521379455907,
+      "lon": 0.232212597996381,
+      "geoinfo": {
+        "display_name": "Princes Park Golf Course, James Clubb Way, Brooklands, Fleet Estate, Hawley, Dartford, Kent, England, DA1 1AL, United Kingdom",
+        "road": "James Clubb Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklands",
+        "city_district": null,
+        "city": "Dartford",
+        "state": "England",
+        "postcode": "DA1 1AL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "James Clubb Way, Dartford, England, United Kingdom"
+    },
+    {
+      "lat": 51.44495331537396,
+      "lon": 0.14567975851802772,
+      "geoinfo": {
+        "display_name": "42, Parkhurst Road, Bexley, London Borough of Bexley, London, Greater London, England, DA5 1AS, United Kingdom",
+        "road": "Parkhurst Road",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "Bexley",
+        "city_district": "London Borough of Bexley",
+        "city": "London",
+        "state": "England",
+        "postcode": "DA5 1AS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "42, Parkhurst Road, Bexley, London Borough of Bexley, London, Greater London, England, DA5 1AS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:12.118342+00:00",
+  "_kind": "geo_samples"
+}

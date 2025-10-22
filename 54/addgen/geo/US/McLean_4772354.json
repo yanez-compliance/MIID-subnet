@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McLean",
+  "geonameid": 4772354,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.92077749997585,
+      "lon": -77.154681992257,
+      "geoinfo": {
+        "display_name": "The Sylvestery at Vinson Hall Retirement Community, Kirby Road, Chesterbrook, McLean, Fairfax County, Virginia, 22101, United States",
+        "road": "Kirby Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chesterbrook",
+        "city_district": null,
+        "city": "McLean",
+        "state": "Virginia",
+        "postcode": "22101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kirby Road, McLean, Virginia, United States"
+    },
+    {
+      "lat": 38.944498535979704,
+      "lon": -77.20521694715929,
+      "geoinfo": {
+        "display_name": "1116, Dominion Court, Elmwood Estates, McLean, Fairfax County, Virginia, 22102, United States",
+        "road": "Dominion Court",
+        "house_number": "1116",
+        "neighbourhood": "Elmwood Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "McLean",
+        "state": "Virginia",
+        "postcode": "22102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1116, Dominion Court, Elmwood Estates, McLean, Fairfax County, Virginia, 22102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:46.752501+00:00",
+  "_kind": "geo_samples"
+}

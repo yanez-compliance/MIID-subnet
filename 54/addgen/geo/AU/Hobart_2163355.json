@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Hobart",
+  "geonameid": 2163355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -42.90708662212577,
+      "lon": 147.343318632724,
+      "geoinfo": {
+        "display_name": "Maning Reef, 482-484, Sandy Bay Road, Lower Sandy Bay, Sandy Bay, Hobart, City of Hobart, Tasmania, 7005, Australia",
+        "road": "Sandy Bay Road",
+        "house_number": "482-484",
+        "neighbourhood": "Lower Sandy Bay",
+        "suburb": "Sandy Bay",
+        "city_district": null,
+        "city": "Hobart",
+        "state": "Tasmania",
+        "postcode": "7005",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "482-484 Sandy Bay Road, Hobart, Tasmania, Australia"
+    },
+    {
+      "lat": -42.88511009154523,
+      "lon": 147.30621553086195,
+      "geoinfo": {
+        "display_name": "Kirby Court, West Hobart, Hobart, City of Hobart, Tasmania, 7000, Australia",
+        "road": "Kirby Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Hobart",
+        "city_district": null,
+        "city": "Hobart",
+        "state": "Tasmania",
+        "postcode": "7000",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "613, Kirby Court, West Hobart, Hobart, City of Hobart, Tasmania, 7000, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:18.354410+00:00",
+  "_kind": "geo_samples"
+}

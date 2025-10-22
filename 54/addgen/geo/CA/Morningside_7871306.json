@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Morningside",
+  "geonameid": 7871306,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.79119107300876,
+      "lon": -79.26082258619823,
+      "geoinfo": {
+        "display_name": "Sheppard Avenue East, Agincourt South-Malvern West, Scarborough North, Scarborough, Toronto, Golden Horseshoe, Ontario, M1S 2Y0, Canada",
+        "road": "Sheppard Avenue East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1S 2Y0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sheppard Avenue East, Morningside, Ontario, Canada"
+    },
+    {
+      "lat": 43.79665486197672,
+      "lon": -79.19689194760939,
+      "geoinfo": {
+        "display_name": "Morningside Avenue, Morningside Heights, Scarborough—Rouge Park, Scarborough, Toronto, Golden Horseshoe, Ontario, M1B 5N6, Canada",
+        "road": "Morningside Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1B 5N6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Morningside Avenue, Morningside Heights, Scarborough—Rouge Park, Scarborough, Toronto, Golden Horseshoe, Ontario, M1B 5N6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:42.326739+00:00",
+  "_kind": "geo_samples"
+}

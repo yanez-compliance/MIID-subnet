@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montgomery Village",
+  "geonameid": 4362743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.192780776561165,
+      "lon": -77.21984994528286,
+      "geoinfo": {
+        "display_name": "Watkins Meadow Drive, Montgomery Village, Montgomery County, Maryland, 20876, United States",
+        "road": "Watkins Meadow Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery Village",
+        "state": "Maryland",
+        "postcode": "20876",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Watkins Meadow Drive, Montgomery Village, Maryland, United States"
+    },
+    {
+      "lat": 39.21548651260618,
+      "lon": -77.20431756073668,
+      "geoinfo": {
+        "display_name": "Seneca Creek Greenway Trail, Burton Woods, Foxlair Acres, Montgomery County, Maryland, 20882, United States",
+        "road": "Seneca Creek Greenway Trail",
+        "house_number": null,
+        "neighbourhood": "Burton Woods",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20882",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "804, Seneca Creek Greenway Trail, Burton Woods, Foxlair Acres, Montgomery County, Maryland, 20882, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:31.904112+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oak Creek",
+  "geonameid": 5265228,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.8669434643987,
+      "lon": -87.83589491125441,
+      "geoinfo": {
+        "display_name": "East Lake Vista Boulevard, Lakeshore Commons, Carrollville, Oak Creek, Milwaukee County, Wisconsin, 53172, United States",
+        "road": "East Lake Vista Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oak Creek",
+        "state": "Wisconsin",
+        "postcode": "53172",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Lake Vista Boulevard, Oak Creek, Wisconsin, United States"
+    },
+    {
+      "lat": 42.88404402229373,
+      "lon": -87.8151603049441,
+      "geoinfo": {
+        "display_name": "Milwaukee County, Wisconsin, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "964, Milwaukee County, 30764 Wisconsin, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:09.499465+00:00",
+  "_kind": "geo_samples"
+}

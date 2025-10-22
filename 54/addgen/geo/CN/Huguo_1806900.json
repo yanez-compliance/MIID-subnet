@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huguo",
+  "geonameid": 1806900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.597916616155498,
+      "lon": 105.39525351387398,
+      "geoinfo": {
+        "display_name": "Huguo, Naxi District, Luzhou, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huguo",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huguo, Sichuan, China"
+    },
+    {
+      "lat": 28.619984069931252,
+      "lon": 105.39929278538077,
+      "geoinfo": {
+        "display_name": "大打路, Naxi District, Luzhou, Sichuan, China",
+        "road": "大打路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "811, 大打路, Naxi District, Luzhou, 39572 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:56:09.340425+00:00",
+  "_kind": "geo_samples"
+}

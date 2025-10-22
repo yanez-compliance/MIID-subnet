@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Witten",
+  "geonameid": 2807363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.44182265603116,
+      "lon": 7.344736487157103,
+      "geoinfo": {
+        "display_name": "Hobby-Miet-Werkstatt, 13, Mannesmannstraße, Johannisviertel, Witten-Mitte, Witten, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58455, Germany",
+        "road": "Mannesmannstraße",
+        "house_number": "13",
+        "neighbourhood": "Johannisviertel",
+        "suburb": "Witten-Mitte",
+        "city_district": null,
+        "city": "Witten",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58455",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13 Mannesmannstraße, Witten, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.4519877985906,
+      "lon": 7.3849965932626676,
+      "geoinfo": {
+        "display_name": "Im Rohr, Rüdinghausen, Witten, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58453, Germany",
+        "road": "Im Rohr",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rüdinghausen",
+        "city_district": null,
+        "city": "Witten",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58453",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "045, Im Rohr, Rüdinghausen, Witten, Ennepe-Ruhr-Kreis, North Rhine-Westphalia, 58453, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:56.903929+00:00",
+  "_kind": "geo_samples"
+}

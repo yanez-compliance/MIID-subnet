@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Matthews",
+  "geonameid": 4478334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.11847578206077,
+      "lon": -80.7128199722024,
+      "geoinfo": {
+        "display_name": "Matthews Medical Center, 1500, Matthews Township Parkway, Matthews, Mecklenburg County, North Carolina, 28105, United States",
+        "road": "Matthews Township Parkway",
+        "house_number": "1500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matthews",
+        "state": "North Carolina",
+        "postcode": "28105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1500 Matthews Township Parkway, Matthews, North Carolina, United States"
+    },
+    {
+      "lat": 35.08721781745504,
+      "lon": -80.76480791525593,
+      "geoinfo": {
+        "display_name": "6116, Cherry Tree Lane, Providence Plantation, Charlotte, Mecklenburg County, North Carolina, 28270, United States",
+        "road": "Cherry Tree Lane",
+        "house_number": "6116",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charlotte",
+        "state": "North Carolina",
+        "postcode": "28270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6116, Cherry Tree Lane, Providence Plantation, Charlotte, Mecklenburg County, North Carolina, 28270, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:08.567897+00:00",
+  "_kind": "geo_samples"
+}

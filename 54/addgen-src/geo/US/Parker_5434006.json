@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parker",
+  "geonameid": 5434006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.530428553594575,
+      "lon": -104.81702004581553,
+      "geoinfo": {
+        "display_name": "10268, Cosmopolitan Circle, Parker, Douglas County, Colorado, 80134, United States",
+        "road": "Cosmopolitan Circle",
+        "house_number": "10268",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parker",
+        "state": "Colorado",
+        "postcode": "80134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10268 Cosmopolitan Circle, Parker, Colorado, United States"
+    },
+    {
+      "lat": 39.539707387219394,
+      "lon": -104.77621386027126,
+      "geoinfo": {
+        "display_name": "Parker Auto Plaza, Parker, Douglas County, Colorado, 80134, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parker",
+        "state": "Colorado",
+        "postcode": "80134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "535, Parker Auto Plaza, Parker, Douglas County, Colorado, 80134, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:52.056331+00:00",
+  "_kind": "geo_samples"
+}

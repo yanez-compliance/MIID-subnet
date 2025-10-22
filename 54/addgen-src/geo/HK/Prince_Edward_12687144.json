@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Prince Edward",
+  "geonameid": 12687144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.328677432654164,
+      "lon": 114.18577919677652,
+      "geoinfo": {
+        "display_name": "Nga Tsin Wai Road, Ma Tau Wai, Kowloon City District, Kowloon, Hong Kong, China",
+        "road": "Nga Tsin Wai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ma Tau Wai",
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Nga Tsin Wai Road, Prince Edward, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.327446158486797,
+      "lon": 114.19667087753486,
+      "geoinfo": {
+        "display_name": "Kai Tak Grid Neighbourhood, Kai Tak City Centre, Kai Tak, Kowloon City District, Kowloon, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kai Tak Grid Neighbourhood",
+        "suburb": "Kai Tak",
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "088, Kai Tak Grid Neighbourhood, Kai Tak City Centre, Kai Tak, Kowloon City District, Kowloon, 37125 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:01.268532+00:00",
+  "_kind": "geo_samples"
+}

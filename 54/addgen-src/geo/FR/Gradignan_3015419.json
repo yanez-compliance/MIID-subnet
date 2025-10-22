@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gradignan",
+  "geonameid": 3015419,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.786808812894336,
+      "lon": -0.5927778565526962,
+      "geoinfo": {
+        "display_name": "Eurofins, 4, Chemin des Maures, Le Bourdillat, Gradignan, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33170, France",
+        "road": "Chemin des Maures",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Le Bourdillat",
+        "city_district": null,
+        "city": "Gradignan",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "4 Chemin des Maures, Gradignan, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.76197141667518,
+      "lon": -0.5539058815152493,
+      "geoinfo": {
+        "display_name": "Rue des Alizés, Villenave-d'Ornon, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33140, France",
+        "road": "Rue des Alizés",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villenave-d'Ornon",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "507, Rue des Alizés, Villenave-d'Ornon, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33140, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:38.374529+00:00",
+  "_kind": "geo_samples"
+}

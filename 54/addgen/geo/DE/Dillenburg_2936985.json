@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dillenburg",
+  "geonameid": 2936985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.75392851750421,
+      "lon": 8.222293403189479,
+      "geoinfo": {
+        "display_name": "A 45, Haiger, Lahn-Dill-Kreis, Hesse, 35708, Germany",
+        "road": "A 45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haiger",
+        "state": "Hesse",
+        "postcode": "35708",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 45, Dillenburg, Hesse, Germany"
+    },
+    {
+      "lat": 50.72291963896678,
+      "lon": 8.258936866770588,
+      "geoinfo": {
+        "display_name": "K 39, Dillenburg, Lahn-Dill-Kreis, Hesse, 35683, Germany",
+        "road": "K 39",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dillenburg",
+        "state": "Hesse",
+        "postcode": "35683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 39, Dillenburg, Lahn-Dill-Kreis, Hesse, 35683, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:32.105848+00:00",
+  "_kind": "geo_samples"
+}

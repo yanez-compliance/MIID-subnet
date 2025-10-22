@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gorbitz",
+  "geonameid": 2919039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.02210802812711,
+      "lon": 13.602293334437736,
+      "geoinfo": {
+        "display_name": "2, Braunsdorfer Straße, Wurgwitz, Niederhermsdorf, Wurgwitz, Freital, Sächsische Schweiz-Osterzgebirge, Saxony, 01705, Germany",
+        "road": "Braunsdorfer Straße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Niederhermsdorf",
+        "city_district": "Wurgwitz",
+        "city": "Freital",
+        "state": "Saxony",
+        "postcode": "01705",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Braunsdorfer Straße, Gorbitz, Saxony, Germany"
+    },
+    {
+      "lat": 51.082557678038405,
+      "lon": 13.652423312879,
+      "geoinfo": {
+        "display_name": "175, Meißner Landstraße, Briesnitz, Stetzsch, Cotta, Dresden, Saxony, 01157, Germany",
+        "road": "Meißner Landstraße",
+        "house_number": "175",
+        "neighbourhood": "Briesnitz",
+        "suburb": "Stetzsch",
+        "city_district": "Cotta",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01157",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "175, Meißner Landstraße, Briesnitz, Stetzsch, Cotta, Dresden, Saxony, 01157, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:21.320854+00:00",
+  "_kind": "geo_samples"
+}

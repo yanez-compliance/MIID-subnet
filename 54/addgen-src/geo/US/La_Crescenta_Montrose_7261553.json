@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Crescenta-Montrose",
+  "geonameid": 7261553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.22476634796998,
+      "lon": -118.24047632374,
+      "geoinfo": {
+        "display_name": "La Crescenta Branch County of Los Angeles Public Library, 2809, Foothill Boulevard, La Crescenta, Los Angeles County, California, 91214, United States",
+        "road": "Foothill Boulevard",
+        "house_number": "2809",
+        "neighbourhood": null,
+        "suburb": "La Crescenta",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91214",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2809 Foothill Boulevard, La Crescenta-Montrose, California, United States"
+    },
+    {
+      "lat": 34.227817513155664,
+      "lon": -118.22119135006677,
+      "geoinfo": {
+        "display_name": "5434, La Forest Drive, La Cañada Flintridge, Los Angeles County, California, 91011, United States",
+        "road": "La Forest Drive",
+        "house_number": "5434",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Cañada Flintridge",
+        "state": "California",
+        "postcode": "91011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5434, La Forest Drive, La Cañada Flintridge, Los Angeles County, California, 91011, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:18.432334+00:00",
+  "_kind": "geo_samples"
+}

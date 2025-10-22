@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Prague",
+  "geonameid": 3067696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.11918652168086,
+      "lon": 14.37982450966613,
+      "geoinfo": {
+        "display_name": "V Šáreckém údolí, Dolní Šárka, Dejvice, Prague, obvod Praha 6, Capital City of Prague, Prague, 160 00, Czechia",
+        "road": "V Šáreckém údolí",
+        "house_number": null,
+        "neighbourhood": "Dolní Šárka",
+        "suburb": "Dejvice",
+        "city_district": "obvod Praha 6",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "160 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "V Šáreckém údolí, Prague, Prague, Czechia"
+    },
+    {
+      "lat": 50.069941563796704,
+      "lon": 14.360709839765166,
+      "geoinfo": {
+        "display_name": "OMV, Ke Kotlářce, Košíře, Prague, obvod Praha 5, Capital City of Prague, Prague, 150 06, Czechia",
+        "road": "Ke Kotlářce",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Košíře",
+        "city_district": "obvod Praha 5",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "150 06",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "OMV, Ke Kotlářce, Košíře, Prague, obvod Praha 5, Capital City of Prague, Prague, 150 06, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:42.503602+00:00",
+  "_kind": "geo_samples"
+}

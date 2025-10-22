@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hamilton",
+  "geonameid": 2647570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.73891314384533,
+      "lon": -4.0926133620771505,
+      "geoinfo": {
+        "display_name": "Chapelton, South Lanarkshire, Scotland, ML10 6SD, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chapelton",
+        "state": "Scotland",
+        "postcode": "ML10 6SD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hamilton, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.75736199475348,
+      "lon": -4.024528643388796,
+      "geoinfo": {
+        "display_name": "Mineral Railway Path, Silvertonhill, Hamilton, South Lanarkshire, Scotland, ML3 7UH, United Kingdom",
+        "road": "Mineral Railway Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Silvertonhill",
+        "city_district": null,
+        "city": "Hamilton",
+        "state": "Scotland",
+        "postcode": "ML3 7UH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mineral Railway Path, Silvertonhill, Hamilton, South Lanarkshire, Scotland, ML3 7UH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:38.951332+00:00",
+  "_kind": "geo_samples"
+}

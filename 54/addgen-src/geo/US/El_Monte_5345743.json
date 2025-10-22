@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Monte",
+  "geonameid": 5345743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.048785182405595,
+      "lon": -118.06370264240485,
+      "geoinfo": {
+        "display_name": "American Military Musuem, 1918, Rosemead Boulevard, Whittier Narrows, South El Monte, Los Angeles County, California, 91733, United States",
+        "road": "Rosemead Boulevard",
+        "house_number": "1918",
+        "neighbourhood": null,
+        "suburb": "Whittier Narrows",
+        "city_district": null,
+        "city": "South El Monte",
+        "state": "California",
+        "postcode": "91733",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1918 Rosemead Boulevard, El Monte, California, United States"
+    },
+    {
+      "lat": 34.04841716069757,
+      "lon": -118.02598398010957,
+      "geoinfo": {
+        "display_name": "2228, Durfee Avenue, El Monte, Los Angeles County, California, 91732, United States",
+        "road": "Durfee Avenue",
+        "house_number": "2228",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Monte",
+        "state": "California",
+        "postcode": "91732",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2228, Durfee Avenue, El Monte, Los Angeles County, California, 91732, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:54.931288+00:00",
+  "_kind": "geo_samples"
+}

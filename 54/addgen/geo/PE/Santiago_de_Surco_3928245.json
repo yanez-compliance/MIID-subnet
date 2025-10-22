@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Santiago de Surco",
+  "geonameid": 3928245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.16790544048472,
+      "lon": -76.98607183663067,
+      "geoinfo": {
+        "display_name": "Calle José Ayala, Victoria, Santiago de Surco, Province of Lima, Lima Metropolitan Area, Lima, 15056, Peru",
+        "road": "Calle José Ayala",
+        "house_number": null,
+        "neighbourhood": "Victoria",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santiago de Surco",
+        "state": "Lima",
+        "postcode": "15056",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle José Ayala, Santiago de Surco, Lima, Peru"
+    },
+    {
+      "lat": -12.117117688780475,
+      "lon": -77.01248123923877,
+      "geoinfo": {
+        "display_name": "Alejandro Deustua, Barrio Médico, Aurora, Surquillo, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15048, Peru",
+        "road": "Alejandro Deustua",
+        "house_number": null,
+        "neighbourhood": "Barrio Médico",
+        "suburb": "Surquillo",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15048",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "626, Alejandro Deustua, Barrio Médico, Aurora, Surquillo, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15048, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:29.804300+00:00",
+  "_kind": "geo_samples"
+}

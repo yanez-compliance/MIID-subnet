@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Metz",
+  "geonameid": 2994160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.09579428644826,
+      "lon": 6.225229077581459,
+      "geoinfo": {
+        "display_name": "10, Rue Félix Savart, Metz-Technopôle, Grange-aux-Bois, Metz, Moselle, Grand Est, Metropolitan France, 57073, France",
+        "road": "Rue Félix Savart",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Grange-aux-Bois",
+        "city_district": null,
+        "city": "Metz",
+        "state": "Grand Est",
+        "postcode": "57073",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "10 Rue Félix Savart, Metz, Grand Est, France"
+    },
+    {
+      "lat": 49.127819281364125,
+      "lon": 6.110028717496078,
+      "geoinfo": {
+        "display_name": "Fontaine de Bruyères, Rue de Plappeville, Lessy, Metz, Moselle, Grand Est, Metropolitan France, 57160, France",
+        "road": "Rue de Plappeville",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lessy",
+        "state": "Grand Est",
+        "postcode": "57160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "994, Rue de Plappeville, Metz, 57160 Grand Est, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:12.982290+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairfax",
+  "geonameid": 4758023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.873230447219704,
+      "lon": -77.30212724365872,
+      "geoinfo": {
+        "display_name": "Flagpole Lane, Oakton, Fairfax County, Virginia, 20030, United States",
+        "road": "Flagpole Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakton",
+        "state": "Virginia",
+        "postcode": "20030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Flagpole Lane, Fairfax, Virginia, United States"
+    },
+    {
+      "lat": 38.845815277495205,
+      "lon": -77.31321472793846,
+      "geoinfo": {
+        "display_name": "Page Avenue, Fairfax, Fairfax County, Virginia, 22030, United States",
+        "road": "Page Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfax",
+        "state": "Virginia",
+        "postcode": "22030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "663, Page Avenue, Fairfax, Fairfax County, Virginia, 22030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:01.166821+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Hohenems",
+  "geonameid": 2775742,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.32768261816345,
+      "lon": 9.714852894925613,
+      "geoinfo": {
+        "display_name": "Kugelweg, Fraxern, Bezirk Feldkirch, Vorarlberg, 6833, Austria",
+        "road": "Kugelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fraxern",
+        "state": "Vorarlberg",
+        "postcode": "6833",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "204, Kugelweg, Fraxern, Bezirk Feldkirch, Vorarlberg, 6833, Austria"
+    },
+    {
+      "lat": 47.379357766624025,
+      "lon": 9.704902303729394,
+      "geoinfo": {
+        "display_name": "Dehner, 142, Radetzkystraße, Brühl, Unterklien, Reute, Hohenems, Bezirk Dornbirn, Vorarlberg, 6845, Austria",
+        "road": "Radetzkystraße",
+        "house_number": "142",
+        "neighbourhood": "Brühl",
+        "suburb": "Unterklien",
+        "city_district": null,
+        "city": "Hohenems",
+        "state": "Vorarlberg",
+        "postcode": "6845",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Dehner, 142, Radetzkystraße, Brühl, Unterklien, Reute, Hohenems, Bezirk Dornbirn, Vorarlberg, 6845, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:31.352009+00:00",
+  "_kind": "geo_samples"
+}

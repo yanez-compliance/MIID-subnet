@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Hanamaki",
+  "geonameid": 2112823,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.37355080513321,
+      "lon": 141.0964318929819,
+      "geoinfo": {
+        "display_name": "Nakaneko, Hanamaki, Iwate Prefecture, 024-0001, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanamaki",
+        "state": null,
+        "postcode": "024-0001",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hanamaki, Japan"
+    },
+    {
+      "lat": 39.40315021871897,
+      "lon": 141.10277430784842,
+      "geoinfo": {
+        "display_name": "Hoshigaoka 1-chome, Hanamaki, Iwate Prefecture, 025-0066, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hoshigaoka 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanamaki",
+        "state": null,
+        "postcode": "025-0066",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hoshigaoka 1-chome, Hanamaki, Iwate Prefecture, 025-0066, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:31.263907+00:00",
+  "_kind": "geo_samples"
+}

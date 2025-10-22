@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eastpointe",
+  "geonameid": 4991735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.45582502284161,
+      "lon": -82.95971856556403,
+      "geoinfo": {
+        "display_name": "15614, Lincoln Avenue, Eastpointe, Macomb County, Michigan, 48021, United States",
+        "road": "Lincoln Avenue",
+        "house_number": "15614",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastpointe",
+        "state": "Michigan",
+        "postcode": "48021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15614 Lincoln Avenue, Eastpointe, Michigan, United States"
+    },
+    {
+      "lat": 42.4662438024486,
+      "lon": -82.93462597784004,
+      "geoinfo": {
+        "display_name": "Schroeder Avenue, Eastpointe, Macomb County, Michigan, 48021, United States",
+        "road": "Schroeder Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastpointe",
+        "state": "Michigan",
+        "postcode": "48021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "571, Schroeder Avenue, Eastpointe, Macomb County, Michigan, 48021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:43.118261+00:00",
+  "_kind": "geo_samples"
+}

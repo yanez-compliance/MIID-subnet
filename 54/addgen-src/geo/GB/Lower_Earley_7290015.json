@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Lower Earley",
+  "geonameid": 7290015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.444733175124,
+      "lon": -0.8786695681511983,
+      "geoinfo": {
+        "display_name": "A329(M), St. Nicholas, Hurst, Woodley, Borough of Wokingham, England, RG41 5RA, United Kingdom",
+        "road": "A329(M)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "St. Nicholas, Hurst",
+        "city_district": null,
+        "city": "Woodley",
+        "state": "England",
+        "postcode": "RG41 5RA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A329(M), Lower Earley, England, United Kingdom"
+    },
+    {
+      "lat": 51.431117296328004,
+      "lon": -0.9684313486036334,
+      "geoinfo": {
+        "display_name": "343, Basingstoke Road, Whitley, Reading, England, RG2 0LA, United Kingdom",
+        "road": "Basingstoke Road",
+        "house_number": "343",
+        "neighbourhood": null,
+        "suburb": "Whitley",
+        "city_district": null,
+        "city": "Reading",
+        "state": "England",
+        "postcode": "RG2 0LA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "343, Basingstoke Road, Whitley, Reading, England, RG2 0LA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:51.437085+00:00",
+  "_kind": "geo_samples"
+}

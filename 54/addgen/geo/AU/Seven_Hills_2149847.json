@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Seven Hills",
+  "geonameid": 2149847,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.7636028501646,
+      "lon": 150.9127711977441,
+      "geoinfo": {
+        "display_name": "Fifth Avenue, Blacktown, Sydney, Blacktown City Council, New South Wales, 2148, Australia",
+        "road": "Fifth Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Blacktown",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2148",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Fifth Avenue, Seven Hills, New South Wales, Australia"
+    },
+    {
+      "lat": -33.81290472255093,
+      "lon": 150.90123763502842,
+      "geoinfo": {
+        "display_name": "Reservoir Road, Prospect, Sydney, Blacktown City Council, New South Wales, 2148, Australia",
+        "road": "Reservoir Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Prospect",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2148",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "885, Reservoir Road, Prospect, Sydney, Blacktown City Council, New South Wales, 2148, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:00.886721+00:00",
+  "_kind": "geo_samples"
+}

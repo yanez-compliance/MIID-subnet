@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marcq-en-Barœul",
+  "geonameid": 2995908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.66875802645624,
+      "lon": 3.0252380856164316,
+      "geoinfo": {
+        "display_name": "543, Avenue du Maréchal de Lattre de Tassigny, Les Muchaux, Saint-André-lez-Lille, Lille, Nord, Hauts-de-France, Metropolitan France, 59350, France",
+        "road": "Avenue du Maréchal de Lattre de Tassigny",
+        "house_number": "543",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-André-lez-Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "543 Avenue du Maréchal de Lattre de Tassigny, Marcq-en-Barœul, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.66410616926265,
+      "lon": 3.024463270236442,
+      "geoinfo": {
+        "display_name": "Rocade Nord Ouest, Les Conquérants, Lambersart, Lille, Nord, Hauts-de-France, Metropolitan France, 59130, France",
+        "road": "Rocade Nord Ouest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lambersart",
+        "state": "Hauts-de-France",
+        "postcode": "59130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "250, Rocade Nord Ouest, Les Conquérants, Lambersart, Lille, Nord, Hauts-de-France, Metropolitan France, 59130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:36.255793+00:00",
+  "_kind": "geo_samples"
+}

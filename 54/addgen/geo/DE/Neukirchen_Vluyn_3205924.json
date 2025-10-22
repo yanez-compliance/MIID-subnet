@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neukirchen-Vluyn",
+  "geonameid": 3205924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.47405058634639,
+      "lon": 6.568719158671044,
+      "geoinfo": {
+        "display_name": "Anrathsweg, Neukirchen-Vluyn, Kreis Wesel, North Rhine-Westphalia, 47506, Germany",
+        "road": "Anrathsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neukirchen-Vluyn",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47506",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Anrathsweg, Neukirchen-Vluyn, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.446932940668624,
+      "lon": 6.606482203394033,
+      "geoinfo": {
+        "display_name": "35c, Parsickstraße, Hülsdonk, Moers, Kreis Wesel, North Rhine-Westphalia, 47441, Germany",
+        "road": "Parsickstraße",
+        "house_number": "35c",
+        "neighbourhood": "Hülsdonk",
+        "suburb": "Moers",
+        "city_district": null,
+        "city": "Moers",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47441",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "35c, Parsickstraße, Hülsdonk, Moers, Kreis Wesel, North Rhine-Westphalia, 47441, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:58.351938+00:00",
+  "_kind": "geo_samples"
+}

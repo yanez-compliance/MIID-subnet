@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Marcos",
+  "geonameid": 5392368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.159077718832656,
+      "lon": -117.1863019846047,
+      "geoinfo": {
+        "display_name": "Paloma Elementary School, 660, Camino Magnifico, San Marcos, San Diego County, California, 92069, United States",
+        "road": "Camino Magnifico",
+        "house_number": "660",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Marcos",
+        "state": "California",
+        "postcode": "92069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "660 Camino Magnifico, San Marcos, California, United States"
+    },
+    {
+      "lat": 33.15028887392414,
+      "lon": -117.18944949657102,
+      "geoinfo": {
+        "display_name": "North Las Posas Road, San Marcos, San Diego County, California, 92969, United States",
+        "road": "North Las Posas Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Marcos",
+        "state": "California",
+        "postcode": "92969",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "482, North Las Posas Road, San Marcos, San Diego County, California, 92969, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:40.121183+00:00",
+  "_kind": "geo_samples"
+}

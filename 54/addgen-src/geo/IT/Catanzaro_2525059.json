@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Catanzaro",
+  "geonameid": 2525059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.85264583390205,
+      "lon": 16.625182206022963,
+      "geoinfo": {
+        "display_name": "Catanzaro, Calabria, 88100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Catanzaro",
+        "state": "Calabria",
+        "postcode": "88100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Catanzaro, Calabria, Italy"
+    },
+    {
+      "lat": 38.88541068144694,
+      "lon": 16.610806689749587,
+      "geoinfo": {
+        "display_name": "Madison Garden, Dulcino, Catanzaro, Calabria, 88100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dulcino",
+        "city_district": null,
+        "city": "Catanzaro",
+        "state": "Calabria",
+        "postcode": "88100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "681, Madison Garden, Dulcino, Catanzaro, Calabria, 88100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:46.689511+00:00",
+  "_kind": "geo_samples"
+}

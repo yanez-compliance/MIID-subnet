@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longhe",
+  "geonameid": 8416625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.04064861059337,
+      "lon": 107.18865708182652,
+      "geoinfo": {
+        "display_name": "Huyu Expressway, Longhe, Changshou District, Chongqing, China",
+        "road": "Huyu Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longhe",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huyu Expressway, Longhe, Chongqing, China"
+    },
+    {
+      "lat": 30.00726384194738,
+      "lon": 107.1957293283058,
+      "geoinfo": {
+        "display_name": "Longhe, Changshou District, Chongqing, 401241, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longhe",
+        "state": "Chongqing",
+        "postcode": "401241",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "532, Longhe, Changshou District, Chongqing, 401241, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:43.459912+00:00",
+  "_kind": "geo_samples"
+}

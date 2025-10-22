@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winnetka",
+  "geonameid": 5410095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.22601974023535,
+      "lon": -118.56373168248484,
+      "geoinfo": {
+        "display_name": "19748, Napa Street, Winnetka Neighborhood Council District, Los Angeles, Los Angeles County, California, 91306, United States",
+        "road": "Napa Street",
+        "house_number": "19748",
+        "neighbourhood": null,
+        "suburb": "Winnetka Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91306",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19748 Napa Street, Winnetka, California, United States"
+    },
+    {
+      "lat": 34.21890922973188,
+      "lon": -118.54962435379618,
+      "geoinfo": {
+        "display_name": "19114, Cantara Street, Reseda Ranch, Reseda, Los Angeles, Los Angeles County, California, 91335, United States",
+        "road": "Cantara Street",
+        "house_number": "19114",
+        "neighbourhood": null,
+        "suburb": "Reseda",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91335",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19114, Cantara Street, Reseda Ranch, Reseda, Los Angeles, Los Angeles County, California, 91335, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:39.082296+00:00",
+  "_kind": "geo_samples"
+}

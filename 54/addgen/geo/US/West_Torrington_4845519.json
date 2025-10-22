@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Torrington",
+  "geonameid": 4845519,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.82128914012452,
+      "lon": -73.15363841186883,
+      "geoinfo": {
+        "display_name": "382, Goshen Road, West Torrington, Torrington, Northwest Hills Planning Region, Connecticut, 06790, United States",
+        "road": "Goshen Road",
+        "house_number": "382",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrington",
+        "state": "Connecticut",
+        "postcode": "06790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "382 Goshen Road, West Torrington, Connecticut, United States"
+    },
+    {
+      "lat": 41.8421688384887,
+      "lon": -73.12240297019981,
+      "geoinfo": {
+        "display_name": "Newfield Road, Torrington, Northwest Hills Planning Region, Connecticut, 06790, United States",
+        "road": "Newfield Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrington",
+        "state": "Connecticut",
+        "postcode": "06790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "423, Newfield Road, Torrington, Northwest Hills Planning Region, Connecticut, 06790, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:25.416334+00:00",
+  "_kind": "geo_samples"
+}

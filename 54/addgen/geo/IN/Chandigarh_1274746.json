@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chandigarh",
+  "geonameid": 1274746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.713486266635673,
+      "lon": 76.81626778676609,
+      "geoinfo": {
+        "display_name": "Madhya Marg, Ward 20, Chandigarh, 160028, India",
+        "road": "Madhya Marg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ward 20",
+        "city": "Chandigarh",
+        "state": "Chandigarh",
+        "postcode": "160028",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Madhya Marg, Chandigarh, Chandigarh, India"
+    },
+    {
+      "lat": 30.72249800360066,
+      "lon": 76.79660982341734,
+      "geoinfo": {
+        "display_name": "Sector 27, Ward 18, Chandigarh, 160027, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sector 27",
+        "city_district": "Ward 18",
+        "city": "Chandigarh",
+        "state": "Chandigarh",
+        "postcode": "160027",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Sector 27, Ward 18, Chandigarh, 160027, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:02:43.604807+00:00",
+  "_kind": "geo_samples"
+}

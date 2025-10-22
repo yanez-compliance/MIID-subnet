@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Las Torres de Cotillas",
+  "geonameid": 2515219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.01023283603842,
+      "lon": -1.2338190207333795,
+      "geoinfo": {
+        "display_name": "Travesía Segunda, Parque de las Palmeras, El Coto, Las Torres de Cotillas, Vega Media del Segura, Region of Murcia, 30565, Spain",
+        "road": "Travesía Segunda",
+        "house_number": null,
+        "neighbourhood": "Parque de las Palmeras",
+        "suburb": "El Coto",
+        "city_district": null,
+        "city": "Las Torres de Cotillas",
+        "state": "Region of Murcia",
+        "postcode": "30565",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Travesía Segunda, Las Torres de Cotillas, Region of Murcia, Spain"
+    },
+    {
+      "lat": 38.05752680753797,
+      "lon": -1.2621192350794117,
+      "geoinfo": {
+        "display_name": "El Portichuelo, Las Pullas, Alguazas, Vega Media del Segura, Region of Murcia, 30560, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Las Pullas",
+        "city_district": null,
+        "city": "Alguazas",
+        "state": "Region of Murcia",
+        "postcode": "30560",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "911, El Portichuelo, Las Pullas, Alguazas, Vega Media del Segura, Region of Murcia, 30560, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:50.964927+00:00",
+  "_kind": "geo_samples"
+}

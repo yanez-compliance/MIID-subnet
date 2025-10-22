@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yicheng",
+  "geonameid": 1786759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.713646375059188,
+      "lon": 112.27911286362512,
+      "geoinfo": {
+        "display_name": "Yicheng City, Xiangyang, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yicheng City",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yicheng, Hubei, China"
+    },
+    {
+      "lat": 31.719130555642845,
+      "lon": 112.22809063394685,
+      "geoinfo": {
+        "display_name": "北环二路, Yicheng City, Xiangyang, Hubei, China",
+        "road": "北环二路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yicheng City",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "770, 北环二路, Yicheng City, Xiangyang, 83611 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:36.383196+00:00",
+  "_kind": "geo_samples"
+}

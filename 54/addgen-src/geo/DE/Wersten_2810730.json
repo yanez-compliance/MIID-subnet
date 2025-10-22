@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wersten",
+  "geonameid": 2810730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.19018044706464,
+      "lon": 6.8408772478847375,
+      "geoinfo": {
+        "display_name": "A 46, Eller, Stadtbezirk 8, Dusseldorf, North Rhine-Westphalia, 40591, Germany",
+        "road": "A 46",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eller",
+        "city_district": "Stadtbezirk 8",
+        "city": "Dusseldorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40591",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 46, Wersten, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.167615642539765,
+      "lon": 6.769830953339248,
+      "geoinfo": {
+        "display_name": "377, Bonner Straße, Grimlinghausen, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41468, Germany",
+        "road": "Bonner Straße",
+        "house_number": "377",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuss",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41468",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "377, Bonner Straße, Grimlinghausen, Neuss, Rhein-Kreis Neuss, North Rhine-Westphalia, 41468, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:14.245904+00:00",
+  "_kind": "geo_samples"
+}

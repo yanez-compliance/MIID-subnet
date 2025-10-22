@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "La Louvière",
+  "geonameid": 2793508,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.44457056621606,
+      "lon": 4.1974355988345815,
+      "geoinfo": {
+        "display_name": "Rue de Binche, Petit Garga, Haine-Saint-Pierre, La Louvière, Hainaut, Wallonia, 7100, Belgium",
+        "road": "Rue de Binche",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Haine-Saint-Pierre",
+        "city": "La Louvière",
+        "state": "Hainaut",
+        "postcode": "7100",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue de Binche, La Louvière, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.45245150690632,
+      "lon": 4.218377091052341,
+      "geoinfo": {
+        "display_name": "7, Rue Adam Joseph Paris, Morlanwelz-Mariemont, Morlanwelz, La Louvière, Hainaut, Wallonia, 7140, Belgium",
+        "road": "Rue Adam Joseph Paris",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Morlanwelz-Mariemont",
+        "city": "Morlanwelz",
+        "state": "Hainaut",
+        "postcode": "7140",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "7, Rue Adam Joseph Paris, Morlanwelz-Mariemont, Morlanwelz, La Louvière, Hainaut, Wallonia, 7140, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:44.540868+00:00",
+  "_kind": "geo_samples"
+}

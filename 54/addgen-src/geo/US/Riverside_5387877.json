@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Riverside",
+  "geonameid": 5387877,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.95225562957812,
+      "lon": -117.34497434352538,
+      "geoinfo": {
+        "display_name": "5320, Via San Jacinto, Riverside, Riverside County, California, 92507, United States",
+        "road": "Via San Jacinto",
+        "house_number": "5320",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverside",
+        "state": "California",
+        "postcode": "92507",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5320 Via San Jacinto, Riverside, California, United States"
+    },
+    {
+      "lat": 33.97575505933544,
+      "lon": -117.41239251725469,
+      "geoinfo": {
+        "display_name": "Rio Road, Jurupa Valley, Riverside County, California, 92504, United States",
+        "road": "Rio Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jurupa Valley",
+        "state": "California",
+        "postcode": "92504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "105, Rio Road, Jurupa Valley, Riverside County, California, 92504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:14.958113+00:00",
+  "_kind": "geo_samples"
+}

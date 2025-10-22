@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longjing",
+  "geonameid": 2035966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.77986055706864,
+      "lon": 129.4821667662052,
+      "geoinfo": {
+        "display_name": "Huichangdong, Dongshengyong, Longjing City, Yanbian, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longjing City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longjing, Jilin, China"
+    },
+    {
+      "lat": 42.74573573848854,
+      "lon": 129.41724293768823,
+      "geoinfo": {
+        "display_name": "Anmin Subdistrict, Zhixin Town, Longjing City, Yanbian, Jilin, 133400, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Anmin Subdistrict",
+        "city_district": "Zhixin Town",
+        "city": "Longjing City",
+        "state": "Jilin",
+        "postcode": "133400",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "786, Anmin Subdistrict, Longjing, 133400 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:27:42.443614+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Frosinone",
+  "geonameid": 3176515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.60052089855864,
+      "lon": 13.327460283061205,
+      "geoinfo": {
+        "display_name": "Ceccano, Frosinone, Lazio, 03023, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ceccano",
+        "state": "Lazio",
+        "postcode": "03023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Frosinone, Lazio, Italy"
+    },
+    {
+      "lat": 41.62538367276104,
+      "lon": 13.35861116677006,
+      "geoinfo": {
+        "display_name": "Via Braccio Cisterna, Frosinone, Lazio, 03100, Italy",
+        "road": "Via Braccio Cisterna",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frosinone",
+        "state": "Lazio",
+        "postcode": "03100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "799, Via Braccio Cisterna, Frosinone, Lazio, 03100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:51.868753+00:00",
+  "_kind": "geo_samples"
+}

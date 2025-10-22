@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lille",
+  "geonameid": 2998324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.61700563930577,
+      "lon": 3.0565428174204237,
+      "geoinfo": {
+        "display_name": "Boulevard Périphérique Sud, Lille-Moulins, Lille, Nord, Hauts-de-France, Metropolitan France, 59046, France",
+        "road": "Boulevard Périphérique Sud",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lille-Moulins",
+        "city_district": "Lille",
+        "city": "Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59046",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Périphérique Sud, Lille, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.671122400235966,
+      "lon": 3.0356346309028845,
+      "geoinfo": {
+        "display_name": "9, Rue de l'Hôpital Saint-Jean de Dieu, Marquette-lez-Lille, Lille, Nord, Hauts-de-France, Metropolitan France, 59520, France",
+        "road": "Rue de l'Hôpital Saint-Jean de Dieu",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marquette-lez-Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59520",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "9, Rue de l'Hôpital Saint-Jean de Dieu, Marquette-lez-Lille, Lille, Nord, Hauts-de-France, Metropolitan France, 59520, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:59.985947+00:00",
+  "_kind": "geo_samples"
+}

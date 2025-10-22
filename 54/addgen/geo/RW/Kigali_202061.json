@@ -1,0 +1,65 @@
+{
+  "country_code": "RW",
+  "country": "Rwanda",
+  "city": "Kigali",
+  "geonameid": 202061,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -1.9677320272010528,
+      "lon": 30.09573076419222,
+      "geoinfo": {
+        "display_name": "KK 493 Street, Kicukiro District, Kigali City, Rwanda",
+        "road": "KK 493 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kigali City",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "KK 493 Street, Kigali, Kigali City, Rwanda"
+    },
+    {
+      "lat": -1.9618151763590244,
+      "lon": 30.03210520872347,
+      "geoinfo": {
+        "display_name": "Kigali, Nyarugenge District, Kigali City, Rwanda",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kigali",
+        "state": "Kigali City",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "Kigali, Kigali City, Rwanda"
+    },
+    {
+      "lat": -1.923721029758299,
+      "lon": 30.055444701840123,
+      "geoinfo": {
+        "display_name": "KG 679 Street, Gatsata / Karuruma, Gasabo District, Kigali City, Rwanda",
+        "road": "KG 679 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gatsata / Karuruma",
+        "state": "Kigali City",
+        "postcode": null,
+        "country": "Rwanda",
+        "country_code": "rw"
+      },
+      "address": "KG 679 Street, Kigali, Kigali City, Rwanda"
+    }
+  ],
+  "updated_at": "2025-10-16T22:17:03.344570+00:00",
+  "_kind": "geo_samples"
+}

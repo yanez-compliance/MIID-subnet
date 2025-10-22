@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Nocera Superiore",
+  "geonameid": 3172243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.712069747595265,
+      "lon": 14.648698747893857,
+      "geoinfo": {
+        "display_name": "Nocera Superiore, Tramonti, Salerno, Campania, 84014, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nocera Superiore",
+        "state": "Campania",
+        "postcode": "84014",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Nocera Superiore, Campania, Italy"
+    },
+    {
+      "lat": 40.769341751375165,
+      "lon": 14.684134927499116,
+      "geoinfo": {
+        "display_name": "Via Francesco Lanzara, Castel San Giorgio, Salerno, Campania, 84086, Italy",
+        "road": "Via Francesco Lanzara",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castel San Giorgio",
+        "state": "Campania",
+        "postcode": "84086",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "246, Via Francesco Lanzara, Castel San Giorgio, Salerno, Campania, 84086, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:13.701429+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "San Francisco",
+  "geonameid": 1690019,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.512208094616732,
+      "lon": 125.96010632255445,
+      "geoinfo": {
+        "display_name": "San Francisco Bypass Road, Purok 3, Hubang, San Francisco, Agusan del Sur, Caraga, 8591, Philippines",
+        "road": "San Francisco Bypass Road",
+        "house_number": null,
+        "neighbourhood": "Purok 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "Agusan del Sur",
+        "postcode": "8591",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "San Francisco Bypass Road, San Francisco, Agusan del Sur, Philippines"
+    },
+    {
+      "lat": 8.520009883075561,
+      "lon": 125.94343945639356,
+      "geoinfo": {
+        "display_name": "San Francisco, Agusan del Sur, Caraga, 8514, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "Agusan del Sur",
+        "postcode": "8514",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "460, San Francisco, Agusan del Sur, Caraga, 8514, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:35:22.357414+00:00",
+  "_kind": "geo_samples"
+}

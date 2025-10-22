@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Strawberry Mansion",
+  "geonameid": 4561553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.99427943886534,
+      "lon": -75.18723949426295,
+      "geoinfo": {
+        "display_name": "3353, Ridge Avenue, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19129, United States",
+        "road": "Ridge Avenue",
+        "house_number": "3353",
+        "neighbourhood": null,
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3353 Ridge Avenue, Strawberry Mansion, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.01364862160994,
+      "lon": -75.16418156465122,
+      "geoinfo": {
+        "display_name": "2101, Ruffner Street, Tioga, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19140, United States",
+        "road": "Ruffner Street",
+        "house_number": "2101",
+        "neighbourhood": "Tioga",
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2101, Ruffner Street, Tioga, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19140, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:31.925588+00:00",
+  "_kind": "geo_samples"
+}

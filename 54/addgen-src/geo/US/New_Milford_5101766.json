@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Milford",
+  "geonameid": 5101766,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.932377393535226,
+      "lon": -74.07036354432702,
+      "geoinfo": {
+        "display_name": "Suburban Diner, NJ 17, Paramus, Bergen County, New Jersey, 07652, United States",
+        "road": "NJ 17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paramus",
+        "state": "New Jersey",
+        "postcode": "07652",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NJ 17, New Milford, New Jersey, United States"
+    },
+    {
+      "lat": 40.94050532852704,
+      "lon": -74.03441151942272,
+      "geoinfo": {
+        "display_name": "893, Elm Avenue, Cherry Hill, River Edge, Bergen County, New Jersey, 07661, United States",
+        "road": "Elm Avenue",
+        "house_number": "893",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "River Edge",
+        "state": "New Jersey",
+        "postcode": "07661",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "893, Elm Avenue, Cherry Hill, River Edge, Bergen County, New Jersey, 07661, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:50.672781+00:00",
+  "_kind": "geo_samples"
+}

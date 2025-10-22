@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Arica",
+  "geonameid": 3899361,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -18.488600271825625,
+      "lon": -70.33911687010598,
+      "geoinfo": {
+        "display_name": "Barrio La Lisera, Arica, Provincia de Arica, Arica y Parinacota Region, 1000434, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio La Lisera",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arica",
+        "state": "Arica y Parinacota Region",
+        "postcode": "1000434",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Barrio La Lisera, Arica, Arica y Parinacota Region, Chile"
+    },
+    {
+      "lat": -18.499401353016456,
+      "lon": -70.32577373783714,
+      "geoinfo": {
+        "display_name": "Costanera Sur, Planta Sur Corpesca, Arica, Provincia de Arica, Arica y Parinacota Region, 1001110, Chile",
+        "road": "Costanera Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arica",
+        "state": "Arica y Parinacota Region",
+        "postcode": "1001110",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Costanera Sur, Arica, Arica y Parinacota Region, Chile"
+    }
+  ],
+  "updated_at": "2025-10-16T12:11:11.787852+00:00",
+  "_kind": "geo_samples"
+}

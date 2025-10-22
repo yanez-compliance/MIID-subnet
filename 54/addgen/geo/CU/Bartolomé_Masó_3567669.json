@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Bartolomé Masó",
+  "geonameid": 3567669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.164708686579374,
+      "lon": -76.97295688734332,
+      "geoinfo": {
+        "display_name": "Carretera Acuipaso, Yara, Granma, 88000, Cuba",
+        "road": "Carretera Acuipaso",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yara",
+        "state": "Granma",
+        "postcode": "88000",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Carretera Acuipaso, Bartolomé Masó, Granma, Cuba"
+    },
+    {
+      "lat": 20.17787708940488,
+      "lon": -76.9309323238436,
+      "geoinfo": {
+        "display_name": "Sabana Larga, Bartolomé Masó, Granma, 88000, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bartolomé Masó",
+        "state": "Granma",
+        "postcode": "88000",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "747, Sabana Larga, Bartolomé Masó, Granma, 88000, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:41.810657+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Redwood City",
+  "geonameid": 5386834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.45518615708381,
+      "lon": -122.23890988318021,
+      "geoinfo": {
+        "display_name": "1650, Alameda de las Pulgas, Redwood City, San Mateo County, California, 94062, United States",
+        "road": "Alameda de las Pulgas",
+        "house_number": "1650",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redwood City",
+        "state": "California",
+        "postcode": "94062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1650 Alameda de las Pulgas, Redwood City, California, United States"
+    },
+    {
+      "lat": 37.47297952367429,
+      "lon": -122.18204227341374,
+      "geoinfo": {
+        "display_name": "24, Greenoaks Drive, Lindenwood, Atherton, San Mateo County, California, 94025, United States",
+        "road": "Greenoaks Drive",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atherton",
+        "state": "California",
+        "postcode": "94025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24, Greenoaks Drive, Lindenwood, Atherton, San Mateo County, California, 94025, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:43.110151+00:00",
+  "_kind": "geo_samples"
+}

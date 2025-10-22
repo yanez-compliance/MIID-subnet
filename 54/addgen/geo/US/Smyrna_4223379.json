@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Smyrna",
+  "geonameid": 4223379,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.85116398107296,
+      "lon": -84.53599859126948,
+      "geoinfo": {
+        "display_name": "Nowlin Drive, Smyrna, Cobb County, Georgia, 30082, United States",
+        "road": "Nowlin Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Smyrna",
+        "state": "Georgia",
+        "postcode": "30082",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nowlin Drive, Smyrna, Georgia, United States"
+    },
+    {
+      "lat": 33.90397991031576,
+      "lon": -84.4862849426086,
+      "geoinfo": {
+        "display_name": "Windy Hill Road Southeast, Cobb County, Georgia, 30067, United States",
+        "road": "Windy Hill Road Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "295, Windy Hill Road Southeast, Cobb County, Georgia, 30067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:50.514495+00:00",
+  "_kind": "geo_samples"
+}

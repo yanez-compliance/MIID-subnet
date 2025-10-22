@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Schaffhausen",
+  "geonameid": 2658761,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.70587722547356,
+      "lon": 8.580095010799685,
+      "geoinfo": {
+        "display_name": "Randenturmstrasse, Beringen, Schaffhausen, 8222, Switzerland",
+        "road": "Randenturmstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beringen",
+        "state": "Schaffhausen",
+        "postcode": "8222",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Randenturmstrasse, Schaffhausen, Schaffhausen, Switzerland"
+    },
+    {
+      "lat": 47.71708513428829,
+      "lon": 8.578002405810967,
+      "geoinfo": {
+        "display_name": "Eggeweg, Blashalde, Beringen, Schaffhausen, 8222, Switzerland",
+        "road": "Eggeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beringen",
+        "state": "Schaffhausen",
+        "postcode": "8222",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Eggeweg, Schaffhausen, Schaffhausen, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:05:30.240462+00:00",
+  "_kind": "geo_samples"
+}

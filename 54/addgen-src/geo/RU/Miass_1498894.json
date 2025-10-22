@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Miass",
+  "geonameid": 1498894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.03497321258068,
+      "lon": 60.147126232476154,
+      "geoinfo": {
+        "display_name": "Miass Urban Okrug, Chelyabinsk Oblast, Ural Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chelyabinsk Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Miass, Chelyabinsk Oblast, Russia"
+    },
+    {
+      "lat": 55.08252219910069,
+      "lon": 60.06522080661612,
+      "geoinfo": {
+        "display_name": "СНТ \"Нагорный-2\", Miass Urban Okrug, Chelyabinsk Oblast, Ural Federal District, 456305, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chelyabinsk Oblast",
+        "postcode": "456305",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "240, Miass, 456305 Chelyabinsk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:35.036312+00:00",
+  "_kind": "geo_samples"
+}

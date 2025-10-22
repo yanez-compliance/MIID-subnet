@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Amherst",
+  "geonameid": 5107129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.996187708239745,
+      "lon": -78.77144851673636,
+      "geoinfo": {
+        "display_name": "Amherst Audubon Golf Course, Ellicott Creek Trailway, Town of Amherst, Erie County, New York, 14260, United States",
+        "road": "Ellicott Creek Trailway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Amherst",
+        "state": "New York",
+        "postcode": "14260",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ellicott Creek Trailway, Amherst, New York, United States"
+    },
+    {
+      "lat": 42.9589567548005,
+      "lon": -78.81627076270199,
+      "geoinfo": {
+        "display_name": "3586, Main Street, Eggertsville, Buffalo, Erie County, New York, 14226, United States",
+        "road": "Main Street",
+        "house_number": "3586",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buffalo",
+        "state": "New York",
+        "postcode": "14226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3586, Main Street, Eggertsville, Buffalo, Erie County, New York, 14226, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:02.754192+00:00",
+  "_kind": "geo_samples"
+}

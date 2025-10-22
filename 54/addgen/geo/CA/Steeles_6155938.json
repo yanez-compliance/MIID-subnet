@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Steeles",
+  "geonameid": 6155938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.80820787238272,
+      "lon": -79.38650113567095,
+      "geoinfo": {
+        "display_name": "15, Laureleaf Road, Markham, York Region, Golden Horseshoe, Ontario, L3T 2X7, Canada",
+        "road": "Laureleaf Road",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Markham",
+        "state": "Ontario",
+        "postcode": "L3T 2X7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "15 Laureleaf Road, Steeles, Ontario, Canada"
+    },
+    {
+      "lat": 43.76901807086635,
+      "lon": -79.31397058081028,
+      "geoinfo": {
+        "display_name": "3, Wishing Well Drive, Tam O'Shanter-Sullivan, Scarborough—Agincourt, Scarborough, Toronto, Golden Horseshoe, Ontario, M1T 1M6, Canada",
+        "road": "Wishing Well Drive",
+        "house_number": "3",
+        "neighbourhood": "Tam O'Shanter-Sullivan",
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1T 1M6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3, Wishing Well Drive, Tam O'Shanter-Sullivan, Scarborough—Agincourt, Scarborough, Toronto, Golden Horseshoe, Ontario, M1T 1M6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:51.734876+00:00",
+  "_kind": "geo_samples"
+}

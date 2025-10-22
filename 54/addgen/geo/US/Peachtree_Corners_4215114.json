@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Peachtree Corners",
+  "geonameid": 4215114,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.99749187477579,
+      "lon": -84.2366854877106,
+      "geoinfo": {
+        "display_name": "East Jones Bridge Road, North River Crossing, Peachtree Corners, Gwinnett County, Georgia, 30092, United States",
+        "road": "East Jones Bridge Road",
+        "house_number": null,
+        "neighbourhood": "North River Crossing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peachtree Corners",
+        "state": "Georgia",
+        "postcode": "30092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Jones Bridge Road, Peachtree Corners, Georgia, United States"
+    },
+    {
+      "lat": 33.987600513722654,
+      "lon": -84.24198312590703,
+      "geoinfo": {
+        "display_name": "4526, Jones Bridge Circle Northwest, Amhurst, North River Crossing, Peachtree Corners, Gwinnett County, Georgia, 30092, United States",
+        "road": "Jones Bridge Circle Northwest",
+        "house_number": "4526",
+        "neighbourhood": "Amhurst",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peachtree Corners",
+        "state": "Georgia",
+        "postcode": "30092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4526, Jones Bridge Circle Northwest, Amhurst, North River Crossing, Peachtree Corners, Gwinnett County, Georgia, 30092, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:16.182286+00:00",
+  "_kind": "geo_samples"
+}

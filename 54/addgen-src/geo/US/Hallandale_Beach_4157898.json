@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hallandale Beach",
+  "geonameid": 4157898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.982315103567036,
+      "lon": -80.11875956148592,
+      "geoinfo": {
+        "display_name": "1904, South Ocean Drive, Hallandale Beach, Broward County, Florida, 33009, United States",
+        "road": "South Ocean Drive",
+        "house_number": "1904",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hallandale Beach",
+        "state": "Florida",
+        "postcode": "33009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1904 South Ocean Drive, Hallandale Beach, Florida, United States"
+    },
+    {
+      "lat": 26.01175599796923,
+      "lon": -80.13836352996645,
+      "geoinfo": {
+        "display_name": "Hollywood Boulevard, Hollywood, Broward County, Florida, 33022, United States",
+        "road": "Hollywood Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hollywood",
+        "state": "Florida",
+        "postcode": "33022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "065, Hollywood Boulevard, Hollywood, Broward County, Florida, 33022, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:22.043789+00:00",
+  "_kind": "geo_samples"
+}

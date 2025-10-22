@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Tung Chung",
+  "geonameid": 11101593,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.328286257192097,
+      "lon": 113.93541635120758,
+      "geoinfo": {
+        "display_name": "Islands District, Tuen Mun District, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": "Tuen Mun District",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Islands District, Tung Chung, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.293842278423018,
+      "lon": 113.97442339366255,
+      "geoinfo": {
+        "display_name": "Hong Kong Olympic Trail, Pak Mong, Islands District, Tai Ho, New Territories, Hong Kong, China",
+        "road": "Hong Kong Olympic Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": "Tai Ho",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "639, Hong Kong Olympic Trail, Pak Mong, Islands District, Tai Ho, New Territories, 97653 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:07.126016+00:00",
+  "_kind": "geo_samples"
+}

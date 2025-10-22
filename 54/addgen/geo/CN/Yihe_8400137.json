@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yihe",
+  "geonameid": 8400137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.11513570907635,
+      "lon": 108.08187804616932,
+      "geoinfo": {
+        "display_name": "Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yihe, Chongqing, China"
+    },
+    {
+      "lat": 31.178737692022324,
+      "lon": 108.08832941278528,
+      "geoinfo": {
+        "display_name": "Yihe, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yihe",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "721, Yihe, Kaizhou District, 59484 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:00.596960+00:00",
+  "_kind": "geo_samples"
+}

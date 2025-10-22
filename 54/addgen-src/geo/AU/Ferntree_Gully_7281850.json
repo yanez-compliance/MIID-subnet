@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Ferntree Gully",
+  "geonameid": 7281850,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.91915459821106,
+      "lon": 145.33175564023244,
+      "geoinfo": {
+        "display_name": "314, Glenfern Road, Upwey, Melbourne, Shire of Yarra Ranges, Victoria, 3158, Australia",
+        "road": "Glenfern Road",
+        "house_number": "314",
+        "neighbourhood": null,
+        "suburb": "Upwey",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3158",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "314 Glenfern Road, Ferntree Gully, Victoria, Australia"
+    },
+    {
+      "lat": -37.866015632866365,
+      "lon": 145.3313983794696,
+      "geoinfo": {
+        "display_name": "Ferndale Track, Sassafras, Melbourne, Shire of Yarra Ranges, Victoria, 3787, Australia",
+        "road": "Ferndale Track",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sassafras",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3787",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "249, Ferndale Track, Sassafras, Melbourne, Shire of Yarra Ranges, Victoria, 3787, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:30.500660+00:00",
+  "_kind": "geo_samples"
+}

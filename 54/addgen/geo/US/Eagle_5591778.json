@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eagle",
+  "geonameid": 5591778,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.66664053255394,
+      "lon": -116.3068825836449,
+      "geoinfo": {
+        "display_name": "Boise River Greenbelt, Boise, Ada County, Idaho, 83614, United States",
+        "road": "Boise River Greenbelt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boise",
+        "state": "Idaho",
+        "postcode": "83614",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Boise River Greenbelt, Eagle, Idaho, United States"
+    },
+    {
+      "lat": 43.73054879008363,
+      "lon": -116.33076218394672,
+      "geoinfo": {
+        "display_name": "4315, North Sage Hill Lane, Triple Ridge Estates, Eagle, Ada County, Idaho, 83616, United States",
+        "road": "North Sage Hill Lane",
+        "house_number": "4315",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eagle",
+        "state": "Idaho",
+        "postcode": "83616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4315, North Sage Hill Lane, Eagle, 83616 Idaho, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:21.099886+00:00",
+  "_kind": "geo_samples"
+}

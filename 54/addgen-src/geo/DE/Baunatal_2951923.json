@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Baunatal",
+  "geonameid": 2951923,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.26250348263076,
+      "lon": 9.38503302771342,
+      "geoinfo": {
+        "display_name": "22, Malenter Weg, Oberster Heimbach, Großenritte, Baunatal, Landkreis Kassel, Hesse, 34225, Germany",
+        "road": "Malenter Weg",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Großenritte",
+        "city_district": null,
+        "city": "Baunatal",
+        "state": "Hesse",
+        "postcode": "34225",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "22 Malenter Weg, Baunatal, Hesse, Germany"
+    },
+    {
+      "lat": 51.22463285407562,
+      "lon": 9.440950287262153,
+      "geoinfo": {
+        "display_name": "K 2, Grifte, Edermünde, Schwalm-Eder-Kreis, Hesse, 34295, Germany",
+        "road": "K 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grifte",
+        "state": "Hesse",
+        "postcode": "34295",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 2, Baunatal, 34295 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:50.019499+00:00",
+  "_kind": "geo_samples"
+}

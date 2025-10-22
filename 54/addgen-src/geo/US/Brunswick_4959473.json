@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brunswick",
+  "geonameid": 4959473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.93752182677665,
+      "lon": -70.00979725512106,
+      "geoinfo": {
+        "display_name": "River Road, Brunswick, Cumberland County, Maine, 04011, United States",
+        "road": "River Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brunswick",
+        "state": "Maine",
+        "postcode": "04011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "River Road, Brunswick, Maine, United States"
+    },
+    {
+      "lat": 43.93261830657313,
+      "lon": -69.94282897505646,
+      "geoinfo": {
+        "display_name": "75, Tedford Road, Topsham, Sagadahoc County, Maine, 04086, United States",
+        "road": "Tedford Road",
+        "house_number": "75",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Topsham",
+        "state": "Maine",
+        "postcode": "04086",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "75, Tedford Road, Topsham, Sagadahoc County, Maine, 04086, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:53.860127+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lorient",
+  "geonameid": 2997577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.75966651087622,
+      "lon": -3.386058787462461,
+      "geoinfo": {
+        "display_name": "37, Rue Anne de Bretagne, Le Plénéno, Kersabiec, Lorient, Morbihan, Brittany, Metropolitan France, 56100, France",
+        "road": "Rue Anne de Bretagne",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lorient",
+        "state": "Brittany",
+        "postcode": "56100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "37 Rue Anne de Bretagne, Lorient, Brittany, France"
+    },
+    {
+      "lat": 47.77508456845478,
+      "lon": -3.41677569831616,
+      "geoinfo": {
+        "display_name": "D 765, La Croix du Mourillon, Quéven, Lorient, Morbihan, Brittany, Metropolitan France, 56530, France",
+        "road": "D 765",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quéven",
+        "state": "Brittany",
+        "postcode": "56530",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 765, La Croix du Mourillon, Quéven, Lorient, Morbihan, Brittany, Metropolitan France, 56530, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:08:29.129870+00:00",
+  "_kind": "geo_samples"
+}

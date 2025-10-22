@@ -1,0 +1,47 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "G‘azalkent",
+  "geonameid": 1513996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.56394514443627,
+      "lon": 69.7583109287512,
+      "geoinfo": {
+        "display_name": "Frunze street, Gazalkent, Bostanlik district, Tashkent Region, 110701, Uzbekistan",
+        "road": "Frunze street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gazalkent",
+        "state": "Tashkent Region",
+        "postcode": "110701",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Frunze street, G‘azalkent, Tashkent Region, Uzbekistan"
+    },
+    {
+      "lat": 41.55407372958964,
+      "lon": 69.73414033673612,
+      "geoinfo": {
+        "display_name": "Dumalak, Bostanlik district, Tashkent Region, 110701, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dumalak",
+        "state": "Tashkent Region",
+        "postcode": "110701",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "586, Dumalak, Bostanlik district, Tashkent Region, 110701, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:25.151392+00:00",
+  "_kind": "geo_samples"
+}

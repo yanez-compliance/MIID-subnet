@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Koblenz",
+  "geonameid": 2886946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.361763592311306,
+      "lon": 7.536567530930384,
+      "geoinfo": {
+        "display_name": "Reit- und Zuchtverein Koblenz-Metternich 1927 e.V., L 52, Rübenach, Koblenz, Rhineland-Palatinate, 56072, Germany",
+        "road": "L 52",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rübenach",
+        "city_district": "Rübenach",
+        "city": "Koblenz",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56072",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 52, Koblenz, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.38085932094213,
+      "lon": 7.59159163351649,
+      "geoinfo": {
+        "display_name": "7, Daimlerstraße, Wallersheim, Koblenz, Rhineland-Palatinate, 56070, Germany",
+        "road": "Daimlerstraße",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Wallersheim",
+        "city_district": null,
+        "city": "Koblenz",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56070",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7, Daimlerstraße, Wallersheim, Koblenz, Rhineland-Palatinate, 56070, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:31.009465+00:00",
+  "_kind": "geo_samples"
+}

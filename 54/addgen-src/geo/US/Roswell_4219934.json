@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roswell",
+  "geonameid": 4219934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.98507064888323,
+      "lon": -84.35274974563806,
+      "geoinfo": {
+        "display_name": "Sandy Springs, Fulton County, Georgia, 30350, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandy Springs",
+        "state": "Georgia",
+        "postcode": "30350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Roswell, Georgia, United States"
+    },
+    {
+      "lat": 34.04526875926607,
+      "lon": -84.33601423209522,
+      "geoinfo": {
+        "display_name": "Mansell Road, Roswell, Fulton County, Georgia, 30076, United States",
+        "road": "Mansell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roswell",
+        "state": "Georgia",
+        "postcode": "30076",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "318, Mansell Road, Roswell, Fulton County, Georgia, 30076, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:20.312308+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vermont Square",
+  "geonameid": 13157324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.962704608277626,
+      "lon": -118.27673848987143,
+      "geoinfo": {
+        "display_name": "233, West 84th Place, Vermont Knolls, Los Angeles, Los Angeles County, California, 90003, United States",
+        "road": "West 84th Place",
+        "house_number": "233",
+        "neighbourhood": null,
+        "suburb": "Vermont Knolls",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "233 West 84th Place, Vermont Square, California, United States"
+    },
+    {
+      "lat": 34.00748768499198,
+      "lon": -118.28763858137219,
+      "geoinfo": {
+        "display_name": "Menlo Avenue Elementary School, 4156, Menlo Avenue, Vermont Square, Los Angeles, Los Angeles County, California, 90037, United States",
+        "road": "Menlo Avenue",
+        "house_number": "4156",
+        "neighbourhood": null,
+        "suburb": "Vermont Square",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Menlo Avenue Elementary School, 4156, Menlo Avenue, Vermont Square, Los Angeles, Los Angeles County, California, 90037, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:08.364229+00:00",
+  "_kind": "geo_samples"
+}

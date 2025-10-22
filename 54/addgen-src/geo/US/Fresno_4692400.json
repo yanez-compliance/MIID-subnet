@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fresno",
+  "geonameid": 4692400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.53431912320295,
+      "lon": -95.4762660488841,
+      "geoinfo": {
+        "display_name": "3636, Lola Street, Palmetto, Fort Bend County, Texas, 77545, United States",
+        "road": "Lola Street",
+        "house_number": "3636",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmetto",
+        "state": "Texas",
+        "postcode": "77545",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3636 Lola Street, Fresno, Texas, United States"
+    },
+    {
+      "lat": 29.542536151280377,
+      "lon": -95.41762543082564,
+      "geoinfo": {
+        "display_name": "2936, North Airline Road, Pearland, Brazoria County, Texas, 77583, United States",
+        "road": "North Airline Road",
+        "house_number": "2936",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pearland",
+        "state": "Texas",
+        "postcode": "77583",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2936, North Airline Road, Pearland, Brazoria County, Texas, 77583, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:15.372213+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springboro",
+  "geonameid": 4525304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.56268313196135,
+      "lon": -84.23923634261187,
+      "geoinfo": {
+        "display_name": "210, Renwood Place, Tamarack Hills, Springboro, Warren County, Ohio, 45066, United States",
+        "road": "Renwood Place",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springboro",
+        "state": "Ohio",
+        "postcode": "45066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210 Renwood Place, Springboro, Ohio, United States"
+    },
+    {
+      "lat": 39.52273196420072,
+      "lon": -84.2669714033117,
+      "geoinfo": {
+        "display_name": "3524, McLean Road, Franklin Township, Warren County, Ohio, 45005, United States",
+        "road": "McLean Road",
+        "house_number": "3524",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3524, McLean Road, Franklin Township, Warren County, Ohio, 45005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:26.652937+00:00",
+  "_kind": "geo_samples"
+}

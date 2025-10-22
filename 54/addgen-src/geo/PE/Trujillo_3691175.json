@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Trujillo",
+  "geonameid": 3691175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -8.142227205876102,
+      "lon": -79.02411840318948,
+      "geoinfo": {
+        "display_name": "Trujillo, Province of Trujillo, La Libertad, 13008, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Trujillo",
+        "state": "La Libertad",
+        "postcode": "13008",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Trujillo, La Libertad, Peru"
+    },
+    {
+      "lat": -8.119099954875397,
+      "lon": -79.00522252891065,
+      "geoinfo": {
+        "display_name": "Calle 16, Villa del Contador, Trujillo, Province of Trujillo, La Libertad, 13007, Peru",
+        "road": "Calle 16",
+        "house_number": null,
+        "neighbourhood": "Villa del Contador",
+        "suburb": null,
+        "city_district": null,
+        "city": "Trujillo",
+        "state": "La Libertad",
+        "postcode": "13007",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle 16, Villa del Contador, Trujillo, Province of Trujillo, La Libertad, 13007, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:04.676477+00:00",
+  "_kind": "geo_samples"
+}

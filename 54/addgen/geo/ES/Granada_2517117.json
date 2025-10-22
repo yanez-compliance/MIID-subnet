@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Granada",
+  "geonameid": 2517117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.21203843388823,
+      "lon": -3.623106768582176,
+      "geoinfo": {
+        "display_name": "Conforama, Lugar de la Caseria Duende, Asegra, Urbanización La Joya, Pulianas, Comarca de la Vega de Granada, Granada, Andalusia, 18197, Spain",
+        "road": "Lugar de la Caseria Duende",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urbanización La Joya",
+        "state": "Andalusia",
+        "postcode": "18197",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Lugar de la Caseria Duende, Granada, Andalusia, Spain"
+    },
+    {
+      "lat": 37.219601844481474,
+      "lon": -3.6271831874871467,
+      "geoinfo": {
+        "display_name": "Asegra, Peligros, Comarca de la Vega de Granada, Granada, Andalusia, 18200, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peligros",
+        "state": "Andalusia",
+        "postcode": "18200",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "553, Asegra, Peligros, Comarca de la Vega de Granada, Granada, Andalusia, 18200, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:03.259236+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Rumia",
+  "geonameid": 3086706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.555562963295934,
+      "lon": 18.321015481828937,
+      "geoinfo": {
+        "display_name": "Kamienna, Zbychowo, gmina Wejherowo, Wejherowo County, Pomeranian Voivodeship, 84-206, Poland",
+        "road": "Kamienna",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zbychowo",
+        "state": "Pomeranian Voivodeship",
+        "postcode": "84-206",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Kamienna, Rumia, Pomeranian Voivodeship, Poland"
+    },
+    {
+      "lat": 54.559934352250046,
+      "lon": 18.45846015828133,
+      "geoinfo": {
+        "display_name": "Chromowa, Pogórze, Gdynia, Pomeranian Voivodeship, 81-154, Poland",
+        "road": "Chromowa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pogórze",
+        "city_district": "Pogórze",
+        "city": "Gdynia",
+        "state": "Pomeranian Voivodeship",
+        "postcode": "81-154",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Chromowa, Pogórze, Gdynia, Pomeranian Voivodeship, 81-154, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:32:38.447635+00:00",
+  "_kind": "geo_samples"
+}

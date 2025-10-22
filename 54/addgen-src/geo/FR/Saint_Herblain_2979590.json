@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Herblain",
+  "geonameid": 2979590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.2034520641767,
+      "lon": -1.659989119885244,
+      "geoinfo": {
+        "display_name": "Impasse de la Gare, Pelousière, Bourgonnière, Saint-Herblain, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44800, France",
+        "road": "Impasse de la Gare",
+        "house_number": null,
+        "neighbourhood": "Pelousière",
+        "suburb": "Bourgonnière",
+        "city_district": null,
+        "city": "Saint-Herblain",
+        "state": "Pays de la Loire",
+        "postcode": "44800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Impasse de la Gare, Saint-Herblain, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.20218763928976,
+      "lon": -1.6756749837611236,
+      "geoinfo": {
+        "display_name": "34, Rue Jean Jaurès, Basse-Indre, Indre, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44610, France",
+        "road": "Rue Jean Jaurès",
+        "house_number": "34",
+        "neighbourhood": "Basse-Indre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Indre",
+        "state": "Pays de la Loire",
+        "postcode": "44610",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "34, Rue Jean Jaurès, Basse-Indre, Indre, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44610, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:45:56.605687+00:00",
+  "_kind": "geo_samples"
+}

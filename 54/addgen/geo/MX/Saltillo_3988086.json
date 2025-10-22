@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Saltillo",
+  "geonameid": 3988086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.41662444289973,
+      "lon": -101.01082212370552,
+      "geoinfo": {
+        "display_name": "Saltillo, Coahuila, 27105, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saltillo",
+        "state": "Coahuila",
+        "postcode": "27105",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Saltillo, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.40872799610494,
+      "lon": -100.97277025329296,
+      "geoinfo": {
+        "display_name": "Calle Federico Gómez Santos, Saltillo, Coahuila, 25020, Mexico",
+        "road": "Calle Federico Gómez Santos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saltillo",
+        "state": "Coahuila",
+        "postcode": "25020",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "226, Calle Federico Gómez Santos, Saltillo, Coahuila, 25020, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:46.914753+00:00",
+  "_kind": "geo_samples"
+}

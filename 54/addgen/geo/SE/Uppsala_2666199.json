@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Uppsala",
+  "geonameid": 2666199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.88923142682161,
+      "lon": 17.65596975985896,
+      "geoinfo": {
+        "display_name": "Viktor Rydbergsgatan, Nyby, Uppsala, Uppsala kommun, Uppsala County, 754 30, Sweden",
+        "road": "Viktor Rydbergsgatan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nyby",
+        "city_district": null,
+        "city": "Uppsala",
+        "state": null,
+        "postcode": "754 30",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Viktor Rydbergsgatan, Uppsala, Sweden"
+    },
+    {
+      "lat": 59.87112285165468,
+      "lon": 17.63225194293314,
+      "geoinfo": {
+        "display_name": "29, Gamla Uppsalagatan, Höganäs, Svartbäcken, Uppsala, Uppsala kommun, Uppsala County, 753 33, Sweden",
+        "road": "Gamla Uppsalagatan",
+        "house_number": "29",
+        "neighbourhood": "Höganäs",
+        "suburb": "Svartbäcken",
+        "city_district": null,
+        "city": "Uppsala",
+        "state": null,
+        "postcode": "753 33",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "29, Gamla Uppsalagatan, Höganäs, Svartbäcken, Uppsala, Uppsala kommun, Uppsala County, 753 33, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:39.820606+00:00",
+  "_kind": "geo_samples"
+}

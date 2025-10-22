@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Weybridge",
+  "geonameid": 2634204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.410295064526075,
+      "lon": -0.45449994776125463,
+      "geoinfo": {
+        "display_name": "New Road, Charlton, Borough of Spelthorne, Surrey, England, TW17 0QQ, United Kingdom",
+        "road": "New Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borough of Spelthorne",
+        "state": "England",
+        "postcode": "TW17 0QQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "New Road, Weybridge, England, United Kingdom"
+    },
+    {
+      "lat": 51.38038151437377,
+      "lon": -0.3924498717408375,
+      "geoinfo": {
+        "display_name": "Esher Rugby Club, Maitland Close, Elmbridge, Surrey, England, KT12 3PH, United Kingdom",
+        "road": "Maitland Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "KT12 3PH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Esher Rugby Club, Maitland Close, Elmbridge, Surrey, England, KT12 3PH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:57.583103+00:00",
+  "_kind": "geo_samples"
+}

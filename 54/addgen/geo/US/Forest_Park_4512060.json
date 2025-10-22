@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Forest Park",
+  "geonameid": 4512060,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.286890878129284,
+      "lon": -84.52557995250052,
+      "geoinfo": {
+        "display_name": "Winton Woods North Campus, 1231, West Kemper Road, Forest Park Square, Forest Park, Hamilton County, Ohio, 45240, United States",
+        "road": "West Kemper Road",
+        "house_number": "1231",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forest Park",
+        "state": "Ohio",
+        "postcode": "45240",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1231 West Kemper Road, Forest Park, Ohio, United States"
+    },
+    {
+      "lat": 39.317955948345265,
+      "lon": -84.5294226200166,
+      "geoinfo": {
+        "display_name": "Crestview Avenue, Fairfield, Butler County, Ohio, 45014, United States",
+        "road": "Crestview Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairfield",
+        "state": "Ohio",
+        "postcode": "45014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "131, Crestview Avenue, Fairfield, Butler County, Ohio, 45014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:00.897443+00:00",
+  "_kind": "geo_samples"
+}

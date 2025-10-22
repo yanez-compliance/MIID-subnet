@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Megarine",
+  "geonameid": 2488716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.213184641223386,
+      "lon": 6.107207737335432,
+      "geoinfo": {
+        "display_name": "Magarine, Meggarine District, Touggourt, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Magarine",
+        "state": "Touggourt",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Megarine, Touggourt, Algeria"
+    },
+    {
+      "lat": 33.17085323146641,
+      "lon": 6.0805450407985,
+      "geoinfo": {
+        "display_name": "Zaouia El Abidia, Touggourt District, Touggourt, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Zaouia El Abidia",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Touggourt",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "048, Zaouia El Abidia, Touggourt District, 34717 Touggourt, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:10.495024+00:00",
+  "_kind": "geo_samples"
+}

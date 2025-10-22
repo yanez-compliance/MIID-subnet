@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Reinach",
+  "geonameid": 6698588,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.473631339236576,
+      "lon": 7.543237933649948,
+      "geoinfo": {
+        "display_name": "Hollenweg, Ettingen, Bezirk Arlesheim, Basel-Landschaft, 4107, Switzerland",
+        "road": "Hollenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ettingen",
+        "state": "Basel-Landschaft",
+        "postcode": "4107",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Hollenweg, Reinach, Basel-Landschaft, Switzerland"
+    },
+    {
+      "lat": 47.4547100176868,
+      "lon": 7.580590379001367,
+      "geoinfo": {
+        "display_name": "130c, Rüttimatt, Pfeffingen, Bezirk Arlesheim, Basel-Landschaft, 4148, Switzerland",
+        "road": null,
+        "house_number": "130c",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pfeffingen",
+        "state": "Basel-Landschaft",
+        "postcode": "4148",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Reinach, Basel-Landschaft, Switzerland"
+    },
+    {
+      "lat": 47.49477580841893,
+      "lon": 7.657370588941135,
+      "geoinfo": {
+        "display_name": "Prattelerweg, Schönmatt, Gempen, Bezirk Dorneck, Amtei Dorneck-Thierstein, Solothurn, 4145, Switzerland",
+        "road": "Prattelerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gempen",
+        "state": "Solothurn",
+        "postcode": "4145",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "400, Prattelerweg, Schönmatt, Gempen, Bezirk Dorneck, Amtei Dorneck-Thierstein, Solothurn, 4145, Switzerland"
+    },
+    {
+      "lat": 47.48060454486708,
+      "lon": 7.595441216049881,
+      "geoinfo": {
+        "display_name": "Aesch, Bezirk Arlesheim, Basel-Landschaft, 4147, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aesch",
+        "state": "Basel-Landschaft",
+        "postcode": "4147",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "529, Reinach, 4147 Basel-Landschaft, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:08:21.410214+00:00",
+  "_kind": "geo_samples"
+}

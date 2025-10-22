@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Upper Gilgil",
+  "geonameid": 197335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -0.2364213514093742,
+      "lon": 36.255199626993715,
+      "geoinfo": {
+        "display_name": "Ol Kalou, Nyandarua, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nyandarua",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Upper Gilgil, Nyandarua, Kenya"
+    },
+    {
+      "lat": -0.2295765120965785,
+      "lon": 36.23257669376825,
+      "geoinfo": {
+        "display_name": "Mugumo, Dundori ward, Bahati, Nakuru, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dundori ward",
+        "state": "Nakuru",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "569, Mugumo, Dundori ward, Bahati, 48122 Nakuru, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:37.181235+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tlaquiltenango",
+  "geonameid": 3515373,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.669632341645535,
+      "lon": -99.13909825848658,
+      "geoinfo": {
+        "display_name": "Tlaltizapan, Tlaltizapán de Zapata, Morelos, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaltizapan",
+        "state": "Morelos",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tlaquiltenango, Morelos, Mexico"
+    },
+    {
+      "lat": 18.64565665757431,
+      "lon": -99.19022086352659,
+      "geoinfo": {
+        "display_name": "Jojutla, Morelos, 62900, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Morelos",
+        "postcode": "62900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "765, Jojutla, Morelos, 62900, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:42.947436+00:00",
+  "_kind": "geo_samples"
+}

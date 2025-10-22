@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Satka",
+  "geonameid": 498418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.00472695738514,
+      "lon": 59.042682361220265,
+      "geoinfo": {
+        "display_name": "Satkinsky District, Chelyabinsk Oblast, Ural Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chelyabinsk Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Satka, Chelyabinsk Oblast, Russia"
+    },
+    {
+      "lat": 55.05253805185652,
+      "lon": 59.110822096657486,
+      "geoinfo": {
+        "display_name": "Satkinsky District, Chelyabinsk Oblast, Ural Federal District, 456914, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chelyabinsk Oblast",
+        "postcode": "456914",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "284, Satka, 456914 Chelyabinsk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:31.726778+00:00",
+  "_kind": "geo_samples"
+}

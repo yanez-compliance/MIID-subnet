@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Gorai",
+  "geonameid": 1270937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.257295477465462,
+      "lon": 72.74940960907705,
+      "geoinfo": {
+        "display_name": "Gorai, Mumbai, Mumbai Suburban, Maharashtra, 401106, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "postcode": "401106",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Gorai, Maharashtra, India"
+    },
+    {
+      "lat": 19.211279832886138,
+      "lon": 72.79714049144799,
+      "geoinfo": {
+        "display_name": "P/N Ward, Zone 4, Mumbai, Mumbai Suburban, Maharashtra, 400049, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "P/N Ward",
+        "city_district": "Zone 4",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "postcode": "400049",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "P/N Ward, Zone 4, Mumbai, Mumbai Suburban, Maharashtra, 400049, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:34:49.161643+00:00",
+  "_kind": "geo_samples"
+}

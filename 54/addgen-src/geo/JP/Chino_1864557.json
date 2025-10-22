@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Chino",
+  "geonameid": 1864557,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.96167413254005,
+      "lon": 138.1517404365619,
+      "geoinfo": {
+        "display_name": "Chino, Nagano Prefecture, 391-0013, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chino",
+        "state": null,
+        "postcode": "391-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Chino, Japan"
+    },
+    {
+      "lat": 35.982002638612066,
+      "lon": 138.1542481984746,
+      "geoinfo": {
+        "display_name": "Chino, Nagano Prefecture, 391-0013, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Chino",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chino",
+        "state": null,
+        "postcode": "391-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Chino, Nagano Prefecture, 391-0013, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:23.635661+00:00",
+  "_kind": "geo_samples"
+}

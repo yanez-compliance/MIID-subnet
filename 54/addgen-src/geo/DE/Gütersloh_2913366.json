@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gütersloh",
+  "geonameid": 2913366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.9025040483516,
+      "lon": 8.311774578212727,
+      "geoinfo": {
+        "display_name": "77a, Gütersloher Straße, Herzebrock, Herzebrock-Clarholz, Kreis Gütersloh, North Rhine-Westphalia, 33442, Germany",
+        "road": "Gütersloher Straße",
+        "house_number": "77a",
+        "neighbourhood": null,
+        "suburb": "Herzebrock",
+        "city_district": null,
+        "city": null,
+        "state": "North Rhine-Westphalia",
+        "postcode": "33442",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "77a Gütersloher Straße, Gütersloh, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.88533103142104,
+      "lon": 8.337193393225249,
+      "geoinfo": {
+        "display_name": "Kiebitzstraße, Gütersloh, Kreis Gütersloh, North Rhine-Westphalia, 33334, Germany",
+        "road": "Kiebitzstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gütersloh",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33334",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "303, Kiebitzstraße, Gütersloh, Kreis Gütersloh, North Rhine-Westphalia, 33334, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:35.271428+00:00",
+  "_kind": "geo_samples"
+}

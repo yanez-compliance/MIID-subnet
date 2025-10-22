@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sun Prairie",
+  "geonameid": 5275020,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.18459375748661,
+      "lon": -89.22837866211098,
+      "geoinfo": {
+        "display_name": "917, Frederick Street, Westview Heights, Sun Prairie, Dane County, Wisconsin, 53590, United States",
+        "road": "Frederick Street",
+        "house_number": "917",
+        "neighbourhood": "Westview Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sun Prairie",
+        "state": "Wisconsin",
+        "postcode": "53590",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "917 Frederick Street, Sun Prairie, Wisconsin, United States"
+    },
+    {
+      "lat": 43.19821151804283,
+      "lon": -89.265272685142,
+      "geoinfo": {
+        "display_name": "6391, Hayden Road, Schroeder's Field, Windsor, Dane County, Wisconsin, 53590, United States",
+        "road": "Hayden Road",
+        "house_number": "6391",
+        "neighbourhood": "Schroeder's Field",
+        "suburb": null,
+        "city_district": null,
+        "city": "Windsor",
+        "state": "Wisconsin",
+        "postcode": "53590",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6391, Hayden Road, Schroeder's Field, Windsor, Dane County, Wisconsin, 53590, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:13.696471+00:00",
+  "_kind": "geo_samples"
+}

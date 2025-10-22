@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Corpus Christi",
+  "geonameid": 4683416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.76555788109134,
+      "lon": -97.40211130643874,
+      "geoinfo": {
+        "display_name": "Montessori School of Corpus Christi, Southern Street, Corpus Christi, Nueces County, Texas, 78404, United States",
+        "road": "Southern Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Corpus Christi",
+        "state": "Texas",
+        "postcode": "78404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southern Street, Corpus Christi, Texas, United States"
+    },
+    {
+      "lat": 27.77466349295468,
+      "lon": -97.40062468009472,
+      "geoinfo": {
+        "display_name": "1645, 7th Street, Downtown, Corpus Christi, Nueces County, Texas, 78404, United States",
+        "road": "7th Street",
+        "house_number": "1645",
+        "neighbourhood": null,
+        "suburb": "Downtown",
+        "city_district": null,
+        "city": "Corpus Christi",
+        "state": "Texas",
+        "postcode": "78404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1645, 7th Street, Downtown, Corpus Christi, Nueces County, Texas, 78404, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:48.486047+00:00",
+  "_kind": "geo_samples"
+}

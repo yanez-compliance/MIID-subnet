@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zitong",
+  "geonameid": 1783700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.2051042821731,
+      "lon": 105.86199879831454,
+      "geoinfo": {
+        "display_name": "Tongnan, Tongnan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongnan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zitong, Chongqing, China"
+    },
+    {
+      "lat": 30.16309894096402,
+      "lon": 105.87269458927474,
+      "geoinfo": {
+        "display_name": "Chanye Avenue, Tongnan, Tongnan District, Chongqing, China",
+        "road": "Chanye Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongnan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "806, Chanye Avenue, Tongnan, Tongnan District, 06398 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:50:30.197436+00:00",
+  "_kind": "geo_samples"
+}

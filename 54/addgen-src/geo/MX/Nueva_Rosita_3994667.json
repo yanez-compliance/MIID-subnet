@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Nueva Rosita",
+  "geonameid": 3994667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.913200243073945,
+      "lon": -101.24411021590042,
+      "geoinfo": {
+        "display_name": "Nueva Rosita, San Juan de Sabinas, Coahuila, 25800, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nueva Rosita",
+        "state": "Coahuila",
+        "postcode": "25800",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Nueva Rosita, Coahuila, Mexico"
+    },
+    {
+      "lat": 27.943910378563913,
+      "lon": -101.25327101142429,
+      "geoinfo": {
+        "display_name": "Paso del Coyote, San Juan de Sabinas, Coahuila, 25800, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": "25800",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "914, Paso del Coyote, San Juan de Sabinas, Coahuila, 25800, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:32:53.727191+00:00",
+  "_kind": "geo_samples"
+}

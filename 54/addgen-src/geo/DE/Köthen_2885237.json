@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Köthen",
+  "geonameid": 2885237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.71673594178402,
+      "lon": 12.005584311327349,
+      "geoinfo": {
+        "display_name": "Großbadegast, Südliches Anhalt, Anhalt-Bitterfeld, Saxony-Anhalt, 06369, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Großbadegast",
+        "state": "Saxony-Anhalt",
+        "postcode": "06369",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Köthen, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.75524250712536,
+      "lon": 11.988228019618063,
+      "geoinfo": {
+        "display_name": "34, Friedrichstraße, Köthen, Köthen (Anhalt), Anhalt-Bitterfeld, Saxony-Anhalt, 06366, Germany",
+        "road": "Friedrichstraße",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": "Köthen",
+        "city_district": "Köthen",
+        "city": "Köthen (Anhalt)",
+        "state": "Saxony-Anhalt",
+        "postcode": "06366",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "34, Friedrichstraße, Köthen, Köthen (Anhalt), Anhalt-Bitterfeld, Saxony-Anhalt, 06366, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:28.576577+00:00",
+  "_kind": "geo_samples"
+}

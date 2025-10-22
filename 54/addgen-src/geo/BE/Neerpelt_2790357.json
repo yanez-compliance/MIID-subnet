@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Neerpelt",
+  "geonameid": 2790357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.22153531822835,
+      "lon": 5.509829718551468,
+      "geoinfo": {
+        "display_name": "Jachtweg, Sint-Huibrechts-Lille, Pelt, Maaseik, Limburg, 3910, Belgium",
+        "road": "Jachtweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pelt",
+        "state": "Limburg",
+        "postcode": "3910",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Jachtweg, Neerpelt, Limburg, Belgium"
+    },
+    {
+      "lat": 51.20606017378409,
+      "lon": 5.442809510068854,
+      "geoinfo": {
+        "display_name": "60, Herent, Neerpelt, Pelt, Maaseik, Limburg, 3910, Belgium",
+        "road": "Herent",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Neerpelt",
+        "city": "Pelt",
+        "state": "Limburg",
+        "postcode": "3910",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "60, Herent, Neerpelt, Pelt, Maaseik, Limburg, 3910, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:46.017373+00:00",
+  "_kind": "geo_samples"
+}

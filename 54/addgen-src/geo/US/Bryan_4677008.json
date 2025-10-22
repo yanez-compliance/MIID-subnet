@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bryan",
+  "geonameid": 4677008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.689263298159403,
+      "lon": -96.35005533977441,
+      "geoinfo": {
+        "display_name": "1110, North Earl Rudder Freeway Frontage Road, Bryan, Brazos County, Texas, 77808, United States",
+        "road": "North Earl Rudder Freeway Frontage Road",
+        "house_number": "1110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bryan",
+        "state": "Texas",
+        "postcode": "77808",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1110 North Earl Rudder Freeway Frontage Road, Bryan, Texas, United States"
+    },
+    {
+      "lat": 30.67851413188813,
+      "lon": -96.32651576120506,
+      "geoinfo": {
+        "display_name": "Elliott Street, Boonville, Bryan, Brazos County, Texas, 77802, United States",
+        "road": "Elliott Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bryan",
+        "state": "Texas",
+        "postcode": "77802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "688, Elliott Street, Boonville, Bryan, Brazos County, Texas, 77802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:37.764304+00:00",
+  "_kind": "geo_samples"
+}

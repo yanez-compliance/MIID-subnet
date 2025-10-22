@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brockton",
+  "geonameid": 4931429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.087722667971484,
+      "lon": -70.97912804989731,
+      "geoinfo": {
+        "display_name": "945, Centre Street, Brockton, Plymouth County, Massachusetts, 02302, United States",
+        "road": "Centre Street",
+        "house_number": "945",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brockton",
+        "state": "Massachusetts",
+        "postcode": "02302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "945 Centre Street, Brockton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.066798745717044,
+      "lon": -71.02636845618622,
+      "geoinfo": {
+        "display_name": "201, Tribou Street, Brockton, Plymouth County, Massachusetts, 02303, United States",
+        "road": "Tribou Street",
+        "house_number": "201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brockton",
+        "state": "Massachusetts",
+        "postcode": "02303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "201, Tribou Street, Brockton, Plymouth County, Massachusetts, 02303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:09.684981+00:00",
+  "_kind": "geo_samples"
+}

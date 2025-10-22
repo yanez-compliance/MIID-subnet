@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Fermo",
+  "geonameid": 3177099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.16027815691685,
+      "lon": 13.75641908935344,
+      "geoinfo": {
+        "display_name": "Via Pompeiana, Sant'Andrea, Fermo, Marche, 63900, Italy",
+        "road": "Via Pompeiana",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sant'Andrea",
+        "city_district": null,
+        "city": "Fermo",
+        "state": "Marche",
+        "postcode": "63900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pompeiana, Fermo, Marche, Italy"
+    },
+    {
+      "lat": 43.20095291740824,
+      "lon": 13.73653898946084,
+      "geoinfo": {
+        "display_name": "Via Colle Vissiano, San Marco, Fermo, 63900, Italy",
+        "road": "Via Colle Vissiano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fermo",
+        "state": null,
+        "postcode": "63900",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "109, Via Colle Vissiano, San Marco, Fermo, 63900, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:18.728568+00:00",
+  "_kind": "geo_samples"
+}

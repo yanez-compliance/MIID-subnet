@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Charef",
+  "geonameid": 2501767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.63185465063911,
+      "lon": 2.7636902281662117,
+      "geoinfo": {
+        "display_name": "Charef, Charef District, Djelfa, 17015, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charef",
+        "state": "Djelfa",
+        "postcode": "17015",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Charef, Djelfa, Algeria"
+    },
+    {
+      "lat": 34.6478936057194,
+      "lon": 2.7545407126330406,
+      "geoinfo": {
+        "display_name": "RN 46, Ain Lahdjar, Charef, Charef District, Djelfa, Algeria",
+        "road": "RN 46",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charef",
+        "state": "Djelfa",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 46, Ain Lahdjar, Charef, Charef District, 62940 Djelfa, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:03.809021+00:00",
+  "_kind": "geo_samples"
+}

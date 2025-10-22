@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Euclid",
+  "geonameid": 5172485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.48815296987763,
+      "lon": -81.51880406424795,
+      "geoinfo": {
+        "display_name": "14473, Washington Boulevard, University Heights, Cuyahoga County, Ohio, 44118, United States",
+        "road": "Washington Boulevard",
+        "house_number": "14473",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "University Heights",
+        "state": "Ohio",
+        "postcode": "44118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14473 Washington Boulevard, South Euclid, Ohio, United States"
+    },
+    {
+      "lat": 41.49679486089099,
+      "lon": -81.47439524376746,
+      "geoinfo": {
+        "display_name": "Fairwood Drive, Pepper Pike, Cuyahoga County, Ohio, 44124, United States",
+        "road": "Fairwood Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pepper Pike",
+        "state": "Ohio",
+        "postcode": "44124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "506, Fairwood Drive, Pepper Pike, Cuyahoga County, Ohio, 44124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:12.742356+00:00",
+  "_kind": "geo_samples"
+}

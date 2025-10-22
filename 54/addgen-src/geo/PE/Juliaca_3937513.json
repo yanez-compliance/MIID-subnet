@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Juliaca",
+  "geonameid": 3937513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -15.480356839398018,
+      "lon": -70.09243916105491,
+      "geoinfo": {
+        "display_name": "Avenida San Martín, Juliaca, Province of San Román, Puno, 21104, Peru",
+        "road": "Avenida San Martín",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Juliaca",
+        "state": "Puno",
+        "postcode": "21104",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Avenida San Martín, Juliaca, Puno, Peru"
+    },
+    {
+      "lat": -15.476289708007316,
+      "lon": -70.1281031960134,
+      "geoinfo": {
+        "display_name": "Pasaje Vilcanota, San Miguel, Province of San Román, Puno, 21100, Peru",
+        "road": "Pasaje Vilcanota",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Miguel",
+        "city_district": null,
+        "city": "San Miguel",
+        "state": "Puno",
+        "postcode": "21100",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "275, Pasaje Vilcanota, San Miguel, Province of San Román, Puno, 21100, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:31.143584+00:00",
+  "_kind": "geo_samples"
+}

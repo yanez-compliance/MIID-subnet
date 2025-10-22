@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Algés",
+  "geonameid": 2271985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.67516337713703,
+      "lon": -9.22615047885177,
+      "geoinfo": {
+        "display_name": "Rua 1º de Maio, Terminal de Líquidos do Porto dos Buxos - OZ, Caparica e Trafaria, Almada, Setúbal, 2825-871, Portugal",
+        "road": "Rua 1º de Maio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Caparica e Trafaria",
+        "city": "Almada",
+        "state": null,
+        "postcode": "2825-871",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua 1º de Maio, Algés, Portugal"
+    },
+    {
+      "lat": 38.68453851187696,
+      "lon": -9.199182050549444,
+      "geoinfo": {
+        "display_name": "Montalvão, Alfazina, Caparica e Trafaria, Almada, Setúbal, 2825-015, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Alfazina",
+        "suburb": null,
+        "city_district": "Caparica e Trafaria",
+        "city": "Almada",
+        "state": null,
+        "postcode": "2825-015",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Montalvão, Alfazina, Caparica e Trafaria, Almada, Setúbal, 2825-015, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:40:27.878973+00:00",
+  "_kind": "geo_samples"
+}

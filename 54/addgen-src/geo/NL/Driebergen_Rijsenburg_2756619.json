@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Driebergen-Rijsenburg",
+  "geonameid": 2756619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.04567522450465,
+      "lon": 5.27250854662364,
+      "geoinfo": {
+        "display_name": "2, Zocherdreef, Driebergen-Rijsenburg, Utrechtse Heuvelrug, Utrecht, Netherlands, 3972 DN, Netherlands",
+        "road": "Zocherdreef",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Driebergen-Rijsenburg",
+        "state": "Utrecht",
+        "postcode": "3972 DN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "2 Zocherdreef, Driebergen-Rijsenburg, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.03967158653362,
+      "lon": 5.308371763131398,
+      "geoinfo": {
+        "display_name": "Beukenlaan, Boswijk, Doorn, Utrechtse Heuvelrug, Utrecht, Netherlands, 3941 BA, Netherlands",
+        "road": "Beukenlaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doorn",
+        "state": "Utrecht",
+        "postcode": "3941 BA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "807, Beukenlaan, Boswijk, Doorn, Utrechtse Heuvelrug, Utrecht, Netherlands, 3941 BA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:51.221848+00:00",
+  "_kind": "geo_samples"
+}

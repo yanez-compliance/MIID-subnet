@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Rawson",
+  "geonameid": 3839307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -43.32471265199061,
+      "lon": -65.10512671314126,
+      "geoinfo": {
+        "display_name": "Municipio de Rawson, Departamento Rawson, Chubut Province, 9103, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chubut Province",
+        "postcode": "9103",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Rawson, Chubut Province, Argentina"
+    },
+    {
+      "lat": -43.31929002190918,
+      "lon": -65.13649932928234,
+      "geoinfo": {
+        "display_name": "Rawson, Municipio de Rawson, Departamento Rawson, Chubut, U9103, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rawson",
+        "state": "Chubut",
+        "postcode": "U9103",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "477, Rawson, Municipio de Rawson, Departamento Rawson, Chubut, U9103, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:40.441337+00:00",
+  "_kind": "geo_samples"
+}

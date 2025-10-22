@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Shepparton",
+  "geonameid": 2149645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -36.36609273612546,
+      "lon": 145.34620782048538,
+      "geoinfo": {
+        "display_name": "36, Paisley Crescent, Mooroopna, City of Greater Shepparton, Victoria, 3629, Australia",
+        "road": "Paisley Crescent",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mooroopna",
+        "state": "Victoria",
+        "postcode": "3629",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "36 Paisley Crescent, Shepparton, Victoria, Australia"
+    },
+    {
+      "lat": -36.36109340156115,
+      "lon": 145.44449262912534,
+      "geoinfo": {
+        "display_name": "New Dookie Road, Grahamvale, City of Greater Shepparton, Victoria, 3631, Australia",
+        "road": "New Dookie Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grahamvale",
+        "city_district": "Grahamvale",
+        "city": null,
+        "state": "Victoria",
+        "postcode": "3631",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "997, New Dookie Road, Grahamvale, City of Greater Shepparton, Victoria, 3631, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:48.029769+00:00",
+  "_kind": "geo_samples"
+}

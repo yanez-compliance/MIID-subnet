@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Orillia",
+  "geonameid": 6094325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.59243899656643,
+      "lon": -79.4551216344355,
+      "geoinfo": {
+        "display_name": "University Avenue, Orillia, Central Ontario, Ontario, L3V 8B3, Canada",
+        "road": "University Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orillia",
+        "state": "Ontario",
+        "postcode": "L3V 8B3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "University Avenue, Orillia, Ontario, Canada"
+    },
+    {
+      "lat": 44.60475039438919,
+      "lon": -79.40857701517807,
+      "geoinfo": {
+        "display_name": "210, Gill Street, Orillia, Central Ontario, Ontario, L3V 4C8, Canada",
+        "road": "Gill Street",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orillia",
+        "state": "Ontario",
+        "postcode": "L3V 4C8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "210, Gill Street, Orillia, Central Ontario, Ontario, L3V 4C8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:36.430447+00:00",
+  "_kind": "geo_samples"
+}

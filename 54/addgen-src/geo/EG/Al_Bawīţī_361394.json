@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Bawīţī",
+  "geonameid": 361394,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.372285326925716,
+      "lon": 28.837750175769862,
+      "geoinfo": {
+        "display_name": "Bawiti, Giza, 12935, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bawiti",
+        "state": "Giza",
+        "postcode": "12935",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Bawīţī, Giza, Egypt"
+    },
+    {
+      "lat": 28.364054505404138,
+      "lon": 28.912021864637296,
+      "geoinfo": {
+        "display_name": "Northern Oases, Giza, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northern Oases",
+        "state": "Giza",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "233, Northern Oases, 75541 Giza, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:28.104380+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Carmarthen",
+  "geonameid": 2653755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.848947190717595,
+      "lon": -4.266138932823819,
+      "geoinfo": {
+        "display_name": "Llangunnor, Carmarthen, Carmarthenshire, Wales, SA32 8AQ, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llangunnor",
+        "city_district": null,
+        "city": "Carmarthen",
+        "state": "Wales",
+        "postcode": "SA32 8AQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Llangunnor, Carmarthen, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.8217375431943,
+      "lon": -4.329913111746001,
+      "geoinfo": {
+        "display_name": "B4312, Llangain, Carmarthenshire, Wales, SA33 5BD, United Kingdom",
+        "road": "B4312",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llangain",
+        "city_district": null,
+        "city": "Llangain",
+        "state": "Wales",
+        "postcode": "SA33 5BD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "B4312, Carmarthen, SA33 5BD Wales, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:23.838633+00:00",
+  "_kind": "geo_samples"
+}

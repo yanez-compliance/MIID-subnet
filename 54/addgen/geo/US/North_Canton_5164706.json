@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Canton",
+  "geonameid": 5164706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.899330501254354,
+      "lon": -81.41828019998123,
+      "geoinfo": {
+        "display_name": "3889, Orion Road Northwest, Stark County, Ohio, 44720, United States",
+        "road": "Orion Road Northwest",
+        "house_number": "3889",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3889 Orion Road Northwest, North Canton, Ohio, United States"
+    },
+    {
+      "lat": 40.85889978410897,
+      "lon": -81.35959116407537,
+      "geoinfo": {
+        "display_name": "1147, Buena Vista Street Northeast, Canton, Stark County, Ohio, 44714, United States",
+        "road": "Buena Vista Street Northeast",
+        "house_number": "1147",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton",
+        "state": "Ohio",
+        "postcode": "44714",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1147, Buena Vista Street Northeast, Canton, Stark County, Ohio, 44714, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:17.971532+00:00",
+  "_kind": "geo_samples"
+}

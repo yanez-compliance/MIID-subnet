@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Clair Shores",
+  "geonameid": 5010978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.467070405812024,
+      "lon": -82.92207250975567,
+      "geoinfo": {
+        "display_name": "Office Depot, 19001, Beaconsfield Avenue, Eastpointe, Macomb County, Michigan, 48021, United States",
+        "road": "Beaconsfield Avenue",
+        "house_number": "19001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eastpointe",
+        "state": "Michigan",
+        "postcode": "48021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19001 Beaconsfield Avenue, Saint Clair Shores, Michigan, United States"
+    },
+    {
+      "lat": 42.48857548893764,
+      "lon": -82.83835266450043,
+      "geoinfo": {
+        "display_name": "Macomb County, Michigan, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Michigan",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "364, Macomb County, 74517 Michigan, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:00.908997+00:00",
+  "_kind": "geo_samples"
+}

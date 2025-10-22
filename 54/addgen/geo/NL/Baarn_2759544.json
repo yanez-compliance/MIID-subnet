@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Baarn",
+  "geonameid": 2759544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.239935172584424,
+      "lon": 5.268631077286355,
+      "geoinfo": {
+        "display_name": "Wakkerendijk, Zuidpolder, Eemnes, Utrecht, Netherlands, 3755 DE, Netherlands",
+        "road": "Wakkerendijk",
+        "house_number": null,
+        "neighbourhood": "Zuidpolder",
+        "suburb": null,
+        "city_district": null,
+        "city": "Eemnes",
+        "state": "Utrecht",
+        "postcode": "3755 DE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Wakkerendijk, Baarn, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.20679987386388,
+      "lon": 5.330217692294051,
+      "geoinfo": {
+        "display_name": "Grimmesteinseweg, Baarn, Utrecht, Netherlands, 3828 NZ, Netherlands",
+        "road": "Grimmesteinseweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Baarn",
+        "city": "Baarn",
+        "state": "Utrecht",
+        "postcode": "3828 NZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "258, Grimmesteinseweg, Baarn, Utrecht, Netherlands, 3828 NZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:38.080319+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Aibling",
+  "geonameid": 2953558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.89250558651373,
+      "lon": 12.025421118590172,
+      "geoinfo": {
+        "display_name": "4a, Thalacker, Ellmosen, Bad Aibling, Landkreis Rosenheim, Bavaria, 83043, Germany",
+        "road": null,
+        "house_number": "4a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Aibling",
+        "state": "Bavaria",
+        "postcode": "83043",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bad Aibling, Bavaria, Germany"
+    },
+    {
+      "lat": 47.82665669621634,
+      "lon": 12.0104164884088,
+      "geoinfo": {
+        "display_name": "Eulenau, Bad Aibling, Landkreis Rosenheim, Bavaria, 83043, Germany",
+        "road": "Eulenau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Aibling",
+        "state": "Bavaria",
+        "postcode": "83043",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "638, Eulenau, Bad Aibling, Landkreis Rosenheim, Bavaria, 83043, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:30.173682+00:00",
+  "_kind": "geo_samples"
+}

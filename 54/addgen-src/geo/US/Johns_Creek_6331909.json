@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Johns Creek",
+  "geonameid": 6331909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.059172805358216,
+      "lon": -84.22622976244858,
+      "geoinfo": {
+        "display_name": "350, Creekside Court, Johns Creek, Fulton County, Georgia, 30022, United States",
+        "road": "Creekside Court",
+        "house_number": "350",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Johns Creek",
+        "state": "Georgia",
+        "postcode": "30022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "350 Creekside Court, Johns Creek, Georgia, United States"
+    },
+    {
+      "lat": 33.9976906030617,
+      "lon": -84.1780070229937,
+      "geoinfo": {
+        "display_name": "4099, Wood Acres Court, Howell Wood, Duluth, Gwinnett County, Georgia, 30096, United States",
+        "road": "Wood Acres Court",
+        "house_number": "4099",
+        "neighbourhood": "Howell Wood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Duluth",
+        "state": "Georgia",
+        "postcode": "30096",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4099, Wood Acres Court, Howell Wood, Duluth, Gwinnett County, Georgia, 30096, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:02.732576+00:00",
+  "_kind": "geo_samples"
+}

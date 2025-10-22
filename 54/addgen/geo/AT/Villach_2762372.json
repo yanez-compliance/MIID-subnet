@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Villach",
+  "geonameid": 2762372,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.580523114361306,
+      "lon": 13.87124087348923,
+      "geoinfo": {
+        "display_name": "Finkenstein, Finkenstein am Faaker See, Bezirk Villach-Land, Carinthia, 9584, Austria",
+        "road": "Finkenstein",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Finkenstein am Faaker See",
+        "state": "Carinthia",
+        "postcode": "9584",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "775, Finkenstein, Finkenstein am Faaker See, Bezirk Villach-Land, Carinthia, 9584, Austria"
+    },
+    {
+      "lat": 46.596178427102444,
+      "lon": 13.84941167344212,
+      "geoinfo": {
+        "display_name": "Parkplatz GAV Center, Lehmgrubenweg, Tschinowitsch, Auen, Villach, Carinthia, 9500, Austria",
+        "road": "Lehmgrubenweg",
+        "house_number": null,
+        "neighbourhood": "Tschinowitsch",
+        "suburb": "Auen",
+        "city_district": null,
+        "city": "Villach",
+        "state": "Carinthia",
+        "postcode": "9500",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "778, Lehmgrubenweg, Villach, 9500 Carinthia, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:03.387015+00:00",
+  "_kind": "geo_samples"
+}

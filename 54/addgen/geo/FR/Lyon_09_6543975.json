@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 09",
+  "geonameid": 6543975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.73784523530338,
+      "lon": 4.834086578369437,
+      "geoinfo": {
+        "display_name": "Simone de Beauvoir, Rue des Girondins, Les Girondins, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France",
+        "road": "Rue des Girondins",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerland",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue des Girondins, Lyon 09, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.77936819290481,
+      "lon": 4.797796006744213,
+      "geoinfo": {
+        "display_name": "Samse Lyon Vaise, Impasse des Jardins, Vaise, 9th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69009, France",
+        "road": "Impasse des Jardins",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vaise",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69009",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Samse Lyon Vaise, Impasse des Jardins, Vaise, 9th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69009, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:22.974005+00:00",
+  "_kind": "geo_samples"
+}

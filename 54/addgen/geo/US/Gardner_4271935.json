@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gardner",
+  "geonameid": 4271935,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.81301497356645,
+      "lon": -94.92658498542443,
+      "geoinfo": {
+        "display_name": "East Washington Street, Gardner, Johnson County, Kansas, 66030, United States",
+        "road": "East Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gardner",
+        "state": "Kansas",
+        "postcode": "66030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Washington Street, Gardner, Kansas, United States"
+    },
+    {
+      "lat": 38.84267500927157,
+      "lon": -94.95344849383734,
+      "geoinfo": {
+        "display_name": "West 159th Street, Gardner, Johnson County, Kansas, 66030, United States",
+        "road": "West 159th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gardner",
+        "state": "Kansas",
+        "postcode": "66030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 159th Street, Gardner, Johnson County, Kansas, 66030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:24.719761+00:00",
+  "_kind": "geo_samples"
+}

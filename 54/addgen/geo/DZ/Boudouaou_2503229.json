@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Boudouaou",
+  "geonameid": 2503229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.6860906145308,
+      "lon": 3.391786719459667,
+      "geoinfo": {
+        "display_name": "CW 122, Kara Mostefa, Ouled Moussa, Khemis El Khechna District, Boumerdes, 35012, Algeria",
+        "road": "CW 122",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ouled Moussa",
+        "state": "Boumerdes",
+        "postcode": "35012",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "CW 122, Boudouaou, Boumerdes, Algeria"
+    },
+    {
+      "lat": 36.73472549878479,
+      "lon": 3.3781356537141987,
+      "geoinfo": {
+        "display_name": "Bidonvilles 3, AADL 5000 logements Boudouaou, Mohamed El Bey, Reghaia, Rouiba District, Algiers, 35400, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "AADL 5000 logements Boudouaou",
+        "city_district": null,
+        "city": "Reghaia",
+        "state": "Algiers",
+        "postcode": "35400",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Bidonvilles 3, AADL 5000 logements Boudouaou, Mohamed El Bey, Reghaia, Rouiba District, Algiers, 35400, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:28.639492+00:00",
+  "_kind": "geo_samples"
+}

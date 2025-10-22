@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Meerbusch",
+  "geonameid": 2872504,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.23452701067637,
+      "lon": 6.623520654484512,
+      "geoinfo": {
+        "display_name": "33, Moerser Straße, Kaarst, Rhein-Kreis Neuss, North Rhine-Westphalia, 41564, Germany",
+        "road": "Moerser Straße",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kaarst",
+        "city": "Kaarst",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41564",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "33 Moerser Straße, Meerbusch, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.246323432451035,
+      "lon": 6.618780917469283,
+      "geoinfo": {
+        "display_name": "Auf der Heide, Hardt, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47877, Germany",
+        "road": "Auf der Heide",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47877",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "391, Auf der Heide, Hardt, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47877, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:36.128586+00:00",
+  "_kind": "geo_samples"
+}

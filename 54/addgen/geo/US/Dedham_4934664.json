@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dedham",
+  "geonameid": 4934664,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.23072228303925,
+      "lon": -71.15930759509438,
+      "geoinfo": {
+        "display_name": "19, Hermaine Avenue, Endicott, Dedham, Norfolk County, Massachusetts, 02026, United States",
+        "road": "Hermaine Avenue",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dedham",
+        "state": "Massachusetts",
+        "postcode": "02026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19 Hermaine Avenue, Dedham, Massachusetts, United States"
+    },
+    {
+      "lat": 42.230154405694186,
+      "lon": -71.2064008625725,
+      "geoinfo": {
+        "display_name": "Lowell Road, Westwood, Norfolk County, Massachusetts, 02027, United States",
+        "road": "Lowell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westwood",
+        "state": "Massachusetts",
+        "postcode": "02027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "650, Lowell Road, Westwood, Norfolk County, Massachusetts, 02027, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:12.189613+00:00",
+  "_kind": "geo_samples"
+}

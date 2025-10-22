@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sherrelwood",
+  "geonameid": 5438567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.8368179536697,
+      "lon": -104.94454001976915,
+      "geoinfo": {
+        "display_name": "Thornton, Adams County, Colorado, 80024, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thornton",
+        "state": "Colorado",
+        "postcode": "80024",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sherrelwood, Colorado, United States"
+    },
+    {
+      "lat": 39.842156041674215,
+      "lon": -104.9618856881334,
+      "geoinfo": {
+        "display_name": "Niver Canal Trail, Welby, Adams County, Colorado, 80229, United States",
+        "road": "Niver Canal Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "407, Niver Canal Trail, Welby, Adams County, Colorado, 80229, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:47.971069+00:00",
+  "_kind": "geo_samples"
+}

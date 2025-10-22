@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Güiria",
+  "geonameid": 3639725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.534259467081025,
+      "lon": -62.29790528481523,
+      "geoinfo": {
+        "display_name": "Sucre State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sucre State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Güiria, Sucre State, Venezuela"
+    },
+    {
+      "lat": 10.612266121078154,
+      "lon": -62.30578627960253,
+      "geoinfo": {
+        "display_name": "Güiria, Parroquia Güiria, Municipio Valdez, Sucre State, 6161, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Güiria",
+        "state": "Sucre State",
+        "postcode": "6161",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "285, Güiria, Parroquia Güiria, Municipio Valdez, Sucre State, 6161, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:10.252199+00:00",
+  "_kind": "geo_samples"
+}

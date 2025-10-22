@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Dejvice",
+  "geonameid": 3077216,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.09536991244382,
+      "lon": 14.393062239941381,
+      "geoinfo": {
+        "display_name": "Milady Horákové, Střešovice, Prague, obvod Praha 6, Capital City of Prague, Prague, 160 41, Czechia",
+        "road": "Milady Horákové",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Střešovice",
+        "city_district": "obvod Praha 6",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "160 41",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Milady Horákové, Dejvice, Prague, Czechia"
+    },
+    {
+      "lat": 50.08189470233742,
+      "lon": 14.439914460270977,
+      "geoinfo": {
+        "display_name": "438/1, Vozová, Žižkov, Prague, obvod Praha 3, Capital City of Prague, Prague, 130 00, Czechia",
+        "road": "Vozová",
+        "house_number": "438/1",
+        "neighbourhood": null,
+        "suburb": "Žižkov",
+        "city_district": "obvod Praha 3",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "130 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "438/1, Vozová, Žižkov, Prague, obvod Praha 3, Capital City of Prague, Prague, 130 00, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:59.997098+00:00",
+  "_kind": "geo_samples"
+}

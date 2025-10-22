@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Capalaba",
+  "geonameid": 2172434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.521086161271402,
+      "lon": 153.18735776537312,
+      "geoinfo": {
+        "display_name": "Pittwin Road North, Capalaba, Greater Brisbane, Queensland, 4157, Australia",
+        "road": "Pittwin Road North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Capalaba",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4157",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Pittwin Road North, Capalaba, Queensland, Australia"
+    },
+    {
+      "lat": -27.564423525036997,
+      "lon": 153.19571629014987,
+      "geoinfo": {
+        "display_name": "Avalon Road, Sheldon, Greater Brisbane, Queensland, 4157, Australia",
+        "road": "Avalon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sheldon",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4157",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "505, Avalon Road, Sheldon, Greater Brisbane, Queensland, 4157, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:05.253861+00:00",
+  "_kind": "geo_samples"
+}

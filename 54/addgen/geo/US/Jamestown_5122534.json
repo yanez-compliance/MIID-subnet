@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jamestown",
+  "geonameid": 5122534,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.08718299084997,
+      "lon": -79.26258115016832,
+      "geoinfo": {
+        "display_name": "26, Hillcrest Avenue, Jamestown, Town of Ellicott, Chautauqua County, New York, 14701, United States",
+        "road": "Hillcrest Avenue",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jamestown",
+        "state": "New York",
+        "postcode": "14701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "26 Hillcrest Avenue, Jamestown, New York, United States"
+    },
+    {
+      "lat": 42.120628727325354,
+      "lon": -79.23179495533651,
+      "geoinfo": {
+        "display_name": "Town of Ellicott, Chautauqua County, New York, 14702, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "14702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "120, Town of Ellicott, Chautauqua County, New York, 14702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:18.955572+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Universal City",
+  "geonameid": 4738574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.509931574410032,
+      "lon": -98.26447898318004,
+      "geoinfo": {
+        "display_name": "Schertz, Bexar County, Texas, 78150, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schertz",
+        "state": "Texas",
+        "postcode": "78150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Universal City, Texas, United States"
+    },
+    {
+      "lat": 29.526683051794265,
+      "lon": -98.32083550475267,
+      "geoinfo": {
+        "display_name": "9805, Shawnee Bluff, Converse, Bexar County, Texas, 78109, United States",
+        "road": "Shawnee Bluff",
+        "house_number": "9805",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Converse",
+        "state": "Texas",
+        "postcode": "78109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9805, Shawnee Bluff, Converse, Bexar County, Texas, 78109, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:19.124999+00:00",
+  "_kind": "geo_samples"
+}

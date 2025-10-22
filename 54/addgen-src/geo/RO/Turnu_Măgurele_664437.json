@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Turnu Măgurele",
+  "geonameid": 664437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.71691331132714,
+      "lon": 24.82936085326284,
+      "geoinfo": {
+        "display_name": "Turnu Măgurele, Teleorman, 145200, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Turnu Măgurele",
+        "state": null,
+        "postcode": "145200",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Turnu Măgurele, Romania"
+    },
+    {
+      "lat": 43.75193121414324,
+      "lon": 24.812112104414936,
+      "geoinfo": {
+        "display_name": "DN54, Islaz, Teleorman, 147175, Romania",
+        "road": "DN54",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Islaz",
+        "state": null,
+        "postcode": "147175",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "DN54, 147175 Turnu Măgurele, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T09:24:00.517917+00:00",
+  "_kind": "geo_samples"
+}

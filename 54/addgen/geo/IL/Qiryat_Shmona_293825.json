@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Qiryat Shmona",
+  "geonameid": 293825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.17821584105482,
+      "lon": 35.595927651344844,
+      "geoinfo": {
+        "display_name": "En Na`ima, 9778, Galil Elyon Regional Council, Safed Subdistrict, North District, 1214500, Israel",
+        "road": "9778",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galil Elyon Regional Council",
+        "state": "North District",
+        "postcode": "1214500",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "9778, Qiryat Shmona, North District, Israel"
+    },
+    {
+      "lat": 33.20555514268543,
+      "lon": 35.58993148005633,
+      "geoinfo": {
+        "display_name": "HaVradim, Kiryat Shmona, Safed Subdistrict, North District, 1102440, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "HaVradim",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kiryat Shmona",
+        "state": "North District",
+        "postcode": "1102440",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "908, HaVradim, Kiryat Shmona, Safed Subdistrict, North District, 1102440, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:45.026502+00:00",
+  "_kind": "geo_samples"
+}

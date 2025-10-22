@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Quincy",
+  "geonameid": 4948247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.26999407004127,
+      "lon": -71.04052741977972,
+      "geoinfo": {
+        "display_name": "Presidents Golf Course, 357, Squantum Street, East Milton, Quincy, Norfolk County, Massachusetts, 02171, United States",
+        "road": "Squantum Street",
+        "house_number": "357",
+        "neighbourhood": "East Milton",
+        "suburb": null,
+        "city_district": null,
+        "city": "Quincy",
+        "state": "Massachusetts",
+        "postcode": "02171",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "357 Squantum Street, Quincy, Massachusetts, United States"
+    },
+    {
+      "lat": 42.255024367397304,
+      "lon": -70.96513016128338,
+      "geoinfo": {
+        "display_name": "13, Sargent Street, Germantown, Quincy, Norfolk County, Massachusetts, 02191, United States",
+        "road": "Sargent Street",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quincy",
+        "state": "Massachusetts",
+        "postcode": "02191",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13, Sargent Street, Germantown, Quincy, Norfolk County, Massachusetts, 02191, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:39.306531+00:00",
+  "_kind": "geo_samples"
+}

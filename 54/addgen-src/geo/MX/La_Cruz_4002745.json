@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Cruz",
+  "geonameid": 4002745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.950060759871885,
+      "lon": -106.90054582814666,
+      "geoinfo": {
+        "display_name": "La Esperanza, Elota, Sinaloa, 82707, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sinaloa",
+        "postcode": "82707",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "La Cruz, Sinaloa, Mexico"
+    },
+    {
+      "lat": 23.962757068368386,
+      "lon": -106.89816522794172,
+      "geoinfo": {
+        "display_name": "La Cruz de Elota, Elota, Sinaloa, 82707, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Cruz de Elota",
+        "state": "Sinaloa",
+        "postcode": "82707",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "557, La Cruz de Elota, Elota, Sinaloa, 82707, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:29.301814+00:00",
+  "_kind": "geo_samples"
+}

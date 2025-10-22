@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Chí Linh",
+  "geonameid": 1585489,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.104184101064398,
+      "lon": 106.33646561352114,
+      "geoinfo": {
+        "display_name": "Chí Linh Ward, Hải Phòng, 03500, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chí Linh Ward",
+        "state": null,
+        "postcode": "03500",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Chí Linh, Bắc Ninh Province, Vietnam"
+    },
+    {
+      "lat": 21.052675144626452,
+      "lon": 106.34979481211153,
+      "geoinfo": {
+        "display_name": "Trần Phú Commune, Hải Phòng, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hải Phòng",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "392, Trần Phú Commune, 17645 Hải Phòng, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:59.550151+00:00",
+  "_kind": "geo_samples"
+}

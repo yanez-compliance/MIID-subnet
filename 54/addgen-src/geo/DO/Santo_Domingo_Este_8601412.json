@@ -1,0 +1,65 @@
+{
+  "country_code": "DO",
+  "country": "Dominican Republic",
+  "city": "Santo Domingo Este",
+  "geonameid": 8601412,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 18.44516496202538,
+      "lon": -69.85018807981132,
+      "geoinfo": {
+        "display_name": "Santo Domingo, Santo Domingo de Guzmán, Distrito Nacional, 03201, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santo Domingo",
+        "state": "Distrito Nacional",
+        "postcode": "03201",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "727, Santo Domingo, Santo Domingo de Guzmán, Distrito Nacional, 03201, Dominican Republic"
+    },
+    {
+      "lat": 18.483415575269348,
+      "lon": -69.87445690632374,
+      "geoinfo": {
+        "display_name": "Calle Rafael Tavares, Pueblo Nuevo, Santo Domingo Este, Santo Domingo, 03006, Dominican Republic",
+        "road": "Calle Rafael Tavares",
+        "house_number": null,
+        "neighbourhood": "Pueblo Nuevo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santo Domingo Este",
+        "state": "Santo Domingo",
+        "postcode": "03006",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "630, Calle Rafael Tavares, Pueblo Nuevo, Santo Domingo Este, Santo Domingo, 03006, Dominican Republic"
+    },
+    {
+      "lat": 18.47820445350636,
+      "lon": -69.81836358763918,
+      "geoinfo": {
+        "display_name": "Calle Progreso, Los Frailes I, Tropical del Este, Santo Domingo Este, Santo Domingo, 11705, Dominican Republic",
+        "road": "Calle Progreso",
+        "house_number": null,
+        "neighbourhood": "Los Frailes I",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santo Domingo Este",
+        "state": "Santo Domingo",
+        "postcode": "11705",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "855, Calle Progreso, Los Frailes I, Tropical del Este, Santo Domingo Este, Santo Domingo, 11705, Dominican Republic"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:45.034920+00:00",
+  "_kind": "geo_samples"
+}

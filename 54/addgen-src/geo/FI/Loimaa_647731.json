@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Loimaa",
+  "geonameid": 647731,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.83870777718312,
+      "lon": 23.106565677784353,
+      "geoinfo": {
+        "display_name": "Sieppalantie, Hattula, Mäenpää, Loimaa, Loimaa sub-region, Southwest Finland, Mainland Finland, Finland",
+        "road": "Sieppalantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loimaa",
+        "state": "Southwest Finland",
+        "postcode": null,
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Sieppalantie, Loimaa, Southwest Finland, Finland"
+    },
+    {
+      "lat": 60.85626791062896,
+      "lon": 23.00230063035115,
+      "geoinfo": {
+        "display_name": "Alhontie, Ferraria, Loimaa, Loimaa sub-region, Southwest Finland, Mainland Finland, 32201, Finland",
+        "road": "Alhontie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loimaa",
+        "state": "Southwest Finland",
+        "postcode": "32201",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Alhontie, Loimaa, Southwest Finland, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:58:04.423166+00:00",
+  "_kind": "geo_samples"
+}

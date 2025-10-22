@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Alkmaar",
+  "geonameid": 2759899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.60921677730852,
+      "lon": 4.749209384076299,
+      "geoinfo": {
+        "display_name": "Lease Visie, 12, Smaragdweg, Boekelermeer, Alkmaar, North Holland, Netherlands, 1812 RJ, Netherlands",
+        "road": "Smaragdweg",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alkmaar",
+        "state": "North Holland",
+        "postcode": "1812 RJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "12 Smaragdweg, Alkmaar, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.66695423475013,
+      "lon": 4.726773270802204,
+      "geoinfo": {
+        "display_name": "77, Zijl, Saenegheest, Bergen, North Holland, Netherlands, 1862 HM, Netherlands",
+        "road": "Zijl",
+        "house_number": "77",
+        "neighbourhood": "Saenegheest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergen",
+        "state": "North Holland",
+        "postcode": "1862 HM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "77, Zijl, Saenegheest, Bergen, North Holland, Netherlands, 1862 HM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:05.697306+00:00",
+  "_kind": "geo_samples"
+}

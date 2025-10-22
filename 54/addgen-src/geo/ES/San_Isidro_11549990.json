@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "San Isidro",
+  "geonameid": 11549990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.37134365189563,
+      "lon": -3.716360221716827,
+      "geoinfo": {
+        "display_name": "Orcasitas, Usera, Madrid, Community of Madrid, 28026, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Usera",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28026",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Usera, San Isidro, 67178 Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40894236956674,
+      "lon": -3.7673902861419766,
+      "geoinfo": {
+        "display_name": "Camino de Valle Puentes, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28024, Spain",
+        "road": "Camino de Valle Puentes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28024",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "206, Camino de Valle Puentes, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28024, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:30.235287+00:00",
+  "_kind": "geo_samples"
+}

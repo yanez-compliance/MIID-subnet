@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Zelenograd",
+  "geonameid": 463829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.965892746773555,
+      "lon": 37.20479255961495,
+      "geoinfo": {
+        "display_name": "Kryukovo District, Zelenograd, Moscow, Central Federal District, 123465, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kryukovo District",
+        "city_district": null,
+        "city": "Zelenograd",
+        "state": "Moscow",
+        "postcode": "123465",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kryukovo District, Zelenograd, Moscow, Russia"
+    },
+    {
+      "lat": 55.98378551087706,
+      "lon": 37.16628910015897,
+      "geoinfo": {
+        "display_name": "улица Логвиненко, Александровка, Kryukovo District, Zelenograd, Moscow, Central Federal District, 124681, Russia",
+        "road": "улица Логвиненко",
+        "house_number": null,
+        "neighbourhood": "Александровка",
+        "suburb": "Kryukovo District",
+        "city_district": null,
+        "city": "Zelenograd",
+        "state": "Moscow",
+        "postcode": "124681",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "164, улица Логвиненко, Александровка, Kryukovo District, Zelenograd, Moscow, Central Federal District, 124681, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:46.435208+00:00",
+  "_kind": "geo_samples"
+}

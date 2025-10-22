@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Taman Permas Jaya",
+  "geonameid": 7619709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.5338352767472174,
+      "lon": 103.84146045197792,
+      "geoinfo": {
+        "display_name": "Plentong, Johor Bahru, Johor, 81750, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plentong",
+        "state": "Johor",
+        "postcode": "81750",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Taman Permas Jaya, Johor, Malaysia"
+    },
+    {
+      "lat": 1.5512754062695462,
+      "lon": 103.82222276848803,
+      "geoinfo": {
+        "display_name": "Ehsan Jaya, Taman Desa Cemerlang, Johor Bahru, Johor, 81800, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Taman Desa Cemerlang",
+        "city_district": null,
+        "city": "Johor Bahru",
+        "state": "Johor",
+        "postcode": "81800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "857, Ehsan Jaya, Taman Desa Cemerlang, Johor Bahru, Johor, 81800, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:15.316832+00:00",
+  "_kind": "geo_samples"
+}

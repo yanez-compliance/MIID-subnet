@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Taunton",
+  "geonameid": 4952629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.89802058316356,
+      "lon": -71.07499469729186,
+      "geoinfo": {
+        "display_name": "Taunton Public Schools, 50, Williams Street, Taunton, Bristol County, Massachusetts, 02780, United States",
+        "road": "Williams Street",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taunton",
+        "state": "Massachusetts",
+        "postcode": "02780",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "50 Williams Street, Taunton, Massachusetts, United States"
+    },
+    {
+      "lat": 41.918790328546265,
+      "lon": -71.10249338302147,
+      "geoinfo": {
+        "display_name": "206, West Britannia Street, Whittenton, Britanniaville, Taunton, Bristol County, Massachusetts, 02780, United States",
+        "road": "West Britannia Street",
+        "house_number": "206",
+        "neighbourhood": "Whittenton",
+        "suburb": null,
+        "city_district": null,
+        "city": "Taunton",
+        "state": "Massachusetts",
+        "postcode": "02780",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206, West Britannia Street, Whittenton, Britanniaville, Taunton, Bristol County, Massachusetts, 02780, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:49.803816+00:00",
+  "_kind": "geo_samples"
+}

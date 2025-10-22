@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Warrnambool",
+  "geonameid": 2144528,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.39719175369696,
+      "lon": 142.47973718820987,
+      "geoinfo": {
+        "display_name": "Pertobe Road, Warrnambool, City of Warrnambool, Victoria, 3280, Australia",
+        "road": "Pertobe Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warrnambool",
+        "state": "Victoria",
+        "postcode": "3280",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Pertobe Road, Warrnambool, Victoria, Australia"
+    },
+    {
+      "lat": -38.36480844813957,
+      "lon": 142.43694861231705,
+      "geoinfo": {
+        "display_name": "165, Swinton Street, Dennington, City of Warrnambool, Victoria, 3280, Australia",
+        "road": "Swinton Street",
+        "house_number": "165",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dennington",
+        "city": null,
+        "state": "Victoria",
+        "postcode": "3280",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "165, Swinton Street, Dennington, City of Warrnambool, Victoria, 3280, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:46.861779+00:00",
+  "_kind": "geo_samples"
+}

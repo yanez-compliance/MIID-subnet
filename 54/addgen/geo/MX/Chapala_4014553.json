@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chapala",
+  "geonameid": 4014553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.250676378749578,
+      "lon": -103.20299550521754,
+      "geoinfo": {
+        "display_name": "Chapala, Región Ciénega, Jalisco, 45900, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chapala",
+        "state": "Jalisco",
+        "postcode": "45900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Chapala, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.285774147758676,
+      "lon": -103.23213488263076,
+      "geoinfo": {
+        "display_name": "San Antonio Tlayacapan, Chapala, Región Ciénega, Jalisco, 45915, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio Tlayacapan",
+        "state": "Jalisco",
+        "postcode": "45915",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "374, San Antonio Tlayacapan, Chapala, Región Ciénega, Jalisco, 45915, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:12.906920+00:00",
+  "_kind": "geo_samples"
+}

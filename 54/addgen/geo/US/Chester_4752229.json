@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chester",
+  "geonameid": 4752229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.38869791673064,
+      "lon": -77.45379719686139,
+      "geoinfo": {
+        "display_name": "9706, Chester Road, Chester, Chesterfield County, Virginia, 23831, United States",
+        "road": "Chester Road",
+        "house_number": "9706",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chester",
+        "state": "Virginia",
+        "postcode": "23831",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9706 Chester Road, Chester, Virginia, United States"
+    },
+    {
+      "lat": 37.36901067950623,
+      "lon": -77.49364729891202,
+      "geoinfo": {
+        "display_name": "Iron Bridge Boulevard, Garden Springs, Chesterfield, Chesterfield County, Virginia, 23831, United States",
+        "road": "Iron Bridge Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chesterfield",
+        "state": "Virginia",
+        "postcode": "23831",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "350, Iron Bridge Boulevard, Garden Springs, Chesterfield, Chesterfield County, Virginia, 23831, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:52.008828+00:00",
+  "_kind": "geo_samples"
+}

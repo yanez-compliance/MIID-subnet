@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint-Laurent",
+  "geonameid": 6138610,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.48514421472291,
+      "lon": -73.70871773428196,
+      "geoinfo": {
+        "display_name": "620, Rue McCaffrey, Saint-Laurent, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4T 2A3, Canada",
+        "road": "Rue McCaffrey",
+        "house_number": "620",
+        "neighbourhood": null,
+        "suburb": "Saint-Laurent",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H4T 2A3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "620 Rue McCaffrey, Saint-Laurent, Quebec, Canada"
+    },
+    {
+      "lat": 45.48455737738551,
+      "lon": -73.66716358315243,
+      "geoinfo": {
+        "display_name": "Avenue Krieghoff, Côte Saint-Luc, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4P 1M7, Canada",
+        "road": "Avenue Krieghoff",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Côte Saint-Luc",
+        "state": "Quebec",
+        "postcode": "H4P 1M7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Avenue Krieghoff, Côte Saint-Luc, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4P 1M7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:22.712858+00:00",
+  "_kind": "geo_samples"
+}

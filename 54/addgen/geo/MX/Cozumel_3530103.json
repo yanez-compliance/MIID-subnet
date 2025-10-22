@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cozumel",
+  "geonameid": 3530103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.51043477238967,
+      "lon": -86.95130886672389,
+      "geoinfo": {
+        "display_name": "Avenida Rafael E. Melgar, Centro, San Miguel de Cozumel, Cozumel, Quintana Roo, 77668, Mexico",
+        "road": "Avenida Rafael E. Melgar",
+        "house_number": null,
+        "neighbourhood": "Centro",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel de Cozumel",
+        "state": "Quintana Roo",
+        "postcode": "77668",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Rafael E. Melgar, Cozumel, Quintana Roo, Mexico"
+    },
+    {
+      "lat": 20.473330378353783,
+      "lon": -86.97225651495171,
+      "geoinfo": {
+        "display_name": "Calle Anona, San Miguel, Cozumel, Quintana Roo, 77675, Mexico",
+        "road": "Calle Anona",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quintana Roo",
+        "postcode": "77675",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "074, Calle Anona, San Miguel, Cozumel, Quintana Roo, 77675, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:58.866241+00:00",
+  "_kind": "geo_samples"
+}

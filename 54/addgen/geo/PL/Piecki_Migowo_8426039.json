@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Piecki-Migowo",
+  "geonameid": 8426039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.349751547881645,
+      "lon": 18.58427494846402,
+      "geoinfo": {
+        "display_name": "11, Piekarnicza, Trzy Lipy, Piecki-Migowo, Gdansk, Gdańsk, Pomeranian Voivodeship, 80-126, Poland",
+        "road": "Piekarnicza",
+        "house_number": "11",
+        "neighbourhood": "Trzy Lipy",
+        "suburb": "Piecki-Migowo",
+        "city_district": "Gdansk",
+        "city": "Gdańsk",
+        "state": "Pomeranian Voivodeship",
+        "postcode": "80-126",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "11 Piekarnicza, Piecki-Migowo, Pomeranian Voivodeship, Poland"
+    },
+    {
+      "lat": 54.396242895826965,
+      "lon": 18.549032361866377,
+      "geoinfo": {
+        "display_name": "Droga Prezydencka, Oliwa, Gdansk, Gdańsk, Pomeranian Voivodeship, 80-322, Poland",
+        "road": "Droga Prezydencka",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oliwa",
+        "city_district": "Gdansk",
+        "city": "Gdańsk",
+        "state": "Pomeranian Voivodeship",
+        "postcode": "80-322",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Droga Prezydencka, Oliwa, Gdansk, Gdańsk, Pomeranian Voivodeship, 80-322, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:41:35.103417+00:00",
+  "_kind": "geo_samples"
+}

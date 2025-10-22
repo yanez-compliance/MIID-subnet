@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roseville",
+  "geonameid": 5043799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.01409625792356,
+      "lon": -93.13303704351156,
+      "geoinfo": {
+        "display_name": "796, Sextant Avenue West, Roseville, Ramsey County, Minnesota, 55113, United States",
+        "road": "Sextant Avenue West",
+        "house_number": "796",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roseville",
+        "state": "Minnesota",
+        "postcode": "55113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "796 Sextant Avenue West, Roseville, Minnesota, United States"
+    },
+    {
+      "lat": 45.0172982975375,
+      "lon": -93.14380043604976,
+      "geoinfo": {
+        "display_name": "West Brooks Avenue, Roseville, Ramsey County, Minnesota, 55113, United States",
+        "road": "West Brooks Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roseville",
+        "state": "Minnesota",
+        "postcode": "55113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "911, West Brooks Avenue, Roseville, Ramsey County, Minnesota, 55113, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:58.968236+00:00",
+  "_kind": "geo_samples"
+}

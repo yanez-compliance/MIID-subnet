@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Bedong",
+  "geonameid": 1734439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.751273170332868,
+      "lon": 100.53805984652547,
+      "geoinfo": {
+        "display_name": "Kuala Muda, Kedah, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kedah",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Bedong, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.7514680794881405,
+      "lon": 100.48540797583084,
+      "geoinfo": {
+        "display_name": "Bedong, Kuala Muda, Kedah, 08100, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bedong",
+        "state": "Kedah",
+        "postcode": "08100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "689, Bedong, Kuala Muda, Kedah, 08100, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:40.452400+00:00",
+  "_kind": "geo_samples"
+}

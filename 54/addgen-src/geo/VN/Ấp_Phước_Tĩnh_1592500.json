@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Ấp Phước Tĩnh",
+  "geonameid": 1592500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.38123902587672,
+      "lon": 107.20721246251044,
+      "geoinfo": {
+        "display_name": "Bà Rịa, Ho Chi Minh City, 78106, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bà Rịa",
+        "state": null,
+        "postcode": "78106",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Ấp Phước Tĩnh, Vietnam"
+    },
+    {
+      "lat": 10.406670875776909,
+      "lon": 107.1823546957955,
+      "geoinfo": {
+        "display_name": "Phước Hương, Phước Hiệp, Long Hai, Ho Chi Minh City, Vietnam",
+        "road": "Phước Hương",
+        "house_number": null,
+        "neighbourhood": "Phước Hiệp",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ho Chi Minh City",
+        "state": null,
+        "postcode": null,
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "290, Phước Hương, Phước Hiệp, Long Hai, 93599 Ho Chi Minh City, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:53.722851+00:00",
+  "_kind": "geo_samples"
+}

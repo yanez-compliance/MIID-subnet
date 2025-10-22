@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Salerno",
+  "geonameid": 3168673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.69741199452217,
+      "lon": 14.807217327290285,
+      "geoinfo": {
+        "display_name": "Autostrada del Mediterraneo, Ogliara, Salerno, Campania, 57184, Italy",
+        "road": "Autostrada del Mediterraneo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salerno",
+        "state": "Campania",
+        "postcode": "57184",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada del Mediterraneo, Salerno, Campania, Italy"
+    },
+    {
+      "lat": 40.68819679870098,
+      "lon": 14.763113499756468,
+      "geoinfo": {
+        "display_name": "Via Urbano II, Salerno, Campania, 84125, Italy",
+        "road": "Via Urbano II",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salerno",
+        "state": "Campania",
+        "postcode": "84125",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "252, Via Urbano II, Salerno, Campania, 84125, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:53.871242+00:00",
+  "_kind": "geo_samples"
+}

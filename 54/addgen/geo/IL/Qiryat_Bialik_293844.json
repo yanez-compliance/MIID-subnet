@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Qiryat Bialik",
+  "geonameid": 293844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.83780034480131,
+      "lon": 35.09610990718506,
+      "geoinfo": {
+        "display_name": "Sderot Rabin, HaParpar, Kiryat Bialik, Haifa Subdistrict, Haifa District, 2706404, Israel",
+        "road": "Sderot Rabin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "HaParpar",
+        "city_district": null,
+        "city": "Kiryat Bialik",
+        "state": "Haifa District",
+        "postcode": "2706404",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Sderot Rabin, Qiryat Bialik, Haifa District, Israel"
+    },
+    {
+      "lat": 32.81529129376574,
+      "lon": 35.04836078205237,
+      "geoinfo": {
+        "display_name": "Haifa Bay District, Haifa, Haifa Subdistrict, Haifa District, 2630050, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Haifa Bay District",
+        "city": "Haifa",
+        "state": "Haifa District",
+        "postcode": "2630050",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "763, Haifa Bay District, Haifa, Haifa Subdistrict, Haifa District, 2630050, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T03:04:06.465086+00:00",
+  "_kind": "geo_samples"
+}

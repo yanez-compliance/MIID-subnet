@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Ségbana",
+  "geonameid": 2391871,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 10.924659717145126,
+      "lon": 3.6832355724669146,
+      "geoinfo": {
+        "display_name": "RN 10, Fouafarani, Guida, Korowi, Segbana, Alibori Department, Benin",
+        "road": "RN 10",
+        "house_number": null,
+        "neighbourhood": "Fouafarani",
+        "suburb": null,
+        "city_district": null,
+        "city": "Korowi",
+        "state": "Alibori Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "RN 10, Ségbana, Alibori Department, Benin"
+    },
+    {
+      "lat": 10.927460382405052,
+      "lon": 3.669604204202099,
+      "geoinfo": {
+        "display_name": "Gorobani, Ségbana, Segbana, Alibori Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Gorobani",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ségbana",
+        "state": "Alibori Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Gorobani, Ségbana, Alibori Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-16T10:51:33.582209+00:00",
+  "_kind": "geo_samples"
+}

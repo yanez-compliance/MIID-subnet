@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Payson",
+  "geonameid": 5308305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.25111843079984,
+      "lon": -111.28664294610203,
+      "geoinfo": {
+        "display_name": "The Golf Club at Chaparral Pines, 504, Grapevine Drive, Payson, Gila County, Arizona, 85541, United States",
+        "road": "Grapevine Drive",
+        "house_number": "504",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Payson",
+        "state": "Arizona",
+        "postcode": "85541",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "504 Grapevine Drive, Payson, Arizona, United States"
+    },
+    {
+      "lat": 34.270620081611035,
+      "lon": -111.34262325535168,
+      "geoinfo": {
+        "display_name": "Payson Ranger District, West Bridle Path Lane, Payson, Gila County, Arizona, 85072, United States",
+        "road": "West Bridle Path Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Payson",
+        "state": "Arizona",
+        "postcode": "85072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "082, West Bridle Path Lane, Payson, 85072 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:40.608159+00:00",
+  "_kind": "geo_samples"
+}

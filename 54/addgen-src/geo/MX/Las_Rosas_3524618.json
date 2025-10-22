@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Las Rosas",
+  "geonameid": 3524618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.340558006636407,
+      "lon": -92.3328701059318,
+      "geoinfo": {
+        "display_name": "Santo Tomás, Las Rosas, Chiapas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Las Rosas, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.387241770938523,
+      "lon": -92.35410505985968,
+      "geoinfo": {
+        "display_name": "Las Rosas, Chiapas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Rosas",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "387, Las Rosas, 87579 Chiapas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:18.413785+00:00",
+  "_kind": "geo_samples"
+}

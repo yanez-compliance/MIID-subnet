@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 10",
+  "geonameid": 7284890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.28798724790723,
+      "lon": 5.448139559344568,
+      "geoinfo": {
+        "display_name": "ITEP / SESSAD Les Bastides, Boulevard de la Valbarelle, Saint-Marcel, 11th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13011, France",
+        "road": "Boulevard de la Valbarelle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "11th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13011",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard de la Valbarelle, Marseille 10, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.297868049206976,
+      "lon": 5.3729797917538615,
+      "geoinfo": {
+        "display_name": "22, Rue de la République, Belsunce, 1st Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13001, France",
+        "road": "Rue de la République",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "1st Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13001",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "22, Rue de la République, Belsunce, 1st Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13001, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:21.075318+00:00",
+  "_kind": "geo_samples"
+}

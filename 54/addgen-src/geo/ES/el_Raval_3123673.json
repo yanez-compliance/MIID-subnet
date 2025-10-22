@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "el Raval",
+  "geonameid": 3123673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38864473016612,
+      "lon": 2.2139958524584737,
+      "geoinfo": {
+        "display_name": "Diagonal Mar, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08019, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08019",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Sant Martí, el Raval, Catalonia, Spain"
+    },
+    {
+      "lat": 41.361985591802494,
+      "lon": 2.199109124811321,
+      "geoinfo": {
+        "display_name": "Dàrsena de la Indústria, Old Port, 08002, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Old Port",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "08002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "520, Dàrsena de la Indústria, Old Port, 08002, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:18.252823+00:00",
+  "_kind": "geo_samples"
+}

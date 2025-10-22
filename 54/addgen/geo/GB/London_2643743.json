@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "London",
+  "geonameid": 2643743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.506617067311666,
+      "lon": -0.10025411947743576,
+      "geoinfo": {
+        "display_name": "Sumner Street, Bankside, Southwark, London Borough of Southwark, London, Greater London, England, SE1 0TF, United Kingdom",
+        "road": "Sumner Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southwark",
+        "city_district": "London Borough of Southwark",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE1 0TF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sumner Street, London, England, United Kingdom"
+    },
+    {
+      "lat": 51.467048167529896,
+      "lon": -0.12137561822749203,
+      "geoinfo": {
+        "display_name": "Nealden Street, Stockwell Park, Stockwell, London Borough of Lambeth, London, Greater London, England, SW9 9QX, United Kingdom",
+        "road": "Nealden Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stockwell",
+        "city_district": "London Borough of Lambeth",
+        "city": "London",
+        "state": "England",
+        "postcode": "SW9 9QX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Nealden Street, Stockwell Park, Stockwell, London Borough of Lambeth, London, Greater London, England, SW9 9QX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:06.230263+00:00",
+  "_kind": "geo_samples"
+}

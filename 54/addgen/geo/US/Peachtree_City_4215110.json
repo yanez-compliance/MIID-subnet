@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Peachtree City",
+  "geonameid": 4215110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.380986171265086,
+      "lon": -84.5866655416001,
+      "geoinfo": {
+        "display_name": "168, Cadmium Court, Peachtree City, Fayette County, Georgia, 30269, United States",
+        "road": "Cadmium Court",
+        "house_number": "168",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peachtree City",
+        "state": "Georgia",
+        "postcode": "30269",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "168 Cadmium Court, Peachtree City, Georgia, United States"
+    },
+    {
+      "lat": 33.4204619896164,
+      "lon": -84.58683288219409,
+      "geoinfo": {
+        "display_name": "401, Blue Smoke Trail, Spooner Ridge, Peachtree City, Fayette County, Georgia, 30269, United States",
+        "road": "Blue Smoke Trail",
+        "house_number": "401",
+        "neighbourhood": "Spooner Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peachtree City",
+        "state": "Georgia",
+        "postcode": "30269",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "401, Blue Smoke Trail, Spooner Ridge, Peachtree City, Fayette County, Georgia, 30269, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:44.572727+00:00",
+  "_kind": "geo_samples"
+}

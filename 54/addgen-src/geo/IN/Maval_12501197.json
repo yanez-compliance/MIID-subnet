@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Maval",
+  "geonameid": 12501197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.759489745417323,
+      "lon": 73.45575330799326,
+      "geoinfo": {
+        "display_name": "Waksai, Mawal, Pune District, Maharashtra, 410405, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waksai",
+        "state": "Maharashtra",
+        "postcode": "410405",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Maval, Maharashtra, India"
+    },
+    {
+      "lat": 18.775615279060407,
+      "lon": 73.4699004189715,
+      "geoinfo": {
+        "display_name": "Mawal, Pune District, Maharashtra, 410405, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "410405",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "100, Mawal, Pune District, Maharashtra, 410405, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:22.567611+00:00",
+  "_kind": "geo_samples"
+}

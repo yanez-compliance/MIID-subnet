@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wichita",
+  "geonameid": 4281730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.7124263844978,
+      "lon": -97.36773323253121,
+      "geoinfo": {
+        "display_name": "North Athenian Avenue, Womers Addition, Wichita, Sedgwick County, Kansas, 67203, United States",
+        "road": "North Athenian Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wichita",
+        "state": "Kansas",
+        "postcode": "67203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Athenian Avenue, Wichita, Kansas, United States"
+    },
+    {
+      "lat": 37.70906613285178,
+      "lon": -97.33880822426285,
+      "geoinfo": {
+        "display_name": "1459, Park Place, Wichita, Sedgwick County, Kansas, 67203, United States",
+        "road": "Park Place",
+        "house_number": "1459",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wichita",
+        "state": "Kansas",
+        "postcode": "67203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1459, Park Place, Wichita, Sedgwick County, Kansas, 67203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:31.104931+00:00",
+  "_kind": "geo_samples"
+}

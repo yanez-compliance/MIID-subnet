@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Hirara",
+  "geonameid": 1862505,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.82611603041928,
+      "lon": 125.34390457950087,
+      "geoinfo": {
+        "display_name": "Miyakojima, Okinawa Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miyakojima",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hirara, Japan"
+    },
+    {
+      "lat": 24.770284124428954,
+      "lon": 125.3197564889891,
+      "geoinfo": {
+        "display_name": "Miyakojima, Okinawa Prefecture, 906-0011, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miyakojima",
+        "state": null,
+        "postcode": "906-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Miyakojima, Okinawa Prefecture, 906-0011, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:25.976666+00:00",
+  "_kind": "geo_samples"
+}

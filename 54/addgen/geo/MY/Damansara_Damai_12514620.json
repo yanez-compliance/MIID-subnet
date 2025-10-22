@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Damansara Damai",
+  "geonameid": 12514620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.162590538314366,
+      "lon": 101.60541063500244,
+      "geoinfo": {
+        "display_name": "Jalan PJU 7/29, PJU 7, Mutiara Damansara, Petaling Jaya, Petaling, Selangor, 46800, Malaysia",
+        "road": "Jalan PJU 7/29",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mutiara Damansara",
+        "city_district": null,
+        "city": "Petaling Jaya",
+        "state": "Selangor",
+        "postcode": "46800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan PJU 7/29, Damansara Damai, Selangor, Malaysia"
+    },
+    {
+      "lat": 3.1819742052818123,
+      "lon": 101.63178137407141,
+      "geoinfo": {
+        "display_name": "Jalan Residen Utama, Desa ParkCity, Kuala Lumpur, 52200, Malaysia",
+        "road": "Jalan Residen Utama",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "52200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "273, Jalan Residen Utama, Desa ParkCity, Kuala Lumpur, 52200, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:01.793273+00:00",
+  "_kind": "geo_samples"
+}

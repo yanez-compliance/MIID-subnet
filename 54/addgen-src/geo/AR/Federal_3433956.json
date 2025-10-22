@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Federal",
+  "geonameid": 3433956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -30.942366578121945,
+      "lon": -58.76675363008531,
+      "geoinfo": {
+        "display_name": "Federal, Distrito Francisco Ramírez, Departamento Federal, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Federal",
+        "state": null,
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Federal, Argentina"
+    },
+    {
+      "lat": -30.92964499305998,
+      "lon": -58.792882240981015,
+      "geoinfo": {
+        "display_name": "Los Jilgueros, Federal, Distrito Francisco Ramírez, Departamento Federal, E3180BGO, Argentina",
+        "road": "Los Jilgueros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Federal",
+        "state": null,
+        "postcode": "E3180BGO",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "360, Los Jilgueros, Federal, Distrito Francisco Ramírez, Departamento Federal, E3180BGO, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:53.545706+00:00",
+  "_kind": "geo_samples"
+}

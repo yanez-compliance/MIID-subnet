@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Schiebroek",
+  "geonameid": 2747597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.95585717769435,
+      "lon": 4.511919890105038,
+      "geoinfo": {
+        "display_name": "121, Van Beethovenlaan, Molenlaankwartier, Hillegersberg-Schiebroek, Rotterdam, South Holland, Netherlands, 3055 JB, Netherlands",
+        "road": "Van Beethovenlaan",
+        "house_number": "121",
+        "neighbourhood": null,
+        "suburb": "Hillegersberg-Schiebroek",
+        "city_district": null,
+        "city": "Rotterdam",
+        "state": "South Holland",
+        "postcode": "3055 JB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "121 Van Beethovenlaan, Schiebroek, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.98331393254081,
+      "lon": 4.416793223955408,
+      "geoinfo": {
+        "display_name": "189c, Oude Leedeweg, Oude Leede, Pijnacker, Pijnacker-Nootdorp, South Holland, Netherlands, 2641 SE, Netherlands",
+        "road": "Oude Leedeweg",
+        "house_number": "189c",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pijnacker",
+        "state": "South Holland",
+        "postcode": "2641 SE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "189c, Oude Leedeweg, Oude Leede, Pijnacker, Pijnacker-Nootdorp, South Holland, Netherlands, 2641 SE, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:48:05.377893+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Istra",
+  "geonameid": 555746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.93907017254566,
+      "lon": 36.857574479420634,
+      "geoinfo": {
+        "display_name": "Загородная улица, Асфальто-бетонный завод, Istra, муниципальный округ Истра, Moscow Oblast, Central Federal District, 143500, Russia",
+        "road": "Загородная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Istra",
+        "state": "Moscow Oblast",
+        "postcode": "143500",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Загородная улица, Istra, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.90688457613876,
+      "lon": 36.892446510148375,
+      "geoinfo": {
+        "display_name": "СТ «Высоково-2», Istra, муниципальный округ Истра, Moscow Oblast, Central Federal District, 143500, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Istra",
+        "state": "Moscow Oblast",
+        "postcode": "143500",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "917, Istra, 143500 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:40.056631+00:00",
+  "_kind": "geo_samples"
+}

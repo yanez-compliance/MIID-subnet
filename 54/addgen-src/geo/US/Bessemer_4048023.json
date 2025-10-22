@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bessemer",
+  "geonameid": 4048023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.38340666355503,
+      "lon": -86.96019079107816,
+      "geoinfo": {
+        "display_name": "Elmore Alley, Oakwood, Jonesboro, Bessemer, Jefferson County, Alabama, 35020, United States",
+        "road": "Elmore Alley",
+        "house_number": null,
+        "neighbourhood": "Oakwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bessemer",
+        "state": "Alabama",
+        "postcode": "35020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Elmore Alley, Bessemer, Alabama, United States"
+    },
+    {
+      "lat": 33.41496353822877,
+      "lon": -86.91888586814301,
+      "geoinfo": {
+        "display_name": "Nameless Road, Wheeling Crossroad, Birmingham, Jefferson County, Alabama, 35020, United States",
+        "road": "Nameless Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "461, Nameless Road, Wheeling Crossroad, Birmingham, Jefferson County, Alabama, 35020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:29.642087+00:00",
+  "_kind": "geo_samples"
+}

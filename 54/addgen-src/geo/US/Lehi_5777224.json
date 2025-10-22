@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lehi",
+  "geonameid": 5777224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.42017172534915,
+      "lon": -111.80880687102562,
+      "geoinfo": {
+        "display_name": "Murdock Canal Trail, Highland, Utah County, Utah, 84003, United States",
+        "road": "Murdock Canal Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Highland",
+        "state": "Utah",
+        "postcode": "84003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Murdock Canal Trail, Lehi, Utah, United States"
+    },
+    {
+      "lat": 40.3552708311692,
+      "lon": -111.82886249180105,
+      "geoinfo": {
+        "display_name": "Lake Shore Drive, American Fork, Utah County, Utah, United States",
+        "road": "Lake Shore Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "American Fork",
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "422, Lake Shore Drive, American Fork, Utah County, 42459 Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:23.911889+00:00",
+  "_kind": "geo_samples"
+}

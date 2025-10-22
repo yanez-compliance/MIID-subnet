@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xindian",
+  "geonameid": 1789118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.822802187027186,
+      "lon": 118.27696951493922,
+      "geoinfo": {
+        "display_name": "Linzi District, Zibo, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zibo",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xindian, Shandong, China"
+    },
+    {
+      "lat": 36.81649012331316,
+      "lon": 118.29067318688747,
+      "geoinfo": {
+        "display_name": "大顺路, Jixia, Linzi District, Zibo, Shandong, China",
+        "road": "大顺路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jixia",
+        "city_district": null,
+        "city": "Zibo",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "119, 大顺路, Jixia, Linzi District, Zibo, 83342 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:30.365834+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Batu Gajah",
+  "geonameid": 1735268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.426911846428489,
+      "lon": 101.04783954972744,
+      "geoinfo": {
+        "display_name": "Kinta, Perak, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Perak",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Batu Gajah, Perak, Malaysia"
+    },
+    {
+      "lat": 4.468716362745822,
+      "lon": 101.05366129282662,
+      "geoinfo": {
+        "display_name": "Taman Tasik Permai, Batu Gajah, Kinta, Perak, 31000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Tasik Permai",
+        "suburb": null,
+        "city_district": null,
+        "city": "Batu Gajah",
+        "state": "Perak",
+        "postcode": "31000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "493, Taman Tasik Permai, Batu Gajah, Kinta, Perak, 31000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:30.850741+00:00",
+  "_kind": "geo_samples"
+}

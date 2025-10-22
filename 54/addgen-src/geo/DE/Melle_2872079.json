@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Melle",
+  "geonameid": 2872079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.22650740932638,
+      "lon": 8.326583964718461,
+      "geoinfo": {
+        "display_name": "Rehteich, Bakum, Melle, Landkreis Osnabrück, Lower Saxony, 49324, Germany",
+        "road": "Rehteich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melle",
+        "state": "Lower Saxony",
+        "postcode": "49324",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rehteich, Melle, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.19508993775881,
+      "lon": 8.282208691461754,
+      "geoinfo": {
+        "display_name": "Gesmold, Melle, Landkreis Osnabrück, Lower Saxony, 49326, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gesmold",
+        "city_district": null,
+        "city": "Melle",
+        "state": "Lower Saxony",
+        "postcode": "49326",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "051, Gesmold, Melle, Landkreis Osnabrück, Lower Saxony, 49326, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:30.641153+00:00",
+  "_kind": "geo_samples"
+}

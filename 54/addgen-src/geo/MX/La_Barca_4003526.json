@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Barca",
+  "geonameid": 4003526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.288236600006705,
+      "lon": -102.5258218683115,
+      "geoinfo": {
+        "display_name": "La Barca, Región Ciénega, Jalisco, 47912, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Barca",
+        "state": "Jalisco",
+        "postcode": "47912",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "La Barca, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.33227483326035,
+      "lon": -102.55769786314187,
+      "geoinfo": {
+        "display_name": "La Barca, Región Ciénega, Jalisco, 47910, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "47910",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "834, La Barca, Región Ciénega, Jalisco, 47910, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:22.330668+00:00",
+  "_kind": "geo_samples"
+}

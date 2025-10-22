@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Troy",
+  "geonameid": 4094163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.766119632948964,
+      "lon": -85.97456233682334,
+      "geoinfo": {
+        "display_name": "153, Briar Hill Way, Troy, Pike County, Alabama, 36079, United States",
+        "road": "Briar Hill Way",
+        "house_number": "153",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troy",
+        "state": "Alabama",
+        "postcode": "36079",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "153 Briar Hill Way, Troy, Alabama, United States"
+    },
+    {
+      "lat": 31.785511999368694,
+      "lon": -85.93002707118204,
+      "geoinfo": {
+        "display_name": "Rifle Range Road, Ridgewood, Troy, Pike County, Alabama, 36082, United States",
+        "road": "Rifle Range Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troy",
+        "state": "Alabama",
+        "postcode": "36082",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "454, Rifle Range Road, Ridgewood, Troy, Pike County, Alabama, 36082, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:41.536953+00:00",
+  "_kind": "geo_samples"
+}

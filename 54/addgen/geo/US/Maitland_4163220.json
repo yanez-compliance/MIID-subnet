@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maitland",
+  "geonameid": 4163220,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.642304797630917,
+      "lon": -81.35849543366992,
+      "geoinfo": {
+        "display_name": "2nd Street, Seminole County, Florida, 32751, United States",
+        "road": "2nd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32751",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2nd Street, Maitland, Florida, United States"
+    },
+    {
+      "lat": 28.62755190940675,
+      "lon": -81.36409750704179,
+      "geoinfo": {
+        "display_name": "243, Horatio Avenue, Maitland, Orange County, Florida, 32751, United States",
+        "road": "Horatio Avenue",
+        "house_number": "243",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maitland",
+        "state": "Florida",
+        "postcode": "32751",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "243, Horatio Avenue, Maitland, Orange County, Florida, 32751, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:05.641036+00:00",
+  "_kind": "geo_samples"
+}

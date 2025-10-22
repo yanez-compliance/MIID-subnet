@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Hartford",
+  "geonameid": 4833403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.753767582351855,
+      "lon": -72.63953459273422,
+      "geoinfo": {
+        "display_name": "452, Main Street, East Hartford, Capitol Planning Region, Connecticut, 06118, United States",
+        "road": "Main Street",
+        "house_number": "452",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Hartford",
+        "state": "Connecticut",
+        "postcode": "06118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "452 Main Street, East Hartford, Connecticut, United States"
+    },
+    {
+      "lat": 41.79774957735683,
+      "lon": -72.6031002877537,
+      "geoinfo": {
+        "display_name": "31, Rene Court, East Hartford, Capitol Planning Region, Connecticut, 06108, United States",
+        "road": "Rene Court",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Hartford",
+        "state": "Connecticut",
+        "postcode": "06108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31, Rene Court, East Hartford, Capitol Planning Region, Connecticut, 06108, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:24.978882+00:00",
+  "_kind": "geo_samples"
+}

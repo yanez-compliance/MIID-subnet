@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Loos",
+  "geonameid": 2997620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.61456310980611,
+      "lon": 2.96331042635492,
+      "geoinfo": {
+        "display_name": "48bis, Rue Léon Gambetta, Hallennes-lez-Haubourdin, Lille, Nord, Hauts-de-France, Metropolitan France, 59320, France",
+        "road": "Rue Léon Gambetta",
+        "house_number": "48bis",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hallennes-lez-Haubourdin",
+        "state": "Hauts-de-France",
+        "postcode": "59320",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "48bis Rue Léon Gambetta, Loos, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.57938572042078,
+      "lon": 3.0609618219010786,
+      "geoinfo": {
+        "display_name": "Chemin du Moulin, Templemars, Lille, Nord, Hauts-de-France, Metropolitan France, 59175, France",
+        "road": "Chemin du Moulin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Templemars",
+        "state": "Hauts-de-France",
+        "postcode": "59175",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "266, Chemin du Moulin, Templemars, Lille, Nord, Hauts-de-France, Metropolitan France, 59175, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:31.023981+00:00",
+  "_kind": "geo_samples"
+}

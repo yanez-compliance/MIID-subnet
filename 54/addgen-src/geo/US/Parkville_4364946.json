@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parkville",
+  "geonameid": 4364946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.39589415954094,
+      "lon": -76.53105435955192,
+      "geoinfo": {
+        "display_name": "2610, Harwood Road, Joppa Manor, Parkville, Baltimore County, Maryland, 21234, United States",
+        "road": "Harwood Road",
+        "house_number": "2610",
+        "neighbourhood": "Joppa Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Parkville",
+        "state": "Maryland",
+        "postcode": "21234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2610 Harwood Road, Parkville, Maryland, United States"
+    },
+    {
+      "lat": 39.37664184702302,
+      "lon": -76.54684322818979,
+      "geoinfo": {
+        "display_name": "7803, Elmhurst Avenue, Villa Cresta, Parkville, Baltimore County, Maryland, 21234, United States",
+        "road": "Elmhurst Avenue",
+        "house_number": "7803",
+        "neighbourhood": "Villa Cresta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Parkville",
+        "state": "Maryland",
+        "postcode": "21234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7803, Elmhurst Avenue, Villa Cresta, Parkville, Baltimore County, Maryland, 21234, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:13.299138+00:00",
+  "_kind": "geo_samples"
+}

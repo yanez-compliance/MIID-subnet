@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Thomasville",
+  "geonameid": 4226348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.8573224237513,
+      "lon": -84.01990690427525,
+      "geoinfo": {
+        "display_name": "4306, Cairo Road, Thomas County, Georgia, 31792, United States",
+        "road": "Cairo Road",
+        "house_number": "4306",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "31792",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4306 Cairo Road, Thomasville, Georgia, United States"
+    },
+    {
+      "lat": 30.82439351046369,
+      "lon": -84.0029669821385,
+      "geoinfo": {
+        "display_name": "272, Davenport Drive, Thomasville, Thomas County, Georgia, 31792, United States",
+        "road": "Davenport Drive",
+        "house_number": "272",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thomasville",
+        "state": "Georgia",
+        "postcode": "31792",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "272, Davenport Drive, Thomasville, Thomas County, Georgia, 31792, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:46.240745+00:00",
+  "_kind": "geo_samples"
+}

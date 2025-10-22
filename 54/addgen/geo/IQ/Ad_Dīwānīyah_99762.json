@@ -1,0 +1,47 @@
+{
+  "country_code": "IQ",
+  "country": "Iraq",
+  "city": "Ad Dīwānīyah",
+  "geonameid": 99762,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 32.02408411441793,
+      "lon": 44.90213715265381,
+      "geoinfo": {
+        "display_name": "شارع الحولي, حي الفرات, Al-Diwaniyah Central Subdistrict, Al-Diwaniyah District, Al-Qadisiyah Governorate, 58001, Iraq",
+        "road": "شارع الحولي",
+        "house_number": null,
+        "neighbourhood": "حي الفرات",
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Diwaniyah District",
+        "state": "Al-Qadisiyah Governorate",
+        "postcode": "58001",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "753, شارع الحولي, Ad Dīwānīyah, 58001 Al-Qadisiyah Governorate, Iraq"
+    },
+    {
+      "lat": 31.98027472043703,
+      "lon": 44.87992264408211,
+      "geoinfo": {
+        "display_name": "Al-Diwaniyah Central Subdistrict, Al-Diwaniyah District, Al-Qadisiyah Governorate, 58000, Iraq",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Diwaniyah District",
+        "state": "Al-Qadisiyah Governorate",
+        "postcode": "58000",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "449, Ad Dīwānīyah, 58000 Al-Qadisiyah Governorate, Iraq"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:50.009184+00:00",
+  "_kind": "geo_samples"
+}

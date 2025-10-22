@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Degtyarsk",
+  "geonameid": 1507488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.694402964742956,
+      "lon": 60.01939870215059,
+      "geoinfo": {
+        "display_name": "муниципальный округ Дегтярск, Sverdlovsk Oblast, Ural Federal District, 623271, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sverdlovsk Oblast",
+        "postcode": "623271",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Degtyarsk, Sverdlovsk Oblast, Russia"
+    },
+    {
+      "lat": 56.724640854518555,
+      "lon": 60.06444140397046,
+      "geoinfo": {
+        "display_name": "99, улица Стахановцев, Degtyarsk, муниципальный округ Дегтярск, Sverdlovsk Oblast, Ural Federal District, 623270, Russia",
+        "road": "улица Стахановцев",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Degtyarsk",
+        "state": "Sverdlovsk Oblast",
+        "postcode": "623270",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "99, улица Стахановцев, Degtyarsk, 623270 Sverdlovsk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:27:44.964139+00:00",
+  "_kind": "geo_samples"
+}

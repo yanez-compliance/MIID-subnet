@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison Heights",
+  "geonameid": 5000500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.513598824828605,
+      "lon": -83.13027288515028,
+      "geoinfo": {
+        "display_name": "1247, Girard Avenue, Red Run Sub, Royal Oak, Oakland County, Michigan, 48073, United States",
+        "road": "Girard Avenue",
+        "house_number": "1247",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Royal Oak",
+        "state": "Michigan",
+        "postcode": "48073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1247 Girard Avenue, Madison Heights, Michigan, United States"
+    },
+    {
+      "lat": 42.51571996514538,
+      "lon": -83.08581479831791,
+      "geoinfo": {
+        "display_name": "30197, Dequindre Road, Warren, Macomb County, Michigan, 48092, United States",
+        "road": "Dequindre Road",
+        "house_number": "30197",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warren",
+        "state": "Michigan",
+        "postcode": "48092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "30197, Dequindre Road, Warren, Macomb County, Michigan, 48092, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:21.124544+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "San Antonio",
+  "geonameid": 12157094,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -17.212114999189918,
+      "lon": -70.95760823407018,
+      "geoinfo": {
+        "display_name": "Avenida Circunvalación, Cruz del Siglo, Montalvo, Moquegua, Province of Mariscal Nieto, Moquegua, 18001, Peru",
+        "road": "Avenida Circunvalación",
+        "house_number": null,
+        "neighbourhood": "Cruz del Siglo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Moquegua",
+        "state": "Moquegua",
+        "postcode": "18001",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Avenida Circunvalación, San Antonio, Moquegua, Peru"
+    },
+    {
+      "lat": -17.234598295213182,
+      "lon": -70.93950197338357,
+      "geoinfo": {
+        "display_name": "Homo, Moquegua, Province of Mariscal Nieto, Moquegua, 18001, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moquegua",
+        "state": "Moquegua",
+        "postcode": "18001",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "997, Homo, Moquegua, Province of Mariscal Nieto, Moquegua, 18001, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T05:00:27.063314+00:00",
+  "_kind": "geo_samples"
+}

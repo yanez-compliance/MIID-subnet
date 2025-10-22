@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lawndale",
+  "geonameid": 5365603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.87212864058314,
+      "lon": -118.37509365843994,
+      "geoinfo": {
+        "display_name": "Sea Air Apartments, 2020, Artesia Boulevard, Redondo Beach, Los Angeles County, California, 90278, United States",
+        "road": "Artesia Boulevard",
+        "house_number": "2020",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redondo Beach",
+        "state": "California",
+        "postcode": "90278",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2020 Artesia Boulevard, Lawndale, California, United States"
+    },
+    {
+      "lat": 33.895231109487874,
+      "lon": -118.38344964227258,
+      "geoinfo": {
+        "display_name": "North Redondo Avenue, Manhattan Village, Manhattan Beach, Los Angeles County, California, 90266, United States",
+        "road": "North Redondo Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manhattan Beach",
+        "state": "California",
+        "postcode": "90266",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "831, North Redondo Avenue, Manhattan Village, Manhattan Beach, Los Angeles County, California, 90266, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:22.016097+00:00",
+  "_kind": "geo_samples"
+}

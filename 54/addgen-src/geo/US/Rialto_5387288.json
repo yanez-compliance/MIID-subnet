@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rialto",
+  "geonameid": 5387288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.149338238825145,
+      "lon": -117.37345527337833,
+      "geoinfo": {
+        "display_name": "Briggs Road, River Ranch, Rialto, San Bernardino County, California, 92377, United States",
+        "road": "Briggs Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rialto",
+        "state": "California",
+        "postcode": "92377",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Briggs Road, Rialto, California, United States"
+    },
+    {
+      "lat": 34.11923318560102,
+      "lon": -117.42063104141336,
+      "geoinfo": {
+        "display_name": "7445, Tangelo Avenue, Fontana, San Bernardino County, California, 92336, United States",
+        "road": "Tangelo Avenue",
+        "house_number": "7445",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fontana",
+        "state": "California",
+        "postcode": "92336",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7445, Tangelo Avenue, Fontana, San Bernardino County, California, 92336, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:31.489001+00:00",
+  "_kind": "geo_samples"
+}

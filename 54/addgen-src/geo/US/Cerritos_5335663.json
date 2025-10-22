@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cerritos",
+  "geonameid": 5335663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.84062602881656,
+      "lon": -118.05485617158467,
+      "geoinfo": {
+        "display_name": "8361, Denni Street, Bingham, Cypress, Orange County, California, 90630, United States",
+        "road": "Denni Street",
+        "house_number": "8361",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cypress",
+        "state": "California",
+        "postcode": "90630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8361 Denni Street, Cerritos, California, United States"
+    },
+    {
+      "lat": 33.85596847769638,
+      "lon": -118.08076440668232,
+      "geoinfo": {
+        "display_name": "19215, Poseidon Avenue, Cerritos, Los Angeles County, California, 90703, United States",
+        "road": "Poseidon Avenue",
+        "house_number": "19215",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cerritos",
+        "state": "California",
+        "postcode": "90703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19215, Poseidon Avenue, Cerritos, Los Angeles County, California, 90703, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:28.041854+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sugamo",
+  "geonameid": 8573188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.72766744937154,
+      "lon": 139.73966127321395,
+      "geoinfo": {
+        "display_name": "Sengoku 4-chome, Sengoku, Bunkyō, Tokyo, 112-0011, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sengoku 4-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bunkyō",
+        "state": null,
+        "postcode": "112-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sengoku 4-chome, Sugamo, Japan"
+    },
+    {
+      "lat": 35.75283392107246,
+      "lon": 139.73754525351143,
+      "geoinfo": {
+        "display_name": "Meiji Avenue, Oji 1, Ōji, Kita, Tokyo, 114-0002, Japan",
+        "road": "Meiji Avenue",
+        "house_number": null,
+        "neighbourhood": "Oji 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kita",
+        "state": null,
+        "postcode": "114-0002",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Meiji Avenue, Oji 1, Ōji, Kita, Tokyo, 114-0002, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:20.309070+00:00",
+  "_kind": "geo_samples"
+}

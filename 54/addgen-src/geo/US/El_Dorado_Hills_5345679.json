@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Dorado Hills",
+  "geonameid": 5345679,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.69635251137357,
+      "lon": -121.07569325505733,
+      "geoinfo": {
+        "display_name": "3799, Stockwood Court, El Dorado Hills, El Dorado County, California, 95762, United States",
+        "road": "Stockwood Court",
+        "house_number": "3799",
+        "neighbourhood": null,
+        "suburb": "El Dorado Hills",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95762",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3799 Stockwood Court, El Dorado Hills, California, United States"
+    },
+    {
+      "lat": 38.65716048757087,
+      "lon": -121.08788747797773,
+      "geoinfo": {
+        "display_name": "El Dorado Hills, El Dorado County, California, 95762, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Dorado Hills",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95762",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "943, El Dorado Hills, El Dorado County, California, 95762, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:08.653427+00:00",
+  "_kind": "geo_samples"
+}

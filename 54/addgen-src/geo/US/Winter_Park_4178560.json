@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winter Park",
+  "geonameid": 4178560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.6182605223428,
+      "lon": -81.34026525941559,
+      "geoinfo": {
+        "display_name": "Winter Park Racquet Club, Tom Gurney Drive, Tuscania, Winter Park, Orange County, Florida, 32789, United States",
+        "road": "Tom Gurney Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winter Park",
+        "state": "Florida",
+        "postcode": "32789",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Tom Gurney Drive, Winter Park, Florida, United States"
+    },
+    {
+      "lat": 28.573630195540062,
+      "lon": -81.31922099676072,
+      "geoinfo": {
+        "display_name": "Baldwin Park Trail, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
+        "road": "Baldwin Park Trail",
+        "house_number": null,
+        "neighbourhood": "Baldwin Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Orlando",
+        "state": "Florida",
+        "postcode": "32814",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "886, Baldwin Park Trail, Baldwin Park, Orlando, Orange County, Florida, 32814, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:14.695375+00:00",
+  "_kind": "geo_samples"
+}

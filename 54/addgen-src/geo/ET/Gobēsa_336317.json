@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Gobēsa",
+  "geonameid": 336317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.618246163326959,
+      "lon": 39.536102377258665,
+      "geoinfo": {
+        "display_name": "Arsi, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Gobēsa, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 7.589685933116332,
+      "lon": 39.46485285890458,
+      "geoinfo": {
+        "display_name": "Gobesa, Arsi, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gobesa",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "726, Gobēsa, 44157 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:59:00.932028+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kladow",
+  "geonameid": 2890136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.452647400703405,
+      "lon": 13.091547591964819,
+      "geoinfo": {
+        "display_name": "Krampnitzer Weg, Krampnitz, Fahrland, Potsdam, Brandenburg, 14476, Germany",
+        "road": "Krampnitzer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Krampnitz",
+        "city_district": null,
+        "city": "Potsdam",
+        "state": "Brandenburg",
+        "postcode": "14476",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Krampnitzer Weg, Kladow, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.473085720079936,
+      "lon": 13.206031398722393,
+      "geoinfo": {
+        "display_name": "Schwarzer Weg, Grunewald, Charlottenburg-Wilmersdorf, Berlin, 14193, Germany",
+        "road": "Schwarzer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grunewald",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14193",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "976, Schwarzer Weg, Grunewald, Charlottenburg-Wilmersdorf, Berlin, 14193, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:41.623846+00:00",
+  "_kind": "geo_samples"
+}

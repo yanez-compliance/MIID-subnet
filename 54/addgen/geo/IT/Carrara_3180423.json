@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Carrara",
+  "geonameid": 3180423,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.0512072978592,
+      "lon": 10.07246138529984,
+      "geoinfo": {
+        "display_name": "12, Via Frassina, Nazzano, Carrara, Massa-Carrara, Tuscany, 54033, Italy",
+        "road": "Via Frassina",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Nazzano",
+        "city_district": null,
+        "city": "Carrara",
+        "state": "Tuscany",
+        "postcode": "54033",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "12 Via Frassina, Carrara, Tuscany, Italy"
+    },
+    {
+      "lat": 44.05812441267177,
+      "lon": 10.06023892776125,
+      "geoinfo": {
+        "display_name": "Via Carlo Cassola, Gildona, Perticata, Fontia, Carrara, Massa-Carrara, Tuscany, 54033, Italy",
+        "road": "Via Carlo Cassola",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Perticata",
+        "city_district": null,
+        "city": "Carrara",
+        "state": "Tuscany",
+        "postcode": "54033",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "881, Via Carlo Cassola, Gildona, Perticata, Fontia, Carrara, Massa-Carrara, Tuscany, 54033, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:28.801077+00:00",
+  "_kind": "geo_samples"
+}

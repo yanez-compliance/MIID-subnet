@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodstock",
+  "geonameid": 4917123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.30210779870811,
+      "lon": -88.4043465078356,
+      "geoinfo": {
+        "display_name": "Serenity Lane, Woodstock, McHenry County, Illinois, 60098, United States",
+        "road": "Serenity Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodstock",
+        "state": "Illinois",
+        "postcode": "60098",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Serenity Lane, Woodstock, Illinois, United States"
+    },
+    {
+      "lat": 42.344977207567126,
+      "lon": -88.41391118412498,
+      "geoinfo": {
+        "display_name": "1246, North Queen Anne Road, Woodstock, McHenry County, Illinois, 60098, United States",
+        "road": "North Queen Anne Road",
+        "house_number": "1246",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodstock",
+        "state": "Illinois",
+        "postcode": "60098",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1246, North Queen Anne Road, Woodstock, McHenry County, Illinois, 60098, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:27.810200+00:00",
+  "_kind": "geo_samples"
+}

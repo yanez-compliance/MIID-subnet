@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orinda",
+  "geonameid": 5379678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.860827808374296,
+      "lon": -122.16550073748222,
+      "geoinfo": {
+        "display_name": "411, Moraga Way, Glorietta, Orinda, Contra Costa County, California, 94563, United States",
+        "road": "Moraga Way",
+        "house_number": "411",
+        "neighbourhood": "Glorietta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Orinda",
+        "state": "California",
+        "postcode": "94563",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "411 Moraga Way, Orinda, California, United States"
+    },
+    {
+      "lat": 37.874752001093505,
+      "lon": -122.13226726382881,
+      "geoinfo": {
+        "display_name": "116, Calle la Montana, Moraga, Contra Costa County, California, 94556, United States",
+        "road": "Calle la Montana",
+        "house_number": "116",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moraga",
+        "state": "California",
+        "postcode": "94556",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "116, Calle la Montana, Moraga, Contra Costa County, California, 94556, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:06.623751+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Guaranda",
+  "geonameid": 3657571,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -1.5819649678824341,
+      "lon": -78.98843921835513,
+      "geoinfo": {
+        "display_name": "San Aurelio, Guaranda, Bolívar, 020101, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guaranda",
+        "state": "Bolívar",
+        "postcode": "020101",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Guaranda, Bolívar, Ecuador"
+    },
+    {
+      "lat": -1.6170808775745655,
+      "lon": -78.98997510250186,
+      "geoinfo": {
+        "display_name": "Escuela \"GABRIEL PAZMIÑO ARMIJOS\", Vía Cachisagua, GRADAS, San Simón, Guaranda, Bolívar, 020150, Ecuador",
+        "road": "Vía Cachisagua",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Simón",
+        "state": "Bolívar",
+        "postcode": "020150",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Vía Cachisagua, Guaranda, Bolívar, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:07:55.203826+00:00",
+  "_kind": "geo_samples"
+}

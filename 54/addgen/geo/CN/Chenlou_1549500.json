@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chenlou",
+  "geonameid": 1549500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.39958864135193,
+      "lon": 118.06557593208147,
+      "geoinfo": {
+        "display_name": "Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Pizhou, Xuzhou, Jiangsu, 221000, China"
+    },
+    {
+      "lat": 34.37582498773453,
+      "lon": 118.07906023895715,
+      "geoinfo": {
+        "display_name": "陈楼镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "260, 陈楼镇, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:50:11.655007+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Bexley",
+  "geonameid": 2175974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.975679102968755,
+      "lon": 151.0950616411028,
+      "geoinfo": {
+        "display_name": "Hurstville Road, Hurstville Grove, St George, Sydney, Georges River Council, New South Wales, 2220, Australia",
+        "road": "Hurstville Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hurstville Grove",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2220",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Hurstville Road, Bexley, New South Wales, Australia"
+    },
+    {
+      "lat": -33.91526329154763,
+      "lon": 151.11712720715448,
+      "geoinfo": {
+        "display_name": "28, Fore Street, Canterbury, Sydney, Canterbury-Bankstown Council, New South Wales, 2193, Australia",
+        "road": "Fore Street",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": "Canterbury",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2193",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "28, Fore Street, Canterbury, Sydney, Canterbury-Bankstown Council, New South Wales, 2193, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:08.838837+00:00",
+  "_kind": "geo_samples"
+}

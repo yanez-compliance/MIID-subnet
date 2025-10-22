@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Baldwin Park",
+  "geonameid": 5325866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.06347452326146,
+      "lon": -117.93578099713037,
+      "geoinfo": {
+        "display_name": "782, California Avenue, West Covina, Los Angeles County, California, 91790, United States",
+        "road": "California Avenue",
+        "house_number": "782",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Covina",
+        "state": "California",
+        "postcode": "91790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "782 California Avenue, Baldwin Park, California, United States"
+    },
+    {
+      "lat": 34.123706879750415,
+      "lon": -117.96735341260192,
+      "geoinfo": {
+        "display_name": "San Gabriel River Freeway, Irwindale, Los Angeles County, California, 91010, United States",
+        "road": "San Gabriel River Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irwindale",
+        "state": "California",
+        "postcode": "91010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "802, San Gabriel River Freeway, Irwindale, Los Angeles County, California, 91010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:34.167941+00:00",
+  "_kind": "geo_samples"
+}

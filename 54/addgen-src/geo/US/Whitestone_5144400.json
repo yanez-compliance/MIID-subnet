@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Whitestone",
+  "geonameid": 5144400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.79065077059235,
+      "lon": -73.80445901221383,
+      "geoinfo": {
+        "display_name": "157-04, 12th Road, Beechhurst, Queens, Queens County, New York, 11357, United States",
+        "road": "12th Road",
+        "house_number": "157-04",
+        "neighbourhood": "Beechhurst",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11357",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "157-04 12th Road, Whitestone, New York, United States"
+    },
+    {
+      "lat": 40.79520799647087,
+      "lon": -73.83278151457489,
+      "geoinfo": {
+        "display_name": "Malba, Queens, Queens County, New York, 11357, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Malba",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11357",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "360, Malba, Queens, Queens County, New York, 11357, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:05.569072+00:00",
+  "_kind": "geo_samples"
+}

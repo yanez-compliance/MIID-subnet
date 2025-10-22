@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Leku",
+  "geonameid": 332129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.8537854966496745,
+      "lon": 38.43919230970988,
+      "geoinfo": {
+        "display_name": "Sidama, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sidama",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Leku, Sidama, Ethiopia"
+    },
+    {
+      "lat": 6.902050165883091,
+      "lon": 38.43715780457056,
+      "geoinfo": {
+        "display_name": "Addis Ababa to Nairobi road, Tula, Sidama, Ethiopia",
+        "road": "Addis Ababa to Nairobi road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tula",
+        "state": "Sidama",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "064, Addis Ababa to Nairobi road, Tula, 93064 Sidama, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:20.440691+00:00",
+  "_kind": "geo_samples"
+}

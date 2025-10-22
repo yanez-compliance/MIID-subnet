@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Blankenberge",
+  "geonameid": 2801858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.28749547549105,
+      "lon": 3.1335677522346264,
+      "geoinfo": {
+        "display_name": "22, Kuiperscheeweg, Sint-Jan-op-den-Dijk, Uitkerke, Blankenberge, Brugge, West Flanders, 8370, Belgium",
+        "road": "Kuiperscheeweg",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blankenberge",
+        "state": "West Flanders",
+        "postcode": "8370",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "22 Kuiperscheeweg, Blankenberge, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.323578912601214,
+      "lon": 3.1993725321776685,
+      "geoinfo": {
+        "display_name": "Noordzeestraat, Stationswijk, Zeebrugge, Lissewege, Bruges, Brugge, West Flanders, 8380, Belgium",
+        "road": "Noordzeestraat",
+        "house_number": null,
+        "neighbourhood": "Stationswijk",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bruges",
+        "state": "West Flanders",
+        "postcode": "8380",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "063, Noordzeestraat, Stationswijk, Zeebrugge, Lissewege, Bruges, Brugge, West Flanders, 8380, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:19.962055+00:00",
+  "_kind": "geo_samples"
+}

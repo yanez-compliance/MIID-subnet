@@ -1,0 +1,47 @@
+{
+  "country_code": "SD",
+  "country": "Sudan",
+  "city": "Sh'īarīah",
+  "geonameid": 13132453,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.447613857143478,
+      "lon": 25.622406151791527,
+      "geoinfo": {
+        "display_name": "Umm Shugeira, East Darfur State, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Umm Shugeira",
+        "state": "East Darfur State",
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "418, Umm Shugeira, 45495 East Darfur State, Sudan"
+    },
+    {
+      "lat": 12.414171270123774,
+      "lon": 25.61935009789835,
+      "geoinfo": {
+        "display_name": "Abu Dangal, East Darfur State, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abu Dangal",
+        "state": "East Darfur State",
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "805, Abu Dangal, 26039 East Darfur State, Sudan"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:48.865475+00:00",
+  "_kind": "geo_samples"
+}

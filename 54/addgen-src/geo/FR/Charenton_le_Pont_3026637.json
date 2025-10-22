@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Charenton-le-Pont",
+  "geonameid": 3026637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.827444680725506,
+      "lon": 2.4664586573346288,
+      "geoinfo": {
+        "display_name": "Autoroute de l’Est, Quartier de Picpus, 12th Arrondissement, Beauté Baltard, Paris, Nogent-sur-Marne, Val-de-Marne, Ile-de-France, Metropolitan France, 75012, France",
+        "road": "Autoroute de l’Est",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": "Paris",
+        "city": "Nogent-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Autoroute de l’Est, Charenton-le-Pont, Ile-de-France, France"
+    },
+    {
+      "lat": 48.84421532562495,
+      "lon": 2.400004144134655,
+      "geoinfo": {
+        "display_name": "Avenue de Saint-Mandé, Quartier de Picpus, 12th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75012, France",
+        "road": "Avenue de Saint-Mandé",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de Saint-Mandé, Quartier de Picpus, 12th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75012, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:19.536269+00:00",
+  "_kind": "geo_samples"
+}

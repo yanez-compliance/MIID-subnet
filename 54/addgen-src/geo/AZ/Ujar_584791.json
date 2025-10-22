@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Ujar",
+  "geonameid": 584791,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.49710425227259,
+      "lon": 47.69423000030034,
+      "geoinfo": {
+        "display_name": "Bakı-Ələt-Qazax-Gürcüstan yolu, Ucar, Ujar District, Azerbaijan",
+        "road": "Bakı-Ələt-Qazax-Gürcüstan yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ucar",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Bakı-Ələt-Qazax-Gürcüstan yolu, Ujar, Azerbaijan"
+    },
+    {
+      "lat": 40.49974566937328,
+      "lon": 47.68621027623755,
+      "geoinfo": {
+        "display_name": "Ujar District, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Ujar, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:27.952770+00:00",
+  "_kind": "geo_samples"
+}

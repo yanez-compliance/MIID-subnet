@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainville",
+  "geonameid": 4840767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.656149292646745,
+      "lon": -72.85004074452172,
+      "geoinfo": {
+        "display_name": "21, Lena Avenue, Plainville, Capitol Planning Region, Connecticut, 06062, United States",
+        "road": "Lena Avenue",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainville",
+        "state": "Connecticut",
+        "postcode": "06062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21 Lena Avenue, Plainville, Connecticut, United States"
+    },
+    {
+      "lat": 41.67054773753932,
+      "lon": -72.851311748773,
+      "geoinfo": {
+        "display_name": "Dewey Place, Hamlin Water's Edge Condominium, Plainville, Capitol Planning Region, Connecticut, 06062, United States",
+        "road": "Dewey Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainville",
+        "state": "Connecticut",
+        "postcode": "06062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "745, Dewey Place, Hamlin Water's Edge Condominium, Plainville, Capitol Planning Region, Connecticut, 06062, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:27.445796+00:00",
+  "_kind": "geo_samples"
+}

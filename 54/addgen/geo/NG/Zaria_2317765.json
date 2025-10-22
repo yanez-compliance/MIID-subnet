@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Zaria",
+  "geonameid": 2317765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.128389190344032,
+      "lon": 7.723785554146217,
+      "geoinfo": {
+        "display_name": "Zaria, Chikaji, Sabon Gari, Kaduna State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zaria",
+        "state": "Kaduna State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Zaria, Kaduna State, Nigeria"
+    },
+    {
+      "lat": 11.10931259187597,
+      "lon": 7.69115305056435,
+      "geoinfo": {
+        "display_name": "A2, Kufena, Zaria, Kaduna State, Nigeria",
+        "road": "A2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kufena",
+        "state": "Kaduna State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "A2, Kufena, Zaria, 76651 Kaduna State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:36.754067+00:00",
+  "_kind": "geo_samples"
+}

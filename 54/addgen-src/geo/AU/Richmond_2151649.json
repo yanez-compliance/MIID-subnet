@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Richmond",
+  "geonameid": 2151649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.80987016463474,
+      "lon": 145.04799472477276,
+      "geoinfo": {
+        "display_name": "Alfred Street, Kew, Melbourne, City of Boroondara, Victoria, 3101, Australia",
+        "road": "Alfred Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kew",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3101",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Alfred Street, Richmond, Victoria, Australia"
+    },
+    {
+      "lat": -37.780830286821434,
+      "lon": 145.0108789835795,
+      "geoinfo": {
+        "display_name": "31, Henderson Street, Northcote, Melbourne, City of Darebin, Victoria, 3070, Australia",
+        "road": "Henderson Street",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": "Northcote",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3070",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "31, Henderson Street, Northcote, Melbourne, City of Darebin, Victoria, 3070, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:47.766537+00:00",
+  "_kind": "geo_samples"
+}

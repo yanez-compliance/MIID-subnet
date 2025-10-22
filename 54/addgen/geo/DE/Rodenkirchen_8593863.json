@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rodenkirchen",
+  "geonameid": 8593863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.90194389647093,
+      "lon": 6.980166906236308,
+      "geoinfo": {
+        "display_name": "3, Kastanienallee, Marienburg, Rodenkirchen, Cologne, North Rhine-Westphalia, 50968, Germany",
+        "road": "Kastanienallee",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Marienburg",
+        "city_district": "Rodenkirchen",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50968",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Kastanienallee, Rodenkirchen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.885322278282025,
+      "lon": 7.02962716004901,
+      "geoinfo": {
+        "display_name": "Malerweg, Weiß, Rodenkirchen, Cologne, North Rhine-Westphalia, 50999, Germany",
+        "road": "Malerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Weiß",
+        "city_district": "Rodenkirchen",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50999",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "142, Malerweg, Weiß, Rodenkirchen, Cologne, North Rhine-Westphalia, 50999, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:42.030346+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Louvain-la-Neuve",
+  "geonameid": 2792073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.68550330774538,
+      "lon": 4.578030475022001,
+      "geoinfo": {
+        "display_name": "32, Rue Charles Dubois, Limelette, Ottignies-Louvain-la-Neuve, Nivelles, Walloon Brabant, Wallonia, 1342, Belgium",
+        "road": "Rue Charles Dubois",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Limelette",
+        "city": "Ottignies-Louvain-la-Neuve",
+        "state": "Walloon Brabant",
+        "postcode": "1342",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "32 Rue Charles Dubois, Louvain-la-Neuve, Walloon Brabant, Belgium"
+    },
+    {
+      "lat": 50.65290570599964,
+      "lon": 4.671852294800762,
+      "geoinfo": {
+        "display_name": "Clos du Verger, Corroy-le-Grand, Chaumont-Gistoux, Nivelles, Walloon Brabant, Wallonia, 1325, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Corroy-le-Grand",
+        "city": "Chaumont-Gistoux",
+        "state": "Walloon Brabant",
+        "postcode": "1325",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "588, Clos du Verger, Corroy-le-Grand, Chaumont-Gistoux, Nivelles, Walloon Brabant, Wallonia, 1325, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:14.410569+00:00",
+  "_kind": "geo_samples"
+}

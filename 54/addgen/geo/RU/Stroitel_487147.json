@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Stroitel",
+  "geonameid": 487147,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.79742645181135,
+      "lon": 36.502838436543115,
+      "geoinfo": {
+        "display_name": "Крымская улица, Глушинский микрорайон, Stroitel, Yakovlevsky District, Belgorod Oblast, Central Federal District, 309070, Russia",
+        "road": "Крымская улица",
+        "house_number": null,
+        "neighbourhood": "Глушинский микрорайон",
+        "suburb": null,
+        "city_district": null,
+        "city": "Stroitel",
+        "state": "Belgorod Oblast",
+        "postcode": "309070",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Крымская улица, Stroitel, Belgorod Oblast, Russia"
+    },
+    {
+      "lat": 50.81789858251903,
+      "lon": 36.45518865889784,
+      "geoinfo": {
+        "display_name": "5, Весёлая улица, Stroitel, Yakovlevsky District, Belgorod Oblast, Central Federal District, 309061, Russia",
+        "road": "Весёлая улица",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stroitel",
+        "state": "Belgorod Oblast",
+        "postcode": "309061",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "5, Весёлая улица, Stroitel, Yakovlevsky District, Belgorod Oblast, Central Federal District, 309061, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:29:45.894810+00:00",
+  "_kind": "geo_samples"
+}

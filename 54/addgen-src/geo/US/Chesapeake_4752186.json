@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chesapeake",
+  "geonameid": 4752186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.81862349855496,
+      "lon": -76.30904026330094,
+      "geoinfo": {
+        "display_name": "935, Portsmouth Boulevard, Brighton, Portsmouth, Virginia, 23704, United States",
+        "road": "Portsmouth Boulevard",
+        "house_number": "935",
+        "neighbourhood": "Brighton",
+        "suburb": null,
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "Virginia",
+        "postcode": "23704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "935 Portsmouth Boulevard, Chesapeake, Virginia, United States"
+    },
+    {
+      "lat": 36.80031355145366,
+      "lon": -76.25878284225948,
+      "geoinfo": {
+        "display_name": "George W Carver Intermediate School, Acorn Street, West Munden, Chesapeake, Virginia, 23324, United States",
+        "road": "Acorn Street",
+        "house_number": null,
+        "neighbourhood": "West Munden",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chesapeake",
+        "state": "Virginia",
+        "postcode": "23324",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "311, Acorn Street, Chesapeake, 23324 Virginia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:12.026075+00:00",
+  "_kind": "geo_samples"
+}

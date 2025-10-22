@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Semey",
+  "geonameid": 1519422,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 50.39454716217209,
+      "lon": 80.2164656727848,
+      "geoinfo": {
+        "display_name": "43, Докучаева, Цемент, Semey, Abay Region, 071410, Kazakhstan",
+        "road": "Докучаева",
+        "house_number": "43",
+        "neighbourhood": null,
+        "suburb": "Цемент",
+        "city_district": null,
+        "city": "Semey",
+        "state": "Abay Region",
+        "postcode": "071410",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "43, Докучаева, Цемент, Semey, Abay Region, 071410, Kazakhstan"
+    },
+    {
+      "lat": 50.395268460142944,
+      "lon": 80.19329815976134,
+      "geoinfo": {
+        "display_name": "Нахаловка, Semey, Abay Region, 071412, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Нахаловка",
+        "city_district": null,
+        "city": "Semey",
+        "state": "Abay Region",
+        "postcode": "071412",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "594, Нахаловка, Semey, Abay Region, 071412, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:00.200124+00:00",
+  "_kind": "geo_samples"
+}

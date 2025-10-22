@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Altenburg",
+  "geonameid": 2957773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.980050988255854,
+      "lon": 12.45286249555164,
+      "geoinfo": {
+        "display_name": "14, Pappelstraße, Südost, Altenburg, Altenburger Land, Thuringia, 04600, Germany",
+        "road": "Pappelstraße",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Südost",
+        "city_district": "Altenburg",
+        "city": "Altenburg",
+        "state": "Thuringia",
+        "postcode": "04600",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14 Pappelstraße, Altenburg, Thuringia, Germany"
+    },
+    {
+      "lat": 51.02403375063845,
+      "lon": 12.472146188854257,
+      "geoinfo": {
+        "display_name": "Otto-Engert-Straße, Borgishain, Pähnitz, Windischleuba, Pleißenaue, Altenburger Land, Thuringia, 04603, Germany",
+        "road": "Otto-Engert-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pähnitz",
+        "state": "Thuringia",
+        "postcode": "04603",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "804, Otto-Engert-Straße, Borgishain, Pähnitz, Windischleuba, Pleißenaue, Altenburger Land, Thuringia, 04603, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:08.523671+00:00",
+  "_kind": "geo_samples"
+}

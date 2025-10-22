@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cleveland",
+  "geonameid": 4614088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.16425782953838,
+      "lon": -84.89772586681254,
+      "geoinfo": {
+        "display_name": "Conner Road, Cleveland, Bradley County, East Tennessee, Tennessee, 37311, United States",
+        "road": "Conner Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Tennessee",
+        "postcode": "37311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Conner Road, Cleveland, Tennessee, United States"
+    },
+    {
+      "lat": 35.12433724147093,
+      "lon": -84.90390395123083,
+      "geoinfo": {
+        "display_name": "Southeastern Container, Enterprise Drive Southwest, Cleveland, Bradley County, East Tennessee, Tennessee, 37311, United States",
+        "road": "Enterprise Drive Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Tennessee",
+        "postcode": "37311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "033, Enterprise Drive Southwest, Cleveland, 37311 Tennessee, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:12.309887+00:00",
+  "_kind": "geo_samples"
+}

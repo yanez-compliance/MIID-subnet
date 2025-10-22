@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Daxing",
+  "geonameid": 1904080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.5572571667995,
+      "lon": 106.11372412771959,
+      "geoinfo": {
+        "display_name": "Meijiang, Bishan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meijiang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Daxing, Chongqing, China"
+    },
+    {
+      "lat": 29.563270985712105,
+      "lon": 106.20872064819568,
+      "geoinfo": {
+        "display_name": "福顺大道, Biquan, Bishan, Bishan District, Chongqing, China",
+        "road": "福顺大道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Biquan",
+        "city_district": null,
+        "city": "Bishan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "649, 福顺大道, Biquan, Bishan, Bishan District, 22889 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:59:00.806348+00:00",
+  "_kind": "geo_samples"
+}

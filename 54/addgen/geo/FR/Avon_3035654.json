@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Avon",
+  "geonameid": 3035654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.39369773235782,
+      "lon": 2.691887001022552,
+      "geoinfo": {
+        "display_name": "D 607, Les Lilas, Fontainebleau, Seine-et-Marne, Ile-de-France, Metropolitan France, 77300, France",
+        "road": "D 607",
+        "house_number": null,
+        "neighbourhood": "Les Lilas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fontainebleau",
+        "state": "Ile-de-France",
+        "postcode": "77300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 607, Avon, Ile-de-France, France"
+    },
+    {
+      "lat": 48.40340428010037,
+      "lon": 2.7868740971034227,
+      "geoinfo": {
+        "display_name": "68, Rue de By, By, Thomery, Fontainebleau, Seine-et-Marne, Metropolitan France, 77810, France",
+        "road": "Rue de By",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thomery",
+        "state": null,
+        "postcode": "77810",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "68, Rue de By, By, Thomery, Fontainebleau, Seine-et-Marne, Metropolitan France, 77810, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:52.901499+00:00",
+  "_kind": "geo_samples"
+}

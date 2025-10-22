@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Bake",
+  "geonameid": 8416628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.92322030683567,
+      "lon": 106.99058952738278,
+      "geoinfo": {
+        "display_name": "Changshou, Changshou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changshou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Bake, Chongqing, China"
+    },
+    {
+      "lat": 29.890160192227608,
+      "lon": 107.04790962503085,
+      "geoinfo": {
+        "display_name": "菩提东路, Changshou, Changshou District, Chongqing, China",
+        "road": "菩提东路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changshou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "232, 菩提东路, Changshou, Changshou District, 78648 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:53.838761+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Torgau",
+  "geonameid": 2821807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.53819280591615,
+      "lon": 13.010955056156485,
+      "geoinfo": {
+        "display_name": "Triftweg, Hellern, Loßwig, Torgau, Nordsachsen, Saxony, 04861, Germany",
+        "road": "Triftweg",
+        "house_number": null,
+        "neighbourhood": "Hellern",
+        "suburb": null,
+        "city_district": null,
+        "city": "Torgau",
+        "state": "Saxony",
+        "postcode": "04861",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Triftweg, Torgau, Saxony, Germany"
+    },
+    {
+      "lat": 51.58430156270462,
+      "lon": 13.03822748227955,
+      "geoinfo": {
+        "display_name": "25, Elbstraße, Zwethau, Beilrode, Nordsachsen, Saxony, 04886, Germany",
+        "road": "Elbstraße",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zwethau",
+        "state": "Saxony",
+        "postcode": "04886",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25, Elbstraße, Torgau, 04886 Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:11.058189+00:00",
+  "_kind": "geo_samples"
+}

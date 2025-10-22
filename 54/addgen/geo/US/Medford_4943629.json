@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Medford",
+  "geonameid": 4943629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.45006107779493,
+      "lon": -71.11409004760561,
+      "geoinfo": {
+        "display_name": "Reservoir Trail, Medford, Middlesex County, Massachusetts, 01890, United States",
+        "road": "Reservoir Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "Massachusetts",
+        "postcode": "01890",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Reservoir Trail, Medford, Massachusetts, United States"
+    },
+    {
+      "lat": 42.392873715017245,
+      "lon": -71.09964456886235,
+      "geoinfo": {
+        "display_name": "48, Tennyson Street, Winter Hill, Somerville, Massachusetts, Ball Square, Somerville, Middlesex County, Massachusetts, 02143, United States",
+        "road": "Tennyson Street",
+        "house_number": "48",
+        "neighbourhood": "Winter Hill, Somerville, Massachusetts",
+        "suburb": "Ball Square",
+        "city_district": null,
+        "city": "Somerville",
+        "state": "Massachusetts",
+        "postcode": "02143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "48, Tennyson Street, Winter Hill, Somerville, Massachusetts, Ball Square, Somerville, Middlesex County, Massachusetts, 02143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:39.032391+00:00",
+  "_kind": "geo_samples"
+}

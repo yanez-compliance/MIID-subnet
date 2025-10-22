@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Colonia",
+  "geonameid": 5096798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.55755641346596,
+      "lon": -74.3438512877465,
+      "geoinfo": {
+        "display_name": "Lincoln Highway, Galleria 27, Edison, Middlesex County, New Jersey, 08820, United States",
+        "road": "Lincoln Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edison",
+        "state": "New Jersey",
+        "postcode": "08820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lincoln Highway, Colonia, New Jersey, United States"
+    },
+    {
+      "lat": 40.54275551133022,
+      "lon": -74.31997438400946,
+      "geoinfo": {
+        "display_name": "22, Hearthstone Avenue, Woodbridge Township, Middlesex County, New Jersey, 08863, United States",
+        "road": "Hearthstone Avenue",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "08863",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22, Hearthstone Avenue, Woodbridge Township, Middlesex County, New Jersey, 08863, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:35.448274+00:00",
+  "_kind": "geo_samples"
+}

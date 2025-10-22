@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Madrid",
+  "geonameid": 3117735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.4236375204284,
+      "lon": -3.656100349603975,
+      "geoinfo": {
+        "display_name": "Calle de San Donato, La Elipa, Ventas, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain",
+        "road": "Calle de San Donato",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de San Donato, Madrid, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42498770810513,
+      "lon": -3.685469053476359,
+      "geoinfo": {
+        "display_name": "Instituto de Educación Secundaria Beatriz Galindo, 10, Calle de Goya, Recoletos, Salamanca, Madrid, Community of Madrid, 28001, Spain",
+        "road": "Calle de Goya",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Instituto de Educación Secundaria Beatriz Galindo, 10, Calle de Goya, Recoletos, Salamanca, Madrid, Community of Madrid, 28001, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:18.418712+00:00",
+  "_kind": "geo_samples"
+}

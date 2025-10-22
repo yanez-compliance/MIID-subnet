@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Quanzhou",
+  "geonameid": 1797353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.874229791682716,
+      "lon": 118.57161435330343,
+      "geoinfo": {
+        "display_name": "Jinjiang City, Licheng District, Quanzhou, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinjiang City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Quanzhou, Fujian, China"
+    },
+    {
+      "lat": 24.95261207444983,
+      "lon": 118.57619975876021,
+      "geoinfo": {
+        "display_name": "Beifeng, Shikeng, Fengze District, Quanzhou, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Beifeng",
+        "city_district": null,
+        "city": "Fengze District",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "440, Beifeng, Quanzhou, 45834 Fujian, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:34:57.497134+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gaithersburg",
+  "geonameid": 4355843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.148603414002714,
+      "lon": -77.2320569297211,
+      "geoinfo": {
+        "display_name": "Watkins Mill Road Sidepath, Bennington, Gaithersburg, Montgomery County, Maryland, 20899, United States",
+        "road": "Watkins Mill Road Sidepath",
+        "house_number": null,
+        "neighbourhood": "Bennington",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaithersburg",
+        "state": "Maryland",
+        "postcode": "20899",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Watkins Mill Road Sidepath, Gaithersburg, Maryland, United States"
+    },
+    {
+      "lat": 39.15477174336313,
+      "lon": -77.2519510264214,
+      "geoinfo": {
+        "display_name": "12149, Clopper Road, Germantown Park, Montgomery County, Maryland, 20874, United States",
+        "road": "Clopper Road",
+        "house_number": "12149",
+        "neighbourhood": "Germantown Park",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20874",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12149, Clopper Road, Germantown Park, Montgomery County, Maryland, 20874, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:24.673615+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Piteå",
+  "geonameid": 603570,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 65.3062987213642,
+      "lon": 21.45023415146424,
+      "geoinfo": {
+        "display_name": "Piteå, Piteå kommun, Norrbotten County, 941 31, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piteå",
+        "state": null,
+        "postcode": "941 31",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Piteå, Sweden"
+    },
+    {
+      "lat": 65.3376240013175,
+      "lon": 21.511554081749857,
+      "geoinfo": {
+        "display_name": "Vägen söderut, Piteå, Piteå kommun, Norrbotten County, 941 50, Sweden",
+        "road": "Vägen söderut",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piteå",
+        "state": null,
+        "postcode": "941 50",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Vägen söderut, Piteå, Piteå kommun, Norrbotten County, 941 50, Sweden"
+    },
+    {
+      "lat": 65.31309059048152,
+      "lon": 21.47104952047743,
+      "geoinfo": {
+        "display_name": "Västra kajen, Sjöbodegränd, Piteå, Piteå kommun, Norrbotten County, 941 38, Sweden",
+        "road": "Sjöbodegränd",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piteå",
+        "state": null,
+        "postcode": "941 38",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Västra kajen, Sjöbodegränd, Piteå, Piteå kommun, Norrbotten County, 941 38, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:40.459539+00:00",
+  "_kind": "geo_samples"
+}

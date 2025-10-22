@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Canton",
+  "geonameid": 4932214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.16510818261892,
+      "lon": -71.1066398818182,
+      "geoinfo": {
+        "display_name": "530, Turnpike Street, Canton, Norfolk County, Massachusetts, 02021, United States",
+        "road": "Turnpike Street",
+        "house_number": "530",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton",
+        "state": "Massachusetts",
+        "postcode": "02021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "530 Turnpike Street, Canton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.130513482770795,
+      "lon": -71.17185903990716,
+      "geoinfo": {
+        "display_name": "24, Huntington Avenue, East Sharon, Sharon, Norfolk County, Massachusetts, 02067, United States",
+        "road": "Huntington Avenue",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sharon",
+        "state": "Massachusetts",
+        "postcode": "02067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24, Huntington Avenue, East Sharon, Sharon, Norfolk County, Massachusetts, 02067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:08.574437+00:00",
+  "_kind": "geo_samples"
+}

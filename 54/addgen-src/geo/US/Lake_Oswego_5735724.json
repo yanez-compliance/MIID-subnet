@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Oswego",
+  "geonameid": 5735724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.42674724786155,
+      "lon": -122.6992882381621,
+      "geoinfo": {
+        "display_name": "Lake Oswego High School, 2501, Country Club Road, Uplands, Lake Oswego, Clackamas County, Oregon, 97034, United States",
+        "road": "Country Club Road",
+        "house_number": "2501",
+        "neighbourhood": "Uplands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Oswego",
+        "state": "Oregon",
+        "postcode": "97034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2501 Country Club Road, Lake Oswego, Oregon, United States"
+    },
+    {
+      "lat": 45.42587057023493,
+      "lon": -122.68745642015871,
+      "geoinfo": {
+        "display_name": "943, Atwater Road, Forest Highlands, Lake Oswego, Clackamas County, Oregon, 97034, United States",
+        "road": "Atwater Road",
+        "house_number": "943",
+        "neighbourhood": "Forest Highlands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Oswego",
+        "state": "Oregon",
+        "postcode": "97034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "943, Atwater Road, Forest Highlands, Lake Oswego, Clackamas County, Oregon, 97034, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:08.516542+00:00",
+  "_kind": "geo_samples"
+}

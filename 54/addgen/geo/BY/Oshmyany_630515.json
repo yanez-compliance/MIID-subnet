@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Oshmyany",
+  "geonameid": 630515,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 54.411716773239974,
+      "lon": 25.866778490349308,
+      "geoinfo": {
+        "display_name": "Н20223, Кальчунскі сельскі Савет, Ashmyany District, Hrodna Region, 231109, Belarus",
+        "road": "Н20223",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Кальчунскі сельскі Савет",
+        "state": "Hrodna Region",
+        "postcode": "231109",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Н20223, Кальчунскі сельскі Савет, Ashmyany District, Hrodna Region, 231109, Belarus"
+    },
+    {
+      "lat": 54.449180906277945,
+      "lon": 25.89752614051834,
+      "geoinfo": {
+        "display_name": "Жупранскі сельскі Савет, Ashmyany District, Hrodna Region, 231107, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Жупранскі сельскі Савет",
+        "state": "Hrodna Region",
+        "postcode": "231107",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "702, Жупранскі сельскі Савет, Ashmyany District, Hrodna Region, 231107, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T02:59:54.230048+00:00",
+  "_kind": "geo_samples"
+}

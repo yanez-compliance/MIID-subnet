@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Oakwood Village",
+  "geonameid": 6092125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.67892356143344,
+      "lon": -79.43258520179684,
+      "geoinfo": {
+        "display_name": "154, Winona Drive, Wychwood, Davenport, Toronto, Golden Horseshoe, Ontario, M6C 1C4, Canada",
+        "road": "Winona Drive",
+        "house_number": "154",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6C 1C4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "154 Winona Drive, Oakwood Village, Ontario, Canada"
+    },
+    {
+      "lat": 43.65237621599943,
+      "lon": -79.42953239102427,
+      "geoinfo": {
+        "display_name": "65, Rusholme Park Crescent, Little Portugal, Davenport, Toronto, Golden Horseshoe, Ontario, M6H 1A7, Canada",
+        "road": "Rusholme Park Crescent",
+        "house_number": "65",
+        "neighbourhood": "Little Portugal",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6H 1A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "65, Rusholme Park Crescent, Little Portugal, Davenport, Toronto, Golden Horseshoe, Ontario, M6H 1A7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:32.988323+00:00",
+  "_kind": "geo_samples"
+}

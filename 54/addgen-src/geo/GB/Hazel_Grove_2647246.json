@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hazel Grove",
+  "geonameid": 2647246,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.37306013903866,
+      "lon": -2.1747767263882367,
+      "geoinfo": {
+        "display_name": "Bramhall Park Road, Cheadle Hulme, Stockport, Greater Manchester, England, SK7 3NZ, United Kingdom",
+        "road": "Bramhall Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cheadle Hulme",
+        "state": "England",
+        "postcode": "SK7 3NZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bramhall Park Road, Hazel Grove, England, United Kingdom"
+    },
+    {
+      "lat": 53.39140791771732,
+      "lon": -2.182676785409549,
+      "geoinfo": {
+        "display_name": "Oakhurst Drive, Orion Business Park, Adswood, Cheadle Hulme, Stockport, Greater Manchester, England, SK3 0WP, United Kingdom",
+        "road": "Oakhurst Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Adswood",
+        "city_district": null,
+        "city": "Cheadle Hulme",
+        "state": "England",
+        "postcode": "SK3 0WP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Oakhurst Drive, Orion Business Park, Adswood, Cheadle Hulme, Stockport, Greater Manchester, England, SK3 0WP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:30.949943+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "The Colony",
+  "geonameid": 4736388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.0678443609329,
+      "lon": -96.88861937814568,
+      "geoinfo": {
+        "display_name": "Wells Fargo, 4703, State Highway 121, The Colony, Denton County, Texas, 75056, United States",
+        "road": "State Highway 121",
+        "house_number": "4703",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "The Colony",
+        "state": "Texas",
+        "postcode": "75056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4703 State Highway 121, The Colony, Texas, United States"
+    },
+    {
+      "lat": 33.10374320673729,
+      "lon": -96.84233377259483,
+      "geoinfo": {
+        "display_name": "8, Woodcreek Lane, Fairway Oaks, Frisco, Denton County, Texas, 75034, United States",
+        "road": "Woodcreek Lane",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frisco",
+        "state": "Texas",
+        "postcode": "75034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8, Woodcreek Lane, Fairway Oaks, Frisco, Denton County, Texas, 75034, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:41.702765+00:00",
+  "_kind": "geo_samples"
+}

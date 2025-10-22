@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Fergus",
+  "geonameid": 7871320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.73209030025218,
+      "lon": -80.3738908460575,
+      "geoinfo": {
+        "display_name": "1st Line, Centre Wellington Business Park, Fergus, Centre Wellington, Wellington County, Ontario, N1M 2R3, Canada",
+        "road": "1st Line",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centre Wellington",
+        "state": "Ontario",
+        "postcode": "N1M 2R3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1st Line, Fergus, Ontario, Canada"
+    },
+    {
+      "lat": 43.699595649591586,
+      "lon": -80.33484559636412,
+      "geoinfo": {
+        "display_name": "Wellington Road 29, Fergus, Centre Wellington, Wellington County, Ontario, N1M 2W5, Canada",
+        "road": "Wellington Road 29",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centre Wellington",
+        "state": "Ontario",
+        "postcode": "N1M 2W5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Wellington Road 29, Fergus, Centre Wellington, Wellington County, Ontario, N1M 2W5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:08.499138+00:00",
+  "_kind": "geo_samples"
+}

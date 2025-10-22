@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Porvoo",
+  "geonameid": 660561,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.42916503923019,
+      "lon": 25.675435024965456,
+      "geoinfo": {
+        "display_name": "Papinjärventie, Rita, Porvoo, Porvoo sub-region, Uusimaa, Mainland Finland, 06150, Finland",
+        "road": "Papinjärventie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rita",
+        "city_district": null,
+        "city": "Porvoo",
+        "state": "Uusimaa",
+        "postcode": "06150",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Papinjärventie, Porvoo, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.40924481437638,
+      "lon": 25.63647864055773,
+      "geoinfo": {
+        "display_name": "Valtatie 7, Hornhattula, Porvoo, Porvoo sub-region, Uusimaa, Mainland Finland, 06100, Finland",
+        "road": "Valtatie 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hornhattula",
+        "city_district": null,
+        "city": "Porvoo",
+        "state": "Uusimaa",
+        "postcode": "06100",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Valtatie 7, Porvoo, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:58:28.481861+00:00",
+  "_kind": "geo_samples"
+}

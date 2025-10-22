@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Commerce City",
+  "geonameid": 5417737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.82175147653594,
+      "lon": -104.91775784311298,
+      "geoinfo": {
+        "display_name": "6080, East 69th Avenue, Adams City, Commerce City, Adams County, Colorado, 80022, United States",
+        "road": "East 69th Avenue",
+        "house_number": "6080",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Commerce City",
+        "state": "Colorado",
+        "postcode": "80022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6080 East 69th Avenue, Commerce City, Colorado, United States"
+    },
+    {
+      "lat": 39.831957786551214,
+      "lon": -104.90721131847282,
+      "geoinfo": {
+        "display_name": "6910, Garden Lane, Commerce City, Adams County, Colorado, 80022, United States",
+        "road": "Garden Lane",
+        "house_number": "6910",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Commerce City",
+        "state": "Colorado",
+        "postcode": "80022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6910, Garden Lane, Commerce City, Adams County, Colorado, 80022, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:29.925276+00:00",
+  "_kind": "geo_samples"
+}

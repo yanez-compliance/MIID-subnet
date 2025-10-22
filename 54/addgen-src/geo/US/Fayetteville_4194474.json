@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fayetteville",
+  "geonameid": 4194474,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.44936787024523,
+      "lon": -84.48407826875055,
+      "geoinfo": {
+        "display_name": "Law Offices of Leslie W. Wade, 101, Devant Street, Brookcliff, Fayetteville, Fayette County, Georgia, 30214, United States",
+        "road": "Devant Street",
+        "house_number": "101",
+        "neighbourhood": "Brookcliff",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fayetteville",
+        "state": "Georgia",
+        "postcode": "30214",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "101 Devant Street, Fayetteville, Georgia, United States"
+    },
+    {
+      "lat": 33.47471321508501,
+      "lon": -84.4350873838527,
+      "geoinfo": {
+        "display_name": "256, Fox Hunt Court, Ponderosa, Cottonwood, Fayette County, Georgia, 30214, United States",
+        "road": "Fox Hunt Court",
+        "house_number": "256",
+        "neighbourhood": "Ponderosa",
+        "suburb": "Cottonwood",
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30214",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "256, Fox Hunt Court, Ponderosa, Cottonwood, Fayette County, Georgia, 30214, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:09.158198+00:00",
+  "_kind": "geo_samples"
+}

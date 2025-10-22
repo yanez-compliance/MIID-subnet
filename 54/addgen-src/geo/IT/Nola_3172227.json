@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Nola",
+  "geonameid": 3172227,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.88984783209112,
+      "lon": 14.524584406686111,
+      "geoinfo": {
+        "display_name": "Via Palermo, Nola, Naples, Campania, 80039, Italy",
+        "road": "Via Palermo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nola",
+        "state": "Campania",
+        "postcode": "80039",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Palermo, Nola, Campania, Italy"
+    },
+    {
+      "lat": 40.91091630894147,
+      "lon": 14.50914726911574,
+      "geoinfo": {
+        "display_name": "Corso Italia, Saviano, Naples, Campania, 80039, Italy",
+        "road": "Corso Italia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saviano",
+        "state": "Campania",
+        "postcode": "80039",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "879, Corso Italia, Saviano, Naples, Campania, 80039, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:01.754947+00:00",
+  "_kind": "geo_samples"
+}

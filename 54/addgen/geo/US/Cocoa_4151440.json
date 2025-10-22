@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cocoa",
+  "geonameid": 4151440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.405397049998893,
+      "lon": -80.70777557407202,
+      "geoinfo": {
+        "display_name": "Bennett Causeway, Brevard County, Florida, 32953, United States",
+        "road": "Bennett Causeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32953",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bennett Causeway, Cocoa, Florida, United States"
+    },
+    {
+      "lat": 28.351788192130723,
+      "lon": -80.74613513329892,
+      "geoinfo": {
+        "display_name": "610, South Georgia Avenue, Cocoa, Brevard County, Florida, 32922, United States",
+        "road": "South Georgia Avenue",
+        "house_number": "610",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cocoa",
+        "state": "Florida",
+        "postcode": "32922",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "610, South Georgia Avenue, Cocoa, Brevard County, Florida, 32922, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:41.256037+00:00",
+  "_kind": "geo_samples"
+}

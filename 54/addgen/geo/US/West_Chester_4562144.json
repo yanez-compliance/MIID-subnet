@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Chester",
+  "geonameid": 4562144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.962075803021655,
+      "lon": -75.66228421417158,
+      "geoinfo": {
+        "display_name": "975, Waltz Road, Marshallton, West Chester, Chester County, Pennsylvania, 19380, United States",
+        "road": "Waltz Road",
+        "house_number": "975",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Chester",
+        "state": "Pennsylvania",
+        "postcode": "19380",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "975 Waltz Road, West Chester, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.92776702740305,
+      "lon": -75.64355819378571,
+      "geoinfo": {
+        "display_name": "1207, Withers Way, West Chester, Chester County, Pennsylvania, 19382, United States",
+        "road": "Withers Way",
+        "house_number": "1207",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Chester",
+        "state": "Pennsylvania",
+        "postcode": "19382",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1207, Withers Way, West Chester, Chester County, Pennsylvania, 19382, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:44.992332+00:00",
+  "_kind": "geo_samples"
+}

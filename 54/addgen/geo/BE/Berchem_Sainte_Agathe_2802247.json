@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Berchem-Sainte-Agathe",
+  "geonameid": 2802247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.87055164750673,
+      "lon": 4.26778453340569,
+      "geoinfo": {
+        "display_name": "Apuntemento, 210, Brusselstraat, Groot-Bijgaarden, Dilbeek, Halle-Vilvoorde, Flemish Brabant, Flanders, 1702, Belgium",
+        "road": "Brusselstraat",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dilbeek",
+        "state": "Flemish Brabant",
+        "postcode": "1702",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "210 Brusselstraat, Berchem-Sainte-Agathe, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.85102771616577,
+      "lon": 4.348864072926315,
+      "geoinfo": {
+        "display_name": "Marché aux Poissons - Vismarkt, Alhambra Quarter, Quays Quarter, Pentagon, Brussels, Brussels-Capital, 1000, Belgium",
+        "road": "Marché aux Poissons - Vismarkt",
+        "house_number": null,
+        "neighbourhood": "Alhambra Quarter",
+        "suburb": "Pentagon",
+        "city_district": "Brussels",
+        "city": "Brussels",
+        "state": null,
+        "postcode": "1000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "880, Marché aux Poissons - Vismarkt, Alhambra Quarter, Quays Quarter, Pentagon, Brussels, Brussels-Capital, 1000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:05.958682+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yuntai",
+  "geonameid": 1785685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.16593182409812,
+      "lon": 107.20324007045653,
+      "geoinfo": {
+        "display_name": "Yuntai, Changshou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuntai",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yuntai, Chongqing, China"
+    },
+    {
+      "lat": 30.147977685759145,
+      "lon": 107.20016767048565,
+      "geoinfo": {
+        "display_name": "S513, Linshui County, Yihe, Changshou District, Chongqing, China",
+        "road": "S513",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yihe",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S513, Linshui County, Yihe, Changshou District, 77584 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:59.018256+00:00",
+  "_kind": "geo_samples"
+}

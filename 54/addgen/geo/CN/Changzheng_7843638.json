@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changzheng",
+  "geonameid": 7843638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.229126005152473,
+      "lon": 121.36691146972827,
+      "geoinfo": {
+        "display_name": "Zhenbei, Changzheng, Putuo District, 200333, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Putuo District",
+        "state": null,
+        "postcode": "200333",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Changzheng, China"
+    },
+    {
+      "lat": 31.208740463720083,
+      "lon": 121.36265964287861,
+      "geoinfo": {
+        "display_name": "Kele Road, Xinjing, Changning District, 200335, China",
+        "road": "Kele Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changning District",
+        "state": null,
+        "postcode": "200335",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "944, Kele Road, Xinjing, Changning District, 200335, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:09.604954+00:00",
+  "_kind": "geo_samples"
+}

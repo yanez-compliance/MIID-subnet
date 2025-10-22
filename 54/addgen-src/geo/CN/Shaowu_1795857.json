@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaowu",
+  "geonameid": 1795857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.31957256123474,
+      "lon": 117.50360119769954,
+      "geoinfo": {
+        "display_name": "Tongtai Subdistrict, Shaowu City, Nanping City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanping City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shaowu, Fujian, China"
+    },
+    {
+      "lat": 27.310205716732558,
+      "lon": 117.45508389901273,
+      "geoinfo": {
+        "display_name": "G316, Tongtai Subdistrict, Shaowu City, Nanping City, Fujian, China",
+        "road": "G316",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanping City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G316, Tongtai Subdistrict, Shaowu City, Nanping City, 90715 Fujian, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:01.694116+00:00",
+  "_kind": "geo_samples"
+}

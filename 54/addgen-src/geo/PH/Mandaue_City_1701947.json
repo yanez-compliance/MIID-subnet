@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Mandaue City",
+  "geonameid": 1701947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.360475705760633,
+      "lon": 123.9259612593847,
+      "geoinfo": {
+        "display_name": "Bethlehem V. Holaysan Jr, 32, Elias Cortes Street, Morado, Cabancalan, Mandaue, Central Visayas, 6014, Philippines",
+        "road": "Elias Cortes Street",
+        "house_number": "32",
+        "neighbourhood": "Morado",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mandaue",
+        "state": null,
+        "postcode": "6014",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "32 Elias Cortes Street, Mandaue City, Philippines"
+    },
+    {
+      "lat": 10.32383165432032,
+      "lon": 123.8950974489613,
+      "geoinfo": {
+        "display_name": "Green Valley, Cebu City, Central Visayas, 6000, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Green Valley",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cebu City",
+        "state": null,
+        "postcode": "6000",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "191, Green Valley, Cebu City, Central Visayas, 6000, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T09:03:30.446546+00:00",
+  "_kind": "geo_samples"
+}

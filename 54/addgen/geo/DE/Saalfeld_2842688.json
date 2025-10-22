@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Saalfeld",
+  "geonameid": 2842688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.68806027927988,
+      "lon": 11.397615979690963,
+      "geoinfo": {
+        "display_name": "L 1107, Unterwellenborn, Kamsdorf, Landkreis Saalfeld-Rudolstadt, Thuringia, 07333, Germany",
+        "road": "L 1107",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Unterwellenborn",
+        "state": "Thuringia",
+        "postcode": "07333",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 1107, Saalfeld, Thuringia, Germany"
+    },
+    {
+      "lat": 50.651433829021826,
+      "lon": 11.332864873669385,
+      "geoinfo": {
+        "display_name": "27, Sandweg, Beulwitz, Saalfeld/Saale, Kamsdorf, Landkreis Saalfeld-Rudolstadt, Thuringia, 07318, Germany",
+        "road": "Sandweg",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saalfeld/Saale",
+        "state": "Thuringia",
+        "postcode": "07318",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "27, Sandweg, Saalfeld, 07318 Thuringia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:55.472051+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Baldwin",
+  "geonameid": 5178940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.34046385663714,
+      "lon": -80.01267081813879,
+      "geoinfo": {
+        "display_name": "N Street, Surrey Farms, Salida, Bethel Park, Allegheny County, Pennsylvania, 15102, United States",
+        "road": "N Street",
+        "house_number": null,
+        "neighbourhood": "Surrey Farms",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bethel Park",
+        "state": "Pennsylvania",
+        "postcode": "15102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "N Street, Baldwin, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.36898914258516,
+      "lon": -79.96720648602721,
+      "geoinfo": {
+        "display_name": "Wanley Road, Brentwood, Allegheny County, Pennsylvania, 15227, United States",
+        "road": "Wanley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "Pennsylvania",
+        "postcode": "15227",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "678, Wanley Road, Brentwood, Allegheny County, Pennsylvania, 15227, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:05.613155+00:00",
+  "_kind": "geo_samples"
+}

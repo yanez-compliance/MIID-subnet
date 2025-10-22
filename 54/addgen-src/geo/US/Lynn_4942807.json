@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lynn",
+  "geonameid": 4942807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.436253735527,
+      "lon": -70.98716552779,
+      "geoinfo": {
+        "display_name": "Saugus Quarry, Salem Turnpike, Saugus, Essex County, Massachusetts, 01905, United States",
+        "road": "Salem Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saugus",
+        "state": "Massachusetts",
+        "postcode": "01905",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Salem Turnpike, Lynn, Massachusetts, United States"
+    },
+    {
+      "lat": 42.48207605897903,
+      "lon": -70.97153223741279,
+      "geoinfo": {
+        "display_name": "18, Thistle Street, Lynn, Essex County, Massachusetts, 01904, United States",
+        "road": "Thistle Street",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynn",
+        "state": "Massachusetts",
+        "postcode": "01904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18, Thistle Street, Lynn, Essex County, Massachusetts, 01904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:22.318632+00:00",
+  "_kind": "geo_samples"
+}

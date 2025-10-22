@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wyandotte",
+  "geonameid": 5015599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.231542639797595,
+      "lon": -83.13273370791595,
+      "geoinfo": {
+        "display_name": "Wyandotte, Wayne County, Michigan, 48192, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyandotte",
+        "state": "Michigan",
+        "postcode": "48192",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wyandotte, Michigan, United States"
+    },
+    {
+      "lat": 42.25101501286546,
+      "lon": -83.14807194353764,
+      "geoinfo": {
+        "display_name": "Ecorse Community High School, 27385, West Outer Drive, Ecorse, Wayne County, Michigan, 48229, United States",
+        "road": "West Outer Drive",
+        "house_number": "27385",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ecorse",
+        "state": "Michigan",
+        "postcode": "48229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ecorse Community High School, 27385, West Outer Drive, Ecorse, Wayne County, Michigan, 48229, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:29.272658+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Talladega",
+  "geonameid": 4092788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.4382597453722,
+      "lon": -86.10052493412702,
+      "geoinfo": {
+        "display_name": "303, Coosa Street East, Talladega, Talladega County, Alabama, 35160, United States",
+        "road": "Coosa Street East",
+        "house_number": "303",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Talladega",
+        "state": "Alabama",
+        "postcode": "35160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "303 Coosa Street East, Talladega, Alabama, United States"
+    },
+    {
+      "lat": 33.44645261317609,
+      "lon": -86.1097201554935,
+      "geoinfo": {
+        "display_name": "Talladega, Talladega County, Alabama, 36160, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Talladega",
+        "state": "Alabama",
+        "postcode": "36160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "997, Talladega, Talladega County, Alabama, 36160, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:46.523095+00:00",
+  "_kind": "geo_samples"
+}

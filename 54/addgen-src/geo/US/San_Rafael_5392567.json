@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Rafael",
+  "geonameid": 5392567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.99751631690936,
+      "lon": -122.54322120228312,
+      "geoinfo": {
+        "display_name": "37, Golden Hinde Boulevard, Terra Linda, San Rafael, Marin County, California, 94903, United States",
+        "road": "Golden Hinde Boulevard",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Rafael",
+        "state": "California",
+        "postcode": "94903",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "37 Golden Hinde Boulevard, San Rafael, California, United States"
+    },
+    {
+      "lat": 37.95442333303144,
+      "lon": -122.49263814717189,
+      "geoinfo": {
+        "display_name": "Shoreline Parkway, San Rafael, Marin County, California, 94964, United States",
+        "road": "Shoreline Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Rafael",
+        "state": "California",
+        "postcode": "94964",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "411, Shoreline Parkway, San Rafael, Marin County, California, 94964, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:27.033730+00:00",
+  "_kind": "geo_samples"
+}

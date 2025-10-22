@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cooper City",
+  "geonameid": 4151824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.05175798715239,
+      "lon": -80.30020790405227,
+      "geoinfo": {
+        "display_name": "Southwest 114th Avenue, Forest Lake, Cooper City, Broward County, Florida, 33330, United States",
+        "road": "Southwest 114th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cooper City",
+        "state": "Florida",
+        "postcode": "33330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 114th Avenue, Cooper City, Florida, United States"
+    },
+    {
+      "lat": 26.071821710064714,
+      "lon": -80.22633518687599,
+      "geoinfo": {
+        "display_name": "5939, Southwest 41st Street, Downtown Davie, Playland Village, Davie, Broward County, Florida, 33314, United States",
+        "road": "Southwest 41st Street",
+        "house_number": "5939",
+        "neighbourhood": "Downtown Davie",
+        "suburb": null,
+        "city_district": null,
+        "city": "Davie",
+        "state": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5939, Southwest 41st Street, Downtown Davie, Playland Village, Davie, Broward County, Florida, 33314, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:43.091764+00:00",
+  "_kind": "geo_samples"
+}

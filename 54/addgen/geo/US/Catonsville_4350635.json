@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Catonsville",
+  "geonameid": 4350635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.25927923491677,
+      "lon": -76.73126760354423,
+      "geoinfo": {
+        "display_name": "Catonsville High School, South Rolling Road, College Hills, Catonsville, Baltimore County, Maryland, 21228, United States",
+        "road": "South Rolling Road",
+        "house_number": null,
+        "neighbourhood": "College Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Catonsville",
+        "state": "Maryland",
+        "postcode": "21228",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Rolling Road, Catonsville, Maryland, United States"
+    },
+    {
+      "lat": 39.29999500293065,
+      "lon": -76.74306356768639,
+      "geoinfo": {
+        "display_name": "Baltimore Beltway, Woodlawn, Baltimore County, Maryland, 21241, United States",
+        "road": "Baltimore Beltway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodlawn",
+        "state": "Maryland",
+        "postcode": "21241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "410, Baltimore Beltway, Woodlawn, Baltimore County, Maryland, 21241, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:08.647483+00:00",
+  "_kind": "geo_samples"
+}

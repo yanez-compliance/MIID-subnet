@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sherman Oaks",
+  "geonameid": 5395244,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.166051694032106,
+      "lon": -118.49022879941266,
+      "geoinfo": {
+        "display_name": "Ventura Freeway, Encino Neighborhood Council District, Los Angeles, Los Angeles County, California, 91436, United States",
+        "road": "Ventura Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Encino Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91436",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ventura Freeway, Sherman Oaks, California, United States"
+    },
+    {
+      "lat": 34.18101964902812,
+      "lon": -118.45373550197668,
+      "geoinfo": {
+        "display_name": "14725, Bessemer Street, Van Nuys Neighborhood Council District, Los Angeles, Los Angeles County, California, 91411, United States",
+        "road": "Bessemer Street",
+        "house_number": "14725",
+        "neighbourhood": null,
+        "suburb": "Van Nuys Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91411",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14725, Bessemer Street, Van Nuys Neighborhood Council District, Los Angeles, Los Angeles County, California, 91411, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:06.017666+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Hellín",
+  "geonameid": 2516797,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.479145148890865,
+      "lon": -1.6732524160002955,
+      "geoinfo": {
+        "display_name": "Hellín, Albacete, Castile-La Mancha, 02400, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hellín",
+        "state": "Castile-La Mancha",
+        "postcode": "02400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Hellín, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 38.510871916949405,
+      "lon": -1.7035720876281473,
+      "geoinfo": {
+        "display_name": "Calle el Arco, Hellín, Albacete, Castile-La Mancha, 02400, Spain",
+        "road": "Calle el Arco",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hellín",
+        "state": "Castile-La Mancha",
+        "postcode": "02400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "249, Calle el Arco, Hellín, Albacete, Castile-La Mancha, 02400, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:55.320739+00:00",
+  "_kind": "geo_samples"
+}

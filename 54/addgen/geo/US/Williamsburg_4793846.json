@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Williamsburg",
+  "geonameid": 4793846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.2775809102516,
+      "lon": -76.69661447177407,
+      "geoinfo": {
+        "display_name": "Colonial Parkway, Forest Hill Park, Williamsburg, Virginia, 23185, United States",
+        "road": "Colonial Parkway",
+        "house_number": null,
+        "neighbourhood": "Forest Hill Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Williamsburg",
+        "state": "Virginia",
+        "postcode": "23185",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Colonial Parkway, Williamsburg, Virginia, United States"
+    },
+    {
+      "lat": 37.28463552867365,
+      "lon": -76.67745615183061,
+      "geoinfo": {
+        "display_name": "115, Starboard Court, Parkway Estates, York County, Virginia, 23185, United States",
+        "road": "Starboard Court",
+        "house_number": "115",
+        "neighbourhood": "Parkway Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "23185",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "115, Starboard Court, Parkway Estates, York County, Virginia, 23185, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:34.727540+00:00",
+  "_kind": "geo_samples"
+}

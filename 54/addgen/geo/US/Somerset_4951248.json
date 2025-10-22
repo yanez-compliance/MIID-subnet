@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Somerset",
+  "geonameid": 4951248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.749247241172,
+      "lon": -71.1427352346254,
+      "geoinfo": {
+        "display_name": "191, Lincoln Avenue, Pottersville, Somerset, Bristol County, Massachusetts, 02726, United States",
+        "road": "Lincoln Avenue",
+        "house_number": "191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Somerset",
+        "state": "Massachusetts",
+        "postcode": "02726",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "191 Lincoln Avenue, Somerset, Massachusetts, United States"
+    },
+    {
+      "lat": 41.733179617153596,
+      "lon": -71.13689917768382,
+      "geoinfo": {
+        "display_name": "9, Wayland Street, Fall River, Bristol County, Massachusetts, 02720, United States",
+        "road": "Wayland Street",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fall River",
+        "state": "Massachusetts",
+        "postcode": "02720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9, Wayland Street, Fall River, Bristol County, Massachusetts, 02720, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:27.116634+00:00",
+  "_kind": "geo_samples"
+}

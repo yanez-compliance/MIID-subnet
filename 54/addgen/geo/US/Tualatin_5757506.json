@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tualatin",
+  "geonameid": 5757506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.365110854532865,
+      "lon": -122.74377444330756,
+      "geoinfo": {
+        "display_name": "21480, Southwest 65th Avenue, Tualatin, Washington County, Oregon, 97062, United States",
+        "road": "Southwest 65th Avenue",
+        "house_number": "21480",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tualatin",
+        "state": "Oregon",
+        "postcode": "97062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21480 Southwest 65th Avenue, Tualatin, Oregon, United States"
+    },
+    {
+      "lat": 45.363753694757534,
+      "lon": -122.76055732477305,
+      "geoinfo": {
+        "display_name": "Robert Hugh Baldock Freeway, Tualatin, Washington County, Oregon, 97062, United States",
+        "road": "Robert Hugh Baldock Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tualatin",
+        "state": "Oregon",
+        "postcode": "97062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "628, Robert Hugh Baldock Freeway, Tualatin, Washington County, Oregon, 97062, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:36.900461+00:00",
+  "_kind": "geo_samples"
+}

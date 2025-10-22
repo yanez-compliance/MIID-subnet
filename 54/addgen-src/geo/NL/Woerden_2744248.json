@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Woerden",
+  "geonameid": 2744248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.121829476662626,
+      "lon": 4.905554211866919,
+      "geoinfo": {
+        "display_name": "Kanis, Woerden, Utrecht, Netherlands, 3471 XB, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woerden",
+        "state": "Utrecht",
+        "postcode": "3471 XB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Woerden, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.10703999686452,
+      "lon": 4.861319208788754,
+      "geoinfo": {
+        "display_name": "Grechtkade, Kamerik, Woerden, Utrecht, Netherlands, 3471 HC, Netherlands",
+        "road": "Grechtkade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woerden",
+        "state": "Utrecht",
+        "postcode": "3471 HC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "738, Grechtkade, Kamerik, Woerden, Utrecht, Netherlands, 3471 HC, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:03.677459+00:00",
+  "_kind": "geo_samples"
+}

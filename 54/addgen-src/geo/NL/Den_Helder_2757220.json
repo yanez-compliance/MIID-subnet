@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Den Helder",
+  "geonameid": 2757220,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.968309645642556,
+      "lon": 4.802552074755731,
+      "geoinfo": {
+        "display_name": "NBCD-School, Noordvoorlandweg, Den Helder, North Holland, Netherlands, 1781 AD, Netherlands",
+        "road": "Noordvoorlandweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Den Helder",
+        "city": "Den Helder",
+        "state": "North Holland",
+        "postcode": "1781 AD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Noordvoorlandweg, Den Helder, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.95781267144726,
+      "lon": 4.808640525754218,
+      "geoinfo": {
+        "display_name": "Oostwal, Den Helder, North Holland, Netherlands, 1781 AD, Netherlands",
+        "road": "Oostwal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Den Helder",
+        "city": "Den Helder",
+        "state": "North Holland",
+        "postcode": "1781 AD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "937, Oostwal, Den Helder, North Holland, Netherlands, 1781 AD, Netherlands"
+    },
+    {
+      "lat": 52.951411977199605,
+      "lon": 4.827728485691548,
+      "geoinfo": {
+        "display_name": "Den Helder, North Holland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Den Helder",
+        "city": "Den Helder",
+        "state": "North Holland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "189, Den Helder, 22038 North Holland, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:46.207323+00:00",
+  "_kind": "geo_samples"
+}

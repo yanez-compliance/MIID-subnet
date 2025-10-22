@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plano",
+  "geonameid": 4719457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.99028382779898,
+      "lon": -96.66606791143032,
+      "geoinfo": {
+        "display_name": "SpringHill Suites, 3251, President George Bush Highway, Richardson, Collin County, Texas, 75082, United States",
+        "road": "President George Bush Highway",
+        "house_number": "3251",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richardson",
+        "state": "Texas",
+        "postcode": "75082",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3251 President George Bush Highway, Plano, Texas, United States"
+    },
+    {
+      "lat": 33.044252236028484,
+      "lon": -96.68474023759185,
+      "geoinfo": {
+        "display_name": "1994, East Parker Road, Plano, Collin County, Texas, 75074, United States",
+        "road": "East Parker Road",
+        "house_number": "1994",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plano",
+        "state": "Texas",
+        "postcode": "75074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1994, East Parker Road, Plano, Collin County, Texas, 75074, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:32.188943+00:00",
+  "_kind": "geo_samples"
+}

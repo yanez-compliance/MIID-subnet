@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Affton",
+  "geonameid": 4374513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.546920778564896,
+      "lon": -90.35775187496067,
+      "geoinfo": {
+        "display_name": "Grant's Farm, 10501, Gravois Road, St. Louis, Saint Louis County, Missouri, 63123, United States",
+        "road": "Gravois Road",
+        "house_number": "10501",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10501 Gravois Road, Affton, Missouri, United States"
+    },
+    {
+      "lat": 38.54871800201173,
+      "lon": -90.34091005434517,
+      "geoinfo": {
+        "display_name": "10135, Gravois Road, Grantwood, Saint Louis County, Missouri, 63123, United States",
+        "road": "Gravois Road",
+        "house_number": "10135",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": "63123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10135, Gravois Road, Grantwood, Saint Louis County, Missouri, 63123, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:45.050691+00:00",
+  "_kind": "geo_samples"
+}

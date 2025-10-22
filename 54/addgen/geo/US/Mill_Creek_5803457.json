@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mill Creek",
+  "geonameid": 5803457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.87251492598209,
+      "lon": -122.19780289963056,
+      "geoinfo": {
+        "display_name": "2523, 139th Street Southeast, Murphys Corner, Mill Creek, Snohomish County, Washington, 98012, United States",
+        "road": "139th Street Southeast",
+        "house_number": "2523",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mill Creek",
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2523 139th Street Southeast, Mill Creek, Washington, United States"
+    },
+    {
+      "lat": 47.83286216946409,
+      "lon": -122.2336370267105,
+      "geoinfo": {
+        "display_name": "182nd Street Southeast, Snohomish County, Washington, 98012, United States",
+        "road": "182nd Street Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "182nd Street Southeast, Snohomish County, Washington, 98012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:05.150929+00:00",
+  "_kind": "geo_samples"
+}

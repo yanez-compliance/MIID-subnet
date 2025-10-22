@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Great Falls",
+  "geonameid": 5655240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.516483606297655,
+      "lon": -111.34089961231804,
+      "geoinfo": {
+        "display_name": "1615, Jim Loud Thunder Gopher Memorial Highway, Westside, Great Falls, Cascade County, Montana, 59404, United States",
+        "road": "Jim Loud Thunder Gopher Memorial Highway",
+        "house_number": "1615",
+        "neighbourhood": "Westside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Great Falls",
+        "state": "Montana",
+        "postcode": "59404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1615 Jim Loud Thunder Gopher Memorial Highway, Great Falls, Montana, United States"
+    },
+    {
+      "lat": 47.53443895795459,
+      "lon": -111.3332698244202,
+      "geoinfo": {
+        "display_name": "Watson Coulee Road, Cascade County, Montana, 59404, United States",
+        "road": "Watson Coulee Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Montana",
+        "postcode": "59404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "253, Watson Coulee Road, Cascade County, Montana, 59404, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:27.719273+00:00",
+  "_kind": "geo_samples"
+}

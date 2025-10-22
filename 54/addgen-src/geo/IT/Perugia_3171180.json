@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Perugia",
+  "geonameid": 3171180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.14241971414525,
+      "lon": 12.392952984572979,
+      "geoinfo": {
+        "display_name": "San Marino, Montelaguardia, Perugia, Umbria, 06125, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perugia",
+        "state": "Umbria",
+        "postcode": "06125",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Perugia, Umbria, Italy"
+    },
+    {
+      "lat": 43.11589256738088,
+      "lon": 12.3412579493797,
+      "geoinfo": {
+        "display_name": "Strada delle Pulite, Perugia, Umbria, 06070, Italy",
+        "road": "Strada delle Pulite",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perugia",
+        "state": "Umbria",
+        "postcode": "06070",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "460, Strada delle Pulite, Perugia, Umbria, 06070, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:12.276220+00:00",
+  "_kind": "geo_samples"
+}

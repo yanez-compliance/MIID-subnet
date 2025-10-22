@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Krasnodar",
+  "geonameid": 542420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.06090532822045,
+      "lon": 38.95982260279092,
+      "geoinfo": {
+        "display_name": "ОАО \"Торговый дом \"Фестивальный\", Turgeneva Street, Прикубанский округ, Krasnodar Municipality, Krasnodar Krai, Southern Federal District, 350000, Russia",
+        "road": "Turgeneva Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Прикубанский округ",
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": "350000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Turgeneva Street, Krasnodar, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 45.05826953024102,
+      "lon": 38.96356364540399,
+      "geoinfo": {
+        "display_name": "2/1, Montazhnikov Street, Западный округ, Krasnodar, Krasnodar Municipality, Krasnodar Krai, 350051, Russia",
+        "road": "Montazhnikov Street",
+        "house_number": "2/1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Западный округ",
+        "city": "Krasnodar",
+        "state": "Krasnodar Krai",
+        "postcode": "350051",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "2/1, Montazhnikov Street, Западный округ, Krasnodar, Krasnodar Municipality, Krasnodar Krai, 350051, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:28.550271+00:00",
+  "_kind": "geo_samples"
+}

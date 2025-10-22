@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Camino Real",
+  "geonameid": 12750403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.689003070305006,
+      "lon": -117.76789644047693,
+      "geoinfo": {
+        "display_name": "Santa Ana Freeway, Oak Creek, Irvine, Orange County, California, 92406, United States",
+        "road": "Santa Ana Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oak Creek",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92406",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Ana Freeway, El Camino Real, California, United States"
+    },
+    {
+      "lat": 33.69147859074863,
+      "lon": -117.77491982902932,
+      "geoinfo": {
+        "display_name": "5151, Doanoke Avenue, El Camino Real, Irvine, Orange County, California, 92604, United States",
+        "road": "Doanoke Avenue",
+        "house_number": "5151",
+        "neighbourhood": null,
+        "suburb": "El Camino Real",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5151, Doanoke Avenue, El Camino Real, Irvine, Orange County, California, 92604, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:41.602333+00:00",
+  "_kind": "geo_samples"
+}

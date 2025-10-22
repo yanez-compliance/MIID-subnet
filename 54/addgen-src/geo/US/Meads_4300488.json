@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Meads",
+  "geonameid": 4300488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.41403746789546,
+      "lon": -82.70206438197559,
+      "geoinfo": {
+        "display_name": "8337, Carla Drive, Rockdale, Boyd County, Kentucky, 41102, United States",
+        "road": "Carla Drive",
+        "house_number": "8337",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kentucky",
+        "postcode": "41102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8337 Carla Drive, Meads, Kentucky, United States"
+    },
+    {
+      "lat": 38.391231144939354,
+      "lon": -82.69059977423584,
+      "geoinfo": {
+        "display_name": "12321, Collins Road, Cannonsburg, Boyd County, Kentucky, 41129, United States",
+        "road": "Collins Road",
+        "house_number": "12321",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cannonsburg",
+        "state": "Kentucky",
+        "postcode": "41129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12321, Collins Road, Cannonsburg, Boyd County, Kentucky, 41129, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:33.735617+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Hill",
+  "geonameid": 5811456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.13999042136126,
+      "lon": -122.27577931568725,
+      "geoinfo": {
+        "display_name": "11520, 128th Street East, Pierce County, Washington, 98374, United States",
+        "road": "128th Street East",
+        "house_number": "11520",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11520 128th Street East, South Hill, Washington, United States"
+    },
+    {
+      "lat": 47.16301836209005,
+      "lon": -122.3133676546255,
+      "geoinfo": {
+        "display_name": "8758, 29th Avenue Court Southwest, Puyallup, Pierce County, Washington, 98373, United States",
+        "road": "29th Avenue Court Southwest",
+        "house_number": "8758",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puyallup",
+        "state": "Washington",
+        "postcode": "98373",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8758, 29th Avenue Court Southwest, Puyallup, Pierce County, Washington, 98373, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:25.811401+00:00",
+  "_kind": "geo_samples"
+}

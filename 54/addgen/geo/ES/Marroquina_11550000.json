@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Marroquina",
+  "geonameid": 11550000,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.426083493922555,
+      "lon": -3.594656242270589,
+      "geoinfo": {
+        "display_name": "M201, Rosas, San Blas - Canillejas, Madrid, Community of Madrid, 28022, Spain",
+        "road": "M201",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Blas - Canillejas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28022",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M201, Marroquina, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.38890351578854,
+      "lon": -3.6322857224710297,
+      "geoinfo": {
+        "display_name": "M-40, Palomeras Sureste, Vallecas, Madrid, Community of Madrid, 28031, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28031",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Palomeras Sureste, Vallecas, Madrid, Community of Madrid, 28031, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:33.792987+00:00",
+  "_kind": "geo_samples"
+}

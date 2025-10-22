@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Murcia",
+  "geonameid": 2513416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.99210714617928,
+      "lon": -1.1070789410922517,
+      "geoinfo": {
+        "display_name": "Calle Portada, Puente Tocinos, Murcia, Área Metropolitana de Murcia, Region of Murcia, 30006, Spain",
+        "road": "Calle Portada",
+        "house_number": null,
+        "neighbourhood": "Puente Tocinos",
+        "suburb": null,
+        "city_district": "Puente Tocinos",
+        "city": "Murcia",
+        "state": "Region of Murcia",
+        "postcode": "30006",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Portada, Murcia, Region of Murcia, Spain"
+    },
+    {
+      "lat": 38.02186972940649,
+      "lon": -1.1633427507132768,
+      "geoinfo": {
+        "display_name": "Casas de Cementerio de Nuestro Padre Jesus, El Puntal, Murcia, Área Metropolitana de Murcia, Region of Murcia, 30100, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Casas de Cementerio de Nuestro Padre Jesus",
+        "suburb": null,
+        "city_district": "El Puntal",
+        "city": "Murcia",
+        "state": "Region of Murcia",
+        "postcode": "30100",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "039, Casas de Cementerio de Nuestro Padre Jesus, El Puntal, Murcia, Área Metropolitana de Murcia, Region of Murcia, 30100, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:18.902113+00:00",
+  "_kind": "geo_samples"
+}

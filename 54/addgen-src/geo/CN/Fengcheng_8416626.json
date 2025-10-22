@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fengcheng",
+  "geonameid": 8416626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.819879786577733,
+      "lon": 107.10463359502506,
+      "geoinfo": {
+        "display_name": "长东路, Changshou, Changshou District, Chongqing, China",
+        "road": "长东路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changshou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "长东路, Fengcheng, Chongqing, China"
+    },
+    {
+      "lat": 29.851333247522817,
+      "lon": 107.0284772327386,
+      "geoinfo": {
+        "display_name": "Changshou, Changshou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changshou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "575, Changshou, Changshou District, 90642 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:46.492960+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elkridge",
+  "geonameid": 4354256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.214376216771065,
+      "lon": -76.71025454612506,
+      "geoinfo": {
+        "display_name": "Grace Cemetery, Railroad Avenue, Elkridge, Howard County, Maryland, 21075, United States",
+        "road": "Railroad Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkridge",
+        "state": "Maryland",
+        "postcode": "21075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Railroad Avenue, Elkridge, Maryland, United States"
+    },
+    {
+      "lat": 39.24085256054896,
+      "lon": -76.7149142640156,
+      "geoinfo": {
+        "display_name": "795, Gun Road, Avalon, Arbutus, Baltimore County, Maryland, 21227, United States",
+        "road": "Gun Road",
+        "house_number": "795",
+        "neighbourhood": "Avalon",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arbutus",
+        "state": "Maryland",
+        "postcode": "21227",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "795, Gun Road, Avalon, Arbutus, Baltimore County, Maryland, 21227, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:02.278886+00:00",
+  "_kind": "geo_samples"
+}

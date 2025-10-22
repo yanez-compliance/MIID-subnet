@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wittenberge",
+  "geonameid": 2807344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.02673309518842,
+      "lon": 11.73159958239039,
+      "geoinfo": {
+        "display_name": "9a, Feldstraße, Lindenberg, Wittenberge, Prignitz, Brandenburg, 19322, Germany",
+        "road": "Feldstraße",
+        "house_number": "9a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wittenberge",
+        "state": "Brandenburg",
+        "postcode": "19322",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9a Feldstraße, Wittenberge, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.982603261394445,
+      "lon": 11.705600480797214,
+      "geoinfo": {
+        "display_name": "Am Deich, Wittenberge, Prignitz, Brandenburg, 19322, Germany",
+        "road": "Am Deich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wittenberge",
+        "state": "Brandenburg",
+        "postcode": "19322",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "156, Am Deich, Wittenberge, Prignitz, Brandenburg, 19322, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:29.793522+00:00",
+  "_kind": "geo_samples"
+}

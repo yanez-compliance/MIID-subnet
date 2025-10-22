@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cullman",
+  "geonameid": 4057835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.167816595504426,
+      "lon": -86.84334547880376,
+      "geoinfo": {
+        "display_name": "854, 5th Avenue Southwest, Cullman, Cullman County, Alabama, 35055, United States",
+        "road": "5th Avenue Southwest",
+        "house_number": "854",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cullman",
+        "state": "Alabama",
+        "postcode": "35055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "854 5th Avenue Southwest, Cullman, Alabama, United States"
+    },
+    {
+      "lat": 34.14436251442118,
+      "lon": -86.8170741791795,
+      "geoinfo": {
+        "display_name": "Simmons Street Southeast, Cullman, Cullman County, Alabama, 35055, United States",
+        "road": "Simmons Street Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cullman",
+        "state": "Alabama",
+        "postcode": "35055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "862, Simmons Street Southeast, Cullman, Cullman County, Alabama, 35055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:49.108953+00:00",
+  "_kind": "geo_samples"
+}

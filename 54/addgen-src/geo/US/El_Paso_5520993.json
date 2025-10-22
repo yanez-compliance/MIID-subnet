@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Paso",
+  "geonameid": 5520993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.797299573807102,
+      "lon": -106.51322364746744,
+      "geoinfo": {
+        "display_name": "Executive Center Boulevard, El Paso, El Paso County, Texas, 79902, United States",
+        "road": "Executive Center Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Paso",
+        "state": "Texas",
+        "postcode": "79902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Executive Center Boulevard, El Paso, Texas, United States"
+    },
+    {
+      "lat": 31.765981557992667,
+      "lon": -106.51032826940842,
+      "geoinfo": {
+        "display_name": "West Paisano Drive, El Paso, El Paso County, Texas, 79968, United States",
+        "road": "West Paisano Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Paso",
+        "state": "Texas",
+        "postcode": "79968",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "883, West Paisano Drive, El Paso, El Paso County, Texas, 79968, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:29.073222+00:00",
+  "_kind": "geo_samples"
+}

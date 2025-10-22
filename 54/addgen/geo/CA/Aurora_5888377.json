@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Aurora",
+  "geonameid": 5888377,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.96804362762067,
+      "lon": -79.44938977501064,
+      "geoinfo": {
+        "display_name": "Old Bloomington Road, Ascot Park, Aurora, York Region, Golden Horseshoe, Ontario, L4E 0C9, Canada",
+        "road": "Old Bloomington Road",
+        "house_number": null,
+        "neighbourhood": "Ascot Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Ontario",
+        "postcode": "L4E 0C9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Old Bloomington Road, Aurora, Ontario, Canada"
+    },
+    {
+      "lat": 44.01748918329363,
+      "lon": -79.49068498484111,
+      "geoinfo": {
+        "display_name": "42, Aspen Leaf Court, Brentwood, Aurora, York Region, Golden Horseshoe, Ontario, L4G 2Z4, Canada",
+        "road": "Aspen Leaf Court",
+        "house_number": "42",
+        "neighbourhood": "Brentwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Ontario",
+        "postcode": "L4G 2Z4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "42, Aspen Leaf Court, Brentwood, Aurora, York Region, Golden Horseshoe, Ontario, L4G 2Z4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:57.348759+00:00",
+  "_kind": "geo_samples"
+}

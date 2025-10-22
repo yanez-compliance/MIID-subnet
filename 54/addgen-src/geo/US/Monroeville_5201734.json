@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Monroeville",
+  "geonameid": 5201734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.435321084131715,
+      "lon": -79.78469261833104,
+      "geoinfo": {
+        "display_name": "Mall Plaza Boulevard, Monroeville, Allegheny County, Pennsylvania, 15140, United States",
+        "road": "Mall Plaza Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monroeville",
+        "state": "Pennsylvania",
+        "postcode": "15140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mall Plaza Boulevard, Monroeville, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.437451140162565,
+      "lon": -79.81674287804267,
+      "geoinfo": {
+        "display_name": "1446, Laurel Drive, Eastmont, Wilkins Township, Allegheny County, Pennsylvania, 15235, United States",
+        "road": "Laurel Drive",
+        "house_number": "1446",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilkins Township",
+        "state": "Pennsylvania",
+        "postcode": "15235",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1446, Laurel Drive, Eastmont, Wilkins Township, Allegheny County, Pennsylvania, 15235, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:42.017085+00:00",
+  "_kind": "geo_samples"
+}

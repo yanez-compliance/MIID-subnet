@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Brighouse-City Centre",
+  "geonameid": 5908809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.13624961094791,
+      "lon": -123.09105007224241,
+      "geoinfo": {
+        "display_name": "Richmond Christian School, Number 5 Road, Ironwood, Shellmont, Richmond, Metro Vancouver Regional District, British Columbia, V7A 4E5, Canada",
+        "road": "Number 5 Road",
+        "house_number": null,
+        "neighbourhood": "Ironwood",
+        "suburb": "Shellmont",
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7A 4E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Number 5 Road, Brighouse-City Centre, British Columbia, Canada"
+    },
+    {
+      "lat": 49.19170731954522,
+      "lon": -123.10207319786385,
+      "geoinfo": {
+        "display_name": "11080, Bridgeport Road, Tait, Bridgeport, Richmond, Metro Vancouver Regional District, British Columbia, V6X, Canada",
+        "road": "Bridgeport Road",
+        "house_number": "11080",
+        "neighbourhood": "Tait",
+        "suburb": "Bridgeport",
+        "city_district": "Bridgeport",
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V6X",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "11080, Bridgeport Road, Tait, Bridgeport, Richmond, Metro Vancouver Regional District, British Columbia, V6X, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:36.381460+00:00",
+  "_kind": "geo_samples"
+}

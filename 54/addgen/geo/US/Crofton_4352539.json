@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Crofton",
+  "geonameid": 4352539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.03630740729348,
+      "lon": -76.71786842633816,
+      "geoinfo": {
+        "display_name": "Patuxent Road, Anne Arundel County, Maryland, 21113, United States",
+        "road": "Patuxent Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Patuxent Road, Crofton, Maryland, United States"
+    },
+    {
+      "lat": 39.0131285705942,
+      "lon": -76.64701386742095,
+      "geoinfo": {
+        "display_name": "Creek Farm Lane, Ridings at North Branch, Chestnut Ridge, Anne Arundel County, Maryland, 21032, United States",
+        "road": "Creek Farm Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "927, Creek Farm Lane, Ridings at North Branch, Chestnut Ridge, Anne Arundel County, Maryland, 21032, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:07.678667+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Northallerton",
+  "geonameid": 2641435,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.345478699329334,
+      "lon": -1.437838714196547,
+      "geoinfo": {
+        "display_name": "Willow Beck Road, Northallerton, North Yorkshire, York and North Yorkshire, England, DL7 8DL, United Kingdom",
+        "road": "Willow Beck Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northallerton",
+        "state": "England",
+        "postcode": "DL7 8DL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Willow Beck Road, Northallerton, England, United Kingdom"
+    },
+    {
+      "lat": 54.32452487142321,
+      "lon": -1.4211606862507737,
+      "geoinfo": {
+        "display_name": "Thirsk Road, Romanby, North Yorkshire, York and North Yorkshire, England, DL6 3SA, United Kingdom",
+        "road": "Thirsk Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Romanby",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "DL6 3SA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Thirsk Road, Romanby, North Yorkshire, York and North Yorkshire, England, DL6 3SA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:17.323443+00:00",
+  "_kind": "geo_samples"
+}

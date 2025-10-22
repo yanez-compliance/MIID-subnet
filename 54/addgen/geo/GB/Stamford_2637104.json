@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stamford",
+  "geonameid": 2637104,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.667387887719,
+      "lon": -0.4969948277084164,
+      "geoinfo": {
+        "display_name": "Little Casterton Road, Hall Farm, Toll Bar, Little Casterton, Rutland, England, PE9 4DB, United Kingdom",
+        "road": "Little Casterton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toll Bar",
+        "state": "England",
+        "postcode": "PE9 4DB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Little Casterton Road, Stamford, England, United Kingdom"
+    },
+    {
+      "lat": 52.64706043391966,
+      "lon": -0.5359654550058449,
+      "geoinfo": {
+        "display_name": "Steadfold Lane, Ketton, Toll Bar, Aldgate, Rutland, England, PE9 3UN, United Kingdom",
+        "road": "Steadfold Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ketton",
+        "city_district": null,
+        "city": "Toll Bar",
+        "state": "England",
+        "postcode": "PE9 3UN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Steadfold Lane, Ketton, Toll Bar, Aldgate, Rutland, England, PE9 3UN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:40:19.101077+00:00",
+  "_kind": "geo_samples"
+}

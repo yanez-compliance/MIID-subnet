@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hyde Park",
+  "geonameid": 4896728,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.79503385650522,
+      "lon": -87.57046672572739,
+      "geoinfo": {
+        "display_name": "Lakefront Trail, East Hyde Park, Hyde Park, Chicago, Hyde Park Township, Cook County, Illinois, 60615, United States",
+        "road": "Lakefront Trail",
+        "house_number": null,
+        "neighbourhood": "East Hyde Park",
+        "suburb": "Hyde Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60615",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lakefront Trail, Hyde Park, Illinois, United States"
+    },
+    {
+      "lat": 41.8144255230353,
+      "lon": -87.54885855580346,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "116, Cook County, 15792 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:26.396128+00:00",
+  "_kind": "geo_samples"
+}

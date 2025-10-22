@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Remagen",
+  "geonameid": 2848335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.58345510992691,
+      "lon": 7.215669323796845,
+      "geoinfo": {
+        "display_name": "3, Kölner Straße, Waldschlösschen, Remagen, Landkreis Ahrweiler, Rhineland-Palatinate, 53424, Germany",
+        "road": "Kölner Straße",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Remagen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "53424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Kölner Straße, Remagen, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.58053054552741,
+      "lon": 7.251798514567075,
+      "geoinfo": {
+        "display_name": "B 42, Kasbach, Kasbach-Ohlenberg, Linz am Rhein, Landkreis Neuwied, Rhineland-Palatinate, 53547, Germany",
+        "road": "B 42",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kasbach",
+        "city_district": null,
+        "city": "Kasbach-Ohlenberg",
+        "state": "Rhineland-Palatinate",
+        "postcode": "53547",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 42, Kasbach, Kasbach-Ohlenberg, Linz am Rhein, Landkreis Neuwied, Rhineland-Palatinate, 53547, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:39.037580+00:00",
+  "_kind": "geo_samples"
+}

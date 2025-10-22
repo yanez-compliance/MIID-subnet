@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Elgin",
+  "geonameid": 4911893,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.9856718082467,
+      "lon": -88.34118023630968,
+      "geoinfo": {
+        "display_name": "Chipotle, 348, Randall Road, Youngsdale, South Elgin, Elgin Township, Kane County, Illinois, 60177, United States",
+        "road": "Randall Road",
+        "house_number": "348",
+        "neighbourhood": "Youngsdale",
+        "suburb": null,
+        "city_district": null,
+        "city": "South Elgin",
+        "state": "Illinois",
+        "postcode": "60177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "348 Randall Road, South Elgin, Illinois, United States"
+    },
+    {
+      "lat": 42.00536205469835,
+      "lon": -88.33597835408705,
+      "geoinfo": {
+        "display_name": "Randall Road, The Reserve, Elgin, Elgin Township, Kane County, Illinois, 60177, United States",
+        "road": "Randall Road",
+        "house_number": null,
+        "neighbourhood": "The Reserve",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elgin",
+        "state": "Illinois",
+        "postcode": "60177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "356, Randall Road, The Reserve, Elgin, Elgin Township, Kane County, Illinois, 60177, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:09.704883+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chalmette",
+  "geonameid": 4319518,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.971710113879112,
+      "lon": -89.95613394318731,
+      "geoinfo": {
+        "display_name": "Saint Bernard Parish, Louisiana, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Louisiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chalmette, Louisiana, United States"
+    },
+    {
+      "lat": 29.942564645552185,
+      "lon": -89.91842418672447,
+      "geoinfo": {
+        "display_name": "Lamarque Drive, Lexington Place, Saint Bernard Parish, Louisiana, 70075, United States",
+        "road": "Lamarque Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Louisiana",
+        "postcode": "70075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "065, Lamarque Drive, Lexington Place, Saint Bernard Parish, Louisiana, 70075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:51.061523+00:00",
+  "_kind": "geo_samples"
+}

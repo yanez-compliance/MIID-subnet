@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Yaiza",
+  "geonameid": 2509408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.974043887822962,
+      "lon": -13.755469207745815,
+      "geoinfo": {
+        "display_name": "LZ-67, Uga, Yaiza, Las Palmas, Canary Islands, Spain",
+        "road": "LZ-67",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uga",
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "LZ-67, Yaiza, Spain"
+    },
+    {
+      "lat": 28.928609513241557,
+      "lon": -13.75870297209955,
+      "geoinfo": {
+        "display_name": "LZ-702, Las Casitas, Femés, Yaiza, Las Palmas, Canary Islands, 35570, Spain",
+        "road": "LZ-702",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Femés",
+        "state": null,
+        "postcode": "35570",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "LZ-702, Las Casitas, Femés, Yaiza, Las Palmas, Canary Islands, 35570, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:34.447653+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tieqiao",
+  "geonameid": 1792760,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.044181138214554,
+      "lon": 108.17785804190764,
+      "geoinfo": {
+        "display_name": "Tieqiao, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tieqiao",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tieqiao, Chongqing, China"
+    },
+    {
+      "lat": 31.07653208364918,
+      "lon": 108.15361695119144,
+      "geoinfo": {
+        "display_name": "Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "756, Kaizhou District, 09394 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:52:37.457021+00:00",
+  "_kind": "geo_samples"
+}

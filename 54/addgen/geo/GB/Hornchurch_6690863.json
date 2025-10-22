@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hornchurch",
+  "geonameid": 6690863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.554410771439734,
+      "lon": 0.27855177237909484,
+      "geoinfo": {
+        "display_name": "Cranham Golf Course, M25, Cranham, London Borough of Havering, London, Greater London, England, RM14 3QJ, United Kingdom",
+        "road": "M25",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cranham",
+        "city_district": "London Borough of Havering",
+        "city": "London",
+        "state": "England",
+        "postcode": "RM14 3QJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M25, Hornchurch, England, United Kingdom"
+    },
+    {
+      "lat": 51.517567478161446,
+      "lon": 0.24408194148121462,
+      "geoinfo": {
+        "display_name": "Brickkiln Wood, South Ockendon, Thurrock, Essex, England, RM15 4QE, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Ockendon",
+        "state": "England",
+        "postcode": "RM15 4QE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Brickkiln Wood, South Ockendon, Thurrock, Essex, England, RM15 4QE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:37.500283+00:00",
+  "_kind": "geo_samples"
+}

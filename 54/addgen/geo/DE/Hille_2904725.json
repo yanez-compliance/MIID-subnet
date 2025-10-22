@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hille",
+  "geonameid": 2904725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.33939677527065,
+      "lon": 8.778981440738097,
+      "geoinfo": {
+        "display_name": "Grefte, Südhemmern, Nordhemmern, Hille, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32479, Germany",
+        "road": "Grefte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Südhemmern",
+        "city_district": null,
+        "city": "Nordhemmern",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32479",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Grefte, Hille, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.34619561128104,
+      "lon": 8.717732072258094,
+      "geoinfo": {
+        "display_name": "11, Hügelstraße, Neuenbaum, Hille, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32479, Germany",
+        "road": "Hügelstraße",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Hille",
+        "city_district": null,
+        "city": "Hille",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32479",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Hügelstraße, Neuenbaum, Hille, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32479, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:39.570147+00:00",
+  "_kind": "geo_samples"
+}

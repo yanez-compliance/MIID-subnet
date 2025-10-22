@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fulu",
+  "geonameid": 1810963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.612914939399776,
+      "lon": 107.9589012482458,
+      "geoinfo": {
+        "display_name": "Shi'an, Liangping District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shi'an",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Fulu, Chongqing, China"
+    },
+    {
+      "lat": 30.60980353061256,
+      "lon": 107.96465169442108,
+      "geoinfo": {
+        "display_name": "Fuxi Road, Shi'an, Liangping District, Chongqing, China",
+        "road": "Fuxi Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shi'an",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "800, Fuxi Road, Shi'an, Liangping District, 55858 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:55.171292+00:00",
+  "_kind": "geo_samples"
+}

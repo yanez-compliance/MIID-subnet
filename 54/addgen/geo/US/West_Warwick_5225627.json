@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Warwick",
+  "geonameid": 5225627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.71810471248921,
+      "lon": -71.51075439798473,
+      "geoinfo": {
+        "display_name": "Hay Street, River Point, West Warwick, Kent County, Rhode Island, 02996, United States",
+        "road": "Hay Street",
+        "house_number": null,
+        "neighbourhood": "River Point",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Warwick",
+        "state": "Rhode Island",
+        "postcode": "02996",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hay Street, West Warwick, Rhode Island, United States"
+    },
+    {
+      "lat": 41.72731089303811,
+      "lon": -71.49409382733025,
+      "geoinfo": {
+        "display_name": "36, Glendale Drive, Natick, West Warwick, Kent County, Rhode Island, 02893, United States",
+        "road": "Glendale Drive",
+        "house_number": "36",
+        "neighbourhood": "Natick",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Warwick",
+        "state": "Rhode Island",
+        "postcode": "02893",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36, Glendale Drive, Natick, West Warwick, Kent County, Rhode Island, 02893, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:31.459709+00:00",
+  "_kind": "geo_samples"
+}

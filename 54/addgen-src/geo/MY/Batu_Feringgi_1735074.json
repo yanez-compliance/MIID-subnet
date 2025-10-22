@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Batu Feringgi",
+  "geonameid": 1735074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.502438545251606,
+      "lon": 100.27575815731545,
+      "geoinfo": {
+        "display_name": "Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Batu Feringgi, Malaysia"
+    },
+    {
+      "lat": 5.457191443256089,
+      "lon": 100.24003368348548,
+      "geoinfo": {
+        "display_name": "PBA Aquadcuct Access, Teluk Bahang, South-West, George Town, Penang, 11100, Malaysia",
+        "road": "PBA Aquadcuct Access",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Teluk Bahang",
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "188, PBA Aquadcuct Access, Teluk Bahang, South-West, George Town, Penang, 11100, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:12.724721+00:00",
+  "_kind": "geo_samples"
+}

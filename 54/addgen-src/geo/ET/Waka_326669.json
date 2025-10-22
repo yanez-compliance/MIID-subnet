@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Waka",
+  "geonameid": 326669,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.076120643600762,
+      "lon": 37.124304307953615,
+      "geoinfo": {
+        "display_name": "Dawro, South West Ethiopia Peoples, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South West Ethiopia Peoples",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Waka, South West Ethiopia Peoples, Ethiopia"
+    },
+    {
+      "lat": 7.089343281284521,
+      "lon": 37.13211961016944,
+      "geoinfo": {
+        "display_name": "Tarcha, Dawro, South West Ethiopia Peoples, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tarcha",
+        "state": "South West Ethiopia Peoples",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "647, Waka, 79621 South West Ethiopia Peoples, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:02.791780+00:00",
+  "_kind": "geo_samples"
+}

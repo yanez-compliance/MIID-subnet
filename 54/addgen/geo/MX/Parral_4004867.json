@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Parral",
+  "geonameid": 4004867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.916263810293138,
+      "lon": -105.6469079460861,
+      "geoinfo": {
+        "display_name": "Howard Johnson, Calle Rubí, Hidalgo del Parral, Chihuahua, 33896, Mexico",
+        "road": "Calle Rubí",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hidalgo del Parral",
+        "state": "Chihuahua",
+        "postcode": "33896",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Rubí, Parral, Chihuahua, Mexico"
+    },
+    {
+      "lat": 26.89489956295721,
+      "lon": -105.6361706211296,
+      "geoinfo": {
+        "display_name": "Hidalgo del Parral, Chihuahua, 33834, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hidalgo del Parral",
+        "state": "Chihuahua",
+        "postcode": "33834",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "511, Hidalgo del Parral, Chihuahua, 33834, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:37.781489+00:00",
+  "_kind": "geo_samples"
+}

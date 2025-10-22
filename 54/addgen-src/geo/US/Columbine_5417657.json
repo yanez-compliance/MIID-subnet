@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Columbine",
+  "geonameid": 5417657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.5898613305634,
+      "lon": -105.06912044525514,
+      "geoinfo": {
+        "display_name": "6926, South Newland Street, Normandy Estates, Columbine, Jefferson County, Colorado, 80128, United States",
+        "road": "South Newland Street",
+        "house_number": "6926",
+        "neighbourhood": null,
+        "suburb": "Columbine",
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6926 South Newland Street, Columbine, Colorado, United States"
+    },
+    {
+      "lat": 39.58806559249295,
+      "lon": -105.02929408826193,
+      "geoinfo": {
+        "display_name": "Mary Carter Greenway Trail, Littleton, Arapahoe County, Colorado, 80128, United States",
+        "road": "Mary Carter Greenway Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Littleton",
+        "state": "Colorado",
+        "postcode": "80128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "541, Mary Carter Greenway Trail, Littleton, Arapahoe County, Colorado, 80128, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:24.197858+00:00",
+  "_kind": "geo_samples"
+}

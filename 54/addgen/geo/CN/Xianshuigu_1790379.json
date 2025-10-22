@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xianshuigu",
+  "geonameid": 1790379,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.97321773542131,
+      "lon": 117.36395509948602,
+      "geoinfo": {
+        "display_name": "天津市天华高级中学, Erba Highway, Xianshuigu Town, Jinnan District, Tianjin, 300350, China",
+        "road": "Erba Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinnan District",
+        "state": "Tianjin",
+        "postcode": "300350",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Erba Highway, Xianshuigu, Tianjin, China"
+    },
+    {
+      "lat": 39.02409653187611,
+      "lon": 117.40970486748358,
+      "geoinfo": {
+        "display_name": "金桥街道, Dongli District, Tianjin, 300301, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "金桥街道",
+        "city": "Dongli District",
+        "state": "Tianjin",
+        "postcode": "300301",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "056, 金桥街道, Dongli District, Tianjin, 300301, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:16.308072+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chinatown",
+  "geonameid": 5336477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.78856414732184,
+      "lon": -122.46290673612663,
+      "geoinfo": {
+        "display_name": "300, Lake Street, Presidio Terrace, Richmond District, San Francisco, California, 94129, United States",
+        "road": "Lake Street",
+        "house_number": "300",
+        "neighbourhood": "Presidio Terrace",
+        "suburb": "Richmond District",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "300 Lake Street, Chinatown, California, United States"
+    },
+    {
+      "lat": 37.76116488551407,
+      "lon": -122.41683237385443,
+      "geoinfo": {
+        "display_name": "755;759, South Van Ness Avenue, Mission District, San Francisco, California, 90110, United States",
+        "road": "South Van Ness Avenue",
+        "house_number": "755;759",
+        "neighbourhood": null,
+        "suburb": "Mission District",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "90110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "755;759, South Van Ness Avenue, Mission District, San Francisco, California, 90110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:32.869839+00:00",
+  "_kind": "geo_samples"
+}

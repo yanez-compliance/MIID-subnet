@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "İznik",
+  "geonameid": 745026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.414229934980995,
+      "lon": 29.74162764440544,
+      "geoinfo": {
+        "display_name": "Dırazali, Iznik, Bursa, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iznik",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "İznik, Turkey"
+    },
+    {
+      "lat": 40.418352761365604,
+      "lon": 29.71837830602018,
+      "geoinfo": {
+        "display_name": "Selçuk, Iznik, Bursa, Marmara Region, 16860, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Selçuk",
+        "city_district": null,
+        "city": "Iznik",
+        "state": null,
+        "postcode": "16860",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "004, Selçuk, Iznik, Bursa, Marmara Region, 16860, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:39.263322+00:00",
+  "_kind": "geo_samples"
+}

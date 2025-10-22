@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kamiigusa",
+  "geonameid": 8573577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.678698088865154,
+      "lon": 139.6121779421972,
+      "geoinfo": {
+        "display_name": "第六天神社, 14, Kami Takaido 2, Kami Takaido, Suginami, Tokyo, 168-8535, Japan",
+        "road": "14",
+        "house_number": null,
+        "neighbourhood": "Kami Takaido 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Suginami",
+        "state": null,
+        "postcode": "168-8535",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "14, Kamiigusa, Japan"
+    },
+    {
+      "lat": 35.761736158125665,
+      "lon": 139.6278385581418,
+      "geoinfo": {
+        "display_name": "Hikarigaoka, Nerima, Tokyo, 179-8799, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "179-8799",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hikarigaoka, Nerima, Tokyo, 179-8799, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:00.242474+00:00",
+  "_kind": "geo_samples"
+}

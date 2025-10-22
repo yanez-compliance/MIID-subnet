@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Santa Catarina",
+  "geonameid": 3984583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.68735547007813,
+      "lon": -100.46366867877789,
+      "geoinfo": {
+        "display_name": "Camino Vecinal, Pío XII, Santa Catarina, Nuevo León, 66350, Mexico",
+        "road": "Camino Vecinal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Catarina",
+        "state": "Nuevo León",
+        "postcode": "66350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino Vecinal, Santa Catarina, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.666472887037585,
+      "lon": -100.4994533403983,
+      "geoinfo": {
+        "display_name": "Santa Catarina, Nuevo León, 66367, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "66367",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "550, Santa Catarina, Nuevo León, 66367, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:56.968208+00:00",
+  "_kind": "geo_samples"
+}

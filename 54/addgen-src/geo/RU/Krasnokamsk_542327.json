@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Krasnokamsk",
+  "geonameid": 542327,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 58.08065438312651,
+      "lon": 55.67552058734943,
+      "geoinfo": {
+        "display_name": "19, Северная улица, Krasnokamsk, Krasnokamsk District, Perm Krai, Volga Federal District, Russia",
+        "road": "Северная улица",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Krasnokamsk",
+        "state": "Perm Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "19 Северная улица, Krasnokamsk, Perm Krai, Russia"
+    },
+    {
+      "lat": 58.09954758962571,
+      "lon": 55.76354740263195,
+      "geoinfo": {
+        "display_name": "Krasnokamsk, Krasnokamsk District, Perm Krai, Volga Federal District, 617060, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Krasnokamsk",
+        "state": "Perm Krai",
+        "postcode": "617060",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "567, Krasnokamsk, Krasnokamsk District, Perm Krai, Volga Federal District, 617060, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:34:01.175315+00:00",
+  "_kind": "geo_samples"
+}

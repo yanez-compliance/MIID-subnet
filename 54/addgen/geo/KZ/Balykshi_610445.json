@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Balykshi",
+  "geonameid": 610445,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.03161886334321,
+      "lon": 51.88685419731651,
+      "geoinfo": {
+        "display_name": "34-я улица, Қайнар, Atyrau, Atyrau Region, 060000, Kazakhstan",
+        "road": "34-я улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Қайнар",
+        "city_district": null,
+        "city": "Atyrau",
+        "state": "Atyrau Region",
+        "postcode": "060000",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "34-я улица, Қайнар, Atyrau, Atyrau Region, 060000, Kazakhstan"
+    },
+    {
+      "lat": 47.02683850857093,
+      "lon": 51.86110773085588,
+      "geoinfo": {
+        "display_name": "7-я улица, Мөлтек, Atyrau, Atyrau Region, Kazakhstan",
+        "road": "7-я улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Мөлтек",
+        "state": "Atyrau Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "7-я улица, Мөлтек, Atyrau, 18925 Atyrau Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:42:51.943642+00:00",
+  "_kind": "geo_samples"
+}

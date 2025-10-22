@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Chambly",
+  "geonameid": 5919566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.463270104025874,
+      "lon": -73.29801040409455,
+      "geoinfo": {
+        "display_name": "Golf de Chambly (FERMÉ), 2466, Rue Martel, Carignan, La Vallée-du-Richelieu, Montérégie, Quebec, J3L 1V7, Canada",
+        "road": "Rue Martel",
+        "house_number": "2466",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carignan",
+        "state": "Quebec",
+        "postcode": "J3L 1V7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2466 Rue Martel, Chambly, Quebec, Canada"
+    },
+    {
+      "lat": 45.45874013942067,
+      "lon": -73.2850916216618,
+      "geoinfo": {
+        "display_name": "Chambly, La Vallée-du-Richelieu, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chambly",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "773, Chambly, La Vallée-du-Richelieu, Montérégie, 25153 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:24.990640+00:00",
+  "_kind": "geo_samples"
+}

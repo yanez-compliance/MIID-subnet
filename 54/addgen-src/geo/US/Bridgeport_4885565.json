@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bridgeport",
+  "geonameid": 4885565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.84741062638806,
+      "lon": -87.59782384769629,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bridgeport, Illinois, United States"
+    },
+    {
+      "lat": 41.79851857821188,
+      "lon": -87.64469351682433,
+      "geoinfo": {
+        "display_name": "5253, South Halsted Street, New City, Chicago, Lake Township, Cook County, Illinois, 60609, United States",
+        "road": "South Halsted Street",
+        "house_number": "5253",
+        "neighbourhood": null,
+        "suburb": "New City",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60609",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5253, South Halsted Street, New City, Chicago, Lake Township, Cook County, Illinois, 60609, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:57.289187+00:00",
+  "_kind": "geo_samples"
+}

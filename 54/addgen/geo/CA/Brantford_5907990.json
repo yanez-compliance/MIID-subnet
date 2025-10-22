@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Brantford",
+  "geonameid": 5907990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.1654450782699,
+      "lon": -80.2700789541162,
+      "geoinfo": {
+        "display_name": "Metcalfe Crescent, Brantford, Ontario, N3R 2L4, Canada",
+        "road": "Metcalfe Crescent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brantford",
+        "state": "Ontario",
+        "postcode": "N3R 2L4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Metcalfe Crescent, Brantford, Ontario, Canada"
+    },
+    {
+      "lat": 43.17519284400456,
+      "lon": -80.25892618390145,
+      "geoinfo": {
+        "display_name": "46, Blackfriar Lane, Brantford, Ontario, N3R 6L4, Canada",
+        "road": "Blackfriar Lane",
+        "house_number": "46",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brantford",
+        "state": "Ontario",
+        "postcode": "N3R 6L4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "46, Blackfriar Lane, Brantford, Ontario, N3R 6L4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:11.572468+00:00",
+  "_kind": "geo_samples"
+}

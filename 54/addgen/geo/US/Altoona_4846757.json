@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Altoona",
+  "geonameid": 4846757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.64897197937547,
+      "lon": -93.44002859642406,
+      "geoinfo": {
+        "display_name": "Northeast 50th Avenue, Altoona, Polk County, Iowa, 50009, United States",
+        "road": "Northeast 50th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altoona",
+        "state": "Iowa",
+        "postcode": "50009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northeast 50th Avenue, Altoona, Iowa, United States"
+    },
+    {
+      "lat": 41.67183786841721,
+      "lon": -93.47918300101357,
+      "geoinfo": {
+        "display_name": "Henry Street Southwest, Bondurant, Polk County, Iowa, 50009, United States",
+        "road": "Henry Street Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bondurant",
+        "state": "Iowa",
+        "postcode": "50009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "718, Henry Street Southwest, Bondurant, Polk County, Iowa, 50009, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:37.451522+00:00",
+  "_kind": "geo_samples"
+}

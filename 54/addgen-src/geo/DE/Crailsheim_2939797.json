@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Crailsheim",
+  "geonameid": 2939797,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.15926763182074,
+      "lon": 10.111883738811143,
+      "geoinfo": {
+        "display_name": "Kernmüllerstr., Beuerlbach, Crailsheim, Verwaltungsverband Crailsheim, Landkreis Schwäbisch Hall, Baden-Württemberg, 74564, Germany",
+        "road": "Kernmüllerstr.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crailsheim",
+        "state": "Baden-Württemberg",
+        "postcode": "74564",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kernmüllerstr., Crailsheim, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.16152536936887,
+      "lon": 10.062378020251574,
+      "geoinfo": {
+        "display_name": "B 290, Satteldorf, Verwaltungsverband Crailsheim, Landkreis Schwäbisch Hall, Baden-Württemberg, 74589, Germany",
+        "road": "B 290",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Satteldorf",
+        "state": "Baden-Württemberg",
+        "postcode": "74589",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 290, Satteldorf, Verwaltungsverband Crailsheim, Landkreis Schwäbisch Hall, Baden-Württemberg, 74589, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:50.995428+00:00",
+  "_kind": "geo_samples"
+}

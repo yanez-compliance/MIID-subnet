@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Iţsā",
+  "geonameid": 355420,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 29.208548190413246,
+      "lon": 30.79189551147215,
+      "geoinfo": {
+        "display_name": "Atsa City, Faiyum, 63759, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atsa City",
+        "state": "Faiyum",
+        "postcode": "63759",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Iţsā, Faiyum, Egypt"
+    },
+    {
+      "lat": 29.27013532618368,
+      "lon": 30.755162415586383,
+      "geoinfo": {
+        "display_name": "Al Madaris Street, Mutul, Faiyum, Egypt",
+        "road": "Al Madaris Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mutul",
+        "state": "Faiyum",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "787, Al Madaris Street, Mutul, 18288 Faiyum, Egypt"
+    },
+    {
+      "lat": 29.258381837470218,
+      "lon": 30.787458124611597,
+      "geoinfo": {
+        "display_name": "Kafr al Zafarani, Faiyum, 63759, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kafr al Zafarani",
+        "state": "Faiyum",
+        "postcode": "63759",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "196, Kafr al Zafarani, Faiyum, 63759, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:22.837531+00:00",
+  "_kind": "geo_samples"
+}

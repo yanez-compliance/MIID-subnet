@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cathedral City",
+  "geonameid": 5335006,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.74824197982348,
+      "lon": -116.4610694510193,
+      "geoinfo": {
+        "display_name": "Rancho Mirage, Riverside County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Mirage",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cathedral City, California, United States"
+    },
+    {
+      "lat": 33.789966393908934,
+      "lon": -116.46575737839932,
+      "geoinfo": {
+        "display_name": "South Shore Lane, Royal Palms, Cathedral City, Riverside County, California, 92234, United States",
+        "road": "South Shore Lane",
+        "house_number": null,
+        "neighbourhood": "Royal Palms",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cathedral City",
+        "state": "California",
+        "postcode": "92234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "621, South Shore Lane, Royal Palms, Cathedral City, Riverside County, California, 92234, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:41.256129+00:00",
+  "_kind": "geo_samples"
+}

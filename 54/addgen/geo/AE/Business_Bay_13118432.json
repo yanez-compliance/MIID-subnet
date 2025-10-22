@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Business Bay",
+  "geonameid": 13118432,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.207602051529737,
+      "lon": 55.249419926093346,
+      "geoinfo": {
+        "display_name": "Jumeirah, Dubai, United Arab Emirates",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jumeirah",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "719, Jumeirah, 23613 Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.194285599273936,
+      "lon": 55.24323169266754,
+      "geoinfo": {
+        "display_name": "24c Street, Jumeirah 2, Jumeirah, Dubai, United Arab Emirates",
+        "road": "24c Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jumeirah 2",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "24c Street, Jumeirah 2, Jumeirah, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-19T02:40:16.448164+00:00",
+  "_kind": "geo_samples"
+}

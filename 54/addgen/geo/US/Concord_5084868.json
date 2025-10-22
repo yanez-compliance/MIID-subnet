@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Concord",
+  "geonameid": 5084868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.22137825017858,
+      "lon": -71.50440864701758,
+      "geoinfo": {
+        "display_name": "17, Robin Road, Concord, Merrimack County, New Hampshire, 03301, United States",
+        "road": "Robin Road",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "New Hampshire",
+        "postcode": "03301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17 Robin Road, Concord, New Hampshire, United States"
+    },
+    {
+      "lat": 43.24607706359036,
+      "lon": -71.532061990188,
+      "geoinfo": {
+        "display_name": "79, Max Lane, Concord, Merrimack County, New Hampshire, 03301, United States",
+        "road": "Max Lane",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "New Hampshire",
+        "postcode": "03301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "79, Max Lane, Concord, Merrimack County, New Hampshire, 03301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:09.618855+00:00",
+  "_kind": "geo_samples"
+}

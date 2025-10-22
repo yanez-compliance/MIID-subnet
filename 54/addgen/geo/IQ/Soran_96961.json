@@ -1,0 +1,47 @@
+{
+  "country_code": "IQ",
+  "country": "Iraq",
+  "city": "Soran",
+  "geonameid": 96961,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 36.65710288292931,
+      "lon": 44.57701036958583,
+      "geoinfo": {
+        "display_name": "Kawrin, Diana Subdistrict, Soran District, Erbil Governorate, Iraqi Kurdistan Region, 44009, Iraq",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kawrin",
+        "state": "Erbil Governorate",
+        "postcode": "44009",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "Soran, Erbil Governorate, Iraq"
+    },
+    {
+      "lat": 36.68055314515101,
+      "lon": 44.53776114079869,
+      "geoinfo": {
+        "display_name": "Saruchawa, Delzyan, Diana Subdistrict, Soran District, Erbil Governorate, Iraqi Kurdistan Region, 44008, Iraq",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Saruchawa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Delzyan",
+        "state": "Erbil Governorate",
+        "postcode": "44008",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "Saruchawa, Soran, Erbil Governorate, Iraq"
+    }
+  ],
+  "updated_at": "2025-10-16T16:39:07.041402+00:00",
+  "_kind": "geo_samples"
+}

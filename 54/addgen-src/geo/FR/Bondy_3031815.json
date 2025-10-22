@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bondy",
+  "geonameid": 3031815,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.89904912046431,
+      "lon": 2.4783809359261784,
+      "geoinfo": {
+        "display_name": "41, Rue Roger Salengro, Le Moulin à Vent, Le Mainguy - Le Moulin à Vent, Bondy, Bobigny, Seine-Saint-Denis, Metropolitan France, 93140, France",
+        "road": "Rue Roger Salengro",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": "Le Mainguy - Le Moulin à Vent",
+        "city_district": null,
+        "city": "Bondy",
+        "state": null,
+        "postcode": "93140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "41 Rue Roger Salengro, Bondy, France"
+    },
+    {
+      "lat": 48.93473356663616,
+      "lon": 2.4507434909377737,
+      "geoinfo": {
+        "display_name": "46, Rue Georges Marie, L'Économie, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France",
+        "road": "Rue Georges Marie",
+        "house_number": "46",
+        "neighbourhood": "L'Économie",
+        "suburb": null,
+        "city_district": null,
+        "city": "Drancy",
+        "state": null,
+        "postcode": "93700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "46, Rue Georges Marie, L'Économie, Drancy, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93700, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:02.445994+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Taku",
+  "geonameid": 11611483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.27552651438596,
+      "lon": 130.06826109270548,
+      "geoinfo": {
+        "display_name": "Taku, Saga Prefecture, 846-0031, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taku",
+        "state": null,
+        "postcode": "846-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Taku, Japan"
+    },
+    {
+      "lat": 33.302162521360174,
+      "lon": 130.07929161210942,
+      "geoinfo": {
+        "display_name": "Karatsu, Saga Prefecture, 849-3112, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Karatsu",
+        "state": null,
+        "postcode": "849-3112",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Karatsu, Saga Prefecture, 849-3112, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:56.247472+00:00",
+  "_kind": "geo_samples"
+}

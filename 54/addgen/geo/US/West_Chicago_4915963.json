@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Chicago",
+  "geonameid": 4915963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.878313807733456,
+      "lon": -88.14553631732089,
+      "geoinfo": {
+        "display_name": "Blair Street, Winfield, DuPage County, Illinois, 60190, United States",
+        "road": "Blair Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winfield",
+        "state": "Illinois",
+        "postcode": "60190",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Blair Street, West Chicago, Illinois, United States"
+    },
+    {
+      "lat": 41.886079017662055,
+      "lon": -88.22068455144634,
+      "geoinfo": {
+        "display_name": "West Chicago, DuPage County, Illinois, 60185, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Chicago",
+        "state": "Illinois",
+        "postcode": "60185",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "663, West Chicago, DuPage County, Illinois, 60185, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:20.674505+00:00",
+  "_kind": "geo_samples"
+}

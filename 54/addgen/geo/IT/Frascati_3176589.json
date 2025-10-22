@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Frascati",
+  "geonameid": 3176589,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.80507525930165,
+      "lon": 12.677422956339207,
+      "geoinfo": {
+        "display_name": "Hotel Flora, Via Vittorio Veneto, Frascati, Roma Capitale, Lazio, 00044, Italy",
+        "road": "Via Vittorio Veneto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frascati",
+        "state": "Lazio",
+        "postcode": "00044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Vittorio Veneto, Frascati, Lazio, Italy"
+    },
+    {
+      "lat": 41.793056167339465,
+      "lon": 12.698116415691501,
+      "geoinfo": {
+        "display_name": "Via Rocca di Papa, Grottaferrata, Roma Capitale, Lazio, 00078, Italy",
+        "road": "Via Rocca di Papa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grottaferrata",
+        "state": "Lazio",
+        "postcode": "00078",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "748, Via Rocca di Papa, Grottaferrata, Roma Capitale, Lazio, 00078, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:02.132115+00:00",
+  "_kind": "geo_samples"
+}

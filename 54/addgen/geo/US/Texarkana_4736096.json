@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Texarkana",
+  "geonameid": 4736096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.46707677187047,
+      "lon": -94.04182324241054,
+      "geoinfo": {
+        "display_name": "Wendy's, 110, East 49th Street, Texarkana, Miller County, Arkansas, 71854, United States",
+        "road": "East 49th Street",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texarkana",
+        "state": "Arkansas",
+        "postcode": "71854",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110 East 49th Street, Texarkana, Arkansas, United States"
+    },
+    {
+      "lat": 33.44602271737135,
+      "lon": -94.05062203813328,
+      "geoinfo": {
+        "display_name": "3064, Pine Street, Texarkana, Bowie County, Texas, 75503, United States",
+        "road": "Pine Street",
+        "house_number": "3064",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texarkana",
+        "state": "Texas",
+        "postcode": "75503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3064, Pine Street, Texarkana, Bowie County, Texas, 75503, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:44.446426+00:00",
+  "_kind": "geo_samples"
+}

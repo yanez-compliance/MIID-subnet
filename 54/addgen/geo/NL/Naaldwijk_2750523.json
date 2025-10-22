@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Naaldwijk",
+  "geonameid": 2750523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.98547091784674,
+      "lon": 4.219798283428916,
+      "geoinfo": {
+        "display_name": "12A, Vlietweg, Hoogeland, Naaldwijk, Westland, South Holland, Netherlands, 2671 ND, Netherlands",
+        "road": "Vlietweg",
+        "house_number": "12A",
+        "neighbourhood": "Hoogeland",
+        "suburb": null,
+        "city_district": null,
+        "city": "Naaldwijk",
+        "state": "South Holland",
+        "postcode": "2671 ND",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "12A Vlietweg, Naaldwijk, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.986354148210715,
+      "lon": 4.248340566865756,
+      "geoinfo": {
+        "display_name": "Kasteelweg, Liermolen, De Lier, Westland, South Holland, Netherlands, 2678 SB, Netherlands",
+        "road": "Kasteelweg",
+        "house_number": null,
+        "neighbourhood": "Liermolen",
+        "suburb": null,
+        "city_district": null,
+        "city": "De Lier",
+        "state": "South Holland",
+        "postcode": "2678 SB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "088, Kasteelweg, Liermolen, De Lier, Westland, South Holland, Netherlands, 2678 SB, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:52.583269+00:00",
+  "_kind": "geo_samples"
+}

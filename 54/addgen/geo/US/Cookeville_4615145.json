@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cookeville",
+  "geonameid": 4615145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.14171258347983,
+      "lon": -85.52114041775556,
+      "geoinfo": {
+        "display_name": "905, Emily Lane, Tanglewood, Marie White Subdivision, Cookeville, Putnam County, Middle Tennessee, Tennessee, 38501, United States",
+        "road": "Emily Lane",
+        "house_number": "905",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cookeville",
+        "state": "Tennessee",
+        "postcode": "38501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "905 Emily Lane, Cookeville, Tennessee, United States"
+    },
+    {
+      "lat": 36.176460057212054,
+      "lon": -85.45554530734174,
+      "geoinfo": {
+        "display_name": "Dry Valley Road, Algood, Putnam County, Middle Tennessee, Tennessee, 38506, United States",
+        "road": "Dry Valley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Algood",
+        "state": "Tennessee",
+        "postcode": "38506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "912, Dry Valley Road, Algood, Putnam County, Middle Tennessee, Tennessee, 38506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:19.773538+00:00",
+  "_kind": "geo_samples"
+}

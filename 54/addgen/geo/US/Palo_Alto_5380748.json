@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palo Alto",
+  "geonameid": 5380748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.46451743825204,
+      "lon": -122.14826918943339,
+      "geoinfo": {
+        "display_name": "1284, West Bayshore Road, East Palo Alto, San Mateo County, California, 94303, United States",
+        "road": "West Bayshore Road",
+        "house_number": "1284",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Palo Alto",
+        "state": "California",
+        "postcode": "94303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1284 West Bayshore Road, Palo Alto, California, United States"
+    },
+    {
+      "lat": 37.44302223234311,
+      "lon": -122.1064465882176,
+      "geoinfo": {
+        "display_name": "Adobe Creek Trail, Palo Alto, Santa Clara County, California, 94303, United States",
+        "road": "Adobe Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palo Alto",
+        "state": "California",
+        "postcode": "94303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "395, Adobe Creek Trail, Palo Alto, Santa Clara County, California, 94303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:22.482055+00:00",
+  "_kind": "geo_samples"
+}

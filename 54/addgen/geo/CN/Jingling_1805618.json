@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jingling",
+  "geonameid": 1805618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.661488867256868,
+      "lon": 113.0573304977475,
+      "geoinfo": {
+        "display_name": "Huangtan, Tianmen, Hubei, 431700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tianmen",
+        "state": "Hubei",
+        "postcode": "431700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jingling, Hubei, China"
+    },
+    {
+      "lat": 30.668664268659082,
+      "lon": 113.13349280658468,
+      "geoinfo": {
+        "display_name": "汉北河堤, Jianghe Community, Jingling Subdistrict, Dongzhong, Tianmen, Xiaogan, Hubei, China",
+        "road": "汉北河堤",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jingling Subdistrict",
+        "city_district": null,
+        "city": "Tianmen",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "478, 汉北河堤, Jianghe Community, Jingling Subdistrict, Dongzhong, Tianmen, Xiaogan, 74283 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:40.749957+00:00",
+  "_kind": "geo_samples"
+}

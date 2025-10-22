@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "la Maternitat i Sant Ramon",
+  "geonameid": 11549788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.37858193252311,
+      "lon": 2.1236699694283616,
+      "geoinfo": {
+        "display_name": "66, Carrer d'Arizala, Sant Ramon, la Maternitat i Sant Ramon, les Corts, Barcelona, Barcelonès, Barcelona, Catalonia, 08028, Spain",
+        "road": "Carrer d'Arizala",
+        "house_number": "66",
+        "neighbourhood": "Sant Ramon",
+        "suburb": "les Corts",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08028",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "66 Carrer d'Arizala, la Maternitat i Sant Ramon, Catalonia, Spain"
+    },
+    {
+      "lat": 41.338390433176116,
+      "lon": 2.1112558710501816,
+      "geoinfo": {
+        "display_name": "Ronda Litoral, Bellvitge, Districte VI, l'Hospitalet de Llobregat, Barcelonès, Barcelona, Catalonia, 08907, Spain",
+        "road": "Ronda Litoral",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Districte VI",
+        "city": "l'Hospitalet de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08907",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "583, Ronda Litoral, Bellvitge, Districte VI, l'Hospitalet de Llobregat, Barcelonès, Barcelona, Catalonia, 08907, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:56.546945+00:00",
+  "_kind": "geo_samples"
+}

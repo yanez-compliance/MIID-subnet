@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Aurora",
+  "geonameid": 4903818,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.80809521360524,
+      "lon": -88.31899846637938,
+      "geoinfo": {
+        "display_name": "206, Butterfield Road, North Aurora, Aurora Township, Kane County, Illinois, 60542, United States",
+        "road": "Butterfield Road",
+        "house_number": "206",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Aurora",
+        "state": "Illinois",
+        "postcode": "60542",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206 Butterfield Road, North Aurora, Illinois, United States"
+    },
+    {
+      "lat": 41.789493988152856,
+      "lon": -88.35256837327945,
+      "geoinfo": {
+        "display_name": "Sullivan Road, Aurora, Aurora Township, Kane County, Illinois, 60506, United States",
+        "road": "Sullivan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Illinois",
+        "postcode": "60506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "465, Sullivan Road, Aurora, Aurora Township, Kane County, Illinois, 60506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:37.136479+00:00",
+  "_kind": "geo_samples"
+}

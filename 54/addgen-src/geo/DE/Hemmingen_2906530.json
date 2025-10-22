@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hemmingen",
+  "geonameid": 2906530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.29664053637279,
+      "lon": 9.745935998773703,
+      "geoinfo": {
+        "display_name": "11, Dresdener Weg, Arnum, Wilkenburg, Hemmingen, Region Hannover, Lower Saxony, 30966, Germany",
+        "road": "Dresdener Weg",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Arnum",
+        "city_district": null,
+        "city": "Hemmingen",
+        "state": "Lower Saxony",
+        "postcode": "30966",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11 Dresdener Weg, Hemmingen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.29294252307272,
+      "lon": 9.733804657328701,
+      "geoinfo": {
+        "display_name": "Sportliche Vereinigung Arnum e. V., Hiddestorfer Straße, Arnum, Ohlendorf, Hemmingen, Region Hannover, Lower Saxony, 30966, Germany",
+        "road": "Hiddestorfer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arnum",
+        "city_district": "Ohlendorf",
+        "city": "Hemmingen",
+        "state": "Lower Saxony",
+        "postcode": "30966",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "662, Hiddestorfer Straße, Hemmingen, 30966 Lower Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:54.626292+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Eggenberg",
+  "geonameid": 2780361,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.05760279013402,
+      "lon": 15.369091752587673,
+      "geoinfo": {
+        "display_name": "Thalerseestraße, Thal, Bezirk Graz-Umgebung, Styria, 8052, Austria",
+        "road": "Thalerseestraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thal",
+        "state": "Styria",
+        "postcode": "8052",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Thalerseestraße, Eggenberg, Styria, Austria"
+    },
+    {
+      "lat": 47.04478508742723,
+      "lon": 15.362730342300683,
+      "geoinfo": {
+        "display_name": "91, Mantscha, Hitzendorf, Bezirk Graz-Umgebung, Styria, 8052, Austria",
+        "road": null,
+        "house_number": "91",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hitzendorf",
+        "state": "Styria",
+        "postcode": "8052",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Eggenberg, Styria, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:29:29.291359+00:00",
+  "_kind": "geo_samples"
+}

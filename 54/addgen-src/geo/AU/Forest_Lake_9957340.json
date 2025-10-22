@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Forest Lake",
+  "geonameid": 9957340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.614636964783564,
+      "lon": 152.97517314457727,
+      "geoinfo": {
+        "display_name": "65, Mulgrave Crescent, Brooklands, Forest Lake, City of Brisbane, Queensland, 4078, Australia",
+        "road": "Mulgrave Crescent",
+        "house_number": "65",
+        "neighbourhood": "Brooklands",
+        "suburb": "Forest Lake",
+        "city_district": "Forest Lake",
+        "city": "City of Brisbane",
+        "state": "Queensland",
+        "postcode": "4078",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "65 Mulgrave Crescent, Forest Lake, Queensland, Australia"
+    },
+    {
+      "lat": -27.652134889255173,
+      "lon": 152.96842427559687,
+      "geoinfo": {
+        "display_name": "Greenbank, Greater Brisbane, Queensland, 4124, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Greenbank",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4124",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "549, Greenbank, Greater Brisbane, Queensland, 4124, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:51.543467+00:00",
+  "_kind": "geo_samples"
+}

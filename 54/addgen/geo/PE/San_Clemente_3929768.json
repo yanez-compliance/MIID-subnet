@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "San Clemente",
+  "geonameid": 3929768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.69206913602173,
+      "lon": -76.17914818358676,
+      "geoinfo": {
+        "display_name": "Hacienda Venturosa, San Miguel, Pisco, Province of Pisco, Ica, 11620, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pisco",
+        "state": "Ica",
+        "postcode": "11620",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "San Clemente, Ica, Peru"
+    },
+    {
+      "lat": -13.64038828771882,
+      "lon": -76.1196500888346,
+      "geoinfo": {
+        "display_name": "Agua Santa, San Clemente, Province of Pisco, Ica, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Clemente",
+        "state": "Ica",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "986, Agua Santa, San Clemente, Province of Pisco, 46698 Ica, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:51.992379+00:00",
+  "_kind": "geo_samples"
+}

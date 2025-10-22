@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Walcourt",
+  "geonameid": 2784189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.29651675524302,
+      "lon": 4.432592629029891,
+      "geoinfo": {
+        "display_name": "80, Rue de Nalinnes, Thy-le-Château, Walcourt, Philippeville, Namur, Wallonia, 5651, Belgium",
+        "road": "Rue de Nalinnes",
+        "house_number": "80",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walcourt",
+        "state": "Namur",
+        "postcode": "5651",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "80 Rue de Nalinnes, Walcourt, Namur, Belgium"
+    },
+    {
+      "lat": 50.259731425014195,
+      "lon": 4.425852140806494,
+      "geoinfo": {
+        "display_name": "Rue du Jardinet, Walcourt, Philippeville, Namur, Wallonia, 5650, Belgium",
+        "road": "Rue du Jardinet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Walcourt",
+        "city": "Walcourt",
+        "state": "Namur",
+        "postcode": "5650",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "347, Rue du Jardinet, Walcourt, Philippeville, Namur, Wallonia, 5650, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:17.362104+00:00",
+  "_kind": "geo_samples"
+}

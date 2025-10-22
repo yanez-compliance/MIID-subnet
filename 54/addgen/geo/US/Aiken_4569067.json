@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aiken",
+  "geonameid": 4569067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.55547298082027,
+      "lon": -81.67334201262055,
+      "geoinfo": {
+        "display_name": "196, Mosley Road, Aiken County, South Carolina, 29801, United States",
+        "road": "Mosley Road",
+        "house_number": "196",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "196 Mosley Road, Aiken, South Carolina, United States"
+    },
+    {
+      "lat": 33.52627728879016,
+      "lon": -81.74930671173466,
+      "geoinfo": {
+        "display_name": "73, Murfield Court, Aiken, Aiken County, South Carolina, 29803, United States",
+        "road": "Murfield Court",
+        "house_number": "73",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aiken",
+        "state": "South Carolina",
+        "postcode": "29803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "73, Murfield Court, Aiken, Aiken County, South Carolina, 29803, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:20.128592+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Ivanovo",
+  "geonameid": 627811,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 52.13161600762447,
+      "lon": 25.508519572162346,
+      "geoinfo": {
+        "display_name": "Н501, Гарбахскі сельскі Савет, Ivanava District, Brest Region, 220793, Belarus",
+        "road": "Н501",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Гарбахскі сельскі Савет",
+        "state": "Brest Region",
+        "postcode": "220793",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Н501, Ivanovo, Brest Region, Belarus"
+    },
+    {
+      "lat": 52.13065131549481,
+      "lon": 25.516252537415216,
+      "geoinfo": {
+        "display_name": "Радаўня, Гарбахскі сельскі Савет, Ivanava District, Brest Region, 225297, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Гарбахскі сельскі Савет",
+        "state": "Brest Region",
+        "postcode": "225297",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Ivanovo, Brest Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:54.895910+00:00",
+  "_kind": "geo_samples"
+}

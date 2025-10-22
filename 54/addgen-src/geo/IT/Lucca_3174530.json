@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lucca",
+  "geonameid": 3174530,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.811982568925586,
+      "lon": 10.546881411043872,
+      "geoinfo": {
+        "display_name": "Via di Sottomonte, Massa Macinaia, Capannori, Lucca, Tuscany, 55061, Italy",
+        "road": "Via di Sottomonte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Capannori",
+        "state": "Tuscany",
+        "postcode": "55061",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via di Sottomonte, Lucca, Tuscany, Italy"
+    },
+    {
+      "lat": 43.85662616422463,
+      "lon": 10.511226008387256,
+      "geoinfo": {
+        "display_name": "Monte San Quirico, Lucca, Tuscany, 55100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lucca",
+        "state": "Tuscany",
+        "postcode": "55100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "467, Monte San Quirico, Lucca, Tuscany, 55100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:43:42.125478+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kingston",
+  "geonameid": 5992500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.24775444429941,
+      "lon": -76.53618897496678,
+      "geoinfo": {
+        "display_name": "Rideau Trail, Balsam Grove, Kingston, Eastern Ontario, Ontario, K7M 3E5, Canada",
+        "road": "Rideau Trail",
+        "house_number": null,
+        "neighbourhood": "Balsam Grove",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingston",
+        "state": "Ontario",
+        "postcode": "K7M 3E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rideau Trail, Kingston, Ontario, Canada"
+    },
+    {
+      "lat": 44.211805622148134,
+      "lon": -76.46745222263074,
+      "geoinfo": {
+        "display_name": "Marysville, Frontenac Islands, Frontenac County, Eastern Ontario, Ontario, K0H 2Y0, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frontenac Islands",
+        "state": "Ontario",
+        "postcode": "K0H 2Y0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Marysville, Frontenac Islands, Frontenac County, Eastern Ontario, Ontario, K0H 2Y0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:43.095751+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Tegel",
+  "geonameid": 2823708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.58255011115511,
+      "lon": 13.271339674205125,
+      "geoinfo": {
+        "display_name": "Borsigdamm, Alt-Tegel, Tegel, Reinickendorf, Berlin, 13507, Germany",
+        "road": "Borsigdamm",
+        "house_number": null,
+        "neighbourhood": "Alt-Tegel",
+        "suburb": "Tegel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13507",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Borsigdamm, Tegel, Germany"
+    },
+    {
+      "lat": 52.560029694203934,
+      "lon": 13.245500488772812,
+      "geoinfo": {
+        "display_name": "Maienwerderweg, Saatwinkel, Tegel, Reinickendorf, Berlin, 13599, Germany",
+        "road": "Maienwerderweg",
+        "house_number": null,
+        "neighbourhood": "Saatwinkel",
+        "suburb": "Tegel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13599",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "869, Maienwerderweg, Saatwinkel, Tegel, Reinickendorf, Berlin, 13599, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:15.377105+00:00",
+  "_kind": "geo_samples"
+}

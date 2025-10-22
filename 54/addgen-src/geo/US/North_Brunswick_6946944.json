@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Brunswick",
+  "geonameid": 6946944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.46963676486774,
+      "lon": -74.44726923905532,
+      "geoinfo": {
+        "display_name": "533, 1st Avenue, Berdines Corners, North Brunswick Township, Middlesex County, New Jersey, 08902, United States",
+        "road": "1st Avenue",
+        "house_number": "533",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Brunswick Township",
+        "state": "New Jersey",
+        "postcode": "08902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "533 1st Avenue, North Brunswick, New Jersey, United States"
+    },
+    {
+      "lat": 40.477909738809124,
+      "lon": -74.51511534446752,
+      "geoinfo": {
+        "display_name": "Bennetts Lane, Clyde, Franklin Township, Somerset County, New Jersey, 08873, United States",
+        "road": "Bennetts Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin Township",
+        "state": "New Jersey",
+        "postcode": "08873",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "425, Bennetts Lane, Clyde, Franklin Township, Somerset County, New Jersey, 08873, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:20.080275+00:00",
+  "_kind": "geo_samples"
+}

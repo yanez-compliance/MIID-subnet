@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arlington",
+  "geonameid": 4671240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.74893918655211,
+      "lon": -97.15563001997354,
+      "geoinfo": {
+        "display_name": "1011, Live Oak Lane, Arlington, Tarrant County, Texas, 76012, United States",
+        "road": "Live Oak Lane",
+        "house_number": "1011",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington",
+        "state": "Texas",
+        "postcode": "76012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1011 Live Oak Lane, Arlington, Texas, United States"
+    },
+    {
+      "lat": 32.778252549384916,
+      "lon": -97.09994927420725,
+      "geoinfo": {
+        "display_name": "Texas Rangers Golf Club, River Hills Drive, Arlington, Tarrant County, Texas, 76006, United States",
+        "road": "River Hills Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington",
+        "state": "Texas",
+        "postcode": "76006",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "295, River Hills Drive, Arlington, 76006 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:39.457103+00:00",
+  "_kind": "geo_samples"
+}

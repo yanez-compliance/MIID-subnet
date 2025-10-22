@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parsippany",
+  "geonameid": 5102427,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.855352741941246,
+      "lon": -74.43348282503207,
+      "geoinfo": {
+        "display_name": "402, Lake Shore Drive, Lake Parsippany, Parsippany-Troy Hills, Morris County, New Jersey, 07054, United States",
+        "road": "Lake Shore Drive",
+        "house_number": "402",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parsippany-Troy Hills",
+        "state": "New Jersey",
+        "postcode": "07054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "402 Lake Shore Drive, Parsippany, New Jersey, United States"
+    },
+    {
+      "lat": 40.846565557158904,
+      "lon": -74.39455995066403,
+      "geoinfo": {
+        "display_name": "10, Iron Forge Road, Troy Hills, Parsippany-Troy Hills, Morris County, New Jersey, 07054, United States",
+        "road": "Iron Forge Road",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parsippany-Troy Hills",
+        "state": "New Jersey",
+        "postcode": "07054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10, Iron Forge Road, Troy Hills, Parsippany-Troy Hills, Morris County, New Jersey, 07054, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:42.558789+00:00",
+  "_kind": "geo_samples"
+}

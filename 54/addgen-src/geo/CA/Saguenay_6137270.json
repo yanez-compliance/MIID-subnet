@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saguenay",
+  "geonameid": 6137270,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.4082552220564,
+      "lon": -71.02842014931997,
+      "geoinfo": {
+        "display_name": "Sentier des Moulins Est, Hamel-Fradette-Gobeil, Arrondissement de Chicoutimi, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, G7H 2N3, Canada",
+        "road": "Sentier des Moulins Est",
+        "house_number": null,
+        "neighbourhood": "Hamel-Fradette-Gobeil",
+        "suburb": "Arrondissement de Chicoutimi",
+        "city_district": null,
+        "city": "Saguenay",
+        "state": "Quebec",
+        "postcode": "G7H 2N3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sentier des Moulins Est, Saguenay, Quebec, Canada"
+    },
+    {
+      "lat": 48.41265754288694,
+      "lon": -71.11631577855263,
+      "geoinfo": {
+        "display_name": "Rue des Pékans, Arrondissement de Chicoutimi, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, G7K 1A3, Canada",
+        "road": "Rue des Pékans",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arrondissement de Chicoutimi",
+        "city_district": null,
+        "city": "Saguenay",
+        "state": "Quebec",
+        "postcode": "G7K 1A3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue des Pékans, Arrondissement de Chicoutimi, Saguenay, Saguenay–Lac-Saint-Jean, Quebec, G7K 1A3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:39:12.318257+00:00",
+  "_kind": "geo_samples"
+}

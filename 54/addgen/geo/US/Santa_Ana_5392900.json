@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Ana",
+  "geonameid": 5392900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.75312157483121,
+      "lon": -117.89869100548067,
+      "geoinfo": {
+        "display_name": "2038, West 10th Street, Santa Ana, Orange County, California, 92703, United States",
+        "road": "West 10th Street",
+        "house_number": "2038",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Ana",
+        "state": "California",
+        "postcode": "92703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2038 West 10th Street, Santa Ana, California, United States"
+    },
+    {
+      "lat": 33.75602497520439,
+      "lon": -117.82072308315796,
+      "geoinfo": {
+        "display_name": "17862, Wellington Avenue, Tustin, Orange County, California, 92780, United States",
+        "road": "Wellington Avenue",
+        "house_number": "17862",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tustin",
+        "state": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17862, Wellington Avenue, Tustin, Orange County, California, 92780, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:45.388396+00:00",
+  "_kind": "geo_samples"
+}

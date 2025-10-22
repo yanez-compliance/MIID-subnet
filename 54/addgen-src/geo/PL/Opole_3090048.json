@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Opole",
+  "geonameid": 3090048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.63776902569271,
+      "lon": 17.952820921247305,
+      "geoinfo": {
+        "display_name": "55, Księdza Jerzego Popiełuszki, Groszowice, Opole, Opole Voivodeship, 45-601, Poland",
+        "road": "Księdza Jerzego Popiełuszki",
+        "house_number": "55",
+        "neighbourhood": null,
+        "suburb": "Groszowice",
+        "city_district": null,
+        "city": "Opole",
+        "state": "Opole Voivodeship",
+        "postcode": "45-601",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "55 Księdza Jerzego Popiełuszki, Opole, Opole Voivodeship, Poland"
+    },
+    {
+      "lat": 50.678118456653536,
+      "lon": 17.968487531739793,
+      "geoinfo": {
+        "display_name": "Tarnopolska, Osiedle Medyk, Gosławice, Opole, Opole Voivodeship, 45-316, Poland",
+        "road": "Tarnopolska",
+        "house_number": null,
+        "neighbourhood": "Osiedle Medyk",
+        "suburb": "Gosławice",
+        "city_district": null,
+        "city": "Opole",
+        "state": "Opole Voivodeship",
+        "postcode": "45-316",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Tarnopolska, Osiedle Medyk, Gosławice, Opole, Opole Voivodeship, 45-316, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:48.812321+00:00",
+  "_kind": "geo_samples"
+}

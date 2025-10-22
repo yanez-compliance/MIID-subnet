@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Scottsdale",
+  "geonameid": 5313457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.50920332310221,
+      "lon": -111.88787039932892,
+      "geoinfo": {
+        "display_name": "Chaparral Road, Maricopa County, Arizona, 85250, United States",
+        "road": "Chaparral Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85250",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chaparral Road, Scottsdale, Arizona, United States"
+    },
+    {
+      "lat": 33.53261941749864,
+      "lon": -111.88041561072072,
+      "geoinfo": {
+        "display_name": "Pima Freeway, Maricopa County, Arizona, 85250, United States",
+        "road": "Pima Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "85250",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "121, Pima Freeway, Maricopa County, Arizona, 85250, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:07:49.943760+00:00",
+  "_kind": "geo_samples"
+}

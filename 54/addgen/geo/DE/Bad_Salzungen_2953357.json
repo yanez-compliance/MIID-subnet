@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Salzungen",
+  "geonameid": 2953357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.81872192472694,
+      "lon": 10.22735939014894,
+      "geoinfo": {
+        "display_name": "Am Weinberg, Bad Salzungen, Wartburgkreis, Thuringia, 36433, Germany",
+        "road": "Am Weinberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Bad Salzungen",
+        "city": "Bad Salzungen",
+        "state": "Thuringia",
+        "postcode": "36433",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Weinberg, Bad Salzungen, Thuringia, Germany"
+    },
+    {
+      "lat": 50.827485857990375,
+      "lon": 10.209536361342956,
+      "geoinfo": {
+        "display_name": "Stadtweg, Tiefenort, Bad Salzungen, Wartburgkreis, Thuringia, 36469, Germany",
+        "road": "Stadtweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Salzungen",
+        "state": "Thuringia",
+        "postcode": "36469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "103, Stadtweg, Tiefenort, Bad Salzungen, Wartburgkreis, Thuringia, 36469, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:42.923396+00:00",
+  "_kind": "geo_samples"
+}

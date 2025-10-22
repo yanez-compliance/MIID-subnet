@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Gurun",
+  "geonameid": 1735485,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.785748044587194,
+      "lon": 100.49070774528451,
+      "geoinfo": {
+        "display_name": "K683, Kampung Panjang, Kuala Muda, Kedah, 08300, Malaysia",
+        "road": "K683",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kedah",
+        "postcode": "08300",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "K683, Gurun, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.802446882201083,
+      "lon": 100.50965320043903,
+      "geoinfo": {
+        "display_name": "K610, Kampung Batu Dua, Gurun, Kuala Muda, Kedah, 08300, Malaysia",
+        "road": "K610",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gurun",
+        "state": "Kedah",
+        "postcode": "08300",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "K610, Kampung Batu Dua, Gurun, Kuala Muda, Kedah, 08300, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:12.314287+00:00",
+  "_kind": "geo_samples"
+}

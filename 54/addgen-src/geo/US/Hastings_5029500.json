@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hastings",
+  "geonameid": 5029500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.764460018575505,
+      "lon": -92.87671914824651,
+      "geoinfo": {
+        "display_name": "Hastings, Dakota County, Minnesota, 55033, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hastings",
+        "state": "Minnesota",
+        "postcode": "55033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hastings, Minnesota, United States"
+    },
+    {
+      "lat": 44.73803536776502,
+      "lon": -92.88664839417577,
+      "geoinfo": {
+        "display_name": "8th Street West, Hastings, Dakota County, Minnesota, 55033, United States",
+        "road": "8th Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hastings",
+        "state": "Minnesota",
+        "postcode": "55033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8th Street West, Hastings, Dakota County, Minnesota, 55033, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:53.216711+00:00",
+  "_kind": "geo_samples"
+}

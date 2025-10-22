@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maple Valley",
+  "geonameid": 5802340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.39586021745455,
+      "lon": -122.01632738325961,
+      "geoinfo": {
+        "display_name": "22849, 244th Avenue Southeast, Atkinson, Maple Valley, King County, Washington, 98038, United States",
+        "road": "244th Avenue Southeast",
+        "house_number": "22849",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maple Valley",
+        "state": "Washington",
+        "postcode": "98038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22849 244th Avenue Southeast, Maple Valley, Washington, United States"
+    },
+    {
+      "lat": 47.42450485469699,
+      "lon": -122.08642788588969,
+      "geoinfo": {
+        "display_name": "19725, 192nd Avenue Southeast, Renton, King County, Washington, 98058, United States",
+        "road": "192nd Avenue Southeast",
+        "house_number": "19725",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Renton",
+        "state": "Washington",
+        "postcode": "98058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19725, 192nd Avenue Southeast, Renton, King County, Washington, 98058, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:54.969365+00:00",
+  "_kind": "geo_samples"
+}

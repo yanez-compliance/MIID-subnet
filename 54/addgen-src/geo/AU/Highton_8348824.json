@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Highton",
+  "geonameid": 8348824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.175926789064924,
+      "lon": 144.34583682828253,
+      "geoinfo": {
+        "display_name": "49, Roslyn Road, Belmont, Geelong, City of Greater Geelong, Victoria, 3216, Australia",
+        "road": "Roslyn Road",
+        "house_number": "49",
+        "neighbourhood": null,
+        "suburb": "Belmont",
+        "city_district": null,
+        "city": "Geelong",
+        "state": "Victoria",
+        "postcode": "3216",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "49 Roslyn Road, Highton, Victoria, Australia"
+    },
+    {
+      "lat": -38.14773814835414,
+      "lon": 144.34306432271265,
+      "geoinfo": {
+        "display_name": "81, Skene Street, Newtown, Geelong, City of Greater Geelong, Victoria, 3220, Australia",
+        "road": "Skene Street",
+        "house_number": "81",
+        "neighbourhood": null,
+        "suburb": "Newtown",
+        "city_district": null,
+        "city": "Geelong",
+        "state": "Victoria",
+        "postcode": "3220",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "81, Skene Street, Newtown, Geelong, City of Greater Geelong, Victoria, 3220, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:59:26.948227+00:00",
+  "_kind": "geo_samples"
+}

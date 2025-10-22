@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Antonio",
+  "geonameid": 4726206,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.428399756367654,
+      "lon": -98.53759260414566,
+      "geoinfo": {
+        "display_name": "171, Southwest 20th Street, San Antonio, Bexar County, Texas, 78207, United States",
+        "road": "Southwest 20th Street",
+        "house_number": "171",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Texas",
+        "postcode": "78207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "171 Southwest 20th Street, San Antonio, Texas, United States"
+    },
+    {
+      "lat": 29.45798388170816,
+      "lon": -98.49628820356331,
+      "geoinfo": {
+        "display_name": "239, West Agarita Avenue, Monte Vista, San Antonio, Bexar County, Texas, 78212, United States",
+        "road": "West Agarita Avenue",
+        "house_number": "239",
+        "neighbourhood": "Monte Vista",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Texas",
+        "postcode": "78212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "239, West Agarita Avenue, Monte Vista, San Antonio, Bexar County, Texas, 78212, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:29.701027+00:00",
+  "_kind": "geo_samples"
+}

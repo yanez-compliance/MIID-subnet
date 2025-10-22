@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longnan",
+  "geonameid": 11778484,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.36589580754871,
+      "lon": 104.9431745355948,
+      "geoinfo": {
+        "display_name": "Sujiaba, Wudu District, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sujiaba",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longnan, Gansu, China"
+    },
+    {
+      "lat": 33.36819732782365,
+      "lon": 104.91743276304784,
+      "geoinfo": {
+        "display_name": "Wudu, Wudu District, Longnan, Gansu, 746000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wudu",
+        "state": "Gansu",
+        "postcode": "746000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "903, Wudu, Wudu District, Longnan, Gansu, 746000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:00:03.671649+00:00",
+  "_kind": "geo_samples"
+}

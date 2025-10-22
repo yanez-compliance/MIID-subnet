@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Licata",
+  "geonameid": 2524393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.09803125297848,
+      "lon": 13.908294790109355,
+      "geoinfo": {
+        "display_name": "Strada Comunale Colonne, Nicolizia, Licata, Agrigento, Sicily, 92027, Italy",
+        "road": "Strada Comunale Colonne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Licata",
+        "state": "Sicily",
+        "postcode": "92027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Comunale Colonne, Licata, Sicily, Italy"
+    },
+    {
+      "lat": 37.09830339193528,
+      "lon": 13.946536651186697,
+      "geoinfo": {
+        "display_name": "Corso Umberto Argentina, Quartiere Africano, Licata, Agrigento, Sicily, 92027, Italy",
+        "road": "Corso Umberto Argentina",
+        "house_number": null,
+        "neighbourhood": "Quartiere Africano",
+        "suburb": null,
+        "city_district": null,
+        "city": "Licata",
+        "state": "Sicily",
+        "postcode": "92027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "134, Corso Umberto Argentina, Quartiere Africano, Licata, Agrigento, Sicily, 92027, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:39.807385+00:00",
+  "_kind": "geo_samples"
+}

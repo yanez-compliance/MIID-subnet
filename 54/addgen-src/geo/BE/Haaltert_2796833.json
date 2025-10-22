@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Haaltert",
+  "geonameid": 2796833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.89723948615581,
+      "lon": 4.002086149692858,
+      "geoinfo": {
+        "display_name": "JCV CarStyling Volckaert, 100, Hoogstraat, Haaltert, Aalst, East Flanders, 9450, Belgium",
+        "road": "Hoogstraat",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haaltert",
+        "state": "East Flanders",
+        "postcode": "9450",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "100 Hoogstraat, Haaltert, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.9383533381741,
+      "lon": 3.9614815610058787,
+      "geoinfo": {
+        "display_name": "56, Kouterstraat, Erondegem, Erpe-Mere, Aalst, East Flanders, 9420, Belgium",
+        "road": "Kouterstraat",
+        "house_number": "56",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erondegem",
+        "state": "East Flanders",
+        "postcode": "9420",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "56, Kouterstraat, Erondegem, Erpe-Mere, Aalst, East Flanders, 9420, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:37.895294+00:00",
+  "_kind": "geo_samples"
+}

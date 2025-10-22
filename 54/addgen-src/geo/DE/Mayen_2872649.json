@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mayen",
+  "geonameid": 2872649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.326532501587586,
+      "lon": 7.176133100763232,
+      "geoinfo": {
+        "display_name": "Oberst-Hauschild-Kaserne, B 258, Kürrenberg, Mayen, Landkreis Mayen-Koblenz, Rhineland-Palatinate, 56727, Germany",
+        "road": "B 258",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mayen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56727",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 258, Mayen, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 50.368461276459094,
+      "lon": 7.19834821307818,
+      "geoinfo": {
+        "display_name": "K 20, Ettringen, Vordereifel, Landkreis Mayen-Koblenz, Rhineland-Palatinate, 56729, Germany",
+        "road": "K 20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ettringen",
+        "state": "Rhineland-Palatinate",
+        "postcode": "56729",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 20, Mayen, 56729 Rhineland-Palatinate, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:38.522474+00:00",
+  "_kind": "geo_samples"
+}

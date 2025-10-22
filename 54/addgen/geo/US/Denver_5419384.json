@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Denver",
+  "geonameid": 5419384,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.73460459632076,
+      "lon": -104.97517098271207,
+      "geoinfo": {
+        "display_name": "Ogden Condos, 1144, Ogden Street, Capitol Hill, Quality Hill Historic District, Denver, Colorado, 80218, United States",
+        "road": "Ogden Street",
+        "house_number": "1144",
+        "neighbourhood": "Capitol Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "postcode": "80218",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1144 Ogden Street, Denver, Colorado, United States"
+    },
+    {
+      "lat": 39.741394329657446,
+      "lon": -104.93507221310333,
+      "geoinfo": {
+        "display_name": "4521, East 16th Avenue, South Park Hill, Denver, Colorado, 80220, United States",
+        "road": "East 16th Avenue",
+        "house_number": "4521",
+        "neighbourhood": "South Park Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "postcode": "80220",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4521, East 16th Avenue, South Park Hill, Denver, Colorado, 80220, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:29.326764+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Maltby",
+  "geonameid": 2643144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.450250999293424,
+      "lon": -1.2476843602520276,
+      "geoinfo": {
+        "display_name": "Park Lane, Conisbrough Parks, Micklebring, Doncaster, South Yorkshire, England, S65 4LT, United Kingdom",
+        "road": "Park Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Conisbrough Parks",
+        "city_district": null,
+        "city": "Doncaster",
+        "state": "England",
+        "postcode": "S65 4LT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Park Lane, Maltby, England, United Kingdom"
+    },
+    {
+      "lat": 53.44033784011098,
+      "lon": -1.1474907411412953,
+      "geoinfo": {
+        "display_name": "Apy Hill Lane, Tickhill, Doncaster, South Yorkshire, England, DN11 9PQ, United Kingdom",
+        "road": "Apy Hill Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tickhill",
+        "city_district": null,
+        "city": "Doncaster",
+        "state": "England",
+        "postcode": "DN11 9PQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Apy Hill Lane, Tickhill, Doncaster, South Yorkshire, England, DN11 9PQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:35.306308+00:00",
+  "_kind": "geo_samples"
+}

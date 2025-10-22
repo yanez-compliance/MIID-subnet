@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Korschenbroich",
+  "geonameid": 2885397,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.22492808677562,
+      "lon": 6.555137866488587,
+      "geoinfo": {
+        "display_name": "Nordkanal, Kleinenbroich, Korschenbroich, Rhein-Kreis Neuss, North Rhine-Westphalia, 41352, Germany",
+        "road": "Nordkanal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kleinenbroich",
+        "city_district": null,
+        "city": "Korschenbroich",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41352",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Nordkanal, Korschenbroich, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.20289270827003,
+      "lon": 6.529370848652612,
+      "geoinfo": {
+        "display_name": "10c, Raderbroich, Korschenbroich, Rhein-Kreis Neuss, North Rhine-Westphalia, 41352, Germany",
+        "road": "Raderbroich",
+        "house_number": "10c",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Korschenbroich",
+        "city": "Korschenbroich",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41352",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10c, Raderbroich, Korschenbroich, Rhein-Kreis Neuss, North Rhine-Westphalia, 41352, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:34.620534+00:00",
+  "_kind": "geo_samples"
+}

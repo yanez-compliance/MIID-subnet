@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mequon",
+  "geonameid": 5262649,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.23663018586072,
+      "lon": -88.01663788428796,
+      "geoinfo": {
+        "display_name": "8594, West Freistadt Road, Freistadt, Mequon, Ozaukee County, Wisconsin, 53097, United States",
+        "road": "West Freistadt Road",
+        "house_number": "8594",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mequon",
+        "state": "Wisconsin",
+        "postcode": "53097",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8594 West Freistadt Road, Mequon, Wisconsin, United States"
+    },
+    {
+      "lat": 43.238819038954844,
+      "lon": -88.0440935100298,
+      "geoinfo": {
+        "display_name": "West Heather Drive, Freistadt, Mequon, Ozaukee County, Wisconsin, 53097, United States",
+        "road": "West Heather Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mequon",
+        "state": "Wisconsin",
+        "postcode": "53097",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "425, West Heather Drive, Freistadt, Mequon, Ozaukee County, Wisconsin, 53097, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:03.580337+00:00",
+  "_kind": "geo_samples"
+}

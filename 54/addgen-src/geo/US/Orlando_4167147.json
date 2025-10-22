@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Orlando",
+  "geonameid": 4167147,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.573850884152215,
+      "lon": -81.39337138044336,
+      "geoinfo": {
+        "display_name": "Saint Michael's Preschool, 2499, North Westmoreland Drive, College Park, Orlando, Orange County, Florida, 32804, United States",
+        "road": "North Westmoreland Drive",
+        "house_number": "2499",
+        "neighbourhood": "College Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Orlando",
+        "state": "Florida",
+        "postcode": "32804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2499 North Westmoreland Drive, Orlando, Florida, United States"
+    },
+    {
+      "lat": 28.568604682683905,
+      "lon": -81.34316708494839,
+      "geoinfo": {
+        "display_name": "1818, Northwood Terrace Drive, Northwood Terrace, Winter Park, Orange County, Florida, 32789, United States",
+        "road": "Northwood Terrace Drive",
+        "house_number": "1818",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winter Park",
+        "state": "Florida",
+        "postcode": "32789",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1818, Northwood Terrace Drive, Northwood Terrace, Winter Park, Orange County, Florida, 32789, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:42:44.387432+00:00",
+  "_kind": "geo_samples"
+}

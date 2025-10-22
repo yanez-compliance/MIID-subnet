@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Calamvale",
+  "geonameid": 8348765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.625913729934847,
+      "lon": 153.0446819698338,
+      "geoinfo": {
+        "display_name": "Calamvale Community College, 11, Hamish Street, Calamvale, Greater Brisbane, Queensland, 4116, Australia",
+        "road": "Hamish Street",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Calamvale",
+        "city_district": "Calamvale",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4116",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "11 Hamish Street, Calamvale, Queensland, Australia"
+    },
+    {
+      "lat": -27.578942320217493,
+      "lon": 153.04760133361978,
+      "geoinfo": {
+        "display_name": "10, Keats Street, Sunnybank, Greater Brisbane, Queensland, 4109, Australia",
+        "road": "Keats Street",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Sunnybank",
+        "city_district": "Sunnybank",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4109",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "10, Keats Street, Sunnybank, Greater Brisbane, Queensland, 4109, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:44.425150+00:00",
+  "_kind": "geo_samples"
+}

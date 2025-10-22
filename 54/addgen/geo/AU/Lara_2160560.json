@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Lara",
+  "geonameid": 2160560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.03734959273343,
+      "lon": 144.45033818497876,
+      "geoinfo": {
+        "display_name": "Avalon, City of Greater Geelong, Victoria, 3212, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Victoria",
+        "postcode": "3212",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Lara, Victoria, Australia"
+    },
+    {
+      "lat": -38.052077624688565,
+      "lon": 144.4224369416827,
+      "geoinfo": {
+        "display_name": "Rees Road, Avalon, City of Greater Geelong, Victoria, 3212, Australia",
+        "road": "Rees Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avalon",
+        "state": "Victoria",
+        "postcode": "3212",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "084, Rees Road, Avalon, City of Greater Geelong, Victoria, 3212, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:30.842469+00:00",
+  "_kind": "geo_samples"
+}

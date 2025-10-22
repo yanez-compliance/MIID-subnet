@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Usera",
+  "geonameid": 6544490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.35419991207322,
+      "lon": -3.6806710771210556,
+      "geoinfo": {
+        "display_name": "Avenida de los Rosales, Butarque, Villaverde, Madrid, Community of Madrid, 28041, Spain",
+        "road": "Avenida de los Rosales",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaverde",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de los Rosales, Usera, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40420128329476,
+      "lon": -3.7449744037497825,
+      "geoinfo": {
+        "display_name": "51, Calle de Higueras, Lucero, Latina, Madrid, Community of Madrid, 28047, Spain",
+        "road": "Calle de Higueras",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28047",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "51, Calle de Higueras, Lucero, Latina, Madrid, Community of Madrid, 28047, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:55.128152+00:00",
+  "_kind": "geo_samples"
+}

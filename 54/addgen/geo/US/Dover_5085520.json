@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dover",
+  "geonameid": 5085520,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.18333886928078,
+      "lon": -70.8452239009134,
+      "geoinfo": {
+        "display_name": "Duplouy Enterprises LLC, 191, Back Road, Hickory Hill Farm, Dover, Strafford County, New Hampshire, 03820, United States",
+        "road": "Back Road",
+        "house_number": "191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dover",
+        "state": "New Hampshire",
+        "postcode": "03820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "191 Back Road, Dover, New Hampshire, United States"
+    },
+    {
+      "lat": 43.1726213602153,
+      "lon": -70.87217498109617,
+      "geoinfo": {
+        "display_name": "Dover, Strafford County, New Hampshire, 03820, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dover",
+        "state": "New Hampshire",
+        "postcode": "03820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "205, Dover, Strafford County, New Hampshire, 03820, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:29.403227+00:00",
+  "_kind": "geo_samples"
+}

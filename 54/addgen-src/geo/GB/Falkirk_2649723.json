@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Falkirk",
+  "geonameid": 2649723,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.02598639398135,
+      "lon": -3.8182228094296287,
+      "geoinfo": {
+        "display_name": "27, King Street, The Valley, Stenhousemuir, Falkirk, Scotland, FK5 3JR, United Kingdom",
+        "road": "King Street",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": "The Valley",
+        "city_district": null,
+        "city": "Stenhousemuir",
+        "state": "Scotland",
+        "postcode": "FK5 3JR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "27 King Street, Falkirk, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.99021052727791,
+      "lon": -3.8320331373124534,
+      "geoinfo": {
+        "display_name": "Lime Road, Falkirk, Scotland, FK1 3AZ, United Kingdom",
+        "road": "Lime Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Falkirk",
+        "state": "Scotland",
+        "postcode": "FK1 3AZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lime Road, Falkirk, Scotland, FK1 3AZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:00.471982+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lancaster",
+  "geonameid": 5197079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.050982847998704,
+      "lon": -76.29537750520622,
+      "geoinfo": {
+        "display_name": "655, East Frederick Street, Ross, Lancaster, Lancaster County, Pennsylvania, 17602, United States",
+        "road": "East Frederick Street",
+        "house_number": "655",
+        "neighbourhood": "Ross",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lancaster",
+        "state": "Pennsylvania",
+        "postcode": "17602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "655 East Frederick Street, Lancaster, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.04794036810324,
+      "lon": -76.34424314320381,
+      "geoinfo": {
+        "display_name": "687, Oakwood Lane, Wheatland, Rohrerstown, East Hempfield Township, Lancaster County, Pennsylvania, 17603, United States",
+        "road": "Oakwood Lane",
+        "house_number": "687",
+        "neighbourhood": "Wheatland",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Hempfield Township",
+        "state": "Pennsylvania",
+        "postcode": "17603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "687, Oakwood Lane, Wheatland, Rohrerstown, East Hempfield Township, Lancaster County, Pennsylvania, 17603, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:01.544390+00:00",
+  "_kind": "geo_samples"
+}

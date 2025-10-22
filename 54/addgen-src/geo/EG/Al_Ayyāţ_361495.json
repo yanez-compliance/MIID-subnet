@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al ‘Ayyāţ",
+  "geonameid": 361495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.595310135278368,
+      "lon": 31.284198863644715,
+      "geoinfo": {
+        "display_name": "Al-Fahmyyin, Giza, 12897, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Fahmyyin",
+        "state": "Giza",
+        "postcode": "12897",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al ‘Ayyāţ, Giza, Egypt"
+    },
+    {
+      "lat": 29.58333563777198,
+      "lon": 31.27318864679317,
+      "geoinfo": {
+        "display_name": "Al Torombat Road, Al Saff, Giza, 12897, Egypt",
+        "road": "Al Torombat Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Saff",
+        "state": "Giza",
+        "postcode": "12897",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "775, Al Torombat Road, Al Saff, Giza, 12897, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:51.085002+00:00",
+  "_kind": "geo_samples"
+}

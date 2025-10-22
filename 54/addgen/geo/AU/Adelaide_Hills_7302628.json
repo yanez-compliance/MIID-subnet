@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Adelaide Hills",
+  "geonameid": 7302628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.9175048277989,
+      "lon": 138.7335549600809,
+      "geoinfo": {
+        "display_name": "Valley View Crescent, Norton Summit, Adelaide Hills Council, South Australia, 5136, Australia",
+        "road": "Valley View Crescent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norton Summit",
+        "state": "South Australia",
+        "postcode": "5136",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Valley View Crescent, Adelaide Hills, South Australia, Australia"
+    },
+    {
+      "lat": -34.939383854953654,
+      "lon": 138.69113647290618,
+      "geoinfo": {
+        "display_name": "45 Track, Stonyfell, Horsnell Gully, Adelaide, Adelaide Hills Council, South Australia, 5141, Australia",
+        "road": "45 Track",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stonyfell",
+        "city_district": "Horsnell Gully",
+        "city": "Adelaide",
+        "state": "South Australia",
+        "postcode": "5141",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "45 Track, Stonyfell, Horsnell Gully, Adelaide, Adelaide Hills Council, South Australia, 5141, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:31.751427+00:00",
+  "_kind": "geo_samples"
+}

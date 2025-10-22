@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Merrick",
+  "geonameid": 5126630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.669153597852485,
+      "lon": -73.55896145190728,
+      "geoinfo": {
+        "display_name": "1916, Gormley Avenue, Merrick, Town of Hempstead, Nassau County, New York, 11566, United States",
+        "road": "Gormley Avenue",
+        "house_number": "1916",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merrick",
+        "state": "New York",
+        "postcode": "11566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1916 Gormley Avenue, Merrick, New York, United States"
+    },
+    {
+      "lat": 40.689823261453284,
+      "lon": -73.54164423252045,
+      "geoinfo": {
+        "display_name": "Newbridge Road, North Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States",
+        "road": "Newbridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Bellmore",
+        "state": "New York",
+        "postcode": "11710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "546, Newbridge Road, North Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:56.541333+00:00",
+  "_kind": "geo_samples"
+}

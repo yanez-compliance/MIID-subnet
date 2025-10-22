@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Levittown",
+  "geonameid": 5197796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.130932636238136,
+      "lon": -74.85123073114559,
+      "geoinfo": {
+        "display_name": "Pershing Road, Levittown, Bristol Township, Bucks County, Pennsylvania, 19057, United States",
+        "road": "Pershing Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol Township",
+        "state": "Pennsylvania",
+        "postcode": "19057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pershing Road, Levittown, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.11566261295194,
+      "lon": -74.81806475804864,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike Pennsylvania Extension, Burlington Township, Burlington County, New Jersey, 08518, United States",
+        "road": "New Jersey Turnpike Pennsylvania Extension",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burlington Township",
+        "state": "New Jersey",
+        "postcode": "08518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "572, New Jersey Turnpike Pennsylvania Extension, Burlington Township, Burlington County, New Jersey, 08518, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:35.810017+00:00",
+  "_kind": "geo_samples"
+}

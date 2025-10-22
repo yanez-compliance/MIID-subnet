@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Villeneuve-la-Garenne",
+  "geonameid": 2968555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.938603527904014,
+      "lon": 2.2950038620606494,
+      "geoinfo": {
+        "display_name": "A 15, Le Village, Gennevilliers, Arrondissement of Nanterre, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92230, France",
+        "road": "A 15",
+        "house_number": null,
+        "neighbourhood": "Le Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gennevilliers",
+        "state": "Ile-de-France",
+        "postcode": "92230",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 15, Villeneuve-la-Garenne, Ile-de-France, France"
+    },
+    {
+      "lat": 48.896507209097784,
+      "lon": 2.3127109138031074,
+      "geoinfo": {
+        "display_name": "Avenue de la Conservation, Quartier des Épinettes, 17th Arrondissement, Paris, Metropolitan France, 75017, France",
+        "road": "Avenue de la Conservation",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "17th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75017",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de la Conservation, Quartier des Épinettes, 17th Arrondissement, Paris, Metropolitan France, 75017, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:19.914458+00:00",
+  "_kind": "geo_samples"
+}

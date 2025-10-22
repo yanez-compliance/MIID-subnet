@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cheyenne",
+  "geonameid": 5821086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.131896622133965,
+      "lon": -104.78828286224454,
+      "geoinfo": {
+        "display_name": "2407, East 7th Street, Cheyenne, Laramie County, Wyoming, 82001, United States",
+        "road": "East 7th Street",
+        "house_number": "2407",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cheyenne",
+        "state": "Wyoming",
+        "postcode": "82001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2407 East 7th Street, Cheyenne, Wyoming, United States"
+    },
+    {
+      "lat": 41.12615395746164,
+      "lon": -104.8697595252333,
+      "geoinfo": {
+        "display_name": "Happy Jack Road, Francis E. Warren Air Force Base, Laramie County, Wyoming, 82005, United States",
+        "road": "Happy Jack Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Francis E. Warren Air Force Base",
+        "state": "Wyoming",
+        "postcode": "82005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "348, Happy Jack Road, Francis E. Warren Air Force Base, Laramie County, Wyoming, 82005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:45.251870+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cranford",
+  "geonameid": 5097017,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.658042784834755,
+      "lon": -74.30666853334287,
+      "geoinfo": {
+        "display_name": "191, Holly Street, Cranford, Union County, New Jersey, 07016, United States",
+        "road": "Holly Street",
+        "house_number": "191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cranford",
+        "state": "New Jersey",
+        "postcode": "07016",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "191 Holly Street, Cranford, New Jersey, United States"
+    },
+    {
+      "lat": 40.70080506000165,
+      "lon": -74.29094236983117,
+      "geoinfo": {
+        "display_name": "2483, Wilson Terrace, Unionburg, Union, Union County, New Jersey, 07083, United States",
+        "road": "Wilson Terrace",
+        "house_number": "2483",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union",
+        "state": "New Jersey",
+        "postcode": "07083",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2483, Wilson Terrace, Unionburg, Union, Union County, New Jersey, 07083, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:54.265133+00:00",
+  "_kind": "geo_samples"
+}

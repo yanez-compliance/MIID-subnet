@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Joliette",
+  "geonameid": 5987650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.01981949999472,
+      "lon": -73.40899507446571,
+      "geoinfo": {
+        "display_name": "980, Chemin des Prairies, Joliette, Joliette (MRC), Lanaudière, Quebec, J6E 3X3, Canada",
+        "road": "Chemin des Prairies",
+        "house_number": "980",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joliette",
+        "state": "Quebec",
+        "postcode": "J6E 3X3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "980 Chemin des Prairies, Joliette, Quebec, Canada"
+    },
+    {
+      "lat": 46.05444785859641,
+      "lon": -73.41093624276718,
+      "geoinfo": {
+        "display_name": "Rang de la Deuxième Chaloupe, Notre-Dame-des-Prairies, Joliette (MRC), Lanaudière, Quebec, J6E 0M1, Canada",
+        "road": "Rang de la Deuxième Chaloupe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Notre-Dame-des-Prairies",
+        "city_district": null,
+        "city": null,
+        "state": "Quebec",
+        "postcode": "J6E 0M1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rang de la Deuxième Chaloupe, Notre-Dame-des-Prairies, Joliette (MRC), Lanaudière, Quebec, J6E 0M1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:36.199496+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Balasore",
+  "geonameid": 1277599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.467062337268384,
+      "lon": 86.93675651770742,
+      "geoinfo": {
+        "display_name": "Baleshwar Sadar, Baleshwar, Odisha, 756056, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Odisha",
+        "postcode": "756056",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Balasore, Odisha, India"
+    },
+    {
+      "lat": 21.529568274155455,
+      "lon": 86.93035223405025,
+      "geoinfo": {
+        "display_name": "SubCentre,Dahapada, NH16, Sahadevkhunta, Baleshwar, Odisha, 756003, India",
+        "road": "NH16",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Odisha",
+        "postcode": "756003",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH16, Balasore, 756003 Odisha, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:35.931599+00:00",
+  "_kind": "geo_samples"
+}

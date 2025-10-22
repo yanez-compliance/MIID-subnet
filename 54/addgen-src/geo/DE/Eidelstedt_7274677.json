@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eidelstedt",
+  "geonameid": 7274677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.61813188887325,
+      "lon": 9.924175014584117,
+      "geoinfo": {
+        "display_name": "Reitstall Krohn, Holloswisch, Eidelstedt, Eimsbüttel, Hamburg, 22523, Germany",
+        "road": "Holloswisch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eidelstedt",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22523",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Holloswisch, Eidelstedt, Germany"
+    },
+    {
+      "lat": 53.59304739260204,
+      "lon": 9.92051213400923,
+      "geoinfo": {
+        "display_name": "A 7, Stellingen, Eimsbüttel, Hamburg, 22525, Germany",
+        "road": "A 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stellingen",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 7, Stellingen, Eimsbüttel, Hamburg, 22525, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:03.095688+00:00",
+  "_kind": "geo_samples"
+}

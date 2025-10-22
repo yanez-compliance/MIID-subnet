@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenfield",
+  "geonameid": 5255068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.00127721936243,
+      "lon": -88.02708749070894,
+      "geoinfo": {
+        "display_name": "2354, South 92nd Street, Eckel Woods, West Allis, Milwaukee County, Wisconsin, 53227, United States",
+        "road": "South 92nd Street",
+        "house_number": "2354",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Allis",
+        "state": "Wisconsin",
+        "postcode": "53227",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2354 South 92nd Street, Greenfield, Wisconsin, United States"
+    },
+    {
+      "lat": 42.99889906482924,
+      "lon": -87.98384066061259,
+      "geoinfo": {
+        "display_name": "5722, West Rita Drive, East Allis, West Allis, Milwaukee County, Wisconsin, 53219, United States",
+        "road": "West Rita Drive",
+        "house_number": "5722",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Allis",
+        "state": "Wisconsin",
+        "postcode": "53219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5722, West Rita Drive, East Allis, West Allis, Milwaukee County, Wisconsin, 53219, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:02.126418+00:00",
+  "_kind": "geo_samples"
+}

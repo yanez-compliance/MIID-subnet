@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Petershagen",
+  "geonameid": 2854655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.3847666689913,
+      "lon": 9.024065785587226,
+      "geoinfo": {
+        "display_name": "1, Auf dem Berge, Gorspen-Vahlsen, Petershagen, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32469, Germany",
+        "road": "Auf dem Berge",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Gorspen-Vahlsen",
+        "city_district": null,
+        "city": "Petershagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Auf dem Berge, Petershagen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.413356295133404,
+      "lon": 8.989951494788903,
+      "geoinfo": {
+        "display_name": "Logeweg, Windheim, Jössen, Petershagen, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32469, Germany",
+        "road": "Logeweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Windheim",
+        "city_district": null,
+        "city": "Petershagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "537, Logeweg, Windheim, Jössen, Petershagen, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32469, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:58.992194+00:00",
+  "_kind": "geo_samples"
+}

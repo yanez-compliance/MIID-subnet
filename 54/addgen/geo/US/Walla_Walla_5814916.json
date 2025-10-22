@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Walla Walla",
+  "geonameid": 5814916,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.0933696227295,
+      "lon": -118.33800295677997,
+      "geoinfo": {
+        "display_name": "Walla Walla County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walla Walla, Washington, United States"
+    },
+    {
+      "lat": 46.0728394317664,
+      "lon": -118.28718103759883,
+      "geoinfo": {
+        "display_name": "North Tausick Way, Walla Walla, Walla Walla County, Washington, 99362, United States",
+        "road": "North Tausick Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walla Walla",
+        "state": "Washington",
+        "postcode": "99362",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "972, North Tausick Way, Walla Walla, Walla Walla County, Washington, 99362, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:36.960749+00:00",
+  "_kind": "geo_samples"
+}

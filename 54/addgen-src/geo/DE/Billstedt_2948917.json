@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Billstedt",
+  "geonameid": 2948917,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.547179881754545,
+      "lon": 10.120918601963098,
+      "geoinfo": {
+        "display_name": "Höfnageleck, Billstedt, Hamburg-Mitte, Hamburg, 22119, Germany",
+        "road": "Höfnageleck",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Billstedt",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22119",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Höfnageleck, Billstedt, Germany"
+    },
+    {
+      "lat": 53.58311380398301,
+      "lon": 10.11497438592519,
+      "geoinfo": {
+        "display_name": "197, Ahrensburger Straße, Tonndorf, Wandsbek, Hamburg, 22045, Germany",
+        "road": "Ahrensburger Straße",
+        "house_number": "197",
+        "neighbourhood": null,
+        "suburb": "Tonndorf",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22045",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "197, Ahrensburger Straße, Tonndorf, Wandsbek, Hamburg, 22045, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:18.913108+00:00",
+  "_kind": "geo_samples"
+}

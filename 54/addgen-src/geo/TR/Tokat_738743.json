@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Tokat",
+  "geonameid": 738743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.34274653039211,
+      "lon": 36.51111684276114,
+      "geoinfo": {
+        "display_name": "Güneşli, Akyamaç, Tokat, Black Sea Region, 60100, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Güneşli",
+        "city_district": null,
+        "city": "Tokat",
+        "state": null,
+        "postcode": "60100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Güneşli, Tokat, Turkey"
+    },
+    {
+      "lat": 40.3300924361116,
+      "lon": 36.551857265857215,
+      "geoinfo": {
+        "display_name": "Novada Tokat, Vali Zekai Gümüşdiş Bulvarı, Tokat, Yeşilırmak, Yeşilırmak Mahallesi, Tokat, Black Sea Region, 60100, Turkey",
+        "road": "Vali Zekai Gümüşdiş Bulvarı",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yeşilırmak",
+        "city_district": "Yeşilırmak Mahallesi",
+        "city": "Tokat",
+        "state": null,
+        "postcode": "60100",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "280, Vali Zekai Gümüşdiş Bulvarı, 60100 Tokat, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:09.639727+00:00",
+  "_kind": "geo_samples"
+}

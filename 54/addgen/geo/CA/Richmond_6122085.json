@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Richmond",
+  "geonameid": 6122085,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.13689235266337,
+      "lon": -123.15661682522624,
+      "geoinfo": {
+        "display_name": "Spender Drive, Blundell, Richmond, Metro Vancouver Regional District, British Columbia, V7E 1K5, Canada",
+        "road": "Spender Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Blundell",
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7E 1K5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Spender Drive, Richmond, British Columbia, Canada"
+    },
+    {
+      "lat": 49.15702769434097,
+      "lon": -123.13043020355443,
+      "geoinfo": {
+        "display_name": "8500, Jones Road, Saint Albans, City Centre, Richmond, Metro Vancouver Regional District, British Columbia, V6Y, Canada",
+        "road": "Jones Road",
+        "house_number": "8500",
+        "neighbourhood": "Saint Albans",
+        "suburb": null,
+        "city_district": "City Centre",
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V6Y",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "8500, Jones Road, Saint Albans, City Centre, Richmond, Metro Vancouver Regional District, British Columbia, V6Y, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:12.114035+00:00",
+  "_kind": "geo_samples"
+}

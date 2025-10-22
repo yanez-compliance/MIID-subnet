@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tieshan",
+  "geonameid": 1904058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.67863299145178,
+      "lon": 105.51847692829179,
+      "geoinfo": {
+        "display_name": "Tieshan, Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tieshan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tieshan, Chongqing, China"
+    },
+    {
+      "lat": 29.66475639664846,
+      "lon": 105.47350810677429,
+      "geoinfo": {
+        "display_name": "S309, Rongchang District, Chongqing, China",
+        "road": "S309",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S309, Rongchang District, 47198 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:31.734207+00:00",
+  "_kind": "geo_samples"
+}

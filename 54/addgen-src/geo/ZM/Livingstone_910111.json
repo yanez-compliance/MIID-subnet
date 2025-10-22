@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Livingstone",
+  "geonameid": 910111,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -17.88105327370297,
+      "lon": 25.857115300749527,
+      "geoinfo": {
+        "display_name": "Mosi-Oa-Tunya, Livingstone, Livingstone District, Southern Province, Zambia",
+        "road": "Mosi-Oa-Tunya",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livingstone",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Mosi-Oa-Tunya, Livingstone, Southern Province, Zambia"
+    },
+    {
+      "lat": -17.8154343826005,
+      "lon": 25.835011725108707,
+      "geoinfo": {
+        "display_name": "Livingstone, Livingstone District, Southern Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livingstone",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Livingstone, Southern Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-17T01:28:17.411522+00:00",
+  "_kind": "geo_samples"
+}

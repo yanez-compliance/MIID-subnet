@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vineyard",
+  "geonameid": 7176039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.44398676268531,
+      "lon": -121.34531743399785,
+      "geoinfo": {
+        "display_name": "Elk Grove, Sacramento County, California, 95829, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elk Grove",
+        "state": "California",
+        "postcode": "95829",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Vineyard, California, United States"
+    },
+    {
+      "lat": 38.460402297859275,
+      "lon": -121.30329846924212,
+      "geoinfo": {
+        "display_name": "8198, Queensland Court, Elk Grove, Sacramento County, California, 95829, United States",
+        "road": "Queensland Court",
+        "house_number": "8198",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elk Grove",
+        "state": "California",
+        "postcode": "95829",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8198, Queensland Court, Elk Grove, Sacramento County, California, 95829, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:19.641155+00:00",
+  "_kind": "geo_samples"
+}

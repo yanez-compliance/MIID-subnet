@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elkton",
+  "geonameid": 4354234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.57869040246705,
+      "lon": -75.84270561403439,
+      "geoinfo": {
+        "display_name": "Frenchtown Road, Elkton, Cecil County, Maryland, 21922, United States",
+        "road": "Frenchtown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkton",
+        "state": "Maryland",
+        "postcode": "21922",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Frenchtown Road, Elkton, Maryland, United States"
+    },
+    {
+      "lat": 39.56915348574755,
+      "lon": -75.85479072428495,
+      "geoinfo": {
+        "display_name": "Elk Point Road, Elk Haven, Cecil County, Maryland, 21921, United States",
+        "road": "Elk Point Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21921",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "776, Elk Point Road, Elk Haven, Cecil County, Maryland, 21921, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:05.363241+00:00",
+  "_kind": "geo_samples"
+}

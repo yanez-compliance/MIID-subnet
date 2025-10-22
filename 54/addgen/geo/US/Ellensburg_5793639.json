@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ellensburg",
+  "geonameid": 5793639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.99782344603237,
+      "lon": -120.56001100544175,
+      "geoinfo": {
+        "display_name": "607, North Railroad Avenue, Ellensburg, Kittitas County, Washington, 98926, United States",
+        "road": "North Railroad Avenue",
+        "house_number": "607",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellensburg",
+        "state": "Washington",
+        "postcode": "98926",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "607 North Railroad Avenue, Ellensburg, Washington, United States"
+    },
+    {
+      "lat": 46.98389039971142,
+      "lon": -120.60377399877625,
+      "geoinfo": {
+        "display_name": "Kittitas County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "005, Kittitas County, 97236 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:23.147862+00:00",
+  "_kind": "geo_samples"
+}

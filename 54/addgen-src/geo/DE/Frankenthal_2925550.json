@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Frankenthal",
+  "geonameid": 2925550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.52946781318777,
+      "lon": 8.30906487489801,
+      "geoinfo": {
+        "display_name": "L 522, Lambsheim, Lambsheim-Heßheim, Rhein-Pfalz-Kreis, Rhineland-Palatinate, 67245, Germany",
+        "road": "L 522",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lambsheim",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67245",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 522, Frankenthal, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.52832199774442,
+      "lon": 8.365708231802186,
+      "geoinfo": {
+        "display_name": "54, Frankenstraße, Strandbad Quartier, Frankenthal Kernstadt, Frankenthal (Pfalz), Rhineland-Palatinate, 67227, Germany",
+        "road": "Frankenstraße",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Frankenthal Kernstadt",
+        "city": "Frankenthal (Pfalz)",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67227",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "54, Frankenstraße, Strandbad Quartier, Frankenthal Kernstadt, Frankenthal (Pfalz), Rhineland-Palatinate, 67227, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:58.871377+00:00",
+  "_kind": "geo_samples"
+}

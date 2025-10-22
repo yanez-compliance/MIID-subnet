@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Snowdon",
+  "geonameid": 12626140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.51932487464697,
+      "lon": -73.63929885574238,
+      "geoinfo": {
+        "display_name": "1141, Dunraven Road, Mount Royal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3P 2K8, Canada",
+        "road": "Dunraven Road",
+        "house_number": "1141",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Royal",
+        "state": "Quebec",
+        "postcode": "H3P 2K8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1141, Dunraven Road, Mount Royal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3P 2K8, Canada"
+    },
+    {
+      "lat": 45.4763610289622,
+      "lon": -73.67510812973262,
+      "geoinfo": {
+        "display_name": "CPKC St-Luc Yard, Wolseley Avenue, Côte Saint-Luc, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4W 2J2, Canada",
+        "road": "Wolseley Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Côte Saint-Luc",
+        "state": "Quebec",
+        "postcode": "H4W 2J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "CPKC St-Luc Yard, Wolseley Avenue, Côte Saint-Luc, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4W 2J2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:26.195585+00:00",
+  "_kind": "geo_samples"
+}

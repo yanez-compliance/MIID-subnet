@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Coslada",
+  "geonameid": 3124408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.441083927549265,
+      "lon": -3.561531379815408,
+      "geoinfo": {
+        "display_name": "M-22, Rejas, San Blas - Canillejas, Madrid, Community of Madrid, 28821, Spain",
+        "road": "M-22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Blas - Canillejas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28821",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-22, Coslada, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.4181722531696,
+      "lon": -3.5243392334839654,
+      "geoinfo": {
+        "display_name": "17, Avenida de Algorta, San Fernando de Henares, Community of Madrid, 28830, Spain",
+        "road": "Avenida de Algorta",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28830",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "17, Avenida de Algorta, San Fernando de Henares, Community of Madrid, 28830, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:08.849072+00:00",
+  "_kind": "geo_samples"
+}

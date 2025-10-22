@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pecan Grove",
+  "geonameid": 4718209,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.6448136450343,
+      "lon": -95.76461204358543,
+      "geoinfo": {
+        "display_name": "Fort Bend County, Texas, 77406, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77406",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pecan Grove, Texas, United States"
+    },
+    {
+      "lat": 29.633143168065846,
+      "lon": -95.75494441055413,
+      "geoinfo": {
+        "display_name": "Garcitas Creek, Fort Bend County, Texas, 77496, United States",
+        "road": "Garcitas Creek",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77496",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "961, Garcitas Creek, Fort Bend County, Texas, 77496, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:26.442360+00:00",
+  "_kind": "geo_samples"
+}

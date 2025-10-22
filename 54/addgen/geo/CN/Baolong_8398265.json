@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Baolong",
+  "geonameid": 8398265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.950650662774922,
+      "lon": 110.04485536274532,
+      "geoinfo": {
+        "display_name": "渝建路, Wushan County, Chongqing, China",
+        "road": "渝建路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "渝建路, Baolong, Chongqing, China"
+    },
+    {
+      "lat": 30.961174176156216,
+      "lon": 109.99394176725347,
+      "geoinfo": {
+        "display_name": "Qingfeng, Wushan County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingfeng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "485, Qingfeng, Wushan County, 75104 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:00.873062+00:00",
+  "_kind": "geo_samples"
+}

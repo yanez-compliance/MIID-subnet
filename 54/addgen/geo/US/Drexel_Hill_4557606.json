@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Drexel Hill",
+  "geonameid": 4557606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.94544898908913,
+      "lon": -75.30655317733837,
+      "geoinfo": {
+        "display_name": "School Lane, Addingham, Upper Darby, Delaware County, Pennsylvania, 19026, United States",
+        "road": "School Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Darby",
+        "state": "Pennsylvania",
+        "postcode": "19026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "School Lane, Drexel Hill, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.98437908837206,
+      "lon": -75.29144265265003,
+      "geoinfo": {
+        "display_name": "592, Brookline Boulevard, Penfield, Havertown, Haverford Township, Delaware County, Pennsylvania, 19083, United States",
+        "road": "Brookline Boulevard",
+        "house_number": "592",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haverford Township",
+        "state": "Pennsylvania",
+        "postcode": "19083",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "592, Brookline Boulevard, Penfield, Havertown, Haverford Township, Delaware County, Pennsylvania, 19083, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:09.429618+00:00",
+  "_kind": "geo_samples"
+}

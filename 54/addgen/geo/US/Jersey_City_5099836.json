@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jersey City",
+  "geonameid": 5099836,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.74900518624332,
+      "lon": -74.08380972754246,
+      "geoinfo": {
+        "display_name": "Kearny, Hudson County, New Jersey, 07032, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kearny",
+        "state": "New Jersey",
+        "postcode": "07032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jersey City, New Jersey, United States"
+    },
+    {
+      "lat": 40.68837425899298,
+      "lon": -74.0514043340046,
+      "geoinfo": {
+        "display_name": "Flagpole Plaza, Manhattan, New York County, New York, 07303, United States",
+        "road": "Flagpole Plaza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "07303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "528, Flagpole Plaza, Manhattan, New York County, New York, 07303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:32.172793+00:00",
+  "_kind": "geo_samples"
+}

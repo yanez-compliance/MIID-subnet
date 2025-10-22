@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pottstown",
+  "geonameid": 5207069,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.239749109861215,
+      "lon": -75.657522382181,
+      "geoinfo": {
+        "display_name": "Pottstown Bypass, South Pottstown, North Coventry Township, Chester County, Pennsylvania, 19465, United States",
+        "road": "Pottstown Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Coventry Township",
+        "state": "Pennsylvania",
+        "postcode": "19465",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pottstown Bypass, Pottstown, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.232657974851044,
+      "lon": -75.61356760026158,
+      "geoinfo": {
+        "display_name": "Hart Road, Lower Pottsgrove Township, Montgomery County, Pennsylvania, 19464, United States",
+        "road": "Hart Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lower Pottsgrove Township",
+        "state": "Pennsylvania",
+        "postcode": "19464",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "896, Hart Road, Lower Pottsgrove Township, Montgomery County, Pennsylvania, 19464, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:19.340262+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Santafé",
+  "geonameid": 2511160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.152980033728966,
+      "lon": -3.7405941417992574,
+      "geoinfo": {
+        "display_name": "La Dehesilla, Santa Fe, Comarca de la Vega de Granada, Granada, Andalusia, 18320, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Fe",
+        "state": "Andalusia",
+        "postcode": "18320",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Santafé, Andalusia, Spain"
+    },
+    {
+      "lat": 37.2114392589898,
+      "lon": -3.7555452438471595,
+      "geoinfo": {
+        "display_name": "Camino de la Fresneda, Fuente Vaqueros, Comarca de la Vega de Granada, Granada, Andalusia, 19340, Spain",
+        "road": "Camino de la Fresneda",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuente Vaqueros",
+        "state": "Andalusia",
+        "postcode": "19340",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "296, Camino de la Fresneda, Fuente Vaqueros, Comarca de la Vega de Granada, Granada, Andalusia, 19340, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:35:33.939878+00:00",
+  "_kind": "geo_samples"
+}

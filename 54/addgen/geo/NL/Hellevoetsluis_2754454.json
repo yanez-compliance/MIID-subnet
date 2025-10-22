@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Hellevoetsluis",
+  "geonameid": 2754454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.80521310383041,
+      "lon": 4.120520603928791,
+      "geoinfo": {
+        "display_name": "Dirksland, Goeree-Overflakkee, South Holland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dirksland",
+        "state": "South Holland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Hellevoetsluis, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.85671878936906,
+      "lon": 4.189422678362031,
+      "geoinfo": {
+        "display_name": "Rijswaardsedijk, Zwartewaal, Voorne aan Zee, South Holland, Netherlands, 3238 LS, Netherlands",
+        "road": "Rijswaardsedijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zwartewaal",
+        "state": "South Holland",
+        "postcode": "3238 LS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "222, Rijswaardsedijk, Zwartewaal, Voorne aan Zee, South Holland, Netherlands, 3238 LS, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:59.029411+00:00",
+  "_kind": "geo_samples"
+}

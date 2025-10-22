@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Broadstairs",
+  "geonameid": 2654635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.368380946482695,
+      "lon": 1.4783023801054125,
+      "geoinfo": {
+        "display_name": "Broadstairs, Thanet, Kent, England, CT10 1BH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT10 1BH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Broadstairs, England, United Kingdom"
+    },
+    {
+      "lat": 51.37500781536808,
+      "lon": 1.3987660708503158,
+      "geoinfo": {
+        "display_name": "Saint Peter's Footpath, Millmead, Margate, Thanet, Kent, England, CT9 3RY, United Kingdom",
+        "road": "Saint Peter's Footpath",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Millmead",
+        "city_district": null,
+        "city": "Thanet",
+        "state": "England",
+        "postcode": "CT9 3RY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Saint Peter's Footpath, Millmead, Margate, Thanet, Kent, England, CT9 3RY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:39.687801+00:00",
+  "_kind": "geo_samples"
+}

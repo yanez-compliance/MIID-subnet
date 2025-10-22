@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Orange",
+  "geonameid": 5104836,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.75635488072956,
+      "lon": -74.278592814393,
+      "geoinfo": {
+        "display_name": "Longview Road, Newstead North, South Orange, Essex County, New Jersey, 07079, United States",
+        "road": "Longview Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Orange",
+        "state": "New Jersey",
+        "postcode": "07079",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Longview Road, South Orange, New Jersey, United States"
+    },
+    {
+      "lat": 40.73721082483771,
+      "lon": -74.21826488301247,
+      "geoinfo": {
+        "display_name": "Garden State Parkway, Irvington, Essex County, New Jersey, 07106, United States",
+        "road": "Garden State Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irvington",
+        "state": "New Jersey",
+        "postcode": "07106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "298, Garden State Parkway, Irvington, Essex County, New Jersey, 07106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:14.900837+00:00",
+  "_kind": "geo_samples"
+}

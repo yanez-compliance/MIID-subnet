@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Karlsfeld",
+  "geonameid": 2892874,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.25763400846035,
+      "lon": 11.524930997067703,
+      "geoinfo": {
+        "display_name": "Dachauer Straße, Badersfeld, Oberschleißheim, Landkreis München, Bavaria, 85764, Germany",
+        "road": "Dachauer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oberschleißheim",
+        "state": "Bavaria",
+        "postcode": "85764",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dachauer Straße, Karlsfeld, Bavaria, Germany"
+    },
+    {
+      "lat": 48.22495799155133,
+      "lon": 11.411996457565301,
+      "geoinfo": {
+        "display_name": "9, Gündinger Straße, Eschenried, Bergkirchen, Landkreis Dachau, Bavaria, 85232, Germany",
+        "road": "Gündinger Straße",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eschenried",
+        "state": "Bavaria",
+        "postcode": "85232",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9, Gündinger Straße, Eschenried, Bergkirchen, Landkreis Dachau, Bavaria, 85232, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:41.052235+00:00",
+  "_kind": "geo_samples"
+}

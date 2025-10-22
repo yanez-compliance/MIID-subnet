@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunland Park",
+  "geonameid": 5493403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.807817311217836,
+      "lon": -106.61985171428199,
+      "geoinfo": {
+        "display_name": "Lizard, Doña Ana County, New Mexico, 88008, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Mexico",
+        "postcode": "88008",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sunland Park, New Mexico, United States"
+    },
+    {
+      "lat": 31.836030380416364,
+      "lon": -106.56029513993029,
+      "geoinfo": {
+        "display_name": "Desert Trail Drive, El Paso, El Paso County, Texas, 79912, United States",
+        "road": "Desert Trail Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Paso",
+        "state": "Texas",
+        "postcode": "79912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "477, Desert Trail Drive, El Paso, El Paso County, Texas, 79912, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:07.735781+00:00",
+  "_kind": "geo_samples"
+}

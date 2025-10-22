@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Caledonia",
+  "geonameid": 5247415,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.82125317809572,
+      "lon": -87.90561190499261,
+      "geoinfo": {
+        "display_name": "Brookside Drive, Caledonia, Racine County, Wisconsin, 53108, United States",
+        "road": "Brookside Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caledonia",
+        "state": "Wisconsin",
+        "postcode": "53108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brookside Drive, Caledonia, Wisconsin, United States"
+    },
+    {
+      "lat": 42.814366488811736,
+      "lon": -87.91233089189465,
+      "geoinfo": {
+        "display_name": "10413, 6 Mile Road, Husher, Caledonia, Racine County, Wisconsin, 53108, United States",
+        "road": "6 Mile Road",
+        "house_number": "10413",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caledonia",
+        "state": "Wisconsin",
+        "postcode": "53108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10413, 6 Mile Road, Husher, Caledonia, Racine County, Wisconsin, 53108, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:10.095443+00:00",
+  "_kind": "geo_samples"
+}

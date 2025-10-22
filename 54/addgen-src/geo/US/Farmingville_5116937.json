@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Farmingville",
+  "geonameid": 5116937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.811789700461425,
+      "lon": -72.99728769923541,
+      "geoinfo": {
+        "display_name": "143, Oregon Avenue, Medford, Town of Brookhaven, Suffolk County, New York, 11763, United States",
+        "road": "Oregon Avenue",
+        "house_number": "143",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "New York",
+        "postcode": "11763",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "143 Oregon Avenue, Farmingville, New York, United States"
+    },
+    {
+      "lat": 40.8243526862687,
+      "lon": -73.0066855600227,
+      "geoinfo": {
+        "display_name": "Express Drive North, Medford, Town of Brookhaven, Suffolk County, New York, 11763, United States",
+        "road": "Express Drive North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "New York",
+        "postcode": "11763",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "295, Express Drive North, Medford, Town of Brookhaven, Suffolk County, New York, 11763, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:29.184194+00:00",
+  "_kind": "geo_samples"
+}

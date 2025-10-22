@@ -1,0 +1,65 @@
+{
+  "country_code": "PS",
+  "country": "Palestinian Territory",
+  "city": "Bayt Lāhyā",
+  "geonameid": 281145,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 31.54300346318065,
+      "lon": 34.44856647418586,
+      "geoinfo": {
+        "display_name": "ar-Rashid",
+        "road": "ar-Rashid",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": null,
+        "country_code": null
+      },
+      "address": "452, ar-Rashid, 86696 Bayt Lāhyā, Palestinian Territory"
+    },
+    {
+      "lat": 31.54532654132335,
+      "lon": 34.49938872789747,
+      "geoinfo": {
+        "display_name": "Teberia, Beit Lahiya, North Gaza Governorate, Gaza Strip, 500, Palestinian Territories",
+        "road": "Teberia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beit Lahiya",
+        "state": null,
+        "postcode": "500",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "052, Teberia, 500 Bayt Lāhyā, Palestinian Territory"
+    },
+    {
+      "lat": 31.5563931621928,
+      "lon": 34.52845387036533,
+      "geoinfo": {
+        "display_name": "Salah Ad-Din, Beit Hanoun, North Gaza Governorate, Gaza Strip, 500, Palestinian Territories",
+        "road": "Salah Ad-Din",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beit Hanoun",
+        "state": null,
+        "postcode": "500",
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "883, Salah Ad-Din, 500 Bayt Lāhyā, Palestinian Territory"
+    }
+  ],
+  "updated_at": "2025-10-19T06:36:10.340802+00:00",
+  "_kind": "geo_samples"
+}

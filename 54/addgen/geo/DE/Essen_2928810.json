@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Essen",
+  "geonameid": 2928810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.4238370585475,
+      "lon": 6.978331167830042,
+      "geoinfo": {
+        "display_name": "15, Borkumstraße, Margarethenhöhe, Stadtbezirk III, Essen, North Rhine-Westphalia, 45149, Germany",
+        "road": "Borkumstraße",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Margarethenhöhe",
+        "city_district": "Stadtbezirk III",
+        "city": "Essen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45149",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15 Borkumstraße, Essen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.488388396086194,
+      "lon": 7.0607032181414375,
+      "geoinfo": {
+        "display_name": "Zollvereinweg, Pestalozzidorf \"Im Grund\", Katernberg, Stadtbezirk VI, Essen, North Rhine-Westphalia, 45327, Germany",
+        "road": "Zollvereinweg",
+        "house_number": null,
+        "neighbourhood": "Pestalozzidorf \"Im Grund\"",
+        "suburb": "Katernberg",
+        "city_district": "Stadtbezirk VI",
+        "city": "Essen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45327",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "643, Zollvereinweg, Pestalozzidorf \"Im Grund\", Katernberg, Stadtbezirk VI, Essen, North Rhine-Westphalia, 45327, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:26.760977+00:00",
+  "_kind": "geo_samples"
+}

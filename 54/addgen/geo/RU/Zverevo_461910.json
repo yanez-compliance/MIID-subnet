@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Zverevo",
+  "geonameid": 461910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.99135539278591,
+      "lon": 40.13582989587917,
+      "geoinfo": {
+        "display_name": "Владимировское сельское поселение, Krasnosulinsky District, Rostov Oblast, Southern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rostov Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Zverevo, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 48.06205301399773,
+      "lon": 40.130744481778834,
+      "geoinfo": {
+        "display_name": "Komissarovka, Долотинское сельское поселение, городской округ Зверево, Rostov Oblast, 346319, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Komissarovka",
+        "state": "Rostov Oblast",
+        "postcode": "346319",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "006, Zverevo, 346319 Rostov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:59:16.255435+00:00",
+  "_kind": "geo_samples"
+}

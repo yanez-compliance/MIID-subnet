@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Antonio Tecómitl",
+  "geonameid": 8858100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.197091369169915,
+      "lon": -99.02577860932662,
+      "geoinfo": {
+        "display_name": "Avenida Nuevo León, Barrio Santa Martha, Totoxhpa, Villa Milpa Alta, Milpa Alta, Mexico City, 12000, Mexico",
+        "road": "Avenida Nuevo León",
+        "house_number": null,
+        "neighbourhood": "Barrio Santa Martha",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Milpa Alta",
+        "state": "Mexico City",
+        "postcode": "12000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Nuevo León, San Antonio Tecómitl, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.249388829181935,
+      "lon": -99.01634468829774,
+      "geoinfo": {
+        "display_name": "Calle Los Ángeles, Colonia Cristo Rey, Mexico City, Xochimilco, San Juan Ixtayopan, Mexico City, 16780, Mexico",
+        "road": "Calle Los Ángeles",
+        "house_number": null,
+        "neighbourhood": "Colonia Cristo Rey",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "16780",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "866, Calle Los Ángeles, Colonia Cristo Rey, Mexico City, Xochimilco, San Juan Ixtayopan, Mexico City, 16780, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:08.116146+00:00",
+  "_kind": "geo_samples"
+}

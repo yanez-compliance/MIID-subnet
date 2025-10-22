@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Milwaukee",
+  "geonameid": 5263045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.04160732879676,
+      "lon": -87.9241582274046,
+      "geoinfo": {
+        "display_name": "900, North 10th Street, Westown, Downtown, Milwaukee, Milwaukee County, Wisconsin, 53233, United States",
+        "road": "North 10th Street",
+        "house_number": "900",
+        "neighbourhood": null,
+        "suburb": "Downtown",
+        "city_district": null,
+        "city": "Milwaukee",
+        "state": "Wisconsin",
+        "postcode": "53233",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "900 North 10th Street, Milwaukee, Wisconsin, United States"
+    },
+    {
+      "lat": 43.05358675451025,
+      "lon": -87.94099799627472,
+      "geoinfo": {
+        "display_name": "1736, North 23rd Street, Midtown, Milwaukee, Milwaukee County, Wisconsin, 53205, United States",
+        "road": "North 23rd Street",
+        "house_number": "1736",
+        "neighbourhood": null,
+        "suburb": "Midtown",
+        "city_district": null,
+        "city": "Milwaukee",
+        "state": "Wisconsin",
+        "postcode": "53205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1736, North 23rd Street, Midtown, Milwaukee, Milwaukee County, Wisconsin, 53205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:17.052453+00:00",
+  "_kind": "geo_samples"
+}

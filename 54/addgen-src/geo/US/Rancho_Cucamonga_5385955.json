@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rancho Cucamonga",
+  "geonameid": 5385955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.13345103055582,
+      "lon": -117.63060940864759,
+      "geoinfo": {
+        "display_name": "The Home Depot, 1401, East 19th Street, Upland, San Bernardino County, California, 91784, United States",
+        "road": "East 19th Street",
+        "house_number": "1401",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upland",
+        "state": "California",
+        "postcode": "91784",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1401 East 19th Street, Rancho Cucamonga, California, United States"
+    },
+    {
+      "lat": 34.13875695071707,
+      "lon": -117.61843855623559,
+      "geoinfo": {
+        "display_name": "6364, Topaz Street, Alta Loma, Rancho Cucamonga, San Bernardino County, California, 91701, United States",
+        "road": "Topaz Street",
+        "house_number": "6364",
+        "neighbourhood": null,
+        "suburb": "Alta Loma",
+        "city_district": null,
+        "city": "Rancho Cucamonga",
+        "state": "California",
+        "postcode": "91701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6364, Topaz Street, Alta Loma, Rancho Cucamonga, San Bernardino County, California, 91701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:38.062443+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Bykhov",
+  "geonameid": 629447,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 53.51597799153157,
+      "lon": 30.18618826573934,
+      "geoinfo": {
+        "display_name": "Bykhaw, Bychaw District, Mahilyow Region, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bykhaw",
+        "state": "Mahilyow Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "147, Bykhaw, Bychaw District, 39554 Mahilyow Region, Belarus"
+    },
+    {
+      "lat": 53.54493246930898,
+      "lon": 30.2096853856937,
+      "geoinfo": {
+        "display_name": "Цэнтральная вуліца, Трасцівец, Холстаўскі сельскі Савет, Bychaw District, Mahilyow Region, 213312, Belarus",
+        "road": "Цэнтральная вуліца",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Холстаўскі сельскі Савет",
+        "state": "Mahilyow Region",
+        "postcode": "213312",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "235, Цэнтральная вуліца, Трасцівец, Холстаўскі сельскі Савет, Bychaw District, Mahilyow Region, 213312, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:03.435293+00:00",
+  "_kind": "geo_samples"
+}

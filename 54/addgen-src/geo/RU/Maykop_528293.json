@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Maykop",
+  "geonameid": 528293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.638599391033694,
+      "lon": 40.14295144899896,
+      "geoinfo": {
+        "display_name": "Восточная улица, Severo-Vostochnye Sady, Кировское сельское поселение, Maykopsky District, Republic of Adygea, 385768, Russia",
+        "road": "Восточная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Severo-Vostochnye Sady",
+        "state": "Republic of Adygea",
+        "postcode": "385768",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Восточная улица, Maykop, Republic of Adygea, Russia"
+    },
+    {
+      "lat": 44.604696131066405,
+      "lon": 40.096736587317764,
+      "geoinfo": {
+        "display_name": "24, Kotovskogo Street, Maykop, городской округ Майкоп, Republic of Adygea, 385000, Russia",
+        "road": "Kotovskogo Street",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maykop",
+        "state": "Republic of Adygea",
+        "postcode": "385000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "24, Kotovskogo Street, Maykop, городской округ Майкоп, Republic of Adygea, 385000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:33.588237+00:00",
+  "_kind": "geo_samples"
+}

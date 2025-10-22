@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Sekondi",
+  "geonameid": 11808941,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 4.935022748491092,
+      "lon": -1.7063017262704199,
+      "geoinfo": {
+        "display_name": "Sekondi, Sekondi Takoradi Metropolitan District, Western Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sekondi",
+        "state": "Western Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Sekondi, Western Region, Ghana"
+    },
+    {
+      "lat": 4.909900767623593,
+      "lon": -1.7368389996576192,
+      "geoinfo": {
+        "display_name": "New Takoradi, Sekondi-Takoradi, Sekondi Takoradi Metropolitan District, Western Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New Takoradi",
+        "city_district": null,
+        "city": "Sekondi-Takoradi",
+        "state": "Western Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "New Takoradi, Sekondi, Western Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:50:03.857531+00:00",
+  "_kind": "geo_samples"
+}

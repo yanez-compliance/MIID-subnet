@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Poughkeepsie",
+  "geonameid": 5132143,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.73520633689961,
+      "lon": -73.91377182241791,
+      "geoinfo": {
+        "display_name": "59, West Cottage Road, Fairview, Town of Poughkeepsie, Dutchess County, New York, 12601, United States",
+        "road": "West Cottage Road",
+        "house_number": "59",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairview",
+        "state": "New York",
+        "postcode": "12601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "59 West Cottage Road, Poughkeepsie, New York, United States"
+    },
+    {
+      "lat": 41.67375534440652,
+      "lon": -73.91896721628589,
+      "geoinfo": {
+        "display_name": "33, Prestwick Court, City of Poughkeepsie, Dutchess County, New York, 12603, United States",
+        "road": "Prestwick Court",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Poughkeepsie",
+        "state": "New York",
+        "postcode": "12603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "33, Prestwick Court, City of Poughkeepsie, Dutchess County, New York, 12603, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:05.084160+00:00",
+  "_kind": "geo_samples"
+}

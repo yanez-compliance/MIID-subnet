@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Vianen",
+  "geonameid": 2745580,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.009601235694014,
+      "lon": 5.0716463902088265,
+      "geoinfo": {
+        "display_name": "Rijksweg A2, Hoog-Zandveld, Nieuwegein, Utrecht, Netherlands, 3434 NT, Netherlands",
+        "road": "Rijksweg A2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nieuwegein",
+        "state": "Utrecht",
+        "postcode": "3434 NT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Rijksweg A2, Vianen, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 51.996932550710554,
+      "lon": 5.052208457024312,
+      "geoinfo": {
+        "display_name": "Achterdijk, Lopikerkapel, Lopik, Utrecht, Netherlands, 3412 MA, Netherlands",
+        "road": "Achterdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lopikerkapel",
+        "state": "Utrecht",
+        "postcode": "3412 MA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "620, Achterdijk, Lopikerkapel, Lopik, Utrecht, Netherlands, 3412 MA, Netherlands"
+    },
+    {
+      "lat": 52.00694449325786,
+      "lon": 5.029579471723234,
+      "geoinfo": {
+        "display_name": "Weg der Verenigde Naties, IJsselstein, Utrecht, Netherlands, 3404 KR, Netherlands",
+        "road": "Weg der Verenigde Naties",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "IJsselstein",
+        "state": "Utrecht",
+        "postcode": "3404 KR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "935, Weg der Verenigde Naties, IJsselstein, Utrecht, Netherlands, 3404 KR, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:06.213526+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Ouen",
+  "geonameid": 2977824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.922311203947835,
+      "lon": 2.294556555278959,
+      "geoinfo": {
+        "display_name": "Avenue Gabriel Péri, Fossé de l'Aumône, Gennevilliers, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92230, France",
+        "road": "Avenue Gabriel Péri",
+        "house_number": null,
+        "neighbourhood": "Fossé de l'Aumône",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gennevilliers",
+        "state": null,
+        "postcode": "92230",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue Gabriel Péri, Saint-Ouen, Ile-de-France, France"
+    },
+    {
+      "lat": 48.92065602310433,
+      "lon": 2.3668486219477973,
+      "geoinfo": {
+        "display_name": "Rue Fernand Grenier, Landy-Plaine - Marcreus - Pressensé, Aubervilliers, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93300, France",
+        "road": "Rue Fernand Grenier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Landy-Plaine - Marcreus - Pressensé",
+        "city_district": null,
+        "city": "Aubervilliers",
+        "state": null,
+        "postcode": "93300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "977, Rue Fernand Grenier, Landy-Plaine - Marcreus - Pressensé, Aubervilliers, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:36.266862+00:00",
+  "_kind": "geo_samples"
+}

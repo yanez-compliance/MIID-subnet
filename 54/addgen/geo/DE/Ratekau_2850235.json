@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ratekau",
+  "geonameid": 2850235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.94040215823877,
+      "lon": 10.79780372987237,
+      "geoinfo": {
+        "display_name": "Kleinensee, Ratekau, Kreis Ostholstein, Schleswig-Holstein, 23626, Germany",
+        "road": "Kleinensee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kleinensee",
+        "city": "Ratekau",
+        "state": "Schleswig-Holstein",
+        "postcode": "23626",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kleinensee, Ratekau, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.92661263578983,
+      "lon": 10.774752470280998,
+      "geoinfo": {
+        "display_name": "4, Tiefende, Sereetz, Ratekau, Kreis Ostholstein, Schleswig-Holstein, 23611, Germany",
+        "road": "Tiefende",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sereetz",
+        "city": "Ratekau",
+        "state": "Schleswig-Holstein",
+        "postcode": "23611",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Tiefende, Sereetz, Ratekau, Kreis Ostholstein, Schleswig-Holstein, 23611, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:47.243460+00:00",
+  "_kind": "geo_samples"
+}

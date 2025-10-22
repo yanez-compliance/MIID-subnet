@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Almere Stad",
+  "geonameid": 2759879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.35839534739381,
+      "lon": 5.222750133749545,
+      "geoinfo": {
+        "display_name": "Arboretum West, Hortus, Almere, Flevoland, Netherlands, 1325 WB, Netherlands",
+        "road": "Arboretum West",
+        "house_number": null,
+        "neighbourhood": "Hortus",
+        "suburb": null,
+        "city_district": null,
+        "city": "Almere",
+        "state": "Flevoland",
+        "postcode": "1325 WB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Arboretum West, Almere Stad, Flevoland, The Netherlands"
+    },
+    {
+      "lat": 52.364372537155816,
+      "lon": 5.216487585085704,
+      "geoinfo": {
+        "display_name": "De Pier, Stedenwijk, Almere Stad, Almere, Flevoland, Netherlands, 1315 SV, Netherlands",
+        "road": "De Pier",
+        "house_number": null,
+        "neighbourhood": "Stedenwijk",
+        "suburb": "Almere Stad",
+        "city_district": null,
+        "city": "Almere",
+        "state": "Flevoland",
+        "postcode": "1315 SV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "295, De Pier, Stedenwijk, Almere Stad, Almere, Flevoland, Netherlands, 1315 SV, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:02.196008+00:00",
+  "_kind": "geo_samples"
+}

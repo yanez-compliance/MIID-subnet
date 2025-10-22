@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tampico",
+  "geonameid": 3516355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.248746003724072,
+      "lon": -97.87802736205994,
+      "geoinfo": {
+        "display_name": "Calle Bajada San Pedro, Tampico, Tamaulipas, 89210, Mexico",
+        "road": "Calle Bajada San Pedro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tampico",
+        "state": "Tamaulipas",
+        "postcode": "89210",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Bajada San Pedro, Tampico, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 22.296441065101536,
+      "lon": -97.86159136867154,
+      "geoinfo": {
+        "display_name": "Calle Francisco I. Madero, Tampico, Tamaulipas, 89314, Mexico",
+        "road": "Calle Francisco I. Madero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tampico",
+        "state": "Tamaulipas",
+        "postcode": "89314",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "090, Calle Francisco I. Madero, Tampico, Tamaulipas, 89314, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:40.905598+00:00",
+  "_kind": "geo_samples"
+}

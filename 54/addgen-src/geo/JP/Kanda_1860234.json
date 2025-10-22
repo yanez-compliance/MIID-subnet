@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kanda",
+  "geonameid": 1860234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.75955245975185,
+      "lon": 130.97508050975796,
+      "geoinfo": {
+        "display_name": "桜ヶ丘, Kanda, Miyako County, Fukuoka Prefecture, 800-0334, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kanda",
+        "state": null,
+        "postcode": "800-0334",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kanda, Japan"
+    },
+    {
+      "lat": 33.8271984811716,
+      "lon": 130.99036930421553,
+      "geoinfo": {
+        "display_name": "Kokura-Minami Ward, Kitakyushu, Fukuoka Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kokura-Minami Ward",
+        "city_district": null,
+        "city": "Kitakyushu",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "707, Kokura-Minami Ward, Kitakyushu, 32960 Fukuoka Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:54.662847+00:00",
+  "_kind": "geo_samples"
+}

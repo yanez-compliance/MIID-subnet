@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ormond Beach",
+  "geonameid": 4167178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.30073147497337,
+      "lon": -81.06429509443613,
+      "geoinfo": {
+        "display_name": "39, Cumberland Avenue, Ormond Beach, Volusia County, Florida, 32174, United States",
+        "road": "Cumberland Avenue",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ormond Beach",
+        "state": "Florida",
+        "postcode": "32174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "39 Cumberland Avenue, Ormond Beach, Florida, United States"
+    },
+    {
+      "lat": 29.24894663280917,
+      "lon": -81.07424990951952,
+      "geoinfo": {
+        "display_name": "1408, Alabama Avenue, Daytona Beach, Volusia County, Florida, 32117, United States",
+        "road": "Alabama Avenue",
+        "house_number": "1408",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Daytona Beach",
+        "state": "Florida",
+        "postcode": "32117",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1408, Alabama Avenue, Daytona Beach, Volusia County, Florida, 32117, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:52.864969+00:00",
+  "_kind": "geo_samples"
+}

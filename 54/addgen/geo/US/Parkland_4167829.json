@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parkland",
+  "geonameid": 4167829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.305615924416315,
+      "lon": -80.22277061443444,
+      "geoinfo": {
+        "display_name": "6080, Northwest 72nd Way, Parkland, Broward County, Florida, 33067, United States",
+        "road": "Northwest 72nd Way",
+        "house_number": "6080",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parkland",
+        "state": "Florida",
+        "postcode": "33067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6080 Northwest 72nd Way, Parkland, Florida, United States"
+    },
+    {
+      "lat": 26.309432703536775,
+      "lon": -80.24663543638135,
+      "geoinfo": {
+        "display_name": "Holmberg Road, Parkland, Broward County, Florida, 33067, United States",
+        "road": "Holmberg Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parkland",
+        "state": "Florida",
+        "postcode": "33067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "643, Holmberg Road, Parkland, Broward County, Florida, 33067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:06.730052+00:00",
+  "_kind": "geo_samples"
+}

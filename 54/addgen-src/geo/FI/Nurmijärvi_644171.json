@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Nurmijärvi",
+  "geonameid": 644171,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.49106549775849,
+      "lon": 24.747362559963403,
+      "geoinfo": {
+        "display_name": "Kytöportaantie, Nurmijärvi, Helsinki sub-region, Uusimaa, Mainland Finland, 05201, Finland",
+        "road": "Kytöportaantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nurmijärvi",
+        "state": "Uusimaa",
+        "postcode": "05201",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Kytöportaantie, Nurmijärvi, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.47775173024769,
+      "lon": 24.820232779924492,
+      "geoinfo": {
+        "display_name": "Heinojantie, Laidunalue, Nurmijärvi, Helsinki sub-region, Uusimaa, Mainland Finland, 01900, Finland",
+        "road": "Heinojantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Laidunalue",
+        "city_district": null,
+        "city": "Nurmijärvi",
+        "state": "Uusimaa",
+        "postcode": "01900",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Heinojantie, Nurmijärvi, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:57:12.400697+00:00",
+  "_kind": "geo_samples"
+}

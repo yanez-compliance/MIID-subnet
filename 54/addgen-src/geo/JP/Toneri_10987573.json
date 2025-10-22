@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Toneri",
+  "geonameid": 10987573,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.80606120484821,
+      "lon": 139.77221378193036,
+      "geoinfo": {
+        "display_name": "Toneri 1-chome, Toneri, Adachi, Tokyo, 121-0832, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Toneri 1-chome",
+        "suburb": "Toneri",
+        "city_district": null,
+        "city": "Adachi",
+        "state": null,
+        "postcode": "121-0832",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Toneri 1-chome, Toneri, Japan"
+    },
+    {
+      "lat": 35.78924363895713,
+      "lon": 139.74432570265972,
+      "geoinfo": {
+        "display_name": "領家五丁目, Kawaguchi, Saitama Prefecture, 332-0004, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "領家五丁目",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kawaguchi",
+        "state": null,
+        "postcode": "332-0004",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "領家五丁目, Kawaguchi, Saitama Prefecture, 332-0004, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:52.720328+00:00",
+  "_kind": "geo_samples"
+}

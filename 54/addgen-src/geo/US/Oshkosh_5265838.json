@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oshkosh",
+  "geonameid": 5265838,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.02804272124634,
+      "lon": -88.5926561256798,
+      "geoinfo": {
+        "display_name": "Westowne Avenue, Oshkosh, Winnebago County, Wisconsin, 54904, United States",
+        "road": "Westowne Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oshkosh",
+        "state": "Wisconsin",
+        "postcode": "54904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Westowne Avenue, Oshkosh, Wisconsin, United States"
+    },
+    {
+      "lat": 44.03072057511956,
+      "lon": -88.52440937957833,
+      "geoinfo": {
+        "display_name": "1053, Baldwin Avenue, Oshkosh, Winnebago County, Wisconsin, 54901, United States",
+        "road": "Baldwin Avenue",
+        "house_number": "1053",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oshkosh",
+        "state": "Wisconsin",
+        "postcode": "54901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1053, Baldwin Avenue, Oshkosh, Winnebago County, Wisconsin, 54901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:13.120955+00:00",
+  "_kind": "geo_samples"
+}

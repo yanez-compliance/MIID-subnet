@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lehrte",
+  "geonameid": 2879367,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.338006359528926,
+      "lon": 10.007234617089455,
+      "geoinfo": {
+        "display_name": "Sehnde, Region Hannover, Lower Saxony, 31319, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sehnde",
+        "state": "Lower Saxony",
+        "postcode": "31319",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lehrte, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.39521282543501,
+      "lon": 9.935940558490925,
+      "geoinfo": {
+        "display_name": "A 2, Ahlten, Lehrte, Region Hannover, Lower Saxony, 31275, Germany",
+        "road": "A 2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ahlten",
+        "city": "Lehrte",
+        "state": "Lower Saxony",
+        "postcode": "31275",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 2, Ahlten, Lehrte, Region Hannover, Lower Saxony, 31275, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:04.768796+00:00",
+  "_kind": "geo_samples"
+}

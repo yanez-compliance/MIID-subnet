@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hanford",
+  "geonameid": 5355180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.288454642832654,
+      "lon": -119.6418954479104,
+      "geoinfo": {
+        "display_name": "Iona Avenue, Hanford, Kings County, California, 93230, United States",
+        "road": "Iona Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanford",
+        "state": "California",
+        "postcode": "93230",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Iona Avenue, Hanford, California, United States"
+    },
+    {
+      "lat": 36.311479567600706,
+      "lon": -119.60725131040816,
+      "geoinfo": {
+        "display_name": "Hanford Armona Road, Hanford, Kings County, California, United States",
+        "road": "Hanford Armona Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanford",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "005, Hanford Armona Road, Hanford, Kings County, 87446 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:39.093568+00:00",
+  "_kind": "geo_samples"
+}

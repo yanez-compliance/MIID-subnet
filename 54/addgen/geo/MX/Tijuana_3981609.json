@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tijuana",
+  "geonameid": 3981609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.4943723085693,
+      "lon": -116.98292239964053,
+      "geoinfo": {
+        "display_name": "6543, Calle Sor Juana Inés de la Cruz, Real del Monte, Delegación La Mesa, Tijuana, Municipio de Tijuana, Baja California, 22194, Mexico",
+        "road": "Calle Sor Juana Inés de la Cruz",
+        "house_number": "6543",
+        "neighbourhood": "Real del Monte",
+        "suburb": null,
+        "city_district": "Delegación La Mesa",
+        "city": "Tijuana",
+        "state": "Baja California",
+        "postcode": "22194",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "6543 Calle Sor Juana Inés de la Cruz, Tijuana, Baja California, Mexico"
+    },
+    {
+      "lat": 32.52619200716893,
+      "lon": -117.01316441536733,
+      "geoinfo": {
+        "display_name": "Vía Rápida Oriente, Zona Río, Delegación La Mesa, Tijuana, Municipio de Tijuana, Baja California, 22014, Mexico",
+        "road": "Vía Rápida Oriente",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Delegación La Mesa",
+        "city": "Tijuana",
+        "state": "Baja California",
+        "postcode": "22014",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "655, Vía Rápida Oriente, Zona Río, Delegación La Mesa, Tijuana, Municipio de Tijuana, Baja California, 22014, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:39.233886+00:00",
+  "_kind": "geo_samples"
+}

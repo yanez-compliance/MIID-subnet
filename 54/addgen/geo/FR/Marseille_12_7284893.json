@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 12",
+  "geonameid": 7284893,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.32263444835061,
+      "lon": 5.4224796131113875,
+      "geoinfo": {
+        "display_name": "L2 Est, Malpassé, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France",
+        "road": "L2 Est",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "13th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13013",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "L2 Est, Marseille 12, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.268586239818966,
+      "lon": 5.45735448041038,
+      "geoinfo": {
+        "display_name": "trace bleu, Les Prud'hommes, Saint-Loup, 10th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13010, France",
+        "road": "trace bleu",
+        "house_number": null,
+        "neighbourhood": "Les Prud'hommes",
+        "suburb": "10th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13010",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "trace bleu, Les Prud'hommes, Saint-Loup, 10th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13010, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:12.254762+00:00",
+  "_kind": "geo_samples"
+}

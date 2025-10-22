@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Nettetal",
+  "geonameid": 2866333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.30874090119503,
+      "lon": 6.314019711532502,
+      "geoinfo": {
+        "display_name": "Bocholt, Oberbocholt, Lobberich, Region Kempen-Viersen, Nettetal, Kreis Viersen, North Rhine-Westphalia, 41334, Germany",
+        "road": "Bocholt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41334",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bocholt, Nettetal, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.32344856413814,
+      "lon": 6.331861868005506,
+      "geoinfo": {
+        "display_name": "Landwehr, Schlibeck, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47929, Germany",
+        "road": "Landwehr",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47929",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "434, Landwehr, Schlibeck, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47929, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:36.827303+00:00",
+  "_kind": "geo_samples"
+}

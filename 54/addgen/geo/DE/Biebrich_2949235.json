@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Biebrich",
+  "geonameid": 2949235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.03748706894482,
+      "lon": 8.250723812596197,
+      "geoinfo": {
+        "display_name": "Glarusstraße, Güldenmark, Biebrich, Wiesbaden, Hesse, 65203, Germany",
+        "road": "Glarusstraße",
+        "house_number": null,
+        "neighbourhood": "Güldenmark",
+        "suburb": "Biebrich",
+        "city_district": null,
+        "city": "Wiesbaden",
+        "state": "Hesse",
+        "postcode": "65203",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Glarusstraße, Biebrich, Hesse, Germany"
+    },
+    {
+      "lat": 50.02252898025723,
+      "lon": 8.19742934699434,
+      "geoinfo": {
+        "display_name": "Am Waldfriedhof, Mombach, Mainz, Rhineland-Palatinate, 55120, Germany",
+        "road": "Am Waldfriedhof",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mombach",
+        "city_district": null,
+        "city": "Mainz",
+        "state": "Rhineland-Palatinate",
+        "postcode": "55120",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "108, Am Waldfriedhof, Mombach, Mainz, Rhineland-Palatinate, 55120, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:55.428629+00:00",
+  "_kind": "geo_samples"
+}

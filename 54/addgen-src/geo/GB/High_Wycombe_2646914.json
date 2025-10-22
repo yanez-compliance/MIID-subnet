@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "High Wycombe",
+  "geonameid": 2646914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.65755245826586,
+      "lon": -0.7979040059074113,
+      "geoinfo": {
+        "display_name": "Bradenham Road, West Wycombe, Buckinghamshire, England, HP14 4EY, United Kingdom",
+        "road": "Bradenham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Wycombe",
+        "state": "England",
+        "postcode": "HP14 4EY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bradenham Road, High Wycombe, England, United Kingdom"
+    },
+    {
+      "lat": 51.61452087549616,
+      "lon": -0.8050180643635793,
+      "geoinfo": {
+        "display_name": "Wycombe Air Park, M40, Great Marlow, Lane End, Buckinghamshire, England, HP14 3NS, United Kingdom",
+        "road": "M40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Great Marlow",
+        "city_district": null,
+        "city": "Lane End",
+        "state": "England",
+        "postcode": "HP14 3NS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wycombe Air Park, M40, Great Marlow, Lane End, Buckinghamshire, England, HP14 3NS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:07.386409+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Tilpat",
+  "geonameid": 10265937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.439184200008118,
+      "lon": 77.35615661859812,
+      "geoinfo": {
+        "display_name": "Faridabad, Haryana, 121001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Faridabad",
+        "state": "Haryana",
+        "postcode": "121001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Tilpat, Haryana, India"
+    },
+    {
+      "lat": 28.46695021692029,
+      "lon": 77.29191823108829,
+      "geoinfo": {
+        "display_name": "Greenfields Colony, Greenfield, Faridabad, Haryana, 121001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Greenfield",
+        "city_district": null,
+        "city": "Faridabad",
+        "state": "Haryana",
+        "postcode": "121001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "641, Greenfields Colony, Greenfield, Faridabad, Haryana, 121001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:14.187832+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Brugherio",
+  "geonameid": 3181495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.53104046937871,
+      "lon": 9.320197054204174,
+      "geoinfo": {
+        "display_name": "Via Italo Calvino, Cascina Visconta, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy",
+        "road": "Via Italo Calvino",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cernusco sul Naviglio",
+        "state": "Lombardy",
+        "postcode": "20063",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Italo Calvino, Brugherio, Lombardy, Italy"
+    },
+    {
+      "lat": 45.547728371159856,
+      "lon": 9.288281234886243,
+      "geoinfo": {
+        "display_name": "55, Via San Maurizio al Lambro, Cascina Guzzina, Moncucco, Brugherio, Monza and Brianza, Lombardy, 20861, Italy",
+        "road": "Via San Maurizio al Lambro",
+        "house_number": "55",
+        "neighbourhood": "Cascina Guzzina",
+        "suburb": null,
+        "city_district": null,
+        "city": "Brugherio",
+        "state": "Lombardy",
+        "postcode": "20861",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "55, Via San Maurizio al Lambro, Cascina Guzzina, Moncucco, Brugherio, Monza and Brianza, Lombardy, 20861, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:34.069998+00:00",
+  "_kind": "geo_samples"
+}

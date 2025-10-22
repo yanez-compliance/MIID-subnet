@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brooklyn Park",
+  "geonameid": 5019335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.11632124550889,
+      "lon": -93.39103743946194,
+      "geoinfo": {
+        "display_name": "US 169, Osseo, Hennepin County, Minnesota, 55445, United States",
+        "road": "US 169",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Osseo",
+        "state": "Minnesota",
+        "postcode": "55445",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 169, Brooklyn Park, Minnesota, United States"
+    },
+    {
+      "lat": 45.094163741015734,
+      "lon": -93.3683027629981,
+      "geoinfo": {
+        "display_name": "Brooklyn Boulevard, Brooklyn Park, Hennepin County, Minnesota, 55445, United States",
+        "road": "Brooklyn Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brooklyn Park",
+        "state": "Minnesota",
+        "postcode": "55445",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "663, Brooklyn Boulevard, Brooklyn Park, Hennepin County, Minnesota, 55445, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:04.890237+00:00",
+  "_kind": "geo_samples"
+}

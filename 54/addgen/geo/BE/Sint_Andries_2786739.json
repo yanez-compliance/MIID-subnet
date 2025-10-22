@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Andries",
+  "geonameid": 2786739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.20904122370963,
+      "lon": 3.233722229708347,
+      "geoinfo": {
+        "display_name": "Langestraatkwartier, Brugge-Centrum, Brugge, Bruges, Brugge, West Flanders, 8000, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brugge-Centrum",
+        "city_district": "Brugge",
+        "city": "Bruges",
+        "state": "West Flanders",
+        "postcode": "8000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Brugge-Centrum, Sint-Andries, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.221536426519286,
+      "lon": 3.125346156647433,
+      "geoinfo": {
+        "display_name": "Oosternieuwweg Zuid, Houtave, Zuienkerke, Brugge, West Flanders, 8377, Belgium",
+        "road": "Oosternieuwweg Zuid",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houtave",
+        "state": "West Flanders",
+        "postcode": "8377",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "746, Oosternieuwweg Zuid, Houtave, Zuienkerke, Brugge, West Flanders, 8377, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:39.238844+00:00",
+  "_kind": "geo_samples"
+}

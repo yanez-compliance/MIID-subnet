@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Kontich",
+  "geonameid": 2794117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.10117423988258,
+      "lon": 4.488491486468167,
+      "geoinfo": {
+        "display_name": "16, Waarloossteenweg, Duffel, Mechelen, Antwerp, Flanders, 2570, Belgium",
+        "road": "Waarloossteenweg",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Duffel",
+        "state": "Antwerp",
+        "postcode": "2570",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "16 Waarloossteenweg, Kontich, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.1143215316436,
+      "lon": 4.477597834992069,
+      "geoinfo": {
+        "display_name": "244, Duffelsesteenweg, Kontich, Antwerp, Flanders, 2550, Belgium",
+        "road": "Duffelsesteenweg",
+        "house_number": "244",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kontich",
+        "city": "Kontich",
+        "state": "Antwerp",
+        "postcode": "2550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "244, Duffelsesteenweg, Kontich, Antwerp, Flanders, 2550, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:16.086997+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Benthuizen",
+  "geonameid": 2759178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.10100336408591,
+      "lon": 4.489484206476101,
+      "geoinfo": {
+        "display_name": "Geerweg, Zoeterwoude, South Holland, Netherlands, 2381 LT, Netherlands",
+        "road": "Geerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zoeterwoude",
+        "state": "South Holland",
+        "postcode": "2381 LT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Geerweg, Benthuizen, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.09221791191786,
+      "lon": 4.6105245017278005,
+      "geoinfo": {
+        "display_name": "79, Voorweg, Hazerswoude-Dorp, Alphen aan den Rijn, South Holland, Netherlands, 2391 AD, Netherlands",
+        "road": "Voorweg",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hazerswoude-Dorp",
+        "state": "South Holland",
+        "postcode": "2391 AD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "79, Voorweg, Hazerswoude-Dorp, Alphen aan den Rijn, South Holland, Netherlands, 2391 AD, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:59.624570+00:00",
+  "_kind": "geo_samples"
+}

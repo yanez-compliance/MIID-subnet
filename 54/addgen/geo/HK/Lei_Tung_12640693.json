@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Lei Tung",
+  "geonameid": 12640693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.22699325834275,
+      "lon": 114.18990032025366,
+      "geoinfo": {
+        "display_name": "魔爪石, Chung Hom Kok, Southern District, Hong Kong Island, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southern District",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Southern District, Lei Tung, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.275242601825166,
+      "lon": 114.143957907113,
+      "geoinfo": {
+        "display_name": "36, Mount Austin Road, Victoria Peak, The Peak, Central and Western District, Hong Kong Island, Hong Kong, China",
+        "road": "Mount Austin Road",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": "The Peak",
+        "city_district": "Central and Western District",
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "36, Mount Austin Road, Victoria Peak, The Peak, Central and Western District, Hong Kong Island, 38995 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:10.942931+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Wakkanai",
+  "geonameid": 2127515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.43232202826586,
+      "lon": 141.72509470357036,
+      "geoinfo": {
+        "display_name": "Wakkanai, Soya Subprefecture, Hokkaido Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakkanai",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Wakkanai, Japan"
+    },
+    {
+      "lat": 45.41668478901009,
+      "lon": 141.69329478210716,
+      "geoinfo": {
+        "display_name": "6, 中央1, 中央, Wakkanai, Soya Subprefecture, Hokkaido Prefecture, 097-0023, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "中央1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakkanai",
+        "state": null,
+        "postcode": "097-0023",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "6, 中央1, 中央, Wakkanai, Soya Subprefecture, Hokkaido Prefecture, 097-0023, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:26.570508+00:00",
+  "_kind": "geo_samples"
+}

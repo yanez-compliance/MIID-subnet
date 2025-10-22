@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Pierce",
+  "geonameid": 4156018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.417016388437272,
+      "lon": -80.35130535103747,
+      "geoinfo": {
+        "display_name": "2799, South 26th Street, Cortez Estates, Saint Lucie County, Florida, 34981, United States",
+        "road": "South 26th Street",
+        "house_number": "2799",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34981",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2799 South 26th Street, Fort Pierce, Florida, United States"
+    },
+    {
+      "lat": 27.488643709555717,
+      "lon": -80.3127539423311,
+      "geoinfo": {
+        "display_name": "Fort Pierce Shores, Saint Lucie County, Florida, 34949, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34949",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "460, Fort Pierce Shores, Saint Lucie County, Florida, 34949, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:18.109572+00:00",
+  "_kind": "geo_samples"
+}

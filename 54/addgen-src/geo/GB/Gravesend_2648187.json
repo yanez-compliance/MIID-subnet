@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Gravesend",
+  "geonameid": 2648187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.436343240944296,
+      "lon": 0.34721312065005383,
+      "geoinfo": {
+        "display_name": "Perry Street, Northfleet, Gravesham, Kent, England, DA11 8DY, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Perry Street",
+        "city_district": null,
+        "city": "Gravesham",
+        "state": "England",
+        "postcode": "DA11 8DY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Perry Street, Gravesend, England, United Kingdom"
+    },
+    {
+      "lat": 51.431216496929146,
+      "lon": 0.31412659024766054,
+      "geoinfo": {
+        "display_name": "Simmons Road, Ebbsfleet Green, Ebbsfleet Garden City, Swanscombe, Dartford, Kent, England, DA10 1DU, United Kingdom",
+        "road": "Simmons Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ebbsfleet Green",
+        "city_district": null,
+        "city": "Ebbsfleet Garden City",
+        "state": "England",
+        "postcode": "DA10 1DU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Simmons Road, Ebbsfleet Green, Ebbsfleet Garden City, Swanscombe, Dartford, Kent, England, DA10 1DU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:54.534593+00:00",
+  "_kind": "geo_samples"
+}

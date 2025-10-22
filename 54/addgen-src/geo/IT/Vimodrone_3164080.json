@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Vimodrone",
+  "geonameid": 3164080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.517131990718404,
+      "lon": 9.349296884972654,
+      "geoinfo": {
+        "display_name": "Big & Small, SS11, Ronco, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy",
+        "road": "SS11",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cernusco sul Naviglio",
+        "state": "Lombardy",
+        "postcode": "20063",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SS11, Vimodrone, Lombardy, Italy"
+    },
+    {
+      "lat": 45.53266882935298,
+      "lon": 9.314935292643066,
+      "geoinfo": {
+        "display_name": "6, Cascina San Maurizio, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy",
+        "road": "Cascina San Maurizio",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cernusco sul Naviglio",
+        "state": "Lombardy",
+        "postcode": "20063",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "6, Cascina San Maurizio, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:06.408975+00:00",
+  "_kind": "geo_samples"
+}

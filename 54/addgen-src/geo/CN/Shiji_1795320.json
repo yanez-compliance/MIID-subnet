@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shiji",
+  "geonameid": 1795320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.17242624765318,
+      "lon": 118.46057074563365,
+      "geoinfo": {
+        "display_name": "沭泗线, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": "沭泗线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "沭泗线, Shiji, Jiangsu, China"
+    },
+    {
+      "lat": 34.212672441726546,
+      "lon": 118.45621031344486,
+      "geoinfo": {
+        "display_name": "Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "349, Xinyi City, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:53:23.658749+00:00",
+  "_kind": "geo_samples"
+}

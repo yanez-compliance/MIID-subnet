@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Centro Habana",
+  "geonameid": 3746183,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.131512796348588,
+      "lon": -82.37371492879011,
+      "geoinfo": {
+        "display_name": "Avenida Salvador Allende (Carlos III), Pueblo Nuevo, Centro Habana, Havana, 10307, Cuba",
+        "road": "Avenida Salvador Allende (Carlos III)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pueblo Nuevo",
+        "city": null,
+        "state": "Havana",
+        "postcode": "10307",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Avenida Salvador Allende (Carlos III), Centro Habana, Havana, Cuba"
+    },
+    {
+      "lat": 23.154332078076557,
+      "lon": -82.33628570139531,
+      "geoinfo": {
+        "display_name": "Vía Monumental, La Cabaña, Camilo Cienfuegos (Habana del Este), Camilo Cienfuegos, Habana del Este, Havana, 14700, Cuba",
+        "road": "Vía Monumental",
+        "house_number": null,
+        "neighbourhood": "La Cabaña",
+        "suburb": "Camilo Cienfuegos (Habana del Este)",
+        "city_district": "Camilo Cienfuegos",
+        "city": null,
+        "state": "Havana",
+        "postcode": "14700",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "383, Vía Monumental, La Cabaña, Camilo Cienfuegos (Habana del Este), Camilo Cienfuegos, Habana del Este, Havana, 14700, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T01:47:26.797307+00:00",
+  "_kind": "geo_samples"
+}

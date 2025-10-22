@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Wollongong",
+  "geonameid": 2171507,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.42347265797899,
+      "lon": 150.87348448173256,
+      "geoinfo": {
+        "display_name": "39, Fisher Street, West Wollongong, Wollongong City Council, New South Wales, 2500, Australia",
+        "road": "Fisher Street",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": "West Wollongong",
+        "city_district": null,
+        "city": "Wollongong City Council",
+        "state": "New South Wales",
+        "postcode": "2500",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "39 Fisher Street, Wollongong, New South Wales, Australia"
+    },
+    {
+      "lat": -34.393145301817505,
+      "lon": 150.86406697923175,
+      "geoinfo": {
+        "display_name": "Wellington Drive, Balgownie, Wollongong City Council, New South Wales, 2519, Australia",
+        "road": "Wellington Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Balgownie",
+        "city_district": null,
+        "city": "Wollongong City Council",
+        "state": "New South Wales",
+        "postcode": "2519",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "326, Wellington Drive, Balgownie, Wollongong City Council, New South Wales, 2519, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:02.762794+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sunnyside",
+  "geonameid": 5812604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.316721401339485,
+      "lon": -120.0099074103599,
+      "geoinfo": {
+        "display_name": "Washington Elementary School, Jackson Avenue, Sunnyside, Yakima County, Washington, 98944, United States",
+        "road": "Jackson Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sunnyside",
+        "state": "Washington",
+        "postcode": "98944",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jackson Avenue, Sunnyside, Washington, United States"
+    },
+    {
+      "lat": 46.34200391413555,
+      "lon": -120.00700120577035,
+      "geoinfo": {
+        "display_name": "Cemetery Road, Sunnyside, Yakima County, Washington, 98944, United States",
+        "road": "Cemetery Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sunnyside",
+        "state": "Washington",
+        "postcode": "98944",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "726, Cemetery Road, Sunnyside, Yakima County, Washington, 98944, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:57.704192+00:00",
+  "_kind": "geo_samples"
+}

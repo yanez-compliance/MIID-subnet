@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Moabit",
+  "geonameid": 2870310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.533389357967685,
+      "lon": 13.36731795781751,
+      "geoinfo": {
+        "display_name": "EXEC IT Solutions, 12, Otto-Weidt-Platz, Europacity, Moabit, Mitte, Berlin, 10557, Germany",
+        "road": "Otto-Weidt-Platz",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Moabit",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10557",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12 Otto-Weidt-Platz, Moabit, Germany"
+    },
+    {
+      "lat": 52.49607948025328,
+      "lon": 13.384243895779186,
+      "geoinfo": {
+        "display_name": "Großbeerenstraße, Tempelhofer Vorstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10963, Germany",
+        "road": "Großbeerenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kreuzberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10963",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "131, Großbeerenstraße, Tempelhofer Vorstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10963, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:52.703532+00:00",
+  "_kind": "geo_samples"
+}

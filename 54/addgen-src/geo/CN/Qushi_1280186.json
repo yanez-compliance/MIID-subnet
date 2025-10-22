@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qushi",
+  "geonameid": 1280186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.21166609708341,
+      "lon": 98.60107147262964,
+      "geoinfo": {
+        "display_name": "Tengchong City, Baoshan, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baoshan",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Qushi, Yunnan, China"
+    },
+    {
+      "lat": 25.23087203300552,
+      "lon": 98.57851827433497,
+      "geoinfo": {
+        "display_name": "XM74, Tengchong City, Baoshan, Yunnan, China",
+        "road": "XM74",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baoshan",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "XM74, Tengchong City, Baoshan, 61075 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:32.425864+00:00",
+  "_kind": "geo_samples"
+}

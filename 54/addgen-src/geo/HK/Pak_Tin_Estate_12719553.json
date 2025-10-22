@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Pak Tin Estate",
+  "geonameid": 12719553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.370656553903093,
+      "lon": 114.17832987699303,
+      "geoinfo": {
+        "display_name": "211, 田心村 Tin Sam Village, Sha Tin District, New Territories, Hong Kong, 000000, China",
+        "road": null,
+        "house_number": "211",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sha Tin District",
+        "state": "Hong Kong",
+        "postcode": "000000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Pak Tin Estate, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.33831585535608,
+      "lon": 114.21341067504667,
+      "geoinfo": {
+        "display_name": "Fung Shing Street, Hammer Hill, Wong Tai Sin District, Kowloon, Hong Kong, China",
+        "road": "Fung Shing Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hammer Hill",
+        "city_district": "Wong Tai Sin District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "643, Fung Shing Street, Hammer Hill, Wong Tai Sin District, Kowloon, 40465 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:46.035940+00:00",
+  "_kind": "geo_samples"
+}

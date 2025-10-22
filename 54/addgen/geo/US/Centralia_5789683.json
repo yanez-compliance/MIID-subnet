@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Centralia",
+  "geonameid": 5789683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.71389327019363,
+      "lon": -122.91255556786759,
+      "geoinfo": {
+        "display_name": "Skyqueen Airport, Seminary Hill Road, Centralia, Lewis County, Washington, United States",
+        "road": "Seminary Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centralia",
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seminary Hill Road, Centralia, Washington, United States"
+    },
+    {
+      "lat": 46.704968411045414,
+      "lon": -122.95931175659797,
+      "geoinfo": {
+        "display_name": "1089, South Tower Avenue, Centralia, Lewis County, Washington, 98531, United States",
+        "road": "South Tower Avenue",
+        "house_number": "1089",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centralia",
+        "state": "Washington",
+        "postcode": "98531",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1089, South Tower Avenue, Centralia, Lewis County, Washington, 98531, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:32.137318+00:00",
+  "_kind": "geo_samples"
+}

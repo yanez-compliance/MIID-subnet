@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Northridge",
+  "geonameid": 5377985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.20883581923161,
+      "lon": -118.55993068313735,
+      "geoinfo": {
+        "display_name": "Alley 80491, Reseda, Los Angeles, Los Angeles County, California, 91306, United States",
+        "road": "Alley 80491",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reseda",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91306",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Alley 80491, Northridge, California, United States"
+    },
+    {
+      "lat": 34.22090541368879,
+      "lon": -118.53001954954938,
+      "geoinfo": {
+        "display_name": "18211, Roscoe Boulevard, Reseda, Los Angeles, Los Angeles County, California, 91325, United States",
+        "road": "Roscoe Boulevard",
+        "house_number": "18211",
+        "neighbourhood": null,
+        "suburb": "Reseda",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91325",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18211, Roscoe Boulevard, Reseda, Los Angeles, Los Angeles County, California, 91325, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:16.748670+00:00",
+  "_kind": "geo_samples"
+}

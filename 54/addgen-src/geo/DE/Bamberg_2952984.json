@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bamberg",
+  "geonameid": 2952984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.904217586602,
+      "lon": 10.922683002436655,
+      "geoinfo": {
+        "display_name": "63, Dr.-Hans-Neubauer-Straße, Malerviertel, Gartenstadt, Bamberg, Bavaria, 96050, Germany",
+        "road": "Dr.-Hans-Neubauer-Straße",
+        "house_number": "63",
+        "neighbourhood": "Malerviertel",
+        "suburb": "Gartenstadt",
+        "city_district": null,
+        "city": "Bamberg",
+        "state": "Bavaria",
+        "postcode": "96050",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "63 Dr.-Hans-Neubauer-Straße, Bamberg, Bavaria, Germany"
+    },
+    {
+      "lat": 49.900097280820894,
+      "lon": 10.84368599594404,
+      "geoinfo": {
+        "display_name": "Rothofer Weg, Gaustadt, Bamberg, Bavaria, 96049, Germany",
+        "road": "Rothofer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gaustadt",
+        "city_district": null,
+        "city": "Bamberg",
+        "state": "Bavaria",
+        "postcode": "96049",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "831, Rothofer Weg, Gaustadt, Bamberg, Bavaria, 96049, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:29.398402+00:00",
+  "_kind": "geo_samples"
+}

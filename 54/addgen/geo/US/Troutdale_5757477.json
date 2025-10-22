@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Troutdale",
+  "geonameid": 5757477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.54031038320542,
+      "lon": -122.35226570575799,
+      "geoinfo": {
+        "display_name": "Columbia River Highway, Multnomah County, Oregon, 97060, United States",
+        "road": "Columbia River Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Columbia River Highway, Troutdale, Oregon, United States"
+    },
+    {
+      "lat": 45.53841051764643,
+      "lon": -122.41771101166299,
+      "geoinfo": {
+        "display_name": "24023, Northeast Shea Lane, Woodvilla Business Center, Troutdale, Multnomah County, Oregon, 97060, United States",
+        "road": "Northeast Shea Lane",
+        "house_number": "24023",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troutdale",
+        "state": "Oregon",
+        "postcode": "97060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24023, Northeast Shea Lane, Woodvilla Business Center, Troutdale, Multnomah County, Oregon, 97060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:39.270020+00:00",
+  "_kind": "geo_samples"
+}

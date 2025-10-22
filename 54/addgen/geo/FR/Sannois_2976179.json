@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sannois",
+  "geonameid": 2976179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.97711472564019,
+      "lon": 2.23830227483507,
+      "geoinfo": {
+        "display_name": "7, Rue des Guillerands, Hameau des Guillerands, Les Guillerands, Sannois, Argenteuil, Val-d'Oise, Ile-de-France, Metropolitan France, 95110, France",
+        "road": "Rue des Guillerands",
+        "house_number": "7",
+        "neighbourhood": "Hameau des Guillerands",
+        "suburb": "Les Guillerands",
+        "city_district": null,
+        "city": "Sannois",
+        "state": "Ile-de-France",
+        "postcode": "95110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "7 Rue des Guillerands, Sannois, Ile-de-France, France"
+    },
+    {
+      "lat": 48.995793436870855,
+      "lon": 2.2863719431705065,
+      "geoinfo": {
+        "display_name": "Rue d'Andilly, Eaubonne, Argenteuil, Val-d'Oise, Metropolitan France, 95600, France",
+        "road": "Rue d'Andilly",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eaubonne",
+        "state": null,
+        "postcode": "95600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "918, Rue d'Andilly, Eaubonne, Argenteuil, Val-d'Oise, Metropolitan France, 95600, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:11.670736+00:00",
+  "_kind": "geo_samples"
+}

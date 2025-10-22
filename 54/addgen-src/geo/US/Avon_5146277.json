@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Avon",
+  "geonameid": 5146277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.476309044818265,
+      "lon": -82.00237970670145,
+      "geoinfo": {
+        "display_name": "35134, Avon Commerce Parkway, Avon, Lorain County, Ohio, 44011, United States",
+        "road": "Avon Commerce Parkway",
+        "house_number": "35134",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon",
+        "state": "Ohio",
+        "postcode": "44011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "35134 Avon Commerce Parkway, Avon, Ohio, United States"
+    },
+    {
+      "lat": 41.478405169739396,
+      "lon": -82.0410445858966,
+      "geoinfo": {
+        "display_name": "Pin Oak Parkway, Avon Lake, Lorain County, Ohio, 44012, United States",
+        "road": "Pin Oak Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avon Lake",
+        "state": "Ohio",
+        "postcode": "44012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "585, Pin Oak Parkway, Avon Lake, Lorain County, Ohio, 44012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:20.219079+00:00",
+  "_kind": "geo_samples"
+}

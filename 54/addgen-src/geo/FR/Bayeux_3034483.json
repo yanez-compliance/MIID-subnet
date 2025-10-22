@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bayeux",
+  "geonameid": 3034483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.241744281246945,
+      "lon": -0.6703705598137275,
+      "geoinfo": {
+        "display_name": "Chemin des Longraies, Blary, Monceaux-en-Bessin, Bayeux, Calvados, Normandy, Metropolitan France, 14400, France",
+        "road": "Chemin des Longraies",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monceaux-en-Bessin",
+        "state": "Normandy",
+        "postcode": "14400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Longraies, Bayeux, Normandy, France"
+    },
+    {
+      "lat": 49.293076238215455,
+      "lon": -0.6409739658311328,
+      "geoinfo": {
+        "display_name": "Chemin des Perelles, La Grâce de Dieu, Les Murlus, Sommervieu, Bayeux, Calvados, Normandy, Metropolitan France, 14400, France",
+        "road": "Chemin des Perelles",
+        "house_number": null,
+        "neighbourhood": "La Grâce de Dieu",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sommervieu",
+        "state": "Normandy",
+        "postcode": "14400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "577, Chemin des Perelles, La Grâce de Dieu, Les Murlus, Sommervieu, Bayeux, Calvados, Normandy, Metropolitan France, 14400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:25.649781+00:00",
+  "_kind": "geo_samples"
+}

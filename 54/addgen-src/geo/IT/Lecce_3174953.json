@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Lecce",
+  "geonameid": 3174953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.334360682609095,
+      "lon": 18.195941841753513,
+      "geoinfo": {
+        "display_name": "Ettore Maglio, Via Giorgio De Chirico, Lecce, Apulia, 73100, Italy",
+        "road": "Via Giorgio De Chirico",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lecce",
+        "state": "Apulia",
+        "postcode": "73100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giorgio De Chirico, Lecce, Apulia, Italy"
+    },
+    {
+      "lat": 40.345745725046974,
+      "lon": 18.2001284022637,
+      "geoinfo": {
+        "display_name": "Planet Group, 4, Via Catanzaro, Lecce, Apulia, 73100, Italy",
+        "road": "Via Catanzaro",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lecce",
+        "state": "Apulia",
+        "postcode": "73100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Planet Group, 4, Via Catanzaro, Lecce, Apulia, 73100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:25.668662+00:00",
+  "_kind": "geo_samples"
+}

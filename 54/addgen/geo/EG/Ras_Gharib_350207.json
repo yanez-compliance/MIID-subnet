@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ras Gharib",
+  "geonameid": 350207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.386630577590818,
+      "lon": 33.04652410691887,
+      "geoinfo": {
+        "display_name": "Gharib Cape, Red Sea, 84715, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gharib Cape",
+        "state": "Red Sea",
+        "postcode": "84715",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Ras Gharib, Red Sea, Egypt"
+    },
+    {
+      "lat": 28.355082419454185,
+      "lon": 33.115676616928376,
+      "geoinfo": {
+        "display_name": "Ras Gharib Anchorage, Gharib Cape, Red Sea, 84715, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gharib Cape",
+        "state": "Red Sea",
+        "postcode": "84715",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "370, Ras Gharib Anchorage, Gharib Cape, Red Sea, 84715, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:13.975047+00:00",
+  "_kind": "geo_samples"
+}

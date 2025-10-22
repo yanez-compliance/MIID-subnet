@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rosenheim",
+  "geonameid": 2844988,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.89048157067253,
+      "lon": 12.099756075100954,
+      "geoinfo": {
+        "display_name": "4, Unterfeldweg, Deutelhausen, Schechen, Landkreis Rosenheim, Bavaria, 83135, Germany",
+        "road": "Unterfeldweg",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schechen",
+        "state": "Bavaria",
+        "postcode": "83135",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Unterfeldweg, Rosenheim, Bavaria, Germany"
+    },
+    {
+      "lat": 47.84274423744159,
+      "lon": 12.107547406858059,
+      "geoinfo": {
+        "display_name": "1, Ottonenstraße, Aisingerwies, Oberwöhr, Fürstätt, Rosenheim, Bavaria, 83026, Germany",
+        "road": "Ottonenstraße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Oberwöhr",
+        "city_district": null,
+        "city": "Rosenheim",
+        "state": "Bavaria",
+        "postcode": "83026",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Ottonenstraße, Aisingerwies, Oberwöhr, Fürstätt, Rosenheim, Bavaria, 83026, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:04.302933+00:00",
+  "_kind": "geo_samples"
+}

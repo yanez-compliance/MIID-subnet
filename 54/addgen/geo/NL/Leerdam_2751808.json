@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Leerdam",
+  "geonameid": 2751808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.88958487804683,
+      "lon": 5.10876572019162,
+      "geoinfo": {
+        "display_name": "63, Horndijk, Leerdam-Oost, Leerdam, Vijfheerenlanden, Utrecht, Netherlands, 4141 MB, Netherlands",
+        "road": "Horndijk",
+        "house_number": "63",
+        "neighbourhood": "Leerdam-Oost",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leerdam",
+        "state": "Utrecht",
+        "postcode": "4141 MB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "63 Horndijk, Leerdam, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 51.87262730105308,
+      "lon": 5.104781167206495,
+      "geoinfo": {
+        "display_name": "Nieuwe Zuiderlingedijk, Asperen, West Betuwe, Gelderland, Netherlands, 4171 KK, Netherlands",
+        "road": "Nieuwe Zuiderlingedijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Asperen",
+        "state": "Gelderland",
+        "postcode": "4171 KK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "945, Nieuwe Zuiderlingedijk, Asperen, West Betuwe, Gelderland, Netherlands, 4171 KK, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:22.336786+00:00",
+  "_kind": "geo_samples"
+}

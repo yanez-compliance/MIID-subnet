@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Isparta",
+  "geonameid": 311073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.76272415610497,
+      "lon": 30.504970478682548,
+      "geoinfo": {
+        "display_name": "Binbirevler Mahallesi, Isparta, Mediterranean Region, 32000, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Binbirevler Mahallesi",
+        "city_district": null,
+        "city": "Isparta",
+        "state": null,
+        "postcode": "32000",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Binbirevler Mahallesi, Isparta, Turkey"
+    },
+    {
+      "lat": 37.769557118066736,
+      "lon": 30.586285899900524,
+      "geoinfo": {
+        "display_name": "Yazısöğüt, Isparta, Mediterranean Region, 32040, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Isparta",
+        "state": null,
+        "postcode": "32040",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "551, Yazısöğüt, Isparta, Mediterranean Region, 32040, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:13.113453+00:00",
+  "_kind": "geo_samples"
+}

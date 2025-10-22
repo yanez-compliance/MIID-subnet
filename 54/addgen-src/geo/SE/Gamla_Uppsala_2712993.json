@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Gamla Uppsala",
+  "geonameid": 2712993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.88531154449616,
+      "lon": 17.71681644815246,
+      "geoinfo": {
+        "display_name": "Jädra, Jälla, Uppsala kommun, Uppsala County, 754 73, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jälla",
+        "state": null,
+        "postcode": "754 73",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Gamla Uppsala, Sweden"
+    },
+    {
+      "lat": 59.87366569416813,
+      "lon": 17.615241441906797,
+      "geoinfo": {
+        "display_name": "Krokusvägen, Tunakolonin, Tuna backar, Uppsala, Uppsala kommun, Uppsala County, 753 36, Sweden",
+        "road": "Krokusvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tuna backar",
+        "city_district": null,
+        "city": "Uppsala",
+        "state": null,
+        "postcode": "753 36",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Krokusvägen, Tunakolonin, Tuna backar, Uppsala, Uppsala kommun, Uppsala County, 753 36, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:13.502202+00:00",
+  "_kind": "geo_samples"
+}

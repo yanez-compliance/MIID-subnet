@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Epping",
+  "geonameid": 2167279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.65342421912673,
+      "lon": 145.01345483180992,
+      "geoinfo": {
+        "display_name": "Northern Private Hospital, Norwell Street, Epping, Melbourne, City of Whittlesea, Victoria, 3076, Australia",
+        "road": "Norwell Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Epping",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3076",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Norwell Street, Epping, Victoria, Australia"
+    },
+    {
+      "lat": -37.612439799744905,
+      "lon": 145.048817550079,
+      "geoinfo": {
+        "display_name": "74, Woodman Circuit, Wollert, Melbourne, City of Whittlesea, Victoria, 3750, Australia",
+        "road": "Woodman Circuit",
+        "house_number": "74",
+        "neighbourhood": null,
+        "suburb": "Wollert",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3750",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "74, Woodman Circuit, Wollert, Melbourne, City of Whittlesea, Victoria, 3750, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:14.473437+00:00",
+  "_kind": "geo_samples"
+}

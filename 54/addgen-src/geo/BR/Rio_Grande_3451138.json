@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Rio Grande",
+  "geonameid": 3451138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.06706384242948,
+      "lon": -52.12475847592613,
+      "geoinfo": {
+        "display_name": "Rio Grande do Sul, South Region, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rio Grande do Sul",
+        "postcode": null,
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rio Grande, Rio Grande do Sul, Brazil"
+    },
+    {
+      "lat": -32.074563714370875,
+      "lon": -52.08107541238923,
+      "geoinfo": {
+        "display_name": "Vila Mangueira, Industrial Tamandaré, Rio Grande, Região Geográfica Imediata de Pelotas, Aglomeração Urbana do Sul, Região Geográfica Intermediária de Pelotas, Rio Grande do Sul, South Region, 96201-460, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Vila Mangueira",
+        "suburb": "Industrial Tamandaré",
+        "city_district": "Rio Grande",
+        "city": "Rio Grande",
+        "state": "Rio Grande do Sul",
+        "postcode": "96201-460",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Vila Mangueira, Industrial Tamandaré, Rio Grande, Região Geográfica Imediata de Pelotas, Aglomeração Urbana do Sul, Região Geográfica Intermediária de Pelotas, Rio Grande do Sul, South Region, 96201-460, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:44.704354+00:00",
+  "_kind": "geo_samples"
+}

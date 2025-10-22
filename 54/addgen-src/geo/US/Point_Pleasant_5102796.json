@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Point Pleasant",
+  "geonameid": 5102796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.073288814922776,
+      "lon": -74.01176939008047,
+      "geoinfo": {
+        "display_name": "Ocean County, New Jersey, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Jersey",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Point Pleasant, New Jersey, United States"
+    },
+    {
+      "lat": 40.12679998413939,
+      "lon": -74.06350194204282,
+      "geoinfo": {
+        "display_name": "2401, Algonkin Trail, Wall Township, Monmouth County, New Jersey, 08736, United States",
+        "road": "Algonkin Trail",
+        "house_number": "2401",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wall Township",
+        "state": "New Jersey",
+        "postcode": "08736",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2401, Algonkin Trail, Wall Township, Monmouth County, New Jersey, 08736, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:06.798248+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lokeren",
+  "geonameid": 2792196,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.10583384914975,
+      "lon": 4.031691668651139,
+      "geoinfo": {
+        "display_name": "377, Neerstraat, Abschoten, Ruiter, Waasmunster, Dendermonde, East Flanders, 9250, Belgium",
+        "road": "Neerstraat",
+        "house_number": "377",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waasmunster",
+        "state": "East Flanders",
+        "postcode": "9250",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "377 Neerstraat, Lokeren, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.11515457894,
+      "lon": 3.9382284750386427,
+      "geoinfo": {
+        "display_name": "179, Gentse Steenweg, Gentdam, De Katte, Lokeren, Sint-Niklaas, East Flanders, 9160, Belgium",
+        "road": "Gentse Steenweg",
+        "house_number": "179",
+        "neighbourhood": "Gentdam",
+        "suburb": null,
+        "city_district": "Lokeren",
+        "city": "Lokeren",
+        "state": "East Flanders",
+        "postcode": "9160",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "179, Gentse Steenweg, Gentdam, De Katte, Lokeren, Sint-Niklaas, East Flanders, 9160, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:02.515578+00:00",
+  "_kind": "geo_samples"
+}

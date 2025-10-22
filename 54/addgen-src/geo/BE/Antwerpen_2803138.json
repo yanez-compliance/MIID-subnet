@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Antwerpen",
+  "geonameid": 2803138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.212784725455876,
+      "lon": 4.425620594050473,
+      "geoinfo": {
+        "display_name": "5, Lentestraat, Kievitwijk, Centraal Station, Antwerp, Flanders, 2018, Belgium",
+        "road": "Lentestraat",
+        "house_number": "5",
+        "neighbourhood": "Kievitwijk",
+        "suburb": null,
+        "city_district": "Antwerp",
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2018",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "5 Lentestraat, Antwerpen, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.210785679727344,
+      "lon": 4.364749504319194,
+      "geoinfo": {
+        "display_name": "R1, Regatta, Linkeroever, Antwerp, 2050, Belgium",
+        "road": "R1",
+        "house_number": null,
+        "neighbourhood": "Regatta",
+        "suburb": "Linkeroever",
+        "city_district": "Antwerp",
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2050",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "R1, Antwerpen, 2050 Antwerp, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:25.961266+00:00",
+  "_kind": "geo_samples"
+}

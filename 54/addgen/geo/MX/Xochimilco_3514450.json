@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Xochimilco",
+  "geonameid": 3514450,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.22441794385648,
+      "lon": -99.07139974421283,
+      "geoinfo": {
+        "display_name": "Francisco Villa, Xochimilco, Mexico City, 16656, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "16656",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Xochimilco, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.214455957953156,
+      "lon": -99.1122932968863,
+      "geoinfo": {
+        "display_name": "Colonia San Juan de los Lagos, Pepelaxtla, Xochimilco, Mexico City, 16870, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Colonia San Juan de los Lagos",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "16870",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "462, Colonia San Juan de los Lagos, Pepelaxtla, Xochimilco, Mexico City, 16870, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:42.855395+00:00",
+  "_kind": "geo_samples"
+}

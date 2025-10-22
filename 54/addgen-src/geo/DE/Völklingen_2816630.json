@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Völklingen",
+  "geonameid": 2816630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.220592695919585,
+      "lon": 6.889632528940425,
+      "geoinfo": {
+        "display_name": "25, Am Bruch, Klarenthal, West, Saarbrücken, Regionalverband Saarbrücken, Saarland, 66127, Germany",
+        "road": "Am Bruch",
+        "house_number": "25",
+        "neighbourhood": "Klarenthal",
+        "suburb": "Klarenthal",
+        "city_district": null,
+        "city": "Saarbrücken",
+        "state": "Saarland",
+        "postcode": "66127",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25 Am Bruch, Völklingen, Saarland, Germany"
+    },
+    {
+      "lat": 49.23315993412527,
+      "lon": 6.857209701433261,
+      "geoinfo": {
+        "display_name": "L 163, Klarenthal, West, Saarbrücken, Regionalverband Saarbrücken, Saarland, 66127, Germany",
+        "road": "L 163",
+        "house_number": null,
+        "neighbourhood": "Klarenthal",
+        "suburb": "Klarenthal",
+        "city_district": null,
+        "city": "Saarbrücken",
+        "state": "Saarland",
+        "postcode": "66127",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 163, Klarenthal, West, Saarbrücken, Regionalverband Saarbrücken, Saarland, 66127, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:31.311357+00:00",
+  "_kind": "geo_samples"
+}

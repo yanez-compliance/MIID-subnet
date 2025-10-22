@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Morden",
+  "geonameid": 2642233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.375340283630266,
+      "lon": -0.22233693652014144,
+      "geoinfo": {
+        "display_name": "London Road, Worcester Park, London Borough of Sutton, London, Greater London, England, SM3 9DF, United Kingdom",
+        "road": "London Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Worcester Park",
+        "city_district": "London Borough of Sutton",
+        "city": "London",
+        "state": "England",
+        "postcode": "SM3 9DF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "London Road, Morden, England, United Kingdom"
+    },
+    {
+      "lat": 51.35704821717596,
+      "lon": -0.2028296375201546,
+      "geoinfo": {
+        "display_name": "Mulgrave Road, Carshalton Beeches, London Borough of Sutton, London, Greater London, England, SM2 6JN, United Kingdom",
+        "road": "Mulgrave Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carshalton Beeches",
+        "city_district": "London Borough of Sutton",
+        "city": "London",
+        "state": "England",
+        "postcode": "SM2 6JN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mulgrave Road, Carshalton Beeches, London Borough of Sutton, London, Greater London, England, SM2 6JN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:37.569011+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Coogee",
+  "geonameid": 2170697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.91245187076557,
+      "lon": 151.26197062122642,
+      "geoinfo": {
+        "display_name": "Clovelly Road, Clovelly, Eastern Suburbs, Sydney, Randwick City Council, New South Wales, 2031, Australia",
+        "road": "Clovelly Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Clovelly",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2031",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Clovelly Road, Coogee, New South Wales, Australia"
+    },
+    {
+      "lat": -33.91751242792355,
+      "lon": 151.28076512584934,
+      "geoinfo": {
+        "display_name": "New South Wales, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "709, Coogee, 06810 New South Wales, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:59.144809+00:00",
+  "_kind": "geo_samples"
+}

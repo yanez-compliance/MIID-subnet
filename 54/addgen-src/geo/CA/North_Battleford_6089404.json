@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "North Battleford",
+  "geonameid": 6089404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.77142213045988,
+      "lon": -108.27887319167914,
+      "geoinfo": {
+        "display_name": "Deanscroft, North Battleford, Saskatchewan, S9A 0Z5, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Deanscroft",
+        "suburb": null,
+        "city_district": null,
+        "city": "North Battleford",
+        "state": "Saskatchewan",
+        "postcode": "S9A 0Z5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Deanscroft, North Battleford, Saskatchewan, Canada"
+    },
+    {
+      "lat": 52.774603760125444,
+      "lon": -108.25833272516138,
+      "geoinfo": {
+        "display_name": "Airport Drive, North Battleford, Saskatchewan, S9A 4A9, Canada",
+        "road": "Airport Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Battleford",
+        "state": "Saskatchewan",
+        "postcode": "S9A 4A9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Airport Drive, North Battleford, Saskatchewan, S9A 4A9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:04.135043+00:00",
+  "_kind": "geo_samples"
+}

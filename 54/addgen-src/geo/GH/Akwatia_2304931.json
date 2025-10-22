@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Akwatia",
+  "geonameid": 2304931,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.013958637975094,
+      "lon": -0.840116330338408,
+      "geoinfo": {
+        "display_name": "Lafia, Denkyembour District, Eastern Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lafia",
+        "state": "Eastern Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Akwatia, Eastern Region, Ghana"
+    },
+    {
+      "lat": 6.075283787310961,
+      "lon": -0.8175664405547899,
+      "geoinfo": {
+        "display_name": "R64, Bawdua, Denkyembour District, Eastern Region, Ghana",
+        "road": "R64",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bawdua",
+        "state": "Eastern Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "R64, Akwatia, Eastern Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:49:29.835423+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Woodstock",
+  "geonameid": 6184365,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.11401400889986,
+      "lon": -80.74442706144042,
+      "geoinfo": {
+        "display_name": "Lindsay Road, South Woodstock, Woodstock, Oxford County, Ontario, N4V 0B6, Canada",
+        "road": "Lindsay Road",
+        "house_number": null,
+        "neighbourhood": "South Woodstock",
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodstock",
+        "state": "Ontario",
+        "postcode": "N4V 0B6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Lindsay Road, Woodstock, Ontario, Canada"
+    },
+    {
+      "lat": 43.10902516951671,
+      "lon": -80.71985274010576,
+      "geoinfo": {
+        "display_name": "Pattullo Avenue, Norwich, Oxford County, Ontario, N4S 7W3, Canada",
+        "road": "Pattullo Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norwich",
+        "state": "Ontario",
+        "postcode": "N4S 7W3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Pattullo Avenue, Norwich, Oxford County, Ontario, N4S 7W3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:39.834180+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Picpus",
+  "geonameid": 12547038,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.8284719235203,
+      "lon": 2.456312415761061,
+      "geoinfo": {
+        "display_name": "Stade Pershing, Route de la Ferme, Quartier de Picpus, 12th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75012, France",
+        "road": "Route de la Ferme",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de la Ferme, Picpus, Ile-de-France, France"
+    },
+    {
+      "lat": 48.84871078207383,
+      "lon": 2.385859360640621,
+      "geoinfo": {
+        "display_name": "Collège Jean François Oeben, Rue de Reuilly, Quartier de Picpus, 12th Arrondissement, Paris, Metropolitan France, 75012, France",
+        "road": "Rue de Reuilly",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Collège Jean François Oeben, Rue de Reuilly, Quartier de Picpus, 12th Arrondissement, Paris, Metropolitan France, 75012, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:37.716941+00:00",
+  "_kind": "geo_samples"
+}

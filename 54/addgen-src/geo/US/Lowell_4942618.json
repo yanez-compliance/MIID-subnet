@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lowell",
+  "geonameid": 4942618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.61554907954198,
+      "lon": -71.32937423264114,
+      "geoinfo": {
+        "display_name": "US 3, Lowell, Middlesex County, Massachusetts, 01851, United States",
+        "road": "US 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lowell",
+        "state": "Massachusetts",
+        "postcode": "01851",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 3, Lowell, Massachusetts, United States"
+    },
+    {
+      "lat": 42.62567174703393,
+      "lon": -71.28331183045827,
+      "geoinfo": {
+        "display_name": "41, Bishop Street, South Lowell, Lowell, Middlesex County, Massachusetts, 01852, United States",
+        "road": "Bishop Street",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lowell",
+        "state": "Massachusetts",
+        "postcode": "01852",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "41, Bishop Street, South Lowell, Lowell, Middlesex County, Massachusetts, 01852, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:01.919962+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shuifu",
+  "geonameid": 6648023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.63633737169969,
+      "lon": 104.36165763958694,
+      "geoinfo": {
+        "display_name": "Yunfu Subdistrict, Shuifu City, Zhaotong City, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yunfu Subdistrict",
+        "city_district": null,
+        "city": "Zhaotong City",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yunfu Subdistrict, Shuifu, Yunnan, China"
+    },
+    {
+      "lat": 28.658832625758606,
+      "lon": 104.3946946317707,
+      "geoinfo": {
+        "display_name": "S311, Shulou, Xuzhou District, Yibin, Sichuan, China",
+        "road": "S311",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shulou",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S311, Shulou, Xuzhou District, Yibin, 80374 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:40:38.599922+00:00",
+  "_kind": "geo_samples"
+}

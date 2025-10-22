@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Rizhao",
+  "geonameid": 9072919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.39587220011679,
+      "lon": 119.54955297611389,
+      "geoinfo": {
+        "display_name": "临海路, Donggang District, Rizhao, Shandong, 276800, China",
+        "road": "临海路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donggang District",
+        "state": "Shandong",
+        "postcode": "276800",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "临海路, Rizhao, Shandong, China"
+    },
+    {
+      "lat": 35.40913464328072,
+      "lon": 119.52256943049836,
+      "geoinfo": {
+        "display_name": "Donggang District, Rizhao, Shandong, 276800, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Donggang District",
+        "state": "Shandong",
+        "postcode": "276800",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "845, Donggang District, Rizhao, Shandong, 276800, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:58.972196+00:00",
+  "_kind": "geo_samples"
+}

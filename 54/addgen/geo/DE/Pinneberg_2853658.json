@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pinneberg",
+  "geonameid": 2853658,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.636331087909305,
+      "lon": 9.822970540055074,
+      "geoinfo": {
+        "display_name": "26a, Am Hollen, Halstenbek, Kreis Pinneberg, Schleswig-Holstein, 25469, Germany",
+        "road": "Am Hollen",
+        "house_number": "26a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Halstenbek",
+        "state": "Schleswig-Holstein",
+        "postcode": "25469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "26a Am Hollen, Pinneberg, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.68917067822922,
+      "lon": 9.780477387623803,
+      "geoinfo": {
+        "display_name": "27, Auweg, Kummerfeld, Pinnau, Kreis Pinneberg, Schleswig-Holstein, 25495, Germany",
+        "road": "Auweg",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kummerfeld",
+        "state": "Schleswig-Holstein",
+        "postcode": "25495",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "27, Auweg, Kummerfeld, Pinnau, Kreis Pinneberg, Schleswig-Holstein, 25495, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:20.429820+00:00",
+  "_kind": "geo_samples"
+}

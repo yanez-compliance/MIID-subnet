@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Anchorage",
+  "geonameid": 5879400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 61.2607664356076,
+      "lon": -149.8858082522084,
+      "geoinfo": {
+        "display_name": "Anchorage, Alaska, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anchorage",
+        "state": "Alaska",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Anchorage, Alaska, United States"
+    },
+    {
+      "lat": 61.20533611019021,
+      "lon": -149.899583108996,
+      "geoinfo": {
+        "display_name": "Chester Creek Trail, Anchorage, Alaska, 99501, United States",
+        "road": "Chester Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anchorage",
+        "state": "Alaska",
+        "postcode": "99501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "564, Chester Creek Trail, Anchorage, Alaska, 99501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:07.981829+00:00",
+  "_kind": "geo_samples"
+}

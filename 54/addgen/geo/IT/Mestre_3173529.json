@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Mestre",
+  "geonameid": 3173529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.49310669186497,
+      "lon": 12.22967823495524,
+      "geoinfo": {
+        "display_name": "Via Baldassarre Galuppi, Mestre-Carpenedo, Mestre, Venice, Venezia, Veneto, 30170, Italy",
+        "road": "Via Baldassarre Galuppi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mestre-Carpenedo",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30170",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Baldassarre Galuppi, Mestre, Veneto, Italy"
+    },
+    {
+      "lat": 45.462460741963916,
+      "lon": 12.243720660454086,
+      "geoinfo": {
+        "display_name": "Via del Commercio, Marghera, Venice, Venezia, Veneto, 30172, Italy",
+        "road": "Via del Commercio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marghera",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30172",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "333, Via del Commercio, Marghera, Venice, Venezia, Veneto, 30172, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:26.729794+00:00",
+  "_kind": "geo_samples"
+}

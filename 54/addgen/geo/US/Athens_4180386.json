@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Athens",
+  "geonameid": 4180386,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.95627416406896,
+      "lon": -83.35637783764008,
+      "geoinfo": {
+        "display_name": "410, Vine Street, Athens, Clarke County, Georgia, 30601, United States",
+        "road": "Vine Street",
+        "house_number": "410",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athens",
+        "state": "Georgia",
+        "postcode": "30601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "410 Vine Street, Athens, Georgia, United States"
+    },
+    {
+      "lat": 33.938060856178,
+      "lon": -83.4047756931724,
+      "geoinfo": {
+        "display_name": "619, West Lake Drive, Athens, Clarke County, Georgia, 30606, United States",
+        "road": "West Lake Drive",
+        "house_number": "619",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Athens",
+        "state": "Georgia",
+        "postcode": "30606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "619, West Lake Drive, Athens, Clarke County, Georgia, 30606, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:30.962079+00:00",
+  "_kind": "geo_samples"
+}

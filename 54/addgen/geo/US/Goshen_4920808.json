@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Goshen",
+  "geonameid": 4920808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.58995989367281,
+      "lon": -85.87249633657557,
+      "geoinfo": {
+        "display_name": "308, Hawthorne Drive, Goshen, Elkhart County, Indiana, 46526, United States",
+        "road": "Hawthorne Drive",
+        "house_number": "308",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goshen",
+        "state": "Indiana",
+        "postcode": "46526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "308 Hawthorne Drive, Goshen, Indiana, United States"
+    },
+    {
+      "lat": 41.609443009620854,
+      "lon": -85.85560864779617,
+      "geoinfo": {
+        "display_name": "Elkhart County, Indiana, 46528, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46528",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "343, Elkhart County, Indiana, 46528, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:18.570021+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Tordera",
+  "geonameid": 3107955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.72112970006987,
+      "lon": 2.735240502045019,
+      "geoinfo": {
+        "display_name": "Carretera de Barcelona, Terrabrava, el Mas Móra, Tordera, Maresme, Barcelona, Catalonia, 08490, Spain",
+        "road": "Carretera de Barcelona",
+        "house_number": null,
+        "neighbourhood": "Terrabrava",
+        "suburb": "el Mas Móra",
+        "city_district": null,
+        "city": "Tordera",
+        "state": "Catalonia",
+        "postcode": "08490",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carretera de Barcelona, Tordera, Catalonia, Spain"
+    },
+    {
+      "lat": 41.723502318950146,
+      "lon": 2.697608177489196,
+      "geoinfo": {
+        "display_name": "103, Carrer del Consell de Cent, Niàgara Parc, Tordera, Maresme, Barcelona, Catalonia, 08490, Spain",
+        "road": "Carrer del Consell de Cent",
+        "house_number": "103",
+        "neighbourhood": "Niàgara Parc",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tordera",
+        "state": "Catalonia",
+        "postcode": "08490",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "103, Carrer del Consell de Cent, Niàgara Parc, Tordera, Maresme, Barcelona, Catalonia, 08490, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:44.657582+00:00",
+  "_kind": "geo_samples"
+}

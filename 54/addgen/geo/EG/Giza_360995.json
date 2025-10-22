@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Giza",
+  "geonameid": 360995,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.0438353821164,
+      "lon": 31.213292323186085,
+      "geoinfo": {
+        "display_name": "14, Al 'Arnouty Street, Dokki, Giza, 12611, Egypt",
+        "road": "Al 'Arnouty Street",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Dokki",
+        "city_district": null,
+        "city": "Giza",
+        "state": "Giza",
+        "postcode": "12611",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "14 Al 'Arnouty Street, Giza, Giza, Egypt"
+    },
+    {
+      "lat": 30.046516101187038,
+      "lon": 31.210623541002644,
+      "geoinfo": {
+        "display_name": "Agricultural Museum, El Mathaf Al Zraay Street, El Agouza, Giza, 12411, Egypt",
+        "road": "El Mathaf Al Zraay Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Agouza",
+        "city_district": null,
+        "city": "Giza",
+        "state": "Giza",
+        "postcode": "12411",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "192, El Mathaf Al Zraay Street, Giza, 12411 Giza, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:29.405376+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hanahan",
+  "geonameid": 4581023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.954994326542234,
+      "lon": -80.0366987629119,
+      "geoinfo": {
+        "display_name": "1303, Belle Grove Circle, Eagle Landing, Hanahan, Berkeley County, South Carolina, 29410, United States",
+        "road": "Belle Grove Circle",
+        "house_number": "1303",
+        "neighbourhood": "Eagle Landing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanahan",
+        "state": "South Carolina",
+        "postcode": "29410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1303 Belle Grove Circle, Hanahan, South Carolina, United States"
+    },
+    {
+      "lat": 32.9199192857642,
+      "lon": -79.97511513032298,
+      "geoinfo": {
+        "display_name": "Perimeter Road, Hanahan, Berkeley County, South Carolina, 29410, United States",
+        "road": "Perimeter Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanahan",
+        "state": "South Carolina",
+        "postcode": "29410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "237, Perimeter Road, Hanahan, Berkeley County, South Carolina, 29410, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:48.165086+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Wanguru",
+  "geonameid": 178323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -0.6522053220921793,
+      "lon": 37.33532585604708,
+      "geoinfo": {
+        "display_name": "Mwea West, Kirinyaga County, 10303, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kirinyaga County",
+        "postcode": "10303",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Wanguru, Kirinyaga County, Kenya"
+    },
+    {
+      "lat": -0.6922914883248633,
+      "lon": 37.392745242523134,
+      "geoinfo": {
+        "display_name": "Gathigiriri, Mwea East, Kirinyaga County, 10303, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gathigiriri",
+        "state": "Kirinyaga County",
+        "postcode": "10303",
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "810, Wanguru, 10303 Kirinyaga County, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:51.013518+00:00",
+  "_kind": "geo_samples"
+}

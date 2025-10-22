@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Warragul",
+  "geonameid": 2144604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.18485157356665,
+      "lon": 145.90146460213035,
+      "geoinfo": {
+        "display_name": "East West Road, Warragul South, Warragul, Shire of Baw Baw, Victoria, 3820, Australia",
+        "road": "East West Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Warragul South",
+        "city": "Warragul",
+        "state": "Victoria",
+        "postcode": "3820",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "East West Road, Warragul, Victoria, Australia"
+    },
+    {
+      "lat": -38.163001797748734,
+      "lon": 145.92888459538676,
+      "geoinfo": {
+        "display_name": "37-39, Queen Street, Warragul, Shire of Baw Baw, Victoria, 3820, Australia",
+        "road": "Queen Street",
+        "house_number": "37-39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warragul",
+        "state": "Victoria",
+        "postcode": "3820",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "37-39, Queen Street, Warragul, Shire of Baw Baw, Victoria, 3820, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:28.675987+00:00",
+  "_kind": "geo_samples"
+}

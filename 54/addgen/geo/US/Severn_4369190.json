@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Severn",
+  "geonameid": 4369190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.14321877986557,
+      "lon": -76.66854529374207,
+      "geoinfo": {
+        "display_name": "7801, Locust Wood Road, Elmhurst Estates, Severn, Anne Arundel County, Maryland, 21144, United States",
+        "road": "Locust Wood Road",
+        "house_number": "7801",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Severn",
+        "state": "Maryland",
+        "postcode": "21144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7801 Locust Wood Road, Severn, Maryland, United States"
+    },
+    {
+      "lat": 39.10184165284378,
+      "lon": -76.72402130799638,
+      "geoinfo": {
+        "display_name": "Chamberlin Avenue, Odenton, Anne Arundel County, Maryland, 21112, United States",
+        "road": "Chamberlin Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Odenton",
+        "state": "Maryland",
+        "postcode": "21112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "823, Chamberlin Avenue, Odenton, Anne Arundel County, Maryland, 21112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:52.919049+00:00",
+  "_kind": "geo_samples"
+}

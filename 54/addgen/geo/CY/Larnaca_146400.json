@@ -1,0 +1,641 @@
+{
+  "country_code": "CY",
+  "country": "Cyprus",
+  "city": "Larnaca",
+  "geonameid": 146400,
+  "target_addresses": 37,
+  "samples": [
+    {
+      "lat": 34.94854177423561,
+      "lon": 33.66272033516292,
+      "geoinfo": {
+        "display_name": "Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cyprus",
+        "postcode": null,
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.88296151509666,
+      "lon": 33.625327243537456,
+      "geoinfo": {
+        "display_name": "B4, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6026, Cyprus",
+        "road": "B4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Agios Nikolaos",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6026",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "B4, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.88688225802541,
+      "lon": 33.61467661455276,
+      "geoinfo": {
+        "display_name": "Artemidos Avenue, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 6650, Cyprus",
+        "road": "Artemidos Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dromolaxia - Meneou Municipality",
+        "state": "Cyprus",
+        "postcode": "6650",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Artemidos Avenue, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.9557414711322,
+      "lon": 33.65277768901703,
+      "geoinfo": {
+        "display_name": "B3, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6305, Cyprus",
+        "road": "B3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrysopolitissa",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6305",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "B3, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.8974161446161,
+      "lon": 33.63411334312015,
+      "geoinfo": {
+        "display_name": "Larnaca Green Point, Vasili MichaelIdi, Skala, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6027, Cyprus",
+        "road": "Vasili MichaelIdi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Skala",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6027",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Vasili MichaelIdi, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.90998120304466,
+      "lon": 33.62411265069689,
+      "geoinfo": {
+        "display_name": "Arethousis, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6031, Cyprus",
+        "road": "Arethousis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Agios Nikolaos",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6031",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Arethousis, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.93704077559832,
+      "lon": 33.581241111365,
+      "geoinfo": {
+        "display_name": "Βιομηχανική Περιοχή Λάρνακας, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7103, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Agios Fanourios",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7103",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Agios Fanourios, Larnaca, Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.95816187518415,
+      "lon": 33.600269106251886,
+      "geoinfo": {
+        "display_name": "Apostolos Loukas, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7104, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Apostolos Loukas",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7104",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Apostolos Loukas, Larnaca, 81152 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.91997734408791,
+      "lon": 33.580255186203125,
+      "geoinfo": {
+        "display_name": "Agios Nikolaos, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Agios Nikolaos",
+        "city_district": "Agios Fanourios",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "6041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Agios Nikolaos, Larnaca, 19257 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.92610968806039,
+      "lon": 33.64048047012652,
+      "geoinfo": {
+        "display_name": "Toyota, Dinysiou Solomou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus",
+        "road": "Dinysiou Solomou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrysopolitissa",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6018",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Toyota, Dinysiou Solomou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus"
+    },
+    {
+      "lat": 34.929905915062946,
+      "lon": 33.64328058731559,
+      "geoinfo": {
+        "display_name": "Georgiou Vizyinou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus",
+        "road": "Georgiou Vizyinou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrysopolitissa",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6018",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Georgiou Vizyinou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus"
+    },
+    {
+      "lat": 34.9297242848477,
+      "lon": 33.641457423474954,
+      "geoinfo": {
+        "display_name": "Georgiou Vizyinou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus",
+        "road": "Georgiou Vizyinou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrysopolitissa",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6018",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "284, Georgiou Vizyinou, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6018, Cyprus"
+    },
+    {
+      "lat": 34.88355183973744,
+      "lon": 33.60399192930708,
+      "geoinfo": {
+        "display_name": "Hala Sultan Tekke Excavation Site, Artemidos Avenue, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 6650, Cyprus",
+        "road": "Artemidos Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dromolaxia - Meneou Municipality",
+        "state": "Cyprus",
+        "postcode": "6650",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "019, Artemidos Avenue, Larnaca, 6650 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.913186375108175,
+      "lon": 33.58936817140917,
+      "geoinfo": {
+        "display_name": "Rizokarpasou, Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus",
+        "road": "Rizokarpasou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vlachos",
+        "city_district": null,
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "6041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "390, Rizokarpasou, Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus"
+    },
+    {
+      "lat": 34.93109093409042,
+      "lon": 33.61377519369812,
+      "geoinfo": {
+        "display_name": "Afrocam Safaro, Gorgonon, Tsakilero, Sotiros, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6047, Cyprus",
+        "road": "Gorgonon",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sotiros",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6047",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "365, Gorgonon, Larnaca, 6047 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.930460494813346,
+      "lon": 33.60518856665033,
+      "geoinfo": {
+        "display_name": "Leoforos Afstralias, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6043, Cyprus",
+        "road": "Leoforos Afstralias",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Agios Fanourios",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "6043",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "701, Leoforos Afstralias, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6043, Cyprus"
+    },
+    {
+      "lat": 34.88692642062407,
+      "lon": 33.6062428802458,
+      "geoinfo": {
+        "display_name": "Hala Sultan Tekke Excavation Site, Artemidos Avenue, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 6650, Cyprus",
+        "road": "Artemidos Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dromolaxia - Meneou Municipality",
+        "state": "Cyprus",
+        "postcode": "6650",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "121, Artemidos Avenue, Larnaca, 6650 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.910088165077084,
+      "lon": 33.6205750966017,
+      "geoinfo": {
+        "display_name": "Achileos Court No.1, Aineiou, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6031, Cyprus",
+        "road": "Aineiou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Agios Nikolaos",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6031",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "Achileos Court No.1, Aineiou, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6031, Cyprus"
+    },
+    {
+      "lat": 34.892930113172056,
+      "lon": 33.59952034668903,
+      "geoinfo": {
+        "display_name": "Larnaca Salt Lakes, Larnaca - Agia Napa Motorway, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 7020, Cyprus",
+        "road": "Larnaca - Agia Napa Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dromolaxia - Meneou Municipality",
+        "state": "Cyprus",
+        "postcode": "7020",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "103, Larnaca - Agia Napa Motorway, Larnaca, 7020 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.95775577140683,
+      "lon": 33.65788091110934,
+      "geoinfo": {
+        "display_name": "B3, Oroklini, Δήμος Λάρνακας, Larnaca District, Cyprus, 7041, Cyprus",
+        "road": "B3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oroklini",
+        "state": "Cyprus",
+        "postcode": "7041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "B3, Oroklini, Δήμος Λάρνακας, Larnaca District, Cyprus, 7041, Cyprus"
+    },
+    {
+      "lat": 34.92381501073606,
+      "lon": 33.64083667144649,
+      "geoinfo": {
+        "display_name": "Manoli Kalomiri, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6017, Cyprus",
+        "road": "Manoli Kalomiri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrysopolitissa",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6017",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "604, Manoli Kalomiri, Chrysopolitissa, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6017, Cyprus"
+    },
+    {
+      "lat": 34.959145969552594,
+      "lon": 33.617319490123066,
+      "geoinfo": {
+        "display_name": "Athanasias, Livadia, Apostolos Loukas, Aradippou, Δήμος Λάρνακας, Larnaca District, Cyprus, 7104, Cyprus",
+        "road": "Athanasias",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Livadia",
+        "city_district": "Apostolos Loukas",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7104",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "143, Athanasias, Livadia, Apostolos Loukas, Aradippou, Δήμος Λάρνακας, Larnaca District, Cyprus, 7104, Cyprus"
+    },
+    {
+      "lat": 34.95676574236665,
+      "lon": 33.65218534825576,
+      "geoinfo": {
+        "display_name": "Livadia, Δήμος Λάρνακας, Larnaca District, Cyprus, 6305, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Livadia",
+        "city_district": null,
+        "city": null,
+        "state": "Cyprus",
+        "postcode": "6305",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "678, Livadia, Δήμος Λάρνακας, Larnaca District, Cyprus, 6305, Cyprus"
+    },
+    {
+      "lat": 34.91990046953208,
+      "lon": 33.60031965237236,
+      "geoinfo": {
+        "display_name": "Georgiou Christodoulidi Avenue, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6042, Cyprus",
+        "road": "Georgiou Christodoulidi Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Agios Nikolaos",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6042",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "324, Georgiou Christodoulidi Avenue, Agios Nikolaos, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6042, Cyprus"
+    },
+    {
+      "lat": 34.96547883722507,
+      "lon": 33.61398983732243,
+      "geoinfo": {
+        "display_name": "Apostolos Loukas, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7104, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Apostolos Loukas",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7104",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "668, Apostolos Loukas, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7104, Cyprus"
+    },
+    {
+      "lat": 34.96449088339499,
+      "lon": 33.62715126526309,
+      "geoinfo": {
+        "display_name": "Larnaca - Agia Napa Motorway, Livadia, Δήμος Λάρνακας, Larnaca District, Cyprus, 7060, Cyprus",
+        "road": "Larnaca - Agia Napa Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Livadia",
+        "city_district": null,
+        "city": null,
+        "state": "Cyprus",
+        "postcode": "7060",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "657, Larnaca - Agia Napa Motorway, Livadia, Δήμος Λάρνακας, Larnaca District, Cyprus, 7060, Cyprus"
+    },
+    {
+      "lat": 34.92547274027193,
+      "lon": 33.591830892951364,
+      "geoinfo": {
+        "display_name": "Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Agios Fanourios",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "6041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "315, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus"
+    },
+    {
+      "lat": 34.88759828218377,
+      "lon": 33.60996939958565,
+      "geoinfo": {
+        "display_name": "Artemidos Avenue, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 6650, Cyprus",
+        "road": "Artemidos Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dromolaxia - Meneou Municipality",
+        "state": "Cyprus",
+        "postcode": "6650",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "566, Artemidos Avenue, Dromolaxia, Dromolaxia - Meneou Municipality, Δήμος Δρομολαξιάς - Μενεού, Larnaca District, Cyprus, 6650, Cyprus"
+    },
+    {
+      "lat": 34.947202852104624,
+      "lon": 33.60446754953685,
+      "geoinfo": {
+        "display_name": "Agriniou, Apostolos Loukas, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7104, Cyprus",
+        "road": "Agriniou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Apostolos Loukas",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7104",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "387, Agriniou, Apostolos Loukas, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7104, Cyprus"
+    },
+    {
+      "lat": 34.92648783601568,
+      "lon": 33.61429707870234,
+      "geoinfo": {
+        "display_name": "Chemopel, Agriniou, Sotiros, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6047, Cyprus",
+        "road": "Agriniou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sotiros",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6047",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "640, Agriniou, Larnaca, 6047 Cyprus, Cyprus"
+    },
+    {
+      "lat": 34.923362112391885,
+      "lon": 33.6213900418431,
+      "geoinfo": {
+        "display_name": "Sintika Hanoum, Sotiros, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6050, Cyprus",
+        "road": "Sintika Hanoum",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sotiros",
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6050",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "379, Sintika Hanoum, Sotiros, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6050, Cyprus"
+    },
+    {
+      "lat": 34.91653980512999,
+      "lon": 33.59098149842825,
+      "geoinfo": {
+        "display_name": "Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vlachos",
+        "city_district": null,
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "6041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "751, Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 6041, Cyprus"
+    },
+    {
+      "lat": 34.90140835336939,
+      "lon": 33.59392578256985,
+      "geoinfo": {
+        "display_name": "Agiou Theodorou, Archiepiskopos Makarios III, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6041, Cyprus",
+        "road": "Agiou Theodorou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Larnaca",
+        "state": "Cyprus",
+        "postcode": "6041",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "413, Agiou Theodorou, Archiepiskopos Makarios III, Larnaca, Δήμος Λάρνακας, Larnaca District, Cyprus, 6041, Cyprus"
+    },
+    {
+      "lat": 34.943244554766714,
+      "lon": 33.58622432571813,
+      "geoinfo": {
+        "display_name": "Idipoda, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7102, Cyprus",
+        "road": "Idipoda",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Agios Fanourios",
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7102",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "282, Idipoda, Agios Fanourios, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7102, Cyprus"
+    },
+    {
+      "lat": 34.907374137874775,
+      "lon": 33.580566746765754,
+      "geoinfo": {
+        "display_name": "14, Anorthoseos, Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7711, Cyprus",
+        "road": "Anorthoseos",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Vlachos",
+        "city_district": null,
+        "city": "Aradippou",
+        "state": "Cyprus",
+        "postcode": "7711",
+        "country": "Cyprus",
+        "country_code": "cy"
+      },
+      "address": "14, Anorthoseos, Vlachos, Aradippou, Δήμος Αραδίππου, Larnaca District, Cyprus, 7711, Cyprus"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:36.927312+00:00",
+  "_kind": "geo_samples"
+}

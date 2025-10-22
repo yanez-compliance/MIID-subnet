@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Scafati",
+  "geonameid": 3167010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7772003353471,
+      "lon": 14.524659626636737,
+      "geoinfo": {
+        "display_name": "Scafati, Salerno, Campania, 84018, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Scafati",
+        "state": "Campania",
+        "postcode": "84018",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Scafati, Campania, Italy"
+    },
+    {
+      "lat": 40.752501696231285,
+      "lon": 14.479033668573845,
+      "geoinfo": {
+        "display_name": "Via delle Tombe, Pompei, Naples, Campania, 80045, Italy",
+        "road": "Via delle Tombe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pompei",
+        "state": "Campania",
+        "postcode": "80045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "403, Via delle Tombe, Pompei, Naples, Campania, 80045, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:42.765810+00:00",
+  "_kind": "geo_samples"
+}

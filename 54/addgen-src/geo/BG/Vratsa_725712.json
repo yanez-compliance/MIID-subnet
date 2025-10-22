@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Vratsa",
+  "geonameid": 725712,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.2404581697152,
+      "lon": 23.571760687089544,
+      "geoinfo": {
+        "display_name": "Bypass Vratsa, Студентски град, Vratsa, 3005, Bulgaria",
+        "road": "Bypass Vratsa",
+        "house_number": null,
+        "neighbourhood": "Студентски град",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vratsa",
+        "state": "Vratsa",
+        "postcode": "3005",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "151, Bypass Vratsa, Студентски град, Vratsa, 3005, Bulgaria"
+    },
+    {
+      "lat": 43.22819099947723,
+      "lon": 23.567013563243908,
+      "geoinfo": {
+        "display_name": "15, Студентски град, Vratsa, 3000, Bulgaria",
+        "road": "15",
+        "house_number": null,
+        "neighbourhood": "Студентски град",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vratsa",
+        "state": "Vratsa",
+        "postcode": "3000",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "15, Студентски град, Vratsa, 3000, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:39.453011+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Torhout",
+  "geonameid": 2785364,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.06974272945036,
+      "lon": 3.11946509473265,
+      "geoinfo": {
+        "display_name": "11, Donaustraat, Torhout, Brugge, West Flanders, 8820, Belgium",
+        "road": "Donaustraat",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torhout",
+        "state": "West Flanders",
+        "postcode": "8820",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "11 Donaustraat, Torhout, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.05448653946659,
+      "lon": 3.0932197160903954,
+      "geoinfo": {
+        "display_name": "Kinderboerderij d'Oude Smelterij, Ieperse Heerweg, Torhout, Brugge, West Flanders, 8820, Belgium",
+        "road": "Ieperse Heerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torhout",
+        "state": "West Flanders",
+        "postcode": "8820",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "618, Ieperse Heerweg, Torhout, 8820 West Flanders, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:28.595301+00:00",
+  "_kind": "geo_samples"
+}

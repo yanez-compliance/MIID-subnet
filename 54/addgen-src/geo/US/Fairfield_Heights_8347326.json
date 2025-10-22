@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairfield Heights",
+  "geonameid": 8347326,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.846004191625525,
+      "lon": -86.43112679011924,
+      "geoinfo": {
+        "display_name": "Hendricks County, Indiana, 46167, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46167",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fairfield Heights, Indiana, United States"
+    },
+    {
+      "lat": 39.806131424122285,
+      "lon": -86.4282383967115,
+      "geoinfo": {
+        "display_name": "North County Road 575 East, Hendricks County, Indiana, 46112, United States",
+        "road": "North County Road 575 East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North County Road 575 East, Hendricks County, Indiana, 46112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:23.508281+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rochester",
+  "geonameid": 5134086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.15896296474878,
+      "lon": -77.67350533674004,
+      "geoinfo": {
+        "display_name": "Canal Side Business Center, City of Rochester, Monroe County, New York, 14606, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rochester",
+        "state": "New York",
+        "postcode": "14606",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rochester, New York, United States"
+    },
+    {
+      "lat": 43.16326284374409,
+      "lon": -77.56626785729318,
+      "geoinfo": {
+        "display_name": "292, Cedarwood Terrace, Beechwood, City of Rochester, Monroe County, New York, 14609, United States",
+        "road": "Cedarwood Terrace",
+        "house_number": "292",
+        "neighbourhood": "Beechwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Rochester",
+        "state": "New York",
+        "postcode": "14609",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "292, Cedarwood Terrace, Beechwood, City of Rochester, Monroe County, New York, 14609, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:21.393675+00:00",
+  "_kind": "geo_samples"
+}

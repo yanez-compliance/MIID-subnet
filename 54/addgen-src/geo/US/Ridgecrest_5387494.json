@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ridgecrest",
+  "geonameid": 5387494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.63375303416259,
+      "lon": -117.62169140913387,
+      "geoinfo": {
+        "display_name": "2268, Pilot Plant Road, San Bernardino County, California, 93555, United States",
+        "road": "Pilot Plant Road",
+        "house_number": "2268",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93555",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2268 Pilot Plant Road, Ridgecrest, California, United States"
+    },
+    {
+      "lat": 35.6599214048726,
+      "lon": -117.68556665444287,
+      "geoinfo": {
+        "display_name": "Snort Access Road, Kern County, California, United States",
+        "road": "Snort Access Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "358, Snort Access Road, Kern County, 23139 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:50.233851+00:00",
+  "_kind": "geo_samples"
+}

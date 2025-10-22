@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Hoboken",
+  "geonameid": 2795730,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.18417692448515,
+      "lon": 4.372458403046004,
+      "geoinfo": {
+        "display_name": "Carrefour, 586, Sint-Bernardsesteenweg, Kiel, Hoboken, Antwerp, Flanders, 2660, Belgium",
+        "road": "Sint-Bernardsesteenweg",
+        "house_number": "586",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2660",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "586 Sint-Bernardsesteenweg, Hoboken, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.20855335368051,
+      "lon": 4.3121762040912435,
+      "geoinfo": {
+        "display_name": "4, Gavers, Zwijndrecht, Beveren-Kruibeke-Zwijndrecht, Sint-Niklaas, East Flanders, 2070, Belgium",
+        "road": "Gavers",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zwijndrecht",
+        "state": "East Flanders",
+        "postcode": "2070",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "4, Gavers, Zwijndrecht, Beveren-Kruibeke-Zwijndrecht, Sint-Niklaas, East Flanders, 2070, Belgium"
+    },
+    {
+      "lat": 51.169304577403395,
+      "lon": 4.390160987478457,
+      "geoinfo": {
+        "display_name": "22, Vuurmolenstraat, De Bist, Wilrijk-Centrum, Wilrijk, Antwerp, Flanders, 2610, Belgium",
+        "road": "Vuurmolenstraat",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Wilrijk-Centrum",
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2610",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "22, Vuurmolenstraat, De Bist, Wilrijk-Centrum, Wilrijk, Antwerp, Flanders, 2610, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:23.911772+00:00",
+  "_kind": "geo_samples"
+}

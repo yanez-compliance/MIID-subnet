@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomington",
+  "geonameid": 4885164,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.47652239066823,
+      "lon": -89.04835415994546,
+      "geoinfo": {
+        "display_name": "West Washington Street, Bloomington, McLean County, Illinois, 61705, United States",
+        "road": "West Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "Illinois",
+        "postcode": "61705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Washington Street, Bloomington, Illinois, United States"
+    },
+    {
+      "lat": 40.47884310202167,
+      "lon": -89.00207361128452,
+      "geoinfo": {
+        "display_name": "903, West Front Street, Pone Hollow, Bloomington, McLean County, Illinois, 61701, United States",
+        "road": "West Front Street",
+        "house_number": "903",
+        "neighbourhood": "Pone Hollow",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "Illinois",
+        "postcode": "61701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "903, West Front Street, Pone Hollow, Bloomington, McLean County, Illinois, 61701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:11.577205+00:00",
+  "_kind": "geo_samples"
+}

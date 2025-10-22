@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cañon City",
+  "geonameid": 5416005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.447532674413154,
+      "lon": -105.21707964574107,
+      "geoinfo": {
+        "display_name": "Royal Gorge Boulevard, East Cañon, Cañon City, Fremont County, Colorado, 81215, United States",
+        "road": "Royal Gorge Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cañon City",
+        "state": "Colorado",
+        "postcode": "81215",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Royal Gorge Boulevard, Cañon City, Colorado, United States"
+    },
+    {
+      "lat": 38.46424976542407,
+      "lon": -105.25914531059321,
+      "geoinfo": {
+        "display_name": "US 50, Fremont County, Colorado, 81212, United States",
+        "road": "US 50",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "81212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 50, Fremont County, Colorado, 81212, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:54.593813+00:00",
+  "_kind": "geo_samples"
+}

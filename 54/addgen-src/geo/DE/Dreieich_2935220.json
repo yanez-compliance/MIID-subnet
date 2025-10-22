@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dreieich",
+  "geonameid": 2935220,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.987569159031366,
+      "lon": 8.718128692835142,
+      "geoinfo": {
+        "display_name": "\"Barockstraße\", Offenthal, Dreieich, Landkreis Offenbach, Hesse, 63303, Germany",
+        "road": "\"Barockstraße\"",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Offenthal",
+        "state": "Hesse",
+        "postcode": "63303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "\"Barockstraße\", Dreieich, Hesse, Germany"
+    },
+    {
+      "lat": 49.992373281284834,
+      "lon": 8.654415621181172,
+      "geoinfo": {
+        "display_name": "4, Mörfelder Landstraße, Linden, Langen, Landkreis Offenbach, Hesse, 63225, Germany",
+        "road": "Mörfelder Landstraße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Linden",
+        "city_district": null,
+        "city": "Langen",
+        "state": "Hesse",
+        "postcode": "63225",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Mörfelder Landstraße, Linden, Langen, Landkreis Offenbach, Hesse, 63225, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:46.450144+00:00",
+  "_kind": "geo_samples"
+}

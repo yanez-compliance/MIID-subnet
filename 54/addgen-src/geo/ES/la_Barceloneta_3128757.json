@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "la Barceloneta",
+  "geonameid": 3128757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.380573769447764,
+      "lon": 2.223928883038075,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "la Barceloneta, Catalonia, Spain"
+    },
+    {
+      "lat": 41.37373076516513,
+      "lon": 2.163268757421426,
+      "geoinfo": {
+        "display_name": "20, Carrer de Margarit, el Poble-sec, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, 08004, Spain",
+        "road": "Carrer de Margarit",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Sants-Montjuïc",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08004",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "20, Carrer de Margarit, el Poble-sec, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, 08004, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:57.813632+00:00",
+  "_kind": "geo_samples"
+}

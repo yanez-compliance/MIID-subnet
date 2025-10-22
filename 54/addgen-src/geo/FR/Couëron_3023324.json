@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Couëron",
+  "geonameid": 3023324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.225967531674094,
+      "lon": -1.7471502059734088,
+      "geoinfo": {
+        "display_name": "Voie du Port Launay, Le Mortier des Noues, Couëron, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44220, France",
+        "road": "Voie du Port Launay",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Couëron",
+        "state": "Pays de la Loire",
+        "postcode": "44220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Voie du Port Launay, Couëron, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.19207191693138,
+      "lon": -1.6820319489579738,
+      "geoinfo": {
+        "display_name": "Digue de La Montagne, Indret, Indre, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44610, France",
+        "road": "Digue de La Montagne",
+        "house_number": null,
+        "neighbourhood": "Indret",
+        "suburb": null,
+        "city_district": null,
+        "city": "Indre",
+        "state": "Pays de la Loire",
+        "postcode": "44610",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "821, Digue de La Montagne, Indret, Indre, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44610, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:57.995542+00:00",
+  "_kind": "geo_samples"
+}

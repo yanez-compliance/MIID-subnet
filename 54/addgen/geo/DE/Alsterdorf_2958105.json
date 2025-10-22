@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Alsterdorf",
+  "geonameid": 2958105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.620419078238584,
+      "lon": 9.990924963493166,
+      "geoinfo": {
+        "display_name": "Straße 3, Lufthansa Technical Base Hamburg, Fuhlsbüttel, Hamburg-Nord, Hamburg, 22335, Germany",
+        "road": "Straße 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fuhlsbüttel",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22335",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Straße 3, Alsterdorf, Germany"
+    },
+    {
+      "lat": 53.59390670216793,
+      "lon": 9.98353454527922,
+      "geoinfo": {
+        "display_name": "47, Tarpenbekstraße, Eppendorf, Hamburg-Nord, Hamburg, 20251, Germany",
+        "road": "Tarpenbekstraße",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": "Eppendorf",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20251",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "47, Tarpenbekstraße, Eppendorf, Hamburg-Nord, Hamburg, 20251, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:47.827687+00:00",
+  "_kind": "geo_samples"
+}

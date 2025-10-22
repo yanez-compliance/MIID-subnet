@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Covington",
+  "geonameid": 5791159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.363631000725206,
+      "lon": -122.08198484512806,
+      "geoinfo": {
+        "display_name": "19456, Southeast 266th Street, Timberlane, Covington, King County, Washington, 98042, United States",
+        "road": "Southeast 266th Street",
+        "house_number": "19456",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Covington",
+        "state": "Washington",
+        "postcode": "98042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19456 Southeast 266th Street, Covington, Washington, United States"
+    },
+    {
+      "lat": 47.33874836033267,
+      "lon": -122.15756063332023,
+      "geoinfo": {
+        "display_name": "29341, 140th Avenue Southeast, Auburn, King County, Washington, 98092, United States",
+        "road": "140th Avenue Southeast",
+        "house_number": "29341",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Washington",
+        "postcode": "98092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29341, 140th Avenue Southeast, Auburn, King County, Washington, 98092, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:19.074402+00:00",
+  "_kind": "geo_samples"
+}

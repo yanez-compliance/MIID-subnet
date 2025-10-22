@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Heidenau",
+  "geonameid": 2907887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.95078669787709,
+      "lon": 13.869392746149051,
+      "geoinfo": {
+        "display_name": "A 17, Ploschwitzer Höhe, Köttewitz, Dohna, Dohna-Müglitztal, Sächsische Schweiz-Osterzgebirge, Saxony, 01809, Germany",
+        "road": "A 17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ploschwitzer Höhe",
+        "city_district": null,
+        "city": "Dohna",
+        "state": "Saxony",
+        "postcode": "01809",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 17, Heidenau, Saxony, Germany"
+    },
+    {
+      "lat": 50.98790663897588,
+      "lon": 13.868572010986595,
+      "geoinfo": {
+        "display_name": "5g, Lugbergblick, Kleinzschachwitz, Trieske, Leuben, Dresden, Saxony, 01259, Germany",
+        "road": "Lugbergblick",
+        "house_number": "5g",
+        "neighbourhood": "Kleinzschachwitz",
+        "suburb": null,
+        "city_district": "Leuben",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01259",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5g, Lugbergblick, Kleinzschachwitz, Trieske, Leuben, Dresden, Saxony, 01259, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:26.541717+00:00",
+  "_kind": "geo_samples"
+}

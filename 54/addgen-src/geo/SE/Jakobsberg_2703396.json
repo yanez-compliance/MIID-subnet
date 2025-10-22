@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Jakobsberg",
+  "geonameid": 2703396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.402948583208804,
+      "lon": 17.82389192313951,
+      "geoinfo": {
+        "display_name": "Viksjö GK, Viksjöleden, Fjällen, Järfälla kommun, Stockholm County, 175 73, Sweden",
+        "road": "Viksjöleden",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Järfälla kommun",
+        "state": null,
+        "postcode": "175 73",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Viksjöleden, Jakobsberg, Sweden"
+    },
+    {
+      "lat": 59.42421727675332,
+      "lon": 17.84184002295235,
+      "geoinfo": {
+        "display_name": "Riddarstråket, Hammaren, Jakobsberg, Järfälla kommun, Stockholm County, 177 65, Sweden",
+        "road": "Riddarstråket",
+        "house_number": null,
+        "neighbourhood": "Hammaren",
+        "suburb": "Jakobsberg",
+        "city_district": null,
+        "city": "Järfälla kommun",
+        "state": null,
+        "postcode": "177 65",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Riddarstråket, Hammaren, Jakobsberg, Järfälla kommun, Stockholm County, 177 65, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:56:41.710656+00:00",
+  "_kind": "geo_samples"
+}

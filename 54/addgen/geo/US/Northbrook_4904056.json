@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Northbrook",
+  "geonameid": 4904056,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.132973041001094,
+      "lon": -87.85254355530137,
+      "geoinfo": {
+        "display_name": "Shabonee School, 1000, Pfingsten Road, White Plains, Northbrook, Northfield Township, Cook County, Illinois, 60062, United States",
+        "road": "Pfingsten Road",
+        "house_number": "1000",
+        "neighbourhood": "White Plains",
+        "suburb": null,
+        "city_district": null,
+        "city": "Northbrook",
+        "state": "Illinois",
+        "postcode": "60062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1000 Pfingsten Road, Northbrook, Illinois, United States"
+    },
+    {
+      "lat": 42.11319474734566,
+      "lon": -87.83579254929778,
+      "geoinfo": {
+        "display_name": "2295, Southbridge Lane, Northbrook, Northfield Township, Cook County, Illinois, 60062, United States",
+        "road": "Southbridge Lane",
+        "house_number": "2295",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northbrook",
+        "state": "Illinois",
+        "postcode": "60062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2295, Southbridge Lane, Northbrook, Northfield Township, Cook County, Illinois, 60062, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:17.178210+00:00",
+  "_kind": "geo_samples"
+}

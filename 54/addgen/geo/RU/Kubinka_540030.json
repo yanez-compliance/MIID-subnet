@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kubinka",
+  "geonameid": 540030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.56709683494371,
+      "lon": 36.670514931413834,
+      "geoinfo": {
+        "display_name": "Одинцовский городской округ, Moscow Oblast, Central Federal District, 143071, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143071",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kubinka, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.61032867526748,
+      "lon": 36.68523688541065,
+      "geoinfo": {
+        "display_name": "СТ «Флокс», Старый Городок, Одинцовский городской округ, Moscow Oblast, Central Federal District, 143079, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Старый Городок",
+        "state": "Moscow Oblast",
+        "postcode": "143079",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "027, СТ «Флокс», Старый Городок, Одинцовский городской округ, Moscow Oblast, Central Federal District, 143079, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:14.122242+00:00",
+  "_kind": "geo_samples"
+}

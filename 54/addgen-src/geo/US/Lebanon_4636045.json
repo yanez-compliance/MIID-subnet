@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lebanon",
+  "geonameid": 4636045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.21910687909272,
+      "lon": -86.29780999644927,
+      "geoinfo": {
+        "display_name": "801, Coles Ferry Pike, Lebanon, Wilson County, Middle Tennessee, Tennessee, 37087, United States",
+        "road": "Coles Ferry Pike",
+        "house_number": "801",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lebanon",
+        "state": "Tennessee",
+        "postcode": "37087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "801 Coles Ferry Pike, Lebanon, Tennessee, United States"
+    },
+    {
+      "lat": 36.22306260740783,
+      "lon": -86.23909642234675,
+      "geoinfo": {
+        "display_name": "Carthage Highway, Lebanon, Wilson County, Middle Tennessee, Tennessee, 37087, United States",
+        "road": "Carthage Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lebanon",
+        "state": "Tennessee",
+        "postcode": "37087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "549, Carthage Highway, Lebanon, Wilson County, Middle Tennessee, Tennessee, 37087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:30.202290+00:00",
+  "_kind": "geo_samples"
+}

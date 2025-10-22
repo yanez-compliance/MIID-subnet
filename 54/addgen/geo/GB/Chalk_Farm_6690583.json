@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chalk Farm",
+  "geonameid": 6690583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54359702014051,
+      "lon": -0.1367991271444405,
+      "geoinfo": {
+        "display_name": "83, Camden Road, Kentish Town, London Borough of Camden, London, Greater London, England, NW1 9EX, United Kingdom",
+        "road": "Camden Road",
+        "house_number": "83",
+        "neighbourhood": null,
+        "suburb": "Kentish Town",
+        "city_district": "London Borough of Camden",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW1 9EX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "83 Camden Road, Chalk Farm, England, United Kingdom"
+    },
+    {
+      "lat": 51.53431743277935,
+      "lon": -0.19565496546539105,
+      "geoinfo": {
+        "display_name": "Ely Court, Chichester Road, Queen's Park, London Borough of Brent, London, Greater London, England, NW6 5QP, United Kingdom",
+        "road": "Chichester Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queen's Park",
+        "city_district": "London Borough of Brent",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW6 5QP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ely Court, Chichester Road, Queen's Park, London Borough of Brent, London, Greater London, England, NW6 5QP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:32.573048+00:00",
+  "_kind": "geo_samples"
+}

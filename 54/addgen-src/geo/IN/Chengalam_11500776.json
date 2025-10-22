@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chengalam",
+  "geonameid": 11500776,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.560326928602603,
+      "lon": 76.45859166091968,
+      "geoinfo": {
+        "display_name": "Vettikad, Kottayam, Kerala, 686033, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kottayam",
+        "state": "Kerala",
+        "postcode": "686033",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Chengalam, Kerala, India"
+    },
+    {
+      "lat": 9.576164416159193,
+      "lon": 76.44365774746694,
+      "geoinfo": {
+        "display_name": "Mutherimada, Kottayam, Kerala, 686563, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mutherimada",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kottayam",
+        "state": "Kerala",
+        "postcode": "686563",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "095, Mutherimada, Kottayam, Kerala, 686563, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:19.079429+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Emmen",
+  "geonameid": 2660911,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.07681522301681,
+      "lon": 8.223378284016913,
+      "geoinfo": {
+        "display_name": "Luzernstrasse, Rüteli, Lucerne, 6016, Switzerland",
+        "road": "Luzernstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lucerne",
+        "state": "Lucerne",
+        "postcode": "6016",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Luzernstrasse, Emmen, Lucerne, Switzerland"
+    },
+    {
+      "lat": 47.09629977462233,
+      "lon": 8.237433515780797,
+      "geoinfo": {
+        "display_name": "5, Oberwahligen, Rothenburg, Lucerne, 6023, Switzerland",
+        "road": null,
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rothenburg",
+        "state": "Lucerne",
+        "postcode": "6023",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Emmen, Lucerne, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:06:06.370471+00:00",
+  "_kind": "geo_samples"
+}

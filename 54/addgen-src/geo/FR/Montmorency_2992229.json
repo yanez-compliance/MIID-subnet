@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Montmorency",
+  "geonameid": 2992229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.97466720167418,
+      "lon": 2.3270871022046857,
+      "geoinfo": {
+        "display_name": "Rue Pasteur, Deuil-la-Barre, Sarcelles, Val-d'Oise, Metropolitan France, 95170, France",
+        "road": "Rue Pasteur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deuil-la-Barre",
+        "state": null,
+        "postcode": "95170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Pasteur, Montmorency, France"
+    },
+    {
+      "lat": 48.972681656023,
+      "lon": 2.303071657325907,
+      "geoinfo": {
+        "display_name": "Avenue de Ceinture, Enghien-les-Bains, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95880, France",
+        "road": "Avenue de Ceinture",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Enghien-les-Bains",
+        "state": "Ile-de-France",
+        "postcode": "95880",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "295, Avenue de Ceinture, Enghien-les-Bains, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95880, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:44.141288+00:00",
+  "_kind": "geo_samples"
+}

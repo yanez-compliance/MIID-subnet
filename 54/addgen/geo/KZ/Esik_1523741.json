@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Esik",
+  "geonameid": 1523741,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.334391019686265,
+      "lon": 77.47064573219076,
+      "geoinfo": {
+        "display_name": "Enbekshikazakh District, Almaty Region, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Almaty Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "Esik, Almaty Region, Kazakhstan"
+    },
+    {
+      "lat": 43.38814584635202,
+      "lon": 77.47413588529935,
+      "geoinfo": {
+        "display_name": "КВ-20, Қарасай, Enbekshikazakh District, Almaty Region, 040407, Kazakhstan",
+        "road": "КВ-20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Қарасай",
+        "state": "Almaty Region",
+        "postcode": "040407",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "КВ-20, Esik, Almaty Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-16T18:25:47.531233+00:00",
+  "_kind": "geo_samples"
+}

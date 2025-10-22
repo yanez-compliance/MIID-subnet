@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willimantic",
+  "geonameid": 4845823,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.69824766586411,
+      "lon": -72.20972489044442,
+      "geoinfo": {
+        "display_name": "400, South Street, Main Street Historic District, Willimantic, Windham, Southeastern Connecticut Planning Region, Connecticut, 06226, United States",
+        "road": "South Street",
+        "house_number": "400",
+        "neighbourhood": "Main Street Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Willimantic",
+        "state": "Connecticut",
+        "postcode": "06226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "400 South Street, Willimantic, Connecticut, United States"
+    },
+    {
+      "lat": 41.710519203905726,
+      "lon": -72.21974117645145,
+      "geoinfo": {
+        "display_name": "31, Mountain Street, Willimantic, Windham, Southeastern Connecticut Planning Region, Connecticut, 06226, United States",
+        "road": "Mountain Street",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Willimantic",
+        "state": "Connecticut",
+        "postcode": "06226",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31, Mountain Street, Willimantic, Windham, Southeastern Connecticut Planning Region, Connecticut, 06226, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:46.773130+00:00",
+  "_kind": "geo_samples"
+}

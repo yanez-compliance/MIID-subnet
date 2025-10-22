@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Walnut Creek",
+  "geonameid": 5406990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.87027972264196,
+      "lon": -122.08380916092625,
+      "geoinfo": {
+        "display_name": "Oakmont Drive, Rossmoor, Walnut Creek, Contra Costa County, California, 94595, United States",
+        "road": "Oakmont Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rossmoor",
+        "city_district": null,
+        "city": "Walnut Creek",
+        "state": "California",
+        "postcode": "94595",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oakmont Drive, Walnut Creek, California, United States"
+    },
+    {
+      "lat": 37.88753703335085,
+      "lon": -122.09417040849482,
+      "geoinfo": {
+        "display_name": "Oakland Avenue, Lafayette, Contra Costa County, California, 94706, United States",
+        "road": "Oakland Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lafayette",
+        "state": "California",
+        "postcode": "94706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "600, Oakland Avenue, Lafayette, Contra Costa County, California, 94706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:16.659262+00:00",
+  "_kind": "geo_samples"
+}

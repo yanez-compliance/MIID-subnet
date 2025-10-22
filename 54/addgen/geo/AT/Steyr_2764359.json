@@ -1,0 +1,83 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Steyr",
+  "geonameid": 2764359,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.00754204294565,
+      "lon": 14.382815897050103,
+      "geoinfo": {
+        "display_name": "Höllstraße, Sand, Garsten, Bezirk Steyr-Land, Upper Austria, 4451, Austria",
+        "road": "Höllstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sand",
+        "state": "Upper Austria",
+        "postcode": "4451",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Höllstraße, Steyr, Upper Austria, Austria"
+    },
+    {
+      "lat": 48.03451245430441,
+      "lon": 14.396961041902067,
+      "geoinfo": {
+        "display_name": "Schlühslmayrsiedlung, Steyr, Upper Austria, 4400, Austria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Schlühslmayrsiedlung",
+        "city_district": null,
+        "city": "Steyr",
+        "state": "Upper Austria",
+        "postcode": "4400",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Schlühslmayrsiedlung, Steyr, Upper Austria, Austria"
+    },
+    {
+      "lat": 48.06829360309671,
+      "lon": 14.384501242280736,
+      "geoinfo": {
+        "display_name": "1, Lerchenring, Lerchensiedlung, Wolfern, Bezirk Steyr-Land, Upper Austria, 4493, Austria",
+        "road": "Lerchenring",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wolfern",
+        "state": "Upper Austria",
+        "postcode": "4493",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "1, Lerchenring, Steyr, 4493 Upper Austria, Austria"
+    },
+    {
+      "lat": 48.041198146469846,
+      "lon": 14.48656651449812,
+      "geoinfo": {
+        "display_name": "Behambergstraße, Katastralgemeinde Penz, Behamberg, Bezirk Amstetten, Lower Austria, 4441, Austria",
+        "road": "Behambergstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Katastralgemeinde Penz",
+        "city_district": null,
+        "city": "Behamberg",
+        "state": "Lower Austria",
+        "postcode": "4441",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "762, Behambergstraße, Katastralgemeinde Penz, Behamberg, Bezirk Amstetten, Lower Austria, 4441, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:46:23.812187+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Altglienicke",
+  "geonameid": 2957185,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.405117127199894,
+      "lon": 13.531719736686393,
+      "geoinfo": {
+        "display_name": "84, Venusstraße, Siedlung Eigenheim II, Altglienicker Grund, Altglienicke, Treptow-Köpenick, Berlin, 12524, Germany",
+        "road": "Venusstraße",
+        "house_number": "84",
+        "neighbourhood": "Siedlung Eigenheim II",
+        "suburb": "Altglienicke",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12524",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "84 Venusstraße, Altglienicke, Germany"
+    },
+    {
+      "lat": 52.40485214371255,
+      "lon": 13.475728616194878,
+      "geoinfo": {
+        "display_name": "Welsumerpfad, Postsiedlung, Rudow, Neukölln, Berlin, 12355, Germany",
+        "road": "Welsumerpfad",
+        "house_number": null,
+        "neighbourhood": "Postsiedlung",
+        "suburb": "Rudow",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12355",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "156, Welsumerpfad, Postsiedlung, Rudow, Neukölln, Berlin, 12355, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:42.901799+00:00",
+  "_kind": "geo_samples"
+}

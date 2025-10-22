@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Droitwich",
+  "geonameid": 2650983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.28960225137086,
+      "lon": -2.168389319541916,
+      "geoinfo": {
+        "display_name": "A442, Hampton Lovett, Cutnall Green, Wychavon, Worcestershire, England, WR9 0LY, United Kingdom",
+        "road": "A442",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wychavon",
+        "state": "England",
+        "postcode": "WR9 0LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A442, Droitwich, England, United Kingdom"
+    },
+    {
+      "lat": 52.29647449222561,
+      "lon": -2.1232592321719537,
+      "geoinfo": {
+        "display_name": "Crown Lane, Dodderhill, Wychbold, Wychavon, Worcestershire, England, WR9 0BZ, United Kingdom",
+        "road": "Crown Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dodderhill",
+        "city_district": null,
+        "city": "Wychavon",
+        "state": "England",
+        "postcode": "WR9 0BZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Crown Lane, Dodderhill, Wychbold, Wychavon, Worcestershire, England, WR9 0BZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:11.092675+00:00",
+  "_kind": "geo_samples"
+}

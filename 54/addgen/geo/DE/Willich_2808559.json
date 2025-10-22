@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Willich",
+  "geonameid": 2808559,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.23778583255083,
+      "lon": 6.49060546965437,
+      "geoinfo": {
+        "display_name": "A 44, Flughafen, Ost, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47877, Germany",
+        "road": "A 44",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Flughafen",
+        "city_district": "Ost",
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47877",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 44, Willich, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.28219487557132,
+      "lon": 6.572627421930273,
+      "geoinfo": {
+        "display_name": "Alperheide, Hoxhöfe, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47877, Germany",
+        "road": "Alperheide",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Region Kempen-Viersen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47877",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "845, Alperheide, Hoxhöfe, Region Kempen-Viersen, Kreis Viersen, North Rhine-Westphalia, 47877, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:22.860382+00:00",
+  "_kind": "geo_samples"
+}

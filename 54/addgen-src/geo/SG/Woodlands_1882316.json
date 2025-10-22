@@ -1,0 +1,83 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Woodlands",
+  "geonameid": 1882316,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.4480998388476711,
+      "lon": 103.74621061050541,
+      "geoinfo": {
+        "display_name": "Singapore",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Singapore",
+        "state": null,
+        "postcode": null,
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Woodlands, Johor, Singapore"
+    },
+    {
+      "lat": 1.450216240537559,
+      "lon": 103.76626690604287,
+      "geoinfo": {
+        "display_name": "Johor–Singapore Causeway, Woodlands, Northwest, Singapore, 730215, Singapore",
+        "road": "Johor–Singapore Causeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woodlands",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "730215",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Johor–Singapore Causeway, Woodlands, Johor, Singapore"
+    },
+    {
+      "lat": 1.4135257538263672,
+      "lon": 103.77529690935079,
+      "geoinfo": {
+        "display_name": "Lorong Asrama, Mandai, Northwest, Singapore, 730436, Singapore",
+        "road": "Lorong Asrama",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mandai",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "730436",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "547, Lorong Asrama, Mandai, Northwest, Singapore, 730436, Singapore"
+    },
+    {
+      "lat": 1.4086965390821857,
+      "lon": 103.77202688429314,
+      "geoinfo": {
+        "display_name": "Bukit Timah Expressway, Central Water Catchment, Northwest, Singapore, 728653, Singapore",
+        "road": "Bukit Timah Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Central Water Catchment",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "728653",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "636, Bukit Timah Expressway, Central Water Catchment, Northwest, Singapore, 728653, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:57:40.677967+00:00",
+  "_kind": "geo_samples"
+}

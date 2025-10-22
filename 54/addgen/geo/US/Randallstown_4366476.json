@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Randallstown",
+  "geonameid": 4366476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.36070281685244,
+      "lon": -76.78719334841216,
+      "geoinfo": {
+        "display_name": "Brenbrook Drive, Randallstown, Baltimore County, Maryland, 21133, United States",
+        "road": "Brenbrook Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Randallstown",
+        "state": "Maryland",
+        "postcode": "21133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brenbrook Drive, Randallstown, Maryland, United States"
+    },
+    {
+      "lat": 39.34760496344233,
+      "lon": -76.74440101352258,
+      "geoinfo": {
+        "display_name": "7525, Marston Road, Milford, Lochearn, Baltimore County, Maryland, 21207, United States",
+        "road": "Marston Road",
+        "house_number": "7525",
+        "neighbourhood": "Milford",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lochearn",
+        "state": "Maryland",
+        "postcode": "21207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7525, Marston Road, Milford, Lochearn, Baltimore County, Maryland, 21207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:16.829490+00:00",
+  "_kind": "geo_samples"
+}

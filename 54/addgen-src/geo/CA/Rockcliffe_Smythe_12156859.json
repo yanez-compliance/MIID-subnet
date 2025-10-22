@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Rockcliffe-Smythe",
+  "geonameid": 12156859,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.67816018569149,
+      "lon": -79.45137504879627,
+      "geoinfo": {
+        "display_name": "1450, St. Clair Avenue West, Corso Italia-Davenport, Davenport, Toronto, Golden Horseshoe, Ontario, M6E 1C3, Canada",
+        "road": "St. Clair Avenue West",
+        "house_number": "1450",
+        "neighbourhood": "Corso Italia-Davenport",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6E 1C3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1450 St. Clair Avenue West, Rockcliffe-Smythe, Ontario, Canada"
+    },
+    {
+      "lat": 43.716349016478006,
+      "lon": -79.47658194895568,
+      "geoinfo": {
+        "display_name": "33, Jay Street, Maple Leaf, York South—Weston, North York, Toronto, Golden Horseshoe, Ontario, M6L 2K5, Canada",
+        "road": "Jay Street",
+        "house_number": "33",
+        "neighbourhood": "Maple Leaf",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6L 2K5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "33, Jay Street, Maple Leaf, York South—Weston, North York, Toronto, Golden Horseshoe, Ontario, M6L 2K5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:00.272609+00:00",
+  "_kind": "geo_samples"
+}

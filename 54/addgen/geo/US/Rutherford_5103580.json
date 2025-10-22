@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rutherford",
+  "geonameid": 5103580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.83439767835294,
+      "lon": -74.09217410701102,
+      "geoinfo": {
+        "display_name": "25, Vreeland Avenue, East Rutherford, Bergen County, New Jersey, 07073, United States",
+        "road": "Vreeland Avenue",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Rutherford",
+        "state": "New Jersey",
+        "postcode": "07073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "25 Vreeland Avenue, Rutherford, New Jersey, United States"
+    },
+    {
+      "lat": 40.839700527334635,
+      "lon": -74.10883834823304,
+      "geoinfo": {
+        "display_name": "West Erie Avenue, Rutherford, Bergen County, New Jersey, 07070, United States",
+        "road": "West Erie Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rutherford",
+        "state": "New Jersey",
+        "postcode": "07070",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "644, West Erie Avenue, Rutherford, Bergen County, New Jersey, 07070, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:08.216971+00:00",
+  "_kind": "geo_samples"
+}

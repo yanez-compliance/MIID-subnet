@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Pengcheng",
+  "geonameid": 1798946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.41327461320565,
+      "lon": 114.15480175423019,
+      "geoinfo": {
+        "display_name": "S222, Sunzhuangkuang, Fengfeng Mining District, Handan, Hebei, 056000, China",
+        "road": "S222",
+        "house_number": null,
+        "neighbourhood": "Sunzhuangkuang",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fengfeng Mining District",
+        "state": "Hebei",
+        "postcode": "056000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S222, Pengcheng, Hebei, China"
+    },
+    {
+      "lat": 36.43019292726737,
+      "lon": 114.13349148855822,
+      "geoinfo": {
+        "display_name": "Fengfeng Mining District, Handan, Hebei, 056000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fengfeng Mining District",
+        "state": "Hebei",
+        "postcode": "056000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "602, Fengfeng Mining District, Handan, Hebei, 056000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:32.983935+00:00",
+  "_kind": "geo_samples"
+}

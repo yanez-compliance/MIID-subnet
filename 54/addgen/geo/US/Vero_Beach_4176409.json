@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vero Beach",
+  "geonameid": 4176409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.61284520519816,
+      "lon": -80.42413592028863,
+      "geoinfo": {
+        "display_name": "6th Street, Indian River County, Florida, 32968, United States",
+        "road": "6th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32968",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6th Street, Vero Beach, Florida, United States"
+    },
+    {
+      "lat": 27.626144615515866,
+      "lon": -80.40177321742074,
+      "geoinfo": {
+        "display_name": "16th Avenue, Vero Beach, Indian River County, Florida, 32690, United States",
+        "road": "16th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vero Beach",
+        "state": "Florida",
+        "postcode": "32690",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16th Avenue, Vero Beach, Indian River County, Florida, 32690, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:29.078409+00:00",
+  "_kind": "geo_samples"
+}

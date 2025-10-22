@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Goch",
+  "geonameid": 2919625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.68018184864078,
+      "lon": 6.150074260865563,
+      "geoinfo": {
+        "display_name": "20, Hervorster Straße, Goch, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 47574, Germany",
+        "road": "Hervorster Straße",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goch",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47574",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20 Hervorster Straße, Goch, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.691130799241,
+      "lon": 6.105737679674905,
+      "geoinfo": {
+        "display_name": "Flugplatz Goch-Asperden, Am Segelflugplatz, Asperden, Goch, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 47574, Germany",
+        "road": "Am Segelflugplatz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goch",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47574",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "869, Am Segelflugplatz, Goch, 47574 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:47.769603+00:00",
+  "_kind": "geo_samples"
+}

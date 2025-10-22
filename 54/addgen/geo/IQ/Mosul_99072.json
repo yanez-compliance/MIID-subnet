@@ -1,0 +1,47 @@
+{
+  "country_code": "IQ",
+  "country": "Iraq",
+  "city": "Mosul",
+  "geonameid": 99072,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 36.36014707465665,
+      "lon": 43.16181495253035,
+      "geoinfo": {
+        "display_name": "Nineveh, 118-22, محلة 118, Hayy al Maliyah, Mosul, Mosul Central Subdistrict, Mosul District, Nineveh Governorate, 41003, Iraq",
+        "road": "118-22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mosul",
+        "state": "Nineveh Governorate",
+        "postcode": "41003",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "Nineveh, 118-22, محلة 118, Hayy al Maliyah, Mosul, Mosul Central Subdistrict, Mosul District, Nineveh Governorate, 41003, Iraq"
+    },
+    {
+      "lat": 36.332361032481415,
+      "lon": 43.144424578002585,
+      "geoinfo": {
+        "display_name": "Mosul, الدندان, Mosul, Mosul Central Subdistrict, Mosul District, Nineveh Governorate, 14447, Iraq",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "الدندان",
+        "city_district": null,
+        "city": "Mosul",
+        "state": "Nineveh Governorate",
+        "postcode": "14447",
+        "country": "Iraq",
+        "country_code": "iq"
+      },
+      "address": "879, الدندان, Mosul, 14447 Nineveh Governorate, Iraq"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:40.783634+00:00",
+  "_kind": "geo_samples"
+}

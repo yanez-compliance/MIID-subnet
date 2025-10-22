@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "East Gwillimbury",
+  "geonameid": 5945707,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.080273052222005,
+      "lon": -79.49074988933766,
+      "geoinfo": {
+        "display_name": "Morning Sideroad, East Gwillimbury, York Region, Golden Horseshoe, Ontario, L9N 0L1, Canada",
+        "road": "Morning Sideroad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": "L9N 0L1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Morning Sideroad, East Gwillimbury, Ontario, Canada"
+    },
+    {
+      "lat": 44.07517305472486,
+      "lon": -79.43440131083221,
+      "geoinfo": {
+        "display_name": "17884, Leslie Street, Newmarket, York Region, Golden Horseshoe, Ontario, L3Y 9A4, Canada",
+        "road": "Leslie Street",
+        "house_number": "17884",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newmarket",
+        "state": "Ontario",
+        "postcode": "L3Y 9A4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "17884, Leslie Street, Newmarket, York Region, Golden Horseshoe, Ontario, L3Y 9A4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:30.927551+00:00",
+  "_kind": "geo_samples"
+}

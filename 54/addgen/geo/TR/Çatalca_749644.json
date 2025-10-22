@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Çatalca",
+  "geonameid": 749644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.15252514150853,
+      "lon": 28.466362993504333,
+      "geoinfo": {
+        "display_name": "D-569, Kaleiçi Mahallesi, Çatalca, Istanbul, Marmara Region, 34540, Turkey",
+        "road": "D-569",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kaleiçi Mahallesi",
+        "city_district": null,
+        "city": "Çatalca",
+        "state": null,
+        "postcode": "34540",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "D-569, Çatalca, Turkey"
+    },
+    {
+      "lat": 41.11853647633793,
+      "lon": 28.480059830405246,
+      "geoinfo": {
+        "display_name": "Ferhatpaşa Mahallesi, Çatalca, Istanbul, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ferhatpaşa Mahallesi",
+        "city_district": null,
+        "city": "Çatalca",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "994, Ferhatpaşa Mahallesi, Çatalca, Istanbul, 33353 Marmara Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:17.366699+00:00",
+  "_kind": "geo_samples"
+}

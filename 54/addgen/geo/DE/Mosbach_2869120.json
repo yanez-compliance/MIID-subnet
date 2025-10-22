@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mosbach",
+  "geonameid": 2869120,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.36485795609103,
+      "lon": 9.095968380217764,
+      "geoinfo": {
+        "display_name": "Uferstraße, Schreckhof, Diedesheim, Mosbach, Verwaltungsgemeinschaft Mosbach, Neckar-Odenwald-Kreis, Baden-Württemberg, 74821, Germany",
+        "road": "Uferstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mosbach",
+        "state": "Baden-Württemberg",
+        "postcode": "74821",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Uferstraße, Mosbach, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.36323205102412,
+      "lon": 9.136544775100182,
+      "geoinfo": {
+        "display_name": "Schlappenweg, Masseldorn, Mosbach, Nüstenbach, Mosbach, Verwaltungsgemeinschaft Mosbach, Neckar-Odenwald-Kreis, Baden-Württemberg, 74821, Germany",
+        "road": "Schlappenweg",
+        "house_number": null,
+        "neighbourhood": "Masseldorn",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mosbach",
+        "state": "Baden-Württemberg",
+        "postcode": "74821",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "718, Schlappenweg, Masseldorn, Mosbach, Nüstenbach, Mosbach, Verwaltungsgemeinschaft Mosbach, Neckar-Odenwald-Kreis, Baden-Württemberg, 74821, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:49.330237+00:00",
+  "_kind": "geo_samples"
+}

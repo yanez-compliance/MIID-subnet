@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Wacha",
+  "geonameid": 12640459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.179308833187039,
+      "lon": 35.796860343766134,
+      "geoinfo": {
+        "display_name": "Keffa, South West Ethiopia Peoples, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South West Ethiopia Peoples",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Wacha, South West Ethiopia Peoples, Ethiopia"
+    },
+    {
+      "lat": 7.144985094384807,
+      "lon": 35.781000505043345,
+      "geoinfo": {
+        "display_name": "Wacha, Keffa, South West Ethiopia Peoples, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wacha",
+        "state": "South West Ethiopia Peoples",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "200, Wacha, Keffa, 32072 South West Ethiopia Peoples, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:04.776090+00:00",
+  "_kind": "geo_samples"
+}

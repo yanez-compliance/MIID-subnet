@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Temuco",
+  "geonameid": 3870011,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -38.72167998480743,
+      "lon": -72.64000456691427,
+      "geoinfo": {
+        "display_name": "San Andrés, Nuevo Milenio, Temuco, Provincia de Cautín, Araucania Region, 4802670, Chile",
+        "road": "San Andrés",
+        "house_number": null,
+        "neighbourhood": "Nuevo Milenio",
+        "suburb": null,
+        "city_district": null,
+        "city": "Temuco",
+        "state": "Araucania Region",
+        "postcode": "4802670",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "San Andrés, Temuco, Araucania Region, Chile"
+    },
+    {
+      "lat": -38.71949032213271,
+      "lon": -72.61210910655421,
+      "geoinfo": {
+        "display_name": "0602, Recreo, Población Villa Alegre, Temuco, Provincia de Cautín, Araucania Region, 4800601, Chile",
+        "road": "Recreo",
+        "house_number": "0602",
+        "neighbourhood": "Población Villa Alegre",
+        "suburb": null,
+        "city_district": null,
+        "city": "Temuco",
+        "state": "Araucania Region",
+        "postcode": "4800601",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "0602 Recreo, Temuco, Araucania Region, Chile"
+    }
+  ],
+  "updated_at": "2025-10-16T12:10:41.687258+00:00",
+  "_kind": "geo_samples"
+}

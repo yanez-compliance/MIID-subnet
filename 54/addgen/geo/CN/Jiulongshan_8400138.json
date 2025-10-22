@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiulongshan",
+  "geonameid": 8400138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.165070905853995,
+      "lon": 108.25325833088121,
+      "geoinfo": {
+        "display_name": "Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiulongshan, Chongqing, China"
+    },
+    {
+      "lat": 31.179511701308755,
+      "lon": 108.26275454221457,
+      "geoinfo": {
+        "display_name": "Jiulongshan, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiulongshan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "008, Jiulongshan, Kaizhou District, 95557 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:23.975316+00:00",
+  "_kind": "geo_samples"
+}

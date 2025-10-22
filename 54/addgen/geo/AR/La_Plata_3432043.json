@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "La Plata",
+  "geonameid": 3432043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.898886181618586,
+      "lon": -57.99919224768799,
+      "geoinfo": {
+        "display_name": "Avenida 19, José Hernández, Partido de La Plata, Buenos Aires, B1897CAM, Argentina",
+        "road": "Avenida 19",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "José Hernández",
+        "state": "Buenos Aires",
+        "postcode": "B1897CAM",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida 19, La Plata, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.92504321309448,
+      "lon": -57.99511168057386,
+      "geoinfo": {
+        "display_name": "Plomiplas, Avenida 32, La Cumbre, San Carlos, Partido de La Plata, Buenos Aires, B1908FMF, Argentina",
+        "road": "Avenida 32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Cumbre",
+        "city_district": null,
+        "city": "San Carlos",
+        "state": "Buenos Aires",
+        "postcode": "B1908FMF",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Plomiplas, Avenida 32, La Cumbre, San Carlos, Partido de La Plata, Buenos Aires, B1908FMF, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:41.069975+00:00",
+  "_kind": "geo_samples"
+}

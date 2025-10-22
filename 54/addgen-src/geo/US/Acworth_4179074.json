@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Acworth",
+  "geonameid": 4179074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.05889286877953,
+      "lon": -84.69483962343809,
+      "geoinfo": {
+        "display_name": "Lake Acworth Drive, Etowah Cove, Acworth, Cobb County, Georgia, 30101, United States",
+        "road": "Lake Acworth Drive",
+        "house_number": null,
+        "neighbourhood": "Etowah Cove",
+        "suburb": null,
+        "city_district": null,
+        "city": "Acworth",
+        "state": "Georgia",
+        "postcode": "30101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Acworth Drive, Acworth, Georgia, United States"
+    },
+    {
+      "lat": 34.10381668721372,
+      "lon": -84.7065369420063,
+      "geoinfo": {
+        "display_name": "Old Allatoona Road Southeast, Allatoona, Bartow County, Georgia, United States",
+        "road": "Old Allatoona Road Southeast",
+        "house_number": null,
+        "neighbourhood": "Allatoona",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "420, Old Allatoona Road Southeast, Allatoona, Bartow County, 02042 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:51.191304+00:00",
+  "_kind": "geo_samples"
+}

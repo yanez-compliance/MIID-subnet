@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lutz",
+  "geonameid": 4163033,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.12946310875091,
+      "lon": -82.45290597095477,
+      "geoinfo": {
+        "display_name": "Debuel Road, Lutz, Hillsborough County, Florida, 33549, United States",
+        "road": "Debuel Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lutz",
+        "state": "Florida",
+        "postcode": "33549",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Debuel Road, Lutz, Florida, United States"
+    },
+    {
+      "lat": 28.13481276691904,
+      "lon": -82.49237081420101,
+      "geoinfo": {
+        "display_name": "Cheval, Hillsborough County, Florida, 33548, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cheval",
+        "state": "Florida",
+        "postcode": "33548",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "471, Cheval, Hillsborough County, Florida, 33548, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:39.492630+00:00",
+  "_kind": "geo_samples"
+}

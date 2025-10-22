@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rubidoux",
+  "geonameid": 5389213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.015979144344634,
+      "lon": -117.38803691724901,
+      "geoinfo": {
+        "display_name": "24th Street, Belltown, Jurupa Valley, Riverside County, California, 92501, United States",
+        "road": "24th Street",
+        "house_number": null,
+        "neighbourhood": "Belltown",
+        "suburb": null,
+        "city_district": null,
+        "city": "Jurupa Valley",
+        "state": "California",
+        "postcode": "92501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24th Street, Rubidoux, California, United States"
+    },
+    {
+      "lat": 33.98661787104002,
+      "lon": -117.40409946115248,
+      "geoinfo": {
+        "display_name": "5246, Wenatchee Way, Rubidoux, Jurupa Valley, Riverside County, California, 92522, United States",
+        "road": "Wenatchee Way",
+        "house_number": "5246",
+        "neighbourhood": null,
+        "suburb": "Rubidoux",
+        "city_district": null,
+        "city": "Jurupa Valley",
+        "state": "California",
+        "postcode": "92522",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5246, Wenatchee Way, Rubidoux, Jurupa Valley, Riverside County, California, 92522, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:06.726712+00:00",
+  "_kind": "geo_samples"
+}

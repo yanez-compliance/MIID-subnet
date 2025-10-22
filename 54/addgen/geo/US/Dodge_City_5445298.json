@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dodge City",
+  "geonameid": 5445298,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.7335704852349,
+      "lon": -100.01341700305282,
+      "geoinfo": {
+        "display_name": "Minneola Road, South Dodge, Dodge City, Ford County, Kansas, 67801, United States",
+        "road": "Minneola Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dodge City",
+        "state": "Kansas",
+        "postcode": "67801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Minneola Road, Dodge City, Kansas, United States"
+    },
+    {
+      "lat": 37.720297544998736,
+      "lon": -100.02767581541471,
+      "geoinfo": {
+        "display_name": "US 56;US 400, Ford County, Kansas, 67801, United States",
+        "road": "US 56;US 400",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "67801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 56;US 400, Ford County, Kansas, 67801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:51.162034+00:00",
+  "_kind": "geo_samples"
+}

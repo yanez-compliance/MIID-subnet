@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Klin",
+  "geonameid": 547523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.31887439645514,
+      "lon": 36.71708881314949,
+      "geoinfo": {
+        "display_name": "28, Московская улица, Klin, городской округ Клин, Moscow Oblast, Central Federal District, 141607, Russia",
+        "road": "Московская улица",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Klin",
+        "state": "Moscow Oblast",
+        "postcode": "141607",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "28 Московская улица, Klin, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 56.299421826595015,
+      "lon": 36.78145794180052,
+      "geoinfo": {
+        "display_name": "Долголетие, пансионат для пожилых людей, 46К-0170, Фроловское, городской округ Клин, Moscow Oblast, Central Federal District, 141663, Russia",
+        "road": "46К-0170",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "141663",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "46К-0170, Klin, Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:23.004253+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tapachula",
+  "geonameid": 3516266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.912202325086309,
+      "lon": -92.27271588542307,
+      "geoinfo": {
+        "display_name": "Vista Hermosa, Framboyanes, Tapachula, Chiapas, 30700, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Vista Hermosa",
+        "suburb": "Framboyanes",
+        "city_district": null,
+        "city": "Tapachula",
+        "state": "Chiapas",
+        "postcode": "30700",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Vista Hermosa, Tapachula, Chiapas, Mexico"
+    },
+    {
+      "lat": 14.88842116338614,
+      "lon": -92.26626413608871,
+      "geoinfo": {
+        "display_name": "Privada Quinta Sur Camino de la Pita, Benito Juárez 1a, Tapachula, Chiapas, 30715, Mexico",
+        "road": "Privada Quinta Sur Camino de la Pita",
+        "house_number": null,
+        "neighbourhood": "Benito Juárez 1a",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tapachula",
+        "state": "Chiapas",
+        "postcode": "30715",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Privada Quinta Sur Camino de la Pita, Benito Juárez 1a, Tapachula, Chiapas, 30715, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:56.951300+00:00",
+  "_kind": "geo_samples"
+}

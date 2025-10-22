@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mission District",
+  "geonameid": 5373628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.76892424976779,
+      "lon": -122.41323620246881,
+      "geoinfo": {
+        "display_name": "Division Street, Mission District, San Francisco, California, 90103, United States",
+        "road": "Division Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mission District",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "90103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Division Street, Mission District, California, United States"
+    },
+    {
+      "lat": 37.77597315197741,
+      "lon": -122.46081988551907,
+      "geoinfo": {
+        "display_name": "675, 3rd Avenue, Inner Richmond, Richmond District, San Francisco, California, 94118, United States",
+        "road": "3rd Avenue",
+        "house_number": "675",
+        "neighbourhood": null,
+        "suburb": "Richmond District",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "675, 3rd Avenue, Inner Richmond, Richmond District, San Francisco, California, 94118, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:51.676991+00:00",
+  "_kind": "geo_samples"
+}

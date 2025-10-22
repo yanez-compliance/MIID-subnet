@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Löhne",
+  "geonameid": 2876187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.19164455622259,
+      "lon": 8.7484646913049,
+      "geoinfo": {
+        "display_name": "B 611, Gohfeld, Löhne, Kreis Herford, North Rhine-Westphalia, 32584, Germany",
+        "road": "B 611",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gohfeld",
+        "city_district": null,
+        "city": "Löhne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32584",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 611, Löhne, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.17598209620647,
+      "lon": 8.76067935845378,
+      "geoinfo": {
+        "display_name": "Auf der Burg, Gohfeld, Löhne, Kreis Herford, North Rhine-Westphalia, 32584, Germany",
+        "road": "Auf der Burg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gohfeld",
+        "city_district": null,
+        "city": "Löhne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32584",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "035, Auf der Burg, Gohfeld, Löhne, Kreis Herford, North Rhine-Westphalia, 32584, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:58.608945+00:00",
+  "_kind": "geo_samples"
+}

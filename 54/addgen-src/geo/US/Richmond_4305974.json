@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richmond",
+  "geonameid": 4305974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.730196866263974,
+      "lon": -84.31303911925771,
+      "geoinfo": {
+        "display_name": "148, Prewitt Drive, Richmond, Madison County, Kentucky, 40475, United States",
+        "road": "Prewitt Drive",
+        "house_number": "148",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "Kentucky",
+        "postcode": "40475",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "148 Prewitt Drive, Richmond, Kentucky, United States"
+    },
+    {
+      "lat": 37.73168602964678,
+      "lon": -84.3084207628709,
+      "geoinfo": {
+        "display_name": "133, Alycia Avenue, Richmond, Madison County, Kentucky, 40475, United States",
+        "road": "Alycia Avenue",
+        "house_number": "133",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "Kentucky",
+        "postcode": "40475",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "133, Alycia Avenue, Richmond, Madison County, Kentucky, 40475, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:01.624754+00:00",
+  "_kind": "geo_samples"
+}

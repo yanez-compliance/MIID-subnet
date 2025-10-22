@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Casal Palocco",
+  "geonameid": 6698333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.722106480398025,
+      "lon": 12.32616214110807,
+      "geoinfo": {
+        "display_name": "Via Cristoforo Colombo, Lido di Castel Fusano, Municipio Roma X, Rome, Roma Capitale, Lazio, 00122, Italy",
+        "road": "Via Cristoforo Colombo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lido di Castel Fusano",
+        "city_district": null,
+        "city": "Rome",
+        "state": "Lazio",
+        "postcode": "00122",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Cristoforo Colombo, Casal Palocco, Lazio, Italy"
+    },
+    {
+      "lat": 41.75782761085906,
+      "lon": 12.295437636334661,
+      "geoinfo": {
+        "display_name": "Via degli Scavi, Ostia Antica, Municipio Roma X, Stagni di Ostia, Rome, Roma Capitale, Lazio, 00119, Italy",
+        "road": "Via degli Scavi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio Roma X",
+        "city_district": null,
+        "city": "Rome",
+        "state": "Lazio",
+        "postcode": "00119",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "793, Via degli Scavi, Ostia Antica, Municipio Roma X, Stagni di Ostia, Rome, Roma Capitale, Lazio, 00119, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:03.950061+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Badalona",
+  "geonameid": 3129028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.418173845477156,
+      "lon": 2.2185607961147817,
+      "geoinfo": {
+        "display_name": "La Mina - districte 6, Sant Adrià de Besòs, Barcelonès, Barcelona, Catalonia, 08930, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Mina - districte 6",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant Adrià de Besòs",
+        "state": "Catalonia",
+        "postcode": "08930",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "La Mina - districte 6, Badalona, Catalonia, Spain"
+    },
+    {
+      "lat": 41.46194382902855,
+      "lon": 2.251656591878742,
+      "geoinfo": {
+        "display_name": "Avinguda del Guix, les Guixeres, Districte 3, Badalona, Barcelonès, Barcelona, Catalonia, 08915, Spain",
+        "road": "Avinguda del Guix",
+        "house_number": null,
+        "neighbourhood": "les Guixeres",
+        "suburb": null,
+        "city_district": "Districte 3",
+        "city": "Badalona",
+        "state": "Catalonia",
+        "postcode": "08915",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avinguda del Guix, les Guixeres, Districte 3, Badalona, Barcelonès, Barcelona, Catalonia, 08915, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:34.717982+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cergy-Pontoise",
+  "geonameid": 8555643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.02499095896492,
+      "lon": 2.1292987392854306,
+      "geoinfo": {
+        "display_name": "A 15, La Valée du Roy, Saint-Ouen-l'Aumône, Pontoise, Val-d'Oise, Ile-de-France, Metropolitan France, 95310, France",
+        "road": "A 15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Valée du Roy",
+        "city_district": null,
+        "city": "Saint-Ouen-l'Aumône",
+        "state": "Ile-de-France",
+        "postcode": "95310",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 15, Cergy-Pontoise, Ile-de-France, France"
+    },
+    {
+      "lat": 49.00678082486729,
+      "lon": 2.0699083951817854,
+      "geoinfo": {
+        "display_name": "Chemin de Fin d'Oise, Neuville-sur-Oise, Pontoise, Val-d'Oise, Metropolitan France, 95000, France",
+        "road": "Chemin de Fin d'Oise",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuville-sur-Oise",
+        "state": null,
+        "postcode": "95000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "824, Chemin de Fin d'Oise, Neuville-sur-Oise, Pontoise, Val-d'Oise, Metropolitan France, 95000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:15.908996+00:00",
+  "_kind": "geo_samples"
+}

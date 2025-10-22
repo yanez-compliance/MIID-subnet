@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Follonica",
+  "geonameid": 3176849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.910362582882414,
+      "lon": 10.722017885961137,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Follonica, Italy"
+    },
+    {
+      "lat": 42.93978103408145,
+      "lon": 10.764275398359041,
+      "geoinfo": {
+        "display_name": "Area picnic \"Il Moro\", Strada Provinciale 152 Aurelia Vecchia, Follonica, Grosseto, Tuscany, 58022, Italy",
+        "road": "Strada Provinciale 152 Aurelia Vecchia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Follonica",
+        "state": "Tuscany",
+        "postcode": "58022",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Area picnic \"Il Moro\", Strada Provinciale 152 Aurelia Vecchia, Follonica, Grosseto, Tuscany, 58022, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:08.028104+00:00",
+  "_kind": "geo_samples"
+}

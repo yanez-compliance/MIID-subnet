@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lage",
+  "geonameid": 2881956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.02239249802337,
+      "lon": 8.819826725867475,
+      "geoinfo": {
+        "display_name": "Bielefelder Straße, Lieme, Lemgo, Kreis Lippe, North Rhine-Westphalia, 32657, Germany",
+        "road": "Bielefelder Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lieme",
+        "city_district": null,
+        "city": "Lemgo",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32657",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bielefelder Straße, Lage, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.9797591087785,
+      "lon": 8.794969599356984,
+      "geoinfo": {
+        "display_name": "11, Immenweg, Ehrentrup, Lage, Kreis Lippe, North Rhine-Westphalia, 32791, Germany",
+        "road": "Immenweg",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lage",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32791",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Immenweg, Ehrentrup, Lage, Kreis Lippe, North Rhine-Westphalia, 32791, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:13.379039+00:00",
+  "_kind": "geo_samples"
+}

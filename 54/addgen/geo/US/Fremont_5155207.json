@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fremont",
+  "geonameid": 5155207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35928000812787,
+      "lon": -83.08083318470398,
+      "geoinfo": {
+        "display_name": "Bypass Highway, Fremont, Sandusky County, Ohio, 43420, United States",
+        "road": "Bypass Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fremont",
+        "state": "Ohio",
+        "postcode": "43420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bypass Highway, Fremont, Ohio, United States"
+    },
+    {
+      "lat": 41.337322296848384,
+      "lon": -83.16825226004825,
+      "geoinfo": {
+        "display_name": "498, Hedrick Road, Sandusky County, Ohio, 43420, United States",
+        "road": "Hedrick Road",
+        "house_number": "498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "43420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "498, Hedrick Road, Sandusky County, Ohio, 43420, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:38.167689+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Desio",
+  "geonameid": 3177608,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.57741748190206,
+      "lon": 9.222330993634706,
+      "geoinfo": {
+        "display_name": "Via Francesco Cilea, Cascina Talloni, Muggiò, Monza and Brianza, Lombardy, 20835, Italy",
+        "road": "Via Francesco Cilea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muggiò",
+        "state": "Lombardy",
+        "postcode": "20835",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Francesco Cilea, Desio, Lombardy, Italy"
+    },
+    {
+      "lat": 45.60779717410433,
+      "lon": 9.162845236725092,
+      "geoinfo": {
+        "display_name": "44, Via Tagliamento, Masciago Milanese, Bovisio Masciago, Monza and Brianza, Lombardy, 20813, Italy",
+        "road": "Via Tagliamento",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Masciago Milanese",
+        "city_district": null,
+        "city": "Bovisio Masciago",
+        "state": "Lombardy",
+        "postcode": "20813",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "44, Via Tagliamento, Masciago Milanese, Bovisio Masciago, Monza and Brianza, Lombardy, 20813, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:57.451985+00:00",
+  "_kind": "geo_samples"
+}

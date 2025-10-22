@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Cloud",
+  "geonameid": 5044407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.5597469096671,
+      "lon": -94.18337493813924,
+      "geoinfo": {
+        "display_name": "2100, 4th Street North, Saint Cloud, Stearns County, Minnesota, 56303, United States",
+        "road": "4th Street North",
+        "house_number": "2100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Cloud",
+        "state": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2100 4th Street North, Saint Cloud, Minnesota, United States"
+    },
+    {
+      "lat": 45.565245965327584,
+      "lon": -94.14326508122389,
+      "geoinfo": {
+        "display_name": "Lincoln Avenue Southeast, Saint Cloud, Benton County, Minnesota, 56304, United States",
+        "road": "Lincoln Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Cloud",
+        "state": "Minnesota",
+        "postcode": "56304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "694, Lincoln Avenue Southeast, Saint Cloud, Benton County, Minnesota, 56304, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:21.293075+00:00",
+  "_kind": "geo_samples"
+}

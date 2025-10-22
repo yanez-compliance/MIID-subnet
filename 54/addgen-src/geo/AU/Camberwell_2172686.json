@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Camberwell",
+  "geonameid": 2172686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.85303744449794,
+      "lon": 145.08608728697632,
+      "geoinfo": {
+        "display_name": "44, Beryl Street, Glen Iris, Melbourne, City of Boroondara, Victoria, 3146, Australia",
+        "road": "Beryl Street",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Glen Iris",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3146",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "44 Beryl Street, Camberwell, Victoria, Australia"
+    },
+    {
+      "lat": -37.87242026292762,
+      "lon": 145.0783605276487,
+      "geoinfo": {
+        "display_name": "Anniversary Trail, Solway, Ashburton, Melbourne, City of Boroondara, Victoria, 3147, Australia",
+        "road": "Anniversary Trail",
+        "house_number": null,
+        "neighbourhood": "Solway",
+        "suburb": "Ashburton",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3147",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "361, Anniversary Trail, Solway, Ashburton, Melbourne, City of Boroondara, Victoria, 3147, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:04.384853+00:00",
+  "_kind": "geo_samples"
+}

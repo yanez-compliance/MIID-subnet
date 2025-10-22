@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Litoměřice",
+  "geonameid": 3071677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.56471536716442,
+      "lon": 14.169821163611589,
+      "geoinfo": {
+        "display_name": "ev.312, Pohořany, Žitenice, okres Litoměřice, Ústí nad Labem Region, Northwest, 411 41, Czechia",
+        "road": null,
+        "house_number": "ev.312",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pohořany",
+        "state": "Northwest",
+        "postcode": "411 41",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Litoměřice, Northwest, Czechia"
+    },
+    {
+      "lat": 50.503054061270284,
+      "lon": 14.099623896919356,
+      "geoinfo": {
+        "display_name": "247, Prosmyky, Lovosice, okres Litoměřice, Ústí nad Labem Region, Northwest, 411 01, Czechia",
+        "road": "247",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Prosmyky",
+        "city_district": null,
+        "city": "Lovosice",
+        "state": "Northwest",
+        "postcode": "411 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "247, Prosmyky, Lovosice, okres Litoměřice, Ústí nad Labem Region, Northwest, 411 01, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:35.625343+00:00",
+  "_kind": "geo_samples"
+}

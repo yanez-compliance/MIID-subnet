@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bay City",
+  "geonameid": 4985180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.60592704753427,
+      "lon": -83.8932971902223,
+      "geoinfo": {
+        "display_name": "South State Street, Bay City, Bay County, Michigan, 48706, United States",
+        "road": "South State Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bay City",
+        "state": "Michigan",
+        "postcode": "48706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South State Street, Bay City, Michigan, United States"
+    },
+    {
+      "lat": 43.60829603306089,
+      "lon": -83.93668679815312,
+      "geoinfo": {
+        "display_name": "East North Union Road, Monitor Township, Bay County, Michigan, 48706, United States",
+        "road": "East North Union Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monitor Township",
+        "state": "Michigan",
+        "postcode": "48706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, East North Union Road, Monitor Township, Bay County, Michigan, 48706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:45.185311+00:00",
+  "_kind": "geo_samples"
+}

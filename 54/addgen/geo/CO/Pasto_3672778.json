@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Pasto",
+  "geonameid": 3672778,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.1948138521374203,
+      "lon": -77.26711957873309,
+      "geoinfo": {
+        "display_name": "Carrera 1, Comuna 4, Pasto, Centro, Nariño, RAP Pacífico, 520003, Colombia",
+        "road": "Carrera 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Comuna 4",
+        "city": "Pasto",
+        "state": "Nariño",
+        "postcode": "520003",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 1, Pasto, Nariño, Colombia"
+    },
+    {
+      "lat": 1.186694190908773,
+      "lon": -77.27512397310336,
+      "geoinfo": {
+        "display_name": "CARRERA 5E, Barrio Chambú, Comuna 5, Pasto, Centro, Nariño, RAP Pacífico, 520003, Colombia",
+        "road": "CARRERA 5E",
+        "house_number": null,
+        "neighbourhood": "Barrio Chambú",
+        "suburb": null,
+        "city_district": "Comuna 5",
+        "city": "Pasto",
+        "state": "Nariño",
+        "postcode": "520003",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "CARRERA 5E, Barrio Chambú, Comuna 5, Pasto, Centro, Nariño, RAP Pacífico, 520003, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:49.371690+00:00",
+  "_kind": "geo_samples"
+}

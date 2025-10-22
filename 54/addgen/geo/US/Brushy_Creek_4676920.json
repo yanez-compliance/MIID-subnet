@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brushy Creek",
+  "geonameid": 4676920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.54758242380764,
+      "lon": -97.73639375965654,
+      "geoinfo": {
+        "display_name": "Sendero Springs Drive, Sendero Springs, Williamson County, Texas, 78781, United States",
+        "road": "Sendero Springs Drive",
+        "house_number": null,
+        "neighbourhood": "Sendero Springs",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78781",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sendero Springs Drive, Brushy Creek, Texas, United States"
+    },
+    {
+      "lat": 30.53089366322844,
+      "lon": -97.70271912906277,
+      "geoinfo": {
+        "display_name": "2132, Chaparral Drive, Round Rock, Williamson County, Texas, 78681, United States",
+        "road": "Chaparral Drive",
+        "house_number": "2132",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Round Rock",
+        "state": "Texas",
+        "postcode": "78681",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2132, Chaparral Drive, Round Rock, Williamson County, Texas, 78681, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:51.390760+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Blauwput",
+  "geonameid": 2801824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.88828388043877,
+      "lon": 4.731965014128777,
+      "geoinfo": {
+        "display_name": "46, Heuvelhof, Lovensveld, Kessel-Lo, Leuven, Flemish Brabant, Flanders, 3010, Belgium",
+        "road": "Heuvelhof",
+        "house_number": "46",
+        "neighbourhood": "Lovensveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leuven",
+        "state": "Flemish Brabant",
+        "postcode": "3010",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "46 Heuvelhof, Blauwput, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.89582308020341,
+      "lon": 4.759987080946451,
+      "geoinfo": {
+        "display_name": "50, Nachtegalenstraat, Linden, Lubbeek, Leuven, Flemish Brabant, Flanders, 3210, Belgium",
+        "road": "Nachtegalenstraat",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Linden",
+        "state": "Flemish Brabant",
+        "postcode": "3210",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "50, Nachtegalenstraat, Linden, Lubbeek, Leuven, Flemish Brabant, Flanders, 3210, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:39.205656+00:00",
+  "_kind": "geo_samples"
+}

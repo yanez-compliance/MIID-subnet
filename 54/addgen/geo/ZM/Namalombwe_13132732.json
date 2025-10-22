@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Namalombwe",
+  "geonameid": 13132732,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.389175661772633,
+      "lon": 28.183728493059487,
+      "geoinfo": {
+        "display_name": "Chilanga District, Lusaka Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "443, Chilanga District, 93821 Lusaka Province, Zambia"
+    },
+    {
+      "lat": -15.389583878400757,
+      "lon": 28.205613838564005,
+      "geoinfo": {
+        "display_name": "Lusaka Bypass, Lusaka District, Lusaka Province, Zambia",
+        "road": "Lusaka Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "910, Lusaka Bypass, Lusaka District, 77734 Lusaka Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:38.543477+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mercedes",
+  "geonameid": 4710749,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.177873468487018,
+      "lon": -97.94908314648761,
+      "geoinfo": {
+        "display_name": "Hidalgo County, Texas, 78570, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mercedes, Texas, United States"
+    },
+    {
+      "lat": 26.163320965509072,
+      "lon": -97.87436105071019,
+      "geoinfo": {
+        "display_name": "1905, Beech Avenue, North Capisallo Colonia, Mercedes, Hidalgo County, Texas, 78570, United States",
+        "road": "Beech Avenue",
+        "house_number": "1905",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mercedes",
+        "state": "Texas",
+        "postcode": "78570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1905, Beech Avenue, North Capisallo Colonia, Mercedes, Hidalgo County, Texas, 78570, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:15.248700+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Sanhe",
+  "geonameid": 8406214,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.85901919314857,
+      "lon": 107.71387809153981,
+      "geoinfo": {
+        "display_name": "Fengdu, Fengdu County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fengdu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Sanhe, Chongqing, China"
+    },
+    {
+      "lat": 29.867679148842054,
+      "lon": 107.69008948471644,
+      "geoinfo": {
+        "display_name": "武汉 - 大理, Mingshan, Fengdu County, Chongqing, China",
+        "road": "武汉 - 大理",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mingshan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "458, 武汉 - 大理, Mingshan, Fengdu County, 05824 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:03.443479+00:00",
+  "_kind": "geo_samples"
+}

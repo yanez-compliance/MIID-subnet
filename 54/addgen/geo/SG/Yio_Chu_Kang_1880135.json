@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Yio Chu Kang",
+  "geonameid": 1880135,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3860909085614723,
+      "lon": 103.88668217252341,
+      "geoinfo": {
+        "display_name": "Buangkok Drive, Anchorvale, Singapur East, Northeast, Singapore, 539755, Singapore",
+        "road": "Buangkok Drive",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": null,
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "539755",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "148, Buangkok Drive, Anchorvale, Singapur East, Northeast, Singapore, 539755, Singapore"
+    },
+    {
+      "lat": 1.383487294738923,
+      "lon": 103.88283015766025,
+      "geoinfo": {
+        "display_name": "Buangkok Link, Hougang, Singapur East, Central, Singapore, 530991, Singapore",
+        "road": "Buangkok Link",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Hougang",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "530991",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "157, Buangkok Link, Hougang, Singapur East, Central, Singapore, 530991, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:36.069731+00:00",
+  "_kind": "geo_samples"
+}

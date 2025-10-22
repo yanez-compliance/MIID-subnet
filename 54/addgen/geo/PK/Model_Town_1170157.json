@@ -1,0 +1,47 @@
+{
+  "country_code": "PK",
+  "country": "Pakistan",
+  "city": "Model Town",
+  "geonameid": 1170157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.493445948721977,
+      "lon": 74.32442866161522,
+      "geoinfo": {
+        "display_name": "93, Avenue 4 Block C, Model Town, Lahore, Model Town Tehsil, Lahore District, Lahore Division, Punjab, 54600, Pakistan",
+        "road": "Avenue 4 Block C",
+        "house_number": "93",
+        "neighbourhood": "Model Town",
+        "suburb": "Model Town",
+        "city_district": null,
+        "city": "Lahore",
+        "state": "Punjab",
+        "postcode": "54600",
+        "country": "Pakistan",
+        "country_code": "pk"
+      },
+      "address": "93 Avenue 4 Block C, Model Town, Punjab, Pakistan"
+    },
+    {
+      "lat": 31.44951076749531,
+      "lon": 74.29297180728038,
+      "geoinfo": {
+        "display_name": "Lahore City Tehsil, Lahore District, Lahore Division, Punjab, 54770, Pakistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Punjab",
+        "postcode": "54770",
+        "country": "Pakistan",
+        "country_code": "pk"
+      },
+      "address": "830, Lahore City Tehsil, Lahore District, Lahore Division, Punjab, 54770, Pakistan"
+    }
+  ],
+  "updated_at": "2025-10-19T09:07:41.580301+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rissen",
+  "geonameid": 2846455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.59117772990763,
+      "lon": 9.793286223774029,
+      "geoinfo": {
+        "display_name": "Feldweg 65, Sülldorf, Altona, Hamburg, 22589, Germany",
+        "road": "Feldweg 65",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sülldorf",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22589",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Feldweg 65, Rissen, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.61428167156315,
+      "lon": 9.765801971363581,
+      "geoinfo": {
+        "display_name": "Feldweg 92, Rissen, Altona, Hamburg, 22559, Germany",
+        "road": "Feldweg 92",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rissen",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22559",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Feldweg 92, Rissen, Altona, Hamburg, 22559, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:24.875391+00:00",
+  "_kind": "geo_samples"
+}

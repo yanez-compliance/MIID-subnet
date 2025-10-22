@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Komárom",
+  "geonameid": 3049519,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.74767142459181,
+      "lon": 18.173238623432916,
+      "geoinfo": {
+        "display_name": "10, Veľký Harčáš, Komárno, District of Komárno, Region of Nitra, Western Slovakia, 945 01, Slovakia",
+        "road": null,
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Komárno",
+        "state": "Region of Nitra",
+        "postcode": "945 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Komárom, Region of Nitra, Hungary"
+    },
+    {
+      "lat": 47.75351790112408,
+      "lon": 18.09019298586582,
+      "geoinfo": {
+        "display_name": "Halfüstölő, Katapán utca, Koppánymonostor, Komárom, Komáromi járás, Komárom-Esztergom, Central Transdanubia, 2903, Hungary",
+        "road": "Katapán utca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Koppánymonostor",
+        "city_district": null,
+        "city": "Komárom",
+        "state": null,
+        "postcode": "2903",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "539, Katapán utca, 2903 Komárom, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T04:41:46.203189+00:00",
+  "_kind": "geo_samples"
+}

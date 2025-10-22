@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Varese",
+  "geonameid": 3164699,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.819399746058934,
+      "lon": 8.817277691495937,
+      "geoinfo": {
+        "display_name": "28, Via Venticinque Aprile, Brunella, Casbeno, Biumo Superiore, Varese, Lombardy, 21100, Italy",
+        "road": "Via Venticinque Aprile",
+        "house_number": "28",
+        "neighbourhood": "Brunella",
+        "suburb": "Casbeno",
+        "city_district": null,
+        "city": "Varese",
+        "state": "Lombardy",
+        "postcode": "21100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "28 Via Venticinque Aprile, Varese, Lombardy, Italy"
+    },
+    {
+      "lat": 45.84657330608498,
+      "lon": 8.811784407512226,
+      "geoinfo": {
+        "display_name": "Via per Bregazzana, Robarello, Molinetto, Bregazzana, Varese, Lombardy, 21056, Italy",
+        "road": "Via per Bregazzana",
+        "house_number": null,
+        "neighbourhood": "Robarello",
+        "suburb": null,
+        "city_district": null,
+        "city": "Varese",
+        "state": "Lombardy",
+        "postcode": "21056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "202, Via per Bregazzana, Robarello, Molinetto, Bregazzana, Varese, Lombardy, 21056, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:01.199621+00:00",
+  "_kind": "geo_samples"
+}

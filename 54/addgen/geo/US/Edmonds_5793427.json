@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Edmonds",
+  "geonameid": 5793427,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.80252738562438,
+      "lon": -122.35674671599354,
+      "geoinfo": {
+        "display_name": "9207, 217th Street Southwest, Edmonds, Snohomish County, Washington, 98020, United States",
+        "road": "217th Street Southwest",
+        "house_number": "9207",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edmonds",
+        "state": "Washington",
+        "postcode": "98020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9207 217th Street Southwest, Edmonds, Washington, United States"
+    },
+    {
+      "lat": 47.804806414923824,
+      "lon": -122.40012960751095,
+      "geoinfo": {
+        "display_name": "Marina Beach Park, Pine Street, Edmonds, Snohomish County, Washington, 98020, United States",
+        "road": "Pine Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edmonds",
+        "state": "Washington",
+        "postcode": "98020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "199, Pine Street, Edmonds, 98020 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:29.218798+00:00",
+  "_kind": "geo_samples"
+}

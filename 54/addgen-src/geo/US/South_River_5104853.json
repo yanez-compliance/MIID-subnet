@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South River",
+  "geonameid": 5104853,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.482214475313015,
+      "lon": -74.36844518431657,
+      "geoinfo": {
+        "display_name": "Edison, Middlesex County, New Jersey, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edison",
+        "state": "New Jersey",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South River, New Jersey, United States"
+    },
+    {
+      "lat": 40.46947301840031,
+      "lon": -74.3904602415449,
+      "geoinfo": {
+        "display_name": "Pine Ridge, East Brunswick Township, Middlesex County, New Jersey, 08882, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Pine Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Brunswick Township",
+        "state": "New Jersey",
+        "postcode": "08882",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "384, Pine Ridge, East Brunswick Township, Middlesex County, New Jersey, 08882, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:42.503194+00:00",
+  "_kind": "geo_samples"
+}

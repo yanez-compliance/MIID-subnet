@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Valley Station",
+  "geonameid": 4311963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.12470962161729,
+      "lon": -85.87528861586429,
+      "geoinfo": {
+        "display_name": "9001, Aristides Drive, Valley Gardens, Louisville, Jefferson County, Kentucky, 40258, United States",
+        "road": "Aristides Drive",
+        "house_number": "9001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40258",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9001 Aristides Drive, Valley Station, Kentucky, United States"
+    },
+    {
+      "lat": 38.07303808194575,
+      "lon": -85.84677285041862,
+      "geoinfo": {
+        "display_name": "4709, Blevins Gap Road, Louisville, Jefferson County, Kentucky, 40272, United States",
+        "road": "Blevins Gap Road",
+        "house_number": "4709",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40272",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4709, Blevins Gap Road, Louisville, Jefferson County, Kentucky, 40272, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:33.315817+00:00",
+  "_kind": "geo_samples"
+}

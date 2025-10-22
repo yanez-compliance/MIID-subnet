@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Laval",
+  "geonameid": 6050610,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.57296502539864,
+      "lon": -73.67674166275606,
+      "geoinfo": {
+        "display_name": "1555, Rue de Luçon, Pont-Viau, Laval (administrative region), Quebec, H7G 3V8, Canada",
+        "road": "Rue de Luçon",
+        "house_number": "1555",
+        "neighbourhood": null,
+        "suburb": "Pont-Viau",
+        "city_district": null,
+        "city": "Laval (administrative region)",
+        "state": "Quebec",
+        "postcode": "H7G 3V8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1555 Rue de Luçon, Laval, Quebec, Canada"
+    },
+    {
+      "lat": 45.568539328465945,
+      "lon": -73.75263511695285,
+      "geoinfo": {
+        "display_name": "Traverse piétons, Carrefour Laval, Chomedey, Laval (administrative region), Quebec, H7T 1C7, Canada",
+        "road": "Traverse piétons",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chomedey",
+        "city_district": null,
+        "city": "Laval (administrative region)",
+        "state": "Quebec",
+        "postcode": "H7T 1C7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Traverse piétons, Carrefour Laval, Chomedey, Laval (administrative region), Quebec, H7T 1C7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:50.007150+00:00",
+  "_kind": "geo_samples"
+}

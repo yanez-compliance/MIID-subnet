@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Navas",
+  "geonameid": 11549805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.42046056333802,
+      "lon": 2.182671657079208,
+      "geoinfo": {
+        "display_name": "14, Carrer d'Olesa, Navas, Sant Andreu, Barcelona, Barcelonès, Barcelona, Catalonia, 08027, Spain",
+        "road": "Carrer d'Olesa",
+        "house_number": "14",
+        "neighbourhood": "Navas",
+        "suburb": "Sant Andreu",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08027",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "14 Carrer d'Olesa, Navas, Catalonia, Spain"
+    },
+    {
+      "lat": 41.42857657589988,
+      "lon": 2.205527176965646,
+      "geoinfo": {
+        "display_name": "74, Passeig de la Verneda, La Verneda - districte 3, Sant Andreu, Barcelona, Barcelonès, Barcelona, Catalonia, 08020, Spain",
+        "road": "Passeig de la Verneda",
+        "house_number": "74",
+        "neighbourhood": "La Verneda - districte 3",
+        "suburb": "Sant Andreu",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08020",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "74, Passeig de la Verneda, La Verneda - districte 3, Sant Andreu, Barcelona, Barcelonès, Barcelona, Catalonia, 08020, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:58.853343+00:00",
+  "_kind": "geo_samples"
+}

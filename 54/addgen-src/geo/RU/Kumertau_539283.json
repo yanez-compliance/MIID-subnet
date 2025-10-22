@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kumertau",
+  "geonameid": 539283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.790943818966916,
+      "lon": 55.80396382680895,
+      "geoinfo": {
+        "display_name": "Kumertau, Bashkortostan, Volga Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bashkortostan",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Kumertau, Bashkortostan, Russia"
+    },
+    {
+      "lat": 52.76605266427797,
+      "lon": 55.804793009099875,
+      "geoinfo": {
+        "display_name": "Бабаевская улица, Kumertau, Bashkortostan, Volga Federal District, 453300, Russia",
+        "road": "Бабаевская улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kumertau",
+        "state": "Bashkortostan",
+        "postcode": "453300",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "488, Бабаевская улица, Kumertau, Bashkortostan, Volga Federal District, 453300, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:51.314368+00:00",
+  "_kind": "geo_samples"
+}

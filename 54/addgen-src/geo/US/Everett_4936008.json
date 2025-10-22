@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Everett",
+  "geonameid": 4936008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.40217357087083,
+      "lon": -71.04896253863461,
+      "geoinfo": {
+        "display_name": "Pep Boys, 1848;1850, Revere Beach Parkway, Everett, Middlesex County, Massachusetts, 02149, United States",
+        "road": "Revere Beach Parkway",
+        "house_number": "1848;1850",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Everett",
+        "state": "Massachusetts",
+        "postcode": "02149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1848;1850 Revere Beach Parkway, Everett, Massachusetts, United States"
+    },
+    {
+      "lat": 42.40526035058454,
+      "lon": -71.08040276103637,
+      "geoinfo": {
+        "display_name": "Ninth Street, Wellington, Medford, Middlesex County, Massachusetts, 02145, United States",
+        "road": "Ninth Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medford",
+        "state": "Massachusetts",
+        "postcode": "02145",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "950, Ninth Street, Wellington, Medford, Middlesex County, Massachusetts, 02145, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:47.782990+00:00",
+  "_kind": "geo_samples"
+}

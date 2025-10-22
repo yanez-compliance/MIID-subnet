@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McKeesport",
+  "geonameid": 5200499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3292360623986,
+      "lon": -79.82833433230894,
+      "geoinfo": {
+        "display_name": "336, Beckman Drive, McKeesport, Allegheny County, Pennsylvania, 15132, United States",
+        "road": "Beckman Drive",
+        "house_number": "336",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McKeesport",
+        "state": "Pennsylvania",
+        "postcode": "15132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "336 Beckman Drive, McKeesport, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.312232149998934,
+      "lon": -79.8741142765248,
+      "geoinfo": {
+        "display_name": "28, Coursin Road, Lincoln, Allegheny County, Pennsylvania, 15037, United States",
+        "road": "Coursin Road",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lincoln",
+        "state": "Pennsylvania",
+        "postcode": "15037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28, Coursin Road, Lincoln, Allegheny County, Pennsylvania, 15037, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:08.547352+00:00",
+  "_kind": "geo_samples"
+}

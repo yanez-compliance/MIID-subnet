@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wilkes-Barre",
+  "geonameid": 5219488,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.23894804130642,
+      "lon": -75.90996305714752,
+      "geoinfo": {
+        "display_name": "Little People Day Care School, 280, Hanover Street, Wilkes-Barre, Luzerne County, Pennsylvania, 18702, United States",
+        "road": "Hanover Street",
+        "house_number": "280",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilkes-Barre",
+        "state": "Pennsylvania",
+        "postcode": "18702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "280 Hanover Street, Wilkes-Barre, Pennsylvania, United States"
+    },
+    {
+      "lat": 41.21495018712869,
+      "lon": -75.90494653296176,
+      "geoinfo": {
+        "display_name": "35, Barnes Street, Carey's Patch, Ashley, Luzerne County, Pennsylvania, 18706, United States",
+        "road": "Barnes Street",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashley",
+        "state": "Pennsylvania",
+        "postcode": "18706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "35, Barnes Street, Carey's Patch, Ashley, Luzerne County, Pennsylvania, 18706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:39.713101+00:00",
+  "_kind": "geo_samples"
+}

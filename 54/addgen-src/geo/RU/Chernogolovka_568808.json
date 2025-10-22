@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Chernogolovka",
+  "geonameid": 568808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.99118341752674,
+      "lon": 38.35046541160771,
+      "geoinfo": {
+        "display_name": "46К-7230, Chernogolovka, городской округ Черноголовка, Moscow Oblast, Central Federal District, 142432, Russia",
+        "road": "46К-7230",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chernogolovka",
+        "state": "Moscow Oblast",
+        "postcode": "142432",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "46К-7230, Chernogolovka, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.983392867451364,
+      "lon": 38.37809250751962,
+      "geoinfo": {
+        "display_name": "Bogorodsky city district, Moscow Oblast, Central Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "587, Chernogolovka, 47024 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:20.718458+00:00",
+  "_kind": "geo_samples"
+}

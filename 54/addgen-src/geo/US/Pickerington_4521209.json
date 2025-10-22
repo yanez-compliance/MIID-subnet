@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pickerington",
+  "geonameid": 4521209,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.85675233467151,
+      "lon": -82.73099115927866,
+      "geoinfo": {
+        "display_name": "7416, Busey Road, Violet Township, Fairfield County, Ohio, 43110, United States",
+        "road": "Busey Road",
+        "house_number": "7416",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "43110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7416 Busey Road, Pickerington, Ohio, United States"
+    },
+    {
+      "lat": 39.86281430848535,
+      "lon": -82.78167829582036,
+      "geoinfo": {
+        "display_name": "Diley Road, Pickerington, Violet Township, Fairfield County, Ohio, 43110, United States",
+        "road": "Diley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pickerington",
+        "state": "Ohio",
+        "postcode": "43110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "309, Diley Road, Pickerington, Violet Township, Fairfield County, Ohio, 43110, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:40.595961+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hyde",
+  "geonameid": 2646327,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.41139560629168,
+      "lon": -2.0843731481465078,
+      "geoinfo": {
+        "display_name": "Oakwood Road, Dingle Hollow, Romiley, Marple, Stockport, Greater Manchester, England, SK6 4DX, United Kingdom",
+        "road": "Oakwood Road",
+        "house_number": null,
+        "neighbourhood": "Dingle Hollow",
+        "suburb": "Romiley",
+        "city_district": null,
+        "city": "Marple",
+        "state": "England",
+        "postcode": "SK6 4DX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Oakwood Road, Hyde, England, United Kingdom"
+    },
+    {
+      "lat": 53.46965177934485,
+      "lon": -2.0156829278539323,
+      "geoinfo": {
+        "display_name": "Hobson Moor Road, Stalyhill, Mottram, Tameside, Greater Manchester, England, SK14 6LS, United Kingdom",
+        "road": "Hobson Moor Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tameside",
+        "state": "England",
+        "postcode": "SK14 6LS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hobson Moor Road, Stalyhill, Mottram, Tameside, Greater Manchester, England, SK14 6LS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:44.555031+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Noida",
+  "geonameid": 7279746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.58704904949605,
+      "lon": 77.3133687205752,
+      "geoinfo": {
+        "display_name": "Udyog Marg, Harola, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 110096, India",
+        "road": "Udyog Marg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Harola",
+        "city_district": null,
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "postcode": "110096",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Udyog Marg, Noida, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.599810904546697,
+      "lon": 77.31470818480308,
+      "geoinfo": {
+        "display_name": "Vasundhara Enclave, Mayur Vihar Tehsil, East Delhi, Delhi, 110096, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Vasundhara Enclave",
+        "suburb": "Mayur Vihar Tehsil",
+        "city_district": "East Delhi",
+        "city": "Delhi",
+        "state": null,
+        "postcode": "110096",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "109, Vasundhara Enclave, Mayur Vihar Tehsil, East Delhi, Delhi, 110096, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:42.848758+00:00",
+  "_kind": "geo_samples"
+}

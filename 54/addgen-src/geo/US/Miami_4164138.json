@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Miami",
+  "geonameid": 4164138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.76340173713515,
+      "lon": -80.15798268566812,
+      "geoinfo": {
+        "display_name": "Antarctica Way, Port of Miami, Miami, Miami-Dade County, Florida, 33109, United States",
+        "road": "Antarctica Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Antarctica Way, Miami, Florida, United States"
+    },
+    {
+      "lat": 25.76185846967148,
+      "lon": -80.18080226676581,
+      "geoinfo": {
+        "display_name": "Saint Louis Condominium, Miami, Miami-Dade County, Florida, 33131, United States",
+        "road": "Saint Louis Condominium",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33131",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "167, Saint Louis Condominium, Miami, Miami-Dade County, Florida, 33131, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:45.402623+00:00",
+  "_kind": "geo_samples"
+}

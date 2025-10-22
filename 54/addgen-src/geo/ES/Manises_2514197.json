@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Manises",
+  "geonameid": 2514197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.51823047921867,
+      "lon": -0.5065713911069191,
+      "geoinfo": {
+        "display_name": "la Presa, el Collado, Manises, l'Horta Sud, Valencia, Valencian Community, 46182, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "la Presa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Manises",
+        "state": "Valencian Community",
+        "postcode": "46182",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "la Presa, Manises, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.53093213301207,
+      "lon": -0.4736795008424988,
+      "geoinfo": {
+        "display_name": "Carrer 29, Montcanyada, Urbanització La Canyada, Paterna, l'Horta Nord, Valencia, Valencian Community, 46182, Spain",
+        "road": "Carrer 29",
+        "house_number": null,
+        "neighbourhood": "Montcanyada",
+        "suburb": "Urbanització La Canyada",
+        "city_district": null,
+        "city": "Paterna",
+        "state": "Valencian Community",
+        "postcode": "46182",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer 29, Montcanyada, Urbanització La Canyada, Paterna, l'Horta Nord, Valencia, Valencian Community, 46182, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:33.242870+00:00",
+  "_kind": "geo_samples"
+}

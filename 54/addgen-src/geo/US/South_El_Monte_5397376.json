@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South El Monte",
+  "geonameid": 5397376,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.04183259737817,
+      "lon": -118.029741656255,
+      "geoinfo": {
+        "display_name": "1858, Fruitvale Avenue, Los Angeles County, California, 91733, United States",
+        "road": "Fruitvale Avenue",
+        "house_number": "1858",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91733",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1858 Fruitvale Avenue, South El Monte, California, United States"
+    },
+    {
+      "lat": 34.078977569409346,
+      "lon": -118.07536221895221,
+      "geoinfo": {
+        "display_name": "3952, Ivar Avenue, Rosemead, Los Angeles County, California, 91770, United States",
+        "road": "Ivar Avenue",
+        "house_number": "3952",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosemead",
+        "state": "California",
+        "postcode": "91770",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3952, Ivar Avenue, Rosemead, Los Angeles County, California, 91770, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:15.394666+00:00",
+  "_kind": "geo_samples"
+}

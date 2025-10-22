@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tangxiang",
+  "geonameid": 8418585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.698668082076672,
+      "lon": 105.69320082647918,
+      "geoinfo": {
+        "display_name": "Longgang, Dazu, Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longgang",
+        "city_district": null,
+        "city": "Dazu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longgang, Tangxiang, Chongqing, China"
+    },
+    {
+      "lat": 29.720068099549803,
+      "lon": 105.73651235711499,
+      "geoinfo": {
+        "display_name": "Dazu, Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dazu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "986, Dazu, Dazu District, 04256 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:49.222327+00:00",
+  "_kind": "geo_samples"
+}

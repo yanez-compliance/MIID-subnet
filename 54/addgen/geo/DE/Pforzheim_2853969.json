@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pforzheim",
+  "geonameid": 2853969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.90358122763514,
+      "lon": 8.734375152157646,
+      "geoinfo": {
+        "display_name": "Emil-Keßler-Straße, Mäuerach, Eutingen, Pforzheim, Baden-Württemberg, 75177, Germany",
+        "road": "Emil-Keßler-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pforzheim",
+        "state": "Baden-Württemberg",
+        "postcode": "75177",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Emil-Keßler-Straße, Pforzheim, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.865765849929595,
+      "lon": 8.709319933141208,
+      "geoinfo": {
+        "display_name": "Dachsweg, Südoststadt, Pforzheim, Baden-Württemberg, 75181, Germany",
+        "road": "Dachsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Südoststadt",
+        "city_district": null,
+        "city": "Pforzheim",
+        "state": "Baden-Württemberg",
+        "postcode": "75181",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "019, Dachsweg, Südoststadt, Pforzheim, Baden-Württemberg, 75181, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:00.797766+00:00",
+  "_kind": "geo_samples"
+}

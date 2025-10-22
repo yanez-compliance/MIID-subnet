@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 01",
+  "geonameid": 6949674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.74323873226311,
+      "lon": 4.876231926285153,
+      "geoinfo": {
+        "display_name": "Avenue des Frères Lumière, Monplaisir, 8th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69008, France",
+        "road": "Avenue des Frères Lumière",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Monplaisir",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69008",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue des Frères Lumière, Lyon 01, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.77739801789521,
+      "lon": 4.866393219229737,
+      "geoinfo": {
+        "display_name": "Avenue Galline, Tonkin, Villeurbanne, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69100, France",
+        "road": "Avenue Galline",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tonkin",
+        "city_district": null,
+        "city": "Villeurbanne",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "493, Avenue Galline, Tonkin, Villeurbanne, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:30.722120+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Noicattaro",
+  "geonameid": 3172228,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.06427081518314,
+      "lon": 16.972745721832165,
+      "geoinfo": {
+        "display_name": "Strada Vicinale Monte Caponero, Noicattaro, Bari, Apulia, 70016, Italy",
+        "road": "Strada Vicinale Monte Caponero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noicattaro",
+        "state": "Apulia",
+        "postcode": "70016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Vicinale Monte Caponero, Noicattaro, Apulia, Italy"
+    },
+    {
+      "lat": 41.06104209058613,
+      "lon": 17.017317912481413,
+      "geoinfo": {
+        "display_name": "Noicattaro, Bari, Apulia, 70045, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noicattaro",
+        "state": "Apulia",
+        "postcode": "70045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "796, Noicattaro, Bari, Apulia, 70045, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:51.515312+00:00",
+  "_kind": "geo_samples"
+}

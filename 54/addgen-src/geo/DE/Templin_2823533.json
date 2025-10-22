@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Templin",
+  "geonameid": 2823533,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.14806561101304,
+      "lon": 13.516085028333233,
+      "geoinfo": {
+        "display_name": "Schmidtshof, Templin, Uckermark, Brandenburg, 17268, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Templin",
+        "state": "Brandenburg",
+        "postcode": "17268",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Templin, Brandenburg, Germany"
+    },
+    {
+      "lat": 53.13679595524069,
+      "lon": 13.507098310713825,
+      "geoinfo": {
+        "display_name": "4, Dollshof, Templin, Uckermark, Brandenburg, 17268, Germany",
+        "road": "Dollshof",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Templin",
+        "state": "Brandenburg",
+        "postcode": "17268",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Dollshof, Templin, Uckermark, Brandenburg, 17268, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:40.501337+00:00",
+  "_kind": "geo_samples"
+}

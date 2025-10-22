@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Lei Tung Estate",
+  "geonameid": 12719787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.234229853741052,
+      "lon": 114.16783182203964,
+      "geoinfo": {
+        "display_name": "The Summit, Station Road, Sham Shui Kok, Tai Shue Wan, Southern District, Hong Kong Island, Hong Kong, China",
+        "road": "Station Road",
+        "house_number": null,
+        "neighbourhood": "Sham Shui Kok",
+        "suburb": "Tai Shue Wan",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Station Road, Lei Tung Estate, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.20716036773676,
+      "lon": 114.1750487887413,
+      "geoinfo": {
+        "display_name": "Islands District, New Territories, Hong Kong, 999077, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": "999077",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "610, Islands District, New Territories, Hong Kong, 999077, China"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:52.509094+00:00",
+  "_kind": "geo_samples"
+}

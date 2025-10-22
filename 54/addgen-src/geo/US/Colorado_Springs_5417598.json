@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Colorado Springs",
+  "geonameid": 5417598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.82465810958278,
+      "lon": -104.7739631383369,
+      "geoinfo": {
+        "display_name": "3009, Wellshire Boulevard, Colorado Springs, El Paso County, Colorado, 80910, United States",
+        "road": "Wellshire Boulevard",
+        "house_number": "3009",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colorado Springs",
+        "state": "Colorado",
+        "postcode": "80910",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3009 Wellshire Boulevard, Colorado Springs, Colorado, United States"
+    },
+    {
+      "lat": 38.82479939749016,
+      "lon": -104.78704552803723,
+      "geoinfo": {
+        "display_name": "410, Yellowstone Drive, K-Land, Colorado Springs, El Paso County, Colorado, 80910, United States",
+        "road": "Yellowstone Drive",
+        "house_number": "410",
+        "neighbourhood": "K-Land",
+        "suburb": null,
+        "city_district": null,
+        "city": "Colorado Springs",
+        "state": "Colorado",
+        "postcode": "80910",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "410, Yellowstone Drive, K-Land, Colorado Springs, El Paso County, Colorado, 80910, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:39.705708+00:00",
+  "_kind": "geo_samples"
+}

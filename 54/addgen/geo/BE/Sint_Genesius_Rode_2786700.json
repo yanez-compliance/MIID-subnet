@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Genesius-Rode",
+  "geonameid": 2786700,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.784627720909796,
+      "lon": 4.377595573719758,
+      "geoinfo": {
+        "display_name": "1439, Chaussée de Waterloo - Waterloosesteenweg, Fort Jaco, Uccle - Ukkel, Brussels-Capital, 1180, Belgium",
+        "road": "Chaussée de Waterloo - Waterloosesteenweg",
+        "house_number": "1439",
+        "neighbourhood": "Fort Jaco",
+        "suburb": null,
+        "city_district": null,
+        "city": "Uccle - Ukkel",
+        "state": null,
+        "postcode": "1180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1439 Chaussée de Waterloo - Waterloosesteenweg, Sint-Genesius-Rode, Belgium"
+    },
+    {
+      "lat": 50.72538516010962,
+      "lon": 4.328126678772315,
+      "geoinfo": {
+        "display_name": "33, Avenue des Etangs, Clair Bois, Braine-l’Alleud, Braine-l'Alleud, Nivelles, Walloon Brabant, Wallonia, 1420, Belgium",
+        "road": "Avenue des Etangs",
+        "house_number": "33",
+        "neighbourhood": "Clair Bois",
+        "suburb": null,
+        "city_district": "Braine-l’Alleud",
+        "city": "Braine-l'Alleud",
+        "state": "Walloon Brabant",
+        "postcode": "1420",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "33, Avenue des Etangs, Clair Bois, Braine-l’Alleud, Braine-l'Alleud, Nivelles, Walloon Brabant, Wallonia, 1420, Belgium"
+    },
+    {
+      "lat": 50.777479436346695,
+      "lon": 4.39487336681958,
+      "geoinfo": {
+        "display_name": "Sentier du Vuylbeek - Vuilbeekpad, Uccle - Ukkel, Brussels-Capital, 1180, Belgium",
+        "road": "Sentier du Vuylbeek - Vuilbeekpad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uccle - Ukkel",
+        "state": null,
+        "postcode": "1180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "491, Sentier du Vuylbeek - Vuilbeekpad, Uccle - Ukkel, Brussels-Capital, 1180, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:39.964016+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Yishun New Town",
+  "geonameid": 1882155,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.4345966073399727,
+      "lon": 103.86252605505358,
+      "geoinfo": {
+        "display_name": "Simpang, Northwest, Singapore, 768929, Singapore",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Simpang",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "768929",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "758, Simpang, Northwest, Singapore, 768929, Singapore"
+    },
+    {
+      "lat": 1.471728277769213,
+      "lon": 103.8256850356384,
+      "geoinfo": {
+        "display_name": "North Road, Sembawang Shipyard, Sembawang, Northwest, Singapore, 759657, Singapore",
+        "road": "North Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sembawang",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "759657",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "949, North Road, Sembawang Shipyard, Sembawang, Northwest, Singapore, 759657, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:57.303074+00:00",
+  "_kind": "geo_samples"
+}

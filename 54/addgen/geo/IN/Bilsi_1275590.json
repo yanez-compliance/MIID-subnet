@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bilsi",
+  "geonameid": 1275590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.12657603968683,
+      "lon": 78.94297543016461,
+      "geoinfo": {
+        "display_name": "Bilsi, Badaun, Uttar Pradesh, 243633, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bilsi",
+        "state": "Uttar Pradesh",
+        "postcode": "243633",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bilsi, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.154243684934098,
+      "lon": 78.9257724023022,
+      "geoinfo": {
+        "display_name": "MDR61W, Bilsi, Badaun, Uttar Pradesh, India",
+        "road": "MDR61W",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "MDR61W, Bilsi, Badaun, 56578 Uttar Pradesh, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:28:00.212312+00:00",
+  "_kind": "geo_samples"
+}

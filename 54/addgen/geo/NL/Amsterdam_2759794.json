@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Amsterdam",
+  "geonameid": 2759794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.33290472235098,
+      "lon": 4.8758857570022665,
+      "geoinfo": {
+        "display_name": "Willem van Weldammelaan, Buitenveldert-West, Buitenveldert, Zuid, Amsterdam, North Holland, Netherlands, 1082 TD, Netherlands",
+        "road": "Willem van Weldammelaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zuid",
+        "city_district": null,
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "postcode": "1082 TD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Willem van Weldammelaan, Amsterdam, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.38515739518564,
+      "lon": 4.85357547205451,
+      "geoinfo": {
+        "display_name": "Haarlemmerweg, Bosleeuw, Sloterdijk, West, Amsterdam, North Holland, Netherlands, 1055 PM, Netherlands",
+        "road": "Haarlemmerweg",
+        "house_number": null,
+        "neighbourhood": "Bosleeuw",
+        "suburb": "West",
+        "city_district": null,
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "postcode": "1055 PM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "037, Haarlemmerweg, Bosleeuw, Sloterdijk, West, Amsterdam, North Holland, Netherlands, 1055 PM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:42.112939+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maplewood",
+  "geonameid": 5100854,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.729791532181736,
+      "lon": -74.32513482487784,
+      "geoinfo": {
+        "display_name": "64, Highland Avenue, Short Hills, Millburn, Essex County, New Jersey, 07078, United States",
+        "road": "Highland Avenue",
+        "house_number": "64",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Short Hills",
+        "state": "New Jersey",
+        "postcode": "07078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "64 Highland Avenue, Maplewood, New Jersey, United States"
+    },
+    {
+      "lat": 40.72904712508883,
+      "lon": -74.30609714844182,
+      "geoinfo": {
+        "display_name": "Rahway Trail (White), Short Hills, Millburn, Essex County, New Jersey, 07041, United States",
+        "road": "Rahway Trail (White)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Short Hills",
+        "state": "New Jersey",
+        "postcode": "07041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "093, Rahway Trail (White), Short Hills, Millburn, Essex County, New Jersey, 07041, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:26.982738+00:00",
+  "_kind": "geo_samples"
+}

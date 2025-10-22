@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "North Vancouver",
+  "geonameid": 6090785,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.31182838373389,
+      "lon": -123.11265776817389,
+      "geoinfo": {
+        "display_name": "Warehouse 6, 5, Senator Road, Norgate, Lions Gate-Lower Capilano, North Vancouver, District of North Vancouver, Metro Vancouver Regional District, British Columbia, V7P 3H9, Canada",
+        "road": "Senator Road",
+        "house_number": "5",
+        "neighbourhood": "Norgate",
+        "suburb": "Lions Gate-Lower Capilano",
+        "city_district": null,
+        "city": "North Vancouver",
+        "state": "British Columbia",
+        "postcode": "V7P 3H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "5 Senator Road, North Vancouver, British Columbia, Canada"
+    },
+    {
+      "lat": 49.29082261795646,
+      "lon": -123.03124975441638,
+      "geoinfo": {
+        "display_name": "Bridgeway Street, Hastings-Sunrise, Vancouver, Metro Vancouver Regional District, British Columbia, V5K, Canada",
+        "road": "Bridgeway Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hastings-Sunrise",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5K",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "887, Bridgeway Street, Hastings-Sunrise, Vancouver, Metro Vancouver Regional District, British Columbia, V5K, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:29.550855+00:00",
+  "_kind": "geo_samples"
+}

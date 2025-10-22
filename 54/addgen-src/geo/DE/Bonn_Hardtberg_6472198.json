@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bonn Hardtberg",
+  "geonameid": 6472198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.72422683649227,
+      "lon": 7.076636991583135,
+      "geoinfo": {
+        "display_name": "3, Röckumstraße, Endenich, Stadtbezirk Bonn, Bonn, North Rhine-Westphalia, 53121, Germany",
+        "road": "Röckumstraße",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Stadtbezirk Bonn",
+        "city": "Bonn",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53121",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Röckumstraße, Bonn Hardtberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.709087407208955,
+      "lon": 7.064489248448876,
+      "geoinfo": {
+        "display_name": "Mitarbeiter, Auf dem Kirchbüchel, Lengsdorf, Hardtberg, Bonn, North Rhine-Westphalia, 53127, Germany",
+        "road": "Auf dem Kirchbüchel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hardtberg",
+        "city_district": null,
+        "city": "Bonn",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53127",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "724, Auf dem Kirchbüchel, Bonn Hardtberg, 53127 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:51.072867+00:00",
+  "_kind": "geo_samples"
+}

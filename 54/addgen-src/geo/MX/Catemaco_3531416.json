@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Catemaco",
+  "geonameid": 3531416,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.412717375543757,
+      "lon": -95.10828065882492,
+      "geoinfo": {
+        "display_name": "Calle Nicolás Bravo, Catemaco, Veracruz, Mexico",
+        "road": "Calle Nicolás Bravo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Catemaco",
+        "state": "Veracruz",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Nicolás Bravo, Catemaco, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.45456746180169,
+      "lon": -95.11453393107246,
+      "geoinfo": {
+        "display_name": "Los Carreón, Catemaco, Veracruz, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Catemaco",
+        "state": "Veracruz",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "146, Los Carreón, Catemaco, 16990 Veracruz, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:16.986010+00:00",
+  "_kind": "geo_samples"
+}

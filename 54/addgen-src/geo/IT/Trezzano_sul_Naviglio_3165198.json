@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Trezzano sul Naviglio",
+  "geonameid": 3165198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.44579804892428,
+      "lon": 9.09892594359572,
+      "geoinfo": {
+        "display_name": "Via Isonzo, Rione La Corte, Cesano Boscone, Milan, Lombardy, 20152, Italy",
+        "road": "Via Isonzo",
+        "house_number": null,
+        "neighbourhood": "Rione La Corte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cesano Boscone",
+        "state": "Lombardy",
+        "postcode": "20152",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Isonzo, Trezzano sul Naviglio, Lombardy, Italy"
+    },
+    {
+      "lat": 45.44992156507299,
+      "lon": 9.064305276854233,
+      "geoinfo": {
+        "display_name": "Via Assiano, Parco Agricolo Sud, Muggiano, Milan, Lombardy, 20019, Italy",
+        "road": "Via Assiano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Muggiano",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "818, Via Assiano, Parco Agricolo Sud, Muggiano, Milan, Lombardy, 20019, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:55.373370+00:00",
+  "_kind": "geo_samples"
+}

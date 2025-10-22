@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Papalotla",
+  "geonameid": 3815447,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.175688148471217,
+      "lon": -98.17419015858809,
+      "geoinfo": {
+        "display_name": "Mazatecochco, Mazatecochco de José María Morelos, Tlaxcala, 90790, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mazatecochco",
+        "state": "Tlaxcala",
+        "postcode": "90790",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Papalotla, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.13256170975713,
+      "lon": -98.2218684455145,
+      "geoinfo": {
+        "display_name": "Carretera Federal Puebla-Tlaxcala, Puebla City, Municipio de Puebla, Puebla, 72014, Mexico",
+        "road": "Carretera Federal Puebla-Tlaxcala",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puebla City",
+        "state": "Puebla",
+        "postcode": "72014",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "437, Carretera Federal Puebla-Tlaxcala, Puebla City, Municipio de Puebla, Puebla, 72014, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:31:32.606991+00:00",
+  "_kind": "geo_samples"
+}

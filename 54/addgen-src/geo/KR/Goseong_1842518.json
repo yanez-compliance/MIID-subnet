@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Goseong",
+  "geonameid": 1842518,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.98671282778655,
+      "lon": 128.36261319851664,
+      "geoinfo": {
+        "display_name": "Songsan-ri, Goseong-gun, South Gyeongsang, 53937, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Songsan-ri",
+        "state": null,
+        "postcode": "53937",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Goseong, South Korea"
+    },
+    {
+      "lat": 34.98189189899703,
+      "lon": 128.342292250223,
+      "geoinfo": {
+        "display_name": "Donghae-ro, Songhak-ri, Goseong-gun, South Gyeongsang, 53937, South Korea",
+        "road": "Donghae-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Songhak-ri",
+        "state": null,
+        "postcode": "53937",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "852, Donghae-ro, 53937 Goseong, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:27.102078+00:00",
+  "_kind": "geo_samples"
+}

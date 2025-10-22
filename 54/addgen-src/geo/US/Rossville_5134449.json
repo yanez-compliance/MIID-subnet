@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rossville",
+  "geonameid": 5134449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.55027136252712,
+      "lon": -74.16725591912929,
+      "geoinfo": {
+        "display_name": "3599, Richmond Avenue, Eltingville, Staten Island, Richmond County, New York, 10312, United States",
+        "road": "Richmond Avenue",
+        "house_number": "3599",
+        "neighbourhood": "Eltingville",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3599 Richmond Avenue, Rossville, New York, United States"
+    },
+    {
+      "lat": 40.550034567859996,
+      "lon": -74.24387883035148,
+      "geoinfo": {
+        "display_name": "Charleston, Staten Island, Richmond County, New York, 07077, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Charleston",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "07077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "433, Charleston, Staten Island, Richmond County, New York, 07077, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:01.201033+00:00",
+  "_kind": "geo_samples"
+}

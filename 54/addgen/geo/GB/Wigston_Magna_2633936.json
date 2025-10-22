@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wigston Magna",
+  "geonameid": 2633936,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.608978385302514,
+      "lon": -1.069798757849212,
+      "geoinfo": {
+        "display_name": "Stoughton Road, Oadby, Oadby and Wigston, Leicestershire, England, LE2 2GJ, United Kingdom",
+        "road": "Stoughton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oadby and Wigston",
+        "state": "England",
+        "postcode": "LE2 2GJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Stoughton Road, Wigston Magna, England, United Kingdom"
+    },
+    {
+      "lat": 52.58440837841372,
+      "lon": -1.117221501261333,
+      "geoinfo": {
+        "display_name": "Holmden Avenue, Wigston Fields, South Wigston, Wigston, Oadby and Wigston, Leicestershire, England, LE18 2EF, United Kingdom",
+        "road": "Holmden Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Wigston",
+        "city_district": null,
+        "city": "Oadby and Wigston",
+        "state": "England",
+        "postcode": "LE18 2EF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Holmden Avenue, Wigston Fields, South Wigston, Wigston, Oadby and Wigston, Leicestershire, England, LE18 2EF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:39.973923+00:00",
+  "_kind": "geo_samples"
+}

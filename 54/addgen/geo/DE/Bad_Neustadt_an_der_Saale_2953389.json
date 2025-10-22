@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Neustadt an der Saale",
+  "geonameid": 2953389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.303446861157546,
+      "lon": 10.264166316255896,
+      "geoinfo": {
+        "display_name": "Bildhauser Straße, Bad Neustadt an der Saale, Bad Neustadt an der Saale (VGem), Landkreis Rhön-Grabfeld, Bavaria, 97616, Germany",
+        "road": "Bildhauser Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Neustadt an der Saale",
+        "state": "Bavaria",
+        "postcode": "97616",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bildhauser Straße, Bad Neustadt an der Saale, Bavaria, Germany"
+    },
+    {
+      "lat": 50.32239078966528,
+      "lon": 10.136569690443475,
+      "geoinfo": {
+        "display_name": "Talweg, Windshausen, Hohenroth, Bad Neustadt an der Saale (VGem), Landkreis Rhön-Grabfeld, Bavaria, 97618, Germany",
+        "road": "Talweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Windshausen",
+        "state": "Bavaria",
+        "postcode": "97618",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "196, Talweg, Windshausen, Hohenroth, Bad Neustadt an der Saale (VGem), Landkreis Rhön-Grabfeld, Bavaria, 97618, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:18.247181+00:00",
+  "_kind": "geo_samples"
+}

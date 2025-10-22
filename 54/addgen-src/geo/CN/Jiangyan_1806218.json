@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiangyan",
+  "geonameid": 1806218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.529505130514664,
+      "lon": 120.13688326422957,
+      "geoinfo": {
+        "display_name": "人民北路, 天目山街道, Jiangyan District, Taizhou, Jiangsu, 225500, China",
+        "road": "人民北路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "天目山街道",
+        "city_district": null,
+        "city": "Jiangyan District",
+        "state": "Jiangsu",
+        "postcode": "225500",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "人民北路, Jiangyan, Jiangsu, China"
+    },
+    {
+      "lat": 32.53520108001706,
+      "lon": 120.14880656843717,
+      "geoinfo": {
+        "display_name": "天目山街道, Jiangyan District, Taizhou, Jiangsu, 225500, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "天目山街道",
+        "city_district": null,
+        "city": "Jiangyan District",
+        "state": "Jiangsu",
+        "postcode": "225500",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "949, 天目山街道, Jiangyan District, Taizhou, Jiangsu, 225500, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:51.646489+00:00",
+  "_kind": "geo_samples"
+}

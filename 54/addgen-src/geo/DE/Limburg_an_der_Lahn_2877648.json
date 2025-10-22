@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Limburg an der Lahn",
+  "geonameid": 2877648,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.356404731645455,
+      "lon": 8.07124610590424,
+      "geoinfo": {
+        "display_name": "Hof Talwiese, 1, Mensfelden, Hünfelden, Landkreis Limburg-Weilburg, Hesse, 65597, Germany",
+        "road": null,
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mensfelden",
+        "state": "Hesse",
+        "postcode": "65597",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Limburg an der Lahn, Hesse, Germany"
+    },
+    {
+      "lat": 50.41814732567923,
+      "lon": 8.091022549117294,
+      "geoinfo": {
+        "display_name": "K 521, Dehrn, Runkel, Landkreis Limburg-Weilburg, Hesse, 65594, Germany",
+        "road": "K 521",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dehrn",
+        "state": "Hesse",
+        "postcode": "65594",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 521, Limburg an der Lahn, 65594 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:31.490780+00:00",
+  "_kind": "geo_samples"
+}

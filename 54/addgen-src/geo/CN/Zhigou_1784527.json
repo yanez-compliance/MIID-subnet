@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhigou",
+  "geonameid": 1784527,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.9087435091979,
+      "lon": 119.2403136352069,
+      "geoinfo": {
+        "display_name": "Zhigou, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhigou, Shandong, China"
+    },
+    {
+      "lat": 35.9414818360754,
+      "lon": 119.22749846550909,
+      "geoinfo": {
+        "display_name": "Zhucheng City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "741, Zhucheng City, Weifang, 68983 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:41.419139+00:00",
+  "_kind": "geo_samples"
+}

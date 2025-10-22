@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Colmar",
+  "geonameid": 3024297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.058579810167096,
+      "lon": 7.342397605708554,
+      "geoinfo": {
+        "display_name": "35, Chemin des Maquisards, Colmar, Colmar-Ribeauvillé, Haut-Rhin, Grand Est, Metropolitan France, 68000, France",
+        "road": "Chemin des Maquisards",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colmar",
+        "state": "Grand Est",
+        "postcode": "68000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "35 Chemin des Maquisards, Colmar, Grand Est, France"
+    },
+    {
+      "lat": 48.041070113366764,
+      "lon": 7.350767456216074,
+      "geoinfo": {
+        "display_name": "Haute Digue Thurweg, Wettolsheim, Colmar-Ribeauvillé, Haut-Rhin, Grand Est, Metropolitan France, 68920, France",
+        "road": "Haute Digue Thurweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wettolsheim",
+        "state": "Grand Est",
+        "postcode": "68920",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "742, Haute Digue Thurweg, Wettolsheim, Colmar-Ribeauvillé, Haut-Rhin, Grand Est, Metropolitan France, 68920, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:01.521814+00:00",
+  "_kind": "geo_samples"
+}

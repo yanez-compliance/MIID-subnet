@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qingquan",
+  "geonameid": 1797793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.488065546109002,
+      "lon": 115.27265873515604,
+      "geoinfo": {
+        "display_name": "S112, Xishui County, Huanggang, Hubei, China",
+        "road": "S112",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huanggang",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S112, Qingquan, Hubei, China"
+    },
+    {
+      "lat": 30.48389263106351,
+      "lon": 115.23542487223513,
+      "geoinfo": {
+        "display_name": "Qingquan, Huanggang, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huanggang",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "902, Qingquan, Huanggang, 55025 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:35:04.767376+00:00",
+  "_kind": "geo_samples"
+}

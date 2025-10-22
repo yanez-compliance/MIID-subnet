@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burien",
+  "geonameid": 5788516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.465634709087134,
+      "lon": -122.38157948922519,
+      "geoinfo": {
+        "display_name": "Seahurst, Burien, King County, Washington, 98166, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Seahurst",
+        "suburb": null,
+        "city_district": null,
+        "city": "Burien",
+        "state": "Washington",
+        "postcode": "98166",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seahurst, Burien, Washington, United States"
+    },
+    {
+      "lat": 47.49265537432458,
+      "lon": -122.34663880522386,
+      "geoinfo": {
+        "display_name": "928, Southwest 124th Street, Mount View, Burien, King County, Washington, 98146, United States",
+        "road": "Southwest 124th Street",
+        "house_number": "928",
+        "neighbourhood": "Mount View",
+        "suburb": null,
+        "city_district": null,
+        "city": "Burien",
+        "state": "Washington",
+        "postcode": "98146",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "928, Southwest 124th Street, Mount View, Burien, King County, Washington, 98146, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:08.002053+00:00",
+  "_kind": "geo_samples"
+}

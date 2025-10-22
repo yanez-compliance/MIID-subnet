@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McAllen",
+  "geonameid": 4709796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.160150769393223,
+      "lon": -98.22819226876584,
+      "geoinfo": {
+        "display_name": "South 10th Street, McAllen, Hidalgo County, Texas, 78503, United States",
+        "road": "South 10th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McAllen",
+        "state": "Texas",
+        "postcode": "78503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South 10th Street, McAllen, Texas, United States"
+    },
+    {
+      "lat": 26.24406799830988,
+      "lon": -98.2311498194569,
+      "geoinfo": {
+        "display_name": "West Redbud Avenue, McAllen, Hidalgo County, Texas, 78504, United States",
+        "road": "West Redbud Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McAllen",
+        "state": "Texas",
+        "postcode": "78504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "186, West Redbud Avenue, McAllen, Hidalgo County, Texas, 78504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:15.028019+00:00",
+  "_kind": "geo_samples"
+}

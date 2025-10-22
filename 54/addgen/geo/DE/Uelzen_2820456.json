@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Uelzen",
+  "geonameid": 2820456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.991097884338046,
+      "lon": 10.515222237616838,
+      "geoinfo": {
+        "display_name": "31, Am Diecksberg, Westerweyhe, Kirchweyhe, Uelzen, Lower Saxony, 29525, Germany",
+        "road": "Am Diecksberg",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": "Westerweyhe",
+        "city_district": null,
+        "city": "Uelzen",
+        "state": "Lower Saxony",
+        "postcode": "29525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "31 Am Diecksberg, Uelzen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.99736422156853,
+      "lon": 10.607937940520037,
+      "geoinfo": {
+        "display_name": "Woltersburg, Molzen, Uelzen, Lower Saxony, 29525, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uelzen",
+        "state": "Lower Saxony",
+        "postcode": "29525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "218, Woltersburg, Molzen, Uelzen, Lower Saxony, 29525, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:51.181047+00:00",
+  "_kind": "geo_samples"
+}

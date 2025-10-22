@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Broadmoor",
+  "geonameid": 5909204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.1378495088862,
+      "lon": -123.08650187614668,
+      "geoinfo": {
+        "display_name": "Highway 99, East Richmond, Richmond, Metro Vancouver Regional District, British Columbia, V7A 4E1, Canada",
+        "road": "Highway 99",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "East Richmond",
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7A 4E1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Highway 99, Broadmoor, British Columbia, Canada"
+    },
+    {
+      "lat": 49.144877315296526,
+      "lon": -123.19807414320826,
+      "geoinfo": {
+        "display_name": "West Dyke Trail, Monds, Seafair, Richmond, Metro Vancouver Regional District, British Columbia, V7C, Canada",
+        "road": "West Dyke Trail",
+        "house_number": null,
+        "neighbourhood": "Monds",
+        "suburb": "Seafair",
+        "city_district": null,
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V7C",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "549, West Dyke Trail, Monds, Seafair, Richmond, Metro Vancouver Regional District, British Columbia, V7C, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:20.693088+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Montreux",
+  "geonameid": 2659601,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.40337711313592,
+      "lon": 6.875746264127809,
+      "geoinfo": {
+        "display_name": "Plage de l'Empereur, Noville, District d'Aigle, Vaud, 1845, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noville",
+        "state": "Vaud",
+        "postcode": "1845",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Montreux, Vaud, Switzerland"
+    },
+    {
+      "lat": 46.42414336511386,
+      "lon": 6.915773050185052,
+      "geoinfo": {
+        "display_name": "Quai des Fleurs, Pallens, Territet, Montreux, District de la Riviera-Pays-d’Enhaut, Vaud, 1822, Switzerland",
+        "road": "Quai des Fleurs",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montreux",
+        "state": "Vaud",
+        "postcode": "1822",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Quai des Fleurs, Montreux, Vaud, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:05:38.358660+00:00",
+  "_kind": "geo_samples"
+}

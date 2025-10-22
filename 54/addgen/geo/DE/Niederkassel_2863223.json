@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Niederkassel",
+  "geonameid": 2863223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.79364574778162,
+      "lon": 7.008912191561085,
+      "geoinfo": {
+        "display_name": "A 555, Widdig, Bornheim, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53332, Germany",
+        "road": "A 555",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bornheim",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53332",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 555, Niederkassel, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.80366032586746,
+      "lon": 7.0667624125775355,
+      "geoinfo": {
+        "display_name": "Marktstraße, Rheidt, Niederkassel, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53859, Germany",
+        "road": "Marktstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rheidt",
+        "city_district": null,
+        "city": "Niederkassel",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53859",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "270, Marktstraße, Rheidt, Niederkassel, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53859, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:29.349652+00:00",
+  "_kind": "geo_samples"
+}

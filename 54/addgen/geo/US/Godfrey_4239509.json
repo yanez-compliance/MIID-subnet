@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Godfrey",
+  "geonameid": 4239509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.98850535875406,
+      "lon": -90.17082326248278,
+      "geoinfo": {
+        "display_name": "Godfrey, Madison County, Illinois, 62012, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Godfrey",
+        "state": "Illinois",
+        "postcode": "62012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Godfrey, Illinois, United States"
+    },
+    {
+      "lat": 38.972753170447376,
+      "lon": -90.13642286245374,
+      "geoinfo": {
+        "display_name": "5257, Seminary Rd, Madison County, Illinois, 62002, United States",
+        "road": "Seminary Rd",
+        "house_number": "5257",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "62002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5257, Seminary Rd, Madison County, Illinois, 62002, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:09.609368+00:00",
+  "_kind": "geo_samples"
+}

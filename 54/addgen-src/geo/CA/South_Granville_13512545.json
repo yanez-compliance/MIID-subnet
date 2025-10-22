@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "South Granville",
+  "geonameid": 13512545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.25715611911776,
+      "lon": -123.15111012466156,
+      "geoinfo": {
+        "display_name": "2015, West 16th Avenue, Kitsilano, Vancouver, Metro Vancouver Regional District, British Columbia, V6J, Canada",
+        "road": "West 16th Avenue",
+        "house_number": "2015",
+        "neighbourhood": null,
+        "suburb": "Kitsilano",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6J",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2015 West 16th Avenue, South Granville, British Columbia, Canada"
+    },
+    {
+      "lat": 49.288944695707464,
+      "lon": -123.13318468996378,
+      "geoinfo": {
+        "display_name": "Kenilworth, 843, Cardero Street, Lower Robson, West End, Vancouver, Metro Vancouver Regional District, British Columbia, V6G, Canada",
+        "road": "Cardero Street",
+        "house_number": "843",
+        "neighbourhood": "Lower Robson",
+        "suburb": "West End",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6G",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Kenilworth, 843, Cardero Street, Lower Robson, West End, Vancouver, Metro Vancouver Regional District, British Columbia, V6G, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:36.304142+00:00",
+  "_kind": "geo_samples"
+}

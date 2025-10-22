@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Bergen",
+  "geonameid": 2759154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.70654040997689,
+      "lon": 4.674163003498949,
+      "geoinfo": {
+        "display_name": "MTB 308, Jachtweg, Schoorl, Bergen, North Holland, Netherlands, 1871 HC, Netherlands",
+        "road": "Jachtweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schoorl",
+        "state": "North Holland",
+        "postcode": "1871 HC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Jachtweg, Bergen, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.66293539516673,
+      "lon": 4.765274671765957,
+      "geoinfo": {
+        "display_name": "Korhoenstraat, De Horn-Noord, Alkmaar, North Holland, Netherlands, 1826 HW, Netherlands",
+        "road": "Korhoenstraat",
+        "house_number": null,
+        "neighbourhood": "De Horn-Noord",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alkmaar",
+        "state": "North Holland",
+        "postcode": "1826 HW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "569, Korhoenstraat, De Horn-Noord, Alkmaar, North Holland, Netherlands, 1826 HW, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:34.297793+00:00",
+  "_kind": "geo_samples"
+}

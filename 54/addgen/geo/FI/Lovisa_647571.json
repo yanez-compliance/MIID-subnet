@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Lovisa",
+  "geonameid": 647571,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.4328512243117,
+      "lon": 26.26317682694122,
+      "geoinfo": {
+        "display_name": "Leikarintie, Loviisa, Loviisa sub-region, Uusimaa, Mainland Finland, 07940, Finland",
+        "road": "Leikarintie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loviisa",
+        "state": "Uusimaa",
+        "postcode": "07940",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Leikarintie, Lovisa, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.47032133521492,
+      "lon": 26.160299583226912,
+      "geoinfo": {
+        "display_name": "Loviisa, Loviisa sub-region, Uusimaa, Mainland Finland, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loviisa",
+        "state": "Uusimaa",
+        "postcode": null,
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Lovisa, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:57:56.447124+00:00",
+  "_kind": "geo_samples"
+}

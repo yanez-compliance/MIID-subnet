@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Etterbeek",
+  "geonameid": 2798578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.85388699656357,
+      "lon": 4.414988279144681,
+      "geoinfo": {
+        "display_name": "E40, Quartier des Constellations - Sterrenbeeldenwijk, Woluwe-Saint-Lambert - Sint-Lambrechts-Woluwe, Brussels-Capital, 1200, Belgium",
+        "road": "E40",
+        "house_number": null,
+        "neighbourhood": "Quartier des Constellations - Sterrenbeeldenwijk",
+        "suburb": null,
+        "city_district": null,
+        "city": "Woluwe-Saint-Lambert - Sint-Lambrechts-Woluwe",
+        "state": null,
+        "postcode": "1200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E40, Etterbeek, Belgium"
+    },
+    {
+      "lat": 50.823175741613355,
+      "lon": 4.363747306230692,
+      "geoinfo": {
+        "display_name": "92, Rue Washington - Washingtonstraat, Tenbosch - Tenbos, Brussels, Ixelles - Elsene, Brussels-Capital, 1050, Belgium",
+        "road": "Rue Washington - Washingtonstraat",
+        "house_number": "92",
+        "neighbourhood": "Tenbosch - Tenbos",
+        "suburb": null,
+        "city_district": "Brussels",
+        "city": "Ixelles - Elsene",
+        "state": null,
+        "postcode": "1050",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "92, Rue Washington - Washingtonstraat, Tenbosch - Tenbos, Brussels, Ixelles - Elsene, Brussels-Capital, 1050, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:01.982572+00:00",
+  "_kind": "geo_samples"
+}

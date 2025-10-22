@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jukui",
+  "geonameid": 8405717,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.601437230382047,
+      "lon": 107.58611120905574,
+      "geoinfo": {
+        "display_name": "Kailiang Expressway, Liangping District, Chongqing, China",
+        "road": "Kailiang Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Kailiang Expressway, Jukui, Chongqing, China"
+    },
+    {
+      "lat": 30.671872190295506,
+      "lon": 107.60852398462788,
+      "geoinfo": {
+        "display_name": "Lirang, Liangping District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lirang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "908, Lirang, Liangping District, 66212 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:36.619080+00:00",
+  "_kind": "geo_samples"
+}

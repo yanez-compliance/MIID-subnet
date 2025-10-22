@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roosevelt",
+  "geonameid": 5134323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71223480536709,
+      "lon": -73.59806718679415,
+      "geoinfo": {
+        "display_name": "168, Lenox Avenue, Hempstead Views, Uniondale, Town of Hempstead, Nassau County, New York, 11553, United States",
+        "road": "Lenox Avenue",
+        "house_number": "168",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uniondale",
+        "state": "New York",
+        "postcode": "11553",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "168 Lenox Avenue, Roosevelt, New York, United States"
+    },
+    {
+      "lat": 40.67051410315356,
+      "lon": -73.6231291203773,
+      "geoinfo": {
+        "display_name": "Buckingham Road, Village of Rockville Centre, Town of Hempstead, Nassau County, New York, 11570, United States",
+        "road": "Buckingham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Rockville Centre",
+        "state": "New York",
+        "postcode": "11570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "542, Buckingham Road, Village of Rockville Centre, Town of Hempstead, Nassau County, New York, 11570, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:16.873564+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sanford",
+  "geonameid": 4490329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.48815765161391,
+      "lon": -79.15048047346662,
+      "geoinfo": {
+        "display_name": "Ross Street, Sanford, Lee County, North Carolina, 27330, United States",
+        "road": "Ross Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanford",
+        "state": "North Carolina",
+        "postcode": "27330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ross Street, Sanford, North Carolina, United States"
+    },
+    {
+      "lat": 35.445044782404246,
+      "lon": -79.1814736484292,
+      "geoinfo": {
+        "display_name": "3401, Northridge Drive, Brookhaven, Lee County, North Carolina, 27330, United States",
+        "road": "Northridge Drive",
+        "house_number": "3401",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27330",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3401, Northridge Drive, Brookhaven, Lee County, North Carolina, 27330, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:26.055297+00:00",
+  "_kind": "geo_samples"
+}

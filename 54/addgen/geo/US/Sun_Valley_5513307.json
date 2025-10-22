@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sun Valley",
+  "geonameid": 5513307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.596611156978476,
+      "lon": -119.77316144933685,
+      "geoinfo": {
+        "display_name": "267, East 6th Avenue, Sun Valley, Washoe County, Nevada, 89433, United States",
+        "road": "East 6th Avenue",
+        "house_number": "267",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sun Valley",
+        "state": "Nevada",
+        "postcode": "89433",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "267 East 6th Avenue, Sun Valley, Nevada, United States"
+    },
+    {
+      "lat": 39.560397224208295,
+      "lon": -119.81031499187507,
+      "geoinfo": {
+        "display_name": "999, South University Park Loop, Reno, Washoe County, Nevada, 89512, United States",
+        "road": "South University Park Loop",
+        "house_number": "999",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reno",
+        "state": "Nevada",
+        "postcode": "89512",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "999, South University Park Loop, Reno, Washoe County, Nevada, 89512, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:13:12.389578+00:00",
+  "_kind": "geo_samples"
+}

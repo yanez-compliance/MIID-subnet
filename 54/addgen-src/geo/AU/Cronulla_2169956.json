@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Cronulla",
+  "geonameid": 2169956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.100634552207424,
+      "lon": 151.13484273944303,
+      "geoinfo": {
+        "display_name": "Marley, Sutherland Shire Council, New South Wales, 2232, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": "2232",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Cronulla, New South Wales, Australia"
+    },
+    {
+      "lat": -34.07494962738899,
+      "lon": 151.1931762155574,
+      "geoinfo": {
+        "display_name": "New South Wales, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "391, 48723 New South Wales, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:00.037626+00:00",
+  "_kind": "geo_samples"
+}

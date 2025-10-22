@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Al Muteena",
+  "geonameid": 13118421,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.287592823128083,
+      "lon": 55.29987683160382,
+      "geoinfo": {
+        "display_name": "Palm Deira, Dubai, United Arab Emirates",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Palm Deira",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "Palm Deira, Al Muteena, Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.278916058659632,
+      "lon": 55.319823217630024,
+      "geoinfo": {
+        "display_name": "Deira, 2 Street, Dubai, United Arab Emirates",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Deira",
+        "suburb": "2 Street",
+        "city_district": null,
+        "city": "Dubai",
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "Deira, Al Muteena, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-16T10:19:28.177218+00:00",
+  "_kind": "geo_samples"
+}

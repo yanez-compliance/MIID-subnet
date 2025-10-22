@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Fredericia",
+  "geonameid": 2621951,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 55.56232326433274,
+      "lon": 9.71180956453523,
+      "geoinfo": {
+        "display_name": "271, Skovvej, Hannerup, Fredericia, Fredericia Municipality, 7000, Denmark",
+        "road": "Skovvej",
+        "house_number": "271",
+        "neighbourhood": null,
+        "suburb": "Hannerup",
+        "city_district": null,
+        "city": "Fredericia",
+        "state": null,
+        "postcode": "7000",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "271 Skovvej, Fredericia, Denmark"
+    },
+    {
+      "lat": 55.57472220402579,
+      "lon": 9.745863042409344,
+      "geoinfo": {
+        "display_name": "4, Kirsebærvej, Vasedal, Fredericia, Fredericia Municipality, 7000, Denmark",
+        "road": "Kirsebærvej",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Vasedal",
+        "city_district": null,
+        "city": "Fredericia",
+        "state": null,
+        "postcode": "7000",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "4 Kirsebærvej, Fredericia, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-16T12:59:02.695065+00:00",
+  "_kind": "geo_samples"
+}

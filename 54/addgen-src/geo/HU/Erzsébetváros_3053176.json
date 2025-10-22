@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Erzsébetváros",
+  "geonameid": 3053176,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.487396027639726,
+      "lon": 19.131546525046424,
+      "geoinfo": {
+        "display_name": "Szent László-templom, 44, Szent László tér, Ligettelek, 10th district, Budapest, Central Hungary, 1102, Hungary",
+        "road": "Szent László tér",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Ligettelek",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1102",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "44 Szent László tér, Erzsébetváros, Hungary"
+    },
+    {
+      "lat": 47.4710882453665,
+      "lon": 19.03088896368281,
+      "geoinfo": {
+        "display_name": "Ercsi út, Kelenföld, 11th district, Budapest, Central Hungary, 1115, Hungary",
+        "road": "Ercsi út",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kelenföld",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1115",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "Ercsi út, Kelenföld, 11th district, Budapest, Central Hungary, 1115, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:55.232154+00:00",
+  "_kind": "geo_samples"
+}

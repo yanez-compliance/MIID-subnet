@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Anak Bukit",
+  "geonameid": 13118138,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3258617324345177,
+      "lon": 103.81429963028359,
+      "geoinfo": {
+        "display_name": "35, Dunearn Close, Novena, Singapore Central, Northwest, Singapore, 289891, Singapore",
+        "road": "Dunearn Close",
+        "house_number": "35",
+        "neighbourhood": "Singapore Central",
+        "suburb": "Novena",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "289891",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "35, Dunearn Close, Novena, Singapore Central, Northwest, Singapore, 289891, Singapore"
+    },
+    {
+      "lat": 1.3717888382868606,
+      "lon": 103.75899180382241,
+      "geoinfo": {
+        "display_name": "Gombak Drive, Bukit Batok, Southwest, Singapore, 669645, Singapore",
+        "road": "Gombak Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bukit Batok",
+        "city_district": "Southwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "669645",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "494, Gombak Drive, Bukit Batok, Southwest, Singapore, 669645, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T06:34:50.091371+00:00",
+  "_kind": "geo_samples"
+}

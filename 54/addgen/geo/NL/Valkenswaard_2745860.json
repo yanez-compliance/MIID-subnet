@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Valkenswaard",
+  "geonameid": 2745860,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.32782681217264,
+      "lon": 5.476428208814378,
+      "geoinfo": {
+        "display_name": "15-BP01, Brugseheide, Valkenswaard, North Brabant, Netherlands, 5556 XW, Netherlands",
+        "road": "Brugseheide",
+        "house_number": "15-BP01",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valkenswaard",
+        "state": "North Brabant",
+        "postcode": "5556 XW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "15-BP01 Brugseheide, Valkenswaard, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.33082388296884,
+      "lon": 5.458523681227687,
+      "geoinfo": {
+        "display_name": "118, Maastrichterweg, Valkenswaard, North Brabant, Netherlands, 5556 VA, Netherlands",
+        "road": "Maastrichterweg",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valkenswaard",
+        "state": "North Brabant",
+        "postcode": "5556 VA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "118, Maastrichterweg, Valkenswaard, North Brabant, Netherlands, 5556 VA, Netherlands"
+    },
+    {
+      "lat": 51.33902842410805,
+      "lon": 5.432025059217041,
+      "geoinfo": {
+        "display_name": "Westparallel, Lage Heide, Valkenswaard, North Brabant, Netherlands, 5551 TJ, Netherlands",
+        "road": "Westparallel",
+        "house_number": null,
+        "neighbourhood": "Lage Heide",
+        "suburb": null,
+        "city_district": null,
+        "city": "Valkenswaard",
+        "state": "North Brabant",
+        "postcode": "5551 TJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "527, Westparallel, Lage Heide, Valkenswaard, North Brabant, Netherlands, 5551 TJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:08.474994+00:00",
+  "_kind": "geo_samples"
+}

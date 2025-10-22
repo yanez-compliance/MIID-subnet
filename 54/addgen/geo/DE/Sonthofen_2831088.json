@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sonthofen",
+  "geonameid": 2831088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.49886138115732,
+      "lon": 10.340992531110906,
+      "geoinfo": {
+        "display_name": "B 308, Liebenstein, Vorderhindelang, Bad Hindelang, Landkreis Oberallgäu, Bavaria, 87541, Germany",
+        "road": "B 308",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Hindelang",
+        "state": "Bavaria",
+        "postcode": "87541",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 308, Sonthofen, Bavaria, Germany"
+    },
+    {
+      "lat": 47.53422679046418,
+      "lon": 10.279876537024013,
+      "geoinfo": {
+        "display_name": "Im Esch, Erzflöße, Burgberg, Burgberg im Allgäu, Landkreis Oberallgäu, Bavaria, 87545, Germany",
+        "road": "Im Esch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Erzflöße",
+        "city_district": null,
+        "city": "Burgberg im Allgäu",
+        "state": "Bavaria",
+        "postcode": "87545",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "048, Im Esch, Erzflöße, Burgberg, Burgberg im Allgäu, Landkreis Oberallgäu, Bavaria, 87545, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:29.486988+00:00",
+  "_kind": "geo_samples"
+}

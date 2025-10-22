@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vladimir",
+  "geonameid": 473247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.16784064540415,
+      "lon": 40.42906827487637,
+      "geoinfo": {
+        "display_name": "улица Куйбышева, Фрунзенский район, Vladimir, городской округ Владимир, Vladimir Oblast, Central Federal District, 600035, Russia",
+        "road": "улица Куйбышева",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Фрунзенский район",
+        "city": "Vladimir",
+        "state": "Vladimir Oblast",
+        "postcode": "600035",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Куйбышева, Vladimir, Vladimir Oblast, Russia"
+    },
+    {
+      "lat": 56.10799800846098,
+      "lon": 40.36114624707816,
+      "geoinfo": {
+        "display_name": "16, 2-я Кольцевая улица, Ленинский район, Vladimir, городской округ Владимир, Vladimir Oblast, Central Federal District, 600033, Russia",
+        "road": "2-я Кольцевая улица",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Ленинский район",
+        "city_district": "Ленинский район",
+        "city": "Vladimir",
+        "state": "Vladimir Oblast",
+        "postcode": "600033",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "16, 2-я Кольцевая улица, Ленинский район, Vladimir, городской округ Владимир, Vladimir Oblast, Central Federal District, 600033, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:28:47.035735+00:00",
+  "_kind": "geo_samples"
+}

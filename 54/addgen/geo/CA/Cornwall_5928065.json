@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Cornwall",
+  "geonameid": 5928065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.995641666037585,
+      "lon": -74.73765750857913,
+      "geoinfo": {
+        "display_name": "Recreation Road, Cornwall Island, Eastern Ontario, Ontario, K6H 0G5, Canada",
+        "road": "Recreation Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cornwall Island",
+        "state": "Ontario",
+        "postcode": "K6H 0G5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Recreation Road, Cornwall, Ontario, Canada"
+    },
+    {
+      "lat": 45.03805049027238,
+      "lon": -74.7360120948781,
+      "geoinfo": {
+        "display_name": "1352, St. Michel Avenue, Cornwall, Eastern Ontario, Ontario, K6H 3G6, Canada",
+        "road": "St. Michel Avenue",
+        "house_number": "1352",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cornwall",
+        "state": "Ontario",
+        "postcode": "K6H 3G6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1352, St. Michel Avenue, Cornwall, Eastern Ontario, Ontario, K6H 3G6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:27.275692+00:00",
+  "_kind": "geo_samples"
+}

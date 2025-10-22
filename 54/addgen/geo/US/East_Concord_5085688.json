@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Concord",
+  "geonameid": 5085688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.24661886249971,
+      "lon": -71.54116937059587,
+      "geoinfo": {
+        "display_name": "87, Mountain Road, East Concord, Concord, Merrimack County, New Hampshire, 03301, United States",
+        "road": "Mountain Road",
+        "house_number": "87",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "New Hampshire",
+        "postcode": "03301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "87 Mountain Road, East Concord, New Hampshire, United States"
+    },
+    {
+      "lat": 43.26794647861932,
+      "lon": -71.53659242061198,
+      "geoinfo": {
+        "display_name": "27, Snow Pond Road, Concord, Merrimack County, New Hampshire, 03301, United States",
+        "road": "Snow Pond Road",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "New Hampshire",
+        "postcode": "03301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27, Snow Pond Road, Concord, Merrimack County, New Hampshire, 03301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:17.000306+00:00",
+  "_kind": "geo_samples"
+}

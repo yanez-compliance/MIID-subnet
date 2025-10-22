@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Quaregnon",
+  "geonameid": 2788499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.47551001842301,
+      "lon": 3.841430354655574,
+      "geoinfo": {
+        "display_name": "Rue Louis Caty, Douvrain, Baudour, Saint-Ghislain, Mons, Hainaut, Wallonia, 7331, Belgium",
+        "road": "Rue Louis Caty",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ghislain",
+        "state": "Hainaut",
+        "postcode": "7331",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue Louis Caty, Quaregnon, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.457174590100244,
+      "lon": 3.928275733527184,
+      "geoinfo": {
+        "display_name": "Boulevard André Delvaux, Les Grands Prés, Faubourg du Parc, Mons, Hainaut, Wallonia, 7000, Belgium",
+        "road": "Boulevard André Delvaux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Faubourg du Parc",
+        "city_district": "Mons",
+        "city": "Mons",
+        "state": "Hainaut",
+        "postcode": "7000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "312, Boulevard André Delvaux, Les Grands Prés, Faubourg du Parc, Mons, Hainaut, Wallonia, 7000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:56.778267+00:00",
+  "_kind": "geo_samples"
+}

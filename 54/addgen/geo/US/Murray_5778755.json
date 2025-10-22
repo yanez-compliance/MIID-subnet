@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Murray",
+  "geonameid": 5778755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.66963442320205,
+      "lon": -111.88423580412422,
+      "geoinfo": {
+        "display_name": "4680, Meadowview Circle, Murray Hill Gardens, Murray, Salt Lake County, Utah, 84107, United States",
+        "road": "Meadowview Circle",
+        "house_number": "4680",
+        "neighbourhood": "Murray Hill Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "Murray",
+        "state": "Utah",
+        "postcode": "84107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4680 Meadowview Circle, Murray, Utah, United States"
+    },
+    {
+      "lat": 40.68491019091988,
+      "lon": -111.85507165183893,
+      "geoinfo": {
+        "display_name": "1272, Oros Avenue, Millcreek, Salt Lake County, Utah, 84124, United States",
+        "road": "Oros Avenue",
+        "house_number": "1272",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millcreek",
+        "state": "Utah",
+        "postcode": "84124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1272, Oros Avenue, Millcreek, Salt Lake County, Utah, 84124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:49.383830+00:00",
+  "_kind": "geo_samples"
+}

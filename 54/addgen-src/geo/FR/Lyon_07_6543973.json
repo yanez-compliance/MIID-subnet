@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 07",
+  "geonameid": 6543973,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.72413269216335,
+      "lon": 4.844694503734153,
+      "geoinfo": {
+        "display_name": "Rue Pierre-Gilles de Gennes, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France",
+        "road": "Rue Pierre-Gilles de Gennes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerland",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Pierre-Gilles de Gennes, Lyon 07, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.75102009570174,
+      "lon": 4.864974251134142,
+      "geoinfo": {
+        "display_name": "19, Rue du Dauphiné, La Buire, Sans Souci, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69003, France",
+        "road": "Rue du Dauphiné",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Sans Souci",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69003",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "19, Rue du Dauphiné, La Buire, Sans Souci, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69003, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:04.551443+00:00",
+  "_kind": "geo_samples"
+}

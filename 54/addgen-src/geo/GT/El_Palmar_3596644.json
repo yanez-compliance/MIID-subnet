@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "El Palmar",
+  "geonameid": 3596644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.650685765536272,
+      "lon": -91.56748790479806,
+      "geoinfo": {
+        "display_name": "Nuevo Palmar, San Felipe, Retalhuleu, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nuevo Palmar",
+        "state": "Retalhuleu",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "El Palmar, Retalhuleu, Guatemala"
+    },
+    {
+      "lat": 14.662143178914727,
+      "lon": -91.57374358400192,
+      "geoinfo": {
+        "display_name": "El Palmar, Quetzaltenango, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quetzaltenango",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "873, El Palmar, 42672 Quetzaltenango, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:49:26.040967+00:00",
+  "_kind": "geo_samples"
+}

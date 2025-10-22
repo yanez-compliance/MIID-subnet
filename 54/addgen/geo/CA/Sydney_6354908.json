@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Sydney",
+  "geonameid": 6354908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.09644776823716,
+      "lon": -60.170875363316995,
+      "geoinfo": {
+        "display_name": "Mira Road, Cape Breton Regional Municipality, Cape Breton County, Nova Scotia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mira Road",
+        "state": "Nova Scotia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sydney, Nova Scotia, Canada"
+    },
+    {
+      "lat": 46.16173780713526,
+      "lon": -60.132398406378115,
+      "geoinfo": {
+        "display_name": "136, Junction Road, Grand Lake Road, Cape Breton Regional Municipality, Cape Breton County, Nova Scotia, B1P 5T9, Canada",
+        "road": "Junction Road",
+        "house_number": "136",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Lake Road",
+        "state": "Nova Scotia",
+        "postcode": "B1P 5T9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "136, Junction Road, Grand Lake Road, Cape Breton Regional Municipality, Cape Breton County, Nova Scotia, B1P 5T9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:12.381624+00:00",
+  "_kind": "geo_samples"
+}

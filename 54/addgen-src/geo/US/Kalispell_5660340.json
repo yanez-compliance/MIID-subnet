@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kalispell",
+  "geonameid": 5660340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.17103737705226,
+      "lon": -114.29683020181325,
+      "geoinfo": {
+        "display_name": "Kalispell South, Kalispell, Flathead County, Montana, 59901, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kalispell South",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalispell",
+        "state": "Montana",
+        "postcode": "59901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kalispell South, Kalispell, Montana, United States"
+    },
+    {
+      "lat": 48.23408162722808,
+      "lon": -114.3267067205367,
+      "geoinfo": {
+        "display_name": "Hutton Ranch Road, Hutton Ranch Plaza, Kalispell, Flathead County, Montana, 59902, United States",
+        "road": "Hutton Ranch Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kalispell",
+        "state": "Montana",
+        "postcode": "59902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "818, Hutton Ranch Road, Hutton Ranch Plaza, Kalispell, Flathead County, Montana, 59902, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:33.669395+00:00",
+  "_kind": "geo_samples"
+}

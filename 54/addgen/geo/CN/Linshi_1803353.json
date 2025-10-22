@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Linshi",
+  "geonameid": 1803353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.64240015414612,
+      "lon": 107.15422378283013,
+      "geoinfo": {
+        "display_name": "Shituo, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shituo",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Linshi, Chongqing, China"
+    },
+    {
+      "lat": 29.658073939583975,
+      "lon": 107.15956969612989,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "214, Fuling District, 30896 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:03.698605+00:00",
+  "_kind": "geo_samples"
+}

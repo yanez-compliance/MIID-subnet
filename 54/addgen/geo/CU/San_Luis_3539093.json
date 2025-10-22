@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "San Luis",
+  "geonameid": 3539093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.16541257995133,
+      "lon": -75.81374827942868,
+      "geoinfo": {
+        "display_name": "Charco Tumba, Dos Caminos, San Luis, Santiago de Cuba, 92300, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dos Caminos",
+        "state": "Santiago de Cuba",
+        "postcode": "92300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "San Luis, Santiago de Cuba, Cuba"
+    },
+    {
+      "lat": 20.21028669510903,
+      "lon": -75.82310823301957,
+      "geoinfo": {
+        "display_name": "Rafael Reyes, Ciudad de San Luis, San Luis, Santiago de Cuba, 92300, Cuba",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Rafael Reyes",
+        "suburb": null,
+        "city_district": "Ciudad de San Luis",
+        "city": "San Luis",
+        "state": "Santiago de Cuba",
+        "postcode": "92300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "700, Rafael Reyes, Ciudad de San Luis, San Luis, Santiago de Cuba, 92300, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T01:46:58.995243+00:00",
+  "_kind": "geo_samples"
+}

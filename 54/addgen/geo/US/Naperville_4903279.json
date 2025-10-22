@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Naperville",
+  "geonameid": 4903279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.79887170337892,
+      "lon": -88.13760208420058,
+      "geoinfo": {
+        "display_name": "Iroquois Avenue, Naperville, DuPage County, Illinois, 60566, United States",
+        "road": "Iroquois Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naperville",
+        "state": "Illinois",
+        "postcode": "60566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Iroquois Avenue, Naperville, Illinois, United States"
+    },
+    {
+      "lat": 41.76270924478631,
+      "lon": -88.15482514040737,
+      "geoinfo": {
+        "display_name": "Brom Drive, Naperville, Naperville Township, DuPage County, Illinois, 60540, United States",
+        "road": "Brom Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naperville",
+        "state": "Illinois",
+        "postcode": "60540",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "568, Brom Drive, Naperville, Naperville Township, DuPage County, Illinois, 60540, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:32.599237+00:00",
+  "_kind": "geo_samples"
+}

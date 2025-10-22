@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Phalauda",
+  "geonameid": 1259818,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.146710985681985,
+      "lon": 77.81633326225995,
+      "geoinfo": {
+        "display_name": "Mawana, Meerut, Uttar Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Phalauda, Uttar Pradesh, India"
+    },
+    {
+      "lat": 29.210673705233056,
+      "lon": 77.86587153615204,
+      "geoinfo": {
+        "display_name": "Dandupur, Mawana, Meerut, Uttar Pradesh, 250401, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dandupur",
+        "state": "Uttar Pradesh",
+        "postcode": "250401",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "132, Dandupur, Mawana, Meerut, Uttar Pradesh, 250401, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:00.808884+00:00",
+  "_kind": "geo_samples"
+}

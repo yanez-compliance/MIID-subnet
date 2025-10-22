@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waltham",
+  "geonameid": 4954380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.36382450302982,
+      "lon": -71.23785538002527,
+      "geoinfo": {
+        "display_name": "18;20, Wadsworth Avenue, South Side, Waltham, Middlesex County, Massachusetts, 02453, United States",
+        "road": "Wadsworth Avenue",
+        "house_number": "18;20",
+        "neighbourhood": "South Side",
+        "suburb": null,
+        "city_district": null,
+        "city": "Waltham",
+        "state": "Massachusetts",
+        "postcode": "02453",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18;20 Wadsworth Avenue, Waltham, Massachusetts, United States"
+    },
+    {
+      "lat": 42.34568443164284,
+      "lon": -71.26149420330133,
+      "geoinfo": {
+        "display_name": "South Avenue, Weston, Middlesex County, Massachusetts, 02481, United States",
+        "road": "South Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weston",
+        "state": "Massachusetts",
+        "postcode": "02481",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "461, South Avenue, Weston, Middlesex County, Massachusetts, 02481, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:15.070706+00:00",
+  "_kind": "geo_samples"
+}

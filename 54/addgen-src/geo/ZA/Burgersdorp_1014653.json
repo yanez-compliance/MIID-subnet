@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Burgersdorp",
+  "geonameid": 1014653,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.008365476256053,
+      "lon": 26.347208346207545,
+      "geoinfo": {
+        "display_name": "Kloof Street, Gariep Ward 3, Burgersdorp, Gariep Local Municipality, Joe Gqabi District Municipality, Eastern Cape, South Africa",
+        "road": "Kloof Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gariep Ward 3",
+        "city_district": null,
+        "city": "Gariep Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Kloof Street, Burgersdorp, Eastern Cape, South Africa"
+    },
+    {
+      "lat": -31.021866532665587,
+      "lon": 26.366795528175974,
+      "geoinfo": {
+        "display_name": "Gariep Ward 3, Gariep Local Municipality, Joe Gqabi District Municipality, Eastern Cape, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gariep Ward 3",
+        "city_district": null,
+        "city": "Gariep Local Municipality",
+        "state": "Eastern Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Gariep Ward 3, Gariep Local Municipality, Joe Gqabi District Municipality, 31642 Eastern Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:45:50.644934+00:00",
+  "_kind": "geo_samples"
+}

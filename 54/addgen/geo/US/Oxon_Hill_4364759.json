@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxon Hill",
+  "geonameid": 4364759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.78063788901614,
+      "lon": -76.97051047505084,
+      "geoinfo": {
+        "display_name": "Steuben Avenue, Squires Woods, Oxon Hill, Prince George's County, Maryland, 20744, United States",
+        "road": "Steuben Avenue",
+        "house_number": null,
+        "neighbourhood": "Squires Woods",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxon Hill",
+        "state": "Maryland",
+        "postcode": "20744",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Steuben Avenue, Oxon Hill, Maryland, United States"
+    },
+    {
+      "lat": 38.805333636420244,
+      "lon": -77.02450924864195,
+      "geoinfo": {
+        "display_name": "Anacostia Freeway, Ward 8, Washington, District of Columbia, 20375, United States",
+        "road": "Anacostia Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20375",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Anacostia Freeway, Ward 8, Washington, District of Columbia, 20375, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:14.955527+00:00",
+  "_kind": "geo_samples"
+}

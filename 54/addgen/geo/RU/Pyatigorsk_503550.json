@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Pyatigorsk",
+  "geonameid": 503550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.01823165601981,
+      "lon": 43.092472255388174,
+      "geoinfo": {
+        "display_name": "улица Володарского, Goryachevodsky, Pyatigorsk, Stavropol Krai, North Caucasian Federal District, 357560, Russia",
+        "road": "улица Володарского",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goryachevodsky",
+        "state": "Stavropol Krai",
+        "postcode": "357560",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Володарского, Pyatigorsk, Stavropol Krai, Russia"
+    },
+    {
+      "lat": 44.06603498149503,
+      "lon": 43.02295794556362,
+      "geoinfo": {
+        "display_name": "Газпром, Бештаугорское шоссе, Pyatigorsk, Stavropol Krai, North Caucasian Federal District, 357538, Russia",
+        "road": "Бештаугорское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pyatigorsk",
+        "state": "Stavropol Krai",
+        "postcode": "357538",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "565, Бештаугорское шоссе, Pyatigorsk, 357538 Stavropol Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:20.751007+00:00",
+  "_kind": "geo_samples"
+}

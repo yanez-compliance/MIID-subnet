@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Candler-McAfee",
+  "geonameid": 7260019,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.704734832219486,
+      "lon": -84.30954288127886,
+      "geoinfo": {
+        "display_name": "2794, Horse Shoe Drive, Gresham Park, Candler-McAfee, DeKalb County, Georgia, 30316, United States",
+        "road": "Horse Shoe Drive",
+        "house_number": "2794",
+        "neighbourhood": null,
+        "suburb": "Gresham Park",
+        "city_district": null,
+        "city": "Candler-McAfee",
+        "state": "Georgia",
+        "postcode": "30316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2794 Horse Shoe Drive, Candler-McAfee, Georgia, United States"
+    },
+    {
+      "lat": 33.75910405303133,
+      "lon": -84.23957957452075,
+      "geoinfo": {
+        "display_name": "Covington Highway, Belvedere Park, DeKalb County, Georgia, 30002, United States",
+        "road": "Covington Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belvedere Park",
+        "state": "Georgia",
+        "postcode": "30002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "529, Covington Highway, Belvedere Park, DeKalb County, Georgia, 30002, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:23.286862+00:00",
+  "_kind": "geo_samples"
+}

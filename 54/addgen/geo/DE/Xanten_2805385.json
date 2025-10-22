@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Xanten",
+  "geonameid": 2805385,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.64669488491025,
+      "lon": 6.4637225278926005,
+      "geoinfo": {
+        "display_name": "16, Fürstenberg, Beek, Birten, Xanten, Kreis Wesel, North Rhine-Westphalia, 46509, Germany",
+        "road": "Fürstenberg",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Beek",
+        "city_district": null,
+        "city": "Xanten",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46509",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Fürstenberg, Xanten, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.672367673813085,
+      "lon": 6.506003821536701,
+      "geoinfo": {
+        "display_name": "Leckerfeld, Bislich-Ortskern, Bislich, Wesel, Kreis Wesel, North Rhine-Westphalia, 46487, Germany",
+        "road": "Leckerfeld",
+        "house_number": null,
+        "neighbourhood": "Bislich-Ortskern",
+        "suburb": "Bislich",
+        "city_district": null,
+        "city": "Wesel",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46487",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "967, Leckerfeld, Bislich-Ortskern, Bislich, Wesel, Kreis Wesel, North Rhine-Westphalia, 46487, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:27.924112+00:00",
+  "_kind": "geo_samples"
+}

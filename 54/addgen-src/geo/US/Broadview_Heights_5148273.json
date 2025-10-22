@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Broadview Heights",
+  "geonameid": 5148273,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.302222679252594,
+      "lon": -81.70612196040678,
+      "geoinfo": {
+        "display_name": "Ohio Turnpike, North Royalton, Cuyahoga County, Ohio, 44133, United States",
+        "road": "Ohio Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Royalton",
+        "state": "Ohio",
+        "postcode": "44133",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ohio Turnpike, Broadview Heights, Ohio, United States"
+    },
+    {
+      "lat": 41.352842715837106,
+      "lon": -81.69255923035445,
+      "geoinfo": {
+        "display_name": "2016, Joann Drive, Parma, Cuyahoga County, Ohio, 44134, United States",
+        "road": "Joann Drive",
+        "house_number": "2016",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Parma",
+        "state": "Ohio",
+        "postcode": "44134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2016, Joann Drive, Parma, Cuyahoga County, Ohio, 44134, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:40.671935+00:00",
+  "_kind": "geo_samples"
+}

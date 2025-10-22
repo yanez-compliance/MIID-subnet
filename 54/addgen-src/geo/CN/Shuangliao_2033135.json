@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shuangliao",
+  "geonameid": 2033135,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.47593787930628,
+      "lon": 123.5145181282729,
+      "geoinfo": {
+        "display_name": "Namu, Shuangliao City, Siping City, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Siping City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shuangliao, Jilin, China"
+    },
+    {
+      "lat": 43.51785524046068,
+      "lon": 123.44648104979599,
+      "geoinfo": {
+        "display_name": "Liaoxi Subdistrict, Shuangliao City, Siping City, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Liaoxi Subdistrict",
+        "city_district": null,
+        "city": "Siping City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "921, Liaoxi Subdistrict, Shuangliao City, Siping City, 74316 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:09.012399+00:00",
+  "_kind": "geo_samples"
+}

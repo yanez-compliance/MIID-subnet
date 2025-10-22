@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Salaberry-de-Valleyfield",
+  "geonameid": 6139289,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.241140491782716,
+      "lon": -74.15505927390427,
+      "geoinfo": {
+        "display_name": "Sainte-Marie Street, Salaberry-de-Valleyfield, Beauharnois-Salaberry, Montérégie, Quebec, J6T 1J5, Canada",
+        "road": "Sainte-Marie Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salaberry-de-Valleyfield",
+        "state": "Quebec",
+        "postcode": "J6T 1J5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Sainte-Marie Street, Salaberry-de-Valleyfield, Quebec, Canada"
+    },
+    {
+      "lat": 45.24543890468374,
+      "lon": -74.1742664803731,
+      "geoinfo": {
+        "display_name": "Salaberry-de-Valleyfield, Beauharnois-Salaberry, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salaberry-de-Valleyfield",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "500, Salaberry-de-Valleyfield, Beauharnois-Salaberry, Montérégie, 90954 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:04.740732+00:00",
+  "_kind": "geo_samples"
+}

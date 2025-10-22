@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiaojia",
+  "geonameid": 8417533,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.27106421892781,
+      "lon": 106.49636110988973,
+      "geoinfo": {
+        "display_name": "Gucheng, Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gucheng",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xiaojia, Chongqing, China"
+    },
+    {
+      "lat": 30.2626189109987,
+      "lon": 106.43572875353185,
+      "geoinfo": {
+        "display_name": "Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "223, Hechuan District, 01973 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:58.092216+00:00",
+  "_kind": "geo_samples"
+}

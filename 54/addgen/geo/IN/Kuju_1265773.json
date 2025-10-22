@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kuju",
+  "geonameid": 1265773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.68554139450516,
+      "lon": 85.5269284302294,
+      "geoinfo": {
+        "display_name": "NH20, Kuju, Mandu, Ramgarh, Jharkhand, 825316, India",
+        "road": "NH20",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuju",
+        "state": "Jharkhand",
+        "postcode": "825316",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH20, Kuju, Jharkhand, India"
+    },
+    {
+      "lat": 23.701474039739345,
+      "lon": 85.48905160344016,
+      "geoinfo": {
+        "display_name": "Kuju, Mandu, Ramgarh, Jharkhand, 825316, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuju",
+        "state": "Jharkhand",
+        "postcode": "825316",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "099, Kuju, Mandu, Ramgarh, Jharkhand, 825316, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:52:12.642937+00:00",
+  "_kind": "geo_samples"
+}

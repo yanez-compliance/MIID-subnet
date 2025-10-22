@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shively",
+  "geonameid": 4308225,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.21137061196091,
+      "lon": -85.83464884406798,
+      "geoinfo": {
+        "display_name": "4004, Ralph Avenue, Louisville, Jefferson County, Kentucky, 40211, United States",
+        "road": "Ralph Avenue",
+        "house_number": "4004",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40211",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4004 Ralph Avenue, Shively, Kentucky, United States"
+    },
+    {
+      "lat": 38.20145668338471,
+      "lon": -85.84135644215867,
+      "geoinfo": {
+        "display_name": "3416, Kramers Lane, Saint Denis, Louisville, Jefferson County, Kentucky, 40216, United States",
+        "road": "Kramers Lane",
+        "house_number": "3416",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louisville",
+        "state": "Kentucky",
+        "postcode": "40216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3416, Kramers Lane, Saint Denis, Louisville, Jefferson County, Kentucky, 40216, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:45.988197+00:00",
+  "_kind": "geo_samples"
+}

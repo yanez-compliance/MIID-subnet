@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Weiden",
+  "geonameid": 2813040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.64423307205246,
+      "lon": 12.132581706040988,
+      "geoinfo": {
+        "display_name": "Maierhof, Rothenstadt, Weiden in der Oberpfalz, Bavaria, 92637, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weiden in der Oberpfalz",
+        "state": "Bavaria",
+        "postcode": "92637",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Weiden, Bavaria, Germany"
+    },
+    {
+      "lat": 49.693362149714254,
+      "lon": 12.15014687779335,
+      "geoinfo": {
+        "display_name": "78a, Merklsteig, Rehbühl, Weiden in der Oberpfalz, Bavaria, 92637, Germany",
+        "road": "Merklsteig",
+        "house_number": "78a",
+        "neighbourhood": null,
+        "suburb": "Rehbühl",
+        "city_district": null,
+        "city": "Weiden in der Oberpfalz",
+        "state": "Bavaria",
+        "postcode": "92637",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "78a, Merklsteig, Rehbühl, Weiden in der Oberpfalz, Bavaria, 92637, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:14:17.675286+00:00",
+  "_kind": "geo_samples"
+}

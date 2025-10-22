@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ipswich",
+  "geonameid": 2646057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.03248027799573,
+      "lon": 1.141890115108902,
+      "geoinfo": {
+        "display_name": "Corporation Avenue, Stoke Park, Ipswich, Suffolk, England, IP2 8QW, United Kingdom",
+        "road": "Corporation Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stoke Park",
+        "city_district": null,
+        "city": "Ipswich",
+        "state": "England",
+        "postcode": "IP2 8QW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Corporation Avenue, Ipswich, England, United Kingdom"
+    },
+    {
+      "lat": 52.061228566415224,
+      "lon": 1.1109507733103463,
+      "geoinfo": {
+        "display_name": "Sproughton Road, Sproughton, Babergh, Suffolk, England, IP1 5FJ, United Kingdom",
+        "road": "Sproughton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Babergh",
+        "state": "England",
+        "postcode": "IP1 5FJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sproughton Road, Sproughton, Babergh, Suffolk, England, IP1 5FJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:27.204852+00:00",
+  "_kind": "geo_samples"
+}

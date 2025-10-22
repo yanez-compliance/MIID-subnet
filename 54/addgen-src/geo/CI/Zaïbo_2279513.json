@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Zaïbo",
+  "geonameid": 2279513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.019141370546927,
+      "lon": -6.660465652772001,
+      "geoinfo": {
+        "display_name": "Zaïbo, Haut-Sassandra, Sassandra-Marahoué, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zaïbo",
+        "state": "Sassandra-Marahoué",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Zaïbo, Sassandra-Marahoué, Ivory Coast"
+    },
+    {
+      "lat": 7.006640006368084,
+      "lon": -6.630351453432681,
+      "geoinfo": {
+        "display_name": "Haut-Sassandra, Sassandra-Marahoué, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sassandra-Marahoué",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "603, Zaïbo, 14312 Sassandra-Marahoué, Ivory Coast"
+    }
+  ],
+  "updated_at": "2025-10-19T01:27:32.654934+00:00",
+  "_kind": "geo_samples"
+}

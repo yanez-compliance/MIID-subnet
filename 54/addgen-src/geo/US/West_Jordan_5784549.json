@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Jordan",
+  "geonameid": 5784549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.61844555431333,
+      "lon": -111.9832197535663,
+      "geoinfo": {
+        "display_name": "Center View Way, West Jordan, Salt Lake County, Utah, 84084, United States",
+        "road": "Center View Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Jordan",
+        "state": "Utah",
+        "postcode": "84084",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Center View Way, West Jordan, Utah, United States"
+    },
+    {
+      "lat": 40.60960862049979,
+      "lon": -111.94280459611211,
+      "geoinfo": {
+        "display_name": "1902, 7800 South, West Jordan, Salt Lake County, Utah, 84088, United States",
+        "road": "7800 South",
+        "house_number": "1902",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Jordan",
+        "state": "Utah",
+        "postcode": "84088",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1902, 7800 South, West Jordan, Salt Lake County, Utah, 84088, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:08.097488+00:00",
+  "_kind": "geo_samples"
+}

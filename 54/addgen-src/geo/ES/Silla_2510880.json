@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Silla",
+  "geonameid": 2510880,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.343683496104866,
+      "lon": -0.39600317625395487,
+      "geoinfo": {
+        "display_name": "Camí d'Adela, el Palmar, Pobles del Sud, Silla, l'Horta Sud, Valencia, Valencian Community, 46460, Spain",
+        "road": "Camí d'Adela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pobles del Sud",
+        "city_district": null,
+        "city": "Silla",
+        "state": "Valencian Community",
+        "postcode": "46460",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí d'Adela, Silla, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.35281160808381,
+      "lon": -0.38504851000485296,
+      "geoinfo": {
+        "display_name": "Camí del Sequiol del Valencià, el Palmar, Pobles del Sud, Valencia, Comarca de València, Valencia, Valencian Community, 46460, Spain",
+        "road": "Camí del Sequiol del Valencià",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pobles del Sud",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46460",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "790, Camí del Sequiol del Valencià, el Palmar, Pobles del Sud, Valencia, Comarca de València, Valencia, Valencian Community, 46460, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:35:23.408362+00:00",
+  "_kind": "geo_samples"
+}

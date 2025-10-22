@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Hietzing",
+  "geonameid": 2776421,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.19976333974175,
+      "lon": 16.2334184906241,
+      "geoinfo": {
+        "display_name": "Auhof Verbindungsweg, KG Auhof, Hietzing, Vienna, 1130, Austria",
+        "road": "Auhof Verbindungsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Auhof",
+        "city_district": "Hietzing",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1130",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Auhof Verbindungsweg, Hietzing, Austria"
+    },
+    {
+      "lat": 48.183107178153996,
+      "lon": 16.237495912663658,
+      "geoinfo": {
+        "display_name": "Laurenzerwiesenweg, KG Auhof, Hietzing, Vienna, 1130, Austria",
+        "road": "Laurenzerwiesenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Auhof",
+        "city_district": "Hietzing",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1130",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Laurenzerwiesenweg, Hietzing, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:29:09.348551+00:00",
+  "_kind": "geo_samples"
+}

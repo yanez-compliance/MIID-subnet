@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Levallois-Perret",
+  "geonameid": 2998975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.93439800997645,
+      "lon": 2.276481434558588,
+      "geoinfo": {
+        "display_name": "A 86, Le Luth, Gennevilliers, Arrondissement of Nanterre, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92230, France",
+        "road": "A 86",
+        "house_number": null,
+        "neighbourhood": "Le Luth",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gennevilliers",
+        "state": "Ile-de-France",
+        "postcode": "92230",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 86, Levallois-Perret, Ile-de-France, France"
+    },
+    {
+      "lat": 48.90306006063924,
+      "lon": 2.250006980594263,
+      "geoinfo": {
+        "display_name": "58 bis, Rue Voltaire, La Garenne-Colombes, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92250, France",
+        "road": "Rue Voltaire",
+        "house_number": "58 bis",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Garenne-Colombes",
+        "state": null,
+        "postcode": "92250",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "58 bis, Rue Voltaire, La Garenne-Colombes, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92250, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:16.442192+00:00",
+  "_kind": "geo_samples"
+}

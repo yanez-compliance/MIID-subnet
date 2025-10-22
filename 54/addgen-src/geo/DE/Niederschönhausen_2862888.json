@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Niederschönhausen",
+  "geonameid": 2862888,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.61570768028773,
+      "lon": 13.375721955842572,
+      "geoinfo": {
+        "display_name": "Berliner Mauerweg, Blankenfelde, Pankow, Berlin, 13159, Germany",
+        "road": "Berliner Mauerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Blankenfelde",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13159",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Berliner Mauerweg, Niederschönhausen, Germany"
+    },
+    {
+      "lat": 52.60133339667502,
+      "lon": 13.397314152695225,
+      "geoinfo": {
+        "display_name": "18, Basilikumweg, Garten- und Siedlergemeinschaft Einigkeit, Rosenthal, Pankow, Berlin, 13158, Germany",
+        "road": "Basilikumweg",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Rosenthal",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13158",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "18, Basilikumweg, Garten- und Siedlergemeinschaft Einigkeit, Rosenthal, Pankow, Berlin, 13158, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:49.643957+00:00",
+  "_kind": "geo_samples"
+}

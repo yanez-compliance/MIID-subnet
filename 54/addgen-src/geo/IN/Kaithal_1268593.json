@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kaithal",
+  "geonameid": 1268593,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.806731604819365,
+      "lon": 76.36308196978365,
+      "geoinfo": {
+        "display_name": "GADLI, Kaithal, Haryana, 136027, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "GADLI",
+        "state": "Haryana",
+        "postcode": "136027",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kaithal, Haryana, India"
+    },
+    {
+      "lat": 29.797469722844077,
+      "lon": 76.36000422270733,
+      "geoinfo": {
+        "display_name": "NH152A, Kaithal, Haryana, 132027, India",
+        "road": "NH152A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaithal",
+        "state": "Haryana",
+        "postcode": "132027",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH152A, Kaithal, Haryana, 132027, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:53:30.546942+00:00",
+  "_kind": "geo_samples"
+}

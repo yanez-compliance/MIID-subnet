@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Martigny-Ville",
+  "geonameid": 2659748,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.0902705008074,
+      "lon": 7.066918578549899,
+      "geoinfo": {
+        "display_name": "Rue du Chemin de Fer, Martigny, Wallis, 1920, Switzerland",
+        "road": "Rue du Chemin de Fer",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Martigny",
+        "state": "Wallis",
+        "postcode": "1920",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "823, Rue du Chemin de Fer, Martigny, Wallis, 1920, Switzerland"
+    },
+    {
+      "lat": 46.114096248301465,
+      "lon": 7.027197989829081,
+      "geoinfo": {
+        "display_name": "La Tailla, Les Marécottes, Salvan, Saint-Maurice, Wallis, 1924, Switzerland",
+        "road": "La Tailla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Les Marécottes",
+        "state": "Wallis",
+        "postcode": "1924",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "502, La Tailla, Les Marécottes, Salvan, Saint-Maurice, Wallis, 1924, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:19.074821+00:00",
+  "_kind": "geo_samples"
+}

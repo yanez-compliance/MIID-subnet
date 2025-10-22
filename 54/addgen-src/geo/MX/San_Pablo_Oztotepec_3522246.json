@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Pablo Oztotepec",
+  "geonameid": 3522246,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.196129357373923,
+      "lon": -99.11178490463261,
+      "geoinfo": {
+        "display_name": "El Corazón, Xochimilco, Mexico City, 16889, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "16889",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Pablo Oztotepec, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.205987654162275,
+      "lon": -99.04329062126337,
+      "geoinfo": {
+        "display_name": "Barrio Nuchtla, Nuchtla, Villa Milpa Alta, Milpa Alta, Mexico City, 12210, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio Nuchtla",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Milpa Alta",
+        "state": "Mexico City",
+        "postcode": "12210",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "477, Barrio Nuchtla, Nuchtla, Villa Milpa Alta, Milpa Alta, Mexico City, 12210, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:19.883003+00:00",
+  "_kind": "geo_samples"
+}

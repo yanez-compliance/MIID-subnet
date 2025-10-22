@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Cojímar",
+  "geonameid": 3563908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.171051668394387,
+      "lon": -82.27422741440654,
+      "geoinfo": {
+        "display_name": "170, Alamar, Alamar Playa, Zona 25, Habana del Este, Havana, 12500, Cuba",
+        "road": "170",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Alamar Playa",
+        "city": "Zona 25",
+        "state": "Havana",
+        "postcode": "12500",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "170, Cojímar, Havana, Cuba"
+    },
+    {
+      "lat": 23.17217211501477,
+      "lon": -82.31108951296257,
+      "geoinfo": {
+        "display_name": "Carretera del Morro, Cojímar, Cojimar, Habana del Este, Havana, 11749, Cuba",
+        "road": "Carretera del Morro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cojímar",
+        "city_district": "Cojimar",
+        "city": null,
+        "state": "Havana",
+        "postcode": "11749",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "093, Carretera del Morro, Cojímar, Cojimar, Habana del Este, Havana, 11749, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:24.714389+00:00",
+  "_kind": "geo_samples"
+}

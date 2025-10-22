@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Tame",
+  "geonameid": 3667478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.455456868285127,
+      "lon": -71.73602072725251,
+      "geoinfo": {
+        "display_name": "Calle 12, Tame, Arauca, RAP Llanos, Colombia",
+        "road": "Calle 12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tame",
+        "state": "Arauca",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 12, Tame, Arauca, Colombia"
+    },
+    {
+      "lat": 6.458825631743562,
+      "lon": -71.77824195889255,
+      "geoinfo": {
+        "display_name": "Tame, Arauca, RAP Llanos, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tame",
+        "state": "Arauca",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "992, Tame, Arauca, 21251 RAP Llanos, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:39.486044+00:00",
+  "_kind": "geo_samples"
+}

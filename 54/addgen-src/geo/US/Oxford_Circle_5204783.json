@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxford Circle",
+  "geonameid": 5204783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.03631352789982,
+      "lon": -75.07969714450134,
+      "geoinfo": {
+        "display_name": "1415, Stevens Street, Oxford Circle, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States",
+        "road": "Stevens Street",
+        "house_number": "1415",
+        "neighbourhood": "Oxford Circle",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1415 Stevens Street, Oxford Circle, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.0833310145592,
+      "lon": -75.09366026157055,
+      "geoinfo": {
+        "display_name": "805, Burke Avenue, Rockledge, Montgomery County, Pennsylvania, 19046, United States",
+        "road": "Burke Avenue",
+        "house_number": "805",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockledge",
+        "state": "Pennsylvania",
+        "postcode": "19046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "805, Burke Avenue, Rockledge, Montgomery County, Pennsylvania, 19046, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:27.399947+00:00",
+  "_kind": "geo_samples"
+}

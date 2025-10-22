@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Man",
+  "geonameid": 2284647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.440260072267659,
+      "lon": -7.5195726008931585,
+      "geoinfo": {
+        "display_name": "Godégouin 1, Tonkpi, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Godégouin 1",
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Man, Montagnes, Ivory Coast"
+    },
+    {
+      "lat": 7.3775402696705585,
+      "lon": -7.55467482495449,
+      "geoinfo": {
+        "display_name": "Man, Tonkpi, Montagnes, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Man",
+        "state": "Montagnes",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "546, Man, Tonkpi, 28100 Montagnes, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:00.647613+00:00",
+  "_kind": "geo_samples"
+}

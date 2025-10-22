@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Land O' Lakes",
+  "geonameid": 4161534,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.19449764720563,
+      "lon": -82.48539418641028,
+      "geoinfo": {
+        "display_name": "TRIAS Construction, 2537, Henley Road, Lutz, Pasco County, Florida, 33558, United States",
+        "road": "Henley Road",
+        "house_number": "2537",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lutz",
+        "state": "Florida",
+        "postcode": "33558",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2537 Henley Road, Land O' Lakes, Florida, United States"
+    },
+    {
+      "lat": 28.240980569621374,
+      "lon": -82.47246576093454,
+      "geoinfo": {
+        "display_name": "Sun Up Road, Land O' Lakes, Pasco County, Florida, 34638, United States",
+        "road": "Sun Up Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Land O' Lakes",
+        "state": "Florida",
+        "postcode": "34638",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "672, Sun Up Road, Land O' Lakes, Pasco County, Florida, 34638, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:09.798001+00:00",
+  "_kind": "geo_samples"
+}

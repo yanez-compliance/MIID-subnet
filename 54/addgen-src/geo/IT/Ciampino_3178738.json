@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ciampino",
+  "geonameid": 3178738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.814400059817444,
+      "lon": 12.571514303857695,
+      "geoinfo": {
+        "display_name": "Rinaldo all'Acquedotto, 1267, Via Appia Nuova, Capannelle, Municipio Roma VII, Rome, Roma Capitale, Lazio, 00178, Italy",
+        "road": "Via Appia Nuova",
+        "house_number": "1267",
+        "neighbourhood": "Capannelle",
+        "suburb": "Municipio Roma VII",
+        "city_district": null,
+        "city": "Rome",
+        "state": "Lazio",
+        "postcode": "00178",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "1267 Via Appia Nuova, Ciampino, Lazio, Italy"
+    },
+    {
+      "lat": 41.78278473333681,
+      "lon": 12.654100601431708,
+      "geoinfo": {
+        "display_name": "Via Pietro Tanzi, Castel De Paolis, Grottaferrata, Roma Capitale, Lazio, 00046, Italy",
+        "road": "Via Pietro Tanzi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grottaferrata",
+        "state": "Lazio",
+        "postcode": "00046",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "571, Via Pietro Tanzi, Castel De Paolis, Grottaferrata, Roma Capitale, Lazio, 00046, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:58:13.289594+00:00",
+  "_kind": "geo_samples"
+}

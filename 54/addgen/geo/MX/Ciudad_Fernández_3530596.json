@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Fernández",
+  "geonameid": 3530596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.95621147652828,
+      "lon": -100.04818779881197,
+      "geoinfo": {
+        "display_name": "El Refugio, Ciudad Fernández, San Luis Potosí, 79660, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "San Luis Potosí",
+        "postcode": "79660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Fernández, San Luis Potosí, Mexico"
+    },
+    {
+      "lat": 21.940117900893693,
+      "lon": -100.01005559499485,
+      "geoinfo": {
+        "display_name": "Calle Cuauhtémoc, Ciudad Fernández, San Luis Potosí, 79650, Mexico",
+        "road": "Calle Cuauhtémoc",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Fernández",
+        "state": "San Luis Potosí",
+        "postcode": "79650",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "715, Calle Cuauhtémoc, Ciudad Fernández, San Luis Potosí, 79650, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:09.849790+00:00",
+  "_kind": "geo_samples"
+}

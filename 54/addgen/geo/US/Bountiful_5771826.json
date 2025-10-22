@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bountiful",
+  "geonameid": 5771826,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.92682999084866,
+      "lon": -111.89172091070027,
+      "geoinfo": {
+        "display_name": "Veterans Memorial Highway, Centerville, Davis County, Utah, 84014, United States",
+        "road": "Veterans Memorial Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centerville",
+        "state": "Utah",
+        "postcode": "84014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Veterans Memorial Highway, Bountiful, Utah, United States"
+    },
+    {
+      "lat": 40.881758507072156,
+      "lon": -111.92200143666622,
+      "geoinfo": {
+        "display_name": "500 South, Woods Cross, Davis County, Utah, 84087, United States",
+        "road": "500 South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woods Cross",
+        "state": "Utah",
+        "postcode": "84087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "500 South, Woods Cross, Davis County, Utah, 84087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:40.605381+00:00",
+  "_kind": "geo_samples"
+}

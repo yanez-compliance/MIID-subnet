@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Narra",
+  "geonameid": 1698103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.250118565222433,
+      "lon": 118.39770699246459,
+      "geoinfo": {
+        "display_name": "Panacan I, Narra, Palawan, Mimaropa, 5303, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Narra",
+        "state": "Palawan",
+        "postcode": "5303",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Narra, Palawan, Philippines"
+    },
+    {
+      "lat": 9.250139967464666,
+      "lon": 118.37523844792213,
+      "geoinfo": {
+        "display_name": "490, Malinao, Palawan, Mimaropa, 5303, Philippines",
+        "road": "490",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Malinao",
+        "state": "Palawan",
+        "postcode": "5303",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "490, Narra, 5303 Palawan, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:47.478969+00:00",
+  "_kind": "geo_samples"
+}

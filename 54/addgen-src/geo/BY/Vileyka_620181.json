@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Vileyka",
+  "geonameid": 620181,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 54.51126792836904,
+      "lon": 26.936430714789783,
+      "geoinfo": {
+        "display_name": "вуліца Зубовіча, Vileyka, Vileyka District, Minsk Region, 222412, Belarus",
+        "road": "вуліца Зубовіча",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vileyka",
+        "state": "Minsk Region",
+        "postcode": "222412",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "вуліца Зубовіча, Vileyka, Minsk Region, Belarus"
+    },
+    {
+      "lat": 54.48550601507156,
+      "lon": 26.982520562106767,
+      "geoinfo": {
+        "display_name": "Могілкі, Р63, Куранецкі сельскі Савет, Vileyka District, Minsk Region, Belarus",
+        "road": "Р63",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Куранецкі сельскі Савет",
+        "state": "Minsk Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Р63, Vileyka, Minsk Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:00.785497+00:00",
+  "_kind": "geo_samples"
+}

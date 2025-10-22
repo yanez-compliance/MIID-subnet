@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Freilassing",
+  "geonameid": 2925080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.861965110864304,
+      "lon": 12.950006026757825,
+      "geoinfo": {
+        "display_name": "Neu-Haberland, Surheim, Saaldorf-Surheim, Landkreis Berchtesgadener Land, Bavaria, 83416, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Surheim",
+        "state": "Bavaria",
+        "postcode": "83416",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Freilassing, Bavaria, Germany"
+    },
+    {
+      "lat": 47.85034894533421,
+      "lon": 12.984518819129798,
+      "geoinfo": {
+        "display_name": "2, Gartenstraße, Salzburghofen, Freilassing, Landkreis Berchtesgadener Land, Bavaria, 83395, Germany",
+        "road": "Gartenstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Freilassing",
+        "state": "Bavaria",
+        "postcode": "83395",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2, Gartenstraße, Salzburghofen, Freilassing, Landkreis Berchtesgadener Land, Bavaria, 83395, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:55.401123+00:00",
+  "_kind": "geo_samples"
+}

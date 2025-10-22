@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Buenaventura Lakes",
+  "geonameid": 4149269,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.32150275303922,
+      "lon": -81.36582173582865,
+      "geoinfo": {
+        "display_name": "690, Royal Palm Drive, Buenaventura Lakes, Osceola County, Florida, 34743, United States",
+        "road": "Royal Palm Drive",
+        "house_number": "690",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buenaventura Lakes",
+        "state": "Florida",
+        "postcode": "34743",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "690 Royal Palm Drive, Buenaventura Lakes, Florida, United States"
+    },
+    {
+      "lat": 28.301320614200595,
+      "lon": -81.33963259898196,
+      "geoinfo": {
+        "display_name": "Gold Dust Circle, Osceola County, Florida, 34744, United States",
+        "road": "Gold Dust Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "34744",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "125, Gold Dust Circle, Osceola County, Florida, 34744, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:24.688242+00:00",
+  "_kind": "geo_samples"
+}

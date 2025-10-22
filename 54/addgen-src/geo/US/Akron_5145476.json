@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Akron",
+  "geonameid": 5145476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.09799492715455,
+      "lon": -81.55389592481666,
+      "geoinfo": {
+        "display_name": "1168, West Exchange Street, Sunset View, Highland Square, Akron, Summit County, Ohio, 44313, United States",
+        "road": "West Exchange Street",
+        "house_number": "1168",
+        "neighbourhood": null,
+        "suburb": "Highland Square",
+        "city_district": null,
+        "city": "Akron",
+        "state": "Ohio",
+        "postcode": "44313",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1168 West Exchange Street, Akron, Ohio, United States"
+    },
+    {
+      "lat": 41.11238170023862,
+      "lon": -81.5045892338352,
+      "geoinfo": {
+        "display_name": "950, Collinwood Avenue, Temple Square, North Hill, Akron, Summit County, Ohio, 44310, United States",
+        "road": "Collinwood Avenue",
+        "house_number": "950",
+        "neighbourhood": "Temple Square",
+        "suburb": "North Hill",
+        "city_district": null,
+        "city": "Akron",
+        "state": "Ohio",
+        "postcode": "44310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "950, Collinwood Avenue, Temple Square, North Hill, Akron, Summit County, Ohio, 44310, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:54.755525+00:00",
+  "_kind": "geo_samples"
+}

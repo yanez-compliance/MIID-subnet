@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Denton",
+  "geonameid": 2651357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.44177925913473,
+      "lon": -2.111824471214253,
+      "geoinfo": {
+        "display_name": "Cemetery Road, Circular Road Estate, Kingston, Denton, Tameside, Greater Manchester, England, M34 6ER, United Kingdom",
+        "road": "Cemetery Road",
+        "house_number": null,
+        "neighbourhood": "Circular Road Estate",
+        "suburb": "Kingston",
+        "city_district": null,
+        "city": "Tameside",
+        "state": "England",
+        "postcode": "M34 6ER",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cemetery Road, Denton, England, United Kingdom"
+    },
+    {
+      "lat": 53.43861370121987,
+      "lon": -2.102702394248759,
+      "geoinfo": {
+        "display_name": "Haughton Green Road, Kingston, Haughton Green, Tameside, Greater Manchester, England, M34 7PD, United Kingdom",
+        "road": "Haughton Green Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kingston",
+        "city_district": null,
+        "city": "Tameside",
+        "state": "England",
+        "postcode": "M34 7PD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Haughton Green Road, Kingston, Haughton Green, Tameside, Greater Manchester, England, M34 7PD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:52.873404+00:00",
+  "_kind": "geo_samples"
+}

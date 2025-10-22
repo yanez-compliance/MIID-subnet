@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Serov",
+  "geonameid": 1492663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.61542586091542,
+      "lon": 60.64959325471619,
+      "geoinfo": {
+        "display_name": "улица Вагонников, Сортировка, Serov, Серовский муниципальный округ, Sverdlovsk Oblast, Ural Federal District, 624981, Russia",
+        "road": "улица Вагонников",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Сортировка",
+        "city_district": null,
+        "city": "Serov",
+        "state": "Sverdlovsk Oblast",
+        "postcode": "624981",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Вагонников, Serov, Sverdlovsk Oblast, Russia"
+    },
+    {
+      "lat": 59.61335406725187,
+      "lon": 60.55636045201367,
+      "geoinfo": {
+        "display_name": "61, улица Тургенева, 1-й разъезд, Serov, Серовский муниципальный округ, Sverdlovsk Oblast, Ural Federal District, 624992, Russia",
+        "road": "улица Тургенева",
+        "house_number": "61",
+        "neighbourhood": null,
+        "suburb": "1-й разъезд",
+        "city_district": null,
+        "city": "Serov",
+        "state": "Sverdlovsk Oblast",
+        "postcode": "624992",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "61, улица Тургенева, Serov, 624992 Sverdlovsk Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:49.556216+00:00",
+  "_kind": "geo_samples"
+}

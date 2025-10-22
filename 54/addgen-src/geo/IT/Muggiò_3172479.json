@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Muggiò",
+  "geonameid": 3172479,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.56516609269229,
+      "lon": 9.222592378636786,
+      "geoinfo": {
+        "display_name": "Via Ludwig van Beethoven, Borgo Primavera, Balsamo, Cinisello Balsamo, Zona Omogenea Milano Nord, Milan, Lombardy, 20092, Italy",
+        "road": "Via Ludwig van Beethoven",
+        "house_number": null,
+        "neighbourhood": "Borgo Primavera",
+        "suburb": "Balsamo",
+        "city_district": null,
+        "city": "Cinisello Balsamo",
+        "state": "Lombardy",
+        "postcode": "20092",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Ludwig van Beethoven, Muggiò, Lombardy, Italy"
+    },
+    {
+      "lat": 45.55344636307448,
+      "lon": 9.249811356111357,
+      "geoinfo": {
+        "display_name": "A4, Sant'Alessandro, Cinisello Balsamo, Zona Omogenea Milano Nord, Milan, Lombardy, 20099, Italy",
+        "road": "A4",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sant'Alessandro",
+        "city_district": null,
+        "city": "Cinisello Balsamo",
+        "state": "Lombardy",
+        "postcode": "20099",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "A4, Sant'Alessandro, Cinisello Balsamo, Zona Omogenea Milano Nord, Milan, Lombardy, 20099, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:01.292158+00:00",
+  "_kind": "geo_samples"
+}

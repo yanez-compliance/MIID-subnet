@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Weston",
+  "geonameid": 4178003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.12210258532333,
+      "lon": -80.38787777759843,
+      "geoinfo": {
+        "display_name": "504, Stonemont Lane, The Lakes, Weston, Broward County, Florida, 33326, United States",
+        "road": "Stonemont Lane",
+        "house_number": "504",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weston",
+        "state": "Florida",
+        "postcode": "33326",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "504 Stonemont Lane, Weston, Florida, United States"
+    },
+    {
+      "lat": 26.123903454368257,
+      "lon": -80.43343687248367,
+      "geoinfo": {
+        "display_name": "US 27, Weston, Broward County, Florida, 33327, United States",
+        "road": "US 27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weston",
+        "state": "Florida",
+        "postcode": "33327",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 27, Weston, Broward County, Florida, 33327, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:27.610660+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MK",
+  "country": "North Macedonia",
+  "city": "Bogovinje",
+  "geonameid": 792501,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 41.9309060320184,
+      "lon": 20.854940204866327,
+      "geoinfo": {
+        "display_name": "Novo Selo, Municipality of Bogovinje, North Macedonia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novo Selo",
+        "state": null,
+        "postcode": null,
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "Bogovinje, North Macedonia"
+    },
+    {
+      "lat": 41.935167367555444,
+      "lon": 20.924469784778157,
+      "geoinfo": {
+        "display_name": "R1206, Sinichane, Municipality of Bogovinje, 1221, North Macedonia",
+        "road": "R1206",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sinichane",
+        "state": null,
+        "postcode": "1221",
+        "country": "North Macedonia",
+        "country_code": "mk"
+      },
+      "address": "R1206, Bogovinje, North Macedonia"
+    }
+  ],
+  "updated_at": "2025-10-16T19:32:43.419238+00:00",
+  "_kind": "geo_samples"
+}

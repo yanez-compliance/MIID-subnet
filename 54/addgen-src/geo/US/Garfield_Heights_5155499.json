@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garfield Heights",
+  "geonameid": 5155499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.42942212285307,
+      "lon": -81.64326554908982,
+      "geoinfo": {
+        "display_name": "Cuyahoga Heights, Cuyahoga County, Ohio, 44105, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuyahoga Heights",
+        "state": "Ohio",
+        "postcode": "44105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Garfield Heights, Ohio, United States"
+    },
+    {
+      "lat": 41.425970832290666,
+      "lon": -81.63349314101576,
+      "geoinfo": {
+        "display_name": "4984, Warner Road, Garfield Heights, Cuyahoga County, Ohio, 44125, United States",
+        "road": "Warner Road",
+        "house_number": "4984",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garfield Heights",
+        "state": "Ohio",
+        "postcode": "44125",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4984, Warner Road, Garfield Heights, Cuyahoga County, Ohio, 44125, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:32.598783+00:00",
+  "_kind": "geo_samples"
+}

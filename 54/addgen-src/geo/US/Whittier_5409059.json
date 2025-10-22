@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Whittier",
+  "geonameid": 5409059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.944735283767336,
+      "lon": -118.02748501358015,
+      "geoinfo": {
+        "display_name": "14239, Hawes Street, South Whittier, Los Angeles County, California, 90604, United States",
+        "road": "Hawes Street",
+        "house_number": "14239",
+        "neighbourhood": null,
+        "suburb": "South Whittier",
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "90604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14239 Hawes Street, Whittier, California, United States"
+    },
+    {
+      "lat": 33.99367309799675,
+      "lon": -118.01484537562307,
+      "geoinfo": {
+        "display_name": "Turnbull Canyon Road, Hacienda Heights, Whittier, Los Angeles County, California, 90608, United States",
+        "road": "Turnbull Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hacienda Heights",
+        "city_district": null,
+        "city": "Whittier",
+        "state": "California",
+        "postcode": "90608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "810, Turnbull Canyon Road, Hacienda Heights, Whittier, Los Angeles County, California, 90608, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:31.035104+00:00",
+  "_kind": "geo_samples"
+}

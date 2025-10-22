@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Barletta",
+  "geonameid": 3182340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35324172431621,
+      "lon": 16.26185650314784,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Barletta, Italy"
+    },
+    {
+      "lat": 41.311657728287344,
+      "lon": 16.338828264982094,
+      "geoinfo": {
+        "display_name": "Contrada Le Paludi, Barletta, Barletta-Andria-Trani, Apulia, 76121, Italy",
+        "road": "Contrada Le Paludi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barletta",
+        "state": "Apulia",
+        "postcode": "76121",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "653, Contrada Le Paludi, Barletta, Barletta-Andria-Trani, Apulia, 76121, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:04.498976+00:00",
+  "_kind": "geo_samples"
+}

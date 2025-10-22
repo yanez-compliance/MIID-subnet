@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santee",
+  "geonameid": 5393429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.848153680976935,
+      "lon": -117.0177142262893,
+      "geoinfo": {
+        "display_name": "West Hills High School, Mast Boulevard, Santee, San Diego County, California, 92071, United States",
+        "road": "Mast Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santee",
+        "state": "California",
+        "postcode": "92071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mast Boulevard, Santee, California, United States"
+    },
+    {
+      "lat": 32.86806585070282,
+      "lon": -116.94461526674709,
+      "geoinfo": {
+        "display_name": "10414, Chase Creek Lane, Lakeside Farms, Riverview, Eucalyptus Hills, San Diego County, California, 92040, United States",
+        "road": "Chase Creek Lane",
+        "house_number": "10414",
+        "neighbourhood": "Lakeside Farms",
+        "suburb": "Riverview",
+        "city_district": null,
+        "city": "Eucalyptus Hills",
+        "state": "California",
+        "postcode": "92040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10414, Chase Creek Lane, Lakeside Farms, Riverview, Eucalyptus Hills, San Diego County, California, 92040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:05.170607+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palmetto Bay",
+  "geonameid": 4167634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.613467598662915,
+      "lon": -80.33776257824246,
+      "geoinfo": {
+        "display_name": "8900, Southwest 168th Street, East Perrine, Palmetto Bay, Miami-Dade County, Florida, 33157, United States",
+        "road": "Southwest 168th Street",
+        "house_number": "8900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmetto Bay",
+        "state": "Florida",
+        "postcode": "33157",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8900 Southwest 168th Street, Palmetto Bay, Florida, United States"
+    },
+    {
+      "lat": 25.601774739950873,
+      "lon": -80.2935953979563,
+      "geoinfo": {
+        "display_name": "Miami-Dade County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "797, Palmetto Bay, 61567 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:20.575094+00:00",
+  "_kind": "geo_samples"
+}

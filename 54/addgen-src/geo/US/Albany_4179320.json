@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Albany",
+  "geonameid": 4179320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.550740558837134,
+      "lon": -84.11762245391552,
+      "geoinfo": {
+        "display_name": "11, Sutton Place, Oak Grove Estates Mobile Home Park, Albany, Dougherty County, Georgia, 31705, United States",
+        "road": "Sutton Place",
+        "house_number": "11",
+        "neighbourhood": "Oak Grove Estates Mobile Home Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Albany",
+        "state": "Georgia",
+        "postcode": "31705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11 Sutton Place, Albany, Georgia, United States"
+    },
+    {
+      "lat": 31.61217545019651,
+      "lon": -84.17525975816669,
+      "geoinfo": {
+        "display_name": "1031, Stuart Avenue, Albany, Dougherty County, Georgia, 31707, United States",
+        "road": "Stuart Avenue",
+        "house_number": "1031",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albany",
+        "state": "Georgia",
+        "postcode": "31707",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1031, Stuart Avenue, Albany, Dougherty County, Georgia, 31707, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:20.693228+00:00",
+  "_kind": "geo_samples"
+}

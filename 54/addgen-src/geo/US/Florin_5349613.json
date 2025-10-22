@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Florin",
+  "geonameid": 5349613,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.52429716612577,
+      "lon": -121.42242451629185,
+      "geoinfo": {
+        "display_name": "6900, Fruitridge Road, Avondale, Fruitridge Manor, Sacramento, Sacramento County, California, 95820, United States",
+        "road": "Fruitridge Road",
+        "house_number": "6900",
+        "neighbourhood": null,
+        "suburb": "Fruitridge Manor",
+        "city_district": null,
+        "city": "Sacramento",
+        "state": "California",
+        "postcode": "95820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6900 Fruitridge Road, Florin, California, United States"
+    },
+    {
+      "lat": 38.47436234384542,
+      "lon": -121.42393201149542,
+      "geoinfo": {
+        "display_name": "Mack Road, Parkway, Sacramento, Sacramento County, California, 92828, United States",
+        "road": "Mack Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parkway",
+        "city_district": null,
+        "city": "Sacramento",
+        "state": "California",
+        "postcode": "92828",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "873, Mack Road, Parkway, Sacramento, Sacramento County, California, 92828, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:59.644181+00:00",
+  "_kind": "geo_samples"
+}

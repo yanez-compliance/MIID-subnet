@@ -1,0 +1,83 @@
+{
+  "country_code": "HR",
+  "country": "Croatia",
+  "city": "Split",
+  "geonameid": 3190261,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 43.47224111503372,
+      "lon": 16.472687496001736,
+      "geoinfo": {
+        "display_name": "Split-Dalmatia County, Croatia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Croatia",
+        "country_code": "hr"
+      },
+      "address": "Split, Croatia"
+    },
+    {
+      "lat": 43.53715775107408,
+      "lon": 16.463158836266462,
+      "geoinfo": {
+        "display_name": "Draškovićeva ulica, Donja strana, Mjesni odbor Sveti Kajo, Solin, Grad Solin, Split-Dalmatia County, 21285, Croatia",
+        "road": "Draškovićeva ulica",
+        "house_number": null,
+        "neighbourhood": "Donja strana",
+        "suburb": null,
+        "city_district": "Solin",
+        "city": "Grad Solin",
+        "state": null,
+        "postcode": "21285",
+        "country": "Croatia",
+        "country_code": "hr"
+      },
+      "address": "Draškovićeva ulica, Split, Croatia"
+    },
+    {
+      "lat": 43.501787018853484,
+      "lon": 16.474549404523597,
+      "geoinfo": {
+        "display_name": "Šetalište pape Ivana Pavla II., Križine, Gradski kotar Trstenik, Split, Grad Split, Split-Dalmatia County, 21114, Croatia",
+        "road": "Šetalište pape Ivana Pavla II.",
+        "house_number": null,
+        "neighbourhood": "Križine",
+        "suburb": null,
+        "city_district": null,
+        "city": "Split",
+        "state": null,
+        "postcode": "21114",
+        "country": "Croatia",
+        "country_code": "hr"
+      },
+      "address": "Šetalište pape Ivana Pavla II., Split, Croatia"
+    },
+    {
+      "lat": 43.50500240518917,
+      "lon": 16.46305962912672,
+      "geoinfo": {
+        "display_name": "3G, Trstenik, Firule, Gradski kotar Bačvice, Split, Grad Split, Split-Dalmatia County, 21000, Croatia",
+        "road": "Trstenik",
+        "house_number": "3G",
+        "neighbourhood": "Firule",
+        "suburb": null,
+        "city_district": null,
+        "city": "Split",
+        "state": null,
+        "postcode": "21000",
+        "country": "Croatia",
+        "country_code": "hr"
+      },
+      "address": "3G Trstenik, Split, Croatia"
+    }
+  ],
+  "updated_at": "2025-10-16T15:08:29.051391+00:00",
+  "_kind": "geo_samples"
+}

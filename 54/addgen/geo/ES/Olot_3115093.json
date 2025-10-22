@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Olot",
+  "geonameid": 3115093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.17098598791147,
+      "lon": 2.500887881584312,
+      "geoinfo": {
+        "display_name": "Carrer del Garbí, Sant Cristòfol les Fonts, Olot, Garrotxa, Girona, Catalonia, 17810, Spain",
+        "road": "Carrer del Garbí",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sant Cristòfol les Fonts",
+        "city_district": null,
+        "city": "Olot",
+        "state": "Catalonia",
+        "postcode": "17810",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer del Garbí, Olot, Catalonia, Spain"
+    },
+    {
+      "lat": 42.179722742066474,
+      "lon": 2.443127730497382,
+      "geoinfo": {
+        "display_name": "GIV-5224, la Pinya, la Vall d'en Bas, Garrotxa, Girona, Catalonia, 17179, Spain",
+        "road": "GIV-5224",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "la Vall d'en Bas",
+        "state": "Catalonia",
+        "postcode": "17179",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "GIV-5224, la Pinya, la Vall d'en Bas, Garrotxa, Girona, Catalonia, 17179, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:10.539764+00:00",
+  "_kind": "geo_samples"
+}

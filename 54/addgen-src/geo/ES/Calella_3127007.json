@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Calella",
+  "geonameid": 3127007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.575613914231184,
+      "lon": 2.634559882152829,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calella, Catalonia, Spain"
+    },
+    {
+      "lat": 41.608473550931365,
+      "lon": 2.7057788750891634,
+      "geoinfo": {
+        "display_name": "Pinemar, Pineda de Mar, Maresme, Barcelona, Catalonia, 08397, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pinemar",
+        "city_district": null,
+        "city": "Pineda de Mar",
+        "state": "Catalonia",
+        "postcode": "08397",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "664, Pinemar, Pineda de Mar, Maresme, Barcelona, Catalonia, 08397, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:46.954094+00:00",
+  "_kind": "geo_samples"
+}

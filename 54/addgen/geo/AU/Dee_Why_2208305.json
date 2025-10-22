@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Dee Why",
+  "geonameid": 2208305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.78190077106654,
+      "lon": 151.3186020245118,
+      "geoinfo": {
+        "display_name": "New South Wales, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Dee Why, New South Wales, Australia"
+    },
+    {
+      "lat": -33.71793175366797,
+      "lon": 151.31303197871043,
+      "geoinfo": {
+        "display_name": "Narrabeen Peninsula, Narrabeen, Northern Beaches, Sydney, Northern Beaches Council, New South Wales, 2101, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Narrabeen",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2101",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "319, Narrabeen Peninsula, Narrabeen, Northern Beaches, Sydney, Northern Beaches Council, New South Wales, 2101, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:21.557396+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Castro Valley",
+  "geonameid": 5334928,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.69339572100226,
+      "lon": -122.05777005213318,
+      "geoinfo": {
+        "display_name": "Arthur H. Breed Junior Freeway, Alameda County, California, 94552, United States",
+        "road": "Arthur H. Breed Junior Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94552",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Arthur H. Breed Junior Freeway, Castro Valley, California, United States"
+    },
+    {
+      "lat": 37.715322579925434,
+      "lon": -122.0842717574007,
+      "geoinfo": {
+        "display_name": "18297, Lamson Road, Castro Valley, Alameda County, California, 94546, United States",
+        "road": "Lamson Road",
+        "house_number": "18297",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castro Valley",
+        "state": "California",
+        "postcode": "94546",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18297, Lamson Road, Castro Valley, Alameda County, California, 94546, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:53.267665+00:00",
+  "_kind": "geo_samples"
+}

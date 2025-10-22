@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Swanscombe",
+  "geonameid": 2636433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.42265110681653,
+      "lon": 0.3375545638056076,
+      "geoinfo": {
+        "display_name": "Watling Street, Springhead, Hazells, Northfleet, Gravesham, Kent, England, DA11 8TD, United Kingdom",
+        "road": "Watling Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gravesham",
+        "state": "England",
+        "postcode": "DA11 8TD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Watling Street, Swanscombe, England, United Kingdom"
+    },
+    {
+      "lat": 51.47442023452453,
+      "lon": 0.2798560344006044,
+      "geoinfo": {
+        "display_name": "Schoolfield Road, West Thurrock, Thurrock, Essex, England, RM20 3AN, United Kingdom",
+        "road": "Schoolfield Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Thurrock",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "RM20 3AN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Schoolfield Road, West Thurrock, Thurrock, Essex, England, RM20 3AN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:32.823886+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Halle-Neustadt",
+  "geonameid": 7289614,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.47317421129581,
+      "lon": 11.911296936973368,
+      "geoinfo": {
+        "display_name": "Thaler Weg, WK I, Westliche Neustadt, Halle-Neustadt, Halle (Saale), Saxony-Anhalt, 06124, Germany",
+        "road": "Thaler Weg",
+        "house_number": null,
+        "neighbourhood": "WK I",
+        "suburb": "Halle-Neustadt",
+        "city_district": null,
+        "city": "Halle (Saale)",
+        "state": "Saxony-Anhalt",
+        "postcode": "06124",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Thaler Weg, Halle-Neustadt, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.51027663842206,
+      "lon": 11.92093108396354,
+      "geoinfo": {
+        "display_name": "Tittelweg, Dölauer Heide, Heide-Nord/Blumenau, Halle (Saale), Saxony-Anhalt, 06120, Germany",
+        "road": "Tittelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dölauer Heide",
+        "city_district": null,
+        "city": "Halle (Saale)",
+        "state": "Saxony-Anhalt",
+        "postcode": "06120",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "307, Tittelweg, Dölauer Heide, Heide-Nord/Blumenau, Halle (Saale), Saxony-Anhalt, 06120, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:10.466995+00:00",
+  "_kind": "geo_samples"
+}

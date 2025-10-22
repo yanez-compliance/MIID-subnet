@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Windsor",
+  "geonameid": 4845920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.82740065187954,
+      "lon": -72.59799559977289,
+      "geoinfo": {
+        "display_name": "50, Talbot Lane, South Windsor, Capitol Planning Region, Connecticut, 06074, United States",
+        "road": "Talbot Lane",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Windsor",
+        "state": "Connecticut",
+        "postcode": "06074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "50 Talbot Lane, Windsor, Connecticut, United States"
+    },
+    {
+      "lat": 41.85777602274551,
+      "lon": -72.65611734625894,
+      "geoinfo": {
+        "display_name": "60, Warham Street, Windsor, Capitol Planning Region, Connecticut, 06095, United States",
+        "road": "Warham Street",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Windsor",
+        "state": "Connecticut",
+        "postcode": "06095",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "60, Warham Street, Windsor, Capitol Planning Region, Connecticut, 06095, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:24.541104+00:00",
+  "_kind": "geo_samples"
+}

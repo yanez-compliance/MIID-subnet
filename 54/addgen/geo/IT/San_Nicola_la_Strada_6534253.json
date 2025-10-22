@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Nicola la Strada",
+  "geonameid": 6534253,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.027774588922824,
+      "lon": 14.334141355568955,
+      "geoinfo": {
+        "display_name": "Via Cimitero, Zona Industriale Marcianise Nord, San Marco Evangelista, Caserta, Campania, 81025, Italy",
+        "road": "Via Cimitero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Marco Evangelista",
+        "state": "Campania",
+        "postcode": "81025",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Cimitero, San Nicola la Strada, Campania, Italy"
+    },
+    {
+      "lat": 41.052063054788235,
+      "lon": 14.370540379867045,
+      "geoinfo": {
+        "display_name": "Maddaloni, Caserta, Campania, 81024, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maddaloni",
+        "state": "Campania",
+        "postcode": "81024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "550, Maddaloni, Caserta, Campania, 81024, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:00.106557+00:00",
+  "_kind": "geo_samples"
+}

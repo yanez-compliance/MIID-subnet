@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Nogales",
+  "geonameid": 3522696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.79194188635159,
+      "lon": -97.17674165443262,
+      "geoinfo": {
+        "display_name": "La Cuesta, Camerino Z. Mendoza, Veracruz, 94740, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Cuesta",
+        "state": "Veracruz",
+        "postcode": "94740",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Nogales, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.81554919824785,
+      "lon": -97.15372454879947,
+      "geoinfo": {
+        "display_name": "Calle Morelos, Huiloapan de Cuauhtémoc, Veracruz, 94720, Mexico",
+        "road": "Calle Morelos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huiloapan de Cuauhtémoc",
+        "state": "Veracruz",
+        "postcode": "94720",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "280, Calle Morelos, Huiloapan de Cuauhtémoc, Veracruz, 94720, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:23.591720+00:00",
+  "_kind": "geo_samples"
+}

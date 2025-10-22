@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Sant'Antonio Abate",
+  "geonameid": 3167393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7036840924094,
+      "lon": 14.57149940360554,
+      "geoinfo": {
+        "display_name": "S.Agnia, Lettere, Naples, Campania, 84010, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lettere",
+        "state": "Campania",
+        "postcode": "84010",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Sant'Antonio Abate, Campania, Italy"
+    },
+    {
+      "lat": 40.75137592233051,
+      "lon": 14.571230741674396,
+      "geoinfo": {
+        "display_name": "Via Santa Maria, Angri, Salerno, Campania, 84012, Italy",
+        "road": "Via Santa Maria",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Angri",
+        "state": "Campania",
+        "postcode": "84012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "786, Via Santa Maria, Angri, Salerno, Campania, 84012, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:45.022633+00:00",
+  "_kind": "geo_samples"
+}

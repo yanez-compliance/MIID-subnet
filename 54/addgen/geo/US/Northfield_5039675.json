@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Northfield",
+  "geonameid": 5039675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.451993241271474,
+      "lon": -93.12213835988926,
+      "geoinfo": {
+        "display_name": "90th Street East, Northfield Township, Rice County, Minnesota, 55057, United States",
+        "road": "90th Street East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northfield Township",
+        "state": "Minnesota",
+        "postcode": "55057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "90th Street East, Northfield, Minnesota, United States"
+    },
+    {
+      "lat": 44.45961732294134,
+      "lon": -93.14937034863762,
+      "geoinfo": {
+        "display_name": "2nd Street East, Northfield, Rice County, Minnesota, 55057, United States",
+        "road": "2nd Street East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northfield",
+        "state": "Minnesota",
+        "postcode": "55057",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2nd Street East, Northfield, Rice County, Minnesota, 55057, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:18.728952+00:00",
+  "_kind": "geo_samples"
+}

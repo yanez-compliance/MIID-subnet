@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pozoblanco",
+  "geonameid": 2512340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.34562959547273,
+      "lon": -4.821662383087725,
+      "geoinfo": {
+        "display_name": "CO-6413, Pozoblanco, Córdoba, Andalusia, 14400, Spain",
+        "road": "CO-6413",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pozoblanco",
+        "state": "Andalusia",
+        "postcode": "14400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CO-6413, Pozoblanco, Andalusia, Spain"
+    },
+    {
+      "lat": 38.39131693929968,
+      "lon": -4.889967455204871,
+      "geoinfo": {
+        "display_name": "Piedra Llorente, Añora, Córdoba, Andalusia, 14400, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Añora",
+        "state": "Andalusia",
+        "postcode": "14400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "644, Piedra Llorente, Añora, Córdoba, Andalusia, 14400, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:36:04.467081+00:00",
+  "_kind": "geo_samples"
+}

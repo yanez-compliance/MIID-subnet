@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Melbourne",
+  "geonameid": 2158177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.840541579987075,
+      "lon": 144.98029247353045,
+      "geoinfo": {
+        "display_name": "Armadale Street, Melbourne, City of Melbourne, Victoria, 3004, Australia",
+        "road": "Armadale Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3004",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Armadale Street, Melbourne, Victoria, Australia"
+    },
+    {
+      "lat": -37.85337562271762,
+      "lon": 144.95673592234772,
+      "geoinfo": {
+        "display_name": "Bay Trail, Middle Park, Melbourne, City of Port Phillip, Victoria, 3206, Australia",
+        "road": "Bay Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Middle Park",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3206",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "446, Bay Trail, Middle Park, Melbourne, City of Port Phillip, Victoria, 3206, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:21.037123+00:00",
+  "_kind": "geo_samples"
+}

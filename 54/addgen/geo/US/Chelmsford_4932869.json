@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chelmsford",
+  "geonameid": 4932869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.59023482842923,
+      "lon": -71.35211764231222,
+      "geoinfo": {
+        "display_name": "54, Bartlett Street, Chelmsford Center Historic District, Chelmsford, Middlesex County, Massachusetts, 01824, United States",
+        "road": "Bartlett Street",
+        "house_number": "54",
+        "neighbourhood": "Chelmsford Center Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chelmsford",
+        "state": "Massachusetts",
+        "postcode": "01824",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "54 Bartlett Street, Chelmsford, Massachusetts, United States"
+    },
+    {
+      "lat": 42.62260758379107,
+      "lon": -71.32893226252848,
+      "geoinfo": {
+        "display_name": "65, South Wilder Street, Highlands, Lowell, Middlesex County, Massachusetts, 01851, United States",
+        "road": "South Wilder Street",
+        "house_number": "65",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lowell",
+        "state": "Massachusetts",
+        "postcode": "01851",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "65, South Wilder Street, Highlands, Lowell, Middlesex County, Massachusetts, 01851, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:16.759225+00:00",
+  "_kind": "geo_samples"
+}

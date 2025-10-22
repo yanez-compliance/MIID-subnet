@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Agawam",
+  "geonameid": 4928788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.05757436158313,
+      "lon": -72.60971093471166,
+      "geoinfo": {
+        "display_name": "99, Campbell Drive, Agawam, Hampden County, Massachusetts, 01001, United States",
+        "road": "Campbell Drive",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Agawam",
+        "state": "Massachusetts",
+        "postcode": "01001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99 Campbell Drive, Agawam, Massachusetts, United States"
+    },
+    {
+      "lat": 42.08164412448261,
+      "lon": -72.6188933545443,
+      "geoinfo": {
+        "display_name": "73, Cooper Street, Agawam, Hampden County, Massachusetts, 01001, United States",
+        "road": "Cooper Street",
+        "house_number": "73",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Agawam",
+        "state": "Massachusetts",
+        "postcode": "01001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "73, Cooper Street, Agawam, Hampden County, Massachusetts, 01001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:38.829439+00:00",
+  "_kind": "geo_samples"
+}

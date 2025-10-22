@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pacifica",
+  "geonameid": 5380420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.6009804051807,
+      "lon": -122.50670755759367,
+      "geoinfo": {
+        "display_name": "Taco Bell Cantina, 5200, Cabrillo Highway, Pedro Valley, Pacifica, San Mateo County, California, 94044, United States",
+        "road": "Cabrillo Highway",
+        "house_number": "5200",
+        "neighbourhood": "Pedro Valley",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pacifica",
+        "state": "California",
+        "postcode": "94044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5200 Cabrillo Highway, Pacifica, California, United States"
+    },
+    {
+      "lat": 37.617166052149265,
+      "lon": -122.43813952331107,
+      "geoinfo": {
+        "display_name": "100, El Dorado Court, San Bruno, San Mateo County, California, 94066, United States",
+        "road": "El Dorado Court",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Bruno",
+        "state": "California",
+        "postcode": "94066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100, El Dorado Court, San Bruno, San Mateo County, California, 94066, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:54.273141+00:00",
+  "_kind": "geo_samples"
+}

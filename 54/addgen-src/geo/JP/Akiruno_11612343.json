@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Akiruno",
+  "geonameid": 11612343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.69075967300343,
+      "lon": 139.26129694992642,
+      "geoinfo": {
+        "display_name": "Ken-O Expressway, Hachioji, Tokyo, 192-0151, Japan",
+        "road": "Ken-O Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hachioji",
+        "state": null,
+        "postcode": "192-0151",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Ken-O Expressway, Akiruno, Japan"
+    },
+    {
+      "lat": 35.763862977643896,
+      "lon": 139.23395591158,
+      "geoinfo": {
+        "display_name": "林道風巻入線, Oguno, Hinode, Nishitama District, Tokyo, 190-0181, Japan",
+        "road": "林道風巻入線",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Nishitama District",
+        "city": "Tokyo",
+        "state": null,
+        "postcode": "190-0181",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "林道風巻入線, Oguno, Hinode, Nishitama District, Tokyo, 190-0181, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:17.489170+00:00",
+  "_kind": "geo_samples"
+}

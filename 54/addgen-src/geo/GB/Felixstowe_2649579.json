@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Felixstowe",
+  "geonameid": 2649579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.98708527035502,
+      "lon": 1.3158432662113226,
+      "geoinfo": {
+        "display_name": "Church Lane, Trimley St Martin, East Suffolk, Suffolk, England, IP11 0SW, United Kingdom",
+        "road": "Church Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Suffolk",
+        "state": "England",
+        "postcode": "IP11 0SW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Lane, Felixstowe, England, United Kingdom"
+    },
+    {
+      "lat": 51.95627705741926,
+      "lon": 1.3421387982052062,
+      "geoinfo": {
+        "display_name": "Russell Road, Grange Farm, Felixstowe, East Suffolk, Suffolk, England, IP11 2BE, United Kingdom",
+        "road": "Russell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grange Farm",
+        "city_district": null,
+        "city": "East Suffolk",
+        "state": "England",
+        "postcode": "IP11 2BE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Russell Road, Grange Farm, Felixstowe, East Suffolk, Suffolk, England, IP11 2BE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:03.870648+00:00",
+  "_kind": "geo_samples"
+}

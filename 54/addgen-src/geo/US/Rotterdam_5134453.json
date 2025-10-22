@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rotterdam",
+  "geonameid": 5134453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.7601047386071,
+      "lon": -74.00479084958796,
+      "geoinfo": {
+        "display_name": "1237, Gifford Church Road, Town of Princetown, Schenectady, New York, 12306, United States",
+        "road": "Gifford Church Road",
+        "house_number": "1237",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Princetown",
+        "state": "New York",
+        "postcode": "12306",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1237 Gifford Church Road, Rotterdam, New York, United States"
+    },
+    {
+      "lat": 42.82567299415925,
+      "lon": -73.96661916717329,
+      "geoinfo": {
+        "display_name": "210, Sanders Avenue, Village of Scotia, Town of Glenville, Schenectady County, New York, 12302, United States",
+        "road": "Sanders Avenue",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Scotia",
+        "state": "New York",
+        "postcode": "12302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210, Sanders Avenue, Village of Scotia, Town of Glenville, Schenectady County, New York, 12302, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:22.382572+00:00",
+  "_kind": "geo_samples"
+}

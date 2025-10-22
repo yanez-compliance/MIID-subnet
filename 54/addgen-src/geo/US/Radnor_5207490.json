@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Radnor",
+  "geonameid": 5207490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.00527366192157,
+      "lon": -75.33685304041323,
+      "geoinfo": {
+        "display_name": "Saints Colman-John Neumann, Mill Ridge Drive, Havertown, Haverford Township, Delaware County, Pennsylvania, 19010, United States",
+        "road": "Mill Ridge Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haverford Township",
+        "state": "Pennsylvania",
+        "postcode": "19010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mill Ridge Drive, Radnor, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.04874600305828,
+      "lon": -75.31201080766846,
+      "geoinfo": {
+        "display_name": "1223, Ridgewood Road, Lower Merion Township, Montgomery County, Pennsylvania, 19010, United States",
+        "road": "Ridgewood Road",
+        "house_number": "1223",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lower Merion Township",
+        "state": "Pennsylvania",
+        "postcode": "19010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1223, Ridgewood Road, Lower Merion Township, Montgomery County, Pennsylvania, 19010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:32.477066+00:00",
+  "_kind": "geo_samples"
+}

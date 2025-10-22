@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Villanova",
+  "geonameid": 8378910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.92904145134419,
+      "lon": 12.777137477642615,
+      "geoinfo": {
+        "display_name": "Villaggio Adriano, Tivoli, Roma Capitale, Lazio, 00019, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tivoli",
+        "state": "Lazio",
+        "postcode": "00019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Villanova, Lazio, Italy"
+    },
+    {
+      "lat": 41.97634674992943,
+      "lon": 12.705776435833709,
+      "geoinfo": {
+        "display_name": "Via dei Sambuchi, Le Muratelle, Colle Fiorito, Guidonia Montecelio, Roma Capitale, Lazio, 00012, Italy",
+        "road": "Via dei Sambuchi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colle Fiorito",
+        "state": "Lazio",
+        "postcode": "00012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "546, Via dei Sambuchi, Le Muratelle, Colle Fiorito, Guidonia Montecelio, Roma Capitale, Lazio, 00012, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:21.852469+00:00",
+  "_kind": "geo_samples"
+}

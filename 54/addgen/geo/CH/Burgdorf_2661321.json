@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Burgdorf",
+  "geonameid": 2661321,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.06077123250757,
+      "lon": 7.63314941190145,
+      "geoinfo": {
+        "display_name": "Kapellenweg, Siecheschache, Burgdorf, Emmental administrative district, Emmental-Oberaargau administrative region, Bern, 3401, Switzerland",
+        "road": "Kapellenweg",
+        "house_number": null,
+        "neighbourhood": "Siecheschache",
+        "suburb": null,
+        "city_district": null,
+        "city": "Burgdorf",
+        "state": "Bern",
+        "postcode": "3401",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Kapellenweg, Burgdorf, Bern, Switzerland"
+    },
+    {
+      "lat": 47.05604280795575,
+      "lon": 7.608353157833328,
+      "geoinfo": {
+        "display_name": "Dömereweg, Tiergarte, Im Choser, Burgdorf, Emmental administrative district, Emmental-Oberaargau administrative region, Bern, 3400, Switzerland",
+        "road": "Dömereweg",
+        "house_number": null,
+        "neighbourhood": "Tiergarte",
+        "suburb": "Im Choser",
+        "city_district": null,
+        "city": "Burgdorf",
+        "state": "Bern",
+        "postcode": "3400",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Dömereweg, Burgdorf, Bern, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:06:30.251240+00:00",
+  "_kind": "geo_samples"
+}

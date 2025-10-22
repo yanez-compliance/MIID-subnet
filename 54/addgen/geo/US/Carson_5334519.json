@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carson",
+  "geonameid": 5334519,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.8550372008683,
+      "lon": -118.25629103800536,
+      "geoinfo": {
+        "display_name": "978, East Elsmere Drive, Carson, Los Angeles County, California, 90746, United States",
+        "road": "East Elsmere Drive",
+        "house_number": "978",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carson",
+        "state": "California",
+        "postcode": "90746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "978 East Elsmere Drive, Carson, California, United States"
+    },
+    {
+      "lat": 33.835946815614484,
+      "lon": -118.28078689430734,
+      "geoinfo": {
+        "display_name": "21210, Nicolle Avenue, Keystone, Carson, Los Angeles County, California, 90745, United States",
+        "road": "Nicolle Avenue",
+        "house_number": "21210",
+        "neighbourhood": null,
+        "suburb": "Keystone",
+        "city_district": null,
+        "city": "Carson",
+        "state": "California",
+        "postcode": "90745",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "21210, Nicolle Avenue, Keystone, Carson, Los Angeles County, California, 90745, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:36.551261+00:00",
+  "_kind": "geo_samples"
+}

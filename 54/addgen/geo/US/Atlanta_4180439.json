@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Atlanta",
+  "geonameid": 4180439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.71508646476008,
+      "lon": -84.42323040229013,
+      "geoinfo": {
+        "display_name": "1400, Murphy Avenue Southwest, Sylvan Hills, Atlanta, Fulton County, Georgia, 30310, United States",
+        "road": "Murphy Avenue Southwest",
+        "house_number": "1400",
+        "neighbourhood": "Sylvan Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1400 Murphy Avenue Southwest, Atlanta, Georgia, United States"
+    },
+    {
+      "lat": 33.758193304231476,
+      "lon": -84.39026478776138,
+      "geoinfo": {
+        "display_name": "119, Luckie Street Northwest, Five Points, Atlanta, Fulton County, Georgia, 30303, United States",
+        "road": "Luckie Street Northwest",
+        "house_number": "119",
+        "neighbourhood": "Five Points",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atlanta",
+        "state": "Georgia",
+        "postcode": "30303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "119, Luckie Street Northwest, Five Points, Atlanta, Fulton County, Georgia, 30303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:36.198732+00:00",
+  "_kind": "geo_samples"
+}

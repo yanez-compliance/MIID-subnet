@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tacony",
+  "geonameid": 5215118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.04142685380295,
+      "lon": -75.02912396081267,
+      "geoinfo": {
+        "display_name": "7924, Frankford Avenue, Holmesburg, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19136, United States",
+        "road": "Frankford Avenue",
+        "house_number": "7924",
+        "neighbourhood": "Holmesburg",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7924 Frankford Avenue, Tacony, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.044687003145505,
+      "lon": -75.04851242711686,
+      "geoinfo": {
+        "display_name": "7432, Battersby Street, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19152, United States",
+        "road": "Battersby Street",
+        "house_number": "7432",
+        "neighbourhood": null,
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7432, Battersby Street, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19152, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:36.028439+00:00",
+  "_kind": "geo_samples"
+}

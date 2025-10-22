@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Grazhdanka",
+  "geonameid": 559029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.996493265735126,
+      "lon": 30.434836902631506,
+      "geoinfo": {
+        "display_name": "Школа № 156, улица Верности, Piskarevka, Saint Petersburg, округ Пискарёвка, Saint Petersburg, Northwestern Federal District, 195273, Russia",
+        "road": "улица Верности",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Piskarevka",
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "195273",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Верности, Grazhdanka, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 60.04522817878008,
+      "lon": 30.475534576535853,
+      "geoinfo": {
+        "display_name": "5, Лесная улица, Восточный микрорайон, Медвежий Стан, Murino, Муринское городское поселение, Vsevolozhsky District, Leningrad Oblast, Northwestern Federal District, 188662, Russia",
+        "road": "Лесная улица",
+        "house_number": "5",
+        "neighbourhood": "Восточный микрорайон",
+        "suburb": "Медвежий Стан",
+        "city_district": null,
+        "city": "Murino",
+        "state": "Leningrad Oblast",
+        "postcode": "188662",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "5, Лесная улица, Восточный микрорайон, Медвежий Стан, Murino, Муринское городское поселение, Vsevolozhsky District, Leningrad Oblast, Northwestern Federal District, 188662, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:18.942552+00:00",
+  "_kind": "geo_samples"
+}

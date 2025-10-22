@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bettendorf",
+  "geonameid": 4848489,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.53583638025566,
+      "lon": -90.53644872683093,
+      "geoinfo": {
+        "display_name": "Middle Road, Village of East Davenport, Pleasant Valley Township, Davenport, Scott County, Iowa, 61299, United States",
+        "road": "Middle Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Davenport",
+        "state": "Iowa",
+        "postcode": "61299",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Middle Road, Bettendorf, Iowa, United States"
+    },
+    {
+      "lat": 41.52559507530796,
+      "lon": -90.50211105652387,
+      "geoinfo": {
+        "display_name": "2200, State Street, Bettendorf, Pleasant Valley Township, Scott County, Iowa, 52722, United States",
+        "road": "State Street",
+        "house_number": "2200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bettendorf",
+        "state": "Iowa",
+        "postcode": "52722",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2200, State Street, Bettendorf, Pleasant Valley Township, Scott County, Iowa, 52722, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:29.085025+00:00",
+  "_kind": "geo_samples"
+}

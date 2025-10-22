@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Atamaría",
+  "geonameid": 2521486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.59630639197252,
+      "lon": -0.7709696034165588,
+      "geoinfo": {
+        "display_name": "RM-12, Rincón de San Ginés, Cartagena, Campo de Cartagena y Mar Menor, Region of Murcia, 30385, Spain",
+        "road": "RM-12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rincón de San Ginés",
+        "city": "Cartagena",
+        "state": "Region of Murcia",
+        "postcode": "30385",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "RM-12, Atamaría, Region of Murcia, Spain"
+    },
+    {
+      "lat": 37.587593504516214,
+      "lon": -0.8559026347017502,
+      "geoinfo": {
+        "display_name": "Avenida de la Marina Española, El Puerto, Portmán, La Unión, Campo de Cartagena y Mar Menor, Region of Murcia, Spain",
+        "road": "Avenida de la Marina Española",
+        "house_number": null,
+        "neighbourhood": "El Puerto",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Unión",
+        "state": "Region of Murcia",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "809, Avenida de la Marina Española, El Puerto, Portmán, La Unión, Campo de Cartagena y Mar Menor, 07848 Region of Murcia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:32.502714+00:00",
+  "_kind": "geo_samples"
+}

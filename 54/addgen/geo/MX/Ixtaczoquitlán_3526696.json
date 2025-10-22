@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ixtaczoquitlán",
+  "geonameid": 3526696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.85645543914223,
+      "lon": -97.10452124081964,
+      "geoinfo": {
+        "display_name": "Calle Norte 6, Del Maestro, San Carlos, Orizaba, Veracruz, 94300, Mexico",
+        "road": "Calle Norte 6",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orizaba",
+        "state": "Veracruz",
+        "postcode": "94300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Norte 6, Ixtaczoquitlán, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.854421610922124,
+      "lon": -97.10575571600683,
+      "geoinfo": {
+        "display_name": "Avenida Oriente 13, Del Maestro, Las Alamedas, Orizaba, Veracruz, 94300, Mexico",
+        "road": "Avenida Oriente 13",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orizaba",
+        "state": "Veracruz",
+        "postcode": "94300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Oriente 13, Del Maestro, Las Alamedas, Orizaba, Veracruz, 94300, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:44.835872+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Mutsu",
+  "geonameid": 2127878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.306264406688086,
+      "lon": 141.16401322239435,
+      "geoinfo": {
+        "display_name": "長坂大湊線, Matsumoricho, Mutsu, Aomori Prefecture, 035-0076, Japan",
+        "road": "長坂大湊線",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mutsu",
+        "state": null,
+        "postcode": "035-0076",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "長坂大湊線, Mutsu, Japan"
+    },
+    {
+      "lat": 41.332136824460555,
+      "lon": 141.20276684681602,
+      "geoinfo": {
+        "display_name": "Mutsu, Aomori Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mutsu",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "074, Mutsu, 22177 Aomori Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:34.310969+00:00",
+  "_kind": "geo_samples"
+}

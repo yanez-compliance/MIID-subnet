@@ -1,0 +1,65 @@
+{
+  "country_code": "DO",
+  "country": "Dominican Republic",
+  "city": "Moca",
+  "geonameid": 3496331,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 19.419269848087843,
+      "lon": -70.49066908432249,
+      "geoinfo": {
+        "display_name": "Moca - Salcedo, Las Lagunas, Moca, Espaillat, 56000, Dominican Republic",
+        "road": "Moca - Salcedo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moca",
+        "state": "Espaillat",
+        "postcode": "56000",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Moca - Salcedo, Moca, Espaillat, Dominican Republic"
+    },
+    {
+      "lat": 19.374806122674727,
+      "lon": -70.49194262018634,
+      "geoinfo": {
+        "display_name": "Villa Faridhee, Moca, Espaillat, 56011, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Villa Faridhee",
+        "suburb": null,
+        "city_district": null,
+        "city": "Moca",
+        "state": "Espaillat",
+        "postcode": "56011",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Villa Faridhee, Moca, Espaillat, Dominican Republic"
+    },
+    {
+      "lat": 19.364564699827646,
+      "lon": -70.493330445661,
+      "geoinfo": {
+        "display_name": "Moca, Espaillat, 56011, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moca",
+        "state": "Espaillat",
+        "postcode": "56011",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Moca, Espaillat, Dominican Republic"
+    }
+  ],
+  "updated_at": "2025-10-16T13:02:02.541732+00:00",
+  "_kind": "geo_samples"
+}

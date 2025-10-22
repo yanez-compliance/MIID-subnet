@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Les Olives",
+  "geonameid": 3000138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.32732742053596,
+      "lon": 5.464791524085437,
+      "geoinfo": {
+        "display_name": "Chemin de La Ribassière, Enco de Pont, Allauch, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13190, France",
+        "road": "Chemin de La Ribassière",
+        "house_number": null,
+        "neighbourhood": "Enco de Pont",
+        "suburb": null,
+        "city_district": null,
+        "city": "Allauch",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de La Ribassière, Les Olives, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.36327716973152,
+      "lon": 5.439430891440176,
+      "geoinfo": {
+        "display_name": "Impasse du Grand Chapiteau, La Parade, Palama, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France",
+        "road": "Impasse du Grand Chapiteau",
+        "house_number": null,
+        "neighbourhood": "La Parade",
+        "suburb": "13th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13013",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Impasse du Grand Chapiteau, La Parade, Palama, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:52.216368+00:00",
+  "_kind": "geo_samples"
+}

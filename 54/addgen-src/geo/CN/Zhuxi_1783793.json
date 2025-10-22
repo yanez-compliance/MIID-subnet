@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhuxi",
+  "geonameid": 1783793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.525313850074326,
+      "lon": 105.66469145569216,
+      "geoinfo": {
+        "display_name": "S303, Shaba, Dazu District, Chongqing, China",
+        "road": "S303",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaba",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S303, Zhuxi, Chongqing, China"
+    },
+    {
+      "lat": 29.544332569379357,
+      "lon": 105.65812627911556,
+      "geoinfo": {
+        "display_name": "Zhuxi, Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhuxi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "616, Zhuxi, Dazu District, 20066 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:32:31.019873+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Metepec",
+  "geonameid": 3523303,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.287160055708625,
+      "lon": -99.57306393113902,
+      "geoinfo": {
+        "display_name": "Avenida Paseo Tollocan, Toluca, State of Mexico, 50246, Mexico",
+        "road": "Avenida Paseo Tollocan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toluca",
+        "state": "State of Mexico",
+        "postcode": "50246",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Paseo Tollocan, Metepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.21651364844497,
+      "lon": -99.61442791944458,
+      "geoinfo": {
+        "display_name": "Calle 5 de Febrero, Santa María Nativitas, Metepec, State of Mexico, 52230, Mexico",
+        "road": "Calle 5 de Febrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa María Nativitas",
+        "state": "State of Mexico",
+        "postcode": "52230",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 5 de Febrero, Santa María Nativitas, Metepec, State of Mexico, 52230, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:20.031026+00:00",
+  "_kind": "geo_samples"
+}

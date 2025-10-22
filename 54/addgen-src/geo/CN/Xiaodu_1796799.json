@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiaodu",
+  "geonameid": 1796799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.921340134903247,
+      "lon": 105.87980782881358,
+      "geoinfo": {
+        "display_name": "Shouqiao, Tongnan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shouqiao",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xiaodu, Chongqing, China"
+    },
+    {
+      "lat": 29.932926733654067,
+      "lon": 105.91443511677082,
+      "geoinfo": {
+        "display_name": "Tongnan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "859, Tongnan District, 74791 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:45.245573+00:00",
+  "_kind": "geo_samples"
+}

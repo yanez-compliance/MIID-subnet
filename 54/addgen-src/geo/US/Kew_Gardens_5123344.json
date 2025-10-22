@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kew Gardens",
+  "geonameid": 5123344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.75217161847025,
+      "lon": -73.8441137502749,
+      "geoinfo": {
+        "display_name": "Queens, Queens County, New York, 11368, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11368",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Queens, Kew Gardens, New York, United States"
+    },
+    {
+      "lat": 40.72012417089243,
+      "lon": -73.86402208499737,
+      "geoinfo": {
+        "display_name": "85-23, 65th Road, Rego Park, Queens, Queens County, New York, 11374, United States",
+        "road": "65th Road",
+        "house_number": "85-23",
+        "neighbourhood": "Rego Park",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "85-23, 65th Road, Rego Park, Queens, Queens County, New York, 11374, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:23.549073+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arlington Heights",
+  "geonameid": 4883555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.10989368039098,
+      "lon": -87.94994648839642,
+      "geoinfo": {
+        "display_name": "Palatine Road, Arlington Heights, Wheeling Township, Cook County, Illinois, 60004, United States",
+        "road": "Palatine Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington Heights",
+        "state": "Illinois",
+        "postcode": "60004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Palatine Road, Arlington Heights, Illinois, United States"
+    },
+    {
+      "lat": 42.09161389011148,
+      "lon": -87.99958089544056,
+      "geoinfo": {
+        "display_name": "1398, West Northwest Highway, Arlington Heights, Wheeling Township, Cook County, Illinois, 60004, United States",
+        "road": "West Northwest Highway",
+        "house_number": "1398",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington Heights",
+        "state": "Illinois",
+        "postcode": "60004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1398, West Northwest Highway, Arlington Heights, Wheeling Township, Cook County, Illinois, 60004, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:50.169395+00:00",
+  "_kind": "geo_samples"
+}

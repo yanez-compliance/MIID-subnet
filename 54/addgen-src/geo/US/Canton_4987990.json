@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Canton",
+  "geonameid": 4987990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.29562597150889,
+      "lon": -83.47446823770608,
+      "geoinfo": {
+        "display_name": "44082, Nowland Drive, Nowland Estates, Canton Township, Wayne County, Michigan, 48188, United States",
+        "road": "Nowland Drive",
+        "house_number": "44082",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton Township",
+        "state": "Michigan",
+        "postcode": "48188",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "44082 Nowland Drive, Canton, Michigan, United States"
+    },
+    {
+      "lat": 42.27954937312528,
+      "lon": -83.52349554545245,
+      "geoinfo": {
+        "display_name": "Denton Road, Canton Township, Wayne County, Michigan, 48111, United States",
+        "road": "Denton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canton Township",
+        "state": "Michigan",
+        "postcode": "48111",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "468, Denton Road, Canton Township, Wayne County, Michigan, 48111, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:51.116141+00:00",
+  "_kind": "geo_samples"
+}

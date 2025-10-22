@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chaigou",
+  "geonameid": 1815847,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.267318831507914,
+      "lon": 119.65005500643844,
+      "geoinfo": {
+        "display_name": "S220, Gaomi City, Weifang, Shandong, China",
+        "road": "S220",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaomi City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S220, Chaigou, Shandong, China"
+    },
+    {
+      "lat": 36.213914788660716,
+      "lon": 119.59237113006392,
+      "geoinfo": {
+        "display_name": "土庄, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "429, 土庄, Weifang, 30398 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:22.268805+00:00",
+  "_kind": "geo_samples"
+}

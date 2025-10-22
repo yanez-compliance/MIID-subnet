@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fresh Meadows",
+  "geonameid": 5118005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.73582577819255,
+      "lon": -73.77881390852326,
+      "geoinfo": {
+        "display_name": "192-65B, 71st Crescent, Fresh Meadows, Queens, Queens County, New York, 11365, United States",
+        "road": "71st Crescent",
+        "house_number": "192-65B",
+        "neighbourhood": "Fresh Meadows",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11365",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "192-65B 71st Crescent, Fresh Meadows, New York, United States"
+    },
+    {
+      "lat": 40.728498174101624,
+      "lon": -73.83742638790035,
+      "geoinfo": {
+        "display_name": "Meadow Lake Drive, Queens, Queens County, New York, 11375, United States",
+        "road": "Meadow Lake Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11375",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "159, Meadow Lake Drive, Queens, Queens County, New York, 11375, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:47.846439+00:00",
+  "_kind": "geo_samples"
+}

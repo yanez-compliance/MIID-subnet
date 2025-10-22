@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Auburn Bay",
+  "geonameid": 7870884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.89105972894673,
+      "lon": -113.94517969157428,
+      "geoinfo": {
+        "display_name": "540, Auburn Bay Avenue SE, Auburn Bay, Calgary, Alberta, T3M 1T8, Canada",
+        "road": "Auburn Bay Avenue SE",
+        "house_number": "540",
+        "neighbourhood": null,
+        "suburb": "Auburn Bay",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T3M 1T8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "540 Auburn Bay Avenue SE, Auburn Bay, Alberta, Canada"
+    },
+    {
+      "lat": 50.85636263164909,
+      "lon": -114.0087212947434,
+      "geoinfo": {
+        "display_name": "69, Legacy Woods Place SE, Legacy, Calgary, Alberta, T2X 0W8, Canada",
+        "road": "Legacy Woods Place SE",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": "Legacy",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T2X 0W8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "69, Legacy Woods Place SE, Legacy, Calgary, Alberta, T2X 0W8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:38:48.584299+00:00",
+  "_kind": "geo_samples"
+}

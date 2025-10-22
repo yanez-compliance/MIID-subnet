@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "The Woodlands",
+  "geonameid": 4736476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.157356787614457,
+      "lon": -95.51182365513331,
+      "geoinfo": {
+        "display_name": "27, South Trace Creek Drive, Trace Creek, The Woodlands, Montgomery County, Texas, 77381, United States",
+        "road": "South Trace Creek Drive",
+        "house_number": "27",
+        "neighbourhood": "Trace Creek",
+        "suburb": null,
+        "city_district": null,
+        "city": "The Woodlands",
+        "state": "Texas",
+        "postcode": "77381",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27 South Trace Creek Drive, The Woodlands, Texas, United States"
+    },
+    {
+      "lat": 30.13245113947962,
+      "lon": -95.49673450218359,
+      "geoinfo": {
+        "display_name": "Spring Creek Drive, Montgomery County, Texas, 77380, United States",
+        "road": "Spring Creek Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77380",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "954, Spring Creek Drive, Montgomery County, Texas, 77380, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:48.471717+00:00",
+  "_kind": "geo_samples"
+}

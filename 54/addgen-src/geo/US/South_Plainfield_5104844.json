@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Plainfield",
+  "geonameid": 5104844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.58202746415195,
+      "lon": -74.43528091989938,
+      "geoinfo": {
+        "display_name": "Cherry Street, Samptown, South Plainfield, Middlesex County, New Jersey, 07080, United States",
+        "road": "Cherry Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Plainfield",
+        "state": "New Jersey",
+        "postcode": "07080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cherry Street, South Plainfield, New Jersey, United States"
+    },
+    {
+      "lat": 40.5849868736551,
+      "lon": -74.43608246792239,
+      "geoinfo": {
+        "display_name": "1629, Chestnut Street, Samptown, South Plainfield, Middlesex County, New Jersey, 07080, United States",
+        "road": "Chestnut Street",
+        "house_number": "1629",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Plainfield",
+        "state": "New Jersey",
+        "postcode": "07080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1629, Chestnut Street, Samptown, South Plainfield, Middlesex County, New Jersey, 07080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:43.588170+00:00",
+  "_kind": "geo_samples"
+}

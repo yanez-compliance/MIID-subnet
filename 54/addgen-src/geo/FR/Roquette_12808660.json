@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Roquette",
+  "geonameid": 12808660,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.86180149809288,
+      "lon": 2.3827979540556883,
+      "geoinfo": {
+        "display_name": "Cordonnerie, Rue du Chemin Vert, Quartier Saint-Ambroise, 11th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75011, France",
+        "road": "Rue du Chemin Vert",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "11th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75011",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du Chemin Vert, Roquette, 83253 Ile-de-France, France"
+    },
+    {
+      "lat": 48.86954998866683,
+      "lon": 2.360171065664016,
+      "geoinfo": {
+        "display_name": "Centre Jean Verdier, Rue de Lancry, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75010, France",
+        "road": "Rue de Lancry",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "10th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75010",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Centre Jean Verdier, Rue de Lancry, Quartier de la Porte-Saint-Martin, 10th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75010, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:28.635916+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 08",
+  "geonameid": 6543974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.77564212355119,
+      "lon": 4.898178673443686,
+      "geoinfo": {
+        "display_name": "Boulevard Laurent Bonnevay, Bonnevay, Villeurbanne, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69100, France",
+        "road": "Boulevard Laurent Bonnevay",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bonnevay",
+        "city_district": null,
+        "city": "Villeurbanne",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Laurent Bonnevay, Lyon 08, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.73336371420855,
+      "lon": 4.829660398380231,
+      "geoinfo": {
+        "display_name": "Rue Marcel Mérieux, Le Bon Lait, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France",
+        "road": "Rue Marcel Mérieux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerland",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Marcel Mérieux, Le Bon Lait, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:26.907066+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dover",
+  "geonameid": 4142290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.13474639530032,
+      "lon": -75.47778196379913,
+      "geoinfo": {
+        "display_name": "5th Street, Dover, Kent County, Delaware, 19902, United States",
+        "road": "5th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dover",
+        "state": "Delaware",
+        "postcode": "19902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5th Street, Dover, Delaware, United States"
+    },
+    {
+      "lat": 39.168678187676285,
+      "lon": -75.51970806211713,
+      "geoinfo": {
+        "display_name": "Luther Towers of Dover, Lakeview Drive, East Lake Gardens, Dover, Kent County, Delaware, 19901, United States",
+        "road": "Lakeview Drive",
+        "house_number": null,
+        "neighbourhood": "East Lake Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dover",
+        "state": "Delaware",
+        "postcode": "19901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "536, Lakeview Drive, Dover, 19901 Delaware, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:15.466548+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Tölz",
+  "geonameid": 2953324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.742094475578625,
+      "lon": 11.587944524078923,
+      "geoinfo": {
+        "display_name": "G 1, Reut, Mühle, Gaißach, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 83674, Germany",
+        "road": "G 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühle",
+        "state": "Bavaria",
+        "postcode": "83674",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "G 1, Bad Tölz, Bavaria, Germany"
+    },
+    {
+      "lat": 47.74337241859103,
+      "lon": 11.602551550835177,
+      "geoinfo": {
+        "display_name": "Schwaiger Alm Steig, Mühle, Gaißach, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 83674, Germany",
+        "road": "Schwaiger Alm Steig",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühle",
+        "state": "Bavaria",
+        "postcode": "83674",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "170, Schwaiger Alm Steig, Mühle, Gaißach, Landkreis Bad Tölz-Wolfratshausen, Bavaria, 83674, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:33.142460+00:00",
+  "_kind": "geo_samples"
+}

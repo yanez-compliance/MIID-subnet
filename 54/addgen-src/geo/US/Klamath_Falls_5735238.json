@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Klamath Falls",
+  "geonameid": 5735238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.21851237304096,
+      "lon": -121.79426438830514,
+      "geoinfo": {
+        "display_name": "191, Octavia Avenue, Klamath Falls, Klamath County, Oregon, 97601, United States",
+        "road": "Octavia Avenue",
+        "house_number": "191",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Klamath Falls",
+        "state": "Oregon",
+        "postcode": "97601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "191 Octavia Avenue, Klamath Falls, Oregon, United States"
+    },
+    {
+      "lat": 42.20745808314283,
+      "lon": -121.81217945644514,
+      "geoinfo": {
+        "display_name": "Falls Highway, Stewart Lenox, Klamath Falls, Klamath County, Oregon, United States",
+        "road": "Falls Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Klamath Falls",
+        "state": "Oregon",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "877, Falls Highway, Stewart Lenox, Klamath Falls, Klamath County, 52784 Oregon, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:35.626862+00:00",
+  "_kind": "geo_samples"
+}

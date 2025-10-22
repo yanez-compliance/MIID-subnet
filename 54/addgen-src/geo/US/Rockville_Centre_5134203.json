@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rockville Centre",
+  "geonameid": 5134203,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.616228400727486,
+      "lon": -73.63925220595026,
+      "geoinfo": {
+        "display_name": "3737, Long Beach Road, Oceanside, Town of Hempstead, Nassau County, New York, 11572, United States",
+        "road": "Long Beach Road",
+        "house_number": "3737",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oceanside",
+        "state": "New York",
+        "postcode": "11572",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3737 Long Beach Road, Rockville Centre, New York, United States"
+    },
+    {
+      "lat": 40.64967823476044,
+      "lon": -73.62124973865475,
+      "geoinfo": {
+        "display_name": "2481, Loft Avenue, Baldwin, Town of Hempstead, Nassau County, New York, 11510, United States",
+        "road": "Loft Avenue",
+        "house_number": "2481",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baldwin",
+        "state": "New York",
+        "postcode": "11510",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2481, Loft Avenue, Baldwin, Town of Hempstead, Nassau County, New York, 11510, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:13.259578+00:00",
+  "_kind": "geo_samples"
+}

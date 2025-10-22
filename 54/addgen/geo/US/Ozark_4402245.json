@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ozark",
+  "geonameid": 4402245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.994635000338384,
+      "lon": -93.22633059903208,
+      "geoinfo": {
+        "display_name": "2633, South 19th Street, Ozark, Christian County, Missouri, 65721, United States",
+        "road": "South 19th Street",
+        "house_number": "2633",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ozark",
+        "state": "Missouri",
+        "postcode": "65721",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2633 South 19th Street, Ozark, Missouri, United States"
+    },
+    {
+      "lat": 36.997959059918664,
+      "lon": -93.24936604065671,
+      "geoinfo": {
+        "display_name": "MO F, Ozark, Christian County, Missouri, 65721, United States",
+        "road": "MO F",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ozark",
+        "state": "Missouri",
+        "postcode": "65721",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "166, MO F, Ozark, Christian County, Missouri, 65721, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:42.998676+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Alsfeld",
+  "geonameid": 2958128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.72068065956073,
+      "lon": 9.312896476937503,
+      "geoinfo": {
+        "display_name": "Hopfgarten, Schwalmtal, Vogelsbergkreis, Hesse, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hopfgarten",
+        "state": "Hesse",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Alsfeld, Hesse, Germany"
+    },
+    {
+      "lat": 50.72160194658061,
+      "lon": 9.32131827846779,
+      "geoinfo": {
+        "display_name": "Jägereiche, Außenliegend, Rainrod, Schwalmtal, Vogelsbergkreis, Hesse, 36318, Germany",
+        "road": "Außenliegend",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rainrod",
+        "state": "Hesse",
+        "postcode": "36318",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "224, Außenliegend, Alsfeld, 36318 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:42.560395+00:00",
+  "_kind": "geo_samples"
+}

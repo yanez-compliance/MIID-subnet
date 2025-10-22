@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Soest",
+  "geonameid": 2747034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.16760800355981,
+      "lon": 5.313217679623544,
+      "geoinfo": {
+        "display_name": "5B, Van Lenneplaan, Soest Zuid, Soest, Utrecht, Netherlands, 3768 XM, Netherlands",
+        "road": "Van Lenneplaan",
+        "house_number": "5B",
+        "neighbourhood": "Soest Zuid",
+        "suburb": null,
+        "city_district": "Soest",
+        "city": "Soest",
+        "state": "Utrecht",
+        "postcode": "3768 XM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "5B Van Lenneplaan, Soest, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.13106544323835,
+      "lon": 5.306308729056035,
+      "geoinfo": {
+        "display_name": "De Stompert, Soest, Utrecht, Netherlands, 3769 AK, Netherlands",
+        "road": "De Stompert",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Soest",
+        "city": "Soest",
+        "state": "Utrecht",
+        "postcode": "3769 AK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "600, De Stompert, Soest, Utrecht, Netherlands, 3769 AK, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:07.349029+00:00",
+  "_kind": "geo_samples"
+}

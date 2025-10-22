@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ocean Acres",
+  "geonameid": 4503346,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.749356744081815,
+      "lon": -74.31060401630393,
+      "geoinfo": {
+        "display_name": "NJ 72, Atlantic Hills, Stafford Township, Ocean County, New Jersey, 08005, United States",
+        "road": "NJ 72",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stafford Township",
+        "state": "New Jersey",
+        "postcode": "08005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "NJ 72, Ocean Acres, New Jersey, United States"
+    },
+    {
+      "lat": 39.75113599334067,
+      "lon": -74.22791544655036,
+      "geoinfo": {
+        "display_name": "20, Hillside Avenue, Hillside Estates, Barnegat Township, Ocean County, New Jersey, 08005, United States",
+        "road": "Hillside Avenue",
+        "house_number": "20",
+        "neighbourhood": "Hillside Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Barnegat Township",
+        "state": "New Jersey",
+        "postcode": "08005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20, Hillside Avenue, Hillside Estates, Barnegat Township, Ocean County, New Jersey, 08005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:31.430377+00:00",
+  "_kind": "geo_samples"
+}

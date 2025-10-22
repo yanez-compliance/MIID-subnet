@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cherbourg",
+  "geonameid": 3025466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.61080080848751,
+      "lon": -1.6312441564761837,
+      "geoinfo": {
+        "display_name": "Chemin de la Loge au Nardouet, La Loge, La Glacerie, Cherbourg-en-Cotentin, Cherbourg, Manche, Normandy, Metropolitan France, 50470, France",
+        "road": "Chemin de la Loge au Nardouet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "La Glacerie",
+        "city": "Cherbourg-en-Cotentin",
+        "state": "Normandy",
+        "postcode": "50470",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de la Loge au Nardouet, Cherbourg, Normandy, France"
+    },
+    {
+      "lat": 49.667210081577515,
+      "lon": -1.6637687492732072,
+      "geoinfo": {
+        "display_name": "Fort Chavagnac, Boulevard de la Saline, Equeurdreville, Équeurdreville-Hainneville, Cherbourg-en-Cotentin, Cherbourg, Manche, Normandy, Metropolitan France, 50120, France",
+        "road": "Boulevard de la Saline",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Equeurdreville",
+        "city_district": "Équeurdreville-Hainneville",
+        "city": "Cherbourg-en-Cotentin",
+        "state": "Normandy",
+        "postcode": "50120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "476, Boulevard de la Saline, Cherbourg, 50120 Normandy, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:48.591241+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodlawn",
+  "geonameid": 4917067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.81597569334642,
+      "lon": -87.56743872766671,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Woodlawn, Illinois, United States"
+    },
+    {
+      "lat": 41.81987150942683,
+      "lon": -87.59293550985244,
+      "geoinfo": {
+        "display_name": "Mermaid (La Sirena), Lakefront Trail, Oakwood Shores, Oakland, Chicago, Hyde Park Township, Cook County, Illinois, 60653, United States",
+        "road": "Lakefront Trail",
+        "house_number": null,
+        "neighbourhood": "Oakwood Shores",
+        "suburb": "Oakland",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60653",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "506, Lakefront Trail, Woodlawn, 60653 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:07.040460+00:00",
+  "_kind": "geo_samples"
+}

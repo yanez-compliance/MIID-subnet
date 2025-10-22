@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oberschöneweide",
+  "geonameid": 2859103,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.446194421468086,
+      "lon": 13.472908861753877,
+      "geoinfo": {
+        "display_name": "A 113, Siedlung Daheim, Baumschulenweg, Treptow-Köpenick, Berlin, 12437, Germany",
+        "road": "A 113",
+        "house_number": null,
+        "neighbourhood": "Siedlung Daheim",
+        "suburb": "Baumschulenweg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12437",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 113, Oberschöneweide, Germany"
+    },
+    {
+      "lat": 52.48796685332871,
+      "lon": 13.49319077068131,
+      "geoinfo": {
+        "display_name": "42-45, Köpenicker Chaussee, Rummelsburg, Lichtenberg, Berlin, 10317, Germany",
+        "road": "Köpenicker Chaussee",
+        "house_number": "42-45",
+        "neighbourhood": null,
+        "suburb": "Rummelsburg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10317",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "42-45, Köpenicker Chaussee, Rummelsburg, Lichtenberg, Berlin, 10317, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:22.040156+00:00",
+  "_kind": "geo_samples"
+}

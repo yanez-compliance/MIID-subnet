@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Nazareth",
+  "geonameid": 294098,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.69381294573723,
+      "lon": 35.33747306702721,
+      "geoinfo": {
+        "display_name": "Nof HaGalil, Jezreel Subdistrict, North District, 1765413, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nof HaGalil",
+        "state": "North District",
+        "postcode": "1765413",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Nazareth, North District, Israel"
+    },
+    {
+      "lat": 32.707817027746074,
+      "lon": 35.31717657369407,
+      "geoinfo": {
+        "display_name": "Hermon, Nof HaGalil, Jezreel Subdistrict, North District, 1765413, Israel",
+        "road": "Hermon",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nof HaGalil",
+        "state": "North District",
+        "postcode": "1765413",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "436, Hermon, Nazareth, 1765413 North District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:21.015732+00:00",
+  "_kind": "geo_samples"
+}

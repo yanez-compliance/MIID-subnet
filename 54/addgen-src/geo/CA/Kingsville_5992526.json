@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kingsville",
+  "geonameid": 5992526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.08706298607753,
+      "lon": -82.70219460011094,
+      "geoinfo": {
+        "display_name": "999, Talbot Road, Kingsville, Essex County, Southwestern Ontario, Ontario, N0P 2G0, Canada",
+        "road": "Talbot Road",
+        "house_number": "999",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingsville",
+        "state": "Ontario",
+        "postcode": "N0P 2G0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "999 Talbot Road, Kingsville, Ontario, Canada"
+    },
+    {
+      "lat": 42.0645480489479,
+      "lon": -82.73262240777024,
+      "geoinfo": {
+        "display_name": "237, Road 3 East, Ruthven, Kingsville, Essex County, Southwestern Ontario, Ontario, N9Y 0C1, Canada",
+        "road": "Road 3 East",
+        "house_number": "237",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingsville",
+        "state": "Ontario",
+        "postcode": "N9Y 0C1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "237, Road 3 East, Ruthven, Kingsville, Essex County, Southwestern Ontario, Ontario, N9Y 0C1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:47.616437+00:00",
+  "_kind": "geo_samples"
+}

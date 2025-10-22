@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dickinson",
+  "geonameid": 5688789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.896703611946606,
+      "lon": -102.75076095304419,
+      "geoinfo": {
+        "display_name": "25th Avenue East, Stark County, North Dakota, 58652, United States",
+        "road": "25th Avenue East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Dakota",
+        "postcode": "58652",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "25th Avenue East, Dickinson, North Dakota, United States"
+    },
+    {
+      "lat": 46.914509560490835,
+      "lon": -102.785764648042,
+      "geoinfo": {
+        "display_name": "34th Street West, Stark County, North Dakota, 58601, United States",
+        "road": "34th Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Dakota",
+        "postcode": "58601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "34th Street West, Stark County, North Dakota, 58601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:33.235411+00:00",
+  "_kind": "geo_samples"
+}

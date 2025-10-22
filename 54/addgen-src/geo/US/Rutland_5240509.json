@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rutland",
+  "geonameid": 5240509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.60500283039702,
+      "lon": -72.9781062467821,
+      "geoinfo": {
+        "display_name": "Rutland City Hall, 1, Strongs Avenue, Rutland Courthouse Historic District, Brookside Trailer Park, Rutland City, Rutland County, Vermont, 05701, United States",
+        "road": "Strongs Avenue",
+        "house_number": "1",
+        "neighbourhood": "Rutland Courthouse Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rutland City",
+        "state": "Vermont",
+        "postcode": "05701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1 Strongs Avenue, Rutland, Vermont, United States"
+    },
+    {
+      "lat": 43.616507954194624,
+      "lon": -73.02624808502685,
+      "geoinfo": {
+        "display_name": "2708, West Street, Rutland Town, Proctor, Rutland County, Vermont, 05765, United States",
+        "road": "West Street",
+        "house_number": "2708",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Proctor",
+        "state": "Vermont",
+        "postcode": "05765",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2708, West Street, Rutland Town, Proctor, Rutland County, Vermont, 05765, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:44.156288+00:00",
+  "_kind": "geo_samples"
+}

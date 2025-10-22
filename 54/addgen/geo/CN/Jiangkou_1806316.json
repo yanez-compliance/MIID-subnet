@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiangkou",
+  "geonameid": 1806316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.255412411995646,
+      "lon": 107.86479775559384,
+      "geoinfo": {
+        "display_name": "Jiangkou, Wulong District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wulong District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiangkou, Chongqing, China"
+    },
+    {
+      "lat": 29.262564252424827,
+      "lon": 107.83561039397462,
+      "geoinfo": {
+        "display_name": "武道高速, Jiangkou, Wulong District, Chongqing, China",
+        "road": "武道高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wulong District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "332, 武道高速, Jiangkou, Wulong District, 57549 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:14.824531+00:00",
+  "_kind": "geo_samples"
+}

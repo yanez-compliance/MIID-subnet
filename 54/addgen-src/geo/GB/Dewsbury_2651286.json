@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Dewsbury",
+  "geonameid": 2651286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.718775832939066,
+      "lon": -1.6816142476436333,
+      "geoinfo": {
+        "display_name": "Oxford Road, Nunroyd, Firthcliffe, Gomersal, Kirklees, West Yorkshire, England, BD19 4HL, United Kingdom",
+        "road": "Oxford Road",
+        "house_number": null,
+        "neighbourhood": "Nunroyd",
+        "suburb": "Firthcliffe",
+        "city_district": null,
+        "city": "Kirklees",
+        "state": "England",
+        "postcode": "BD19 4HL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Oxford Road, Dewsbury, England, United Kingdom"
+    },
+    {
+      "lat": 53.67681747197908,
+      "lon": -1.5709208988682914,
+      "geoinfo": {
+        "display_name": "Sunnydale Park, Ossett, Wakefield, West Yorkshire, England, WF5 0RJ, United Kingdom",
+        "road": "Sunnydale Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "England",
+        "postcode": "WF5 0RJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sunnydale Park, Ossett, Wakefield, West Yorkshire, England, WF5 0RJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:03.081750+00:00",
+  "_kind": "geo_samples"
+}

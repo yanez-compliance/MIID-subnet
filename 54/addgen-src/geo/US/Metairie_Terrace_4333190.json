@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Metairie Terrace",
+  "geonameid": 4333190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.978326461923,
+      "lon": -90.11316602240771,
+      "geoinfo": {
+        "display_name": "New Orleans Country Club, Avenue M, New Orleans, Orleans Parish, Louisiana, 70012, United States",
+        "road": "Avenue M",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Orleans",
+        "state": "Louisiana",
+        "postcode": "70012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Avenue M, Metairie Terrace, Louisiana, United States"
+    },
+    {
+      "lat": 29.992415620314617,
+      "lon": -90.20867305728127,
+      "geoinfo": {
+        "display_name": "6509, Lafreniere Street, Metairie, Jefferson Parish, Louisiana, 70003, United States",
+        "road": "Lafreniere Street",
+        "house_number": "6509",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Metairie",
+        "state": "Louisiana",
+        "postcode": "70003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6509, Lafreniere Street, Metairie, Jefferson Parish, Louisiana, 70003, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:09.130069+00:00",
+  "_kind": "geo_samples"
+}

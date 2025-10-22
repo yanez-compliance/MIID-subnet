@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kampung Sedenak",
+  "geonameid": 1732734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.7159417346165546,
+      "lon": 103.50294317997417,
+      "geoinfo": {
+        "display_name": "Sedenak, Kulai, Johor, 81030, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sedenak",
+        "state": "Johor",
+        "postcode": "81030",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Kampung Sedenak, Johor, Malaysia"
+    },
+    {
+      "lat": 1.7009001649110052,
+      "lon": 103.55919940988143,
+      "geoinfo": {
+        "display_name": "Sengkang, Kulai, Johor, 81030, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sengkang",
+        "state": "Johor",
+        "postcode": "81030",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "769, Sengkang, Kulai, Johor, 81030, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:24.663052+00:00",
+  "_kind": "geo_samples"
+}

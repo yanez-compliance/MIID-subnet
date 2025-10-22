@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Lomas del Sur",
+  "geonameid": 8858108,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.463078536920445,
+      "lon": -103.39560664964534,
+      "geoinfo": {
+        "display_name": "Lomas de Tejeda, Tlajomulco de Zúñiga, Región Centro, Jalisco, 45644, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lomas de Tejeda",
+        "state": "Jalisco",
+        "postcode": "45644",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Lomas del Sur, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.509298892521283,
+      "lon": -103.37388149815914,
+      "geoinfo": {
+        "display_name": "Valle del Oro, Valle de Tejeda, Tlajomulco de Zúñiga, Región Centro, Jalisco, 44655, Mexico",
+        "road": "Valle del Oro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Valle de Tejeda",
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "44655",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "540, Valle del Oro, Valle de Tejeda, Tlajomulco de Zúñiga, Región Centro, Jalisco, 44655, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:14.573210+00:00",
+  "_kind": "geo_samples"
+}

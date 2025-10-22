@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Riverbank",
+  "geonameid": 5387844,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.724902321955035,
+      "lon": -120.92323747129504,
+      "geoinfo": {
+        "display_name": "5955, Stretch Drive, Riverbank, Stanislaus County, California, 95367, United States",
+        "road": "Stretch Drive",
+        "house_number": "5955",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverbank",
+        "state": "California",
+        "postcode": "95367",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5955 Stretch Drive, Riverbank, California, United States"
+    },
+    {
+      "lat": 37.76987995670374,
+      "lon": -120.90328020435199,
+      "geoinfo": {
+        "display_name": "5098, River Road, Adela, Stanislaus County, California, 95361, United States",
+        "road": "River Road",
+        "house_number": "5098",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95361",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5098, River Road, Adela, Stanislaus County, California, 95361, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:54.721406+00:00",
+  "_kind": "geo_samples"
+}

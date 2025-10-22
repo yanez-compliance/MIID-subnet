@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Pizhou",
+  "geonameid": 1785716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.33815477019241,
+      "lon": 117.9674619295019,
+      "geoinfo": {
+        "display_name": "长江路, Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": "长江路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "长江路, Pizhou, Jiangsu, China"
+    },
+    {
+      "lat": 34.33137422693506,
+      "lon": 117.9668064708974,
+      "geoinfo": {
+        "display_name": "Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "718, Pizhou, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:19.421769+00:00",
+  "_kind": "geo_samples"
+}

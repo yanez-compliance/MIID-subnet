@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Matamoros",
+  "geonameid": 3996426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.567547014315473,
+      "lon": -103.22750854969865,
+      "geoinfo": {
+        "display_name": "Breka, El Consuelo, Matamoros, Coahuila, 27087, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Consuelo",
+        "state": "Coahuila",
+        "postcode": "27087",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Matamoros, Coahuila, Mexico"
+    },
+    {
+      "lat": 25.516541909332403,
+      "lon": -103.27251448037397,
+      "geoinfo": {
+        "display_name": "San Felipe, Matamoros, Coahuila, 27449, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": "27449",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "263, San Felipe, Matamoros, Coahuila, 27449, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:06.406526+00:00",
+  "_kind": "geo_samples"
+}

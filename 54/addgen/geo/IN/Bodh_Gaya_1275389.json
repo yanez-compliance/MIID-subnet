@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bodh Gaya",
+  "geonameid": 1275389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.659749976425385,
+      "lon": 84.97705185960392,
+      "geoinfo": {
+        "display_name": "Bodh Gaya, Gaya, Bihar, 824231, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "824231",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bodh Gaya, Bihar, India"
+    },
+    {
+      "lat": 24.717558577654447,
+      "lon": 84.94379596686538,
+      "geoinfo": {
+        "display_name": "Mohanpur, Bodh Gaya, Gaya, Bihar, 823004, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mohanpur",
+        "state": "Bihar",
+        "postcode": "823004",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "510, Mohanpur, Bodh Gaya, Gaya, Bihar, 823004, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:04:01.442096+00:00",
+  "_kind": "geo_samples"
+}

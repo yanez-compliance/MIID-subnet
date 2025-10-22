@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Williston",
+  "geonameid": 5692947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.128985746320055,
+      "lon": -103.57280755501705,
+      "geoinfo": {
+        "display_name": "49 Lane Northwest, Williams County, North Dakota, United States",
+        "road": "49 Lane Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Dakota",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "49 Lane Northwest, Williston, North Dakota, United States"
+    },
+    {
+      "lat": 48.14612487413052,
+      "lon": -103.60170074085946,
+      "geoinfo": {
+        "display_name": "1312, East Broadway, Williston, Williams County, North Dakota, 58801, United States",
+        "road": "East Broadway",
+        "house_number": "1312",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Williston",
+        "state": "North Dakota",
+        "postcode": "58801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1312, East Broadway, Williston, Williams County, North Dakota, 58801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:19.355013+00:00",
+  "_kind": "geo_samples"
+}

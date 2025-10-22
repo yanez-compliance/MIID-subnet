@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Painesville",
+  "geonameid": 5166009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.73533024562142,
+      "lon": -81.22167925336271,
+      "geoinfo": {
+        "display_name": "Casement Avenue, Lake County, Ohio, 44077, United States",
+        "road": "Casement Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Casement Avenue, Painesville, Ohio, United States"
+    },
+    {
+      "lat": 41.73852365755011,
+      "lon": -81.27197594281358,
+      "geoinfo": {
+        "display_name": "Hidden Harbor Drive, Fairport Harbor, Lake County, Ohio, 44077, United States",
+        "road": "Hidden Harbor Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairport Harbor",
+        "state": "Ohio",
+        "postcode": "44077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "828, Hidden Harbor Drive, Fairport Harbor, Lake County, Ohio, 44077, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:40.087784+00:00",
+  "_kind": "geo_samples"
+}

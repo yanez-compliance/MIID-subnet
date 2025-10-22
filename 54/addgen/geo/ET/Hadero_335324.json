@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Hadero",
+  "geonameid": 335324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.221151569147676,
+      "lon": 37.67474368777019,
+      "geoinfo": {
+        "display_name": "Hadero, Kembata Tembaro, Central Ethiopia Regional State, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hadero",
+        "state": "Central Ethiopia Regional State",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Hadero, Central Ethiopia Regional State, Ethiopia"
+    },
+    {
+      "lat": 7.228355607232437,
+      "lon": 37.638373440234574,
+      "geoinfo": {
+        "display_name": "Kembata Tembaro, Central Ethiopia Regional State, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Central Ethiopia Regional State",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "544, Hadero, 80611 Central Ethiopia Regional State, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:57.211123+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Langen",
+  "geonameid": 2881276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.61339200817584,
+      "lon": 8.608241296656603,
+      "geoinfo": {
+        "display_name": "1, Leipziger Straße, Langen, Geestland, Landkreis Cuxhaven, Lower Saxony, 27607, Germany",
+        "road": "Leipziger Straße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Langen",
+        "city_district": null,
+        "city": "Geestland",
+        "state": "Lower Saxony",
+        "postcode": "27607",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Leipziger Straße, Langen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.58443986577415,
+      "lon": 8.563264285531853,
+      "geoinfo": {
+        "display_name": "Washingtonstraße, Weddewarden, Stadtbezirk Bremerhaven-Nord, Bremerhaven, Bremen, 27580, Germany",
+        "road": "Washingtonstraße",
+        "house_number": null,
+        "neighbourhood": "Weddewarden",
+        "suburb": "Weddewarden",
+        "city_district": "Stadtbezirk Bremerhaven-Nord",
+        "city": "Bremerhaven",
+        "state": "Bremen",
+        "postcode": "27580",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "603, Washingtonstraße, Weddewarden, Stadtbezirk Bremerhaven-Nord, Bremerhaven, Bremen, 27580, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:06.241995+00:00",
+  "_kind": "geo_samples"
+}

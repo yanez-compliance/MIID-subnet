@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Balzar",
+  "geonameid": 3660361,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -1.3869851628393368,
+      "lon": -79.92216628673471,
+      "geoinfo": {
+        "display_name": "Balzar, Guayas, 091302, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guayas",
+        "postcode": "091302",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Balzar, Guayas, Ecuador"
+    },
+    {
+      "lat": -1.408779315590633,
+      "lon": -79.91459344117915,
+      "geoinfo": {
+        "display_name": "Vía Palestina - Balzar, Balzar, Guayas, 091302, Ecuador",
+        "road": "Vía Palestina - Balzar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balzar",
+        "state": "Guayas",
+        "postcode": "091302",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Vía Palestina - Balzar, Balzar, Guayas, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:08:19.193803+00:00",
+  "_kind": "geo_samples"
+}

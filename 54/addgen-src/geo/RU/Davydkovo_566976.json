@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Davydkovo",
+  "geonameid": 566976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.73150400951852,
+      "lon": 37.48230399764894,
+      "geoinfo": {
+        "display_name": "проспект Багратиона, Fili-Davydkovo District, Moscow, Central Federal District, 121096, Russia",
+        "road": "проспект Багратиона",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fili-Davydkovo District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "121096",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "проспект Багратиона, Davydkovo, Moscow, Russia"
+    },
+    {
+      "lat": 55.705540485330495,
+      "lon": 37.43289932238264,
+      "geoinfo": {
+        "display_name": "29 с128, Верейская улица, Mozhaysky District, Moscow, Central Federal District, 141357, Russia",
+        "road": "Верейская улица",
+        "house_number": "29 с128",
+        "neighbourhood": null,
+        "suburb": "Mozhaysky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "141357",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "29 с128, Верейская улица, Mozhaysky District, Moscow, Central Federal District, 141357, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:12.534129+00:00",
+  "_kind": "geo_samples"
+}

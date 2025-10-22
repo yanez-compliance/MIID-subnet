@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Yangliuqing",
+  "geonameid": 1787437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.17507280981656,
+      "lon": 117.01491169974372,
+      "geoinfo": {
+        "display_name": "青光镇, Beichen District, Tianjin, 300380, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beichen District",
+        "state": "Tianjin",
+        "postcode": "300380",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yangliuqing, Tianjin, China"
+    },
+    {
+      "lat": 39.12440414866491,
+      "lon": 116.9933664967435,
+      "geoinfo": {
+        "display_name": "青宁路, 杨柳青镇, Xiqing District, Tianjin, China",
+        "road": "青宁路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "杨柳青镇",
+        "city": "Xiqing District",
+        "state": "Tianjin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "456, 青宁路, 杨柳青镇, Xiqing District, 70214 Tianjin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:15.479303+00:00",
+  "_kind": "geo_samples"
+}

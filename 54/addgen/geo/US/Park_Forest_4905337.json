@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Park Forest",
+  "geonameid": 4905337,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.47183493411057,
+      "lon": -87.6555804403747,
+      "geoinfo": {
+        "display_name": "Ashland Avenue, South Chicago Heights, Bloom Township, Cook County, Illinois, 60475, United States",
+        "road": "Ashland Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Chicago Heights",
+        "state": "Illinois",
+        "postcode": "60475",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ashland Avenue, Park Forest, Illinois, United States"
+    },
+    {
+      "lat": 41.50948044532457,
+      "lon": -87.65798932265517,
+      "geoinfo": {
+        "display_name": "1202, Orchard Avenue, Chicago Heights, Bloom Township, Cook County, Illinois, 60411, United States",
+        "road": "Orchard Avenue",
+        "house_number": "1202",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chicago Heights",
+        "state": "Illinois",
+        "postcode": "60411",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1202, Orchard Avenue, Chicago Heights, Bloom Township, Cook County, Illinois, 60411, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:54.939961+00:00",
+  "_kind": "geo_samples"
+}

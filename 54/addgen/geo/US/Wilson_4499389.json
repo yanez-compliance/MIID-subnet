@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wilson",
+  "geonameid": 4499389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.73426218558764,
+      "lon": -77.96002857498837,
+      "geoinfo": {
+        "display_name": "Belle Meade, Wilson County, North Carolina, 27852, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Belle Meade",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27852",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Belle Meade, Wilson, North Carolina, United States"
+    },
+    {
+      "lat": 35.693025463230704,
+      "lon": -77.92897611193378,
+      "geoinfo": {
+        "display_name": "Wysteria Lane South, Wilson, Wilson County, North Carolina, 27893, United States",
+        "road": "Wysteria Lane South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilson",
+        "state": "North Carolina",
+        "postcode": "27893",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "217, Wysteria Lane South, Wilson, Wilson County, North Carolina, 27893, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:33.349152+00:00",
+  "_kind": "geo_samples"
+}

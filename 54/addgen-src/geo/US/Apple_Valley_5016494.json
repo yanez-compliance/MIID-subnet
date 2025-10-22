@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Apple Valley",
+  "geonameid": 5016494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.72070336275536,
+      "lon": -93.16815566836301,
+      "geoinfo": {
+        "display_name": "Elmwood Way, Apple Valley, Dakota County, Minnesota, 55068, United States",
+        "road": "Elmwood Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apple Valley",
+        "state": "Minnesota",
+        "postcode": "55068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Elmwood Way, Apple Valley, Minnesota, United States"
+    },
+    {
+      "lat": 44.74695643984376,
+      "lon": -93.22950930671828,
+      "geoinfo": {
+        "display_name": "13776, Hanover Way, Palomino Woods, Apple Valley, Dakota County, Minnesota, 55124, United States",
+        "road": "Hanover Way",
+        "house_number": "13776",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apple Valley",
+        "state": "Minnesota",
+        "postcode": "55124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13776, Hanover Way, Palomino Woods, Apple Valley, Dakota County, Minnesota, 55124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:46.311899+00:00",
+  "_kind": "geo_samples"
+}

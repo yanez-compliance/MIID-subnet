@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhonghe",
+  "geonameid": 1784388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.177017987077274,
+      "lon": 108.0979173500676,
+      "geoinfo": {
+        "display_name": "Yihe, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yihe",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhonghe, Chongqing, China"
+    },
+    {
+      "lat": 31.217314517978476,
+      "lon": 108.13257739473444,
+      "geoinfo": {
+        "display_name": "开云路, 石堰村, Kaizhou District, Chongqing, China",
+        "road": "开云路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "石堰村",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "005, 开云路, 石堰村, Kaizhou District, 95053 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:33.736641+00:00",
+  "_kind": "geo_samples"
+}

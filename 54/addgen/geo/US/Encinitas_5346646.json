@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Encinitas",
+  "geonameid": 5346646,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.0184955785406,
+      "lon": -117.31592949219832,
+      "geoinfo": {
+        "display_name": "Cardiff-by-the-Sea, Encinitas, San Diego County, California, 92007, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cardiff-by-the-Sea",
+        "city_district": null,
+        "city": "Encinitas",
+        "state": "California",
+        "postcode": "92007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cardiff-by-the-Sea, Encinitas, California, United States"
+    },
+    {
+      "lat": 33.014474252144346,
+      "lon": -117.28315828541399,
+      "geoinfo": {
+        "display_name": "Cardiff State Beach Parking, South Coast Highway 101, Cardiff-by-the-Sea, Encinitas, San Diego County, California, 92007, United States",
+        "road": "South Coast Highway 101",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cardiff-by-the-Sea",
+        "city_district": null,
+        "city": "Encinitas",
+        "state": "California",
+        "postcode": "92007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cardiff State Beach Parking, South Coast Highway 101, Cardiff-by-the-Sea, Encinitas, San Diego County, California, 92007, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:04.088525+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Élancourt",
+  "geonameid": 3020310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.78671647892422,
+      "lon": 1.9547444511033325,
+      "geoinfo": {
+        "display_name": "La Clef de Saint-Pierre, Élancourt, Rambouillet, Yvelines, Ile-de-France, Metropolitan France, 78990, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Clef de Saint-Pierre",
+        "city_district": null,
+        "city": "Élancourt",
+        "state": "Ile-de-France",
+        "postcode": "78990",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "La Clef de Saint-Pierre, Élancourt, Ile-de-France, France"
+    },
+    {
+      "lat": 48.817752056173,
+      "lon": 1.937922733548679,
+      "geoinfo": {
+        "display_name": "Rue Françoise Dolto, Le Clos, Plaisir, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78370, France",
+        "road": "Rue Françoise Dolto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Le Clos",
+        "city_district": null,
+        "city": "Plaisir",
+        "state": "Ile-de-France",
+        "postcode": "78370",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "026, Rue Françoise Dolto, Le Clos, Plaisir, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78370, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:37.500155+00:00",
+  "_kind": "geo_samples"
+}

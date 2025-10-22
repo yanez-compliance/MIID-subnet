@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Scordia",
+  "geonameid": 2523180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.25687056684605,
+      "lon": 14.864849123376077,
+      "geoinfo": {
+        "display_name": "Lentini, Siracusa, Sicily, 96016, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lentini",
+        "state": "Sicily",
+        "postcode": "96016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Scordia, Sicily, Italy"
+    },
+    {
+      "lat": 37.3072694085046,
+      "lon": 14.888853357279446,
+      "geoinfo": {
+        "display_name": "Strada di bonifica Contrada Iroldo, Lentini, Siracusa, Sicily, 96016, Italy",
+        "road": "Strada di bonifica Contrada Iroldo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lentini",
+        "state": "Sicily",
+        "postcode": "96016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "761, Strada di bonifica Contrada Iroldo, Lentini, Siracusa, Sicily, 96016, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:22.339335+00:00",
+  "_kind": "geo_samples"
+}

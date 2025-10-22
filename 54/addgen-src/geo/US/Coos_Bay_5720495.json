@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coos Bay",
+  "geonameid": 5720495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.36734963558303,
+      "lon": -124.24027822897519,
+      "geoinfo": {
+        "display_name": "Coos Bay, Coos County, Oregon, 97420, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coos Bay",
+        "state": "Oregon",
+        "postcode": "97420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Coos Bay, Oregon, United States"
+    },
+    {
+      "lat": 43.33486097015087,
+      "lon": -124.20415487167882,
+      "geoinfo": {
+        "display_name": "2672, East Avenue, Millington, Coos County, Oregon, 97420, United States",
+        "road": "East Avenue",
+        "house_number": "2672",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97420",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2672, East Avenue, Millington, Coos County, Oregon, 97420, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:23.111507+00:00",
+  "_kind": "geo_samples"
+}

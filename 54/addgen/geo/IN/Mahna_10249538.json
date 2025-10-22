@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Mahna",
+  "geonameid": 10249538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.258622931614806,
+      "lon": 74.99639359918096,
+      "geoinfo": {
+        "display_name": "Bibi Wala, Bathinda Tahsil, Bathinda, Punjab, 151004, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bibi Wala",
+        "state": "Punjab",
+        "postcode": "151004",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Mahna, Punjab, India"
+    },
+    {
+      "lat": 30.234559713507565,
+      "lon": 74.96612287564575,
+      "geoinfo": {
+        "display_name": "Baba Farid Nagar, Bathinda, Bathinda Tahsil, Bathinda, Punjab, 151001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baba Farid Nagar",
+        "city_district": null,
+        "city": "Bathinda",
+        "state": "Punjab",
+        "postcode": "151001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "565, Baba Farid Nagar, Bathinda, Bathinda Tahsil, Bathinda, Punjab, 151001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:26.888206+00:00",
+  "_kind": "geo_samples"
+}

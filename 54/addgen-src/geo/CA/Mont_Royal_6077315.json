@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Mont-Royal",
+  "geonameid": 6077315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.54040552907074,
+      "lon": -73.6247618993938,
+      "geoinfo": {
+        "display_name": "7790, Rue Drolet, Villeray, Villeray–Saint-Michel–Parc-Extension, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2R 1G8, Canada",
+        "road": "Rue Drolet",
+        "house_number": "7790",
+        "neighbourhood": "Villeray",
+        "suburb": "Villeray–Saint-Michel–Parc-Extension",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H2R 1G8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "7790 Rue Drolet, Mont-Royal, Quebec, Canada"
+    },
+    {
+      "lat": 45.48748499207075,
+      "lon": -73.68070311097699,
+      "geoinfo": {
+        "display_name": "8505, Chemin Dalton, Saint-Laurent, Mount Royal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4T 2B2, Canada",
+        "road": "Chemin Dalton",
+        "house_number": "8505",
+        "neighbourhood": null,
+        "suburb": "Saint-Laurent",
+        "city_district": null,
+        "city": "Mount Royal",
+        "state": "Quebec",
+        "postcode": "H4T 2B2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "8505, Chemin Dalton, Saint-Laurent, Mount Royal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4T 2B2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:18.930407+00:00",
+  "_kind": "geo_samples"
+}

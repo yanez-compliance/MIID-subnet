@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gif-sur-Yvette",
+  "geonameid": 3016078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.708193311264345,
+      "lon": 2.1216396738791015,
+      "geoinfo": {
+        "display_name": "Route de Châteaufort, Résidence des Quinconces, La Croix de Fer, Gif-sur-Yvette, Palaiseau, Essonne, Metropolitan France, 91190, France",
+        "road": "Route de Châteaufort",
+        "house_number": null,
+        "neighbourhood": "Résidence des Quinconces",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gif-sur-Yvette",
+        "state": null,
+        "postcode": "91190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Châteaufort, Gif-sur-Yvette, Ile-de-France, France"
+    },
+    {
+      "lat": 48.649748057443624,
+      "lon": 2.0917745863660304,
+      "geoinfo": {
+        "display_name": "Le Jardin, L'Orée du Bois, Les Pavillons, Roussigny, Limours, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91470, France",
+        "road": "Le Jardin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roussigny",
+        "state": "Ile-de-France",
+        "postcode": "91470",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "289, Le Jardin, L'Orée du Bois, Les Pavillons, Roussigny, Limours, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91470, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:14.440232+00:00",
+  "_kind": "geo_samples"
+}

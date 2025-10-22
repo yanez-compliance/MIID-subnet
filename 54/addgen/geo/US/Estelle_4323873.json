@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Estelle",
+  "geonameid": 4323873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.82585780123888,
+      "lon": -90.14411002744778,
+      "geoinfo": {
+        "display_name": "Jefferson Parish, Louisiana, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Louisiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Estelle, Louisiana, United States"
+    },
+    {
+      "lat": 29.861366072093908,
+      "lon": -90.08233407184213,
+      "geoinfo": {
+        "display_name": "4008, Paige Janette Drive, Woodmere, Harvey, Jefferson Parish, Louisiana, 70058, United States",
+        "road": "Paige Janette Drive",
+        "house_number": "4008",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harvey",
+        "state": "Louisiana",
+        "postcode": "70058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4008, Paige Janette Drive, Woodmere, Harvey, Jefferson Parish, Louisiana, 70058, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:38.823595+00:00",
+  "_kind": "geo_samples"
+}

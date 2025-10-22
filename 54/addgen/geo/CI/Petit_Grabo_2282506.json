@@ -1,0 +1,47 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Petit Grabo",
+  "geonameid": 2282506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.254246994905022,
+      "lon": -7.349476032459821,
+      "geoinfo": {
+        "display_name": "San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Petit Grabo, Bas-Sassandra, Ivory Coast"
+    },
+    {
+      "lat": 5.290986389275973,
+      "lon": -7.3095200847592405,
+      "geoinfo": {
+        "display_name": "A7, Petit Grabo, San-Pédro, Bas-Sassandra, Côte d'Ivoire",
+        "road": "A7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petit Grabo",
+        "state": "Bas-Sassandra",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "A7, Petit Grabo, San-Pédro, 76187 Bas-Sassandra, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:51.574636+00:00",
+  "_kind": "geo_samples"
+}

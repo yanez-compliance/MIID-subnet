@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "San Marcelino",
+  "geonameid": 1689099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.972914046769098,
+      "lon": 120.15377651299124,
+      "geoinfo": {
+        "display_name": "Rodriguez Street, San Isidro, San Marcelino, Zambales, Central Luzon, 2207, Philippines",
+        "road": "Rodriguez Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Marcelino",
+        "state": "Zambales",
+        "postcode": "2207",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Rodriguez Street, San Marcelino, Zambales, Philippines"
+    },
+    {
+      "lat": 14.977600181378627,
+      "lon": 120.19328280619737,
+      "geoinfo": {
+        "display_name": "Rabanes, Zambales, Central Luzon, 2207, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rabanes",
+        "state": "Zambales",
+        "postcode": "2207",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "349, San Marcelino, 2207 Zambales, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:35:09.620291+00:00",
+  "_kind": "geo_samples"
+}

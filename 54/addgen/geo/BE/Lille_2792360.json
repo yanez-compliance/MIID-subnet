@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lille",
+  "geonameid": 2792360,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.24724107881054,
+      "lon": 4.880717125727336,
+      "geoinfo": {
+        "display_name": "7, Watermolenstraat, Tielen, Kasterlee, Turnhout, Antwerp, 2460, Belgium",
+        "road": "Watermolenstraat",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kasterlee",
+        "state": "Antwerp",
+        "postcode": "2460",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "7 Watermolenstraat, Lille, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.242726038277446,
+      "lon": 4.753515132697988,
+      "geoinfo": {
+        "display_name": "E34, Pulderbos, Vorselaar, Turnhout, Antwerp, 2290, Belgium",
+        "road": "E34",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pulderbos",
+        "state": "Antwerp",
+        "postcode": "2290",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E34, Pulderbos, Vorselaar, Turnhout, Antwerp, 2290, Belgium"
+    },
+    {
+      "lat": 51.24779721976018,
+      "lon": 4.8741940924527904,
+      "geoinfo": {
+        "display_name": "8, Waterstraat, Gierle, Lille, Turnhout, Antwerp, 2275, Belgium",
+        "road": "Waterstraat",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lille",
+        "state": "Antwerp",
+        "postcode": "2275",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "8, Waterstraat, Gierle, Lille, Turnhout, Antwerp, 2275, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:47.904458+00:00",
+  "_kind": "geo_samples"
+}

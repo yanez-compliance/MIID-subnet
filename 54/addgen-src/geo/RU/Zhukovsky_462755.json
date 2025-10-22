@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Zhukovsky",
+  "geonameid": 462755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.573074488240394,
+      "lon": 38.08099446589454,
+      "geoinfo": {
+        "display_name": "46К-5480, Прибрежный 1, Zhukovsky, Moscow Oblast, Central Federal District, 140182, Russia",
+        "road": "46К-5480",
+        "house_number": null,
+        "neighbourhood": "Прибрежный 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhukovsky",
+        "state": "Moscow Oblast",
+        "postcode": "140182",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "46К-5480, Zhukovsky, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.56040683457698,
+      "lon": 38.09517754302982,
+      "geoinfo": {
+        "display_name": "Инновационная зона \"Жуковский\", Mikhailovskaya Sloboda, Zhukovsky, Moscow Oblast, Central Federal District, 140182, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Инновационная зона \"Жуковский\"",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mikhailovskaya Sloboda",
+        "state": "Moscow Oblast",
+        "postcode": "140182",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "317, Инновационная зона \"Жуковский\", Zhukovsky, 140182 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:20.699050+00:00",
+  "_kind": "geo_samples"
+}

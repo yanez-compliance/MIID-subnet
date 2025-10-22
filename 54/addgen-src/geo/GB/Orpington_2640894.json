@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Orpington",
+  "geonameid": 2640894,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.352986020632265,
+      "lon": 0.11792124464433079,
+      "geoinfo": {
+        "display_name": "Church Road, London Borough of Bromley, London, Greater London, England, BR6 7SP, United Kingdom",
+        "road": "Church Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Bromley",
+        "city": "London",
+        "state": "England",
+        "postcode": "BR6 7SP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Road, Orpington, England, United Kingdom"
+    },
+    {
+      "lat": 51.3590780239133,
+      "lon": 0.0548587719590316,
+      "geoinfo": {
+        "display_name": "Farnborough Common, Farnborough, London Borough of Bromley, London, Greater London, England, BR6 7AD, United Kingdom",
+        "road": "Farnborough Common",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Farnborough",
+        "city_district": "London Borough of Bromley",
+        "city": "London",
+        "state": "England",
+        "postcode": "BR6 7AD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Farnborough Common, Farnborough, London Borough of Bromley, London, Greater London, England, BR6 7AD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:40:58.059553+00:00",
+  "_kind": "geo_samples"
+}

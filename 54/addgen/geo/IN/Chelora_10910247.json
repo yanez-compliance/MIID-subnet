@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chelora",
+  "geonameid": 10910247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.879795065307839,
+      "lon": 75.42952816024733,
+      "geoinfo": {
+        "display_name": "Chelora, Kannur, Kerala, 670006, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Chelora",
+        "city": null,
+        "state": "Kerala",
+        "postcode": "670006",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Chelora, Chelora, Kerala, India"
+    },
+    {
+      "lat": 11.914543045884242,
+      "lon": 75.44725139334552,
+      "geoinfo": {
+        "display_name": "Residential Road, Kanachery, Kannur, Kerala, 670591, India",
+        "road": "Residential Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kanachery",
+        "state": "Kerala",
+        "postcode": "670591",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "105, Residential Road, Kanachery, Kannur, Kerala, 670591, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:32.150512+00:00",
+  "_kind": "geo_samples"
+}

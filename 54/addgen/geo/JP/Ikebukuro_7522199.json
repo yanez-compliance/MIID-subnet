@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Ikebukuro",
+  "geonameid": 7522199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.70788226149664,
+      "lon": 139.74522810442912,
+      "geoinfo": {
+        "display_name": "Kasuga 1-chome, Kasuga, Bunkyō, Tokyo, 162-0814, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kasuga 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bunkyō",
+        "state": null,
+        "postcode": "162-0814",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kasuga 1-chome, Ikebukuro, Japan"
+    },
+    {
+      "lat": 35.72437272715241,
+      "lon": 139.68726331610983,
+      "geoinfo": {
+        "display_name": "Mejiro-dori Ave., Minami-Nagasaki 3, Minami-Nagasaki, Toshima, Tokyo, 161-0032, Japan",
+        "road": "Mejiro-dori Ave.",
+        "house_number": null,
+        "neighbourhood": "Minami-Nagasaki 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toshima",
+        "state": null,
+        "postcode": "161-0032",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Mejiro-dori Ave., Minami-Nagasaki 3, Minami-Nagasaki, Toshima, Tokyo, 161-0032, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:09.298911+00:00",
+  "_kind": "geo_samples"
+}

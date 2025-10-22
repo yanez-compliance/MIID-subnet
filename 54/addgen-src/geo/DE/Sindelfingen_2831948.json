@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sindelfingen",
+  "geonameid": 2831948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.705501384013196,
+      "lon": 9.082360617460866,
+      "geoinfo": {
+        "display_name": "Kaufwaldsträßle, Sindelfingen (Stadt), Sindelfingen, Landkreis Böblingen, Baden-Württemberg, 71065, Germany",
+        "road": "Kaufwaldsträßle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sindelfingen (Stadt)",
+        "state": "Baden-Württemberg",
+        "postcode": "71065",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kaufwaldsträßle, Sindelfingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.694479919958205,
+      "lon": 9.041508674086131,
+      "geoinfo": {
+        "display_name": "Sandweg, Böblingen (Kernstadt), Böblingen, Landkreis Böblingen, Baden-Württemberg, 71032, Germany",
+        "road": "Sandweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Böblingen (Kernstadt)",
+        "city_district": null,
+        "city": "Böblingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71032",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "622, Sandweg, Böblingen (Kernstadt), Böblingen, Landkreis Böblingen, Baden-Württemberg, 71032, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:36.766757+00:00",
+  "_kind": "geo_samples"
+}

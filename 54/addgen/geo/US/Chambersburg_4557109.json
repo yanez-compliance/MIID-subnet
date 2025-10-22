@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chambersburg",
+  "geonameid": 4557109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.95312292218039,
+      "lon": -77.6567334687871,
+      "geoinfo": {
+        "display_name": "Wilson College, 1015, Pennsylvania Avenue, Chambersburg, Franklin County, Pennsylvania, 17201, United States",
+        "road": "Pennsylvania Avenue",
+        "house_number": "1015",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chambersburg",
+        "state": "Pennsylvania",
+        "postcode": "17201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1015 Pennsylvania Avenue, Chambersburg, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.92995925002852,
+      "lon": -77.64182558137637,
+      "geoinfo": {
+        "display_name": "Washington Street, Chambersburg, Franklin County, Pennsylvania, 17202, United States",
+        "road": "Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chambersburg",
+        "state": "Pennsylvania",
+        "postcode": "17202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "950, Washington Street, Chambersburg, Franklin County, Pennsylvania, 17202, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:10.710679+00:00",
+  "_kind": "geo_samples"
+}

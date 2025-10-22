@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Clermont-Ferrand",
+  "geonameid": 3024635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.7628050680054,
+      "lon": 3.047659345425006,
+      "geoinfo": {
+        "display_name": "21 bis, Boulevard du Docteur Jean-Baptiste Romeuf, Royat, Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes, Metropolitan France, 63130, France",
+        "road": "Boulevard du Docteur Jean-Baptiste Romeuf",
+        "house_number": "21 bis",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Royat",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "63130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "21 bis Boulevard du Docteur Jean-Baptiste Romeuf, Clermont-Ferrand, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.793385571657645,
+      "lon": 3.1325955603390367,
+      "geoinfo": {
+        "display_name": "Route Militaire des Gravanches, Les Gravanches, Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes, Metropolitan France, 63100, France",
+        "road": "Route Militaire des Gravanches",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Gravanches",
+        "city_district": null,
+        "city": "Clermont-Ferrand",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "63100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "148, Route Militaire des Gravanches, Les Gravanches, Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes, Metropolitan France, 63100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:29.849324+00:00",
+  "_kind": "geo_samples"
+}

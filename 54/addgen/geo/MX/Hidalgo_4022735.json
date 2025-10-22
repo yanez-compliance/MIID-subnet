@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Hidalgo",
+  "geonameid": 4022735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.93120656730056,
+      "lon": -100.46383274817481,
+      "geoinfo": {
+        "display_name": "Hidalgo, Nuevo León, 65600, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hidalgo",
+        "state": "Nuevo León",
+        "postcode": "65600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Hidalgo, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.948618716316975,
+      "lon": -100.4314908474807,
+      "geoinfo": {
+        "display_name": "Calle Julian Santiago Villarreal, Abasolo, Nuevo León, 65600, Mexico",
+        "road": "Calle Julian Santiago Villarreal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "65600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "487, Calle Julian Santiago Villarreal, Abasolo, Nuevo León, 65600, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:58.582817+00:00",
+  "_kind": "geo_samples"
+}

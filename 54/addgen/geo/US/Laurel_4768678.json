@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laurel",
+  "geonameid": 4768678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.609873202030386,
+      "lon": -77.53067952582654,
+      "geoinfo": {
+        "display_name": "I 64, Tuckahoe, Henrico County, Virginia, 23273, United States",
+        "road": "I 64",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tuckahoe",
+        "state": "Virginia",
+        "postcode": "23273",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 64, Laurel, Virginia, United States"
+    },
+    {
+      "lat": 37.60914853556564,
+      "lon": -77.51834834611847,
+      "geoinfo": {
+        "display_name": "West Broad Street, Henrico County, Virginia, 23273, United States",
+        "road": "West Broad Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "23273",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "891, West Broad Street, Henrico County, Virginia, 23273, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:00.522248+00:00",
+  "_kind": "geo_samples"
+}

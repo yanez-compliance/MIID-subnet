@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Shivaji Nagar",
+  "geonameid": 6943660,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.555108839873558,
+      "lon": 73.86628439543819,
+      "geoinfo": {
+        "display_name": "Khadki, Pune, Pune District, Maharashtra, 411001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postcode": "411001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Shivaji Nagar, Maharashtra, India"
+    },
+    {
+      "lat": 18.51543857409821,
+      "lon": 73.86445155863916,
+      "geoinfo": {
+        "display_name": "Laxmi Path, Ganesh Peth, Pune, Pune District, Maharashtra, 411002, India",
+        "road": "Laxmi Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ganesh Peth",
+        "city_district": null,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postcode": "411002",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "079, Laxmi Path, Ganesh Peth, Pune, Pune District, Maharashtra, 411002, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:31:03.297955+00:00",
+  "_kind": "geo_samples"
+}

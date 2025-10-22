@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ballymena",
+  "geonameid": 2656490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.88096246581233,
+      "lon": -6.305765043755341,
+      "geoinfo": {
+        "display_name": "Carniny Road, Ballymena, Mid and East Antrim District, County Antrim, Northern Ireland, BT43 5ND, United Kingdom",
+        "road": "Carniny Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ballymena",
+        "state": "Northern Ireland",
+        "postcode": "BT43 5ND",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Carniny Road, Ballymena, Northern Ireland, United Kingdom"
+    },
+    {
+      "lat": 54.85877913325583,
+      "lon": -6.321473474358095,
+      "geoinfo": {
+        "display_name": "Spar, 3-5, Fenaghy Road, Galgorm, Mid and East Antrim District, County Antrim, Northern Ireland, BT42 1HW, United Kingdom",
+        "road": "Fenaghy Road",
+        "house_number": "3-5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galgorm",
+        "state": "Northern Ireland",
+        "postcode": "BT42 1HW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Spar, 3-5, Fenaghy Road, Galgorm, Mid and East Antrim District, County Antrim, Northern Ireland, BT42 1HW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:01.689972+00:00",
+  "_kind": "geo_samples"
+}

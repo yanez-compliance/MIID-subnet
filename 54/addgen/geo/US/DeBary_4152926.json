@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "DeBary",
+  "geonameid": 4152926,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.855891406068647,
+      "lon": -81.27422476147167,
+      "geoinfo": {
+        "display_name": "Enterprise, Volusia County, Florida, 32728, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32728",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "DeBary, Florida, United States"
+    },
+    {
+      "lat": 28.895324459711755,
+      "lon": -81.35299369964694,
+      "geoinfo": {
+        "display_name": "50, River Bluff Trail, DeBary, Volusia County, Florida, 32713, United States",
+        "road": "River Bluff Trail",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "DeBary",
+        "state": "Florida",
+        "postcode": "32713",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "50, River Bluff Trail, DeBary, Volusia County, Florida, 32713, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:28.410838+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xichang",
+  "geonameid": 1789647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.861933554721244,
+      "lon": 102.29209083147438,
+      "geoinfo": {
+        "display_name": "Xichang, Chuanxing, Xichang City, Liangshan, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xichang",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xichang, Sichuan, China"
+    },
+    {
+      "lat": 27.924652617654,
+      "lon": 102.24355362113731,
+      "geoinfo": {
+        "display_name": "桑坡, Xichang City, Liangshan, Sichuan, 615000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "桑坡",
+        "state": "Sichuan",
+        "postcode": "615000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "168, 桑坡, Xichang City, Liangshan, Sichuan, 615000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:07.894764+00:00",
+  "_kind": "geo_samples"
+}

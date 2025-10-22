@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Petrovsk",
+  "geonameid": 509987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.30418519664564,
+      "lon": 45.411204618381014,
+      "geoinfo": {
+        "display_name": "1, Восточная улица, Petrovsk, городское поселение Петровск, Petrovsky District, Saratov Oblast, Volga Federal District, 412540, Russia",
+        "road": "Восточная улица",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petrovsk",
+        "state": "Saratov Oblast",
+        "postcode": "412540",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "1 Восточная улица, Petrovsk, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 52.329679522929794,
+      "lon": 45.452193640247245,
+      "geoinfo": {
+        "display_name": "63К-00599, Синеньское сельское поселение, Petrovsky District, Saratov Oblast, Volga Federal District, Russia",
+        "road": "63К-00599",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saratov Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "63К-00599, Синеньское сельское поселение, Petrovsky District, Saratov Oblast, Volga Federal District, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:31:54.895620+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Centurion",
+  "geonameid": 1105777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.854600371360895,
+      "lon": 28.227301745167818,
+      "geoinfo": {
+        "display_name": "N1, Tshwane Ward 79, Irene, City of Tshwane Metropolitan Municipality, Gauteng, 0178, South Africa",
+        "road": "N1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 79",
+        "city_district": null,
+        "city": "Irene",
+        "state": "Gauteng",
+        "postcode": "0178",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "N1, Centurion, Gauteng, South Africa"
+    },
+    {
+      "lat": -25.89910497582359,
+      "lon": 28.173369521093495,
+      "geoinfo": {
+        "display_name": "Tshwane Ward 78, Golden Fields Estate, City of Tshwane Metropolitan Municipality, Gauteng, 0144, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 78",
+        "city_district": null,
+        "city": "Golden Fields Estate",
+        "state": "Gauteng",
+        "postcode": "0144",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Tshwane Ward 78, Centurion, 0144 Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:39:33.901240+00:00",
+  "_kind": "geo_samples"
+}

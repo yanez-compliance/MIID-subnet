@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cherry Hill",
+  "geonameid": 4501198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.935594846746284,
+      "lon": -75.05822024529388,
+      "geoinfo": {
+        "display_name": "Kaighns Avenue, Merchantville, Pennsauken Township, Camden County, New Jersey, 08109, United States",
+        "road": "Kaighns Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pennsauken Township",
+        "state": "New Jersey",
+        "postcode": "08109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kaighns Avenue, Cherry Hill, New Jersey, United States"
+    },
+    {
+      "lat": 39.91081353159077,
+      "lon": -74.99978890008639,
+      "geoinfo": {
+        "display_name": "2, Wayland Road, Barclay Farm, Cherry Hill Township, Camden County, New Jersey, 08034, United States",
+        "road": "Wayland Road",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cherry Hill Township",
+        "state": "New Jersey",
+        "postcode": "08034",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Wayland Road, Barclay Farm, Cherry Hill Township, Camden County, New Jersey, 08034, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:58.382568+00:00",
+  "_kind": "geo_samples"
+}

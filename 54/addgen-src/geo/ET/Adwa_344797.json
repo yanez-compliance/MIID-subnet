@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Adwa",
+  "geonameid": 344797,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.180075828159918,
+      "lon": 38.91783040148818,
+      "geoinfo": {
+        "display_name": "A2, Adwa, Central Tigray, Tigray, Ethiopia",
+        "road": "A2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adwa",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "A2, Adwa, Tigray, Ethiopia"
+    },
+    {
+      "lat": 14.176188181364505,
+      "lon": 38.901028843350886,
+      "geoinfo": {
+        "display_name": "Adwa, Central Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adwa",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "675, Adwa, Central Tigray, 85222 Tigray, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:03:16.014429+00:00",
+  "_kind": "geo_samples"
+}

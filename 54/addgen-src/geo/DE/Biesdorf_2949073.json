@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Biesdorf",
+  "geonameid": 2949073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.533101775202596,
+      "lon": 13.554413706036115,
+      "geoinfo": {
+        "display_name": "4, Charlottenstraße, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Germany",
+        "road": "Charlottenstraße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Biesdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Charlottenstraße, Biesdorf, Germany"
+    },
+    {
+      "lat": 52.51924030029471,
+      "lon": 13.548048895904891,
+      "geoinfo": {
+        "display_name": "49A, Maratstraße, Biesdorf-Nord, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Germany",
+        "road": "Maratstraße",
+        "house_number": "49A",
+        "neighbourhood": null,
+        "suburb": "Biesdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "49A, Maratstraße, Biesdorf-Nord, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:36.218476+00:00",
+  "_kind": "geo_samples"
+}

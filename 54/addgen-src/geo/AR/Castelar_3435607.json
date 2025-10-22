@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Castelar",
+  "geonameid": 3435607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.66594893563264,
+      "lon": -58.646321066146804,
+      "geoinfo": {
+        "display_name": "Montevideo, Castelar, Partido de Morón, Buenos Aires, 1712, Argentina",
+        "road": "Montevideo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castelar",
+        "state": "Buenos Aires",
+        "postcode": "1712",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Montevideo, Castelar, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.62891220166789,
+      "lon": -58.62475084682807,
+      "geoinfo": {
+        "display_name": "599, Waskman, Asunción, Villa Tesei, Partido de Hurlingham, Buenos Aires, 1688, Argentina",
+        "road": "Waskman",
+        "house_number": "599",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Tesei",
+        "state": "Buenos Aires",
+        "postcode": "1688",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "599, Waskman, Asunción, Villa Tesei, Partido de Hurlingham, Buenos Aires, 1688, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:51.730560+00:00",
+  "_kind": "geo_samples"
+}

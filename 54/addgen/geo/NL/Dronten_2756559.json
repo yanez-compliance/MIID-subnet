@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Dronten",
+  "geonameid": 2756559,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.54094786619212,
+      "lon": 5.669475759752462,
+      "geoinfo": {
+        "display_name": "1, Elandpad, Het Palet, Dronten, Flevoland, Netherlands, 8251 SP, Netherlands",
+        "road": "Elandpad",
+        "house_number": "1",
+        "neighbourhood": "Het Palet",
+        "suburb": null,
+        "city_district": "Dronten",
+        "city": "Dronten",
+        "state": "Flevoland",
+        "postcode": "8251 SP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "1 Elandpad, Dronten, Flevoland, The Netherlands"
+    },
+    {
+      "lat": 52.50541370653949,
+      "lon": 5.688972114311288,
+      "geoinfo": {
+        "display_name": "Van den Hamlaan, Dronten, Flevoland, Netherlands, 8251 RX, Netherlands",
+        "road": "Van den Hamlaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Dronten",
+        "city": "Dronten",
+        "state": "Flevoland",
+        "postcode": "8251 RX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "527, Van den Hamlaan, Dronten, Flevoland, Netherlands, 8251 RX, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:47.555238+00:00",
+  "_kind": "geo_samples"
+}

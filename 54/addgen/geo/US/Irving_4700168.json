@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Irving",
+  "geonameid": 4700168,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.85405947629951,
+      "lon": -96.9333231737882,
+      "geoinfo": {
+        "display_name": "Rochelle Boulevard, Irving, Dallas County, Texas, 75062, United States",
+        "road": "Rochelle Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irving",
+        "state": "Texas",
+        "postcode": "75062",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rochelle Boulevard, Irving, Texas, United States"
+    },
+    {
+      "lat": 32.78873711456984,
+      "lon": -96.9195060546554,
+      "geoinfo": {
+        "display_name": "South Walton Walker Boulevard, Irving, Dallas County, Texas, 75236, United States",
+        "road": "South Walton Walker Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irving",
+        "state": "Texas",
+        "postcode": "75236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "264, South Walton Walker Boulevard, Irving, Dallas County, Texas, 75236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:59.174772+00:00",
+  "_kind": "geo_samples"
+}

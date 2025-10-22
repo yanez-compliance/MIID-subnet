@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eldersburg",
+  "geonameid": 4354163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.42405689296979,
+      "lon": -76.98596817722967,
+      "geoinfo": {
+        "display_name": "Ronsdale Road, Linton Springs, Carroll County, Maryland, United States",
+        "road": "Ronsdale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ronsdale Road, Eldersburg, Maryland, United States"
+    },
+    {
+      "lat": 39.42953904282386,
+      "lon": -76.99636767742524,
+      "geoinfo": {
+        "display_name": "225, Adam Smith Street, Wilson Terrace, Carroll County, Maryland, 21784, United States",
+        "road": "Adam Smith Street",
+        "house_number": "225",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21784",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "225, Adam Smith Street, Wilson Terrace, Carroll County, Maryland, 21784, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:17.453412+00:00",
+  "_kind": "geo_samples"
+}

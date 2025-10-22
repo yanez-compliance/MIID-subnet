@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carrollwood Village",
+  "geonameid": 4150118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.07026794000008,
+      "lon": -82.49432462567343,
+      "geoinfo": {
+        "display_name": "Arlington, Carrollwood, Hillsborough County, Florida, 33618, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrollwood",
+        "state": "Florida",
+        "postcode": "33618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carrollwood Village, Florida, United States"
+    },
+    {
+      "lat": 28.053824952219387,
+      "lon": -82.48544663666641,
+      "geoinfo": {
+        "display_name": "Hardaman Place, Carrollwood, Hillsborough County, Florida, 33618, United States",
+        "road": "Hardaman Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrollwood",
+        "state": "Florida",
+        "postcode": "33618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "434, Hardaman Place, Carrollwood, Hillsborough County, Florida, 33618, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:05.181412+00:00",
+  "_kind": "geo_samples"
+}

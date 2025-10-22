@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Maliuzui",
+  "geonameid": 8549445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.730594315828156,
+      "lon": 106.93107727076989,
+      "geoinfo": {
+        "display_name": "Luoqi, Yubei District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yubei District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Maliuzui, Chongqing, China"
+    },
+    {
+      "lat": 29.66244488141187,
+      "lon": 106.95189709585514,
+      "geoinfo": {
+        "display_name": "X760, Maliuzui, Banan District, Chongqing, China",
+        "road": "X760",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maliuzui",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X760, Maliuzui, Banan District, 37649 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:09.995309+00:00",
+  "_kind": "geo_samples"
+}

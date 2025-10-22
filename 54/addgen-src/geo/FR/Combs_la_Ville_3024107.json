@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Combs-la-Ville",
+  "geonameid": 3024107,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.65327279259695,
+      "lon": 2.611686673876075,
+      "geoinfo": {
+        "display_name": "La Francilienne, Combs-la-Ville, Melun, Seine-et-Marne, Ile-de-France, Metropolitan France, 77380, France",
+        "road": "La Francilienne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Combs-la-Ville",
+        "state": "Ile-de-France",
+        "postcode": "77380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "La Francilienne, Combs-la-Ville, Ile-de-France, France"
+    },
+    {
+      "lat": 48.64513338155687,
+      "lon": 2.577178305975125,
+      "geoinfo": {
+        "display_name": "Chemin d'Egrenay, Moissy-Cramayel, Melun, Seine-et-Marne, Metropolitan France, 77550, France",
+        "road": "Chemin d'Egrenay",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moissy-Cramayel",
+        "state": null,
+        "postcode": "77550",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "695, Chemin d'Egrenay, Moissy-Cramayel, Melun, Seine-et-Marne, Metropolitan France, 77550, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:55.495253+00:00",
+  "_kind": "geo_samples"
+}

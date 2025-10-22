@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Morley",
+  "geonameid": 8349083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.883053873551372,
+      "lon": 115.88327805040915,
+      "geoinfo": {
+        "display_name": "Wellington Road, Dianella, City of Stirling, Western Australia, 6059, Australia",
+        "road": "Wellington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dianella",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6059",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Wellington Road, Morley, Western Australia, Australia"
+    },
+    {
+      "lat": -31.870779953243378,
+      "lon": 115.88712004774278,
+      "geoinfo": {
+        "display_name": "Growse Place, Noranda, City of Bayswater, Western Australia, 6090, Australia",
+        "road": "Growse Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Noranda",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6090",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "693, Growse Place, Noranda, City of Bayswater, Western Australia, 6090, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:56:14.459999+00:00",
+  "_kind": "geo_samples"
+}

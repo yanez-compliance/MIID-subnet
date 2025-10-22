@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Meissen",
+  "geonameid": 2872155,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.16448932062097,
+      "lon": 13.424567729035317,
+      "geoinfo": {
+        "display_name": "K 8070, Sieglitz, Oberjahna, Käbschütztal, Meissen, Saxony, 01665, Germany",
+        "road": "K 8070",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Käbschütztal",
+        "state": "Saxony",
+        "postcode": "01665",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 8070, Meissen, Saxony, Germany"
+    },
+    {
+      "lat": 51.193603568678036,
+      "lon": 13.444414733967864,
+      "geoinfo": {
+        "display_name": "S 88, Diera, Diera-Zehren, Meissen, Saxony, 01665, Germany",
+        "road": "S 88",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diera-Zehren",
+        "state": "Saxony",
+        "postcode": "01665",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "S 88, Diera, Diera-Zehren, Meissen, Saxony, 01665, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:10.730995+00:00",
+  "_kind": "geo_samples"
+}

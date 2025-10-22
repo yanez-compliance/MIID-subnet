@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mülheim",
+  "geonameid": 2867838,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.4197039320149,
+      "lon": 6.925551496066823,
+      "geoinfo": {
+        "display_name": "Neckelstraße, Menden, Menden-Holthausen, Rechtsruhr-Süd, Mülheim an der Ruhr, North Rhine-Westphalia, 45470, Germany",
+        "road": "Neckelstraße",
+        "house_number": null,
+        "neighbourhood": "Menden",
+        "suburb": "Menden-Holthausen",
+        "city_district": "Rechtsruhr-Süd",
+        "city": "Mülheim an der Ruhr",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45470",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Neckelstraße, Mülheim, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.46020087576532,
+      "lon": 6.837004951476007,
+      "geoinfo": {
+        "display_name": "37, Landwehr, Alstaden, Alt-Oberhausen, Oberhausen, North Rhine-Westphalia, 46049, Germany",
+        "road": "Landwehr",
+        "house_number": "37",
+        "neighbourhood": null,
+        "suburb": "Alstaden",
+        "city_district": "Alt-Oberhausen",
+        "city": "Oberhausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46049",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "37, Landwehr, Alstaden, Alt-Oberhausen, Oberhausen, North Rhine-Westphalia, 46049, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:06.627572+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Costa Rica",
+  "geonameid": 4012693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.60536560005685,
+      "lon": -107.41328824209616,
+      "geoinfo": {
+        "display_name": "Proagro del Noreste, Campo Nuevo México, Culiacán, Sinaloa, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campo Nuevo México",
+        "state": "Sinaloa",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Costa Rica, Sinaloa, Mexico"
+    },
+    {
+      "lat": 24.59063591978396,
+      "lon": -107.37282212912689,
+      "geoinfo": {
+        "display_name": "Carretera Los Mezquites - Costa Rica, Santa Lucía, Costa Rica, Culiacán, Sinaloa, 80450, Mexico",
+        "road": "Carretera Los Mezquites - Costa Rica",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Costa Rica",
+        "state": "Sinaloa",
+        "postcode": "80450",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "294, Carretera Los Mezquites - Costa Rica, Santa Lucía, Costa Rica, Culiacán, Sinaloa, 80450, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:05.646894+00:00",
+  "_kind": "geo_samples"
+}

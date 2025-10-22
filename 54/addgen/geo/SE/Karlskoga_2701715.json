@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Karlskoga",
+  "geonameid": 2701715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.36417008542145,
+      "lon": 14.493019922999633,
+      "geoinfo": {
+        "display_name": "T 708, Älvkärr, Karlskoga, Karlskoga kommun, Örebro County, 691 35, Sweden",
+        "road": "T 708",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Karlskoga",
+        "state": null,
+        "postcode": "691 35",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "T 708, Karlskoga, Sweden"
+    },
+    {
+      "lat": 59.307040194182996,
+      "lon": 14.469300145061874,
+      "geoinfo": {
+        "display_name": "Fisksjöleden, Fisksjön, Karlskoga, Karlskoga kommun, Örebro County, 691 48, Sweden",
+        "road": "Fisksjöleden",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fisksjön",
+        "city_district": null,
+        "city": "Karlskoga",
+        "state": null,
+        "postcode": "691 48",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Fisksjöleden, Fisksjön, Karlskoga, Karlskoga kommun, Örebro County, 691 48, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:28.046436+00:00",
+  "_kind": "geo_samples"
+}

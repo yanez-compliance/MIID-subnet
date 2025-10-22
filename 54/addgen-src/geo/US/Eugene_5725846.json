@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eugene",
+  "geonameid": 5725846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.03400486888742,
+      "lon": -123.06703020453556,
+      "geoinfo": {
+        "display_name": "1760, East 23rd Avenue, Eugene, Lane County, Oregon, 97403, United States",
+        "road": "East 23rd Avenue",
+        "house_number": "1760",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eugene",
+        "state": "Oregon",
+        "postcode": "97403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1760 East 23rd Avenue, Eugene, Oregon, United States"
+    },
+    {
+      "lat": 44.051064625921725,
+      "lon": -123.12636697999933,
+      "geoinfo": {
+        "display_name": "2120, West 7th Place, Eugene, Lane County, Oregon, 97405, United States",
+        "road": "West 7th Place",
+        "house_number": "2120",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eugene",
+        "state": "Oregon",
+        "postcode": "97405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2120, West 7th Place, Eugene, Lane County, Oregon, 97405, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:26.145625+00:00",
+  "_kind": "geo_samples"
+}

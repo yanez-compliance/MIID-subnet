@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wayne",
+  "geonameid": 5218270,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.047021617677984,
+      "lon": -75.3685771913512,
+      "geoinfo": {
+        "display_name": "Huston Road, Radnor Station, Radnor, Radnor Township, Delaware County, Pennsylvania, 19087, United States",
+        "road": "Huston Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Radnor Township",
+        "state": "Pennsylvania",
+        "postcode": "19087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Huston Road, Wayne, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.07461948791245,
+      "lon": -75.36769425788442,
+      "geoinfo": {
+        "display_name": "621, Timber Drive, Bob White Farms, Upper Merion Township, Montgomery County, Pennsylvania, 19087, United States",
+        "road": "Timber Drive",
+        "house_number": "621",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Merion Township",
+        "state": "Pennsylvania",
+        "postcode": "19087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "621, Timber Drive, Bob White Farms, Upper Merion Township, Montgomery County, Pennsylvania, 19087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:43.695066+00:00",
+  "_kind": "geo_samples"
+}

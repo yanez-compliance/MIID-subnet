@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "High Point",
+  "geonameid": 4471025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.920126014496475,
+      "lon": -79.99635651998946,
+      "geoinfo": {
+        "display_name": "West Fairfield Road, High Point, Guilford County, North Carolina, 27263, United States",
+        "road": "West Fairfield Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "High Point",
+        "state": "North Carolina",
+        "postcode": "27263",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Fairfield Road, High Point, North Carolina, United States"
+    },
+    {
+      "lat": 35.98697307756605,
+      "lon": -79.99621158406995,
+      "geoinfo": {
+        "display_name": "1596, Ann Arbor Avenue, High Point, Guilford County, North Carolina, 27265, United States",
+        "road": "Ann Arbor Avenue",
+        "house_number": "1596",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "High Point",
+        "state": "North Carolina",
+        "postcode": "27265",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1596, Ann Arbor Avenue, High Point, Guilford County, North Carolina, 27265, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:18.242047+00:00",
+  "_kind": "geo_samples"
+}

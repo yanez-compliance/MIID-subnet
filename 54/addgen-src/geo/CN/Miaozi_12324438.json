@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Miaozi",
+  "geonameid": 12324438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.61753740559824,
+      "lon": 118.25956745818662,
+      "geoinfo": {
+        "display_name": "Miaozi, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Miaozi, Shandong, China"
+    },
+    {
+      "lat": 36.65154434786861,
+      "lon": 118.20286776357112,
+      "geoinfo": {
+        "display_name": "Linzi District, Zibo, Shandong, 255438, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zibo",
+        "state": "Shandong",
+        "postcode": "255438",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "806, Linzi District, Zibo, Shandong, 255438, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:50.494115+00:00",
+  "_kind": "geo_samples"
+}

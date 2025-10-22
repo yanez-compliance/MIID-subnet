@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dolton",
+  "geonameid": 4890009,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.628806589711274,
+      "lon": -87.61142660230092,
+      "geoinfo": {
+        "display_name": "Lakeside Avenue, Dolton, Thornton Township, Cook County, Illinois, 60419, United States",
+        "road": "Lakeside Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dolton",
+        "state": "Illinois",
+        "postcode": "60419",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lakeside Avenue, Dolton, Illinois, United States"
+    },
+    {
+      "lat": 41.62426014140655,
+      "lon": -87.62791569910111,
+      "geoinfo": {
+        "display_name": "222, North Riverside Drive, Dolton, Thornton Township, Cook County, Illinois, 60419, United States",
+        "road": "North Riverside Drive",
+        "house_number": "222",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dolton",
+        "state": "Illinois",
+        "postcode": "60419",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "222, North Riverside Drive, Dolton, Thornton Township, Cook County, Illinois, 60419, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:07.508653+00:00",
+  "_kind": "geo_samples"
+}

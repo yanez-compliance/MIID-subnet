@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alaquàs",
+  "geonameid": 2522297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.463091528013905,
+      "lon": -0.5125272302455868,
+      "geoinfo": {
+        "display_name": "Camí de Torrent, Quart de Poblet, l'Horta Sud, Valencia, Valencian Community, 46909, Spain",
+        "road": "Camí de Torrent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quart de Poblet",
+        "state": "Valencian Community",
+        "postcode": "46909",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de Torrent, Alaquàs, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.46625556221373,
+      "lon": -0.4173287781333218,
+      "geoinfo": {
+        "display_name": "Carrer de Constantí Llombart, Barri de la Llum, Xirivella, l'Horta Sud, Valencia, Valencian Community, 46920, Spain",
+        "road": "Carrer de Constantí Llombart",
+        "house_number": null,
+        "neighbourhood": "Barri de la Llum",
+        "suburb": null,
+        "city_district": null,
+        "city": "Xirivella",
+        "state": "Valencian Community",
+        "postcode": "46920",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "371, Carrer de Constantí Llombart, Barri de la Llum, Xirivella, l'Horta Sud, Valencia, Valencian Community, 46920, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:19.611656+00:00",
+  "_kind": "geo_samples"
+}

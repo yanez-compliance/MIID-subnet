@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Alaminos",
+  "geonameid": 1731686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.035445719684992,
+      "lon": 121.25681581070991,
+      "geoinfo": {
+        "display_name": "Santa Rosa, Alaminos, Laguna, Calabarzon, 4001, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alaminos",
+        "state": "Laguna",
+        "postcode": "4001",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Alaminos, Laguna, Philippines"
+    },
+    {
+      "lat": 14.03796401973669,
+      "lon": 121.28125843151403,
+      "geoinfo": {
+        "display_name": "Purok 2, San Bartolome, San Pablo, Laguna, Calabarzon, 4000, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Purok 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pablo",
+        "state": "Laguna",
+        "postcode": "4000",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Purok 2, San Bartolome, San Pablo, Laguna, Calabarzon, 4000, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:29:04.705328+00:00",
+  "_kind": "geo_samples"
+}

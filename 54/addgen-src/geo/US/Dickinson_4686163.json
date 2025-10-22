@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dickinson",
+  "geonameid": 4686163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.42179290402134,
+      "lon": -95.02751308618855,
+      "geoinfo": {
+        "display_name": "Texas City, Galveston County, Texas, 77591, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texas City",
+        "state": "Texas",
+        "postcode": "77591",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dickinson, Texas, United States"
+    },
+    {
+      "lat": 29.4647805216457,
+      "lon": -95.06323134876887,
+      "geoinfo": {
+        "display_name": "3289, Timber Lane, Dickinson, Galveston County, Texas, 77539, United States",
+        "road": "Timber Lane",
+        "house_number": "3289",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dickinson",
+        "state": "Texas",
+        "postcode": "77539",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3289, Timber Lane, Dickinson, Galveston County, Texas, 77539, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:17.603899+00:00",
+  "_kind": "geo_samples"
+}

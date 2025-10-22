@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marana",
+  "geonameid": 5303705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.41527940983379,
+      "lon": -111.22694476414969,
+      "geoinfo": {
+        "display_name": "Wong Way, Marana, Pima County, Arizona, 85653, United States",
+        "road": "Wong Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marana",
+        "state": "Arizona",
+        "postcode": "85653",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wong Way, Marana, Arizona, United States"
+    },
+    {
+      "lat": 32.420755305819156,
+      "lon": -111.19287711578838,
+      "geoinfo": {
+        "display_name": "Santa Cruz River Path, Rillito Cement Plant, Marana, Pima County, Arizona, 85654, United States",
+        "road": "Santa Cruz River Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marana",
+        "state": "Arizona",
+        "postcode": "85654",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "160, Santa Cruz River Path, Rillito Cement Plant, Marana, Pima County, Arizona, 85654, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:34.203265+00:00",
+  "_kind": "geo_samples"
+}

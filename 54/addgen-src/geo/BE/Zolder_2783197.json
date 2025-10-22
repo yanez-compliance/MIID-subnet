@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zolder",
+  "geonameid": 2783197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.020213611985604,
+      "lon": 5.27436530507657,
+      "geoinfo": {
+        "display_name": "Weigersberg, Boekt, Zolder, Heusden-Zolder, Hasselt, Limburg, 3550, Belgium",
+        "road": "Weigersberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heusden-Zolder",
+        "state": "Limburg",
+        "postcode": "3550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Weigersberg, Zolder, Limburg, Belgium"
+    },
+    {
+      "lat": 51.03670326729461,
+      "lon": 5.376594239302216,
+      "geoinfo": {
+        "display_name": "50, Lakerweg, Laak, Houthalen, Houthalen-Helchteren, Maaseik, Limburg, 3530, Belgium",
+        "road": "Lakerweg",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houthalen-Helchteren",
+        "state": "Limburg",
+        "postcode": "3530",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "50, Lakerweg, Laak, Houthalen, Houthalen-Helchteren, Maaseik, Limburg, 3530, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:35.397060+00:00",
+  "_kind": "geo_samples"
+}

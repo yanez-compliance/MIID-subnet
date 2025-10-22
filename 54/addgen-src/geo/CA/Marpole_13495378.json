@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Marpole",
+  "geonameid": 13495378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.21172831768612,
+      "lon": -123.10719353266522,
+      "geoinfo": {
+        "display_name": "Ontario Street, Sunset, Vancouver, Metro Vancouver Regional District, British Columbia, V5X, Canada",
+        "road": "Ontario Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sunset",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5X",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Ontario Street, Marpole, British Columbia, Canada"
+    },
+    {
+      "lat": 49.19306837379087,
+      "lon": -123.10843550515202,
+      "geoinfo": {
+        "display_name": "McLennan Avenue, Tait, Bridgeport, Richmond, Metro Vancouver Regional District, British Columbia, V6X, Canada",
+        "road": "McLennan Avenue",
+        "house_number": null,
+        "neighbourhood": "Tait",
+        "suburb": null,
+        "city_district": "Bridgeport",
+        "city": "Richmond",
+        "state": "British Columbia",
+        "postcode": "V6X",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "500, McLennan Avenue, Tait, Bridgeport, Richmond, Metro Vancouver Regional District, British Columbia, V6X, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:46.154189+00:00",
+  "_kind": "geo_samples"
+}

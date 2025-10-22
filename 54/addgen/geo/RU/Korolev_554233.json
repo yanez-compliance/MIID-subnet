@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Korolev",
+  "geonameid": 554233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.937238472033805,
+      "lon": 37.801369508050705,
+      "geoinfo": {
+        "display_name": "улица Лермонтова, Строитель, Mytishchi, Mytishchi Urban Okrug, Moscow Oblast, Central Federal District, 141005, Russia",
+        "road": "улица Лермонтова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Строитель",
+        "city_district": null,
+        "city": "Mytishchi",
+        "state": "Moscow Oblast",
+        "postcode": "141005",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Лермонтова, Korolev, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.940154047375515,
+      "lon": 37.88020944607593,
+      "geoinfo": {
+        "display_name": "5, 2-й Пролетарский тупик, Старые Горки, Первомайский, Korolyov, Moscow Oblast, Central Federal District, 141060, Russia",
+        "road": "2-й Пролетарский тупик",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Старые Горки",
+        "city_district": null,
+        "city": "Korolyov",
+        "state": "Moscow Oblast",
+        "postcode": "141060",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "5, 2-й Пролетарский тупик, Старые Горки, Первомайский, Korolyov, Moscow Oblast, Central Federal District, 141060, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:28.927853+00:00",
+  "_kind": "geo_samples"
+}

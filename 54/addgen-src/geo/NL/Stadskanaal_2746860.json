@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Stadskanaal",
+  "geonameid": 2746860,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.95943833052121,
+      "lon": 6.94845343548242,
+      "geoinfo": {
+        "display_name": "126, Zuiderdiep, Nieuw-Buinen, Borger-Odoorn, Drenthe, Netherlands, 9521 AW, Netherlands",
+        "road": "Zuiderdiep",
+        "house_number": "126",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nieuw-Buinen",
+        "state": "Drenthe",
+        "postcode": "9521 AW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "126 Zuiderdiep, Stadskanaal, Drenthe, The Netherlands"
+    },
+    {
+      "lat": 53.006510554569985,
+      "lon": 6.912692007906641,
+      "geoinfo": {
+        "display_name": "Stadskanaal, Groningen, Netherlands, 9503 RK, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stadskanaal",
+        "state": "Groningen",
+        "postcode": "9503 RK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "618, Stadskanaal, Groningen, Netherlands, 9503 RK, Netherlands"
+    },
+    {
+      "lat": 52.97487233976835,
+      "lon": 6.996782016113958,
+      "geoinfo": {
+        "display_name": "Zuider Kanaalweg, 1e Oomsberg, Musselkanaal, Stadskanaal, Groningen, Netherlands, 9585 PD, Netherlands",
+        "road": "Zuider Kanaalweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Musselkanaal",
+        "state": "Groningen",
+        "postcode": "9585 PD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Zuider Kanaalweg, 1e Oomsberg, Musselkanaal, Stadskanaal, Groningen, Netherlands, 9585 PD, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:15.237080+00:00",
+  "_kind": "geo_samples"
+}

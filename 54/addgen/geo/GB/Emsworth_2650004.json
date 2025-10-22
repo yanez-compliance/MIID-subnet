@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Emsworth",
+  "geonameid": 2650004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.8437625381746,
+      "lon": -0.9486044607282245,
+      "geoinfo": {
+        "display_name": "Warblington Road, Emsworth, Havant, Hampshire, England, PO10 7HD, United Kingdom",
+        "road": "Warblington Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emsworth",
+        "state": "England",
+        "postcode": "PO10 7HD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Warblington Road, Emsworth, England, United Kingdom"
+    },
+    {
+      "lat": 50.83823476568047,
+      "lon": -0.92714155276926,
+      "geoinfo": {
+        "display_name": "Thorney Road, Southbourne, Prinsted, Chichester, West Sussex, England, PO10 8DE, United Kingdom",
+        "road": "Thorney Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southbourne",
+        "city_district": null,
+        "city": "Chichester",
+        "state": "England",
+        "postcode": "PO10 8DE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Thorney Road, Southbourne, Prinsted, Chichester, West Sussex, England, PO10 8DE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:39.519383+00:00",
+  "_kind": "geo_samples"
+}

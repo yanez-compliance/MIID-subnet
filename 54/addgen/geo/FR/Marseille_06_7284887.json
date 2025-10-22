@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 06",
+  "geonameid": 7284887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.25306609065577,
+      "lon": 5.344642051374075,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Marseille 06, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.288257776002816,
+      "lon": 5.323500054873651,
+      "geoinfo": {
+        "display_name": "Place aux Fleurs, Frioul Islands, 7th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13007, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "7th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Place aux Fleurs, Frioul Islands, 7th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13007, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:26.944712+00:00",
+  "_kind": "geo_samples"
+}

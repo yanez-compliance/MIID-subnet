@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Austin",
+  "geonameid": 5016884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.68781130341396,
+      "lon": -93.00653036066831,
+      "geoinfo": {
+        "display_name": "18th Avenue Northwest, Austin, Mower County, Minnesota, 55912, United States",
+        "road": "18th Avenue Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Minnesota",
+        "postcode": "55912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18th Avenue Northwest, Austin, Minnesota, United States"
+    },
+    {
+      "lat": 43.65730302569308,
+      "lon": -92.95057375454515,
+      "geoinfo": {
+        "display_name": "7th Avenue Southeast, Austin, Mower County, Minnesota, 55912, United States",
+        "road": "7th Avenue Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Minnesota",
+        "postcode": "55912",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7th Avenue Southeast, Austin, Mower County, Minnesota, 55912, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:49.881943+00:00",
+  "_kind": "geo_samples"
+}

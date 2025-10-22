@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Soest",
+  "geonameid": 2831708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.53549593588021,
+      "lon": 8.115185256094167,
+      "geoinfo": {
+        "display_name": "Am Hagedornsknapp, Hiddingsen, Soest, Kreis Soest, North Rhine-Westphalia, 59494, Germany",
+        "road": "Am Hagedornsknapp",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Soest",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59494",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Hagedornsknapp, Soest, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.597917629054876,
+      "lon": 8.163835439731304,
+      "geoinfo": {
+        "display_name": "Sassendorf, Bad Sassendorf, Kreis Soest, North Rhine-Westphalia, 59505, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sassendorf",
+        "city_district": null,
+        "city": "Bad Sassendorf",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59505",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "885, Sassendorf, Bad Sassendorf, Kreis Soest, North Rhine-Westphalia, 59505, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:33.093947+00:00",
+  "_kind": "geo_samples"
+}

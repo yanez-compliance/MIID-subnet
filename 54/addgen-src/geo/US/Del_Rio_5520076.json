@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Del Rio",
+  "geonameid": 5520076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.359018637530077,
+      "lon": -100.93770596830899,
+      "geoinfo": {
+        "display_name": "2823, Cienegas Road, Del Rio, Val Verde County, Texas, 78840, United States",
+        "road": "Cienegas Road",
+        "house_number": "2823",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Del Rio",
+        "state": "Texas",
+        "postcode": "78840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2823 Cienegas Road, Del Rio, Texas, United States"
+    },
+    {
+      "lat": 29.343070343991993,
+      "lon": -100.86648690019635,
+      "geoinfo": {
+        "display_name": "Broadbent Avenue, Val Verde County, Texas, 78840, United States",
+        "road": "Broadbent Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "634, Broadbent Avenue, Val Verde County, Texas, 78840, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:02.770625+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Wevelgem",
+  "geonameid": 2783759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.82235553292884,
+      "lon": 3.1434584837010426,
+      "geoinfo": {
+        "display_name": "Wittemolenstraat, Moorsele, Wevelgem, Kortrijk, West Flanders, Flanders, 8560, Belgium",
+        "road": "Wittemolenstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moorsele",
+        "state": "West Flanders",
+        "postcode": "8560",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Wittemolenstraat, Wevelgem, West Flanders, Belgium"
+    },
+    {
+      "lat": 50.82070814891912,
+      "lon": 3.1222756756073813,
+      "geoinfo": {
+        "display_name": "Zandweg, Menin, Kortrijk, West Flanders, 8930, Belgium",
+        "road": "Zandweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Menin",
+        "state": "West Flanders",
+        "postcode": "8930",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "774, Zandweg, Menin, Kortrijk, West Flanders, 8930, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:10.197998+00:00",
+  "_kind": "geo_samples"
+}

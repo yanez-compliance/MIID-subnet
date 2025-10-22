@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sirohi",
+  "geonameid": 1256067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.87857698055118,
+      "lon": 72.87071559129008,
+      "geoinfo": {
+        "display_name": "NH62, Sirohi Tehsil, Sirohi, Rajasthan, India",
+        "road": "NH62",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rajasthan",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH62, Sirohi, Rajasthan, India"
+    },
+    {
+      "lat": 24.86631228102388,
+      "lon": 72.81289509571424,
+      "geoinfo": {
+        "display_name": "Khambal, Sirohi Tehsil, Sirohi, Rajasthan, 307001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khambal",
+        "state": "Rajasthan",
+        "postcode": "307001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "276, Khambal, Sirohi Tehsil, Sirohi, Rajasthan, 307001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:12.283136+00:00",
+  "_kind": "geo_samples"
+}

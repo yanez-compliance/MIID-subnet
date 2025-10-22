@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winthrop",
+  "geonameid": 4955993,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.344969992704776,
+      "lon": -70.94585614827959,
+      "geoinfo": {
+        "display_name": "Boston, Suffolk County, Massachusetts, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Winthrop, Massachusetts, United States"
+    },
+    {
+      "lat": 42.349864949733195,
+      "lon": -70.96523781716884,
+      "geoinfo": {
+        "display_name": "Deer Island Loop Trail, Boston, Suffolk County, Massachusetts, 02152, United States",
+        "road": "Deer Island Loop Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "693, Deer Island Loop Trail, Boston, Suffolk County, Massachusetts, 02152, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:46.252614+00:00",
+  "_kind": "geo_samples"
+}

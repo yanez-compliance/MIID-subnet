@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "White Bear Lake",
+  "geonameid": 5052658,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.12318219350608,
+      "lon": -93.00246438443614,
+      "geoinfo": {
+        "display_name": "Holiday, 5970, 120th Street North, White Bear Lake, Ramsey County, Minnesota, 55110, United States",
+        "road": "120th Street North",
+        "house_number": "5970",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "White Bear Lake",
+        "state": "Minnesota",
+        "postcode": "55110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5970 120th Street North, White Bear Lake, Minnesota, United States"
+    },
+    {
+      "lat": 45.04163856943668,
+      "lon": -93.00414764930265,
+      "geoinfo": {
+        "display_name": "Manitou Ridge Golf Course, Orchard Lane, White Bear Lake, Ramsey County, Minnesota, 55110, United States",
+        "road": "Orchard Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "White Bear Lake",
+        "state": "Minnesota",
+        "postcode": "55110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "621, Orchard Lane, White Bear Lake, 55110 Minnesota, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:53.238861+00:00",
+  "_kind": "geo_samples"
+}

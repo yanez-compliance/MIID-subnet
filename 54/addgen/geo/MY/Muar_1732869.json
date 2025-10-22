@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Muar",
+  "geonameid": 1732869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.0304704120046133,
+      "lon": 102.58066431964055,
+      "geoinfo": {
+        "display_name": "Jalan Temenggong Ahmad, Muar, Johor, 84000, Malaysia",
+        "road": "Jalan Temenggong Ahmad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muar",
+        "state": "Johor",
+        "postcode": "84000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Temenggong Ahmad, Muar, Johor, Malaysia"
+    },
+    {
+      "lat": 2.0638993029345083,
+      "lon": 102.59386964178108,
+      "geoinfo": {
+        "display_name": "Taman Marin, Muar, Johor, 84000, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Marin",
+        "suburb": null,
+        "city_district": null,
+        "city": "Muar",
+        "state": "Johor",
+        "postcode": "84000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "860, Taman Marin, Muar, Johor, 84000, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:18.655219+00:00",
+  "_kind": "geo_samples"
+}

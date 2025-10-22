@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Weesp",
+  "geonameid": 2744904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.302336341320014,
+      "lon": 5.09415323938439,
+      "geoinfo": {
+        "display_name": "Visserijpad, Weesp, Amsterdam, North Holland, Netherlands, 1381 HM, Netherlands",
+        "road": "Visserijpad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weesp",
+        "state": "North Holland",
+        "postcode": "1381 HM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Visserijpad, Weesp, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.2852672720021,
+      "lon": 5.003622591036862,
+      "geoinfo": {
+        "display_name": "41, Gein-Noord, Abcoude, De Ronde Venen, Utrecht, Netherlands, 1391 HA, Netherlands",
+        "road": "Gein-Noord",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abcoude",
+        "state": "Utrecht",
+        "postcode": "1391 HA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "41, Gein-Noord, Abcoude, De Ronde Venen, Utrecht, Netherlands, 1391 HA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:42.490141+00:00",
+  "_kind": "geo_samples"
+}

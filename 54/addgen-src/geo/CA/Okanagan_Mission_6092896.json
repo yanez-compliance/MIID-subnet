@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Okanagan Mission",
+  "geonameid": 6092896,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.825218657131906,
+      "lon": -119.49536849213811,
+      "geoinfo": {
+        "display_name": "444, Sarsons Road, Lower Mission, Kelowna, Westbank First Nation #9, Regional District of Central Okanagan, British Columbia, V1W 1W2, Canada",
+        "road": "Sarsons Road",
+        "house_number": "444",
+        "neighbourhood": null,
+        "suburb": "Lower Mission",
+        "city_district": null,
+        "city": "Kelowna",
+        "state": "British Columbia",
+        "postcode": "V1W 1W2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "444 Sarsons Road, Okanagan Mission, British Columbia, Canada"
+    },
+    {
+      "lat": 49.83976014960739,
+      "lon": -119.52790314568306,
+      "geoinfo": {
+        "display_name": "West Kelowna, Regional District of Central Okanagan, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Kelowna",
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "429, West Kelowna, Regional District of Central Okanagan, 05273 British Columbia, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:02.044046+00:00",
+  "_kind": "geo_samples"
+}

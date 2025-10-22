@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Durham",
+  "geonameid": 4464368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.99720051034789,
+      "lon": -78.90299201084731,
+      "geoinfo": {
+        "display_name": "Durham Marriott City Center, 201, Foster Street, American Tobacco Historic District, Five Points, Durham, Durham County, North Carolina, 27701, United States",
+        "road": "Foster Street",
+        "house_number": "201",
+        "neighbourhood": "American Tobacco Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Durham",
+        "state": "North Carolina",
+        "postcode": "27701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "201 Foster Street, Durham, North Carolina, United States"
+    },
+    {
+      "lat": 36.01514389713586,
+      "lon": -78.88323534564243,
+      "geoinfo": {
+        "display_name": "Dr John H Franklin Highway, Durham, Durham County, North Carolina, 27701, United States",
+        "road": "Dr John H Franklin Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Durham",
+        "state": "North Carolina",
+        "postcode": "27701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "198, Dr John H Franklin Highway, Durham, Durham County, North Carolina, 27701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:38.674227+00:00",
+  "_kind": "geo_samples"
+}

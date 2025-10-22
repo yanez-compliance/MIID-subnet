@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boone",
+  "geonameid": 4456703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.208672677667586,
+      "lon": -81.66332871993905,
+      "geoinfo": {
+        "display_name": "VFW Drive, Beverly Heights, Boone, Watauga County, North Carolina, 28607, United States",
+        "road": "VFW Drive",
+        "house_number": null,
+        "neighbourhood": "Beverly Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Boone",
+        "state": "North Carolina",
+        "postcode": "28607",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "VFW Drive, Boone, North Carolina, United States"
+    },
+    {
+      "lat": 36.21207988461185,
+      "lon": -81.72876081463491,
+      "geoinfo": {
+        "display_name": "D and R Shook Road, Watauga County, North Carolina, 28608, United States",
+        "road": "D and R Shook Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "28608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "996, D and R Shook Road, Watauga County, North Carolina, 28608, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:13.968340+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Labrador",
+  "geonameid": 8012683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.93022525531274,
+      "lon": 153.36539294591427,
+      "geoinfo": {
+        "display_name": "Brisbane Road, Arundel, Gold Coast City, Queensland, 4214, Australia",
+        "road": "Brisbane Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arundel",
+        "city_district": null,
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4214",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Brisbane Road, Labrador, Queensland, Australia"
+    },
+    {
+      "lat": -27.95294880220827,
+      "lon": 153.36277357907463,
+      "geoinfo": {
+        "display_name": "Kookaburra Place, Parkwood, Gold Coast City, Queensland, 4214, Australia",
+        "road": "Kookaburra Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parkwood",
+        "city_district": null,
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4214",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "882, Kookaburra Place, Parkwood, Gold Coast City, Queensland, 4214, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:56:07.128175+00:00",
+  "_kind": "geo_samples"
+}

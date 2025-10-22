@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Paso Robles",
+  "geonameid": 5381438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.59096878619562,
+      "lon": -120.6825548738537,
+      "geoinfo": {
+        "display_name": "Santa Ysabel Avenue, Santa Ysabel Ranch, San Luis Obispo County, California, 93466, United States",
+        "road": "Santa Ysabel Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93466",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Santa Ysabel Avenue, Paso Robles, California, United States"
+    },
+    {
+      "lat": 35.65858253228082,
+      "lon": -120.68890891534451,
+      "geoinfo": {
+        "display_name": "3888, North River Road, Paso Robles, San Luis Obispo County, California, 93446, United States",
+        "road": "North River Road",
+        "house_number": "3888",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paso Robles",
+        "state": "California",
+        "postcode": "93446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3888, North River Road, Paso Robles, San Luis Obispo County, California, 93446, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:27.156637+00:00",
+  "_kind": "geo_samples"
+}

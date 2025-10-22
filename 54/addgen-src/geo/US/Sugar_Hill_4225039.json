@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sugar Hill",
+  "geonameid": 4225039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.11322812246551,
+      "lon": -84.07776006395184,
+      "geoinfo": {
+        "display_name": "La Perla Drive Northeast, Sugar Hill, Gwinnett County, Georgia, 30518, United States",
+        "road": "La Perla Drive Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sugar Hill",
+        "state": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "La Perla Drive Northeast, Sugar Hill, Georgia, United States"
+    },
+    {
+      "lat": 34.11001322587315,
+      "lon": -83.98539157671293,
+      "geoinfo": {
+        "display_name": "Mill Center Parkway, Woodbriar East, Buford, Gwinnett County, Georgia, 30519, United States",
+        "road": "Mill Center Parkway",
+        "house_number": null,
+        "neighbourhood": "Woodbriar East",
+        "suburb": null,
+        "city_district": null,
+        "city": "Buford",
+        "state": "Georgia",
+        "postcode": "30519",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "083, Mill Center Parkway, Woodbriar East, Buford, Gwinnett County, Georgia, 30519, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:54.937334+00:00",
+  "_kind": "geo_samples"
+}

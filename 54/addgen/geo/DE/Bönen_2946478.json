@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bönen",
+  "geonameid": 2946478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.600902635162164,
+      "lon": 7.725109076993557,
+      "geoinfo": {
+        "display_name": "Am Telgenbusch, Altenbögge, Bönen, Kreis Unna, North Rhine-Westphalia, 59199, Germany",
+        "road": "Am Telgenbusch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altenbögge",
+        "city_district": null,
+        "city": "Bönen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59199",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Telgenbusch, Bönen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.594079918328056,
+      "lon": 7.695229401352245,
+      "geoinfo": {
+        "display_name": "Derner Straße, Derne, Kamen-Mitte, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany",
+        "road": "Derner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Derne",
+        "city_district": null,
+        "city": "Kamen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59174",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "131, Derner Straße, Derne, Kamen-Mitte, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:08.709667+00:00",
+  "_kind": "geo_samples"
+}

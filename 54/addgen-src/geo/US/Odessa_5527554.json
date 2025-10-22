@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Odessa",
+  "geonameid": 5527554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.866759803120924,
+      "lon": -102.36643445035176,
+      "geoinfo": {
+        "display_name": "1875, North Dixie Boulevard, Brentwood, Odessa, Ector County, Texas, 79761, United States",
+        "road": "North Dixie Boulevard",
+        "house_number": "1875",
+        "neighbourhood": "Brentwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Odessa",
+        "state": "Texas",
+        "postcode": "79761",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1875 North Dixie Boulevard, Odessa, Texas, United States"
+    },
+    {
+      "lat": 31.848982819552145,
+      "lon": -102.3167736809581,
+      "geoinfo": {
+        "display_name": "OIDC Drive, D & S Industrial Park, Odessa, Ector County, Texas, 79761, United States",
+        "road": "OIDC Drive",
+        "house_number": null,
+        "neighbourhood": "D & S Industrial Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Odessa",
+        "state": "Texas",
+        "postcode": "79761",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "052, OIDC Drive, D & S Industrial Park, Odessa, Ector County, Texas, 79761, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:54.135602+00:00",
+  "_kind": "geo_samples"
+}

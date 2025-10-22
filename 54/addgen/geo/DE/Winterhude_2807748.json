@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Winterhude",
+  "geonameid": 2807748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.60122175686788,
+      "lon": 10.00523931403416,
+      "geoinfo": {
+        "display_name": "24, Fiefstücken, Winterhude, Hamburg-Nord, Hamburg, 22297, Germany",
+        "road": "Fiefstücken",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Winterhude",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22297",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24 Fiefstücken, Winterhude, Germany"
+    },
+    {
+      "lat": 53.62447173403629,
+      "lon": 10.07400474749121,
+      "geoinfo": {
+        "display_name": "Mittelallee, Ohlsdorf, Hamburg-Nord, Hamburg, 22337, Germany",
+        "road": "Mittelallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ohlsdorf",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22337",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "421, Mittelallee, Ohlsdorf, Hamburg-Nord, Hamburg, 22337, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:27.818281+00:00",
+  "_kind": "geo_samples"
+}

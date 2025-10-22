@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lidu",
+  "geonameid": 1803753,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.72228058083301,
+      "lon": 107.25108774358445,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lidu, Chongqing, China"
+    },
+    {
+      "lat": 29.76627050069061,
+      "lon": 107.32420668441154,
+      "geoinfo": {
+        "display_name": "Fuling, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuling",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "663, Fuling, Fuling District, 32795 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:07.428427+00:00",
+  "_kind": "geo_samples"
+}

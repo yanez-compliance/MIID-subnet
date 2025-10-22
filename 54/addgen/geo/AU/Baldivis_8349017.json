@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Baldivis",
+  "geonameid": 8349017,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.31970148858675,
+      "lon": 115.87625026888442,
+      "geoinfo": {
+        "display_name": "Burma Road, Baldivis, City of Rockingham, Western Australia, 6171, Australia",
+        "road": "Burma Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baldivis",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6171",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Burma Road, Baldivis, Western Australia, Australia"
+    },
+    {
+      "lat": -32.33822839495637,
+      "lon": 115.86409113246721,
+      "geoinfo": {
+        "display_name": "Baldivis, City of Rockingham, Western Australia, 6171, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baldivis",
+        "state": "Western Australia",
+        "postcode": "6171",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "062, Baldivis, City of Rockingham, Western Australia, 6171, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:55.063478+00:00",
+  "_kind": "geo_samples"
+}

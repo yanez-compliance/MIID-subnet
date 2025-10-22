@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cachan",
+  "geonameid": 3029276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.76004711827188,
+      "lon": 2.3681681881940913,
+      "geoinfo": {
+        "display_name": "Avenue de la Cité, Chevilly-Larue, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94550, France",
+        "road": "Avenue de la Cité",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chevilly-Larue",
+        "state": null,
+        "postcode": "94550",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue de la Cité, Cachan, Ile-de-France, France"
+    },
+    {
+      "lat": 48.80313270817559,
+      "lon": 2.3859328178643633,
+      "geoinfo": {
+        "display_name": "35, Rue du Professeur Calmette, Le Fort, Vitry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94200, France",
+        "road": "Rue du Professeur Calmette",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": "Le Fort",
+        "city_district": null,
+        "city": "Vitry-sur-Seine",
+        "state": null,
+        "postcode": "94200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "35, Rue du Professeur Calmette, Le Fort, Vitry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:02.948352+00:00",
+  "_kind": "geo_samples"
+}

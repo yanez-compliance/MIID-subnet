@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Pinner",
+  "geonameid": 2640275,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.59468515080034,
+      "lon": -0.4248504925507574,
+      "geoinfo": {
+        "display_name": "R39, Northwood, London Borough of Hillingdon, London, Greater London, England, HA5 2NL, United Kingdom",
+        "road": "R39",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Northwood",
+        "city_district": "London Borough of Hillingdon",
+        "city": "London",
+        "state": "England",
+        "postcode": "HA5 2NL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "R39, Pinner, England, United Kingdom"
+    },
+    {
+      "lat": 51.62644177818263,
+      "lon": -0.3814304502935274,
+      "geoinfo": {
+        "display_name": "Harrow Way, Carpenders Park, Watford Rural, South Oxhey, Three Rivers, Hertfordshire, England, WD19 5ES, United Kingdom",
+        "road": "Harrow Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carpenders Park",
+        "city_district": null,
+        "city": "Three Rivers",
+        "state": "England",
+        "postcode": "WD19 5ES",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Harrow Way, Carpenders Park, Watford Rural, South Oxhey, Three Rivers, Hertfordshire, England, WD19 5ES, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:10.349198+00:00",
+  "_kind": "geo_samples"
+}

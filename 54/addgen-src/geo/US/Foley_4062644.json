@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Foley",
+  "geonameid": 4062644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.43087067333388,
+      "lon": -87.71887589279618,
+      "geoinfo": {
+        "display_name": "Myrtlewood Drive, Foley, Baldwin County, Alabama, 36536, United States",
+        "road": "Myrtlewood Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foley",
+        "state": "Alabama",
+        "postcode": "36536",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Myrtlewood Drive, Foley, Alabama, United States"
+    },
+    {
+      "lat": 30.42619128671382,
+      "lon": -87.7270650948497,
+      "geoinfo": {
+        "display_name": "Quail Lane, Baldwin County, Alabama, 36535, United States",
+        "road": "Quail Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alabama",
+        "postcode": "36535",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "425, Quail Lane, Baldwin County, Alabama, 36535, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:06.743756+00:00",
+  "_kind": "geo_samples"
+}

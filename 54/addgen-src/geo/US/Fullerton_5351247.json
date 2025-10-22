@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fullerton",
+  "geonameid": 5351247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.86970113551661,
+      "lon": -117.95906964826453,
+      "geoinfo": {
+        "display_name": "Grace Ministries International, 150, South Wanda Drive, Fullerton, Orange County, California, 92833, United States",
+        "road": "South Wanda Drive",
+        "house_number": "150",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fullerton",
+        "state": "California",
+        "postcode": "92833",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "150 South Wanda Drive, Fullerton, California, United States"
+    },
+    {
+      "lat": 33.85282757946855,
+      "lon": -117.93768235408147,
+      "geoinfo": {
+        "display_name": "1407, West Arlington Avenue, Anaheim, Orange County, California, 92801, United States",
+        "road": "West Arlington Avenue",
+        "house_number": "1407",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anaheim",
+        "state": "California",
+        "postcode": "92801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1407, West Arlington Avenue, Anaheim, Orange County, California, 92801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:09:42.876607+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Highlands",
+  "geonameid": 5377640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.67692205095832,
+      "lon": -121.42543446465596,
+      "geoinfo": {
+        "display_name": "E Street, Sacramento County, California, 95673, United States",
+        "road": "E Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95673",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "E Street, North Highlands, California, United States"
+    },
+    {
+      "lat": 38.68146846610688,
+      "lon": -121.37096058179297,
+      "geoinfo": {
+        "display_name": "6239, Dewar Way, North Highlands, Sacramento County, California, 95660, United States",
+        "road": "Dewar Way",
+        "house_number": "6239",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6239, Dewar Way, North Highlands, Sacramento County, California, 95660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:35.189746+00:00",
+  "_kind": "geo_samples"
+}

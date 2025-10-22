@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gaoqiao",
+  "geonameid": 8400059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.345628924632948,
+      "lon": 108.21986079433864,
+      "geoinfo": {
+        "display_name": "Gaoqiao, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaoqiao",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Gaoqiao, Chongqing, China"
+    },
+    {
+      "lat": 31.376996388688255,
+      "lon": 108.2619945412191,
+      "geoinfo": {
+        "display_name": "Pingle, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pingle",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "713, Pingle, Kaizhou District, 82425 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:09.631204+00:00",
+  "_kind": "geo_samples"
+}

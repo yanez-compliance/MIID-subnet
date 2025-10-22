@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rinteln",
+  "geonameid": 2846523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.18496161603918,
+      "lon": 9.026618630738664,
+      "geoinfo": {
+        "display_name": "Aue, Eisbergen, Porta Westfalica, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32457, Germany",
+        "road": "Aue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eisbergen",
+        "city_district": null,
+        "city": "Porta Westfalica",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32457",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Aue, Rinteln, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.21156054679971,
+      "lon": 9.116629261182798,
+      "geoinfo": {
+        "display_name": "4, Rintelner Straße, Steinbergen, Rinteln, Landkreis Schaumburg, Lower Saxony, 31737, Germany",
+        "road": "Rintelner Straße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Steinbergen",
+        "city_district": null,
+        "city": "Rinteln",
+        "state": "Lower Saxony",
+        "postcode": "31737",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Rintelner Straße, Steinbergen, Rinteln, Landkreis Schaumburg, Lower Saxony, 31737, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:23.684855+00:00",
+  "_kind": "geo_samples"
+}

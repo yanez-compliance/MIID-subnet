@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Antakya",
+  "geonameid": 323779,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.168395704984206,
+      "lon": 36.17565836206817,
+      "geoinfo": {
+        "display_name": "Hatay, Antakya, Hatay, Mediterranean Region, 31160, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hatay",
+        "state": null,
+        "postcode": "31160",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Antakya, Turkey"
+    },
+    {
+      "lat": 36.246301492616155,
+      "lon": 36.15718102472496,
+      "geoinfo": {
+        "display_name": "Çevre Yolu Caddesi, Odabaşı Mahallesi, Hatay, Antakya, Hatay, Mediterranean Region, 31180, Turkey",
+        "road": "Çevre Yolu Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Odabaşı Mahallesi",
+        "city_district": null,
+        "city": "Hatay",
+        "state": null,
+        "postcode": "31180",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "311, Çevre Yolu Caddesi, Odabaşı Mahallesi, Hatay, Antakya, Hatay, Mediterranean Region, 31180, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:13.705659+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fürth",
+  "geonameid": 2923544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.43361944098691,
+      "lon": 10.979627132774525,
+      "geoinfo": {
+        "display_name": "Erlanger Straße, Altenberg, Oberasbach, Fürth (district), Bavaria, 90522, Germany",
+        "road": "Erlanger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oberasbach",
+        "state": "Bavaria",
+        "postcode": "90522",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Erlanger Straße, Fürth, Bavaria, Germany"
+    },
+    {
+      "lat": 49.473463143374694,
+      "lon": 10.924975840835224,
+      "geoinfo": {
+        "display_name": "Rennweg, Oberfürberg, West, Fürth, Bavaria, 90768, Germany",
+        "road": "Rennweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oberfürberg",
+        "city_district": null,
+        "city": "Fürth",
+        "state": "Bavaria",
+        "postcode": "90768",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "788, Rennweg, Oberfürberg, West, Fürth, Bavaria, 90768, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:56.461639+00:00",
+  "_kind": "geo_samples"
+}

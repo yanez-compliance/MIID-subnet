@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Guildford",
+  "geonameid": 2647793,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.2203503858602,
+      "lon": -0.6132123928985093,
+      "geoinfo": {
+        "display_name": "Sandy Lane, Compton, Guildford, Surrey, England, GU3 1HJ, United Kingdom",
+        "road": "Sandy Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guildford",
+        "state": "England",
+        "postcode": "GU3 1HJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sandy Lane, Guildford, England, United Kingdom"
+    },
+    {
+      "lat": 51.239754206816365,
+      "lon": -0.5320493445679765,
+      "geoinfo": {
+        "display_name": "Longmead, Merrow, Guildford, Surrey, England, GU1 2HW, United Kingdom",
+        "road": "Longmead",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Merrow",
+        "city_district": null,
+        "city": "Guildford",
+        "state": "England",
+        "postcode": "GU1 2HW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Longmead, Merrow, Guildford, Surrey, England, GU1 2HW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:44.600113+00:00",
+  "_kind": "geo_samples"
+}

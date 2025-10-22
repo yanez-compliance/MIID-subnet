@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedberg",
+  "geonameid": 2924803,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.37110867578872,
+      "lon": 10.975968974445754,
+      "geoinfo": {
+        "display_name": "Schützenstraße, Wulfertshausen, Friedberg, Landkreis Aichach-Friedberg, Bavaria, 86316, Germany",
+        "road": "Schützenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Friedberg",
+        "state": "Bavaria",
+        "postcode": "86316",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schützenstraße, Friedberg, Bavaria, Germany"
+    },
+    {
+      "lat": 48.37490572186493,
+      "lon": 11.000786189935251,
+      "geoinfo": {
+        "display_name": "Oberzell, Dasing, Landkreis Aichach-Friedberg, Bavaria, 86453, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oberzell",
+        "state": "Bavaria",
+        "postcode": "86453",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "307, Friedberg, 86453 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:29.640726+00:00",
+  "_kind": "geo_samples"
+}

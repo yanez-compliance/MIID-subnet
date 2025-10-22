@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Būsh",
+  "geonameid": 358600,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 29.165946663537884,
+      "lon": 31.125723750689577,
+      "geoinfo": {
+        "display_name": "Naser, Bani Sweif, 62828, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naser",
+        "state": "Bani Sweif",
+        "postcode": "62828",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Būsh, Bani Sweif, Egypt"
+    },
+    {
+      "lat": 29.153840549318055,
+      "lon": 31.115515507358396,
+      "geoinfo": {
+        "display_name": "Al Teraa Al Saghira Street, Naser, Bani Sweif, 62828, Egypt",
+        "road": "Al Teraa Al Saghira Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naser",
+        "state": "Bani Sweif",
+        "postcode": "62828",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "090, Al Teraa Al Saghira Street, Naser, Bani Sweif, 62828, Egypt"
+    },
+    {
+      "lat": 29.17716489367726,
+      "lon": 31.150856900828924,
+      "geoinfo": {
+        "display_name": "Al Zaitun, Bani Sweif, 62828, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Zaitun",
+        "state": "Bani Sweif",
+        "postcode": "62828",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "446, Al Zaitun, Bani Sweif, 62828, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:40.834332+00:00",
+  "_kind": "geo_samples"
+}

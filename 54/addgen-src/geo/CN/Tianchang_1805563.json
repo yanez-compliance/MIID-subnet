@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tianchang",
+  "geonameid": 1805563,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.012591460370004,
+      "lon": 113.9898731610127,
+      "geoinfo": {
+        "display_name": "蔡庄村, Shijiazhuang, Hebei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shijiazhuang",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Tianchang, Hebei, China"
+    },
+    {
+      "lat": 38.009060816952484,
+      "lon": 114.05611390833491,
+      "geoinfo": {
+        "display_name": "G307, Jingxing County, Shijiazhuang, Hebei, 050100, China",
+        "road": "G307",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jingxing County",
+        "state": "Hebei",
+        "postcode": "050100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G307, Jingxing County, Shijiazhuang, Hebei, 050100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:32.999434+00:00",
+  "_kind": "geo_samples"
+}

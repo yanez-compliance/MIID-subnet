@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Angers",
+  "geonameid": 3037656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.4772226715714,
+      "lon": -0.4941141882466911,
+      "geoinfo": {
+        "display_name": "Boulevard de la Chanterie, Saint-Barthélemy-d'Anjou, Angers, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49124, France",
+        "road": "Boulevard de la Chanterie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Barthélemy-d'Anjou",
+        "state": "Pays de la Loire",
+        "postcode": "49124",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard de la Chanterie, Angers, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.45330128993218,
+      "lon": -0.4980807202880813,
+      "geoinfo": {
+        "display_name": "D 117, La Roe, Trélazé, Angers, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49800, France",
+        "road": "D 117",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Trélazé",
+        "state": "Pays de la Loire",
+        "postcode": "49800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 117, La Roe, Trélazé, Angers, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49800, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:44.557822+00:00",
+  "_kind": "geo_samples"
+}

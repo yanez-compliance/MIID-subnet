@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Escorial",
+  "geonameid": 3123504,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.55844886092669,
+      "lon": -4.157245748001949,
+      "geoinfo": {
+        "display_name": "Abrevadero, Camino de las Arenillas, San Lorenzo de El Escorial, Community of Madrid, 28293, Spain",
+        "road": "Camino de las Arenillas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Lorenzo de El Escorial",
+        "state": "Community of Madrid",
+        "postcode": "28293",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camino de las Arenillas, El Escorial, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.58955091386024,
+      "lon": -4.085300763999414,
+      "geoinfo": {
+        "display_name": "Cerro Cabrerizo, El Escorial, Community of Madrid, 28280, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Escorial",
+        "state": "Community of Madrid",
+        "postcode": "28280",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "344, Cerro Cabrerizo, El Escorial, Community of Madrid, 28280, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:49.116796+00:00",
+  "_kind": "geo_samples"
+}

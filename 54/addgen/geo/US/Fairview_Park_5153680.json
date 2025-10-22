@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairview Park",
+  "geonameid": 5153680,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.453266110899584,
+      "lon": -81.83223315962003,
+      "geoinfo": {
+        "display_name": "4380, West 192nd Street, Fairview Park, Cuyahoga County, Ohio, 44126, United States",
+        "road": "West 192nd Street",
+        "house_number": "4380",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairview Park",
+        "state": "Ohio",
+        "postcode": "44126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4380 West 192nd Street, Fairview Park, Ohio, United States"
+    },
+    {
+      "lat": 41.42361517270102,
+      "lon": -81.82838906274311,
+      "geoinfo": {
+        "display_name": "4841, Rocky River Drive, Hopkins, Riverside, Cleveland, Cuyahoga County, Ohio, 44135, United States",
+        "road": "Rocky River Drive",
+        "house_number": "4841",
+        "neighbourhood": null,
+        "suburb": "Riverside",
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44135",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4841, Rocky River Drive, Hopkins, Riverside, Cleveland, Cuyahoga County, Ohio, 44135, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:29.615241+00:00",
+  "_kind": "geo_samples"
+}

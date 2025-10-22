@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Fuencarral",
+  "geonameid": 3121969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.50125963872374,
+      "lon": -3.6687202778402077,
+      "geoinfo": {
+        "display_name": "Calle de Valcarlos, Las Tablas, Valverde, Fuencarral-El Pardo, Madrid, Community of Madrid, 28050, Spain",
+        "road": "Calle de Valcarlos",
+        "house_number": null,
+        "neighbourhood": "Las Tablas",
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28050",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de Valcarlos, Fuencarral, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.486900082289615,
+      "lon": -3.6928175267898,
+      "geoinfo": {
+        "display_name": "50, Calle de Antoniorrobles, Begoña, Valverde, Fuencarral, Fuencarral-El Pardo, Madrid, Community of Madrid, 28034, Spain",
+        "road": "Calle de Antoniorrobles",
+        "house_number": "50",
+        "neighbourhood": "Begoña",
+        "suburb": "Fuencarral",
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28034",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "50, Calle de Antoniorrobles, Begoña, Valverde, Fuencarral, Fuencarral-El Pardo, Madrid, Community of Madrid, 28034, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:54.887058+00:00",
+  "_kind": "geo_samples"
+}

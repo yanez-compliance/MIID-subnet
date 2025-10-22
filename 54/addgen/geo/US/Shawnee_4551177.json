@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shawnee",
+  "geonameid": 4551177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.35367547627265,
+      "lon": -96.96666038177338,
+      "geoinfo": {
+        "display_name": "2953, Franklin, Pottawatomie County, Oklahoma, 74804, United States",
+        "road": "Franklin",
+        "house_number": "2953",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": "74804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2953 Franklin, Shawnee, Oklahoma, United States"
+    },
+    {
+      "lat": 35.29966893857875,
+      "lon": -96.89183417605672,
+      "geoinfo": {
+        "display_name": "Hardesty Road, Shawnee, Pottawatomie County, Oklahoma, 74801, United States",
+        "road": "Hardesty Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shawnee",
+        "state": "Oklahoma",
+        "postcode": "74801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "634, Hardesty Road, Shawnee, Pottawatomie County, Oklahoma, 74801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:31.882575+00:00",
+  "_kind": "geo_samples"
+}

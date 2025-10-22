@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Zossen",
+  "geonameid": 2803870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.24183788133686,
+      "lon": 13.42712308438702,
+      "geoinfo": {
+        "display_name": "32, Jägerstraße, Schmachtenhagen, Zossen, Teltow-Fläming, Brandenburg, 15806, Germany",
+        "road": "Jägerstraße",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zossen",
+        "city": "Zossen",
+        "state": "Brandenburg",
+        "postcode": "15806",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "32 Jägerstraße, Zossen, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.21432236259568,
+      "lon": 13.488925726534209,
+      "geoinfo": {
+        "display_name": "Hinterfeld, Zossen, Teltow-Fläming, Brandenburg, 15806, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zossen",
+        "city": "Zossen",
+        "state": "Brandenburg",
+        "postcode": "15806",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "369, Hinterfeld, Zossen, Teltow-Fläming, Brandenburg, 15806, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:13:54.596276+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bostonia",
+  "geonameid": 5330167,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.808100312089586,
+      "lon": -116.91180326349594,
+      "geoinfo": {
+        "display_name": "1876, Greenfield Drive, El Cajon, San Diego County, California, 92019, United States",
+        "road": "Greenfield Drive",
+        "house_number": "1876",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cajon",
+        "state": "California",
+        "postcode": "92019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1876 Greenfield Drive, Bostonia, California, United States"
+    },
+    {
+      "lat": 32.79867319178159,
+      "lon": -116.98623381149471,
+      "geoinfo": {
+        "display_name": "382, Mount Hills Place, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States",
+        "road": "Mount Hills Place",
+        "house_number": "382",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cajon",
+        "state": "California",
+        "postcode": "92020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "382, Mount Hills Place, Fletcher Hills, El Cajon, San Diego County, California, 92020, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:20.742833+00:00",
+  "_kind": "geo_samples"
+}

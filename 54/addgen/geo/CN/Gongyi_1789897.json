@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gongyi",
+  "geonameid": 1789897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.7314286820624,
+      "lon": 113.04497347614124,
+      "geoinfo": {
+        "display_name": "G310, Gongyi, Zhengzhou, Henan, 451200, China",
+        "road": "G310",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gongyi",
+        "state": "Henan",
+        "postcode": "451200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G310, Gongyi, Henan, China"
+    },
+    {
+      "lat": 34.77607001383716,
+      "lon": 113.056615941886,
+      "geoinfo": {
+        "display_name": "Zhanjie, Gongyi, Zhengzhou, Henan, 451200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gongyi",
+        "state": "Henan",
+        "postcode": "451200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "124, Zhanjie, Gongyi, Zhengzhou, Henan, 451200, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:19.976186+00:00",
+  "_kind": "geo_samples"
+}

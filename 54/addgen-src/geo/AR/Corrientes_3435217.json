@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Corrientes",
+  "geonameid": 3435217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.471015697939716,
+      "lon": -58.8317478177051,
+      "geoinfo": {
+        "display_name": "1169, San Lorenzo, Libertad, Barrio Centro, Seccional 3era, Corrientes, Departamento Capital, Corrientes, 3400, Argentina",
+        "road": "San Lorenzo",
+        "house_number": "1169",
+        "neighbourhood": "Libertad",
+        "suburb": null,
+        "city_district": "Seccional 3era",
+        "city": "Corrientes",
+        "state": "Corrientes",
+        "postcode": "3400",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "1169 San Lorenzo, Corrientes, Corrientes, Argentina"
+    },
+    {
+      "lat": -27.438545963614853,
+      "lon": -58.812331398934354,
+      "geoinfo": {
+        "display_name": "Corrientes, Departamento Capital, Corrientes, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Corrientes",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "323, Corrientes, Departamento Capital, 07988 Corrientes, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:48.115782+00:00",
+  "_kind": "geo_samples"
+}

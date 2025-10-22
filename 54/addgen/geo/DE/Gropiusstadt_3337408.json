@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gropiusstadt",
+  "geonameid": 3337408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.402581564539624,
+      "lon": 13.520082703044174,
+      "geoinfo": {
+        "display_name": "A 113, Kosmosviertel, Altglienicke, Treptow-Köpenick, Berlin, 12524, Germany",
+        "road": "A 113",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altglienicke",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12524",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 113, Gropiusstadt, Germany"
+    },
+    {
+      "lat": 52.39481855552243,
+      "lon": 13.485467162333096,
+      "geoinfo": {
+        "display_name": "Rudower Straße, Waßmannsdorf, Schönefeld, Dahme-Spreewald, Brandenburg, 12529, Germany",
+        "road": "Rudower Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schönefeld",
+        "state": "Brandenburg",
+        "postcode": "12529",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "381, Rudower Straße, Waßmannsdorf, Schönefeld, Dahme-Spreewald, Brandenburg, 12529, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:46.122179+00:00",
+  "_kind": "geo_samples"
+}

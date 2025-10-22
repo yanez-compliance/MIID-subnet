@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Amberg",
+  "geonameid": 2956656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.443109775430415,
+      "lon": 11.82825734586491,
+      "geoinfo": {
+        "display_name": "Siemens AG, 19, Fuggerstraße, Gewerbegebiet West, Amberg, Bavaria, 92224, Germany",
+        "road": "Fuggerstraße",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amberg",
+        "state": "Bavaria",
+        "postcode": "92224",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19 Fuggerstraße, Amberg, Bavaria, Germany"
+    },
+    {
+      "lat": 49.44221634807281,
+      "lon": 11.904499329588276,
+      "geoinfo": {
+        "display_name": "St 2040, Krumbach, Amberg, Bavaria, 92224, Germany",
+        "road": "St 2040",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Krumbach",
+        "state": "Bavaria",
+        "postcode": "92224",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "St 2040, Krumbach, Amberg, Bavaria, 92224, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:26.664978+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Adams Morgan",
+  "geonameid": 4137457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.91246350917052,
+      "lon": -77.01333204593165,
+      "geoinfo": {
+        "display_name": "Florida Ave and R St NW, R Street Northwest, Truxton Circle, Ward 5, Washington, District of Columbia, 20001, United States",
+        "road": "R Street Northwest",
+        "house_number": null,
+        "neighbourhood": "Truxton Circle",
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "R Street Northwest, Adams Morgan, District of Columbia, United States"
+    },
+    {
+      "lat": 38.920498458389154,
+      "lon": -77.04270495418051,
+      "geoinfo": {
+        "display_name": "1818, Belmont Road Northwest, Adams Morgan, Ward 1, Washington, District of Columbia, 20009, United States",
+        "road": "Belmont Road Northwest",
+        "house_number": "1818",
+        "neighbourhood": "Adams Morgan",
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "20009",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1818, Belmont Road Northwest, Adams Morgan, Ward 1, Washington, District of Columbia, 20009, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:41:03.935217+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Villaguay",
+  "geonameid": 3427428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.836115094244956,
+      "lon": -59.01354636991772,
+      "geoinfo": {
+        "display_name": "Villaguay, Distrito Lucas al Sud, Departamento Villaguay, 3240, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villaguay",
+        "state": null,
+        "postcode": "3240",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Villaguay, Argentina"
+    },
+    {
+      "lat": -31.85908514621156,
+      "lon": -59.00934762646686,
+      "geoinfo": {
+        "display_name": "Barrio Chaco, Villaguay, Distrito Lucas al Sud, Departamento Villaguay, 3240, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barrio Chaco",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villaguay",
+        "state": null,
+        "postcode": "3240",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "189, Barrio Chaco, Villaguay, Distrito Lucas al Sud, Departamento Villaguay, 3240, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:35.648766+00:00",
+  "_kind": "geo_samples"
+}

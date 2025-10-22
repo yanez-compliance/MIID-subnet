@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Knysna",
+  "geonameid": 988698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.06531767316108,
+      "lon": 23.01896033707996,
+      "geoinfo": {
+        "display_name": "C.R. Swart Drive, Brenton, Knysna Ward 5, Knysna Local Municipality, George, Western Cape, 6570, South Africa",
+        "road": "C.R. Swart Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brenton",
+        "city_district": "Knysna Local Municipality",
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6570",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "C.R. Swart Drive, Knysna, Western Cape, South Africa"
+    },
+    {
+      "lat": -34.02294711500182,
+      "lon": 23.092780831656913,
+      "geoinfo": {
+        "display_name": "Knysna Ward 4, Knysna Local Municipality, George, Western Cape, 6572, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Knysna Ward 4",
+        "city_district": "Knysna Local Municipality",
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6572",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Knysna Ward 4, Knysna Local Municipality, George, Western Cape, 6572, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:45.751351+00:00",
+  "_kind": "geo_samples"
+}

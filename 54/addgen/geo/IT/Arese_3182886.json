@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Arese",
+  "geonameid": 3182886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.54524956721903,
+      "lon": 9.074363922660009,
+      "geoinfo": {
+        "display_name": "Via Giacomo Leopardi, Sant'Anna, Arese, Milan, Lombardy, 20044, Italy",
+        "road": "Via Giacomo Leopardi",
+        "house_number": null,
+        "neighbourhood": "Sant'Anna",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arese",
+        "state": "Lombardy",
+        "postcode": "20044",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Giacomo Leopardi, Arese, Lombardy, Italy"
+    },
+    {
+      "lat": 45.56673794231161,
+      "lon": 9.129511068508375,
+      "geoinfo": {
+        "display_name": "Via Martiri di Marzabotto, Lazzaretto, Castelletto, Senago, Milan, Lombardy, 20030, Italy",
+        "road": "Via Martiri di Marzabotto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Castelletto",
+        "city_district": null,
+        "city": "Senago",
+        "state": "Lombardy",
+        "postcode": "20030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "395, Via Martiri di Marzabotto, Lazzaretto, Castelletto, Senago, Milan, Lombardy, 20030, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:57.158053+00:00",
+  "_kind": "geo_samples"
+}

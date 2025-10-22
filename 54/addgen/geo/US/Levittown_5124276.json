@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Levittown",
+  "geonameid": 5124276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.75171777440465,
+      "lon": -73.56086857256912,
+      "geoinfo": {
+        "display_name": "1007, Grand Boulevard, Bowling Green Estates, Westbury South, Village of Westbury, Town of Hempstead, Nassau County, New York, 11590, United States",
+        "road": "Grand Boulevard",
+        "house_number": "1007",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Westbury",
+        "state": "New York",
+        "postcode": "11590",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1007 Grand Boulevard, Levittown, New York, United States"
+    },
+    {
+      "lat": 40.71129014030893,
+      "lon": -73.46473907817246,
+      "geoinfo": {
+        "display_name": "12, Maria Court, Massapequa, Town of Oyster Bay, Nassau County, New York, 11758, United States",
+        "road": "Maria Court",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massapequa",
+        "state": "New York",
+        "postcode": "11758",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12, Maria Court, Massapequa, Town of Oyster Bay, Nassau County, New York, 11758, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:58.759747+00:00",
+  "_kind": "geo_samples"
+}

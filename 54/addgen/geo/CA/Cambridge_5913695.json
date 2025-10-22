@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Cambridge",
+  "geonameid": 5913695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.36521738169027,
+      "lon": -80.32962253090692,
+      "geoinfo": {
+        "display_name": "56, Grant Street, Galt, Cambridge, Region of Waterloo, Southwestern Ontario, Ontario, N1S 1A9, Canada",
+        "road": "Grant Street",
+        "house_number": "56",
+        "neighbourhood": null,
+        "suburb": "Galt",
+        "city_district": null,
+        "city": "Cambridge",
+        "state": "Ontario",
+        "postcode": "N1S 1A9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "56 Grant Street, Cambridge, Ontario, Canada"
+    },
+    {
+      "lat": 43.32612817717437,
+      "lon": -80.34869755076085,
+      "geoinfo": {
+        "display_name": "Spragues Road, North Dumfries, Region of Waterloo, Southwestern Ontario, Ontario, N1S 5B7, Canada",
+        "road": "Spragues Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Dumfries",
+        "state": "Ontario",
+        "postcode": "N1S 5B7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Spragues Road, North Dumfries, Region of Waterloo, Southwestern Ontario, Ontario, N1S 5B7, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:14.803648+00:00",
+  "_kind": "geo_samples"
+}

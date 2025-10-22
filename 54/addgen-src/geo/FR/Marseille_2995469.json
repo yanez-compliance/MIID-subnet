@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille",
+  "geonameid": 2995469,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.32026584821327,
+      "lon": 5.3895218801069475,
+      "geoinfo": {
+        "display_name": "Traverse du Croissant Doré, Bon-Secours, 14th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13014, France",
+        "road": "Traverse du Croissant Doré",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "14th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13014",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Traverse du Croissant Doré, Marseille, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.32123489963347,
+      "lon": 5.333260939863946,
+      "geoinfo": {
+        "display_name": "Môle de la Madrague, Arenc, 2nd Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13002, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "2nd Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13002",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Môle de la Madrague, Arenc, 2nd Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13002, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:51.319424+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gallus",
+  "geonameid": 7118093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.0939847556514,
+      "lon": 8.619506693218753,
+      "geoinfo": {
+        "display_name": "Bahn-Betriebswerk Frankfurt-Griesheim, 33, Hermann-Eggert-Straße, Friedrich-Ebert-Siedlung, Gallus, Innenstadt 1, Frankfurt, Hesse, 60327, Germany",
+        "road": "Hermann-Eggert-Straße",
+        "house_number": "33",
+        "neighbourhood": "Friedrich-Ebert-Siedlung",
+        "suburb": "Gallus",
+        "city_district": "Innenstadt 1",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "postcode": "60327",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "33 Hermann-Eggert-Straße, Gallus, Hesse, Germany"
+    },
+    {
+      "lat": 50.11218636866847,
+      "lon": 8.647556409144293,
+      "geoinfo": {
+        "display_name": "Messe Frankfurt, Am Dammgraben, City West, Westend Süd, Innenstadt 2, Frankfurt, Hesse, 60327, Germany",
+        "road": "Am Dammgraben",
+        "house_number": null,
+        "neighbourhood": "City West",
+        "suburb": "Westend Süd",
+        "city_district": "Innenstadt 2",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "postcode": "60327",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Messe Frankfurt, Am Dammgraben, City West, Westend Süd, Innenstadt 2, Frankfurt, Hesse, 60327, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:31.172632+00:00",
+  "_kind": "geo_samples"
+}

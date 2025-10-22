@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Gliwice",
+  "geonameid": 3099230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.33627967790912,
+      "lon": 18.67591672527019,
+      "geoinfo": {
+        "display_name": "Poligon testowy Bumaru Łabędy, Ignacego Domeyki, Żerniki, Gliwice, Metropolis GZM, Silesian Voivodeship, 44-105, Poland",
+        "road": "Ignacego Domeyki",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Żerniki",
+        "city_district": null,
+        "city": "Gliwice",
+        "state": "Silesian Voivodeship",
+        "postcode": "44-105",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Ignacego Domeyki, Gliwice, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.30216648056177,
+      "lon": 18.732204196581243,
+      "geoinfo": {
+        "display_name": "Myjnia TIR, Knurowska, Maciejów, Baildona, Gliwice, Metropolis GZM, Silesian Voivodeship, 44-100, Poland",
+        "road": "Knurowska",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maciejów",
+        "city_district": "Baildona",
+        "city": "Gliwice",
+        "state": "Silesian Voivodeship",
+        "postcode": "44-100",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Myjnia TIR, Knurowska, Maciejów, Baildona, Gliwice, Metropolis GZM, Silesian Voivodeship, 44-100, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T02:53:34.745310+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Saratov",
+  "geonameid": 498677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.56689213444233,
+      "lon": 46.026016325946884,
+      "geoinfo": {
+        "display_name": "ПО \"Корпус\", 1, улица Осипова, СХИ, Кировский район, Saratov, Saratov Oblast, Volga Federal District, 410000, Russia",
+        "road": "улица Осипова",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "СХИ",
+        "city_district": "Кировский район",
+        "city": "Saratov",
+        "state": "Saratov Oblast",
+        "postcode": "410000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "1 улица Осипова, Saratov, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 51.50200567249607,
+      "lon": 46.03178755789771,
+      "geoinfo": {
+        "display_name": "Engels, городское поселение Энгельс, Engelssky District, Saratov Oblast, Volga Federal District, 413100, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Engels",
+        "state": "Saratov Oblast",
+        "postcode": "413100",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "428, Engels, городское поселение Энгельс, Engelssky District, Saratov Oblast, Volga Federal District, 413100, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:30:52.756726+00:00",
+  "_kind": "geo_samples"
+}

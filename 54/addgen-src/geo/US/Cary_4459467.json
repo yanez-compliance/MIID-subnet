@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cary",
+  "geonameid": 4459467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.779351217097016,
+      "lon": -78.82363546340727,
+      "geoinfo": {
+        "display_name": "Field 3, Black Creek Greenway, Cary, Wake County, North Carolina, 27513, United States",
+        "road": "Black Creek Greenway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cary",
+        "state": "North Carolina",
+        "postcode": "27513",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Black Creek Greenway, Cary, North Carolina, United States"
+    },
+    {
+      "lat": 35.80123625080092,
+      "lon": -78.83056900232951,
+      "geoinfo": {
+        "display_name": "Prestonwood Country Club, 300, Prestonwood Parkway, Preston, Cary, Wake County, North Carolina, 27513, United States",
+        "road": "Prestonwood Parkway",
+        "house_number": "300",
+        "neighbourhood": "Preston",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cary",
+        "state": "North Carolina",
+        "postcode": "27513",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Prestonwood Country Club, 300, Prestonwood Parkway, Preston, Cary, Wake County, North Carolina, 27513, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:48:20.101390+00:00",
+  "_kind": "geo_samples"
+}

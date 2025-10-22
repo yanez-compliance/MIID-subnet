@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vincennes",
+  "geonameid": 4266307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.683984669948025,
+      "lon": -87.5627768271398,
+      "geoinfo": {
+        "display_name": "1570E, Lawrence County, Illinois, United States",
+        "road": "1570E",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1570E, Vincennes, Illinois, United States"
+    },
+    {
+      "lat": 38.69810232122275,
+      "lon": -87.53809095312548,
+      "geoinfo": {
+        "display_name": "Westport, Lawrence County, Illinois, 47591, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "47591",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "379, Westport, Lawrence County, Illinois, 47591, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:04.706906+00:00",
+  "_kind": "geo_samples"
+}

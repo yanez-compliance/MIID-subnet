@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hochheim am Main",
+  "geonameid": 2903175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.002421478836744,
+      "lon": 8.364386287841567,
+      "geoinfo": {
+        "display_name": "Rettungsweg, Südstadt, Hochheim, Main-Taunus-Kreis, Hesse, 65239, Germany",
+        "road": "Rettungsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hochheim",
+        "state": "Hesse",
+        "postcode": "65239",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rettungsweg, Hochheim am Main, Hesse, Germany"
+    },
+    {
+      "lat": 50.037472759375966,
+      "lon": 8.374693536464502,
+      "geoinfo": {
+        "display_name": "Wickerbachmühle, Massenheim, Hochheim, Main-Taunus-Kreis, Hesse, 65239, Germany",
+        "road": "Wickerbachmühle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massenheim",
+        "state": "Hesse",
+        "postcode": "65239",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "735, Wickerbachmühle, Hochheim am Main, 65239 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:36.184481+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Boxtel",
+  "geonameid": 2758460,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.575886662722105,
+      "lon": 5.279673324639184,
+      "geoinfo": {
+        "display_name": "Verzetslaantje, Boxtel, North Brabant, Netherlands, 5281 TT, Netherlands",
+        "road": "Verzetslaantje",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boxtel",
+        "state": "North Brabant",
+        "postcode": "5281 TT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Verzetslaantje, Boxtel, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.577292889784715,
+      "lon": 5.3596767378374475,
+      "geoinfo": {
+        "display_name": "56, Boxtelseweg, Berg, Liempde, Boxtel, North Brabant, Netherlands, 5298 VD, Netherlands",
+        "road": "Boxtelseweg",
+        "house_number": "56",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liempde",
+        "state": "North Brabant",
+        "postcode": "5298 VD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "56, Boxtelseweg, Berg, Liempde, Boxtel, North Brabant, Netherlands, 5298 VD, Netherlands"
+    },
+    {
+      "lat": 51.63157966089335,
+      "lon": 5.298954790394373,
+      "geoinfo": {
+        "display_name": "Groensteeg, De Groensche Hoeven, Vught, North Brabant, Netherlands, 5261 LD, Netherlands",
+        "road": "Groensteeg",
+        "house_number": null,
+        "neighbourhood": "De Groensche Hoeven",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vught",
+        "state": "North Brabant",
+        "postcode": "5261 LD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "564, Groensteeg, De Groensche Hoeven, Vught, North Brabant, Netherlands, 5261 LD, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:55.449450+00:00",
+  "_kind": "geo_samples"
+}

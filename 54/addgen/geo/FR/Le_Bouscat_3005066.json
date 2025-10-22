@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Bouscat",
+  "geonameid": 3005066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.868436775850334,
+      "lon": -0.5871431751795386,
+      "geoinfo": {
+        "display_name": "Rue de la Préceinte, Le Bouscat, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33110, France",
+        "road": "Rue de la Préceinte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Bouscat",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de la Préceinte, Le Bouscat, Nouvelle-Aquitaine, France"
+    },
+    {
+      "lat": 44.85992706409152,
+      "lon": -0.6101879806438545,
+      "geoinfo": {
+        "display_name": "Rue Coiffard, Les Pins-Francs, Caudéran, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33200, France",
+        "road": "Rue Coiffard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Pins-Francs",
+        "city_district": null,
+        "city": "Bordeaux",
+        "state": "Nouvelle-Aquitaine",
+        "postcode": "33200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "110, Rue Coiffard, Les Pins-Francs, Caudéran, Bordeaux, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:45.842475+00:00",
+  "_kind": "geo_samples"
+}

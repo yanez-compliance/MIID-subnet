@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Emiliano Zapata",
+  "geonameid": 3527879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.830742554858396,
+      "lon": -99.21089992998985,
+      "geoinfo": {
+        "display_name": "Temixco, Morelos, 62766, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temixco",
+        "state": "Morelos",
+        "postcode": "62766",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Emiliano Zapata, Morelos, Mexico"
+    },
+    {
+      "lat": 18.869753197985666,
+      "lon": -99.15279803754603,
+      "geoinfo": {
+        "display_name": "Calle Clavel, Progreso, Jiutepec, Morelos, 62574, Mexico",
+        "road": "Calle Clavel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Progreso",
+        "state": "Morelos",
+        "postcode": "62574",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "387, Calle Clavel, Progreso, Jiutepec, Morelos, 62574, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:12.817226+00:00",
+  "_kind": "geo_samples"
+}

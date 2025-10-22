@@ -1,0 +1,83 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Simmering",
+  "geonameid": 2765028,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.155314431911556,
+      "lon": 16.44450648003467,
+      "geoinfo": {
+        "display_name": "Zehngrafweg, KG Kaiserebersdorf, Simmering, Vienna, 1110, Austria",
+        "road": "Zehngrafweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Kaiserebersdorf",
+        "city_district": "Simmering",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1110",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Zehngrafweg, Simmering, Austria"
+    },
+    {
+      "lat": 48.15247390310846,
+      "lon": 16.461485318557138,
+      "geoinfo": {
+        "display_name": "5, Rosa-Jochmann-Ring, KG Kaiserebersdorf, Simmering, Vienna, 1110, Austria",
+        "road": "Rosa-Jochmann-Ring",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "KG Kaiserebersdorf",
+        "city_district": "Simmering",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1110",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "5 Rosa-Jochmann-Ring, Simmering, Austria"
+    },
+    {
+      "lat": 48.19805064366378,
+      "lon": 16.45929825438375,
+      "geoinfo": {
+        "display_name": "Rohrweihenweg, KG Aspern, Donaustadt, Vienna, 1220, Austria",
+        "road": "Rohrweihenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Aspern",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "495, Rohrweihenweg, KG Aspern, Donaustadt, Vienna, 1220, Austria"
+    },
+    {
+      "lat": 48.20745837612486,
+      "lon": 16.380985514136114,
+      "geoinfo": {
+        "display_name": "Stubenring, Innere Stadt, Vienna, 1010, Austria",
+        "road": "Stubenring",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Innere Stadt",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1010",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "908, Stubenring, Innere Stadt, Vienna, 1010, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:13.096388+00:00",
+  "_kind": "geo_samples"
+}

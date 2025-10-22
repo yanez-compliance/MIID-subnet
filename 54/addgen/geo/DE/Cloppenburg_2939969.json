@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Cloppenburg",
+  "geonameid": 2939969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.83277336615354,
+      "lon": 8.033001408940265,
+      "geoinfo": {
+        "display_name": "4, Glockenblumenstraße, Krapendorf, Cloppenburg, Cloppenburg district, Lower Saxony, 49661, Germany",
+        "road": "Glockenblumenstraße",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Krapendorf",
+        "city_district": null,
+        "city": "Cloppenburg",
+        "state": "Lower Saxony",
+        "postcode": "49661",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Glockenblumenstraße, Cloppenburg, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.80961383755598,
+      "lon": 8.035226505712055,
+      "geoinfo": {
+        "display_name": "Nuttelner Straße, Tegelrieden, Sevelten, Cappeln (Oldenburg), Cloppenburg district, Lower Saxony, 49692, Germany",
+        "road": "Nuttelner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sevelten",
+        "state": "Lower Saxony",
+        "postcode": "49692",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "188, Nuttelner Straße, Tegelrieden, Sevelten, Cappeln (Oldenburg), Cloppenburg district, Lower Saxony, 49692, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:25.123165+00:00",
+  "_kind": "geo_samples"
+}

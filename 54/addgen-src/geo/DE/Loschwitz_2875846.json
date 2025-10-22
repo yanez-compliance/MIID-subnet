@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Loschwitz",
+  "geonameid": 2875846,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.08849277692605,
+      "lon": 13.842793159283936,
+      "geoinfo": {
+        "display_name": "Kreuz 6, Dresdner Heide, Loschwitz, Dresden, Saxony, 01099, Germany",
+        "road": "Kreuz 6",
+        "house_number": null,
+        "neighbourhood": "Dresdner Heide",
+        "suburb": null,
+        "city_district": "Loschwitz",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01099",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kreuz 6, Loschwitz, Saxony, Germany"
+    },
+    {
+      "lat": 51.015398295885035,
+      "lon": 13.846829735661865,
+      "geoinfo": {
+        "display_name": "6, Eichbergstraße, Kleinzschachwitz, Leuben, Dresden, Saxony, 01259, Germany",
+        "road": "Eichbergstraße",
+        "house_number": "6",
+        "neighbourhood": "Kleinzschachwitz",
+        "suburb": "Kleinzschachwitz",
+        "city_district": "Leuben",
+        "city": "Dresden",
+        "state": "Saxony",
+        "postcode": "01259",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6, Eichbergstraße, Kleinzschachwitz, Leuben, Dresden, Saxony, 01259, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:59.185386+00:00",
+  "_kind": "geo_samples"
+}

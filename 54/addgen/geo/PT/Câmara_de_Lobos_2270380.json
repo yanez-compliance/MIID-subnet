@@ -1,0 +1,65 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Câmara de Lobos",
+  "geonameid": 2270380,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 32.62264771083449,
+      "lon": -16.99791129584139,
+      "geoinfo": {
+        "display_name": "Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Câmara de Lobos, Portugal"
+    },
+    {
+      "lat": 32.691846817555664,
+      "lon": -16.961522312171823,
+      "geoinfo": {
+        "display_name": "Levada do Curral, Santo António, Funchal, Madeira, 9325-049, Portugal",
+        "road": "Levada do Curral",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santo António",
+        "city_district": null,
+        "city": "Funchal",
+        "state": null,
+        "postcode": "9325-049",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Levada do Curral, Santo António, Funchal, Madeira, 9325-049, Portugal"
+    },
+    {
+      "lat": 32.63838760323625,
+      "lon": -17.01290276067545,
+      "geoinfo": {
+        "display_name": "Fajã dos Asnos, Quinta Grande, Câmara de Lobos, Madeira, 9300-427, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Câmara de Lobos",
+        "state": null,
+        "postcode": "9300-427",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Fajã dos Asnos, Quinta Grande, Câmara de Lobos, Madeira, 9300-427, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:51.361455+00:00",
+  "_kind": "geo_samples"
+}

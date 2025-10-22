@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Valdefuentes",
+  "geonameid": 11550025,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.49478845529556,
+      "lon": -3.6019145009135034,
+      "geoinfo": {
+        "display_name": "M-12, Barajas, Madrid, Community of Madrid, 28055, Spain",
+        "road": "M-12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28055",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-12, Valdefuentes, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.47005983884961,
+      "lon": -3.6485579226803226,
+      "geoinfo": {
+        "display_name": "Calle Estíbaliz, Pinar del Rey, Hortaleza, Madrid, Community of Madrid, 28033, Spain",
+        "road": "Calle Estíbaliz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hortaleza",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28033",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "382, Calle Estíbaliz, Pinar del Rey, Hortaleza, Madrid, Community of Madrid, 28033, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:49.983897+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Euclid",
+  "geonameid": 5153420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.596148544397494,
+      "lon": -81.48836079301678,
+      "geoinfo": {
+        "display_name": "28098, Euclid Avenue, Hillandale, Euclid, Cuyahoga County, Ohio, 44132, United States",
+        "road": "Euclid Avenue",
+        "house_number": "28098",
+        "neighbourhood": "Hillandale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Euclid",
+        "state": "Ohio",
+        "postcode": "44132",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28098 Euclid Avenue, Euclid, Ohio, United States"
+    },
+    {
+      "lat": 41.562480312807104,
+      "lon": -81.4908880574462,
+      "geoinfo": {
+        "display_name": "Cuyahoga County Airport, 26300, Curtiss Wright Parkway, Cleveland, Cuyahoga County, Ohio, 44143, United States",
+        "road": "Curtiss Wright Parkway",
+        "house_number": "26300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cuyahoga County Airport, 26300, Curtiss Wright Parkway, Cleveland, Cuyahoga County, Ohio, 44143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:23.681511+00:00",
+  "_kind": "geo_samples"
+}

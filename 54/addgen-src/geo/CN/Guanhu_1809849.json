@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Guanhu",
+  "geonameid": 1809849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.4436099114309,
+      "lon": 117.95651931912501,
+      "geoinfo": {
+        "display_name": "邳城镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Guanhu, Jiangsu, China"
+    },
+    {
+      "lat": 34.41129795913264,
+      "lon": 117.99306372324882,
+      "geoinfo": {
+        "display_name": "宿邳线, Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": "宿邳线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "167, 宿邳线, Pizhou, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:26.246018+00:00",
+  "_kind": "geo_samples"
+}

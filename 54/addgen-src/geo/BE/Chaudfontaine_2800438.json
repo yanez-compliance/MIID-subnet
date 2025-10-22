@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Chaudfontaine",
+  "geonameid": 2800438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.59771060326979,
+      "lon": 5.600830799766543,
+      "geoinfo": {
+        "display_name": "112, Sentier du Lièvre, Embourg, Chaudfontaine, Liège, Wallonia, 4053, Belgium",
+        "road": "Sentier du Lièvre",
+        "house_number": "112",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chaudfontaine",
+        "state": "Liège",
+        "postcode": "4053",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "112 Sentier du Lièvre, Chaudfontaine, Liège, Belgium"
+    },
+    {
+      "lat": 50.59569069859118,
+      "lon": 5.68515718998149,
+      "geoinfo": {
+        "display_name": "Ruelle des Sortais, Magnée, Fléron, Liège, Wallonia, 4624, Belgium",
+        "road": "Ruelle des Sortais",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fléron",
+        "state": "Liège",
+        "postcode": "4624",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "154, Ruelle des Sortais, Magnée, Fléron, Liège, Wallonia, 4624, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:13.042232+00:00",
+  "_kind": "geo_samples"
+}

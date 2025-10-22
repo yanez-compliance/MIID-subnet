@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wake Forest",
+  "geonameid": 4497290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.97742050324659,
+      "lon": -78.45519091566298,
+      "geoinfo": {
+        "display_name": "Mill Dam Road, Wake County, North Carolina, 27587, United States",
+        "road": "Mill Dam Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27587",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mill Dam Road, Wake Forest, North Carolina, United States"
+    },
+    {
+      "lat": 35.95413325256234,
+      "lon": -78.46953320421058,
+      "geoinfo": {
+        "display_name": "6298, Degrace Drive, Jones Dairy Farm, Wake County, North Carolina, 27587, United States",
+        "road": "Degrace Drive",
+        "house_number": "6298",
+        "neighbourhood": "Jones Dairy Farm",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27587",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6298, Degrace Drive, Jones Dairy Farm, Wake County, North Carolina, 27587, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:54.620654+00:00",
+  "_kind": "geo_samples"
+}

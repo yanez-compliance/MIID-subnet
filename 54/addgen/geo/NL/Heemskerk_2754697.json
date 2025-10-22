@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Heemskerk",
+  "geonameid": 2754697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.51159951981713,
+      "lon": 4.6435983072846225,
+      "geoinfo": {
+        "display_name": "36A, Luttik Cie, Heemskerkerduin, Heemskerk, North Holland, Netherlands, 1969 MV, Netherlands",
+        "road": "Luttik Cie",
+        "house_number": "36A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heemskerk",
+        "state": "North Holland",
+        "postcode": "1969 MV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "36A Luttik Cie, Heemskerk, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.507352001467076,
+      "lon": 4.603772305769239,
+      "geoinfo": {
+        "display_name": "Heemskerk, North Holland, Netherlands, 1969 GB, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heemskerk",
+        "state": "North Holland",
+        "postcode": "1969 GB",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "759, Heemskerk, North Holland, Netherlands, 1969 GB, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:48:48.446591+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Point",
+  "geonameid": 4192674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.64954134380097,
+      "lon": -84.40349561669919,
+      "geoinfo": {
+        "display_name": "Airport Loop Road, Hapeville, Fulton County, Georgia, 30320, United States",
+        "road": "Airport Loop Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hapeville",
+        "state": "Georgia",
+        "postcode": "30320",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Airport Loop Road, East Point, Georgia, United States"
+    },
+    {
+      "lat": 33.6432729885056,
+      "lon": -84.41473415483354,
+      "geoinfo": {
+        "display_name": "Delta TOC1, Maynard H Jackson Junior Boulevard, Clayton County, Georgia, 30320, United States",
+        "road": "Maynard H Jackson Junior Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30320",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Delta TOC1, Maynard H Jackson Junior Boulevard, Clayton County, Georgia, 30320, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:05.508933+00:00",
+  "_kind": "geo_samples"
+}

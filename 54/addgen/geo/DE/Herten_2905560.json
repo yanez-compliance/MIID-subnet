@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Herten",
+  "geonameid": 2905560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.60541638279893,
+      "lon": 7.181136926774028,
+      "geoinfo": {
+        "display_name": "Wiesenstraße, Paulusviertel, Recklinghausen, Kreis Recklinghausen, North Rhine-Westphalia, 45659, Germany",
+        "road": "Wiesenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Paulusviertel",
+        "city_district": null,
+        "city": "Recklinghausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45659",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wiesenstraße, Herten, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.60933761822702,
+      "lon": 7.187462430293924,
+      "geoinfo": {
+        "display_name": "72, Hohenzollernstraße, Paulusviertel, Recklinghausen, Kreis Recklinghausen, North Rhine-Westphalia, 45659, Germany",
+        "road": "Hohenzollernstraße",
+        "house_number": "72",
+        "neighbourhood": null,
+        "suburb": "Paulusviertel",
+        "city_district": null,
+        "city": "Recklinghausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45659",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "72, Hohenzollernstraße, Paulusviertel, Recklinghausen, Kreis Recklinghausen, North Rhine-Westphalia, 45659, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:48.667870+00:00",
+  "_kind": "geo_samples"
+}

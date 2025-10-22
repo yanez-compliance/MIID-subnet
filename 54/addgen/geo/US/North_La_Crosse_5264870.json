@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North La Crosse",
+  "geonameid": 5264870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.82042113746912,
+      "lon": -91.23034857873515,
+      "geoinfo": {
+        "display_name": "East Avenue North, College Park, Goosetown, La Crosse, La Crosse County, Wisconsin, 54601, United States",
+        "road": "East Avenue North",
+        "house_number": null,
+        "neighbourhood": "College Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Crosse",
+        "state": "Wisconsin",
+        "postcode": "54601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Avenue North, North La Crosse, Wisconsin, United States"
+    },
+    {
+      "lat": 43.825915534594735,
+      "lon": -91.19878870872927,
+      "geoinfo": {
+        "display_name": "County Road FA, Town of Medary, La Crosse County, Wisconsin, 54601, United States",
+        "road": "County Road FA",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Medary",
+        "state": "Wisconsin",
+        "postcode": "54601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "105, County Road FA, Town of Medary, La Crosse County, Wisconsin, 54601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:45:07.696043+00:00",
+  "_kind": "geo_samples"
+}

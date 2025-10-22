@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Cártama",
+  "geonameid": 2520055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.68925116463436,
+      "lon": -4.655232166249665,
+      "geoinfo": {
+        "display_name": "MA-3304, Ampliación de Cártama, Alhaurín el Grande, Valle del Guadalhorce, Malaga, Andalusia, 29570, Spain",
+        "road": "MA-3304",
+        "house_number": null,
+        "neighbourhood": "Ampliación de Cártama",
+        "suburb": null,
+        "city_district": null,
+        "city": "Alhaurín el Grande",
+        "state": "Andalusia",
+        "postcode": "29570",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "MA-3304, Cártama, Andalusia, Spain"
+    },
+    {
+      "lat": 36.69202294135005,
+      "lon": -4.5866548445114885,
+      "geoinfo": {
+        "display_name": "Torrealquería, Alhaurín de la Torre, Valle del Guadalhorce, Malaga, Andalusia, 29130, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alhaurín de la Torre",
+        "state": "Andalusia",
+        "postcode": "29130",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "573, Torrealquería, Alhaurín de la Torre, Valle del Guadalhorce, Malaga, Andalusia, 29130, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:32.204465+00:00",
+  "_kind": "geo_samples"
+}

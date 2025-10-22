@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Aalter",
+  "geonameid": 2803443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.125737523036136,
+      "lon": 3.4286435629791474,
+      "geoinfo": {
+        "display_name": "43, Grote Kapellestraat, Knesselare, Aalter, Gent, East Flanders, 9910, Belgium",
+        "road": "Grote Kapellestraat",
+        "house_number": "43",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalter",
+        "state": "East Flanders",
+        "postcode": "9910",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "43 Grote Kapellestraat, Aalter, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.09497858704774,
+      "lon": 3.4863610742270543,
+      "geoinfo": {
+        "display_name": "Bellemdorpweg, Bellem, Aalter, Gent, East Flanders, 9881, Belgium",
+        "road": "Bellemdorpweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalter",
+        "state": "East Flanders",
+        "postcode": "9881",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "440, Bellemdorpweg, Bellem, Aalter, Gent, East Flanders, 9881, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:20.884417+00:00",
+  "_kind": "geo_samples"
+}

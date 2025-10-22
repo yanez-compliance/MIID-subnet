@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richfield",
+  "geonameid": 5043193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.86539429307212,
+      "lon": -93.2316920721165,
+      "geoinfo": {
+        "display_name": "East 75th Street, Fort Snelling Unorganized Territory, Hennepin County, Minnesota, 55450, United States",
+        "road": "East 75th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Snelling Unorganized Territory",
+        "state": "Minnesota",
+        "postcode": "55450",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 75th Street, Richfield, Minnesota, United States"
+    },
+    {
+      "lat": 44.876950398337065,
+      "lon": -93.30892104845402,
+      "geoinfo": {
+        "display_name": "6928, Penn Avenue South, Richfield, Hennepin County, Minnesota, 55423, United States",
+        "road": "Penn Avenue South",
+        "house_number": "6928",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richfield",
+        "state": "Minnesota",
+        "postcode": "55423",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6928, Penn Avenue South, Richfield, Hennepin County, Minnesota, 55423, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:39.855237+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kalliyoor",
+  "geonameid": 13353570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.456729882785742,
+      "lon": 77.01130038780092,
+      "geoinfo": {
+        "display_name": "Neyyattinkara, Thiruvananthapuram, Kerala, 695020, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kerala",
+        "postcode": "695020",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kalliyoor, Kerala, India"
+    },
+    {
+      "lat": 8.464668948166869,
+      "lon": 76.99663024637837,
+      "geoinfo": {
+        "display_name": "Nemom, Thiruvananthapuram, Kerala, 695001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nemom",
+        "city_district": null,
+        "city": "Thiruvananthapuram",
+        "state": "Kerala",
+        "postcode": "695001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "083, Nemom, Thiruvananthapuram, Kerala, 695001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:18.609952+00:00",
+  "_kind": "geo_samples"
+}

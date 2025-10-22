@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bury",
+  "geonameid": 2654187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.57007397659964,
+      "lon": -2.3119077323517674,
+      "geoinfo": {
+        "display_name": "Eton Hill Road, Irwell Bank, Radcliffe, Bury, Greater Manchester, England, M26 2XQ, United Kingdom",
+        "road": "Eton Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Irwell Bank",
+        "city_district": null,
+        "city": "Radcliffe",
+        "state": "England",
+        "postcode": "M26 2XQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Eton Hill Road, Bury, England, United Kingdom"
+    },
+    {
+      "lat": 53.59045339895142,
+      "lon": -2.264215136092778,
+      "geoinfo": {
+        "display_name": "Heap Brow, Heap Bridge, Rochdale, Greater Manchester, England, BL9 7JR, United Kingdom",
+        "road": "Heap Brow",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rochdale",
+        "state": "England",
+        "postcode": "BL9 7JR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Heap Brow, Heap Bridge, Rochdale, Greater Manchester, England, BL9 7JR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:34.829139+00:00",
+  "_kind": "geo_samples"
+}

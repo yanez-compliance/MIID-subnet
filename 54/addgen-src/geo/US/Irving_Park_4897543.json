@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Irving Park",
+  "geonameid": 4897543,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.98609552135549,
+      "lon": -87.71541169689576,
+      "geoinfo": {
+        "display_name": "5742, North Bernard Street, North Park, Chicago, Jefferson Township, Cook County, Illinois, 60659, United States",
+        "road": "North Bernard Street",
+        "house_number": "5742",
+        "neighbourhood": null,
+        "suburb": "North Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60659",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5742 North Bernard Street, Irving Park, Illinois, United States"
+    },
+    {
+      "lat": 41.970641872693214,
+      "lon": -87.77199621172188,
+      "geoinfo": {
+        "display_name": "4939, North Mango Avenue, Colonial Gardens, Jefferson Park, Chicago, Jefferson Township, Cook County, Illinois, 60630, United States",
+        "road": "North Mango Avenue",
+        "house_number": "4939",
+        "neighbourhood": "Colonial Gardens",
+        "suburb": "Jefferson Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4939, North Mango Avenue, Colonial Gardens, Jefferson Park, Chicago, Jefferson Township, Cook County, Illinois, 60630, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:23.440864+00:00",
+  "_kind": "geo_samples"
+}

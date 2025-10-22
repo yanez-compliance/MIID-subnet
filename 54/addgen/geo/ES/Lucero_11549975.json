@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Lucero",
+  "geonameid": 11549975,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36446340092127,
+      "lon": -3.7296215704754956,
+      "geoinfo": {
+        "display_name": "M-40, Buenavista, Carabanchel, Madrid, Community of Madrid, 28919, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28919",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Lucero, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.39874608259739,
+      "lon": -3.763620993079436,
+      "geoinfo": {
+        "display_name": "Carretera de Boadilla del Monte, Aluche, Latina, Madrid, Community of Madrid, 28024, Spain",
+        "road": "Carretera de Boadilla del Monte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28024",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "668, Carretera de Boadilla del Monte, Aluche, Latina, Madrid, Community of Madrid, 28024, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:30.928982+00:00",
+  "_kind": "geo_samples"
+}

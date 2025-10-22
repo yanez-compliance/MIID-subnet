@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gangtou",
+  "geonameid": 1810725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.31497406082475,
+      "lon": 118.2019715986921,
+      "geoinfo": {
+        "display_name": "Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Gangtou, Jiangsu, China"
+    },
+    {
+      "lat": 34.33800188389527,
+      "lon": 118.24600518799325,
+      "geoinfo": {
+        "display_name": "马陵山西路, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": "马陵山西路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "526, 马陵山西路, Xinyi City, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:53.124284+00:00",
+  "_kind": "geo_samples"
+}

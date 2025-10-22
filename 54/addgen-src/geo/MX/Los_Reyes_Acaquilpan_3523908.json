@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Los Reyes Acaquilpan",
+  "geonameid": 3523908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.358578753507373,
+      "lon": -98.97573748372369,
+      "geoinfo": {
+        "display_name": "Parroquia de los Santos Reyes Magos de Acaquilpan, Calle Gustavo Baz Prada, Los Reyes Acaquilpan, La Paz, State of Mexico, 56440, Mexico",
+        "road": "Calle Gustavo Baz Prada",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Reyes Acaquilpan",
+        "state": "State of Mexico",
+        "postcode": "56440",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Gustavo Baz Prada, Los Reyes Acaquilpan, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.378246554104255,
+      "lon": -98.9459037328099,
+      "geoinfo": {
+        "display_name": "Calle Morelos, La Paz, State of Mexico, 56520, Mexico",
+        "road": "Calle Morelos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "56520",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "936, Calle Morelos, La Paz, State of Mexico, 56520, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:10.703005+00:00",
+  "_kind": "geo_samples"
+}

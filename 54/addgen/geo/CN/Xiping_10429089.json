@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiping",
+  "geonameid": 10429089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.61608510685578,
+      "lon": 105.12509711077156,
+      "geoinfo": {
+        "display_name": "Gangu County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xiping, Gansu, China"
+    },
+    {
+      "lat": 34.61094633384777,
+      "lon": 105.09968756563947,
+      "geoinfo": {
+        "display_name": "Zhongba, Wushan County, Tianshui, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhongba",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "453, Zhongba, Wushan County, Tianshui, 91075 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:08.520222+00:00",
+  "_kind": "geo_samples"
+}

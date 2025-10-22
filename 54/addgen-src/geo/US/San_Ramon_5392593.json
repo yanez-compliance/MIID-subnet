@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Ramon",
+  "geonameid": 5392593,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.7853456893013,
+      "lon": -121.94546972653234,
+      "geoinfo": {
+        "display_name": "3164, Tahoe Place, San Ramon, Contra Costa County, California, 94582, United States",
+        "road": "Tahoe Place",
+        "house_number": "3164",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Ramon",
+        "state": "California",
+        "postcode": "94582",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3164 Tahoe Place, San Ramon, California, United States"
+    },
+    {
+      "lat": 37.78006220286208,
+      "lon": -122.02737895567977,
+      "geoinfo": {
+        "display_name": "Alameda County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "602, Alameda County, 55150 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:21.757688+00:00",
+  "_kind": "geo_samples"
+}

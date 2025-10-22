@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palm Bay",
+  "geonameid": 4167499,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.045218135206795,
+      "lon": -80.57789130037986,
+      "geoinfo": {
+        "display_name": "Bay Boulevard, Palm Bay, Brevard County, Florida, 32905, United States",
+        "road": "Bay Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Bay",
+        "state": "Florida",
+        "postcode": "32905",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bay Boulevard, Palm Bay, Florida, United States"
+    },
+    {
+      "lat": 28.036395777704126,
+      "lon": -80.6206254454292,
+      "geoinfo": {
+        "display_name": "Cumberland Farms, Palm Bay Road Northeast, The Pines, Palm Bay, Brevard County, Florida, 32905, United States",
+        "road": "Palm Bay Road Northeast",
+        "house_number": null,
+        "neighbourhood": "The Pines",
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Bay",
+        "state": "Florida",
+        "postcode": "32905",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "972, Palm Bay Road Northeast, Palm Bay, 32905 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:59.353124+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Kirkby",
+  "geonameid": 2645313,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.488431821974906,
+      "lon": -2.872537406184505,
+      "geoinfo": {
+        "display_name": "Brookhey Drive, Kirkby, Knowsley, Liverpool City Region, England, L33 9UH, United Kingdom",
+        "road": "Brookhey Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirkby",
+        "state": "England",
+        "postcode": "L33 9UH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Brookhey Drive, Kirkby, England, United Kingdom"
+    },
+    {
+      "lat": 53.51941212320056,
+      "lon": -2.9112019276752004,
+      "geoinfo": {
+        "display_name": "Villas Road, Melling, Sefton, Liverpool City Region, England, L31 1FN, United Kingdom",
+        "road": "Villas Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Melling",
+        "city_district": null,
+        "city": "Sefton",
+        "state": "England",
+        "postcode": "L31 1FN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Villas Road, Melling, Sefton, Liverpool City Region, England, L31 1FN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:13.287988+00:00",
+  "_kind": "geo_samples"
+}

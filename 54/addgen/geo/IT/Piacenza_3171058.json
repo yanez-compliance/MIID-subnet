@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Piacenza",
+  "geonameid": 3171058,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.04474219119534,
+      "lon": 9.644310968297177,
+      "geoinfo": {
+        "display_name": "21a, Strada Gragnana, Pistona, Piacenza, Emilia-Romagna, 29121, Italy",
+        "road": "Strada Gragnana",
+        "house_number": "21a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piacenza",
+        "state": "Emilia-Romagna",
+        "postcode": "29121",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "21a Strada Gragnana, Piacenza, Emilia-Romagna, Italy"
+    },
+    {
+      "lat": 45.056425639325035,
+      "lon": 9.710464025544907,
+      "geoinfo": {
+        "display_name": "Via Nino Bixio, Barriera Milano, Capitolo, Piacenza, Emilia-Romagna, 29100, Italy",
+        "road": "Via Nino Bixio",
+        "house_number": null,
+        "neighbourhood": "Barriera Milano",
+        "suburb": "Capitolo",
+        "city_district": null,
+        "city": "Piacenza",
+        "state": "Emilia-Romagna",
+        "postcode": "29100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "654, Via Nino Bixio, Barriera Milano, Capitolo, Piacenza, Emilia-Romagna, 29100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:33.604822+00:00",
+  "_kind": "geo_samples"
+}

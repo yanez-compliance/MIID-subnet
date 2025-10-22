@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Chrzanów",
+  "geonameid": 3101547,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.12098585078735,
+      "lon": 19.388414954757256,
+      "geoinfo": {
+        "display_name": "Kolonia Fabryczna, Chrzanów, gmina Chrzanów, Chrzanów County, Lesser Poland Voivodeship, 32-500, Poland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kolonia Fabryczna",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chrzanów",
+        "state": "Lesser Poland Voivodeship",
+        "postcode": "32-500",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Kolonia Fabryczna, Chrzanów, Lesser Poland Voivodeship, Poland"
+    },
+    {
+      "lat": 50.1713293720233,
+      "lon": 19.390699429296344,
+      "geoinfo": {
+        "display_name": "Wandy, Balin Duży, Balin, gmina Chrzanów, Chrzanów County, Lesser Poland Voivodeship, 32-500, Poland",
+        "road": "Wandy",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balin",
+        "state": "Lesser Poland Voivodeship",
+        "postcode": "32-500",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Wandy, Balin Duży, Balin, gmina Chrzanów, Chrzanów County, Lesser Poland Voivodeship, 32-500, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T09:12:24.021605+00:00",
+  "_kind": "geo_samples"
+}

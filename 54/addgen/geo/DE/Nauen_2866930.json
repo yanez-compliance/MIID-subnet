@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Nauen",
+  "geonameid": 2866930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.62511144456021,
+      "lon": 12.816931809446348,
+      "geoinfo": {
+        "display_name": "Lietzow, Nauen, Havelland, Brandenburg, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nauen",
+        "state": "Brandenburg",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Nauen, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.57496731163672,
+      "lon": 12.913515434123555,
+      "geoinfo": {
+        "display_name": "Wustermark, Havelland, Brandenburg, 14641, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wustermark",
+        "state": "Brandenburg",
+        "postcode": "14641",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "331, Nauen, 14641 Brandenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:41.829927+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Avenel",
+  "geonameid": 5095325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.554222524821384,
+      "lon": -74.31444736091315,
+      "geoinfo": {
+        "display_name": "US 1, Woodbridge Township, Middlesex County, New Jersey, 08863, United States",
+        "road": "US 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "08863",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 1, Avenel, New Jersey, United States"
+    },
+    {
+      "lat": 40.5520341285219,
+      "lon": -74.24785395464586,
+      "geoinfo": {
+        "display_name": "Alvin P. Williams Memorial Park, PSEG Sewaren Generating Station, Sewaren, Woodbridge Township, Middlesex County, New Jersey, 07064, United States",
+        "road": "Alvin P. Williams Memorial Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sewaren",
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "07064",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "908, Alvin P. Williams Memorial Park, PSEG Sewaren Generating Station, Sewaren, Woodbridge Township, Middlesex County, New Jersey, 07064, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:36.990132+00:00",
+  "_kind": "geo_samples"
+}

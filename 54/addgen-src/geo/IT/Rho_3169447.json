@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Rho",
+  "geonameid": 3169447,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.52161767403511,
+      "lon": 9.075996161788721,
+      "geoinfo": {
+        "display_name": "Trade Fair Milano, Via Cesare Battisti, Cerchiarello, Cerchiate, Pero, Milan, Lombardy, 20016, Italy",
+        "road": "Via Cesare Battisti",
+        "house_number": null,
+        "neighbourhood": "Cerchiarello",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pero",
+        "state": "Lombardy",
+        "postcode": "20016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Cesare Battisti, Rho, Lombardy, Italy"
+    },
+    {
+      "lat": 45.57505015858585,
+      "lon": 9.020538601452376,
+      "geoinfo": {
+        "display_name": "Via Antonio Canova, Lainate, Milan, Lombardy, 20045, Italy",
+        "road": "Via Antonio Canova",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lainate",
+        "state": "Lombardy",
+        "postcode": "20045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "847, Via Antonio Canova, Lainate, Milan, Lombardy, 20045, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:14.494436+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Obregón",
+  "geonameid": 4013704,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.517792890211407,
+      "lon": -109.96730962746628,
+      "geoinfo": {
+        "display_name": "El Ranchito, Providencia, Cajeme, Sonora, 85134, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Providencia",
+        "state": "Sonora",
+        "postcode": "85134",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ciudad Obregón, Sonora, Mexico"
+    },
+    {
+      "lat": 27.473466932217455,
+      "lon": -109.94066310173434,
+      "geoinfo": {
+        "display_name": "Calle Sebastián Lerdo de Tejada, Ciudad Obregón, Cajeme, Sonora, 85160, Mexico",
+        "road": "Calle Sebastián Lerdo de Tejada",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Obregón",
+        "state": "Sonora",
+        "postcode": "85160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "901, Calle Sebastián Lerdo de Tejada, Ciudad Obregón, Cajeme, Sonora, 85160, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:43.949947+00:00",
+  "_kind": "geo_samples"
+}

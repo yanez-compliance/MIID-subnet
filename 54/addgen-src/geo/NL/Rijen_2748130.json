@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Rijen",
+  "geonameid": 2748130,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.554420685067875,
+      "lon": 4.903531695971919,
+      "geoinfo": {
+        "display_name": "Rijksweg-A58, Gilze, Gilze en Rijen, North Brabant, Netherlands, 5126 NX, Netherlands",
+        "road": "Rijksweg-A58",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gilze",
+        "state": "North Brabant",
+        "postcode": "5126 NX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Rijksweg-A58, Rijen, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.59867816929732,
+      "lon": 4.906776308246951,
+      "geoinfo": {
+        "display_name": "Brabant Golf, Statenlaan, Achter het gemeentehuis, Rijen, Gilze en Rijen, North Brabant, Netherlands, 5121 HE, Netherlands",
+        "road": "Statenlaan",
+        "house_number": null,
+        "neighbourhood": "Achter het gemeentehuis",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rijen",
+        "state": "North Brabant",
+        "postcode": "5121 HE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "620, Statenlaan, Rijen, 5121 HE North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.57020295230464,
+      "lon": 4.905761571987789,
+      "geoinfo": {
+        "display_name": "121D-340Z, Rijksweg, Molenschot, Gilze en Rijen, North Brabant, Netherlands, 5124 NZ, Netherlands",
+        "road": "Rijksweg",
+        "house_number": "121D-340Z",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Molenschot",
+        "state": "North Brabant",
+        "postcode": "5124 NZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "121D-340Z, Rijksweg, Molenschot, Gilze en Rijen, North Brabant, Netherlands, 5124 NZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:21.981475+00:00",
+  "_kind": "geo_samples"
+}

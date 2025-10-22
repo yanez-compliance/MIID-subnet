@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellmore",
+  "geonameid": 5108707,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.644965614949996,
+      "lon": -73.48182462769988,
+      "geoinfo": {
+        "display_name": "9, Forest Avenue, Massapequa, Town of Oyster Bay, Nassau County, New York, 11758, United States",
+        "road": "Forest Avenue",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massapequa",
+        "state": "New York",
+        "postcode": "11758",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9 Forest Avenue, Bellmore, New York, United States"
+    },
+    {
+      "lat": 40.63519843073771,
+      "lon": -73.53981091462282,
+      "geoinfo": {
+        "display_name": "Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellmore",
+        "state": "New York",
+        "postcode": "11710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "092, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:54.580914+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Binghamton",
+  "geonameid": 5109177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.09764233129766,
+      "lon": -75.88950934215775,
+      "geoinfo": {
+        "display_name": "69, Belden Street, City of Binghamton, Broome County, New York, 13903, United States",
+        "road": "Belden Street",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Binghamton",
+        "state": "New York",
+        "postcode": "13903",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "69 Belden Street, Binghamton, New York, United States"
+    },
+    {
+      "lat": 42.12509613988323,
+      "lon": -75.95937108682067,
+      "geoinfo": {
+        "display_name": "169, North Baldwin Street, Village of Johnson City, Town of Union, Broome County, New York, 13790, United States",
+        "road": "North Baldwin Street",
+        "house_number": "169",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Johnson City",
+        "state": "New York",
+        "postcode": "13790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "169, North Baldwin Street, Village of Johnson City, Town of Union, Broome County, New York, 13790, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:59.635619+00:00",
+  "_kind": "geo_samples"
+}

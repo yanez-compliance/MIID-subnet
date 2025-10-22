@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Edinburgh",
+  "geonameid": 2650225,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.92577527234929,
+      "lon": -3.2097455847405687,
+      "geoinfo": {
+        "display_name": "Maxwell Street, Church Hill, Morningside, City of Edinburgh, Scotland, EH10 5HU, United Kingdom",
+        "road": "Maxwell Street",
+        "house_number": null,
+        "neighbourhood": "Church Hill",
+        "suburb": "Morningside",
+        "city_district": null,
+        "city": "City of Edinburgh",
+        "state": "Scotland",
+        "postcode": "EH10 5HU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Maxwell Street, Edinburgh, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.92379831271457,
+      "lon": -3.2437067394055203,
+      "geoinfo": {
+        "display_name": "Union Canal Towpath, Shaftesbury Park Colonies, Happy Valley, Comiston, City of Edinburgh, Scotland, EH14 1DF, United Kingdom",
+        "road": "Union Canal Towpath",
+        "house_number": null,
+        "neighbourhood": "Shaftesbury Park Colonies",
+        "suburb": "Comiston",
+        "city_district": null,
+        "city": "City of Edinburgh",
+        "state": "Scotland",
+        "postcode": "EH14 1DF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Union Canal Towpath, Shaftesbury Park Colonies, Happy Valley, Comiston, City of Edinburgh, Scotland, EH14 1DF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:24.402668+00:00",
+  "_kind": "geo_samples"
+}

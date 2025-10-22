@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "San Andrés Itzapa",
+  "geonameid": 3590529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.634892066250236,
+      "lon": -90.81810861034009,
+      "geoinfo": {
+        "display_name": "Puma, Pan-American Highway, Colonia Carlos Ramos, Los Aposentos, El Tejar, Municipio de Chimaltenango, Chimaltenango, 04013, Guatemala",
+        "road": "Pan-American Highway",
+        "house_number": null,
+        "neighbourhood": "Colonia Carlos Ramos",
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de Chimaltenango",
+        "state": "Chimaltenango",
+        "postcode": "04013",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Pan-American Highway, San Andrés Itzapa, Chimaltenango, Guatemala"
+    },
+    {
+      "lat": 14.62365132966551,
+      "lon": -90.84288963397448,
+      "geoinfo": {
+        "display_name": "San Andrés Itzapa, Chimaltenango, 04013, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Andrés Itzapa",
+        "state": "Chimaltenango",
+        "postcode": "04013",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "389, San Andrés Itzapa, Chimaltenango, 04013, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:23.398131+00:00",
+  "_kind": "geo_samples"
+}

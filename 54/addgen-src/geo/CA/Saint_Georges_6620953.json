@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint-Georges",
+  "geonameid": 6620953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.07037442920817,
+      "lon": -70.6729513621119,
+      "geoinfo": {
+        "display_name": "Saint-Georges, Beauce-Sartigan, Chaudière-Appalaches, Quebec, G5Y 5R9, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Georges",
+        "state": "Quebec",
+        "postcode": "G5Y 5R9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Saint-Georges, Quebec, Canada"
+    },
+    {
+      "lat": 46.14739974667739,
+      "lon": -70.67738488109588,
+      "geoinfo": {
+        "display_name": "Ultima Fenestration, 8455, 25e Avenue, Parc technologique, Saint-Georges, Beauce-Sartigan, Chaudière-Appalaches, Quebec, G6A 1M8, Canada",
+        "road": "25e Avenue",
+        "house_number": "8455",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Georges",
+        "state": "Quebec",
+        "postcode": "G6A 1M8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Ultima Fenestration, 8455, 25e Avenue, Parc technologique, Saint-Georges, Beauce-Sartigan, Chaudière-Appalaches, Quebec, G6A 1M8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:22:56.377884+00:00",
+  "_kind": "geo_samples"
+}

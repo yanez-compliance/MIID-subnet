@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bellwood",
+  "geonameid": 4884434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.87044903370358,
+      "lon": -87.82663800801883,
+      "geoinfo": {
+        "display_name": "Eisenhower Expressway, Forest Park, Proviso Township, Cook County, Illinois, 60141, United States",
+        "road": "Eisenhower Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Forest Park",
+        "state": "Illinois",
+        "postcode": "60141",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eisenhower Expressway, Bellwood, Illinois, United States"
+    },
+    {
+      "lat": 41.89883624588634,
+      "lon": -87.90466609755174,
+      "geoinfo": {
+        "display_name": "UP Global II Intermodal Facility, Proviso Drive, Berkeley, Proviso Township, Cook County, Illinois, 60163, United States",
+        "road": "Proviso Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkeley",
+        "state": "Illinois",
+        "postcode": "60163",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "204, Proviso Drive, Bellwood, 60163 Illinois, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:08.009417+00:00",
+  "_kind": "geo_samples"
+}

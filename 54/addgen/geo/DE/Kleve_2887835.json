@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kleve",
+  "geonameid": 2887835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.760309459518936,
+      "lon": 6.150299592184364,
+      "geoinfo": {
+        "display_name": "15, Baumannshof, Hau, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 47551, Germany",
+        "road": "Baumannshof",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bedburg-Hau",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47551",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15 Baumannshof, Kleve, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.821779135979206,
+      "lon": 6.180171041119223,
+      "geoinfo": {
+        "display_name": "Oraniendeich, Griethausen, Cleves, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 47533, Germany",
+        "road": "Oraniendeich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Griethausen",
+        "city_district": null,
+        "city": "Cleves",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47533",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "089, Oraniendeich, Griethausen, Cleves, Bedburg-Hau, Kreis Kleve, North Rhine-Westphalia, 47533, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:17.454160+00:00",
+  "_kind": "geo_samples"
+}

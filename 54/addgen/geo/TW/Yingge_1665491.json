@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Yingge",
+  "geonameid": 1665491,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.971547038006914,
+      "lon": 121.34453186077316,
+      "geoinfo": {
+        "display_name": "大湖路金包珠巷, Zhonghu Village, Yingge District, Zhonghu, New Taipei, 239, Taiwan",
+        "road": "大湖路金包珠巷",
+        "house_number": null,
+        "neighbourhood": "Zhonghu Village",
+        "suburb": "Yingge District",
+        "city_district": null,
+        "city": "New Taipei",
+        "state": null,
+        "postcode": "239",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "大湖路金包珠巷, Yingge, Taiwan"
+    },
+    {
+      "lat": 24.943717041585177,
+      "lon": 121.3333756379039,
+      "geoinfo": {
+        "display_name": "岳崙營區, 99, Bade Road, Jianshan Village, Yingge District, Erqiao, New Taipei, 23941, Taiwan",
+        "road": "Bade Road",
+        "house_number": "99",
+        "neighbourhood": "Jianshan Village",
+        "suburb": "Yingge District",
+        "city_district": null,
+        "city": "New Taipei",
+        "state": null,
+        "postcode": "23941",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "99 Bade Road, Yingge, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:34:19.832832+00:00",
+  "_kind": "geo_samples"
+}

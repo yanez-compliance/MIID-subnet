@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sterling",
+  "geonameid": 4787534,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.990395661718395,
+      "lon": -77.43071488129247,
+      "geoinfo": {
+        "display_name": "Sully Road, Sterling, Loudoun County, Virginia, 20103, United States",
+        "road": "Sully Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterling",
+        "state": "Virginia",
+        "postcode": "20103",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sully Road, Sterling, Virginia, United States"
+    },
+    {
+      "lat": 39.01259263559699,
+      "lon": -77.39376808778302,
+      "geoinfo": {
+        "display_name": "807, North Sterling Boulevard, Sterling, Loudoun County, Virginia, 20164, United States",
+        "road": "North Sterling Boulevard",
+        "house_number": "807",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterling",
+        "state": "Virginia",
+        "postcode": "20164",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "807, North Sterling Boulevard, Sterling, Loudoun County, Virginia, 20164, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:05.424395+00:00",
+  "_kind": "geo_samples"
+}

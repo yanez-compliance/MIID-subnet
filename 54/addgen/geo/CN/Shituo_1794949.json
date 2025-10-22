@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shituo",
+  "geonameid": 1794949,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.72530417477886,
+      "lon": 107.09837729785625,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shituo, Chongqing, China"
+    },
+    {
+      "lat": 29.744159230896983,
+      "lon": 107.16459053894125,
+      "geoinfo": {
+        "display_name": "Shituo, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shituo",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "324, Shituo, Fuling District, 39709 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:10.005244+00:00",
+  "_kind": "geo_samples"
+}

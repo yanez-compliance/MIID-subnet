@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pioltello",
+  "geonameid": 3170676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.5279162054517,
+      "lon": 9.329545189823666,
+      "geoinfo": {
+        "display_name": "14, Via Alessandro Manzoni, Cernusco sul Naviglio, Milan, Lombardy, 20063, Italy",
+        "road": "Via Alessandro Manzoni",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cernusco sul Naviglio",
+        "state": "Lombardy",
+        "postcode": "20063",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "14 Via Alessandro Manzoni, Pioltello, Lombardy, Italy"
+    },
+    {
+      "lat": 45.47879261801678,
+      "lon": 9.31763346344226,
+      "geoinfo": {
+        "display_name": "Via Rivoltana, Rugacesio di Sotto, Pioltello, Milan, Lombardy, 20096, Italy",
+        "road": "Via Rivoltana",
+        "house_number": null,
+        "neighbourhood": "Rugacesio di Sotto",
+        "suburb": "Pioltello",
+        "city_district": null,
+        "city": "Pioltello",
+        "state": "Lombardy",
+        "postcode": "20096",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "116, Via Rivoltana, Rugacesio di Sotto, Pioltello, Milan, Lombardy, 20096, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:34.690304+00:00",
+  "_kind": "geo_samples"
+}

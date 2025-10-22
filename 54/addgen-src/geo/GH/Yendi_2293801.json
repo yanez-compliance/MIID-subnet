@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Yendi",
+  "geonameid": 2293801,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 9.424908650939232,
+      "lon": -0.03501766267998748,
+      "geoinfo": {
+        "display_name": "Yendi, Yendi Municipal District, Northern Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yendi",
+        "state": "Northern Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Yendi, Northern Region, Ghana"
+    },
+    {
+      "lat": 9.437303756776334,
+      "lon": 0.0007405178979460591,
+      "geoinfo": {
+        "display_name": "Kpatua, Yendi, Yendi Municipal District, Northern Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kpatua",
+        "city_district": null,
+        "city": "Yendi",
+        "state": "Northern Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Kpatua, Yendi, Northern Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:46:41.829399+00:00",
+  "_kind": "geo_samples"
+}

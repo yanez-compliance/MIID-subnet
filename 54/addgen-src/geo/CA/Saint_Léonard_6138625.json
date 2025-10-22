@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint-Léonard",
+  "geonameid": 6138625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.57961564498441,
+      "lon": -73.58331765885075,
+      "geoinfo": {
+        "display_name": "Rue des Angevins, Saint-Léonard, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H1S 1H9, Canada",
+        "road": "Rue des Angevins",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Saint-Léonard",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H1S 1H9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue des Angevins, Saint-Léonard, Quebec, Canada"
+    },
+    {
+      "lat": 45.563462568624466,
+      "lon": -73.62225092777639,
+      "geoinfo": {
+        "display_name": "8e Avenue, Saint-Michel, Villeray–Saint-Michel–Parc-Extension, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H1Z 2X2, Canada",
+        "road": "8e Avenue",
+        "house_number": null,
+        "neighbourhood": "Saint-Michel",
+        "suburb": "Villeray–Saint-Michel–Parc-Extension",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H1Z 2X2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "8e Avenue, Saint-Michel, Villeray–Saint-Michel–Parc-Extension, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H1Z 2X2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:26.065668+00:00",
+  "_kind": "geo_samples"
+}

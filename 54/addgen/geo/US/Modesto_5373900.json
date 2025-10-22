@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Modesto",
+  "geonameid": 5373900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.662156687139934,
+      "lon": -121.04267579619679,
+      "geoinfo": {
+        "display_name": "Second Street, Modesto, Stanislaus County, California, 95350, United States",
+        "road": "Second Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Modesto",
+        "state": "California",
+        "postcode": "95350",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Second Street, Modesto, California, United States"
+    },
+    {
+      "lat": 37.632442747707806,
+      "lon": -121.01330612082572,
+      "geoinfo": {
+        "display_name": "Helen White Memorial Trail, West Modesto, Modesto, Stanislaus County, California, 95351, United States",
+        "road": "Helen White Memorial Trail",
+        "house_number": null,
+        "neighbourhood": "West Modesto",
+        "suburb": null,
+        "city_district": null,
+        "city": "Modesto",
+        "state": "California",
+        "postcode": "95351",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "981, Helen White Memorial Trail, West Modesto, Modesto, Stanislaus County, California, 95351, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:01.307219+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Yopal",
+  "geonameid": 3665688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.329793603335691,
+      "lon": -72.36286257435884,
+      "geoinfo": {
+        "display_name": "Calle 52, Yopal, Casanare, RAP Llanos, 820000, Colombia",
+        "road": "Calle 52",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Casanare",
+        "postcode": "820000",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 52, Yopal, Casanare, Colombia"
+    },
+    {
+      "lat": 5.34030749078955,
+      "lon": -72.36464790108259,
+      "geoinfo": {
+        "display_name": "Vía Matepantano, Yopal, Casanare, RAP Llanos, Colombia",
+        "road": "Vía Matepantano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Casanare",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "915, Vía Matepantano, Yopal, Casanare, 47462 RAP Llanos, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:28.751961+00:00",
+  "_kind": "geo_samples"
+}

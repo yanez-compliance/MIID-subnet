@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Haan",
+  "geonameid": 2913195,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.186649222812825,
+      "lon": 7.001821742269812,
+      "geoinfo": {
+        "display_name": "57, Kölner Straße, Musikantenviertel, Bruchermühle, Haan, Kreis Mettmann, North Rhine-Westphalia, 42781, Germany",
+        "road": "Kölner Straße",
+        "house_number": "57",
+        "neighbourhood": "Musikantenviertel",
+        "suburb": null,
+        "city_district": null,
+        "city": "Haan",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42781",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "57 Kölner Straße, Haan, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.211943721523625,
+      "lon": 7.07419207619409,
+      "geoinfo": {
+        "display_name": "25, Abteiweg, Gräfrath, Solingen, North Rhine-Westphalia, 42653, Germany",
+        "road": "Abteiweg",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Gräfrath",
+        "city_district": null,
+        "city": "Solingen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42653",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25, Abteiweg, Gräfrath, Solingen, North Rhine-Westphalia, 42653, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:34.786247+00:00",
+  "_kind": "geo_samples"
+}

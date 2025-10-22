@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Narimasu",
+  "geonameid": 8572949,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.75735507683873,
+      "lon": 139.62042433052736,
+      "geoinfo": {
+        "display_name": "Takamatsu, Nerima, Tokyo, 179-0075, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "179-0075",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Narimasu, Japan"
+    },
+    {
+      "lat": 35.79085594451343,
+      "lon": 139.62450005395579,
+      "geoinfo": {
+        "display_name": "下新倉三丁目, Wako, Saitama Prefecture, 351-0115, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "下新倉三丁目",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wako",
+        "state": null,
+        "postcode": "351-0115",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "下新倉三丁目, Wako, Saitama Prefecture, 351-0115, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:32.663551+00:00",
+  "_kind": "geo_samples"
+}

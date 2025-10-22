@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Rochford",
+  "geonameid": 2639265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.60147092482921,
+      "lon": 0.6524960431160292,
+      "geoinfo": {
+        "display_name": "24, Main Road, Hockley, Rochford, Essex, England, SS5 4QS, United Kingdom",
+        "road": "Main Road",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": "Hockley",
+        "city_district": null,
+        "city": "Rochford",
+        "state": "England",
+        "postcode": "SS5 4QS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "24 Main Road, Rochford, England, United Kingdom"
+    },
+    {
+      "lat": 51.56097132493543,
+      "lon": 0.7435650115081119,
+      "geoinfo": {
+        "display_name": "Shopland Road, Sutton, Rochford, Essex, England, SS3 0QQ, United Kingdom",
+        "road": "Shopland Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sutton",
+        "city_district": null,
+        "city": "Rochford",
+        "state": "England",
+        "postcode": "SS3 0QQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Shopland Road, Sutton, Rochford, Essex, England, SS3 0QQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:49.622948+00:00",
+  "_kind": "geo_samples"
+}

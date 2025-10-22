@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "La Bordeta",
+  "geonameid": 6545105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.389088488095204,
+      "lon": 2.1676105699669463,
+      "geoinfo": {
+        "display_name": "Gran Via de les Corts Catalanes, la Dreta de l'Eixample, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08007, Spain",
+        "road": "Gran Via de les Corts Catalanes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Gran Via de les Corts Catalanes, La Bordeta, Catalonia, Spain"
+    },
+    {
+      "lat": 41.34770053472796,
+      "lon": 2.132946846038732,
+      "geoinfo": {
+        "display_name": "Avinguda de Joan Carles I, Granvia Sud, Districte III, l'Hospitalet de Llobregat, Barcelonès, Barcelona, Catalonia, 08908, Spain",
+        "road": "Avinguda de Joan Carles I",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Districte III",
+        "city": "l'Hospitalet de Llobregat",
+        "state": "Catalonia",
+        "postcode": "08908",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "846, Avinguda de Joan Carles I, Granvia Sud, Districte III, l'Hospitalet de Llobregat, Barcelonès, Barcelona, Catalonia, 08908, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:26.470663+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Botoşani",
+  "geonameid": 684039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.728248550538666,
+      "lon": 26.665194334413428,
+      "geoinfo": {
+        "display_name": "Bulevardul Mihai Eminescu, Botoșani, 710370, Romania",
+        "road": "Bulevardul Mihai Eminescu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Botoșani",
+        "state": null,
+        "postcode": "710370",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Bulevardul Mihai Eminescu, Botoşani, Romania"
+    },
+    {
+      "lat": 47.74643405622702,
+      "lon": 26.608013340283236,
+      "geoinfo": {
+        "display_name": "16C, Strada Salcâmilor, Stâncești, Mihai Eminescu, Botoșani, 717256, Romania",
+        "road": "Strada Salcâmilor",
+        "house_number": "16C",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stâncești",
+        "state": null,
+        "postcode": "717256",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "16C, Strada Salcâmilor, 717256 Botoşani, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:03.621136+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ahrensburg",
+  "geonameid": 2959083,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.643898050304124,
+      "lon": 10.19577254720918,
+      "geoinfo": {
+        "display_name": "Eulenkrugstraße, Volksdorf, Wandsbek, Hamburg, 22359, Germany",
+        "road": "Eulenkrugstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Volksdorf",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22359",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Eulenkrugstraße, Ahrensburg, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.715089092091176,
+      "lon": 10.201448820548169,
+      "geoinfo": {
+        "display_name": "Brookweg, Klein Hansdorf, Jersbek, Bargteheide-Land, Kreis Stormarn, Schleswig-Holstein, 22941, Germany",
+        "road": "Brookweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jersbek",
+        "state": "Schleswig-Holstein",
+        "postcode": "22941",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "069, Brookweg, Klein Hansdorf, Jersbek, Bargteheide-Land, Kreis Stormarn, Schleswig-Holstein, 22941, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:16.705384+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Broomfield",
+  "geonameid": 5415035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.914163622847006,
+      "lon": -105.13243016458448,
+      "geoinfo": {
+        "display_name": "D7@12R/30L, Pilatus Way, Jefferson County, Colorado, 80021, United States",
+        "road": "Pilatus Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pilatus Way, Broomfield, Colorado, United States"
+    },
+    {
+      "lat": 39.91807942360902,
+      "lon": -105.08717784852266,
+      "geoinfo": {
+        "display_name": "Marble Street, Broomfield Heights, Broomfield, Colorado, 80021, United States",
+        "road": "Marble Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Broomfield",
+        "state": "Colorado",
+        "postcode": "80021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "290, Marble Street, Broomfield Heights, Broomfield, Colorado, 80021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:49.813142+00:00",
+  "_kind": "geo_samples"
+}

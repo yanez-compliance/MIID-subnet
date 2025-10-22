@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Quart de Poblet",
+  "geonameid": 2519068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.49030627038438,
+      "lon": -0.4901539133560118,
+      "geoinfo": {
+        "display_name": "S3, Camí de la Pinadeta, Manises, l'Horta Sud, Valencia, Valencian Community, 46940, Spain",
+        "road": "Camí de la Pinadeta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manises",
+        "state": "Valencian Community",
+        "postcode": "46940",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camí de la Pinadeta, Quart de Poblet, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.48075103497151,
+      "lon": -0.45376721139978904,
+      "geoinfo": {
+        "display_name": "Autovía del Este / Autovia de l'Est, Barri de Porta, Quart de Poblet, l'Horta Sud, Valencia, Valencian Community, 46930, Spain",
+        "road": "Autovía del Este / Autovia de l'Est",
+        "house_number": null,
+        "neighbourhood": "Barri de Porta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Quart de Poblet",
+        "state": "Valencian Community",
+        "postcode": "46930",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "309, Autovía del Este / Autovia de l'Est, Barri de Porta, Quart de Poblet, l'Horta Sud, Valencia, Valencian Community, 46930, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:16.453635+00:00",
+  "_kind": "geo_samples"
+}

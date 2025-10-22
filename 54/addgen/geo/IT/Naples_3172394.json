@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Naples",
+  "geonameid": 3172394,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.86029741634258,
+      "lon": 14.302873165284357,
+      "geoinfo": {
+        "display_name": "Via Pasquale Del Pezzo, Municipalità 6, Botteghelle, Naples, Campania, 80143, Italy",
+        "road": "Via Pasquale Del Pezzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipalità 6",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80143",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pasquale Del Pezzo, Naples, Campania, Italy"
+    },
+    {
+      "lat": 40.86011763016026,
+      "lon": 14.299733838421577,
+      "geoinfo": {
+        "display_name": "De Giorgio International SRL, 495, Via Ferrante Imparato, Municipalità 6, Naples, Campania, 80146, Italy",
+        "road": "Via Ferrante Imparato",
+        "house_number": "495",
+        "neighbourhood": null,
+        "suburb": "Municipalità 6",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80146",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "De Giorgio International SRL, 495, Via Ferrante Imparato, Municipalità 6, Naples, Campania, 80146, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:25.041641+00:00",
+  "_kind": "geo_samples"
+}

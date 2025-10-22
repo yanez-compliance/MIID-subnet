@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Flers",
+  "geonameid": 3018339,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.716679778169706,
+      "lon": -0.5728656142864657,
+      "geoinfo": {
+        "display_name": "La Cour Montagnou, Flers, Argentan, Orne, Normandy, Metropolitan France, 61100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Flers",
+        "state": "Normandy",
+        "postcode": "61100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Flers, Normandy, France"
+    },
+    {
+      "lat": 48.73863864082552,
+      "lon": -0.5185740907886358,
+      "geoinfo": {
+        "display_name": "D 812, La Selle-la-Forge, Argentan, Orne, Normandy, Metropolitan France, 61100, France",
+        "road": "D 812",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Selle-la-Forge",
+        "state": "Normandy",
+        "postcode": "61100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 812, La Selle-la-Forge, Argentan, Orne, Normandy, Metropolitan France, 61100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:49.922838+00:00",
+  "_kind": "geo_samples"
+}

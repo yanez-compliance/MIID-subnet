@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Farnham",
+  "geonameid": 2649660,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.22555069854883,
+      "lon": -0.8255789758716349,
+      "geoinfo": {
+        "display_name": "Middle Old Park, Farnham, Waverley, Surrey, England, GU10 5EA, United Kingdom",
+        "road": "Middle Old Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waverley",
+        "state": "England",
+        "postcode": "GU10 5EA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Middle Old Park, Farnham, England, United Kingdom"
+    },
+    {
+      "lat": 51.241869357887445,
+      "lon": -0.7779257395687993,
+      "geoinfo": {
+        "display_name": "Luke Road, Cargate, Aldershot, Rushmoor, Hampshire, England, GU11 3BN, United Kingdom",
+        "road": "Luke Road",
+        "house_number": null,
+        "neighbourhood": "Cargate",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rushmoor",
+        "state": "England",
+        "postcode": "GU11 3BN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Luke Road, Cargate, Aldershot, Rushmoor, Hampshire, England, GU11 3BN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:58.312594+00:00",
+  "_kind": "geo_samples"
+}

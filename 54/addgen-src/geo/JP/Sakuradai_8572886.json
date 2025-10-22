@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sakuradai",
+  "geonameid": 8572886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.754117016443594,
+      "lon": 139.63621941810084,
+      "geoinfo": {
+        "display_name": "Kasugacho, Nerima, Tokyo, 179-0074, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "179-0074",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sakuradai, Japan"
+    },
+    {
+      "lat": 35.77148482361516,
+      "lon": 139.651269268822,
+      "geoinfo": {
+        "display_name": "Akatsuka 1, Akatsuka, Itabashi, Tokyo, 175-0092, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Akatsuka 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Itabashi",
+        "state": null,
+        "postcode": "175-0092",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Akatsuka 1, Akatsuka, Itabashi, Tokyo, 175-0092, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:40.915829+00:00",
+  "_kind": "geo_samples"
+}

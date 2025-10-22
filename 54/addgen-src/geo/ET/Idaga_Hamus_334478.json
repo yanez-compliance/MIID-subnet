@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Idaga Hamus",
+  "geonameid": 334478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.214923505471853,
+      "lon": 39.59547872754844,
+      "geoinfo": {
+        "display_name": "Eastern Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Idaga Hamus, Tigray, Ethiopia"
+    },
+    {
+      "lat": 14.206546708955312,
+      "lon": 39.54998105877683,
+      "geoinfo": {
+        "display_name": "A2, Bet Haworiyat, Eastern Tigray, Tigray, Ethiopia",
+        "road": "A2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bet Haworiyat",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "A2, Idaga Hamus, 34911 Tigray, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:04.947131+00:00",
+  "_kind": "geo_samples"
+}

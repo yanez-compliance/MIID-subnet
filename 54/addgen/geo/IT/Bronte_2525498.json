@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Bronte",
+  "geonameid": 2525498,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.80633447242576,
+      "lon": 14.870306681792673,
+      "geoinfo": {
+        "display_name": "Bronte, Catania, Sicily, 95034, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bronte",
+        "state": "Sicily",
+        "postcode": "95034",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Bronte, Sicily, Italy"
+    },
+    {
+      "lat": 37.76785292735189,
+      "lon": 14.78797270169692,
+      "geoinfo": {
+        "display_name": "Ex Trazzera Bronte-Passopaglia, Masseria Longhitano, Bronte, Catania, Sicily, 95034, Italy",
+        "road": "Ex Trazzera Bronte-Passopaglia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bronte",
+        "state": "Sicily",
+        "postcode": "95034",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "045, Ex Trazzera Bronte-Passopaglia, Masseria Longhitano, Bronte, Catania, Sicily, 95034, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:37.345215+00:00",
+  "_kind": "geo_samples"
+}

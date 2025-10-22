@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Quincy",
+  "geonameid": 4247703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.962537469189925,
+      "lon": -91.43985959994717,
+      "geoinfo": {
+        "display_name": "Adams County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Quincy, Illinois, United States"
+    },
+    {
+      "lat": 39.91500034716795,
+      "lon": -91.38767329814793,
+      "geoinfo": {
+        "display_name": "1763, Van Buren Street, Quincy, Adams County, Illinois, 62301, United States",
+        "road": "Van Buren Street",
+        "house_number": "1763",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quincy",
+        "state": "Illinois",
+        "postcode": "62301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1763, Van Buren Street, Quincy, Adams County, Illinois, 62301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:13.306907+00:00",
+  "_kind": "geo_samples"
+}

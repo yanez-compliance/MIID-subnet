@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Ra'anana",
+  "geonameid": 293807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.205939180791944,
+      "lon": 34.86790588972306,
+      "geoinfo": {
+        "display_name": "Kfar Nahman Institute, Shimon Peres Rd., Neveh Zemer, 2003, Raanana, עיריית הוד השרון - מינהל הכספים, Petah Tikva Subdistrict, Center District, 4334522, Israel",
+        "road": "Shimon Peres Rd.",
+        "house_number": null,
+        "neighbourhood": "Neveh Zemer",
+        "suburb": "2003",
+        "city_district": null,
+        "city": "Raanana",
+        "state": "Center District",
+        "postcode": "4334522",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Shimon Peres Rd., Ra'anana, Center District, Israel"
+    },
+    {
+      "lat": 32.16332248035321,
+      "lon": 34.89672280239252,
+      "geoinfo": {
+        "display_name": "Hadarim, Hod HaSharon, Petah Tikva Subdistrict, Center District, 4592000, Israel",
+        "road": "Hadarim",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hod HaSharon",
+        "state": "Center District",
+        "postcode": "4592000",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "603, Hadarim, Hod HaSharon, Petah Tikva Subdistrict, Center District, 4592000, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T06:00:39.595994+00:00",
+  "_kind": "geo_samples"
+}

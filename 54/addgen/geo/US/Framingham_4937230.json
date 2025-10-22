@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Framingham",
+  "geonameid": 4937230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.30129804016082,
+      "lon": -71.40961915793892,
+      "geoinfo": {
+        "display_name": "99, Fairbanks Way, Framingham, Middlesex County, Massachusetts, 01701, United States",
+        "road": "Fairbanks Way",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Framingham",
+        "state": "Massachusetts",
+        "postcode": "01701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99 Fairbanks Way, Framingham, Massachusetts, United States"
+    },
+    {
+      "lat": 42.25803133601464,
+      "lon": -71.41792977242817,
+      "geoinfo": {
+        "display_name": "65, Bates Road, Framingham, Middlesex County, Massachusetts, 01702, United States",
+        "road": "Bates Road",
+        "house_number": "65",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Framingham",
+        "state": "Massachusetts",
+        "postcode": "01702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "65, Bates Road, Framingham, Middlesex County, Massachusetts, 01702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:45.092095+00:00",
+  "_kind": "geo_samples"
+}

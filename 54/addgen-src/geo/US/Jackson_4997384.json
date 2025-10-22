@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jackson",
+  "geonameid": 4997384,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.27060911787401,
+      "lon": -84.3612857946194,
+      "geoinfo": {
+        "display_name": "Judy Lane, Leoni Township, Jackson County, Michigan, 49202, United States",
+        "road": "Judy Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leoni Township",
+        "state": "Michigan",
+        "postcode": "49202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Judy Lane, Jackson, Michigan, United States"
+    },
+    {
+      "lat": 42.23785037280685,
+      "lon": -84.43854848307572,
+      "geoinfo": {
+        "display_name": "2016, Spring Arbor Road, Summit Hills, Summit Township, Jackson County, Michigan, 49203, United States",
+        "road": "Spring Arbor Road",
+        "house_number": "2016",
+        "neighbourhood": "Summit Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Summit Township",
+        "state": "Michigan",
+        "postcode": "49203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2016, Spring Arbor Road, Summit Hills, Summit Township, Jackson County, Michigan, 49203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:13.650415+00:00",
+  "_kind": "geo_samples"
+}

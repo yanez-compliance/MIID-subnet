@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Terneuzen",
+  "geonameid": 2746420,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.34201294027833,
+      "lon": 3.8638195388962986,
+      "geoinfo": {
+        "display_name": "Serlippens, Terneuzen-Noord, Terneuzen, Zeeland, Netherlands, 4532 KW, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Serlippens",
+        "suburb": null,
+        "city_district": null,
+        "city": "Terneuzen",
+        "state": "Zeeland",
+        "postcode": "4532 KW",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Serlippens, Terneuzen, Zeeland, The Netherlands"
+    },
+    {
+      "lat": 51.3738742603077,
+      "lon": 3.796884549959696,
+      "geoinfo": {
+        "display_name": "Westerscheldetunnelweg, Ellewoutsdijk, Borsele, Zeeland, Netherlands, 4437 AP, Netherlands",
+        "road": "Westerscheldetunnelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellewoutsdijk",
+        "state": "Zeeland",
+        "postcode": "4437 AP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "702, Westerscheldetunnelweg, Terneuzen, 4437 AP Zeeland, The Netherlands"
+    },
+    {
+      "lat": 51.34998416143317,
+      "lon": 3.8544627761709416,
+      "geoinfo": {
+        "display_name": "Zuid-Everingen, Ellewoutsdijk, Borsele, Zeeland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ellewoutsdijk",
+        "state": "Zeeland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "189, Terneuzen, 15090 Zeeland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:10.742922+00:00",
+  "_kind": "geo_samples"
+}

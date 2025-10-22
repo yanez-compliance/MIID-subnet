@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "El Cerrito",
+  "geonameid": 5345623,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.91760542683251,
+      "lon": -122.29429908711488,
+      "geoinfo": {
+        "display_name": "7664, Moeser Lane, El Cerrito, Contra Costa County, California, 94530, United States",
+        "road": "Moeser Lane",
+        "house_number": "7664",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cerrito",
+        "state": "California",
+        "postcode": "94530",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7664 Moeser Lane, El Cerrito, California, United States"
+    },
+    {
+      "lat": 37.93434685775538,
+      "lon": -122.26536579339397,
+      "geoinfo": {
+        "display_name": "Fire Trail No 3, Richmond, Contra Costa County, California, 94707, United States",
+        "road": "Fire Trail No 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richmond",
+        "state": "California",
+        "postcode": "94707",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fire Trail No 3, Richmond, Contra Costa County, California, 94707, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:51.393651+00:00",
+  "_kind": "geo_samples"
+}

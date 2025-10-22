@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Boom",
+  "geonameid": 2801494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.09090442179183,
+      "lon": 4.441091622096944,
+      "geoinfo": {
+        "display_name": "E19, Rumst, Antwerp, Flanders, 2840, Belgium",
+        "road": "E19",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rumst",
+        "city": "Rumst",
+        "state": "Antwerp",
+        "postcode": "2840",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "E19, Boom, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.06198160155248,
+      "lon": 4.323072185281536,
+      "geoinfo": {
+        "display_name": "Rijksweg, Puurs, Puurs-Sint-Amands, Mechelen, Antwerp, Flanders, 2870, Belgium",
+        "road": "Rijksweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puurs-Sint-Amands",
+        "state": "Antwerp",
+        "postcode": "2870",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "044, Rijksweg, Puurs, Puurs-Sint-Amands, Mechelen, Antwerp, Flanders, 2870, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:35.692532+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Butler",
+  "geonameid": 4161178,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.47929762436069,
+      "lon": -81.57551293595274,
+      "geoinfo": {
+        "display_name": "5534, Oxford Moor Boulevard, Oxford Moor, Lake Butler, Orange County, Florida, 34786, United States",
+        "road": "Oxford Moor Boulevard",
+        "house_number": "5534",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Butler",
+        "state": "Florida",
+        "postcode": "34786",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5534 Oxford Moor Boulevard, Lake Butler, Florida, United States"
+    },
+    {
+      "lat": 28.486252354170684,
+      "lon": -81.49823899689447,
+      "geoinfo": {
+        "display_name": "5098, Washington Avenue, Windermere Heights, Doctor Phillips, Orange County, Florida, 32819, United States",
+        "road": "Washington Avenue",
+        "house_number": "5098",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doctor Phillips",
+        "state": "Florida",
+        "postcode": "32819",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5098, Washington Avenue, Windermere Heights, Doctor Phillips, Orange County, Florida, 32819, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:30.191856+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Pailou",
+  "geonameid": 8403616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.779973043629564,
+      "lon": 108.36453682694044,
+      "geoinfo": {
+        "display_name": "X061, Pailou Subdistrict, Huangni, 九池街道, Wanzhou, Chongqing, 404000, China",
+        "road": "X061",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pailou Subdistrict",
+        "city_district": null,
+        "city": "九池街道",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X061, Pailou, Chongqing, China"
+    },
+    {
+      "lat": 30.814411660464618,
+      "lon": 108.39699139194042,
+      "geoinfo": {
+        "display_name": "Chenjiaba Subdistrict, Wanzhou, Chongqing, 404000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chenjiaba Subdistrict",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": "404000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "820, Chenjiaba Subdistrict, Wanzhou, Chongqing, 404000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:17.799563+00:00",
+  "_kind": "geo_samples"
+}

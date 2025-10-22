@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arvin",
+  "geonameid": 5324903,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.21217283880497,
+      "lon": -118.85261564539049,
+      "geoinfo": {
+        "display_name": "Bear Mountain Boulevard, Kern County, California, United States",
+        "road": "Bear Mountain Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bear Mountain Boulevard, Arvin, California, United States"
+    },
+    {
+      "lat": 35.2400028739054,
+      "lon": -118.80934659422205,
+      "geoinfo": {
+        "display_name": "Buena Vista Boulevard, Kern County, California, United States",
+        "road": "Buena Vista Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "787, Buena Vista Boulevard, Kern County, 92415 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:01.399289+00:00",
+  "_kind": "geo_samples"
+}

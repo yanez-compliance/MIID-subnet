@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Altamira",
+  "geonameid": 3533005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.35557975126427,
+      "lon": -97.94251836732168,
+      "geoinfo": {
+        "display_name": "Altamira, Tamaulipas, 89600, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altamira",
+        "state": "Tamaulipas",
+        "postcode": "89600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Altamira, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 22.42440471547856,
+      "lon": -97.92413335316603,
+      "geoinfo": {
+        "display_name": "Escuela Primaria José Vasconcelos, 2815, Calle Solidaridad 1, COLONIA ADOLFO LOPEZ MATEOS, Altamira, Tamaulipas, 89602, Mexico",
+        "road": "Calle Solidaridad 1",
+        "house_number": "2815",
+        "neighbourhood": "COLONIA ADOLFO LOPEZ MATEOS",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tamaulipas",
+        "postcode": "89602",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Escuela Primaria José Vasconcelos, 2815, Calle Solidaridad 1, COLONIA ADOLFO LOPEZ MATEOS, Altamira, Tamaulipas, 89602, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:07.781353+00:00",
+  "_kind": "geo_samples"
+}

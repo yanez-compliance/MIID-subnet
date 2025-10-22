@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Varberg",
+  "geonameid": 2664996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.09897518421498,
+      "lon": 12.213634832786564,
+      "geoinfo": {
+        "display_name": "Varberg, Varbergs kommun, Halland County, 432 41, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Varberg",
+        "state": null,
+        "postcode": "432 41",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Varberg, Sweden"
+    },
+    {
+      "lat": 57.12343672355467,
+      "lon": 12.20665461288212,
+      "geoinfo": {
+        "display_name": "39, Myrekullevägen, Varberg, Varbergs kommun, Halland County, 432 93, Sweden",
+        "road": "Myrekullevägen",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Varberg",
+        "state": null,
+        "postcode": "432 93",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "39, Myrekullevägen, Varberg, Varbergs kommun, Halland County, 432 93, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:56:33.335663+00:00",
+  "_kind": "geo_samples"
+}

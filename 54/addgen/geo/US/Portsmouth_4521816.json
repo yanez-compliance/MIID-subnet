@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Portsmouth",
+  "geonameid": 4521816,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.76436039333383,
+      "lon": -83.01921442233527,
+      "geoinfo": {
+        "display_name": "2391, Galena Pike, Valley View, West Portsmouth, Scioto County, Ohio, 45663, United States",
+        "road": "Galena Pike",
+        "house_number": "2391",
+        "neighbourhood": "Valley View",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Portsmouth",
+        "state": "Ohio",
+        "postcode": "45663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2391 Galena Pike, Portsmouth, Ohio, United States"
+    },
+    {
+      "lat": 38.71235970722485,
+      "lon": -83.01564948375275,
+      "geoinfo": {
+        "display_name": "Windy Hill Road, South Portsmouth, Greenup County, Kentucky, 41174, United States",
+        "road": "Windy Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Portsmouth",
+        "state": "Kentucky",
+        "postcode": "41174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "923, Windy Hill Road, South Portsmouth, Greenup County, Kentucky, 41174, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:49.960118+00:00",
+  "_kind": "geo_samples"
+}

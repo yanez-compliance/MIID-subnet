@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cholet",
+  "geonameid": 3025053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.09821903662609,
+      "lon": -0.9026620271179077,
+      "geoinfo": {
+        "display_name": "Impasse des Chênes, Saint-Léger-sous-Cholet, Cholet, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49280, France",
+        "road": "Impasse des Chênes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Léger-sous-Cholet",
+        "state": "Pays de la Loire",
+        "postcode": "49280",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Impasse des Chênes, Cholet, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.086979564869644,
+      "lon": -0.8627617641290678,
+      "geoinfo": {
+        "display_name": "La Petière, Cholet, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49300, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Cholet",
+        "city": "Cholet",
+        "state": "Pays de la Loire",
+        "postcode": "49300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "193, La Petière, Cholet, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:18:27.042820+00:00",
+  "_kind": "geo_samples"
+}

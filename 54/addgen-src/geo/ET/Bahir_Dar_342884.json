@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Bahir Dar",
+  "geonameid": 342884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.578545667776396,
+      "lon": 37.41899653401961,
+      "geoinfo": {
+        "display_name": "Bahir Dar City, Amhara, Ethiopia, West Gojjam, Amhara Region, 6000, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahir Dar City, Amhara, Ethiopia",
+        "state": "Amhara Region",
+        "postcode": "6000",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Bahir Dar, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 11.599416370117146,
+      "lon": 37.38529215097417,
+      "geoinfo": {
+        "display_name": "Route 3, Bahir Dar Special Zone, West Gojjam, Amhara Region, 6600, Ethiopia",
+        "road": "Route 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahir Dar Special Zone",
+        "state": "Amhara Region",
+        "postcode": "6600",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Route 3, Bahir Dar Special Zone, West Gojjam, Amhara Region, 6600, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:29.833421+00:00",
+  "_kind": "geo_samples"
+}

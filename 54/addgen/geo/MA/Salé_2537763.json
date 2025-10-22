@@ -1,0 +1,47 @@
+{
+  "country_code": "MA",
+  "country": "Morocco",
+  "city": "Salé",
+  "geonameid": 2537763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.091812045300564,
+      "lon": -6.811360679781711,
+      "geoinfo": {
+        "display_name": "Morocco",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Morocco",
+        "country_code": "ma"
+      },
+      "address": "Salé, Morocco"
+    },
+    {
+      "lat": 34.068536371732215,
+      "lon": -6.810722817949212,
+      "geoinfo": {
+        "display_name": "Boulevard Abdelkrim Khattabi, Bab Lamrissa باب لمريسة, Salé, باشوية سلا, Prefecture of Salé, 11160, Morocco",
+        "road": "Boulevard Abdelkrim Khattabi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bab Lamrissa باب لمريسة",
+        "city_district": null,
+        "city": "Salé",
+        "state": null,
+        "postcode": "11160",
+        "country": "Morocco",
+        "country_code": "ma"
+      },
+      "address": "995, Boulevard Abdelkrim Khattabi, Bab Lamrissa باب لمريسة, Salé, باشوية سلا, Prefecture of Salé, 11160, Morocco"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:33.469234+00:00",
+  "_kind": "geo_samples"
+}

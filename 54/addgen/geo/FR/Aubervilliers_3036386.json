@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Aubervilliers",
+  "geonameid": 3036386,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.91442904934525,
+      "lon": 2.319822594486571,
+      "geoinfo": {
+        "display_name": "21, Quai de Seine, Les Docks, Saint-Ouen-sur-Seine, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93400, France",
+        "road": "Quai de Seine",
+        "house_number": "21",
+        "neighbourhood": "Les Docks",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ouen-sur-Seine",
+        "state": null,
+        "postcode": "93400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "21 Quai de Seine, Aubervilliers, Ile-de-France, France"
+    },
+    {
+      "lat": 48.895584804051346,
+      "lon": 2.4405890086356328,
+      "geoinfo": {
+        "display_name": "5, Rue Wagner, Zone industrielle du Parc, Léo Lagrange, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93130, France",
+        "road": "Rue Wagner",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Léo Lagrange",
+        "city_district": null,
+        "city": "Noisy-le-Sec",
+        "state": "Ile-de-France",
+        "postcode": "93130",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5, Rue Wagner, Zone industrielle du Parc, Léo Lagrange, Noisy-le-Sec, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93130, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:37.000358+00:00",
+  "_kind": "geo_samples"
+}

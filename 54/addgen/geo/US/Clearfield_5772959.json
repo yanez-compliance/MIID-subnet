@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clearfield",
+  "geonameid": 5772959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.08633497897273,
+      "lon": -111.97880111099576,
+      "geoinfo": {
+        "display_name": "7th West Apartments, 1814, North 700 West, Robins Park, Layton, Davis County, Utah, 84041, United States",
+        "road": "North 700 West",
+        "house_number": "1814",
+        "neighbourhood": "Robins Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Layton",
+        "state": "Utah",
+        "postcode": "84041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1814 North 700 West, Clearfield, Utah, United States"
+    },
+    {
+      "lat": 41.11354304303715,
+      "lon": -111.97879625059363,
+      "geoinfo": {
+        "display_name": "C Street, Davis County, Utah, 84056, United States",
+        "road": "C Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": "84056",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "419, C Street, Davis County, Utah, 84056, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:04.076309+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Soissons",
+  "geonameid": 2974389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.35162993303422,
+      "lon": 3.338660124302138,
+      "geoinfo": {
+        "display_name": "Belleu, Soissons, Aisne, Hauts-de-France, Metropolitan France, 02200, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleu",
+        "state": "Hauts-de-France",
+        "postcode": "02200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Soissons, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.40083272896822,
+      "lon": 3.381377275763255,
+      "geoinfo": {
+        "display_name": "Chemin des Belles Vues, Crouy, Soissons, Aisne, Hauts-de-France, Metropolitan France, 02880, France",
+        "road": "Chemin des Belles Vues",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crouy",
+        "state": "Hauts-de-France",
+        "postcode": "02880",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "299, Chemin des Belles Vues, Crouy, Soissons, Aisne, Hauts-de-France, Metropolitan France, 02880, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:59.603650+00:00",
+  "_kind": "geo_samples"
+}

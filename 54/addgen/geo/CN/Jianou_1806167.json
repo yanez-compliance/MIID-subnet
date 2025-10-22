@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jian’ou",
+  "geonameid": 1806167,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.017738132090653,
+      "lon": 118.33749731628684,
+      "geoinfo": {
+        "display_name": "Jian'an, Nanping City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanping City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jian’ou, Fujian, China"
+    },
+    {
+      "lat": 27.058046785924482,
+      "lon": 118.30012854560138,
+      "geoinfo": {
+        "display_name": "G528, Zhishan Subdistrict, Jian'ou, Nanping City, Fujian, China",
+        "road": "G528",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanping City",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G528, Zhishan Subdistrict, Jian'ou, Nanping City, 98431 Fujian, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:15.652008+00:00",
+  "_kind": "geo_samples"
+}

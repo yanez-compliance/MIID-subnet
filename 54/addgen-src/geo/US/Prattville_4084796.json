@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Prattville",
+  "geonameid": 4084796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.44346795178254,
+      "lon": -86.50569195495203,
+      "geoinfo": {
+        "display_name": "Grouby Airport Road, Prattville, Autauga County, Alabama, 36067, United States",
+        "road": "Grouby Airport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prattville",
+        "state": "Alabama",
+        "postcode": "36067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grouby Airport Road, Prattville, Alabama, United States"
+    },
+    {
+      "lat": 32.449514621330216,
+      "lon": -86.48228845417951,
+      "geoinfo": {
+        "display_name": "Cook Road, Country Club Estates, Hunting Ridge, Prattville, Autauga County, Alabama, 36067, United States",
+        "road": "Cook Road",
+        "house_number": null,
+        "neighbourhood": "Country Club Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Prattville",
+        "state": "Alabama",
+        "postcode": "36067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "445, Cook Road, Country Club Estates, Hunting Ridge, Prattville, Autauga County, Alabama, 36067, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:51.846499+00:00",
+  "_kind": "geo_samples"
+}

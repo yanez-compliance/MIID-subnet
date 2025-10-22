@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Kogarah",
+  "geonameid": 2161185,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.96889303585738,
+      "lon": 151.12011264733084,
+      "geoinfo": {
+        "display_name": "Carlton Parade, Carlton, St George, Sydney, Bayside Council, New South Wales, 2218, Australia",
+        "road": "Carlton Parade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carlton",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2218",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Carlton Parade, Kogarah, New South Wales, Australia"
+    },
+    {
+      "lat": -33.96163473023311,
+      "lon": 151.12597397654795,
+      "geoinfo": {
+        "display_name": "Verdun Street, Bexley, St George, Sydney, Bayside Council, New South Wales, 2207, Australia",
+        "road": "Verdun Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bexley",
+        "city_district": null,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "postcode": "2207",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "743, Verdun Street, Bexley, St George, Sydney, Bayside Council, New South Wales, 2207, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:14.807981+00:00",
+  "_kind": "geo_samples"
+}

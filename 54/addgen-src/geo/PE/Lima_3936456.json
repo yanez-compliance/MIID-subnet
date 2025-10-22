@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Lima",
+  "geonameid": 3936456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.01850858772453,
+      "lon": -77.04650106347697,
+      "geoinfo": {
+        "display_name": "National University of Engineering, Avenida Túpac Amaru, San Martín de Porres, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15333, Peru",
+        "road": "Avenida Túpac Amaru",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Martín de Porres",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15333",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Avenida Túpac Amaru, Lima, Lima, Peru"
+    },
+    {
+      "lat": -12.052057978210682,
+      "lon": -76.99134611359331,
+      "geoinfo": {
+        "display_name": "El Amauta, El Agustino, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15004, Peru",
+        "road": "El Amauta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "El Agustino",
+        "city_district": null,
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": "15004",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "134, El Amauta, El Agustino, Lima, Province of Lima, Lima Metropolitan Area, Lima, 15004, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:22.939322+00:00",
+  "_kind": "geo_samples"
+}

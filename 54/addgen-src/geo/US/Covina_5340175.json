@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Covina",
+  "geonameid": 5340175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.07619973231557,
+      "lon": -117.89782202003077,
+      "geoinfo": {
+        "display_name": "746, South Midsite Avenue, Covina, Los Angeles County, California, 91723, United States",
+        "road": "South Midsite Avenue",
+        "house_number": "746",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Covina",
+        "state": "California",
+        "postcode": "91723",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "746 South Midsite Avenue, Covina, California, United States"
+    },
+    {
+      "lat": 34.12562651641506,
+      "lon": -117.91903018075801,
+      "geoinfo": {
+        "display_name": "West 3rd Street, Azusa, Los Angeles County, California, 91702, United States",
+        "road": "West 3rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Azusa",
+        "state": "California",
+        "postcode": "91702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West 3rd Street, Azusa, Los Angeles County, California, 91702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:16.067232+00:00",
+  "_kind": "geo_samples"
+}

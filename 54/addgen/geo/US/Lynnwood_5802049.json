@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lynnwood",
+  "geonameid": 5802049,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.86260483992911,
+      "lon": -122.33910812542996,
+      "geoinfo": {
+        "display_name": "75th Place West, Meadowdale, Edmonds, Snohomish County, Washington, 98026, United States",
+        "road": "75th Place West",
+        "house_number": null,
+        "neighbourhood": "Meadowdale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Edmonds",
+        "state": "Washington",
+        "postcode": "98026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "75th Place West, Lynnwood, Washington, United States"
+    },
+    {
+      "lat": 47.84328729720635,
+      "lon": -122.35731068383848,
+      "geoinfo": {
+        "display_name": "17624, Talbot Road, Edmonds, Snohomish County, Washington, 98026, United States",
+        "road": "Talbot Road",
+        "house_number": "17624",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Edmonds",
+        "state": "Washington",
+        "postcode": "98026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17624, Talbot Road, Edmonds, Snohomish County, Washington, 98026, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:30.697049+00:00",
+  "_kind": "geo_samples"
+}

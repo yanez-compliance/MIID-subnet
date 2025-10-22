@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Alice Springs",
+  "geonameid": 2077895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -23.665012958991852,
+      "lon": 133.89838205866607,
+      "geoinfo": {
+        "display_name": "Atyunpe, Undoolya, Town of Alice Springs, Northern Territory, 0870, Australia",
+        "road": "Atyunpe",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Undoolya",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "0870",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Atyunpe, Alice Springs, Australia"
+    },
+    {
+      "lat": -23.686619840596993,
+      "lon": 133.88244958537152,
+      "geoinfo": {
+        "display_name": "St Philip's College, Riverside Walk, Kunoth, Stuart, Town of Alice Springs, Northern Territory, 0870, Australia",
+        "road": "Riverside Walk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stuart",
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "0870",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "448, Riverside Walk, 0870 Alice Springs, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:30.763084+00:00",
+  "_kind": "geo_samples"
+}

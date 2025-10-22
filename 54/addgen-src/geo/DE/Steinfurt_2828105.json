@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Steinfurt",
+  "geonameid": 2828105,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.12683729272764,
+      "lon": 7.382458278377737,
+      "geoinfo": {
+        "display_name": "57, Grottenkamp, Borghorst, Steinfurt, Kreis Steinfurt, North Rhine-Westphalia, 48565, Germany",
+        "road": "Grottenkamp",
+        "house_number": "57",
+        "neighbourhood": null,
+        "suburb": "Borghorst",
+        "city_district": null,
+        "city": "Steinfurt",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48565",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "57 Grottenkamp, Steinfurt, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.142192745097795,
+      "lon": 7.314942173485806,
+      "geoinfo": {
+        "display_name": "Sellen, Burgsteinfurt, Steinfurt, Kreis Steinfurt, North Rhine-Westphalia, 48565, Germany",
+        "road": "Sellen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Burgsteinfurt",
+        "city_district": null,
+        "city": "Steinfurt",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48565",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "823, Sellen, Burgsteinfurt, Steinfurt, Kreis Steinfurt, North Rhine-Westphalia, 48565, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:45.743190+00:00",
+  "_kind": "geo_samples"
+}

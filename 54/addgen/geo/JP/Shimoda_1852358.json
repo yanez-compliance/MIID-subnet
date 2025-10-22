@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Shimoda",
+  "geonameid": 1852358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.91683313183523,
+      "lon": 132.95808957657994,
+      "geoinfo": {
+        "display_name": "National Highway Route 321, Shimanto, Kochi Prefecture, Japan",
+        "road": "National Highway Route 321",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shimanto",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 321, Shimoda, Japan"
+    },
+    {
+      "lat": 32.912779301784184,
+      "lon": 132.9563812472528,
+      "geoinfo": {
+        "display_name": "Shimanto, Kochi Prefecture, 787-0392, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shimanto",
+        "state": null,
+        "postcode": "787-0392",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Shimanto, Kochi Prefecture, 787-0392, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:01:36.417345+00:00",
+  "_kind": "geo_samples"
+}

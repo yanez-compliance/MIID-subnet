@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pleasant Hill",
+  "geonameid": 5383720,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.974599611426015,
+      "lon": -122.07143030210536,
+      "geoinfo": {
+        "display_name": "314, Camelback Road, Camelback, Pleasant Hill, Contra Costa County, California, 94523, United States",
+        "road": "Camelback Road",
+        "house_number": "314",
+        "neighbourhood": "Camelback",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pleasant Hill",
+        "state": "California",
+        "postcode": "94523",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "314 Camelback Road, Pleasant Hill, California, United States"
+    },
+    {
+      "lat": 37.94118012952066,
+      "lon": -122.04754473506044,
+      "geoinfo": {
+        "display_name": "1399, Strathmore Court, Concord, Contra Costa County, California, 94518, United States",
+        "road": "Strathmore Court",
+        "house_number": "1399",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "California",
+        "postcode": "94518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1399, Strathmore Court, Concord, Contra Costa County, California, 94518, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:06.200006+00:00",
+  "_kind": "geo_samples"
+}

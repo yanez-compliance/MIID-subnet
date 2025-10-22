@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Montignies-sur-Sambre",
+  "geonameid": 2790796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.4151460416179,
+      "lon": 4.4809978552115135,
+      "geoinfo": {
+        "display_name": "73, Rue Marguerite Depasse, La Closeraie, Haies, Gilly, Charleroi, Hainaut, Wallonia, 6060, Belgium",
+        "road": "Rue Marguerite Depasse",
+        "house_number": "73",
+        "neighbourhood": "La Closeraie",
+        "suburb": "Haies",
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6060",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "73 Rue Marguerite Depasse, Montignies-sur-Sambre, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.44218214815965,
+      "lon": 4.455020667880098,
+      "geoinfo": {
+        "display_name": "3, Rue Louis Lambert, Houbois, Jumet, Charleroi, Hainaut, Wallonia, 6040, Belgium",
+        "road": "Rue Louis Lambert",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Houbois",
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6040",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "3, Rue Louis Lambert, Houbois, Jumet, Charleroi, Hainaut, Wallonia, 6040, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:55.475026+00:00",
+  "_kind": "geo_samples"
+}

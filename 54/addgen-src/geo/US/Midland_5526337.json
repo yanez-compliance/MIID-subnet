@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Midland",
+  "geonameid": 5526337,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.0244265001908,
+      "lon": -102.11244818636614,
+      "geoinfo": {
+        "display_name": "Culpeper Drive, Fair Oaks Estates, Midland, Midland County, Texas, 79705, United States",
+        "road": "Culpeper Drive",
+        "house_number": null,
+        "neighbourhood": "Fair Oaks Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Midland",
+        "state": "Texas",
+        "postcode": "79705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Culpeper Drive, Midland, Texas, United States"
+    },
+    {
+      "lat": 32.02414877782572,
+      "lon": -102.05076289099355,
+      "geoinfo": {
+        "display_name": "McPherson Estates, Midland, Midland County, Texas, 79705, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "McPherson Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Midland",
+        "state": "Texas",
+        "postcode": "79705",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "767, McPherson Estates, Midland, Midland County, Texas, 79705, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:13:36.055451+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carpentersville",
+  "geonameid": 4886676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.078252792379956,
+      "lon": -88.26068230687744,
+      "geoinfo": {
+        "display_name": "South Kennedy Drive, East Dundee, Dundee Township, Kane County, Illinois, 60179, United States",
+        "road": "South Kennedy Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Dundee",
+        "state": "Illinois",
+        "postcode": "60179",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Kennedy Drive, Carpentersville, Illinois, United States"
+    },
+    {
+      "lat": 42.117820919356625,
+      "lon": -88.23703210473064,
+      "geoinfo": {
+        "display_name": "Private Utility Drive, Barrington Hills, Barrington Township, Cook County, Illinois, 60179, United States",
+        "road": "Private Utility Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60179",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "161, Private Utility Drive, Barrington Hills, Barrington Township, Cook County, Illinois, 60179, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:31.063191+00:00",
+  "_kind": "geo_samples"
+}

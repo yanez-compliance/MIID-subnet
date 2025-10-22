@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montclair",
+  "geonameid": 5101334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.794859305185675,
+      "lon": -74.16931681755597,
+      "geoinfo": {
+        "display_name": "Hendricks Field Golf Course, 220, Franklin Avenue, Belleville, Essex County, New Jersey, 07110, United States",
+        "road": "Franklin Avenue",
+        "house_number": "220",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleville",
+        "state": "New Jersey",
+        "postcode": "07110",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "220 Franklin Avenue, Montclair, New Jersey, United States"
+    },
+    {
+      "lat": 40.860390723021084,
+      "lon": -74.1967074979517,
+      "geoinfo": {
+        "display_name": "Montclair State University, 1, Normal Avenue, Montclair Heights, Montclair, Essex County, New Jersey, 07043, United States",
+        "road": "Normal Avenue",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montclair",
+        "state": "New Jersey",
+        "postcode": "07043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Montclair State University, 1, Normal Avenue, Montclair Heights, Montclair, Essex County, New Jersey, 07043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:30.612607+00:00",
+  "_kind": "geo_samples"
+}

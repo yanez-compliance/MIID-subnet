@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lawrence",
+  "geonameid": 4274277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.96610941396767,
+      "lon": -95.2170391864628,
+      "geoinfo": {
+        "display_name": "East 11th Street, East Lawrence, Lawrence, Douglas County, Kansas, 66044, United States",
+        "road": "East 11th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lawrence",
+        "state": "Kansas",
+        "postcode": "66044",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 11th Street, Lawrence, Kansas, United States"
+    },
+    {
+      "lat": 38.95764320964901,
+      "lon": -95.28584731310124,
+      "geoinfo": {
+        "display_name": "Hidden Valley Camp, 3420, Bob Billings Parkway, Lawrence, Douglas County, Kansas, 66049, United States",
+        "road": "Bob Billings Parkway",
+        "house_number": "3420",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lawrence",
+        "state": "Kansas",
+        "postcode": "66049",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hidden Valley Camp, 3420, Bob Billings Parkway, Lawrence, Douglas County, Kansas, 66049, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:19.692364+00:00",
+  "_kind": "geo_samples"
+}

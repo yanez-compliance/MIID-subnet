@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burbank",
+  "geonameid": 5331835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.195068197734464,
+      "lon": -118.33759974387564,
+      "geoinfo": {
+        "display_name": "2178, North Buena Vista Street, Burbank, Los Angeles County, California, 91504, United States",
+        "road": "North Buena Vista Street",
+        "house_number": "2178",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burbank",
+        "state": "California",
+        "postcode": "91504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2178 North Buena Vista Street, Burbank, California, United States"
+    },
+    {
+      "lat": 34.14509807536657,
+      "lon": -118.30636900473611,
+      "geoinfo": {
+        "display_name": "Mount Hollywood Drive, Los Feliz Neighborhood Council District, Los Angeles, Los Angeles County, California, 90068, United States",
+        "road": "Mount Hollywood Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90068",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "067, Mount Hollywood Drive, Los Feliz Neighborhood Council District, Los Angeles, Los Angeles County, California, 90068, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:09.097705+00:00",
+  "_kind": "geo_samples"
+}

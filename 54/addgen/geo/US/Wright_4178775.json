@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wright",
+  "geonameid": 4178775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.47828578333541,
+      "lon": -86.674012714677,
+      "geoinfo": {
+        "display_name": "Okaloosa County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wright, Florida, United States"
+    },
+    {
+      "lat": 30.448225184397717,
+      "lon": -86.6301635588426,
+      "geoinfo": {
+        "display_name": "339, Racetrack Road Northwest, Fort Walton Beach, Okaloosa County, Florida, 32547, United States",
+        "road": "Racetrack Road Northwest",
+        "house_number": "339",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Walton Beach",
+        "state": "Florida",
+        "postcode": "32547",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "339, Racetrack Road Northwest, Fort Walton Beach, Okaloosa County, Florida, 32547, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:40.123195+00:00",
+  "_kind": "geo_samples"
+}

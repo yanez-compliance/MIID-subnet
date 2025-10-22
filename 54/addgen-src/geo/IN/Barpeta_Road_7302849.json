@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Barpeta Road",
+  "geonameid": 7302849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.52470956972479,
+      "lon": 90.97763629906304,
+      "geoinfo": {
+        "display_name": "Barpeta Road, Barnagar (Pt), Barpeta, Assam, 781315, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barpeta Road",
+        "state": "Assam",
+        "postcode": "781315",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Barpeta Road, Assam, India"
+    },
+    {
+      "lat": 26.521209505844148,
+      "lon": 91.0072815393044,
+      "geoinfo": {
+        "display_name": "Sarupeta (Pt), Bajali, Assam, 781315, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Assam",
+        "postcode": "781315",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "555, Barpeta Road, 781315 Assam, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:40.003544+00:00",
+  "_kind": "geo_samples"
+}

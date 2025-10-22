@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Tortosa",
+  "geonameid": 3107677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.80768631055526,
+      "lon": 0.5349671384080791,
+      "geoinfo": {
+        "display_name": "352, Partida S Lazaro, Tortosa, Baix Ebre, Tarragona, Catalonia, 43517, Spain",
+        "road": null,
+        "house_number": "352",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tortosa",
+        "state": "Catalonia",
+        "postcode": "43517",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Tortosa, Catalonia, Spain"
+    },
+    {
+      "lat": 40.78973743462561,
+      "lon": 0.47714136670744967,
+      "geoinfo": {
+        "display_name": "Camí del Marge Nou, Colònia Parellades, Roquetes, Baix Ebre, Tarragona, Catalonia, 43520, Spain",
+        "road": "Camí del Marge Nou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roquetes",
+        "state": "Catalonia",
+        "postcode": "43520",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "084, Camí del Marge Nou, Colònia Parellades, Roquetes, Baix Ebre, Tarragona, Catalonia, 43520, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:39.608988+00:00",
+  "_kind": "geo_samples"
+}

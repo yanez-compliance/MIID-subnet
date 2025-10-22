@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Krasnoyarsk",
+  "geonameid": 1502026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.03747474823215,
+      "lon": 92.89299766331,
+      "geoinfo": {
+        "display_name": "улица Молокова, Взлётка, 1-ый микрорайон, Взлётка, Советский район, Krasnoyarsk, Krasnoyarsk Urban Okrug, Krasnoyarsk Krai, Siberian Federal District, 660077, Russia",
+        "road": "улица Молокова",
+        "house_number": null,
+        "neighbourhood": "Взлётка, 1-ый микрорайон",
+        "suburb": "Взлётка",
+        "city_district": "Советский район",
+        "city": "Krasnoyarsk",
+        "state": "Krasnoyarsk Krai",
+        "postcode": "660077",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Молокова, Krasnoyarsk, Krasnoyarsk Krai, Russia"
+    },
+    {
+      "lat": 56.01260023622118,
+      "lon": 92.94261174868382,
+      "geoinfo": {
+        "display_name": "2а стр 11, Коммунальная улица, Кировский район, Krasnoyarsk, Krasnoyarsk Urban Okrug, Krasnoyarsk Krai, Siberian Federal District, 660059, Russia",
+        "road": "Коммунальная улица",
+        "house_number": "2а стр 11",
+        "neighbourhood": null,
+        "suburb": "Кировский район",
+        "city_district": null,
+        "city": "Krasnoyarsk",
+        "state": "Krasnoyarsk Krai",
+        "postcode": "660059",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "2а стр 11, Коммунальная улица, Кировский район, Krasnoyarsk, Krasnoyarsk Urban Okrug, Krasnoyarsk Krai, Siberian Federal District, 660059, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:50:04.134835+00:00",
+  "_kind": "geo_samples"
+}

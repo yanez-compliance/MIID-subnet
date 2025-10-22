@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Meiningen",
+  "geonameid": 2872225,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.58601988940488,
+      "lon": 10.356454902358086,
+      "geoinfo": {
+        "display_name": "Mönchsweg, Herpf, Meiningen, Landkreis Schmalkalden-Meiningen, Thuringia, 98617, Germany",
+        "road": "Mönchsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Herpf",
+        "city": "Meiningen",
+        "state": "Thuringia",
+        "postcode": "98617",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Mönchsweg, Meiningen, Thuringia, Germany"
+    },
+    {
+      "lat": 50.589970622347614,
+      "lon": 10.398877299769916,
+      "geoinfo": {
+        "display_name": "Kaffeeweg, Meiningen, Weidig, Kernstadt Meiningen, Meiningen, Landkreis Schmalkalden-Meiningen, Thuringia, 98617, Germany",
+        "road": "Kaffeeweg",
+        "house_number": null,
+        "neighbourhood": "Meiningen",
+        "suburb": "Weidig",
+        "city_district": "Kernstadt Meiningen",
+        "city": "Meiningen",
+        "state": "Thuringia",
+        "postcode": "98617",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "832, Kaffeeweg, Meiningen, Weidig, Kernstadt Meiningen, Meiningen, Landkreis Schmalkalden-Meiningen, Thuringia, 98617, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:14.176370+00:00",
+  "_kind": "geo_samples"
+}

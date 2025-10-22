@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Chincha Alta",
+  "geonameid": 3943789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.452666959089587,
+      "lon": -76.13902301092857,
+      "geoinfo": {
+        "display_name": "Calle Simón Bolívar, San Pablito, El Pedregal, Chincha Baja, Province of Chincha, Ica, 11700, Peru",
+        "road": "Calle Simón Bolívar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chincha Baja",
+        "state": "Ica",
+        "postcode": "11700",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle Simón Bolívar, Chincha Alta, Ica, Peru"
+    },
+    {
+      "lat": -13.383077216145617,
+      "lon": -76.14549604451932,
+      "geoinfo": {
+        "display_name": "El Amarillo, Grocio Prado, Province of Chincha, Ica, 11700, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grocio Prado",
+        "state": "Ica",
+        "postcode": "11700",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "605, El Amarillo, Grocio Prado, Province of Chincha, Ica, 11700, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:12.142015+00:00",
+  "_kind": "geo_samples"
+}

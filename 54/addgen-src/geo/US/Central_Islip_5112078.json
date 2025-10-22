@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Central Islip",
+  "geonameid": 5112078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.779031720612636,
+      "lon": -73.1909973143996,
+      "geoinfo": {
+        "display_name": "Central Islip Fire Station 3, 720, Eastview Drive, Brentwood, Town of Islip, Suffolk County, New York, 11722, United States",
+        "road": "Eastview Drive",
+        "house_number": "720",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "New York",
+        "postcode": "11722",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "720 Eastview Drive, Central Islip, New York, United States"
+    },
+    {
+      "lat": 40.78206465603634,
+      "lon": -73.24448328717116,
+      "geoinfo": {
+        "display_name": "Brentwood Parkway, Brentwood, Town of Islip, Suffolk County, New York, 11717, United States",
+        "road": "Brentwood Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "New York",
+        "postcode": "11717",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "238, Brentwood Parkway, Brentwood, Town of Islip, Suffolk County, New York, 11717, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:19.577338+00:00",
+  "_kind": "geo_samples"
+}

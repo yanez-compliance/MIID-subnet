@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Heston",
+  "geonameid": 2647027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.48469049244665,
+      "lon": -0.4183536056706883,
+      "geoinfo": {
+        "display_name": "Cranford Lane, London Borough of Hillingdon, London, Greater London, England, UB3 5HY, United Kingdom",
+        "road": "Cranford Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Hillingdon",
+        "city": "London",
+        "state": "England",
+        "postcode": "UB3 5HY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cranford Lane, Heston, England, United Kingdom"
+    },
+    {
+      "lat": 51.44562246522958,
+      "lon": -0.4031280140297862,
+      "geoinfo": {
+        "display_name": "Camden Avenue, Feltham, London Borough of Hounslow, London, Greater London, England, TW13 5AZ, United Kingdom",
+        "road": "Camden Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Feltham",
+        "city_district": "London Borough of Hounslow",
+        "city": "London",
+        "state": "England",
+        "postcode": "TW13 5AZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Camden Avenue, Feltham, London Borough of Hounslow, London, Greater London, England, TW13 5AZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:14.561431+00:00",
+  "_kind": "geo_samples"
+}

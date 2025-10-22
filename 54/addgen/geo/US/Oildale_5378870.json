@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oildale",
+  "geonameid": 5378870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.40969919363153,
+      "lon": -119.00936085163521,
+      "geoinfo": {
+        "display_name": "Angus Lane, Kern County, California, 93305, United States",
+        "road": "Angus Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Angus Lane, Oildale, California, United States"
+    },
+    {
+      "lat": 35.45482347446064,
+      "lon": -119.03525332320544,
+      "geoinfo": {
+        "display_name": "Granite Road, Kern County, California, 93302, United States",
+        "road": "Granite Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93302",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "079, Granite Road, Kern County, California, 93302, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:47.340783+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lulou",
+  "geonameid": 1802020,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.718640936095554,
+      "lon": 116.81193278717141,
+      "geoinfo": {
+        "display_name": "日定线, Pei County, Xuzhou, Jiangsu, 221000, China",
+        "road": "日定线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pei County",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "日定线, Pei County, Xuzhou, Jiangsu, 221000, China"
+    },
+    {
+      "lat": 34.751185102641024,
+      "lon": 116.79224551974907,
+      "geoinfo": {
+        "display_name": "朱寨镇, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "411, 朱寨镇, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:54:41.397591+00:00",
+  "_kind": "geo_samples"
+}

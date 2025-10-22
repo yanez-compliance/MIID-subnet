@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Albertville",
+  "geonameid": 3038266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.71608685438002,
+      "lon": 6.405216127461315,
+      "geoinfo": {
+        "display_name": "158, Route de l'Epignier, L'Epignier, Thénésol, Albertville, Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 73200, France",
+        "road": "Route de l'Epignier",
+        "house_number": "158",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thénésol",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "73200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "158 Route de l'Epignier, Albertville, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.63459520397319,
+      "lon": 6.36636233214304,
+      "geoinfo": {
+        "display_name": "Route de Monthion, Grignon, Albertville, Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 73200, France",
+        "road": "Route de Monthion",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grignon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "73200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "935, Route de Monthion, Grignon, Albertville, Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 73200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:48.215517+00:00",
+  "_kind": "geo_samples"
+}

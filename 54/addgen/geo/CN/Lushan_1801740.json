@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Lushan",
+  "geonameid": 1801740,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.6144281826242,
+      "lon": 107.77587702168485,
+      "geoinfo": {
+        "display_name": "Lushan, Kaili, Qiandongnan, Guizhou, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lushan",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lushan, Guizhou, China"
+    },
+    {
+      "lat": 26.638375788845394,
+      "lon": 107.79615004818292,
+      "geoinfo": {
+        "display_name": "S308, Lushan, Kaili, Qiandongnan, Guizhou, China",
+        "road": "S308",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lushan",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S308, Lushan, Kaili, Qiandongnan, 03816 Guizhou, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:54:32.629386+00:00",
+  "_kind": "geo_samples"
+}

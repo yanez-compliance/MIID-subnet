@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "St Albans",
+  "geonameid": 8015209,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.7491255814368,
+      "lon": 144.814391394262,
+      "geoinfo": {
+        "display_name": "11, Occold Court, St Albans South, St Albans, Melbourne, City of Brimbank, Victoria, 3021, Australia",
+        "road": "Occold Court",
+        "house_number": "11",
+        "neighbourhood": "St Albans South",
+        "suburb": "St Albans",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3021",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "11 Occold Court, St Albans, Victoria, Australia"
+    },
+    {
+      "lat": -37.715394261474664,
+      "lon": 144.8317279769551,
+      "geoinfo": {
+        "display_name": "13, Mercedes Street, Keilor, Melbourne, City of Brimbank, Victoria, 3036, Australia",
+        "road": "Mercedes Street",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Keilor",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3036",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "13, Mercedes Street, Keilor, Melbourne, City of Brimbank, Victoria, 3036, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:43.443162+00:00",
+  "_kind": "geo_samples"
+}

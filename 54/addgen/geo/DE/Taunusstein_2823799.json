@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Taunusstein",
+  "geonameid": 2823799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.134622651950664,
+      "lon": 8.12495612508148,
+      "geoinfo": {
+        "display_name": "Aarstraße, Stiftsmühle, Bleidenstadt, Taunusstein, Rheingau-Taunus-Kreis, Hesse, 65232, Germany",
+        "road": "Aarstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bleidenstadt",
+        "city_district": null,
+        "city": null,
+        "state": "Hesse",
+        "postcode": "65232",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Aarstraße, Taunusstein, Hesse, Germany"
+    },
+    {
+      "lat": 50.16663676038269,
+      "lon": 8.20535176167123,
+      "geoinfo": {
+        "display_name": "Lilienstraße, Neuhof, Taunusstein, Rheingau-Taunus-Kreis, Hesse, 65232, Germany",
+        "road": "Lilienstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuhof",
+        "state": "Hesse",
+        "postcode": "65232",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "289, Lilienstraße, Neuhof, Taunusstein, Rheingau-Taunus-Kreis, Hesse, 65232, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:00.341202+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seminole",
+  "geonameid": 4172434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.84601958404141,
+      "lon": -82.76519315234243,
+      "geoinfo": {
+        "display_name": "Seminole Village, Seminole, Pinellas County, Florida, 33777, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Seminole Village",
+        "suburb": null,
+        "city_district": null,
+        "city": "Seminole",
+        "state": "Florida",
+        "postcode": "33777",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seminole Village, Seminole, Florida, United States"
+    },
+    {
+      "lat": 27.862358684198743,
+      "lon": -82.80575422477392,
+      "geoinfo": {
+        "display_name": "12027, 98th Avenue North, Seminole, Pinellas County, Florida, 33772, United States",
+        "road": "98th Avenue North",
+        "house_number": "12027",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seminole",
+        "state": "Florida",
+        "postcode": "33772",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12027, 98th Avenue North, Seminole, Pinellas County, Florida, 33772, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:39.115251+00:00",
+  "_kind": "geo_samples"
+}

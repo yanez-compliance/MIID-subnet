@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "San Bartolomé",
+  "geonameid": 2511447,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.001522534469004,
+      "lon": -13.565474858338158,
+      "geoinfo": {
+        "display_name": "Calle Jorge Luís Borges, Arrecife, Las Palmas, Canary Islands, 35507, Spain",
+        "road": "Calle Jorge Luís Borges",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arrecife",
+        "state": null,
+        "postcode": "35507",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Jorge Luís Borges, San Bartolomé, Spain"
+    },
+    {
+      "lat": 28.998479096714814,
+      "lon": -13.653983285695702,
+      "geoinfo": {
+        "display_name": "Carretera El Centro, Masdache, Tías, Las Palmas, Canary Islands, 35572, Spain",
+        "road": "Carretera El Centro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tías",
+        "state": null,
+        "postcode": "35572",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "036, Carretera El Centro, Masdache, Tías, Las Palmas, Canary Islands, 35572, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:45.954805+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Milford",
+  "geonameid": 5106279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.13807214861854,
+      "lon": -74.42562771435801,
+      "geoinfo": {
+        "display_name": "Sponge Bob Square Pants, West Milford, Passaic County, New Jersey, United States",
+        "road": "Sponge Bob Square Pants",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Milford",
+        "state": "New Jersey",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sponge Bob Square Pants, West Milford, New Jersey, United States"
+    },
+    {
+      "lat": 41.09970553506044,
+      "lon": -74.39378024037805,
+      "geoinfo": {
+        "display_name": "Mercer Place, West Milford, Passaic County, New Jersey, 07480, United States",
+        "road": "Mercer Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Milford",
+        "state": "New Jersey",
+        "postcode": "07480",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "771, Mercer Place, West Milford, Passaic County, New Jersey, 07480, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:53.697790+00:00",
+  "_kind": "geo_samples"
+}

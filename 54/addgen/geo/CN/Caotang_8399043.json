@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Caotang",
+  "geonameid": 8399043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.123842330973304,
+      "lon": 109.61407193827979,
+      "geoinfo": {
+        "display_name": "Caotang, Fengjie County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caotang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Caotang, Chongqing, China"
+    },
+    {
+      "lat": 31.07176989297987,
+      "lon": 109.58332230442471,
+      "geoinfo": {
+        "display_name": "武汉 - 大理, Baidi, Fengjie County, Chongqing, China",
+        "road": "武汉 - 大理",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baidi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "429, 武汉 - 大理, Baidi, Fengjie County, 62355 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:05.195690+00:00",
+  "_kind": "geo_samples"
+}

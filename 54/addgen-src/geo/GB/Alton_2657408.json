@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Alton",
+  "geonameid": 2657408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.15560262161188,
+      "lon": -0.9589918022438059,
+      "geoinfo": {
+        "display_name": "Anstey Mill Lane, Anstey, Alton, Holybourne, East Hampshire, Hampshire, England, GU34 2PR, United Kingdom",
+        "road": "Anstey Mill Lane",
+        "house_number": null,
+        "neighbourhood": "Anstey",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Hampshire",
+        "state": "England",
+        "postcode": "GU34 2PR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Anstey Mill Lane, Alton, England, United Kingdom"
+    },
+    {
+      "lat": 51.18252965735707,
+      "lon": -0.99866406109539,
+      "geoinfo": {
+        "display_name": "The Avenue, Golden Pot, Shalden, East Hampshire, Hampshire, England, GU34 4DS, United Kingdom",
+        "road": "The Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shalden",
+        "city_district": null,
+        "city": "East Hampshire",
+        "state": "England",
+        "postcode": "GU34 4DS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Avenue, Golden Pot, Shalden, East Hampshire, Hampshire, England, GU34 4DS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:39.986421+00:00",
+  "_kind": "geo_samples"
+}

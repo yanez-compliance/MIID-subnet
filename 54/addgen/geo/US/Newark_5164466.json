@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newark",
+  "geonameid": 5164466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.06334315277032,
+      "lon": -82.37269088108384,
+      "geoinfo": {
+        "display_name": "SR 16, Newark, Licking County, Ohio, 43055, United States",
+        "road": "SR 16",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "Ohio",
+        "postcode": "43055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "SR 16, Newark, Ohio, United States"
+    },
+    {
+      "lat": 40.06154061191524,
+      "lon": -82.38497166678003,
+      "geoinfo": {
+        "display_name": "99, Montgomery Place, Newark, Licking County, Ohio, 43055, United States",
+        "road": "Montgomery Place",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "Ohio",
+        "postcode": "43055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99, Montgomery Place, Newark, Licking County, Ohio, 43055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:14.343538+00:00",
+  "_kind": "geo_samples"
+}

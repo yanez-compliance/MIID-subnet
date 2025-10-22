@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Kawit",
+  "geonameid": 1709003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.414047880820917,
+      "lon": 120.87181134044411,
+      "geoinfo": {
+        "display_name": "Road 1, Tejeros Convention, Rosario, Cavite, Calabarzon, 4106, Philippines",
+        "road": "Road 1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosario",
+        "state": "Cavite",
+        "postcode": "4106",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Road 1, Kawit, Cavite, Philippines"
+    },
+    {
+      "lat": 14.439162416531378,
+      "lon": 120.87509510771181,
+      "geoinfo": {
+        "display_name": "San Rafael III, Noveleta, Cavite, Calabarzon, 4105, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noveleta",
+        "state": "Cavite",
+        "postcode": "4105",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "904, San Rafael III, Noveleta, Cavite, Calabarzon, 4105, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:36.742953+00:00",
+  "_kind": "geo_samples"
+}

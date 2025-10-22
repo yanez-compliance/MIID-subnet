@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Opladen",
+  "geonameid": 2857185,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.104125566416194,
+      "lon": 6.975299613018265,
+      "geoinfo": {
+        "display_name": "A 542, Immigrath, Langenfeld (Rheinland), Kreis Mettmann, North Rhine-Westphalia, 40764, Germany",
+        "road": "A 542",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Immigrath",
+        "city_district": null,
+        "city": "Langenfeld (Rheinland)",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40764",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 542, Opladen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.05562023003056,
+      "lon": 6.9413689947020085,
+      "geoinfo": {
+        "display_name": "Golo-Mann-Straße, Rheindorf, Stadtbezirk I, Leverkusen, North Rhine-Westphalia, 51371, Germany",
+        "road": "Golo-Mann-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rheindorf",
+        "city_district": "Stadtbezirk I",
+        "city": "Leverkusen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51371",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "844, Golo-Mann-Straße, Rheindorf, Stadtbezirk I, Leverkusen, North Rhine-Westphalia, 51371, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:17.479772+00:00",
+  "_kind": "geo_samples"
+}

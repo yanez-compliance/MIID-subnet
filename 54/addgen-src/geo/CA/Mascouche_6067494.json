@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Mascouche",
+  "geonameid": 6067494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.75699511182874,
+      "lon": -73.59129132842831,
+      "geoinfo": {
+        "display_name": "Croissant Nelligan, Mascouche, Les Moulins, Lanaudière, Quebec, J7K 1P2, Canada",
+        "road": "Croissant Nelligan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mascouche",
+        "state": "Quebec",
+        "postcode": "J7K 1P2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Croissant Nelligan, Mascouche, Quebec, Canada"
+    },
+    {
+      "lat": 45.755716326038495,
+      "lon": -73.55205914436402,
+      "geoinfo": {
+        "display_name": "Mascouche, Les Moulins, Lanaudière, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mascouche",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "995, Mascouche, Les Moulins, Lanaudière, 45582 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:57.034677+00:00",
+  "_kind": "geo_samples"
+}

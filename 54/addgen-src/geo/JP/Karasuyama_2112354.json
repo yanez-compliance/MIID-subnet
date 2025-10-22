@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Karasuyama",
+  "geonameid": 2112354,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.622487937773094,
+      "lon": 140.158920850384,
+      "geoinfo": {
+        "display_name": "Nasukarasuyama, Tochigi Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nasukarasuyama",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Karasuyama, Japan"
+    },
+    {
+      "lat": 36.66273328378514,
+      "lon": 140.15558729949754,
+      "geoinfo": {
+        "display_name": "Chuo 3-chome, Nasukarasuyama, Tochigi Prefecture, 321-0621, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Chuo 3-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nasukarasuyama",
+        "state": null,
+        "postcode": "321-0621",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Chuo 3-chome, Nasukarasuyama, Tochigi Prefecture, 321-0621, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:38.073112+00:00",
+  "_kind": "geo_samples"
+}

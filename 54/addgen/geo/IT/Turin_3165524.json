@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Turin",
+  "geonameid": 3165524,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.05104949922391,
+      "lon": 7.672689104292031,
+      "geoinfo": {
+        "display_name": "10, Via Giovanni Argentero, San Salvario, Circoscrizione 8, Turin, Piedmont, 10126, Italy",
+        "road": "Via Giovanni Argentero",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "San Salvario",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10126",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "10 Via Giovanni Argentero, Turin, Piedmont, Italy"
+    },
+    {
+      "lat": 45.03413247276585,
+      "lon": 7.704982696442363,
+      "geoinfo": {
+        "display_name": "Strada dei Boschi, Pian del Lot, Circoscrizione 8, Cavoretto, Turin, Piedmont, 10133, Italy",
+        "road": "Strada dei Boschi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Circoscrizione 8",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10133",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada dei Boschi, Pian del Lot, Circoscrizione 8, Cavoretto, Turin, Piedmont, 10133, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:39.561610+00:00",
+  "_kind": "geo_samples"
+}

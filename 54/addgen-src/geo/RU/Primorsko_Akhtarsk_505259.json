@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Primorsko-Akhtarsk",
+  "geonameid": 505259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.07519601149547,
+      "lon": 38.173121149067654,
+      "geoinfo": {
+        "display_name": "улица Дружбы, Primorsko-Akhtarsk, Primorsko-Akhtarsky District, Krasnodar Krai, Southern Federal District, 353860, Russia",
+        "road": "улица Дружбы",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Primorsko-Akhtarsk",
+        "state": "Krasnodar Krai",
+        "postcode": "353860",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Дружбы, Primorsko-Akhtarsk, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 46.058343850180506,
+      "lon": 38.13316853511884,
+      "geoinfo": {
+        "display_name": "мыс Бабиный, Primorsko-Akhtarsky District, Krasnodar Krai, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "519, мыс Бабиный, Primorsko-Akhtarsky District, 96236 Krasnodar Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:00.411200+00:00",
+  "_kind": "geo_samples"
+}

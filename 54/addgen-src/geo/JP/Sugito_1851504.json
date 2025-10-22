@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sugito",
+  "geonameid": 1851504,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.07124796408943,
+      "lon": 139.71479196502202,
+      "geoinfo": {
+        "display_name": "Minami 1-chome, Satte, Saitama Prefecture, 340-0155, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Minami 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Satte",
+        "state": null,
+        "postcode": "340-0155",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Minami 1-chome, Sugito, Japan"
+    },
+    {
+      "lat": 36.069027228203794,
+      "lon": 139.74634556207,
+      "geoinfo": {
+        "display_name": "Hirasuka, Satte, Saitama Prefecture, 340-0121, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Satte",
+        "state": null,
+        "postcode": "340-0121",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hirasuka, Satte, Saitama Prefecture, 340-0121, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:07.348761+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bourges",
+  "geonameid": 3031005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.063560890584434,
+      "lon": 2.377864121887949,
+      "geoinfo": {
+        "display_name": "Rue Joseph le Brix, Quartier Diderot, Bourges, Cher, Centre-Val de Loire, Metropolitan France, 18000, France",
+        "road": "Rue Joseph le Brix",
+        "house_number": null,
+        "neighbourhood": "Quartier Diderot",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourges",
+        "state": "Centre-Val de Loire",
+        "postcode": "18000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Joseph le Brix, Bourges, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.08574163129841,
+      "lon": 2.3642506806277,
+      "geoinfo": {
+        "display_name": "202 g, Rue Louis Mallet, Vouzay, Bourges, Cher, Centre-Val de Loire, Metropolitan France, 18000, France",
+        "road": "Rue Louis Mallet",
+        "house_number": "202 g",
+        "neighbourhood": "Vouzay",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bourges",
+        "state": "Centre-Val de Loire",
+        "postcode": "18000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "202 g, Rue Louis Mallet, Vouzay, Bourges, Cher, Centre-Val de Loire, Metropolitan France, 18000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:59.078051+00:00",
+  "_kind": "geo_samples"
+}

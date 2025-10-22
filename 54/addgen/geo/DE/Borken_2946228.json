@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Borken",
+  "geonameid": 2946228,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.8180910870075,
+      "lon": 6.892733568186723,
+      "geoinfo": {
+        "display_name": "Dingekamp, Marbeck, Borken, Kreis Borken, North Rhine-Westphalia, 46325, Germany",
+        "road": "Dingekamp",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borken",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46325",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dingekamp, Borken, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.8025185423812,
+      "lon": 6.874694451693708,
+      "geoinfo": {
+        "display_name": "23, Essriege, Marbeck, Borken, Kreis Borken, North Rhine-Westphalia, 46325, Germany",
+        "road": "Essriege",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Borken",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46325",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "23, Essriege, Marbeck, Borken, Kreis Borken, North Rhine-Westphalia, 46325, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:05.132633+00:00",
+  "_kind": "geo_samples"
+}

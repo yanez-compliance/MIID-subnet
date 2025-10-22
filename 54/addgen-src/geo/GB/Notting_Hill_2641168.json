@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Notting Hill",
+  "geonameid": 2641168,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.475500905763845,
+      "lon": -0.24189580288024973,
+      "geoinfo": {
+        "display_name": "Church Road, London Borough of Richmond upon Thames, London, Greater London, England, SW13 9HL, United Kingdom",
+        "road": "Church Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "SW13 9HL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Road, Notting Hill, England, United Kingdom"
+    },
+    {
+      "lat": 51.47501163894469,
+      "lon": -0.20622248170513008,
+      "geoinfo": {
+        "display_name": "Za Pizzica, Fulham Road, Hurlingham, Fulham, London Borough of Hammersmith and Fulham, London, Greater London, England, SW6 5HG, United Kingdom",
+        "road": "Fulham Road",
+        "house_number": null,
+        "neighbourhood": "Hurlingham",
+        "suburb": "Fulham",
+        "city_district": "London Borough of Hammersmith and Fulham",
+        "city": "London",
+        "state": "England",
+        "postcode": "SW6 5HG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Za Pizzica, Fulham Road, Hurlingham, Fulham, London Borough of Hammersmith and Fulham, London, Greater London, England, SW6 5HG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:27.772544+00:00",
+  "_kind": "geo_samples"
+}

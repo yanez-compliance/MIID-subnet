@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kulmbach",
+  "geonameid": 2882588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.099121454914126,
+      "lon": 11.448978695905444,
+      "geoinfo": {
+        "display_name": "6, Ludwig-Crößmann-Straße, Lerchenbühl, Weiher, Kulmbach, Landkreis Kulmbach, Bavaria, 95326, Germany",
+        "road": "Ludwig-Crößmann-Straße",
+        "house_number": "6",
+        "neighbourhood": "Lerchenbühl",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kulmbach",
+        "state": "Bavaria",
+        "postcode": "95326",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6 Ludwig-Crößmann-Straße, Kulmbach, Bavaria, Germany"
+    },
+    {
+      "lat": 50.13670682386736,
+      "lon": 11.453922818010001,
+      "geoinfo": {
+        "display_name": "Flugplatz Kulmbach, Trimm-Dich-Pfad Kulmbach, Oberpurbach, Kulmbach, Landkreis Kulmbach, Bavaria, 95326, Germany",
+        "road": "Trimm-Dich-Pfad Kulmbach",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kulmbach",
+        "state": "Bavaria",
+        "postcode": "95326",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "981, Trimm-Dich-Pfad Kulmbach, Kulmbach, 95326 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:50.729048+00:00",
+  "_kind": "geo_samples"
+}

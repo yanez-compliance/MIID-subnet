@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Valley Stream",
+  "geonameid": 5129248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.702667121652,
+      "lon": -73.7043786323204,
+      "geoinfo": {
+        "display_name": "1655, Estelle Avenue, Elmont, Town of Hempstead, Nassau County, New York, 11003, United States",
+        "road": "Estelle Avenue",
+        "house_number": "1655",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmont",
+        "state": "New York",
+        "postcode": "11003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1655 Estelle Avenue, North Valley Stream, New York, United States"
+    },
+    {
+      "lat": 40.66262233481389,
+      "lon": -73.74038928924682,
+      "geoinfo": {
+        "display_name": "240-17, Weller Avenue, Rosedale, Queens, Queens County, New York, 11422, United States",
+        "road": "Weller Avenue",
+        "house_number": "240-17",
+        "neighbourhood": "Rosedale",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11422",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "240-17, Weller Avenue, Rosedale, Queens, Queens County, New York, 11422, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:21.354720+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "La Prairie",
+  "geonameid": 6049863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.415242324127725,
+      "lon": -73.5415717592464,
+      "geoinfo": {
+        "display_name": "Sainte-Catherine, Roussillon, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Catherine",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "La Prairie, Quebec, Canada"
+    },
+    {
+      "lat": 45.44426735030765,
+      "lon": -73.51362204600751,
+      "geoinfo": {
+        "display_name": "Brossard, Urban agglomeration of Longueuil, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brossard",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "399, Brossard, Urban agglomeration of Longueuil, Montérégie, 19785 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:34.407161+00:00",
+  "_kind": "geo_samples"
+}

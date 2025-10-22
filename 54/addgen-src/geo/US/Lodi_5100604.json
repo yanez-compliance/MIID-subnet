@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lodi",
+  "geonameid": 5100604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.88292602930099,
+      "lon": -74.13154569149773,
+      "geoinfo": {
+        "display_name": "Field #1 (Potts Field), Hamilton Avenue, Clifton, Passaic County, New Jersey, 07011, United States",
+        "road": "Hamilton Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clifton",
+        "state": "New Jersey",
+        "postcode": "07011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hamilton Avenue, Lodi, New Jersey, United States"
+    },
+    {
+      "lat": 40.84661757687466,
+      "lon": -74.06963626689922,
+      "geoinfo": {
+        "display_name": "Industrial Avenue, Teterboro, Moonachie, Bergen County, New Jersey, 07608, United States",
+        "road": "Industrial Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moonachie",
+        "state": "New Jersey",
+        "postcode": "07608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "979, Industrial Avenue, Teterboro, Moonachie, Bergen County, New Jersey, 07608, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:23.367066+00:00",
+  "_kind": "geo_samples"
+}

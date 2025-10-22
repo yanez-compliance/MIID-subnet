@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kentwood",
+  "geonameid": 4998018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.88442324550325,
+      "lon": -85.60254342989225,
+      "geoinfo": {
+        "display_name": "Brenton Woods Drive Southeast, Kentwood, Kent County, Michigan, 49508, United States",
+        "road": "Brenton Woods Drive Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kentwood",
+        "state": "Michigan",
+        "postcode": "49508",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brenton Woods Drive Southeast, Kentwood, Michigan, United States"
+    },
+    {
+      "lat": 42.91065633068092,
+      "lon": -85.62827059929161,
+      "geoinfo": {
+        "display_name": "Meijer, 1540, 28th Street Southeast, Third Ward, Grand Rapids, Kent County, Michigan, 49508, United States",
+        "road": "28th Street Southeast",
+        "house_number": "1540",
+        "neighbourhood": null,
+        "suburb": "Third Ward",
+        "city_district": null,
+        "city": "Grand Rapids",
+        "state": "Michigan",
+        "postcode": "49508",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Meijer, 1540, 28th Street Southeast, Third Ward, Grand Rapids, Kent County, Michigan, 49508, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:52.487574+00:00",
+  "_kind": "geo_samples"
+}

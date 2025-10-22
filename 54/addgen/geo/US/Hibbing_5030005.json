@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hibbing",
+  "geonameid": 5030005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.44031854523876,
+      "lon": -92.89589684658962,
+      "geoinfo": {
+        "display_name": "11521, Spudville Road, Redore, Hibbing, Saint Louis County, Minnesota, 55746, United States",
+        "road": "Spudville Road",
+        "house_number": "11521",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hibbing",
+        "state": "Minnesota",
+        "postcode": "55746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11521 Spudville Road, Hibbing, Minnesota, United States"
+    },
+    {
+      "lat": 47.40422615177186,
+      "lon": -92.98029502077685,
+      "geoinfo": {
+        "display_name": "3696, Landfill Road, Hibbing, Saint Louis County, Minnesota, 55746, United States",
+        "road": "Landfill Road",
+        "house_number": "3696",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hibbing",
+        "state": "Minnesota",
+        "postcode": "55746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3696, Landfill Road, Hibbing, Saint Louis County, Minnesota, 55746, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:15.136930+00:00",
+  "_kind": "geo_samples"
+}

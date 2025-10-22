@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Fuki",
+  "geonameid": 9633186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.663823787851264,
+      "lon": 135.68974023793447,
+      "geoinfo": {
+        "display_name": "National Highway Route 308, Onitoricho, Ikoma, Nara Prefecture, 630-0234, Japan",
+        "road": "National Highway Route 308",
+        "house_number": null,
+        "neighbourhood": "Onitoricho",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ikoma",
+        "state": null,
+        "postcode": "630-0234",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 308, Fuki, Japan"
+    },
+    {
+      "lat": 34.60808234141294,
+      "lon": 135.6962657037743,
+      "geoinfo": {
+        "display_name": "Seyakita 1-chome, Sango, Ikoma County, Nara Prefecture, 636-0814, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Seyakita 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sango",
+        "state": null,
+        "postcode": "636-0814",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Seyakita 1-chome, Sango, Ikoma County, Nara Prefecture, 636-0814, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:44.353780+00:00",
+  "_kind": "geo_samples"
+}

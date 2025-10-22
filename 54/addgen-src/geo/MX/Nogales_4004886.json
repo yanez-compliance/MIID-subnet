@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Nogales",
+  "geonameid": 4004886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.30341292576214,
+      "lon": -110.90678691633745,
+      "geoinfo": {
+        "display_name": "Periférico Oriente, Heroica Nogales, Nogales, Sonora, 84074, Mexico",
+        "road": "Periférico Oriente",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heroica Nogales",
+        "state": "Sonora",
+        "postcode": "84074",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Periférico Oriente, Nogales, Sonora, Mexico"
+    },
+    {
+      "lat": 31.2883015318219,
+      "lon": -110.92319906058171,
+      "geoinfo": {
+        "display_name": "Calle Campanario, Heroica Nogales, Nogales, Sonora, 84063, Mexico",
+        "road": "Calle Campanario",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heroica Nogales",
+        "state": "Sonora",
+        "postcode": "84063",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "562, Calle Campanario, Heroica Nogales, Nogales, Sonora, 84063, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:32.086472+00:00",
+  "_kind": "geo_samples"
+}

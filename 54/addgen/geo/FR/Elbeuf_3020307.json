@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Elbeuf",
+  "geonameid": 3020307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.259783431251094,
+      "lon": 1.0135257124913188,
+      "geoinfo": {
+        "display_name": "Elbeuf, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76500, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elbeuf",
+        "state": "Normandy",
+        "postcode": "76500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Elbeuf, Normandy, France"
+    },
+    {
+      "lat": 49.29068314176539,
+      "lon": 0.9601381818664907,
+      "geoinfo": {
+        "display_name": "Rue Pochet, Saint-Ouen-du-Tilleul, Bernay, Eure, Normandy, Metropolitan France, 27670, France",
+        "road": "Rue Pochet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ouen-du-Tilleul",
+        "state": "Normandy",
+        "postcode": "27670",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "514, Rue Pochet, Saint-Ouen-du-Tilleul, Bernay, Eure, Normandy, Metropolitan France, 27670, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:49.492560+00:00",
+  "_kind": "geo_samples"
+}

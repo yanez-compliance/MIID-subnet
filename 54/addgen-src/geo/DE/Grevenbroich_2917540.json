@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Grevenbroich",
+  "geonameid": 2917540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.1059390499217,
+      "lon": 6.5412237328672385,
+      "geoinfo": {
+        "display_name": "Herberath, Bedburdyck, Jüchen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41363, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jüchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41363",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Grevenbroich, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.10677194590122,
+      "lon": 6.525074517787316,
+      "geoinfo": {
+        "display_name": "Herberath, Bedburdyck, Jüchen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41363, Germany",
+        "road": "Herberath",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jüchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41363",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "423, Herberath, Bedburdyck, Jüchen, Rhein-Kreis Neuss, North Rhine-Westphalia, 41363, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:18.372978+00:00",
+  "_kind": "geo_samples"
+}

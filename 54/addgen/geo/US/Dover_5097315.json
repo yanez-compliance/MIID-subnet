@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dover",
+  "geonameid": 5097315,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.915444060879324,
+      "lon": -74.58850019050935,
+      "geoinfo": {
+        "display_name": "Spicertown, Rockaway Township, Morris County, New Jersey, 07885, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockaway Township",
+        "state": "New Jersey",
+        "postcode": "07885",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dover, New Jersey, United States"
+    },
+    {
+      "lat": 40.89847052211635,
+      "lon": -74.55131559409169,
+      "geoinfo": {
+        "display_name": "Ev Ken Terrace, Rockaway Township, Morris County, New Jersey, 07801, United States",
+        "road": "Ev Ken Terrace",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rockaway Township",
+        "state": "New Jersey",
+        "postcode": "07801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "924, Ev Ken Terrace, Rockaway Township, Morris County, New Jersey, 07801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:45.092190+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hammond",
+  "geonameid": 4326868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.47924772362784,
+      "lon": -90.44902824124938,
+      "geoinfo": {
+        "display_name": "West Florida Republic Parkway, Hammond, Tangipahoa Parish, Louisiana, 70404, United States",
+        "road": "West Florida Republic Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hammond",
+        "state": "Louisiana",
+        "postcode": "70404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Florida Republic Parkway, Hammond, Louisiana, United States"
+    },
+    {
+      "lat": 30.508176896493186,
+      "lon": -90.41494988600371,
+      "geoinfo": {
+        "display_name": "44514, South Airport Road, Hammond, Tangipahoa Parish, Louisiana, 70403, United States",
+        "road": "South Airport Road",
+        "house_number": "44514",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hammond",
+        "state": "Louisiana",
+        "postcode": "70403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "44514, South Airport Road, Hammond, Tangipahoa Parish, Louisiana, 70403, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:54.694426+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Piombino",
+  "geonameid": 3170674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.93313205992954,
+      "lon": 10.57920018317096,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Piombino, Italy"
+    },
+    {
+      "lat": 42.92369436037041,
+      "lon": 10.535265725548932,
+      "geoinfo": {
+        "display_name": "Centro Sportivo Stadio Magona d'Italia, Viale Regina Margherita, Porta a Terra, Piombino, Livorno, Tuscany, Italy",
+        "road": "Viale Regina Margherita",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Porta a Terra",
+        "city_district": null,
+        "city": "Piombino",
+        "state": "Tuscany",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "052, Viale Regina Margherita, Piombino, 28712 Tuscany, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:00.165805+00:00",
+  "_kind": "geo_samples"
+}

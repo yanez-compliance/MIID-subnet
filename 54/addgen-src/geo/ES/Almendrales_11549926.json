@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Almendrales",
+  "geonameid": 11549926,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.35471104687641,
+      "lon": -3.702228178293285,
+      "geoinfo": {
+        "display_name": "Los Ángeles, Villaverde, Madrid, Community of Madrid, 28041, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaverde",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Villaverde, Almendrales, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.36652624105799,
+      "lon": -3.6870792793202334,
+      "geoinfo": {
+        "display_name": "Calle de Periana, San Fermín, Usera, Madrid, Community of Madrid, 23043, Spain",
+        "road": "Calle de Periana",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Usera",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "23043",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "715, Calle de Periana, San Fermín, Usera, Madrid, Community of Madrid, 23043, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:17.352211+00:00",
+  "_kind": "geo_samples"
+}

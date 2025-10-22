@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chippenham",
+  "geonameid": 2653144,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.430536247252306,
+      "lon": -2.1568731141671007,
+      "geoinfo": {
+        "display_name": "Easton Lane, Easton, Corsham, Wiltshire, England, SN13 9QD, United Kingdom",
+        "road": "Easton Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Corsham",
+        "city_district": null,
+        "city": "Corsham",
+        "state": "England",
+        "postcode": "SN13 9QD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Easton Lane, Chippenham, England, United Kingdom"
+    },
+    {
+      "lat": 51.46352804779211,
+      "lon": -2.1542932682822076,
+      "geoinfo": {
+        "display_name": "Frogwell, Chippenham Without, Wiltshire, England, SN14 0RE, United Kingdom",
+        "road": "Frogwell",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chippenham Without",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "SN14 0RE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Frogwell, Chippenham Without, Wiltshire, England, SN14 0RE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:15.858620+00:00",
+  "_kind": "geo_samples"
+}

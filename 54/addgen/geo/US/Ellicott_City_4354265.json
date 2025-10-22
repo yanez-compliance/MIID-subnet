@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ellicott City",
+  "geonameid": 4354265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.24991031730377,
+      "lon": -76.84813671880558,
+      "geoinfo": {
+        "display_name": "9710, Gretchen Lane, Briarcliffe, Dorsey's Search, Ellicott City, Howard County, Maryland, 21042, United States",
+        "road": "Gretchen Lane",
+        "house_number": "9710",
+        "neighbourhood": null,
+        "suburb": "Dorsey's Search",
+        "city_district": null,
+        "city": "Ellicott City",
+        "state": "Maryland",
+        "postcode": "21042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9710 Gretchen Lane, Ellicott City, Maryland, United States"
+    },
+    {
+      "lat": 39.23815940648269,
+      "lon": -76.7654170165169,
+      "geoinfo": {
+        "display_name": "4922, March Brown Road, Elkridge, Howard County, Maryland, 21075, United States",
+        "road": "March Brown Road",
+        "house_number": "4922",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkridge",
+        "state": "Maryland",
+        "postcode": "21075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4922, March Brown Road, Elkridge, Howard County, Maryland, 21075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:19.114387+00:00",
+  "_kind": "geo_samples"
+}

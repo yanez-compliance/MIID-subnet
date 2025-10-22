@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Changnyeong",
+  "geonameid": 6903078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.55370723924344,
+      "lon": 128.49587249320365,
+      "geoinfo": {
+        "display_name": "Gyo-ri, Changnyeong-gun, South Gyeongsang, 50317, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gyo-ri",
+        "state": null,
+        "postcode": "50317",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Changnyeong, South Korea"
+    },
+    {
+      "lat": 35.57918006353058,
+      "lon": 128.5220902801873,
+      "geoinfo": {
+        "display_name": "Changmil-ro, Goam-myeon, Changnyeong-gun, South Gyeongsang, 50315, South Korea",
+        "road": "Changmil-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goam-myeon",
+        "state": null,
+        "postcode": "50315",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "617, Changmil-ro, 50315 Changnyeong, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:21.670119+00:00",
+  "_kind": "geo_samples"
+}

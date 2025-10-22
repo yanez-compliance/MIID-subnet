@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Penzing",
+  "geonameid": 2775371,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.20136085625936,
+      "lon": 16.311491611850006,
+      "geoinfo": {
+        "display_name": "33, Kienmayergasse, KG Breitensee, Penzing, Vienna, 1140, Austria",
+        "road": "Kienmayergasse",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "KG Breitensee",
+        "city_district": "Penzing",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1140",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "33 Kienmayergasse, Penzing, Austria"
+    },
+    {
+      "lat": 48.194724763286565,
+      "lon": 16.26922195776865,
+      "geoinfo": {
+        "display_name": "15, Käthe-Dorsch-Gasse, Upper Baumgarten, Baumgarten, Penzing, Vienna, 1140, Austria",
+        "road": "Käthe-Dorsch-Gasse",
+        "house_number": "15",
+        "neighbourhood": "Upper Baumgarten",
+        "suburb": "Baumgarten",
+        "city_district": "Penzing",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1140",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "15 Käthe-Dorsch-Gasse, Penzing, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:28:53.225313+00:00",
+  "_kind": "geo_samples"
+}

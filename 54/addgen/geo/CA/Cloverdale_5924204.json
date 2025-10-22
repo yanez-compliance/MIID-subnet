@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Cloverdale",
+  "geonameid": 5924204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.07972792478258,
+      "lon": -122.70004080040344,
+      "geoinfo": {
+        "display_name": "4349, 190 Street, South Surrey, Surrey, Metro Vancouver Regional District, British Columbia, V3Z 1B2, Canada",
+        "road": "190 Street",
+        "house_number": "4349",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "South Surrey",
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V3Z 1B2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "4349 190 Street, Cloverdale, British Columbia, Canada"
+    },
+    {
+      "lat": 49.10241773949178,
+      "lon": -122.68377183263547,
+      "geoinfo": {
+        "display_name": "19510, 55 Avenue, Cloverdale, Surrey, Metro Vancouver Regional District, British Columbia, V3S 7H1, Canada",
+        "road": "55 Avenue",
+        "house_number": "19510",
+        "neighbourhood": null,
+        "suburb": "Cloverdale",
+        "city_district": null,
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V3S 7H1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "19510, 55 Avenue, Cloverdale, Surrey, Metro Vancouver Regional District, British Columbia, V3S 7H1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:31.597379+00:00",
+  "_kind": "geo_samples"
+}

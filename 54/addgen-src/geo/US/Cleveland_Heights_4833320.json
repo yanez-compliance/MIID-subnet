@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cleveland Heights",
+  "geonameid": 4833320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.504366460153186,
+      "lon": -81.56366631683265,
+      "geoinfo": {
+        "display_name": "3273, Yorkshire Road, The Highlands, Cleveland Heights, Cuyahoga County, Ohio, 44118, United States",
+        "road": "Yorkshire Road",
+        "house_number": "3273",
+        "neighbourhood": "The Highlands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland Heights",
+        "state": "Ohio",
+        "postcode": "44118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3273 Yorkshire Road, Cleveland Heights, Ohio, United States"
+    },
+    {
+      "lat": 41.550063328579505,
+      "lon": -81.54204017741878,
+      "geoinfo": {
+        "display_name": "2150, Green Road, Euclid-Green, Cleveland, Cuyahoga County, Ohio, 44121, United States",
+        "road": "Green Road",
+        "house_number": "2150",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cleveland",
+        "state": "Ohio",
+        "postcode": "44121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2150, Green Road, Euclid-Green, Cleveland, Cuyahoga County, Ohio, 44121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:13.419576+00:00",
+  "_kind": "geo_samples"
+}

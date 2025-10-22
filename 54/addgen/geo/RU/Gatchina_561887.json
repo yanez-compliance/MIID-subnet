@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Gatchina",
+  "geonameid": 561887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.54622910929145,
+      "lon": 30.1225767428515,
+      "geoinfo": {
+        "display_name": "улица Сойту, Gatchina, Gatchinsky District, Leningrad Oblast, Northwestern Federal District, 188309, Russia",
+        "road": "улица Сойту",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gatchina",
+        "state": "Leningrad Oblast",
+        "postcode": "188309",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Сойту, Gatchina, Leningrad Oblast, Russia"
+    },
+    {
+      "lat": 59.596624524312205,
+      "lon": 30.08065305919631,
+      "geoinfo": {
+        "display_name": "СНТ \"Балтиец\", Gatchinsky District, Leningrad Oblast, Northwestern Federal District, 188300, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Leningrad Oblast",
+        "postcode": "188300",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "455, СНТ \"Балтиец\", Gatchinsky District, Leningrad Oblast, Northwestern Federal District, 188300, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:35:32.626875+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuqiao",
+  "geonameid": 1791036,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.784216155957555,
+      "lon": 108.48149298966257,
+      "geoinfo": {
+        "display_name": "Wuqiao Subdistrict, Wanzhou, Chongqing, 404100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wuqiao Subdistrict",
+        "state": "Chongqing",
+        "postcode": "404100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wuqiao, Chongqing, China"
+    },
+    {
+      "lat": 30.806855233802462,
+      "lon": 108.45251275661828,
+      "geoinfo": {
+        "display_name": "Chenjiaba Subdistrict, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chenjiaba Subdistrict",
+        "city_district": null,
+        "city": "Wanzhou",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "595, Chenjiaba Subdistrict, Wanzhou, 53448 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:37.509690+00:00",
+  "_kind": "geo_samples"
+}

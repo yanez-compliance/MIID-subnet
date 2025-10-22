@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laredo",
+  "geonameid": 4705349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.540584289024782,
+      "lon": -99.48308667822938,
+      "geoinfo": {
+        "display_name": "Walnut Circle, Laredo, Webb County, Texas, 78042, United States",
+        "road": "Walnut Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laredo",
+        "state": "Texas",
+        "postcode": "78042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walnut Circle, Laredo, Texas, United States"
+    },
+    {
+      "lat": 27.49723996777082,
+      "lon": -99.49195873032158,
+      "geoinfo": {
+        "display_name": "Rio Grande Vega Trail, LA X, Eastern Division, Laredo, Webb County, Texas, 78040, United States",
+        "road": "Rio Grande Vega Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eastern Division",
+        "city_district": null,
+        "city": "Laredo",
+        "state": "Texas",
+        "postcode": "78040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "865, Rio Grande Vega Trail, LA X, Eastern Division, Laredo, Webb County, Texas, 78040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:11.528632+00:00",
+  "_kind": "geo_samples"
+}

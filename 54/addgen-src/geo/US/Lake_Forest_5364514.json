@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Forest",
+  "geonameid": 5364514,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.6685274203128,
+      "lon": -117.67172074061587,
+      "geoinfo": {
+        "display_name": "Lopala, The Meadows, Lake Forest, Orange County, California, 92610, United States",
+        "road": "Lopala",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Forest",
+        "state": "California",
+        "postcode": "92610",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lopala, Lake Forest, California, United States"
+    },
+    {
+      "lat": 33.65248003030557,
+      "lon": -117.73665307799172,
+      "geoinfo": {
+        "display_name": "18, Technology Drive, Irvine Spectrum, Irvine, Orange County, California, 92618, United States",
+        "road": "Technology Drive",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Irvine Spectrum",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92618",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18, Technology Drive, Irvine Spectrum, Irvine, Orange County, California, 92618, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:14.346895+00:00",
+  "_kind": "geo_samples"
+}

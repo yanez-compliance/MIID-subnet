@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grove City",
+  "geonameid": 4513409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.883595963691135,
+      "lon": -83.1272466885917,
+      "geoinfo": {
+        "display_name": "5126, Grove City Road, Pleasant Township, Franklin County, Ohio, 43123, United States",
+        "road": "Grove City Road",
+        "house_number": "5126",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "43123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5126 Grove City Road, Grove City, Ohio, United States"
+    },
+    {
+      "lat": 39.904892882095474,
+      "lon": -83.09940104865832,
+      "geoinfo": {
+        "display_name": "2395, Boston Mills Drive, Columbus, Franklin County, Ohio, 43123, United States",
+        "road": "Boston Mills Drive",
+        "house_number": "2395",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Ohio",
+        "postcode": "43123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2395, Boston Mills Drive, Columbus, Franklin County, Ohio, 43123, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:37.005206+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Thornlie",
+  "geonameid": 8349108,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.039556419317364,
+      "lon": 115.98049377401796,
+      "geoinfo": {
+        "display_name": "Park Road, Kenwick, City of Gosnells, Western Australia, 6109, Australia",
+        "road": "Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kenwick",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6109",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Park Road, Thornlie, Western Australia, Australia"
+    },
+    {
+      "lat": -32.06659995506171,
+      "lon": 115.91191781454584,
+      "geoinfo": {
+        "display_name": "Craft Street, Canning Vale, City of Canning, Western Australia, 6155, Australia",
+        "road": "Craft Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canning Vale",
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": "6155",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "925, Craft Street, Canning Vale, City of Canning, Western Australia, 6155, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:53.723358+00:00",
+  "_kind": "geo_samples"
+}

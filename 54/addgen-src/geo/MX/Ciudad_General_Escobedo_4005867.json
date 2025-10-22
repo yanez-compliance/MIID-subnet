@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad General Escobedo",
+  "geonameid": 4005867,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.80734084032799,
+      "lon": -100.3448837353097,
+      "geoinfo": {
+        "display_name": "Bodega Aurrera, Avenida Las Torres, General Escobedo, Nuevo León, 66062, Mexico",
+        "road": "Avenida Las Torres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "General Escobedo",
+        "state": "Nuevo León",
+        "postcode": "66062",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Las Torres, Ciudad General Escobedo, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.75333722852257,
+      "lon": -100.32003319537746,
+      "geoinfo": {
+        "display_name": "Avenida de la Aurora, San Nicolás de los Garza, Nuevo León, 66422, Mexico",
+        "road": "Avenida de la Aurora",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Nicolás de los Garza",
+        "state": "Nuevo León",
+        "postcode": "66422",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "726, Avenida de la Aurora, San Nicolás de los Garza, Nuevo León, 66422, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:34:04.080235+00:00",
+  "_kind": "geo_samples"
+}

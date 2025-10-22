@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Brad",
+  "geonameid": 683974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.11224560597918,
+      "lon": 22.835401058098906,
+      "geoinfo": {
+        "display_name": "Țărățel, Brad, Hunedoara, 335204, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brad",
+        "state": null,
+        "postcode": "335204",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Brad, Romania"
+    },
+    {
+      "lat": 46.11428682819955,
+      "lon": 22.75813314442207,
+      "geoinfo": {
+        "display_name": "50, Strada Lunca, Brad, Hunedoara, 335200, Romania",
+        "road": "Strada Lunca",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brad",
+        "state": null,
+        "postcode": "335200",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "50, Strada Lunca, Brad, Hunedoara, 335200, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:19.998761+00:00",
+  "_kind": "geo_samples"
+}

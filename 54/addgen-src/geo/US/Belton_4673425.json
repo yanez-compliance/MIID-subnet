@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Belton",
+  "geonameid": 4673425,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.04346908066029,
+      "lon": -97.44484051562914,
+      "geoinfo": {
+        "display_name": "Hobbs, Belton, Bell County, Texas, 76534, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belton",
+        "state": "Texas",
+        "postcode": "76534",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Belton, Texas, United States"
+    },
+    {
+      "lat": 31.078372805628426,
+      "lon": -97.46491309917471,
+      "geoinfo": {
+        "display_name": "Commerce Street, Belton, Bell County, Texas, 76513, United States",
+        "road": "Commerce Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belton",
+        "state": "Texas",
+        "postcode": "76513",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "925, Commerce Street, Belton, Bell County, Texas, 76513, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:47.341914+00:00",
+  "_kind": "geo_samples"
+}

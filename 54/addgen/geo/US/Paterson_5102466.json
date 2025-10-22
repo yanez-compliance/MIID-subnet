@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Paterson",
+  "geonameid": 5102466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.90257619546414,
+      "lon": -74.18260487231062,
+      "geoinfo": {
+        "display_name": "2, Mountain Avenue, Woodland Park, Passaic County, New Jersey, 07424, United States",
+        "road": "Mountain Avenue",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodland Park",
+        "state": "New Jersey",
+        "postcode": "07424",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2 Mountain Avenue, Paterson, New Jersey, United States"
+    },
+    {
+      "lat": 40.928109626444495,
+      "lon": -74.20109575379081,
+      "geoinfo": {
+        "display_name": "Pccc, 300, Oldham Road, Wayne, Passaic County, New Jersey, 07470, United States",
+        "road": "Oldham Road",
+        "house_number": "300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wayne",
+        "state": "New Jersey",
+        "postcode": "07470",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pccc, 300, Oldham Road, Wayne, Passaic County, New Jersey, 07470, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:02.647265+00:00",
+  "_kind": "geo_samples"
+}

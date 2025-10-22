@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Reservoir",
+  "geonameid": 2151716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.744765066719225,
+      "lon": 144.95905916378675,
+      "geoinfo": {
+        "display_name": "5, King Street, Coburg, Melbourne, City of Merri-bek, Victoria, 3058, Australia",
+        "road": "King Street",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Coburg",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3058",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "5 King Street, Reservoir, Victoria, Australia"
+    },
+    {
+      "lat": -37.693877472930986,
+      "lon": 145.01040888895795,
+      "geoinfo": {
+        "display_name": "Mahoneys Road, Thomastown, Melbourne, City of Whittlesea, Victoria, 3074, Australia",
+        "road": "Mahoneys Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Thomastown",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3074",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "097, Mahoneys Road, Thomastown, Melbourne, City of Whittlesea, Victoria, 3074, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:43.609754+00:00",
+  "_kind": "geo_samples"
+}

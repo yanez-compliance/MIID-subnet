@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fords",
+  "geonameid": 5098109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.53934464037591,
+      "lon": -74.31320925781154,
+      "geoinfo": {
+        "display_name": "New Jersey Turnpike, Fords, Woodbridge Township, Middlesex County, New Jersey, 08863, United States",
+        "road": "New Jersey Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fords",
+        "city_district": null,
+        "city": "Woodbridge Township",
+        "state": "New Jersey",
+        "postcode": "08863",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "New Jersey Turnpike, Fords, New Jersey, United States"
+    },
+    {
+      "lat": 40.54386744708083,
+      "lon": -74.36728660695341,
+      "geoinfo": {
+        "display_name": "90, Durham Avenue, Metuchen, Middlesex County, New Jersey, 08840, United States",
+        "road": "Durham Avenue",
+        "house_number": "90",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Metuchen",
+        "state": "New Jersey",
+        "postcode": "08840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "90, Durham Avenue, Metuchen, Middlesex County, New Jersey, 08840, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:28.237543+00:00",
+  "_kind": "geo_samples"
+}

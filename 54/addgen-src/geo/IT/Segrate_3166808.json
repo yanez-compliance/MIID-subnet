@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Segrate",
+  "geonameid": 3166808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.481805211518996,
+      "lon": 9.265680170696339,
+      "geoinfo": {
+        "display_name": "12, Via Cuneo, Redecesio, Segrate, Milan, Lombardy, 20054, Italy",
+        "road": "Via Cuneo",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Redecesio",
+        "city_district": null,
+        "city": "Segrate",
+        "state": "Lombardy",
+        "postcode": "20054",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "12 Via Cuneo, Segrate, Lombardy, Italy"
+    },
+    {
+      "lat": 45.460826831271085,
+      "lon": 9.297983147330855,
+      "geoinfo": {
+        "display_name": "Via Trento, Cascina del Bosco, Mezzate, Peschiera Borromeo, Milan, Lombardy, 20068, Italy",
+        "road": "Via Trento",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peschiera Borromeo",
+        "state": "Lombardy",
+        "postcode": "20068",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "140, Via Trento, Cascina del Bosco, Mezzate, Peschiera Borromeo, Milan, Lombardy, 20068, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:17.587889+00:00",
+  "_kind": "geo_samples"
+}

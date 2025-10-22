@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Belleville",
+  "geonameid": 5897884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.189311355897935,
+      "lon": -77.39047787080322,
+      "geoinfo": {
+        "display_name": "Bell Boulevard, Belleville, Central Ontario, Ontario, K8P 3C8, Canada",
+        "road": "Bell Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleville",
+        "state": "Ontario",
+        "postcode": "K8P 3C8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Bell Boulevard, Belleville, Ontario, Canada"
+    },
+    {
+      "lat": 44.171992723037015,
+      "lon": -77.33902300413743,
+      "geoinfo": {
+        "display_name": "2, Whalen Court, Eastgate Park, Belleville, Central Ontario, Ontario, K8N 4Z4, Canada",
+        "road": "Whalen Court",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleville",
+        "state": "Ontario",
+        "postcode": "K8N 4Z4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2, Whalen Court, Eastgate Park, Belleville, Central Ontario, Ontario, K8N 4Z4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:13.252160+00:00",
+  "_kind": "geo_samples"
+}

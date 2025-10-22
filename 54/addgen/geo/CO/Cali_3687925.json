@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Cali",
+  "geonameid": 3687925,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.4450101165007645,
+      "lon": -76.53128056602856,
+      "geoinfo": {
+        "display_name": "Calle 11, San Juan Bosco, Comuna 3, Cali, Sur, Valle del Cauca, RAP Pacífico, 760044, Colombia",
+        "road": "Calle 11",
+        "house_number": null,
+        "neighbourhood": "San Juan Bosco",
+        "suburb": null,
+        "city_district": "Comuna 3",
+        "city": "Cali",
+        "state": "Valle del Cauca",
+        "postcode": "760044",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 11, Cali, Valle del Cauca, Colombia"
+    },
+    {
+      "lat": 3.4197117241216652,
+      "lon": -76.52639406835317,
+      "geoinfo": {
+        "display_name": "Calle 14C, Cristobal Colón, Comuna 10, Cali, Sur, Valle del Cauca, RAP Pacífico, 760041, Colombia",
+        "road": "Calle 14C",
+        "house_number": null,
+        "neighbourhood": "Cristobal Colón",
+        "suburb": null,
+        "city_district": "Comuna 10",
+        "city": "Cali",
+        "state": "Valle del Cauca",
+        "postcode": "760041",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 14C, Cristobal Colón, Comuna 10, Cali, Sur, Valle del Cauca, RAP Pacífico, 760041, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:41.197842+00:00",
+  "_kind": "geo_samples"
+}

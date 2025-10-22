@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Noyon",
+  "geonameid": 2989877,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.57651275542642,
+      "lon": 2.999122863350001,
+      "geoinfo": {
+        "display_name": "8, Rue de la Poterne, Noyon, Saint-Blaise, Noyon, Compiègne, Oise, Hauts-de-France, Metropolitan France, 60400, France",
+        "road": "Rue de la Poterne",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Saint-Blaise",
+        "city_district": null,
+        "city": "Noyon",
+        "state": "Hauts-de-France",
+        "postcode": "60400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "8 Rue de la Poterne, Noyon, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.60326038962995,
+      "lon": 2.9419389688704833,
+      "geoinfo": {
+        "display_name": "Route de Porquericourt, Sermaize, Compiègne, Oise, Hauts-de-France, Metropolitan France, 60400, France",
+        "road": "Route de Porquericourt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sermaize",
+        "state": "Hauts-de-France",
+        "postcode": "60400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "357, Route de Porquericourt, Sermaize, Compiègne, Oise, Hauts-de-France, Metropolitan France, 60400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:29.215461+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ken Caryl",
+  "geonameid": 5427207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.57918322670165,
+      "lon": -105.14571512611396,
+      "geoinfo": {
+        "display_name": "Ken Caryl Avenue, Jefferson County, Colorado, 80127, United States",
+        "road": "Ken Caryl Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ken Caryl Avenue, Ken Caryl, Colorado, United States"
+    },
+    {
+      "lat": 39.59607842274599,
+      "lon": -105.13773878658225,
+      "geoinfo": {
+        "display_name": "6603, South Ward Street, Jefferson County, Colorado, 80127, United States",
+        "road": "South Ward Street",
+        "house_number": "6603",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Colorado",
+        "postcode": "80127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6603, South Ward Street, Jefferson County, Colorado, 80127, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:35.979503+00:00",
+  "_kind": "geo_samples"
+}

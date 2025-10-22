@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cypress Hills",
+  "geonameid": 5114418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.67595077334333,
+      "lon": -73.8928601703358,
+      "geoinfo": {
+        "display_name": "2748, Atlantic Avenue, Cypress Hills, Brooklyn, Kings County, New York, 11207, United States",
+        "road": "Atlantic Avenue",
+        "house_number": "2748",
+        "neighbourhood": "Cypress Hills",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2748 Atlantic Avenue, Cypress Hills, New York, United States"
+    },
+    {
+      "lat": 40.6898555036136,
+      "lon": -73.88222152283858,
+      "geoinfo": {
+        "display_name": "Brooklyn, Kings County, New York, 11208, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "565, Brooklyn, Kings County, New York, 11208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:24.162081+00:00",
+  "_kind": "geo_samples"
+}

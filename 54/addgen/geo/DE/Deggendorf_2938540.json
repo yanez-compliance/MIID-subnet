@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Deggendorf",
+  "geonameid": 2938540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.833260017227154,
+      "lon": 12.994915697477595,
+      "geoinfo": {
+        "display_name": "47, Mietzing, Elmering, Deggendorf, Landkreis Deggendorf, Bavaria, 94469, Germany",
+        "road": null,
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deggendorf",
+        "state": "Bavaria",
+        "postcode": "94469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Deggendorf, Bavaria, Germany"
+    },
+    {
+      "lat": 48.797345970339805,
+      "lon": 12.948327626172103,
+      "geoinfo": {
+        "display_name": "Scheuer, Holzschwaig, Schiltorn, Plattling, Landkreis Deggendorf, Bavaria, 94447, Germany",
+        "road": "Scheuer",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plattling",
+        "state": "Bavaria",
+        "postcode": "94447",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "020, Scheuer, Holzschwaig, Schiltorn, Plattling, Landkreis Deggendorf, Bavaria, 94447, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:59.741948+00:00",
+  "_kind": "geo_samples"
+}

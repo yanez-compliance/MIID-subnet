@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Lalor",
+  "geonameid": 2160706,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.671973770399966,
+      "lon": 145.01687034181455,
+      "geoinfo": {
+        "display_name": "David Street, Lalor, Melbourne, City of Whittlesea, Victoria, 3075, Australia",
+        "road": "David Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lalor",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3075",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "David Street, Lalor, Victoria, Australia"
+    },
+    {
+      "lat": -37.6668362584391,
+      "lon": 145.03931334586395,
+      "geoinfo": {
+        "display_name": "61, Hawkes Drive, Mill Park, Melbourne, City of Whittlesea, Victoria, 3032, Australia",
+        "road": "Hawkes Drive",
+        "house_number": "61",
+        "neighbourhood": null,
+        "suburb": "Mill Park",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3032",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "61, Hawkes Drive, Mill Park, Melbourne, City of Whittlesea, Victoria, 3032, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:54.199160+00:00",
+  "_kind": "geo_samples"
+}

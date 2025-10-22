@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Napa",
+  "geonameid": 5376095,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.25786302902751,
+      "lon": -122.30746403059094,
+      "geoinfo": {
+        "display_name": "Carneros Highway, Napa, Napa County, California, 94559, United States",
+        "road": "Carneros Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Napa",
+        "state": "California",
+        "postcode": "94559",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carneros Highway, Napa, California, United States"
+    },
+    {
+      "lat": 38.31261729322358,
+      "lon": -122.26649400776587,
+      "geoinfo": {
+        "display_name": "Montecito Boulevard, Napa, Napa County, California, 94558, United States",
+        "road": "Montecito Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Napa",
+        "state": "California",
+        "postcode": "94558",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "513, Montecito Boulevard, Napa, Napa County, California, 94558, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:13.323153+00:00",
+  "_kind": "geo_samples"
+}

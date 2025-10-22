@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Williamsport",
+  "geonameid": 5219585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.21793150805522,
+      "lon": -77.01266181677364,
+      "geoinfo": {
+        "display_name": "Pinecrest Drive, South Williamsport, Lycoming County, Pennsylvania, 17702, United States",
+        "road": "Pinecrest Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Williamsport",
+        "state": "Pennsylvania",
+        "postcode": "17702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pinecrest Drive, Williamsport, Pennsylvania, United States"
+    },
+    {
+      "lat": 41.26097323665414,
+      "lon": -77.05133096524003,
+      "geoinfo": {
+        "display_name": "2161, Mahaffey Lane, Garden View, Old Lycoming Township, Lycoming County, Pennsylvania, 17701, United States",
+        "road": "Mahaffey Lane",
+        "house_number": "2161",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Old Lycoming Township",
+        "state": "Pennsylvania",
+        "postcode": "17701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2161, Mahaffey Lane, Garden View, Old Lycoming Township, Lycoming County, Pennsylvania, 17701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:56.907848+00:00",
+  "_kind": "geo_samples"
+}

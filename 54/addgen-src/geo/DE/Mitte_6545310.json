@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mitte",
+  "geonameid": 6545310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.49078030861217,
+      "lon": 13.416879939735681,
+      "geoinfo": {
+        "display_name": "124, Urbanstraße, Graefekiez, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10967, Germany",
+        "road": "Urbanstraße",
+        "house_number": "124",
+        "neighbourhood": null,
+        "suburb": "Kreuzberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10967",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "124 Urbanstraße, Mitte, Germany"
+    },
+    {
+      "lat": 52.49189228692856,
+      "lon": 13.437355484463524,
+      "geoinfo": {
+        "display_name": "Ratiborstraße, Luisenstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10999, Germany",
+        "road": "Ratiborstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kreuzberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10999",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "262, Ratiborstraße, Luisenstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10999, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:59.455235+00:00",
+  "_kind": "geo_samples"
+}

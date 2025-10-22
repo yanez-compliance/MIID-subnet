@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Germantown",
+  "geonameid": 4356050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.156260223389914,
+      "lon": -77.28987745033304,
+      "geoinfo": {
+        "display_name": "13900, Kingsbrook Drive, Kingsview Knolls, Germantown, Montgomery County, Maryland, 20874, United States",
+        "road": "Kingsbrook Drive",
+        "house_number": "13900",
+        "neighbourhood": "Kingsview Knolls",
+        "suburb": null,
+        "city_district": null,
+        "city": "Germantown",
+        "state": "Maryland",
+        "postcode": "20874",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13900 Kingsbrook Drive, Germantown, Maryland, United States"
+    },
+    {
+      "lat": 39.190464461293615,
+      "lon": -77.21828760657728,
+      "geoinfo": {
+        "display_name": "Watkins Mill Road, Watkins Mill, Montgomery Village, Montgomery County, Maryland, 20876, United States",
+        "road": "Watkins Mill Road",
+        "house_number": null,
+        "neighbourhood": "Watkins Mill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery Village",
+        "state": "Maryland",
+        "postcode": "20876",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "881, Watkins Mill Road, Watkins Mill, Montgomery Village, Montgomery County, Maryland, 20876, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:27.409381+00:00",
+  "_kind": "geo_samples"
+}

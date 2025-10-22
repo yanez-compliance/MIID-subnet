@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Gbawe",
+  "geonameid": 2300721,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 5.581465256415113,
+      "lon": -0.33980085612504574,
+      "geoinfo": {
+        "display_name": "Weija, Weija-Gbawe Municipal District, Greater Accra Region, GS-0167-1738, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weija",
+        "state": "Greater Accra Region",
+        "postcode": "GS-0167-1738",
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Gbawe, Greater Accra Region, Ghana"
+    },
+    {
+      "lat": 5.564350604848355,
+      "lon": -0.29177210510308754,
+      "geoinfo": {
+        "display_name": "Weija-Gbawe Municipal Hospital, Winneba Road, Mallam Borla, Gbawe, Weija-Gbawe Municipal District, Greater Accra Region, GS-0167-1738, Ghana",
+        "road": "Winneba Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mallam Borla",
+        "city_district": null,
+        "city": "Gbawe",
+        "state": "Greater Accra Region",
+        "postcode": "GS-0167-1738",
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Winneba Road, Gbawe, Greater Accra Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:47:29.023926+00:00",
+  "_kind": "geo_samples"
+}

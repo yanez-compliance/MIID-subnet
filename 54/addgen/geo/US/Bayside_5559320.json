@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bayside",
+  "geonameid": 5559320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.81382132244913,
+      "lon": -124.02863902469575,
+      "geoinfo": {
+        "display_name": "Jacoby Creek Road, Arcata, Humboldt County, California, 95524, United States",
+        "road": "Jacoby Creek Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arcata",
+        "state": "California",
+        "postcode": "95524",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jacoby Creek Road, Bayside, California, United States"
+    },
+    {
+      "lat": 40.863134734248426,
+      "lon": -124.02742098661203,
+      "geoinfo": {
+        "display_name": "Humboldt County, California, 95525, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95525",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "820, Bayside, 95525 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:51.725424+00:00",
+  "_kind": "geo_samples"
+}

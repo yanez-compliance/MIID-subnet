@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Minawa",
+  "geonameid": 1907190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.53366832692862,
+      "lon": 139.28890162277528,
+      "geoinfo": {
+        "display_name": "Aikawa, Aiko County, Kanagawa Prefecture, 243-0306, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aikawa",
+        "state": null,
+        "postcode": "243-0306",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Minawa, Japan"
+    },
+    {
+      "lat": 35.50337405247432,
+      "lon": 139.36202654859483,
+      "geoinfo": {
+        "display_name": "新開, Yamagiwa, Atsugi, Kanagawa Prefecture, 243-0803, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "新開",
+        "suburb": null,
+        "city_district": null,
+        "city": "Atsugi",
+        "state": null,
+        "postcode": "243-0803",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "新開, Yamagiwa, Atsugi, Kanagawa Prefecture, 243-0803, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:10.816318+00:00",
+  "_kind": "geo_samples"
+}

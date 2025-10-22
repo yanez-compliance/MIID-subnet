@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tampa",
+  "geonameid": 4174757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.94491526678729,
+      "lon": -82.42617766091053,
+      "geoinfo": {
+        "display_name": "28th Street, Tampa, Hillsborough County, Florida, 33605, United States",
+        "road": "28th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tampa",
+        "state": "Florida",
+        "postcode": "33605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28th Street, Tampa, Florida, United States"
+    },
+    {
+      "lat": 27.94961288964817,
+      "lon": -82.48598491035418,
+      "geoinfo": {
+        "display_name": "Carmen Street, West Tampa, Tampa, Hillsborough County, Florida, 33609, United States",
+        "road": "Carmen Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Tampa",
+        "city_district": null,
+        "city": "Tampa",
+        "state": "Florida",
+        "postcode": "33609",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "630, Carmen Street, West Tampa, Tampa, Hillsborough County, Florida, 33609, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:43:14.703455+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Brunswick",
+  "geonameid": 5101717,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.48568912184123,
+      "lon": -74.43044259223974,
+      "geoinfo": {
+        "display_name": "Old Gibbons Drive, New Brunswick, Middlesex County, New Jersey, 08903, United States",
+        "road": "Old Gibbons Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Brunswick",
+        "state": "New Jersey",
+        "postcode": "08903",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Old Gibbons Drive, New Brunswick, New Jersey, United States"
+    },
+    {
+      "lat": 40.467211823510574,
+      "lon": -74.41025550046642,
+      "geoinfo": {
+        "display_name": "19, Eggers Street, Lawrence Brook, Lawrence Brook Manor, East Brunswick Township, Middlesex County, New Jersey, 08816, United States",
+        "road": "Eggers Street",
+        "house_number": "19",
+        "neighbourhood": "Lawrence Brook",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Brunswick Township",
+        "state": "New Jersey",
+        "postcode": "08816",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19, Eggers Street, Lawrence Brook, Lawrence Brook Manor, East Brunswick Township, Middlesex County, New Jersey, 08816, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:30.298348+00:00",
+  "_kind": "geo_samples"
+}

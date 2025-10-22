@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Issaquah",
+  "geonameid": 5798487,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.56214056475117,
+      "lon": -122.07039632175471,
+      "geoinfo": {
+        "display_name": "Issaquah Creek Trail, Issaquah, King County, Washington, 98129, United States",
+        "road": "Issaquah Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Issaquah",
+        "state": "Washington",
+        "postcode": "98129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Issaquah Creek Trail, Issaquah, Washington, United States"
+    },
+    {
+      "lat": 47.50609064514387,
+      "lon": -121.98668638521944,
+      "geoinfo": {
+        "display_name": "Tiger Mountain Trail, King County, Washington, United States",
+        "road": "Tiger Mountain Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "045, Tiger Mountain Trail, King County, 51773 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:41.327786+00:00",
+  "_kind": "geo_samples"
+}

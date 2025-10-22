@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clarksville",
+  "geonameid": 4255836,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.3403143824373,
+      "lon": -85.77198716337126,
+      "geoinfo": {
+        "display_name": "Potters Lane, Clarksville, Clark County, Indiana, 47219, United States",
+        "road": "Potters Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksville",
+        "state": "Indiana",
+        "postcode": "47219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Potters Lane, Clarksville, Indiana, United States"
+    },
+    {
+      "lat": 38.31533869374948,
+      "lon": -85.80605961158764,
+      "geoinfo": {
+        "display_name": "1709, South Audubon Drive, New Albany, Floyd County, Indiana, 47150, United States",
+        "road": "South Audubon Drive",
+        "house_number": "1709",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Albany",
+        "state": "Indiana",
+        "postcode": "47150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1709, South Audubon Drive, New Albany, Floyd County, Indiana, 47150, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:14.555854+00:00",
+  "_kind": "geo_samples"
+}

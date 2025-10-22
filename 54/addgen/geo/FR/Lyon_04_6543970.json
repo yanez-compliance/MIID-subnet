@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 04",
+  "geonameid": 6543970,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.759714051706496,
+      "lon": 4.79825897665513,
+      "geoinfo": {
+        "display_name": "Impasse du Point du Jour, Champvert-Point du jour -Jeunet, 5th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69005, France",
+        "road": "Impasse du Point du Jour",
+        "house_number": null,
+        "neighbourhood": "Champvert-Point du jour -Jeunet",
+        "suburb": "5th Arrondissement",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69005",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Impasse du Point du Jour, Lyon 04, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.77829447581789,
+      "lon": 4.8247922246985695,
+      "geoinfo": {
+        "display_name": "Rue Barodet, La Croix-Rousse, 4th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69004, France",
+        "road": "Rue Barodet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Croix-Rousse",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69004",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Barodet, La Croix-Rousse, 4th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69004, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:17.658636+00:00",
+  "_kind": "geo_samples"
+}

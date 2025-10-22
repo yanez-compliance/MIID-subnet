@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Franklin",
+  "geonameid": 4937276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.06816400747164,
+      "lon": -71.3933234049091,
+      "geoinfo": {
+        "display_name": "6, Lockewood Drive, Franklin, Norfolk County, Massachusetts, 02038, United States",
+        "road": "Lockewood Drive",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin",
+        "state": "Massachusetts",
+        "postcode": "02038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6 Lockewood Drive, Franklin, Massachusetts, United States"
+    },
+    {
+      "lat": 42.10864672164093,
+      "lon": -71.42684582173653,
+      "geoinfo": {
+        "display_name": "551, Pond Street, Westview, Franklin, Norfolk County, Massachusetts, 02038, United States",
+        "road": "Pond Street",
+        "house_number": "551",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin",
+        "state": "Massachusetts",
+        "postcode": "02038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "551, Pond Street, Westview, Franklin, Norfolk County, Massachusetts, 02038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:58.719065+00:00",
+  "_kind": "geo_samples"
+}

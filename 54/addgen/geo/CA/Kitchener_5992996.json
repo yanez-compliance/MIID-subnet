@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kitchener",
+  "geonameid": 5992996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.45708243561636,
+      "lon": -80.47189337436579,
+      "geoinfo": {
+        "display_name": "Edna Street, Central Frederick, Kitchener, Region of Waterloo, Southwestern Ontario, Ontario, N2H 6S1, Canada",
+        "road": "Edna Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Central Frederick",
+        "city_district": null,
+        "city": "Kitchener",
+        "state": "Ontario",
+        "postcode": "N2H 6S1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Edna Street, Kitchener, Ontario, Canada"
+    },
+    {
+      "lat": 43.432444981647514,
+      "lon": -80.48681105269496,
+      "geoinfo": {
+        "display_name": "Southdale Avenue, Southdale, Kitchener, Region of Waterloo, Ontario, N2M 3V1, Canada",
+        "road": "Southdale Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southdale",
+        "city_district": null,
+        "city": "Kitchener",
+        "state": "Ontario",
+        "postcode": "N2M 3V1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Southdale Avenue, Southdale, Kitchener, Region of Waterloo, Ontario, N2M 3V1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:51.102507+00:00",
+  "_kind": "geo_samples"
+}

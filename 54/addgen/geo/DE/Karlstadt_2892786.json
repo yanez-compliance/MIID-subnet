@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Karlstadt",
+  "geonameid": 2892786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.93939902826508,
+      "lon": 9.823603475687635,
+      "geoinfo": {
+        "display_name": "MSP 8, Stetten, Karlstadt, Landkreis Main-Spessart, Bavaria, 97753, Germany",
+        "road": "MSP 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stetten",
+        "city_district": null,
+        "city": "Karlstadt",
+        "state": "Bavaria",
+        "postcode": "97753",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "MSP 8, Karlstadt, Bavaria, Germany"
+    },
+    {
+      "lat": 49.973846653477196,
+      "lon": 9.817231018723332,
+      "geoinfo": {
+        "display_name": "St 2301, Schönarts, Gemarkung Eußenheim, Eußenheim, Landkreis Main-Spessart, Bavaria, 97776, Germany",
+        "road": "St 2301",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gemarkung Eußenheim",
+        "city_district": null,
+        "city": "Eußenheim",
+        "state": "Bavaria",
+        "postcode": "97776",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "St 2301, Karlstadt, 97776 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:45.137127+00:00",
+  "_kind": "geo_samples"
+}

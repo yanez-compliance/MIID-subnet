@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Antonio Oeste",
+  "geonameid": 3837980,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -40.73980618717803,
+      "lon": -64.90119826106427,
+      "geoinfo": {
+        "display_name": "Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San Antonio Oeste, Argentina"
+    },
+    {
+      "lat": -40.717900235668935,
+      "lon": -64.98223695500353,
+      "geoinfo": {
+        "display_name": "Barrio San Miguel, San Antonio Oeste, Departamento San Antonio, Río Negro, 8520, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barrio San Miguel",
+        "city_district": null,
+        "city": null,
+        "state": "Río Negro",
+        "postcode": "8520",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "602, Barrio San Miguel, San Antonio Oeste, Departamento San Antonio, Río Negro, 8520, Argentina"
+    },
+    {
+      "lat": -40.71156501864553,
+      "lon": -64.99280049420089,
+      "geoinfo": {
+        "display_name": "Ruta Nacional 3, Barrio San Miguel, San Antonio Oeste, Departamento San Antonio, Río Negro, Argentina",
+        "road": "Ruta Nacional 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barrio San Miguel",
+        "city_district": null,
+        "city": null,
+        "state": "Río Negro",
+        "postcode": null,
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Ruta Nacional 3, Barrio San Miguel, San Antonio Oeste, Departamento San Antonio, 11731 Río Negro, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:47.050071+00:00",
+  "_kind": "geo_samples"
+}

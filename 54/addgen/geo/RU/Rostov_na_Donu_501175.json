@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Rostov-na-Donu",
+  "geonameid": 501175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.2363041755486,
+      "lon": 39.71808407652572,
+      "geoinfo": {
+        "display_name": "Ростовский Ипподром, Университетский переулок, Кировский район, Rostov-on-Don, Rostov Oblast, 344006, Russia",
+        "road": "Университетский переулок",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Кировский район",
+        "city": "Rostov-on-Don",
+        "state": "Rostov Oblast",
+        "postcode": "344006",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Университетский переулок, Rostov-na-Donu, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 47.22373866416812,
+      "lon": 39.68851309618387,
+      "geoinfo": {
+        "display_name": "проспект Сиверса, Новое Поселение, Ленинский район, Rostov-on-Don, Rostov Oblast, 344082, Russia",
+        "road": "проспект Сиверса",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Новое Поселение",
+        "city_district": "Ленинский район",
+        "city": "Rostov-on-Don",
+        "state": "Rostov Oblast",
+        "postcode": "344082",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "979, проспект Сиверса, Новое Поселение, Ленинский район, Rostov-on-Don, Rostov Oblast, 344082, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:00.426284+00:00",
+  "_kind": "geo_samples"
+}

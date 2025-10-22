@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Courneuve",
+  "geonameid": 3009824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92612435898527,
+      "lon": 2.3870885779801934,
+      "geoinfo": {
+        "display_name": "Centre-Ville, La Courneuve, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93120, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centre-Ville",
+        "city_district": null,
+        "city": "La Courneuve",
+        "state": null,
+        "postcode": "93120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Centre-Ville, La Courneuve, Ile-de-France, France"
+    },
+    {
+      "lat": 48.949918369470744,
+      "lon": 2.4274542363038387,
+      "geoinfo": {
+        "display_name": "Rue Maurice Bokanowski, Dugny, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93440, France",
+        "road": "Rue Maurice Bokanowski",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dugny",
+        "state": null,
+        "postcode": "93440",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "634, Rue Maurice Bokanowski, Dugny, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93440, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:26.746677+00:00",
+  "_kind": "geo_samples"
+}

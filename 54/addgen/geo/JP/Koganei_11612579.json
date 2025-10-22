@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Koganei",
+  "geonameid": 11612579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.69822694474971,
+      "lon": 139.53056149020819,
+      "geoinfo": {
+        "display_name": "Higashicho 2-chome, Koganei, Tokyo, 184-0011, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Higashicho 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koganei",
+        "state": null,
+        "postcode": "184-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Higashicho 2-chome, Koganei, Japan"
+    },
+    {
+      "lat": 35.69387380802049,
+      "lon": 139.4723554672697,
+      "geoinfo": {
+        "display_name": "Yakushido, Otaka no michi, Nishimotomachi 1-chome, Kokubunji, Tokyo, 185-0023, Japan",
+        "road": "Otaka no michi",
+        "house_number": null,
+        "neighbourhood": "Nishimotomachi 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kokubunji",
+        "state": null,
+        "postcode": "185-0023",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yakushido, Otaka no michi, Nishimotomachi 1-chome, Kokubunji, Tokyo, 185-0023, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:23.662093+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Palomeras Bajas",
+  "geonameid": 11550008,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.38407258545007,
+      "lon": -3.6337489164479657,
+      "geoinfo": {
+        "display_name": "Avenida de la Albufera, Palomeras Sureste, Vallecas, Madrid, Community of Madrid, 28031, Spain",
+        "road": "Avenida de la Albufera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28031",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de la Albufera, Palomeras Bajas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.36046214951308,
+      "lon": -3.668399564392751,
+      "geoinfo": {
+        "display_name": "Calle 22, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Calle 22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 22, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:35.929140+00:00",
+  "_kind": "geo_samples"
+}

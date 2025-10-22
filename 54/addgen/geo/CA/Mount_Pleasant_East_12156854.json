@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Mount Pleasant East",
+  "geonameid": 12156854,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.711833759606506,
+      "lon": -79.40487748275893,
+      "geoinfo": {
+        "display_name": "166, St Clements Avenue, Yonge-Eglinton, Eglinton—Lawrence, Toronto, Golden Horseshoe, Ontario, M4P 2H7, Canada",
+        "road": "St Clements Avenue",
+        "house_number": "166",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4P 2H7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "166 St Clements Avenue, Mount Pleasant East, Ontario, Canada"
+    },
+    {
+      "lat": 43.711851914927436,
+      "lon": -79.38900487743598,
+      "geoinfo": {
+        "display_name": "212, Broadway Avenue, Mount Pleasant East, Don Valley West, Toronto, Golden Horseshoe, Ontario, M4P 2L5, Canada",
+        "road": "Broadway Avenue",
+        "house_number": "212",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4P 2L5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "212, Broadway Avenue, Mount Pleasant East, Don Valley West, Toronto, Golden Horseshoe, Ontario, M4P 2L5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:39:03.353733+00:00",
+  "_kind": "geo_samples"
+}

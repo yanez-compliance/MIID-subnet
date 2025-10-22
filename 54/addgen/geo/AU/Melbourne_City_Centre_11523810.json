@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Melbourne City Centre",
+  "geonameid": 11523810,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.84492288705863,
+      "lon": 144.92699448168673,
+      "geoinfo": {
+        "display_name": "Princes Pier Pylons, Pier Street, Beacon Cove, Port Melbourne, Melbourne, City of Port Phillip, Victoria, 3207, Australia",
+        "road": "Pier Street",
+        "house_number": null,
+        "neighbourhood": "Beacon Cove",
+        "suburb": "Port Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3207",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Pier Street, Melbourne City Centre, Victoria, Australia"
+    },
+    {
+      "lat": -37.819687024312174,
+      "lon": 145.0030467665775,
+      "geoinfo": {
+        "display_name": "12, Francis Street, Richmond, Melbourne, City of Yarra, Victoria, 3121, Australia",
+        "road": "Francis Street",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Richmond",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3121",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "12, Francis Street, Richmond, Melbourne, City of Yarra, Victoria, 3121, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:12:01.296015+00:00",
+  "_kind": "geo_samples"
+}

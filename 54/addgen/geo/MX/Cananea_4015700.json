@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cananea",
+  "geonameid": 4015700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.001754301903336,
+      "lon": -110.29373538960947,
+      "geoinfo": {
+        "display_name": "Cananea, Sonora, 84620, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cananea",
+        "state": "Sonora",
+        "postcode": "84620",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Cananea, Sonora, Mexico"
+    },
+    {
+      "lat": 30.98063954158712,
+      "lon": -110.31065073165905,
+      "geoinfo": {
+        "display_name": "Avenida Durango, Cananea, Sonora, 84620, Mexico",
+        "road": "Avenida Durango",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cananea",
+        "state": "Sonora",
+        "postcode": "84620",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "767, Avenida Durango, Cananea, Sonora, 84620, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:44.467908+00:00",
+  "_kind": "geo_samples"
+}

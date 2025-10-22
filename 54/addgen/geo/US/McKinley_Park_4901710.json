@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McKinley Park",
+  "geonameid": 4901710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.87038595101024,
+      "lon": -87.67743391697408,
+      "geoinfo": {
+        "display_name": "Jesse Brown VA Medical Center, 820, South Damen Avenue, Illinois Medical District, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60612, United States",
+        "road": "South Damen Avenue",
+        "house_number": "820",
+        "neighbourhood": "Illinois Medical District",
+        "suburb": "Near West Side",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "820 South Damen Avenue, McKinley Park, Illinois, United States"
+    },
+    {
+      "lat": 41.82705085984883,
+      "lon": -87.71809035124758,
+      "geoinfo": {
+        "display_name": "3741, West 35th Street, South Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60632, United States",
+        "road": "West 35th Street",
+        "house_number": "3741",
+        "neighbourhood": null,
+        "suburb": "South Lawndale",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3741, West 35th Street, South Lawndale, Chicago, West Chicago Township, Cook County, Illinois, 60632, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:47.783164+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Velp",
+  "geonameid": 2745677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.01506295828251,
+      "lon": 5.978105312922005,
+      "geoinfo": {
+        "display_name": "Bovenallee, Rozendaal, Rheden, Gelderland, Netherlands, 6881 AG, Netherlands",
+        "road": "Bovenallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rozendaal",
+        "state": "Gelderland",
+        "postcode": "6881 AG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Bovenallee, Velp, Gelderland, The Netherlands"
+    },
+    {
+      "lat": 51.96459419305962,
+      "lon": 5.920597975440291,
+      "geoinfo": {
+        "display_name": "1, Kervelstraat, Kamillehof, Arnhem, Gelderland, Netherlands, 6833 GC, Netherlands",
+        "road": "Kervelstraat",
+        "house_number": "1",
+        "neighbourhood": "Kamillehof",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arnhem",
+        "state": "Gelderland",
+        "postcode": "6833 GC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "1, Kervelstraat, Kamillehof, Arnhem, Gelderland, Netherlands, 6833 GC, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:47:53.311715+00:00",
+  "_kind": "geo_samples"
+}

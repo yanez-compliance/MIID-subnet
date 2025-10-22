@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Fondi",
+  "geonameid": 3176843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38890517956527,
+      "lon": 13.401095541717902,
+      "geoinfo": {
+        "display_name": "Valle Vigna, Fondi, Latina, Lazio, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fondi",
+        "state": "Lazio",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Fondi, Lazio, Italy"
+    },
+    {
+      "lat": 41.35920519413035,
+      "lon": 13.431048596449084,
+      "geoinfo": {
+        "display_name": "Via degli Osci, Cardinale, Fondi, Latina, Lazio, 04022, Italy",
+        "road": "Via degli Osci",
+        "house_number": null,
+        "neighbourhood": "Cardinale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fondi",
+        "state": "Lazio",
+        "postcode": "04022",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "955, Via degli Osci, Cardinale, Fondi, Latina, Lazio, 04022, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:59.252130+00:00",
+  "_kind": "geo_samples"
+}

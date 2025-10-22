@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Barinas",
+  "geonameid": 3648546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.596958817903161,
+      "lon": -70.20233114371462,
+      "geoinfo": {
+        "display_name": "E.B. Mi Jardín II, Calle JJ 007, Urbanización El Oasis, Florentino, Parroquia Ramón Ignacio Méndez, Municipio Barinas, Barinas State, 5201, Venezuela",
+        "road": "Calle JJ 007",
+        "house_number": null,
+        "neighbourhood": "Urbanización El Oasis",
+        "suburb": "Florentino",
+        "city_district": null,
+        "city": null,
+        "state": "Barinas State",
+        "postcode": "5201",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Calle JJ 007, Barinas, Barinas State, Venezuela"
+    },
+    {
+      "lat": 8.656788654297241,
+      "lon": -70.2492625201977,
+      "geoinfo": {
+        "display_name": "Zona Industrial, Barrio Guanapa, Parroquia Rómulo Betancourt, Municipio Barinas, Barinas State, 0273, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barrio Guanapa",
+        "city_district": null,
+        "city": null,
+        "state": "Barinas State",
+        "postcode": "0273",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "570, Barrio Guanapa, Barinas, 0273 Barinas State, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:48:19.181951+00:00",
+  "_kind": "geo_samples"
+}

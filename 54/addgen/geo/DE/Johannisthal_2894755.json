@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Johannisthal",
+  "geonameid": 2894755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.452445022404305,
+      "lon": 13.509273620350179,
+      "geoinfo": {
+        "display_name": "Gruss-Optik, Sterndamm, Eisenbahnsiedlung, Johannisthal, Treptow-Köpenick, Berlin, 12487, Germany",
+        "road": "Sterndamm",
+        "house_number": null,
+        "neighbourhood": "Eisenbahnsiedlung",
+        "suburb": "Johannisthal",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12487",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Sterndamm, Johannisthal, Germany"
+    },
+    {
+      "lat": 52.46329185152174,
+      "lon": 13.506753572329993,
+      "geoinfo": {
+        "display_name": "3, Tabbertstraße, Oberschöneweide, Treptow-Köpenick, Berlin, 12459, Germany",
+        "road": "Tabbertstraße",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Oberschöneweide",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12459",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3, Tabbertstraße, Oberschöneweide, Treptow-Köpenick, Berlin, 12459, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:32.722342+00:00",
+  "_kind": "geo_samples"
+}

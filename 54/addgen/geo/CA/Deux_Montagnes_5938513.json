@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Deux-Montagnes",
+  "geonameid": 5938513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.509717399891656,
+      "lon": -73.93634357331304,
+      "geoinfo": {
+        "display_name": "Baie-du-Lac, Sainte-Marthe-sur-le-Lac, Deux-Montagnes (MRC), Laurentides, Quebec, J0N 1P0, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Marthe-sur-le-Lac",
+        "state": "Quebec",
+        "postcode": "J0N 1P0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Deux-Montagnes, Quebec, Canada"
+    },
+    {
+      "lat": 45.54054692773617,
+      "lon": -73.93260594442903,
+      "geoinfo": {
+        "display_name": "2264, Boulevard des Pins, Sainte-Marthe-sur-le-Lac, Deux-Montagnes (MRC), Laurentides, Quebec, J0N 1P0, Canada",
+        "road": "Boulevard des Pins",
+        "house_number": "2264",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Marthe-sur-le-Lac",
+        "state": "Quebec",
+        "postcode": "J0N 1P0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2264, Boulevard des Pins, Sainte-Marthe-sur-le-Lac, Deux-Montagnes (MRC), Laurentides, Quebec, J0N 1P0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:15.700805+00:00",
+  "_kind": "geo_samples"
+}

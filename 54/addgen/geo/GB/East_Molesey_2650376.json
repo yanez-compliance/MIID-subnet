@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "East Molesey",
+  "geonameid": 2650376,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.408820180756386,
+      "lon": -0.3249751694709955,
+      "geoinfo": {
+        "display_name": "Hampton Court Road, Hampton Wick, London Borough of Richmond upon Thames, London, Greater London, England, KT1 4AZ, United Kingdom",
+        "road": "Hampton Court Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hampton Wick",
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "KT1 4AZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hampton Court Road, East Molesey, England, United Kingdom"
+    },
+    {
+      "lat": 51.38153551316634,
+      "lon": -0.3085810925564404,
+      "geoinfo": {
+        "display_name": "Saffron Way, Surbiton, Royal Borough of Kingston upon Thames, London, Greater London, England, KT6 5DU, United Kingdom",
+        "road": "Saffron Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Surbiton",
+        "city_district": "Royal Borough of Kingston upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "KT6 5DU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Saffron Way, Surbiton, Royal Borough of Kingston upon Thames, London, Greater London, England, KT6 5DU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:55.997405+00:00",
+  "_kind": "geo_samples"
+}

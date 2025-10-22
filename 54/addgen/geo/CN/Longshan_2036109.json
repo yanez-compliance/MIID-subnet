@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longshan",
+  "geonameid": 2036109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.85579504195553,
+      "lon": 125.16714807474226,
+      "geoinfo": {
+        "display_name": "Gongnong, Longshan District, Liaoyuan City, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longshan District",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longshan, Jilin, China"
+    },
+    {
+      "lat": 42.88769271576798,
+      "lon": 125.09969083015841,
+      "geoinfo": {
+        "display_name": "集锡线, Longshan District, Liaoyuan City, Longshan, Jilin, China",
+        "road": "集锡线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longshan District",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "632, 集锡线, Longshan District, Liaoyuan City, Longshan, 09481 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:58.895366+00:00",
+  "_kind": "geo_samples"
+}

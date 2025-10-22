@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Treptow",
+  "geonameid": 7290255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.48952484162781,
+      "lon": 13.475562006860896,
+      "geoinfo": {
+        "display_name": "Platz am Spreetunnel, Alt-Treptow, Treptow-Köpenick, Berlin, 12435, Germany",
+        "road": "Platz am Spreetunnel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Alt-Treptow",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Platz am Spreetunnel, Treptow, Germany"
+    },
+    {
+      "lat": 52.48803342275737,
+      "lon": 13.419482866174427,
+      "geoinfo": {
+        "display_name": "11, Jahnstraße, Graefekiez, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10967, Germany",
+        "road": "Jahnstraße",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Kreuzberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10967",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Jahnstraße, Graefekiez, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10967, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:58.038772+00:00",
+  "_kind": "geo_samples"
+}

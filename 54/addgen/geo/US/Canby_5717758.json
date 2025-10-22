@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Canby",
+  "geonameid": 5717758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.22651995772492,
+      "lon": -122.68471577659258,
+      "geoinfo": {
+        "display_name": "Lone Elder, Clackamas County, Oregon, 97013, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Canby, Oregon, United States"
+    },
+    {
+      "lat": 45.26923934194893,
+      "lon": -122.63486723693555,
+      "geoinfo": {
+        "display_name": "11300, South Bremer Road, O'Neil Corners, Canby, Clackamas County, Oregon, 97013, United States",
+        "road": "South Bremer Road",
+        "house_number": "11300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canby",
+        "state": "Oregon",
+        "postcode": "97013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11300, South Bremer Road, O'Neil Corners, Canby, Clackamas County, Oregon, 97013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:32.030347+00:00",
+  "_kind": "geo_samples"
+}

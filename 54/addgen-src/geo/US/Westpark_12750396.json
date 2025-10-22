@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westpark",
+  "geonameid": 12750396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.68065172165557,
+      "lon": -117.80503116123265,
+      "geoinfo": {
+        "display_name": "San Diego Creek Trail, Woodbridge Village Center, Woodbridge, Irvine, Orange County, California, 92614, United States",
+        "road": "San Diego Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woodbridge",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92614",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "San Diego Creek Trail, Westpark, California, United States"
+    },
+    {
+      "lat": 33.72263902103552,
+      "lon": -117.80711882656787,
+      "geoinfo": {
+        "display_name": "Laurelwood, Browning, Tustin, Orange County, California, 92782, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Browning",
+        "city_district": null,
+        "city": "Tustin",
+        "state": "California",
+        "postcode": "92782",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "853, Laurelwood, Browning, Tustin, Orange County, California, 92782, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:35.467989+00:00",
+  "_kind": "geo_samples"
+}

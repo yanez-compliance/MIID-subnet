@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Memphis",
+  "geonameid": 4135865,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.156051481837025,
+      "lon": -90.14553299098772,
+      "geoinfo": {
+        "display_name": "North Service Road, West Memphis, Crittenden County, Arkansas, 72301, United States",
+        "road": "North Service Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Memphis",
+        "state": "Arkansas",
+        "postcode": "72301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Service Road, West Memphis, Arkansas, United States"
+    },
+    {
+      "lat": 35.13520859531458,
+      "lon": -90.22544325918746,
+      "geoinfo": {
+        "display_name": "South College Boulevard, West Memphis, Crittenden County, Arkansas, 72301, United States",
+        "road": "South College Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Memphis",
+        "state": "Arkansas",
+        "postcode": "72301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "147, South College Boulevard, West Memphis, Crittenden County, Arkansas, 72301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:10.748810+00:00",
+  "_kind": "geo_samples"
+}

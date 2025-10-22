@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Kallangur",
+  "geonameid": 6943560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.25471479805751,
+      "lon": 152.98525948560103,
+      "geoinfo": {
+        "display_name": "Ahern Street, Kallangur, Greater Brisbane, City of Moreton Bay, Queensland, 4503, Australia",
+        "road": "Ahern Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kallangur",
+        "state": "Queensland",
+        "postcode": "4503",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Ahern Street, Kallangur, Queensland, Australia"
+    },
+    {
+      "lat": -27.284804511345765,
+      "lon": 152.98040560399758,
+      "geoinfo": {
+        "display_name": "11, West Dianne Street, The Groves 1-169, Lawnton, Greater Brisbane, City of Moreton Bay, Queensland, 4501, Australia",
+        "road": "West Dianne Street",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Lawnton",
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4501",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "11, West Dianne Street, The Groves 1-169, Lawnton, Greater Brisbane, City of Moreton Bay, Queensland, 4501, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:23.584515+00:00",
+  "_kind": "geo_samples"
+}

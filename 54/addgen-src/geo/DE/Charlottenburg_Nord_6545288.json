@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Charlottenburg-Nord",
+  "geonameid": 6545288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.54184461039313,
+      "lon": 13.296410227197155,
+      "geoinfo": {
+        "display_name": "A 111, Paul-Hertz-Siedlung, Charlottenburg-Nord, Charlottenburg-Wilmersdorf, Berlin, 13627, Germany",
+        "road": "A 111",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Charlottenburg-Nord",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13627",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 111, Charlottenburg-Nord, Germany"
+    },
+    {
+      "lat": 52.56799657212288,
+      "lon": 13.276313092555357,
+      "geoinfo": {
+        "display_name": "Schwarzer Weg, Tegel, Reinickendorf, Berlin, 13507, Germany",
+        "road": "Schwarzer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tegel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13507",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "870, Schwarzer Weg, Tegel, Reinickendorf, Berlin, 13507, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:54.790157+00:00",
+  "_kind": "geo_samples"
+}

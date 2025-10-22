@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Lytkarino",
+  "geonameid": 532657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.554619479444256,
+      "lon": 37.90984939891419,
+      "geoinfo": {
+        "display_name": "149, Нагорная улица, Andreyevskoye, Leninsky District, Moscow Oblast, Central Federal District, 142714, Russia",
+        "road": "Нагорная улица",
+        "house_number": "149",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "142714",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "149 Нагорная улица, Lytkarino, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.580476581924444,
+      "lon": 37.8689882982115,
+      "geoinfo": {
+        "display_name": "Leninsky District, Moscow Oblast, Central Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "257, Lytkarino, 20633 Moscow Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:33:13.637087+00:00",
+  "_kind": "geo_samples"
+}

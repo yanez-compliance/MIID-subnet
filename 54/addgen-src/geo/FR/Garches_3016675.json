@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Garches",
+  "geonameid": 3016675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.830694958061045,
+      "lon": 2.1837198130416318,
+      "geoinfo": {
+        "display_name": "Rue de Marnes, Résidence de la Brosse, Ville-d'Avray, Boulogne-Billancourt, Hauts-de-Seine, Metropolitan France, 92410, France",
+        "road": "Rue de Marnes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ville-d'Avray",
+        "state": null,
+        "postcode": "92410",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Marnes, Garches, Ile-de-France, France"
+    },
+    {
+      "lat": 48.86105743477606,
+      "lon": 2.150124456386559,
+      "geoinfo": {
+        "display_name": "Résidence Élysée 2, La Celle-Saint-Cloud, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78170, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Celle-Saint-Cloud",
+        "state": "Ile-de-France",
+        "postcode": "78170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Résidence Élysée 2, La Celle-Saint-Cloud, Versailles, Yvelines, Ile-de-France, Metropolitan France, 78170, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:44.134827+00:00",
+  "_kind": "geo_samples"
+}

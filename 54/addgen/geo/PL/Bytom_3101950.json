@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Bytom",
+  "geonameid": 3101950,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.38803752121164,
+      "lon": 18.911765380229063,
+      "geoinfo": {
+        "display_name": "32, Klonowa, Buchacz, Radzionków, Tarnowskie Góry County, Metropolis GZM, Silesian Voivodeship, 41-922, Poland",
+        "road": "Klonowa",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Buchacz",
+        "city_district": null,
+        "city": "Radzionków",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-922",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "32 Klonowa, Bytom, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.344041038850335,
+      "lon": 18.910227924935732,
+      "geoinfo": {
+        "display_name": "Planowane centrum przesiadkowe na pl. Wolskiego, Ignacego Chrzanowskiego, Śródmieście, Bytom, Metropolis GZM, Silesian Voivodeship, 41-902, Poland",
+        "road": "Ignacego Chrzanowskiego",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Śródmieście",
+        "city": "Bytom",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-902",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Planowane centrum przesiadkowe na pl. Wolskiego, Ignacego Chrzanowskiego, Śródmieście, Bytom, Metropolis GZM, Silesian Voivodeship, 41-902, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T02:53:41.429090+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Loma Linda",
+  "geonameid": 5367696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.037411939325715,
+      "lon": -117.2916911950518,
+      "geoinfo": {
+        "display_name": "East Colton Heights, Colton, San Bernardino County, California, 92313, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colton",
+        "state": "California",
+        "postcode": "92313",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Loma Linda, California, United States"
+    },
+    {
+      "lat": 34.06912134111412,
+      "lon": -117.23454958522167,
+      "geoinfo": {
+        "display_name": "1289, Bryn Mawr Avenue, Redlands, San Bernardino County, California, 92374, United States",
+        "road": "Bryn Mawr Avenue",
+        "house_number": "1289",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Redlands",
+        "state": "California",
+        "postcode": "92374",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1289, Bryn Mawr Avenue, Redlands, San Bernardino County, California, 92374, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:32.997028+00:00",
+  "_kind": "geo_samples"
+}

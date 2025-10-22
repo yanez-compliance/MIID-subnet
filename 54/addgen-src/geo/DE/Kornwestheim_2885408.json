@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kornwestheim",
+  "geonameid": 2885408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.86788144602099,
+      "lon": 9.128593342454456,
+      "geoinfo": {
+        "display_name": "11, Im Kornfeld, Möglingen, Landkreis Ludwigsburg, Baden-Württemberg, 71696, Germany",
+        "road": null,
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Möglingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71696",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kornwestheim, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.866052289163136,
+      "lon": 9.2529299273052,
+      "geoinfo": {
+        "display_name": "32, Kirchstraße, Halden, Aldingen, Remseck, Landkreis Ludwigsburg, Baden-Württemberg, 71686, Germany",
+        "road": "Kirchstraße",
+        "house_number": "32",
+        "neighbourhood": "Halden",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aldingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71686",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "32, Kirchstraße, Halden, Aldingen, Remseck, Landkreis Ludwigsburg, Baden-Württemberg, 71686, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:54.172419+00:00",
+  "_kind": "geo_samples"
+}

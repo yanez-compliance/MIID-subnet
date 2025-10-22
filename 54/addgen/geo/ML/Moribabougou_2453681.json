@@ -1,0 +1,47 @@
+{
+  "country_code": "ML",
+  "country": "Mali",
+  "city": "Moribabougou",
+  "geonameid": 2453681,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.69219365587773,
+      "lon": -7.897374720056502,
+      "geoinfo": {
+        "display_name": "Solomanibougou, Kati Cercle, Koulikoro, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Solomanibougou",
+        "state": "Koulikoro",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "Moribabougou, Koulikoro, Mali"
+    },
+    {
+      "lat": 12.671065912968608,
+      "lon": -7.872356756861131,
+      "geoinfo": {
+        "display_name": "Dougourakoro, Kognini, Kati Cercle, Koulikoro, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dougourakoro",
+        "city_district": null,
+        "city": "Kognini",
+        "state": "Koulikoro",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "Dougourakoro, Moribabougou, Koulikoro, Mali"
+    }
+  ],
+  "updated_at": "2025-10-16T19:33:43.350130+00:00",
+  "_kind": "geo_samples"
+}

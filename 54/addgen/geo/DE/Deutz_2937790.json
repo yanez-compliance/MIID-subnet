@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Deutz",
+  "geonameid": 2937790,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.94388098113047,
+      "lon": 6.990675837474553,
+      "geoinfo": {
+        "display_name": "Parkhaus Zoobrücke P22a, Brügelmannstraße, Deutz, Innenstadt, Cologne, North Rhine-Westphalia, 50679, Germany",
+        "road": "Brügelmannstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Deutz",
+        "city_district": "Innenstadt",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50679",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Brügelmannstraße, Deutz, 11481 North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.90514264610431,
+      "lon": 6.970724480309269,
+      "geoinfo": {
+        "display_name": "150, Goltsteinstraße, Bayenthal, Rodenkirchen, Cologne, North Rhine-Westphalia, 50968, Germany",
+        "road": "Goltsteinstraße",
+        "house_number": "150",
+        "neighbourhood": null,
+        "suburb": "Bayenthal",
+        "city_district": "Rodenkirchen",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50968",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "150, Goltsteinstraße, Bayenthal, Rodenkirchen, Cologne, North Rhine-Westphalia, 50968, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:56.406021+00:00",
+  "_kind": "geo_samples"
+}

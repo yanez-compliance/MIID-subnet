@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bedlington",
+  "geonameid": 2656039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.12129751832404,
+      "lon": -1.6003388578835678,
+      "geoinfo": {
+        "display_name": "Bedlingtonshire Golf Club, Hartford Road, West Bedlington, Bedlington, Northumberland, North East, England, NE22 6AA, United Kingdom",
+        "road": "Hartford Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Bedlington",
+        "city_district": null,
+        "city": "Bedlington",
+        "state": "England",
+        "postcode": "NE22 6AA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hartford Road, Bedlington, England, United Kingdom"
+    },
+    {
+      "lat": 55.151639368054724,
+      "lon": -1.608384708506009,
+      "geoinfo": {
+        "display_name": "Choppington, Northumberland, North East, England, NE62 5SR, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Choppington",
+        "city_district": null,
+        "city": "Choppington",
+        "state": "England",
+        "postcode": "NE62 5SR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Choppington, Northumberland, North East, England, NE62 5SR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:19.457218+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mühlhausen",
+  "geonameid": 2867996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.21705838420681,
+      "lon": 10.435806646224126,
+      "geoinfo": {
+        "display_name": "Auf dem Kleinen Tonberg, Sambach, Mühlhausen/Thüringen, Unstrut-Hainich-Kreis, Thuringia, 99974, Germany",
+        "road": "Auf dem Kleinen Tonberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühlhausen/Thüringen",
+        "state": "Thuringia",
+        "postcode": "99974",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Auf dem Kleinen Tonberg, Mühlhausen, Thuringia, Germany"
+    },
+    {
+      "lat": 51.200932825372774,
+      "lon": 10.408295010598318,
+      "geoinfo": {
+        "display_name": "Ziegelweg, Weises Ziegelei, Pfafferode, Mühlhausen/Thüringen, Unstrut-Hainich-Kreis, Thuringia, 99974, Germany",
+        "road": "Ziegelweg",
+        "house_number": null,
+        "neighbourhood": "Weises Ziegelei",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mühlhausen/Thüringen",
+        "state": "Thuringia",
+        "postcode": "99974",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "875, Ziegelweg, Mühlhausen, 99974 Thuringia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:19.549612+00:00",
+  "_kind": "geo_samples"
+}

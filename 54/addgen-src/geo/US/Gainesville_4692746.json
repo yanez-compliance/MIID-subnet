@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gainesville",
+  "geonameid": 4692746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.59640580520538,
+      "lon": -97.11016431818275,
+      "geoinfo": {
+        "display_name": "Farm-to-Market Road 902, Cooke County, Texas, 76241, United States",
+        "road": "Farm-to-Market Road 902",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "76241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Farm-to-Market Road 902, Gainesville, Texas, United States"
+    },
+    {
+      "lat": 33.63342250976935,
+      "lon": -97.17131207195109,
+      "geoinfo": {
+        "display_name": "Cooke County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "614, Cooke County, 85808 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:52.455758+00:00",
+  "_kind": "geo_samples"
+}

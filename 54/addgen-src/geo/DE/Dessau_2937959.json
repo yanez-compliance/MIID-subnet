@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dessau",
+  "geonameid": 2937959,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.798821213391236,
+      "lon": 12.21919434600053,
+      "geoinfo": {
+        "display_name": "Hohe Straße, Kochstedt, Dessau, Dessau-Roßlau, Saxony-Anhalt, 06847, Germany",
+        "road": "Hohe Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kochstedt",
+        "city_district": "Dessau",
+        "city": null,
+        "state": "Saxony-Anhalt",
+        "postcode": "06847",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hohe Straße, Dessau, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.79824588600926,
+      "lon": 12.269123276010044,
+      "geoinfo": {
+        "display_name": "Lehmkutenwall, Hagenbreite, Törten, Dessau, Dessau-Roßlau, Saxony-Anhalt, 06849, Germany",
+        "road": "Lehmkutenwall",
+        "house_number": null,
+        "neighbourhood": "Hagenbreite",
+        "suburb": "Törten",
+        "city_district": "Dessau",
+        "city": null,
+        "state": "Saxony-Anhalt",
+        "postcode": "06849",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "479, Lehmkutenwall, Hagenbreite, Törten, Dessau, Dessau-Roßlau, Saxony-Anhalt, 06849, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:17.413932+00:00",
+  "_kind": "geo_samples"
+}

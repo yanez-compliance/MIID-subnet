@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Nazrēt",
+  "geonameid": 330186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.537910890128853,
+      "lon": 39.2368511242541,
+      "geoinfo": {
+        "display_name": "East Shewa, Oromia Region, 0408, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oromia Region",
+        "postcode": "0408",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Nazrēt, Oromia Region, Ethiopia"
+    },
+    {
+      "lat": 8.527684177009345,
+      "lon": 39.28165922837442,
+      "geoinfo": {
+        "display_name": "Adama, Oromia Region, 0408, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adama",
+        "state": "Oromia Region",
+        "postcode": "0408",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "342, Nazrēt, 0408 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:19.709495+00:00",
+  "_kind": "geo_samples"
+}

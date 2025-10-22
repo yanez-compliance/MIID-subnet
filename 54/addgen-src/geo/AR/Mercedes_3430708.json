@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Mercedes",
+  "geonameid": 3430708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.642283512157334,
+      "lon": -59.450481499318485,
+      "geoinfo": {
+        "display_name": "Mercedes, Partido de Mercedes, Buenos Aires, B6600, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mercedes",
+        "state": "Buenos Aires",
+        "postcode": "B6600",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Mercedes, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.677020524464666,
+      "lon": -59.45297987944511,
+      "geoinfo": {
+        "display_name": "Calle 144, Mercedes, Partido de Mercedes, Buenos Aires, B6600AAK, Argentina",
+        "road": "Calle 144",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mercedes",
+        "state": "Buenos Aires",
+        "postcode": "B6600AAK",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Calle 144, Mercedes, Partido de Mercedes, Buenos Aires, B6600AAK, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:56.171617+00:00",
+  "_kind": "geo_samples"
+}

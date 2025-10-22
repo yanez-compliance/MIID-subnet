@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sedan",
+  "geonameid": 2975349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.67707254182164,
+      "lon": 4.883224827477435,
+      "geoinfo": {
+        "display_name": "D 977, Cheveuges, Sedan, Ardennes, Grand Est, Metropolitan France, 08350, France",
+        "road": "D 977",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cheveuges",
+        "state": "Grand Est",
+        "postcode": "08350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 977, Sedan, Grand Est, France"
+    },
+    {
+      "lat": 49.67448241447007,
+      "lon": 4.901873759868989,
+      "geoinfo": {
+        "display_name": "Les Prés des Jeunes Fondis, Sedan, Ardennes, Grand Est, Metropolitan France, 08200, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sedan",
+        "state": "Grand Est",
+        "postcode": "08200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "303, Les Prés des Jeunes Fondis, Sedan, Ardennes, Grand Est, Metropolitan France, 08200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:03.192876+00:00",
+  "_kind": "geo_samples"
+}

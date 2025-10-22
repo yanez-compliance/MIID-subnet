@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Remseck am Neckar",
+  "geonameid": 12188617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.87327395002638,
+      "lon": 9.234499366603139,
+      "geoinfo": {
+        "display_name": "Ludwigsburger Steige, Markgröninger Weg, Aldingen, Remseck, Landkreis Ludwigsburg, Baden-Württemberg, 71686, Germany",
+        "road": "Ludwigsburger Steige",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aldingen",
+        "state": "Baden-Württemberg",
+        "postcode": "71686",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ludwigsburger Steige, Remseck am Neckar, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.84779474895849,
+      "lon": 9.287348184163934,
+      "geoinfo": {
+        "display_name": "Oeffinger Straße, Oeffingen, Hegnach, Fellbach, Rems-Murr-Kreis, Baden-Württemberg, 70736, Germany",
+        "road": "Oeffinger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oeffingen",
+        "city_district": null,
+        "city": "Fellbach",
+        "state": "Baden-Württemberg",
+        "postcode": "70736",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "451, Oeffinger Straße, Oeffingen, Hegnach, Fellbach, Rems-Murr-Kreis, Baden-Württemberg, 70736, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:18.302238+00:00",
+  "_kind": "geo_samples"
+}

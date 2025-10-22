@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Lethbridge",
+  "geonameid": 6053154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.67030511810336,
+      "lon": -112.86767773448534,
+      "geoinfo": {
+        "display_name": "University Drive W, University, Lethbridge, Alberta, T1K 4J0, Canada",
+        "road": "University Drive W",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "University",
+        "city_district": null,
+        "city": "Lethbridge",
+        "state": "Alberta",
+        "postcode": "T1K 4J0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "University Drive W, Lethbridge, Alberta, Canada"
+    },
+    {
+      "lat": 49.69241335208467,
+      "lon": -112.77047827412312,
+      "geoinfo": {
+        "display_name": "Lethbridge County, Alberta, T1J 5K6, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alberta",
+        "postcode": "T1J 5K6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Lethbridge County, Alberta, T1J 5K6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:46.244502+00:00",
+  "_kind": "geo_samples"
+}

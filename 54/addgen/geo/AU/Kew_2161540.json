@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Kew",
+  "geonameid": 2161540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.79008146182328,
+      "lon": 145.0469130802623,
+      "geoinfo": {
+        "display_name": "15, Elm Grove, Kew East, Melbourne, City of Boroondara, Victoria, 3102, Australia",
+        "road": "Elm Grove",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Kew East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3102",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "15 Elm Grove, Kew, Victoria, Australia"
+    },
+    {
+      "lat": -37.762377574324425,
+      "lon": 145.0253425276676,
+      "geoinfo": {
+        "display_name": "Clarendon Street, Thornbury, Melbourne, City of Darebin, Victoria, 3071, Australia",
+        "road": "Clarendon Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Thornbury",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3071",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "631, Clarendon Street, Thornbury, Melbourne, City of Darebin, Victoria, 3071, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:34.583832+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Novopokrovskaya",
+  "geonameid": 518325,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.97818705334519,
+      "lon": 40.67195840223767,
+      "geoinfo": {
+        "display_name": "Полевой переулок, Novopokrovskaya, Новопокровское сельское поселение, Новопокровский район, Krasnodar Krai, 353021, Russia",
+        "road": "Полевой переулок",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novopokrovskaya",
+        "state": "Krasnodar Krai",
+        "postcode": "353021",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Полевой переулок, Novopokrovskaya, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 45.91784011632214,
+      "lon": 40.669672749092584,
+      "geoinfo": {
+        "display_name": "Новопокровское сельское поселение, Новопокровский район, Krasnodar Krai, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "460, Новопокровское сельское поселение, Новопокровский район, 58697 Krasnodar Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:36.263567+00:00",
+  "_kind": "geo_samples"
+}

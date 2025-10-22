@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rocklin",
+  "geonameid": 5388319,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.784569651395984,
+      "lon": -121.25361905878471,
+      "geoinfo": {
+        "display_name": "5801, Zion Court, Rocklin, Placer County, California, 95677, United States",
+        "road": "Zion Court",
+        "house_number": "5801",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rocklin",
+        "state": "California",
+        "postcode": "95677",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5801 Zion Court, Rocklin, California, United States"
+    },
+    {
+      "lat": 38.76775788988774,
+      "lon": -121.22283636195687,
+      "geoinfo": {
+        "display_name": "Sierra College Boulevard, Roseville, Placer County, California, 95661, United States",
+        "road": "Sierra College Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roseville",
+        "state": "California",
+        "postcode": "95661",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118, Sierra College Boulevard, Roseville, Placer County, California, 95661, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:41.949407+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Northport",
+  "geonameid": 4080555,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.21582293559602,
+      "lon": -87.60503893225666,
+      "geoinfo": {
+        "display_name": "Tuscaloosa, Tuscaloosa County, Alabama, 35476, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tuscaloosa",
+        "state": "Alabama",
+        "postcode": "35476",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northport, Alabama, United States"
+    },
+    {
+      "lat": 33.242587108572835,
+      "lon": -87.62678067192567,
+      "geoinfo": {
+        "display_name": "3589, 69th Avenue, Simpson Subdivision, Northport, Tuscaloosa County, Alabama, 35473, United States",
+        "road": "69th Avenue",
+        "house_number": "3589",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northport",
+        "state": "Alabama",
+        "postcode": "35473",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3589, 69th Avenue, Simpson Subdivision, Northport, Tuscaloosa County, Alabama, 35473, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:52.657880+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Échirolles",
+  "geonameid": 3020495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.17783737924391,
+      "lon": 5.753057842012316,
+      "geoinfo": {
+        "display_name": "EHPAD du Bon Pasteur, 14, Rue Paul Langevin, Croix Rouge, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, Metropolitan France, 38400, France",
+        "road": "Rue Paul Langevin",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Croix Rouge",
+        "city_district": null,
+        "city": "Saint-Martin-d'Hères",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "38400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "14 Rue Paul Langevin, Échirolles, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.1203592996827,
+      "lon": 5.67141229912168,
+      "geoinfo": {
+        "display_name": "4 bis, Rue Jules Ferry, Lotissement la Joumatte, Le Bourg, Claix, Grenoble, Isère, Auvergne-Rhône-Alpes, Metropolitan France, 38640, France",
+        "road": "Rue Jules Ferry",
+        "house_number": "4 bis",
+        "neighbourhood": "Lotissement la Joumatte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Claix",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "38640",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "4 bis, Rue Jules Ferry, Lotissement la Joumatte, Le Bourg, Claix, Grenoble, Isère, Auvergne-Rhône-Alpes, Metropolitan France, 38640, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:08.222311+00:00",
+  "_kind": "geo_samples"
+}

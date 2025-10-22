@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Porto Torres",
+  "geonameid": 3170069,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.84586887950541,
+      "lon": 8.359531674207917,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Porto Torres, Italy"
+    },
+    {
+      "lat": 40.814842003858054,
+      "lon": 8.371648351267789,
+      "geoinfo": {
+        "display_name": "Strada Provinciale 34, Posthudorra/Porto Torres, Sassari, Sardinia, 07046, Italy",
+        "road": "Strada Provinciale 34",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Posthudorra/Porto Torres",
+        "state": "Sardinia",
+        "postcode": "07046",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Provinciale 34, Posthudorra/Porto Torres, Sassari, Sardinia, 07046, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:39.021882+00:00",
+  "_kind": "geo_samples"
+}

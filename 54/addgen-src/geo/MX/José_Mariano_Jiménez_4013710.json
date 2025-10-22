@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "José Mariano Jiménez",
+  "geonameid": 4013710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.110832756361166,
+      "lon": -104.88567269489545,
+      "geoinfo": {
+        "display_name": "Carretera Torreón-Jiménez, Jiménez, Chihuahua, 33980, Mexico",
+        "road": "Carretera Torreón-Jiménez",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiménez",
+        "state": "Chihuahua",
+        "postcode": "33980",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Torreón-Jiménez, José Mariano Jiménez, Chihuahua, Mexico"
+    },
+    {
+      "lat": 27.092889710095847,
+      "lon": -104.94153842733093,
+      "geoinfo": {
+        "display_name": "Hacienda de Dolores, Jiménez, Chihuahua, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hacienda de Dolores",
+        "state": "Chihuahua",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "311, Hacienda de Dolores, Jiménez, 55329 Chihuahua, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:38.487583+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Trinity-Bellwoods",
+  "geonameid": 7870920,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.65285897035338,
+      "lon": -79.3813103318241,
+      "geoinfo": {
+        "display_name": "Old City Hall, 60, Queen Street West, Yonge-Bay Corridor, Toronto Centre, Toronto, Golden Horseshoe, Ontario, M5H 2M4, Canada",
+        "road": "Queen Street West",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5H 2M4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "60 Queen Street West, Trinity-Bellwoods, Ontario, Canada"
+    },
+    {
+      "lat": 43.648710626699895,
+      "lon": -79.45603934314661,
+      "geoinfo": {
+        "display_name": "17, High Park Gardens, High Park, High Park-Swansea, Parkdale—High Park, Toronto, Golden Horseshoe, Ontario, M6R 1T2, Canada",
+        "road": "High Park Gardens",
+        "house_number": "17",
+        "neighbourhood": "High Park",
+        "suburb": "High Park-Swansea",
+        "city_district": "Parkdale—High Park",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6R 1T2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "17, High Park Gardens, High Park, High Park-Swansea, Parkdale—High Park, Toronto, Golden Horseshoe, Ontario, M6R 1T2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:04.998730+00:00",
+  "_kind": "geo_samples"
+}

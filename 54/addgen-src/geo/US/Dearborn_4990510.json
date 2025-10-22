@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dearborn",
+  "geonameid": 4990510,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.30561123206848,
+      "lon": -83.17403218785174,
+      "geoinfo": {
+        "display_name": "Schaefer Road, Dearborn, Wayne County, Michigan, 82074, United States",
+        "road": "Schaefer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dearborn",
+        "state": "Michigan",
+        "postcode": "82074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Schaefer Road, Dearborn, Michigan, United States"
+    },
+    {
+      "lat": 42.344303087221945,
+      "lon": -83.19169464402582,
+      "geoinfo": {
+        "display_name": "Payne Avenue, Dearborn, Wayne County, Michigan, 48126, United States",
+        "road": "Payne Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dearborn",
+        "state": "Michigan",
+        "postcode": "48126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "478, Payne Avenue, Dearborn, Wayne County, Michigan, 48126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:57.187854+00:00",
+  "_kind": "geo_samples"
+}

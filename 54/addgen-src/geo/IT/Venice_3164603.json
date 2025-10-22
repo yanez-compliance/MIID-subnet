@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Venice",
+  "geonameid": 3164603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.461485256547924,
+      "lon": 12.35449719876782,
+      "geoinfo": {
+        "display_name": "Strada Colorata, Venezia-Murano-Burano, Murano, Venice, Venezia, Veneto, 30141, Italy",
+        "road": "Strada Colorata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Venezia-Murano-Burano",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30141",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Colorata, Venice, Veneto, Italy"
+    },
+    {
+      "lat": 45.40324726470197,
+      "lon": 12.29883802158077,
+      "geoinfo": {
+        "display_name": "Venezia-Murano-Burano, Burano, Venice, Venezia, Veneto, 30142, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Venezia-Murano-Burano",
+        "city_district": null,
+        "city": "Venice",
+        "state": "Veneto",
+        "postcode": "30142",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "119, Venezia-Murano-Burano, Burano, Venice, Venezia, Veneto, 30142, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:18.643180+00:00",
+  "_kind": "geo_samples"
+}

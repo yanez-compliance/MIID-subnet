@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tucson",
+  "geonameid": 5318313,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.18878318000377,
+      "lon": -110.91882238291984,
+      "geoinfo": {
+        "display_name": "East 36th Street, Tucson, Pima County, Arizona, 85726, United States",
+        "road": "East 36th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tucson",
+        "state": "Arizona",
+        "postcode": "85726",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 36th Street, Tucson, Arizona, United States"
+    },
+    {
+      "lat": 32.194167856269274,
+      "lon": -110.91216213302192,
+      "geoinfo": {
+        "display_name": "East 34th Street, Tucson, Pima County, Arizona, 85716, United States",
+        "road": "East 34th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tucson",
+        "state": "Arizona",
+        "postcode": "85716",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 34th Street, Tucson, Pima County, Arizona, 85716, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:42.999551+00:00",
+  "_kind": "geo_samples"
+}

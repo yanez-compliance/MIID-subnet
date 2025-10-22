@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chicago Lawn",
+  "geonameid": 4887463,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.812703729415176,
+      "lon": -87.70289547665966,
+      "geoinfo": {
+        "display_name": "4430, South Troy Street, Brighton Park, Chicago, Lake Township, Cook County, Illinois, 60632, United States",
+        "road": "South Troy Street",
+        "house_number": "4430",
+        "neighbourhood": null,
+        "suburb": "Brighton Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60632",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4430 South Troy Street, Chicago Lawn, Illinois, United States"
+    },
+    {
+      "lat": 41.7495210090642,
+      "lon": -87.65477095386444,
+      "geoinfo": {
+        "display_name": "7933, South Elizabeth Street, South Englewood, Auburn Gresham, Chicago, Lake Township, Cook County, Illinois, 60620, United States",
+        "road": "South Elizabeth Street",
+        "house_number": "7933",
+        "neighbourhood": "South Englewood",
+        "suburb": "Auburn Gresham",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7933, South Elizabeth Street, South Englewood, Auburn Gresham, Chicago, Lake Township, Cook County, Illinois, 60620, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:12.271712+00:00",
+  "_kind": "geo_samples"
+}

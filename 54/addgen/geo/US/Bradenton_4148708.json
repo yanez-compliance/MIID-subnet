@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bradenton",
+  "geonameid": 4148708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.536231314726734,
+      "lon": -82.57682510437583,
+      "geoinfo": {
+        "display_name": "23rd Street West, Palmetto, Manatee County, Florida, 34220, United States",
+        "road": "23rd Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmetto",
+        "state": "Florida",
+        "postcode": "34220",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23rd Street West, Bradenton, Florida, United States"
+    },
+    {
+      "lat": 27.483430397246213,
+      "lon": -82.55774220890578,
+      "geoinfo": {
+        "display_name": "6th Street East, Bradenton, Manatee County, Florida, 34208, United States",
+        "road": "6th Street East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bradenton",
+        "state": "Florida",
+        "postcode": "34208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6th Street East, Bradenton, Manatee County, Florida, 34208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:01.530532+00:00",
+  "_kind": "geo_samples"
+}

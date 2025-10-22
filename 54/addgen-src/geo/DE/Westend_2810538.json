@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Westend",
+  "geonameid": 2810538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.52835365341372,
+      "lon": 13.291004548467956,
+      "geoinfo": {
+        "display_name": "Charlottenburg Palace Gardens, Luisenplatz, Kalowswerder, Charlottenburg, Charlottenburg-Wilmersdorf, Berlin, 10585, Germany",
+        "road": "Luisenplatz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Charlottenburg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10585",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Luisenplatz, Westend, Germany"
+    },
+    {
+      "lat": 52.49562716367231,
+      "lon": 13.244643644163142,
+      "geoinfo": {
+        "display_name": "Teufelsseechaussee, Grunewald, Charlottenburg-Wilmersdorf, Berlin, 14193, Germany",
+        "road": "Teufelsseechaussee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Grunewald",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14193",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "320, Teufelsseechaussee, Grunewald, Charlottenburg-Wilmersdorf, Berlin, 14193, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:39.850874+00:00",
+  "_kind": "geo_samples"
+}

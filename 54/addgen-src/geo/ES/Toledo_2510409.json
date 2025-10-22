@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Toledo",
+  "geonameid": 2510409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.84675558753512,
+      "lon": -4.027979166760106,
+      "geoinfo": {
+        "display_name": "Toledo, Castile-La Mancha, 45002, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toledo",
+        "state": "Castile-La Mancha",
+        "postcode": "45002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Toledo, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 39.85356061289668,
+      "lon": -4.027917523684192,
+      "geoinfo": {
+        "display_name": "Calle Calvario, Toledo, Castile-La Mancha, 45002, Spain",
+        "road": "Calle Calvario",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toledo",
+        "state": "Castile-La Mancha",
+        "postcode": "45002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "019, Calle Calvario, Toledo, Castile-La Mancha, 45002, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:07.228435+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Chas",
+  "geonameid": 1274553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.60088179436958,
+      "lon": 86.18892258077253,
+      "geoinfo": {
+        "display_name": "NH18, Chas, Bokaro, Jharkhand, 827013, India",
+        "road": "NH18",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chas",
+        "state": "Jharkhand",
+        "postcode": "827013",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH18, Chas, Jharkhand, India"
+    },
+    {
+      "lat": 23.657447007967434,
+      "lon": 86.19669347599289,
+      "geoinfo": {
+        "display_name": "Bokaro, Chas, Bokaro, Jharkhand, 827013, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bokaro",
+        "state": "Jharkhand",
+        "postcode": "827013",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "414, Bokaro, Chas, Bokaro, Jharkhand, 827013, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:59:19.075489+00:00",
+  "_kind": "geo_samples"
+}

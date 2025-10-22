@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Candiac",
+  "geonameid": 5914826,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.38694854934069,
+      "lon": -73.48329080140779,
+      "geoinfo": {
+        "display_name": "Rue de Douvaine, Candiac, Roussillon, Montérégie, Quebec, J5R 0G6, Canada",
+        "road": "Rue de Douvaine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Candiac",
+        "state": "Quebec",
+        "postcode": "J5R 0G6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue de Douvaine, Candiac, Quebec, Canada"
+    },
+    {
+      "lat": 45.39281882305227,
+      "lon": -73.53085091306708,
+      "geoinfo": {
+        "display_name": "112, Place Jason, J, Candiac, Roussillon, Montérégie, Quebec, J5B 1Y9, Canada",
+        "road": "Place Jason",
+        "house_number": "112",
+        "neighbourhood": "J",
+        "suburb": null,
+        "city_district": null,
+        "city": "Candiac",
+        "state": "Quebec",
+        "postcode": "J5B 1Y9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "112, Place Jason, J, Candiac, Roussillon, Montérégie, Quebec, J5B 1Y9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:06:21.325061+00:00",
+  "_kind": "geo_samples"
+}

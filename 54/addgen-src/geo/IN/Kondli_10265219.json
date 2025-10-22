@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kondli",
+  "geonameid": 10265219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.62757852560854,
+      "lon": 77.3727436151596,
+      "geoinfo": {
+        "display_name": "Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201014, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sector 62",
+        "city_district": null,
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "postcode": "201014",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Sector 62, Kondli, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.6287794477626,
+      "lon": 77.30606153024686,
+      "geoinfo": {
+        "display_name": "Indraprastha Extension, Preet Vihar Tehsil, East Delhi, Delhi, 110092, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Indraprastha Extension",
+        "suburb": "Preet Vihar Tehsil",
+        "city_district": "East Delhi",
+        "city": "Delhi",
+        "state": null,
+        "postcode": "110092",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "262, Indraprastha Extension, Preet Vihar Tehsil, East Delhi, Delhi, 110092, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:09:08.091530+00:00",
+  "_kind": "geo_samples"
+}

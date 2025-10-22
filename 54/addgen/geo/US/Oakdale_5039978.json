@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakdale",
+  "geonameid": 5039978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.98250194551918,
+      "lon": -92.97936350779322,
+      "geoinfo": {
+        "display_name": "6299, 24th Street North, Hazel Park, Oakdale, Washington County, Minnesota, 55128, United States",
+        "road": "24th Street North",
+        "house_number": "6299",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakdale",
+        "state": "Minnesota",
+        "postcode": "55128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6299 24th Street North, Oakdale, Minnesota, United States"
+    },
+    {
+      "lat": 44.957919641476614,
+      "lon": -93.02524809659324,
+      "geoinfo": {
+        "display_name": "Nokomis Montessori South, 525, White Bear Avenue North, Eastview, Southeast, Saint Paul, Ramsey County, Minnesota, 55106, United States",
+        "road": "White Bear Avenue North",
+        "house_number": "525",
+        "neighbourhood": "Eastview",
+        "suburb": "Southeast",
+        "city_district": null,
+        "city": "Saint Paul",
+        "state": "Minnesota",
+        "postcode": "55106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nokomis Montessori South, 525, White Bear Avenue North, Eastview, Southeast, Saint Paul, Ramsey County, Minnesota, 55106, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:43.680961+00:00",
+  "_kind": "geo_samples"
+}

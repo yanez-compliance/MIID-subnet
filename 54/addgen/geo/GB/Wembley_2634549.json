@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wembley",
+  "geonameid": 2634549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.574216746910245,
+      "lon": -0.29384995955286597,
+      "geoinfo": {
+        "display_name": "Anaya, 322, Preston Road, Preston, Wembley, London, Greater London, England, HA3 0QP, United Kingdom",
+        "road": "Preston Road",
+        "house_number": "322",
+        "neighbourhood": null,
+        "suburb": "Preston",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "HA3 0QP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "322 Preston Road, Wembley, England, United Kingdom"
+    },
+    {
+      "lat": 51.54753947481185,
+      "lon": -0.2562389811845149,
+      "geoinfo": {
+        "display_name": "Beckett Close, Harlesden, London Borough of Brent, London, Greater London, England, NW10 9BS, United Kingdom",
+        "road": "Beckett Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Harlesden",
+        "city_district": "London Borough of Brent",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW10 9BS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Beckett Close, Harlesden, London Borough of Brent, London, Greater London, England, NW10 9BS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:23.988836+00:00",
+  "_kind": "geo_samples"
+}

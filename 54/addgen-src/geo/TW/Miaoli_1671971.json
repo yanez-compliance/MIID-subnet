@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Miaoli",
+  "geonameid": 1671971,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 24.58828034927072,
+      "lon": 120.80484929422217,
+      "geoinfo": {
+        "display_name": "Yuandun, Xinchuan Village, Miaoli City, Miaoli County, 36001, Taiwan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Xinchuan Village",
+        "city": "Miaoli City",
+        "state": null,
+        "postcode": "36001",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "Xinchuan Village, Miaoli, Taiwan"
+    },
+    {
+      "lat": 24.57037853742046,
+      "lon": 120.86340230485128,
+      "geoinfo": {
+        "display_name": "濫坑道, Hecheng, Xiangshan Village, Touwu, Miaoli County, 360, Taiwan",
+        "road": "濫坑道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Xiangshan Village",
+        "city": "Touwu",
+        "state": null,
+        "postcode": "360",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "濫坑道, Miaoli, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:34:59.215977+00:00",
+  "_kind": "geo_samples"
+}

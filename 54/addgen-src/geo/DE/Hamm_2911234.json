@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hamm",
+  "geonameid": 2911234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.58503458571972,
+      "lon": 10.033752530306009,
+      "geoinfo": {
+        "display_name": "8, Saarlandstraße, Barmbek-Nord, Hamburg-Nord, Hamburg, 22303, Germany",
+        "road": "Saarlandstraße",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": "Barmbek-Nord",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "8 Saarlandstraße, Hamm, Germany"
+    },
+    {
+      "lat": 53.5945503601716,
+      "lon": 10.028527315552568,
+      "geoinfo": {
+        "display_name": "Platanenallee, Winterhude, Hamburg-Nord, Hamburg, 22303, Germany",
+        "road": "Platanenallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Winterhude",
+        "city_district": "Hamburg-Nord",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "683, Platanenallee, Winterhude, Hamburg-Nord, Hamburg, 22303, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:25.409262+00:00",
+  "_kind": "geo_samples"
+}

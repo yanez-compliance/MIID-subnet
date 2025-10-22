@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pearl City",
+  "geonameid": 5852275,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.405254204149536,
+      "lon": -157.97500141091845,
+      "geoinfo": {
+        "display_name": "1203, Kaweloka Street, Pearl Highlands, Pearl City, Honolulu County, Hawaii, 96782, United States",
+        "road": "Kaweloka Street",
+        "house_number": "1203",
+        "neighbourhood": "Pearl Highlands",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pearl City",
+        "state": "Hawaii",
+        "postcode": "96782",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1203 Kaweloka Street, Pearl City, Hawaii, United States"
+    },
+    {
+      "lat": 21.3659877651666,
+      "lon": -157.96119457337514,
+      "geoinfo": {
+        "display_name": "Kamehameha Loop, Waipahu, Honolulu County, Hawaii, 96860, United States",
+        "road": "Kamehameha Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waipahu",
+        "state": "Hawaii",
+        "postcode": "96860",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "559, Kamehameha Loop, Waipahu, Honolulu County, Hawaii, 96860, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:35.687916+00:00",
+  "_kind": "geo_samples"
+}

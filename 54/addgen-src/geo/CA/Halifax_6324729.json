@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Halifax",
+  "geonameid": 6324729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.65379340965812,
+      "lon": -63.6037549603117,
+      "geoinfo": {
+        "display_name": "6267, Almon Street, Halifax, Halifax Regional Municipality, Halifax County, Nova Scotia, B3K 1V1, Canada",
+        "road": "Almon Street",
+        "house_number": "6267",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Halifax",
+        "state": "Nova Scotia",
+        "postcode": "B3K 1V1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "6267 Almon Street, Halifax, Nova Scotia, Canada"
+    },
+    {
+      "lat": 44.67959823794351,
+      "lon": -63.58732215597355,
+      "geoinfo": {
+        "display_name": "60, Farrell Street, Crystal Heights, North Dartmouth, Tufts Cove, Dartmouth, Halifax Regional Municipality, Halifax County, Nova Scotia, B3A 4B2, Canada",
+        "road": "Farrell Street",
+        "house_number": "60",
+        "neighbourhood": "Crystal Heights",
+        "suburb": "Tufts Cove",
+        "city_district": null,
+        "city": "Dartmouth",
+        "state": "Nova Scotia",
+        "postcode": "B3A 4B2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "60, Farrell Street, Crystal Heights, North Dartmouth, Tufts Cove, Dartmouth, Halifax Regional Municipality, Halifax County, Nova Scotia, B3A 4B2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:36.653086+00:00",
+  "_kind": "geo_samples"
+}

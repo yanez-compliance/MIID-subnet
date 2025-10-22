@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cortlandt Manor",
+  "geonameid": 11811570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.29194710814383,
+      "lon": -73.8790038314307,
+      "geoinfo": {
+        "display_name": "3, Crestview Avenue, Toddville, Town of Cortlandt, Westchester County, New York, 10567, United States",
+        "road": "Crestview Avenue",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Cortlandt",
+        "state": "New York",
+        "postcode": "10567",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3 Crestview Avenue, Cortlandt Manor, New York, United States"
+    },
+    {
+      "lat": 41.291705799939564,
+      "lon": -73.90033529577677,
+      "geoinfo": {
+        "display_name": "2, Iroquois Street, City of Peekskill, Westchester County, New York, 10566, United States",
+        "road": "Iroquois Street",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Peekskill",
+        "state": "New York",
+        "postcode": "10566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Iroquois Street, City of Peekskill, Westchester County, New York, 10566, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:21.789647+00:00",
+  "_kind": "geo_samples"
+}

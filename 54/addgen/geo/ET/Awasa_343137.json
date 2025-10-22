@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Awasa",
+  "geonameid": 343137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.082892351767638,
+      "lon": 38.475994319059716,
+      "geoinfo": {
+        "display_name": "Hawassa, Sidama, 1923, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawassa",
+        "state": "Sidama",
+        "postcode": "1923",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Awasa, Sidama, Ethiopia"
+    },
+    {
+      "lat": 7.106725667126686,
+      "lon": 38.478806434775656,
+      "geoinfo": {
+        "display_name": "Biishaan Gurachaa, West Arsi, Oromia Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Biishaan Gurachaa",
+        "state": "Oromia Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "988, Biishaan Gurachaa, West Arsi, 82460 Oromia Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:01:30.194244+00:00",
+  "_kind": "geo_samples"
+}

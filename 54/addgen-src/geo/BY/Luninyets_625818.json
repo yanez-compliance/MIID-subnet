@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Luninyets",
+  "geonameid": 625818,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 52.25078363249737,
+      "lon": 26.824013019592144,
+      "geoinfo": {
+        "display_name": "40Б, вуліца Пірагова, Бохоново, Luniniec, Luninets District, Brest Region, 225642, Belarus",
+        "road": "вуліца Пірагова",
+        "house_number": "40Б",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Luniniec",
+        "state": "Brest Region",
+        "postcode": "225642",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "40Б, вуліца Пірагова, Бохоново, Luniniec, Luninets District, Brest Region, 225642, Belarus"
+    },
+    {
+      "lat": 52.280774670961755,
+      "lon": 26.77824933126706,
+      "geoinfo": {
+        "display_name": "Аэродром, 21к19, М10, Luniniec, Luninets District, Brest Region, 225644, Belarus",
+        "road": "М10",
+        "house_number": "21к19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Luniniec",
+        "state": "Brest Region",
+        "postcode": "225644",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Аэродром, 21к19, М10, Luniniec, Luninets District, Brest Region, 225644, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:23.800404+00:00",
+  "_kind": "geo_samples"
+}

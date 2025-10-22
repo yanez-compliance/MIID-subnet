@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Livermore",
+  "geonameid": 5367440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.68048466280883,
+      "lon": -121.81930725779164,
+      "geoinfo": {
+        "display_name": "Stanley Boulevard, Alameda County, California, 94551, United States",
+        "road": "Stanley Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94551",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Stanley Boulevard, Livermore, California, United States"
+    },
+    {
+      "lat": 37.65741383096504,
+      "lon": -121.74560425131426,
+      "geoinfo": {
+        "display_name": "Wente Street, Alameda County, California, 94605, United States",
+        "road": "Wente Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "94605",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "702, Wente Street, Alameda County, California, 94605, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:55.268051+00:00",
+  "_kind": "geo_samples"
+}

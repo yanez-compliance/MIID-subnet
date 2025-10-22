@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Kruis",
+  "geonameid": 2786634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.23854225924877,
+      "lon": 3.2683770718482608,
+      "geoinfo": {
+        "display_name": "Polderstraat, Damme, Brugge, West Flanders, 8340, Belgium",
+        "road": "Polderstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Damme",
+        "state": "West Flanders",
+        "postcode": "8340",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Polderstraat, Sint-Kruis, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.210991533631805,
+      "lon": 3.2725935252812586,
+      "geoinfo": {
+        "display_name": "34, De Linde, Sint-Kruis, Bruges, Brugge, West Flanders, 8310, Belgium",
+        "road": "De Linde",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Kruis",
+        "city": "Bruges",
+        "state": "West Flanders",
+        "postcode": "8310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "34, De Linde, Sint-Kruis, Bruges, Brugge, West Flanders, 8310, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:37.411506+00:00",
+  "_kind": "geo_samples"
+}

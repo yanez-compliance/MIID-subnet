@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Scarborough",
+  "geonameid": 4982720,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.567605128261015,
+      "lon": -70.40109210615613,
+      "geoinfo": {
+        "display_name": "107, Stewart Drive, Dunstan Crossing, Dunstan, Scarborough, Cumberland County, Maine, 04074, United States",
+        "road": "Stewart Drive",
+        "house_number": "107",
+        "neighbourhood": null,
+        "suburb": "Dunstan",
+        "city_district": null,
+        "city": "Scarborough",
+        "state": "Maine",
+        "postcode": "04074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "107, Stewart Drive, Dunstan Crossing, Dunstan, Scarborough, Cumberland County, Maine, 04074, United States"
+    },
+    {
+      "lat": 43.58568305271058,
+      "lon": -70.33822378034263,
+      "geoinfo": {
+        "display_name": "Ward Street Path, Eastern Village, Oak Hill, Scarborough, Cumberland County, Maine, 04074, United States",
+        "road": "Ward Street Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oak Hill",
+        "city_district": null,
+        "city": "Scarborough",
+        "state": "Maine",
+        "postcode": "04074",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "052, Ward Street Path, Eastern Village, Oak Hill, Scarborough, Cumberland County, Maine, 04074, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:39.140127+00:00",
+  "_kind": "geo_samples"
+}

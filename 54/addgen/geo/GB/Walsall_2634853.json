@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Walsall",
+  "geonameid": 2634853,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.57890345654334,
+      "lon": -1.962866844833643,
+      "geoinfo": {
+        "display_name": "16, Boscobel Road, The Chuckery, Highgate, Walsall, West Midlands, England, WS1 2PL, United Kingdom",
+        "road": "Boscobel Road",
+        "house_number": "16",
+        "neighbourhood": "The Chuckery",
+        "suburb": "Highgate",
+        "city_district": null,
+        "city": "Walsall",
+        "state": "England",
+        "postcode": "WS1 2PL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "16 Boscobel Road, Walsall, England, United Kingdom"
+    },
+    {
+      "lat": 52.55804712771179,
+      "lon": -2.036759109909389,
+      "geoinfo": {
+        "display_name": "Woden Road West, Woods Bank, Darlaston, Walsall, West Midlands, England, WS10 7SU, United Kingdom",
+        "road": "Woden Road West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woods Bank",
+        "city_district": null,
+        "city": "Darlaston",
+        "state": "England",
+        "postcode": "WS10 7SU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Woden Road West, Woods Bank, Darlaston, Walsall, West Midlands, England, WS10 7SU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:04.231467+00:00",
+  "_kind": "geo_samples"
+}

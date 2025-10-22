@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Perth",
+  "geonameid": 2063523,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.959086883983655,
+      "lon": 115.88196385230492,
+      "geoinfo": {
+        "display_name": "Gloucester Park, 569, Nelson Crescent, East Perth, Perth, City of Perth, Western Australia, 6004, Australia",
+        "road": "Nelson Crescent",
+        "house_number": "569",
+        "neighbourhood": null,
+        "suburb": "East Perth",
+        "city_district": null,
+        "city": "Perth",
+        "state": "Western Australia",
+        "postcode": "6004",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "569 Nelson Crescent, Perth, Western Australia, Australia"
+    },
+    {
+      "lat": -31.989741006787252,
+      "lon": 115.83495351759836,
+      "geoinfo": {
+        "display_name": "Crawley, Perth, City of Perth, Western Australia, 6009, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Crawley",
+        "city_district": null,
+        "city": "Perth",
+        "state": "Western Australia",
+        "postcode": "6009",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "759, Crawley, Perth, City of Perth, Western Australia, 6009, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:47.773951+00:00",
+  "_kind": "geo_samples"
+}

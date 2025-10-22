@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qingxi",
+  "geonameid": 8416237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.774535360847956,
+      "lon": 107.42243313950515,
+      "geoinfo": {
+        "display_name": "G348, Jiangdong Subdistrict, Fuling, Fuling District, Chongqing, China",
+        "road": "G348",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jiangdong Subdistrict",
+        "city_district": null,
+        "city": "Fuling",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G348, Qingxi, Chongqing, China"
+    },
+    {
+      "lat": 29.793584671736195,
+      "lon": 107.47560576206608,
+      "geoinfo": {
+        "display_name": "Qingxi, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingxi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "294, Qingxi, Fuling District, 24636 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:01.884235+00:00",
+  "_kind": "geo_samples"
+}

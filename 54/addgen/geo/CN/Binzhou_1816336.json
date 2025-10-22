@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Binzhou",
+  "geonameid": 1816336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.37249958636598,
+      "lon": 118.0050710905791,
+      "geoinfo": {
+        "display_name": "滨州医学院附属医院, Huanghe 2nd Road, Shixi, Bincheng District, Binzhou, Shandong, 256600, China",
+        "road": "Huanghe 2nd Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shixi",
+        "city_district": null,
+        "city": "Bincheng District",
+        "state": "Shandong",
+        "postcode": "256600",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huanghe 2nd Road, Binzhou, Shandong, China"
+    },
+    {
+      "lat": 37.34132987210551,
+      "lon": 118.05583503989816,
+      "geoinfo": {
+        "display_name": "Bincheng District, Binzhou, Shandong, 256600, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bincheng District",
+        "state": "Shandong",
+        "postcode": "256600",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "808, Bincheng District, Binzhou, Shandong, 256600, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:46.559578+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sakura",
+  "geonameid": 11612337,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.73319068318196,
+      "lon": 139.9570393913773,
+      "geoinfo": {
+        "display_name": "Yaita, Tochigi Prefecture, 329-1311, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yaita",
+        "state": null,
+        "postcode": "329-1311",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sakura, Japan"
+    },
+    {
+      "lat": 36.748729278008696,
+      "lon": 139.9440109985161,
+      "geoinfo": {
+        "display_name": "Ishizeki, Yaita, Tochigi Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yaita",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "098, Ishizeki, Yaita, 52686 Tochigi Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:41.514528+00:00",
+  "_kind": "geo_samples"
+}

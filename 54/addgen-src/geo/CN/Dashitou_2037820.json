@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dashitou",
+  "geonameid": 2037820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.283548512963094,
+      "lon": 128.54586765316532,
+      "geoinfo": {
+        "display_name": "Zengyi, Dunhua City, Yanbian, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dunhua City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dashitou, Jilin, China"
+    },
+    {
+      "lat": 43.33161561943454,
+      "lon": 128.4861605041844,
+      "geoinfo": {
+        "display_name": "大板线, Changshengtun, Dunhua City, Yanbian, Jilin, China",
+        "road": "大板线",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dunhua City",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "219, 大板线, Changshengtun, Dunhua City, Yanbian, 95669 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:00:52.237048+00:00",
+  "_kind": "geo_samples"
+}

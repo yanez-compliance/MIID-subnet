@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Muttenz",
+  "geonameid": 2659522,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.53166223263949,
+      "lon": 7.697268373658416,
+      "geoinfo": {
+        "display_name": "21, Rilänen, Pratteln, Bezirk Liestal, Basel-Landschaft, 4133, Switzerland",
+        "road": null,
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pratteln",
+        "state": "Basel-Landschaft",
+        "postcode": "4133",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "21, Muttenz, 4133 Basel-Landschaft, Switzerland"
+    },
+    {
+      "lat": 47.561687313298386,
+      "lon": 7.619106144240289,
+      "geoinfo": {
+        "display_name": "Grenzacherstrasse, Hirzbrunnen, Kleinbasel, Basel, Basel-City, 5068, Switzerland",
+        "road": "Grenzacherstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hirzbrunnen",
+        "city_district": null,
+        "city": "Basel",
+        "state": "Basel-City",
+        "postcode": "5068",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "874, Grenzacherstrasse, Hirzbrunnen, Kleinbasel, Basel, Basel-City, 5068, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:35.788146+00:00",
+  "_kind": "geo_samples"
+}

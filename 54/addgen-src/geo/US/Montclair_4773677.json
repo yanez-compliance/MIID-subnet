@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montclair",
+  "geonameid": 4773677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.60215342361698,
+      "lon": -77.33353929475336,
+      "geoinfo": {
+        "display_name": "16206, Edgewood Drive, Cardinal Ridge, Dumfries, Prince William County, Virginia, 22025, United States",
+        "road": "Edgewood Drive",
+        "house_number": "16206",
+        "neighbourhood": "Cardinal Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dumfries",
+        "state": "Virginia",
+        "postcode": "22025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16206 Edgewood Drive, Montclair, Virginia, United States"
+    },
+    {
+      "lat": 38.633493722811885,
+      "lon": -77.34075699223055,
+      "geoinfo": {
+        "display_name": "14794, Darbydale Avenue, Darbydale, Dale City, Prince William County, Virginia, 22193, United States",
+        "road": "Darbydale Avenue",
+        "house_number": "14794",
+        "neighbourhood": "Darbydale",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dale City",
+        "state": "Virginia",
+        "postcode": "22193",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14794, Darbydale Avenue, Darbydale, Dale City, Prince William County, Virginia, 22193, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:03.408275+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Kallio",
+  "geonameid": 654706,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.2177199502761,
+      "lon": 24.94566397876557,
+      "geoinfo": {
+        "display_name": "32, Kullervonkatu, Käpylä, Central major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00610, Finland",
+        "road": "Kullervonkatu",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Käpylä",
+        "city_district": "Central major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00610",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "32, Kullervonkatu, Käpylä, Central major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00610, Finland"
+    },
+    {
+      "lat": 60.17622797464751,
+      "lon": 24.997851448628143,
+      "geoinfo": {
+        "display_name": "Kruunuvuorensilta, Kruunuvuori, Kruunuvuorenranta, Mustikkamaa-Korkeasaari, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00570, Finland",
+        "road": "Kruunuvuorensilta",
+        "house_number": null,
+        "neighbourhood": "Kruunuvuori",
+        "suburb": "Kruunuvuorenranta",
+        "city_district": "Southeastern major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00570",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "377, Kruunuvuorensilta, Kruunuvuori, Kruunuvuorenranta, Mustikkamaa-Korkeasaari, Southeastern major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00570, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:54.384477+00:00",
+  "_kind": "geo_samples"
+}

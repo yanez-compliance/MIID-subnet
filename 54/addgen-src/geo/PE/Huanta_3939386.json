@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Huanta",
+  "geonameid": 3939386,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.90964599371269,
+      "lon": -74.27295690821148,
+      "geoinfo": {
+        "display_name": "AY-100, Vegaccocha, Ccollana, Luricocha, Province of Huanta, Ayacucho, Peru",
+        "road": "AY-100",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ccollana",
+        "state": "Ayacucho",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "AY-100, Huanta, Ayacucho, Peru"
+    },
+    {
+      "lat": -12.921149613430472,
+      "lon": -74.25198669485118,
+      "geoinfo": {
+        "display_name": "Castro Pampa, Nahuinpuquio, Huanta, Province of Huanta, Ayacucho, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Castro Pampa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Huanta",
+        "state": "Ayacucho",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "714, Castro Pampa, Nahuinpuquio, Huanta, Province of Huanta, 38477 Ayacucho, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:36.097374+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newton",
+  "geonameid": 4276248,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.06934852955142,
+      "lon": -97.36077441309172,
+      "geoinfo": {
+        "display_name": "Northwest 24th Street, Newton, Harvey County, Kansas, United States",
+        "road": "Northwest 24th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newton",
+        "state": "Kansas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northwest 24th Street, Newton, Kansas, United States"
+    },
+    {
+      "lat": 38.06665211547294,
+      "lon": -97.32871491187286,
+      "geoinfo": {
+        "display_name": "I 135;US 81, Harvey County, Kansas, 67114, United States",
+        "road": "I 135;US 81",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "67114",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 135;US 81, Harvey County, Kansas, 67114, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:12.103950+00:00",
+  "_kind": "geo_samples"
+}

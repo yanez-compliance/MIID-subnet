@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Mol",
+  "geonameid": 2791067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.1730479130706,
+      "lon": 5.0656628165214315,
+      "geoinfo": {
+        "display_name": "31, Gerststraat, Mol, Turnhout, Antwerp, 2400, Belgium",
+        "road": "Gerststraat",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mol",
+        "state": "Antwerp",
+        "postcode": "2400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "31 Gerststraat, Mol, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.18737547401229,
+      "lon": 5.16156694181049,
+      "geoinfo": {
+        "display_name": "Owenslei, Mol, Turnhout, Antwerp, 2400, Belgium",
+        "road": "Owenslei",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mol",
+        "state": "Antwerp",
+        "postcode": "2400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "326, Owenslei, Mol, Turnhout, Antwerp, 2400, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:54.091683+00:00",
+  "_kind": "geo_samples"
+}

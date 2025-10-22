@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Southchase",
+  "geonameid": 4173600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.37919758519101,
+      "lon": -81.39175938342643,
+      "geoinfo": {
+        "display_name": "Florida's Turnpike, Southchase, Meadow Woods, Orange County, Florida, 32837, United States",
+        "road": "Florida's Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southchase",
+        "state": "Florida",
+        "postcode": "32837",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Florida's Turnpike, Southchase, Florida, United States"
+    },
+    {
+      "lat": 28.356316995450495,
+      "lon": -81.35992790451552,
+      "geoinfo": {
+        "display_name": "14500, Little Oakley Court, Spring Lake, Meadow Woods, Orange County, Florida, 32824, United States",
+        "road": "Little Oakley Court",
+        "house_number": "14500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meadow Woods",
+        "state": "Florida",
+        "postcode": "32824",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14500, Little Oakley Court, Spring Lake, Meadow Woods, Orange County, Florida, 32824, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:43.743048+00:00",
+  "_kind": "geo_samples"
+}

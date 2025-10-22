@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Sosnovka",
+  "geonameid": 461698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 60.01014274698674,
+      "lon": 30.420236759359902,
+      "geoinfo": {
+        "display_name": "Школа № 88, проспект Науки, округ Гражданка, Saint Petersburg, Northwestern Federal District, 195256, Russia",
+        "road": "проспект Науки",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "округ Гражданка",
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "195256",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "проспект Науки, Sosnovka, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 60.02083732166812,
+      "lon": 30.344788107648046,
+      "geoinfo": {
+        "display_name": "Круговая аллея, Saint Petersburg, округ Сосновское, Saint Petersburg, Northwestern Federal District, 194223, Russia",
+        "road": "Круговая аллея",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "194223",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "728, Круговая аллея, Saint Petersburg, округ Сосновское, Saint Petersburg, Northwestern Federal District, 194223, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:43.101114+00:00",
+  "_kind": "geo_samples"
+}

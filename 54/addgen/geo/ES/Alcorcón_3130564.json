@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alcorcón",
+  "geonameid": 3130564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3389820967012,
+      "lon": -3.804358481390773,
+      "geoinfo": {
+        "display_name": "Calle de la Laguna, Suroeste, Alcorcón, Community of Madrid, 28924, Spain",
+        "road": "Calle de la Laguna",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alcorcón",
+        "state": "Community of Madrid",
+        "postcode": "28924",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de la Laguna, Alcorcón, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.319055020872895,
+      "lon": -3.7980201726123908,
+      "geoinfo": {
+        "display_name": "Colada de Esparteros y de la Canaleja, Sur, Leganés, Community of Madrid, 28941, Spain",
+        "road": "Colada de Esparteros y de la Canaleja",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sur",
+        "city": "Leganés",
+        "state": "Community of Madrid",
+        "postcode": "28941",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "853, Colada de Esparteros y de la Canaleja, Sur, Leganés, Community of Madrid, 28941, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:20.565248+00:00",
+  "_kind": "geo_samples"
+}

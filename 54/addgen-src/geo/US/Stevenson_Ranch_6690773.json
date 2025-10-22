@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stevenson Ranch",
+  "geonameid": 6690773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.37992640337288,
+      "lon": -118.59447815180502,
+      "geoinfo": {
+        "display_name": "Pico Canyon Road, Southern Oaks, Mentryville, Los Angeles County, California, 91381, United States",
+        "road": "Pico Canyon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91381",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pico Canyon Road, Stevenson Ranch, California, United States"
+    },
+    {
+      "lat": 34.415417683117845,
+      "lon": -118.53366782006718,
+      "geoinfo": {
+        "display_name": "Commuter Way, Santa Clarita, Los Angeles County, California, 91321, United States",
+        "road": "Commuter Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clarita",
+        "state": "California",
+        "postcode": "91321",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "078, Commuter Way, Santa Clarita, Los Angeles County, California, 91321, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:58.552677+00:00",
+  "_kind": "geo_samples"
+}

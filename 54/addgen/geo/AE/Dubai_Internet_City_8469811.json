@@ -1,0 +1,47 @@
+{
+  "country_code": "AE",
+  "country": "United Arab Emirates",
+  "city": "Dubai Internet City",
+  "geonameid": 8469811,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.054412260003687,
+      "lon": 55.153420382712454,
+      "geoinfo": {
+        "display_name": "36 Street, Emirates Hills, Dubai, United Arab Emirates",
+        "road": "36 Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "36 Street, Dubai Internet City, Dubai, United Arab Emirates"
+    },
+    {
+      "lat": 25.108523321528807,
+      "lon": 55.207008576671186,
+      "geoinfo": {
+        "display_name": "17a Street, Al Barsha 2, Al Barsha, Al Barsha 2, Dubai, United Arab Emirates",
+        "road": "17a Street",
+        "house_number": null,
+        "neighbourhood": "Al Barsha 2",
+        "suburb": "Al Barsha 2",
+        "city_district": null,
+        "city": null,
+        "state": "Dubai",
+        "postcode": null,
+        "country": "United Arab Emirates",
+        "country_code": "ae"
+      },
+      "address": "17a Street, Dubai Internet City, Dubai, United Arab Emirates"
+    }
+  ],
+  "updated_at": "2025-10-16T10:19:03.812353+00:00",
+  "_kind": "geo_samples"
+}

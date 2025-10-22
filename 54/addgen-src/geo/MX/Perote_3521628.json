@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Perote",
+  "geonameid": 3521628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.56267818251333,
+      "lon": -97.19985378855597,
+      "geoinfo": {
+        "display_name": "Los Molinos (San José), Perote, Veracruz, 21272, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Molinos (San José)",
+        "state": "Veracruz",
+        "postcode": "21272",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Perote, Veracruz, Mexico"
+    },
+    {
+      "lat": 19.535602811091973,
+      "lon": -97.20639618625935,
+      "geoinfo": {
+        "display_name": "El Conejo, Perote, Veracruz, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Conejo",
+        "state": "Veracruz",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "873, El Conejo, Perote, 75853 Veracruz, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:00.510842+00:00",
+  "_kind": "geo_samples"
+}

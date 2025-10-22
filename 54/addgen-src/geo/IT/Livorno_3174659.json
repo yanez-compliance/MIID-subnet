@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Livorno",
+  "geonameid": 3174659,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.569855271313614,
+      "lon": 10.354748780782263,
+      "geoinfo": {
+        "display_name": "Via Pian di Rota, Livorno, Tuscany, 57121, Italy",
+        "road": "Via Pian di Rota",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livorno",
+        "state": "Tuscany",
+        "postcode": "57121",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pian di Rota, Livorno, Tuscany, Italy"
+    },
+    {
+      "lat": 43.5691427846948,
+      "lon": 10.298391540100528,
+      "geoinfo": {
+        "display_name": "Via dei Navicelli, Livorno, Tuscany, 57100, Italy",
+        "road": "Via dei Navicelli",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Livorno",
+        "state": "Tuscany",
+        "postcode": "57100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "959, Via dei Navicelli, Livorno, Tuscany, 57100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:39.011145+00:00",
+  "_kind": "geo_samples"
+}

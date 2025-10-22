@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ypsilanti",
+  "geonameid": 5015688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.248991914901836,
+      "lon": -83.62228637982354,
+      "geoinfo": {
+        "display_name": "Bowman-Roosevelt Lot, Jones-Goddard, Riverside, Ypsilanti, Washtenaw County, Michigan, 48197, United States",
+        "road": "Jones-Goddard",
+        "house_number": null,
+        "neighbourhood": "Riverside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ypsilanti",
+        "state": "Michigan",
+        "postcode": "48197",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jones-Goddard, Ypsilanti, Michigan, United States"
+    },
+    {
+      "lat": 42.24223922676457,
+      "lon": -83.66293173522567,
+      "geoinfo": {
+        "display_name": "4834, Club Place, Pittsfield Charter Township, Washtenaw County, Michigan, 48197, United States",
+        "road": "Club Place",
+        "house_number": "4834",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsfield Charter Township",
+        "state": "Michigan",
+        "postcode": "48197",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4834, Club Place, Pittsfield Charter Township, Washtenaw County, Michigan, 48197, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:20.763645+00:00",
+  "_kind": "geo_samples"
+}

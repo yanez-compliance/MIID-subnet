@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bhiwadi",
+  "geonameid": 7279747,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.195362874677553,
+      "lon": 76.84286915496024,
+      "geoinfo": {
+        "display_name": "Bhiwadi, Tijara Tehsil, Kherthal-Tijara, Rajasthan, 301019, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "postcode": "301019",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bhiwadi, Rajasthan, India"
+    },
+    {
+      "lat": 28.241731753608995,
+      "lon": 76.84898831085412,
+      "geoinfo": {
+        "display_name": "Manesar, Gurugram, Haryana, 301019, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Manesar",
+        "city": "Gurugram",
+        "state": "Haryana",
+        "postcode": "301019",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "621, Manesar, Gurugram, Haryana, 301019, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:45:19.075655+00:00",
+  "_kind": "geo_samples"
+}

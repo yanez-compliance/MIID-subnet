@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Radcliffe",
+  "geonameid": 6691227,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.52836974296156,
+      "lon": -2.3630360492700375,
+      "geoinfo": {
+        "display_name": "M61, Wardley, Clifton, Salford, Greater Manchester, England, BL4 8SF, United Kingdom",
+        "road": "M61",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wardley",
+        "city_district": null,
+        "city": "Salford",
+        "state": "England",
+        "postcode": "BL4 8SF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M61, Radcliffe, England, United Kingdom"
+    },
+    {
+      "lat": 53.56390476016602,
+      "lon": -2.26684388128563,
+      "geoinfo": {
+        "display_name": "Griffe Lane, Unsworth, Hollins, Bury, Greater Manchester, England, BL9 8QR, United Kingdom",
+        "road": "Griffe Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Unsworth",
+        "city_district": null,
+        "city": "Bury",
+        "state": "England",
+        "postcode": "BL9 8QR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Griffe Lane, Unsworth, Hollins, Bury, Greater Manchester, England, BL9 8QR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:31.948349+00:00",
+  "_kind": "geo_samples"
+}

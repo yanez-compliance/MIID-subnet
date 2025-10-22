@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ferrara",
+  "geonameid": 3177090,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.83113832054688,
+      "lon": 11.65216070095333,
+      "geoinfo": {
+        "display_name": "10, Via Giovanni Battista Lanza, Quacchio, Borgo Punta, Pontegradella, Ferrara, Emilia-Romagna, 44123, Italy",
+        "road": "Via Giovanni Battista Lanza",
+        "house_number": "10",
+        "neighbourhood": "Quacchio",
+        "suburb": "Borgo Punta",
+        "city_district": null,
+        "city": "Ferrara",
+        "state": "Emilia-Romagna",
+        "postcode": "44123",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "10 Via Giovanni Battista Lanza, Ferrara, Emilia-Romagna, Italy"
+    },
+    {
+      "lat": 44.82087651324045,
+      "lon": 11.603366759076888,
+      "geoinfo": {
+        "display_name": "22, Viale Krasnodar, Villaggio Satellite, Ferrara, Emilia-Romagna, 44124, Italy",
+        "road": "Viale Krasnodar",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Villaggio Satellite",
+        "city_district": null,
+        "city": "Ferrara",
+        "state": "Emilia-Romagna",
+        "postcode": "44124",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "22, Viale Krasnodar, Villaggio Satellite, Ferrara, Emilia-Romagna, 44124, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:14.198339+00:00",
+  "_kind": "geo_samples"
+}

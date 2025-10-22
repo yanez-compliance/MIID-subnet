@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairland",
+  "geonameid": 4354573,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.0476589210176,
+      "lon": -76.94745025808426,
+      "geoinfo": {
+        "display_name": "Beltsville, Prince George's County, Maryland, 20993, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beltsville",
+        "state": "Maryland",
+        "postcode": "20993",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fairland, Maryland, United States"
+    },
+    {
+      "lat": 39.06114735972763,
+      "lon": -76.96982880603483,
+      "geoinfo": {
+        "display_name": "1899, Staley Manor Drive, Rolling Acres, White Oak, Montgomery County, Maryland, 20904, United States",
+        "road": "Staley Manor Drive",
+        "house_number": "1899",
+        "neighbourhood": "Rolling Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": "White Oak",
+        "state": "Maryland",
+        "postcode": "20904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1899, Staley Manor Drive, Rolling Acres, White Oak, Montgomery County, Maryland, 20904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:21.010848+00:00",
+  "_kind": "geo_samples"
+}

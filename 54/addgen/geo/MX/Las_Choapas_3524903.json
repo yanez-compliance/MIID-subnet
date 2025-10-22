@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Las Choapas",
+  "geonameid": 3524903,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.918109079891025,
+      "lon": -94.13907680822713,
+      "geoinfo": {
+        "display_name": "Venustiano Carranza, Las Choapas, Veracruz, 96980, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Veracruz",
+        "postcode": "96980",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Las Choapas, Veracruz, Mexico"
+    },
+    {
+      "lat": 17.90035841907094,
+      "lon": -94.08998753636298,
+      "geoinfo": {
+        "display_name": "Calle Salomón Reyes, Las Choapas, Veracruz, 96980, Mexico",
+        "road": "Calle Salomón Reyes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Choapas",
+        "state": "Veracruz",
+        "postcode": "96980",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "442, Calle Salomón Reyes, Las Choapas, Veracruz, 96980, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:27.444208+00:00",
+  "_kind": "geo_samples"
+}

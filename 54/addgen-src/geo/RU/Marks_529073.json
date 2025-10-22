@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Marks",
+  "geonameid": 529073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.71999765234304,
+      "lon": 46.78122586734692,
+      "geoinfo": {
+        "display_name": "1, Берёзовая улица, Marx, городское поселение Маркс, Marksovsky District, Saratov Oblast, Volga Federal District, 413090, Russia",
+        "road": "Берёзовая улица",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marx",
+        "state": "Saratov Oblast",
+        "postcode": "413090",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "1 Берёзовая улица, Marks, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 51.701142156988965,
+      "lon": 46.813295612833514,
+      "geoinfo": {
+        "display_name": "Р-229, Приволжское, Приволжское сельское поселение, Marksovsky District, Saratov Oblast, Volga Federal District, 413092, Russia",
+        "road": "Р-229",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Приволжское",
+        "state": "Saratov Oblast",
+        "postcode": "413092",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Р-229, Приволжское, Приволжское сельское поселение, Marksovsky District, Saratov Oblast, Volga Federal District, 413092, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:37.091882+00:00",
+  "_kind": "geo_samples"
+}

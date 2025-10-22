@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainfield",
+  "geonameid": 5102720,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.64762943133904,
+      "lon": -74.44207024437466,
+      "geoinfo": {
+        "display_name": "107, Redmont Road, Watchung, Somerset County, New Jersey, 07069, United States",
+        "road": "Redmont Road",
+        "house_number": "107",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Watchung",
+        "state": "New Jersey",
+        "postcode": "07069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "107 Redmont Road, Plainfield, New Jersey, United States"
+    },
+    {
+      "lat": 40.60193320088544,
+      "lon": -74.39858810177154,
+      "geoinfo": {
+        "display_name": "1416, Maple Avenue, Plainfield, Union County, New Jersey, 07060, United States",
+        "road": "Maple Avenue",
+        "house_number": "1416",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "New Jersey",
+        "postcode": "07060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1416, Maple Avenue, Plainfield, Union County, New Jersey, 07060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:39:56.083625+00:00",
+  "_kind": "geo_samples"
+}

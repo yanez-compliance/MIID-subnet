@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clayton",
+  "geonameid": 4460943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.63097127272198,
+      "lon": -78.42898294824818,
+      "geoinfo": {
+        "display_name": "Primelending, 8998, Clayton Boulevard, Powhatan, Clayton, Johnston County, North Carolina, 27520, United States",
+        "road": "Clayton Boulevard",
+        "house_number": "8998",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clayton",
+        "state": "North Carolina",
+        "postcode": "27520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8998 Clayton Boulevard, Clayton, North Carolina, United States"
+    },
+    {
+      "lat": 35.64861818276438,
+      "lon": -78.40382824693317,
+      "geoinfo": {
+        "display_name": "East Clayton Elementary School, 2075, Wrenwood Drive, Ross Landing, Clayton, Johnston County, North Carolina, 27520, United States",
+        "road": "Wrenwood Drive",
+        "house_number": "2075",
+        "neighbourhood": "Ross Landing",
+        "suburb": null,
+        "city_district": null,
+        "city": "Clayton",
+        "state": "North Carolina",
+        "postcode": "27520",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Clayton Elementary School, 2075, Wrenwood Drive, Ross Landing, Clayton, Johnston County, North Carolina, 27520, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:26.988660+00:00",
+  "_kind": "geo_samples"
+}

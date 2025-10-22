@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Madrid",
+  "geonameid": 3675707,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.751248706672181,
+      "lon": -74.26758001778906,
+      "geoinfo": {
+        "display_name": "Santa Cruz, Madrid, Sabana Occidente, RAP (Especial) Central, 250037, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Santa Cruz",
+        "city": "Madrid",
+        "state": null,
+        "postcode": "250037",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Santa Cruz, Madrid, Colombia"
+    },
+    {
+      "lat": 4.7044993684980065,
+      "lon": -74.25900900174179,
+      "geoinfo": {
+        "display_name": "La Estancia, Madrid, Sabana Occidente, RAP (Especial) Central, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madrid",
+        "state": null,
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "285, La Estancia, Madrid, Sabana Occidente, 76341 RAP (Especial) Central, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:18.958679+00:00",
+  "_kind": "geo_samples"
+}

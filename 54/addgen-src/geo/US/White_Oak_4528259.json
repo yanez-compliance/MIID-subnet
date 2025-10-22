@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "White Oak",
+  "geonameid": 4528259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.206217720980554,
+      "lon": -84.63210972107258,
+      "geoinfo": {
+        "display_name": "5672, Jessup Road, White Oak, Green Township, Hamilton County, Ohio, 45247, United States",
+        "road": "Jessup Road",
+        "house_number": "5672",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45247",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5672 Jessup Road, White Oak, Ohio, United States"
+    },
+    {
+      "lat": 39.238474374193245,
+      "lon": -84.58305533008648,
+      "geoinfo": {
+        "display_name": "3102, Compton Road, Wardwood Acres, Colerain Heights, Colerain Township, Hamilton County, Ohio, 45251, United States",
+        "road": "Compton Road",
+        "house_number": "3102",
+        "neighbourhood": "Wardwood Acres",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45251",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3102, Compton Road, Wardwood Acres, Colerain Heights, Colerain Township, Hamilton County, Ohio, 45251, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:44.097459+00:00",
+  "_kind": "geo_samples"
+}

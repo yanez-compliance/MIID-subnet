@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Irvington",
+  "geonameid": 5099724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70298200020392,
+      "lon": -74.26857836108648,
+      "geoinfo": {
+        "display_name": "1279, Orange Avenue, Union, Union County, New Jersey, 07083, United States",
+        "road": "Orange Avenue",
+        "house_number": "1279",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union",
+        "state": "New Jersey",
+        "postcode": "07083",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1279 Orange Avenue, Irvington, New Jersey, United States"
+    },
+    {
+      "lat": 40.744774123588094,
+      "lon": -74.19296551908629,
+      "geoinfo": {
+        "display_name": "153, Cabinet Street, University Heights, Newark, Essex County, New Jersey, 07107, United States",
+        "road": "Cabinet Street",
+        "house_number": "153",
+        "neighbourhood": "University Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "New Jersey",
+        "postcode": "07107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "153, Cabinet Street, University Heights, Newark, Essex County, New Jersey, 07107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:19.753732+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Olney",
+  "geonameid": 5204465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.05166123591963,
+      "lon": -75.12739023505834,
+      "geoinfo": {
+        "display_name": "6558, North 5th Street, East Oak Lane, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19126, United States",
+        "road": "North 5th Street",
+        "house_number": "6558",
+        "neighbourhood": "East Oak Lane",
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6558 North 5th Street, Olney, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.04580437226616,
+      "lon": -75.08204027504183,
+      "geoinfo": {
+        "display_name": "1106, Magee Avenue, Volunteertown, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States",
+        "road": "Magee Avenue",
+        "house_number": "1106",
+        "neighbourhood": "Volunteertown",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1106, Magee Avenue, Volunteertown, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19149, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:49.898341+00:00",
+  "_kind": "geo_samples"
+}

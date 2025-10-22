@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 11) / Seebach",
+  "geonameid": 2658656,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.41829135549839,
+      "lon": 8.556302353651148,
+      "geoinfo": {
+        "display_name": "Schärenmoosstrasse, Seebach, Kreis 11, Zurich, District Zurich, Zurich, 8050, Switzerland",
+        "road": "Schärenmoosstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seebach",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8050",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Schärenmoosstrasse, Zürich (Kreis 11) / Seebach, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.4317323852828,
+      "lon": 8.533958948469758,
+      "geoinfo": {
+        "display_name": "Rümlangstrasse, Seebach, Letten, Rümlang, Bezirk Dielsdorf, Zurich, 8052, Switzerland",
+        "road": "Rümlangstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seebach",
+        "city_district": null,
+        "city": "Rümlang",
+        "state": "Zurich",
+        "postcode": "8052",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Rümlangstrasse, Zürich (Kreis 11) / Seebach, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.421032952993414,
+      "lon": 8.573903916062164,
+      "geoinfo": {
+        "display_name": "A11, Herti, Wallisellen, Bezirk Bülach, Zurich, 8152, Switzerland",
+        "road": "A11",
+        "house_number": null,
+        "neighbourhood": "Herti",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wallisellen",
+        "state": "Zurich",
+        "postcode": "8152",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "A11, Herti, Wallisellen, Bezirk Bülach, Zurich, 8152, Switzerland"
+    },
+    {
+      "lat": 47.41848268190411,
+      "lon": 8.592655966907607,
+      "geoinfo": {
+        "display_name": "7, Pfadhagstrasse, Rieden, Wallisellen, Bezirk Bülach, Zurich, 8304, Switzerland",
+        "road": "Pfadhagstrasse",
+        "house_number": "7",
+        "neighbourhood": "Rieden",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wallisellen",
+        "state": "Zurich",
+        "postcode": "8304",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "7, Pfadhagstrasse, Rieden, Wallisellen, Bezirk Bülach, Zurich, 8304, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:08.358378+00:00",
+  "_kind": "geo_samples"
+}

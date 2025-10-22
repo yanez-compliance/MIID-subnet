@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Barrio de Peral",
+  "geonameid": 2521249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.63486645014245,
+      "lon": -0.9487552358375573,
+      "geoinfo": {
+        "display_name": "San Félix, Cartagena, Campo de Cartagena y Mar Menor, Region of Murcia, 30353, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "San Félix",
+        "city": "Cartagena",
+        "state": "Region of Murcia",
+        "postcode": "30353",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "San Félix, Barrio de Peral, Region of Murcia, Spain"
+    },
+    {
+      "lat": 37.587862829152336,
+      "lon": -0.9637986434314683,
+      "geoinfo": {
+        "display_name": "Barriada Santiago, Santa Lucía, Cartagena, Campo de Cartagena y Mar Menor, Region of Murcia, 30202, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Barriada Santiago",
+        "suburb": null,
+        "city_district": "Santa Lucía",
+        "city": "Cartagena",
+        "state": "Region of Murcia",
+        "postcode": "30202",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "687, Barriada Santiago, Santa Lucía, Cartagena, Campo de Cartagena y Mar Menor, Region of Murcia, 30202, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:28.275430+00:00",
+  "_kind": "geo_samples"
+}

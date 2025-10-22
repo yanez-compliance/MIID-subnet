@@ -1,0 +1,47 @@
+{
+  "country_code": "MM",
+  "country": "Myanmar",
+  "city": "Pyu",
+  "geonameid": 1298911,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 18.452523129020232,
+      "lon": 96.41162982510424,
+      "geoinfo": {
+        "display_name": "Pein Hne Khon, Phyu, Taungoo District, Bago Region, 08141, Myanmar",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pein Hne Khon",
+        "state": "Bago Region",
+        "postcode": "08141",
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "Pyu, Bago Region, Myanmar"
+    },
+    {
+      "lat": 18.473580874403737,
+      "lon": 96.43662848806338,
+      "geoinfo": {
+        "display_name": "NH12, Tar Char, Phyu, Taungoo District, Bago Region, Myanmar",
+        "road": "NH12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tar Char",
+        "state": "Bago Region",
+        "postcode": null,
+        "country": "Myanmar",
+        "country_code": "mm"
+      },
+      "address": "NH12, Pyu, Bago Region, Myanmar"
+    }
+  ],
+  "updated_at": "2025-10-16T19:36:42.766070+00:00",
+  "_kind": "geo_samples"
+}

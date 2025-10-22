@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brentwood",
+  "geonameid": 5110077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.81347097601258,
+      "lon": -73.2234683438866,
+      "geoinfo": {
+        "display_name": "100, Kings Highway, Brentwood, Town of Islip, Suffolk County, New York, 11788, United States",
+        "road": "Kings Highway",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "New York",
+        "postcode": "11788",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 Kings Highway, Brentwood, New York, United States"
+    },
+    {
+      "lat": 40.74122449930051,
+      "lon": -73.25776441426444,
+      "geoinfo": {
+        "display_name": "15, Pembroke Court, North Bay Shore, Bay Shore, Town of Islip, Suffolk County, New York, 11706, United States",
+        "road": "Pembroke Court",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bay Shore",
+        "state": "New York",
+        "postcode": "11706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15, Pembroke Court, North Bay Shore, Bay Shore, Town of Islip, Suffolk County, New York, 11706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:02:05.635615+00:00",
+  "_kind": "geo_samples"
+}

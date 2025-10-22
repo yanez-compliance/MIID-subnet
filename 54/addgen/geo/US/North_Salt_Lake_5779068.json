@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Salt Lake",
+  "geonameid": 5779068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.8648210682012,
+      "lon": -111.87308460923377,
+      "geoinfo": {
+        "display_name": "2371, 300 East, Oak Hills, Bountiful, Davis County, Utah, 84010, United States",
+        "road": "300 East",
+        "house_number": "2371",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bountiful",
+        "state": "Utah",
+        "postcode": "84010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2371 300 East, North Salt Lake, Utah, United States"
+    },
+    {
+      "lat": 40.86324810641969,
+      "lon": -111.96192417544194,
+      "geoinfo": {
+        "display_name": "Davis County, Utah, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "717, Davis County, 57493 Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:57.279736+00:00",
+  "_kind": "geo_samples"
+}

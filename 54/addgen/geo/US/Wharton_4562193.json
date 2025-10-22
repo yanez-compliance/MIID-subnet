@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wharton",
+  "geonameid": 4562193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.92523272428664,
+      "lon": -75.17553555181655,
+      "geoinfo": {
+        "display_name": "The Mark Kachhi Law Firm, PLLC, 1727, Snyder Avenue, Girard Estates, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19145, United States",
+        "road": "Snyder Avenue",
+        "house_number": "1727",
+        "neighbourhood": "Girard Estates",
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19145",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1727 Snyder Avenue, Wharton, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.913918668103726,
+      "lon": -75.12084637694329,
+      "geoinfo": {
+        "display_name": "Broadway, Waterfront South, Morgan Village, Camden, Camden County, New Jersey, 08104, United States",
+        "road": "Broadway",
+        "house_number": null,
+        "neighbourhood": "Waterfront South",
+        "suburb": null,
+        "city_district": null,
+        "city": "Camden",
+        "state": "New Jersey",
+        "postcode": "08104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "905, Broadway, Waterfront South, Morgan Village, Camden, Camden County, New Jersey, 08104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:37.221862+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Bussolengo",
+  "geonameid": 3181359,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.460307127976854,
+      "lon": 10.845109164075879,
+      "geoinfo": {
+        "display_name": "Via delle Penezie, Bussolengo, Verona, Veneto, 37012, Italy",
+        "road": "Via delle Penezie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bussolengo",
+        "state": "Veneto",
+        "postcode": "37012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via delle Penezie, Bussolengo, Veneto, Italy"
+    },
+    {
+      "lat": 45.432331822010134,
+      "lon": 10.878258854668086,
+      "geoinfo": {
+        "display_name": "50, Via Mancalacqua, Mancalacqua, Sona, Verona, Veneto, 37060, Italy",
+        "road": "Via Mancalacqua",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mancalacqua",
+        "state": "Veneto",
+        "postcode": "37060",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "50, Via Mancalacqua, Mancalacqua, Sona, Verona, Veneto, 37060, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:49.217672+00:00",
+  "_kind": "geo_samples"
+}

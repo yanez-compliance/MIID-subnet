@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Komae",
+  "geonameid": 11612580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.63163428003884,
+      "lon": 139.61756780290435,
+      "geoinfo": {
+        "display_name": "さくらのトイレ, 一の橋, Kinuta Park, Setagaya, Tokyo, 157-8510, Japan",
+        "road": "一の橋",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kinuta Park",
+        "city_district": null,
+        "city": "Setagaya",
+        "state": null,
+        "postcode": "157-8510",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "一の橋, Komae, Japan"
+    },
+    {
+      "lat": 35.65986231375901,
+      "lon": 139.58061064935026,
+      "geoinfo": {
+        "display_name": "Wakabacho 1-chome, Chofu, Tokyo, 182-0002, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Wakabacho 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chofu",
+        "state": null,
+        "postcode": "182-0002",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Wakabacho 1-chome, Chofu, Tokyo, 182-0002, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:09.626012+00:00",
+  "_kind": "geo_samples"
+}

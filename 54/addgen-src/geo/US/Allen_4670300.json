@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Allen",
+  "geonameid": 4670300,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.11699121238364,
+      "lon": -96.69756784507749,
+      "geoinfo": {
+        "display_name": "1220, North Alma Drive, Allen, Collin County, Texas, 75013, United States",
+        "road": "North Alma Drive",
+        "house_number": "1220",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Allen",
+        "state": "Texas",
+        "postcode": "75013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1220 North Alma Drive, Allen, Texas, United States"
+    },
+    {
+      "lat": 33.14235941904508,
+      "lon": -96.68331163911661,
+      "geoinfo": {
+        "display_name": "State Highway 121, The Meadows, Collin County, Texas, 75013, United States",
+        "road": "State Highway 121",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "75013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "State Highway 121, The Meadows, Collin County, Texas, 75013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:31.418072+00:00",
+  "_kind": "geo_samples"
+}

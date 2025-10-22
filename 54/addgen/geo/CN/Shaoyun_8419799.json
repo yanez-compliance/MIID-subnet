@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaoyun",
+  "geonameid": 8419799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.01810259424853,
+      "lon": 105.98966626877605,
+      "geoinfo": {
+        "display_name": "Shaoyun, Tongliang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongliang District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shaoyun, Chongqing, China"
+    },
+    {
+      "lat": 30.01136530292547,
+      "lon": 105.95371977437838,
+      "geoinfo": {
+        "display_name": "X392, Shaoyun, Tongliang District, Chongqing, China",
+        "road": "X392",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongliang District",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X392, Shaoyun, Tongliang District, 24723 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:44.620112+00:00",
+  "_kind": "geo_samples"
+}

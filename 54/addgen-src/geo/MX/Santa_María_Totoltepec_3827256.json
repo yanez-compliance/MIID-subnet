@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Santa María Totoltepec",
+  "geonameid": 3827256,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.313269670088342,
+      "lon": -99.55947301795776,
+      "geoinfo": {
+        "display_name": "El Cerrillo Vista Hemosa, Toluca, State of Mexico, 52102, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Cerrillo Vista Hemosa",
+        "state": "State of Mexico",
+        "postcode": "52102",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Santa María Totoltepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.286128675776666,
+      "lon": -99.6343521678,
+      "geoinfo": {
+        "display_name": "Calle 28 de Octubre, Toluca, State of Mexico, 50070, Mexico",
+        "road": "Calle 28 de Octubre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toluca",
+        "state": "State of Mexico",
+        "postcode": "50070",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 28 de Octubre, Toluca, State of Mexico, 50070, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:58.887569+00:00",
+  "_kind": "geo_samples"
+}

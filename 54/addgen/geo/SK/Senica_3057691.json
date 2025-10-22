@@ -1,0 +1,47 @@
+{
+  "country_code": "SK",
+  "country": "Slovakia",
+  "city": "Senica",
+  "geonameid": 3057691,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.70631710692929,
+      "lon": 17.42018662967718,
+      "geoinfo": {
+        "display_name": "Sobotište, District of Senica, Region of Trnava, Western Slovakia, 906 05, Slovakia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sobotište",
+        "state": "Region of Trnava",
+        "postcode": "906 05",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Senica, Region of Trnava, Slovakia"
+    },
+    {
+      "lat": 48.69318209792083,
+      "lon": 17.352641662331806,
+      "geoinfo": {
+        "display_name": "1146, Sotina, Senica, District of Senica, Region of Trnava, Western Slovakia, 905 01, Slovakia",
+        "road": "1146",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sotina",
+        "city_district": null,
+        "city": "Senica",
+        "state": "Region of Trnava",
+        "postcode": "905 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "1146, Senica, Region of Trnava, Slovakia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:57:39.144663+00:00",
+  "_kind": "geo_samples"
+}

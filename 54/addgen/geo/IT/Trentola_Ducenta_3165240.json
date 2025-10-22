@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Trentola-Ducenta",
+  "geonameid": 3165240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.984911418568885,
+      "lon": 14.218241836412682,
+      "geoinfo": {
+        "display_name": "Via delle rose, Carinaro, Caserta, Campania, 81032, Italy",
+        "road": "Via delle rose",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carinaro",
+        "state": "Campania",
+        "postcode": "81032",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via delle rose, Trentola-Ducenta, Campania, Italy"
+    },
+    {
+      "lat": 40.999493337083464,
+      "lon": 14.17318089618658,
+      "geoinfo": {
+        "display_name": "Via Bellini, Villa di Briano, Caserta, Campania, 81030, Italy",
+        "road": "Via Bellini",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa di Briano",
+        "state": "Campania",
+        "postcode": "81030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "395, Via Bellini, Villa di Briano, Caserta, Campania, 81030, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:25.576225+00:00",
+  "_kind": "geo_samples"
+}

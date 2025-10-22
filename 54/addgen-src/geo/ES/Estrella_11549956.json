@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Estrella",
+  "geonameid": 11549956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.388986250824104,
+      "lon": -3.6863762928961257,
+      "geoinfo": {
+        "display_name": "Bypass Sur, Legazpi, Arganzuela, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Bypass Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Arganzuela",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Bypass Sur, Estrella, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40117304388929,
+      "lon": -3.6904064117682274,
+      "geoinfo": {
+        "display_name": "Repsol, 23, Calle del General Lacy, Palos de Moguer, Arganzuela, Madrid, Community of Madrid, 28045, Spain",
+        "road": "Calle del General Lacy",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Arganzuela",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28045",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Repsol, 23, Calle del General Lacy, Palos de Moguer, Arganzuela, Madrid, Community of Madrid, 28045, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:24.300517+00:00",
+  "_kind": "geo_samples"
+}

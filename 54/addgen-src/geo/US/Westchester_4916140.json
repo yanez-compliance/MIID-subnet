@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westchester",
+  "geonameid": 4916140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.868338125084435,
+      "lon": -87.87772966980427,
+      "geoinfo": {
+        "display_name": "Westchester Boulevard, Westchester, Proviso Township, Cook County, Illinois, 60154, United States",
+        "road": "Westchester Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westchester",
+        "state": "Illinois",
+        "postcode": "60154",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Westchester Boulevard, Westchester, Illinois, United States"
+    },
+    {
+      "lat": 41.816186174243505,
+      "lon": -87.91147840379995,
+      "geoinfo": {
+        "display_name": "3984, Garden Avenue, Old Town North, Western Springs, Lyons Township, Cook County, Illinois, 60558, United States",
+        "road": "Garden Avenue",
+        "house_number": "3984",
+        "neighbourhood": "Old Town North",
+        "suburb": null,
+        "city_district": null,
+        "city": "Western Springs",
+        "state": "Illinois",
+        "postcode": "60558",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3984, Garden Avenue, Old Town North, Western Springs, Lyons Township, Cook County, Illinois, 60558, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:57.099453+00:00",
+  "_kind": "geo_samples"
+}

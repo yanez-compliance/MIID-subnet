@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Zeist",
+  "geonameid": 2743977,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.10182500284121,
+      "lon": 5.217128311191789,
+      "geoinfo": {
+        "display_name": "131, Comeniuslaan, Zeist, Utrecht, Netherlands, 3706 XE, Netherlands",
+        "road": "Comeniuslaan",
+        "house_number": "131",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Zeist",
+        "city": "Zeist",
+        "state": "Utrecht",
+        "postcode": "3706 XE",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "131 Comeniuslaan, Zeist, Utrecht, The Netherlands"
+    },
+    {
+      "lat": 52.13091097314816,
+      "lon": 5.21940944029224,
+      "geoinfo": {
+        "display_name": "Burgemeester Van der Borchlaan, Bilthoven, De Bilt, Utrecht, Netherlands, 3722 GZ, Netherlands",
+        "road": "Burgemeester Van der Borchlaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bilthoven",
+        "state": "Utrecht",
+        "postcode": "3722 GZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "357, Burgemeester Van der Borchlaan, Bilthoven, De Bilt, Utrecht, Netherlands, 3722 GZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:47:25.363917+00:00",
+  "_kind": "geo_samples"
+}

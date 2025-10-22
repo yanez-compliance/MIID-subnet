@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kronach",
+  "geonameid": 2883784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.25748922467805,
+      "lon": 11.386937516999788,
+      "geoinfo": {
+        "display_name": "Martin-Luther-Straße, Unterrodach, Marktrodach, Landkreis Kronach, Bavaria, 96364, Germany",
+        "road": "Martin-Luther-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Unterrodach",
+        "state": "Bavaria",
+        "postcode": "96364",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Martin-Luther-Straße, Kronach, Bavaria, Germany"
+    },
+    {
+      "lat": 50.20591651541525,
+      "lon": 11.353367657992958,
+      "geoinfo": {
+        "display_name": "11, Wüstbuch, Kronach, Landkreis Kronach, Bavaria, 96317, Germany",
+        "road": null,
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kronach",
+        "state": "Bavaria",
+        "postcode": "96317",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "11, Wüstbuch, Kronach, Landkreis Kronach, Bavaria, 96317, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:14.420005+00:00",
+  "_kind": "geo_samples"
+}

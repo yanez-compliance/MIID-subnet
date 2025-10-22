@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ventura",
+  "geonameid": 5405878,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.28816545883417,
+      "lon": -119.33220354810841,
+      "geoinfo": {
+        "display_name": "State Beach Access Road, Ventura County, California, 93001, United States",
+        "road": "State Beach Access Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "State Beach Access Road, Ventura, California, United States"
+    },
+    {
+      "lat": 34.289177817218714,
+      "lon": -119.28879710295995,
+      "geoinfo": {
+        "display_name": "Grant Park, North Chestnut Street, San Buenaventura (Ventura), Ventura County, California, 93001, United States",
+        "road": "North Chestnut Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Buenaventura (Ventura)",
+        "state": "California",
+        "postcode": "93001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "714, North Chestnut Street, Ventura, 93001 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:19.648276+00:00",
+  "_kind": "geo_samples"
+}

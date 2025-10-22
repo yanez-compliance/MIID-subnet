@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ahaus",
+  "geonameid": 2959279,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.10069572684164,
+      "lon": 6.959936695833113,
+      "geoinfo": {
+        "display_name": "Averesch, Wessum, Ahaus, Kreis Borken, North Rhine-Westphalia, 48683, Germany",
+        "road": "Averesch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Averesch",
+        "city_district": "Wessum",
+        "city": "Ahaus",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Averesch, Ahaus, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.072507178717146,
+      "lon": 6.989319470983997,
+      "geoinfo": {
+        "display_name": "2, Scharfland, Wüllen, Ahaus, Kreis Borken, North Rhine-Westphalia, 48683, Germany",
+        "road": "Scharfland",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wüllen",
+        "city": "Ahaus",
+        "state": "North Rhine-Westphalia",
+        "postcode": "48683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2, Scharfland, Wüllen, Ahaus, Kreis Borken, North Rhine-Westphalia, 48683, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:34.457106+00:00",
+  "_kind": "geo_samples"
+}

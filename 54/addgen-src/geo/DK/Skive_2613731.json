@@ -1,0 +1,47 @@
+{
+  "country_code": "DK",
+  "country": "Denmark",
+  "city": "Skive",
+  "geonameid": 2613731,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 56.52640551670974,
+      "lon": 9.003204798663576,
+      "geoinfo": {
+        "display_name": "Svansøvej, Skive Municipality, Central Denmark Region, 7800, Denmark",
+        "road": "Svansøvej",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Central Denmark Region",
+        "postcode": "7800",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "Svansøvej, Skive, Central Denmark Region, Denmark"
+    },
+    {
+      "lat": 56.553376327582946,
+      "lon": 9.080579790955534,
+      "geoinfo": {
+        "display_name": "121, Viborgvej, Dommerby, Skive Municipality, Central Denmark Region, 7800, Denmark",
+        "road": "Viborgvej",
+        "house_number": "121",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dommerby",
+        "state": "Central Denmark Region",
+        "postcode": "7800",
+        "country": "Denmark",
+        "country_code": "dk"
+      },
+      "address": "121 Viborgvej, Skive, Central Denmark Region, Denmark"
+    }
+  ],
+  "updated_at": "2025-10-16T12:57:56.779851+00:00",
+  "_kind": "geo_samples"
+}

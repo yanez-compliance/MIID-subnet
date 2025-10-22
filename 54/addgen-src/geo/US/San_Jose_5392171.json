@@ -1,0 +1,29 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Jose",
+  "geonameid": 5392171,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.33842325067707,
+      "lon": -121.88398693339198,
+      "geoinfo": {
+        "display_name": "East Santa Clara Street, Horace Mann, San Jose, Santa Clara County, California, 95112, United States",
+        "road": "East Santa Clara Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Horace Mann",
+        "city_district": null,
+        "city": "San Jose",
+        "state": "California",
+        "postcode": "95112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Santa Clara Street, San Jose, California, United States"
+    }
+  ],
+  "updated_at": "2025-10-17T00:21:23.513086+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Barcellona Pozzo di Gotto",
+  "geonameid": 2525597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.171402467429125,
+      "lon": 15.22428627730345,
+      "geoinfo": {
+        "display_name": "Autostrada Messina-Palermo, Mollica, Fattoriamo, Acquacalda, Barcellona Pozzo di Gotto, Messina, Sicily, 98051, Italy",
+        "road": "Autostrada Messina-Palermo",
+        "house_number": null,
+        "neighbourhood": "Mollica",
+        "suburb": null,
+        "city_district": null,
+        "city": "Barcellona Pozzo di Gotto",
+        "state": "Sicily",
+        "postcode": "98051",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada Messina-Palermo, Barcellona Pozzo di Gotto, Sicily, Italy"
+    },
+    {
+      "lat": 38.15562981465552,
+      "lon": 15.167791521176907,
+      "geoinfo": {
+        "display_name": "Via Maceo Marina, Maceo Marina, Terme Vigliatore, Messina, Sicily, 98050, Italy",
+        "road": "Via Maceo Marina",
+        "house_number": null,
+        "neighbourhood": "Maceo Marina",
+        "suburb": null,
+        "city_district": null,
+        "city": "Terme Vigliatore",
+        "state": "Sicily",
+        "postcode": "98050",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "639, Via Maceo Marina, Maceo Marina, Terme Vigliatore, Messina, Sicily, 98050, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:50.175932+00:00",
+  "_kind": "geo_samples"
+}

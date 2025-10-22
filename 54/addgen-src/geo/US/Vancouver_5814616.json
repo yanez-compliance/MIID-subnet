@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vancouver",
+  "geonameid": 5814616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.67676052829742,
+      "lon": -122.68231823124933,
+      "geoinfo": {
+        "display_name": "7500, Northwest 11th Avenue, West Hazel Dell, Lakeshore, Vancouver, Clark County, Washington, 98665, United States",
+        "road": "Northwest 11th Avenue",
+        "house_number": "7500",
+        "neighbourhood": null,
+        "suburb": "Lakeshore",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98665",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7500 Northwest 11th Avenue, Vancouver, Washington, United States"
+    },
+    {
+      "lat": 45.671319568330986,
+      "lon": -122.62388748605039,
+      "geoinfo": {
+        "display_name": "4510, Northeast 68th Drive, Andresen/Saint Johns, Walnut Grove, Vancouver, Clark County, Washington, 98661, United States",
+        "road": "Northeast 68th Drive",
+        "house_number": "4510",
+        "neighbourhood": null,
+        "suburb": "Walnut Grove",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98661",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4510, Northeast 68th Drive, Andresen/Saint Johns, Walnut Grove, Vancouver, Clark County, Washington, 98661, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:33.055000+00:00",
+  "_kind": "geo_samples"
+}

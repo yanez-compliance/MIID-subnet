@@ -1,0 +1,83 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Minsk",
+  "geonameid": 625144,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 53.93321068711442,
+      "lon": 27.60300341117608,
+      "geoinfo": {
+        "display_name": "вуліца Якуба Коласа, Pyershamayski District, Minsk, 220113, Belarus",
+        "road": "вуліца Якуба Коласа",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pyershamayski District",
+        "city": "Minsk",
+        "state": null,
+        "postcode": "220113",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "вуліца Якуба Коласа, Minsk, Belarus"
+    },
+    {
+      "lat": 53.87150333205677,
+      "lon": 27.55627508568526,
+      "geoinfo": {
+        "display_name": "Diadem, 32, Аэрадромная вуліца, Kastrychnitski District, Minsk, 220007, Belarus",
+        "road": "Аэрадромная вуліца",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kastrychnitski District",
+        "city": "Minsk",
+        "state": null,
+        "postcode": "220007",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "32 Аэрадромная вуліца, Minsk, Belarus"
+    },
+    {
+      "lat": 53.87253263245113,
+      "lon": 27.578540382812214,
+      "geoinfo": {
+        "display_name": "11, 1-ы Млынавы завулак, Sakalianka, Leninsky District, Minsk, 220006, Belarus",
+        "road": "1-ы Млынавы завулак",
+        "house_number": "11",
+        "neighbourhood": "Sakalianka",
+        "suburb": null,
+        "city_district": "Leninsky District",
+        "city": "Minsk",
+        "state": null,
+        "postcode": "220006",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "11, 1-ы Млынавы завулак, Sakalianka, Leninsky District, Minsk, 220006, Belarus"
+    },
+    {
+      "lat": 53.88974055796852,
+      "lon": 27.611717840471712,
+      "geoinfo": {
+        "display_name": "6, вуліца Алега Кашавога, Traktarazavodski pasiolak, Partyzanski District, Minsk, 220070, Belarus",
+        "road": "вуліца Алега Кашавога",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Traktarazavodski pasiolak",
+        "city_district": "Partyzanski District",
+        "city": "Minsk",
+        "state": null,
+        "postcode": "220070",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "6, вуліца Алега Кашавога, Traktarazavodski pasiolak, Partyzanski District, Minsk, 220070, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T01:33:09.274146+00:00",
+  "_kind": "geo_samples"
+}

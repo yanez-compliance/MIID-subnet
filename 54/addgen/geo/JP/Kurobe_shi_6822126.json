@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kurobe-shi",
+  "geonameid": 6822126,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.918798613943125,
+      "lon": 137.39798142576834,
+      "geoinfo": {
+        "display_name": "Kurobe, Toyama Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kurobe",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kurobe-shi, Japan"
+    },
+    {
+      "lat": 36.90748691351511,
+      "lon": 137.43454494339593,
+      "geoinfo": {
+        "display_name": "飛騨, Kurobe, Toyama Prefecture, 938-0025, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kurobe",
+        "state": null,
+        "postcode": "938-0025",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "飛騨, Kurobe, Toyama Prefecture, 938-0025, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:03.377186+00:00",
+  "_kind": "geo_samples"
+}

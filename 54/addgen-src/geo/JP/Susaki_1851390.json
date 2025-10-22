@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Susaki",
+  "geonameid": 1851390,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.37159614885729,
+      "lon": 133.2585414379332,
+      "geoinfo": {
+        "display_name": "Kochi Expressway, Awa, Susaki, Kochi Prefecture, 785-0009, Japan",
+        "road": "Kochi Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Susaki",
+        "state": null,
+        "postcode": "785-0009",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kochi Expressway, Susaki, Japan"
+    },
+    {
+      "lat": 33.43501482819477,
+      "lon": 133.2903295210463,
+      "geoinfo": {
+        "display_name": "Susaki, Kochi Prefecture, 785-0009, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Susaki",
+        "state": null,
+        "postcode": "785-0009",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Susaki, Kochi Prefecture, 785-0009, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:49:24.353019+00:00",
+  "_kind": "geo_samples"
+}

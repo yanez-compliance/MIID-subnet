@@ -1,0 +1,65 @@
+{
+  "country_code": "JO",
+  "country": "Jordan",
+  "city": "Ṣuwayliḥ",
+  "geonameid": 13286467,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 32.05001075961545,
+      "lon": 35.850061763594866,
+      "geoinfo": {
+        "display_name": "Ayn al Basha, Ain Albasha Sub-District, Ain Albasha District, Balqa, 11282, Jordan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ayn al Basha",
+        "state": "Balqa",
+        "postcode": "11282",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "006, Ayn al Basha, Ain Albasha Sub-District, Ain Albasha District, Balqa, 11282, Jordan"
+    },
+    {
+      "lat": 32.01374654908766,
+      "lon": 35.857832972563685,
+      "geoinfo": {
+        "display_name": "Uhud Street, الفضيلة, Sweileh, Al-Jami'ah Sub-District, Al-Jami'ah District, Amman, 11282, Jordan",
+        "road": "Uhud Street",
+        "house_number": null,
+        "neighbourhood": "الفضيلة",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sweileh",
+        "state": "Amman",
+        "postcode": "11282",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "153, Uhud Street, الفضيلة, Sweileh, Al-Jami'ah Sub-District, Al-Jami'ah District, Amman, 11282, Jordan"
+    },
+    {
+      "lat": 32.04731863749049,
+      "lon": 35.869674442168964,
+      "geoinfo": {
+        "display_name": "Abu-Nusair, Al-Jami'ah Sub-District, Al-Jami'ah District, Amman, 11282, Jordan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Abu-Nusair",
+        "city_district": null,
+        "city": null,
+        "state": "Amman",
+        "postcode": "11282",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "763, Abu-Nusair, Al-Jami'ah Sub-District, Al-Jami'ah District, Amman, 11282, Jordan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:28.967513+00:00",
+  "_kind": "geo_samples"
+}

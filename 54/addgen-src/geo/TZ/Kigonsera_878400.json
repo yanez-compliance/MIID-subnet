@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Kigonsera",
+  "geonameid": 878400,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -10.809320009676,
+      "lon": 35.04889701512257,
+      "geoinfo": {
+        "display_name": "T12, Mbinga, Ruvuma Region, Southern Highlands Zone, Tanzania",
+        "road": "T12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ruvuma Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "T12, Kigonsera, Ruvuma Region, Tanzania"
+    },
+    {
+      "lat": -10.75980640865607,
+      "lon": 35.04152825535662,
+      "geoinfo": {
+        "display_name": "Kigonsera, Mbinga, Ruvuma Region, Southern Highlands Zone, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kigonsera",
+        "state": "Ruvuma Region",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "472, Kigonsera, Mbinga, Ruvuma Region, 59773 Southern Highlands Zone, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:31.079448+00:00",
+  "_kind": "geo_samples"
+}

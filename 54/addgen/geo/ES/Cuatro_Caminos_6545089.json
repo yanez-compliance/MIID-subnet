@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Cuatro Caminos",
+  "geonameid": 6545089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.482674631319114,
+      "lon": -3.6775571208638302,
+      "geoinfo": {
+        "display_name": "Calle 30, Manoteras, Castilla, Chamartín, Madrid, Community of Madrid, 28036, Spain",
+        "road": "Calle 30",
+        "house_number": null,
+        "neighbourhood": "Manoteras",
+        "suburb": "Chamartín",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28036",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 30, Cuatro Caminos, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.45714695435907,
+      "lon": -3.6934633755787822,
+      "geoinfo": {
+        "display_name": "Avenida de Brasil, Castillejos, Tetuán, Madrid, Community of Madrid, 28020, Spain",
+        "road": "Avenida de Brasil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tetuán",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28020",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "565, Avenida de Brasil, Castillejos, Tetuán, Madrid, Community of Madrid, 28020, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:41.025004+00:00",
+  "_kind": "geo_samples"
+}

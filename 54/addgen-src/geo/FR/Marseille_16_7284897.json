@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 16",
+  "geonameid": 7284897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.35519815385987,
+      "lon": 5.2829402350706625,
+      "geoinfo": {
+        "display_name": "Tobrouk, Route du Rove, Les Riaux, 16th Arrondissement, Le Rove, Istres, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13740, France",
+        "road": "Route du Rove",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "16th Arrondissement",
+        "city_district": null,
+        "city": "Le Rove",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13740",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route du Rove, Marseille 16, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.33360996370838,
+      "lon": 5.320299943005175,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "142, 76430 Metropolitan France, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:34.275325+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Loushanguan",
+  "geonameid": 1792516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.095516495102466,
+      "lon": 106.83451999294755,
+      "geoinfo": {
+        "display_name": "Lanhai Expressway, Tongzi, Zunyi, Guizhou, China",
+        "road": "Lanhai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zunyi",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lanhai Expressway, Loushanguan, Guizhou, China"
+    },
+    {
+      "lat": 28.134455783272447,
+      "lon": 106.79018221924075,
+      "geoinfo": {
+        "display_name": "Tongzi, Zunyi, Guizhou, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zunyi",
+        "state": "Guizhou",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "238, Tongzi, Zunyi, 74345 Guizhou, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:06.353296+00:00",
+  "_kind": "geo_samples"
+}

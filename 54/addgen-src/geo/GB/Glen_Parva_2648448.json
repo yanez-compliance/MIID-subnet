@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Glen Parva",
+  "geonameid": 2648448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.56606739750888,
+      "lon": -1.1907908596250703,
+      "geoinfo": {
+        "display_name": "M1, Whetstone, Cosby, Blaby, Leicestershire, England, LE8 6ZG, United Kingdom",
+        "road": "M1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Whetstone",
+        "city_district": null,
+        "city": "Cosby",
+        "state": "England",
+        "postcode": "LE8 6ZG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "M1, Glen Parva, England, United Kingdom"
+    },
+    {
+      "lat": 52.61364265648748,
+      "lon": -1.151410804789892,
+      "geoinfo": {
+        "display_name": "Aylestone Meadows, Ward Close, Aylestone, Leicester, City of Leicester, England, LE2 8NJ, United Kingdom",
+        "road": "Ward Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aylestone",
+        "city_district": null,
+        "city": "Leicester",
+        "state": "England",
+        "postcode": "LE2 8NJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Aylestone Meadows, Ward Close, Aylestone, Leicester, City of Leicester, England, LE2 8NJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:41.306575+00:00",
+  "_kind": "geo_samples"
+}

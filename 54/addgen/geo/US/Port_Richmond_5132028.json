@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Richmond",
+  "geonameid": 5132028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.64177349459721,
+      "lon": -74.1445960049732,
+      "geoinfo": {
+        "display_name": "Bayonne Bridge, Richmond Terrace, Port Richmond, Staten Island, Richmond County, New York, 10303, United States",
+        "road": "Richmond Terrace",
+        "house_number": null,
+        "neighbourhood": "Port Richmond",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Richmond Terrace, Port Richmond, New York, United States"
+    },
+    {
+      "lat": 40.642723394448744,
+      "lon": -74.15583422821929,
+      "geoinfo": {
+        "display_name": "Harbor Road, Mariners Harbor, Staten Island, Richmond County, New York, 10303, United States",
+        "road": "Harbor Road",
+        "house_number": null,
+        "neighbourhood": "Mariners Harbor",
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10303",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "539, Harbor Road, Mariners Harbor, Staten Island, Richmond County, New York, 10303, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:30.685766+00:00",
+  "_kind": "geo_samples"
+}

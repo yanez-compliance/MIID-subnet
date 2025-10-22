@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Kensington-Chinatown",
+  "geonameid": 12156886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.64301641873938,
+      "lon": -79.40414589265457,
+      "geoinfo": {
+        "display_name": "Wellington Street West, West Queen West, Spadina—Fort York, Toronto, Golden Horseshoe, Ontario, M5V 2W8, Canada",
+        "road": "Wellington Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5V 2W8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Wellington Street West, Kensington-Chinatown, Ontario, Canada"
+    },
+    {
+      "lat": 43.66387547179145,
+      "lon": -79.40625544560983,
+      "geoinfo": {
+        "display_name": "93, Sussex Avenue, University, University—Rosedale, Toronto, Golden Horseshoe, Ontario, M5S 1H4, Canada",
+        "road": "Sussex Avenue",
+        "house_number": "93",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M5S 1H4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "93, Sussex Avenue, University, University—Rosedale, Toronto, Golden Horseshoe, Ontario, M5S 1H4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:53.192403+00:00",
+  "_kind": "geo_samples"
+}

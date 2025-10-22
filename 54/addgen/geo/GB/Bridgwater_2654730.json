@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bridgwater",
+  "geonameid": 2654730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.088240829373234,
+      "lon": -2.9893030103244533,
+      "geoinfo": {
+        "display_name": "Park Lane, North Petherton, Somerset, England, TA7 0DT, United Kingdom",
+        "road": "Park Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Petherton",
+        "state": "England",
+        "postcode": "TA7 0DT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Park Lane, Bridgwater, England, United Kingdom"
+    },
+    {
+      "lat": 51.157608532645924,
+      "lon": -3.0418893556233204,
+      "geoinfo": {
+        "display_name": "Marsh Lane, Cannington, Somerset, England, TA5 2HZ, United Kingdom",
+        "road": "Marsh Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cannington",
+        "city_district": null,
+        "city": "Cannington",
+        "state": "England",
+        "postcode": "TA5 2HZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Marsh Lane, Cannington, Somerset, England, TA5 2HZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:50.380773+00:00",
+  "_kind": "geo_samples"
+}

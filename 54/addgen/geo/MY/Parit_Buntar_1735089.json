@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Parit Buntar",
+  "geonameid": 1735089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.1392501291203425,
+      "lon": 100.522324646658,
+      "geoinfo": {
+        "display_name": "Bandar Baharu, Kedah, 34950, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bandar Baharu",
+        "state": "Kedah",
+        "postcode": "34950",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Parit Buntar, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.097784551571489,
+      "lon": 100.46811126293983,
+      "geoinfo": {
+        "display_name": "Taman Meranti 2, Parit Mat Aris Bawah, Titi Serong, Parit Buntar, Kerian, Perak, 34200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Meranti 2",
+        "suburb": null,
+        "city_district": null,
+        "city": "Parit Buntar",
+        "state": "Perak",
+        "postcode": "34200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Taman Meranti 2, Parit Buntar, 34200 Perak, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:16.919265+00:00",
+  "_kind": "geo_samples"
+}

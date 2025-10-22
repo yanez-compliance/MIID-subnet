@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Indianapolis",
+  "geonameid": 4259418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.79699571013069,
+      "lon": -86.12141689073049,
+      "geoinfo": {
+        "display_name": "2401, Bloyd Avenue, North Brookside, Near Eastside, Indianapolis, Marion County, Indiana, 46218, United States",
+        "road": "Bloyd Avenue",
+        "house_number": "2401",
+        "neighbourhood": "North Brookside",
+        "suburb": null,
+        "city_district": "Near Eastside",
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46218",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2401 Bloyd Avenue, Indianapolis, Indiana, United States"
+    },
+    {
+      "lat": 39.771041361014966,
+      "lon": -86.15367629332538,
+      "geoinfo": {
+        "display_name": "East Miami Street, Indianapolis, Marion County, Indiana, 46204, United States",
+        "road": "East Miami Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "299, East Miami Street, Indianapolis, Marion County, Indiana, 46204, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:56.916045+00:00",
+  "_kind": "geo_samples"
+}

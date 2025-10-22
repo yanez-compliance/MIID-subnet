@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedrichsfelde",
+  "geonameid": 2924599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.51266556058027,
+      "lon": 13.53402935673647,
+      "geoinfo": {
+        "display_name": "25, Gensinger Straße, Gensinger Viertel, Friedrichsfelde, Lichtenberg, Berlin, 10315, Germany",
+        "road": "Gensinger Straße",
+        "house_number": "25",
+        "neighbourhood": "Gensinger Viertel",
+        "suburb": "Friedrichsfelde",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10315",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "25 Gensinger Straße, Friedrichsfelde, Germany"
+    },
+    {
+      "lat": 52.54505080128424,
+      "lon": 13.497185152277813,
+      "geoinfo": {
+        "display_name": "3b, Bahnhofstraße, Hohenschönhausen II, Alt-Hohenschönhausen, Lichtenberg, Berlin, 13055, Germany",
+        "road": "Bahnhofstraße",
+        "house_number": "3b",
+        "neighbourhood": "Hohenschönhausen II",
+        "suburb": "Alt-Hohenschönhausen",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13055",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3b, Bahnhofstraße, Hohenschönhausen II, Alt-Hohenschönhausen, Lichtenberg, Berlin, 13055, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:39.204573+00:00",
+  "_kind": "geo_samples"
+}

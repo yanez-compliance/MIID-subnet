@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jollyville",
+  "geonameid": 4701458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.471356087862222,
+      "lon": -97.7802486049295,
+      "geoinfo": {
+        "display_name": "13508, Broadmeade Avenue, Austin, Williamson County, Texas, 78729, United States",
+        "road": "Broadmeade Avenue",
+        "house_number": "13508",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78729",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13508 Broadmeade Avenue, Jollyville, Texas, United States"
+    },
+    {
+      "lat": 30.42278947578694,
+      "lon": -97.74492422343134,
+      "geoinfo": {
+        "display_name": "Research Boulevard, Research Park, Austin, Travis County, Texas, 78859, United States",
+        "road": "Research Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postcode": "78859",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "496, Research Boulevard, Research Park, Austin, Travis County, Texas, 78859, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:02.935278+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norcross",
+  "geonameid": 4212888,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.935773376231005,
+      "lon": -84.2003289020386,
+      "geoinfo": {
+        "display_name": "5478, Everglades Trail, Sheffield Forest, Norcross, Gwinnett County, Georgia, 30071, United States",
+        "road": "Everglades Trail",
+        "house_number": "5478",
+        "neighbourhood": "Sheffield Forest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Norcross",
+        "state": "Georgia",
+        "postcode": "30071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5478 Everglades Trail, Norcross, Georgia, United States"
+    },
+    {
+      "lat": 33.940544057330584,
+      "lon": -84.24464415318701,
+      "geoinfo": {
+        "display_name": "Peachtree Industrial Boulevard, Overlook, Peachtree Corners, Gwinnett County, Georgia, 30092, United States",
+        "road": "Peachtree Industrial Boulevard",
+        "house_number": null,
+        "neighbourhood": "Overlook",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peachtree Corners",
+        "state": "Georgia",
+        "postcode": "30092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "360, Peachtree Industrial Boulevard, Overlook, Peachtree Corners, Gwinnett County, Georgia, 30092, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:39.132827+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schwetzingen",
+  "geonameid": 2834240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.36312678688135,
+      "lon": 8.528595099525843,
+      "geoinfo": {
+        "display_name": "60, Schulstraße, Ketsch, Rhein-Neckar-Kreis, Baden-Württemberg, 68775, Germany",
+        "road": "Schulstraße",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ketsch",
+        "state": "Baden-Württemberg",
+        "postcode": "68775",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "60 Schulstraße, Schwetzingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.367526004555465,
+      "lon": 8.641621843843474,
+      "geoinfo": {
+        "display_name": "Alte Speyerer Straße, Kirchheim, Heidelberg, Baden-Württemberg, 69124, Germany",
+        "road": "Alte Speyerer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kirchheim",
+        "city_district": null,
+        "city": "Heidelberg",
+        "state": "Baden-Württemberg",
+        "postcode": "69124",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "173, Alte Speyerer Straße, Kirchheim, Heidelberg, Baden-Württemberg, 69124, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:02.764017+00:00",
+  "_kind": "geo_samples"
+}

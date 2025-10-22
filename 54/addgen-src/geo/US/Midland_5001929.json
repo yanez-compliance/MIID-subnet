@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Midland",
+  "geonameid": 5001929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.58501046060268,
+      "lon": -84.26061152192591,
+      "geoinfo": {
+        "display_name": "East Miller Road, Bullock Creek, Midland Charter Township, Midland County, Michigan, 48640, United States",
+        "road": "East Miller Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midland Charter Township",
+        "state": "Michigan",
+        "postcode": "48640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Miller Road, Midland, Michigan, United States"
+    },
+    {
+      "lat": 43.58213563476226,
+      "lon": -84.24666052907445,
+      "geoinfo": {
+        "display_name": "1037, South Poseyville Road, Bullock Creek, Midland Charter Township, Midland County, Michigan, 48640, United States",
+        "road": "South Poseyville Road",
+        "house_number": "1037",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Midland Charter Township",
+        "state": "Michigan",
+        "postcode": "48640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1037, South Poseyville Road, Bullock Creek, Midland Charter Township, Midland County, Michigan, 48640, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:14.629173+00:00",
+  "_kind": "geo_samples"
+}

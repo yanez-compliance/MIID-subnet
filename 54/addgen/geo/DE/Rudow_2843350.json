@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rudow",
+  "geonameid": 2843350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.40246088063631,
+      "lon": 13.488397281494246,
+      "geoinfo": {
+        "display_name": "2, Kückenweg, Rudow, Neukölln, Berlin, 12355, Germany",
+        "road": "Kückenweg",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Rudow",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12355",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Kückenweg, Rudow, Germany"
+    },
+    {
+      "lat": 52.43307639331196,
+      "lon": 13.526003205347017,
+      "geoinfo": {
+        "display_name": "Haus 3, 18, Abram-Joffe-Straße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany",
+        "road": "Abram-Joffe-Straße",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Adlershof",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Haus 3, 18, Abram-Joffe-Straße, WISTA, Adlershof, Treptow-Köpenick, Berlin, 12489, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:27.267353+00:00",
+  "_kind": "geo_samples"
+}

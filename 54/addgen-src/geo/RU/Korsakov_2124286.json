@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Korsakov",
+  "geonameid": 2124286,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.64603933717851,
+      "lon": 142.76046860414004,
+      "geoinfo": {
+        "display_name": "2, Корабельный переулок, Korsakov, Korsakovsky District, Sakhalin Oblast, Far Eastern Federal District, 694021, Russia",
+        "road": "Корабельный переулок",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Korsakov",
+        "state": "Sakhalin Oblast",
+        "postcode": "694021",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "2 Корабельный переулок, Korsakov, Sakhalin Oblast, Russia"
+    },
+    {
+      "lat": 46.618756764352675,
+      "lon": 142.73695319045657,
+      "geoinfo": {
+        "display_name": "Korsakovsky District, Sakhalin Oblast, Far Eastern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sakhalin Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "275, Korsakov, 43401 Sakhalin Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:32.853833+00:00",
+  "_kind": "geo_samples"
+}

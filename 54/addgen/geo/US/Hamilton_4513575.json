@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hamilton",
+  "geonameid": 4513575,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.427418179147125,
+      "lon": -84.57689501645474,
+      "geoinfo": {
+        "display_name": "Office Park Drive, Hamilton, Butler County, Ohio, 45013, United States",
+        "road": "Office Park Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamilton",
+        "state": "Ohio",
+        "postcode": "45013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Office Park Drive, Hamilton, Ohio, United States"
+    },
+    {
+      "lat": 39.4109010751695,
+      "lon": -84.5936733589501,
+      "geoinfo": {
+        "display_name": "North Washington Boulevard, Edgewood, Hamilton, Butler County, Ohio, 45013, United States",
+        "road": "North Washington Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamilton",
+        "state": "Ohio",
+        "postcode": "45013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "268, North Washington Boulevard, Edgewood, Hamilton, Butler County, Ohio, 45013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:39.056308+00:00",
+  "_kind": "geo_samples"
+}

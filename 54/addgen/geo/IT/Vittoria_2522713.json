@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Vittoria",
+  "geonameid": 2522713,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.96053035665049,
+      "lon": 14.477356348956517,
+      "geoinfo": {
+        "display_name": "SP97, Vittoria, Ragusa, Sicily, 97019, Italy",
+        "road": "SP97",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vittoria",
+        "state": "Sicily",
+        "postcode": "97019",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "SP97, Vittoria, Sicily, Italy"
+    },
+    {
+      "lat": 36.93367480189122,
+      "lon": 14.555212392988297,
+      "geoinfo": {
+        "display_name": "Casa Pelligra, Comiso, Ragusa, Sicily, 97013, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Comiso",
+        "state": "Sicily",
+        "postcode": "97013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "841, Casa Pelligra, Comiso, Ragusa, Sicily, 97013, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:09.615597+00:00",
+  "_kind": "geo_samples"
+}

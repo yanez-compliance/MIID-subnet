@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pomona",
+  "geonameid": 5384170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.09494044831762,
+      "lon": -117.7516684520182,
+      "geoinfo": {
+        "display_name": "250, West Bonita Avenue, North Pomona, Pomona, Los Angeles County, California, 91767, United States",
+        "road": "West Bonita Avenue",
+        "house_number": "250",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pomona",
+        "state": "California",
+        "postcode": "91767",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "250 West Bonita Avenue, Pomona, California, United States"
+    },
+    {
+      "lat": 34.05234591234536,
+      "lon": -117.79515552179622,
+      "geoinfo": {
+        "display_name": "West Mission Boulevard, Spadra, Pomona, Los Angeles County, California, 91768, United States",
+        "road": "West Mission Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pomona",
+        "state": "California",
+        "postcode": "91768",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "445, West Mission Boulevard, Spadra, Pomona, Los Angeles County, California, 91768, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:12.304280+00:00",
+  "_kind": "geo_samples"
+}

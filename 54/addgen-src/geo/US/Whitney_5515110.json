@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Whitney",
+  "geonameid": 5515110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.1177497076178,
+      "lon": -115.02385654089633,
+      "geoinfo": {
+        "display_name": "Flamingo Arroyo Trail, Whitney, Clark County, Nevada, 89112, United States",
+        "road": "Flamingo Arroyo Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitney",
+        "state": "Nevada",
+        "postcode": "89112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Flamingo Arroyo Trail, Whitney, Nevada, United States"
+    },
+    {
+      "lat": 36.121372698070196,
+      "lon": -115.03265701533374,
+      "geoinfo": {
+        "display_name": "6440, Pronghorn Ridge Avenue, Mountain View, Clark County, Nevada, 89122, United States",
+        "road": "Pronghorn Ridge Avenue",
+        "house_number": "6440",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nevada",
+        "postcode": "89122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6440, Pronghorn Ridge Avenue, Mountain View, Clark County, Nevada, 89122, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:21.643308+00:00",
+  "_kind": "geo_samples"
+}

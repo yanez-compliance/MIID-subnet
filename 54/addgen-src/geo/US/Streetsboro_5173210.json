@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Streetsboro",
+  "geonameid": 5173210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.23061407694983,
+      "lon": -81.35799552663602,
+      "geoinfo": {
+        "display_name": "8767, Seasons Road, Streetsboro, Portage County, Ohio, 44241, United States",
+        "road": "Seasons Road",
+        "house_number": "8767",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Streetsboro",
+        "state": "Ohio",
+        "postcode": "44241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8767 Seasons Road, Streetsboro, Ohio, United States"
+    },
+    {
+      "lat": 41.251931681270925,
+      "lon": -81.39270256026221,
+      "geoinfo": {
+        "display_name": "Ohio Turnpike, Hudson, Summit County, Ohio, 44236, United States",
+        "road": "Ohio Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hudson",
+        "state": "Ohio",
+        "postcode": "44236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "012, Ohio Turnpike, Hudson, Summit County, Ohio, 44236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:41.712821+00:00",
+  "_kind": "geo_samples"
+}

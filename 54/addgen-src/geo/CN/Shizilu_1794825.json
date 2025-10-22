@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shizilu",
+  "geonameid": 1794825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.16457576606204,
+      "lon": 118.88241646230719,
+      "geoinfo": {
+        "display_name": "Junan County, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shizilu, Shandong, China"
+    },
+    {
+      "lat": 35.19257853139658,
+      "lon": 118.8589251386559,
+      "geoinfo": {
+        "display_name": "东环路, Junan County, Shandong, China",
+        "road": "东环路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "118, 东环路, Junan County, 79626 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:06.249468+00:00",
+  "_kind": "geo_samples"
+}

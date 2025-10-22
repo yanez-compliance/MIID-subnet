@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Montcada i Reixac",
+  "geonameid": 3116527,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.49370986306386,
+      "lon": 2.1949125137250314,
+      "geoinfo": {
+        "display_name": "2, Carrer de Munay, Pla del Besòs, Montcada i Reixac, Vallès Occidental, Barcelona, Catalonia, 08110, Spain",
+        "road": "Carrer de Munay",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montcada i Reixac",
+        "state": "Catalonia",
+        "postcode": "08110",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "2 Carrer de Munay, Montcada i Reixac, Catalonia, Spain"
+    },
+    {
+      "lat": 41.442298014862935,
+      "lon": 2.1795819985590286,
+      "geoinfo": {
+        "display_name": "Centre Escolar Valldaura, Carrer del Molí, la Prosperitat, Nou Barris, Barcelona, Barcelonès, Barcelona, Catalonia, 08042, Spain",
+        "road": "Carrer del Molí",
+        "house_number": null,
+        "neighbourhood": "la Prosperitat",
+        "suburb": "Nou Barris",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08042",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "033, Carrer del Molí, Montcada i Reixac, 08042 Catalonia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:18.906442+00:00",
+  "_kind": "geo_samples"
+}

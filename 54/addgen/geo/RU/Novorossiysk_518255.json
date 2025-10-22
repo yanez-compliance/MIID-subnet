@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Novorossiysk",
+  "geonameid": 518255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.723302387010705,
+      "lon": 37.75867111455841,
+      "geoinfo": {
+        "display_name": "3, Schorsa Street, Приморский район, Novorossiysk, городской округ Новороссийск, Krasnodar Krai, Southern Federal District, 353900, Russia",
+        "road": "Schorsa Street",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Приморский район",
+        "city": "Novorossiysk",
+        "state": "Krasnodar Krai",
+        "postcode": "353900",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "3 Schorsa Street, Novorossiysk, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 44.711825802822844,
+      "lon": 37.76101448592675,
+      "geoinfo": {
+        "display_name": "50, Pavlovskaya Street, Центральный район, Novorossiysk, городской округ Новороссийск, Krasnodar Krai, 353900, Russia",
+        "road": "Pavlovskaya Street",
+        "house_number": "50",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Центральный район",
+        "city": "Novorossiysk",
+        "state": "Krasnodar Krai",
+        "postcode": "353900",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "50, Pavlovskaya Street, Центральный район, Novorossiysk, городской округ Новороссийск, Krasnodar Krai, 353900, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:49:31.873850+00:00",
+  "_kind": "geo_samples"
+}

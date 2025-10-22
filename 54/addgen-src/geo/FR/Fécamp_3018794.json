@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Fécamp",
+  "geonameid": 3018794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.77381592482229,
+      "lon": 0.3443846578509611,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Fécamp, France"
+    },
+    {
+      "lat": 49.75632786790782,
+      "lon": 0.374414780397432,
+      "geoinfo": {
+        "display_name": "Rue Jules Ferry, Fécamp, Le Havre, Seine-Maritime, Normandy, Metropolitan France, 76400, France",
+        "road": "Rue Jules Ferry",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fécamp",
+        "state": "Normandy",
+        "postcode": "76400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "872, Rue Jules Ferry, Fécamp, Le Havre, Seine-Maritime, Normandy, Metropolitan France, 76400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:54.341962+00:00",
+  "_kind": "geo_samples"
+}

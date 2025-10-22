@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Aarschot",
+  "geonameid": 2803429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.96400009229746,
+      "lon": 4.7909181105821155,
+      "geoinfo": {
+        "display_name": "19, Pastoor Dergentstraat, Gelrode, Aarschot, Leuven, Flemish Brabant, Flanders, 3200, Belgium",
+        "road": "Pastoor Dergentstraat",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aarschot",
+        "state": "Flemish Brabant",
+        "postcode": "3200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "19 Pastoor Dergentstraat, Aarschot, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.97514487616432,
+      "lon": 4.78438342124048,
+      "geoinfo": {
+        "display_name": "Domein van Rivieren, Vosdonker, Gelrode, Aarschot, Leuven, Flemish Brabant, Flanders, 3200, Belgium",
+        "road": "Vosdonker",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aarschot",
+        "state": "Flemish Brabant",
+        "postcode": "3200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "534, Vosdonker, Aarschot, 3200 Flemish Brabant, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:46.360574+00:00",
+  "_kind": "geo_samples"
+}

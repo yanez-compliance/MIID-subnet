@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brookfield",
+  "geonameid": 4885689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.81117692487925,
+      "lon": -87.83978729518809,
+      "geoinfo": {
+        "display_name": "8798, 44th Street, Lyons, Lyons Township, Cook County, Illinois, 60534, United States",
+        "road": "44th Street",
+        "house_number": "8798",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lyons",
+        "state": "Illinois",
+        "postcode": "60534",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8798 44th Street, Brookfield, Illinois, United States"
+    },
+    {
+      "lat": 41.844243771153764,
+      "lon": -87.857980157933,
+      "geoinfo": {
+        "display_name": "Little Broadview Singletrack, La Grange Park, Proviso Township, Cook County, Illinois, 60526, United States",
+        "road": "Little Broadview Singletrack",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Grange Park",
+        "state": "Illinois",
+        "postcode": "60526",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "999, Little Broadview Singletrack, La Grange Park, Proviso Township, Cook County, Illinois, 60526, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:56.721842+00:00",
+  "_kind": "geo_samples"
+}

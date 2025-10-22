@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Mimico",
+  "geonameid": 6074409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.610859442935514,
+      "lon": -79.48975545465056,
+      "geoinfo": {
+        "display_name": "2519, Lake Shore Boulevard West, Mimico-Queensway, Etobicoke—Lakeshore, Etobicoke, Toronto, Golden Horseshoe, Ontario, M8V 1C5, Canada",
+        "road": "Lake Shore Boulevard West",
+        "house_number": "2519",
+        "neighbourhood": "Mimico-Queensway",
+        "suburb": "Etobicoke",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M8V 1C5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2519 Lake Shore Boulevard West, Mimico, Ontario, Canada"
+    },
+    {
+      "lat": 43.59052399196154,
+      "lon": -79.55805424818912,
+      "geoinfo": {
+        "display_name": "Toronto Golf Course, 1305, Dixie Road, Lakeview, Mississauga, Peel Region, Golden Horseshoe, Ontario, L5E 1G5, Canada",
+        "road": "Dixie Road",
+        "house_number": "1305",
+        "neighbourhood": null,
+        "suburb": "Lakeview",
+        "city_district": null,
+        "city": "Mississauga",
+        "state": "Ontario",
+        "postcode": "L5E 1G5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Toronto Golf Course, 1305, Dixie Road, Lakeview, Mississauga, Peel Region, Golden Horseshoe, Ontario, L5E 1G5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:31.926101+00:00",
+  "_kind": "geo_samples"
+}

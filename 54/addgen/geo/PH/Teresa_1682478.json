@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Teresa",
+  "geonameid": 1682478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.573220482250363,
+      "lon": 121.19400623309025,
+      "geoinfo": {
+        "display_name": "E. Rodriguez Avenue, Maia Alta Phase 1, Dalig, Antipolo, Rizal, Calabarzon, 1670, Philippines",
+        "road": "E. Rodriguez Avenue",
+        "house_number": null,
+        "neighbourhood": "Maia Alta Phase 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Antipolo",
+        "state": "Rizal",
+        "postcode": "1670",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "E. Rodriguez Avenue, Teresa, Rizal, Philippines"
+    },
+    {
+      "lat": 14.567250029814407,
+      "lon": 121.2489595160116,
+      "geoinfo": {
+        "display_name": "Talaga, Morong, Rizal, Calabarzon, 1960, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morong",
+        "state": "Rizal",
+        "postcode": "1960",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "202, Talaga, Morong, Rizal, Calabarzon, 1960, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:39.041200+00:00",
+  "_kind": "geo_samples"
+}

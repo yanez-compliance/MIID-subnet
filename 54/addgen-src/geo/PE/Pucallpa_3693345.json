@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Pucallpa",
+  "geonameid": 3693345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -8.418500353219354,
+      "lon": -74.55207419944894,
+      "geoinfo": {
+        "display_name": "Pucallpa Metropolitan Area, Primavera, San Fernando, Manantay, Province of Coronel Portillo, Ucayali, 25002, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Primavera",
+        "city_district": null,
+        "city": "Manantay",
+        "state": "Ucayali",
+        "postcode": "25002",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Primavera, Pucallpa, Ucayali, Peru"
+    },
+    {
+      "lat": -8.355362912100649,
+      "lon": -74.55105625907876,
+      "geoinfo": {
+        "display_name": "Nuevo Edén, La Restinga, Callería, Province of Coronel Portillo, Ucayali, 25004, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nuevo Edén",
+        "suburb": null,
+        "city_district": null,
+        "city": "Callería",
+        "state": "Ucayali",
+        "postcode": "25004",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "511, Nuevo Edén, Pucallpa, 25004 Ucayali, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:11.239883+00:00",
+  "_kind": "geo_samples"
+}

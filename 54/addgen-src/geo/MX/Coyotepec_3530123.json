@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Coyotepec",
+  "geonameid": 3530123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.778926956403133,
+      "lon": -99.24313453067971,
+      "geoinfo": {
+        "display_name": "Tepotzotlán, State of Mexico, 54660, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "State of Mexico",
+        "postcode": "54660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Coyotepec, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.77546421641165,
+      "lon": -99.20439954313154,
+      "geoinfo": {
+        "display_name": "Calle 5 de Mayo, Coyotepec, State of Mexico, 54660, Mexico",
+        "road": "Calle 5 de Mayo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coyotepec",
+        "state": "State of Mexico",
+        "postcode": "54660",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 5 de Mayo, Coyotepec, State of Mexico, 54660, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:02.500977+00:00",
+  "_kind": "geo_samples"
+}

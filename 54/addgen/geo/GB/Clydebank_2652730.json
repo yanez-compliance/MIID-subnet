@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Clydebank",
+  "geonameid": 2652730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.92518891221236,
+      "lon": -4.367568036231014,
+      "geoinfo": {
+        "display_name": "Duntocher Road, Bonnaughton, Bearsden, East Dunbartonshire, Scotland, G61 4QE, United Kingdom",
+        "road": "Duntocher Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bearsden",
+        "state": "Scotland",
+        "postcode": "G61 4QE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Duntocher Road, Clydebank, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.915664187455434,
+      "lon": -4.437891920546165,
+      "geoinfo": {
+        "display_name": "Canberra Avenue, Dalmuir, Clydebank, West Dunbartonshire, Scotland, G81 4LN, United Kingdom",
+        "road": "Canberra Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dalmuir",
+        "city_district": null,
+        "city": "Clydebank",
+        "state": "Scotland",
+        "postcode": "G81 4LN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Canberra Avenue, Dalmuir, Clydebank, West Dunbartonshire, Scotland, G81 4LN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:15.547533+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bay City",
+  "geonameid": 4829307,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.990202119941937,
+      "lon": -95.93044276396414,
+      "geoinfo": {
+        "display_name": "7th Street, Bay City, Matagorda County, Texas, 77414, United States",
+        "road": "7th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bay City",
+        "state": "Texas",
+        "postcode": "77414",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7th Street, Bay City, Texas, United States"
+    },
+    {
+      "lat": 28.95351416562836,
+      "lon": -95.93487433525263,
+      "geoinfo": {
+        "display_name": "442, Langham Road, Matagorda County, Texas, 77414, United States",
+        "road": "Langham Road",
+        "house_number": "442",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77414",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "442, Langham Road, Matagorda County, Texas, 77414, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:55.351847+00:00",
+  "_kind": "geo_samples"
+}

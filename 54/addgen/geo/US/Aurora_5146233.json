@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aurora",
+  "geonameid": 5146233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.3047380033298,
+      "lon": -81.36083613728907,
+      "geoinfo": {
+        "display_name": "383, South Bissell Road, Gardens, Aurora, Portage County, Ohio, 44202, United States",
+        "road": "South Bissell Road",
+        "house_number": "383",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Ohio",
+        "postcode": "44202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "383 South Bissell Road, Aurora, Ohio, United States"
+    },
+    {
+      "lat": 41.31986462600289,
+      "lon": -81.31942839928557,
+      "geoinfo": {
+        "display_name": "Garfield Road East, Aurora, Portage County, Ohio, 44202, United States",
+        "road": "Garfield Road East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Ohio",
+        "postcode": "44202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "366, Garfield Road East, Aurora, Portage County, Ohio, 44202, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:37.057913+00:00",
+  "_kind": "geo_samples"
+}

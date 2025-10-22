@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lexington",
+  "geonameid": 4585000,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.96956076146654,
+      "lon": -81.23131582237527,
+      "geoinfo": {
+        "display_name": "221, Autumn Lane, Lexington County, South Carolina, 29072, United States",
+        "road": "Autumn Lane",
+        "house_number": "221",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "221 Autumn Lane, Lexington, South Carolina, United States"
+    },
+    {
+      "lat": 33.93959196050862,
+      "lon": -81.22396415354022,
+      "geoinfo": {
+        "display_name": "819, Old Orangeburg Road, Land of Lakes, Walnut Creek, Lexington County, South Carolina, 29073, United States",
+        "road": "Old Orangeburg Road",
+        "house_number": "819",
+        "neighbourhood": "Land of Lakes",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "819, Old Orangeburg Road, Land of Lakes, Walnut Creek, Lexington County, South Carolina, 29073, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:52.461068+00:00",
+  "_kind": "geo_samples"
+}

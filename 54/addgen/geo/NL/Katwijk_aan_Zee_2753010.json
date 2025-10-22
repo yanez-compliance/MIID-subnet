@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Katwijk aan Zee",
+  "geonameid": 2753010,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.16732847066047,
+      "lon": 4.372963134706954,
+      "geoinfo": {
+        "display_name": "Berkheide, Wassenaar, South Holland, Netherlands, 2242 PJ, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wassenaar",
+        "state": "South Holland",
+        "postcode": "2242 PJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Katwijk aan Zee, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.17917291383152,
+      "lon": 4.382796544564913,
+      "geoinfo": {
+        "display_name": "Berkheide, Westerbaan, Zanderij, Katwijk aan den Rijn, Katwijk, South Holland, Netherlands, 2224 XP, Netherlands",
+        "road": "Westerbaan",
+        "house_number": null,
+        "neighbourhood": "Zanderij",
+        "suburb": "Katwijk aan den Rijn",
+        "city_district": null,
+        "city": "Katwijk",
+        "state": "South Holland",
+        "postcode": "2224 XP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "092, Westerbaan, Katwijk aan Zee, 2224 XP South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.181179153762585,
+      "lon": 4.379605233403913,
+      "geoinfo": {
+        "display_name": "Begrazing in Berkheide, Rijwielpad Zuidduinen, Katwijk, South Holland, Netherlands, 2225 JS, Netherlands",
+        "road": "Rijwielpad Zuidduinen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Katwijk",
+        "state": "South Holland",
+        "postcode": "2225 JS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "028, Rijwielpad Zuidduinen, Katwijk aan Zee, 2225 JS South Holland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:39.186476+00:00",
+  "_kind": "geo_samples"
+}

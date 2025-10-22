@@ -1,0 +1,65 @@
+{
+  "country_code": "TN",
+  "country": "Tunisia",
+  "city": "La Gazelle",
+  "geonameid": 7870240,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 36.90669857488797,
+      "lon": 10.154318487194393,
+      "geoinfo": {
+        "display_name": "برج الطويل, المدينة الفاضلة, معتمدية رواد, Ariana, 2083, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ariana",
+        "postcode": "2083",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "La Gazelle, Ariana, Tunisia"
+    },
+    {
+      "lat": 36.92645643044896,
+      "lon": 10.200717267931152,
+      "geoinfo": {
+        "display_name": "رواد, Ariana, 2056, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ariana",
+        "state": "Ariana",
+        "postcode": "2056",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "519, La Gazelle, 2056 Ariana, Tunisia"
+    },
+    {
+      "lat": 36.92515079688991,
+      "lon": 10.203455367106445,
+      "geoinfo": {
+        "display_name": "Raoued, رواد, معتمدية رواد, Ariana, 2056, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Raoued",
+        "state": "Ariana",
+        "postcode": "2056",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "980, La Gazelle, 2056 Ariana, Tunisia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:18.565954+00:00",
+  "_kind": "geo_samples"
+}

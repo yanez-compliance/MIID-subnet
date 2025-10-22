@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Basel",
+  "geonameid": 2661604,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.55530065723652,
+      "lon": 7.62060723139146,
+      "geoinfo": {
+        "display_name": "16, Rheinstrasse, Birsfelden, Bezirk Arlesheim, Basel-Landschaft, 4127, Switzerland",
+        "road": "Rheinstrasse",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birsfelden",
+        "state": "Basel-Landschaft",
+        "postcode": "4127",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "16 Rheinstrasse, Basel, Basel-Landschaft, Switzerland"
+    },
+    {
+      "lat": 47.55468010063836,
+      "lon": 7.605475339555546,
+      "geoinfo": {
+        "display_name": "In den Klosterreben, Breite, Kleinbasel, Basel, Basel-City, 4052, Switzerland",
+        "road": "In den Klosterreben",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Breite",
+        "city_district": null,
+        "city": "Basel",
+        "state": "Basel-City",
+        "postcode": "4052",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "In den Klosterreben, Basel, Basel-City, Switzerland"
+    },
+    {
+      "lat": 47.54663699517839,
+      "lon": 7.565082332723259,
+      "geoinfo": {
+        "display_name": "159, Holeestrasse, Schützenmattpark, Bachletten, Grossbasel, Basel, Basel-City, 4054, Switzerland",
+        "road": "Holeestrasse",
+        "house_number": "159",
+        "neighbourhood": "Schützenmattpark",
+        "suburb": "Bachletten",
+        "city_district": null,
+        "city": "Basel",
+        "state": "Basel-City",
+        "postcode": "4054",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "159, Holeestrasse, Schützenmattpark, Bachletten, Grossbasel, Basel, Basel-City, 4054, Switzerland"
+    },
+    {
+      "lat": 47.54572828178216,
+      "lon": 7.537812822508692,
+      "geoinfo": {
+        "display_name": "75, Oberwilerstrasse, Strängi, Allschwil, Bezirk Arlesheim, Basel-Landschaft, 4123, Switzerland",
+        "road": "Oberwilerstrasse",
+        "house_number": "75",
+        "neighbourhood": "Strängi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Allschwil",
+        "state": "Basel-Landschaft",
+        "postcode": "4123",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "75, Oberwilerstrasse, Strängi, Allschwil, Bezirk Arlesheim, Basel-Landschaft, 4123, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:15.164930+00:00",
+  "_kind": "geo_samples"
+}

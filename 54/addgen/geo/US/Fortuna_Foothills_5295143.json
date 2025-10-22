@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fortuna Foothills",
+  "geonameid": 5295143,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.64579724130627,
+      "lon": -114.44764637134628,
+      "geoinfo": {
+        "display_name": "East 13th Street, Yuma County, Arizona, 83567, United States",
+        "road": "East 13th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": "83567",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 13th Street, Fortuna Foothills, Arizona, United States"
+    },
+    {
+      "lat": 32.620496639710765,
+      "lon": -114.38395267912726,
+      "geoinfo": {
+        "display_name": "Fortuna Foothills, Yuma County, Arizona, 85367, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fortuna Foothills",
+        "state": "Arizona",
+        "postcode": "85367",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "376, Fortuna Foothills, Yuma County, Arizona, 85367, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:29:23.481494+00:00",
+  "_kind": "geo_samples"
+}

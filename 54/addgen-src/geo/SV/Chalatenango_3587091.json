@@ -1,0 +1,65 @@
+{
+  "country_code": "SV",
+  "country": "El Salvador",
+  "city": "Chalatenango",
+  "geonameid": 3587091,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 14.043941826651686,
+      "lon": -88.96505259450771,
+      "geoinfo": {
+        "display_name": "Chalatenango, 1301, El Salvador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chalatenango",
+        "state": "Chalatenango",
+        "postcode": "1301",
+        "country": "El Salvador",
+        "country_code": "sv"
+      },
+      "address": "Chalatenango, Chalatenango, El Salvador"
+    },
+    {
+      "lat": 14.041723096904784,
+      "lon": -88.92144359668211,
+      "geoinfo": {
+        "display_name": "By Pass, Chalatenango, 1301, El Salvador",
+        "road": "By Pass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chalatenango",
+        "state": "Chalatenango",
+        "postcode": "1301",
+        "country": "El Salvador",
+        "country_code": "sv"
+      },
+      "address": "By Pass, Chalatenango, Chalatenango, El Salvador"
+    },
+    {
+      "lat": 14.001381191861599,
+      "lon": -88.9229095494183,
+      "geoinfo": {
+        "display_name": "CHA09S, San Miguel de Mercedes, Chalatenango, 1301, El Salvador",
+        "road": "CHA09S",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel de Mercedes",
+        "state": "Chalatenango",
+        "postcode": "1301",
+        "country": "El Salvador",
+        "country_code": "sv"
+      },
+      "address": "CHA09S, Chalatenango, Chalatenango, El Salvador"
+    }
+  ],
+  "updated_at": "2025-10-16T23:06:34.029415+00:00",
+  "_kind": "geo_samples"
+}

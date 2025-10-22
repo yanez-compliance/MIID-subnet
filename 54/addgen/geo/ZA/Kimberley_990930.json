@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Kimberley",
+  "geonameid": 990930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.73751049794808,
+      "lon": 24.727589824924376,
+      "geoinfo": {
+        "display_name": "Fisher Road, Riviera, Sol Plaatje Ward 8, Sol Plaatje Local Municipality, Frances Baard District Municipality, Northern Cape, 8345, South Africa",
+        "road": "Fisher Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Riviera",
+        "city_district": null,
+        "city": "Sol Plaatje Local Municipality",
+        "state": "Northern Cape",
+        "postcode": "8345",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Fisher Road, Kimberley, Northern Cape, South Africa"
+    },
+    {
+      "lat": -28.7246627640562,
+      "lon": 24.777983456646968,
+      "geoinfo": {
+        "display_name": "Kimberley Stadium, Kenilworth Road, De Beers, Sol Plaatje Ward 21, Sol Plaatje Local Municipality, Frances Baard District Municipality, Northern Cape, 8301, South Africa",
+        "road": "Kenilworth Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "De Beers",
+        "city_district": null,
+        "city": "Sol Plaatje Local Municipality",
+        "state": "Northern Cape",
+        "postcode": "8301",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Kimberley Stadium, Kenilworth Road, De Beers, Sol Plaatje Ward 21, Sol Plaatje Local Municipality, Frances Baard District Municipality, Northern Cape, 8301, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:25.450348+00:00",
+  "_kind": "geo_samples"
+}

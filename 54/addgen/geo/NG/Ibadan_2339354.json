@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Ibadan",
+  "geonameid": 2339354,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 7.349045189194558,
+      "lon": 3.9067625701889064,
+      "geoinfo": {
+        "display_name": "Ibadan South East, Oyo State, 200252, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oyo State",
+        "postcode": "200252",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Ibadan, Oyo State, Nigeria"
+    },
+    {
+      "lat": 7.396570961447403,
+      "lon": 3.934692083042899,
+      "geoinfo": {
+        "display_name": "Ibadan North East, Oyo State, 200222, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oyo State",
+        "postcode": "200222",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "270, Ibadan North East, Oyo State, 200222, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:34.879819+00:00",
+  "_kind": "geo_samples"
+}

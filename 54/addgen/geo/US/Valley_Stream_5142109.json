@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Valley Stream",
+  "geonameid": 5142109,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.63210637956376,
+      "lon": -73.67947703926474,
+      "geoinfo": {
+        "display_name": "The Seawane Club, Bayberry North, Village of Hewlett Harbor, Town of Hempstead, Nassau County, New York, 11557, United States",
+        "road": "Bayberry North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Hewlett Harbor",
+        "state": "New York",
+        "postcode": "11557",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bayberry North, Valley Stream, New York, United States"
+    },
+    {
+      "lat": 40.66575766170358,
+      "lon": -73.75655237213456,
+      "geoinfo": {
+        "display_name": "Belt Parkway, Laurelton, Queens, Queens County, New York, 11413, United States",
+        "road": "Belt Parkway",
+        "house_number": null,
+        "neighbourhood": "Laurelton",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11413",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "584, Belt Parkway, Laurelton, Queens, Queens County, New York, 11413, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:18.161699+00:00",
+  "_kind": "geo_samples"
+}

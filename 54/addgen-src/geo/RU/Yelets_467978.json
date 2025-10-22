@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Yelets",
+  "geonameid": 467978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.59579355350918,
+      "lon": 38.52643295840252,
+      "geoinfo": {
+        "display_name": "\"Утюг\", улица Пашкова, Соцгородок, Yelets, Lipetsk Oblast, Central Federal District, 399785, Russia",
+        "road": "улица Пашкова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Соцгородок",
+        "city_district": null,
+        "city": "Yelets",
+        "state": "Lipetsk Oblast",
+        "postcode": "399785",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Пашкова, Yelets, Lipetsk Oblast, Russia"
+    },
+    {
+      "lat": 52.631675407871064,
+      "lon": 38.442866893418824,
+      "geoinfo": {
+        "display_name": "Орловское шоссе, Yelets, Пищулинский сельсовет, Yelets, Lipetsk Oblast, Central Federal District, 399778, Russia",
+        "road": "Орловское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yelets",
+        "state": "Lipetsk Oblast",
+        "postcode": "399778",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "852, Орловское шоссе, Yelets, Пищулинский сельсовет, Yelets, Lipetsk Oblast, Central Federal District, 399778, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:51.446764+00:00",
+  "_kind": "geo_samples"
+}

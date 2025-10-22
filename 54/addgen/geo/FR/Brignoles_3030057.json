@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Brignoles",
+  "geonameid": 3030057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.44159397049443,
+      "lon": 6.065399693376638,
+      "geoinfo": {
+        "display_name": "Les Grandes Aires, Le Val, Brignoles, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83143, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Les Grandes Aires",
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Val",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83143",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Les Grandes Aires, Brignoles, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.40547126810389,
+      "lon": 6.107401394726372,
+      "geoinfo": {
+        "display_name": "Chemin de Fourneiri, Brignoles, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83170, France",
+        "road": "Chemin de Fourneiri",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brignoles",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "83170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "834, Chemin de Fourneiri, Brignoles, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83170, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:50.840874+00:00",
+  "_kind": "geo_samples"
+}

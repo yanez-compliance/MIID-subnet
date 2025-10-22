@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rosamond",
+  "geonameid": 5388735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.883741952196296,
+      "lon": -118.21131471636645,
+      "geoinfo": {
+        "display_name": "Avenue of the Stars, Rosamond, Kern County, California, 93560, United States",
+        "road": "Avenue of the Stars",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosamond",
+        "state": "California",
+        "postcode": "93560",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Avenue of the Stars, Rosamond, California, United States"
+    },
+    {
+      "lat": 34.88332016268238,
+      "lon": -118.12258488386739,
+      "geoinfo": {
+        "display_name": "Kern County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "668, Kern County, 49197 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:56.324332+00:00",
+  "_kind": "geo_samples"
+}

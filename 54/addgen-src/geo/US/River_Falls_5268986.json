@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "River Falls",
+  "geonameid": 5268986,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.85834374717248,
+      "lon": -92.6530248149707,
+      "geoinfo": {
+        "display_name": "879th Avenue, Town of River Falls, Pierce County, Wisconsin, 54022, United States",
+        "road": "879th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Wisconsin",
+        "postcode": "54022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "879th Avenue, River Falls, Wisconsin, United States"
+    },
+    {
+      "lat": 44.88666553779482,
+      "lon": -92.58971945833915,
+      "geoinfo": {
+        "display_name": "River Drive, Town of Kinnickinnic, Saint Croix County, Wisconsin, 54022, United States",
+        "road": "River Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Kinnickinnic",
+        "state": "Wisconsin",
+        "postcode": "54022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "544, River Drive, Town of Kinnickinnic, Saint Croix County, Wisconsin, 54022, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:57.600768+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Massapequa Park",
+  "geonameid": 5126187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70440724623074,
+      "lon": -73.43942151223739,
+      "geoinfo": {
+        "display_name": "4, Southeast Park Drive, Village of Massapequa Park, Town of Oyster Bay, Nassau County, New York, 11762, United States",
+        "road": "Southeast Park Drive",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Massapequa Park",
+        "state": "New York",
+        "postcode": "11762",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4 Southeast Park Drive, Massapequa Park, New York, United States"
+    },
+    {
+      "lat": 40.66327082306973,
+      "lon": -73.47849668897925,
+      "geoinfo": {
+        "display_name": "110, Cleveland Place, Massapequa, Town of Oyster Bay, Nassau County, New York, 11758, United States",
+        "road": "Cleveland Place",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Massapequa",
+        "state": "New York",
+        "postcode": "11758",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "110, Cleveland Place, Massapequa, Town of Oyster Bay, Nassau County, New York, 11758, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:03:32.137692+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Roermond",
+  "geonameid": 2748000,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.186545288260525,
+      "lon": 5.985120503818429,
+      "geoinfo": {
+        "display_name": "13, Roerzicht, Roerzicht-Voorstad, Centrum, Roermond, Limburg, Netherlands, 6041 XV, Netherlands",
+        "road": "Roerzicht",
+        "house_number": "13",
+        "neighbourhood": "Roerzicht-Voorstad",
+        "suburb": null,
+        "city_district": null,
+        "city": "Roermond",
+        "state": "Limburg",
+        "postcode": "6041 XV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "13 Roerzicht, Roermond, Limburg, The Netherlands"
+    },
+    {
+      "lat": 51.19929778182902,
+      "lon": 5.979687482593562,
+      "geoinfo": {
+        "display_name": "Louis Raemaekersbrug, Maaswaarderweg, Maasplassen, Roermond, Limburg, Netherlands, 6041 TJ, Netherlands",
+        "road": "Maaswaarderweg",
+        "house_number": null,
+        "neighbourhood": "Maasplassen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Roermond",
+        "state": "Limburg",
+        "postcode": "6041 TJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "841, Maaswaarderweg, Roermond, 6041 TJ Limburg, The Netherlands"
+    },
+    {
+      "lat": 51.22065879638022,
+      "lon": 6.041618644136614,
+      "geoinfo": {
+        "display_name": "Riet, Boukoul, Swalmen, Roermond, Limburg, Netherlands, 6071 BM, Netherlands",
+        "road": "Riet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boukoul",
+        "state": "Limburg",
+        "postcode": "6071 BM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "552, Riet, Boukoul, Swalmen, Roermond, Limburg, Netherlands, 6071 BM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:19.764079+00:00",
+  "_kind": "geo_samples"
+}

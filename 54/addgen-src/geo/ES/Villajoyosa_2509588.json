@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Villajoyosa",
+  "geonameid": 2509588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.51212896149611,
+      "lon": -0.26901096720448403,
+      "geoinfo": {
+        "display_name": "Autopista del Mediterráneo, la Porxa, la Vila Joiosa / Villajoyosa, la Marina Baixa, Alacant / Alicante, Valencian Community, Spain",
+        "road": "Autopista del Mediterráneo",
+        "house_number": null,
+        "neighbourhood": "la Porxa",
+        "suburb": null,
+        "city_district": null,
+        "city": "la Vila Joiosa / Villajoyosa",
+        "state": "Valencian Community",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista del Mediterráneo, Villajoyosa, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.506872216931725,
+      "lon": -0.17808040670266176,
+      "geoinfo": {
+        "display_name": "Les Talades, Torre de Sant Josep, la Vila Joiosa / Villajoyosa, la Marina Baixa, Alacant / Alicante, Valencian Community, 03570, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Torre de Sant Josep",
+        "suburb": null,
+        "city_district": null,
+        "city": "la Vila Joiosa / Villajoyosa",
+        "state": "Valencian Community",
+        "postcode": "03570",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "008, Les Talades, Torre de Sant Josep, la Vila Joiosa / Villajoyosa, la Marina Baixa, Alacant / Alicante, Valencian Community, 03570, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:38.131538+00:00",
+  "_kind": "geo_samples"
+}

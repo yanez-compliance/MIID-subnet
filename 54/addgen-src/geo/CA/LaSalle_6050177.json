@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "LaSalle",
+  "geonameid": 6050177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.25353753020209,
+      "lon": -83.06229654343657,
+      "geoinfo": {
+        "display_name": "Todd Lane, Lasalle, Essex County, Southwestern Ontario, Ontario, N9H 1S3, Canada",
+        "road": "Todd Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lasalle",
+        "state": "Ontario",
+        "postcode": "N9H 1S3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Todd Lane, LaSalle, Ontario, Canada"
+    },
+    {
+      "lat": 42.274653971971865,
+      "lon": -83.05663250398284,
+      "geoinfo": {
+        "display_name": "Industrial Drive, Sandwich, Windsor, Southwestern Ontario, Ontario, N9C 3R4, Canada",
+        "road": "Industrial Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sandwich",
+        "city_district": null,
+        "city": "Windsor",
+        "state": "Ontario",
+        "postcode": "N9C 3R4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Industrial Drive, Sandwich, Windsor, Southwestern Ontario, Ontario, N9C 3R4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:04.615516+00:00",
+  "_kind": "geo_samples"
+}

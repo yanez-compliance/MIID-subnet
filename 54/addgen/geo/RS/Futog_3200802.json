@@ -1,0 +1,47 @@
+{
+  "country_code": "RS",
+  "country": "Serbia",
+  "city": "Futog",
+  "geonameid": 3200802,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 45.21225011032877,
+      "lon": 19.719156783270666,
+      "geoinfo": {
+        "display_name": "2g, Петра Кочића, Beocin, Beocin Municipality, South Backa Administrative District, Vojvodina, 21300, Serbia",
+        "road": "Петра Кочића",
+        "house_number": "2g",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beocin Municipality",
+        "state": "Vojvodina",
+        "postcode": "21300",
+        "country": "Serbia",
+        "country_code": "rs"
+      },
+      "address": "2g, Петра Кочића, Futog, 21300 Vojvodina, Serbia"
+    },
+    {
+      "lat": 45.236829734858325,
+      "lon": 19.688113026210175,
+      "geoinfo": {
+        "display_name": "42, Djure Djakovica, Novi Futog, МЗ Футог, Futog, City of Novi Sad, South Backa Administrative District, Vojvodina, 21410, Serbia",
+        "road": "Djure Djakovica",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": "МЗ Футог",
+        "city_district": null,
+        "city": "Futog",
+        "state": "Vojvodina",
+        "postcode": "21410",
+        "country": "Serbia",
+        "country_code": "rs"
+      },
+      "address": "42, Djure Djakovica, Novi Futog, МЗ Футог, Futog, City of Novi Sad, South Backa Administrative District, Vojvodina, 21410, Serbia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:43:38.355851+00:00",
+  "_kind": "geo_samples"
+}

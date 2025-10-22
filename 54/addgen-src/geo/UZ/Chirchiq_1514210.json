@@ -1,0 +1,65 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Chirchiq",
+  "geonameid": 1514210,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 41.449271498195586,
+      "lon": 69.62931821815147,
+      "geoinfo": {
+        "display_name": "Karamanas, Bostanlik district, Tashkent Region, 102100, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Karamanas",
+        "state": "Tashkent Region",
+        "postcode": "102100",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Chirchiq, Tashkent Region, Uzbekistan"
+    },
+    {
+      "lat": 41.46527321161374,
+      "lon": 69.53274398412782,
+      "geoinfo": {
+        "display_name": "Chirchik, Kibray District, Tashkent Region, 111700, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chirchik",
+        "state": "Tashkent Region",
+        "postcode": "111700",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "489, Chirchik, Kibray District, Tashkent Region, 111700, Uzbekistan"
+    },
+    {
+      "lat": 41.46897969085028,
+      "lon": 69.63624134250321,
+      "geoinfo": {
+        "display_name": "Bostanlik district, Tashkent Region, 102100, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tashkent Region",
+        "postcode": "102100",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "268, Chirchiq, 102100 Tashkent Region, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:32:32.867290+00:00",
+  "_kind": "geo_samples"
+}

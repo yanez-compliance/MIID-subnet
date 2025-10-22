@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fischeln",
+  "geonameid": 2926565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.29502130665351,
+      "lon": 6.547536594776076,
+      "geoinfo": {
+        "display_name": "Anrather Straße, Fischeln, Krefeld-Fischeln, Krefeld, North Rhine-Westphalia, 47807, Germany",
+        "road": "Anrather Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fischeln",
+        "city_district": "Krefeld-Fischeln",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47807",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Anrather Straße, Fischeln, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.29281165072284,
+      "lon": 6.603361716829343,
+      "geoinfo": {
+        "display_name": "4, Steinrath, Fischeln, Krefeld-Fischeln, Krefeld, North Rhine-Westphalia, 47807, Germany",
+        "road": "Steinrath",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Fischeln",
+        "city_district": "Krefeld-Fischeln",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47807",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Steinrath, Fischeln, Krefeld-Fischeln, Krefeld, North Rhine-Westphalia, 47807, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:11.344188+00:00",
+  "_kind": "geo_samples"
+}

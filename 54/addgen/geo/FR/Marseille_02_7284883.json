@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 02",
+  "geonameid": 7284883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.28916871492737,
+      "lon": 5.3340455949513075,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Marseille 02, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.325501022007295,
+      "lon": 5.376926516636829,
+      "geoinfo": {
+        "display_name": "Boulevard Louis Guichoux, Le Canet, 14th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13014, France",
+        "road": "Boulevard Louis Guichoux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "14th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13014",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Louis Guichoux, Le Canet, 14th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13014, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:20:08.710010+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Apaseo el Alto",
+  "geonameid": 4018404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.484945642690978,
+      "lon": -100.61839541799286,
+      "geoinfo": {
+        "display_name": "Camino a San Cristóbal, Centro Norte, Apaseo el Alto, Guanajuato, 38503, Mexico",
+        "road": "Camino a San Cristóbal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apaseo el Alto",
+        "state": "Guanajuato",
+        "postcode": "38503",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Camino a San Cristóbal, Apaseo el Alto, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.482169744381583,
+      "lon": -100.62153671014845,
+      "geoinfo": {
+        "display_name": "Apaseo el Alto, Guanajuato, 38503, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apaseo el Alto",
+        "state": "Guanajuato",
+        "postcode": "38503",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "415, Apaseo el Alto, Guanajuato, 38503, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:03.819541+00:00",
+  "_kind": "geo_samples"
+}

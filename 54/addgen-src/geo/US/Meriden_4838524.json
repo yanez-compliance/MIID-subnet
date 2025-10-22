@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Meriden",
+  "geonameid": 4838524,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.54347597391418,
+      "lon": -72.81136279864964,
+      "geoinfo": {
+        "display_name": "197, Springdale Avenue, Meriden, South Central Connecticut Planning Region, Connecticut, 06451, United States",
+        "road": "Springdale Avenue",
+        "house_number": "197",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meriden",
+        "state": "Connecticut",
+        "postcode": "06451",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "197 Springdale Avenue, Meriden, Connecticut, United States"
+    },
+    {
+      "lat": 41.57248531899005,
+      "lon": -72.78548773927298,
+      "geoinfo": {
+        "display_name": "Beaver Lake Road, Meriden, South Central Connecticut Planning Region, Connecticut, 06451, United States",
+        "road": "Beaver Lake Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meriden",
+        "state": "Connecticut",
+        "postcode": "06451",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "716, Beaver Lake Road, Meriden, South Central Connecticut Planning Region, Connecticut, 06451, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:37.325151+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Albania",
+  "geonameid": 3690250,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.152085310039679,
+      "lon": -72.57557401709543,
+      "geoinfo": {
+        "display_name": "Albania, La Guajira, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albania",
+        "state": "La Guajira",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Albania, La Guajira, Colombia"
+    },
+    {
+      "lat": 11.134232514335041,
+      "lon": -72.61028371012166,
+      "geoinfo": {
+        "display_name": "Mushaisha, Albania, La Guajira, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mushaisha",
+        "suburb": null,
+        "city_district": null,
+        "city": "Albania",
+        "state": "La Guajira",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "102, Mushaisha, Albania, 69413 La Guajira, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:06:48.607937+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Beersel",
+  "geonameid": 2802433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.758047887578215,
+      "lon": 4.28459929141573,
+      "geoinfo": {
+        "display_name": "Lakenberg, Breedveld, Kesterbeek, Lot, Beersel, Halle-Vilvoorde, Flemish Brabant, Flanders, 1651, Belgium",
+        "road": "Lakenberg",
+        "house_number": null,
+        "neighbourhood": "Breedveld",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lot",
+        "state": "Flemish Brabant",
+        "postcode": "1651",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Lakenberg, Beersel, Flemish Brabant, Belgium"
+    },
+    {
+      "lat": 50.799753134733606,
+      "lon": 4.256375001310243,
+      "geoinfo": {
+        "display_name": "30, Kasteelstraat, Rattendaal, Sint-Pieters-Leeuw, Halle-Vilvoorde, Flemish Brabant, Flanders, 1600, Belgium",
+        "road": "Kasteelstraat",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Pieters-Leeuw",
+        "city": "Sint-Pieters-Leeuw",
+        "state": "Flemish Brabant",
+        "postcode": "1600",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "30, Kasteelstraat, Rattendaal, Sint-Pieters-Leeuw, Halle-Vilvoorde, Flemish Brabant, Flanders, 1600, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:05.625874+00:00",
+  "_kind": "geo_samples"
+}

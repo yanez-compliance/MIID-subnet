@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Osipovichi",
+  "geonameid": 624034,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 53.269756027784275,
+      "lon": 28.602785016060785,
+      "geoinfo": {
+        "display_name": "Н11202, Восава, Пратасевіцкі сельскі Савет, Asipovichy District, Mahilyow Region, 213761, Belarus",
+        "road": "Н11202",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Пратасевіцкі сельскі Савет",
+        "state": "Mahilyow Region",
+        "postcode": "213761",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Н11202, Восава, Пратасевіцкі сельскі Савет, Asipovichy District, Mahilyow Region, 213761, Belarus"
+    },
+    {
+      "lat": 53.33229268097123,
+      "lon": 28.591325657296704,
+      "geoinfo": {
+        "display_name": "Вяззеўскі сельскі Савет, Asipovichy District, Mahilyow Region, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Вяззеўскі сельскі Савет",
+        "state": "Mahilyow Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "892, Вяззеўскі сельскі Савет, Asipovichy District, 91641 Mahilyow Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T01:32:52.363265+00:00",
+  "_kind": "geo_samples"
+}

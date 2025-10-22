@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Harburg",
+  "geonameid": 2910685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.43131413407169,
+      "lon": 10.014908238459222,
+      "geoinfo": {
+        "display_name": "Vogteistraße, Rönneburg, Harburg, Hamburg, 21079, Germany",
+        "road": "Vogteistraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rönneburg",
+        "city_district": "Harburg",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21079",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Vogteistraße, Harburg, Germany"
+    },
+    {
+      "lat": 53.486213451973086,
+      "lon": 10.045349694960544,
+      "geoinfo": {
+        "display_name": "44, Einlagedeich, Moorwerder, Wilhelmsburg, Hamburg-Mitte, Hamburg, 21109, Germany",
+        "road": "Einlagedeich",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Wilhelmsburg",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21109",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "44, Einlagedeich, Moorwerder, Wilhelmsburg, Hamburg-Mitte, Hamburg, 21109, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:17.454452+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Pleasant",
+  "geonameid": 4712933,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.15596074828601,
+      "lon": -94.93447869126767,
+      "geoinfo": {
+        "display_name": "East 1st Street, Mount Pleasant, Titus County, Texas, 75455, United States",
+        "road": "East 1st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Pleasant",
+        "state": "Texas",
+        "postcode": "75455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 1st Street, Mount Pleasant, Texas, United States"
+    },
+    {
+      "lat": 33.159153546625205,
+      "lon": -94.95087020415308,
+      "geoinfo": {
+        "display_name": "1338, East 4th Street, Mount Pleasant, Titus County, Texas, 75455, United States",
+        "road": "East 4th Street",
+        "house_number": "1338",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Pleasant",
+        "state": "Texas",
+        "postcode": "75455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1338, East 4th Street, Mount Pleasant, Titus County, Texas, 75455, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:46.756865+00:00",
+  "_kind": "geo_samples"
+}

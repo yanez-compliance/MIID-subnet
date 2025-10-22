@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Veracruz",
+  "geonameid": 3514783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.140770902924988,
+      "lon": -96.12677934121217,
+      "geoinfo": {
+        "display_name": "Calle José González Herrera, Primero de Mayo Sur, Boca del Río, Veracruz, 91948, Mexico",
+        "road": "Calle José González Herrera",
+        "house_number": null,
+        "neighbourhood": "Primero de Mayo Sur",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Veracruz",
+        "postcode": "91948",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle José González Herrera, Veracruz, Veracruz, Mexico"
+    },
+    {
+      "lat": 19.206753393456854,
+      "lon": -96.17389478827138,
+      "geoinfo": {
+        "display_name": "Calle Playa Las Gaviotas, Adolfo Ruiz Cortinez, Veracruz City, Municipio de Veracruz, Veracruz, 91850, Mexico",
+        "road": "Calle Playa Las Gaviotas",
+        "house_number": null,
+        "neighbourhood": "Adolfo Ruiz Cortinez",
+        "suburb": null,
+        "city_district": null,
+        "city": "Veracruz City",
+        "state": "Veracruz",
+        "postcode": "91850",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "719, Calle Playa Las Gaviotas, Adolfo Ruiz Cortinez, Veracruz City, Municipio de Veracruz, Veracruz, 91850, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:35.599050+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Fernando",
+  "geonameid": 5391945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.2852635374551,
+      "lon": -118.43862643552158,
+      "geoinfo": {
+        "display_name": "215, North Maclay Avenue, San Fernando, Los Angeles County, California, 91340, United States",
+        "road": "North Maclay Avenue",
+        "house_number": "215",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando",
+        "state": "California",
+        "postcode": "91340",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "215 North Maclay Avenue, San Fernando, California, United States"
+    },
+    {
+      "lat": 34.28361240620401,
+      "lon": -118.4863240303037,
+      "geoinfo": {
+        "display_name": "16334, Keeler Drive, Granada Hills North Neighborhood Council District, Los Angeles, Los Angeles County, California, 91344, United States",
+        "road": "Keeler Drive",
+        "house_number": "16334",
+        "neighbourhood": null,
+        "suburb": "Granada Hills North Neighborhood Council District",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "91344",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16334, Keeler Drive, Granada Hills North Neighborhood Council District, Los Angeles, Los Angeles County, California, 91344, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:03.217710+00:00",
+  "_kind": "geo_samples"
+}

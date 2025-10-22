@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gainesville",
+  "geonameid": 4196586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.28156416027781,
+      "lon": -83.86512739055239,
+      "geoinfo": {
+        "display_name": "McEver Road, Gainesville, Hall County, Georgia, 30504, United States",
+        "road": "McEver Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gainesville",
+        "state": "Georgia",
+        "postcode": "30504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "McEver Road, Gainesville, Georgia, United States"
+    },
+    {
+      "lat": 34.29734317054585,
+      "lon": -83.84843581388465,
+      "geoinfo": {
+        "display_name": "656, Nix Drive, Lakeshore Estates, Gainesville, Hall County, Georgia, 30501, United States",
+        "road": "Nix Drive",
+        "house_number": "656",
+        "neighbourhood": "Lakeshore Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gainesville",
+        "state": "Georgia",
+        "postcode": "30501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "656, Nix Drive, Lakeshore Estates, Gainesville, Hall County, Georgia, 30501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:41.831988+00:00",
+  "_kind": "geo_samples"
+}

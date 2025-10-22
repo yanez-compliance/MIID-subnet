@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Mumbwa",
+  "geonameid": 904422,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.023603043248317,
+      "lon": 27.04539224800378,
+      "geoinfo": {
+        "display_name": "Mumbwa District, Central Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Central Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "098, Mumbwa District, 46389 Central Province, Zambia"
+    },
+    {
+      "lat": -14.945571301516459,
+      "lon": 27.040928993543115,
+      "geoinfo": {
+        "display_name": "Mumbwa, Mumbwa District, Central Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mumbwa",
+        "state": "Central Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "191, Mumbwa, Mumbwa District, 65247 Central Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:46:24.787186+00:00",
+  "_kind": "geo_samples"
+}

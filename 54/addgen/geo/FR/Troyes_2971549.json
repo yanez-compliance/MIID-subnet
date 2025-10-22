@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Troyes",
+  "geonameid": 2971549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.337646293968355,
+      "lon": 4.069166422606636,
+      "geoinfo": {
+        "display_name": "Sainte-Maure, Troyes, Aube, Grand Est, Metropolitan France, 10150, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Maure",
+        "state": "Grand Est",
+        "postcode": "10150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Troyes, Grand Est, France"
+    },
+    {
+      "lat": 48.33405243552626,
+      "lon": 4.095958442241812,
+      "geoinfo": {
+        "display_name": "D 610, Lavau, Troyes, Aube, Grand Est, Metropolitan France, 10150, France",
+        "road": "D 610",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lavau",
+        "state": "Grand Est",
+        "postcode": "10150",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 610, Lavau, Troyes, Aube, Grand Est, Metropolitan France, 10150, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:51.037795+00:00",
+  "_kind": "geo_samples"
+}

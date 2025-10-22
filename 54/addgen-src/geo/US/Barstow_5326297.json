@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Barstow",
+  "geonameid": 5326297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.89843612335806,
+      "lon": -117.0253534180561,
+      "geoinfo": {
+        "display_name": "246, East Main Street, Barstow, San Bernardino County, California, 92311, United States",
+        "road": "East Main Street",
+        "house_number": "246",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barstow",
+        "state": "California",
+        "postcode": "92311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "246 East Main Street, Barstow, California, United States"
+    },
+    {
+      "lat": 34.85723092695155,
+      "lon": -117.02407396416729,
+      "geoinfo": {
+        "display_name": "OM7396, Desert View Housing Area, Barstow, San Bernardino County, California, United States",
+        "road": "OM7396",
+        "house_number": null,
+        "neighbourhood": "Desert View Housing Area",
+        "suburb": null,
+        "city_district": null,
+        "city": "Barstow",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "OM7396, Desert View Housing Area, Barstow, San Bernardino County, 85191 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:08:14.721428+00:00",
+  "_kind": "geo_samples"
+}

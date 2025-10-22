@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Buenaventura",
+  "geonameid": 3987500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.037225319158022,
+      "lon": -101.55774701350374,
+      "geoinfo": {
+        "display_name": "Nadadores, Coahuila, 25500, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Coahuila",
+        "postcode": "25500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San Buenaventura, Coahuila, Mexico"
+    },
+    {
+      "lat": 27.051658483871343,
+      "lon": -101.56999418356635,
+      "geoinfo": {
+        "display_name": "San Buenaventura, Coahuila, 25500, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Buenaventura",
+        "state": "Coahuila",
+        "postcode": "25500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "288, San Buenaventura, Coahuila, 25500, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:02.617364+00:00",
+  "_kind": "geo_samples"
+}

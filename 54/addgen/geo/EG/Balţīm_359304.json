@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Balţīm",
+  "geonameid": 359304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.585626433612035,
+      "lon": 31.105715848848988,
+      "geoinfo": {
+        "display_name": "Baltim City, Baltim Resort, Kafr El Sheikh, 33735, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Baltim City",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltim Resort",
+        "state": "Kafr El Sheikh",
+        "postcode": "33735",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Baltim City, Balţīm, Kafr El Sheikh, Egypt"
+    },
+    {
+      "lat": 31.551631902824443,
+      "lon": 31.036766952205912,
+      "geoinfo": {
+        "display_name": "Awlad Dafir, Kafr El Sheikh, 35731, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Awlad Dafir",
+        "state": "Kafr El Sheikh",
+        "postcode": "35731",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "206, Awlad Dafir, Kafr El Sheikh, 35731, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:07.983633+00:00",
+  "_kind": "geo_samples"
+}

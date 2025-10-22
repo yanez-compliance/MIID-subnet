@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bayou Cane",
+  "geonameid": 4315768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.58902104071581,
+      "lon": -90.75089493271638,
+      "geoinfo": {
+        "display_name": "Houma, Terrebonne Parish, Louisiana, 70360, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houma",
+        "state": "Louisiana",
+        "postcode": "70360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bayou Cane, Louisiana, United States"
+    },
+    {
+      "lat": 29.613293853252,
+      "lon": -90.79053563177723,
+      "geoinfo": {
+        "display_name": "199, Brazo Court, Crescent, Houma, Terrebonne Parish, Louisiana, 70360, United States",
+        "road": "Brazo Court",
+        "house_number": "199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houma",
+        "state": "Louisiana",
+        "postcode": "70360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "199, Brazo Court, Crescent, Houma, Terrebonne Parish, Louisiana, 70360, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:46.761704+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Biny Selo",
+  "geonameid": 586968,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 40.445631999019184,
+      "lon": 50.03011203313492,
+      "geoinfo": {
+        "display_name": "Surakhany Raion, Baku City, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Surakhany Raion",
+        "city": "Baku City",
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "543, Surakhany Raion, 32974 Baku City, Azerbaijan"
+    },
+    {
+      "lat": 40.48881258688301,
+      "lon": 50.09302953873951,
+      "geoinfo": {
+        "display_name": "Mardakan, Baku City, 1044, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baku City",
+        "state": null,
+        "postcode": "1044",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "165, Mardakan, Baku City, 1044, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:46.299285+00:00",
+  "_kind": "geo_samples"
+}

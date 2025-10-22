@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Hermosillo",
+  "geonameid": 4004898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.079722800532398,
+      "lon": -110.965207804851,
+      "geoinfo": {
+        "display_name": "Franciso Salazar, Hermosillo, Sonora, 83000, Mexico",
+        "road": "Franciso Salazar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hermosillo",
+        "state": "Sonora",
+        "postcode": "83000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Franciso Salazar, Hermosillo, Sonora, Mexico"
+    },
+    {
+      "lat": 29.114437957629672,
+      "lon": -110.97956260861818,
+      "geoinfo": {
+        "display_name": "Privada 4 Arizona, Hermosillo, Sonora, 83138, Mexico",
+        "road": "Privada 4 Arizona",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hermosillo",
+        "state": "Sonora",
+        "postcode": "83138",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Privada 4 Arizona, Hermosillo, Sonora, 83138, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:31.319312+00:00",
+  "_kind": "geo_samples"
+}

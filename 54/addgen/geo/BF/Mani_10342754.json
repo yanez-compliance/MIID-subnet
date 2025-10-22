@@ -1,0 +1,47 @@
+{
+  "country_code": "BF",
+  "country": "Burkina Faso",
+  "city": "Mani",
+  "geonameid": 10342754,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 13.24142652507333,
+      "lon": -0.25043672154029556,
+      "geoinfo": {
+        "display_name": "Kamissi, Gnagna, East, Burkina Faso",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamissi",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "Mani, Burkina Faso"
+    },
+    {
+      "lat": 13.236531362589153,
+      "lon": -0.19108082548317917,
+      "geoinfo": {
+        "display_name": "N 18, Manni, Gnagna, East, Burkina Faso",
+        "road": "N 18",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manni",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "N 18, Mani, Burkina Faso"
+    }
+  ],
+  "updated_at": "2025-10-19T01:08:41.444608+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Los Mochis",
+  "geonameid": 3997479,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.810650655570413,
+      "lon": -108.98621142158426,
+      "geoinfo": {
+        "display_name": "Boulevard Antonio Rosales, Los Mochis, Ahome, Sinaloa, 81223, Mexico",
+        "road": "Boulevard Antonio Rosales",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Mochis",
+        "state": "Sinaloa",
+        "postcode": "81223",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Boulevard Antonio Rosales, Los Mochis, Sinaloa, Mexico"
+    },
+    {
+      "lat": 25.77522514263974,
+      "lon": -109.01945523447397,
+      "geoinfo": {
+        "display_name": "Boulevard Pedro María Anaya, Benito Juarez, Los Mochis, Ahome, Sinaloa, 81270, Mexico",
+        "road": "Boulevard Pedro María Anaya",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Mochis",
+        "state": "Sinaloa",
+        "postcode": "81270",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "241, Boulevard Pedro María Anaya, Benito Juarez, Los Mochis, Ahome, Sinaloa, 81270, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:28.413262+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Chivilcoy",
+  "geonameid": 3861344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.91751831811082,
+      "lon": -60.0603793454722,
+      "geoinfo": {
+        "display_name": "Palemón Huergo, San Ceferino, Chivilcoy, Partido de Chivilcoy, Buenos Aires, B6620KSB, Argentina",
+        "road": "Palemón Huergo",
+        "house_number": null,
+        "neighbourhood": "San Ceferino",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chivilcoy",
+        "state": "Buenos Aires",
+        "postcode": "B6620KSB",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Palemón Huergo, Chivilcoy, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.93140252216012,
+      "lon": -59.984828756136125,
+      "geoinfo": {
+        "display_name": "Los Quebrachos, Partido de Chivilcoy, Buenos Aires, 6620, Argentina",
+        "road": "Los Quebrachos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "6620",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "125, Los Quebrachos, Partido de Chivilcoy, Buenos Aires, 6620, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:57:24.121763+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Puurs",
+  "geonameid": 2788506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.05218129261375,
+      "lon": 4.3064363085914605,
+      "geoinfo": {
+        "display_name": "65, Dendermondsesteenweg, Breendonk, Puurs-Sint-Amands, Mechelen, Antwerp, 2870, Belgium",
+        "road": "Dendermondsesteenweg",
+        "house_number": "65",
+        "neighbourhood": null,
+        "suburb": "Breendonk",
+        "city_district": null,
+        "city": "Puurs-Sint-Amands",
+        "state": "Antwerp",
+        "postcode": "2870",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "65 Dendermondsesteenweg, Puurs, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.05597263646902,
+      "lon": 4.3500694573203385,
+      "geoinfo": {
+        "display_name": "33, Brandstraat, Breendonk (Willebroek), oorspronkelijke gemeente Breendonk, Willebroek, Mechelen, Antwerp, 2830, Belgium",
+        "road": "Brandstraat",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "Breendonk (Willebroek)",
+        "city_district": "oorspronkelijke gemeente Breendonk",
+        "city": "Willebroek",
+        "state": "Antwerp",
+        "postcode": "2830",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "33, Brandstraat, Puurs, 2830 Antwerp, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:39.092656+00:00",
+  "_kind": "geo_samples"
+}

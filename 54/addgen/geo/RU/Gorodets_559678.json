@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Gorodets",
+  "geonameid": 559678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.634636029270325,
+      "lon": 43.53215014080636,
+      "geoinfo": {
+        "display_name": "22К-0022, Серково, Gorodetsky District, Nizhny Novgorod Oblast, Volga Federal District, Russia",
+        "road": "22К-0022",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Серково",
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "22К-0022, Gorodets, Nizhny Novgorod Oblast, Russia"
+    },
+    {
+      "lat": 56.69349669441566,
+      "lon": 43.50683917988607,
+      "geoinfo": {
+        "display_name": "Gorodetsky District, Nizhny Novgorod Oblast, Volga Federal District, 606533, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": "606533",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "635, Gorodets, 606533 Nizhny Novgorod Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:25:57.668436+00:00",
+  "_kind": "geo_samples"
+}

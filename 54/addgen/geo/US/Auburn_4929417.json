@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn",
+  "geonameid": 4929417,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.192149344519244,
+      "lon": -71.82718291842902,
+      "geoinfo": {
+        "display_name": "Washington Street, Pondville, Auburn, Worcester County, Massachusetts, 01501, United States",
+        "road": "Washington Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Massachusetts",
+        "postcode": "01501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Washington Street, Auburn, Massachusetts, United States"
+    },
+    {
+      "lat": 42.228818114950535,
+      "lon": -71.83798682712182,
+      "geoinfo": {
+        "display_name": "9, South Edlin Street, Heard Street, Worcester, Worcester County, Massachusetts, 01603, United States",
+        "road": "South Edlin Street",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Worcester",
+        "state": "Massachusetts",
+        "postcode": "01603",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9, South Edlin Street, Heard Street, Worcester, Worcester County, Massachusetts, 01603, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:37.915283+00:00",
+  "_kind": "geo_samples"
+}

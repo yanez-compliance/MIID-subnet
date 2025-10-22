@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chamblee",
+  "geonameid": 4187204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.89628293327023,
+      "lon": -84.34261420209602,
+      "geoinfo": {
+        "display_name": "1714, Johnson Ferry Road Northeast, Brookhaven, DeKalb County, Georgia, 30319, United States",
+        "road": "Johnson Ferry Road Northeast",
+        "house_number": "1714",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brookhaven",
+        "state": "Georgia",
+        "postcode": "30319",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1714 Johnson Ferry Road Northeast, Chamblee, Georgia, United States"
+    },
+    {
+      "lat": 33.91844525002168,
+      "lon": -84.30560771565227,
+      "geoinfo": {
+        "display_name": "Savoy Drive, Chamblee, DeKalb County, Georgia, 30341, United States",
+        "road": "Savoy Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chamblee",
+        "state": "Georgia",
+        "postcode": "30341",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "611, Savoy Drive, Chamblee, DeKalb County, Georgia, 30341, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:58.414118+00:00",
+  "_kind": "geo_samples"
+}

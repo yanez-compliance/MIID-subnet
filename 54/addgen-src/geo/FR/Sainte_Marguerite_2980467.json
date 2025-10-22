@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sainte-Marguerite",
+  "geonameid": 2980467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.258106599381335,
+      "lon": 5.340040338701375,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Sainte-Marguerite, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.23985079000396,
+      "lon": 5.355197620058473,
+      "geoinfo": {
+        "display_name": "Impasse du Rêve, Montredon, 8th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13008, France",
+        "road": "Impasse du Rêve",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "8th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13008",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Impasse du Rêve, Montredon, 8th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13008, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:35.150834+00:00",
+  "_kind": "geo_samples"
+}

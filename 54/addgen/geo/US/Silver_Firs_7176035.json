@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Silver Firs",
+  "geonameid": 7176035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.88366764186384,
+      "lon": -122.11865201989403,
+      "geoinfo": {
+        "display_name": "8427, East Lowell Larimer Road, Larimers Corner, Silver Firs, Snohomish County, Washington, 98290, United States",
+        "road": "East Lowell Larimer Road",
+        "house_number": "8427",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silver Firs",
+        "state": "Washington",
+        "postcode": "98290",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8427 East Lowell Larimer Road, Silver Firs, Washington, United States"
+    },
+    {
+      "lat": 47.905544471155096,
+      "lon": -122.14881997709448,
+      "geoinfo": {
+        "display_name": "Larimers Corner, Silver Firs, Snohomish County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silver Firs",
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "981, Larimers Corner, Silver Firs, Snohomish County, 28369 Washington, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:45:49.333149+00:00",
+  "_kind": "geo_samples"
+}

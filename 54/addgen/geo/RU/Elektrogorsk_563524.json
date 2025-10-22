@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Elektrogorsk",
+  "geonameid": 563524,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.89580654109884,
+      "lon": 38.77601021653903,
+      "geoinfo": {
+        "display_name": "8, улица Калинина, Elektrogorsk, Павлово-Посадский городской округ, Moscow Oblast, Central Federal District, 142530, Russia",
+        "road": "улица Калинина",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elektrogorsk",
+        "state": "Moscow Oblast",
+        "postcode": "142530",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "8 улица Калинина, Elektrogorsk, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.91047710925719,
+      "lon": 38.85106760274512,
+      "geoinfo": {
+        "display_name": "Орехово-Зуевский городской округ, Moscow Oblast, Central Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "589, Орехово-Зуевский городской округ, Moscow Oblast, 19137 Central Federal District, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:42.504954+00:00",
+  "_kind": "geo_samples"
+}

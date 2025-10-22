@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakland Park",
+  "geonameid": 4166638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.18431978513828,
+      "lon": -80.08680935753644,
+      "geoinfo": {
+        "display_name": "Silver Shores, Lauderdale-by-the-Sea, Broward County, Florida, 33308, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lauderdale-by-the-Sea",
+        "state": "Florida",
+        "postcode": "33308",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oakland Park, Florida, United States"
+    },
+    {
+      "lat": 26.212745389359686,
+      "lon": -80.14595606310259,
+      "geoinfo": {
+        "display_name": "AccuDock, 1790, Southwest 13th Court, Pompano Beach, Broward County, Florida, 33069, United States",
+        "road": "Southwest 13th Court",
+        "house_number": "1790",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pompano Beach",
+        "state": "Florida",
+        "postcode": "33069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "AccuDock, 1790, Southwest 13th Court, Pompano Beach, Broward County, Florida, 33069, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:49.151351+00:00",
+  "_kind": "geo_samples"
+}

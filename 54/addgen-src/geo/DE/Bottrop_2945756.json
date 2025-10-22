@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bottrop",
+  "geonameid": 2945756,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.52129072519543,
+      "lon": 6.937822767568031,
+      "geoinfo": {
+        "display_name": "5, Mönchenort, Stadtmitte, Bottrop, North Rhine-Westphalia, 46236, Germany",
+        "road": "Mönchenort",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Stadtmitte",
+        "city_district": null,
+        "city": "Bottrop",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46236",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5 Mönchenort, Bottrop, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.53770690629175,
+      "lon": 6.947312283845415,
+      "geoinfo": {
+        "display_name": "23, Königsberger Straße, Batenbrock, Bottrop, North Rhine-Westphalia, 46238, Germany",
+        "road": "Königsberger Straße",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Batenbrock",
+        "city_district": null,
+        "city": "Bottrop",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46238",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "23, Königsberger Straße, Batenbrock, Bottrop, North Rhine-Westphalia, 46238, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:45.161736+00:00",
+  "_kind": "geo_samples"
+}

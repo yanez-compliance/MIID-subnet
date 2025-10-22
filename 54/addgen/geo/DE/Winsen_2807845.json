@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Winsen",
+  "geonameid": 2807845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.37261252544708,
+      "lon": 10.145564539532788,
+      "geoinfo": {
+        "display_name": "Gehrdener Deich, Gehrden, Winsen (Luhe), Harburg, Lower Saxony, 21423, Germany",
+        "road": "Gehrdener Deich",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winsen (Luhe)",
+        "state": "Lower Saxony",
+        "postcode": "21423",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Gehrdener Deich, Winsen, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.339685661884594,
+      "lon": 10.201049431588658,
+      "geoinfo": {
+        "display_name": "9, Redderweg, Roydorf, Winsen (Luhe), Harburg, Lower Saxony, 21423, Germany",
+        "road": "Redderweg",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winsen (Luhe)",
+        "state": "Lower Saxony",
+        "postcode": "21423",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9, Redderweg, Roydorf, Winsen (Luhe), Harburg, Lower Saxony, 21423, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:39.926748+00:00",
+  "_kind": "geo_samples"
+}

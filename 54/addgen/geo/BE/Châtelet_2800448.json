@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Châtelet",
+  "geonameid": 2800448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.41849812776377,
+      "lon": 4.519210584806059,
+      "geoinfo": {
+        "display_name": "26, Rue des Charbonnages, Châtelineau, Châtelet, Charleroi, Hainaut, Wallonia, 6200, Belgium",
+        "road": "Rue des Charbonnages",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Châtelet",
+        "state": "Hainaut",
+        "postcode": "6200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "26 Rue des Charbonnages, Châtelet, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.412055745079314,
+      "lon": 4.488426538253806,
+      "geoinfo": {
+        "display_name": "Rue Lison, Gilly, Charleroi, Hainaut, Wallonia, 6060, Belgium",
+        "road": "Rue Lison",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6060",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "054, Rue Lison, Gilly, Charleroi, Hainaut, Wallonia, 6060, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:16.465629+00:00",
+  "_kind": "geo_samples"
+}

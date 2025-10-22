@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shorewood",
+  "geonameid": 4911418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.52712856792449,
+      "lon": -88.21092922865648,
+      "geoinfo": {
+        "display_name": "953, North Raven Road, Shorewood, Troy Township, Will County, Illinois, 60404, United States",
+        "road": "North Raven Road",
+        "house_number": "953",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shorewood",
+        "state": "Illinois",
+        "postcode": "60404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "953 North Raven Road, Shorewood, Illinois, United States"
+    },
+    {
+      "lat": 41.54865244970634,
+      "lon": -88.20481784709054,
+      "geoinfo": {
+        "display_name": "5000, Norwalk Lane, Joliet, Troy Township, Will County, Illinois, 60586, United States",
+        "road": "Norwalk Lane",
+        "house_number": "5000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joliet",
+        "state": "Illinois",
+        "postcode": "60586",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5000, Norwalk Lane, Joliet, Troy Township, Will County, Illinois, 60586, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:49.550426+00:00",
+  "_kind": "geo_samples"
+}

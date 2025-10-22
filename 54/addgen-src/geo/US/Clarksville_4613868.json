@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clarksville",
+  "geonameid": 4613868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.566268577868584,
+      "lon": -87.375404393637,
+      "geoinfo": {
+        "display_name": "516, Overton Drive, Montgomery Estates, Clarksville, Montgomery County, Middle Tennessee, Tennessee, 37042, United States",
+        "road": "Overton Drive",
+        "house_number": "516",
+        "neighbourhood": "Montgomery Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksville",
+        "state": "Tennessee",
+        "postcode": "37042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "516 Overton Drive, Clarksville, Tennessee, United States"
+    },
+    {
+      "lat": 36.55347302461063,
+      "lon": -87.3171315828871,
+      "geoinfo": {
+        "display_name": "1900, Stepford Drive, Middleton Place, Clarksville, Montgomery County, Middle Tennessee, Tennessee, 37043, United States",
+        "road": "Stepford Drive",
+        "house_number": "1900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksville",
+        "state": "Tennessee",
+        "postcode": "37043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1900, Stepford Drive, Middleton Place, Clarksville, Montgomery County, Middle Tennessee, Tennessee, 37043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:07.221503+00:00",
+  "_kind": "geo_samples"
+}

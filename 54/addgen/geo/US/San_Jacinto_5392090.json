@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Jacinto",
+  "geonameid": 5392090,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.81123226553471,
+      "lon": -116.9972297066032,
+      "geoinfo": {
+        "display_name": "San Jacinto, Riverside County, California, 92582, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Jacinto",
+        "state": "California",
+        "postcode": "92582",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "San Jacinto, California, United States"
+    },
+    {
+      "lat": 33.74953587032582,
+      "lon": -116.97232269555063,
+      "geoinfo": {
+        "display_name": "162, West Latham Avenue, Hemet, Riverside County, California, 92543, United States",
+        "road": "West Latham Avenue",
+        "house_number": "162",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemet",
+        "state": "California",
+        "postcode": "92543",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "162, West Latham Avenue, Hemet, Riverside County, California, 92543, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:39.193519+00:00",
+  "_kind": "geo_samples"
+}

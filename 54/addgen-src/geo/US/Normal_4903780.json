@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Normal",
+  "geonameid": 4903780,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.51096477378873,
+      "lon": -88.9890340457113,
+      "geoinfo": {
+        "display_name": "West Mulberry Street, Normal, McLean County, Illinois, 61790, United States",
+        "road": "West Mulberry Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Normal",
+        "state": "Illinois",
+        "postcode": "61790",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Mulberry Street, Normal, Illinois, United States"
+    },
+    {
+      "lat": 40.49027523802639,
+      "lon": -88.98385767406688,
+      "geoinfo": {
+        "display_name": "White Place, Bloomington, McLean County, Illinois, 61701, United States",
+        "road": "White Place",
+        "house_number": null,
+        "neighbourhood": "White Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "Illinois",
+        "postcode": "61701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "667, White Place, Bloomington, McLean County, Illinois, 61701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:12.172001+00:00",
+  "_kind": "geo_samples"
+}

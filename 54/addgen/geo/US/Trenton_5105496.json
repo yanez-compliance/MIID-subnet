@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Trenton",
+  "geonameid": 5105496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.202941987907835,
+      "lon": -74.6966982781876,
+      "geoinfo": {
+        "display_name": "855, Whitehorse Avenue, Trenton Gardens, Hamilton Township, Mercer County, New Jersey, 08610, United States",
+        "road": "Whitehorse Avenue",
+        "house_number": "855",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamilton Township",
+        "state": "New Jersey",
+        "postcode": "08610",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "855 Whitehorse Avenue, Trenton, New Jersey, United States"
+    },
+    {
+      "lat": 40.22253075000184,
+      "lon": -74.72325340362401,
+      "geoinfo": {
+        "display_name": "1065, Johnston Avenue, Hamilton Township, Mercer County, New Jersey, 08629, United States",
+        "road": "Johnston Avenue",
+        "house_number": "1065",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamilton Township",
+        "state": "New Jersey",
+        "postcode": "08629",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1065, Johnston Avenue, Hamilton Township, Mercer County, New Jersey, 08629, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:18.429175+00:00",
+  "_kind": "geo_samples"
+}

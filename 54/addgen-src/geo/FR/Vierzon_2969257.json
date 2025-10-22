@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Vierzon",
+  "geonameid": 2969257,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.18996734508622,
+      "lon": 2.0807607789060296,
+      "geoinfo": {
+        "display_name": "La Bruyère, Vierzon, Cher, Centre-Val de Loire, Metropolitan France, 18100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vierzon",
+        "state": "Centre-Val de Loire",
+        "postcode": "18100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Vierzon, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.204369050587076,
+      "lon": 2.0274946814092036,
+      "geoinfo": {
+        "display_name": "Rue Jean Moulin, Saint-Hilaire-de-Court, Vierzon, Cher, Centre-Val de Loire, Metropolitan France, 18100, France",
+        "road": "Rue Jean Moulin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Hilaire-de-Court",
+        "state": "Centre-Val de Loire",
+        "postcode": "18100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "337, Rue Jean Moulin, Saint-Hilaire-de-Court, Vierzon, Cher, Centre-Val de Loire, Metropolitan France, 18100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:39.379172+00:00",
+  "_kind": "geo_samples"
+}

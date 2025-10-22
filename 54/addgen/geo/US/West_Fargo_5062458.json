@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Fargo",
+  "geonameid": 5062458,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.91022824286266,
+      "lon": -96.87549630701898,
+      "geoinfo": {
+        "display_name": "19th Avenue North, Reed Township, Cass County, North Dakota, 58121, United States",
+        "road": "19th Avenue North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Dakota",
+        "postcode": "58121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19th Avenue North, West Fargo, North Dakota, United States"
+    },
+    {
+      "lat": 46.88255061631911,
+      "lon": -96.95547934148351,
+      "geoinfo": {
+        "display_name": "Sandhills Archery Club, Gress Avenue Northwest, West Fargo, Cass County, North Dakota, 58078, United States",
+        "road": "Gress Avenue Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Fargo",
+        "state": "North Dakota",
+        "postcode": "58078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "442, Gress Avenue Northwest, West Fargo, 58078 North Dakota, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:02.240333+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Homestead",
+  "geonameid": 4159050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.467370159248343,
+      "lon": -80.50537909661892,
+      "geoinfo": {
+        "display_name": "Miami-Dade County, Florida, 33030, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Homestead, Florida, United States"
+    },
+    {
+      "lat": 25.46813757177761,
+      "lon": -80.50254488299967,
+      "geoinfo": {
+        "display_name": "Southwest 18th Avenue, Homestead, Miami-Dade County, Florida, 33030, United States",
+        "road": "Southwest 18th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Homestead",
+        "state": "Florida",
+        "postcode": "33030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southwest 18th Avenue, Homestead, Miami-Dade County, Florida, 33030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:24.193119+00:00",
+  "_kind": "geo_samples"
+}

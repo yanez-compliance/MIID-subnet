@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South San Jose Hills",
+  "geonameid": 5397777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.01349211193581,
+      "lon": -117.90623495927956,
+      "geoinfo": {
+        "display_name": "18145, Renault Street, South San Jose Hills, Los Angeles County, California, 91744, United States",
+        "road": "Renault Street",
+        "house_number": "18145",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91744",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18145 Renault Street, South San Jose Hills, California, United States"
+    },
+    {
+      "lat": 34.00743361330704,
+      "lon": -117.86379005166545,
+      "geoinfo": {
+        "display_name": "20199, Bourdet Avenue, Walnut, Los Angeles County, California, 91789, United States",
+        "road": "Bourdet Avenue",
+        "house_number": "20199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walnut",
+        "state": "California",
+        "postcode": "91789",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20199, Bourdet Avenue, Walnut, Los Angeles County, California, 91789, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:44.855195+00:00",
+  "_kind": "geo_samples"
+}

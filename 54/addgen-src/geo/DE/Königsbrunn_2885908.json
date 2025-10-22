@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Königsbrunn",
+  "geonameid": 2885908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.27089560147599,
+      "lon": 10.862143443406202,
+      "geoinfo": {
+        "display_name": "Haunstetter Straße, Bobingen, Augsburg (district), Bavaria, 86399, Germany",
+        "road": "Haunstetter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bobingen",
+        "state": "Bavaria",
+        "postcode": "86399",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Haunstetter Straße, Königsbrunn, Bavaria, Germany"
+    },
+    {
+      "lat": 48.31342902067945,
+      "lon": 10.923143575990986,
+      "geoinfo": {
+        "display_name": "Haunstetter Geräumt, Siebenbrunn, Haunstetten-Siebenbrunn, Augsburg, Bavaria, 86179, Germany",
+        "road": "Haunstetter Geräumt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Siebenbrunn",
+        "city_district": null,
+        "city": "Augsburg",
+        "state": "Bavaria",
+        "postcode": "86179",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "544, Haunstetter Geräumt, Siebenbrunn, Haunstetten-Siebenbrunn, Augsburg, Bavaria, 86179, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:57.766475+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shelbyville",
+  "geonameid": 4657077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.483850486299765,
+      "lon": -86.50886355053548,
+      "geoinfo": {
+        "display_name": "Simms Road, Bedford County, Middle Tennessee, Tennessee, 37160, United States",
+        "road": "Simms Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tennessee",
+        "postcode": "37160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Simms Road, Shelbyville, Tennessee, United States"
+    },
+    {
+      "lat": 35.528049319333135,
+      "lon": -86.45981317388936,
+      "geoinfo": {
+        "display_name": "2301, Midland Road, Shelbyville, Bedford County, Middle Tennessee, Tennessee, 37160, United States",
+        "road": "Midland Road",
+        "house_number": "2301",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shelbyville",
+        "state": "Tennessee",
+        "postcode": "37160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2301, Midland Road, Shelbyville, Bedford County, Middle Tennessee, Tennessee, 37160, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:09.082914+00:00",
+  "_kind": "geo_samples"
+}

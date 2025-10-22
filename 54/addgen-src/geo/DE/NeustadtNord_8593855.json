@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neustadt/Nord",
+  "geonameid": 8593855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.93865165162897,
+      "lon": 6.919469868649508,
+      "geoinfo": {
+        "display_name": "Aachener Straße, Lindenthal, Cologne, North Rhine-Westphalia, 50931, Germany",
+        "road": "Aachener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lindenthal",
+        "city_district": "Lindenthal",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50931",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Aachener Straße, Neustadt/Nord, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.96278682042364,
+      "lon": 6.959814945287594,
+      "geoinfo": {
+        "display_name": "102, Florastraße, Nippes, Cologne, North Rhine-Westphalia, 50733, Germany",
+        "road": "Florastraße",
+        "house_number": "102",
+        "neighbourhood": null,
+        "suburb": "Nippes",
+        "city_district": "Nippes",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50733",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "102, Florastraße, Nippes, Cologne, North Rhine-Westphalia, 50733, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:06.317416+00:00",
+  "_kind": "geo_samples"
+}

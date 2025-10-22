@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Meadow Woods",
+  "geonameid": 4163918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.366229132899356,
+      "lon": -81.3866289005758,
+      "geoinfo": {
+        "display_name": "Town Center Boulevard, Meadow Woods, Orange County, Florida, 32824, United States",
+        "road": "Town Center Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meadow Woods",
+        "state": "Florida",
+        "postcode": "32824",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Town Center Boulevard, Meadow Woods, Florida, United States"
+    },
+    {
+      "lat": 28.368925483982345,
+      "lon": -81.3742029186139,
+      "geoinfo": {
+        "display_name": "168, Martin Brower Road, Southchase, Meadow Woods, Orange County, Florida, 32824, United States",
+        "road": "Martin Brower Road",
+        "house_number": "168",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southchase",
+        "state": "Florida",
+        "postcode": "32824",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "168, Martin Brower Road, Southchase, Meadow Woods, Orange County, Florida, 32824, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:01:41.590670+00:00",
+  "_kind": "geo_samples"
+}

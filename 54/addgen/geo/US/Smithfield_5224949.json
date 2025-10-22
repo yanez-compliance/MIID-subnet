@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Smithfield",
+  "geonameid": 5224949,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.962692258444655,
+      "lon": -71.54299817448329,
+      "geoinfo": {
+        "display_name": "Follett Street, North Smithfield, Providence County, Rhode Island, 02896, United States",
+        "road": "Follett Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Smithfield",
+        "state": "Rhode Island",
+        "postcode": "02896",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Follett Street, Smithfield, Rhode Island, United States"
+    },
+    {
+      "lat": 41.88954321110329,
+      "lon": -71.55502761588238,
+      "geoinfo": {
+        "display_name": "Indian Run Trail, Spragueville, Smithfield, Providence County, Rhode Island, 02828, United States",
+        "road": "Indian Run Trail",
+        "house_number": null,
+        "neighbourhood": "Spragueville",
+        "suburb": null,
+        "city_district": null,
+        "city": "Smithfield",
+        "state": "Rhode Island",
+        "postcode": "02828",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "369, Indian Run Trail, Spragueville, Smithfield, Providence County, Rhode Island, 02828, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:37.131124+00:00",
+  "_kind": "geo_samples"
+}

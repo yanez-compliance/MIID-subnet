@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodburn",
+  "geonameid": 5761708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.129732077154635,
+      "lon": -122.88747576736465,
+      "geoinfo": {
+        "display_name": "8518, Parr Road Northeast, Marion County, Oregon, 97026, United States",
+        "road": "Parr Road Northeast",
+        "house_number": "8518",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8518 Parr Road Northeast, Woodburn, Oregon, United States"
+    },
+    {
+      "lat": 45.132449730832626,
+      "lon": -122.85907699191975,
+      "geoinfo": {
+        "display_name": "1110, Brown Street, Woodburn, Marion County, Oregon, 97071, United States",
+        "road": "Brown Street",
+        "house_number": "1110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodburn",
+        "state": "Oregon",
+        "postcode": "97071",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1110, Brown Street, Woodburn, Marion County, Oregon, 97071, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:49.765985+00:00",
+  "_kind": "geo_samples"
+}

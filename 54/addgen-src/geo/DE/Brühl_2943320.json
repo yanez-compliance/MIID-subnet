@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Brühl",
+  "geonameid": 2943320,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83466497485635,
+      "lon": 6.883578800982965,
+      "geoinfo": {
+        "display_name": "30, Friedrich-Ebert-Straße, Kierberg, Brühl, Rhein-Erft-Kreis, North Rhine-Westphalia, 50321, Germany",
+        "road": "Friedrich-Ebert-Straße",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": "Kierberg",
+        "city_district": null,
+        "city": "Brühl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50321",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "30 Friedrich-Ebert-Straße, Brühl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.866842319730814,
+      "lon": 6.8857928741244665,
+      "geoinfo": {
+        "display_name": "H50, Weingartenstraße, Hermülheim, Kendenich, Hürth, Rhein-Erft-Kreis, North Rhine-Westphalia, 50354, Germany",
+        "road": "Weingartenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hermülheim",
+        "city_district": null,
+        "city": "Hürth",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50354",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "H50, Weingartenstraße, Hermülheim, Kendenich, Hürth, Rhein-Erft-Kreis, North Rhine-Westphalia, 50354, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:14.048983+00:00",
+  "_kind": "geo_samples"
+}

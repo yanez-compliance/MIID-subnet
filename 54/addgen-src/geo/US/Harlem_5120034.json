@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harlem",
+  "geonameid": 5120034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.816460380826186,
+      "lon": -73.9592241742391,
+      "geoinfo": {
+        "display_name": "Prentis Hall, 632, West 125th Street, Manhattanville, Manhattan Community Board 9, Manhattan, New York County, New York, 10027, United States",
+        "road": "West 125th Street",
+        "house_number": "632",
+        "neighbourhood": "Manhattanville",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10027",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "632 West 125th Street, Harlem, New York, United States"
+    },
+    {
+      "lat": 40.83258052687908,
+      "lon": -73.92677399185982,
+      "geoinfo": {
+        "display_name": "Public School 73, 1020, Anderson Avenue, High Bridge, The Bronx, Bronx County, New York, 10452, United States",
+        "road": "Anderson Avenue",
+        "house_number": "1020",
+        "neighbourhood": "High Bridge",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10452",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Public School 73, 1020, Anderson Avenue, High Bridge, The Bronx, Bronx County, New York, 10452, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:11.065591+00:00",
+  "_kind": "geo_samples"
+}

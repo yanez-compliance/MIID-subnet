@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ghedi",
+  "geonameid": 3176177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.40646513648274,
+      "lon": 10.28767548110471,
+      "geoinfo": {
+        "display_name": "Ghedi, Brescia, Lombardy, 25016, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghedi",
+        "state": "Lombardy",
+        "postcode": "25016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Ghedi, Lombardy, Italy"
+    },
+    {
+      "lat": 45.35814521462298,
+      "lon": 10.27501977690577,
+      "geoinfo": {
+        "display_name": "Strada Gandine, Cascina Gandine di mezzo, Ghedi, Brescia, Lombardy, 25016, Italy",
+        "road": "Strada Gandine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghedi",
+        "state": "Lombardy",
+        "postcode": "25016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "018, Strada Gandine, Cascina Gandine di mezzo, Ghedi, Brescia, Lombardy, 25016, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:50.780605+00:00",
+  "_kind": "geo_samples"
+}

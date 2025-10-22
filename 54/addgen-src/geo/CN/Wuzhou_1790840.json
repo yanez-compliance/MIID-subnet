@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wuzhou",
+  "geonameid": 1790840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.48686304145204,
+      "lon": 111.2913744283719,
+      "geoinfo": {
+        "display_name": "西环路, 下冲, Dongxing, 大塘街道, Dongxing Subdistrict, Wanxiu District, Wuzhou City, Guangxi, 543000, China",
+        "road": "西环路",
+        "house_number": null,
+        "neighbourhood": "下冲",
+        "suburb": "Dongxing",
+        "city_district": "大塘街道",
+        "city": "Dongxing Subdistrict",
+        "state": "Guangxi",
+        "postcode": "543000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "西环路, Wuzhou, Guangxi, China"
+    },
+    {
+      "lat": 23.508554821052492,
+      "lon": 111.31571040297617,
+      "geoinfo": {
+        "display_name": "舜帝大道, 莲花山, Wanxiu, Wanxiu District, Wuzhou City, Guangxi, 543000, China",
+        "road": "舜帝大道",
+        "house_number": null,
+        "neighbourhood": "莲花山",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wanxiu",
+        "state": "Guangxi",
+        "postcode": "543000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "915, 舜帝大道, 莲花山, Wanxiu, Wanxiu District, Wuzhou City, Guangxi, 543000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:52:15.684622+00:00",
+  "_kind": "geo_samples"
+}

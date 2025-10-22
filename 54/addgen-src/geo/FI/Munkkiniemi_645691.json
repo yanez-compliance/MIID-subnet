@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Munkkiniemi",
+  "geonameid": 645691,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.1970907354072,
+      "lon": 24.87107369432642,
+      "geoinfo": {
+        "display_name": "Tiilirinne, Vanha Munkkiniemi, Munkkiniemi, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00330, Finland",
+        "road": "Tiilirinne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Munkkiniemi",
+        "city_district": "Western major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00330",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Tiilirinne, Munkkiniemi, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.18849237754509,
+      "lon": 24.852208877394748,
+      "geoinfo": {
+        "display_name": "Kuusisaarenpolku, Kuusisaari, Munkkiniemi, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00340, Finland",
+        "road": "Kuusisaarenpolku",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kuusisaari",
+        "city_district": "Western major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00340",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Kuusisaarenpolku, Munkkiniemi, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:57:40.415249+00:00",
+  "_kind": "geo_samples"
+}

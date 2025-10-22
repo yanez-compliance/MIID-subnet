@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Pasadena",
+  "geonameid": 5397717,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.12187362932915,
+      "lon": -118.15957445598421,
+      "geoinfo": {
+        "display_name": "Orange Grove Avenue, South Pasadena, Los Angeles County, California, 91030, United States",
+        "road": "Orange Grove Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Pasadena",
+        "state": "California",
+        "postcode": "91030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Orange Grove Avenue, South Pasadena, California, United States"
+    },
+    {
+      "lat": 34.15137448390013,
+      "lon": -118.14027761162673,
+      "geoinfo": {
+        "display_name": "493, East Corson Street, Pasadena Council District 3, Pasadena, Los Angeles County, California, 91101, United States",
+        "road": "East Corson Street",
+        "house_number": "493",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pasadena Council District 3",
+        "city": "Pasadena",
+        "state": "California",
+        "postcode": "91101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "493, East Corson Street, Pasadena Council District 3, Pasadena, Los Angeles County, California, 91101, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:38.775820+00:00",
+  "_kind": "geo_samples"
+}

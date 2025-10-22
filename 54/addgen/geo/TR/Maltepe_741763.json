@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Maltepe",
+  "geonameid": 741763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.951978425207905,
+      "lon": 29.10114176567404,
+      "geoinfo": {
+        "display_name": "Turkcell, Bağdat Caddesi, Altıntepe Mahallesi, Maltepe, Istanbul, Marmara Region, 34840, Turkey",
+        "road": "Bağdat Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altıntepe Mahallesi",
+        "city_district": null,
+        "city": "Maltepe",
+        "state": null,
+        "postcode": "34840",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Bağdat Caddesi, Maltepe, Turkey"
+    },
+    {
+      "lat": 40.91562915847316,
+      "lon": 29.10422082301052,
+      "geoinfo": {
+        "display_name": "Istanbul, Fatih, Istanbul, Marmara Region, 34122, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Istanbul",
+        "state": null,
+        "postcode": "34122",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "752, Istanbul, Fatih, Istanbul, Marmara Region, 34122, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:31.916353+00:00",
+  "_kind": "geo_samples"
+}

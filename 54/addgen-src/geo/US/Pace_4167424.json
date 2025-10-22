@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pace",
+  "geonameid": 4167424,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.583640478032283,
+      "lon": -87.13995699090208,
+      "geoinfo": {
+        "display_name": "Busby Lane, Pace, Santa Rosa County, Florida, 32571, United States",
+        "road": "Busby Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pace",
+        "state": "Florida",
+        "postcode": "32571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Busby Lane, Pace, Florida, United States"
+    },
+    {
+      "lat": 30.635135648590254,
+      "lon": -87.19190948004214,
+      "geoinfo": {
+        "display_name": "5593, Oakmont Drive, Santa Rosa County, Florida, 32571, United States",
+        "road": "Oakmont Drive",
+        "house_number": "5593",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5593, Oakmont Drive, Santa Rosa County, Florida, 32571, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:16.902488+00:00",
+  "_kind": "geo_samples"
+}

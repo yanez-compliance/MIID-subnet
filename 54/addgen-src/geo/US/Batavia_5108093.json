@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Batavia",
+  "geonameid": 5108093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.01700202168817,
+      "lon": -78.19019231755448,
+      "geoinfo": {
+        "display_name": "210, Oak Street, City of Batavia, Genesee County, New York, 14020, United States",
+        "road": "Oak Street",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Batavia",
+        "state": "New York",
+        "postcode": "14020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "210 Oak Street, Batavia, New York, United States"
+    },
+    {
+      "lat": 42.980378255607114,
+      "lon": -78.16712149944375,
+      "geoinfo": {
+        "display_name": "City of Batavia, Town of Batavia, Genesee County, New York, 14020, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Batavia",
+        "state": "New York",
+        "postcode": "14020",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "483, Batavia, 14020 New York, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:54.878199+00:00",
+  "_kind": "geo_samples"
+}

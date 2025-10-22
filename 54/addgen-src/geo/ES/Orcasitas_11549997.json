@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Orcasitas",
+  "geonameid": 11549997,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.358416793317076,
+      "lon": -3.6642286428765876,
+      "geoinfo": {
+        "display_name": "Calle 26, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Calle 26",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 26, Orcasitas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.34966801626907,
+      "lon": -3.7405584943229258,
+      "geoinfo": {
+        "display_name": "M-45, Cerro del Castañar, Butarque, Leganés, Community of Madrid, 28919, Spain",
+        "road": "M-45",
+        "house_number": null,
+        "neighbourhood": "Cerro del Castañar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leganés",
+        "state": "Community of Madrid",
+        "postcode": "28919",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-45, Cerro del Castañar, Butarque, Leganés, Community of Madrid, 28919, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:12.901593+00:00",
+  "_kind": "geo_samples"
+}

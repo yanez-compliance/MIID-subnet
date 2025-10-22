@@ -1,0 +1,47 @@
+{
+  "country_code": "BF",
+  "country": "Burkina Faso",
+  "city": "Yalgo",
+  "geonameid": 2353670,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 12.950591537687561,
+      "lon": -0.8496605277916844,
+      "geoinfo": {
+        "display_name": "Sanmatenga, Central-North, Burkina Faso",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "Yalgo, Burkina Faso"
+    },
+    {
+      "lat": 12.920745198791945,
+      "lon": -0.8344783882681911,
+      "geoinfo": {
+        "display_name": "N 15, Niangré-Tansoba, Sanmatenga, Central-North, Burkina Faso",
+        "road": "N 15",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Niangré-Tansoba",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "N 15, Yalgo, Burkina Faso"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:46.628817+00:00",
+  "_kind": "geo_samples"
+}

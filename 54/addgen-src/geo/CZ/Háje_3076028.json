@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Háje",
+  "geonameid": 3076028,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.023552134912464,
+      "lon": 14.509878295619322,
+      "geoinfo": {
+        "display_name": "Opatovská, Chodov, Prague, obvod Praha 4, Capital City of Prague, Prague, 149 00, Czechia",
+        "road": "Opatovská",
+        "house_number": null,
+        "neighbourhood": "Chodov",
+        "suburb": "Prague",
+        "city_district": "obvod Praha 4",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "149 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Opatovská, Háje, Prague, Czechia"
+    },
+    {
+      "lat": 50.014201330365424,
+      "lon": 14.494531236346607,
+      "geoinfo": {
+        "display_name": "K Jelenám, Kunratice, Prague, obvod Praha 4, Capital City of Prague, Prague, 148 00, Czechia",
+        "road": "K Jelenám",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kunratice",
+        "city_district": "obvod Praha 4",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "148 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "K Jelenám, Kunratice, Prague, obvod Praha 4, Capital City of Prague, Prague, 148 00, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:00.788976+00:00",
+  "_kind": "geo_samples"
+}

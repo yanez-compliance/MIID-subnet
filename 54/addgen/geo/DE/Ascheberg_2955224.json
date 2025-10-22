@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ascheberg",
+  "geonameid": 2955224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.78477149220741,
+      "lon": 7.584883712590943,
+      "geoinfo": {
+        "display_name": "Ascheberg, Kreis Coesfeld, North Rhine-Westphalia, 59387, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ascheberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59387",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ascheberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.77229555133671,
+      "lon": 7.596835453784448,
+      "geoinfo": {
+        "display_name": "55, Nordkirchener Straße, Ascheberg, Kreis Coesfeld, North Rhine-Westphalia, 59387, Germany",
+        "road": "Nordkirchener Straße",
+        "house_number": "55",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ascheberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59387",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "55, Nordkirchener Straße, Ascheberg, Kreis Coesfeld, North Rhine-Westphalia, 59387, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:51.104932+00:00",
+  "_kind": "geo_samples"
+}

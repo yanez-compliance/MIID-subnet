@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middle River",
+  "geonameid": 4362344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.33946613499354,
+      "lon": -76.38998822898088,
+      "geoinfo": {
+        "display_name": "Eastern Avenue, Hopkins Point, Baltimore County, Maryland, 21220, United States",
+        "road": "Eastern Avenue",
+        "house_number": null,
+        "neighbourhood": "Hopkins Point",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21220",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eastern Avenue, Middle River, Maryland, United States"
+    },
+    {
+      "lat": 39.30168315955057,
+      "lon": -76.42212345970582,
+      "geoinfo": {
+        "display_name": "502, Turnstone Court, Quiet Waters, Essex, Baltimore County, Maryland, 21221, United States",
+        "road": "Turnstone Court",
+        "house_number": "502",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Essex",
+        "state": "Maryland",
+        "postcode": "21221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "502, Turnstone Court, Quiet Waters, Essex, Baltimore County, Maryland, 21221, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:21.846593+00:00",
+  "_kind": "geo_samples"
+}

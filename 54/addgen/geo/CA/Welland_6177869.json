@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Welland",
+  "geonameid": 6177869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.021845599308904,
+      "lon": -79.24098446820274,
+      "geoinfo": {
+        "display_name": "3, Quaker Road, Welland, Niagara Region, Golden Horseshoe, Ontario, L3C 1M3, Canada",
+        "road": "Quaker Road",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Welland",
+        "state": "Ontario",
+        "postcode": "L3C 1M3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3 Quaker Road, Welland, Ontario, Canada"
+    },
+    {
+      "lat": 42.974522135737345,
+      "lon": -79.2564976206089,
+      "geoinfo": {
+        "display_name": "Ontario Road, Welland, Niagara Region, Golden Horseshoe, Ontario, L3B 3L1, Canada",
+        "road": "Ontario Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Welland",
+        "state": "Ontario",
+        "postcode": "L3B 3L1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Ontario Road, Welland, Niagara Region, Golden Horseshoe, Ontario, L3B 3L1, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:29.489098+00:00",
+  "_kind": "geo_samples"
+}

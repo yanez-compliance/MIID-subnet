@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Butte",
+  "geonameid": 5642934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.036997183190365,
+      "lon": -112.51615646437708,
+      "geoinfo": {
+        "display_name": "Butte, Silver Bow County, Montana, 59703, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Butte",
+        "state": "Montana",
+        "postcode": "59703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Butte, Montana, United States"
+    },
+    {
+      "lat": 45.99670009830664,
+      "lon": -112.50635478840495,
+      "geoinfo": {
+        "display_name": "2124, George Street, Silver Bow Park, Butte, Silver Bow County, Montana, 59701, United States",
+        "road": "George Street",
+        "house_number": "2124",
+        "neighbourhood": "Silver Bow Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Butte",
+        "state": "Montana",
+        "postcode": "59701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2124, George Street, Silver Bow Park, Butte, Silver Bow County, Montana, 59701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:01.451228+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sin-le-Noble",
+  "geonameid": 2974494,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.32749418342204,
+      "lon": 3.1142424353863256,
+      "geoinfo": {
+        "display_name": "D 643, Gœulzin, Douai, Nord, Hauts-de-France, Metropolitan France, 59169, France",
+        "road": "D 643",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gœulzin",
+        "state": "Hauts-de-France",
+        "postcode": "59169",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 643, Sin-le-Noble, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.38086206392846,
+      "lon": 3.069567406598922,
+      "geoinfo": {
+        "display_name": "162, Rue de Charleville, Douai, Nord, Hauts-de-France, Metropolitan France, 59500, France",
+        "road": "Rue de Charleville",
+        "house_number": "162",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Douai",
+        "state": "Hauts-de-France",
+        "postcode": "59500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "162, Rue de Charleville, Douai, Nord, Hauts-de-France, Metropolitan France, 59500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:25.327754+00:00",
+  "_kind": "geo_samples"
+}

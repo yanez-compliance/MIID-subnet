@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oxford",
+  "geonameid": 4440076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.378020542434186,
+      "lon": -89.50640970079965,
+      "geoinfo": {
+        "display_name": "467, Park Drive, Oxford, Lafayette County, Mississippi, 38655, United States",
+        "road": "Park Drive",
+        "house_number": "467",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxford",
+        "state": "Mississippi",
+        "postcode": "38655",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "467 Park Drive, Oxford, Mississippi, United States"
+    },
+    {
+      "lat": 34.35597032291187,
+      "lon": -89.48165691493256,
+      "geoinfo": {
+        "display_name": "398, Dede Drive, Brittany Woods, Lafayette County, Mississippi, 38655, United States",
+        "road": "Dede Drive",
+        "house_number": "398",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mississippi",
+        "postcode": "38655",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "398, Dede Drive, Brittany Woods, Lafayette County, Mississippi, 38655, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:52.458657+00:00",
+  "_kind": "geo_samples"
+}

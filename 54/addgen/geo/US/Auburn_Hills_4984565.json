@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn Hills",
+  "geonameid": 4984565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.67322441670139,
+      "lon": -83.24623298793738,
+      "geoinfo": {
+        "display_name": "2155, North Opdyke Road, Auburn Hills, Oakland County, Michigan, 48326, United States",
+        "road": "North Opdyke Road",
+        "house_number": "2155",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn Hills",
+        "state": "Michigan",
+        "postcode": "48326",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2155 North Opdyke Road, Auburn Hills, Michigan, United States"
+    },
+    {
+      "lat": 42.69872402363029,
+      "lon": -83.28624434939393,
+      "geoinfo": {
+        "display_name": "Great Lakes Crossing Drive, Auburn Hills, Oakland County, Michigan, 48359, United States",
+        "road": "Great Lakes Crossing Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn Hills",
+        "state": "Michigan",
+        "postcode": "48359",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "476, Great Lakes Crossing Drive, Auburn Hills, Oakland County, Michigan, 48359, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:39.655813+00:00",
+  "_kind": "geo_samples"
+}

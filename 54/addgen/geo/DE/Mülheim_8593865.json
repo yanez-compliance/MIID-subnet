@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mülheim",
+  "geonameid": 8593865,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.97347657489023,
+      "lon": 7.061963633676202,
+      "geoinfo": {
+        "display_name": "17, Aschenbrödelweg, Dellbrück, Mülheim, Cologne, North Rhine-Westphalia, 51067, Germany",
+        "road": "Aschenbrödelweg",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Dellbrück",
+        "city_district": "Mülheim",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51067",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17 Aschenbrödelweg, Mülheim, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.9815630973412,
+      "lon": 6.989323942713187,
+      "geoinfo": {
+        "display_name": "Stammheimer Ufer, Stammheim, Mülheim, Cologne, North Rhine-Westphalia, 51061, Germany",
+        "road": "Stammheimer Ufer",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stammheim",
+        "city_district": "Mülheim",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51061",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "516, Stammheimer Ufer, Stammheim, Mülheim, Cologne, North Rhine-Westphalia, 51061, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:09.695514+00:00",
+  "_kind": "geo_samples"
+}

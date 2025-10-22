@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Wałbrzych",
+  "geonameid": 3082707,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.75224999720131,
+      "lon": 16.248471555837273,
+      "geoinfo": {
+        "display_name": "9J, Karkonoska, Sobięcin, Wałbrzych, Lower Silesian Voivodeship, 58-305, Poland",
+        "road": "Karkonoska",
+        "house_number": "9J",
+        "neighbourhood": null,
+        "suburb": "Sobięcin",
+        "city_district": null,
+        "city": "Wałbrzych",
+        "state": "Lower Silesian Voivodeship",
+        "postcode": "58-305",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "9J Karkonoska, Wałbrzych, Lower Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.73331093048364,
+      "lon": 16.255607273121885,
+      "geoinfo": {
+        "display_name": "Mieroszowska, Nowy Glinik, Sobięcin, Glinik, Wałbrzych, Lower Silesian Voivodeship, 58-352, Poland",
+        "road": "Mieroszowska",
+        "house_number": null,
+        "neighbourhood": "Nowy Glinik",
+        "suburb": "Sobięcin",
+        "city_district": "Glinik",
+        "city": "Wałbrzych",
+        "state": "Lower Silesian Voivodeship",
+        "postcode": "58-352",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Mieroszowska, Nowy Glinik, Sobięcin, Glinik, Wałbrzych, Lower Silesian Voivodeship, 58-352, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T09:11:14.489447+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SK",
+  "country": "Slovakia",
+  "city": "Nitra",
+  "geonameid": 3058531,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.350589692792404,
+      "lon": 18.09882678389467,
+      "geoinfo": {
+        "display_name": "Kláštorská, Zoborský kláštor, Dražovce, Nitra, District of Nitra, Region of Nitra, Western Slovakia, 949 01, Slovakia",
+        "road": "Kláštorská",
+        "house_number": null,
+        "neighbourhood": "Zoborský kláštor",
+        "suburb": "Dražovce",
+        "city_district": null,
+        "city": "Nitra",
+        "state": "Region of Nitra",
+        "postcode": "949 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Kláštorská, Nitra, Region of Nitra, Slovakia"
+    },
+    {
+      "lat": 48.31547796607836,
+      "lon": 18.046615473284046,
+      "geoinfo": {
+        "display_name": "388, Mlynárce, Nitra, District of Nitra, Region of Nitra, Western Slovakia, 949 01, Slovakia",
+        "road": null,
+        "house_number": "388",
+        "neighbourhood": null,
+        "suburb": "Mlynárce",
+        "city_district": null,
+        "city": "Nitra",
+        "state": "Region of Nitra",
+        "postcode": "949 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Mlynárce, Nitra, Region of Nitra, Slovakia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:57:46.984718+00:00",
+  "_kind": "geo_samples"
+}

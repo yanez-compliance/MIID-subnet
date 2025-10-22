@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Okaya",
+  "geonameid": 1854384,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.026458665698286,
+      "lon": 138.07974181183755,
+      "geoinfo": {
+        "display_name": "Toyoda, Suwa, Nagano Prefecture, 392-0022, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suwa",
+        "state": null,
+        "postcode": "392-0022",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Okaya, Japan"
+    },
+    {
+      "lat": 36.087626908402335,
+      "lon": 138.02387319305225,
+      "geoinfo": {
+        "display_name": "Nagano Expressway, Shiojiri, Nagano Prefecture, 394-0003, Japan",
+        "road": "Nagano Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shiojiri",
+        "state": null,
+        "postcode": "394-0003",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nagano Expressway, Shiojiri, Nagano Prefecture, 394-0003, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:38.205729+00:00",
+  "_kind": "geo_samples"
+}

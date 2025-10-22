@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boca Del Mar",
+  "geonameid": 4148399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.373544551577385,
+      "lon": -80.11822071268973,
+      "geoinfo": {
+        "display_name": "I 95, Boca Raton, Palm Beach County, Florida, 33431, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boca Raton",
+        "state": "Florida",
+        "postcode": "33431",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, Boca Del Mar, Florida, United States"
+    },
+    {
+      "lat": 26.326652946473523,
+      "lon": -80.15329239730673,
+      "geoinfo": {
+        "display_name": "757, North Powerline Road, The Lakes of Deer Creek, Deerfield Beach, Broward County, Florida, 33442, United States",
+        "road": "North Powerline Road",
+        "house_number": "757",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deerfield Beach",
+        "state": "Florida",
+        "postcode": "33442",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "757, North Powerline Road, The Lakes of Deer Creek, Deerfield Beach, Broward County, Florida, 33442, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:17.372133+00:00",
+  "_kind": "geo_samples"
+}

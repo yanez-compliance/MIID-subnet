@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Azuqueca de Henares",
+  "geonameid": 3129046,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.56038286259186,
+      "lon": -3.2514160069542197,
+      "geoinfo": {
+        "display_name": "Camino de la Barca, Azuqueca de Henares, Guadalajara, Castile-La Mancha, 19200, Spain",
+        "road": "Camino de la Barca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Azuqueca de Henares",
+        "state": "Castile-La Mancha",
+        "postcode": "19200",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Camino de la Barca, Azuqueca de Henares, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 40.5618859697282,
+      "lon": -3.222490462484524,
+      "geoinfo": {
+        "display_name": "Valdelanegra, Chiloeches, Guadalajara, Castile-La Mancha, 19163, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiloeches",
+        "state": "Castile-La Mancha",
+        "postcode": "19163",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "657, Valdelanegra, Chiloeches, Guadalajara, Castile-La Mancha, 19163, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:35.203814+00:00",
+  "_kind": "geo_samples"
+}

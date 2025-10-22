@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Canicattì",
+  "geonameid": 2525405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.33969708615555,
+      "lon": 13.835385901089275,
+      "geoinfo": {
+        "display_name": "Strada Statale di Naro, Acquanova, Canicattì, Agrigento, Sicily, 92024, Italy",
+        "road": "Strada Statale di Naro",
+        "house_number": null,
+        "neighbourhood": "Acquanova",
+        "suburb": null,
+        "city_district": null,
+        "city": "Canicattì",
+        "state": "Sicily",
+        "postcode": "92024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale di Naro, Canicattì, Sicily, Italy"
+    },
+    {
+      "lat": 37.38431982858861,
+      "lon": 13.843904688235266,
+      "geoinfo": {
+        "display_name": "Canicattì, Agrigento, Sicily, 92024, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Canicattì",
+        "state": "Sicily",
+        "postcode": "92024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "801, Canicattì, Agrigento, Sicily, 92024, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:05.682458+00:00",
+  "_kind": "geo_samples"
+}

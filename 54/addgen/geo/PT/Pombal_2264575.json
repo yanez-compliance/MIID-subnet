@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Pombal",
+  "geonameid": 2264575,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.92626324564237,
+      "lon": -8.673621971177289,
+      "geoinfo": {
+        "display_name": "Rua Principal, Cotrofe, Pombal, Leiria, 3100-000, Portugal",
+        "road": "Rua Principal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pombal",
+        "city": "Pombal",
+        "state": null,
+        "postcode": "3100-000",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Principal, Pombal, Portugal"
+    },
+    {
+      "lat": 39.89387332707456,
+      "lon": -8.615578164931987,
+      "geoinfo": {
+        "display_name": "EM 530, Vicentes, Pombal, Leiria, 3100-380, Portugal",
+        "road": "EM 530",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pombal",
+        "city": "Pombal",
+        "state": null,
+        "postcode": "3100-380",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "EM 530, Vicentes, Pombal, Leiria, 3100-380, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:40:14.402413+00:00",
+  "_kind": "geo_samples"
+}

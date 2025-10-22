@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Villa Lugano",
+  "geonameid": 3427408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.66686361463433,
+      "lon": -58.488995071540884,
+      "geoinfo": {
+        "display_name": "3077, Murguiondo, Villa 15 - Ciudad Oculta, Villa Lugano, Buenos Aires, Comuna 8, Autonomous City of Buenos Aires, C1439ATC, Argentina",
+        "road": "Murguiondo",
+        "house_number": "3077",
+        "neighbourhood": null,
+        "suburb": "Villa Lugano",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "C1439ATC",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "3077 Murguiondo, Villa Lugano, Autonomous City of Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.649062053868235,
+      "lon": -58.49424610466603,
+      "geoinfo": {
+        "display_name": "CMB 20, Araujo, Mataderos, Buenos Aires, Comuna 9, Autonomous City of Buenos Aires, 1440, Argentina",
+        "road": "Araujo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mataderos",
+        "city_district": null,
+        "city": "Buenos Aires",
+        "state": "Autonomous City of Buenos Aires",
+        "postcode": "1440",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "CMB 20, Araujo, Mataderos, Buenos Aires, Comuna 9, Autonomous City of Buenos Aires, 1440, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:32.039928+00:00",
+  "_kind": "geo_samples"
+}

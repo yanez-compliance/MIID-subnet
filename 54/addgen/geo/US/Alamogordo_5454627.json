@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alamogordo",
+  "geonameid": 5454627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.8888153452434,
+      "lon": -105.9983343071025,
+      "geoinfo": {
+        "display_name": "Alamogordo Drive, Otero County, New Mexico, 83310, United States",
+        "road": "Alamogordo Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Mexico",
+        "postcode": "83310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Alamogordo Drive, Alamogordo, New Mexico, United States"
+    },
+    {
+      "lat": 32.87731986349867,
+      "lon": -106.00541243428064,
+      "geoinfo": {
+        "display_name": "Otero County, New Mexico, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "498, Otero County, 48051 New Mexico, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:54.269775+00:00",
+  "_kind": "geo_samples"
+}

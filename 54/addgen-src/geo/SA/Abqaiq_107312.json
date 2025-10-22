@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Abqaiq",
+  "geonameid": 107312,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 25.893973415142174,
+      "lon": 49.68540752697036,
+      "geoinfo": {
+        "display_name": "Abqaiq Governorate, Eastern Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Eastern Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "118, Abqaiq Governorate, 39500 Eastern Province, Saudi Arabia"
+    },
+    {
+      "lat": 25.918382329974058,
+      "lon": 49.6376217808959,
+      "geoinfo": {
+        "display_name": "Ar Rawdah, Abqaiq, Abqaiq Governorate, Eastern Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ar Rawdah",
+        "suburb": null,
+        "city_district": null,
+        "city": "Abqaiq",
+        "state": "Eastern Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "237, Ar Rawdah, Abqaiq, Abqaiq Governorate, 71001 Eastern Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:09.354627+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Baden-Baden",
+  "geonameid": 2953504,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.728333272640064,
+      "lon": 8.235142943556381,
+      "geoinfo": {
+        "display_name": "Iberstweg, Baden-Baden, Geroldsau, Baden-Baden, Baden-Württemberg, 76534, Germany",
+        "road": "Iberstweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baden-Baden",
+        "state": "Baden-Württemberg",
+        "postcode": "76534",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Iberstweg, Baden-Baden, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.79677604553848,
+      "lon": 8.201893343753195,
+      "geoinfo": {
+        "display_name": "L 67, Oos, Baden-Baden, Baden-Württemberg, 76532, Germany",
+        "road": "L 67",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oos",
+        "city_district": null,
+        "city": "Baden-Baden",
+        "state": "Baden-Württemberg",
+        "postcode": "76532",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 67, Oos, Baden-Baden, Baden-Württemberg, 76532, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:47.583768+00:00",
+  "_kind": "geo_samples"
+}

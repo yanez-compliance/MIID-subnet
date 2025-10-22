@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Galaţi",
+  "geonameid": 677697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.411108766565036,
+      "lon": 28.07957584736136,
+      "geoinfo": {
+        "display_name": "I.C. Brătianu, Tulcea, 827100, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "827100",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Galaţi, Romania"
+    },
+    {
+      "lat": 45.455263902555046,
+      "lon": 28.080420633617567,
+      "geoinfo": {
+        "display_name": "Help Labus, Calea Prutului, Galați, 800211, Romania",
+        "road": "Calea Prutului",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Galați",
+        "state": null,
+        "postcode": "800211",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "070, Calea Prutului, 800211 Galaţi, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T09:24:49.718234+00:00",
+  "_kind": "geo_samples"
+}

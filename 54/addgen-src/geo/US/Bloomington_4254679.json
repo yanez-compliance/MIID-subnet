@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomington",
+  "geonameid": 4254679,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.20219307441447,
+      "lon": -86.50337659795898,
+      "geoinfo": {
+        "display_name": "Griffy Lake Nature Preserve, 3595, North Headley Road, Bloomington, Monroe County, Indiana, 47408, United States",
+        "road": "North Headley Road",
+        "house_number": "3595",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "Indiana",
+        "postcode": "47408",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3595 North Headley Road, Bloomington, Indiana, United States"
+    },
+    {
+      "lat": 39.19844465875428,
+      "lon": -86.4931729462535,
+      "geoinfo": {
+        "display_name": "East Lanam Road, Monroe County, Indiana, 47408, United States",
+        "road": "East Lanam Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "47408",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "809, East Lanam Road, Monroe County, Indiana, 47408, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:20.281107+00:00",
+  "_kind": "geo_samples"
+}

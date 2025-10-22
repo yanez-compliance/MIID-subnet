@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "East Kilbride",
+  "geonameid": 2650405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.744780312220755,
+      "lon": -4.141157135646906,
+      "geoinfo": {
+        "display_name": "South Bridge, East Kilbride, South Lanarkshire, Scotland, G75 0QZ, United Kingdom",
+        "road": "South Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Kilbride",
+        "state": "Scotland",
+        "postcode": "G75 0QZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "South Bridge, East Kilbride, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.753555286830036,
+      "lon": -4.225612535377014,
+      "geoinfo": {
+        "display_name": "Brocklinn Park, Gardenhall, Mossneuk, South Lanarkshire, Scotland, G75 8JS, United Kingdom",
+        "road": "Brocklinn Park",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mossneuk",
+        "city_district": null,
+        "city": null,
+        "state": "Scotland",
+        "postcode": "G75 8JS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Brocklinn Park, Gardenhall, Mossneuk, South Lanarkshire, Scotland, G75 8JS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:32.433764+00:00",
+  "_kind": "geo_samples"
+}

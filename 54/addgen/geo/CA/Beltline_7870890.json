@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Beltline",
+  "geonameid": 7870890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0321019948072,
+      "lon": -114.0594017063229,
+      "geoinfo": {
+        "display_name": "Macleod Trail S, Manchester Industrial, Calgary, Alberta, T2S 3C7, Canada",
+        "road": "Macleod Trail S",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Manchester Industrial",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T2S 3C7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Macleod Trail S, Beltline, Alberta, Canada"
+    },
+    {
+      "lat": 51.02137967392881,
+      "lon": -114.13197123734996,
+      "geoinfo": {
+        "display_name": "36 Avenue SW, Rutland Park, Calgary, Alberta, T3E 1C2, Canada",
+        "road": "36 Avenue SW",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rutland Park",
+        "city_district": null,
+        "city": "Calgary",
+        "state": "Alberta",
+        "postcode": "T3E 1C2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "36 Avenue SW, Rutland Park, Calgary, Alberta, T3E 1C2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:40:01.297926+00:00",
+  "_kind": "geo_samples"
+}

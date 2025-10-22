@@ -1,0 +1,47 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Yangirabot",
+  "geonameid": 1512348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.01615508357948,
+      "lon": 65.98602166786435,
+      "geoinfo": {
+        "display_name": "4P48, Вайрат, Mangaran, Kattakurgan District, Samarqand Region, 140000, Uzbekistan",
+        "road": "4P48",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mangaran",
+        "state": "Samarqand Region",
+        "postcode": "140000",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "4P48, Yangirabot, Samarqand Region, Uzbekistan"
+    },
+    {
+      "lat": 40.03095248234074,
+      "lon": 66.00438896723007,
+      "geoinfo": {
+        "display_name": "Kavak, Xatirchi District, Navoiy Region, 211000, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kavak",
+        "state": "Navoiy Region",
+        "postcode": "211000",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "777, Kavak, Xatirchi District, Navoiy Region, 211000, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:50.547913+00:00",
+  "_kind": "geo_samples"
+}

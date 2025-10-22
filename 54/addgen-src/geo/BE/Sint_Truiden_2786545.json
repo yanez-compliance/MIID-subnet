@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Sint-Truiden",
+  "geonameid": 2786545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.79785638180123,
+      "lon": 5.202667555773725,
+      "geoinfo": {
+        "display_name": "Lindebrings, 1010, Lichtenberglaan, Sint-Truiden, Hasselt, Limburg, 3800, Belgium",
+        "road": "Lichtenberglaan",
+        "house_number": "1010",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Truiden",
+        "city": "Sint-Truiden",
+        "state": "Limburg",
+        "postcode": "3800",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1010 Lichtenberglaan, Sint-Truiden, Limburg, Belgium"
+    },
+    {
+      "lat": 50.84881057395408,
+      "lon": 5.147269367182718,
+      "geoinfo": {
+        "display_name": "Ossenwegstraat, Runkelen, Sint-Truiden, Hasselt, Limburg, 3803, Belgium",
+        "road": "Ossenwegstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sint-Truiden",
+        "state": "Limburg",
+        "postcode": "3803",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "774, Ossenwegstraat, Runkelen, Sint-Truiden, Hasselt, Limburg, 3803, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:05.527968+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sterling Heights",
+  "geonameid": 5011148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.57094941338121,
+      "lon": -82.99945173069891,
+      "geoinfo": {
+        "display_name": "Clubhouse Drive, Plumbrook Village Condos, Sterling Heights, Macomb County, Michigan, 48312, United States",
+        "road": "Clubhouse Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterling Heights",
+        "state": "Michigan",
+        "postcode": "48312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Clubhouse Drive, Sterling Heights, Michigan, United States"
+    },
+    {
+      "lat": 42.55106874533437,
+      "lon": -83.03814341940851,
+      "geoinfo": {
+        "display_name": "7000, 15 Mile Road, Sterling Heights, Macomb County, Michigan, 48312, United States",
+        "road": "15 Mile Road",
+        "house_number": "7000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterling Heights",
+        "state": "Michigan",
+        "postcode": "48312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7000, 15 Mile Road, Sterling Heights, Macomb County, Michigan, 48312, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:04.614384+00:00",
+  "_kind": "geo_samples"
+}

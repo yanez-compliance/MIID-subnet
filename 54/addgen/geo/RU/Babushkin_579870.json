@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Babushkin",
+  "geonameid": 579870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.89813489073257,
+      "lon": 37.78629782822624,
+      "geoinfo": {
+        "display_name": "СНТ «Водоканал», Mytishchi Urban Okrug, Moscow Oblast, Central Federal District, 141009, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "141009",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "СНТ «Водоканал», Mytishchi Urban Okrug, Moscow Oblast, Central Federal District, 141009, Russia"
+    },
+    {
+      "lat": 55.843810456406466,
+      "lon": 37.720413613833934,
+      "geoinfo": {
+        "display_name": "Подкова, проектируемый проезд № 5061, Yaroslavsky District, Moscow, Central Federal District, 129337, Russia",
+        "road": "проектируемый проезд № 5061",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yaroslavsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "129337",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Подкова, проектируемый проезд № 5061, Yaroslavsky District, Moscow, Central Federal District, 129337, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:03.747255+00:00",
+  "_kind": "geo_samples"
+}

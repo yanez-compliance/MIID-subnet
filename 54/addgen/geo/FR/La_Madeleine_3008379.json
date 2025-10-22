@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Madeleine",
+  "geonameid": 3008379,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.6710974163476,
+      "lon": 3.0665329263896854,
+      "geoinfo": {
+        "display_name": "93, Rue de Lille, Domaine de la Rivière, Saint-Roch, Marquette-lez-Lille, Lille, Nord, Hauts-de-France, Metropolitan France, 59520, France",
+        "road": "Rue de Lille",
+        "house_number": "93",
+        "neighbourhood": "Domaine de la Rivière",
+        "suburb": null,
+        "city_district": null,
+        "city": "Marquette-lez-Lille",
+        "state": "Hauts-de-France",
+        "postcode": "59520",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "93 Rue de Lille, La Madeleine, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.67230102490523,
+      "lon": 3.1238217941161195,
+      "geoinfo": {
+        "display_name": "29B, Rue Marie Curie, Noir Bonnet, Wasquehal, Lille, Nord, Hauts-de-France, Metropolitan France, 59290, France",
+        "road": "Rue Marie Curie",
+        "house_number": "29B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wasquehal",
+        "state": "Hauts-de-France",
+        "postcode": "59290",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "29B, Rue Marie Curie, Noir Bonnet, Wasquehal, Lille, Nord, Hauts-de-France, Metropolitan France, 59290, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:09.232292+00:00",
+  "_kind": "geo_samples"
+}

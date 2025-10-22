@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Winchester",
+  "geonameid": 5515345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.15293204052952,
+      "lon": -115.115311037478,
+      "geoinfo": {
+        "display_name": "1490, Pacific Street, Las Vegas, Clark County, Nevada, 89104, United States",
+        "road": "Pacific Street",
+        "house_number": "1490",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "postcode": "89104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1490 Pacific Street, Winchester, Nevada, United States"
+    },
+    {
+      "lat": 36.09706881941872,
+      "lon": -115.13109135112492,
+      "geoinfo": {
+        "display_name": "1605, East Reno Avenue, Midtown UNLV, Clark County, Nevada, 89119, United States",
+        "road": "East Reno Avenue",
+        "house_number": "1605",
+        "neighbourhood": null,
+        "suburb": "Midtown UNLV",
+        "city_district": null,
+        "city": null,
+        "state": "Nevada",
+        "postcode": "89119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1605, East Reno Avenue, Midtown UNLV, Clark County, Nevada, 89119, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:58.024989+00:00",
+  "_kind": "geo_samples"
+}

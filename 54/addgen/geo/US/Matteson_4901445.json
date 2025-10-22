@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Matteson",
+  "geonameid": 4901445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.53155337765066,
+      "lon": -87.74439144583133,
+      "geoinfo": {
+        "display_name": "I 57, Providence Manor, Matteson, Rich Township, Cook County, Illinois, 60443, United States",
+        "road": "I 57",
+        "house_number": null,
+        "neighbourhood": "Providence Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Matteson",
+        "state": "Illinois",
+        "postcode": "60443",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 57, Matteson, Illinois, United States"
+    },
+    {
+      "lat": 41.51245883813798,
+      "lon": -87.75838179938866,
+      "geoinfo": {
+        "display_name": "5750, Colgate Lane, Newbury Estates, Matteson, Rich Township, Cook County, Illinois, 60443, United States",
+        "road": "Colgate Lane",
+        "house_number": "5750",
+        "neighbourhood": "Newbury Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Matteson",
+        "state": "Illinois",
+        "postcode": "60443",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5750, Colgate Lane, Newbury Estates, Matteson, Rich Township, Cook County, Illinois, 60443, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:36.292051+00:00",
+  "_kind": "geo_samples"
+}

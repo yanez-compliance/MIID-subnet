@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rummelsburg",
+  "geonameid": 2843106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.48906223098286,
+      "lon": 13.497255853790426,
+      "geoinfo": {
+        "display_name": "Köpenicker Chaussee, Rummelsburg, Lichtenberg, Berlin, 10317, Germany",
+        "road": "Köpenicker Chaussee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rummelsburg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10317",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Köpenicker Chaussee, Rummelsburg, Germany"
+    },
+    {
+      "lat": 52.52533725959894,
+      "lon": 13.474247603773431,
+      "geoinfo": {
+        "display_name": "Kindergarten Spatzennest, 32-34, Paul-Junius-Straße, Fennpfuhl, Lichtenberg, Berlin, 10369, Germany",
+        "road": "Paul-Junius-Straße",
+        "house_number": "32-34",
+        "neighbourhood": null,
+        "suburb": "Fennpfuhl",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10369",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kindergarten Spatzennest, 32-34, Paul-Junius-Straße, Fennpfuhl, Lichtenberg, Berlin, 10369, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:15.207537+00:00",
+  "_kind": "geo_samples"
+}

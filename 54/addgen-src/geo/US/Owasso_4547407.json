@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Owasso",
+  "geonameid": 4547407,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.3023251531637,
+      "lon": -95.83975388672071,
+      "geoinfo": {
+        "display_name": "North 120th East Avenue, Owasso, Tulsa County, Oklahoma, 74055, United States",
+        "road": "North 120th East Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Owasso",
+        "state": "Oklahoma",
+        "postcode": "74055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 120th East Avenue, Owasso, Oklahoma, United States"
+    },
+    {
+      "lat": 36.30106978515448,
+      "lon": -95.86869972354745,
+      "geoinfo": {
+        "display_name": "North Mingo Road, Owasso, Tulsa County, Oklahoma, 74055, United States",
+        "road": "North Mingo Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Owasso",
+        "state": "Oklahoma",
+        "postcode": "74055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "019, North Mingo Road, Owasso, Tulsa County, Oklahoma, 74055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:19.841857+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Olpe",
+  "geonameid": 2857306,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.00401492489353,
+      "lon": 7.793804386678769,
+      "geoinfo": {
+        "display_name": "4, Buchhagener Weg, Potzenhof, Brachtpe, Drolshagen, Kreis Olpe, North Rhine-Westphalia, 57489, Germany",
+        "road": "Buchhagener Weg",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Drolshagen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57489",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4 Buchhagener Weg, Olpe, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.016121299031404,
+      "lon": 7.8296919788372,
+      "geoinfo": {
+        "display_name": "A 45, Rüblinghausen, Olpe, Kreis Olpe, North Rhine-Westphalia, 57462, Germany",
+        "road": "A 45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olpe",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57462",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 45, Rüblinghausen, Olpe, Kreis Olpe, North Rhine-Westphalia, 57462, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:49.860027+00:00",
+  "_kind": "geo_samples"
+}

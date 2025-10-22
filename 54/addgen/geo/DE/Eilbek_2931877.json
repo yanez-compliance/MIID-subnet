@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eilbek",
+  "geonameid": 2931877,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.5685174225481,
+      "lon": 10.044165361183554,
+      "geoinfo": {
+        "display_name": "2, Ritterstraße, Eilbek, Wandsbek, Hamburg, 22089, Germany",
+        "road": "Ritterstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Eilbek",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22089",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2 Ritterstraße, Eilbek, Germany"
+    },
+    {
+      "lat": 53.61077231254804,
+      "lon": 10.05593123395357,
+      "geoinfo": {
+        "display_name": "Gründgensstraße, Quartierszentrum Campus Steilshoop, Steilshoop, Wandsbek, Hamburg, 22309, Germany",
+        "road": "Gründgensstraße",
+        "house_number": null,
+        "neighbourhood": "Quartierszentrum Campus Steilshoop",
+        "suburb": "Steilshoop",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22309",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "727, Gründgensstraße, Quartierszentrum Campus Steilshoop, Steilshoop, Wandsbek, Hamburg, 22309, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:03.048175+00:00",
+  "_kind": "geo_samples"
+}

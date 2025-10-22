@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Adra",
+  "geonameid": 2522430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.74048166620804,
+      "lon": -3.0699016303403726,
+      "geoinfo": {
+        "display_name": "Calle Carrerilla, Guainos Bajo, Adra, Almeria, Andalusia, Spain",
+        "road": "Calle Carrerilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adra",
+        "state": "Andalusia",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Carrerilla, Adra, Andalusia, Spain"
+    },
+    {
+      "lat": 36.762620648759466,
+      "lon": -3.0098053902042814,
+      "geoinfo": {
+        "display_name": "Puente del Río, Adra, Almeria, Andalusia, 04770, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adra",
+        "state": "Andalusia",
+        "postcode": "04770",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "761, Puente del Río, Adra, Almeria, Andalusia, 04770, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:41.208982+00:00",
+  "_kind": "geo_samples"
+}

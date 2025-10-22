@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kamenka",
+  "geonameid": 553725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.224835375171125,
+      "lon": 44.03468724470465,
+      "geoinfo": {
+        "display_name": "58К-94, Kamenka, Каменский сельсовет, Kamensky District, Penza Oblast, Volga Federal District, 442214, Russia",
+        "road": "58К-94",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kamenka",
+        "state": "Penza Oblast",
+        "postcode": "442214",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "58К-94, Kamenka, Penza Oblast, Russia"
+    },
+    {
+      "lat": 53.156904673258076,
+      "lon": 44.098937251704434,
+      "geoinfo": {
+        "display_name": "Каменский сельсовет, Kamensky District, Penza Oblast, Volga Federal District, 442219, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Penza Oblast",
+        "postcode": "442219",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "440, Kamenka, 442219 Penza Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:51:19.148094+00:00",
+  "_kind": "geo_samples"
+}

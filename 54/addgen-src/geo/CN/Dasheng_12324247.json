@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dasheng",
+  "geonameid": 12324247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.336968109011515,
+      "lon": 118.85472363312147,
+      "geoinfo": {
+        "display_name": "Anqiu City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anqiu City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dasheng, Shandong, China"
+    },
+    {
+      "lat": 36.327850590430835,
+      "lon": 118.89867106949298,
+      "geoinfo": {
+        "display_name": "Changle County, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "912, Changle County, Weifang, 04574 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:05.826277+00:00",
+  "_kind": "geo_samples"
+}

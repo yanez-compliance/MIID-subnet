@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sheepshead Bay",
+  "geonameid": 5137849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.59433795623353,
+      "lon": -73.94524936287559,
+      "geoinfo": {
+        "display_name": "4405, Bedford Avenue, Sheepshead Bay, Brooklyn, Kings County, New York, 11229, United States",
+        "road": "Bedford Avenue",
+        "house_number": "4405",
+        "neighbourhood": "Sheepshead Bay",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4405 Bedford Avenue, Sheepshead Bay, New York, United States"
+    },
+    {
+      "lat": 40.603349885640405,
+      "lon": -73.93102369338565,
+      "geoinfo": {
+        "display_name": "The Salt Marsh Nature Center, 3200, Avenue U, Brooklyn, Kings County, New York, 11234, United States",
+        "road": "Avenue U",
+        "house_number": "3200",
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11234",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Salt Marsh Nature Center, 3200, Avenue U, Brooklyn, Kings County, New York, 11234, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:04.846468+00:00",
+  "_kind": "geo_samples"
+}

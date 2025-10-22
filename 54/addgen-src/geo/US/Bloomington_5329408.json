@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomington",
+  "geonameid": 5329408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.076657590049194,
+      "lon": -117.38751564180731,
+      "geoinfo": {
+        "display_name": "Rialto, San Bernardino County, California, 92316, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rialto",
+        "state": "California",
+        "postcode": "92316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bloomington, California, United States"
+    },
+    {
+      "lat": 34.071405842352775,
+      "lon": -117.41001335777015,
+      "geoinfo": {
+        "display_name": "10048, Locust Avenue, Bloomington, San Bernardino County, California, 92316, United States",
+        "road": "Locust Avenue",
+        "house_number": "10048",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomington",
+        "state": "California",
+        "postcode": "92316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10048, Locust Avenue, Bloomington, San Bernardino County, California, 92316, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:45.897187+00:00",
+  "_kind": "geo_samples"
+}

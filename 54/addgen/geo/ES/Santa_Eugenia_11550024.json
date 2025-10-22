@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Santa Eugenia",
+  "geonameid": 11550024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.3664223782257,
+      "lon": -3.66016844880019,
+      "geoinfo": {
+        "display_name": "M-40, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Santa Eugenia, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.37928054435608,
+      "lon": -3.608545194768581,
+      "geoinfo": {
+        "display_name": "60, Avenida de Santa Eugenia, Santa Eugenia, Villa de Vallecas, Madrid, Community of Madrid, 28031, Spain",
+        "road": "Avenida de Santa Eugenia",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28031",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "60, Avenida de Santa Eugenia, Santa Eugenia, Villa de Vallecas, Madrid, Community of Madrid, 28031, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:43.850257+00:00",
+  "_kind": "geo_samples"
+}

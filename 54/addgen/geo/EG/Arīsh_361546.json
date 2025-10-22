@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Arīsh",
+  "geonameid": 361546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.15949164423001,
+      "lon": 33.75892514598019,
+      "geoinfo": {
+        "display_name": "North Sinai, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Sinai",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Arīsh, North Sinai, Egypt"
+    },
+    {
+      "lat": 31.128910759653333,
+      "lon": 33.837251041239675,
+      "geoinfo": {
+        "display_name": "El Arish, North Sinai, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Arish",
+        "state": "North Sinai",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "291, El Arish, 95028 North Sinai, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:51:00.755464+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Olavanna",
+  "geonameid": 13353577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.255869364663964,
+      "lon": 75.83994799122901,
+      "geoinfo": {
+        "display_name": "Kozhikode, Kerala, 673014, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kozhikode",
+        "state": "Kerala",
+        "postcode": "673014",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Olavanna, Kerala, India"
+    },
+    {
+      "lat": 11.233885321258539,
+      "lon": 75.79577464156057,
+      "geoinfo": {
+        "display_name": "Kallai, Kozhikode, Kerala, 673003, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kallai",
+        "city_district": null,
+        "city": "Kozhikode",
+        "state": "Kerala",
+        "postcode": "673003",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "435, Kallai, Kozhikode, Kerala, 673003, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:54:31.260888+00:00",
+  "_kind": "geo_samples"
+}

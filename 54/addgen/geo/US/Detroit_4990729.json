@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Detroit",
+  "geonameid": 4990729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.35550023148167,
+      "lon": -83.03459434108404,
+      "geoinfo": {
+        "display_name": "Detroit Police Department 7th Precinct, 3501, Chene Street, Forest Park, Detroit, Wayne County, Michigan, 48207, United States",
+        "road": "Chene Street",
+        "house_number": "3501",
+        "neighbourhood": "Forest Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Detroit",
+        "state": "Michigan",
+        "postcode": "48207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3501 Chene Street, Detroit, Michigan, United States"
+    },
+    {
+      "lat": 42.35620383153989,
+      "lon": -83.06033019162722,
+      "geoinfo": {
+        "display_name": "John D. Dingell VA Medical Center, 4646, John R Street, Medical Center, Midtown, Detroit, Wayne County, Michigan, 48201, United States",
+        "road": "John R Street",
+        "house_number": "4646",
+        "neighbourhood": "Medical Center",
+        "suburb": "Midtown",
+        "city_district": null,
+        "city": "Detroit",
+        "state": "Michigan",
+        "postcode": "48201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "John D. Dingell VA Medical Center, 4646, John R Street, Medical Center, Midtown, Detroit, Wayne County, Michigan, 48201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:06.600921+00:00",
+  "_kind": "geo_samples"
+}

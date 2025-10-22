@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Leawood",
+  "geonameid": 4274317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.97059008434455,
+      "lon": -94.62995977701308,
+      "geoinfo": {
+        "display_name": "8714, Mission Road, Prairie Village, Johnson County, Kansas, 66206, United States",
+        "road": "Mission Road",
+        "house_number": "8714",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prairie Village",
+        "state": "Kansas",
+        "postcode": "66206",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8714 Mission Road, Leawood, Kansas, United States"
+    },
+    {
+      "lat": 38.93057870211823,
+      "lon": -94.62017308287209,
+      "geoinfo": {
+        "display_name": "Tomahawk Creek Trail, Leawood, Johnson County, Kansas, 66211, United States",
+        "road": "Tomahawk Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leawood",
+        "state": "Kansas",
+        "postcode": "66211",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "676, Tomahawk Creek Trail, Leawood, Johnson County, Kansas, 66211, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:25.740379+00:00",
+  "_kind": "geo_samples"
+}

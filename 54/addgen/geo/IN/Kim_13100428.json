@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kim",
+  "geonameid": 13100428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.370395909249325,
+      "lon": 72.9537987954362,
+      "geoinfo": {
+        "display_name": "Mangrol Taluka, Surat, Gujarat, 394110, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gujarat",
+        "postcode": "394110",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kim, Gujarat, India"
+    },
+    {
+      "lat": 21.381140697925726,
+      "lon": 72.90800818158073,
+      "geoinfo": {
+        "display_name": "Kim, Olpad Taluka, Surat, Gujarat, 394111, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kim",
+        "state": "Gujarat",
+        "postcode": "394111",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "297, Kim, Olpad Taluka, Surat, Gujarat, 394111, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:56.125990+00:00",
+  "_kind": "geo_samples"
+}

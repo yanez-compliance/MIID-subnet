@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Darwin",
+  "geonameid": 2073124,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -12.461864471598545,
+      "lon": 130.8121213505279,
+      "geoinfo": {
+        "display_name": "Darwin Harbour, Darwin, Northern Territory, 0822, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Darwin Harbour",
+        "city": "Darwin",
+        "state": null,
+        "postcode": "0822",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Darwin Harbour, Darwin, Australia"
+    },
+    {
+      "lat": -12.429505000340473,
+      "lon": 130.83795431500096,
+      "geoinfo": {
+        "display_name": "Conigrave Street, Fannie Bay, Darwin, City of Darwin, Northern Territory, 0820, Australia",
+        "road": "Conigrave Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fannie Bay",
+        "city_district": null,
+        "city": "Darwin",
+        "state": null,
+        "postcode": "0820",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "107, Conigrave Street, Fannie Bay, Darwin, City of Darwin, Northern Territory, 0820, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:21.376529+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hamden",
+  "geonameid": 4835654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.37077700801898,
+      "lon": -72.91939195116781,
+      "geoinfo": {
+        "display_name": "Wells Fargo, Dixwell Avenue, Hamden, South Central Connecticut Planning Region, Connecticut, 06514, United States",
+        "road": "Dixwell Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamden",
+        "state": "Connecticut",
+        "postcode": "06514",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dixwell Avenue, Hamden, Connecticut, United States"
+    },
+    {
+      "lat": 41.388891243737795,
+      "lon": -72.91223724408627,
+      "geoinfo": {
+        "display_name": "45, Glen Ridge Road, Beecher Heights, Hamden, South Central Connecticut Planning Region, Connecticut, 06518, United States",
+        "road": "Glen Ridge Road",
+        "house_number": "45",
+        "neighbourhood": "Beecher Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hamden",
+        "state": "Connecticut",
+        "postcode": "06518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "45, Glen Ridge Road, Beecher Heights, Hamden, South Central Connecticut Planning Region, Connecticut, 06518, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:26.536455+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "KP",
+  "country": "North Korea",
+  "city": "Sunan",
+  "geonameid": 1869021,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 39.22741058158239,
+      "lon": 125.71104387416851,
+      "geoinfo": {
+        "display_name": "Sunan District, P'yŏngyang, North Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sunan District",
+        "city": "P'yŏngyang",
+        "state": null,
+        "postcode": null,
+        "country": "North Korea",
+        "country_code": "kp"
+      },
+      "address": "Sunan District, Sunan, North Korea"
+    },
+    {
+      "lat": 39.18412797084891,
+      "lon": 125.70504506666934,
+      "geoinfo": {
+        "display_name": "Pyongyang–Huichon Motorway, Sunan District, P'yŏngyang, North Korea",
+        "road": "Pyongyang–Huichon Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sunan District",
+        "city": "P'yŏngyang",
+        "state": null,
+        "postcode": null,
+        "country": "North Korea",
+        "country_code": "kp"
+      },
+      "address": "Pyongyang–Huichon Motorway, Sunan, South Pyongan, North Korea"
+    }
+  ],
+  "updated_at": "2025-10-16T18:06:48.175801+00:00",
+  "_kind": "geo_samples"
+}

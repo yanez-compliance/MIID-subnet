@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eastchester",
+  "geonameid": 5116118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.95303074993405,
+      "lon": -73.75622136332574,
+      "geoinfo": {
+        "display_name": "5, York Road, Town of Mamaroneck, Westchester County, New York, 10538, United States",
+        "road": "York Road",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Mamaroneck",
+        "state": "New York",
+        "postcode": "10538",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5 York Road, Eastchester, New York, United States"
+    },
+    {
+      "lat": 40.96598945713891,
+      "lon": -73.79248699619292,
+      "geoinfo": {
+        "display_name": "39, Regal Drive, Maplewood, City of New Rochelle, Westchester County, New York, 10804, United States",
+        "road": "Regal Drive",
+        "house_number": "39",
+        "neighbourhood": "Maplewood",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of New Rochelle",
+        "state": "New York",
+        "postcode": "10804",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "39, Regal Drive, Maplewood, City of New Rochelle, Westchester County, New York, 10804, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:27.798271+00:00",
+  "_kind": "geo_samples"
+}

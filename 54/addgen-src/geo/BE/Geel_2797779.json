@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Geel",
+  "geonameid": 2797779,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.15817684793542,
+      "lon": 4.955078906066974,
+      "geoinfo": {
+        "display_name": "Zwaarvoerdersspoor, Larum, Geel, Turnhout, Antwerp, Flanders, 2440, Belgium",
+        "road": "Zwaarvoerdersspoor",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geel",
+        "state": "Antwerp",
+        "postcode": "2440",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Zwaarvoerdersspoor, Geel, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.1452311531394,
+      "lon": 5.0212359713302535,
+      "geoinfo": {
+        "display_name": "'t Steen, Meerhout, Turnhout, Antwerp, 2450, Belgium",
+        "road": "'t Steen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meerhout",
+        "state": "Antwerp",
+        "postcode": "2450",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "187, 't Steen, Meerhout, Turnhout, Antwerp, 2450, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:24.630046+00:00",
+  "_kind": "geo_samples"
+}

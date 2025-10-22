@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Meadow",
+  "geonameid": 5115960,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.68954763231932,
+      "lon": -73.562364119036,
+      "geoinfo": {
+        "display_name": "Southern State Parkway, North Merrick, Town of Hempstead, Nassau County, New York, 11566, United States",
+        "road": "Southern State Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Merrick",
+        "state": "New York",
+        "postcode": "11566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Southern State Parkway, East Meadow, New York, United States"
+    },
+    {
+      "lat": 40.68700864544484,
+      "lon": -73.52938181294975,
+      "geoinfo": {
+        "display_name": "1366, Oneida Avenue, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States",
+        "road": "Oneida Avenue",
+        "house_number": "1366",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellmore",
+        "state": "New York",
+        "postcode": "11710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1366, Oneida Avenue, Bellmore, Town of Hempstead, Nassau County, New York, 11710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:55.521725+00:00",
+  "_kind": "geo_samples"
+}

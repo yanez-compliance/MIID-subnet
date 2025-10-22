@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Falls Church",
+  "geonameid": 7258780,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.85836557031869,
+      "lon": -77.185851213597,
+      "geoinfo": {
+        "display_name": "3239, Wayne Road, Jefferson, West Falls Church, Fairfax County, Virginia, 22042, United States",
+        "road": "Wayne Road",
+        "house_number": "3239",
+        "neighbourhood": "Jefferson",
+        "suburb": null,
+        "city_district": null,
+        "city": "West Falls Church",
+        "state": "Virginia",
+        "postcode": "22042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3239 Wayne Road, West Falls Church, Virginia, United States"
+    },
+    {
+      "lat": 38.88017232466863,
+      "lon": -77.17910700809787,
+      "geoinfo": {
+        "display_name": "Falls Church City Trail, Winter Hill, Falls Church, Virginia, 22046, United States",
+        "road": "Falls Church City Trail",
+        "house_number": null,
+        "neighbourhood": "Winter Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Falls Church",
+        "state": "Virginia",
+        "postcode": "22046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "187, Falls Church City Trail, Winter Hill, Falls Church, Virginia, 22046, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:25.934570+00:00",
+  "_kind": "geo_samples"
+}

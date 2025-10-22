@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elko",
+  "geonameid": 5703670,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.83836765608078,
+      "lon": -115.81715539722165,
+      "geoinfo": {
+        "display_name": "Elko, Elko County, Nevada, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elko",
+        "state": "Nevada",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Elko, Nevada, United States"
+    },
+    {
+      "lat": 40.86430465795784,
+      "lon": -115.78966404511955,
+      "geoinfo": {
+        "display_name": "Arrowleaf Street, Elko County, Nevada, 89801, United States",
+        "road": "Arrowleaf Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nevada",
+        "postcode": "89801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "536, Arrowleaf Street, Elko County, Nevada, 89801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:38.631808+00:00",
+  "_kind": "geo_samples"
+}

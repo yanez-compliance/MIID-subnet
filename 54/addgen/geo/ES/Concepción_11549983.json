@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Concepción",
+  "geonameid": 11549983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.44030458495003,
+      "lon": -3.644073176454083,
+      "geoinfo": {
+        "display_name": "41, Calle de José del Hierro, Concepción, Ciudad Lineal, Madrid, Community of Madrid, 28027, Spain",
+        "road": "Calle de José del Hierro",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28027",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "41 Calle de José del Hierro, Concepción, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.46570865719776,
+      "lon": -3.680370519372709,
+      "geoinfo": {
+        "display_name": "41, Calle de Menéndez Pidal, Costa Fleming, Nueva España, Chamartín, Madrid, Community of Madrid, 28036, Spain",
+        "road": "Calle de Menéndez Pidal",
+        "house_number": "41",
+        "neighbourhood": "Costa Fleming",
+        "suburb": "Chamartín",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28036",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "41, Calle de Menéndez Pidal, Costa Fleming, Nueva España, Chamartín, Madrid, Community of Madrid, 28036, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:47.393540+00:00",
+  "_kind": "geo_samples"
+}

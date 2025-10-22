@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Venray",
+  "geonameid": 2745634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.50940416573756,
+      "lon": 5.956811651985431,
+      "geoinfo": {
+        "display_name": "Heidseweg, Heide, Venray, Limburg, Netherlands, 5801 JT, Netherlands",
+        "road": "Heidseweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heide",
+        "state": "Limburg",
+        "postcode": "5801 JT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Heidseweg, Venray, Limburg, The Netherlands"
+    },
+    {
+      "lat": 51.53726328814047,
+      "lon": 5.929835794904967,
+      "geoinfo": {
+        "display_name": "31A, Kleindorp, Merselo, Venray, Limburg, Netherlands, 5815 CL, Netherlands",
+        "road": "Kleindorp",
+        "house_number": "31A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merselo",
+        "state": "Limburg",
+        "postcode": "5815 CL",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "31A, Kleindorp, Merselo, Venray, Limburg, Netherlands, 5815 CL, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:49.950428+00:00",
+  "_kind": "geo_samples"
+}

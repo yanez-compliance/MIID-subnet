@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Diemen",
+  "geonameid": 2756888,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.365579309203156,
+      "lon": 4.968731115879442,
+      "geoinfo": {
+        "display_name": "Zeeburgerbrug, Diemerzeedijk, Oost, Amsterdam, North Holland, Netherlands, 1095 KK, Netherlands",
+        "road": "Diemerzeedijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oost",
+        "city_district": null,
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "postcode": "1095 KK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Diemerzeedijk, Diemen, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.36391447831691,
+      "lon": 4.90243016276241,
+      "geoinfo": {
+        "display_name": "71G, Amstel, Weesperbuurt, Centrum, Amsterdam, North Holland, Netherlands, 1018 EK, Netherlands",
+        "road": "Amstel",
+        "house_number": "71G",
+        "neighbourhood": "Weesperbuurt",
+        "suburb": "Centrum",
+        "city_district": null,
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "postcode": "1018 EK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "71G, Amstel, Weesperbuurt, Centrum, Amsterdam, North Holland, Netherlands, 1018 EK, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:46.403653+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Ulu Bedok",
+  "geonameid": 1880159,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.335355242088286,
+      "lon": 103.93990893019861,
+      "geoinfo": {
+        "display_name": "Pan-Island Expressway, Picardy Gardens, Singapur East, Bedok, Southeast, Singapore, 470771, Singapore",
+        "road": "Pan-Island Expressway",
+        "house_number": null,
+        "neighbourhood": "Picardy Gardens",
+        "suburb": "Bedok",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "470771",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "966, Pan-Island Expressway, Picardy Gardens, Singapur East, Bedok, Southeast, Singapore, 470771, Singapore"
+    },
+    {
+      "lat": 1.334477298649739,
+      "lon": 103.9039451958369,
+      "geoinfo": {
+        "display_name": "43, Kaki Bukit Place, Eunos Techpark, Bedok, Northeast, Singapore, 415934, Singapore",
+        "road": "Kaki Bukit Place",
+        "house_number": "43",
+        "neighbourhood": null,
+        "suburb": "Bedok",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "415934",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "43, Kaki Bukit Place, Eunos Techpark, Bedok, Northeast, Singapore, 415934, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:52.717317+00:00",
+  "_kind": "geo_samples"
+}

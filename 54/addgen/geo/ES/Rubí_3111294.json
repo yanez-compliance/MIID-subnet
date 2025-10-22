@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Rubí",
+  "geonameid": 3111294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.50360279343465,
+      "lon": 2.0286238353854325,
+      "geoinfo": {
+        "display_name": "Carrer de Can Serrallach, Rubí, Vallès Occidental, Barcelona, Catalonia, 08191, Spain",
+        "road": "Carrer de Can Serrallach",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rubí",
+        "state": "Catalonia",
+        "postcode": "08191",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer de Can Serrallach, Rubí, Catalonia, Spain"
+    },
+    {
+      "lat": 41.48155030470486,
+      "lon": 1.985172762748684,
+      "geoinfo": {
+        "display_name": "avinguda de Can Campanyà, Comte de Sert, Polígon industrial Comte de Sert, Castellbisbal, Vallès Occidental, Barcelona, Catalonia, 08755, Spain",
+        "road": "avinguda de Can Campanyà",
+        "house_number": null,
+        "neighbourhood": "Comte de Sert",
+        "suburb": null,
+        "city_district": null,
+        "city": "Castellbisbal",
+        "state": "Catalonia",
+        "postcode": "08755",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "812, avinguda de Can Campanyà, Comte de Sert, Polígon industrial Comte de Sert, Castellbisbal, Vallès Occidental, Barcelona, Catalonia, 08755, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:59.611446+00:00",
+  "_kind": "geo_samples"
+}

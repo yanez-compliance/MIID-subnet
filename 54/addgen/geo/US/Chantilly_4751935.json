@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chantilly",
+  "geonameid": 4751935,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.881517361181146,
+      "lon": -77.46118849191642,
+      "geoinfo": {
+        "display_name": "Stonecroft Boulevard, Reston, Fairfax County, Virginia, 20153, United States",
+        "road": "Stonecroft Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reston",
+        "state": "Virginia",
+        "postcode": "20153",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Stonecroft Boulevard, Chantilly, Virginia, United States"
+    },
+    {
+      "lat": 38.892625607070194,
+      "lon": -77.48689234516142,
+      "geoinfo": {
+        "display_name": "Mountain Road District Park, 15700, Braddock Road, Centreville, Fairfax County, Virginia, 20120, United States",
+        "road": "Braddock Road",
+        "house_number": "15700",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centreville",
+        "state": "Virginia",
+        "postcode": "20120",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mountain Road District Park, 15700, Braddock Road, Centreville, Fairfax County, Virginia, 20120, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:51.809716+00:00",
+  "_kind": "geo_samples"
+}

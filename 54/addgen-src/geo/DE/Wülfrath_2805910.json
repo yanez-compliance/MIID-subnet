@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wülfrath",
+  "geonameid": 2805910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.26827880129628,
+      "lon": 7.01212358712562,
+      "geoinfo": {
+        "display_name": "Wülfrather Straße, Obmettmann, Mettmann, Kreis Mettmann, North Rhine-Westphalia, 40822, Germany",
+        "road": "Wülfrather Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Obmettmann",
+        "city_district": null,
+        "city": "Mettmann",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40822",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wülfrather Straße, Wülfrath, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.23839678381494,
+      "lon": 7.02677663627072,
+      "geoinfo": {
+        "display_name": "Hermgesberg, Pütt, Haan, Kreis Mettmann, North Rhine-Westphalia, 42781, Germany",
+        "road": "Hermgesberg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haan",
+        "state": "North Rhine-Westphalia",
+        "postcode": "42781",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "159, Hermgesberg, Pütt, Haan, Kreis Mettmann, North Rhine-Westphalia, 42781, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:13:58.123864+00:00",
+  "_kind": "geo_samples"
+}

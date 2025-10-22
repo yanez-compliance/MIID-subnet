@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fenway/Kenmore",
+  "geonameid": 8532040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.306653794611265,
+      "lon": -71.12395003431199,
+      "geoinfo": {
+        "display_name": "991, Centre Street, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02245, United States",
+        "road": "Centre Street",
+        "house_number": "991",
+        "neighbourhood": null,
+        "suburb": "Jamaica Plain",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "991, Centre Street, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02245, United States"
+    },
+    {
+      "lat": 42.34365088808247,
+      "lon": -71.05736957770239,
+      "geoinfo": {
+        "display_name": "Foundry Street, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02205, United States",
+        "road": "Foundry Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seaport",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "926, Foundry Street, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02205, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:15.896717+00:00",
+  "_kind": "geo_samples"
+}

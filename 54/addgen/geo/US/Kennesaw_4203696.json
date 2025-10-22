@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kennesaw",
+  "geonameid": 4203696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.049636565896485,
+      "lon": -84.58552845777005,
+      "geoinfo": {
+        "display_name": "4043, George Busbee Parkway Northwest, Abington Green, Cobb County, Georgia, 30144, United States",
+        "road": "George Busbee Parkway Northwest",
+        "house_number": "4043",
+        "neighbourhood": "Abington Green",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4043 George Busbee Parkway Northwest, Kennesaw, Georgia, United States"
+    },
+    {
+      "lat": 34.02648187075261,
+      "lon": -84.58438633150094,
+      "geoinfo": {
+        "display_name": "1065, Big Shanty Road Northwest, Cobb County, Georgia, 30144, United States",
+        "road": "Big Shanty Road Northwest",
+        "house_number": "1065",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1065, Big Shanty Road Northwest, Cobb County, Georgia, 30144, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:24:45.301918+00:00",
+  "_kind": "geo_samples"
+}

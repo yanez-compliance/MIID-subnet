@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Urla",
+  "geonameid": 298316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.283470792822364,
+      "lon": 26.75793775683495,
+      "geoinfo": {
+        "display_name": "Kuşçular Mahallesi, Urla, Aegean Region, 35437, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Urla",
+        "state": null,
+        "postcode": "35437",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Urla, Turkey"
+    },
+    {
+      "lat": 38.3087387542139,
+      "lon": 26.730728682541006,
+      "geoinfo": {
+        "display_name": "İçmeler Mahallesi, Urla, Aegean Region, 35430, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "İçmeler Mahallesi",
+        "city": "Urla",
+        "state": null,
+        "postcode": "35430",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "726, İçmeler Mahallesi, Urla, Aegean Region, 35430, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:55.566352+00:00",
+  "_kind": "geo_samples"
+}

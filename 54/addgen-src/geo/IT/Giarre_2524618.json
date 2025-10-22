@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Giarre",
+  "geonameid": 2524618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.701894423731424,
+      "lon": 15.183578350028673,
+      "geoinfo": {
+        "display_name": "Strada 19 Rovettazzo, Santa Margherita, Carruba, Riposto, Catania, Sicily, 95018, Italy",
+        "road": "Strada 19 Rovettazzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riposto",
+        "state": "Sicily",
+        "postcode": "95018",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada 19 Rovettazzo, Giarre, Sicily, Italy"
+    },
+    {
+      "lat": 37.759161437064236,
+      "lon": 15.164076544387537,
+      "geoinfo": {
+        "display_name": "Via Rinazzo, Nunziata, Mascali, Catania, Sicily, 95016, Italy",
+        "road": "Via Rinazzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nunziata",
+        "city_district": null,
+        "city": "Mascali",
+        "state": "Sicily",
+        "postcode": "95016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "222, Via Rinazzo, Nunziata, Mascali, Catania, Sicily, 95016, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:26.586782+00:00",
+  "_kind": "geo_samples"
+}

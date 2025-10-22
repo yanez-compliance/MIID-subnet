@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Charlottetown",
+  "geonameid": 5920288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.261234767751326,
+      "lon": -63.14932900292685,
+      "geoinfo": {
+        "display_name": "Royalty Centre, 44, Enman Crescent, Charlottetown, Queens County, Prince Edward Island, C1E 1E3, Canada",
+        "road": "Enman Crescent",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charlottetown",
+        "state": "Prince Edward Island",
+        "postcode": "C1E 1E3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "44 Enman Crescent, Charlottetown, Prince Edward Island, Canada"
+    },
+    {
+      "lat": 46.19692099797927,
+      "lon": -63.10097953998494,
+      "geoinfo": {
+        "display_name": "190, Keppoch Road, Keppoch, Stratford, Town of Stratford, Queens County, Prince Edward Island, C1B 0B8, Canada",
+        "road": "Keppoch Road",
+        "house_number": "190",
+        "neighbourhood": null,
+        "suburb": "Keppoch",
+        "city_district": null,
+        "city": "Stratford",
+        "state": "Prince Edward Island",
+        "postcode": "C1B 0B8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "190, Keppoch Road, Keppoch, Stratford, Town of Stratford, Queens County, Prince Edward Island, C1B 0B8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:01:58.891218+00:00",
+  "_kind": "geo_samples"
+}

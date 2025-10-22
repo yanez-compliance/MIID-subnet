@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Baldwin",
+  "geonameid": 5107760,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.6727476023676,
+      "lon": -73.57832039007474,
+      "geoinfo": {
+        "display_name": "80, St Francis Avenue, Roosevelt, Town of Hempstead, Nassau County, New York, 11575, United States",
+        "road": "St Francis Avenue",
+        "house_number": "80",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roosevelt",
+        "state": "New York",
+        "postcode": "11575",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "80 St Francis Avenue, Baldwin, New York, United States"
+    },
+    {
+      "lat": 40.63660164329405,
+      "lon": -73.62411326715575,
+      "geoinfo": {
+        "display_name": "3272, Frederick Street, Oceanside, Town of Hempstead, Nassau County, New York, 11572, United States",
+        "road": "Frederick Street",
+        "house_number": "3272",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oceanside",
+        "state": "New York",
+        "postcode": "11572",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3272, Frederick Street, Oceanside, Town of Hempstead, Nassau County, New York, 11572, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:19.583312+00:00",
+  "_kind": "geo_samples"
+}

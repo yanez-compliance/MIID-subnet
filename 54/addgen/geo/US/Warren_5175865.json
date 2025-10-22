@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Warren",
+  "geonameid": 5175865,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.261296566273515,
+      "lon": -80.8020066911728,
+      "geoinfo": {
+        "display_name": "2499, Larchmont Avenue Northeast, Brown Corner, Trumbull County, Ohio, 44483, United States",
+        "road": "Larchmont Avenue Northeast",
+        "house_number": "2499",
+        "neighbourhood": "Brown Corner",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44483",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2499 Larchmont Avenue Northeast, Warren, Ohio, United States"
+    },
+    {
+      "lat": 41.23250501257738,
+      "lon": -80.80008810002575,
+      "geoinfo": {
+        "display_name": "1301, Belle Street Southeast, Belvedere Park, Warren, Trumbull County, Ohio, 44484, United States",
+        "road": "Belle Street Southeast",
+        "house_number": "1301",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warren",
+        "state": "Ohio",
+        "postcode": "44484",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1301, Belle Street Southeast, Belvedere Park, Warren, Trumbull County, Ohio, 44484, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:19.541802+00:00",
+  "_kind": "geo_samples"
+}

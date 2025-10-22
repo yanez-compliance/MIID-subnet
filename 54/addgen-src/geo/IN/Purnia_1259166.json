@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Purnia",
+  "geonameid": 1259166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.77815836766328,
+      "lon": 87.47482375833631,
+      "geoinfo": {
+        "display_name": "NH231, Purnia, Purnia East, Purnia, Bihar, 854301, India",
+        "road": "NH231",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Purnia",
+        "state": "Bihar",
+        "postcode": "854301",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH231, Purnia, Bihar, India"
+    },
+    {
+      "lat": 25.789850204468536,
+      "lon": 87.44295586139897,
+      "geoinfo": {
+        "display_name": "Purnia East, Purnia, Bihar, 854303, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "854303",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "183, Purnia East, Purnia, Bihar, 854303, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:40.638348+00:00",
+  "_kind": "geo_samples"
+}

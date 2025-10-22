@@ -1,0 +1,47 @@
+{
+  "country_code": "DO",
+  "country": "Dominican Republic",
+  "city": "Villa Francisca",
+  "geonameid": 3491941,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 18.446796996009077,
+      "lon": -69.89453961992805,
+      "geoinfo": {
+        "display_name": "Zona Colonial, Santo Domingo de Guzmán, Distrito Nacional, 10210, Dominican Republic",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zona Colonial",
+        "state": "Distrito Nacional",
+        "postcode": "10210",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Villa Francisca, Distrito Nacional, Dominican Republic"
+    },
+    {
+      "lat": 18.502760822873807,
+      "lon": -69.86377736258537,
+      "geoinfo": {
+        "display_name": "Calle La Fe, Urbanización Margarita, La Milagrosa, Santo Domingo Este, Santo Domingo, 03006, Dominican Republic",
+        "road": "Calle La Fe",
+        "house_number": null,
+        "neighbourhood": "Urbanización Margarita",
+        "suburb": null,
+        "city_district": null,
+        "city": "Santo Domingo Este",
+        "state": "Santo Domingo",
+        "postcode": "03006",
+        "country": "Dominican Republic",
+        "country_code": "do"
+      },
+      "address": "Calle La Fe, Villa Francisca, Santo Domingo, Dominican Republic"
+    }
+  ],
+  "updated_at": "2025-10-16T13:00:59.915982+00:00",
+  "_kind": "geo_samples"
+}

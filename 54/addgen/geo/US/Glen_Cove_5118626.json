@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glen Cove",
+  "geonameid": 5118626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.87985910010657,
+      "lon": -73.65649286654833,
+      "geoinfo": {
+        "display_name": "14, Soundside Lane, City of Glen Cove, Nassau County, New York, 11542, United States",
+        "road": "Soundside Lane",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Glen Cove",
+        "state": "New York",
+        "postcode": "11542",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14 Soundside Lane, Glen Cove, New York, United States"
+    },
+    {
+      "lat": 40.86466219428747,
+      "lon": -73.61328784988594,
+      "geoinfo": {
+        "display_name": "24, Norfolk Lane, City of Glen Cove, Nassau County, New York, 11542, United States",
+        "road": "Norfolk Lane",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Glen Cove",
+        "state": "New York",
+        "postcode": "11542",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24, Norfolk Lane, City of Glen Cove, Nassau County, New York, 11542, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:36.755937+00:00",
+  "_kind": "geo_samples"
+}

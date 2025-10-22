@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Malingshan",
+  "geonameid": 1549428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.22520118647891,
+      "lon": 118.33944592926589,
+      "geoinfo": {
+        "display_name": "425省道, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": "425省道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "425省道, Malingshan, Jiangsu, China"
+    },
+    {
+      "lat": 34.20058509202982,
+      "lon": 118.36074243426182,
+      "geoinfo": {
+        "display_name": "Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "305, Xinyi City, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:14.515695+00:00",
+  "_kind": "geo_samples"
+}

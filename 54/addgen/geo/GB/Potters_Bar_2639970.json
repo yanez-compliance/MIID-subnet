@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Potters Bar",
+  "geonameid": 2639970,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.67320990477187,
+      "lon": -0.1879002816209405,
+      "geoinfo": {
+        "display_name": "2, Great North Road, Ganwick Corner, Potters Bar, Hertsmere, Hertfordshire, England, EN5 4RH, United Kingdom",
+        "road": "Great North Road",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hertsmere",
+        "state": "England",
+        "postcode": "EN5 4RH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "2 Great North Road, Potters Bar, England, United Kingdom"
+    },
+    {
+      "lat": 51.72484291284619,
+      "lon": -0.14490309412397154,
+      "geoinfo": {
+        "display_name": "Northaw Great Wood Country Park, Carbone Hill, Northaw and Cuffley, Newgate Street, Welwyn Hatfield, Hertfordshire, England, EN6 4PJ, United Kingdom",
+        "road": "Carbone Hill",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Northaw and Cuffley",
+        "city_district": null,
+        "city": "Welwyn Hatfield",
+        "state": "England",
+        "postcode": "EN6 4PJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Northaw Great Wood Country Park, Carbone Hill, Northaw and Cuffley, Newgate Street, Welwyn Hatfield, Hertfordshire, England, EN6 4PJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:19.284290+00:00",
+  "_kind": "geo_samples"
+}

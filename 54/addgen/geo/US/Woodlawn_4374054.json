@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodlawn",
+  "geonameid": 4374054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.313286833609325,
+      "lon": -76.72209910312532,
+      "geoinfo": {
+        "display_name": "5692, Dogwood Road, Windsor Terrace, Gwynn Oak, Woodlawn, Baltimore County, Maryland, 21207, United States",
+        "road": "Dogwood Road",
+        "house_number": "5692",
+        "neighbourhood": "Windsor Terrace",
+        "suburb": "Gwynn Oak",
+        "city_district": null,
+        "city": "Woodlawn",
+        "state": "Maryland",
+        "postcode": "21207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5692 Dogwood Road, Woodlawn, Maryland, United States"
+    },
+    {
+      "lat": 39.34176076365569,
+      "lon": -76.70595358550541,
+      "geoinfo": {
+        "display_name": "West Northern Parkway, Grove Park, Baltimore, Maryland, 21207, United States",
+        "road": "West Northern Parkway",
+        "house_number": null,
+        "neighbourhood": "Grove Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "169, West Northern Parkway, Grove Park, Baltimore, Maryland, 21207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:45.956893+00:00",
+  "_kind": "geo_samples"
+}

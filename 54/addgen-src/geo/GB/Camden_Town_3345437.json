@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Camden Town",
+  "geonameid": 3345437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.524869432379425,
+      "lon": -0.09418287766871847,
+      "geoinfo": {
+        "display_name": "Old Street, Saint Luke's, Finsbury, London Borough of Islington, London, Greater London, England, EC1V 9AY, United Kingdom",
+        "road": "Old Street",
+        "house_number": null,
+        "neighbourhood": "Saint Luke's",
+        "suburb": "Finsbury",
+        "city_district": "London Borough of Islington",
+        "city": "London",
+        "state": "England",
+        "postcode": "EC1V 9AY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Old Street, Camden Town, England, United Kingdom"
+    },
+    {
+      "lat": 51.54983183613839,
+      "lon": -0.08502761491230187,
+      "geoinfo": {
+        "display_name": "77-83, Mildmay Park, Newington Green, Highbury, London Borough of Islington, London, Greater London, England, N1 4NB, United Kingdom",
+        "road": "Mildmay Park",
+        "house_number": "77-83",
+        "neighbourhood": "Newington Green",
+        "suburb": "Highbury",
+        "city_district": "London Borough of Islington",
+        "city": "London",
+        "state": "England",
+        "postcode": "N1 4NB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "77-83, Mildmay Park, Newington Green, Highbury, London Borough of Islington, London, Greater London, England, N1 4NB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:08.043177+00:00",
+  "_kind": "geo_samples"
+}

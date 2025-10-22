@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Basking Ridge",
+  "geonameid": 5095409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70527683577576,
+      "lon": -74.56090833235861,
+      "geoinfo": {
+        "display_name": "Middlesex Freeway, Basking Ridge, Bernards Township, Somerset County, New Jersey, 02794, United States",
+        "road": "Middlesex Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernards Township",
+        "state": "New Jersey",
+        "postcode": "02794",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Middlesex Freeway, Basking Ridge, New Jersey, United States"
+    },
+    {
+      "lat": 40.684612498445205,
+      "lon": -74.4999885010631,
+      "geoinfo": {
+        "display_name": "40, Sherwood Lane, Stirling, Long Hill Township, Morris County, New Jersey, 07980, United States",
+        "road": "Sherwood Lane",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stirling",
+        "state": "New Jersey",
+        "postcode": "07980",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "40, Sherwood Lane, Stirling, Long Hill Township, Morris County, New Jersey, 07980, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:06.203779+00:00",
+  "_kind": "geo_samples"
+}

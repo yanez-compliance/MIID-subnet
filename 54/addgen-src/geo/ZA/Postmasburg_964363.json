@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Postmasburg",
+  "geonameid": 964363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.33028414509532,
+      "lon": 23.06065066651458,
+      "geoinfo": {
+        "display_name": "Sarel Marais Street, Vergenoeg, Tsantsabane Ward 5, Postmasburg, Tsantsabane Local Municipality, ZF Mgcawu District Municipality, Northern Cape, 8420, South Africa",
+        "road": "Sarel Marais Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vergenoeg",
+        "city_district": null,
+        "city": "Tsantsabane Local Municipality",
+        "state": "Northern Cape",
+        "postcode": "8420",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Sarel Marais Street, Postmasburg, Northern Cape, South Africa"
+    },
+    {
+      "lat": -28.350504769564296,
+      "lon": 23.037695071214273,
+      "geoinfo": {
+        "display_name": "Tsantsabane Ward 5, Tsantsabane Local Municipality, ZF Mgcawu District Municipality, Northern Cape, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tsantsabane Ward 5",
+        "city_district": null,
+        "city": "Tsantsabane Local Municipality",
+        "state": "Northern Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Tsantsabane Ward 5, Tsantsabane Local Municipality, ZF Mgcawu District Municipality, 88165 Northern Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:44:14.725669+00:00",
+  "_kind": "geo_samples"
+}

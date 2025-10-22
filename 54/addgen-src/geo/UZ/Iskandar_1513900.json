@@ -1,0 +1,65 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Iskandar",
+  "geonameid": 1513900,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 41.59384074664705,
+      "lon": 69.68808736351531,
+      "geoinfo": {
+        "display_name": "Bostanlik district, Tashkent Region, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Tashkent Region",
+        "postcode": null,
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Iskandar, Tashkent Region, Uzbekistan"
+    },
+    {
+      "lat": 41.52028689122441,
+      "lon": 69.68299297931652,
+      "geoinfo": {
+        "display_name": "Dumalak, Bostanlik district, Tashkent Region, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dumalak",
+        "state": "Tashkent Region",
+        "postcode": null,
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "304, Dumalak, Bostanlik district, 03267 Tashkent Region, Uzbekistan"
+    },
+    {
+      "lat": 41.55520435276022,
+      "lon": 69.72338418923252,
+      "geoinfo": {
+        "display_name": "Barraj, Bostanlik district, Tashkent Region, 110701, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barraj",
+        "state": "Tashkent Region",
+        "postcode": "110701",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "862, Barraj, Bostanlik district, Tashkent Region, 110701, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:32:13.408581+00:00",
+  "_kind": "geo_samples"
+}

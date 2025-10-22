@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Zumpango",
+  "geonameid": 3513966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.78219897253217,
+      "lon": -99.07622509646998,
+      "geoinfo": {
+        "display_name": "Calle Los Arrieros, Zumpango, State of Mexico, 55603, Mexico",
+        "road": "Calle Los Arrieros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zumpango",
+        "state": "State of Mexico",
+        "postcode": "55603",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Los Arrieros, Zumpango, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.779775256347182,
+      "lon": -99.13193785668882,
+      "geoinfo": {
+        "display_name": "San Juan Zitlaltepec, Zumpango, State of Mexico, 55620, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan Zitlaltepec",
+        "state": "State of Mexico",
+        "postcode": "55620",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "237, San Juan Zitlaltepec, Zumpango, State of Mexico, 55620, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:27.142710+00:00",
+  "_kind": "geo_samples"
+}

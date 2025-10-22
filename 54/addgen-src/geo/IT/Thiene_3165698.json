@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Thiene",
+  "geonameid": 3165698,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.69332190804613,
+      "lon": 11.520121395905559,
+      "geoinfo": {
+        "display_name": "Nuova Gasparona, Contrà, Madonnetta, Sarcedo, Vicenza, Veneto, 36030, Italy",
+        "road": "Nuova Gasparona",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Contrà",
+        "city_district": null,
+        "city": "Madonnetta",
+        "state": "Veneto",
+        "postcode": "36030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Nuova Gasparona, Thiene, Veneto, Italy"
+    },
+    {
+      "lat": 45.70088218873827,
+      "lon": 11.484596739463338,
+      "geoinfo": {
+        "display_name": "Via San Giovanni Bosco, Conca, Thiene, Vicenza, Veneto, 36016, Italy",
+        "road": "Via San Giovanni Bosco",
+        "house_number": null,
+        "neighbourhood": "Conca",
+        "suburb": "Conca",
+        "city_district": null,
+        "city": "Thiene",
+        "state": "Veneto",
+        "postcode": "36016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "508, Via San Giovanni Bosco, Conca, Thiene, Vicenza, Veneto, 36016, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:59.088788+00:00",
+  "_kind": "geo_samples"
+}

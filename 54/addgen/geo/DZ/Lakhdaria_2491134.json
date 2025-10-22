@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Lakhdaria",
+  "geonameid": 2491134,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.55721171307062,
+      "lon": 3.6208445552851978,
+      "geoinfo": {
+        "display_name": "RN 5, Taliouine, Lakhdaria, Lakhdaria District, Bouira, Algeria",
+        "road": "RN 5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakhdaria",
+        "state": "Bouira",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 5, Lakhdaria, Bouira, Algeria"
+    },
+    {
+      "lat": 36.58812847522651,
+      "lon": 3.61170095720018,
+      "geoinfo": {
+        "display_name": "Lakhdaria, Lakhdaria District, Bouira, 10002, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakhdaria",
+        "state": "Bouira",
+        "postcode": "10002",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "311, Lakhdaria, Lakhdaria District, Bouira, 10002, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:16.827265+00:00",
+  "_kind": "geo_samples"
+}

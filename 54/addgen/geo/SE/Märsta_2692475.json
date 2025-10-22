@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Märsta",
+  "geonameid": 2692475,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.60324485292731,
+      "lon": 17.86931853384827,
+      "geoinfo": {
+        "display_name": "Banvaktarvägen, Märsta, Sigtuna kommun, Stockholm County, 195 60, Sweden",
+        "road": "Banvaktarvägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Märsta",
+        "state": null,
+        "postcode": "195 60",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Banvaktarvägen, Märsta, Sweden"
+    },
+    {
+      "lat": 59.65770123134615,
+      "lon": 17.850275424616843,
+      "geoinfo": {
+        "display_name": "Odensala, Sigtuna kommun, Stockholm County, 195 46, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "195 46",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Odensala, Sigtuna kommun, Stockholm County, 195 46, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:24.662990+00:00",
+  "_kind": "geo_samples"
+}

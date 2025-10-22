@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longxi",
+  "geonameid": 8398676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.32203014644473,
+      "lon": 109.62686444654952,
+      "geoinfo": {
+        "display_name": "Huatai, Wuxi County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huatai",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longxi, Chongqing, China"
+    },
+    {
+      "lat": 31.32477767597949,
+      "lon": 109.67633518140028,
+      "geoinfo": {
+        "display_name": "XC68, Huatai, Wuxi County, Chongqing, China",
+        "road": "XC68",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huatai",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "XC68, Huatai, Wuxi County, 14493 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:03.623644+00:00",
+  "_kind": "geo_samples"
+}

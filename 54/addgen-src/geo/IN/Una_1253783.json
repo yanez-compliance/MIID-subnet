@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Una",
+  "geonameid": 1253783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.818180863531577,
+      "lon": 71.05650543498463,
+      "geoinfo": {
+        "display_name": "Una, Una Taluka, Gir Somnath, Gujarat, 362560, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Una",
+        "state": "Gujarat",
+        "postcode": "362560",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Una, Gujarat, India"
+    },
+    {
+      "lat": 20.793060818698486,
+      "lon": 71.03531773256937,
+      "geoinfo": {
+        "display_name": "Delvada, Una Taluka, Gir Somnath, Gujarat, 362510, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Delvada",
+        "state": "Gujarat",
+        "postcode": "362510",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "504, Delvada, Una Taluka, Gir Somnath, Gujarat, 362510, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:25.950218+00:00",
+  "_kind": "geo_samples"
+}

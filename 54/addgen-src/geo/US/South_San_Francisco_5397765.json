@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South San Francisco",
+  "geonameid": 5397765,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.632631041538446,
+      "lon": -122.43150619349494,
+      "geoinfo": {
+        "display_name": "South Drive, San Bruno, San Mateo County, California, 94066, United States",
+        "road": "South Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Bruno",
+        "state": "California",
+        "postcode": "94066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Drive, South San Francisco, California, United States"
+    },
+    {
+      "lat": 37.65147358898324,
+      "lon": -122.36192645703734,
+      "geoinfo": {
+        "display_name": "South San Francisco, San Mateo County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South San Francisco",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "538, South San Francisco, San Mateo County, 85823 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:17.726312+00:00",
+  "_kind": "geo_samples"
+}

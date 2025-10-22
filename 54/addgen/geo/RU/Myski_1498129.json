@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Myski",
+  "geonameid": 1498129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.70819368228696,
+      "lon": 87.8196005037279,
+      "geoinfo": {
+        "display_name": "44, Луговая улица, Мыски 3, Myski, Myskovsky Urban Okrug, Kemerovo Oblast–Kuzbass, Siberian Federal District, 652849, Russia",
+        "road": "Луговая улица",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Мыски 3",
+        "city_district": null,
+        "city": "Myski",
+        "state": "Kemerovo Oblast–Kuzbass",
+        "postcode": "652849",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "44 Луговая улица, Myski, Kemerovo Oblast–Kuzbass, Russia"
+    },
+    {
+      "lat": 53.69191973657962,
+      "lon": 87.73978316309042,
+      "geoinfo": {
+        "display_name": "Myskovsky Urban Okrug, Kemerovo Oblast–Kuzbass, Siberian Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kemerovo Oblast–Kuzbass",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "781, Myski, 34988 Kemerovo Oblast–Kuzbass, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:53:25.719591+00:00",
+  "_kind": "geo_samples"
+}

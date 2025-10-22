@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bend",
+  "geonameid": 5713587,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.06682243712,
+      "lon": -121.35407245803745,
+      "geoinfo": {
+        "display_name": "Northwest Shevlin Park Road, Summit West, Bend, Deschutes County, Oregon, 97703, United States",
+        "road": "Northwest Shevlin Park Road",
+        "house_number": null,
+        "neighbourhood": "Summit West",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bend",
+        "state": "Oregon",
+        "postcode": "97703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Northwest Shevlin Park Road, Bend, Oregon, United States"
+    },
+    {
+      "lat": 44.01386331489711,
+      "lon": -121.3183073688378,
+      "geoinfo": {
+        "display_name": "60997, Southeast Grand Targhee Drive, Bend, Deschutes County, Oregon, 97702, United States",
+        "road": "Southeast Grand Targhee Drive",
+        "house_number": "60997",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bend",
+        "state": "Oregon",
+        "postcode": "97702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "60997, Southeast Grand Targhee Drive, Bend, Deschutes County, Oregon, 97702, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:25.303975+00:00",
+  "_kind": "geo_samples"
+}

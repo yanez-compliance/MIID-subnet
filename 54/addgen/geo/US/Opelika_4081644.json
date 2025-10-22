@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Opelika",
+  "geonameid": 4081644,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.624286205329376,
+      "lon": -85.42502677260568,
+      "geoinfo": {
+        "display_name": "Opelika, Lee County, Alabama, 36801, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Opelika",
+        "state": "Alabama",
+        "postcode": "36801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Opelika, Alabama, United States"
+    },
+    {
+      "lat": 32.64176117247422,
+      "lon": -85.38384729191681,
+      "geoinfo": {
+        "display_name": "1112, West Street, Opelika, Lee County, Alabama, 36801, United States",
+        "road": "West Street",
+        "house_number": "1112",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Opelika",
+        "state": "Alabama",
+        "postcode": "36801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1112, West Street, Opelika, Lee County, Alabama, 36801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:17.508739+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Iwai",
+  "geonameid": 1861225,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.71383780619474,
+      "lon": 139.23040300091193,
+      "geoinfo": {
+        "display_name": "Hachioji, Tokyo, 192-0152, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hachioji",
+        "state": null,
+        "postcode": "192-0152",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Iwai, Japan"
+    },
+    {
+      "lat": 35.712419917605644,
+      "lon": 139.2368874757794,
+      "geoinfo": {
+        "display_name": "今熊, Akikawa kaido, Kamikawamachi, Hachioji, Tokyo, 192-0152, Japan",
+        "road": "Akikawa kaido",
+        "house_number": null,
+        "neighbourhood": "Kamikawamachi",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hachioji",
+        "state": null,
+        "postcode": "192-0152",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "今熊, Akikawa kaido, Kamikawamachi, Hachioji, Tokyo, 192-0152, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:05.106869+00:00",
+  "_kind": "geo_samples"
+}

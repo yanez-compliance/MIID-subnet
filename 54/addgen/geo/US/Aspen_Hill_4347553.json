@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aspen Hill",
+  "geonameid": 4347553,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.04311499263714,
+      "lon": -77.0891855687439,
+      "geoinfo": {
+        "display_name": "Rock Creek Trail, Holiday Park, North Bethesda, Montgomery County, Maryland, 20896, United States",
+        "road": "Rock Creek Trail",
+        "house_number": null,
+        "neighbourhood": "Holiday Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "North Bethesda",
+        "state": "Maryland",
+        "postcode": "20896",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Rock Creek Trail, Aspen Hill, Maryland, United States"
+    },
+    {
+      "lat": 39.04118544662979,
+      "lon": -77.07970654982906,
+      "geoinfo": {
+        "display_name": "11358, Mitscher Street, Rock Creek Palisades, North Kensington, Montgomery County, Maryland, 20895, United States",
+        "road": "Mitscher Street",
+        "house_number": "11358",
+        "neighbourhood": "Rock Creek Palisades",
+        "suburb": null,
+        "city_district": null,
+        "city": "North Kensington",
+        "state": "Maryland",
+        "postcode": "20895",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11358, Mitscher Street, Rock Creek Palisades, North Kensington, Montgomery County, Maryland, 20895, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:58.442200+00:00",
+  "_kind": "geo_samples"
+}

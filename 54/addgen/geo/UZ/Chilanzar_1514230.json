@@ -1,0 +1,65 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Chilanzar",
+  "geonameid": 1514230,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 41.2799018372289,
+      "lon": 69.16428758109043,
+      "geoinfo": {
+        "display_name": "Fazyltepa Street, Chilanzar-25, Uchtepa Tumani, Tashkent, Almazar district, 100000, Uzbekistan",
+        "road": "Fazyltepa Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tashkent",
+        "state": null,
+        "postcode": "100000",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Fazyltepa Street, Chilanzar, Uzbekistan"
+    },
+    {
+      "lat": 41.27683767137121,
+      "lon": 69.14076744011089,
+      "geoinfo": {
+        "display_name": "Urikzar, Uchtepa Tumani, Tashkent, Almazar district, 100000, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tashkent",
+        "state": null,
+        "postcode": "100000",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "849, Urikzar, Uchtepa Tumani, Tashkent, Almazar district, 100000, Uzbekistan"
+    },
+    {
+      "lat": 41.24307894130234,
+      "lon": 69.15626569280559,
+      "geoinfo": {
+        "display_name": "T. Tairov street, Eshanguzar, Zangiata District, Tashkent Region, 111809, Uzbekistan",
+        "road": "T. Tairov street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eshanguzar",
+        "state": "Tashkent Region",
+        "postcode": "111809",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "337, T. Tairov street, Eshanguzar, Zangiata District, Tashkent Region, 111809, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T06:32:35.096536+00:00",
+  "_kind": "geo_samples"
+}

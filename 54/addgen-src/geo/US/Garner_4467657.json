@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garner",
+  "geonameid": 4467657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.69721893601047,
+      "lon": -78.57433363201586,
+      "geoinfo": {
+        "display_name": "Greenfield Parkway, Garner, Wake County, North Carolina, 27529, United States",
+        "road": "Greenfield Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garner",
+        "state": "North Carolina",
+        "postcode": "27529",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Greenfield Parkway, Garner, North Carolina, United States"
+    },
+    {
+      "lat": 35.66845070263541,
+      "lon": -78.59916742569938,
+      "geoinfo": {
+        "display_name": "Anton Way, Wake County, North Carolina, 27529, United States",
+        "road": "Anton Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27529",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "289, Anton Way, Wake County, North Carolina, 27529, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:48:26.279313+00:00",
+  "_kind": "geo_samples"
+}

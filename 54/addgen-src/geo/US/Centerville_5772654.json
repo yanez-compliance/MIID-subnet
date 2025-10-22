@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Centerville",
+  "geonameid": 5772654,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.92561649545384,
+      "lon": -111.88908340352444,
+      "geoinfo": {
+        "display_name": "636, West Creekview Drive, Centerville, Davis County, Utah, 84014, United States",
+        "road": "West Creekview Drive",
+        "house_number": "636",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Centerville",
+        "state": "Utah",
+        "postcode": "84014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "636 West Creekview Drive, Centerville, Utah, United States"
+    },
+    {
+      "lat": 40.92250324307362,
+      "lon": -111.85273942163396,
+      "geoinfo": {
+        "display_name": "Parrish Creek Trail, Davis County, Utah, 84014, United States",
+        "road": "Parrish Creek Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": "84014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "088, Parrish Creek Trail, Davis County, Utah, 84014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:16.611020+00:00",
+  "_kind": "geo_samples"
+}

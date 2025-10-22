@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Bedēsa",
+  "geonameid": 342558,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.799545631263855,
+      "lon": 38.09387572475373,
+      "geoinfo": {
+        "display_name": "T'Ena Bilate Bota, Sidama, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sidama",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Bedēsa, Sidama, Ethiopia"
+    },
+    {
+      "lat": 6.809718571988838,
+      "lon": 38.08855536286447,
+      "geoinfo": {
+        "display_name": "Dimtu to Bilate, Dimtu, Wolayita, South Ethiopia Regional State, Ethiopia",
+        "road": "Dimtu to Bilate",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dimtu",
+        "state": "South Ethiopia Regional State",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "773, Dimtu to Bilate, Dimtu, Wolayita, 11612 South Ethiopia Regional State, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:36.501059+00:00",
+  "_kind": "geo_samples"
+}

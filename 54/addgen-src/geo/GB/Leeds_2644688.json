@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Leeds",
+  "geonameid": 2644688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.78942439280703,
+      "lon": -1.4851290864773539,
+      "geoinfo": {
+        "display_name": "Levens Close, Halton Moor, Leeds, West Yorkshire, England, LS15 0AT, United Kingdom",
+        "road": "Levens Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Halton Moor",
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS15 0AT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Levens Close, Leeds, England, United Kingdom"
+    },
+    {
+      "lat": 53.78590938625085,
+      "lon": -1.4990919605532067,
+      "geoinfo": {
+        "display_name": "Pontefract Lane, Osmondthorpe, Leeds, West Yorkshire, England, LS9 0SS, United Kingdom",
+        "road": "Pontefract Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Osmondthorpe",
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS9 0SS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Pontefract Lane, Osmondthorpe, Leeds, West Yorkshire, England, LS9 0SS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:48.028712+00:00",
+  "_kind": "geo_samples"
+}

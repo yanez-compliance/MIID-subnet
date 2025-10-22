@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bergkamen",
+  "geonameid": 2950344,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.648936653902766,
+      "lon": 7.631652385985534,
+      "geoinfo": {
+        "display_name": "Westenhellweg, Bergkamen, Kreis Unna, North Rhine-Westphalia, 59192, Germany",
+        "road": "Westenhellweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergkamen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59192",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Westenhellweg, Bergkamen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.60344982971547,
+      "lon": 7.654187296985365,
+      "geoinfo": {
+        "display_name": "Querstraße, Kamen-Mitte, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany",
+        "road": "Querstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kamen-Mitte",
+        "city_district": null,
+        "city": "Kamen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59174",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "889, Querstraße, Kamen-Mitte, Kamen, Kreis Unna, North Rhine-Westphalia, 59174, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:15:22.157770+00:00",
+  "_kind": "geo_samples"
+}

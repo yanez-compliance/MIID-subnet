@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Wāshīm",
+  "geonameid": 1252908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.123687701678932,
+      "lon": 77.13883709347024,
+      "geoinfo": {
+        "display_name": "Washim, Maharashtra, 444505, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Washim",
+        "state": "Maharashtra",
+        "postcode": "444505",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Wāshīm, Maharashtra, India"
+    },
+    {
+      "lat": 20.090442050730907,
+      "lon": 77.1292013993317,
+      "geoinfo": {
+        "display_name": "MDR47, Washim, Maharashtra, 444505, India",
+        "road": "MDR47",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Washim",
+        "state": "Maharashtra",
+        "postcode": "444505",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "MDR47, Wāshīm, 444505 Maharashtra, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:13.627421+00:00",
+  "_kind": "geo_samples"
+}

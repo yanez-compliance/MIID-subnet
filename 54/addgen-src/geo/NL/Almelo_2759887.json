@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Almelo",
+  "geonameid": 2759887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.36709561980641,
+      "lon": 6.612537797770426,
+      "geoinfo": {
+        "display_name": "237, Bedrijvenpark Twente, Twente, Almelo, Overijssel, Netherlands, 7602 KJ, Netherlands",
+        "road": "Bedrijvenpark Twente",
+        "house_number": "237",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Almelo",
+        "city": "Almelo",
+        "state": "Overijssel",
+        "postcode": "7602 KJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "237 Bedrijvenpark Twente, Almelo, Overijssel, The Netherlands"
+    },
+    {
+      "lat": 52.38926221361928,
+      "lon": 6.701263534654663,
+      "geoinfo": {
+        "display_name": "19, Slagenweg, Harbrinkhoek, Tubbergen, Overijssel, Netherlands, 7615 NJ, Netherlands",
+        "road": "Slagenweg",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harbrinkhoek",
+        "state": "Overijssel",
+        "postcode": "7615 NJ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "19, Slagenweg, Harbrinkhoek, Tubbergen, Overijssel, Netherlands, 7615 NJ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:50:08.329779+00:00",
+  "_kind": "geo_samples"
+}

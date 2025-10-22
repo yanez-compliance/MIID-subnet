@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kinston",
+  "geonameid": 4474436,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.26751922847627,
+      "lon": -77.53032588426919,
+      "geoinfo": {
+        "display_name": "Oak Lawn, Lenoir County, North Carolina, 28501, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "28501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kinston, North Carolina, United States"
+    },
+    {
+      "lat": 35.272722980171636,
+      "lon": -77.62695244626117,
+      "geoinfo": {
+        "display_name": "John Road, Hillcrest Farms, Kinston, Lenoir County, North Carolina, 28504, United States",
+        "road": "John Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kinston",
+        "state": "North Carolina",
+        "postcode": "28504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "658, John Road, Hillcrest Farms, Kinston, Lenoir County, North Carolina, 28504, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:10.564404+00:00",
+  "_kind": "geo_samples"
+}

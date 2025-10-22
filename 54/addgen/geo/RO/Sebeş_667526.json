@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Sebeş",
+  "geonameid": 667526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.942525105117625,
+      "lon": 23.58805106383414,
+      "geoinfo": {
+        "display_name": "DN7;DN1, Sebeș, Alba, 515800, Romania",
+        "road": "DN7;DN1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sebeș",
+        "state": null,
+        "postcode": "515800",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "DN7;DN1, Sebeş, Romania"
+    },
+    {
+      "lat": 45.91907866037536,
+      "lon": 23.555265500792615,
+      "geoinfo": {
+        "display_name": "Strada Valea Sebeșului, Petrești, Sebeș, Alba, 515850, Romania",
+        "road": "Strada Valea Sebeșului",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sebeș",
+        "state": null,
+        "postcode": "515850",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "876, Strada Valea Sebeșului, 515850 Sebeş, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:41:31.565998+00:00",
+  "_kind": "geo_samples"
+}

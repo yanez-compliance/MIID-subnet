@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Montréal",
+  "geonameid": 6077243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.52808948937306,
+      "lon": -73.54335561818738,
+      "geoinfo": {
+        "display_name": "Rue Port-de-Montréal, Hochelaga, Terminal Laurier - Logistec, Ville-Marie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H1W 2C2, Canada",
+        "road": "Rue Port-de-Montréal",
+        "house_number": null,
+        "neighbourhood": "Hochelaga",
+        "suburb": "Ville-Marie",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H1W 2C2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Port-de-Montréal, Montréal, Quebec, Canada"
+    },
+    {
+      "lat": 45.53316076855135,
+      "lon": -73.59785051462387,
+      "geoinfo": {
+        "display_name": "5869, Avenue De Chateaubriand, La Petite-Patrie, Rosemont–La Petite-Patrie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2S 2N3, Canada",
+        "road": "Avenue De Chateaubriand",
+        "house_number": "5869",
+        "neighbourhood": "La Petite-Patrie",
+        "suburb": "Rosemont–La Petite-Patrie",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H2S 2N3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "5869, Avenue De Chateaubriand, La Petite-Patrie, Rosemont–La Petite-Patrie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2S 2N3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:56.334546+00:00",
+  "_kind": "geo_samples"
+}

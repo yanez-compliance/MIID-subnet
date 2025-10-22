@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Paiporta",
+  "geonameid": 2513029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.400669603930325,
+      "lon": -0.38780183205909213,
+      "geoinfo": {
+        "display_name": "Catarroja, l'Horta Sud, Valencia, Valencian Community, 46470, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Catarroja",
+        "state": "Valencian Community",
+        "postcode": "46470",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Paiporta, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.45860674761955,
+      "lon": -0.404655752661428,
+      "geoinfo": {
+        "display_name": "Carrer Argenters, Vara de Quart, Patraix, Valencia, Comarca de València, Valencia, Valencian Community, 46014, Spain",
+        "road": "Carrer Argenters",
+        "house_number": null,
+        "neighbourhood": "Vara de Quart",
+        "suburb": "Patraix",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46014",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "283, Carrer Argenters, Vara de Quart, Patraix, Valencia, Comarca de València, Valencia, Valencian Community, 46014, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:36.228445+00:00",
+  "_kind": "geo_samples"
+}

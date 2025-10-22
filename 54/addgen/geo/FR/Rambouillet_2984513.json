@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Rambouillet",
+  "geonameid": 2984513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.61472068468058,
+      "lon": 1.8245812469161675,
+      "geoinfo": {
+        "display_name": "Orcemont, Rambouillet, Yvelines, Ile-de-France, Metropolitan France, 78125, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orcemont",
+        "state": "Ile-de-France",
+        "postcode": "78125",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rambouillet, Ile-de-France, France"
+    },
+    {
+      "lat": 48.638121571651794,
+      "lon": 1.8834568581090267,
+      "geoinfo": {
+        "display_name": "Chemin de Robert Joly, Clairefontaine-en-Yvelines, Rambouillet, Yvelines, Ile-de-France, Metropolitan France, 78120, France",
+        "road": "Chemin de Robert Joly",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clairefontaine-en-Yvelines",
+        "state": "Ile-de-France",
+        "postcode": "78120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "185, Chemin de Robert Joly, Clairefontaine-en-Yvelines, Rambouillet, Yvelines, Ile-de-France, Metropolitan France, 78120, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:39.501740+00:00",
+  "_kind": "geo_samples"
+}

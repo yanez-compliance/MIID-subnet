@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Jüchen",
+  "geonameid": 2894637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.070971401365554,
+      "lon": 6.521129569565108,
+      "geoinfo": {
+        "display_name": "Garzweiler, Jüchen, Rhein-Kreis Neuss, North Rhine-Westphalia, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Garzweiler",
+        "city": "Jüchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Garzweiler, Jüchen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.11444704974198,
+      "lon": 6.438811925452559,
+      "geoinfo": {
+        "display_name": "Regioparkring, Gewerbegebiet Regiopark, Sasserath, Süd, Mönchengladbach, North Rhine-Westphalia, 41199, Germany",
+        "road": "Regioparkring",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sasserath",
+        "city_district": "Süd",
+        "city": "Mönchengladbach",
+        "state": "North Rhine-Westphalia",
+        "postcode": "41199",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "964, Regioparkring, Gewerbegebiet Regiopark, Sasserath, Süd, Mönchengladbach, North Rhine-Westphalia, 41199, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:52.691146+00:00",
+  "_kind": "geo_samples"
+}

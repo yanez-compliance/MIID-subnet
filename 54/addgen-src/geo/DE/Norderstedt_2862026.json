@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Norderstedt",
+  "geonameid": 2862026,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.71051314967425,
+      "lon": 9.968133068953483,
+      "geoinfo": {
+        "display_name": "Syltkuhlen, Norderstedt, Kreis Segeberg, Schleswig-Holstein, 22846, Germany",
+        "road": "Syltkuhlen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norderstedt",
+        "state": "Schleswig-Holstein",
+        "postcode": "22846",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Syltkuhlen, Norderstedt, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.67609231464387,
+      "lon": 10.052584142076984,
+      "geoinfo": {
+        "display_name": "Harksheider Straße, Poppenbüttel, Wandsbek, Hamburg, 22399, Germany",
+        "road": "Harksheider Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Poppenbüttel",
+        "city_district": "Wandsbek",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22399",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "560, Harksheider Straße, Poppenbüttel, Wandsbek, Hamburg, 22399, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:53.565909+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Haven",
+  "geonameid": 4924104,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.101448923734964,
+      "lon": -84.98116801180811,
+      "geoinfo": {
+        "display_name": "12302, Parent Road, Five Points, New Haven, Allen County, Indiana, 46774, United States",
+        "road": "Parent Road",
+        "house_number": "12302",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Haven",
+        "state": "Indiana",
+        "postcode": "46774",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12302 Parent Road, New Haven, Indiana, United States"
+    },
+    {
+      "lat": 41.10803185145151,
+      "lon": -85.01871555767713,
+      "geoinfo": {
+        "display_name": "9569, Parent Road, New Haven, Allen County, Indiana, 46774, United States",
+        "road": "Parent Road",
+        "house_number": "9569",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Haven",
+        "state": "Indiana",
+        "postcode": "46774",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9569, Parent Road, New Haven, Allen County, Indiana, 46774, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:52.508996+00:00",
+  "_kind": "geo_samples"
+}

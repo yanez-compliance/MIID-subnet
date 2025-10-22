@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pavia",
+  "geonameid": 3171366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.177642815390726,
+      "lon": 9.164109202942646,
+      "geoinfo": {
+        "display_name": "52, Viale Lungoticino Sforza, Borgo Ticino, Pavia, Lombardy, 27100, Italy",
+        "road": "Viale Lungoticino Sforza",
+        "house_number": "52",
+        "neighbourhood": null,
+        "suburb": "Borgo Ticino",
+        "city_district": null,
+        "city": "Pavia",
+        "state": "Lombardy",
+        "postcode": "27100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "52 Viale Lungoticino Sforza, Pavia, Lombardy, Italy"
+    },
+    {
+      "lat": 45.18457268543088,
+      "lon": 9.11303132557951,
+      "geoinfo": {
+        "display_name": "Argine del Canarazzo, Cantarana, Carbonara al Ticino, Pavia, Lombardy, 27028, Italy",
+        "road": "Argine del Canarazzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carbonara al Ticino",
+        "state": "Lombardy",
+        "postcode": "27028",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "102, Argine del Canarazzo, Cantarana, Carbonara al Ticino, Pavia, Lombardy, 27028, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:38.155074+00:00",
+  "_kind": "geo_samples"
+}

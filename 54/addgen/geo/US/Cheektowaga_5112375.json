@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cheektowaga",
+  "geonameid": 5112375,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.93969614311118,
+      "lon": -78.73238832832226,
+      "geoinfo": {
+        "display_name": "Buffalo-Niagara International Airport, Aero Drive, Village of Williamsville, Town of Cheektowaga, Erie County, New York, 14225, United States",
+        "road": "Aero Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Williamsville",
+        "state": "New York",
+        "postcode": "14225",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Aero Drive, Cheektowaga, New York, United States"
+    },
+    {
+      "lat": 42.88015856769087,
+      "lon": -78.71766234121438,
+      "geoinfo": {
+        "display_name": "1066, Losson Road, Town of Cheektowaga, Erie County, New York, 14043, United States",
+        "road": "Losson Road",
+        "house_number": "1066",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Cheektowaga",
+        "state": "New York",
+        "postcode": "14043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1066, Losson Road, Town of Cheektowaga, Erie County, New York, 14043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:27.943485+00:00",
+  "_kind": "geo_samples"
+}

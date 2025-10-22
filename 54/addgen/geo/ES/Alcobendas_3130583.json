@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Alcobendas",
+  "geonameid": 3130583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.53312151286938,
+      "lon": -3.6128960839959414,
+      "geoinfo": {
+        "display_name": "M-12, La Moraleja, Alcobendas, Community of Madrid, 20108, Spain",
+        "road": "M-12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Moraleja",
+        "city_district": null,
+        "city": "Alcobendas",
+        "state": "Community of Madrid",
+        "postcode": "20108",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-12, Alcobendas, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.531412934947284,
+      "lon": -3.616925840464571,
+      "geoinfo": {
+        "display_name": "Vereda de las Peñas, La Moraleja, Alcobendas, Community of Madrid, 20108, Spain",
+        "road": "Vereda de las Peñas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Moraleja",
+        "city_district": null,
+        "city": "Alcobendas",
+        "state": "Community of Madrid",
+        "postcode": "20108",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "524, Vereda de las Peñas, La Moraleja, Alcobendas, Community of Madrid, 20108, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:39.654079+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aurora",
+  "geonameid": 5412347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.69326483448953,
+      "lon": -104.83078549722747,
+      "geoinfo": {
+        "display_name": "1300, South Potomac Street, Aurora, Arapahoe County, Colorado, 80012, United States",
+        "road": "South Potomac Street",
+        "house_number": "1300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Colorado",
+        "postcode": "80012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1300 South Potomac Street, Aurora, Colorado, United States"
+    },
+    {
+      "lat": 39.7346681448021,
+      "lon": -104.8592656680162,
+      "geoinfo": {
+        "display_name": "11067, East 12th Avenue, Aurora, Arapahoe County, Colorado, 80010, United States",
+        "road": "East 12th Avenue",
+        "house_number": "11067",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aurora",
+        "state": "Colorado",
+        "postcode": "80010",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11067, East 12th Avenue, Aurora, Arapahoe County, Colorado, 80010, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:11.982646+00:00",
+  "_kind": "geo_samples"
+}

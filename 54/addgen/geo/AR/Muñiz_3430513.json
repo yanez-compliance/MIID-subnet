@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Muñiz",
+  "geonameid": 3430513,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.56827430007259,
+      "lon": -58.72511775102695,
+      "geoinfo": {
+        "display_name": "Macabi, San José, Los Plátanos, Muñiz, Partido de San Miguel, Buenos Aires, 1663, Argentina",
+        "road": "San José",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Los Plátanos",
+        "city": "Muñiz",
+        "state": "Buenos Aires",
+        "postcode": "1663",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San José, Muñiz, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.56591491097346,
+      "lon": -58.7603210497171,
+      "geoinfo": {
+        "display_name": "Santa María, Santa Brígida, Santa María, Partido de San Miguel, Buenos Aires, 1736, Argentina",
+        "road": "Santa María",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Santa Brígida",
+        "city": "Santa María",
+        "state": "Buenos Aires",
+        "postcode": "1736",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "120, Santa María, Santa Brígida, Santa María, Partido de San Miguel, Buenos Aires, 1736, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:32.485167+00:00",
+  "_kind": "geo_samples"
+}

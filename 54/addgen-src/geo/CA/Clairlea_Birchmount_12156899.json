@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Clairlea-Birchmount",
+  "geonameid": 12156899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.68903743704106,
+      "lon": -79.23699934090375,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Clairlea-Birchmount, Ontario, Canada"
+    },
+    {
+      "lat": 43.72897504692423,
+      "lon": -79.26209330034973,
+      "geoinfo": {
+        "display_name": "55, Saugeen Crescent, Kennedy Park, Scarborough Southwest, Scarborough, Toronto, Golden Horseshoe, Ontario, M1K 3G2, Canada",
+        "road": "Saugeen Crescent",
+        "house_number": "55",
+        "neighbourhood": null,
+        "suburb": "Scarborough",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M1K 3G2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "55, Saugeen Crescent, Kennedy Park, Scarborough Southwest, Scarborough, Toronto, Golden Horseshoe, Ontario, M1K 3G2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:03.800500+00:00",
+  "_kind": "geo_samples"
+}

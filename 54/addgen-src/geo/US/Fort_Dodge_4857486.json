@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Dodge",
+  "geonameid": 4857486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.47692495065198,
+      "lon": -94.14115030631791,
+      "geoinfo": {
+        "display_name": "Mill Road, Cooper Township, Webster County, Iowa, 50501, United States",
+        "road": "Mill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": "50501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mill Road, Fort Dodge, Iowa, United States"
+    },
+    {
+      "lat": 42.508495066668495,
+      "lon": -94.19959719128627,
+      "geoinfo": {
+        "display_name": "Riverside Connection, Fort Dodge, Wahkonsa Township, Webster County, Iowa, 50501, United States",
+        "road": "Riverside Connection",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Dodge",
+        "state": "Iowa",
+        "postcode": "50501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "570, Riverside Connection, Fort Dodge, Wahkonsa Township, Webster County, Iowa, 50501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:15.236077+00:00",
+  "_kind": "geo_samples"
+}

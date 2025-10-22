@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stepney",
+  "geonameid": 2636948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.514933845449164,
+      "lon": -0.03498477538118022,
+      "geoinfo": {
+        "display_name": "Lascar Wharf Building, 21, Parnham Street, Ratcliffe, Limehouse, London Borough of Tower Hamlets, London, Greater London, England, E14 7FN, United Kingdom",
+        "road": "Parnham Street",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": "Limehouse",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E14 7FN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "21 Parnham Street, Stepney, England, United Kingdom"
+    },
+    {
+      "lat": 51.50618572258515,
+      "lon": -0.09085155944155826,
+      "geoinfo": {
+        "display_name": "Winchester Walk, Borough Market, The Borough, London Borough of Southwark, London, Greater London, England, SE1 9DE, United Kingdom",
+        "road": "Winchester Walk",
+        "house_number": null,
+        "neighbourhood": "Borough Market",
+        "suburb": "The Borough",
+        "city_district": "London Borough of Southwark",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE1 9DE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Winchester Walk, Borough Market, The Borough, London Borough of Southwark, London, Greater London, England, SE1 9DE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:32.950688+00:00",
+  "_kind": "geo_samples"
+}

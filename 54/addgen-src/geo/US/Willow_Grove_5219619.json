@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willow Grove",
+  "geonameid": 5219619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.15442224326037,
+      "lon": -75.15164519564841,
+      "geoinfo": {
+        "display_name": "Upper Dublin Township, Montgomery County, Pennsylvania, 19025, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Dublin Township",
+        "state": "Pennsylvania",
+        "postcode": "19025",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Willow Grove, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.10596225020321,
+      "lon": -75.12544967931827,
+      "geoinfo": {
+        "display_name": "Old York Road, Abington Township, Montgomery County, Pennsylvania, 19046, United States",
+        "road": "Old York Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abington Township",
+        "state": "Pennsylvania",
+        "postcode": "19046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "395, Old York Road, Abington Township, Montgomery County, Pennsylvania, 19046, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:26.589841+00:00",
+  "_kind": "geo_samples"
+}

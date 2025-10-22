@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 08",
+  "geonameid": 7284889,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.25905281258978,
+      "lon": 5.395411726237917,
+      "geoinfo": {
+        "display_name": "Intermarché Hyper, 365, Avenue Guy de Maupassant, Grand Saint-Giniez, Sainte-Anne, 8th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13008, France",
+        "road": "Avenue Guy de Maupassant",
+        "house_number": "365",
+        "neighbourhood": "Grand Saint-Giniez",
+        "suburb": "8th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13008",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "365 Avenue Guy de Maupassant, Marseille 08, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.26119910610213,
+      "lon": 5.382032586574909,
+      "geoinfo": {
+        "display_name": "Sentier Pédestre de l'Huveaune, La Plage, 8th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13008, France",
+        "road": "Sentier Pédestre de l'Huveaune",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "8th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13008",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Sentier Pédestre de l'Huveaune, La Plage, 8th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13008, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:46.816014+00:00",
+  "_kind": "geo_samples"
+}

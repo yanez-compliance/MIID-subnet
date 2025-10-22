@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Nuevo Imperial",
+  "geonameid": 3934239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.072041475982417,
+      "lon": -76.30018298252668,
+      "geoinfo": {
+        "display_name": "Augusto B. Leguia, Nuevo Imperial, Province of Cañete, Lima, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nuevo Imperial",
+        "state": "Lima",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Nuevo Imperial, Lima, Peru"
+    },
+    {
+      "lat": -13.045833041688775,
+      "lon": -76.34640513943152,
+      "geoinfo": {
+        "display_name": "Imperial, Cerro Alegre, Imperial, Province of Cañete, Lima, 15701, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Imperial",
+        "city_district": null,
+        "city": "Imperial",
+        "state": "Lima",
+        "postcode": "15701",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "154, Imperial, Cerro Alegre, Imperial, Province of Cañete, Lima, 15701, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:30:03.535958+00:00",
+  "_kind": "geo_samples"
+}

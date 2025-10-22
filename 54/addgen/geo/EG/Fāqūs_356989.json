@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Fāqūs",
+  "geonameid": 356989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.738891672650595,
+      "lon": 31.787496159052033,
+      "geoinfo": {
+        "display_name": "Fakous City, Eastern, 44641, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fakous City",
+        "state": "Eastern",
+        "postcode": "44641",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Fāqūs, Eastern, Egypt"
+    },
+    {
+      "lat": 30.757327215258286,
+      "lon": 31.826957025078,
+      "geoinfo": {
+        "display_name": "Al Maahad Al Dini Street, Faqous, Eastern, 44768, Egypt",
+        "road": "Al Maahad Al Dini Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Faqous",
+        "state": "Eastern",
+        "postcode": "44768",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "592, Al Maahad Al Dini Street, Faqous, Eastern, 44768, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:04.789218+00:00",
+  "_kind": "geo_samples"
+}

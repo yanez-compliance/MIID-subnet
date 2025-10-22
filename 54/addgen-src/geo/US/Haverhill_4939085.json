@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Haverhill",
+  "geonameid": 4939085,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.75932902183695,
+      "lon": -71.1048308259262,
+      "geoinfo": {
+        "display_name": "20;22, Riverbank Circle, Ward Hill, Haverhill, Essex County, Massachusetts, 01832, United States",
+        "road": "Riverbank Circle",
+        "house_number": "20;22",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haverhill",
+        "state": "Massachusetts",
+        "postcode": "01832",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20;22 Riverbank Circle, Haverhill, Massachusetts, United States"
+    },
+    {
+      "lat": 42.770594095065505,
+      "lon": -71.0195892879081,
+      "geoinfo": {
+        "display_name": "149, Main Street, Groveland, Essex County, Massachusetts, 01834, United States",
+        "road": "Main Street",
+        "house_number": "149",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Groveland",
+        "state": "Massachusetts",
+        "postcode": "01834",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "149, Main Street, Groveland, Essex County, Massachusetts, 01834, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:06.040250+00:00",
+  "_kind": "geo_samples"
+}

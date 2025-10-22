@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Teopisca",
+  "geonameid": 3515938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.504158383401812,
+      "lon": -92.47437129343434,
+      "geoinfo": {
+        "display_name": "Calle a Nuevo León, Teopisca, Chiapas, Mexico",
+        "road": "Calle a Nuevo León",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teopisca",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle a Nuevo León, Teopisca, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.527073026245354,
+      "lon": -92.4538582759211,
+      "geoinfo": {
+        "display_name": "Teopisca, Chiapas, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teopisca",
+        "state": "Chiapas",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "685, Teopisca, 06956 Chiapas, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:49:41.353487+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ML",
+  "country": "Mali",
+  "city": "Yorosso",
+  "geonameid": 2448442,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.355166122008818,
+      "lon": -4.769664887549776,
+      "geoinfo": {
+        "display_name": "Yorosso, Yorosso Cercle, Sikasso Region, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yorosso",
+        "state": "Sikasso Region",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "498, Yorosso, Yorosso Cercle, 24163 Sikasso Region, Mali"
+    },
+    {
+      "lat": 12.359631064425374,
+      "lon": -4.799014950990909,
+      "geoinfo": {
+        "display_name": "Diarakongo, Yorosso Cercle, Sikasso Region, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diarakongo",
+        "state": "Sikasso Region",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "886, Diarakongo, Yorosso Cercle, 04332 Sikasso Region, Mali"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:05.624192+00:00",
+  "_kind": "geo_samples"
+}

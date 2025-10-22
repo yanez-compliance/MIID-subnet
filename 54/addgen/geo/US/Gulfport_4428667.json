@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gulfport",
+  "geonameid": 4428667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.347761143961545,
+      "lon": -89.0824205855319,
+      "geoinfo": {
+        "display_name": "Gulfport, Harrison County, Mississippi, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulfport",
+        "state": "Mississippi",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Gulfport, Mississippi, United States"
+    },
+    {
+      "lat": 30.36977227821436,
+      "lon": -89.10928382936436,
+      "geoinfo": {
+        "display_name": "3906, 15th Street, Gulfport, Harrison County, Mississippi, 39501, United States",
+        "road": "15th Street",
+        "house_number": "3906",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulfport",
+        "state": "Mississippi",
+        "postcode": "39501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3906, 15th Street, Gulfport, Harrison County, Mississippi, 39501, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:48:02.110135+00:00",
+  "_kind": "geo_samples"
+}

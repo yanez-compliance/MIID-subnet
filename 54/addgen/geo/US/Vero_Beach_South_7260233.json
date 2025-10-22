@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vero Beach South",
+  "geonameid": 7260233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.605321118582793,
+      "lon": -80.45649989020723,
+      "geoinfo": {
+        "display_name": "Indian River County, Florida, 32968, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32968",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Vero Beach South, Florida, United States"
+    },
+    {
+      "lat": 27.57277550591351,
+      "lon": -80.40240529282974,
+      "geoinfo": {
+        "display_name": "16th Court Southwest, Florida Ridge, Indian River County, Florida, 32962, United States",
+        "road": "16th Court Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Florida Ridge",
+        "state": "Florida",
+        "postcode": "32962",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16th Court Southwest, Florida Ridge, Indian River County, Florida, 32962, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:14.884151+00:00",
+  "_kind": "geo_samples"
+}

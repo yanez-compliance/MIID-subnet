@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tula de Allende",
+  "geonameid": 3515064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.057725860177413,
+      "lon": -99.36027567099111,
+      "geoinfo": {
+        "display_name": "La Malinche 2da. sección, Tula, Tula de Allende, Hidalgo, 42814, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tula",
+        "state": "Hidalgo",
+        "postcode": "42814",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tula de Allende, Hidalgo, Mexico"
+    },
+    {
+      "lat": 20.030455549526337,
+      "lon": -99.32589439839471,
+      "geoinfo": {
+        "display_name": "Unidad Deportiva, San Marcos, Tula de Allende, Hidalgo, 42830, Mexico",
+        "road": "Unidad Deportiva",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Marcos",
+        "state": "Hidalgo",
+        "postcode": "42830",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "759, Unidad Deportiva, San Marcos, Tula de Allende, Hidalgo, 42830, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:53.716533+00:00",
+  "_kind": "geo_samples"
+}

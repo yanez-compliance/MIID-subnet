@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Charlottenburg",
+  "geonameid": 2940187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.52838927604873,
+      "lon": 13.259764963426331,
+      "geoinfo": {
+        "display_name": "Knüppeldamm, KGA Dahlemer Wiese Süd, Westend, Charlottenburg-Wilmersdorf, Berlin, 14050, Germany",
+        "road": "Knüppeldamm",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Westend",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "14050",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Knüppeldamm, Charlottenburg, Germany"
+    },
+    {
+      "lat": 52.54116042679422,
+      "lon": 13.322677121438037,
+      "geoinfo": {
+        "display_name": "Jugendstrafanstalt Berlin, Hüttigpfad, Charlottenburg-Nord, Charlottenburg-Wilmersdorf, Berlin, 13627, Germany",
+        "road": "Hüttigpfad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Charlottenburg-Nord",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13627",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "494, Hüttigpfad, 13627 Charlottenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:58.934779+00:00",
+  "_kind": "geo_samples"
+}

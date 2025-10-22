@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Milford",
+  "geonameid": 4943958,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.114857225495456,
+      "lon": -71.51350930219154,
+      "geoinfo": {
+        "display_name": "36, Plain Street, Hopedale, Worcester County, Massachusetts, 01574, United States",
+        "road": "Plain Street",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hopedale",
+        "state": "Massachusetts",
+        "postcode": "01574",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "36 Plain Street, Milford, Massachusetts, United States"
+    },
+    {
+      "lat": 42.16900434101606,
+      "lon": -71.48817166731942,
+      "geoinfo": {
+        "display_name": "Swamp Bypass, Braggville, Holliston, Middlesex County, Massachusetts, 01757, United States",
+        "road": "Swamp Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Holliston",
+        "state": "Massachusetts",
+        "postcode": "01757",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "814, Swamp Bypass, Milford, 01757 Massachusetts, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:12:13.007677+00:00",
+  "_kind": "geo_samples"
+}

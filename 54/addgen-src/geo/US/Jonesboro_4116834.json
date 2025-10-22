@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jonesboro",
+  "geonameid": 4116834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.8696971189196,
+      "lon": -90.70482264293187,
+      "geoinfo": {
+        "display_name": "104, Coleman Drive, Jonesboro, Craighead County, Arkansas, 72401, United States",
+        "road": "Coleman Drive",
+        "house_number": "104",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jonesboro",
+        "state": "Arkansas",
+        "postcode": "72401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "104 Coleman Drive, Jonesboro, Arkansas, United States"
+    },
+    {
+      "lat": 35.88447788092157,
+      "lon": -90.69829217555471,
+      "geoinfo": {
+        "display_name": "Big Creek Site 20 Reservoir, Foster Drive, Philadelphia, Jonesboro, Craighead County, Arkansas, 72401, United States",
+        "road": "Foster Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jonesboro",
+        "state": "Arkansas",
+        "postcode": "72401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Big Creek Site 20 Reservoir, Foster Drive, Philadelphia, Jonesboro, Craighead County, Arkansas, 72401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:31.542318+00:00",
+  "_kind": "geo_samples"
+}

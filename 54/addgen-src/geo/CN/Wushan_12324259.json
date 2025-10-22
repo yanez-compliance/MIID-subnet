@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wushan",
+  "geonameid": 12324259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.225293573025105,
+      "lon": 118.83306198881704,
+      "geoinfo": {
+        "display_name": "Wushan, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wushan, Shandong, China"
+    },
+    {
+      "lat": 36.22846692456282,
+      "lon": 118.85910561626477,
+      "geoinfo": {
+        "display_name": "青柘路, Anqiu City, Weifang, Shandong, China",
+        "road": "青柘路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anqiu City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "628, 青柘路, Anqiu City, Weifang, 43300 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:26.994477+00:00",
+  "_kind": "geo_samples"
+}

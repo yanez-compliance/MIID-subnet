@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Hoorn",
+  "geonameid": 2753638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.66899248648469,
+      "lon": 5.102863624895632,
+      "geoinfo": {
+        "display_name": "43, Noorderdracht, Oosterblokker, Drechterland, North Holland, Netherlands, 1696 AC, Netherlands",
+        "road": "Noorderdracht",
+        "house_number": "43",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oosterblokker",
+        "state": "North Holland",
+        "postcode": "1696 AC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "43 Noorderdracht, Hoorn, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.64928137882061,
+      "lon": 5.100146346184456,
+      "geoinfo": {
+        "display_name": "241, Robert Stolzhof, Kersenboogerd, Hoorn, North Holland, Netherlands, 1628 XA, Netherlands",
+        "road": "Robert Stolzhof",
+        "house_number": "241",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Hoorn",
+        "city": "Hoorn",
+        "state": "North Holland",
+        "postcode": "1628 XA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "241, Robert Stolzhof, Kersenboogerd, Hoorn, North Holland, Netherlands, 1628 XA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:29.897101+00:00",
+  "_kind": "geo_samples"
+}

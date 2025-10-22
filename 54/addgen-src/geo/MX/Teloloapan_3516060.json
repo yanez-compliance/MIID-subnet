@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Teloloapan",
+  "geonameid": 3516060,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.37045834658265,
+      "lon": -99.87019205477515,
+      "geoinfo": {
+        "display_name": "Calle Vicente Guerrero, Teloloapan, Guerrero, 40400, Mexico",
+        "road": "Calle Vicente Guerrero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teloloapan",
+        "state": "Guerrero",
+        "postcode": "40400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Vicente Guerrero, Teloloapan, Guerrero, Mexico"
+    },
+    {
+      "lat": 18.332479093926253,
+      "lon": -99.84286803616236,
+      "geoinfo": {
+        "display_name": "Rincón del Sauce, Teloloapan, Guerrero, 40400, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guerrero",
+        "postcode": "40400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "251, Rincón del Sauce, Teloloapan, Guerrero, 40400, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:01.744500+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Pensacola",
+  "geonameid": 4177908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.399718843581486,
+      "lon": -87.27795895740448,
+      "geoinfo": {
+        "display_name": "New Warrington Road, Warrington Village Apartments, Escambia County, Florida, 32511, United States",
+        "road": "New Warrington Road",
+        "house_number": null,
+        "neighbourhood": "Warrington Village Apartments",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32511",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "New Warrington Road, West Pensacola, Florida, United States"
+    },
+    {
+      "lat": 30.455306755154133,
+      "lon": -87.26661713739725,
+      "geoinfo": {
+        "display_name": "4532, Havre Way, Tristan Village, Brent, Escambia County, Florida, 32505, United States",
+        "road": "Havre Way",
+        "house_number": "4532",
+        "neighbourhood": null,
+        "suburb": "Brent",
+        "city_district": null,
+        "city": "Brent",
+        "state": "Florida",
+        "postcode": "32505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4532, Havre Way, Tristan Village, Brent, Escambia County, Florida, 32505, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:32.104316+00:00",
+  "_kind": "geo_samples"
+}

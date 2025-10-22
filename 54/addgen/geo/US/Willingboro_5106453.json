@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Willingboro",
+  "geonameid": 5106453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.04181240320063,
+      "lon": -74.86655316479043,
+      "geoinfo": {
+        "display_name": "78, Hazelwood Circle, Hawthorne Park, Willingboro Township, Burlington County, New Jersey, 08046, United States",
+        "road": "Hazelwood Circle",
+        "house_number": "78",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Willingboro Township",
+        "state": "New Jersey",
+        "postcode": "08046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "78 Hazelwood Circle, Willingboro, New Jersey, United States"
+    },
+    {
+      "lat": 40.0124467998985,
+      "lon": -74.90878139759478,
+      "geoinfo": {
+        "display_name": "Creek Road, Borton Landing, Moorestown Township, Burlington County, New Jersey, 08054, United States",
+        "road": "Creek Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moorestown Township",
+        "state": "New Jersey",
+        "postcode": "08054",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "818, Creek Road, Borton Landing, Moorestown Township, Burlington County, New Jersey, 08054, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:49.480859+00:00",
+  "_kind": "geo_samples"
+}

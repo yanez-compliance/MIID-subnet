@@ -1,0 +1,839 @@
+{
+  "country_code": "GM",
+  "country": "Gambia",
+  "city": "Kotu",
+  "geonameid": 2412833,
+  "target_addresses": 50,
+  "samples": [
+    {
+      "lat": 13.451032603354149,
+      "lon": -16.685804207464667,
+      "geoinfo": {
+        "display_name": "Latrikunda Yiringanya, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "Kotu, Kanifing Municipal Council, Gambia"
+    },
+    {
+      "lat": 13.432216241514535,
+      "lon": -16.69511992047342,
+      "geoinfo": {
+        "display_name": "Bakoteh, Sukuta, Kombo North/Saint Mary, Brikama, West Coast Division, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sukuta",
+        "state": "West Coast Division",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "Kotu, West Coast Division, Gambia"
+    },
+    {
+      "lat": 13.461474975894218,
+      "lon": -16.722540238337647,
+      "geoinfo": {
+        "display_name": "Kotu beach, Bakau New Town and Fajara, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kotu beach",
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "Kotu beach, Kotu, Kanifing Municipal Council, Gambia"
+    },
+    {
+      "lat": 13.44181928692072,
+      "lon": -16.71328204037798,
+      "geoinfo": {
+        "display_name": "Kololi, Kombo North/Saint Mary, Brikama, West Coast Division, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kololi",
+        "city_district": null,
+        "city": null,
+        "state": "West Coast Division",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "221, Kololi, Kombo North/Saint Mary, Brikama, 77711 West Coast Division, The Gambia"
+    },
+    {
+      "lat": 13.495005924057367,
+      "lon": -16.70700939629193,
+      "geoinfo": {
+        "display_name": "Fajara, Bakau New Town and Fajara, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fajara",
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "949, Fajara, Bakau New Town and Fajara, Serrekunda, 64723 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.43488400748727,
+      "lon": -16.71018009983316,
+      "geoinfo": {
+        "display_name": "Kerr Serign, Sukuta, Kombo North/Saint Mary, Brikama, West Coast Division, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kerr Serign",
+        "city_district": null,
+        "city": "Sukuta",
+        "state": "West Coast Division",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "101, Kerr Serign, Sukuta, Kombo North/Saint Mary, Brikama, 38862 West Coast Division, The Gambia"
+    },
+    {
+      "lat": 13.48124803972256,
+      "lon": -16.682158178953173,
+      "geoinfo": {
+        "display_name": "Bakau Newtown, Bakau, Bakau New Town and Fajara, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bakau Newtown",
+        "suburb": "Bakau",
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "617, Bakau Newtown, Bakau, Bakau New Town and Fajara, Serrekunda, 77202 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459411026270997,
+      "lon": -16.705063994453376,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "234, Kololi, Serrekunda, 32909 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.458387409303132,
+      "lon": -16.7066335545515,
+      "geoinfo": {
+        "display_name": "Bertil Harding Highway, Senegambia, Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": "Bertil Harding Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Senegambia",
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "581, Bertil Harding Highway, Senegambia, Kololi, Serrekunda, 65336 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.45824774795713,
+      "lon": -16.70466928560247,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "635, Kololi, Serrekunda, 07774 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461225048636674,
+      "lon": -16.704379782469218,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "467, Manjai Kunda, Serrekunda, 67919 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459282168647121,
+      "lon": -16.706184511139767,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "505, Kololi, Serrekunda, 14960 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461689070781928,
+      "lon": -16.705464649751605,
+      "geoinfo": {
+        "display_name": "Bakau New Town and Fajara, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "537, Bakau New Town and Fajara, Serrekunda, 89043 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.4574725935221,
+      "lon": -16.703483760582913,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "208, Manjai Kunda, Serrekunda, 94291 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461521286354895,
+      "lon": -16.706783823296146,
+      "geoinfo": {
+        "display_name": "Kotu Juction, Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": "Kotu Juction",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "911, Kotu Juction, Manjai Kunda, Serrekunda, 70167 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460384406980957,
+      "lon": -16.70502338497025,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "111, Manjai Kunda, Serrekunda, 38703 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460503370718543,
+      "lon": -16.70373773196931,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "075, Manjai Kunda, Serrekunda, 07777 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460355396007921,
+      "lon": -16.7056771598343,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "913, Manjai Kunda, Serrekunda, 28001 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.458584861417904,
+      "lon": -16.70712707620685,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "383, Kololi, Serrekunda, 01124 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.457998369254046,
+      "lon": -16.70474920648782,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "932, Manjai Kunda, Serrekunda, 90025 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459912106656006,
+      "lon": -16.704721619766865,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "344, Manjai Kunda, Serrekunda, 01768 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461518467171311,
+      "lon": -16.703813547954105,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "674, Manjai Kunda, Serrekunda, 71852 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460544106049667,
+      "lon": -16.704641610004394,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "379, Manjai Kunda, Serrekunda, 02434 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459794601583917,
+      "lon": -16.703388887244735,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "033, Manjai Kunda, Serrekunda, 99277 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.45793643161023,
+      "lon": -16.707417993023782,
+      "geoinfo": {
+        "display_name": "Bertil Harding Highway, Senegambia, Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": "Bertil Harding Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Senegambia",
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "189, Bertil Harding Highway, Senegambia, Kololi, Serrekunda, 19564 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460967130704278,
+      "lon": -16.70404539630275,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "591, Manjai Kunda, Serrekunda, 56899 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.457466944317982,
+      "lon": -16.705387676930414,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "916, Manjai Kunda, Serrekunda, 12237 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459581292858113,
+      "lon": -16.70280132366673,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "785, Manjai Kunda, Serrekunda, 62231 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459743605991303,
+      "lon": -16.703259300400305,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "530, Manjai Kunda, Serrekunda, 34754 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.45896081816863,
+      "lon": -16.707517171012658,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "342, Kololi, Serrekunda, 46419 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.46059267872777,
+      "lon": -16.70719130907508,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "960, Kololi, Serrekunda, 71641 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460009578541978,
+      "lon": -16.707227212534242,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "154, Kololi, Serrekunda, 75787 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459128504758116,
+      "lon": -16.702718435416667,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "800, Manjai Kunda, Serrekunda, 66500 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459070789830802,
+      "lon": -16.7072424704437,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "297, Kololi, Serrekunda, 16969 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.45863372336057,
+      "lon": -16.70525044157431,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "964, Kololi, Serrekunda, 11412 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.457751719325383,
+      "lon": -16.70628120689237,
+      "geoinfo": {
+        "display_name": "Bertil Harding Highway, Senegambia, Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": "Bertil Harding Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Senegambia",
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "513, Bertil Harding Highway, Senegambia, Kololi, Serrekunda, 50897 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460651895315948,
+      "lon": -16.70352374387926,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "120, Manjai Kunda, Serrekunda, 23909 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.457500214795829,
+      "lon": -16.705524349763397,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "417, Kololi, Serrekunda, 22559 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.457422625538298,
+      "lon": -16.703445180351977,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "630, Manjai Kunda, Serrekunda, 51270 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.460635205935533,
+      "lon": -16.707050883460205,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "219, Kololi, Serrekunda, 99140 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.4579458352401,
+      "lon": -16.703997838122625,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "691, Manjai Kunda, Serrekunda, 42662 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.459384411127285,
+      "lon": -16.70379228040961,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "131, Kololi, Serrekunda, 81051 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461395517924176,
+      "lon": -16.704043403595502,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "111, Manjai Kunda, Serrekunda, 09134 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461146403038788,
+      "lon": -16.705550000192297,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "498, Manjai Kunda, Serrekunda, 67773 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.458633096653417,
+      "lon": -16.707011621047123,
+      "geoinfo": {
+        "display_name": "Kololi, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "273, Kololi, Serrekunda, 96983 Kanifing Municipal Council, The Gambia"
+    },
+    {
+      "lat": 13.461181989182508,
+      "lon": -16.7039609053658,
+      "geoinfo": {
+        "display_name": "Manjai Kunda, Serrekunda, Kanifing Municipal Council, The Gambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Serrekunda",
+        "state": "Kanifing Municipal Council",
+        "postcode": null,
+        "country": "The Gambia",
+        "country_code": "gm"
+      },
+      "address": "467, Manjai Kunda, Serrekunda, 45460 Kanifing Municipal Council, The Gambia"
+    }
+  ],
+  "updated_at": "2025-10-21T23:45:02.592451+00:00",
+  "_kind": "geo_samples"
+}

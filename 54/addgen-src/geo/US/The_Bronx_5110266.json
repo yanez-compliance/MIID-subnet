@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "The Bronx",
+  "geonameid": 5110266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.83518441769496,
+      "lon": -73.88516315974562,
+      "geoinfo": {
+        "display_name": "Longfellow Avenue, Charlotte Gardens, The Bronx, Bronx County, New York, 10460, United States",
+        "road": "Longfellow Avenue",
+        "house_number": null,
+        "neighbourhood": "Charlotte Gardens",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10460",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Longfellow Avenue, The Bronx, New York, United States"
+    },
+    {
+      "lat": 40.859109084430095,
+      "lon": -73.82356462703531,
+      "geoinfo": {
+        "display_name": "Erskine Place, The Bronx, Bronx County, New York, 10475, United States",
+        "road": "Erskine Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10475",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "626, Erskine Place, The Bronx, Bronx County, New York, 10475, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:25.596078+00:00",
+  "_kind": "geo_samples"
+}

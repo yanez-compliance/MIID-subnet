@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Chapel Allerton",
+  "geonameid": 6695247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.84556745326975,
+      "lon": -1.5359469775882424,
+      "geoinfo": {
+        "display_name": "Scott Hall Road, Moortown, Leeds, West Yorkshire, England, LS17 6HJ, United Kingdom",
+        "road": "Scott Hall Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moortown",
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS17 6HJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Scott Hall Road, Chapel Allerton, England, United Kingdom"
+    },
+    {
+      "lat": 53.847504528248336,
+      "lon": -1.558520264881661,
+      "geoinfo": {
+        "display_name": "Moor Allerton Care Centre, 2, Cranmer Close, Camp Town, Moortown, Leeds, West Yorkshire, England, LS17 5PT, United Kingdom",
+        "road": "Cranmer Close",
+        "house_number": "2",
+        "neighbourhood": "Camp Town",
+        "suburb": "Moortown",
+        "city_district": null,
+        "city": "Leeds",
+        "state": "England",
+        "postcode": "LS17 5PT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moor Allerton Care Centre, 2, Cranmer Close, Camp Town, Moortown, Leeds, West Yorkshire, England, LS17 5PT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:49.213669+00:00",
+  "_kind": "geo_samples"
+}

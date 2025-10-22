@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wesel",
+  "geonameid": 2810678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.64846706229132,
+      "lon": 6.645869031581043,
+      "geoinfo": {
+        "display_name": "Kanu-Freunde-Lippe e.V. Wesel, 16, Am Lippehafen, Fusternberg, Wesel, Kreis Wesel, North Rhine-Westphalia, 46485, Germany",
+        "road": "Am Lippehafen",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Fusternberg",
+        "city_district": null,
+        "city": "Wesel",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46485",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Am Lippehafen, Wesel, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.63178003835392,
+      "lon": 6.612664386990791,
+      "geoinfo": {
+        "display_name": "Emmelsumer Straße, Lippedorf, Wesel, Kreis Wesel, North Rhine-Westphalia, 46485, Germany",
+        "road": "Emmelsumer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wesel",
+        "city_district": null,
+        "city": "Wesel",
+        "state": "North Rhine-Westphalia",
+        "postcode": "46485",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "877, Emmelsumer Straße, Lippedorf, Wesel, Kreis Wesel, North Rhine-Westphalia, 46485, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:43.414302+00:00",
+  "_kind": "geo_samples"
+}

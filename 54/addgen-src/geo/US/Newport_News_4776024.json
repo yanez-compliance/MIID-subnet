@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newport News",
+  "geonameid": 4776024,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.97455354193716,
+      "lon": -76.42305666087374,
+      "geoinfo": {
+        "display_name": "Harbor Access Road, Newport News Marine Terminals, Newport News, Virginia, 23607, United States",
+        "road": "Harbor Access Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newport News",
+        "state": "Virginia",
+        "postcode": "23607",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Harbor Access Road, Newport News, Virginia, United States"
+    },
+    {
+      "lat": 36.98274465594666,
+      "lon": -76.43300926769345,
+      "geoinfo": {
+        "display_name": "Fire Station 1, 201, 33rd Street, Newport News, Virginia, 23607, United States",
+        "road": "33rd Street",
+        "house_number": "201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newport News",
+        "state": "Virginia",
+        "postcode": "23607",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fire Station 1, 201, 33rd Street, Newport News, Virginia, 23607, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:50.430210+00:00",
+  "_kind": "geo_samples"
+}

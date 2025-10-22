@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schmallenberg",
+  "geonameid": 2838053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.172343304451076,
+      "lon": 8.288684455280286,
+      "geoinfo": {
+        "display_name": "3, Obringhausen, Ebbinghof, Schmallenberg, Hochsauerlandkreis, North Rhine-Westphalia, 57392, Germany",
+        "road": null,
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schmallenberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57392",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schmallenberg, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.14416560353098,
+      "lon": 8.310172972888838,
+      "geoinfo": {
+        "display_name": "Grafschafter Straße, Grafschaft, Schmallenberg, Hochsauerlandkreis, North Rhine-Westphalia, 57392, Germany",
+        "road": "Grafschafter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schmallenberg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "57392",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "119, Grafschafter Straße, Grafschaft, Schmallenberg, Hochsauerlandkreis, North Rhine-Westphalia, 57392, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:11.947049+00:00",
+  "_kind": "geo_samples"
+}

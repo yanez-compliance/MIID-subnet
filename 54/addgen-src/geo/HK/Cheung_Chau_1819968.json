@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Cheung Chau",
+  "geonameid": 1819968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.177882360111884,
+      "lon": 114.02922604588407,
+      "geoinfo": {
+        "display_name": "Cheung Chau, Islands District, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cheung Chau",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Cheung Chau, Cheung Chau, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.178483041183174,
+      "lon": 114.05731208841837,
+      "geoinfo": {
+        "display_name": "Islands District, New Territories, Hong Kong, 999077, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": "999077",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "299, Islands District, New Territories, Hong Kong, 999077, China"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:12.588951+00:00",
+  "_kind": "geo_samples"
+}

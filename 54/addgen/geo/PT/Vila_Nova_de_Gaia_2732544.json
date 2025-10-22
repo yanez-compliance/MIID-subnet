@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Vila Nova de Gaia",
+  "geonameid": 2732544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.15374954847349,
+      "lon": -8.602201276062424,
+      "geoinfo": {
+        "display_name": "Rua de Dom João IV, Moreira, Bonfim, Porto, 4000-035, Portugal",
+        "road": "Rua de Dom João IV",
+        "house_number": null,
+        "neighbourhood": "Moreira",
+        "suburb": "Bonfim",
+        "city_district": null,
+        "city": "Porto",
+        "state": null,
+        "postcode": "4000-035",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua de Dom João IV, Vila Nova de Gaia, Portugal"
+    },
+    {
+      "lat": 41.10112675408488,
+      "lon": -8.614938891838952,
+      "geoinfo": {
+        "display_name": "Rua do Rio do Forno, Vilar do Paraíso, Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto, 4405-872, Portugal",
+        "road": "Rua do Rio do Forno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vilar do Paraíso",
+        "city_district": "Mafamude e Vilar do Paraíso",
+        "city": "Vila Nova de Gaia",
+        "state": null,
+        "postcode": "4405-872",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua do Rio do Forno, Vilar do Paraíso, Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto, 4405-872, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T05:15:39.911332+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "White Oak",
+  "geonameid": 4373449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.04568666811024,
+      "lon": -76.94801631615849,
+      "geoinfo": {
+        "display_name": "11455, Cherry Hill Road, Beltsville, Prince George's County, Maryland, 20993, United States",
+        "road": "Cherry Hill Road",
+        "house_number": "11455",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beltsville",
+        "state": "Maryland",
+        "postcode": "20993",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11455 Cherry Hill Road, White Oak, Maryland, United States"
+    },
+    {
+      "lat": 39.065799473572,
+      "lon": -77.03461249255557,
+      "geoinfo": {
+        "display_name": "Randolph Road, Layhill South, Glenmont, Montgomery County, Maryland, 20904, United States",
+        "road": "Randolph Road",
+        "house_number": null,
+        "neighbourhood": "Layhill South",
+        "suburb": null,
+        "city_district": null,
+        "city": "Glenmont",
+        "state": "Maryland",
+        "postcode": "20904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "144, Randolph Road, Layhill South, Glenmont, Montgomery County, Maryland, 20904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:29.304446+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Bungo-Takada-shi",
+  "geonameid": 1851170,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.570065760342544,
+      "lon": 131.4717060134798,
+      "geoinfo": {
+        "display_name": "Bungo-Takada, Oita Prefecture, 879-0628, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bungo-Takada",
+        "state": null,
+        "postcode": "879-0628",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Bungo-Takada-shi, Japan"
+    },
+    {
+      "lat": 33.54498973323902,
+      "lon": 131.414057256641,
+      "geoinfo": {
+        "display_name": "Aomori, Usa, Oita Prefecture, 879-0628, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Usa",
+        "state": null,
+        "postcode": "879-0628",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Aomori, Usa, Oita Prefecture, 879-0628, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:49:21.031049+00:00",
+  "_kind": "geo_samples"
+}

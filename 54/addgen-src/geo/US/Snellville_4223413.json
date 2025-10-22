@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Snellville",
+  "geonameid": 4223413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.824474159880765,
+      "lon": -83.99466698477327,
+      "geoinfo": {
+        "display_name": "Temple Johnson Road, The Station, Snellville, Gwinnett County, Georgia, 30039, United States",
+        "road": "Temple Johnson Road",
+        "house_number": null,
+        "neighbourhood": "The Station",
+        "suburb": null,
+        "city_district": null,
+        "city": "Snellville",
+        "state": "Georgia",
+        "postcode": "30039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Temple Johnson Road, Snellville, Georgia, United States"
+    },
+    {
+      "lat": 33.87472723735647,
+      "lon": -84.0318122864072,
+      "geoinfo": {
+        "display_name": "2599, Settlers Court, Dogwood Plantation, Gwinnett County, Georgia, 30078, United States",
+        "road": "Settlers Court",
+        "house_number": "2599",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2599, Settlers Court, Dogwood Plantation, Gwinnett County, Georgia, 30078, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:49.786182+00:00",
+  "_kind": "geo_samples"
+}

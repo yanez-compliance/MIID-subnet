@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Tortona",
+  "geonameid": 3165370,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.88058693890252,
+      "lon": 8.882791712849954,
+      "geoinfo": {
+        "display_name": "Strada Privata Bruciata, Vho, Tortona, Alessandria, Piedmont, 15057, Italy",
+        "road": "Strada Privata Bruciata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tortona",
+        "state": "Piedmont",
+        "postcode": "15057",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Privata Bruciata, Tortona, Piedmont, Italy"
+    },
+    {
+      "lat": 44.858023542236324,
+      "lon": 8.892189817628386,
+      "geoinfo": {
+        "display_name": "Mombisaggio, Tortona, Alessandria, Piedmont, 15050, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tortona",
+        "state": "Piedmont",
+        "postcode": "15050",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "888, Mombisaggio, Tortona, Alessandria, Piedmont, 15050, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:32.545553+00:00",
+  "_kind": "geo_samples"
+}

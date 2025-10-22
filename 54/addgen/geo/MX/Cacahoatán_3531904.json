@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cacahoatán",
+  "geonameid": 3531904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.990129632345134,
+      "lon": -92.16664310721659,
+      "geoinfo": {
+        "display_name": "Oxxo, 8, 4 Calle Oriente, Cacahoatán, Chiapas, 30890, Mexico",
+        "road": "4 Calle Oriente",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cacahoatán",
+        "state": "Chiapas",
+        "postcode": "30890",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "8 4 Calle Oriente, Cacahoatán, Chiapas, Mexico"
+    },
+    {
+      "lat": 15.002199640234103,
+      "lon": -92.20822102301803,
+      "geoinfo": {
+        "display_name": "Carrillo Puerto Sur, Carrillo Puerto, Tapachula, Chiapas, 30890, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrillo Puerto",
+        "state": "Chiapas",
+        "postcode": "30890",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "332, Carrillo Puerto Sur, Carrillo Puerto, Tapachula, Chiapas, 30890, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:20.681519+00:00",
+  "_kind": "geo_samples"
+}

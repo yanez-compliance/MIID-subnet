@@ -1,0 +1,65 @@
+{
+  "country_code": "NZ",
+  "country": "New Zealand",
+  "city": "North Shore",
+  "geonameid": 2185964,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -36.78012770009198,
+      "lon": 174.79195226083542,
+      "geoinfo": {
+        "display_name": "Takapuna, Devonport-Takapuna, Auckland, 0622, New Zealand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Takapuna",
+        "city_district": null,
+        "city": "Devonport-Takapuna",
+        "state": "Auckland",
+        "postcode": "0622",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "Takapuna, North Shore, Auckland, New Zealand"
+    },
+    {
+      "lat": -36.84382608997488,
+      "lon": 174.75381684413927,
+      "geoinfo": {
+        "display_name": "Gaunt Street, Victoria Quarter, Wynyard Quarter, Saint Marys Bay, Waitematā, Auckland, 1001, New Zealand",
+        "road": "Gaunt Street",
+        "house_number": null,
+        "neighbourhood": "Victoria Quarter",
+        "suburb": "Saint Marys Bay",
+        "city_district": null,
+        "city": "Waitematā",
+        "state": "Auckland",
+        "postcode": "1001",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "392, Gaunt Street, Victoria Quarter, Wynyard Quarter, Saint Marys Bay, Waitematā, Auckland, 1001, New Zealand"
+    },
+    {
+      "lat": -36.80576284176003,
+      "lon": 174.71457942121606,
+      "geoinfo": {
+        "display_name": "6, Brussells Place, Birkenhead, Kaipātiki, Auckland, 0626, New Zealand",
+        "road": "Brussells Place",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Birkenhead",
+        "city_district": null,
+        "city": "Kaipātiki",
+        "state": "Auckland",
+        "postcode": "0626",
+        "country": "New Zealand",
+        "country_code": "nz"
+      },
+      "address": "6, Brussells Place, Birkenhead, Kaipātiki, Auckland, 0626, New Zealand"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:34.689057+00:00",
+  "_kind": "geo_samples"
+}

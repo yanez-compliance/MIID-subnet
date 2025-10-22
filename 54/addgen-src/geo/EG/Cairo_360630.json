@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Cairo",
+  "geonameid": 360630,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 30.07814801292867,
+      "lon": 31.241385436855857,
+      "geoinfo": {
+        "display_name": "15, Asaad Street, El Mabyada, Rod El-Farag, Cairo, 11689, Egypt",
+        "road": "Asaad Street",
+        "house_number": "15",
+        "neighbourhood": "El Mabyada",
+        "suburb": "Rod El-Farag",
+        "city_district": null,
+        "city": "Cairo",
+        "state": "Cairo",
+        "postcode": "11689",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "15 Asaad Street, Cairo, Cairo, Egypt"
+    },
+    {
+      "lat": 30.047907442153303,
+      "lon": 31.2338148165733,
+      "geoinfo": {
+        "display_name": "Egyptian Museum, Merit Pasha Street, Al Ismalia, Bab al Luq, Cairo, 11556, Egypt",
+        "road": "Merit Pasha Street",
+        "house_number": null,
+        "neighbourhood": "Al Ismalia",
+        "suburb": "Bab al Luq",
+        "city_district": null,
+        "city": "Cairo",
+        "state": "Cairo",
+        "postcode": "11556",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "685, Merit Pasha Street, Cairo, 11556 Cairo, Egypt"
+    },
+    {
+      "lat": 30.092076311768384,
+      "lon": 31.228743567551525,
+      "geoinfo": {
+        "display_name": "Kornish Al Nil Street, Imbaba, Warraq al Hadar, Giza, 12652, Egypt",
+        "road": "Kornish Al Nil Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Imbaba",
+        "city_district": null,
+        "city": "Warraq al Hadar",
+        "state": "Giza",
+        "postcode": "12652",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "271, Kornish Al Nil Street, Imbaba, Warraq al Hadar, Giza, 12652, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:54.357720+00:00",
+  "_kind": "geo_samples"
+}

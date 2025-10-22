@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Watertown",
+  "geonameid": 5278005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.18025734264814,
+      "lon": -88.699641092567,
+      "geoinfo": {
+        "display_name": "1374, Richards Avenue, Watertown, Jefferson County, Wisconsin, 53094, United States",
+        "road": "Richards Avenue",
+        "house_number": "1374",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Watertown",
+        "state": "Wisconsin",
+        "postcode": "53094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1374 Richards Avenue, Watertown, Wisconsin, United States"
+    },
+    {
+      "lat": 43.15225109676555,
+      "lon": -88.73098428637074,
+      "geoinfo": {
+        "display_name": "Airport Road, Ebenezer, Watertown, Jefferson County, Wisconsin, 53094, United States",
+        "road": "Airport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Watertown",
+        "state": "Wisconsin",
+        "postcode": "53094",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "807, Airport Road, Ebenezer, Watertown, Jefferson County, Wisconsin, 53094, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:20.506385+00:00",
+  "_kind": "geo_samples"
+}

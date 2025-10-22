@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huixtla",
+  "geonameid": 3526855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.125363033684208,
+      "lon": -92.46256220962208,
+      "geoinfo": {
+        "display_name": "Tuzantán, Chiapas, 30640, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chiapas",
+        "postcode": "30640",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huixtla, Chiapas, Mexico"
+    },
+    {
+      "lat": 15.182050703336625,
+      "lon": -92.46319164442255,
+      "geoinfo": {
+        "display_name": "Huixtla, Chiapas, 30640, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huixtla",
+        "state": "Chiapas",
+        "postcode": "30640",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "826, Huixtla, Chiapas, 30640, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:35.408240+00:00",
+  "_kind": "geo_samples"
+}

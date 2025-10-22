@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ciudad Madero",
+  "geonameid": 3530594,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.249934186616656,
+      "lon": -97.83543485641688,
+      "geoinfo": {
+        "display_name": "Avenida Monterrey, Ciudad Madero, Tamaulipas, 89490, Mexico",
+        "road": "Avenida Monterrey",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Madero",
+        "state": "Tamaulipas",
+        "postcode": "89490",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Monterrey, Ciudad Madero, Tamaulipas, Mexico"
+    },
+    {
+      "lat": 22.22701271882317,
+      "lon": -97.86529229694769,
+      "geoinfo": {
+        "display_name": "Privada Miguel Hidalgo y Costilla, Tampico, Tamaulipas, 89160, Mexico",
+        "road": "Privada Miguel Hidalgo y Costilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tampico",
+        "state": "Tamaulipas",
+        "postcode": "89160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "693, Privada Miguel Hidalgo y Costilla, Tampico, Tamaulipas, 89160, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:09.553889+00:00",
+  "_kind": "geo_samples"
+}

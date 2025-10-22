@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Crystal Lake",
+  "geonameid": 4889229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.23465306666624,
+      "lon": -88.30277317093866,
+      "geoinfo": {
+        "display_name": "300, Exchange Drive, Crystal Lake, McHenry County, Illinois, 60014, United States",
+        "road": "Exchange Drive",
+        "house_number": "300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crystal Lake",
+        "state": "Illinois",
+        "postcode": "60014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "300 Exchange Drive, Crystal Lake, Illinois, United States"
+    },
+    {
+      "lat": 42.24472955214079,
+      "lon": -88.29547538595065,
+      "geoinfo": {
+        "display_name": "712, Blackthorn Drive, Crystal Lake, McHenry County, Illinois, 60014, United States",
+        "road": "Blackthorn Drive",
+        "house_number": "712",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crystal Lake",
+        "state": "Illinois",
+        "postcode": "60014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "712, Blackthorn Drive, Crystal Lake, McHenry County, Illinois, 60014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:00.325704+00:00",
+  "_kind": "geo_samples"
+}

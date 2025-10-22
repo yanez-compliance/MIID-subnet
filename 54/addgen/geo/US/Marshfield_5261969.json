@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marshfield",
+  "geonameid": 5261969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.63761964223549,
+      "lon": -90.19606641324818,
+      "geoinfo": {
+        "display_name": "South Lincoln Avenue, Town of Lincoln, Wood County, Wisconsin, 54449, United States",
+        "road": "South Lincoln Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Lincoln",
+        "state": "Wisconsin",
+        "postcode": "54449",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Lincoln Avenue, Marshfield, Wisconsin, United States"
+    },
+    {
+      "lat": 44.66819719072143,
+      "lon": -90.18988575954609,
+      "geoinfo": {
+        "display_name": "327, South Adams Avenue, Marshfield, Wood County, Wisconsin, 54449, United States",
+        "road": "South Adams Avenue",
+        "house_number": "327",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marshfield",
+        "state": "Wisconsin",
+        "postcode": "54449",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "327, South Adams Avenue, Marshfield, Wood County, Wisconsin, 54449, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:59.957417+00:00",
+  "_kind": "geo_samples"
+}

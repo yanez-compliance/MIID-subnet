@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Hollywood",
+  "geonameid": 4177834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.05930275374696,
+      "lon": -80.16354878724628,
+      "geoinfo": {
+        "display_name": "I 95, Dania Beach, Broward County, Florida, 33004, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dania Beach",
+        "state": "Florida",
+        "postcode": "33004",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, West Hollywood, Florida, United States"
+    },
+    {
+      "lat": 26.014449477069647,
+      "lon": -80.18977556696731,
+      "geoinfo": {
+        "display_name": "508, North 46th Avenue, West Hollywood, Hollywood, Broward County, Florida, 33021, United States",
+        "road": "North 46th Avenue",
+        "house_number": "508",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hollywood",
+        "state": "Florida",
+        "postcode": "33021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "508, North 46th Avenue, West Hollywood, Hollywood, Broward County, Florida, 33021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:47.435565+00:00",
+  "_kind": "geo_samples"
+}

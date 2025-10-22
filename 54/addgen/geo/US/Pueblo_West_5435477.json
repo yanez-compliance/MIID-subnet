@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pueblo West",
+  "geonameid": 5435477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.34842450788761,
+      "lon": -104.75257143100532,
+      "geoinfo": {
+        "display_name": "West Bywood Drive, Pueblo West, Pueblo County, Colorado, 81007, United States",
+        "road": "West Bywood Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pueblo West",
+        "state": "Colorado",
+        "postcode": "81007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Bywood Drive, Pueblo West, Colorado, United States"
+    },
+    {
+      "lat": 38.32637000509451,
+      "lon": -104.72683834863878,
+      "geoinfo": {
+        "display_name": "447, East Stardust Drive, Pueblo West, Pueblo County, Colorado, 81007, United States",
+        "road": "East Stardust Drive",
+        "house_number": "447",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pueblo West",
+        "state": "Colorado",
+        "postcode": "81007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "447, East Stardust Drive, Pueblo West, Pueblo County, Colorado, 81007, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:12:41.895325+00:00",
+  "_kind": "geo_samples"
+}

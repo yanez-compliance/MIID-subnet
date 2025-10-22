@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Vasastaden",
+  "geonameid": 2664740,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 59.349897536340634,
+      "lon": 18.02634305151972,
+      "geoinfo": {
+        "display_name": "Solnavägen, Solna Kyrkby, Solna, Solna kommun, Stockholm County, 171 64, Sweden",
+        "road": "Solnavägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Solna Kyrkby",
+        "city_district": null,
+        "city": "Solna",
+        "state": null,
+        "postcode": "171 64",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Solnavägen, Vasastaden, Sweden"
+    },
+    {
+      "lat": 59.321804157867774,
+      "lon": 18.050027203463546,
+      "geoinfo": {
+        "display_name": "Söder Mälarstrandskajen, Zinkensdamm, Södermalm, Södermalms stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 118 25, Sweden",
+        "road": "Söder Mälarstrandskajen",
+        "house_number": null,
+        "neighbourhood": "Zinkensdamm",
+        "suburb": "Södermalm",
+        "city_district": "Södermalms stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "118 25",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Söder Mälarstrandskajen, Zinkensdamm, Södermalm, Södermalms stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 118 25, Sweden"
+    },
+    {
+      "lat": 59.343760787622216,
+      "lon": 18.04951163190036,
+      "geoinfo": {
+        "display_name": "25E, Norrtullsgatan, Sabbatsberg, Vasastaden, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 113 27, Sweden",
+        "road": "Norrtullsgatan",
+        "house_number": "25E",
+        "neighbourhood": "Sabbatsberg",
+        "suburb": "Vasastaden",
+        "city_district": "Norra innerstadens stadsdelsområde",
+        "city": "Stockholm",
+        "state": null,
+        "postcode": "113 27",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "25E, Norrtullsgatan, Sabbatsberg, Vasastaden, Norra innerstadens stadsdelsområde, Stockholm, Stockholm Municipality, Stockholm County, 113 27, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:46.943166+00:00",
+  "_kind": "geo_samples"
+}

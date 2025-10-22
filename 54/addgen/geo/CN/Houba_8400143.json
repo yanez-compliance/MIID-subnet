@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Houba",
+  "geonameid": 8400143,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.206259066606663,
+      "lon": 108.45941010690977,
+      "geoinfo": {
+        "display_name": "Duoqiao, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Duoqiao",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Houba, Chongqing, China"
+    },
+    {
+      "lat": 31.21846536788953,
+      "lon": 108.49254162415684,
+      "geoinfo": {
+        "display_name": "巫云开高速, Houba, Kaizhou District, Chongqing, China",
+        "road": "巫云开高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Houba",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "019, 巫云开高速, Houba, Kaizhou District, 32309 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:13.223739+00:00",
+  "_kind": "geo_samples"
+}

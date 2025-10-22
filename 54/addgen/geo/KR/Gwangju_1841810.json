@@ -1,0 +1,83 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Gwangju",
+  "geonameid": 1841810,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 37.399222873121474,
+      "lon": 127.27736781433936,
+      "geoinfo": {
+        "display_name": "Ssangnyeong-dong, Daessangnyeong-ri, Gwangju-si, Gyeonggi, 12791, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gwangju-si",
+        "state": null,
+        "postcode": "12791",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Gwangju, South Korea"
+    },
+    {
+      "lat": 37.3844500424947,
+      "lon": 127.24211012870201,
+      "geoinfo": {
+        "display_name": "광남1동, Gwangju-si, Gyeonggi, 12777, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "광남1동",
+        "city": "Gwangju-si",
+        "state": null,
+        "postcode": "12777",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "광남1동, 12777 Gwangju, South Korea"
+    },
+    {
+      "lat": 37.41638842887692,
+      "lon": 127.27079000410045,
+      "geoinfo": {
+        "display_name": "란이네 2호점, 110, Gyeongancheon-ro, Songjeong-dong, Chowol-eup, Gwangju-si, 12740, South Korea",
+        "road": "Gyeongancheon-ro",
+        "house_number": "110",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gwangju-si",
+        "state": null,
+        "postcode": "12740",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "110, Gyeongancheon-ro, 12740 Gwangju, South Korea"
+    },
+    {
+      "lat": 37.393621834602286,
+      "lon": 127.23835918448569,
+      "geoinfo": {
+        "display_name": "Seongnamicheon-ro, Jangji-dong, 광남1동, Gwangju-si, Gyeonggi, 12780, South Korea",
+        "road": "Seongnamicheon-ro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "광남1동",
+        "city": "Gwangju-si",
+        "state": null,
+        "postcode": "12780",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "900, Seongnamicheon-ro, 12780 Gwangju, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:35.449529+00:00",
+  "_kind": "geo_samples"
+}

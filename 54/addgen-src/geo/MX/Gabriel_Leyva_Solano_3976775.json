@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Gabriel Leyva Solano",
+  "geonameid": 3976775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.63555375186878,
+      "lon": -108.63110129018858,
+      "geoinfo": {
+        "display_name": "Sin 205, Campo Figueroa, Guasave, Sinaloa, Mexico",
+        "road": "Sin 205",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sinaloa",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Sin 205, Gabriel Leyva Solano, Sinaloa, Mexico"
+    },
+    {
+      "lat": 25.62552248259858,
+      "lon": -108.61631986638677,
+      "geoinfo": {
+        "display_name": "Guasave, Sinaloa, 81122, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sinaloa",
+        "postcode": "81122",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "170, Guasave, Sinaloa, 81122, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:21.753794+00:00",
+  "_kind": "geo_samples"
+}

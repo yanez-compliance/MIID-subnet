@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Verl",
+  "geonameid": 2817576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.919537806758484,
+      "lon": 8.488166498320162,
+      "geoinfo": {
+        "display_name": "175, Paderborner Straße, Gütersloh, Kreis Gütersloh, North Rhine-Westphalia, 33335, Germany",
+        "road": "Paderborner Straße",
+        "house_number": "175",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gütersloh",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33335",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "175 Paderborner Straße, Verl, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.86676332515147,
+      "lon": 8.469075220629287,
+      "geoinfo": {
+        "display_name": "129, Chromstraße, Verl, Kreis Gütersloh, North Rhine-Westphalia, 33415, Germany",
+        "road": "Chromstraße",
+        "house_number": "129",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Verl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33415",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "129, Chromstraße, Verl, Kreis Gütersloh, North Rhine-Westphalia, 33415, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:39.347973+00:00",
+  "_kind": "geo_samples"
+}

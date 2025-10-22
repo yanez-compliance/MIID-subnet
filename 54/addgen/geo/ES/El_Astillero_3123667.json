@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Astillero",
+  "geonameid": 3123667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.399661284060684,
+      "lon": -3.819634802483534,
+      "geoinfo": {
+        "display_name": "Casa Yeyo, 3, Calle del General Francisco Díaz Pimienta, Guarnizo, El Astillero, Cantabria, 39611, Spain",
+        "road": "Calle del General Francisco Díaz Pimienta",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Astillero",
+        "state": "Cantabria",
+        "postcode": "39611",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "3 Calle del General Francisco Díaz Pimienta, El Astillero, Cantabria, Spain"
+    },
+    {
+      "lat": 43.37552228066385,
+      "lon": -3.865246533863275,
+      "geoinfo": {
+        "display_name": "Villanueva-Riosapero, Riosapero, Villanueva de Villaescusa, Villaescusa, Cantabria, 39418, Spain",
+        "road": "Villanueva-Riosapero",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villaescusa",
+        "state": "Cantabria",
+        "postcode": "39418",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "273, Villanueva-Riosapero, Riosapero, Villanueva de Villaescusa, Villaescusa, Cantabria, 39418, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:13.944593+00:00",
+  "_kind": "geo_samples"
+}

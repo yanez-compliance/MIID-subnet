@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schweinfurt",
+  "geonameid": 2834498,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.054608767341385,
+      "lon": 10.164251974621024,
+      "geoinfo": {
+        "display_name": "Mc Clellan Avenue, Geldersheim, Landkreis Schweinfurt, Bavaria, 97505, Germany",
+        "road": "Mc Clellan Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Geldersheim",
+        "state": "Bavaria",
+        "postcode": "97505",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Mc Clellan Avenue, Schweinfurt, Bavaria, Germany"
+    },
+    {
+      "lat": 50.02993597505449,
+      "lon": 10.222615028958844,
+      "geoinfo": {
+        "display_name": "Walther, 2, Hafenstraße, Hafen-West, Schweinfurt, Bavaria, 97424, Germany",
+        "road": "Hafenstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Hafen-West",
+        "city_district": null,
+        "city": "Schweinfurt",
+        "state": "Bavaria",
+        "postcode": "97424",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Walther, 2, Hafenstraße, Hafen-West, Schweinfurt, Bavaria, 97424, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:40.269571+00:00",
+  "_kind": "geo_samples"
+}

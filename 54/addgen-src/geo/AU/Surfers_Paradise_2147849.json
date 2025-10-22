@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Surfers Paradise",
+  "geonameid": 2147849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.96350661563356,
+      "lon": 153.44791012006704,
+      "geoinfo": {
+        "display_name": "Queensland, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Queensland",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Surfers Paradise, Queensland, Australia"
+    },
+    {
+      "lat": -27.999169619959442,
+      "lon": 153.43509813867317,
+      "geoinfo": {
+        "display_name": "Gold Coast Oceanway, Surfers Paradise, Gold Coast City, Queensland, 4217, Australia",
+        "road": "Gold Coast Oceanway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Surfers Paradise",
+        "city_district": null,
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4217",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "025, Gold Coast Oceanway, Surfers Paradise, Gold Coast City, Queensland, 4217, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:41.658847+00:00",
+  "_kind": "geo_samples"
+}

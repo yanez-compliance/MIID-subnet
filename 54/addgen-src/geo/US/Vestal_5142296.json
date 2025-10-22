@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vestal",
+  "geonameid": 5142296,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.06584352749396,
+      "lon": -76.02094559395685,
+      "geoinfo": {
+        "display_name": "135, Foster Road, Town of Vestal, Broome County, New York, 13850, United States",
+        "road": "Foster Road",
+        "house_number": "135",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Vestal",
+        "state": "New York",
+        "postcode": "13850",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "135 Foster Road, Vestal, New York, United States"
+    },
+    {
+      "lat": 42.073359801204255,
+      "lon": -76.1019783549421,
+      "geoinfo": {
+        "display_name": "Southern Tier Expressway, Ross Corners, Town of Vestal, Broome County, New York, United States",
+        "road": "Southern Tier Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Vestal",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "829, Southern Tier Expressway, Ross Corners, Town of Vestal, Broome County, 68240 New York, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:34.677644+00:00",
+  "_kind": "geo_samples"
+}

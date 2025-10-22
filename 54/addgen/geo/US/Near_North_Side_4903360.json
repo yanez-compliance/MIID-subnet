@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Near North Side",
+  "geonameid": 4903360,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.92197406605689,
+      "lon": -87.60659626104247,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Near North Side, Illinois, United States"
+    },
+    {
+      "lat": 41.94059099031488,
+      "lon": -87.64645754248944,
+      "geoinfo": {
+        "display_name": "651-655, West Melrose Street, Lakeview East, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States",
+        "road": "West Melrose Street",
+        "house_number": "651-655",
+        "neighbourhood": "Lakeview East",
+        "suburb": "Lake View",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60657",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "651-655, West Melrose Street, Lakeview East, Lake View, Chicago, Lake View Township, Cook County, Illinois, 60657, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:59.899120+00:00",
+  "_kind": "geo_samples"
+}

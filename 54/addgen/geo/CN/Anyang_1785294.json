@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Anyang",
+  "geonameid": 1785294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.079586102750184,
+      "lon": 114.38709797968008,
+      "geoinfo": {
+        "display_name": "明福街, Zhonghualu Subdistrict, Wenfeng District, Anyang, Henan, 455000, China",
+        "road": "明福街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zhonghualu Subdistrict",
+        "city_district": null,
+        "city": null,
+        "state": "Henan",
+        "postcode": "455000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "明福街, Anyang, Henan, China"
+    },
+    {
+      "lat": 36.058422452041604,
+      "lon": 114.39156145251849,
+      "geoinfo": {
+        "display_name": "永明路, Zhonghualu Subdistrict, 开发区银杏大街街道, Wenfeng District, Anyang, Henan, 455000, China",
+        "road": "永明路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zhonghualu Subdistrict",
+        "city_district": null,
+        "city": "开发区银杏大街街道",
+        "state": "Henan",
+        "postcode": "455000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "275, 永明路, Zhonghualu Subdistrict, 开发区银杏大街街道, Wenfeng District, Anyang, Henan, 455000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:09.559215+00:00",
+  "_kind": "geo_samples"
+}

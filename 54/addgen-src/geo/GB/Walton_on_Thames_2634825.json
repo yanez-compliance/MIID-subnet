@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Walton-on-Thames",
+  "geonameid": 2634825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.39854151248432,
+      "lon": -0.41289551640080224,
+      "geoinfo": {
+        "display_name": "Xcel Sports Hub, Sunbury Lane, Elmbridge, Surrey, England, TW16 6BU, United Kingdom",
+        "road": "Sunbury Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "TW16 6BU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sunbury Lane, Walton-on-Thames, England, United Kingdom"
+    },
+    {
+      "lat": 51.36426878532719,
+      "lon": -0.3953191018336328,
+      "geoinfo": {
+        "display_name": "Havers Avenue, Hersham, West End, Elmbridge, Surrey, England, KT12 4NE, United Kingdom",
+        "road": "Havers Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hersham",
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "KT12 4NE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Havers Avenue, Hersham, West End, Elmbridge, Surrey, England, KT12 4NE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:00.111685+00:00",
+  "_kind": "geo_samples"
+}

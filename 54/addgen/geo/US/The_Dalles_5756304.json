@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "The Dalles",
+  "geonameid": 5756304,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.61312635457108,
+      "lon": -121.14086181063219,
+      "geoinfo": {
+        "display_name": "The Dalles Bridge, Klickitat County, Washington, 98617, United States",
+        "road": "The Dalles Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98617",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Dalles Bridge, The Dalles, Washington, United States"
+    },
+    {
+      "lat": 45.57334432477073,
+      "lon": -121.1685988792506,
+      "geoinfo": {
+        "display_name": "2000, Stack Road, Wasco County, Oregon, 97058, United States",
+        "road": "Stack Road",
+        "house_number": "2000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2000, Stack Road, Wasco County, Oregon, 97058, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:13.134718+00:00",
+  "_kind": "geo_samples"
+}

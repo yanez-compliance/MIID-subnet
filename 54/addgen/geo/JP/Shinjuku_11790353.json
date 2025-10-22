@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Shinjuku",
+  "geonameid": 11790353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.674175789473345,
+      "lon": 139.67034969569298,
+      "geoinfo": {
+        "display_name": "Sasazuka 1, Sasazuka, Shibuya, Tokyo, 151-0073, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Sasazuka 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Shibuya",
+        "state": null,
+        "postcode": "151-0073",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sasazuka 1, Shinjuku, Japan"
+    },
+    {
+      "lat": 35.675618869417676,
+      "lon": 139.74442924592447,
+      "geoinfo": {
+        "display_name": "National Diet Building, 1, Nagatacho 1-chome, Nagatacho, Chiyoda, Tokyo, 100-0014, Japan",
+        "road": null,
+        "house_number": "1",
+        "neighbourhood": "Nagatacho 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiyoda",
+        "state": null,
+        "postcode": "100-0014",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Diet Building, 1, Nagatacho 1-chome, Nagatacho, Chiyoda, Tokyo, 100-0014, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:42.413806+00:00",
+  "_kind": "geo_samples"
+}

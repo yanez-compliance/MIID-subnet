@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plant City",
+  "geonameid": 4168773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.045000925172143,
+      "lon": -82.1043214818078,
+      "geoinfo": {
+        "display_name": "2644, North Park Road, Plant City, Hillsborough County, Florida, 33563, United States",
+        "road": "North Park Road",
+        "house_number": "2644",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plant City",
+        "state": "Florida",
+        "postcode": "33563",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2644 North Park Road, Plant City, Florida, United States"
+    },
+    {
+      "lat": 28.006673884111752,
+      "lon": -82.1555932135002,
+      "geoinfo": {
+        "display_name": "Robinson Road, Plant City, Hillsborough County, Florida, 33563, United States",
+        "road": "Robinson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plant City",
+        "state": "Florida",
+        "postcode": "33563",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "390, Robinson Road, Plant City, Hillsborough County, Florida, 33563, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:11.209547+00:00",
+  "_kind": "geo_samples"
+}

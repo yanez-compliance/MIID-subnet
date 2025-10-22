@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Achern",
+  "geonameid": 2959686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.59361234533118,
+      "lon": 8.093069184476361,
+      "geoinfo": {
+        "display_name": "K 5311, Renchen, Mösbach, Achern, Verwaltungsgemeinschaft Achern, Ortenaukreis, Baden-Württemberg, 77855, Germany",
+        "road": "K 5311",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Renchen",
+        "state": "Baden-Württemberg",
+        "postcode": "77855",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "K 5311, Achern, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.60969484341532,
+      "lon": 8.076135295527147,
+      "geoinfo": {
+        "display_name": "L 87, Oberachern, Achern, Verwaltungsgemeinschaft Achern, Ortenaukreis, Baden-Württemberg, 77855, Germany",
+        "road": "L 87",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Oberachern",
+        "city_district": null,
+        "city": "Achern",
+        "state": "Baden-Württemberg",
+        "postcode": "77855",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 87, Oberachern, Achern, Verwaltungsgemeinschaft Achern, Ortenaukreis, Baden-Württemberg, 77855, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:37.234909+00:00",
+  "_kind": "geo_samples"
+}

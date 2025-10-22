@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "General Pacheco",
+  "geonameid": 3433787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.45696514536094,
+      "lon": -58.59246852862886,
+      "geoinfo": {
+        "display_name": "05/23, Avenida Hipólito Yrigoyen, Villa del Carmen, San Fernando, Partido de San Fernando, Buenos Aires, B1644GPK, Argentina",
+        "road": "Avenida Hipólito Yrigoyen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando",
+        "state": "Buenos Aires",
+        "postcode": "B1644GPK",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida Hipólito Yrigoyen, General Pacheco, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.425549600324985,
+      "lon": -58.63039307307198,
+      "geoinfo": {
+        "display_name": "Nordelta, Partido de Tigre, Buenos Aires, 1624, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nordelta",
+        "state": "Buenos Aires",
+        "postcode": "1624",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "500, Nordelta, Partido de Tigre, Buenos Aires, 1624, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:44.519140+00:00",
+  "_kind": "geo_samples"
+}

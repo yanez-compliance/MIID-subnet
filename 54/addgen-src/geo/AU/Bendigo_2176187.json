@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Bendigo",
+  "geonameid": 2176187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -36.76308728403103,
+      "lon": 144.33079985386368,
+      "geoinfo": {
+        "display_name": "Bendigo Domain Village, McIvor Road, Junortoun, Bendigo, City of Greater Bendigo, Victoria, 3551, Australia",
+        "road": "McIvor Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Junortoun",
+        "city_district": null,
+        "city": "Bendigo",
+        "state": "Victoria",
+        "postcode": "3551",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "McIvor Road, Bendigo, Victoria, Australia"
+    },
+    {
+      "lat": -36.76697802769373,
+      "lon": 144.23921592720552,
+      "geoinfo": {
+        "display_name": "42, Kronk Street, Golden Square, Bendigo, City of Greater Bendigo, Victoria, 3551, Australia",
+        "road": "Kronk Street",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Golden Square",
+        "city": "Bendigo",
+        "state": "Victoria",
+        "postcode": "3551",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "42, Kronk Street, Golden Square, Bendigo, City of Greater Bendigo, Victoria, 3551, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:20.063213+00:00",
+  "_kind": "geo_samples"
+}

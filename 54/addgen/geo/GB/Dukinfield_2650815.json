@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Dukinfield",
+  "geonameid": 2650815,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.492016464294224,
+      "lon": -2.0532323521571887,
+      "geoinfo": {
+        "display_name": "Arlies Lane, Arlies, Stalybridge, Tameside, Greater Manchester, England, SK15 3PZ, United Kingdom",
+        "road": "Arlies Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tameside",
+        "state": "England",
+        "postcode": "SK15 3PZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Arlies Lane, Dukinfield, England, United Kingdom"
+    },
+    {
+      "lat": 53.50562521589541,
+      "lon": -2.0697861492896195,
+      "geoinfo": {
+        "display_name": "Gorsey Lane, Hurst Cross, Stalybridge, Tameside, Greater Manchester, England, OL6 9AY, United Kingdom",
+        "road": "Gorsey Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hurst Cross",
+        "city_district": null,
+        "city": "Tameside",
+        "state": "England",
+        "postcode": "OL6 9AY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Gorsey Lane, Hurst Cross, Stalybridge, Tameside, Greater Manchester, England, OL6 9AY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:39.251500+00:00",
+  "_kind": "geo_samples"
+}

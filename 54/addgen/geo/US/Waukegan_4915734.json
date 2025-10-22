@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waukegan",
+  "geonameid": 4915734,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.319061980300994,
+      "lon": -87.84619494662823,
+      "geoinfo": {
+        "display_name": "Robert McClory Bike Path, North Chicago, Lake County, Illinois, 60088, United States",
+        "road": "Robert McClory Bike Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Chicago",
+        "state": "Illinois",
+        "postcode": "60088",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Robert McClory Bike Path, Waukegan, Illinois, United States"
+    },
+    {
+      "lat": 42.33225984832957,
+      "lon": -87.8601905989931,
+      "geoinfo": {
+        "display_name": "1528, Renken Drive, North Chicago, Lake County, Illinois, 60064, United States",
+        "road": "Renken Drive",
+        "house_number": "1528",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Chicago",
+        "state": "Illinois",
+        "postcode": "60064",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1528, Renken Drive, North Chicago, Lake County, Illinois, 60064, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:45.325427+00:00",
+  "_kind": "geo_samples"
+}

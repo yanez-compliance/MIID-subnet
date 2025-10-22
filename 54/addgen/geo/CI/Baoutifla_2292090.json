@@ -1,0 +1,65 @@
+{
+  "country_code": "CI",
+  "country": "Ivory Coast",
+  "city": "Baoutifla",
+  "geonameid": 2292090,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 7.259307990282394,
+      "lon": -6.477610019513881,
+      "geoinfo": {
+        "display_name": "Route de Vavoua, Vavoua, Haut-Sassandra, Sassandra-Marahoué, Côte d'Ivoire",
+        "road": "Route de Vavoua",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vavoua",
+        "state": "Sassandra-Marahoué",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "Route de Vavoua, Vavoua, Haut-Sassandra, 60941 Sassandra-Marahoué, Côte d'Ivoire"
+    },
+    {
+      "lat": 7.1942163814908415,
+      "lon": -6.493757231045272,
+      "geoinfo": {
+        "display_name": "Bonoufla, Haut-Sassandra, Sassandra-Marahoué, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bonoufla",
+        "state": "Sassandra-Marahoué",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "111, Bonoufla, Haut-Sassandra, 33169 Sassandra-Marahoué, Côte d'Ivoire"
+    },
+    {
+      "lat": 7.252579822483402,
+      "lon": -6.434639942949461,
+      "geoinfo": {
+        "display_name": "Vavoua, Haut-Sassandra, Sassandra-Marahoué, Côte d'Ivoire",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vavoua",
+        "state": "Sassandra-Marahoué",
+        "postcode": null,
+        "country": "Côte d'Ivoire",
+        "country_code": "ci"
+      },
+      "address": "849, Vavoua, Haut-Sassandra, 80926 Sassandra-Marahoué, Côte d'Ivoire"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:04.628162+00:00",
+  "_kind": "geo_samples"
+}

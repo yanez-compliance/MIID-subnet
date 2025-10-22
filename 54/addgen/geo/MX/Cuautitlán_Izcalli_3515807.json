@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cuautitlán Izcalli",
+  "geonameid": 3515807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.638770033019533,
+      "lon": -99.17173239867279,
+      "geoinfo": {
+        "display_name": "Tultitlán, State of Mexico, 54915, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tultitlán",
+        "state": "State of Mexico",
+        "postcode": "54915",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Cuautitlán Izcalli, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.643725632696096,
+      "lon": -99.20474868437219,
+      "geoinfo": {
+        "display_name": "Club Albatros, Calle Tenango del Valle, Cuautitlán Izcalli, State of Mexico, 54743, Mexico",
+        "road": "Calle Tenango del Valle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuautitlán Izcalli",
+        "state": "State of Mexico",
+        "postcode": "54743",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "646, Calle Tenango del Valle, Cuautitlán Izcalli, 54743 State of Mexico, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:28:07.470596+00:00",
+  "_kind": "geo_samples"
+}

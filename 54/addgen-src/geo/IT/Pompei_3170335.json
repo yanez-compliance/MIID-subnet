@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pompei",
+  "geonameid": 3170335,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.76997593045929,
+      "lon": 14.502568122927746,
+      "geoinfo": {
+        "display_name": "Via Spinelli, Grotta, Boscoreale, Naples, Campania, 80045, Italy",
+        "road": "Via Spinelli",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boscoreale",
+        "state": "Campania",
+        "postcode": "80045",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Spinelli, Pompei, Campania, Italy"
+    },
+    {
+      "lat": 40.76900083198957,
+      "lon": 14.453668397828643,
+      "geoinfo": {
+        "display_name": "Via Cola, Boscotrecase, Naples, Campania, 80042, Italy",
+        "road": "Via Cola",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boscotrecase",
+        "state": "Campania",
+        "postcode": "80042",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "882, Via Cola, Boscotrecase, Naples, Campania, 80042, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:00.910915+00:00",
+  "_kind": "geo_samples"
+}

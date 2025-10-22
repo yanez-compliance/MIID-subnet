@@ -1,0 +1,65 @@
+{
+  "country_code": "JO",
+  "country": "Jordan",
+  "city": "Amman",
+  "geonameid": 250441,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 31.920617565135654,
+      "lon": 35.918000420162066,
+      "geoinfo": {
+        "display_name": "الروضة, منطقة بدر, Amman, Amman Sub-District, Amman Qasabah District, Amman, 11623, Jordan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "الروضة",
+        "suburb": "منطقة بدر",
+        "city_district": null,
+        "city": "Amman",
+        "state": "Amman",
+        "postcode": "11623",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "الروضة, Amman, Amman, Jordan"
+    },
+    {
+      "lat": 31.921775435294535,
+      "lon": 35.966711689761134,
+      "geoinfo": {
+        "display_name": "Al-Hikma Street, العروبة, Quaismeh Sub-District, Quaismeh District, Amman, 11152, Jordan",
+        "road": "Al-Hikma Street",
+        "house_number": null,
+        "neighbourhood": "العروبة",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Amman",
+        "postcode": "11152",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "Al-Hikma Street, Amman, Amman, Jordan"
+    },
+    {
+      "lat": 31.948116690018974,
+      "lon": 35.93813044103456,
+      "geoinfo": {
+        "display_name": "Ad Doha Street, Jabal al-Ashrafiyeh, منطقة المدينة, Amman, Amman Sub-District, Amman Qasabah District, Amman, 11110, Jordan",
+        "road": "Ad Doha Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "منطقة المدينة",
+        "city_district": null,
+        "city": "Amman",
+        "state": "Amman",
+        "postcode": "11110",
+        "country": "Jordan",
+        "country_code": "jo"
+      },
+      "address": "Ad Doha Street, Amman, Amman, Jordan"
+    }
+  ],
+  "updated_at": "2025-10-16T17:20:33.779564+00:00",
+  "_kind": "geo_samples"
+}

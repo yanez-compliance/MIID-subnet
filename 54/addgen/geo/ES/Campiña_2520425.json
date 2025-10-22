@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Campiña",
+  "geonameid": 2520425,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.20959407871172,
+      "lon": -2.954180236721122,
+      "geoinfo": {
+        "display_name": "El Acebuchar, Villanueva del Arzobispo, Jaén, Andalusia, 23270, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villanueva del Arzobispo",
+        "state": "Andalusia",
+        "postcode": "23270",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Campiña, Andalusia, Spain"
+    },
+    {
+      "lat": 38.246749137599394,
+      "lon": -2.969293288288458,
+      "geoinfo": {
+        "display_name": "N-322, Beas de Segura, Jaén, Andalusia, 23270, Spain",
+        "road": "N-322",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beas de Segura",
+        "state": "Andalusia",
+        "postcode": "23270",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-322, Beas de Segura, Jaén, Andalusia, 23270, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:35.739573+00:00",
+  "_kind": "geo_samples"
+}

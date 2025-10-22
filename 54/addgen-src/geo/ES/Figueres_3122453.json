@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Figueres",
+  "geonameid": 3122453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.271453013133275,
+      "lon": 2.9114148713057224,
+      "geoinfo": {
+        "display_name": "GIV-5105, Mas Vidal, Avinyonet de Puigventós, Upper Empordà, Girona, Catalonia, 17730, Spain",
+        "road": "GIV-5105",
+        "house_number": null,
+        "neighbourhood": "Mas Vidal",
+        "suburb": null,
+        "city_district": null,
+        "city": "Avinyonet de Puigventós",
+        "state": "Catalonia",
+        "postcode": "17730",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "GIV-5105, Figueres, Catalonia, Spain"
+    },
+    {
+      "lat": 42.26889151828781,
+      "lon": 2.9884947711892953,
+      "geoinfo": {
+        "display_name": "Vial Nord, Zona Industrial Vilatenim, Figueres, Upper Empordà, Girona, Catalonia, 17484, Spain",
+        "road": "Vial Nord",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Figueres",
+        "state": "Catalonia",
+        "postcode": "17484",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "866, Vial Nord, Zona Industrial Vilatenim, Figueres, Upper Empordà, Girona, Catalonia, 17484, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:05.890716+00:00",
+  "_kind": "geo_samples"
+}

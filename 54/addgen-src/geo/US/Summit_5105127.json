@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Summit",
+  "geonameid": 5105127,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7113071926227,
+      "lon": -74.32458844296544,
+      "geoinfo": {
+        "display_name": "Phillipsburg-Newark Expressway, Springfield, Union County, New Jersey, 07081, United States",
+        "road": "Phillipsburg-Newark Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "New Jersey",
+        "postcode": "07081",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Phillipsburg-Newark Expressway, Summit, New Jersey, United States"
+    },
+    {
+      "lat": 40.70901096379007,
+      "lon": -74.38616250789227,
+      "geoinfo": {
+        "display_name": "53, Division Avenue, Summit, Union County, New Jersey, 07901, United States",
+        "road": "Division Avenue",
+        "house_number": "53",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Summit",
+        "state": "New Jersey",
+        "postcode": "07901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "53, Division Avenue, Summit, Union County, New Jersey, 07901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:01:48.434444+00:00",
+  "_kind": "geo_samples"
+}

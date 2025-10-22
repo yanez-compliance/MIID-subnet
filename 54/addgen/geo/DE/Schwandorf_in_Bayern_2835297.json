@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schwandorf in Bayern",
+  "geonameid": 2835297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.36662350529643,
+      "lon": 12.096015219504794,
+      "geoinfo": {
+        "display_name": "Irrenlohe, Irlaching Siedlung, Irlaching, Schwandorf, Landkreis Schwandorf, Bavaria, 92421, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schwandorf",
+        "state": "Bavaria",
+        "postcode": "92421",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schwandorf in Bayern, Bavaria, Germany"
+    },
+    {
+      "lat": 49.34532959985801,
+      "lon": 12.097844214027258,
+      "geoinfo": {
+        "display_name": "Wöhrvorstadt, Richt, Schwandorf, Landkreis Schwandorf, Bavaria, 92421, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wöhrvorstadt",
+        "city_district": null,
+        "city": "Schwandorf",
+        "state": "Bavaria",
+        "postcode": "92421",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "053, Wöhrvorstadt, Richt, Schwandorf, Landkreis Schwandorf, Bavaria, 92421, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:53.561204+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainfield",
+  "geonameid": 4263108,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.692978198590815,
+      "lon": -86.36852554084358,
+      "geoinfo": {
+        "display_name": "Edwards Drive, Plainfield, Hendricks County, Indiana, 46168, United States",
+        "road": "Edwards Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Indiana",
+        "postcode": "46168",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Edwards Drive, Plainfield, Indiana, United States"
+    },
+    {
+      "lat": 39.69695939192173,
+      "lon": -86.3651538428366,
+      "geoinfo": {
+        "display_name": "Stafford Road, Plainfield, Hendricks County, Indiana, 46168, United States",
+        "road": "Stafford Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plainfield",
+        "state": "Indiana",
+        "postcode": "46168",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "269, Stafford Road, Plainfield, Hendricks County, Indiana, 46168, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:03:02.954778+00:00",
+  "_kind": "geo_samples"
+}

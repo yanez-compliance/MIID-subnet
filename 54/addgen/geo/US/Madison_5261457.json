@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison",
+  "geonameid": 5261457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.06569088208018,
+      "lon": -89.38722460881311,
+      "geoinfo": {
+        "display_name": "John Nolen Drive, The Yards, Madison, Dane County, Wisconsin, 57315, United States",
+        "road": "John Nolen Drive",
+        "house_number": null,
+        "neighbourhood": "The Yards",
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "Wisconsin",
+        "postcode": "57315",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "John Nolen Drive, Madison, Wisconsin, United States"
+    },
+    {
+      "lat": 43.05089412469095,
+      "lon": -89.38138800118773,
+      "geoinfo": {
+        "display_name": "1491, Expo Way, Madison, Dane County, Wisconsin, 53713, United States",
+        "road": "Expo Way",
+        "house_number": "1491",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "Wisconsin",
+        "postcode": "53713",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1491, Expo Way, Madison, Dane County, Wisconsin, 53713, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:07:02.649805+00:00",
+  "_kind": "geo_samples"
+}

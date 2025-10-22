@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Pozzallo",
+  "geonameid": 2523693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.717363345454785,
+      "lon": 14.8428857972909,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Pozzallo, Italy"
+    },
+    {
+      "lat": 36.7026117387292,
+      "lon": 14.815243353940653,
+      "geoinfo": {
+        "display_name": "Maganuco, Modica, Ragusa, Sicily, 97016, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Modica",
+        "state": "Sicily",
+        "postcode": "97016",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "735, Maganuco, Modica, Ragusa, Sicily, 97016, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:24.234276+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Huntington Park",
+  "geonameid": 5358736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.970487664143306,
+      "lon": -118.20994262009047,
+      "geoinfo": {
+        "display_name": "7451, State Street, Huntington Park, Los Angeles County, California, 90255, United States",
+        "road": "State Street",
+        "house_number": "7451",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntington Park",
+        "state": "California",
+        "postcode": "90255",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7451 State Street, Huntington Park, California, United States"
+    },
+    {
+      "lat": 33.975782895122805,
+      "lon": -118.18001743861919,
+      "geoinfo": {
+        "display_name": "6537, Heliotrope Avenue, Bell, Los Angeles County, California, 90201, United States",
+        "road": "Heliotrope Avenue",
+        "house_number": "6537",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bell",
+        "state": "California",
+        "postcode": "90201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6537, Heliotrope Avenue, Bell, Los Angeles County, California, 90201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:11.318373+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Belek",
+  "geonameid": 321580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.82714684828973,
+      "lon": 31.03974295813518,
+      "geoinfo": {
+        "display_name": "Antalya, Mediterranean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Belek, Turkey"
+    },
+    {
+      "lat": 36.87128415810756,
+      "lon": 31.109642474729352,
+      "geoinfo": {
+        "display_name": "Karadayı, Karadayı Mahallesi, Serik, Antalya, Mediterranean Region, 07506, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Karadayı",
+        "city_district": "Karadayı Mahallesi",
+        "city": "Serik",
+        "state": null,
+        "postcode": "07506",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "480, Karadayı, Karadayı Mahallesi, Serik, Antalya, Mediterranean Region, 07506, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:01.782156+00:00",
+  "_kind": "geo_samples"
+}

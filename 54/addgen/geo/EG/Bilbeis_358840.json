@@ -1,0 +1,65 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Bilbeis",
+  "geonameid": 358840,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 30.392390857423532,
+      "lon": 31.541302626531653,
+      "geoinfo": {
+        "display_name": "Eastern, 44621, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Eastern",
+        "postcode": "44621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Bilbeis, Eastern, Egypt"
+    },
+    {
+      "lat": 30.39786658824252,
+      "lon": 31.59446652265428,
+      "geoinfo": {
+        "display_name": "Bilbeis Airport, Mohamed Abd Al Qader Street, Belbes City, Bilbeis, Eastern, 44621, Egypt",
+        "road": "Mohamed Abd Al Qader Street",
+        "house_number": null,
+        "neighbourhood": "Belbes City",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bilbeis",
+        "state": "Eastern",
+        "postcode": "44621",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "913, Mohamed Abd Al Qader Street, Bilbeis, 44621 Eastern, Egypt"
+    },
+    {
+      "lat": 30.4433930095709,
+      "lon": 31.556452302342603,
+      "geoinfo": {
+        "display_name": "Belbes City, Bilbeis, Eastern, 44887, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Belbes City",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bilbeis",
+        "state": "Eastern",
+        "postcode": "44887",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "190, Belbes City, Bilbeis, Eastern, 44887, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:33.894552+00:00",
+  "_kind": "geo_samples"
+}

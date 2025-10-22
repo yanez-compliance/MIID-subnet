@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lenexa",
+  "geonameid": 4274356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.95977709768056,
+      "lon": -94.78809858568611,
+      "geoinfo": {
+        "display_name": "Canyon Farms Golf Club, 17501, West 87th Street Parkway, Lenexa, Johnson County, Kansas, 66219, United States",
+        "road": "West 87th Street Parkway",
+        "house_number": "17501",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lenexa",
+        "state": "Kansas",
+        "postcode": "66219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17501 West 87th Street Parkway, Lenexa, Kansas, United States"
+    },
+    {
+      "lat": 38.96954048195107,
+      "lon": -94.76082664437493,
+      "geoinfo": {
+        "display_name": "Lackman Road, Lenexa, Johnson County, Kansas, 66219, United States",
+        "road": "Lackman Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lenexa",
+        "state": "Kansas",
+        "postcode": "66219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "445, Lackman Road, Lenexa, Johnson County, Kansas, 66219, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:29.542045+00:00",
+  "_kind": "geo_samples"
+}

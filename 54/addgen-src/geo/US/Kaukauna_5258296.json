@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kaukauna",
+  "geonameid": 5258296,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.27962120662756,
+      "lon": -88.25070990412361,
+      "geoinfo": {
+        "display_name": "West Thilmany Road, Expera Specialty Solutions, Kaukauna, Outagamie County, Wisconsin, 54130, United States",
+        "road": "West Thilmany Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaukauna",
+        "state": "Wisconsin",
+        "postcode": "54130",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Thilmany Road, Kaukauna, Wisconsin, United States"
+    },
+    {
+      "lat": 44.25343354569061,
+      "lon": -88.29110676814784,
+      "geoinfo": {
+        "display_name": "Debruin Road, Combined Locks, Town of Buchanan, Outagamie County, Wisconsin, 54113, United States",
+        "road": "Debruin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Combined Locks",
+        "state": "Wisconsin",
+        "postcode": "54113",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "887, Debruin Road, Combined Locks, Town of Buchanan, Outagamie County, Wisconsin, 54113, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:50.160705+00:00",
+  "_kind": "geo_samples"
+}

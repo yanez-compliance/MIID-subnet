@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Narlıca",
+  "geonameid": 438055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.25682501326444,
+      "lon": 36.17482558995549,
+      "geoinfo": {
+        "display_name": "Çevre Yolu Caddesi, Hatay, Antakya, Hatay, Mediterranean Region, 31027, Turkey",
+        "road": "Çevre Yolu Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hatay",
+        "state": null,
+        "postcode": "31027",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Çevre Yolu Caddesi, Narlıca, Turkey"
+    },
+    {
+      "lat": 36.22957087157999,
+      "lon": 36.16187394755425,
+      "geoinfo": {
+        "display_name": "Odabaşı Mahallesi, Hatay, Antakya, Hatay, Mediterranean Region, 31030, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Odabaşı Mahallesi",
+        "city_district": null,
+        "city": "Hatay",
+        "state": null,
+        "postcode": "31030",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "840, Odabaşı Mahallesi, Hatay, Antakya, Hatay, Mediterranean Region, 31030, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:27.928189+00:00",
+  "_kind": "geo_samples"
+}

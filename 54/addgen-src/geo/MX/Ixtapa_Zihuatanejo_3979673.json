@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ixtapa-Zihuatanejo",
+  "geonameid": 3979673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.655555762399754,
+      "lon": -101.50794671102558,
+      "geoinfo": {
+        "display_name": "Zihuatanejo de Azueta, Guerrero, 40895, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guerrero",
+        "postcode": "40895",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Ixtapa-Zihuatanejo, Guerrero, Mexico"
+    },
+    {
+      "lat": 17.64227843977586,
+      "lon": -101.50902519306236,
+      "geoinfo": {
+        "display_name": "Zihuatanejo - La Mira, El Coacoyul, Zihuatanejo de Azueta, Guerrero, 40895, Mexico",
+        "road": "Zihuatanejo - La Mira",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Coacoyul",
+        "state": "Guerrero",
+        "postcode": "40895",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "968, Zihuatanejo - La Mira, El Coacoyul, Zihuatanejo de Azueta, Guerrero, 40895, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:40.549697+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Bareilly",
+  "geonameid": 1277013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.339748970000013,
+      "lon": 79.42290806303224,
+      "geoinfo": {
+        "display_name": "Bareilly Cantonment, Bareilly, Uttar Pradesh, 243001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bareilly Cantonment",
+        "city_district": null,
+        "city": "Bareilly",
+        "state": "Uttar Pradesh",
+        "postcode": "243001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Bareilly Cantonment, Bareilly, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.347514192583937,
+      "lon": 79.47643058411371,
+      "geoinfo": {
+        "display_name": "Bareilly, Uttar Pradesh, 243001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bareilly",
+        "state": "Uttar Pradesh",
+        "postcode": "243001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "557, Bareilly, Uttar Pradesh, 243001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:28.012337+00:00",
+  "_kind": "geo_samples"
+}

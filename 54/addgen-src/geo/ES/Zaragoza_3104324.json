@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Zaragoza",
+  "geonameid": 3104324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.62851935873141,
+      "lon": -0.912815976449246,
+      "geoinfo": {
+        "display_name": "BS Motors, 84, Calle de Marcelino Álvarez, Casablanca, Zaragoza, Aragon, 50012, Spain",
+        "road": "Calle de Marcelino Álvarez",
+        "house_number": "84",
+        "neighbourhood": null,
+        "suburb": "Casablanca",
+        "city_district": null,
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "postcode": "50012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "84 Calle de Marcelino Álvarez, Zaragoza, Aragon, Spain"
+    },
+    {
+      "lat": 41.679807105924944,
+      "lon": -0.8514215057496083,
+      "geoinfo": {
+        "display_name": "Camino de Roseque, San Juan de Mozarrifar, Distrito Rural, Zaragoza, Aragon, 50058, Spain",
+        "road": "Camino de Roseque",
+        "house_number": null,
+        "neighbourhood": "San Juan de Mozarrifar",
+        "suburb": null,
+        "city_district": "Distrito Rural",
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "postcode": "50058",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "566, Camino de Roseque, San Juan de Mozarrifar, Distrito Rural, Zaragoza, Aragon, 50058, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:21.606609+00:00",
+  "_kind": "geo_samples"
+}

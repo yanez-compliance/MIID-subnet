@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Majie",
+  "geonameid": 7340460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.46962592155567,
+      "lon": 105.00899530271036,
+      "geoinfo": {
+        "display_name": "Yangzhuang, Wudu District, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yangzhuang",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Majie, Gansu, China"
+    },
+    {
+      "lat": 33.42052145976737,
+      "lon": 104.95069839574381,
+      "geoinfo": {
+        "display_name": "Miaoleng, Wudu District, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miaoleng",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "087, Miaoleng, Wudu District, Longnan, 49209 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:01:43.310129+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Dos Hermanas",
+  "geonameid": 2518794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.31557525551501,
+      "lon": -5.907053135558769,
+      "geoinfo": {
+        "display_name": "Calle B (Urb. Echaguy), Federico Echajuy, Dos Hermanas, Sevilla, Andalusia, 41704, Spain",
+        "road": "Calle B (Urb. Echaguy)",
+        "house_number": null,
+        "neighbourhood": "Federico Echajuy",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dos Hermanas",
+        "state": "Andalusia",
+        "postcode": "41704",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle B (Urb. Echaguy), Dos Hermanas, Andalusia, Spain"
+    },
+    {
+      "lat": 37.27622739675223,
+      "lon": -5.898345394574516,
+      "geoinfo": {
+        "display_name": "Calle A, Urbanización Santa Teresa, Dos Hermanas, Sevilla, Andalusia, 41702, Spain",
+        "road": "Calle A",
+        "house_number": null,
+        "neighbourhood": "Urbanización Santa Teresa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dos Hermanas",
+        "state": "Andalusia",
+        "postcode": "41702",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "630, Calle A, Urbanización Santa Teresa, Dos Hermanas, Sevilla, Andalusia, 41702, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:01.887378+00:00",
+  "_kind": "geo_samples"
+}

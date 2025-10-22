@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Palmela",
+  "geonameid": 2265223,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.580133923184235,
+      "lon": -8.929547442920551,
+      "geoinfo": {
+        "display_name": "Área de Serviço de Palmela, Rua do Socorro, Palmela (Noroeste), Palmela, Setúbal, 2950-425, Portugal",
+        "road": "Rua do Socorro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Palmela (Noroeste)",
+        "city_district": "Palmela",
+        "city": "Palmela",
+        "state": null,
+        "postcode": "2950-425",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua do Socorro, Palmela, Portugal"
+    },
+    {
+      "lat": 38.6069472023413,
+      "lon": -8.887937960109715,
+      "geoinfo": {
+        "display_name": "EM 575, Venda do Alcaide, Palmela, Setúbal, 2950-438, Portugal",
+        "road": "EM 575",
+        "house_number": null,
+        "neighbourhood": "Venda do Alcaide",
+        "suburb": null,
+        "city_district": "Palmela",
+        "city": "Palmela",
+        "state": null,
+        "postcode": "2950-438",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "EM 575, Venda do Alcaide, Palmela, Setúbal, 2950-438, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:34.029617+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "SY",
+  "country": "Syria",
+  "city": "Binnish",
+  "geonameid": 171451,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 36.00104782083331,
+      "lon": 36.71793033915674,
+      "geoinfo": {
+        "display_name": "Al-Fo'a, Binnish Subdistrict, Idleb District, Idleb Governorate, Syria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Fo'a",
+        "state": "Idleb Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "Binnish, Idleb Governorate, Syria"
+    },
+    {
+      "lat": 35.94925945742176,
+      "lon": 36.671938856680605,
+      "geoinfo": {
+        "display_name": "60, Idlib, Idleb Subdistrict, Idleb District, Idleb Governorate, Syria",
+        "road": "60",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Idlib",
+        "state": "Idleb Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "60, Binnish, Idleb Governorate, Syria"
+    }
+  ],
+  "updated_at": "2025-10-16T23:10:14.393117+00:00",
+  "_kind": "geo_samples"
+}

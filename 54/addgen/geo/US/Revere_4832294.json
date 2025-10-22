@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Revere",
+  "geonameid": 4832294,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.42982871267803,
+      "lon": -70.98466882625317,
+      "geoinfo": {
+        "display_name": "Rent-A-Tool Heliport, North Shore Road, Oak Island, Point of Pines, Revere, Suffolk County, Massachusetts, 02151, United States",
+        "road": "North Shore Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Revere",
+        "state": "Massachusetts",
+        "postcode": "02151",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Shore Road, Revere, Massachusetts, United States"
+    },
+    {
+      "lat": 42.38171044557461,
+      "lon": -70.96597691374285,
+      "geoinfo": {
+        "display_name": "Winthrop Beach, Winthrop, Suffolk County, Massachusetts, 02152, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winthrop",
+        "state": "Massachusetts",
+        "postcode": "02152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "223, Winthrop Beach, Winthrop, Suffolk County, Massachusetts, 02152, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:17.910560+00:00",
+  "_kind": "geo_samples"
+}

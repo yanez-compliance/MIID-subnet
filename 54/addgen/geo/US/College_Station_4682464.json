@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "College Station",
+  "geonameid": 4682464,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.622600799661853,
+      "lon": -96.3368472748115,
+      "geoinfo": {
+        "display_name": "Lot 47, Polo Road, The Gardens Apartments, College Station, Brazos County, Texas, 77843, United States",
+        "road": "Polo Road",
+        "house_number": null,
+        "neighbourhood": "The Gardens Apartments",
+        "suburb": null,
+        "city_district": null,
+        "city": "College Station",
+        "state": "Texas",
+        "postcode": "77843",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Polo Road, College Station, Texas, United States"
+    },
+    {
+      "lat": 30.655342774117567,
+      "lon": -96.35968491089012,
+      "geoinfo": {
+        "display_name": "747, Avondale Avenue, Bryan, Brazos County, Texas, 77802, United States",
+        "road": "Avondale Avenue",
+        "house_number": "747",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bryan",
+        "state": "Texas",
+        "postcode": "77802",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "747, Avondale Avenue, Bryan, Brazos County, Texas, 77802, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:32.072817+00:00",
+  "_kind": "geo_samples"
+}

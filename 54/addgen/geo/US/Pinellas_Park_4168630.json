@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pinellas Park",
+  "geonameid": 4168630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.832938953402454,
+      "lon": -82.72093572582831,
+      "geoinfo": {
+        "display_name": "6225, 67th Avenue North, Pinellas Park, Pinellas County, Florida, 33781, United States",
+        "road": "67th Avenue North",
+        "house_number": "6225",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pinellas Park",
+        "state": "Florida",
+        "postcode": "33781",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6225 67th Avenue North, Pinellas Park, Florida, United States"
+    },
+    {
+      "lat": 27.82827157946892,
+      "lon": -82.714832411226,
+      "geoinfo": {
+        "display_name": "5915, 62nd Avenue North, Millbrooke Ranch, Pinellas Park, Pinellas County, Florida, 33781, United States",
+        "road": "62nd Avenue North",
+        "house_number": "5915",
+        "neighbourhood": "Millbrooke Ranch",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pinellas Park",
+        "state": "Florida",
+        "postcode": "33781",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5915, 62nd Avenue North, Millbrooke Ranch, Pinellas Park, Pinellas County, Florida, 33781, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:17.623429+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Laitan",
+  "geonameid": 8417596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.162913557176722,
+      "lon": 106.48601093189804,
+      "geoinfo": {
+        "display_name": "Laitan, Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laitan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Laitan, Chongqing, China"
+    },
+    {
+      "lat": 30.2071037732965,
+      "lon": 106.51329295579454,
+      "geoinfo": {
+        "display_name": "Hechuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "398, Hechuan District, 31700 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:53.802889+00:00",
+  "_kind": "geo_samples"
+}

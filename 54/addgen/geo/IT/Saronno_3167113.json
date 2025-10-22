@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Saronno",
+  "geonameid": 3167113,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.66024864684736,
+      "lon": 9.026741671199678,
+      "geoinfo": {
+        "display_name": "Via Francesco Petrarca, Rovello Porro, Como, Lombardy, 22070, Italy",
+        "road": "Via Francesco Petrarca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rovello Porro",
+        "state": "Lombardy",
+        "postcode": "22070",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Francesco Petrarca, Saronno, Lombardy, Italy"
+    },
+    {
+      "lat": 45.600527130986904,
+      "lon": 9.040786124507187,
+      "geoinfo": {
+        "display_name": "Via Papa Giovanni Ventitreesimo, Cassina Pertusella, Caronno Pertusella, Varese, Lombardy, 21042, Italy",
+        "road": "Via Papa Giovanni Ventitreesimo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caronno Pertusella",
+        "state": "Lombardy",
+        "postcode": "21042",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "420, Via Papa Giovanni Ventitreesimo, Cassina Pertusella, Caronno Pertusella, Varese, Lombardy, 21042, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:41.394575+00:00",
+  "_kind": "geo_samples"
+}

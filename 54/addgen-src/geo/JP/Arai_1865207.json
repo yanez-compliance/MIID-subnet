@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Arai",
+  "geonameid": 1865207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.96630628959095,
+      "lon": 138.21342699894234,
+      "geoinfo": {
+        "display_name": "Joetsu, Niigata Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Joetsu",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Arai, Japan"
+    },
+    {
+      "lat": 36.99862928423856,
+      "lon": 138.23068060029948,
+      "geoinfo": {
+        "display_name": "大字新井, Myoko, Niigata Prefecture, 944-0051, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "大字新井",
+        "suburb": null,
+        "city_district": null,
+        "city": "Myoko",
+        "state": null,
+        "postcode": "944-0051",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "大字新井, Myoko, Niigata Prefecture, 944-0051, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:42.283678+00:00",
+  "_kind": "geo_samples"
+}

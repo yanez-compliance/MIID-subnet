@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Olney",
+  "geonameid": 4364537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.13713308451839,
+      "lon": -77.09620724331724,
+      "geoinfo": {
+        "display_name": "Norbeck Country Club, Gallagher Way, Cashell Manor, Montgomery County, Maryland, 20832, United States",
+        "road": "Gallagher Way",
+        "house_number": null,
+        "neighbourhood": "Cashell Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20832",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Gallagher Way, Olney, Maryland, United States"
+    },
+    {
+      "lat": 39.150887510038665,
+      "lon": -77.02240111720056,
+      "geoinfo": {
+        "display_name": "18002, Bentley Road, Sandy Spring Meadow, Sandy Spring, Montgomery County, Maryland, 20860, United States",
+        "road": "Bentley Road",
+        "house_number": "18002",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandy Spring",
+        "state": "Maryland",
+        "postcode": "20860",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18002, Bentley Road, Sandy Spring Meadow, Sandy Spring, Montgomery County, Maryland, 20860, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:46.058418+00:00",
+  "_kind": "geo_samples"
+}

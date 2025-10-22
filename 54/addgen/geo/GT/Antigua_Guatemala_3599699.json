@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Antigua Guatemala",
+  "geonameid": 3599699,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.545867306309976,
+      "lon": -90.7645850657223,
+      "geoinfo": {
+        "display_name": "Ciudad Vieja, Sacatepéquez, 03012, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Vieja",
+        "state": "Sacatepéquez",
+        "postcode": "03012",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Antigua Guatemala, Sacatepéquez, Guatemala"
+    },
+    {
+      "lat": 14.54523543634874,
+      "lon": -90.74231547973741,
+      "geoinfo": {
+        "display_name": "Panorama, El Calvario, San Bartolomé Becerra, Antigua Guatemala, Sacatepéquez, 03001, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Panorama",
+        "suburb": "El Calvario",
+        "city_district": null,
+        "city": "Antigua Guatemala",
+        "state": "Sacatepéquez",
+        "postcode": "03001",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "770, Panorama, Antigua Guatemala, 03001 Sacatepéquez, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:58.510257+00:00",
+  "_kind": "geo_samples"
+}

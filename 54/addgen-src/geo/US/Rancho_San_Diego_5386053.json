@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rancho San Diego",
+  "geonameid": 5386053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.75604582145066,
+      "lon": -116.95391586315164,
+      "geoinfo": {
+        "display_name": "4242, Miguel View Road, Calavo Gardens, La Mesa, San Diego County, California, 91941, United States",
+        "road": "Miguel View Road",
+        "house_number": "4242",
+        "neighbourhood": "Calavo Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Mesa",
+        "state": "California",
+        "postcode": "91941",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4242 Miguel View Road, Rancho San Diego, California, United States"
+    },
+    {
+      "lat": 32.72815967330384,
+      "lon": -116.8885045979994,
+      "geoinfo": {
+        "display_name": "Calle del Sol Dirt Extention, Jamul, San Diego County, California, 91935, United States",
+        "road": "Calle del Sol Dirt Extention",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jamul",
+        "state": "California",
+        "postcode": "91935",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "896, Calle del Sol Dirt Extention, Jamul, San Diego County, California, 91935, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:59.770370+00:00",
+  "_kind": "geo_samples"
+}

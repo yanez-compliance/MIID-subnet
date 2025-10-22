@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lompoc",
+  "geonameid": 5367788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.677694906243005,
+      "lon": -120.45853283449414,
+      "geoinfo": {
+        "display_name": "North H Street, Lompoc, Santa Barbara County, California, 93436, United States",
+        "road": "North H Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lompoc",
+        "state": "California",
+        "postcode": "93436",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North H Street, Lompoc, California, United States"
+    },
+    {
+      "lat": 34.61832164123524,
+      "lon": -120.4753733172843,
+      "geoinfo": {
+        "display_name": "Santa Barbara County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "571, Santa Barbara County, 43264 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:31.920599+00:00",
+  "_kind": "geo_samples"
+}

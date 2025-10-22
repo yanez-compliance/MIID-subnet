@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bückeburg",
+  "geonameid": 2942159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.27742589475332,
+      "lon": 9.108639201275496,
+      "geoinfo": {
+        "display_name": "Hauptstraße, Vehlen, Obernkirchen, Landkreis Schaumburg, Lower Saxony, 31683, Germany",
+        "road": "Hauptstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vehlen",
+        "city_district": null,
+        "city": "Obernkirchen",
+        "state": "Lower Saxony",
+        "postcode": "31683",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hauptstraße, Bückeburg, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.25612436462143,
+      "lon": 9.064538865293564,
+      "geoinfo": {
+        "display_name": "Immanuel-Schule, 7, Hermannstraße, Bergdorf, Bückeburg, Landkreis Schaumburg, Lower Saxony, 31675, Germany",
+        "road": "Hermannstraße",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Bergdorf",
+        "city_district": null,
+        "city": "Bückeburg",
+        "state": "Lower Saxony",
+        "postcode": "31675",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Immanuel-Schule, 7, Hermannstraße, Bergdorf, Bückeburg, Landkreis Schaumburg, Lower Saxony, 31675, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:34.639232+00:00",
+  "_kind": "geo_samples"
+}

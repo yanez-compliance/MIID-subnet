@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gloucester",
+  "geonameid": 4937829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.620170760100635,
+      "lon": -70.67643951570295,
+      "geoinfo": {
+        "display_name": "14, Gloucester Avenue, Gloucester, Essex County, Massachusetts, 01930, United States",
+        "road": "Gloucester Avenue",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gloucester",
+        "state": "Massachusetts",
+        "postcode": "01930",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14 Gloucester Avenue, Gloucester, Massachusetts, United States"
+    },
+    {
+      "lat": 42.630950207416014,
+      "lon": -70.64905138670255,
+      "geoinfo": {
+        "display_name": "Old Rockport Road, Gloucester, Essex County, Massachusetts, 01930, United States",
+        "road": "Old Rockport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gloucester",
+        "state": "Massachusetts",
+        "postcode": "01930",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "971, Old Rockport Road, Gloucester, Essex County, Massachusetts, 01930, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:31.739586+00:00",
+  "_kind": "geo_samples"
+}

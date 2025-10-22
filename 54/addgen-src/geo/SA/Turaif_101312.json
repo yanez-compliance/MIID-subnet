@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Turaif",
+  "geonameid": 101312,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 31.701136543368673,
+      "lon": 38.646084978914786,
+      "geoinfo": {
+        "display_name": "Turayf, Northern Borders Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Turayf",
+        "state": "Northern Borders Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "835, Turaif, 92333 Northern Borders Province, Saudi Arabia"
+    },
+    {
+      "lat": 31.682598394833274,
+      "lon": 38.685646277448235,
+      "geoinfo": {
+        "display_name": "85, Turayf, Northern Borders Province, Saudi Arabia",
+        "road": "85",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Turayf",
+        "state": "Northern Borders Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "85, Turaif, 86943 Northern Borders Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:51.015173+00:00",
+  "_kind": "geo_samples"
+}

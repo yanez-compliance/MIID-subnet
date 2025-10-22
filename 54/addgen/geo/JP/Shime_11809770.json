@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Shime",
+  "geonameid": 11809770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.58981983209336,
+      "lon": 130.45977825570594,
+      "geoinfo": {
+        "display_name": "ユニバ通り, 片峰中央四丁目, Hakata Ward, Fukuoka, Kasuya County, Fukuoka Prefecture, 811-2303, Japan",
+        "road": "ユニバ通り",
+        "house_number": null,
+        "neighbourhood": "片峰中央四丁目",
+        "suburb": "Hakata Ward",
+        "city_district": null,
+        "city": "Fukuoka",
+        "state": null,
+        "postcode": "811-2303",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "ユニバ通り, Shime, Japan"
+    },
+    {
+      "lat": 33.5676915038752,
+      "lon": 130.5131103323144,
+      "geoinfo": {
+        "display_name": "Umi 5-chome, Umi, Kasuya County, Fukuoka Prefecture, 811-2113, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Umi 5-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Umi",
+        "state": null,
+        "postcode": "811-2113",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Umi 5-chome, Umi, Kasuya County, Fukuoka Prefecture, 811-2113, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:20.745398+00:00",
+  "_kind": "geo_samples"
+}

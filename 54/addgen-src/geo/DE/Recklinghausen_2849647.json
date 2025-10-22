@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Recklinghausen",
+  "geonameid": 2849647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.650702062641706,
+      "lon": 7.184947137147786,
+      "geoinfo": {
+        "display_name": "Burgstraße, Sinsen-Lenkerbeck, Marl, Kreis Recklinghausen, North Rhine-Westphalia, 45770, Germany",
+        "road": "Burgstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sinsen-Lenkerbeck",
+        "city_district": null,
+        "city": "Marl",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45770",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Burgstraße, Recklinghausen, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.5879276331855,
+      "lon": 7.198412873798618,
+      "geoinfo": {
+        "display_name": "Bruchweg, Hillerheide, Recklinghausen, Kreis Recklinghausen, North Rhine-Westphalia, 45659, Germany",
+        "road": "Bruchweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hillerheide",
+        "city_district": null,
+        "city": "Recklinghausen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45659",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "672, Bruchweg, Hillerheide, Recklinghausen, Kreis Recklinghausen, North Rhine-Westphalia, 45659, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:17.642598+00:00",
+  "_kind": "geo_samples"
+}

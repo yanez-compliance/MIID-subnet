@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Piazza Armerina",
+  "geonameid": 2523796,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.39187074426094,
+      "lon": 14.369349186970116,
+      "geoinfo": {
+        "display_name": "Via Antonio Balbo, Castellina, Piazza Armerina, Enna, Sicily, 94015, Italy",
+        "road": "Via Antonio Balbo",
+        "house_number": null,
+        "neighbourhood": "Castellina",
+        "suburb": null,
+        "city_district": null,
+        "city": "Piazza Armerina",
+        "state": "Sicily",
+        "postcode": "94015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Antonio Balbo, Piazza Armerina, Sicily, Italy"
+    },
+    {
+      "lat": 37.406600779939495,
+      "lon": 14.38652445933192,
+      "geoinfo": {
+        "display_name": "Piazza Armerina, Enna, Sicily, 94015, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Piazza Armerina",
+        "state": "Sicily",
+        "postcode": "94015",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "289, Piazza Armerina, Enna, Sicily, 94015, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:09.237877+00:00",
+  "_kind": "geo_samples"
+}

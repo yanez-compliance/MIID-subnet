@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Glenferrie",
+  "geonameid": 2165329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.81437194261114,
+      "lon": 145.02856139515384,
+      "geoinfo": {
+        "display_name": "Barkers Road, Hawthorn, Melbourne, City of Boroondara, Victoria, 3122, Australia",
+        "road": "Barkers Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hawthorn",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3122",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Barkers Road, Glenferrie, Victoria, Australia"
+    },
+    {
+      "lat": -37.80356074366019,
+      "lon": 145.05232889593427,
+      "geoinfo": {
+        "display_name": "28, Argyle Road, Kew, Melbourne, City of Boroondara, Victoria, 3101, Australia",
+        "road": "Argyle Road",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": "Kew",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3101",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "28, Argyle Road, Kew, Melbourne, City of Boroondara, Victoria, 3101, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:09.428682+00:00",
+  "_kind": "geo_samples"
+}

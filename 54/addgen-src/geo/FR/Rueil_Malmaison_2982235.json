@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Rueil-Malmaison",
+  "geonameid": 2982235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.84681496637497,
+      "lon": 2.1551877285919736,
+      "geoinfo": {
+        "display_name": "144, Avenue de la Celle-Saint-Cloud, Vaucresson, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92420, France",
+        "road": "Avenue de la Celle-Saint-Cloud",
+        "house_number": "144",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vaucresson",
+        "state": null,
+        "postcode": "92420",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "144 Avenue de la Celle-Saint-Cloud, Rueil-Malmaison, Ile-de-France, France"
+    },
+    {
+      "lat": 48.86969394644079,
+      "lon": 2.2409211547360623,
+      "geoinfo": {
+        "display_name": "Allée du Bord de l'Eau, Quartier de la Muette, 16th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75016, France",
+        "road": "Allée du Bord de l'Eau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "16th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75016",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée du Bord de l'Eau, Quartier de la Muette, 16th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75016, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:17.257729+00:00",
+  "_kind": "geo_samples"
+}

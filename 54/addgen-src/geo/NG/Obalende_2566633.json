@@ -1,0 +1,47 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Obalende",
+  "geonameid": 2566633,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.474492876809338,
+      "lon": 3.412735650956006,
+      "geoinfo": {
+        "display_name": "Lagos, Lagos Island, Lagos State, 100242, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lagos",
+        "state": "Lagos State",
+        "postcode": "100242",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Obalende, Lagos State, Nigeria"
+    },
+    {
+      "lat": 6.413061909427102,
+      "lon": 3.427436123317912,
+      "geoinfo": {
+        "display_name": "Eko Atlantic, Eti Osa, Lagos State, 500001, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Eko Atlantic",
+        "suburb": "Eko Atlantic",
+        "city_district": null,
+        "city": null,
+        "state": "Lagos State",
+        "postcode": "500001",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "874, Eko Atlantic, Eti Osa, Lagos State, 500001, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:45.220983+00:00",
+  "_kind": "geo_samples"
+}

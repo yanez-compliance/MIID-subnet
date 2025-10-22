@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stanton",
+  "geonameid": 5398630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.80943115770179,
+      "lon": -118.03442502346218,
+      "geoinfo": {
+        "display_name": "Cerritos Avenue, Cypress, Orange County, California, 90630, United States",
+        "road": "Cerritos Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cypress",
+        "state": "California",
+        "postcode": "90630",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cerritos Avenue, Stanton, California, United States"
+    },
+    {
+      "lat": 33.7681864512876,
+      "lon": -117.99641681220257,
+      "geoinfo": {
+        "display_name": "7629, Trask Avenue, Westminster, Orange County, California, 92683, United States",
+        "road": "Trask Avenue",
+        "house_number": "7629",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westminster",
+        "state": "California",
+        "postcode": "92683",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7629, Trask Avenue, Westminster, Orange County, California, 92683, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:57.202137+00:00",
+  "_kind": "geo_samples"
+}

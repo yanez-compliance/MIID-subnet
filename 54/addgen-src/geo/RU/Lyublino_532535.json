@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Lyublino",
+  "geonameid": 532535,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.6577544085672,
+      "lon": 37.747317931471734,
+      "geoinfo": {
+        "display_name": "56/2, улица Перерва, Maryino District, Moscow, Central Federal District, 111116, Russia",
+        "road": "улица Перерва",
+        "house_number": "56/2",
+        "neighbourhood": null,
+        "suburb": "Maryino District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "111116",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "56/2 улица Перерва, Lyublino, Moscow, Russia"
+    },
+    {
+      "lat": 55.700056772540286,
+      "lon": 37.75495168876366,
+      "geoinfo": {
+        "display_name": "32, улица Юных Ленинцев, Kuzminki District, Moscow, Central Federal District, 109462, Russia",
+        "road": "улица Юных Ленинцев",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Kuzminki District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "109462",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "32, улица Юных Ленинцев, Kuzminki District, Moscow, Central Federal District, 109462, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:50:09.854389+00:00",
+  "_kind": "geo_samples"
+}

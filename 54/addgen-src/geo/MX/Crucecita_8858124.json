@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Crucecita",
+  "geonameid": 8858124,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.748755152369506,
+      "lon": -96.11778106556822,
+      "geoinfo": {
+        "display_name": "Sector C, La Crucecita, Santa María Huatulco, Oaxaca, 70987, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Crucecita",
+        "state": "Oaxaca",
+        "postcode": "70987",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Crucecita, Oaxaca, Mexico"
+    },
+    {
+      "lat": 15.80424478733373,
+      "lon": -96.10882350399136,
+      "geoinfo": {
+        "display_name": "Santa María Huatulco, Oaxaca, 70983, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oaxaca",
+        "postcode": "70983",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "115, Santa María Huatulco, Oaxaca, 70983, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:13.433967+00:00",
+  "_kind": "geo_samples"
+}

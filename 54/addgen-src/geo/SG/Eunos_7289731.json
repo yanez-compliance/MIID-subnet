@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Eunos",
+  "geonameid": 7289731,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.332911320530311,
+      "lon": 103.91540766598271,
+      "geoinfo": {
+        "display_name": "631, Bedok Reservoir Road, Singapur East, Bedok, Northeast, Singapore, 470631, Singapore",
+        "road": "Bedok Reservoir Road",
+        "house_number": "631",
+        "neighbourhood": "Singapur East",
+        "suburb": "Bedok",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "470631",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "631 Bedok Reservoir Road, Eunos, Singapore"
+    },
+    {
+      "lat": 1.3152014561916072,
+      "lon": 103.89644207548622,
+      "geoinfo": {
+        "display_name": "11, Haig Road, Geylang, Singapur East, Southeast, Singapore, 430011, Singapore",
+        "road": "Haig Road",
+        "house_number": "11",
+        "neighbourhood": "Singapur East",
+        "suburb": "Geylang",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "430011",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "11 Haig Road, Eunos, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-16T22:54:38.994890+00:00",
+  "_kind": "geo_samples"
+}

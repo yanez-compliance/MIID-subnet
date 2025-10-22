@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Duffel",
+  "geonameid": 2799090,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.12721322899921,
+      "lon": 4.536994632249627,
+      "geoinfo": {
+        "display_name": "79, Lintsesteenweg, Lier, Mechelen, Antwerp, Flanders, 2500, Belgium",
+        "road": "Lintsesteenweg",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lier",
+        "city": "Lier",
+        "state": "Antwerp",
+        "postcode": "2500",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "79 Lintsesteenweg, Duffel, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.11378184674796,
+      "lon": 4.502898808708494,
+      "geoinfo": {
+        "display_name": "Missestraat, Lier, Duffel, Mechelen, Antwerp, Flanders, 2570, Belgium",
+        "road": "Missestraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lier",
+        "city": "Duffel",
+        "state": "Antwerp",
+        "postcode": "2570",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "148, Missestraat, Lier, Duffel, Mechelen, Antwerp, Flanders, 2570, Belgium"
+    },
+    {
+      "lat": 51.10814030799718,
+      "lon": 4.468778834954438,
+      "geoinfo": {
+        "display_name": "143, Beekboshoek, Waarloos, Kontich, Antwerp, Flanders, 2550, Belgium",
+        "road": "Beekboshoek",
+        "house_number": "143",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kontich",
+        "state": "Antwerp",
+        "postcode": "2550",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "143, Beekboshoek, Waarloos, Kontich, Antwerp, Flanders, 2550, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:39.871910+00:00",
+  "_kind": "geo_samples"
+}

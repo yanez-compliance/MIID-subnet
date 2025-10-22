@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Westmount",
+  "geonameid": 6179226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.49180241724704,
+      "lon": -73.61070952055462,
+      "geoinfo": {
+        "display_name": "11, Avenue Oakland, Westmount, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3V 1P1, Canada",
+        "road": "Avenue Oakland",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westmount",
+        "state": "Quebec",
+        "postcode": "H3V 1P1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "11 Avenue Oakland, Westmount, Quebec, Canada"
+    },
+    {
+      "lat": 45.51091806333063,
+      "lon": -73.61636849166166,
+      "geoinfo": {
+        "display_name": "729, Chemin de la Côte-Sainte-Catherine, Outremont, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3T 1A4, Canada",
+        "road": "Chemin de la Côte-Sainte-Catherine",
+        "house_number": "729",
+        "neighbourhood": null,
+        "suburb": "Outremont",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H3T 1A4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "729, Chemin de la Côte-Sainte-Catherine, Outremont, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3T 1A4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:26.973119+00:00",
+  "_kind": "geo_samples"
+}

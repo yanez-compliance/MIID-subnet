@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Clara",
+  "geonameid": 5393015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.363487179256445,
+      "lon": -121.96316738343337,
+      "geoinfo": {
+        "display_name": "2280, Los Padres Boulevard, Santa Clara, Santa Clara County, California, 95050, United States",
+        "road": "Los Padres Boulevard",
+        "house_number": "2280",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clara",
+        "state": "California",
+        "postcode": "95050",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2280 Los Padres Boulevard, Santa Clara, California, United States"
+    },
+    {
+      "lat": 37.37636937004484,
+      "lon": -121.99224038407509,
+      "geoinfo": {
+        "display_name": "3065, Boyter Place, Nuevo, Santa Clara, Santa Clara County, California, 95089, United States",
+        "road": "Boyter Place",
+        "house_number": "3065",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Clara",
+        "state": "California",
+        "postcode": "95089",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3065, Boyter Place, Nuevo, Santa Clara, Santa Clara County, California, 95089, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:06.560969+00:00",
+  "_kind": "geo_samples"
+}

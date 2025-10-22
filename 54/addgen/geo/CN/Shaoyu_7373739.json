@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shaoyu",
+  "geonameid": 7373739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.07341906544494,
+      "lon": 105.37455474366902,
+      "geoinfo": {
+        "display_name": "Shaoyu, Xihe County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaoyu",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shaoyu, Gansu, China"
+    },
+    {
+      "lat": 34.098434435454294,
+      "lon": 105.37710292039598,
+      "geoinfo": {
+        "display_name": "Baoji, Xihe County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baoji",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "888, Baoji, Xihe County, Longnan, 50123 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:02.450268+00:00",
+  "_kind": "geo_samples"
+}

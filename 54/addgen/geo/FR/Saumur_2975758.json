@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saumur",
+  "geonameid": 2975758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.27685622577097,
+      "lon": -0.134719259983932,
+      "geoinfo": {
+        "display_name": "47, Route de la Tour de Ménives, Moulin de la Tour, Saint-Hilaire-Saint-Florent, Saumur, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49400, France",
+        "road": "Route de la Tour de Ménives",
+        "house_number": "47",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Saint-Hilaire-Saint-Florent",
+        "city": "Saumur",
+        "state": "Pays de la Loire",
+        "postcode": "49400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "47 Route de la Tour de Ménives, Saumur, Pays de la Loire, France"
+    },
+    {
+      "lat": 47.26526518870486,
+      "lon": -0.02553899702550093,
+      "geoinfo": {
+        "display_name": "Villebernier, Saumur, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49400, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villebernier",
+        "state": "Pays de la Loire",
+        "postcode": "49400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "721, Villebernier, Saumur, Maine-et-Loire, Pays de la Loire, Metropolitan France, 49400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:45.928327+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Grimsby",
+  "geonameid": 5967149,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.1783300805921,
+      "lon": -79.56085243931705,
+      "geoinfo": {
+        "display_name": "Mountain Street, Grimsby, Niagara Region, Golden Horseshoe, Ontario, L3M 4E7, Canada",
+        "road": "Mountain Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grimsby",
+        "state": "Ontario",
+        "postcode": "L3M 4E7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Mountain Street, Grimsby, Ontario, Canada"
+    },
+    {
+      "lat": 43.18686551207975,
+      "lon": -79.56258222824181,
+      "geoinfo": {
+        "display_name": "Bruce Trail - Niagara Section, Grimsby, Niagara Region, Golden Horseshoe, Ontario, L3M 1H3, Canada",
+        "road": "Bruce Trail - Niagara Section",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grimsby",
+        "state": "Ontario",
+        "postcode": "L3M 1H3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Bruce Trail - Niagara Section, Grimsby, Niagara Region, Golden Horseshoe, Ontario, L3M 1H3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:58.644605+00:00",
+  "_kind": "geo_samples"
+}

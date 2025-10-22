@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Latina",
+  "geonameid": 6544489,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.37563082068055,
+      "lon": -3.7996816100760897,
+      "geoinfo": {
+        "display_name": "Calle de los Coraceros, Campamento, Latina, Madrid, Community of Madrid, 28925, Spain",
+        "road": "Calle de los Coraceros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Latina",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28925",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de los Coraceros, Latina, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42559591201735,
+      "lon": -3.7605240974144976,
+      "geoinfo": {
+        "display_name": "Circuito El Bosque, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28011, Spain",
+        "road": "Circuito El Bosque",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moncloa-Aravaca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28011",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "829, Circuito El Bosque, Casa de Campo, Moncloa-Aravaca, Madrid, Community of Madrid, 28011, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:37.432838+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Phoenixville",
+  "geonameid": 5205849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.14785374371268,
+      "lon": -75.51499071042522,
+      "geoinfo": {
+        "display_name": "1154, Bateman Drive, The Ledges, Phoenixville, Chester County, Pennsylvania, 19460, United States",
+        "road": "Bateman Drive",
+        "house_number": "1154",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Phoenixville",
+        "state": "Pennsylvania",
+        "postcode": "19460",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1154 Bateman Drive, Phoenixville, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.10839803702214,
+      "lon": -75.50362401543204,
+      "geoinfo": {
+        "display_name": "112, Anderson Farm Road, Williams Corner, Schuylkill Township, Chester County, Pennsylvania, 19460, United States",
+        "road": "Anderson Farm Road",
+        "house_number": "112",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schuylkill Township",
+        "state": "Pennsylvania",
+        "postcode": "19460",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "112, Anderson Farm Road, Williams Corner, Schuylkill Township, Chester County, Pennsylvania, 19460, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:12.149803+00:00",
+  "_kind": "geo_samples"
+}

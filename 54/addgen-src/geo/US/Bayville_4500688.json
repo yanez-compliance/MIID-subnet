@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bayville",
+  "geonameid": 4500688,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.90040188183345,
+      "lon": -74.13733701152158,
+      "geoinfo": {
+        "display_name": "Eugene Furey Boulevard, Holly Park, Berkeley Township, Ocean County, New Jersey, 08721, United States",
+        "road": "Eugene Furey Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkeley Township",
+        "state": "New Jersey",
+        "postcode": "08721",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eugene Furey Boulevard, Bayville, New Jersey, United States"
+    },
+    {
+      "lat": 39.91287192075346,
+      "lon": -74.20195329929919,
+      "geoinfo": {
+        "display_name": "1659, Berkeley Avenue, Beachwood, Ocean County, New Jersey, 08722, United States",
+        "road": "Berkeley Avenue",
+        "house_number": "1659",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beachwood",
+        "state": "New Jersey",
+        "postcode": "08722",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1659, Berkeley Avenue, Beachwood, Ocean County, New Jersey, 08722, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:05:49.602931+00:00",
+  "_kind": "geo_samples"
+}

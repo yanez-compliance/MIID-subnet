@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Phulpur",
+  "geonameid": 1259735,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.577812778740125,
+      "lon": 82.08273818787664,
+      "geoinfo": {
+        "display_name": "Phulpur, Prayagraj, Uttar Pradesh, 212402, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": "212402",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Phulpur, Uttar Pradesh, India"
+    },
+    {
+      "lat": 25.548479831166823,
+      "lon": 82.10097966686091,
+      "geoinfo": {
+        "display_name": "Phoolpur, Phulpur, Prayagraj, Uttar Pradesh, 212402, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Phoolpur",
+        "state": "Uttar Pradesh",
+        "postcode": "212402",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "411, Phoolpur, Phulpur, Prayagraj, Uttar Pradesh, 212402, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:11.098502+00:00",
+  "_kind": "geo_samples"
+}

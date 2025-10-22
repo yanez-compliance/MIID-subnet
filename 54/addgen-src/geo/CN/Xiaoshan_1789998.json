@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiaoshan",
+  "geonameid": 1789998,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.12662510699917,
+      "lon": 120.24450554313881,
+      "geoinfo": {
+        "display_name": "蜀山路, Shushan, Xiaoshan District, Hangzhou City, Zhejiang, 311202, China",
+        "road": "蜀山路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shushan",
+        "city_district": null,
+        "city": "Xiaoshan District",
+        "state": "Zhejiang",
+        "postcode": "311202",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "蜀山路, Xiaoshan, Zhejiang, China"
+    },
+    {
+      "lat": 30.175790164242184,
+      "lon": 120.25985466930425,
+      "geoinfo": {
+        "display_name": "Chengxiang, Xiaoshan District, Hangzhou City, Zhejiang, 311202, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chengxiang",
+        "city_district": null,
+        "city": "Xiaoshan District",
+        "state": "Zhejiang",
+        "postcode": "311202",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "033, Chengxiang, Xiaoshan District, Hangzhou City, Zhejiang, 311202, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:37.535977+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Krasnoye Selo",
+  "geonameid": 542000,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.75557131673249,
+      "lon": 30.088314324858857,
+      "geoinfo": {
+        "display_name": "Стрельнинское шоссе, СНТ Авиатор, Toriki, округ Горелово, Saint Petersburg, Northwestern Federal District, 198320, Russia",
+        "road": "Стрельнинское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Toriki",
+        "city_district": null,
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "198320",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Стрельнинское шоссе, Krasnoye Selo, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.745217079326366,
+      "lon": 30.103352327769624,
+      "geoinfo": {
+        "display_name": "4, 13-я линия, Дружба, Krasnoye Selo, Saint Petersburg, Northwestern Federal District, 198320, Russia",
+        "road": "13-я линия",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Дружба",
+        "city_district": null,
+        "city": "Krasnoye Selo",
+        "state": "Saint Petersburg",
+        "postcode": "198320",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "4, 13-я линия, Дружба, Krasnoye Selo, Saint Petersburg, Northwestern Federal District, 198320, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:20.075892+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Nîmes",
+  "geonameid": 2990363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.86610098970548,
+      "lon": 4.362783055341407,
+      "geoinfo": {
+        "display_name": "Chemin Haut de Roulan, Mas de Rouvière, Nîmes, Gard, Occitania, Metropolitan France, 30972, France",
+        "road": "Chemin Haut de Roulan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nîmes",
+        "state": "Occitania",
+        "postcode": "30972",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin Haut de Roulan, Nîmes, Occitania, France"
+    },
+    {
+      "lat": 43.80076701632986,
+      "lon": 4.371674818590752,
+      "geoinfo": {
+        "display_name": "Nîmes, Gard, Occitania, Metropolitan France, 30132, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nîmes",
+        "state": "Occitania",
+        "postcode": "30132",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "929, Nîmes, Gard, Occitania, Metropolitan France, 30132, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:47.685870+00:00",
+  "_kind": "geo_samples"
+}

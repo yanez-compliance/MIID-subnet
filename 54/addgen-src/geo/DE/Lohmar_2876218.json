@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lohmar",
+  "geonameid": 2876218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83537340177054,
+      "lon": 7.276742589837644,
+      "geoinfo": {
+        "display_name": "10, Birker Straße, Inger, Hagen, Birk, Lohmar, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53797, Germany",
+        "road": "Birker Straße",
+        "house_number": "10",
+        "neighbourhood": "Inger",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lohmar",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53797",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "10 Birker Straße, Lohmar, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.80217536878208,
+      "lon": 7.235629187667707,
+      "geoinfo": {
+        "display_name": "Mühlenhofweg, Marienfried, Wolsdorf, Siegburg, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53721, Germany",
+        "road": "Mühlenhofweg",
+        "house_number": null,
+        "neighbourhood": "Marienfried",
+        "suburb": "Wolsdorf",
+        "city_district": null,
+        "city": "Siegburg",
+        "state": "North Rhine-Westphalia",
+        "postcode": "53721",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "505, Mühlenhofweg, Marienfried, Wolsdorf, Siegburg, Rhein-Sieg-Kreis, North Rhine-Westphalia, 53721, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:35:21.149027+00:00",
+  "_kind": "geo_samples"
+}

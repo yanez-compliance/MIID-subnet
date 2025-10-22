@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Novate Milanese",
+  "geonameid": 3172184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.561173370472794,
+      "lon": 9.150806782009836,
+      "geoinfo": {
+        "display_name": "Guardia di Finanza, 27, Via Giancarlo Puecher, Villaggio Ambrosiano, Paderno Dugnano, Zona Omogenea Milano Nord, Milan, Lombardy, 20037, Italy",
+        "road": "Via Giancarlo Puecher",
+        "house_number": "27",
+        "neighbourhood": "Villaggio Ambrosiano",
+        "suburb": "Villaggio Ambrosiano",
+        "city_district": null,
+        "city": "Paderno Dugnano",
+        "state": "Lombardy",
+        "postcode": "20037",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "27 Via Giancarlo Puecher, Novate Milanese, Lombardy, Italy"
+    },
+    {
+      "lat": 45.50285438185062,
+      "lon": 9.16722358419776,
+      "geoinfo": {
+        "display_name": "Via Filippo Baldinucci, Bovisa, Municipio 9, Milan, Lombardy, 20158, Italy",
+        "road": "Via Filippo Baldinucci",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 9",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20158",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Filippo Baldinucci, Bovisa, Municipio 9, Milan, Lombardy, 20158, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:17.841902+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Chosica",
+  "geonameid": 3943423,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -11.960039237256842,
+      "lon": -76.71709113321573,
+      "geoinfo": {
+        "display_name": "Brisas de California, Lurigancho, Province of Lima, Lima Metropolitan Area, Lima, 15468, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Brisas de California",
+        "suburb": null,
+        "city_district": null,
+        "city": "Lurigancho",
+        "state": "Lima",
+        "postcode": "15468",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Brisas de California, Chosica, Lima, Peru"
+    },
+    {
+      "lat": -11.958012634204307,
+      "lon": -76.74104216033666,
+      "geoinfo": {
+        "display_name": "Club AOPIP, Avenida Las Flores, Lurigancho, Province of Lima, Lima Metropolitan Area, Lima, 15472, Peru",
+        "road": "Avenida Las Flores",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lurigancho",
+        "state": "Lima",
+        "postcode": "15472",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "943, Avenida Las Flores, Chosica, 15472 Lima, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:44.211945+00:00",
+  "_kind": "geo_samples"
+}

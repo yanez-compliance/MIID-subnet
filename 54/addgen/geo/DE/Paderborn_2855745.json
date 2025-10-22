@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Paderborn",
+  "geonameid": 2855745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.72711010212987,
+      "lon": 8.785519528377653,
+      "geoinfo": {
+        "display_name": "Am Springbach, Paderborn, Kreis Paderborn, North Rhine-Westphalia, 33100, Germany",
+        "road": "Am Springbach",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Paderborn",
+        "city_district": null,
+        "city": "Paderborn",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33100",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Springbach, Paderborn, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.67787810813929,
+      "lon": 8.768136985071243,
+      "geoinfo": {
+        "display_name": "Querweg, Nordborchen, Borchen, Kreis Paderborn, North Rhine-Westphalia, 33178, Germany",
+        "road": "Querweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nordborchen",
+        "city_district": null,
+        "city": "Borchen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "33178",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "546, Querweg, Nordborchen, Borchen, Kreis Paderborn, North Rhine-Westphalia, 33178, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:06.161491+00:00",
+  "_kind": "geo_samples"
+}

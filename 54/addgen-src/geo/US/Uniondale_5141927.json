@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Uniondale",
+  "geonameid": 5141927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.66074527276236,
+      "lon": -73.56849412412082,
+      "geoinfo": {
+        "display_name": "Meadowbrook State Parkway, Village of Freeport, Town of Hempstead, Nassau County, New York, 11566, United States",
+        "road": "Meadowbrook State Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Freeport",
+        "state": "New York",
+        "postcode": "11566",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Meadowbrook State Parkway, Uniondale, New York, United States"
+    },
+    {
+      "lat": 40.69212392310172,
+      "lon": -73.58463332539789,
+      "geoinfo": {
+        "display_name": "Smith Street School, 780, Smith Street, Uniondale, Town of Hempstead, Nassau County, New York, 11553, United States",
+        "road": "Smith Street",
+        "house_number": "780",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uniondale",
+        "state": "New York",
+        "postcode": "11553",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Smith Street School, 780, Smith Street, Uniondale, Town of Hempstead, Nassau County, New York, 11553, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:03:56.197383+00:00",
+  "_kind": "geo_samples"
+}

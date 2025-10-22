@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Sincelejo",
+  "geonameid": 3667983,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.300379328927349,
+      "lon": -75.42795939733857,
+      "geoinfo": {
+        "display_name": "Sincelejo, Montes de María, Sucre, 700002, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sincelejo",
+        "state": "Sucre",
+        "postcode": "700002",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Sincelejo, Sucre, Colombia"
+    },
+    {
+      "lat": 9.290308544455291,
+      "lon": -75.42834408247903,
+      "geoinfo": {
+        "display_name": "Cerrito Colorado, Sincelejo, Montes de María, Sucre, 700002, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Cerrito Colorado",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sincelejo",
+        "state": "Sucre",
+        "postcode": "700002",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "959, Cerrito Colorado, Sincelejo, Montes de María, Sucre, 700002, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:15.883124+00:00",
+  "_kind": "geo_samples"
+}

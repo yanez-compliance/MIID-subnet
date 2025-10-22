@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Oran",
+  "geonameid": 2485926,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.71551076098041,
+      "lon": -0.6554923015892323,
+      "geoinfo": {
+        "display_name": "Fort lamoune, طريق المرسى الكبير, Oran, Oran District, Oran, 31020, Algeria",
+        "road": "طريق المرسى الكبير",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oran",
+        "state": "Oran",
+        "postcode": "31020",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "طريق المرسى الكبير, Oran, Oran, Algeria"
+    },
+    {
+      "lat": 35.734128966138925,
+      "lon": -0.6125415120521928,
+      "geoinfo": {
+        "display_name": "Gambetta, Oran, Oran District, Oran, 31025, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gambetta",
+        "city_district": null,
+        "city": "Oran",
+        "state": "Oran",
+        "postcode": "31025",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "655, Gambetta, Oran, Oran District, Oran, 31025, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:01.082048+00:00",
+  "_kind": "geo_samples"
+}

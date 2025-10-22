@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Medicine Hat",
+  "geonameid": 6071618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.01760130610771,
+      "lon": -110.63295929524115,
+      "geoinfo": {
+        "display_name": "Carter Crescent Southeast, Medicine Hat, Alberta, T1B 3W1, Canada",
+        "road": "Carter Crescent Southeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medicine Hat",
+        "state": "Alberta",
+        "postcode": "T1B 3W1",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Carter Crescent Southeast, Medicine Hat, Alberta, Canada"
+    },
+    {
+      "lat": 50.04438713909702,
+      "lon": -110.71679231924138,
+      "geoinfo": {
+        "display_name": "NW Riverside Trail, Medicine Hat, Alberta, T1A 3Z8, Canada",
+        "road": "NW Riverside Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medicine Hat",
+        "state": "Alberta",
+        "postcode": "T1A 3Z8",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "NW Riverside Trail, Medicine Hat, Alberta, T1A 3Z8, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:33.974695+00:00",
+  "_kind": "geo_samples"
+}

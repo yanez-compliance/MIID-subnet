@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tepexpan",
+  "geonameid": 3817746,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.608670935597186,
+      "lon": -98.97579227232261,
+      "geoinfo": {
+        "display_name": "Calle Francisco Villa, San Miguel Totolcingo, Acolman, Atenco, State of Mexico, 56020, Mexico",
+        "road": "Calle Francisco Villa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acolman",
+        "state": "State of Mexico",
+        "postcode": "56020",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Francisco Villa, Tepexpan, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.596128239320997,
+      "lon": -98.89279738791768,
+      "geoinfo": {
+        "display_name": "La Concepción, Ocopulco, Chiautla, Atenco, State of Mexico, 55886, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Concepción",
+        "city_district": null,
+        "city": "Chiautla",
+        "state": "State of Mexico",
+        "postcode": "55886",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "469, La Concepción, Ocopulco, Chiautla, Atenco, State of Mexico, 55886, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:47.304977+00:00",
+  "_kind": "geo_samples"
+}

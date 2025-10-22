@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tecamachalco",
+  "geonameid": 3516188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.925628083261692,
+      "lon": -97.72887077411112,
+      "geoinfo": {
+        "display_name": "Lomas de Santa Cruz, Tecamachalco, Puebla, 75490, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lomas de Santa Cruz",
+        "state": "Puebla",
+        "postcode": "75490",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tecamachalco, Puebla, Mexico"
+    },
+    {
+      "lat": 18.852951323917303,
+      "lon": -97.72362548019937,
+      "geoinfo": {
+        "display_name": "Rancho el Laurel (El Laurel), Xochimilco, Tecamachalco, Puebla, 75485, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xochimilco",
+        "state": "Puebla",
+        "postcode": "75485",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "965, Tecamachalco, 75485 Puebla, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:49:46.270048+00:00",
+  "_kind": "geo_samples"
+}

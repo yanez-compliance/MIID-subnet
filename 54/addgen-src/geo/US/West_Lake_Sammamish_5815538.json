@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Lake Sammamish",
+  "geonameid": 5815538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.58170152014777,
+      "lon": -122.10222940638302,
+      "geoinfo": {
+        "display_name": "Vasa Park, Bellevue, King County, Washington, 99007, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellevue",
+        "state": "Washington",
+        "postcode": "99007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Lake Sammamish, Washington, United States"
+    },
+    {
+      "lat": 47.56450066800562,
+      "lon": -122.11095537694557,
+      "geoinfo": {
+        "display_name": "4513, 172nd Avenue Southeast, Cougar Hills, Bellevue, King County, Washington, 98006, United States",
+        "road": "172nd Avenue Southeast",
+        "house_number": "4513",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellevue",
+        "state": "Washington",
+        "postcode": "98006",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4513, 172nd Avenue Southeast, Cougar Hills, Bellevue, King County, Washington, 98006, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:11.888032+00:00",
+  "_kind": "geo_samples"
+}

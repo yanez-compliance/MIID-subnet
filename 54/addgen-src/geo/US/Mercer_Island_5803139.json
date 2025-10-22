@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mercer Island",
+  "geonameid": 5803139,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.60454977537281,
+      "lon": -122.2471543770875,
+      "geoinfo": {
+        "display_name": "McGilvra, Mercer Island, King County, Washington, 98040, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "McGilvra",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mercer Island",
+        "state": "Washington",
+        "postcode": "98040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "McGilvra, Mercer Island, Washington, United States"
+    },
+    {
+      "lat": 47.551575510764714,
+      "lon": -122.27026861379328,
+      "geoinfo": {
+        "display_name": "4853, South Findlay Street, Seward Park, Rainier Valley, Seattle, King County, Washington, 98118, United States",
+        "road": "South Findlay Street",
+        "house_number": "4853",
+        "neighbourhood": "Seward Park",
+        "suburb": "Rainier Valley",
+        "city_district": null,
+        "city": "Seattle",
+        "state": "Washington",
+        "postcode": "98118",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4853, South Findlay Street, Seward Park, Rainier Valley, Seattle, King County, Washington, 98118, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:34.268854+00:00",
+  "_kind": "geo_samples"
+}

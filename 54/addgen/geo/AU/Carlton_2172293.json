@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Carlton",
+  "geonameid": 2172293,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.81039625294448,
+      "lon": 145.00199036764872,
+      "geoinfo": {
+        "display_name": "473, Victoria Street, Abbotsford, Melbourne, City of Yarra, Victoria, 3067, Australia",
+        "road": "Victoria Street",
+        "house_number": "473",
+        "neighbourhood": null,
+        "suburb": "Abbotsford",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3067",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "473 Victoria Street, Carlton, Victoria, Australia"
+    },
+    {
+      "lat": -37.761245736298356,
+      "lon": 144.98733253091453,
+      "geoinfo": {
+        "display_name": "71, Leinster Grove, Thornbury, Melbourne, City of Darebin, Victoria, 3071, Australia",
+        "road": "Leinster Grove",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": "Thornbury",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3071",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "71, Leinster Grove, Thornbury, Melbourne, City of Darebin, Victoria, 3071, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:31.010367+00:00",
+  "_kind": "geo_samples"
+}

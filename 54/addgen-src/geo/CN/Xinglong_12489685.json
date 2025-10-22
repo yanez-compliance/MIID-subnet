@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xinglong",
+  "geonameid": 12489685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.166993391946985,
+      "lon": 106.95891322489841,
+      "geoinfo": {
+        "display_name": "Shentong, Nanchuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shentong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xinglong, Chongqing, China"
+    },
+    {
+      "lat": 29.19743959074428,
+      "lon": 107.02764071142921,
+      "geoinfo": {
+        "display_name": "XA99, Nanchuan, Muliang, Nanchuan District, Chongqing, China",
+        "road": "XA99",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanchuan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "XA99, Nanchuan, Muliang, Nanchuan District, 08854 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:13.250057+00:00",
+  "_kind": "geo_samples"
+}

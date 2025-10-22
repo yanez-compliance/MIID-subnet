@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Villeneuve-Saint-Georges",
+  "geonameid": 2968529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.76718959980698,
+      "lon": 2.4364328146257312,
+      "geoinfo": {
+        "display_name": "Voie 2M, Chemin des Bœufs, Gizeh-Montaigut - Palais, Créteil, Val-de-Marne, Metropolitan France, 94000, France",
+        "road": "Chemin des Bœufs",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gizeh-Montaigut - Palais",
+        "city_district": null,
+        "city": "Créteil",
+        "state": null,
+        "postcode": "94000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Bœufs, Villeneuve-Saint-Georges, France"
+    },
+    {
+      "lat": 48.72012617230939,
+      "lon": 2.4461434453455424,
+      "geoinfo": {
+        "display_name": "Rue de Belle Place, Villeneuve-Saint-Georges, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94190, France",
+        "road": "Rue de Belle Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villeneuve-Saint-Georges",
+        "state": "Ile-de-France",
+        "postcode": "94190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "621, Rue de Belle Place, Villeneuve-Saint-Georges, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94190, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:40.039086+00:00",
+  "_kind": "geo_samples"
+}

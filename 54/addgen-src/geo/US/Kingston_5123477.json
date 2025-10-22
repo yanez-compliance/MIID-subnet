@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kingston",
+  "geonameid": 5123477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.91477222997153,
+      "lon": -73.98742781287636,
+      "geoinfo": {
+        "display_name": "19, Dock Street, Rondout, City of Kingston, Ulster County, New York, 12401, United States",
+        "road": "Dock Street",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Kingston",
+        "state": "New York",
+        "postcode": "12401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19 Dock Street, Kingston, New York, United States"
+    },
+    {
+      "lat": 41.94349568677506,
+      "lon": -74.01676038396191,
+      "geoinfo": {
+        "display_name": "298, Barbarossa Lane, Town of Ulster, Ulster County, New York, 12401, United States",
+        "road": "Barbarossa Lane",
+        "house_number": "298",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New York",
+        "postcode": "12401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "298, Barbarossa Lane, Town of Ulster, Ulster County, New York, 12401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:03:20.024810+00:00",
+  "_kind": "geo_samples"
+}

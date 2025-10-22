@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Philadelphia",
+  "geonameid": 5164390,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.49468434227444,
+      "lon": -81.46426145401905,
+      "geoinfo": {
+        "display_name": "1028, Grant Avenue Northwest, New Philadelphia, Tuscarawas County, Ohio, 44663, United States",
+        "road": "Grant Avenue Northwest",
+        "house_number": "1028",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Philadelphia",
+        "state": "Ohio",
+        "postcode": "44663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1028 Grant Avenue Northwest, New Philadelphia, Ohio, United States"
+    },
+    {
+      "lat": 40.50029522535151,
+      "lon": -81.42654692590202,
+      "geoinfo": {
+        "display_name": "Winkler Drive Northeast, New Philadelphia, Tuscarawas County, Ohio, 44663, United States",
+        "road": "Winkler Drive Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Philadelphia",
+        "state": "Ohio",
+        "postcode": "44663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "723, Winkler Drive Northeast, New Philadelphia, Tuscarawas County, Ohio, 44663, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:35.647508+00:00",
+  "_kind": "geo_samples"
+}

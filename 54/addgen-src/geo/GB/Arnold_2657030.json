@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Arnold",
+  "geonameid": 2657030,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.983101363099195,
+      "lon": -1.108818081213207,
+      "geoinfo": {
+        "display_name": "Westdale Junior School, Westdale Lane West, Mapperley, Carlton, Nottingham, Nottinghamshire, East Midlands, England, NG3 6ET, United Kingdom",
+        "road": "Westdale Lane West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mapperley",
+        "city_district": null,
+        "city": "Nottingham",
+        "state": "England",
+        "postcode": "NG3 6ET",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Westdale Lane West, Arnold, England, United Kingdom"
+    },
+    {
+      "lat": 52.995491638782475,
+      "lon": -1.0661715608324764,
+      "geoinfo": {
+        "display_name": "Spring Lane, Lambley, Gedling, Nottinghamshire, East Midlands, England, NG4 4PG, United Kingdom",
+        "road": "Spring Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gedling",
+        "state": "England",
+        "postcode": "NG4 4PG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Spring Lane, Lambley, Gedling, Nottinghamshire, East Midlands, England, NG4 4PG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:05.181671+00:00",
+  "_kind": "geo_samples"
+}

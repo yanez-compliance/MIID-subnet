@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Templestowe",
+  "geonameid": 2147140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.76669862531983,
+      "lon": 145.11031855503427,
+      "geoinfo": {
+        "display_name": "9, Howitt Drive, Templestowe Lower, Melbourne, City of Manningham, Victoria, 3107, Australia",
+        "road": "Howitt Drive",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Templestowe Lower",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "9 Howitt Drive, Templestowe, Victoria, Australia"
+    },
+    {
+      "lat": -37.75286079496315,
+      "lon": 145.1728018988562,
+      "geoinfo": {
+        "display_name": "Heidelberg-Warrandyte Road, Doncaster East, Melbourne, City of Manningham, Victoria, 3109, Australia",
+        "road": "Heidelberg-Warrandyte Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Doncaster East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3109",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "201, Heidelberg-Warrandyte Road, Doncaster East, Melbourne, City of Manningham, Victoria, 3109, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:07.675410+00:00",
+  "_kind": "geo_samples"
+}

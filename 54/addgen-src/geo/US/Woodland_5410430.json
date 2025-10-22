@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodland",
+  "geonameid": 5410430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.67266466802122,
+      "lon": -121.75283470820436,
+      "geoinfo": {
+        "display_name": "669, Spring Court, Woodland, Yolo County, California, 95776, United States",
+        "road": "Spring Court",
+        "house_number": "669",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodland",
+        "state": "California",
+        "postcode": "95776",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "669 Spring Court, Woodland, California, United States"
+    },
+    {
+      "lat": 38.68114470659474,
+      "lon": -121.75723127059418,
+      "geoinfo": {
+        "display_name": "1283, Dannelly Circle, Woodland, Yolo County, California, 95776, United States",
+        "road": "Dannelly Circle",
+        "house_number": "1283",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodland",
+        "state": "California",
+        "postcode": "95776",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1283, Dannelly Circle, Woodland, Yolo County, California, 95776, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:36.368457+00:00",
+  "_kind": "geo_samples"
+}

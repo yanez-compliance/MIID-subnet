@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "Valencia",
+  "geonameid": 3650301,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -0.9473323242917994,
+      "lon": -79.34698532282286,
+      "geoinfo": {
+        "display_name": "La Union, Valencia, Los Ríos, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Los Ríos",
+        "postcode": null,
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Valencia, Los Ríos, Ecuador"
+    },
+    {
+      "lat": -0.97700875989917,
+      "lon": -79.35981755599164,
+      "geoinfo": {
+        "display_name": "Vía La Experiencia, El Oasis, Valencia, Los Ríos, Ecuador",
+        "road": "Vía La Experiencia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Los Ríos",
+        "postcode": null,
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Vía La Experiencia, Valencia, Los Ríos, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:07:13.094246+00:00",
+  "_kind": "geo_samples"
+}

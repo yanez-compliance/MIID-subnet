@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parkside",
+  "geonameid": 8449754,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.75194146678533,
+      "lon": -122.52727044108717,
+      "geoinfo": {
+        "display_name": "Sunset District, San Francisco, California, 94166, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sunset District",
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94166",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sunset District, Parkside, California, United States"
+    },
+    {
+      "lat": 37.7166489759013,
+      "lon": -122.4557225379076,
+      "geoinfo": {
+        "display_name": "82, Montana Street, Ocean View, San Francisco, California, 94112, United States",
+        "road": "Montana Street",
+        "house_number": "82",
+        "neighbourhood": "Ocean View",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postcode": "94112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "82, Montana Street, Ocean View, San Francisco, California, 94112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:51.501122+00:00",
+  "_kind": "geo_samples"
+}

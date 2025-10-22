@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Logansport",
+  "geonameid": 4922968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.737569432983975,
+      "lon": -86.3969122537835,
+      "geoinfo": {
+        "display_name": "Cass County, Indiana, 47947, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "47947",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Logansport, Indiana, United States"
+    },
+    {
+      "lat": 40.72864166884875,
+      "lon": -86.34010847763754,
+      "geoinfo": {
+        "display_name": "Plant #1, Logansport Bypass, Logansport, Cass County, Indiana, 46947, United States",
+        "road": "Logansport Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Logansport",
+        "state": "Indiana",
+        "postcode": "46947",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Plant #1, Logansport Bypass, Logansport, Cass County, Indiana, 46947, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:25.870899+00:00",
+  "_kind": "geo_samples"
+}

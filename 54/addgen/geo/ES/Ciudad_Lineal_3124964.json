@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ciudad Lineal",
+  "geonameid": 3124964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.42305781116343,
+      "lon": -3.6490220048952446,
+      "geoinfo": {
+        "display_name": "Pasaje de Santa Felicidad, La Elipa, Ventas, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain",
+        "road": "Pasaje de Santa Felicidad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Pasaje de Santa Felicidad, Ciudad Lineal, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.45784266131026,
+      "lon": -3.6167940782718375,
+      "geoinfo": {
+        "display_name": "Calle de Manuel Azaña, Barajas, Madrid, Community of Madrid, 28043, Spain",
+        "road": "Calle de Manuel Azaña",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28043",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "159, Calle de Manuel Azaña, Barajas, Madrid, Community of Madrid, 28043, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:56.578274+00:00",
+  "_kind": "geo_samples"
+}

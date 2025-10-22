@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hangzhou",
+  "geonameid": 1808926,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.256387337309214,
+      "lon": 120.18269119344924,
+      "geoinfo": {
+        "display_name": "环城东路, 老浙大社区, 小营街道, Shangcheng District, Hangzhou City, Zhejiang, 310009, China",
+        "road": "环城东路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "小营街道",
+        "city_district": null,
+        "city": "Shangcheng District",
+        "state": "Zhejiang",
+        "postcode": "310009",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "环城东路, Hangzhou, Zhejiang, China"
+    },
+    {
+      "lat": 30.334370620348423,
+      "lon": 120.1708098654685,
+      "geoinfo": {
+        "display_name": "东新路, Shiqiao, 石桥街道, Gongshu District, Hangzhou City, Zhejiang, 310004, China",
+        "road": "东新路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shiqiao",
+        "city_district": null,
+        "city": "Gongshu District",
+        "state": "Zhejiang",
+        "postcode": "310004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "587, 东新路, Shiqiao, 石桥街道, Gongshu District, Hangzhou City, Zhejiang, 310004, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:00.315633+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "San José Pinula",
+  "geonameid": 3589977,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.520380698545301,
+      "lon": -90.42069089977304,
+      "geoinfo": {
+        "display_name": "Las Anonas, San José Pinula, Guatemala Department, 01052, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San José Pinula",
+        "state": "Guatemala Department",
+        "postcode": "01052",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "San José Pinula, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.582652753826446,
+      "lon": -90.3884974420536,
+      "geoinfo": {
+        "display_name": "San Luis Letran, San José Pinula, Guatemala Department, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis Letran",
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "148, San Luis Letran, San José Pinula, 80939 Guatemala Department, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T05:48:38.934901+00:00",
+  "_kind": "geo_samples"
+}

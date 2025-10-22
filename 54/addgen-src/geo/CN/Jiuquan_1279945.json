@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiuquan",
+  "geonameid": 1279945,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.710570627400614,
+      "lon": 98.4795215573091,
+      "geoinfo": {
+        "display_name": "Jiuquan, Suzhou District, Jiuquan, Gansu, 735000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiuquan",
+        "state": "Gansu",
+        "postcode": "735000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiuquan, Gansu, China"
+    },
+    {
+      "lat": 39.771297851058115,
+      "lon": 98.52970932040209,
+      "geoinfo": {
+        "display_name": "Suzhou, Suzhou District, Jiuquan, Gansu, 735000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Suzhou",
+        "state": "Gansu",
+        "postcode": "735000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "370, Suzhou, Suzhou District, Jiuquan, Gansu, 735000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:50.837893+00:00",
+  "_kind": "geo_samples"
+}

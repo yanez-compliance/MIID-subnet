@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Shimo’ochiai",
+  "geonameid": 10865987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.72236061495859,
+      "lon": 139.69827314241743,
+      "geoinfo": {
+        "display_name": "Mejiro 4, Mejiro, Toshima, Tokyo, 171-0031, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Mejiro 4",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toshima",
+        "state": null,
+        "postcode": "171-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Mejiro 4, Shimo’ochiai, Japan"
+    },
+    {
+      "lat": 35.70785467762238,
+      "lon": 139.71583999886195,
+      "geoinfo": {
+        "display_name": "Nishi-Waseda 2, Nishi-Waseda, Shinjuku, Tokyo, 160-8484, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nishi-Waseda 2",
+        "suburb": "Nishi-Waseda",
+        "city_district": null,
+        "city": "Shinjuku",
+        "state": null,
+        "postcode": "160-8484",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nishi-Waseda 2, Nishi-Waseda, Shinjuku, Tokyo, 160-8484, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:40.274073+00:00",
+  "_kind": "geo_samples"
+}

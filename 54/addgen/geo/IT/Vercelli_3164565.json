@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Vercelli",
+  "geonameid": 3164565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.299738446468524,
+      "lon": 8.430521723356556,
+      "geoinfo": {
+        "display_name": "Tangenziale Sud, Cascina Boschine, Vercelli, Piedmont, 13100, Italy",
+        "road": "Tangenziale Sud",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vercelli",
+        "state": "Piedmont",
+        "postcode": "13100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Tangenziale Sud, Vercelli, Piedmont, Italy"
+    },
+    {
+      "lat": 45.306275454010134,
+      "lon": 8.389023922970818,
+      "geoinfo": {
+        "display_name": "Ex Cascina San Bartolomeo, Villaggio Concordia, Vercelli, Piedmont, 13100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villaggio Concordia",
+        "city_district": null,
+        "city": "Vercelli",
+        "state": "Piedmont",
+        "postcode": "13100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "261, Ex Cascina San Bartolomeo, Villaggio Concordia, Vercelli, Piedmont, 13100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:20.408160+00:00",
+  "_kind": "geo_samples"
+}

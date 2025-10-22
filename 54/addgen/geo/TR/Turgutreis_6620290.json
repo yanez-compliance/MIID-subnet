@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Turgutreis",
+  "geonameid": 6620290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.03297458485081,
+      "lon": 27.299924657648962,
+      "geoinfo": {
+        "display_name": "10. Sokak, İslamhaneleri, Bodrum, Muğla, Aegean Region, 48400, Turkey",
+        "road": "10. Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bodrum",
+        "state": null,
+        "postcode": "48400",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "10. Sokak, Turgutreis, Turkey"
+    },
+    {
+      "lat": 36.9922780524993,
+      "lon": 27.308809678462428,
+      "geoinfo": {
+        "display_name": "Akyarlar, Akyarlar Mahallesi, Bodrum, Muğla, Aegean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Akyarlar",
+        "city_district": "Akyarlar Mahallesi",
+        "city": "Bodrum",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "731, Akyarlar, Akyarlar Mahallesi, Bodrum, Muğla, 93641 Aegean Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:07:00.722342+00:00",
+  "_kind": "geo_samples"
+}

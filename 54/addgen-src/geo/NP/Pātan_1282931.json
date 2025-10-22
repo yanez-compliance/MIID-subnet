@@ -1,0 +1,65 @@
+{
+  "country_code": "NP",
+  "country": "Nepal",
+  "city": "Pātan",
+  "geonameid": 1282931,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 27.65722254251645,
+      "lon": 85.34434420762742,
+      "geoinfo": {
+        "display_name": "Sitapakha, Mahalaxmi-04, Phaudegau, Mahalaxmi Municipality, Lalitpur, Bagamati Province, 44705, Nepal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Mahalaxmi-04",
+        "city": "Phaudegau",
+        "state": "Bagamati Province",
+        "postcode": "44705",
+        "country": "Nepal",
+        "country_code": "np"
+      },
+      "address": "Mahalaxmi-04, Pātan, Bagamati Province, Nepal"
+    },
+    {
+      "lat": 27.644525090724642,
+      "lon": 85.30839485067416,
+      "geoinfo": {
+        "display_name": "Lalitpur-25, Lalitpur, Lalitpur Metropolitan City, Lalitpur, Bagamati Province, 13775, Nepal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lalitpur-25",
+        "city": "Lalitpur",
+        "state": "Bagamati Province",
+        "postcode": "13775",
+        "country": "Nepal",
+        "country_code": "np"
+      },
+      "address": "Lalitpur-25, Pātan, Bagamati Province, Nepal"
+    },
+    {
+      "lat": 27.704028716364363,
+      "lon": 85.28836251874714,
+      "geoinfo": {
+        "display_name": "Chhauni Museum, Museum Marg, Kalimati, Kathmandu-13, Kathmandu Metropolitan City, Kathmandu, Bagamati Province, 44000, Nepal",
+        "road": "Museum Marg",
+        "house_number": null,
+        "neighbourhood": "Kalimati",
+        "suburb": "Kalimati",
+        "city_district": "Kathmandu-13",
+        "city": "Kathmandu Metropolitan City",
+        "state": "Bagamati Province",
+        "postcode": "44000",
+        "country": "Nepal",
+        "country_code": "np"
+      },
+      "address": "Museum Marg, Pātan, Bagamati Province, Nepal"
+    }
+  ],
+  "updated_at": "2025-10-16T20:28:15.410921+00:00",
+  "_kind": "geo_samples"
+}

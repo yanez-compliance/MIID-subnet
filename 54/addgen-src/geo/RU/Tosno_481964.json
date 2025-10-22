@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Tosno",
+  "geonameid": 481964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.5553921215161,
+      "lon": 30.8443448132036,
+      "geoinfo": {
+        "display_name": "23, Московское шоссе, Tosno, Тосненское городское поселение, Tusina District, Leningrad Oblast, Northwestern Federal District, 187002, Russia",
+        "road": "Московское шоссе",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tosno",
+        "state": "Leningrad Oblast",
+        "postcode": "187002",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "23 Московское шоссе, Tosno, Leningrad Oblast, Russia"
+    },
+    {
+      "lat": 59.5174136082336,
+      "lon": 30.864358412365807,
+      "geoinfo": {
+        "display_name": "Тосненское городское поселение, Tusina District, Leningrad Oblast, Northwestern Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Leningrad Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "403, Tosno, 84162 Leningrad Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:54.847585+00:00",
+  "_kind": "geo_samples"
+}

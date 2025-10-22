@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Zapopan",
+  "geonameid": 3979770,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.740998417109314,
+      "lon": -103.36144512828992,
+      "geoinfo": {
+        "display_name": "Calle Paseo de los Guamuchiles, Fraccionamiento Tabachines, Zapopan, Región Centro, Jalisco, 45180, Mexico",
+        "road": "Calle Paseo de los Guamuchiles",
+        "house_number": null,
+        "neighbourhood": "Fraccionamiento Tabachines",
+        "suburb": null,
+        "city_district": null,
+        "city": "Zapopan",
+        "state": "Jalisco",
+        "postcode": "45180",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Paseo de los Guamuchiles, Zapopan, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.727091394431138,
+      "lon": -103.38355857128765,
+      "geoinfo": {
+        "display_name": "Calle Santa Lucía, Tepeyac, Zapopan, Región Centro, Jalisco, 45157, Mexico",
+        "road": "Calle Santa Lucía",
+        "house_number": null,
+        "neighbourhood": "Tepeyac",
+        "suburb": null,
+        "city_district": null,
+        "city": "Zapopan",
+        "state": "Jalisco",
+        "postcode": "45157",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "328, Calle Santa Lucía, Tepeyac, Zapopan, Región Centro, Jalisco, 45157, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:27.500188+00:00",
+  "_kind": "geo_samples"
+}

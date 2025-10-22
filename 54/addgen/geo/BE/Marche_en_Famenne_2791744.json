@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Marche-en-Famenne",
+  "geonameid": 2791744,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.23517509711783,
+      "lon": 5.275970122210575,
+      "geoinfo": {
+        "display_name": "Chemin de Hogne, Aye, Marche-en-Famenne, Somme-Leuze, Marche-en-Famenne, Luxembourg, Wallonia, 6900, Belgium",
+        "road": "Chemin de Hogne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marche-en-Famenne",
+        "state": "Luxembourg",
+        "postcode": "6900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin de Hogne, Marche-en-Famenne, Luxembourg, Belgium"
+    },
+    {
+      "lat": 50.21245129259409,
+      "lon": 5.388979607033065,
+      "geoinfo": {
+        "display_name": "Rue de la Forêt, Waha, Marche-en-Famenne, Luxembourg, Wallonia, 6900, Belgium",
+        "road": "Rue de la Forêt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Waha",
+        "city": "Marche-en-Famenne",
+        "state": "Luxembourg",
+        "postcode": "6900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "475, Rue de la Forêt, Waha, Marche-en-Famenne, Luxembourg, Wallonia, 6900, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:03.303675+00:00",
+  "_kind": "geo_samples"
+}

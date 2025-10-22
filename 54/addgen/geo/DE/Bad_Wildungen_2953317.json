@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Wildungen",
+  "geonameid": 2953317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.10246519790876,
+      "lon": 9.174397190756626,
+      "geoinfo": {
+        "display_name": "Mandern, Bad Wildungen, Landkreis Waldeck-Frankenberg, Hesse, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mandern",
+        "state": "Hesse",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bad Wildungen, Hesse, Germany"
+    },
+    {
+      "lat": 51.14941559491264,
+      "lon": 9.104250764930924,
+      "geoinfo": {
+        "display_name": "1, Am Kalkrain, Giflitz, Edertal, Landkreis Waldeck-Frankenberg, Hesse, 34549, Germany",
+        "road": "Am Kalkrain",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Giflitz",
+        "state": "Hesse",
+        "postcode": "34549",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Am Kalkrain, Giflitz, Edertal, Landkreis Waldeck-Frankenberg, Hesse, 34549, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:30.875104+00:00",
+  "_kind": "geo_samples"
+}

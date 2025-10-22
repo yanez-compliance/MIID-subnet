@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Noble Park",
+  "geonameid": 2155204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.0007043195491,
+      "lon": 145.1938408379543,
+      "geoinfo": {
+        "display_name": "EastLink Trail, Dandenong South, Melbourne, City of Greater Dandenong, Victoria, 3175, Australia",
+        "road": "EastLink Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dandenong South",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3175",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "EastLink Trail, Noble Park, Victoria, Australia"
+    },
+    {
+      "lat": -37.93316349370363,
+      "lon": 145.13569688634902,
+      "geoinfo": {
+        "display_name": "34, Kombi Road, Clayton South, Melbourne, City of Kingston, Victoria, 3169, Australia",
+        "road": "Kombi Road",
+        "house_number": "34",
+        "neighbourhood": null,
+        "suburb": "Clayton South",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3169",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "34, Kombi Road, Clayton South, Melbourne, City of Kingston, Victoria, 3169, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:58:47.171030+00:00",
+  "_kind": "geo_samples"
+}

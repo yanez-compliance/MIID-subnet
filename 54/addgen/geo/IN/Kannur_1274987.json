@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kannur",
+  "geonameid": 1274987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.85173094141283,
+      "lon": 75.36526747265646,
+      "geoinfo": {
+        "display_name": "Kannur, Kerala, 670017, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kannur",
+        "state": "Kerala",
+        "postcode": "670017",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kannur, Kerala, India"
+    },
+    {
+      "lat": 11.863467317716683,
+      "lon": 75.40050187268328,
+      "geoinfo": {
+        "display_name": "Chelora, Kannur, Kerala, 670001, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Chelora",
+        "city": "Kannur",
+        "state": "Kerala",
+        "postcode": "670001",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "114, Chelora, Kannur, Kerala, 670001, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:38:01.681618+00:00",
+  "_kind": "geo_samples"
+}

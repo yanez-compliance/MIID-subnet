@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Miami Beach",
+  "geonameid": 4164143,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.79820799749213,
+      "lon": -80.16141800258976,
+      "geoinfo": {
+        "display_name": "830, West Dilido Drive, Miami Beach, Miami-Dade County, Florida, 33139, United States",
+        "road": "West Dilido Drive",
+        "house_number": "830",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami Beach",
+        "state": "Florida",
+        "postcode": "33139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "830 West Dilido Drive, Miami Beach, Florida, United States"
+    },
+    {
+      "lat": 25.79238572920965,
+      "lon": -80.08290311315639,
+      "geoinfo": {
+        "display_name": "Miami-Dade County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "556, Miami Beach, 82247 Florida, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:43.243591+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Madison",
+  "geonameid": 4838116,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.260423679806706,
+      "lon": -72.6330732907992,
+      "geoinfo": {
+        "display_name": "South Central Connecticut Planning Region, Connecticut, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Connecticut",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Madison, Connecticut, United States"
+    },
+    {
+      "lat": 41.291559580557184,
+      "lon": -72.6403343584833,
+      "geoinfo": {
+        "display_name": "81, Green Hill Road, East River, Madison, South Central Connecticut Planning Region, Connecticut, 06443, United States",
+        "road": "Green Hill Road",
+        "house_number": "81",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Madison",
+        "state": "Connecticut",
+        "postcode": "06443",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "81, Green Hill Road, East River, Madison, South Central Connecticut Planning Region, Connecticut, 06443, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:50.754165+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Gustavo Adolfo Madero",
+  "geonameid": 3514674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.520286746400274,
+      "lon": -99.13748709842947,
+      "geoinfo": {
+        "display_name": "Avenida Ticomán, Colonia La Candelaria Ticomán, Mexico City, Gustavo A. Madero, Mexico City, 07310, Mexico",
+        "road": "Avenida Ticomán",
+        "house_number": null,
+        "neighbourhood": "Colonia La Candelaria Ticomán",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "07310",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Ticomán, Gustavo Adolfo Madero, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.4759866050389,
+      "lon": -99.10502332981342,
+      "geoinfo": {
+        "display_name": "Calle Oriente 171, Colonia Santa Coleta, Mexico City, Gustavo A. Madero, Mexico City, 07470, Mexico",
+        "road": "Calle Oriente 171",
+        "house_number": null,
+        "neighbourhood": "Colonia Santa Coleta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "07470",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Oriente 171, Colonia Santa Coleta, Mexico City, Gustavo A. Madero, Mexico City, 07470, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:46.178786+00:00",
+  "_kind": "geo_samples"
+}

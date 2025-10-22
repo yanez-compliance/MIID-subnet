@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Orange",
+  "geonameid": 2154219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.29587868071336,
+      "lon": 149.05894192822888,
+      "geoinfo": {
+        "display_name": "Canobolas Road, Canobolas, Orange City Council, New South Wales, 2800, Australia",
+        "road": "Canobolas Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canobolas",
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": "2800",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Canobolas Road, Orange, New South Wales, Australia"
+    },
+    {
+      "lat": -33.32458277878488,
+      "lon": 149.11199096438392,
+      "geoinfo": {
+        "display_name": "Shepherd Road, Spring Creek, Orange City Council, New South Wales, 2800, Australia",
+        "road": "Shepherd Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Spring Creek",
+        "city_district": null,
+        "city": null,
+        "state": "New South Wales",
+        "postcode": "2800",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "392, Shepherd Road, Spring Creek, Orange City Council, New South Wales, 2800, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:48:05.950539+00:00",
+  "_kind": "geo_samples"
+}

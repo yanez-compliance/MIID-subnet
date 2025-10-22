@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Searcy",
+  "geonameid": 4130430,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.255972414836975,
+      "lon": -91.74752660428476,
+      "geoinfo": {
+        "display_name": "1000, West McRae Avenue, Searcy, White County, Arkansas, 72143, United States",
+        "road": "West McRae Avenue",
+        "house_number": "1000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Searcy",
+        "state": "Arkansas",
+        "postcode": "72143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1000 West McRae Avenue, Searcy, Arkansas, United States"
+    },
+    {
+      "lat": 35.218323041412766,
+      "lon": -91.74403624388819,
+      "geoinfo": {
+        "display_name": "Pioneer Road, Searcy, White County, Arkansas, 72143, United States",
+        "road": "Pioneer Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Searcy",
+        "state": "Arkansas",
+        "postcode": "72143",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "173, Pioneer Road, Searcy, White County, Arkansas, 72143, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:07.395281+00:00",
+  "_kind": "geo_samples"
+}

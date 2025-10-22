@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Yarraville",
+  "geonameid": 2142457,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.82317946912384,
+      "lon": 144.84509736662667,
+      "geoinfo": {
+        "display_name": "Federation Trail, Brooklyn, Melbourne, City of Hobsons Bay, Victoria, 3025, Australia",
+        "road": "Federation Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3025",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Federation Trail, Yarraville, Victoria, Australia"
+    },
+    {
+      "lat": -37.838692525950286,
+      "lon": 144.88185257190074,
+      "geoinfo": {
+        "display_name": "26, Steele Street, Newport, Melbourne, City of Hobsons Bay, Victoria, 3015, Australia",
+        "road": "Steele Street",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Newport",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3015",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "26, Steele Street, Newport, Melbourne, City of Hobsons Bay, Victoria, 3015, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:42.826067+00:00",
+  "_kind": "geo_samples"
+}

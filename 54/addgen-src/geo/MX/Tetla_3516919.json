@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tetla",
+  "geonameid": 3516919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.430960652180687,
+      "lon": -98.13041079506038,
+      "geoinfo": {
+        "display_name": "Calle Emiliano Zapata, San Bartolomé Matlalohcan, Tetla de la Solidaridad, Tlaxcala, 90342, Mexico",
+        "road": "Calle Emiliano Zapata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Bartolomé Matlalohcan",
+        "state": "Tlaxcala",
+        "postcode": "90342",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Emiliano Zapata, Tetla, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.433706018617507,
+      "lon": -98.08971356857697,
+      "geoinfo": {
+        "display_name": "Santa María Texcalac, Apizaco, Tlaxcala, 90430, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa María Texcalac",
+        "state": "Tlaxcala",
+        "postcode": "90430",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "742, Santa María Texcalac, Apizaco, Tlaxcala, 90430, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:42.739122+00:00",
+  "_kind": "geo_samples"
+}

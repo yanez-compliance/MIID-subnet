@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Culpeper",
+  "geonameid": 4754966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.47678985706633,
+      "lon": -77.96969092868153,
+      "geoinfo": {
+        "display_name": "Montrose Lane, High Point, Braggs Corner, Culpeper County, Virginia, 22701, United States",
+        "road": "Montrose Lane",
+        "house_number": null,
+        "neighbourhood": "High Point",
+        "suburb": null,
+        "city_district": null,
+        "city": "Braggs Corner",
+        "state": "Virginia",
+        "postcode": "22701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Montrose Lane, Culpeper, Virginia, United States"
+    },
+    {
+      "lat": 38.51555014782699,
+      "lon": -78.00236579251364,
+      "geoinfo": {
+        "display_name": "13282, Chestnut Fork Road, Churchill, Kerrington, Catalpa, Culpeper County, Virginia, 22701, United States",
+        "road": "Chestnut Fork Road",
+        "house_number": "13282",
+        "neighbourhood": "Churchill",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13282, Chestnut Fork Road, Churchill, Kerrington, Catalpa, Culpeper County, Virginia, 22701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:17.041219+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Erkrath",
+  "geonameid": 2929600,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.204657744652046,
+      "lon": 6.912549213017782,
+      "geoinfo": {
+        "display_name": "Ankerweg, Unterfeldhaus, Erkrath, Kreis Mettmann, North Rhine-Westphalia, 40699, Germany",
+        "road": "Ankerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Unterfeldhaus",
+        "city_district": null,
+        "city": "Erkrath",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40699",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ankerweg, Erkrath, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.19492775239864,
+      "lon": 6.924332559726243,
+      "geoinfo": {
+        "display_name": "6a, Am Eselsbach, Unterfeldhaus, Erkrath, Kreis Mettmann, North Rhine-Westphalia, 40699, Germany",
+        "road": "Am Eselsbach",
+        "house_number": "6a",
+        "neighbourhood": null,
+        "suburb": "Unterfeldhaus",
+        "city_district": null,
+        "city": "Erkrath",
+        "state": "North Rhine-Westphalia",
+        "postcode": "40699",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6a, Am Eselsbach, Unterfeldhaus, Erkrath, Kreis Mettmann, North Rhine-Westphalia, 40699, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:30.103934+00:00",
+  "_kind": "geo_samples"
+}

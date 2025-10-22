@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schwerte",
+  "geonameid": 2834265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.44553144678377,
+      "lon": 7.504207380469627,
+      "geoinfo": {
+        "display_name": "5, Höhenweg, Wichlinghofen, Hörde, Dortmund, North Rhine-Westphalia, 44265, Germany",
+        "road": "Höhenweg",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Wichlinghofen",
+        "city_district": "Hörde",
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44265",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5 Höhenweg, Schwerte, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.432287410221484,
+      "lon": 7.577530658316667,
+      "geoinfo": {
+        "display_name": "Langer Weg, Wandhofen, Schwerte, Kreis Unna, North Rhine-Westphalia, 58239, Germany",
+        "road": "Langer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wandhofen",
+        "city_district": null,
+        "city": "Schwerte",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58239",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "566, Langer Weg, Wandhofen, Schwerte, Kreis Unna, North Rhine-Westphalia, 58239, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:59.810286+00:00",
+  "_kind": "geo_samples"
+}

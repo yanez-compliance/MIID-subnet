@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Supaul",
+  "geonameid": 1255396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.10952783153991,
+      "lon": 86.55907782816058,
+      "geoinfo": {
+        "display_name": "Supaul, Bihar, 852131, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Supaul",
+        "state": "Bihar",
+        "postcode": "852131",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Supaul, Bihar, India"
+    },
+    {
+      "lat": 26.150407169993205,
+      "lon": 86.62572563959276,
+      "geoinfo": {
+        "display_name": "NH327A, Kishanpur, Supaul, Bihar, India",
+        "road": "NH327A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kishanpur",
+        "state": "Bihar",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH327A, Kishanpur, Supaul, 92470 Bihar, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:39.210566+00:00",
+  "_kind": "geo_samples"
+}

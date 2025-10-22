@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boise",
+  "geonameid": 5586437,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.61939879808881,
+      "lon": -116.19658216916416,
+      "geoinfo": {
+        "display_name": "709, North 6th Street, Downtown, North End, Boise, Ada County, Idaho, 83702, United States",
+        "road": "North 6th Street",
+        "house_number": "709",
+        "neighbourhood": "Downtown",
+        "suburb": "North End",
+        "city_district": null,
+        "city": "Boise",
+        "state": "Idaho",
+        "postcode": "83702",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "709 North 6th Street, Boise, Idaho, United States"
+    },
+    {
+      "lat": 43.64132500843306,
+      "lon": -116.17565335583512,
+      "geoinfo": {
+        "display_name": "#39 Red Cliffs, Highlands, Boise, Ada County, Idaho, 83720, United States",
+        "road": "#39 Red Cliffs",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Highlands",
+        "city_district": null,
+        "city": "Boise",
+        "state": "Idaho",
+        "postcode": "83720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "#39 Red Cliffs, Highlands, Boise, Ada County, Idaho, 83720, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:07.400845+00:00",
+  "_kind": "geo_samples"
+}

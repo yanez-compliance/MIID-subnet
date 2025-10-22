@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vnukovo",
+  "geonameid": 857689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.60286121312669,
+      "lon": 37.29744330755581,
+      "geoinfo": {
+        "display_name": "Vnukovo, Moscow, Central Federal District, 119027, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vnukovo",
+        "state": "Moscow",
+        "postcode": "119027",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Vnukovo, Moscow, Russia"
+    },
+    {
+      "lat": 55.57541539091736,
+      "lon": 37.33116604142562,
+      "geoinfo": {
+        "display_name": "23, улица Ликовка, КП «Валуевская Слобода», Филимонковский район, Moscow, Central Federal District, 142780, Russia",
+        "road": "улица Ликовка",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": "Филимонковский район",
+        "city_district": null,
+        "city": null,
+        "state": "Moscow",
+        "postcode": "142780",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "23, улица Ликовка, КП «Валуевская Слобода», Филимонковский район, Moscow, Central Federal District, 142780, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:46.428296+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Middletown",
+  "geonameid": 5223358,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.533167320927035,
+      "lon": -71.31869326663437,
+      "geoinfo": {
+        "display_name": "Pier 2, Burma Road, Middletown, Newport County, Rhode Island, 02841, United States",
+        "road": "Burma Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middletown",
+        "state": "Rhode Island",
+        "postcode": "02841",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Burma Road, Middletown, Rhode Island, United States"
+    },
+    {
+      "lat": 41.54992847449894,
+      "lon": -71.24814469755684,
+      "geoinfo": {
+        "display_name": "Sakonnet Greenway, Portsmouth, Newport County, Rhode Island, 02871, United States",
+        "road": "Sakonnet Greenway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "Rhode Island",
+        "postcode": "02871",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "707, Sakonnet Greenway, Portsmouth, Newport County, Rhode Island, 02871, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:46.856448+00:00",
+  "_kind": "geo_samples"
+}

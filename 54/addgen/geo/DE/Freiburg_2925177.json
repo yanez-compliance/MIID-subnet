@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Freiburg",
+  "geonameid": 2925177,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.00308072179823,
+      "lon": 7.916864823580038,
+      "geoinfo": {
+        "display_name": "Hallerweg, Welchental, Ebnet, Freiburg im Breisgau, Baden-Württemberg, 79117, Germany",
+        "road": "Hallerweg",
+        "house_number": null,
+        "neighbourhood": "Welchental",
+        "suburb": "Ebnet",
+        "city_district": null,
+        "city": "Freiburg im Breisgau",
+        "state": "Baden-Württemberg",
+        "postcode": "79117",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hallerweg, Freiburg, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.040694952485765,
+      "lon": 7.853184231163198,
+      "geoinfo": {
+        "display_name": "Marian-Rutka-Platz, Neumattweg, Brühl-Industriegebiet, Brühl, Freiburg im Breisgau, Baden-Württemberg, 79108, Germany",
+        "road": "Neumattweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brühl",
+        "city_district": null,
+        "city": "Freiburg im Breisgau",
+        "state": "Baden-Württemberg",
+        "postcode": "79108",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "849, Neumattweg, Freiburg, 79108 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:36.914509+00:00",
+  "_kind": "geo_samples"
+}

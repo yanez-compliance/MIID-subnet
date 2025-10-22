@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stratford",
+  "geonameid": 2636714,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.575065455342724,
+      "lon": 0.011100704222430757,
+      "geoinfo": {
+        "display_name": "Dyson Road, Leytonstone, London Borough of Waltham Forest, London, Greater London, England, E11 1NA, United Kingdom",
+        "road": "Dyson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Leytonstone",
+        "city_district": "London Borough of Waltham Forest",
+        "city": "London",
+        "state": "England",
+        "postcode": "E11 1NA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Dyson Road, Stratford, England, United Kingdom"
+    },
+    {
+      "lat": 51.51461058194508,
+      "lon": -0.011011766206894775,
+      "geoinfo": {
+        "display_name": "Langdon Park Community School, Bright Street, Poplar, London Borough of Tower Hamlets, London, Greater London, England, E14 0RZ, United Kingdom",
+        "road": "Bright Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Poplar",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "E14 0RZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Langdon Park Community School, Bright Street, Poplar, London Borough of Tower Hamlets, London, Greater London, England, E14 0RZ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:40:15.555531+00:00",
+  "_kind": "geo_samples"
+}

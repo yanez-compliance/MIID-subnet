@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Reinickendorf",
+  "geonameid": 2848756,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.573733677469434,
+      "lon": 13.328542784749365,
+      "geoinfo": {
+        "display_name": "Kienhorststraße, Reinickendorf, Berlin, 13403, Germany",
+        "road": "Kienhorststraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Reinickendorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13403",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kienhorststraße, Reinickendorf, Germany"
+    },
+    {
+      "lat": 52.52925842986348,
+      "lon": 13.322635650929783,
+      "geoinfo": {
+        "display_name": "Huttenstraße, Huttenkiez, Moabit, Mitte, Berlin, 10553, Germany",
+        "road": "Huttenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moabit",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10553",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "719, Huttenstraße, Huttenkiez, Moabit, Mitte, Berlin, 10553, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:30.863791+00:00",
+  "_kind": "geo_samples"
+}

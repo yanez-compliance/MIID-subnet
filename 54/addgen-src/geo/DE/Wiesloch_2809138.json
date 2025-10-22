@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wiesloch",
+  "geonameid": 2809138,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.2945355729932,
+      "lon": 8.709346561841997,
+      "geoinfo": {
+        "display_name": "30, Juliusblick, Altwiesloch, Wiesloch, Verwaltungsgemeinschaft Wiesloch, Rhein-Neckar-Kreis, Baden-Württemberg, 69168, Germany",
+        "road": "Juliusblick",
+        "house_number": "30",
+        "neighbourhood": "Altwiesloch",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wiesloch",
+        "state": "Baden-Württemberg",
+        "postcode": "69168",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "30 Juliusblick, Wiesloch, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 49.25646503821003,
+      "lon": 8.686089366844737,
+      "geoinfo": {
+        "display_name": "9, Panoramastraße, Malschenberg, Rauenberg, Verwaltungsverband Rauenberg, Rhein-Neckar-Kreis, Baden-Württemberg, 69231, Germany",
+        "road": "Panoramastraße",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rauenberg",
+        "state": "Baden-Württemberg",
+        "postcode": "69231",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "9, Panoramastraße, Wiesloch, 69231 Baden-Württemberg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:31.261667+00:00",
+  "_kind": "geo_samples"
+}

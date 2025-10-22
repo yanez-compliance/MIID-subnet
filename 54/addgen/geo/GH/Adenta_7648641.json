@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Adenta",
+  "geonameid": 7648641,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 5.749159478279743,
+      "lon": -0.13541272197003215,
+      "geoinfo": {
+        "display_name": "Amanfro, Adenta Municipal District, Greater Accra Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Amanfro",
+        "city_district": null,
+        "city": null,
+        "state": "Greater Accra Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Amanfro, Adenta, Greater Accra Region, Ghana"
+    },
+    {
+      "lat": 5.678665441170119,
+      "lon": -0.14482919170035102,
+      "geoinfo": {
+        "display_name": "Ogbojo, Madina, Adenta Municipal District, Greater Accra Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ogbojo",
+        "city_district": null,
+        "city": "Madina",
+        "state": "Greater Accra Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Ogbojo, Adenta, Greater Accra Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:49:45.819350+00:00",
+  "_kind": "geo_samples"
+}

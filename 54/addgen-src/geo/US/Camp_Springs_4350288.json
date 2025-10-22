@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Camp Springs",
+  "geonameid": 4350288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.79035663159825,
+      "lon": -76.91820041271117,
+      "geoinfo": {
+        "display_name": "7223, Easy Street, Temple Hills, Prince George's County, Maryland, 20748, United States",
+        "road": "Easy Street",
+        "house_number": "7223",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Temple Hills",
+        "state": "Maryland",
+        "postcode": "20748",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7223 Easy Street, Camp Springs, Maryland, United States"
+    },
+    {
+      "lat": 38.843776267391824,
+      "lon": -76.89350398876961,
+      "geoinfo": {
+        "display_name": "3307, Walters Lane, Berkshire, District Heights, Prince George's County, Maryland, 20747, United States",
+        "road": "Walters Lane",
+        "house_number": "3307",
+        "neighbourhood": "Berkshire",
+        "suburb": null,
+        "city_district": null,
+        "city": "District Heights",
+        "state": "Maryland",
+        "postcode": "20747",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3307, Walters Lane, Berkshire, District Heights, Prince George's County, Maryland, 20747, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:18.357598+00:00",
+  "_kind": "geo_samples"
+}

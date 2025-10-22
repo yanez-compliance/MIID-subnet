@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 03",
+  "geonameid": 6543969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.722255146867994,
+      "lon": 4.829505816234738,
+      "geoinfo": {
+        "display_name": "Allée Pierre de Coubertin, Gerland, 7th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69007, France",
+        "road": "Allée Pierre de Coubertin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gerland",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée Pierre de Coubertin, Lyon 03, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.79304714252491,
+      "lon": 4.835141702282499,
+      "geoinfo": {
+        "display_name": "Le Tulliana, 45, Montée des Forts, Le Bourg, Caluire-et-Cuire, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69300, France",
+        "road": "Montée des Forts",
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": "Le Bourg",
+        "city_district": null,
+        "city": "Caluire-et-Cuire",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Le Tulliana, 45, Montée des Forts, Le Bourg, Caluire-et-Cuire, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:39.724134+00:00",
+  "_kind": "geo_samples"
+}

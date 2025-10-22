@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Mut",
+  "geonameid": 304013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.66998601140881,
+      "lon": 33.417825571778046,
+      "geoinfo": {
+        "display_name": "Silifke-Konya yolu, Meydan, Ortaköy, Mut, Mersin, Mediterranean Region, 33600, Turkey",
+        "road": "Silifke-Konya yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Meydan",
+        "city_district": null,
+        "city": "Mut",
+        "state": null,
+        "postcode": "33600",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Silifke-Konya yolu, Mut, Turkey"
+    },
+    {
+      "lat": 36.63599961564184,
+      "lon": 33.451316416075755,
+      "geoinfo": {
+        "display_name": "Yazalanı, Mut, Mersin, Mediterranean Region, 33600, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yazalanı",
+        "city_district": null,
+        "city": "Mut",
+        "state": null,
+        "postcode": "33600",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "966, Yazalanı, Mut, Mersin, Mediterranean Region, 33600, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:02.323849+00:00",
+  "_kind": "geo_samples"
+}

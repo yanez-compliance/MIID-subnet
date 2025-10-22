@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Liangxiang",
+  "geonameid": 1803948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.75988776333596,
+      "lon": 116.10140153744261,
+      "geoinfo": {
+        "display_name": "良坨路, Dayuan, Fangshan District, Beijing, 102488, China",
+        "road": "良坨路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fangshan District",
+        "state": "Beijing",
+        "postcode": "102488",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "良坨路, Liangxiang, Beijing, China"
+    },
+    {
+      "lat": 39.74246422540915,
+      "lon": 116.12271725831421,
+      "geoinfo": {
+        "display_name": "Gongchen, Yu‘ergou, Fangshan District, Beijing, 102488, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gongchen",
+        "city_district": null,
+        "city": "Fangshan District",
+        "state": "Beijing",
+        "postcode": "102488",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "627, Gongchen, Liangxiang, 102488 Beijing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:06.206247+00:00",
+  "_kind": "geo_samples"
+}

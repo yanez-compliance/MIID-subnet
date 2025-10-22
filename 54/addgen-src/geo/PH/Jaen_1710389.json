@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Jaen",
+  "geonameid": 1710389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.31241056589917,
+      "lon": 120.8819917179803,
+      "geoinfo": {
+        "display_name": "Purok 1, San Mariano, San Antonio, Nueva Ecija, Central Luzon, 3106, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Purok 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio",
+        "state": "Nueva Ecija",
+        "postcode": "3106",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Purok 1, Jaen, Nueva Ecija, Philippines"
+    },
+    {
+      "lat": 15.35024674816746,
+      "lon": 120.89288420274609,
+      "geoinfo": {
+        "display_name": "Jaen, Nueva Ecija, Central Luzon, 3109, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jaen",
+        "state": "Nueva Ecija",
+        "postcode": "3109",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "989, Jaen, Nueva Ecija, Central Luzon, 3109, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:36:21.201817+00:00",
+  "_kind": "geo_samples"
+}

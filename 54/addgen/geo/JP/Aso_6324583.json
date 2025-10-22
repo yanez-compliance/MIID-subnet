@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Aso",
+  "geonameid": 6324583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.91461393978146,
+      "lon": 131.09641090402275,
+      "geoinfo": {
+        "display_name": "Takawara, Aso, Kumamoto Prefecture, 869-2612, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aso",
+        "state": null,
+        "postcode": "869-2612",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Aso, Japan"
+    },
+    {
+      "lat": 32.93169189073547,
+      "lon": 131.06127510698946,
+      "geoinfo": {
+        "display_name": "阿蘇カドリー・ドミニオン, National Highway Route 57, Kurabaru, Aso, Kumamoto Prefecture, Japan",
+        "road": "National Highway Route 57",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aso",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 57, 08470 Aso, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:14.999372+00:00",
+  "_kind": "geo_samples"
+}

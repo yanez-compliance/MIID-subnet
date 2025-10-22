@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Rathenow",
+  "geonameid": 2850213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.5865852993009,
+      "lon": 12.347962380428747,
+      "geoinfo": {
+        "display_name": "12, Amselweg, Stadtrandsiedlung, Heidefeld, Rathenow, Havelland, Brandenburg, 14712, Germany",
+        "road": "Amselweg",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Heidefeld",
+        "city_district": null,
+        "city": "Rathenow",
+        "state": "Brandenburg",
+        "postcode": "14712",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12 Amselweg, Rathenow, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.64184886021638,
+      "lon": 12.31828757660586,
+      "geoinfo": {
+        "display_name": "Havelland-Radweg, Göttlin, Rathenow, Havelland, Brandenburg, 14712, Germany",
+        "road": "Havelland-Radweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rathenow",
+        "state": "Brandenburg",
+        "postcode": "14712",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "187, Havelland-Radweg, Göttlin, Rathenow, Havelland, Brandenburg, 14712, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:42.563841+00:00",
+  "_kind": "geo_samples"
+}

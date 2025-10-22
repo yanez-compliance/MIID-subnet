@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Machalí",
+  "geonameid": 3881102,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -34.18037274610571,
+      "lon": -70.60285028808602,
+      "geoinfo": {
+        "display_name": "Los Carrizos, Machalí, Provincia de Cachapoal, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Machalí",
+        "state": null,
+        "postcode": null,
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "925, Los Carrizos, Machalí, 63080 Provincia de Cachapoal, Chile"
+    },
+    {
+      "lat": -34.21560080276915,
+      "lon": -70.61989174340582,
+      "geoinfo": {
+        "display_name": "Nogales, Machalí, Provincia de Cachapoal, 2910000, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nogales",
+        "city_district": null,
+        "city": "Machalí",
+        "state": null,
+        "postcode": "2910000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "336, Nogales, Machalí, Provincia de Cachapoal, 2910000, Chile"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:35.815195+00:00",
+  "_kind": "geo_samples"
+}

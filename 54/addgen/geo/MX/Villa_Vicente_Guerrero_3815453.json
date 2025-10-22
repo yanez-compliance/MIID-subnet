@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Villa Vicente Guerrero",
+  "geonameid": 3815453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.123349190165225,
+      "lon": -98.17277810418733,
+      "geoinfo": {
+        "display_name": "36, Calle Miguel Hidalgo, San Pablo del Monte, Tlaxcala, 72019, Mexico",
+        "road": "Calle Miguel Hidalgo",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pablo del Monte",
+        "state": "Tlaxcala",
+        "postcode": "72019",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "36 Calle Miguel Hidalgo, Villa Vicente Guerrero, Tlaxcala, Mexico"
+    },
+    {
+      "lat": 19.147626462414824,
+      "lon": -98.18391207821716,
+      "geoinfo": {
+        "display_name": "Prolongación Tercera Privada de Ayuntamiento, Tenancingo, Tlaxcala, 90790, Mexico",
+        "road": "Prolongación Tercera Privada de Ayuntamiento",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tenancingo",
+        "state": "Tlaxcala",
+        "postcode": "90790",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "208, Prolongación Tercera Privada de Ayuntamiento, Tenancingo, Tlaxcala, 90790, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:32.967573+00:00",
+  "_kind": "geo_samples"
+}

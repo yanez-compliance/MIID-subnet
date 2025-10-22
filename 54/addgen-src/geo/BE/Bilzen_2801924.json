@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Bilzen",
+  "geonameid": 2801924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.83205809651434,
+      "lon": 5.516760444156229,
+      "geoinfo": {
+        "display_name": "30, Achter de Hoven, Rijkhoven, Bilzen-Hoeselt, Tongeren, Limburg, 3740, Belgium",
+        "road": "Achter de Hoven",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rijkhoven",
+        "state": "Limburg",
+        "postcode": "3740",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "30 Achter de Hoven, Bilzen, Limburg, Belgium"
+    },
+    {
+      "lat": 50.90959602573865,
+      "lon": 5.53859824891697,
+      "geoinfo": {
+        "display_name": "Bilzerweg, Zutendaal, Bilzen-Hoeselt, Hasselt, Limburg, Flanders, 3690, Belgium",
+        "road": "Bilzerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zutendaal",
+        "state": "Limburg",
+        "postcode": "3690",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "424, Bilzerweg, Zutendaal, Bilzen-Hoeselt, Hasselt, Limburg, Flanders, 3690, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:07:42.809275+00:00",
+  "_kind": "geo_samples"
+}

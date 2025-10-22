@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Bercham",
+  "geonameid": 7473418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.637405263369034,
+      "lon": 101.1692731039583,
+      "geoinfo": {
+        "display_name": "Ipoh, Kinta, Perak, 31150, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "31150",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Bercham, Perak, Malaysia"
+    },
+    {
+      "lat": 4.633738147622597,
+      "lon": 101.11459769953066,
+      "geoinfo": {
+        "display_name": "Jalan Sultan Azlan Shah, Tasek, Ipoh, Kinta, Perak, 30620, Malaysia",
+        "road": "Jalan Sultan Azlan Shah",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tasek",
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "30620",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "032, Jalan Sultan Azlan Shah, Tasek, Ipoh, Kinta, Perak, 30620, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:54:16.754464+00:00",
+  "_kind": "geo_samples"
+}

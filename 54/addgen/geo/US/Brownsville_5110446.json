@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brownsville",
+  "geonameid": 5110446,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.63489885641308,
+      "lon": -73.89201520351102,
+      "geoinfo": {
+        "display_name": "9604, Avenue N, Brooklyn, Kings County, New York, 11236, United States",
+        "road": "Avenue N",
+        "house_number": "9604",
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9604 Avenue N, Brownsville, New York, United States"
+    },
+    {
+      "lat": 40.6849151162792,
+      "lon": -73.90745989487606,
+      "geoinfo": {
+        "display_name": "718, Chauncey Street, Bushwick, Brooklyn, Kings County, New York, 11207, United States",
+        "road": "Chauncey Street",
+        "house_number": "718",
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "718, Chauncey Street, Bushwick, Brooklyn, Kings County, New York, 11207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:29.523132+00:00",
+  "_kind": "geo_samples"
+}

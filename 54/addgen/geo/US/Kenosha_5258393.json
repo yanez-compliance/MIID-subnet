@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kenosha",
+  "geonameid": 5258393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.606360856208575,
+      "lon": -87.85341667101699,
+      "geoinfo": {
+        "display_name": "39th Avenue, Gateway, Kenosha, Kenosha County, Wisconsin, 53142, United States",
+        "road": "39th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gateway",
+        "city_district": null,
+        "city": "Kenosha",
+        "state": "Wisconsin",
+        "postcode": "53142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "39th Avenue, Kenosha, Wisconsin, United States"
+    },
+    {
+      "lat": 42.54612426454812,
+      "lon": -87.84280676400766,
+      "geoinfo": {
+        "display_name": "87th Place, Isetts, Kenosha, Kenosha County, Wisconsin, 53142, United States",
+        "road": "87th Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Isetts",
+        "city_district": null,
+        "city": "Kenosha",
+        "state": "Wisconsin",
+        "postcode": "53142",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "87th Place, Isetts, Kenosha, Kenosha County, Wisconsin, 53142, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:54.013679+00:00",
+  "_kind": "geo_samples"
+}

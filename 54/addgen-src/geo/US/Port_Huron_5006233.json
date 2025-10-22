@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Huron",
+  "geonameid": 5006233,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.970873429751165,
+      "lon": -82.44714064709234,
+      "geoinfo": {
+        "display_name": "1952, Court Street, Port Huron, Saint Clair County, Michigan, 48060, United States",
+        "road": "Court Street",
+        "house_number": "1952",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Huron",
+        "state": "Michigan",
+        "postcode": "48060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1952 Court Street, Port Huron, Michigan, United States"
+    },
+    {
+      "lat": 42.95378053788156,
+      "lon": -82.45873677632194,
+      "geoinfo": {
+        "display_name": "Dove Street, Port Huron, Saint Clair County, Michigan, 48060, United States",
+        "road": "Dove Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Port Huron",
+        "state": "Michigan",
+        "postcode": "48060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "340, Dove Street, Port Huron, Saint Clair County, Michigan, 48060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:20.311712+00:00",
+  "_kind": "geo_samples"
+}

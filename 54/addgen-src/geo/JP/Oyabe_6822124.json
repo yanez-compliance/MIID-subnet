@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Oyabe",
+  "geonameid": 6822124,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.67289602890573,
+      "lon": 136.79881253015648,
+      "geoinfo": {
+        "display_name": "National Highway Route 8, Sakado, Tsubata, Kahoku County, Ishikawa Prefecture, Japan",
+        "road": "National Highway Route 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tsubata",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "National Highway Route 8, Oyabe, Japan"
+    },
+    {
+      "lat": 36.64380413239105,
+      "lon": 136.88156911711013,
+      "geoinfo": {
+        "display_name": "西川原, Oyabe, Toyama Prefecture, 932-8611, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "西川原",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oyabe",
+        "state": null,
+        "postcode": "932-8611",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "西川原, Oyabe, Toyama Prefecture, 932-8611, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:41.383903+00:00",
+  "_kind": "geo_samples"
+}

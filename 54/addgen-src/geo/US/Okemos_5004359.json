@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Okemos",
+  "geonameid": 5004359,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.69927553909405,
+      "lon": -84.4142171262535,
+      "geoinfo": {
+        "display_name": "Kinawa Middle School, 1900, Kinawa Drive, Okemos, Ingham County, Michigan, 48864, United States",
+        "road": "Kinawa Drive",
+        "house_number": "1900",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Okemos",
+        "state": "Michigan",
+        "postcode": "48864",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1900 Kinawa Drive, Okemos, Michigan, United States"
+    },
+    {
+      "lat": 42.703889275272786,
+      "lon": -84.38279733866463,
+      "geoinfo": {
+        "display_name": "Breakwater Drive, The Shoals, Okemos, Ingham County, Michigan, 48864, United States",
+        "road": "Breakwater Drive",
+        "house_number": null,
+        "neighbourhood": "The Shoals",
+        "suburb": null,
+        "city_district": null,
+        "city": "Okemos",
+        "state": "Michigan",
+        "postcode": "48864",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, Breakwater Drive, The Shoals, Okemos, Ingham County, Michigan, 48864, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:18.209138+00:00",
+  "_kind": "geo_samples"
+}

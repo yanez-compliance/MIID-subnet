@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Barcelona",
+  "geonameid": 3128760,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.405839771754245,
+      "lon": 2.1842354696267137,
+      "geoinfo": {
+        "display_name": "601, Carrer del Consell de Cent, el Clot, Sant Martí, Barcelona, Barcelonès, Barcelona, Catalonia, 08026, Spain",
+        "road": "Carrer del Consell de Cent",
+        "house_number": "601",
+        "neighbourhood": null,
+        "suburb": "Sant Martí",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08026",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "601 Carrer del Consell de Cent, Barcelona, Catalonia, Spain"
+    },
+    {
+      "lat": 41.42781606722249,
+      "lon": 2.18054211190494,
+      "geoinfo": {
+        "display_name": "34, Carrer de la Riera d'Horta, Vilapicina i la Torre Llobeta, Nou Barris, Barcelona, Barcelonès, Barcelona, Catalonia, 08027, Spain",
+        "road": "Carrer de la Riera d'Horta",
+        "house_number": "34",
+        "neighbourhood": "Vilapicina i la Torre Llobeta",
+        "suburb": "Nou Barris",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08027",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "34, Carrer de la Riera d'Horta, Vilapicina i la Torre Llobeta, Nou Barris, Barcelona, Barcelonès, Barcelona, Catalonia, 08027, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:44.350532+00:00",
+  "_kind": "geo_samples"
+}

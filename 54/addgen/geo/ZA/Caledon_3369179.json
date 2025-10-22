@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Caledon",
+  "geonameid": 3369179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.21756293547001,
+      "lon": 19.463462824268976,
+      "geoinfo": {
+        "display_name": "Berg Street, Myddleton, Theewaterskloof Ward 3, Theewaterskloof Local Municipality, Western Cape, 7230, South Africa",
+        "road": "Berg Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Myddleton",
+        "city_district": null,
+        "city": "Theewaterskloof Local Municipality",
+        "state": "Western Cape",
+        "postcode": "7230",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Berg Street, Caledon, Western Cape, South Africa"
+    },
+    {
+      "lat": -34.26044787342085,
+      "lon": 19.40176464752698,
+      "geoinfo": {
+        "display_name": "Uitsig, Theewaterskloof Ward 4, Caledon, Theewaterskloof Local Municipality, Overberg District Municipality, Western Cape, 7230, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Uitsig",
+        "city_district": null,
+        "city": "Theewaterskloof Local Municipality",
+        "state": "Western Cape",
+        "postcode": "7230",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "013, Uitsig, Caledon, 7230 Western Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:57:13.491992+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Berkeley",
+  "geonameid": 5327684,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.844065805168846,
+      "lon": -122.2892702458556,
+      "geoinfo": {
+        "display_name": "1452, 63rd Street, Emeryville, Alameda County, California, 94608, United States",
+        "road": "63rd Street",
+        "house_number": "1452",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Emeryville",
+        "state": "California",
+        "postcode": "94608",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1452 63rd Street, Berkeley, California, United States"
+    },
+    {
+      "lat": 37.860670675938444,
+      "lon": -122.30500117013659,
+      "geoinfo": {
+        "display_name": "Bay Trail, Ocean View, Berkeley, Alameda County, California, 94710, United States",
+        "road": "Bay Trail",
+        "house_number": null,
+        "neighbourhood": "Ocean View",
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkeley",
+        "state": "California",
+        "postcode": "94710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "546, Bay Trail, Ocean View, Berkeley, Alameda County, California, 94710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:30.243535+00:00",
+  "_kind": "geo_samples"
+}

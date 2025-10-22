@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Balingen",
+  "geonameid": 2953089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.2994505187162,
+      "lon": 8.88092590216072,
+      "geoinfo": {
+        "display_name": "38, Sonnenbergstraße, Engstlatt, Balingen, Gemeindeverwaltungsverband Balingen, Zollernalbkreis, Baden-Württemberg, 72336, Germany",
+        "road": "Sonnenbergstraße",
+        "house_number": "38",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Engstlatt",
+        "city": "Balingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72336",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "38 Sonnenbergstraße, Balingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.26369349438832,
+      "lon": 8.878392944989404,
+      "geoinfo": {
+        "display_name": "2, Stockackerhof, Balingen, Gemeindeverwaltungsverband Balingen, Zollernalbkreis, Baden-Württemberg, 72336, Germany",
+        "road": "Stockackerhof",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balingen",
+        "state": "Baden-Württemberg",
+        "postcode": "72336",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2, Stockackerhof, Balingen, Gemeindeverwaltungsverband Balingen, Zollernalbkreis, Baden-Württemberg, 72336, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:06.318619+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Benito",
+  "geonameid": 4726290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.14953064905032,
+      "lon": -97.6763007328322,
+      "geoinfo": {
+        "display_name": "El Cielo Circle, Harlingen, Cameron County, Texas, United States",
+        "road": "El Cielo Circle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harlingen",
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "El Cielo Circle, San Benito, Texas, United States"
+    },
+    {
+      "lat": 26.14434292848887,
+      "lon": -97.63182868483733,
+      "geoinfo": {
+        "display_name": "El Camino Real, San Benito, Cameron County, Texas, 78586, United States",
+        "road": "El Camino Real",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Benito",
+        "state": "Texas",
+        "postcode": "78586",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "836, El Camino Real, San Benito, Cameron County, Texas, 78586, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:41.450194+00:00",
+  "_kind": "geo_samples"
+}

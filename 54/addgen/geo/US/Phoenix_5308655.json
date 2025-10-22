@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Phoenix",
+  "geonameid": 5308655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.43592661839236,
+      "lon": -112.0984862980256,
+      "geoinfo": {
+        "display_name": "West Pima Street, Central City South, Central City, Phoenix, Maricopa County, Arizona, 85007, United States",
+        "road": "West Pima Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Central City",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Pima Street, Phoenix, Arizona, United States"
+    },
+    {
+      "lat": 33.40837504827773,
+      "lon": -112.07350000427488,
+      "geoinfo": {
+        "display_name": "4202, South Central Avenue, South Phoenix, South Mountain, Phoenix, Maricopa County, Arizona, 85040, United States",
+        "road": "South Central Avenue",
+        "house_number": "4202",
+        "neighbourhood": "South Phoenix",
+        "suburb": "South Mountain",
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postcode": "85040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4202, South Central Avenue, South Phoenix, South Mountain, Phoenix, Maricopa County, Arizona, 85040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:44.216249+00:00",
+  "_kind": "geo_samples"
+}

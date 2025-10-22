@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Echo Park",
+  "geonameid": 10104154,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.0725978688833,
+      "lon": -118.2452105377163,
+      "geoinfo": {
+        "display_name": "1, Scott Avenue, Echo Park, Los Angeles, Los Angeles County, California, 90012, United States",
+        "road": "Scott Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Echo Park",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Scott Avenue, Echo Park, California, United States"
+    },
+    {
+      "lat": 34.107064382717375,
+      "lon": -118.25605595073168,
+      "geoinfo": {
+        "display_name": "Golden State Freeway, Los Angeles, Los Angeles County, California, 90039, United States",
+        "road": "Golden State Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "214, Golden State Freeway, Los Angeles, Los Angeles County, California, 90039, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:55.766845+00:00",
+  "_kind": "geo_samples"
+}

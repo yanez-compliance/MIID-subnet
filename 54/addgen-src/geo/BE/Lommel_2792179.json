@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lommel",
+  "geonameid": 2792179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.2065937107517,
+      "lon": 5.282963634227096,
+      "geoinfo": {
+        "display_name": "21;23, Marie Popelinstraat, Lommel, Maaseik, Limburg, 3920, Belgium",
+        "road": "Marie Popelinstraat",
+        "house_number": "21;23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lommel",
+        "state": "Limburg",
+        "postcode": "3920",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "21;23 Marie Popelinstraat, Lommel, Limburg, Belgium"
+    },
+    {
+      "lat": 51.21728109572865,
+      "lon": 5.270905658121323,
+      "geoinfo": {
+        "display_name": "3B, Lodewijk De Raetstraat, Lommel, Maaseik, Limburg, 3920, Belgium",
+        "road": "Lodewijk De Raetstraat",
+        "house_number": "3B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lommel",
+        "state": "Limburg",
+        "postcode": "3920",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "3B, Lodewijk De Raetstraat, Lommel, Maaseik, Limburg, 3920, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:08.464959+00:00",
+  "_kind": "geo_samples"
+}

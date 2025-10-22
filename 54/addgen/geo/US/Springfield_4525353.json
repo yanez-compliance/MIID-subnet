@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 4525353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.945314298738424,
+      "lon": -83.85051082495359,
+      "geoinfo": {
+        "display_name": "2471, West 1st Street, Forest Hills, Clark County, Ohio, 45504, United States",
+        "road": "West 1st Street",
+        "house_number": "2471",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45504",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2471 West 1st Street, Springfield, Ohio, United States"
+    },
+    {
+      "lat": 39.91917351689777,
+      "lon": -83.81960574346593,
+      "geoinfo": {
+        "display_name": "467, West Pleasant Street, South Fountain Avenue Historic District, Springfield, Clark County, Ohio, 45506, United States",
+        "road": "West Pleasant Street",
+        "house_number": "467",
+        "neighbourhood": "South Fountain Avenue Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Ohio",
+        "postcode": "45506",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "467, West Pleasant Street, South Fountain Avenue Historic District, Springfield, Clark County, Ohio, 45506, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:05.834422+00:00",
+  "_kind": "geo_samples"
+}

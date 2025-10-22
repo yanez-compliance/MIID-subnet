@@ -1,0 +1,65 @@
+{
+  "country_code": "NG",
+  "country": "Nigeria",
+  "city": "Ode",
+  "geonameid": 2328090,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 7.768164610998632,
+      "lon": 5.704785872749733,
+      "geoinfo": {
+        "display_name": "Omuo, Ekiti East, Ekiti State, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Omuo",
+        "state": "Ekiti State",
+        "postcode": null,
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "Ode, Ekiti State, Nigeria"
+    },
+    {
+      "lat": 7.771054576088813,
+      "lon": 5.712916920253367,
+      "geoinfo": {
+        "display_name": "Omuo, Ekiti East, Ekiti State, 362221, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Omuo",
+        "state": "Ekiti State",
+        "postcode": "362221",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "875, Ode, 362221 Ekiti State, Nigeria"
+    },
+    {
+      "lat": 7.786657480435019,
+      "lon": 5.751531566617877,
+      "geoinfo": {
+        "display_name": "Ekiti East, Ekiti State, 362221, Nigeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ekiti State",
+        "postcode": "362221",
+        "country": "Nigeria",
+        "country_code": "ng"
+      },
+      "address": "794, Ode, 362221 Ekiti State, Nigeria"
+    }
+  ],
+  "updated_at": "2025-10-19T05:56:36.788568+00:00",
+  "_kind": "geo_samples"
+}

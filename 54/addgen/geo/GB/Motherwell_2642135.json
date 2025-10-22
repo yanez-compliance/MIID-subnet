@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Motherwell",
+  "geonameid": 2642135,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.77600186900327,
+      "lon": -3.930230621566879,
+      "geoinfo": {
+        "display_name": "Aldi, 109, Glasgow Road, Wishawhill, Wishaw, North Lanarkshire, Scotland, ML2 7NR, United Kingdom",
+        "road": "Glasgow Road",
+        "house_number": "109",
+        "neighbourhood": null,
+        "suburb": "Wishawhill",
+        "city_district": null,
+        "city": "Wishaw",
+        "state": "Scotland",
+        "postcode": "ML2 7NR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "109 Glasgow Road, Motherwell, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.79195480659689,
+      "lon": -4.047919807822628,
+      "geoinfo": {
+        "display_name": "Hole 5, The Paddock, Whitehill, Hamilton, South Lanarkshire, Scotland, ML3 0RB, United Kingdom",
+        "road": "The Paddock",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Whitehill",
+        "city_district": null,
+        "city": "Hamilton",
+        "state": "Scotland",
+        "postcode": "ML3 0RB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hole 5, The Paddock, Whitehill, Hamilton, South Lanarkshire, Scotland, ML3 0RB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:27.663753+00:00",
+  "_kind": "geo_samples"
+}

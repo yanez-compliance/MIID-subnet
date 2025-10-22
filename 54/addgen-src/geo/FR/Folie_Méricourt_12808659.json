@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Folie Méricourt",
+  "geonameid": 12808659,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.86511956770824,
+      "lon": 2.4163061257761536,
+      "geoinfo": {
+        "display_name": "McDonald's, A 3, Centre Sud, Bagnolet, Bobigny, Seine-Saint-Denis, Ile-de-France, Metropolitan France, 93170, France",
+        "road": "A 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centre Sud",
+        "city_district": null,
+        "city": "Bagnolet",
+        "state": "Ile-de-France",
+        "postcode": "93170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "A 3, Folie Méricourt, Ile-de-France, France"
+    },
+    {
+      "lat": 48.83595243039549,
+      "lon": 2.380054353005238,
+      "geoinfo": {
+        "display_name": "Paris Bercy Seine, 210, Quai de Bercy, Quartier de Bercy, 12th Arrondissement, Paris, Metropolitan France, 75012, France",
+        "road": "Quai de Bercy",
+        "house_number": "210",
+        "neighbourhood": null,
+        "suburb": "Quartier de Bercy",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Paris Bercy Seine, 210, Quai de Bercy, Quartier de Bercy, 12th Arrondissement, Paris, Metropolitan France, 75012, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:57.959814+00:00",
+  "_kind": "geo_samples"
+}

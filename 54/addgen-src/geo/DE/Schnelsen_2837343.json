@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schnelsen",
+  "geonameid": 2837343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.62700720949172,
+      "lon": 9.932489197205426,
+      "geoinfo": {
+        "display_name": "138a, Frohmestraße, Schnelsen, Eimsbüttel, Hamburg, 22459, Germany",
+        "road": "Frohmestraße",
+        "house_number": "138a",
+        "neighbourhood": null,
+        "suburb": "Schnelsen",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22459",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "138a Frohmestraße, Schnelsen, Germany"
+    },
+    {
+      "lat": 53.63928905986898,
+      "lon": 9.974371543601867,
+      "geoinfo": {
+        "display_name": "29b, Grotkoppelweg, Niendorf, Eimsbüttel, Hamburg, 22453, Germany",
+        "road": "Grotkoppelweg",
+        "house_number": "29b",
+        "neighbourhood": null,
+        "suburb": "Niendorf",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22453",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "29b, Grotkoppelweg, Niendorf, Eimsbüttel, Hamburg, 22453, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:08.433396+00:00",
+  "_kind": "geo_samples"
+}

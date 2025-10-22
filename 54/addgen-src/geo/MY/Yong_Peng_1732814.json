@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Yong Peng",
+  "geonameid": 1732814,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 2.027510022321552,
+      "lon": 103.10372352130139,
+      "geoinfo": {
+        "display_name": "Batu Pahat, Johor, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Johor",
+        "postcode": null,
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Yong Peng, Johor, Malaysia"
+    },
+    {
+      "lat": 2.0031789871359384,
+      "lon": 103.06969637357808,
+      "geoinfo": {
+        "display_name": "Yong Peng, Batu Pahat, Johor, 83700, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yong Peng",
+        "state": "Johor",
+        "postcode": "83700",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "144, Yong Peng, Batu Pahat, Johor, 83700, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:28.319321+00:00",
+  "_kind": "geo_samples"
+}

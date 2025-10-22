@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Frankfort",
+  "geonameid": 4920473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.26705300805108,
+      "lon": -86.53539820655621,
+      "geoinfo": {
+        "display_name": "County Road 130 South, Frankfort, Clinton County, Indiana, 46041, United States",
+        "road": "County Road 130 South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frankfort",
+        "state": "Indiana",
+        "postcode": "46041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 130 South, Frankfort, Indiana, United States"
+    },
+    {
+      "lat": 40.31022782935444,
+      "lon": -86.47528329847958,
+      "geoinfo": {
+        "display_name": "East County Road 180 North, Clinton County, Indiana, 46041, United States",
+        "road": "East County Road 180 North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East County Road 180 North, Clinton County, Indiana, 46041, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:35.456345+00:00",
+  "_kind": "geo_samples"
+}

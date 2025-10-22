@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Gillette",
+  "geonameid": 5826027,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.27606107935093,
+      "lon": -105.54307146999359,
+      "geoinfo": {
+        "display_name": "3000, West Lakeway Road, Gillette, Campbell County, Wyoming, 82718, United States",
+        "road": "West Lakeway Road",
+        "house_number": "3000",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gillette",
+        "state": "Wyoming",
+        "postcode": "82718",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3000 West Lakeway Road, Gillette, Wyoming, United States"
+    },
+    {
+      "lat": 44.31844461537235,
+      "lon": -105.46401597076735,
+      "geoinfo": {
+        "display_name": "Northern Drive, Gillette, Campbell County, Wyoming, United States",
+        "road": "Northern Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gillette",
+        "state": "Wyoming",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "202, Northern Drive, Gillette, Campbell County, 47207 Wyoming, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:23.327433+00:00",
+  "_kind": "geo_samples"
+}

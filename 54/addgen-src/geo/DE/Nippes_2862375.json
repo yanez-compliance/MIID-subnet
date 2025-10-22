@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Nippes",
+  "geonameid": 2862375,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.99633336366751,
+      "lon": 6.9585613206874335,
+      "geoinfo": {
+        "display_name": "Bremerhavener Straße, Niehl, Nippes, Cologne, North Rhine-Westphalia, 50735, Germany",
+        "road": "Bremerhavener Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Niehl",
+        "city_district": "Nippes",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "50735",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Bremerhavener Straße, Nippes, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.98724185658476,
+      "lon": 6.978234266230001,
+      "geoinfo": {
+        "display_name": "RTHC Bayer Leverkusen, 20, Am Stammheimer Schloßpark, Stammheim, Mülheim, Cologne, North Rhine-Westphalia, 51061, Germany",
+        "road": "Am Stammheimer Schloßpark",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Stammheim",
+        "city_district": "Mülheim",
+        "city": "Cologne",
+        "state": "North Rhine-Westphalia",
+        "postcode": "51061",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "RTHC Bayer Leverkusen, 20, Am Stammheimer Schloßpark, Stammheim, Mülheim, Cologne, North Rhine-Westphalia, 51061, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:27.907232+00:00",
+  "_kind": "geo_samples"
+}

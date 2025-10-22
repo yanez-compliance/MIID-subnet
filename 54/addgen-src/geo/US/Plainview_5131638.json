@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plainview",
+  "geonameid": 5131638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.78048293805582,
+      "lon": -73.41775364460234,
+      "geoinfo": {
+        "display_name": "Long Island Expressway, Melville, Town of Huntington, Suffolk County, New York, 11747, United States",
+        "road": "Long Island Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melville",
+        "state": "New York",
+        "postcode": "11747",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Long Island Expressway, Plainview, New York, United States"
+    },
+    {
+      "lat": 40.78215916426648,
+      "lon": -73.42836034578852,
+      "geoinfo": {
+        "display_name": "123, Redbrook Court, Melville, Town of Huntington, Suffolk County, New York, 11747, United States",
+        "road": "Redbrook Court",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melville",
+        "state": "New York",
+        "postcode": "11747",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "123, Redbrook Court, Melville, Town of Huntington, Suffolk County, New York, 11747, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:24.938173+00:00",
+  "_kind": "geo_samples"
+}

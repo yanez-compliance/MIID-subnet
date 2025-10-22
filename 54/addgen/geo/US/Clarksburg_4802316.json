@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clarksburg",
+  "geonameid": 4802316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.282068814724255,
+      "lon": -80.32507124086182,
+      "geoinfo": {
+        "display_name": "312, Stiles Street, Montpelier, Clarksburg, Harrison County, West Virginia, 26301, United States",
+        "road": "Stiles Street",
+        "house_number": "312",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksburg",
+        "state": "West Virginia",
+        "postcode": "26301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "312 Stiles Street, Clarksburg, West Virginia, United States"
+    },
+    {
+      "lat": 39.30737610688122,
+      "lon": -80.36684596507347,
+      "geoinfo": {
+        "display_name": "Crooked Run Road, Edgewood, Clarksburg, Harrison County, West Virginia, United States",
+        "road": "Crooked Run Road",
+        "house_number": null,
+        "neighbourhood": "Edgewood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksburg",
+        "state": "West Virginia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "532, Crooked Run Road, Edgewood, Clarksburg, Harrison County, 71196 West Virginia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:39.567906+00:00",
+  "_kind": "geo_samples"
+}

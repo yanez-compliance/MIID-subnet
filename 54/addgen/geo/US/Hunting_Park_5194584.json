@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hunting Park",
+  "geonameid": 5194584,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.00944342303017,
+      "lon": -75.15453466971557,
+      "geoinfo": {
+        "display_name": "3634, North 16th Street, Nicetown, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19140, United States",
+        "road": "North 16th Street",
+        "house_number": "3634",
+        "neighbourhood": "Nicetown",
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3634 North 16th Street, Hunting Park, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.988171161238675,
+      "lon": -75.17396324678872,
+      "geoinfo": {
+        "display_name": "2391, West Glenwood Avenue, Raymond Rosen Manor, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19121, United States",
+        "road": "West Glenwood Avenue",
+        "house_number": "2391",
+        "neighbourhood": null,
+        "suburb": "North Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2391, West Glenwood Avenue, Raymond Rosen Manor, North Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19121, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:31.457179+00:00",
+  "_kind": "geo_samples"
+}

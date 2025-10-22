@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hillside",
+  "geonameid": 5099093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.69815588673216,
+      "lon": -74.24655337788099,
+      "geoinfo": {
+        "display_name": "US 22, Hillside, Union County, New Jersey, 07205, United States",
+        "road": "US 22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hillside",
+        "state": "New Jersey",
+        "postcode": "07205",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 22, Hillside, New Jersey, United States"
+    },
+    {
+      "lat": 40.71332764018157,
+      "lon": -74.18381609290932,
+      "geoinfo": {
+        "display_name": "McCarter Highway, Newark, Essex County, New Jersey, 07104, United States",
+        "road": "McCarter Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newark",
+        "state": "New Jersey",
+        "postcode": "07104",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "292, McCarter Highway, Newark, Essex County, New Jersey, 07104, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:15.124721+00:00",
+  "_kind": "geo_samples"
+}

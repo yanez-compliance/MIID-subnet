@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chelsea",
+  "geonameid": 4932879,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.40178684467217,
+      "lon": -71.03738390636359,
+      "geoinfo": {
+        "display_name": "197;199, Orange Street, Orange - Addison, Chelsea, Suffolk County, Massachusetts, 02150, United States",
+        "road": "Orange Street",
+        "house_number": "197;199",
+        "neighbourhood": "Orange - Addison",
+        "suburb": null,
+        "city_district": null,
+        "city": "Chelsea",
+        "state": "Massachusetts",
+        "postcode": "02150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "197;199 Orange Street, Chelsea, Massachusetts, United States"
+    },
+    {
+      "lat": 42.35254055672441,
+      "lon": -71.0343055317415,
+      "geoinfo": {
+        "display_name": "Dry Dock Number 4, Boston Harborwalk, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02210, United States",
+        "road": "Boston Harborwalk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seaport",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dry Dock Number 4, Boston Harborwalk, Seaport, South Boston, Boston, Suffolk County, Massachusetts, 02210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:24.147285+00:00",
+  "_kind": "geo_samples"
+}

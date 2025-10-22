@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mid-City",
+  "geonameid": 13157343,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.05863895720479,
+      "lon": -118.32378791868958,
+      "geoinfo": {
+        "display_name": "845, South Windsor Boulevard, Los Angeles, Los Angeles County, California, 90019, United States",
+        "road": "South Windsor Boulevard",
+        "house_number": "845",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "845 South Windsor Boulevard, Mid-City, California, United States"
+    },
+    {
+      "lat": 34.048230575678964,
+      "lon": -118.39200670414283,
+      "geoinfo": {
+        "display_name": "9320, Kirkside Road, Beverlywood, Pico-Robertson, Los Angeles, Los Angeles County, California, 90035, United States",
+        "road": "Kirkside Road",
+        "house_number": "9320",
+        "neighbourhood": "Beverlywood",
+        "suburb": "Pico-Robertson",
+        "city_district": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "postcode": "90035",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9320, Kirkside Road, Beverlywood, Pico-Robertson, Los Angeles, Los Angeles County, California, 90035, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:47.684814+00:00",
+  "_kind": "geo_samples"
+}

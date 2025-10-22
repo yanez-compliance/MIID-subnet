@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Farmington",
+  "geonameid": 4386289,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.74987999070418,
+      "lon": -90.38493584263405,
+      "geoinfo": {
+        "display_name": "Old Fredericktown Road, Farmington, Saint Francois County, Missouri, 63640, United States",
+        "road": "Old Fredericktown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmington",
+        "state": "Missouri",
+        "postcode": "63640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Old Fredericktown Road, Farmington, Missouri, United States"
+    },
+    {
+      "lat": 37.78306822335358,
+      "lon": -90.40149659671053,
+      "geoinfo": {
+        "display_name": "125, Meramec Drive, Farmington, Saint Francois County, Missouri, 63640, United States",
+        "road": "Meramec Drive",
+        "house_number": "125",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmington",
+        "state": "Missouri",
+        "postcode": "63640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "125, Meramec Drive, Farmington, Saint Francois County, Missouri, 63640, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:32.848137+00:00",
+  "_kind": "geo_samples"
+}

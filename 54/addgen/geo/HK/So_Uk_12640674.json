@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "So Uk",
+  "geonameid": 12640674,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.38062678750539,
+      "lon": 114.17092520320361,
+      "geoinfo": {
+        "display_name": "Shun Shin Chee Kit Yin Koon, Shing Mun Tunnel Road, Pak Tin, Tung Lo Wan, Sha Tin District, New Territories, Hong Kong, 000000, China",
+        "road": "Shing Mun Tunnel Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sha Tin District",
+        "state": "Hong Kong",
+        "postcode": "000000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shing Mun Tunnel Road, So Uk, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.34024211281923,
+      "lon": 114.18540992090361,
+      "geoinfo": {
+        "display_name": "Fu Keung Street, Lok Fu, Wang Tau Hom, Wong Tai Sin District, Kowloon, Hong Kong, China",
+        "road": "Fu Keung Street",
+        "house_number": null,
+        "neighbourhood": "Lok Fu",
+        "suburb": "Wang Tau Hom",
+        "city_district": "Wong Tai Sin District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "295, Fu Keung Street, Lok Fu, Wang Tau Hom, Wong Tai Sin District, Kowloon, 61068 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:54:49.819254+00:00",
+  "_kind": "geo_samples"
+}

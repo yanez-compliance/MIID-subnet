@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qingdao",
+  "geonameid": 1797929,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.078510658419845,
+      "lon": 120.3484742543434,
+      "geoinfo": {
+        "display_name": "青岛第四十二中学, Yanan No.2 Road, Dengzhoulu, Shibei District, Qingdao, Shandong, 266011, China",
+        "road": "Yanan No.2 Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dengzhoulu",
+        "city_district": null,
+        "city": "Shibei District",
+        "state": "Shandong",
+        "postcode": "266011",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yanan No.2 Road, Qingdao, Shandong, China"
+    },
+    {
+      "lat": 36.02505633255919,
+      "lon": 120.40071847617038,
+      "geoinfo": {
+        "display_name": "Shinan District, Qingdao, Shandong, 266001, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shinan District",
+        "state": "Shandong",
+        "postcode": "266001",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "716, Shinan District, Qingdao, Shandong, 266001, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:52.347159+00:00",
+  "_kind": "geo_samples"
+}

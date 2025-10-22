@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Burngreave",
+  "geonameid": 11776857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.39628404390633,
+      "lon": -1.4830128458698495,
+      "geoinfo": {
+        "display_name": "Parkwood Road, Philadelphia, Upperthorpe, Sheffield, South Yorkshire, England, S3 8AG, United Kingdom",
+        "road": "Parkwood Road",
+        "house_number": null,
+        "neighbourhood": "Philadelphia",
+        "suburb": "Upperthorpe",
+        "city_district": null,
+        "city": "Sheffield",
+        "state": "England",
+        "postcode": "S3 8AG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Parkwood Road, Burngreave, England, United Kingdom"
+    },
+    {
+      "lat": 53.42944691713407,
+      "lon": -1.4621357390341898,
+      "geoinfo": {
+        "display_name": "Colley Drive, Longley, Sheffield, South Yorkshire, England, S5 9HB, United Kingdom",
+        "road": "Colley Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longley",
+        "city_district": null,
+        "city": "Sheffield",
+        "state": "England",
+        "postcode": "S5 9HB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Colley Drive, Longley, Sheffield, South Yorkshire, England, S5 9HB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:20.195782+00:00",
+  "_kind": "geo_samples"
+}

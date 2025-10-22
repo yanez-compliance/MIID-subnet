@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Stratford",
+  "geonameid": 6157977,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.39673271023945,
+      "lon": -80.9495171531255,
+      "geoinfo": {
+        "display_name": "Perth East, Perth County, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perth East",
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Stratford, Ontario, Canada"
+    },
+    {
+      "lat": 43.35292647619259,
+      "lon": -80.90777141045204,
+      "geoinfo": {
+        "display_name": "2762, Perth Line 33, Perth East, Perth County, Ontario, N0B 2P0, Canada",
+        "road": "Perth Line 33",
+        "house_number": "2762",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perth East",
+        "state": "Ontario",
+        "postcode": "N0B 2P0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2762, Perth Line 33, Perth East, Perth County, Ontario, N0B 2P0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:54.192880+00:00",
+  "_kind": "geo_samples"
+}

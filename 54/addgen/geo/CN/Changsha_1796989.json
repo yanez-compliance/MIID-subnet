@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changsha",
+  "geonameid": 1796989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.369601862288622,
+      "lon": 112.71008008170418,
+      "geoinfo": {
+        "display_name": "沿江东路, Xiaxi, Sanbu Subdistrict, Kaiping, Jiangmen, Guangdong Province, 529300, China",
+        "road": "沿江东路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sanbu Subdistrict",
+        "city_district": null,
+        "city": "Jiangmen",
+        "state": "Guangdong Province",
+        "postcode": "529300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "沿江东路, Changsha, Guangdong Province, China"
+    },
+    {
+      "lat": 22.42003664572902,
+      "lon": 112.6867058311394,
+      "geoinfo": {
+        "display_name": "Xintian, Jiangmen, Guangdong Province, 529300, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jiangmen",
+        "state": "Guangdong Province",
+        "postcode": "529300",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "532, Xintian, Jiangmen, Guangdong Province, 529300, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:48.864339+00:00",
+  "_kind": "geo_samples"
+}

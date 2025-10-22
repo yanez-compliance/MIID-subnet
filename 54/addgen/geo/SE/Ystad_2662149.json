@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Ystad",
+  "geonameid": 2662149,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.39730912611554,
+      "lon": 13.7810431644384,
+      "geoinfo": {
+        "display_name": "Ystad, Ystads kommun, Skåne County, 271 43, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ystad",
+        "state": null,
+        "postcode": "271 43",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Ystad, Sweden"
+    },
+    {
+      "lat": 55.44302587756573,
+      "lon": 13.786218576803265,
+      "geoinfo": {
+        "display_name": "Möllegårdsvägen, Källesjö, Hedeskoga, Ystads kommun, Skåne County, 271 55, Sweden",
+        "road": "Möllegårdsvägen",
+        "house_number": null,
+        "neighbourhood": "Källesjö",
+        "suburb": null,
+        "city_district": null,
+        "city": "Hedeskoga",
+        "state": null,
+        "postcode": "271 55",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "897, Möllegårdsvägen, 271 55 Ystad, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:59:31.821340+00:00",
+  "_kind": "geo_samples"
+}

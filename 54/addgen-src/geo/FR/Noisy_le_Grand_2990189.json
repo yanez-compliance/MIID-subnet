@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Noisy-le-Grand",
+  "geonameid": 2990189,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.832851952254664,
+      "lon": 2.5345121521695297,
+      "geoinfo": {
+        "display_name": "Boulevard Jean Monnet, Les Hautes Noues, Villiers-sur-Marne, Nogent-sur-Marne, Val-de-Marne, Ile-de-France, Metropolitan France, 94350, France",
+        "road": "Boulevard Jean Monnet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Hautes Noues",
+        "city_district": null,
+        "city": "Villiers-sur-Marne",
+        "state": "Ile-de-France",
+        "postcode": "94350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Boulevard Jean Monnet, Noisy-le-Grand, Ile-de-France, France"
+    },
+    {
+      "lat": 48.83865234953882,
+      "lon": 2.533031364553879,
+      "geoinfo": {
+        "display_name": "14, Place de la Fontaine, Bry-sur-Marne, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94360, France",
+        "road": "Place de la Fontaine",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bry-sur-Marne",
+        "state": null,
+        "postcode": "94360",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "14, Place de la Fontaine, Bry-sur-Marne, Nogent-sur-Marne, Val-de-Marne, Metropolitan France, 94360, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:27.547187+00:00",
+  "_kind": "geo_samples"
+}

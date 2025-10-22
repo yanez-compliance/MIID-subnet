@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Los Angeles",
+  "geonameid": 11550023,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.362668125299756,
+      "lon": -3.6820331651586002,
+      "geoinfo": {
+        "display_name": "M-40, San Fermín, Usera, Madrid, Community of Madrid, 28041, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Usera",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28041",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Los Angeles, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.34043763357437,
+      "lon": -3.750461176981067,
+      "geoinfo": {
+        "display_name": "Calle El Roncal, Zarzaquemada, Leganés, Community of Madrid, 28915, Spain",
+        "road": "Calle El Roncal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zarzaquemada",
+        "city_district": null,
+        "city": "Leganés",
+        "state": "Community of Madrid",
+        "postcode": "28915",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "390, Calle El Roncal, Zarzaquemada, Leganés, Community of Madrid, 28915, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:58.590505+00:00",
+  "_kind": "geo_samples"
+}

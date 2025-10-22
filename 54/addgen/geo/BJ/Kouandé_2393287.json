@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Kouandé",
+  "geonameid": 2393287,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.36490191846713,
+      "lon": 2.0516126069881366,
+      "geoinfo": {
+        "display_name": "RNIE 1, Houèto, Ouidah, Atlantique Department, Benin",
+        "road": "RNIE 1",
+        "house_number": null,
+        "neighbourhood": "Houèto",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ouidah",
+        "state": "Atlantique Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "RNIE 1, Houèto, Ouidah, 27506 Atlantique Department, Benin"
+    },
+    {
+      "lat": 6.404382538128216,
+      "lon": 2.100747954262686,
+      "geoinfo": {
+        "display_name": "Ouidah, Atlantique Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ouidah",
+        "state": "Atlantique Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "248, Ouidah, 77137 Atlantique Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:14.210275+00:00",
+  "_kind": "geo_samples"
+}

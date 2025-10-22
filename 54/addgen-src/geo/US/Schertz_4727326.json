@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Schertz",
+  "geonameid": 4727326,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.549772274626225,
+      "lon": -98.2672497743292,
+      "geoinfo": {
+        "display_name": "254, Zuehl Street, Schertz, Guadalupe County, Texas, 78154, United States",
+        "road": "Zuehl Street",
+        "house_number": "254",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schertz",
+        "state": "Texas",
+        "postcode": "78154",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "254 Zuehl Street, Schertz, Texas, United States"
+    },
+    {
+      "lat": 29.51053139384132,
+      "lon": -98.28679229953856,
+      "geoinfo": {
+        "display_name": "Anderson Loop, Airport City, Converse, Bexar County, Texas, 78150, United States",
+        "road": "Anderson Loop",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Converse",
+        "state": "Texas",
+        "postcode": "78150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "692, Anderson Loop, Airport City, Converse, Bexar County, Texas, 78150, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:33.307015+00:00",
+  "_kind": "geo_samples"
+}

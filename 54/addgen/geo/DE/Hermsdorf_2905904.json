@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hermsdorf",
+  "geonameid": 2905904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.59248602932699,
+      "lon": 13.250234230777192,
+      "geoinfo": {
+        "display_name": "Mühlenweg, Tegel, Reinickendorf, Berlin, 13505, Germany",
+        "road": "Mühlenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tegel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13505",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Mühlenweg, Hermsdorf, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.60413074553683,
+      "lon": 13.333254041601322,
+      "geoinfo": {
+        "display_name": "16, Bernshausener Ring, Wittenau, Reinickendorf, Berlin, 13435, Germany",
+        "road": "Bernshausener Ring",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Wittenau",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16, Bernshausener Ring, Wittenau, Reinickendorf, Berlin, 13435, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:14.715069+00:00",
+  "_kind": "geo_samples"
+}

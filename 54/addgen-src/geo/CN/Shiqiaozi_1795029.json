@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shiqiaozi",
+  "geonameid": 1795029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.17675551790326,
+      "lon": 119.22378755585251,
+      "geoinfo": {
+        "display_name": "Weiri Expressway, Zhucheng City, Weifang, Shandong, China",
+        "road": "Weiri Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Weiri Expressway, Shiqiaozi, Shandong, China"
+    },
+    {
+      "lat": 36.12361965379067,
+      "lon": 119.27625615813784,
+      "geoinfo": {
+        "display_name": "Zhucheng City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "036, Zhucheng City, Weifang, 47524 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:13.536799+00:00",
+  "_kind": "geo_samples"
+}

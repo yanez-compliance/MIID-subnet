@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lemoore",
+  "geonameid": 5365918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.264380049372136,
+      "lon": -119.75917231834241,
+      "geoinfo": {
+        "display_name": "17th Avenue, Kings County, California, 93245, United States",
+        "road": "17th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17th Avenue, Lemoore, California, United States"
+    },
+    {
+      "lat": 36.32234150609811,
+      "lon": -119.74006702121466,
+      "geoinfo": {
+        "display_name": "16th Avenue, Kings County, California, 93202, United States",
+        "road": "16th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16th Avenue, Kings County, California, 93202, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:28.109270+00:00",
+  "_kind": "geo_samples"
+}

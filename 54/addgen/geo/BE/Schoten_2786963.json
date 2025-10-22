@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Schoten",
+  "geonameid": 2786963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.26082100127649,
+      "lon": 4.54402265889179,
+      "geoinfo": {
+        "display_name": "10, Bosschaert de Bouwellei, Koningshof, Schoten, Antwerp, 2900, Belgium",
+        "road": "Bosschaert de Bouwellei",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schoten",
+        "state": "Antwerp",
+        "postcode": "2900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "10 Bosschaert de Bouwellei, Schoten, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.25444144426839,
+      "lon": 4.5061567048093965,
+      "geoinfo": {
+        "display_name": "Dauwaertlaan, Donk, Schoten, Antwerp, 2900, Belgium",
+        "road": "Dauwaertlaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schoten",
+        "state": "Antwerp",
+        "postcode": "2900",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "699, Dauwaertlaan, Donk, Schoten, Antwerp, 2900, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:00:57.076506+00:00",
+  "_kind": "geo_samples"
+}

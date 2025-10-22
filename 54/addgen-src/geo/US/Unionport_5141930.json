@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Unionport",
+  "geonameid": 5141930,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.82555344698339,
+      "lon": -73.85572016784973,
+      "geoinfo": {
+        "display_name": "900, Pugsley Avenue, Unionport, The Bronx, Bronx County, New York, 10473, United States",
+        "road": "Pugsley Avenue",
+        "house_number": "900",
+        "neighbourhood": "Unionport",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10473",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "900 Pugsley Avenue, Unionport, New York, United States"
+    },
+    {
+      "lat": 40.82144694792183,
+      "lon": -73.82604765900564,
+      "geoinfo": {
+        "display_name": "560;570, Balcom Avenue, Throggs Neck, The Bronx, Bronx County, New York, 10465, United States",
+        "road": "Balcom Avenue",
+        "house_number": "560;570",
+        "neighbourhood": "Throggs Neck",
+        "suburb": "The Bronx",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10465",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "560;570, Balcom Avenue, Throggs Neck, The Bronx, Bronx County, New York, 10465, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:42:39.540828+00:00",
+  "_kind": "geo_samples"
+}

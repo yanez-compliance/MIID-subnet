@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakleaf Plantation",
+  "geonameid": 7315237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.17292720338063,
+      "lon": -81.8343481908886,
+      "geoinfo": {
+        "display_name": "Plantation Oaks Boulevard, Oakleaf, Clay County, Florida, 32222, United States",
+        "road": "Plantation Oaks Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakleaf",
+        "state": "Florida",
+        "postcode": "32222",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Plantation Oaks Boulevard, Oakleaf Plantation, Florida, United States"
+    },
+    {
+      "lat": 30.17171023061151,
+      "lon": -81.84974966269777,
+      "geoinfo": {
+        "display_name": "The Preserve at Oakleaf Building 14, 785, Oakleaf Plantation Parkway, Orange Park, Clay County, Florida, 32065, United States",
+        "road": "Oakleaf Plantation Parkway",
+        "house_number": "785",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Orange Park",
+        "state": "Florida",
+        "postcode": "32065",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "The Preserve at Oakleaf Building 14, 785, Oakleaf Plantation Parkway, Orange Park, Clay County, Florida, 32065, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:17:07.182185+00:00",
+  "_kind": "geo_samples"
+}

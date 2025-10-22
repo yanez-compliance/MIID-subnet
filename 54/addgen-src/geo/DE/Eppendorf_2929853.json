@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Eppendorf",
+  "geonameid": 2929853,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.580173420234075,
+      "lon": 9.997450481401987,
+      "geoinfo": {
+        "display_name": "Heilwigstraße, Harvestehude, Eimsbüttel, Hamburg, 20149, Germany",
+        "road": "Heilwigstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Harvestehude",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20149",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Heilwigstraße, Eppendorf, Germany"
+    },
+    {
+      "lat": 53.61826935736802,
+      "lon": 9.966463962646841,
+      "geoinfo": {
+        "display_name": "Tarpenbekwanderweg, Niendorf, Eimsbüttel, Hamburg, 22453, Germany",
+        "road": "Tarpenbekwanderweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Niendorf",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22453",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "034, Tarpenbekwanderweg, Niendorf, Eimsbüttel, Hamburg, 22453, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:48.965058+00:00",
+  "_kind": "geo_samples"
+}

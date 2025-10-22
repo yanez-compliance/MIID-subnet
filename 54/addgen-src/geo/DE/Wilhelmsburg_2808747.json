@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wilhelmsburg",
+  "geonameid": 2808747,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.5158248669824,
+      "lon": 10.004212973360833,
+      "geoinfo": {
+        "display_name": "Honartsdeicher Weg, Wilhelmsburg, Hamburg-Mitte, Hamburg, 21109, Germany",
+        "road": "Honartsdeicher Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wilhelmsburg",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21109",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Honartsdeicher Weg, Wilhelmsburg, Germany"
+    },
+    {
+      "lat": 53.462786395488266,
+      "lon": 9.983399127346958,
+      "geoinfo": {
+        "display_name": "JOHN REED Fitness, 1, Am Werder, Harburg, Hamburg, 21073, Germany",
+        "road": "Am Werder",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Harburg",
+        "city_district": "Harburg",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "21073",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "JOHN REED Fitness, 1, Am Werder, Harburg, Hamburg, 21073, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:23.595405+00:00",
+  "_kind": "geo_samples"
+}

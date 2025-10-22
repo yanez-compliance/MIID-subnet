@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Parabiago",
+  "geonameid": 3171484,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.56340439559602,
+      "lon": 8.889684862744943,
+      "geoinfo": {
+        "display_name": "Via Pietro Micca, Villa Cortese, Milan, Lombardy, 20035, Italy",
+        "road": "Via Pietro Micca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Cortese",
+        "state": "Lombardy",
+        "postcode": "20035",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Pietro Micca, Parabiago, Lombardy, Italy"
+    },
+    {
+      "lat": 45.591796461574376,
+      "lon": 8.91792319019036,
+      "geoinfo": {
+        "display_name": "13, Via Bruno Buozzi, Sant'Ambrogio, Oltresempione, Legnano, Milan, Lombardy, 20025, Italy",
+        "road": "Via Bruno Buozzi",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Oltresempione",
+        "city_district": null,
+        "city": "Legnano",
+        "state": "Lombardy",
+        "postcode": "20025",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "13, Via Bruno Buozzi, Sant'Ambrogio, Oltresempione, Legnano, Milan, Lombardy, 20025, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:07.315961+00:00",
+  "_kind": "geo_samples"
+}

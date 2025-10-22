@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bangor",
+  "geonameid": 2656397,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.2208428265631,
+      "lon": -4.187222612503245,
+      "geoinfo": {
+        "display_name": "The Lodge, Holyhead Road, Pentre Uchaf, Llanfair Pwllgwyngyll, Llanfairpwllgwyngyll, Isle of Anglesey, Wales, LL61 5YH, United Kingdom",
+        "road": "Holyhead Road",
+        "house_number": null,
+        "neighbourhood": "Pentre Uchaf",
+        "suburb": "Llanfair Pwllgwyngyll",
+        "city_district": null,
+        "city": "Llanfairpwllgwyngyll",
+        "state": "Wales",
+        "postcode": "LL61 5YH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Holyhead Road, Bangor, Wales, United Kingdom"
+    },
+    {
+      "lat": 53.20753429904483,
+      "lon": -4.110902169533253,
+      "geoinfo": {
+        "display_name": "A5, Llandygai, Gwynedd, Wales, LL57 4BG, United Kingdom",
+        "road": "A5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Llandygai",
+        "city_district": null,
+        "city": "Llandygai",
+        "state": "Wales",
+        "postcode": "LL57 4BG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A5, Bangor, LL57 4BG Wales, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:19.109044+00:00",
+  "_kind": "geo_samples"
+}

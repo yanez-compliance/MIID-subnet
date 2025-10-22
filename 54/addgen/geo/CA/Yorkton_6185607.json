@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Yorkton",
+  "geonameid": 6185607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.223583253182305,
+      "lon": -102.43756978514831,
+      "geoinfo": {
+        "display_name": "Partridge Court, Yorkton, Saskatchewan, S3N 3G7, Canada",
+        "road": "Partridge Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yorkton",
+        "state": "Saskatchewan",
+        "postcode": "S3N 3G7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Partridge Court, Yorkton, Saskatchewan, Canada"
+    },
+    {
+      "lat": 51.23257101316361,
+      "lon": -102.50584388096907,
+      "geoinfo": {
+        "display_name": "Yorkton, Saskatchewan, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yorkton",
+        "state": "Saskatchewan",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "080, Yorkton, 49829 Saskatchewan, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:38.653784+00:00",
+  "_kind": "geo_samples"
+}

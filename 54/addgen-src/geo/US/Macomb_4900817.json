@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Macomb",
+  "geonameid": 4900817,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.43744945274232,
+      "lon": -90.6552666260354,
+      "geoinfo": {
+        "display_name": "East 1300th Street, Macomb, McDonough County, Illinois, 61455, United States",
+        "road": "East 1300th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Macomb",
+        "state": "Illinois",
+        "postcode": "61455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 1300th Street, Macomb, Illinois, United States"
+    },
+    {
+      "lat": 40.45722339396712,
+      "lon": -90.68310463952307,
+      "geoinfo": {
+        "display_name": "817, West Washington Street, Macomb, McDonough County, Illinois, 61455, United States",
+        "road": "West Washington Street",
+        "house_number": "817",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Macomb",
+        "state": "Illinois",
+        "postcode": "61455",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "817, West Washington Street, Macomb, McDonough County, Illinois, 61455, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:55:36.966551+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Tiancheng",
+  "geonameid": 8403610,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.88994385640902,
+      "lon": 108.36604229812254,
+      "geoinfo": {
+        "display_name": "Longxi Avenue, 双堰村, 天城街道, Wanzhou, Chongqing, China",
+        "road": "Longxi Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "天城街道",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longxi Avenue, Tiancheng, Chongqing, China"
+    },
+    {
+      "lat": 30.879134647158487,
+      "lon": 108.3216502597068,
+      "geoinfo": {
+        "display_name": "天城街道, Wanzhou, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "天城街道",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "368, 天城街道, Wanzhou, 77953 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T00:02:31.098872+00:00",
+  "_kind": "geo_samples"
+}

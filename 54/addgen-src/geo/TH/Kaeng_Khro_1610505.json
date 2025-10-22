@@ -1,0 +1,47 @@
+{
+  "country_code": "TH",
+  "country": "Thailand",
+  "city": "Kaeng Khro",
+  "geonameid": 1610505,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.07124902390495,
+      "lon": 102.28316548976375,
+      "geoinfo": {
+        "display_name": "229, Ban Sap Daeng, Pho Chai, Khok Pho Chai, Khon Kaen Province, Thailand",
+        "road": "229",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ban Sap Daeng",
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "229, Kaeng Khro, Thailand"
+    },
+    {
+      "lat": 16.123242167733757,
+      "lon": 102.24592370254713,
+      "geoinfo": {
+        "display_name": "Kaeng Khro, Chaiyaphum Province, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaeng Khro",
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "011, Kaeng Khro, 10134 Chaiyaphum Province, Thailand"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:25.531430+00:00",
+  "_kind": "geo_samples"
+}

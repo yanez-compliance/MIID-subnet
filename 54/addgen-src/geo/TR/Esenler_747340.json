@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Esenler",
+  "geonameid": 747340,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.01082682482704,
+      "lon": 28.87215959162031,
+      "geoinfo": {
+        "display_name": "Cami Sokağı, Haznedar Mahallesi, Gungoren, Istanbul, Marmara Region, 34160, Turkey",
+        "road": "Cami Sokağı",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Haznedar Mahallesi",
+        "city_district": null,
+        "city": "Gungoren",
+        "state": null,
+        "postcode": "34160",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Cami Sokağı, Esenler, Turkey"
+    },
+    {
+      "lat": 41.02807955375025,
+      "lon": 28.832389807224924,
+      "geoinfo": {
+        "display_name": "Hürriyet Mahallesi, Bağcılar, Istanbul, Marmara Region, 34212, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hürriyet Mahallesi",
+        "city_district": null,
+        "city": "Bağcılar",
+        "state": null,
+        "postcode": "34212",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "804, Hürriyet Mahallesi, Bağcılar, Istanbul, Marmara Region, 34212, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:30.885296+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Haydock",
+  "geonameid": 2647265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.50201836777412,
+      "lon": -2.654320026126693,
+      "geoinfo": {
+        "display_name": "2, Grange Road, Rose Hill, Bryn, Wigan, Greater Manchester, England, WN4 0BB, United Kingdom",
+        "road": "Grange Road",
+        "house_number": "2",
+        "neighbourhood": "Rose Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wigan",
+        "state": "England",
+        "postcode": "WN4 0BB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "2 Grange Road, Haydock, England, United Kingdom"
+    },
+    {
+      "lat": 53.466449427727184,
+      "lon": -2.6354572392569993,
+      "geoinfo": {
+        "display_name": "171A, Lodge Lane, Old Boston, Newton-le-Willows, St Helens, Liverpool City Region, England, WA12 0HP, United Kingdom",
+        "road": "Lodge Lane",
+        "house_number": "171A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newton-le-Willows",
+        "state": "England",
+        "postcode": "WA12 0HP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "171A, Lodge Lane, Old Boston, Newton-le-Willows, St Helens, Liverpool City Region, England, WA12 0HP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:50.143962+00:00",
+  "_kind": "geo_samples"
+}

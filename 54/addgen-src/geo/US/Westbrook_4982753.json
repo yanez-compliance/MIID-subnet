@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westbrook",
+  "geonameid": 4982753,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.70958674053319,
+      "lon": -70.33914143673108,
+      "geoinfo": {
+        "display_name": "Pride Street, Prides Corner, Westbrook, Cumberland County, Maine, 04092, United States",
+        "road": "Pride Street",
+        "house_number": null,
+        "neighbourhood": "Prides Corner",
+        "suburb": null,
+        "city_district": null,
+        "city": "Westbrook",
+        "state": "Maine",
+        "postcode": "04092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pride Street, Westbrook, Maine, United States"
+    },
+    {
+      "lat": 43.653283469253104,
+      "lon": -70.33076941271801,
+      "geoinfo": {
+        "display_name": "Maine Turnpike, Portland, Cumberland County, Maine, 04102, United States",
+        "road": "Maine Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Portland",
+        "state": "Maine",
+        "postcode": "04102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "861, Maine Turnpike, Portland, Cumberland County, Maine, 04102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:57.450549+00:00",
+  "_kind": "geo_samples"
+}

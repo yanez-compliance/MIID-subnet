@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Somerville",
+  "geonameid": 4951257,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.39461477801896,
+      "lon": -71.10960503958756,
+      "geoinfo": {
+        "display_name": "17, Clyde Street, Magoun Square, Ball Square, Somerville, Middlesex County, Massachusetts, 02144, United States",
+        "road": "Clyde Street",
+        "house_number": "17",
+        "neighbourhood": "Magoun Square",
+        "suburb": "Ball Square",
+        "city_district": null,
+        "city": "Somerville",
+        "state": "Massachusetts",
+        "postcode": "02144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17 Clyde Street, Somerville, Massachusetts, United States"
+    },
+    {
+      "lat": 42.40090989576522,
+      "lon": -71.04498657158763,
+      "geoinfo": {
+        "display_name": "Maxwell, 102, Mill Road, Everett, Middlesex County, Massachusetts, 02149, United States",
+        "road": "Mill Road",
+        "house_number": "102",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Everett",
+        "state": "Massachusetts",
+        "postcode": "02149",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Maxwell, 102, Mill Road, Everett, Middlesex County, Massachusetts, 02149, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:58:51.423707+00:00",
+  "_kind": "geo_samples"
+}

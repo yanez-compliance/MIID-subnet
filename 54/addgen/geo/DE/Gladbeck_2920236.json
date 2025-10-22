@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Gladbeck",
+  "geonameid": 2920236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.594881454226204,
+      "lon": 6.971622659414334,
+      "geoinfo": {
+        "display_name": "Arenbergstraße, Zweckel, Gladbeck, Kreis Recklinghausen, North Rhine-Westphalia, 45966, Germany",
+        "road": "Arenbergstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zweckel",
+        "city_district": "Zweckel",
+        "city": "Gladbeck",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45966",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Arenbergstraße, Gladbeck, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.567170357844624,
+      "lon": 7.003267995109244,
+      "geoinfo": {
+        "display_name": "15, Bramsfeld, Butendorf, Gladbeck, Kreis Recklinghausen, North Rhine-Westphalia, 45968, Germany",
+        "road": "Bramsfeld",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Butendorf",
+        "city_district": "Butendorf",
+        "city": "Gladbeck",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45968",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15, Bramsfeld, Butendorf, Gladbeck, Kreis Recklinghausen, North Rhine-Westphalia, 45968, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:45.920373+00:00",
+  "_kind": "geo_samples"
+}

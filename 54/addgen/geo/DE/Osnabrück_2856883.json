@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Osnabrück",
+  "geonameid": 2856883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.254852469763485,
+      "lon": 7.983692484575423,
+      "geoinfo": {
+        "display_name": "Lengericher Landstraße, Hellern, Osnabrück, Lower Saxony, 49078, Germany",
+        "road": "Lengericher Landstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hellern",
+        "city_district": null,
+        "city": "Osnabrück",
+        "state": "Lower Saxony",
+        "postcode": "49078",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lengericher Landstraße, Osnabrück, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.262479067753084,
+      "lon": 8.062984216239728,
+      "geoinfo": {
+        "display_name": "2, Schweerstraße, Fledder, Osnabrück, Lower Saxony, 49084, Germany",
+        "road": "Schweerstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Fledder",
+        "city_district": null,
+        "city": "Osnabrück",
+        "state": "Lower Saxony",
+        "postcode": "49084",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2, Schweerstraße, Fledder, Osnabrück, Lower Saxony, 49084, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:07.690039+00:00",
+  "_kind": "geo_samples"
+}

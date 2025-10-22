@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Andover",
+  "geonameid": 2657324,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.24124567740054,
+      "lon": -1.5173655131597745,
+      "geoinfo": {
+        "display_name": "Penton Mewsey, Test Valley, Hampshire, England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Test Valley",
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Andover, England, United Kingdom"
+    },
+    {
+      "lat": 51.19152252166712,
+      "lon": -1.5447426202633052,
+      "geoinfo": {
+        "display_name": "Abbotts Ann Road, Abbotts Ann, Monxton, Test Valley, Hampshire, England, SP11 7DB, United Kingdom",
+        "road": "Abbotts Ann Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Test Valley",
+        "state": "England",
+        "postcode": "SP11 7DB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Abbotts Ann Road, Abbotts Ann, Monxton, Test Valley, Hampshire, England, SP11 7DB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:11.755107+00:00",
+  "_kind": "geo_samples"
+}

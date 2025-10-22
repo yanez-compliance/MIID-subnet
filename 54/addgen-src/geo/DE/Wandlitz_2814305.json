@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wandlitz",
+  "geonameid": 2814305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.73504358968368,
+      "lon": 13.492849189230146,
+      "geoinfo": {
+        "display_name": "Wandlitzer Chaussee, Liepnitz, Wandlitz, Bernau, Barnim, Brandenburg, 16321, Germany",
+        "road": "Wandlitzer Chaussee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernau",
+        "state": "Brandenburg",
+        "postcode": "16321",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wandlitzer Chaussee, Wandlitz, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.72902234531062,
+      "lon": 13.42971922571595,
+      "geoinfo": {
+        "display_name": "Fahrgelände Offroad-Tiger, Liebenwalder Weg, Basdorf, Wandlitz, Barnim, Brandenburg, 16348, Germany",
+        "road": "Liebenwalder Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Basdorf",
+        "state": "Brandenburg",
+        "postcode": "16348",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "394, Liebenwalder Weg, Wandlitz, 16348 Brandenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:09.780486+00:00",
+  "_kind": "geo_samples"
+}

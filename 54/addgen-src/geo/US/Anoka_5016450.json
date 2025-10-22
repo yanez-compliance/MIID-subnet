@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Anoka",
+  "geonameid": 5016450,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.20490330942224,
+      "lon": -93.44067743715237,
+      "geoinfo": {
+        "display_name": "13863, Norwood Lane, Parkview Estates, Dayton, Hennepin County, Minnesota, 55327, United States",
+        "road": "Norwood Lane",
+        "house_number": "13863",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Minnesota",
+        "postcode": "55327",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13863 Norwood Lane, Anoka, Minnesota, United States"
+    },
+    {
+      "lat": 45.16602557949202,
+      "lon": -93.35262396114543,
+      "geoinfo": {
+        "display_name": "11684, Mississippi Drive North, West Coon Rapids, Champlin, Hennepin County, Minnesota, 55316, United States",
+        "road": "Mississippi Drive North",
+        "house_number": "11684",
+        "neighbourhood": "West Coon Rapids",
+        "suburb": null,
+        "city_district": null,
+        "city": "Champlin",
+        "state": "Minnesota",
+        "postcode": "55316",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11684, Mississippi Drive North, West Coon Rapids, Champlin, Hennepin County, Minnesota, 55316, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:41.123132+00:00",
+  "_kind": "geo_samples"
+}

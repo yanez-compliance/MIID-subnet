@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San Felipe",
+  "geonameid": 3987246,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.44396786037821,
+      "lon": -101.19632195482572,
+      "geoinfo": {
+        "display_name": "Carretera San Felipe-Dolores Hidalgo, El Aposento, Rancho de Guadalupe, La Huerta, San Felipe, Guanajuato, 37605, Mexico",
+        "road": "Carretera San Felipe-Dolores Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Huerta",
+        "state": "Guanajuato",
+        "postcode": "37605",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera San Felipe-Dolores Hidalgo, San Felipe, Guanajuato, Mexico"
+    },
+    {
+      "lat": 21.46902207471735,
+      "lon": -101.20396335556525,
+      "geoinfo": {
+        "display_name": "Prolongación Cortázar, De Los Espinos, San Felipe, Guanajuato, 37600, Mexico",
+        "road": "Prolongación Cortázar",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Felipe",
+        "state": "Guanajuato",
+        "postcode": "37600",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "363, Prolongación Cortázar, De Los Espinos, San Felipe, Guanajuato, 37600, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:43.095555+00:00",
+  "_kind": "geo_samples"
+}

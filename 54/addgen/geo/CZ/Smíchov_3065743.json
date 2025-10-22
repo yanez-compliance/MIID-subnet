@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Smíchov",
+  "geonameid": 3065743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.07724528021591,
+      "lon": 14.388853170893045,
+      "geoinfo": {
+        "display_name": "1168/80, Na Hřebenkách, Smíchov, Prague, obvod Praha 5, Capital City of Prague, Prague, 150 00, Czechia",
+        "road": "Na Hřebenkách",
+        "house_number": "1168/80",
+        "neighbourhood": null,
+        "suburb": "Smíchov",
+        "city_district": "obvod Praha 5",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "150 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "1168/80 Na Hřebenkách, Smíchov, Prague, Czechia"
+    },
+    {
+      "lat": 50.08137450734944,
+      "lon": 14.337698327977044,
+      "geoinfo": {
+        "display_name": "Na Vypichu, Liboc, Prague, obvod Praha 6, Capital City of Prague, Prague, 150 06, Czechia",
+        "road": "Na Vypichu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Liboc",
+        "city_district": "obvod Praha 6",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "150 06",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Na Vypichu, Liboc, Prague, obvod Praha 6, Capital City of Prague, Prague, 150 06, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:01.132660+00:00",
+  "_kind": "geo_samples"
+}

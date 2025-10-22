@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lamont",
+  "geonameid": 5364916,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.23601733863764,
+      "lon": -118.94754009488952,
+      "geoinfo": {
+        "display_name": "Buena Vista Boulevard, Weedpatch, Kern County, California, 93241, United States",
+        "road": "Buena Vista Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weedpatch",
+        "state": "California",
+        "postcode": "93241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Buena Vista Boulevard, Lamont, California, United States"
+    },
+    {
+      "lat": 35.23511432124614,
+      "lon": -118.9222832469038,
+      "geoinfo": {
+        "display_name": "May Street, Weedpatch, Kern County, California, 93241, United States",
+        "road": "May Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weedpatch",
+        "state": "California",
+        "postcode": "93241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "102, May Street, Weedpatch, Kern County, California, 93241, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:29.364813+00:00",
+  "_kind": "geo_samples"
+}

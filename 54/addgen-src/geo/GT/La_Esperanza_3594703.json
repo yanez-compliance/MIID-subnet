@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "La Esperanza",
+  "geonameid": 3594703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.875940870151526,
+      "lon": -91.55675671285776,
+      "geoinfo": {
+        "display_name": "7a Calle, El Progreso, La Esperanza, Quetzaltenango, 09023, Guatemala",
+        "road": "7a Calle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Esperanza",
+        "state": "Quetzaltenango",
+        "postcode": "09023",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "7a Calle, La Esperanza, Quetzaltenango, Guatemala"
+    },
+    {
+      "lat": 14.893999507650332,
+      "lon": -91.5224910462813,
+      "geoinfo": {
+        "display_name": "Olintepeque, Zona 9, Quetzaltenango, 09023, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olintepeque",
+        "state": "Quetzaltenango",
+        "postcode": "09023",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Olintepeque, Zona 9, Quetzaltenango, 09023, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:00.230627+00:00",
+  "_kind": "geo_samples"
+}

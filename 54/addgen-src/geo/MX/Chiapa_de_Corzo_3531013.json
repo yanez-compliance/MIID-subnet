@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chiapa de Corzo",
+  "geonameid": 3531013,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.68749079733699,
+      "lon": -93.00471917672304,
+      "geoinfo": {
+        "display_name": "Chiapa de Corzo, Chiapas, 29160, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiapa de Corzo",
+        "state": "Chiapas",
+        "postcode": "29160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Chiapa de Corzo, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.73960412968207,
+      "lon": -93.03999259682179,
+      "geoinfo": {
+        "display_name": "2 Oriente sur, Jardines de Grijalva, Chiapa de Corzo, Chiapas, 29160, Mexico",
+        "road": "2 Oriente sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jardines de Grijalva",
+        "state": "Chiapas",
+        "postcode": "29160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "2 Oriente sur, Jardines de Grijalva, Chiapa de Corzo, Chiapas, 29160, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:09.667674+00:00",
+  "_kind": "geo_samples"
+}

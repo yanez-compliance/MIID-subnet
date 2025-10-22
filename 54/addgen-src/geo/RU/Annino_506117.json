@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Annino",
+  "geonameid": 506117,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.55819745689526,
+      "lon": 37.63870045296161,
+      "geoinfo": {
+        "display_name": "Жабкино, Leninsky District, Moscow Oblast, Central Federal District, 142718, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "142718",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Annino, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.6026027308884,
+      "lon": 37.6569713944163,
+      "geoinfo": {
+        "display_name": "проектируемый проезд № 6631, Biryulyovo Vostochnoye District, Moscow, Central Federal District, 115404, Russia",
+        "road": "проектируемый проезд № 6631",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Biryulyovo Vostochnoye District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "115404",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "проектируемый проезд № 6631, Biryulyovo Vostochnoye District, Moscow, Central Federal District, 115404, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:31:40.980791+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Nuenen",
+  "geonameid": 2749780,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.455297091710534,
+      "lon": 5.546234076801674,
+      "geoinfo": {
+        "display_name": "63, Geldropsedijk, Eeneind, Nuenen, Nuenen c.a., North Brabant, Netherlands, 5674 VV, Netherlands",
+        "road": "Geldropsedijk",
+        "house_number": "63",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nuenen",
+        "state": "North Brabant",
+        "postcode": "5674 VV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "63 Geldropsedijk, Nuenen, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.475941687414725,
+      "lon": 5.595161648858007,
+      "geoinfo": {
+        "display_name": "Grensdijk, Nuenen, Nuenen c.a., North Brabant, Netherlands, 5708 JS, Netherlands",
+        "road": "Grensdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nuenen",
+        "state": "North Brabant",
+        "postcode": "5708 JS",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "301, Grensdijk, Nuenen, Nuenen c.a., North Brabant, Netherlands, 5708 JS, Netherlands"
+    },
+    {
+      "lat": 51.44819622067596,
+      "lon": 5.602499674980645,
+      "geoinfo": {
+        "display_name": "43, Broekstraat, Bijenkorf, Het Broek, Mierlo, Geldrop-Mierlo, North Brabant, Netherlands, 5731 RA, Netherlands",
+        "road": "Broekstraat",
+        "house_number": "43",
+        "neighbourhood": "Bijenkorf",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mierlo",
+        "state": "North Brabant",
+        "postcode": "5731 RA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "43, Broekstraat, Bijenkorf, Het Broek, Mierlo, Geldrop-Mierlo, North Brabant, Netherlands, 5731 RA, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:32.457373+00:00",
+  "_kind": "geo_samples"
+}

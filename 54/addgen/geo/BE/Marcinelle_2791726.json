@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Marcinelle",
+  "geonameid": 2791726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.36188665487319,
+      "lon": 4.482398818956405,
+      "geoinfo": {
+        "display_name": "Bois de Roumont, Gerpinnes, Charleroi, Hainaut, Wallonia, 6280, Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Hainaut",
+        "postcode": "6280",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Marcinelle, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.39520496114788,
+      "lon": 4.485920102438968,
+      "geoinfo": {
+        "display_name": "Ravel Sambre, Charleroi Dry Port, Montignies-sur-Sambre, Charleroi, Hainaut, Wallonia, 6061, Belgium",
+        "road": "Ravel Sambre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6061",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "332, Ravel Sambre, Charleroi Dry Port, Montignies-sur-Sambre, Charleroi, Hainaut, Wallonia, 6061, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:59.125049+00:00",
+  "_kind": "geo_samples"
+}

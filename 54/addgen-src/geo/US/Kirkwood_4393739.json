@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kirkwood",
+  "geonameid": 4393739,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.576076840503866,
+      "lon": -90.44274520214964,
+      "geoinfo": {
+        "display_name": "415, Emmerson Avenue, Kirkwood, Saint Louis County, Missouri, 63122, United States",
+        "road": "Emmerson Avenue",
+        "house_number": "415",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kirkwood",
+        "state": "Missouri",
+        "postcode": "63122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "415 Emmerson Avenue, Kirkwood, Missouri, United States"
+    },
+    {
+      "lat": 38.582399458246684,
+      "lon": -90.45124526762677,
+      "geoinfo": {
+        "display_name": "Des Peres Hospital, 2345, Dougherty Ferry Road, St. Louis, Saint Louis County, Missouri, 63122, United States",
+        "road": "Dougherty Ferry Road",
+        "house_number": "2345",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63122",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Des Peres Hospital, 2345, Dougherty Ferry Road, St. Louis, Saint Louis County, Missouri, 63122, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:36.366382+00:00",
+  "_kind": "geo_samples"
+}

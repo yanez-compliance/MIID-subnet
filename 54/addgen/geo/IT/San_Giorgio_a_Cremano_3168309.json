@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Giorgio a Cremano",
+  "geonameid": 3168309,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.80290297995166,
+      "lon": 14.378680224102695,
+      "geoinfo": {
+        "display_name": "Via Vesuvio, Ercolano, Naples, Campania, 80056, Italy",
+        "road": "Via Vesuvio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ercolano",
+        "state": "Campania",
+        "postcode": "80056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Vesuvio, San Giorgio a Cremano, Campania, Italy"
+    },
+    {
+      "lat": 40.809913882137316,
+      "lon": 14.385483985181926,
+      "geoinfo": {
+        "display_name": "Ercolano, Naples, Campania, 80056, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ercolano",
+        "state": "Campania",
+        "postcode": "80056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "509, Ercolano, Naples, Campania, 80056, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:27.850890+00:00",
+  "_kind": "geo_samples"
+}

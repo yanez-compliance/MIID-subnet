@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cuneo",
+  "geonameid": 3177700,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.41051859835807,
+      "lon": 7.4966105728342045,
+      "geoinfo": {
+        "display_name": "Via della Filatura, San Bernardo, Cervasca, Cuneo, Piedmont, Italy",
+        "road": "Via della Filatura",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cervasca",
+        "state": "Piedmont",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via della Filatura, Cuneo, Piedmont, Italy"
+    },
+    {
+      "lat": 44.41760014358865,
+      "lon": 7.578852619473879,
+      "geoinfo": {
+        "display_name": "Via Forfice, Tetto Oriente Avagnina, Bombonina, Cuneo, Piedmont, 12100, Italy",
+        "road": "Via Forfice",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuneo",
+        "state": "Piedmont",
+        "postcode": "12100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "824, Via Forfice, Tetto Oriente Avagnina, Bombonina, Cuneo, Piedmont, 12100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:36.992437+00:00",
+  "_kind": "geo_samples"
+}

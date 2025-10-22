@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Campana",
+  "geonameid": 3435810,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -34.157653855459436,
+      "lon": -59.01301527539499,
+      "geoinfo": {
+        "display_name": "Colectora Este, Zárate, Partido de Campana, Buenos Aires, 2800, Argentina",
+        "road": "Colectora Este",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zárate",
+        "state": "Buenos Aires",
+        "postcode": "2800",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Colectora Este, Campana, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.15468969255871,
+      "lon": -58.92411196624553,
+      "geoinfo": {
+        "display_name": "Campana, Partido de Campana, Buenos Aires, 2804, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Campana",
+        "state": "Buenos Aires",
+        "postcode": "2804",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "554, Campana, Partido de Campana, Buenos Aires, 2804, Argentina"
+    },
+    {
+      "lat": -34.18164526393493,
+      "lon": -59.008522592656085,
+      "geoinfo": {
+        "display_name": "Camino provincial secundario 014-04, Partido de Campana, Buenos Aires, B2804NPA, Argentina",
+        "road": "Camino provincial secundario 014-04",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "B2804NPA",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Camino provincial secundario 014-04, Partido de Campana, Buenos Aires, B2804NPA, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:20.567852+00:00",
+  "_kind": "geo_samples"
+}

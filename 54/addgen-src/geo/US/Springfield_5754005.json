@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Springfield",
+  "geonameid": 5754005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.0473794292368,
+      "lon": -122.98689724521965,
+      "geoinfo": {
+        "display_name": "28th Street, Springfield, Lane County, Oregon, 97477, United States",
+        "road": "28th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Oregon",
+        "postcode": "97477",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28th Street, Springfield, Oregon, United States"
+    },
+    {
+      "lat": 44.01521068785807,
+      "lon": -123.03405549737684,
+      "geoinfo": {
+        "display_name": "East 30th Avenue, Lane County, Oregon, 97403, United States",
+        "road": "East 30th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oregon",
+        "postcode": "97403",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 30th Avenue, Lane County, Oregon, 97403, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:38.631750+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Arbroath",
+  "geonameid": 2657215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.591857454276266,
+      "lon": -2.6231266375292965,
+      "geoinfo": {
+        "display_name": "Muirheads, Colliston, Angus, Scotland, DD11 3RW, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Colliston",
+        "state": "Scotland",
+        "postcode": "DD11 3RW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Arbroath, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.555350856272476,
+      "lon": -2.583393438475776,
+      "geoinfo": {
+        "display_name": "Fish Market, Danger Point, Fit o' the Toon, Arbroath, Angus, Scotland, DD11 1AY, United Kingdom",
+        "road": "Danger Point",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fit o' the Toon",
+        "city_district": null,
+        "city": "Arbroath",
+        "state": "Scotland",
+        "postcode": "DD11 1AY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Fish Market, Danger Point, Fit o' the Toon, Arbroath, Angus, Scotland, DD11 1AY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:25.657344+00:00",
+  "_kind": "geo_samples"
+}

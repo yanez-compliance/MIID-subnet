@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hemet",
+  "geonameid": 5356277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.74718117896637,
+      "lon": -116.98145167279985,
+      "geoinfo": {
+        "display_name": "118, South Western Avenue, Hemet, Riverside County, California, 92543, United States",
+        "road": "South Western Avenue",
+        "house_number": "118",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemet",
+        "state": "California",
+        "postcode": "92543",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "118 South Western Avenue, Hemet, California, United States"
+    },
+    {
+      "lat": 33.75402367237567,
+      "lon": -116.95720006763278,
+      "geoinfo": {
+        "display_name": "North San Jacinto Street, Hemet, Riverside County, California, 92383, United States",
+        "road": "North San Jacinto Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemet",
+        "state": "California",
+        "postcode": "92383",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "274, North San Jacinto Street, Hemet, Riverside County, California, 92383, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:09:48.807566+00:00",
+  "_kind": "geo_samples"
+}

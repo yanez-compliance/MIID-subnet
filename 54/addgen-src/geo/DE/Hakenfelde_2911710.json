@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hakenfelde",
+  "geonameid": 2911710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.58361085692598,
+      "lon": 13.166043914335077,
+      "geoinfo": {
+        "display_name": "Oberjägerweg, Reiterhof, Hakenfelde, Spandau, Berlin, 13587, Germany",
+        "road": "Oberjägerweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hakenfelde",
+        "city_district": "Spandau",
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13587",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Oberjägerweg, Hakenfelde, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.54033618636769,
+      "lon": 13.153002848608278,
+      "geoinfo": {
+        "display_name": "13, Luftschifferweg, Gartenstadt Staaken, Staaken, Spandau, Berlin, 13591, Germany",
+        "road": "Luftschifferweg",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": "Staaken",
+        "city_district": "Spandau",
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13591",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "13, Luftschifferweg, Gartenstadt Staaken, Staaken, Spandau, Berlin, 13591, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:11.520660+00:00",
+  "_kind": "geo_samples"
+}

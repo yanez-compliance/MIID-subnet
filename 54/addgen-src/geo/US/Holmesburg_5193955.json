@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Holmesburg",
+  "geonameid": 5193955,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.04916965468816,
+      "lon": -75.038093223339,
+      "geoinfo": {
+        "display_name": "Pennypack Trail, Lexington Park, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19136, United States",
+        "road": "Pennypack Trail",
+        "house_number": null,
+        "neighbourhood": "Lexington Park",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pennypack Trail, Holmesburg, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.073596446403585,
+      "lon": -75.04629601884575,
+      "geoinfo": {
+        "display_name": "8581, Bustleton Avenue, Lagrange, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19152, United States",
+        "road": "Bustleton Avenue",
+        "house_number": "8581",
+        "neighbourhood": "Lagrange",
+        "suburb": "Northeast Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8581, Bustleton Avenue, Lagrange, Northeast Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19152, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:38.408993+00:00",
+  "_kind": "geo_samples"
+}

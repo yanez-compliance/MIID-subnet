@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Firminy",
+  "geonameid": 3018455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.39142465192696,
+      "lon": 4.2784215366438545,
+      "geoinfo": {
+        "display_name": "La Poste Espace Clients Pro, 5, Rue Basse Ville, Sous-Marquant, Firminy, Saint-Étienne, Loire, Auvergne-Rhône-Alpes, Metropolitan France, 42700, France",
+        "road": "Rue Basse Ville",
+        "house_number": "5",
+        "neighbourhood": "Sous-Marquant",
+        "suburb": null,
+        "city_district": null,
+        "city": "Firminy",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "42700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5 Rue Basse Ville, Firminy, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.36780117489648,
+      "lon": 4.258711887236116,
+      "geoinfo": {
+        "display_name": "N 88, La Biela, Saint-Ferréol-d'Auroure, Yssingeaux, Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France, 43330, France",
+        "road": "N 88",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ferréol-d'Auroure",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "43330",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "N 88, La Biela, Saint-Ferréol-d'Auroure, Yssingeaux, Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France, 43330, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:57.214288+00:00",
+  "_kind": "geo_samples"
+}

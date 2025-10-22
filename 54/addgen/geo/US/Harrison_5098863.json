@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Harrison",
+  "geonameid": 5098863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.761586763983416,
+      "lon": -74.20218189569037,
+      "geoinfo": {
+        "display_name": "168, William Street, Ampere, East Orange, Essex County, New Jersey, 07017, United States",
+        "road": "William Street",
+        "house_number": "168",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Orange",
+        "state": "New Jersey",
+        "postcode": "07017",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "168 William Street, Harrison, New Jersey, United States"
+    },
+    {
+      "lat": 40.73725414569611,
+      "lon": -74.14758192666808,
+      "geoinfo": {
+        "display_name": "Cape May Street, Harrison, Hudson County, New Jersey, 07105, United States",
+        "road": "Cape May Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Harrison",
+        "state": "New Jersey",
+        "postcode": "07105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "471, Cape May Street, Harrison, Hudson County, New Jersey, 07105, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:10.902725+00:00",
+  "_kind": "geo_samples"
+}

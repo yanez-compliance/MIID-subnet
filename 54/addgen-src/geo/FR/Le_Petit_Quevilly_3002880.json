@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Petit-Quevilly",
+  "geonameid": 3002880,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.427475944500024,
+      "lon": 1.0535864862812017,
+      "geoinfo": {
+        "display_name": "88, Rue des Frères Delattre, Flaubert, Le Petit-Quevilly, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76140, France",
+        "road": "Rue des Frères Delattre",
+        "house_number": "88",
+        "neighbourhood": null,
+        "suburb": "Flaubert",
+        "city_district": null,
+        "city": "Le Petit-Quevilly",
+        "state": "Normandy",
+        "postcode": "76140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "88 Rue des Frères Delattre, Le Petit-Quevilly, Normandy, France"
+    },
+    {
+      "lat": 49.398039908153486,
+      "lon": 1.0995632333682048,
+      "geoinfo": {
+        "display_name": "Centre hospitalier du Rouvray, 4, Rue Paul Éluard, Sotteville-lès-Rouen, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76300, France",
+        "road": "Rue Paul Éluard",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sotteville-lès-Rouen",
+        "state": "Normandy",
+        "postcode": "76300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Centre hospitalier du Rouvray, 4, Rue Paul Éluard, Sotteville-lès-Rouen, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76300, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:47:54.827913+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Angri",
+  "geonameid": 3183063,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.711098763417155,
+      "lon": 14.60327767358606,
+      "geoinfo": {
+        "display_name": "Corbara, Salerno, Campania, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Corbara",
+        "state": "Campania",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Angri, Campania, Italy"
+    },
+    {
+      "lat": 40.73315178982439,
+      "lon": 14.541324227197611,
+      "geoinfo": {
+        "display_name": "Via Portale, Sant'Antonio Abate, Naples, Campania, 80057, Italy",
+        "road": "Via Portale",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sant'Antonio Abate",
+        "state": "Campania",
+        "postcode": "80057",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "765, Via Portale, Sant'Antonio Abate, Naples, Campania, 80057, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:48.593899+00:00",
+  "_kind": "geo_samples"
+}

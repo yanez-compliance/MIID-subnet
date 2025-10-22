@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Douai",
+  "geonameid": 3021000,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.34659501973028,
+      "lon": 3.052849237163185,
+      "geoinfo": {
+        "display_name": "23, Rue de la Voûte, Courchelettes, Douai, Nord, Hauts-de-France, Metropolitan France, 59552, France",
+        "road": "Rue de la Voûte",
+        "house_number": "23",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Courchelettes",
+        "state": "Hauts-de-France",
+        "postcode": "59552",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "23 Rue de la Voûte, Douai, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.353528473346955,
+      "lon": 3.027105977673986,
+      "geoinfo": {
+        "display_name": "Chemin de la Brayelle, Brebières, Arras, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62117, France",
+        "road": "Chemin de la Brayelle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brebières",
+        "state": "Hauts-de-France",
+        "postcode": "62117",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "223, Chemin de la Brayelle, Brebières, Arras, Pas-de-Calais, Hauts-de-France, Metropolitan France, 62117, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:49.947274+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hereford",
+  "geonameid": 5523074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.827172404751174,
+      "lon": -102.38478505969971,
+      "geoinfo": {
+        "display_name": "595, Brevard Street, Hereford, Deaf Smith County, Texas, 79045, United States",
+        "road": "Brevard Street",
+        "house_number": "595",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hereford",
+        "state": "Texas",
+        "postcode": "79045",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "595 Brevard Street, Hereford, Texas, United States"
+    },
+    {
+      "lat": 34.78720884755508,
+      "lon": -102.42332668314125,
+      "geoinfo": {
+        "display_name": "County Road H, Deaf Smith County, Texas, United States",
+        "road": "County Road H",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "684, County Road H, Deaf Smith County, 24750 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:48.092253+00:00",
+  "_kind": "geo_samples"
+}

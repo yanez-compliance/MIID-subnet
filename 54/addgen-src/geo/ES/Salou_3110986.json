@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Salou",
+  "geonameid": 3110986,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.04334387892894,
+      "lon": 1.1283730452118133,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Salou, Catalonia, Spain"
+    },
+    {
+      "lat": 41.1116351347847,
+      "lon": 1.1525647711170197,
+      "geoinfo": {
+        "display_name": "Carrer del Castellet, Vila-seca, Tarragonès, Tarragona, Catalonia, 43480, Spain",
+        "road": "Carrer del Castellet",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vila-seca",
+        "state": "Catalonia",
+        "postcode": "43480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "623, Carrer del Castellet, Vila-seca, Tarragonès, Tarragona, Catalonia, 43480, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:27.319576+00:00",
+  "_kind": "geo_samples"
+}

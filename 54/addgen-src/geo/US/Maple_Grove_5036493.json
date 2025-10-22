@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maple Grove",
+  "geonameid": 5036493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.08614497372721,
+      "lon": -93.41511291379936,
+      "geoinfo": {
+        "display_name": "I 94;I 694, Maple Grove, Hennepin County, Minnesota, 55369, United States",
+        "road": "I 94;I 694",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maple Grove",
+        "state": "Minnesota",
+        "postcode": "55369",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 94;I 694, Maple Grove, Minnesota, United States"
+    },
+    {
+      "lat": 45.10504418250992,
+      "lon": -93.4327539227181,
+      "geoinfo": {
+        "display_name": "Kirkwood Lane North, Maple Grove, Hennepin County, Minnesota, 55369, United States",
+        "road": "Kirkwood Lane North",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maple Grove",
+        "state": "Minnesota",
+        "postcode": "55369",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "936, Kirkwood Lane North, Maple Grove, Hennepin County, Minnesota, 55369, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:29.187757+00:00",
+  "_kind": "geo_samples"
+}

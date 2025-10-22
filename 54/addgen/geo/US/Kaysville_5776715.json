@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kaysville",
+  "geonameid": 5776715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.049169984262114,
+      "lon": -111.96297206676492,
+      "geoinfo": {
+        "display_name": "974, South 200 East, East View, Layton, Davis County, Utah, 84041, United States",
+        "road": "South 200 East",
+        "house_number": "974",
+        "neighbourhood": "East View",
+        "suburb": null,
+        "city_district": null,
+        "city": "Layton",
+        "state": "Utah",
+        "postcode": "84041",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "974 South 200 East, Kaysville, Utah, United States"
+    },
+    {
+      "lat": 41.04949302584537,
+      "lon": -111.88449172199871,
+      "geoinfo": {
+        "display_name": "Davis County, Utah, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "685, Davis County, 37073 Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:46.073901+00:00",
+  "_kind": "geo_samples"
+}

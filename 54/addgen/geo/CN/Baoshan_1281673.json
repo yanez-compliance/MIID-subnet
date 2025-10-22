@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Baoshan",
+  "geonameid": 1281673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.11452896134035,
+      "lon": 99.16125839954462,
+      "geoinfo": {
+        "display_name": "ABC, 同仁街, Lancheng Subdistrict, Longyang District, Baoshan, Yunnan, China",
+        "road": "同仁街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lancheng Subdistrict",
+        "city_district": null,
+        "city": "Longyang District",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "同仁街, Baoshan, Yunnan, China"
+    },
+    {
+      "lat": 25.147889191400836,
+      "lon": 99.1760463183803,
+      "geoinfo": {
+        "display_name": "万和华府, Yongchang Subdistrict, Longyang District, Baoshan, Yunnan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yongchang Subdistrict",
+        "city_district": null,
+        "city": "Longyang District",
+        "state": "Yunnan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "408, 万和华府, Yongchang Subdistrict, Longyang District, Baoshan, 18809 Yunnan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:31:59.321263+00:00",
+  "_kind": "geo_samples"
+}

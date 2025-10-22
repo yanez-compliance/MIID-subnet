@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Baltimore",
+  "geonameid": 4347778,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.31202297885528,
+      "lon": -76.64278239432048,
+      "geoinfo": {
+        "display_name": "1527, Retreat Street, Penn-North, Baltimore, Maryland, 21217, United States",
+        "road": "Retreat Street",
+        "house_number": "1527",
+        "neighbourhood": "Penn-North",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21217",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1527 Retreat Street, Baltimore, Maryland, United States"
+    },
+    {
+      "lat": 39.29193237044503,
+      "lon": -76.56179489954569,
+      "geoinfo": {
+        "display_name": "East Lombard Street, Kresson, Baltimore, Maryland, 21224, United States",
+        "road": "East Lombard Street",
+        "house_number": null,
+        "neighbourhood": "Kresson",
+        "suburb": null,
+        "city_district": null,
+        "city": "Baltimore",
+        "state": "Maryland",
+        "postcode": "21224",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "554, East Lombard Street, Kresson, Baltimore, Maryland, 21224, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:14.764470+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Corsico",
+  "geonameid": 3178004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.424396328367344,
+      "lon": 9.106155985786796,
+      "geoinfo": {
+        "display_name": "Via Trieste, Romano Banco, Buccinasco, Milan, Lombardy, 20090, Italy",
+        "road": "Via Trieste",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buccinasco",
+        "state": "Lombardy",
+        "postcode": "20090",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Trieste, Corsico, Lombardy, Italy"
+    },
+    {
+      "lat": 45.44655555015305,
+      "lon": 9.163365777316683,
+      "geoinfo": {
+        "display_name": "Via Eugenio Villoresi, Navigli, Municipio 6, Milan, Lombardy, 20143, Italy",
+        "road": "Via Eugenio Villoresi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 6",
+        "city_district": null,
+        "city": "Milan",
+        "state": "Lombardy",
+        "postcode": "20143",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Eugenio Villoresi, Navigli, Municipio 6, Milan, Lombardy, 20143, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:02.625102+00:00",
+  "_kind": "geo_samples"
+}

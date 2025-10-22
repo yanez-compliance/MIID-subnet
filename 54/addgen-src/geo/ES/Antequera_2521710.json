@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Antequera",
+  "geonameid": 2521710,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.995959146441805,
+      "lon": -4.536750349089116,
+      "geoinfo": {
+        "display_name": "Las Viñas, Antequera, Malaga, Andalusia, 29200, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antequera",
+        "state": "Andalusia",
+        "postcode": "29200",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Antequera, Andalusia, Spain"
+    },
+    {
+      "lat": 37.02373817843139,
+      "lon": -4.570125828551353,
+      "geoinfo": {
+        "display_name": "Cuesta Talavera, Antequera, Malaga, Andalusia, 29200, Spain",
+        "road": "Cuesta Talavera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antequera",
+        "state": "Andalusia",
+        "postcode": "29200",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "624, Cuesta Talavera, Antequera, Malaga, Andalusia, 29200, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:28.709827+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pine Bluff",
+  "geonameid": 4126226,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.245628490638964,
+      "lon": -92.03440998620432,
+      "geoinfo": {
+        "display_name": "3079, Roane Avenue, Pine Bluff, Jefferson County, Arkansas, 71601, United States",
+        "road": "Roane Avenue",
+        "house_number": "3079",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pine Bluff",
+        "state": "Arkansas",
+        "postcode": "71601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3079 Roane Avenue, Pine Bluff, Arkansas, United States"
+    },
+    {
+      "lat": 34.211994387022294,
+      "lon": -91.96876374954824,
+      "geoinfo": {
+        "display_name": "Pines Mall Drive, The Pines, Pine Bluff, Jefferson County, Arkansas, 71601, United States",
+        "road": "Pines Mall Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pine Bluff",
+        "state": "Arkansas",
+        "postcode": "71601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "501, Pines Mall Drive, The Pines, Pine Bluff, Jefferson County, Arkansas, 71601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:22:59.475329+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Brigittenau",
+  "geonameid": 12214081,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.23280837152205,
+      "lon": 16.399873955450822,
+      "geoinfo": {
+        "display_name": "Nordbahnlände, KG Brigittenau, KG Leopoldstadt, Leopoldstadt, Vienna, 1020, Austria",
+        "road": "Nordbahnlände",
+        "house_number": null,
+        "neighbourhood": "KG Brigittenau",
+        "suburb": "KG Leopoldstadt",
+        "city_district": "Leopoldstadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1020",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Nordbahnlände, Brigittenau, Austria"
+    },
+    {
+      "lat": 48.240410671154784,
+      "lon": 16.385014427960872,
+      "geoinfo": {
+        "display_name": "75, Engerthstraße, KG Brigittenau, Brigittenau, Vienna, 1200, Austria",
+        "road": "Engerthstraße",
+        "house_number": "75",
+        "neighbourhood": "KG Brigittenau",
+        "suburb": "Brigittenau",
+        "city_district": null,
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1200",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "75 Engerthstraße, Brigittenau, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:31:36.893644+00:00",
+  "_kind": "geo_samples"
+}

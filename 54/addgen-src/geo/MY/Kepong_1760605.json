@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kepong",
+  "geonameid": 1760605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.214910118139849,
+      "lon": 101.63060669860671,
+      "geoinfo": {
+        "display_name": "Jalan 3, Taman Desa Jaya, Selayang Municipal Council, Gombak, Selangor, 52100, Malaysia",
+        "road": "Jalan 3",
+        "house_number": null,
+        "neighbourhood": "Taman Desa Jaya",
+        "suburb": null,
+        "city_district": null,
+        "city": "Selayang Municipal Council",
+        "state": "Selangor",
+        "postcode": "52100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan 3, Kepong, Selangor, Malaysia"
+    },
+    {
+      "lat": 3.175448287014256,
+      "lon": 101.63973656088591,
+      "geoinfo": {
+        "display_name": "Lightning Ridge, Palimbayan, Kuala Lumpur, 52200, Malaysia",
+        "road": "Lightning Ridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "52200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "617, Lightning Ridge, Palimbayan, Kuala Lumpur, 52200, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:34.413176+00:00",
+  "_kind": "geo_samples"
+}

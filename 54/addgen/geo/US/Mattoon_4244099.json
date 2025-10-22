@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mattoon",
+  "geonameid": 4244099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.49887278190583,
+      "lon": -88.35301762664436,
+      "geoinfo": {
+        "display_name": "Coles County, Illinois, 61938, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "61938",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mattoon, Illinois, United States"
+    },
+    {
+      "lat": 39.457095522218026,
+      "lon": -88.35292606155177,
+      "geoinfo": {
+        "display_name": "County Road 650 East, Mattoon, Coles County, Illinois, 61938, United States",
+        "road": "County Road 650 East",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mattoon",
+        "state": "Illinois",
+        "postcode": "61938",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "County Road 650 East, Mattoon, Coles County, Illinois, 61938, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:16.757500+00:00",
+  "_kind": "geo_samples"
+}

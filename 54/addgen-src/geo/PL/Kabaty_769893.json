@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Kabaty",
+  "geonameid": 769893,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.135920003841086,
+      "lon": 21.063916460876897,
+      "geoinfo": {
+        "display_name": "Aleja Kasztanowa, Wysoki Ursynów, Natolin, Ursynów, Warsaw, Masovian Voivodeship, 02-789, Poland",
+        "road": "Aleja Kasztanowa",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ursynów",
+        "city_district": null,
+        "city": "Warsaw",
+        "state": "Masovian Voivodeship",
+        "postcode": "02-789",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Aleja Kasztanowa, Kabaty, Masovian Voivodeship, Poland"
+    },
+    {
+      "lat": 52.10791817219598,
+      "lon": 21.027947999833383,
+      "geoinfo": {
+        "display_name": "35, Bażancia, Zielony Ursynów, Dąbrówka, Ursynów, Warsaw, Masovian Voivodeship, 02-892, Poland",
+        "road": "Bażancia",
+        "house_number": "35",
+        "neighbourhood": "Dąbrówka",
+        "suburb": "Ursynów",
+        "city_district": null,
+        "city": "Warsaw",
+        "state": "Masovian Voivodeship",
+        "postcode": "02-892",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "35, Bażancia, Zielony Ursynów, Dąbrówka, Ursynów, Warsaw, Masovian Voivodeship, 02-892, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:16.475124+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Tulun",
+  "geonameid": 2014927,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.59999525534664,
+      "lon": 100.5583265293396,
+      "geoinfo": {
+        "display_name": "125, 2-я Анганорская улица, Tulun, городской округ Тулун, Irkutsk Oblast, Siberian Federal District, 665260, Russia",
+        "road": "2-я Анганорская улица",
+        "house_number": "125",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulun",
+        "state": "Irkutsk Oblast",
+        "postcode": "665260",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "125 2-я Анганорская улица, Tulun, Irkutsk Oblast, Russia"
+    },
+    {
+      "lat": 54.52744252669663,
+      "lon": 100.58839792968553,
+      "geoinfo": {
+        "display_name": "микрорайон Сосновый Бор, Tulun, городской округ Тулун, Irkutsk Oblast, Siberian Federal District, 665259, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "микрорайон Сосновый Бор",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tulun",
+        "state": "Irkutsk Oblast",
+        "postcode": "665259",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "823, микрорайон Сосновый Бор, Tulun, городской округ Тулун, Irkutsk Oblast, Siberian Federal District, 665259, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:39:54.549417+00:00",
+  "_kind": "geo_samples"
+}

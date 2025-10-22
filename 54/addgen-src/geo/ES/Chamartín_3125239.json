@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Chamartín",
+  "geonameid": 3125239,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.48053049399252,
+      "lon": -3.6422496610483064,
+      "geoinfo": {
+        "display_name": "M-40, Las Cárcavas - San Antonio, Valdefuentes, Hortaleza, Madrid, Community of Madrid, 28033, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": "Las Cárcavas - San Antonio",
+        "suburb": "Hortaleza",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28033",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Chamartín, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.470153643784165,
+      "lon": -3.6330635955425294,
+      "geoinfo": {
+        "display_name": "Calle de Popayán, Pinar del Rey, Hortaleza, Madrid, Community of Madrid, 28043, Spain",
+        "road": "Calle de Popayán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hortaleza",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28043",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "987, Calle de Popayán, Pinar del Rey, Hortaleza, Madrid, Community of Madrid, 28043, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:13.054822+00:00",
+  "_kind": "geo_samples"
+}

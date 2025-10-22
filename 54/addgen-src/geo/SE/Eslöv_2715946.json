@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Eslöv",
+  "geonameid": 2715946,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.87810444999823,
+      "lon": 13.306930350332992,
+      "geoinfo": {
+        "display_name": "Gruvgården, Eslövs kommun, Skåne County, 241 34, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "241 34",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Eslöv, Sweden"
+    },
+    {
+      "lat": 55.88033437110924,
+      "lon": 13.274430053727103,
+      "geoinfo": {
+        "display_name": "M 1278, Östra Asmundtorp, Eslöv, Eslövs kommun, Skåne County, 241 34, Sweden",
+        "road": "M 1278",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eslöv",
+        "state": null,
+        "postcode": "241 34",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "M 1278, Östra Asmundtorp, Eslöv, Eslövs kommun, Skåne County, 241 34, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:56:47.379471+00:00",
+  "_kind": "geo_samples"
+}

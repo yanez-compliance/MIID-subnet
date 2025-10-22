@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lakeville",
+  "geonameid": 5034059,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.655074938505955,
+      "lon": -93.30468978167181,
+      "geoinfo": {
+        "display_name": "205th Street West, Lakeville, Dakota County, Minnesota, United States",
+        "road": "205th Street West",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lakeville",
+        "state": "Minnesota",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "205th Street West, Lakeville, Minnesota, United States"
+    },
+    {
+      "lat": 44.64629982763897,
+      "lon": -93.20009646305803,
+      "geoinfo": {
+        "display_name": "Flemming Street, Whispering Fields, Farmington, Dakota County, Minnesota, 55024, United States",
+        "road": "Flemming Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Farmington",
+        "state": "Minnesota",
+        "postcode": "55024",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "166, Flemming Street, Whispering Fields, Farmington, Dakota County, Minnesota, 55024, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:48.304331+00:00",
+  "_kind": "geo_samples"
+}

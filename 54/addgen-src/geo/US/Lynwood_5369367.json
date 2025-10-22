@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lynwood",
+  "geonameid": 5369367,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.9354363377429,
+      "lon": -118.20919802027665,
+      "geoinfo": {
+        "display_name": "3419, Alma Avenue, Lynwood, Los Angeles County, California, 90262, United States",
+        "road": "Alma Avenue",
+        "house_number": "3419",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynwood",
+        "state": "California",
+        "postcode": "90262",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3419 Alma Avenue, Lynwood, California, United States"
+    },
+    {
+      "lat": 33.91631977665997,
+      "lon": -118.19142471747818,
+      "geoinfo": {
+        "display_name": "Century Freeway, Lynwood Gardens, Lynwood, Los Angeles County, California, 90267, United States",
+        "road": "Century Freeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lynwood",
+        "state": "California",
+        "postcode": "90267",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "261, Century Freeway, Lynwood Gardens, Lynwood, Los Angeles County, California, 90267, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:10:25.127835+00:00",
+  "_kind": "geo_samples"
+}

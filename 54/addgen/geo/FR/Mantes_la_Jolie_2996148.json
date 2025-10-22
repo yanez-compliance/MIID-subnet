@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Mantes-la-Jolie",
+  "geonameid": 2996148,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.967896261034056,
+      "lon": 1.7251099101415264,
+      "geoinfo": {
+        "display_name": "19, Rue de la Charentonne, Domaine de la Vallée, Mantes-la-Ville, Mantes-la-Jolie, Yvelines, Ile-de-France, Metropolitan France, 78711, France",
+        "road": "Rue de la Charentonne",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mantes-la-Ville",
+        "state": "Ile-de-France",
+        "postcode": "78711",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "19 Rue de la Charentonne, Mantes-la-Jolie, Ile-de-France, France"
+    },
+    {
+      "lat": 48.966618751179496,
+      "lon": 1.7361714264234207,
+      "geoinfo": {
+        "display_name": "Rue du Château, La Plagne, Guerville, Mantes-la-Jolie, Yvelines, Ile-de-France, Metropolitan France, 78930, France",
+        "road": "Rue du Château",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guerville",
+        "state": "Ile-de-France",
+        "postcode": "78930",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "183, Rue du Château, La Plagne, Guerville, Mantes-la-Jolie, Yvelines, Ile-de-France, Metropolitan France, 78930, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:39.871235+00:00",
+  "_kind": "geo_samples"
+}

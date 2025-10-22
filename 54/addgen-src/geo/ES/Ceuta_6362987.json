@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ceuta",
+  "geonameid": 6362987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.85116908074952,
+      "lon": -5.325982826403899,
+      "geoinfo": {
+        "display_name": "Colline de l'Enzar, Fnideq, Pachalik de Fnideq باشوية الفنيدق, M'diq-Fnideq Prefecture, Tangier-Tetouan-Al Hoceima, 93102, Morocco",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fnideq",
+        "state": null,
+        "postcode": "93102",
+        "country": "Morocco",
+        "country_code": "ma"
+      },
+      "address": "Ceuta, Spain"
+    },
+    {
+      "lat": 35.879594557068316,
+      "lon": -5.276483295263167,
+      "geoinfo": {
+        "display_name": "El Sarchal, San Amaro, Ceuta, 51005, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "El Sarchal",
+        "suburb": "San Amaro",
+        "city_district": null,
+        "city": "Ceuta",
+        "state": null,
+        "postcode": "51005",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "956, El Sarchal, San Amaro, Ceuta, 51005, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:34.134851+00:00",
+  "_kind": "geo_samples"
+}

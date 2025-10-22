@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Tây Hồ",
+  "geonameid": 1566566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.09347694683924,
+      "lon": 105.80779475826796,
+      "geoinfo": {
+        "display_name": "Đường An Dương Vương, Phu Thuong Ward, Hà Nội, 10206, Vietnam",
+        "road": "Đường An Dương Vương",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Phu Thuong Ward",
+        "city_district": null,
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "10206",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Đường An Dương Vương, Tây Hồ, Vietnam"
+    },
+    {
+      "lat": 21.100188701271925,
+      "lon": 105.78178185223976,
+      "geoinfo": {
+        "display_name": "Thien Loc Commune, Hà Nội, 11909, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Thien Loc Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "11909",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "664, Thien Loc Commune, Hà Nội, 11909, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:49:08.503241+00:00",
+  "_kind": "geo_samples"
+}

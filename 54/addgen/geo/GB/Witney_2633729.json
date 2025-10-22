@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Witney",
+  "geonameid": 2633729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.80501601549632,
+      "lon": -1.5016793941286668,
+      "geoinfo": {
+        "display_name": "Crawley, West Oxfordshire, Oxfordshire, England, OX29 9UN, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Crawley",
+        "city_district": null,
+        "city": "West Oxfordshire",
+        "state": "England",
+        "postcode": "OX29 9UN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Crawley, Witney, England, United Kingdom"
+    },
+    {
+      "lat": 51.771692795354085,
+      "lon": -1.5406713430567454,
+      "geoinfo": {
+        "display_name": "Caswell Lane, Caswell Farm, Curbridge, West Oxfordshire, Oxfordshire, England, OX18 3NJ, United Kingdom",
+        "road": "Caswell Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Oxfordshire",
+        "state": "England",
+        "postcode": "OX18 3NJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Caswell Lane, Caswell Farm, Curbridge, West Oxfordshire, Oxfordshire, England, OX18 3NJ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:16.884862+00:00",
+  "_kind": "geo_samples"
+}

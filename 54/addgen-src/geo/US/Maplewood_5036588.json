@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Maplewood",
+  "geonameid": 5036588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.94112229548631,
+      "lon": -92.99190945644834,
+      "geoinfo": {
+        "display_name": "2566, Upper Afton Road, Battle Creek, Maplewood, Ramsey County, Minnesota, 55119, United States",
+        "road": "Upper Afton Road",
+        "house_number": "2566",
+        "neighbourhood": "Battle Creek",
+        "suburb": null,
+        "city_district": null,
+        "city": "Maplewood",
+        "state": "Minnesota",
+        "postcode": "55119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2566 Upper Afton Road, Maplewood, Minnesota, United States"
+    },
+    {
+      "lat": 44.977336699632446,
+      "lon": -93.01496576881904,
+      "geoinfo": {
+        "display_name": "2198, Maryland Avenue East, Greater East Side, Saint Paul, Ramsey County, Minnesota, 55119, United States",
+        "road": "Maryland Avenue East",
+        "house_number": "2198",
+        "neighbourhood": null,
+        "suburb": "Greater East Side",
+        "city_district": null,
+        "city": "Saint Paul",
+        "state": "Minnesota",
+        "postcode": "55119",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2198, Maryland Avenue East, Greater East Side, Saint Paul, Ramsey County, Minnesota, 55119, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:34.867849+00:00",
+  "_kind": "geo_samples"
+}

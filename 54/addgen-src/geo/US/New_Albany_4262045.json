@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Albany",
+  "geonameid": 4262045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.289645506455784,
+      "lon": -85.8735206296881,
+      "geoinfo": {
+        "display_name": "Corydon Pike, Silver Hills, New Albany, Floyd County, Indiana, United States",
+        "road": "Corydon Pike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Albany",
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Corydon Pike, New Albany, Indiana, United States"
+    },
+    {
+      "lat": 38.30034706057418,
+      "lon": -85.77354576345145,
+      "geoinfo": {
+        "display_name": "1198, Mc Kinley Avenue, Clarksville, Clark County, Indiana, 47129, United States",
+        "road": "Mc Kinley Avenue",
+        "house_number": "1198",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clarksville",
+        "state": "Indiana",
+        "postcode": "47129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1198, Mc Kinley Avenue, Clarksville, Clark County, Indiana, 47129, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:21.164050+00:00",
+  "_kind": "geo_samples"
+}

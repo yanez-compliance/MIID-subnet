@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Favara",
+  "geonameid": 2524786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.324330061182906,
+      "lon": 13.615274350938432,
+      "geoinfo": {
+        "display_name": "Strada statale Strada degli Scrittori, Calcarelle, Agrigento, Sicily, 92100, Italy",
+        "road": "Strada statale Strada degli Scrittori",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Calcarelle",
+        "city_district": null,
+        "city": "Agrigento",
+        "state": "Sicily",
+        "postcode": "92100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada statale Strada degli Scrittori, Favara, Sicily, Italy"
+    },
+    {
+      "lat": 37.3551877834659,
+      "lon": 13.686933758044738,
+      "geoinfo": {
+        "display_name": "Favara, Agrigento, Sicily, 92026, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Favara",
+        "state": "Sicily",
+        "postcode": "92026",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "377, Favara, Agrigento, Sicily, 92026, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:30.633720+00:00",
+  "_kind": "geo_samples"
+}

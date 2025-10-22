@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Carrickfergus",
+  "geonameid": 2653680,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.74964651902687,
+      "lon": -5.801920018062985,
+      "geoinfo": {
+        "display_name": "Marshallstown Road, Carrickfergus, Mid and East Antrim District, County Antrim, Northern Ireland, BT38 7SP, United Kingdom",
+        "road": "Marshallstown Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrickfergus",
+        "state": "Northern Ireland",
+        "postcode": "BT38 7SP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Marshallstown Road, Carrickfergus, Northern Ireland, United Kingdom"
+    },
+    {
+      "lat": 54.714749968130825,
+      "lon": -5.750587793192191,
+      "geoinfo": {
+        "display_name": "Bellahill, Mid and East Antrim District, County Antrim, Northern Ireland, BT38 7LX, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Northern Ireland",
+        "postcode": "BT38 7LX",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bellahill, Mid and East Antrim District, County Antrim, Northern Ireland, BT38 7LX, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:29.585848+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Jumet",
+  "geonameid": 2794860,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.44024507929235,
+      "lon": 4.470851512368813,
+      "geoinfo": {
+        "display_name": "École des Hamendes, 17, Rue François Deterville, Houbois, Jumet, Charleroi, Hainaut, Wallonia, 6040, Belgium",
+        "road": "Rue François Deterville",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Houbois",
+        "city_district": null,
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6040",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "17 Rue François Deterville, Jumet, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.41426586565267,
+      "lon": 4.4483244157804585,
+      "geoinfo": {
+        "display_name": "Rue Huart Chapel, Ville-Basse, Charleroi, Hainaut, Wallonia, 6000, Belgium",
+        "road": "Rue Huart Chapel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ville-Basse",
+        "city_district": "Charleroi",
+        "city": "Charleroi",
+        "state": "Hainaut",
+        "postcode": "6000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "890, Rue Huart Chapel, Ville-Basse, Charleroi, Hainaut, Wallonia, 6000, Belgium"
+    },
+    {
+      "lat": 50.45997993904917,
+      "lon": 4.387466267258912,
+      "geoinfo": {
+        "display_name": "95, Rue Paul Pastur, Courcelles, Charleroi, Hainaut, Wallonia, 6180, Belgium",
+        "road": "Rue Paul Pastur",
+        "house_number": "95",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Courcelles",
+        "state": "Hainaut",
+        "postcode": "6180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "95, Rue Paul Pastur, Courcelles, Charleroi, Hainaut, Wallonia, 6180, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:15.889659+00:00",
+  "_kind": "geo_samples"
+}

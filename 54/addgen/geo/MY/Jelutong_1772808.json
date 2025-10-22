@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Jelutong",
+  "geonameid": 1772808,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.3876685569376335,
+      "lon": 100.31144752470671,
+      "geoinfo": {
+        "display_name": "Jelutong Avenue, Taman Jelutong, Jelutong, North-East, George Town, Penang, 11600, Malaysia",
+        "road": "Jelutong Avenue",
+        "house_number": null,
+        "neighbourhood": "Taman Jelutong",
+        "suburb": "Jelutong",
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11600",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jelutong Avenue, Jelutong, Penang, Malaysia"
+    },
+    {
+      "lat": 5.384514003572395,
+      "lon": 100.33151745154518,
+      "geoinfo": {
+        "display_name": "Kampung Ban Liow, North-East, George Town, Penang, 11600, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kampung Ban Liow",
+        "suburb": null,
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11600",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "115, Kampung Ban Liow, North-East, George Town, Penang, 11600, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:54:09.354929+00:00",
+  "_kind": "geo_samples"
+}

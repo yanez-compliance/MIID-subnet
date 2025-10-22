@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hamburg-Mitte",
+  "geonameid": 2911288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.53877665249412,
+      "lon": 10.052705696188845,
+      "geoinfo": {
+        "display_name": "90, Großmannstraße, Rothenburgsort, Hamburg-Mitte, Hamburg, 20539, Germany",
+        "road": "Großmannstraße",
+        "house_number": "90",
+        "neighbourhood": null,
+        "suburb": "Rothenburgsort",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20539",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "90 Großmannstraße, Hamburg-Mitte, Germany"
+    },
+    {
+      "lat": 53.53556728798067,
+      "lon": 9.95495545988545,
+      "geoinfo": {
+        "display_name": "Hermann-Blohm-Straße, Steinwerder, Hamburg-Mitte, Hamburg, 20457, Germany",
+        "road": "Hermann-Blohm-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Steinwerder",
+        "city_district": null,
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "20457",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "270, Hermann-Blohm-Straße, Steinwerder, Hamburg-Mitte, Hamburg, 20457, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:46.678572+00:00",
+  "_kind": "geo_samples"
+}

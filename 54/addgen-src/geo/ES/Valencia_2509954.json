@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Valencia",
+  "geonameid": 2509954,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.4902958762471,
+      "lon": -0.4146443844604768,
+      "geoinfo": {
+        "display_name": "Carrer del Pare Barranco, Sant Pau, Campanar, Valencia, Comarca de València, Valencia, Valencian Community, 46035, Spain",
+        "road": "Carrer del Pare Barranco",
+        "house_number": null,
+        "neighbourhood": "Sant Pau",
+        "suburb": "Campanar",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer del Pare Barranco, Valencia, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.44345936773546,
+      "lon": -0.3875412861487767,
+      "geoinfo": {
+        "display_name": "438, Carrer de Sant Vicent Màrtir, Camí Real, Jesús, Valencia, Comarca de València, Valencia, Valencian Community, 46017, Spain",
+        "road": "Carrer de Sant Vicent Màrtir",
+        "house_number": "438",
+        "neighbourhood": "Camí Real",
+        "suburb": "Jesús",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "438, Carrer de Sant Vicent Màrtir, Camí Real, Jesús, Valencia, Comarca de València, Valencia, Valencian Community, 46017, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:56.645915+00:00",
+  "_kind": "geo_samples"
+}

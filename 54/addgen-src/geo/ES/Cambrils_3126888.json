@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Cambrils",
+  "geonameid": 3126888,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.07142183341351,
+      "lon": 1.0908260368012463,
+      "geoinfo": {
+        "display_name": "Carrer del Mas d'en Puig, Vilafortuny, Cambrils, Baix Camp, Tarragona, Catalonia, 43850, Spain",
+        "road": "Carrer del Mas d'en Puig",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vilafortuny",
+        "city_district": null,
+        "city": "Cambrils",
+        "state": "Catalonia",
+        "postcode": "43850",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer del Mas d'en Puig, Cambrils, Catalonia, Spain"
+    },
+    {
+      "lat": 41.09743660377168,
+      "lon": 1.0648906039688248,
+      "geoinfo": {
+        "display_name": "Camí de Vilafortuny, Vinyols i els Arcs, Baix Camp, Tarragona, Catalonia, 43391, Spain",
+        "road": "Camí de Vilafortuny",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vinyols i els Arcs",
+        "state": "Catalonia",
+        "postcode": "43391",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "505, Camí de Vilafortuny, Vinyols i els Arcs, Baix Camp, Tarragona, Catalonia, 43391, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:16.258408+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "The Beaches",
+  "geonameid": 6163363,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.67100134294762,
+      "lon": -79.285783519298,
+      "geoinfo": {
+        "display_name": "18, Park Avenue, The Beaches, Beaches—East York, Toronto, Golden Horseshoe, Ontario, M4E 3K9, Canada",
+        "road": "Park Avenue",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M4E 3K9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "18 Park Avenue, The Beaches, Ontario, Canada"
+    },
+    {
+      "lat": 43.66439305538243,
+      "lon": -79.24677821584027,
+      "geoinfo": {
+        "display_name": "Golden Horseshoe, Ontario, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ontario",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "944, The Beaches, 91413 Ontario, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:22:31.803146+00:00",
+  "_kind": "geo_samples"
+}

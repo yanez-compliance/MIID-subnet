@@ -1,0 +1,47 @@
+{
+  "country_code": "SA",
+  "country": "Saudi Arabia",
+  "city": "Al Khabrā’",
+  "geonameid": 109391,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 26.092768655317013,
+      "lon": 43.659258426757184,
+      "geoinfo": {
+        "display_name": "Al Khabra, Buraydah, Al-Qassim Province, Saudi Arabia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Khabra",
+        "state": "Al-Qassim Province",
+        "postcode": null,
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Al Khabrā’, Al-Qassim Province, Saudi Arabia"
+    },
+    {
+      "lat": 26.097989358955058,
+      "lon": 43.61287674084665,
+      "geoinfo": {
+        "display_name": "Qasim Madinah Road, Al Khabra, Buraydah, Al-Qassim Province, 51941, Saudi Arabia",
+        "road": "Qasim Madinah Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Khabra",
+        "state": "Al-Qassim Province",
+        "postcode": "51941",
+        "country": "Saudi Arabia",
+        "country_code": "sa"
+      },
+      "address": "Qasim Madinah Road, Al Khabrā’, Al-Qassim Province, Saudi Arabia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:19:19.651844+00:00",
+  "_kind": "geo_samples"
+}

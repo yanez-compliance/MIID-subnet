@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Navojoa",
+  "geonameid": 3995019,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.047152250135277,
+      "lon": -109.40526205717651,
+      "geoinfo": {
+        "display_name": "Antonio Rosales (Las Ánimas), Navojoa, Sonora, 85894, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navojoa",
+        "state": "Sonora",
+        "postcode": "85894",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Navojoa, Sonora, Mexico"
+    },
+    {
+      "lat": 27.076783080926646,
+      "lon": -109.48199961974261,
+      "geoinfo": {
+        "display_name": "Boulevard Manlio Fabio Beltrones, Navojoa, Sonora, 85825, Mexico",
+        "road": "Boulevard Manlio Fabio Beltrones",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Navojoa",
+        "state": "Sonora",
+        "postcode": "85825",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "144, Boulevard Manlio Fabio Beltrones, Navojoa, Sonora, 85825, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:17.065137+00:00",
+  "_kind": "geo_samples"
+}

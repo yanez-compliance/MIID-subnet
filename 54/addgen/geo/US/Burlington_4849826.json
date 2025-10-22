@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burlington",
+  "geonameid": 4849826,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.836707856624855,
+      "lon": -91.11485041422917,
+      "geoinfo": {
+        "display_name": "Burlington Golf Club, Charette Lane, Burlington, Des Moines County, Iowa, 52601, United States",
+        "road": "Charette Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burlington",
+        "state": "Iowa",
+        "postcode": "52601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Charette Lane, Burlington, Iowa, United States"
+    },
+    {
+      "lat": 40.83926063769397,
+      "lon": -91.11118090941676,
+      "geoinfo": {
+        "display_name": "11137, Highway 99, Burlington, Des Moines County, Iowa, 52601, United States",
+        "road": "Highway 99",
+        "house_number": "11137",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burlington",
+        "state": "Iowa",
+        "postcode": "52601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11137, Highway 99, Burlington, Des Moines County, Iowa, 52601, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:11.586105+00:00",
+  "_kind": "geo_samples"
+}

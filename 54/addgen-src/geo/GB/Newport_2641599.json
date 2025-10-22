@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Newport",
+  "geonameid": 2641599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.69186355381755,
+      "lon": -1.3080424936815576,
+      "geoinfo": {
+        "display_name": "213, Carisbrooke Road, Nodehill, Newport, Isle of Wight, England, PO30 1DJ, United Kingdom",
+        "road": "Carisbrooke Road",
+        "house_number": "213",
+        "neighbourhood": null,
+        "suburb": "Nodehill",
+        "city_district": null,
+        "city": "Newport",
+        "state": "England",
+        "postcode": "PO30 1DJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "213 Carisbrooke Road, Newport, England, United Kingdom"
+    },
+    {
+      "lat": 50.6724424867558,
+      "lon": -1.3338239635464746,
+      "geoinfo": {
+        "display_name": "Bowcombe Farm Lane, Bowcombe, Newport, Gatcombe, Isle of Wight, England, PO30 3HY, United Kingdom",
+        "road": "Bowcombe Farm Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Newport",
+        "city_district": null,
+        "city": "Gatcombe",
+        "state": "England",
+        "postcode": "PO30 3HY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bowcombe Farm Lane, Bowcombe, Newport, Gatcombe, Isle of Wight, England, PO30 3HY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:49.541250+00:00",
+  "_kind": "geo_samples"
+}

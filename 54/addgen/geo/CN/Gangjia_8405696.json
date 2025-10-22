@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gangjia",
+  "geonameid": 8405696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.239803639989148,
+      "lon": 107.47852859158435,
+      "geoinfo": {
+        "display_name": "Diandu Road, 花园村, Dianjiang County, Chongqing, China",
+        "road": "Diandu Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "花园村",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Diandu Road, Gangjia, Chongqing, China"
+    },
+    {
+      "lat": 30.199892031680278,
+      "lon": 107.45910854919943,
+      "geoinfo": {
+        "display_name": "花园村, Dianjiang County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "花园村",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "854, 花园村, Dianjiang County, 04630 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:27.882418+00:00",
+  "_kind": "geo_samples"
+}

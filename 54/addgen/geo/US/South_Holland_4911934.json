@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Holland",
+  "geonameid": 4911934,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.590081761409714,
+      "lon": -87.58163541208404,
+      "geoinfo": {
+        "display_name": "1489, East 168th Street, South Holland, Thornton Township, Cook County, Illinois, 60473, United States",
+        "road": "East 168th Street",
+        "house_number": "1489",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Holland",
+        "state": "Illinois",
+        "postcode": "60473",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1489 East 168th Street, South Holland, Illinois, United States"
+    },
+    {
+      "lat": 41.62635989710117,
+      "lon": -87.6374640935382,
+      "geoinfo": {
+        "display_name": "344, East 145th Street, North Harvey, Harvey, Thornton Township, Cook County, Illinois, 60426, United States",
+        "road": "East 145th Street",
+        "house_number": "344",
+        "neighbourhood": "North Harvey",
+        "suburb": null,
+        "city_district": null,
+        "city": "Harvey",
+        "state": "Illinois",
+        "postcode": "60426",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "344, East 145th Street, North Harvey, Harvey, Thornton Township, Cook County, Illinois, 60426, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:41.715642+00:00",
+  "_kind": "geo_samples"
+}

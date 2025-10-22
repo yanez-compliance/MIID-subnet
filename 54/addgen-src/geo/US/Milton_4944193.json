@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Milton",
+  "geonameid": 4944193,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.271137931315785,
+      "lon": -71.09338306256151,
+      "geoinfo": {
+        "display_name": "1548, Blue Hill Avenue, Mattapan, Boston, Suffolk County, Massachusetts, 02126, United States",
+        "road": "Blue Hill Avenue",
+        "house_number": "1548",
+        "neighbourhood": null,
+        "suburb": "Mattapan",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1548 Blue Hill Avenue, Milton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.27822706360987,
+      "lon": -71.0792574662763,
+      "geoinfo": {
+        "display_name": "1009, Morton Street, Mattapan, Boston, Suffolk County, Massachusetts, 02126, United States",
+        "road": "Morton Street",
+        "house_number": "1009",
+        "neighbourhood": null,
+        "suburb": "Mattapan",
+        "city_district": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "postcode": "02126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1009, Morton Street, Mattapan, Boston, Suffolk County, Massachusetts, 02126, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:26.449821+00:00",
+  "_kind": "geo_samples"
+}

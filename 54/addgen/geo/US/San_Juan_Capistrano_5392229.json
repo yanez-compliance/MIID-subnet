@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Juan Capistrano",
+  "geonameid": 5392229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.467853931333295,
+      "lon": -117.65791836236816,
+      "geoinfo": {
+        "display_name": "4004, Calle Bienvenido, San Clemente, Orange County, California, 92673, United States",
+        "road": "Calle Bienvenido",
+        "house_number": "4004",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Clemente",
+        "state": "California",
+        "postcode": "92673",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4004 Calle Bienvenido, San Juan Capistrano, California, United States"
+    },
+    {
+      "lat": 33.4966727013973,
+      "lon": -117.6702617932049,
+      "geoinfo": {
+        "display_name": "32123, Paseo Carolina, San Juan Capistrano, Orange County, California, 92675, United States",
+        "road": "Paseo Carolina",
+        "house_number": "32123",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Juan Capistrano",
+        "state": "California",
+        "postcode": "92675",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "32123, Paseo Carolina, San Juan Capistrano, Orange County, California, 92675, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:56.265899+00:00",
+  "_kind": "geo_samples"
+}

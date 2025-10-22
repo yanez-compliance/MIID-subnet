@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Prescott Valley",
+  "geonameid": 5309858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.58597680084617,
+      "lon": -112.2831253328144,
+      "geoinfo": {
+        "display_name": "East Valley Road, Prescott Valley, Yavapai County, Arizona, 86341, United States",
+        "road": "East Valley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prescott Valley",
+        "state": "Arizona",
+        "postcode": "86341",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Valley Road, Prescott Valley, Arizona, United States"
+    },
+    {
+      "lat": 34.65318802696975,
+      "lon": -112.32435920440221,
+      "geoinfo": {
+        "display_name": "7987, Rusty Spur Trail, Pronghorn Ranch, Prescott Valley, Yavapai County, Arizona, 86315, United States",
+        "road": "Rusty Spur Trail",
+        "house_number": "7987",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prescott Valley",
+        "state": "Arizona",
+        "postcode": "86315",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7987, Rusty Spur Trail, Pronghorn Ranch, Prescott Valley, Yavapai County, Arizona, 86315, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:20.297343+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenfield",
+  "geonameid": 4258285,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.80326410005083,
+      "lon": -85.7779217128892,
+      "geoinfo": {
+        "display_name": "1399, Fairview Drive, Greenfield, Hancock County, Indiana, 46140, United States",
+        "road": "Fairview Drive",
+        "house_number": "1399",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenfield",
+        "state": "Indiana",
+        "postcode": "46140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1399 Fairview Drive, Greenfield, Indiana, United States"
+    },
+    {
+      "lat": 39.76598992659975,
+      "lon": -85.80911808988229,
+      "geoinfo": {
+        "display_name": "West Hickory Drive, Hancock County, Indiana, 46140, United States",
+        "road": "West Hickory Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": "46140",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "045, West Hickory Drive, Hancock County, Indiana, 46140, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:15.299777+00:00",
+  "_kind": "geo_samples"
+}

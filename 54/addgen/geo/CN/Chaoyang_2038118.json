@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chaoyang",
+  "geonameid": 2038118,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.64714938328757,
+      "lon": 125.98054959843242,
+      "geoinfo": {
+        "display_name": "Meihekou City, Tonghua City, Jilin, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Chaoyang, Jilin, China"
+    },
+    {
+      "lat": 42.69802832177021,
+      "lon": 126.04144357064442,
+      "geoinfo": {
+        "display_name": "兴工路, Dongfeng, Huinan, Huinan County, Tonghua City, Jilin, China",
+        "road": "兴工路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dongfeng",
+        "city_district": null,
+        "city": "Huinan",
+        "state": "Jilin",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "426, 兴工路, Dongfeng, Huinan, Huinan County, Tonghua City, 18897 Jilin, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:41.681695+00:00",
+  "_kind": "geo_samples"
+}

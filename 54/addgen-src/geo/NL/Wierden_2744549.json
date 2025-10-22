@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Wierden",
+  "geonameid": 2744549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.372765191096924,
+      "lon": 6.565813108484377,
+      "geoinfo": {
+        "display_name": "21-inwo, 1e Meijerinkshoekweg, Meijerinksberg, Het Loo, Wierden, Overijssel, Netherlands, 7641 RV, Netherlands",
+        "road": "1e Meijerinkshoekweg",
+        "house_number": "21-inwo",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wierden",
+        "city": "Wierden",
+        "state": "Overijssel",
+        "postcode": "7641 RV",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "21-inwo 1e Meijerinkshoekweg, Wierden, Overijssel, The Netherlands"
+    },
+    {
+      "lat": 52.33996516687888,
+      "lon": 6.596335528867363,
+      "geoinfo": {
+        "display_name": "Ypeloweg, Wierden, Overijssel, Netherlands, 7604 PZ, Netherlands",
+        "road": "Ypeloweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wierden",
+        "city": "Wierden",
+        "state": "Overijssel",
+        "postcode": "7604 PZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "223, Ypeloweg, Wierden, Overijssel, Netherlands, 7604 PZ, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:47.326327+00:00",
+  "_kind": "geo_samples"
+}

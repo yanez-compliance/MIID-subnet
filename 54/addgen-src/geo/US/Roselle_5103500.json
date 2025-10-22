@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roselle",
+  "geonameid": 5103500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.63396889010808,
+      "lon": -74.31100177373581,
+      "geoinfo": {
+        "display_name": "Hyatt Hills Golf Complex, 1300, Raritan Road, Clark, Union County, New Jersey, 07066, United States",
+        "road": "Raritan Road",
+        "house_number": "1300",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clark",
+        "state": "New Jersey",
+        "postcode": "07066",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1300 Raritan Road, Roselle, New Jersey, United States"
+    },
+    {
+      "lat": 40.656677220554606,
+      "lon": -74.27491879553051,
+      "geoinfo": {
+        "display_name": "206, Clover Street, Roselle, Union County, New Jersey, 07203, United States",
+        "road": "Clover Street",
+        "house_number": "206",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roselle",
+        "state": "New Jersey",
+        "postcode": "07203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "206, Clover Street, Roselle, Union County, New Jersey, 07203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:02.108548+00:00",
+  "_kind": "geo_samples"
+}

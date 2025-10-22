@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arlington",
+  "geonameid": 4744709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.90575875844999,
+      "lon": -77.09594077011471,
+      "geoinfo": {
+        "display_name": "Windy Run Park, 2420, North Kenmore Street, Woodmont, Courthouse, Arlington, Arlington County, Virginia, 22207, United States",
+        "road": "North Kenmore Street",
+        "house_number": "2420",
+        "neighbourhood": "Woodmont",
+        "suburb": "Courthouse",
+        "city_district": null,
+        "city": "Arlington",
+        "state": "Virginia",
+        "postcode": "22207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2420 North Kenmore Street, Arlington, Virginia, United States"
+    },
+    {
+      "lat": 38.91280915231138,
+      "lon": -77.10377368901268,
+      "geoinfo": {
+        "display_name": "George Washington Memorial Parkway, Woodmont, Arlington, Arlington County, Virginia, 22207, United States",
+        "road": "George Washington Memorial Parkway",
+        "house_number": null,
+        "neighbourhood": "Woodmont",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington",
+        "state": "Virginia",
+        "postcode": "22207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "551, George Washington Memorial Parkway, Woodmont, Arlington, Arlington County, Virginia, 22207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:44.562527+00:00",
+  "_kind": "geo_samples"
+}

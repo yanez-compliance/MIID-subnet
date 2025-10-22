@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Canteleu",
+  "geonameid": 3028779,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.42361229352287,
+      "lon": 1.0415156617832946,
+      "geoinfo": {
+        "display_name": "Rue de l'Industrie, Le Grand-Quevilly, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76120, France",
+        "road": "Rue de l'Industrie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Grand-Quevilly",
+        "state": "Normandy",
+        "postcode": "76120",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de l'Industrie, Canteleu, Normandy, France"
+    },
+    {
+      "lat": 49.46604495780395,
+      "lon": 1.0014963027936803,
+      "geoinfo": {
+        "display_name": "Route de la Vaupalière, Le Grand Essart, Montigny, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76380, France",
+        "road": "Route de la Vaupalière",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montigny",
+        "state": "Normandy",
+        "postcode": "76380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "825, Route de la Vaupalière, Le Grand Essart, Montigny, Rouen, Seine-Maritime, Normandy, Metropolitan France, 76380, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:09.561075+00:00",
+  "_kind": "geo_samples"
+}

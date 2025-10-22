@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Narangba",
+  "geonameid": 2155787,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.204436682633375,
+      "lon": 152.9698464722975,
+      "geoinfo": {
+        "display_name": "28, Hall Road, Narangba, City of Moreton Bay, Queensland, 4504, Australia",
+        "road": "Hall Road",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Narangba",
+        "state": "Queensland",
+        "postcode": "4504",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "28 Hall Road, Narangba, Queensland, Australia"
+    },
+    {
+      "lat": -27.17840298790064,
+      "lon": 152.98777424538778,
+      "geoinfo": {
+        "display_name": "Deception Bay Road, Deception Bay, Greater Brisbane, City of Moreton Bay, Queensland, 4508, Australia",
+        "road": "Deception Bay Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deception Bay",
+        "state": "Queensland",
+        "postcode": "4508",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "651, Deception Bay Road, Deception Bay, Greater Brisbane, City of Moreton Bay, Queensland, 4508, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:13.822060+00:00",
+  "_kind": "geo_samples"
+}

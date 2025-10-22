@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Enterprise",
+  "geonameid": 5503766,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.016894215987406,
+      "lon": -115.19785609701711,
+      "geoinfo": {
+        "display_name": "4083, West Richmar Avenue, Enterprise, Clark County, Nevada, 89139, United States",
+        "road": "West Richmar Avenue",
+        "house_number": "4083",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Enterprise",
+        "state": "Nevada",
+        "postcode": "89139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4083 West Richmar Avenue, Enterprise, Nevada, United States"
+    },
+    {
+      "lat": 36.03619263164584,
+      "lon": -115.23401144219409,
+      "geoinfo": {
+        "display_name": "6475, West Camero Avenue, Clark County, Nevada, 89139, United States",
+        "road": "West Camero Avenue",
+        "house_number": "6475",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nevada",
+        "postcode": "89139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6475, West Camero Avenue, Clark County, Nevada, 89139, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:55.496395+00:00",
+  "_kind": "geo_samples"
+}

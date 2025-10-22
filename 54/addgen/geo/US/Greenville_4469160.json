@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenville",
+  "geonameid": 4469160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.574163665924566,
+      "lon": -77.34034493056075,
+      "geoinfo": {
+        "display_name": "1815, Planter's Walk, Planters Walk, Greenville, Pitt County, North Carolina, 27858, United States",
+        "road": "Planter's Walk",
+        "house_number": "1815",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenville",
+        "state": "North Carolina",
+        "postcode": "27858",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1815 Planter's Walk, Greenville, North Carolina, United States"
+    },
+    {
+      "lat": 35.61839647602458,
+      "lon": -77.31231040742374,
+      "geoinfo": {
+        "display_name": "Vail Drive, Pitt County, North Carolina, 27834, United States",
+        "road": "Vail Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27834",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "931, Vail Drive, Pitt County, North Carolina, 27834, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:18.504818+00:00",
+  "_kind": "geo_samples"
+}

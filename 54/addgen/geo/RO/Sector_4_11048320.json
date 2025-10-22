@@ -1,0 +1,83 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Sector 4",
+  "geonameid": 11048320,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": 44.35259444007962,
+      "lon": 26.073719449475906,
+      "geoinfo": {
+        "display_name": "Șoseaua de Centură, Măgurele, Jilava, Ilfov, 077126, Romania",
+        "road": "Șoseaua de Centură",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Măgurele",
+        "state": null,
+        "postcode": "077126",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Șoseaua de Centură, Sector 4, Romania"
+    },
+    {
+      "lat": 44.40861520111223,
+      "lon": 26.098886531324215,
+      "geoinfo": {
+        "display_name": "Bellu, Sector 4, Bucharest, 040207, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bellu",
+        "city_district": "Sector 4",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "040207",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Bellu, Sector 4, Bucharest, 040207, Romania"
+    },
+    {
+      "lat": 44.336415135187494,
+      "lon": 26.14694880553203,
+      "geoinfo": {
+        "display_name": "Șoseaua de Centură, Sector 4, Popești-Leordeni, Ilfov, 042186, Romania",
+        "road": "Șoseaua de Centură",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sector 4",
+        "city": "Popești-Leordeni",
+        "state": null,
+        "postcode": "042186",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Șoseaua de Centură, Sector 4, Popești-Leordeni, Ilfov, 042186, Romania"
+    },
+    {
+      "lat": 44.376633420199184,
+      "lon": 26.109899873440717,
+      "geoinfo": {
+        "display_name": "198-202, Strada Luică, Progresul, Sector 4, Bucharest, 041458, Romania",
+        "road": "Strada Luică",
+        "house_number": "198-202",
+        "neighbourhood": null,
+        "suburb": "Progresul",
+        "city_district": "Sector 4",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "041458",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "198-202, Strada Luică, Progresul, Sector 4, Bucharest, 041458, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:14.851004+00:00",
+  "_kind": "geo_samples"
+}

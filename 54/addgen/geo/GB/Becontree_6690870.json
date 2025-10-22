@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Becontree",
+  "geonameid": 6690870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54185754682211,
+      "lon": 0.1874654730405991,
+      "geoinfo": {
+        "display_name": "Rainham Road, South Hornchurch, London Borough of Havering, London, Greater London, England, RM13 7LJ, United Kingdom",
+        "road": "Rainham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Hornchurch",
+        "city_district": "London Borough of Havering",
+        "city": "London",
+        "state": "England",
+        "postcode": "RM13 7LJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Rainham Road, Becontree, England, United Kingdom"
+    },
+    {
+      "lat": 51.53622363154234,
+      "lon": 0.07449433404383651,
+      "geoinfo": {
+        "display_name": "Abbey Road, Roding Riverside, London Borough of Barking and Dagenham, London, Greater London, England, IG11 7ZR, United Kingdom",
+        "road": "Abbey Road",
+        "house_number": null,
+        "neighbourhood": "Roding Riverside",
+        "suburb": null,
+        "city_district": "London Borough of Barking and Dagenham",
+        "city": "London",
+        "state": "England",
+        "postcode": "IG11 7ZR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Abbey Road, Roding Riverside, London Borough of Barking and Dagenham, London, Greater London, England, IG11 7ZR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:54:26.522107+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Geldrop",
+  "geonameid": 2755619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.44349622951173,
+      "lon": 5.61421404001971,
+      "geoinfo": {
+        "display_name": "112, Dorpsstraat, Bijenkorf, Mierlo, Geldrop-Mierlo, North Brabant, Netherlands, 5731 JK, Netherlands",
+        "road": "Dorpsstraat",
+        "house_number": "112",
+        "neighbourhood": "Bijenkorf",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mierlo",
+        "state": "North Brabant",
+        "postcode": "5731 JK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "112 Dorpsstraat, Geldrop, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.41742056252411,
+      "lon": 5.6290755463249305,
+      "geoinfo": {
+        "display_name": "Blauwe Kei, Voortje, Mierlo, Geldrop-Mierlo, North Brabant, Netherlands, 5731 PR, Netherlands",
+        "road": "Blauwe Kei",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mierlo",
+        "state": "North Brabant",
+        "postcode": "5731 PR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "811, Blauwe Kei, Geldrop, 5731 PR North Brabant, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:24.030461+00:00",
+  "_kind": "geo_samples"
+}

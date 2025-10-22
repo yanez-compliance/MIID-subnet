@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Rengo",
+  "geonameid": 3873441,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -34.421425696410864,
+      "lon": -70.82182354148169,
+      "geoinfo": {
+        "display_name": "Ruta H-577, La Chimba, Rengo, Provincia de Cachapoal, O'Higgins Region, 2940640, Chile",
+        "road": "Ruta H-577",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rengo",
+        "state": "O'Higgins Region",
+        "postcode": "2940640",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Ruta H-577, Rengo, O'Higgins Region, Chile"
+    },
+    {
+      "lat": -34.44336090462958,
+      "lon": -70.86207443008954,
+      "geoinfo": {
+        "display_name": "Malloa, Provincia de Cachapoal, O'Higgins Region, 2950000, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Malloa",
+        "state": "O'Higgins Region",
+        "postcode": "2950000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Rengo, O'Higgins Region, Chile"
+    }
+  ],
+  "updated_at": "2025-10-16T12:10:53.683197+00:00",
+  "_kind": "geo_samples"
+}

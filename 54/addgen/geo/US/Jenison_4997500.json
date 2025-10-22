@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jenison",
+  "geonameid": 4997500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.912847262443975,
+      "lon": -85.84229290940993,
+      "geoinfo": {
+        "display_name": "Pinewood Elementary, 2405, Chippewa Street, Georgetown Charter Township, Ottawa County, Michigan, 49428, United States",
+        "road": "Chippewa Street",
+        "house_number": "2405",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Georgetown Charter Township",
+        "state": "Michigan",
+        "postcode": "49428",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2405 Chippewa Street, Jenison, Michigan, United States"
+    },
+    {
+      "lat": 42.87122344719302,
+      "lon": -85.78023151800016,
+      "geoinfo": {
+        "display_name": "Rivera Court Southwest, Wyoming, Kent County, Michigan, 49518, United States",
+        "road": "Rivera Court Southwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wyoming",
+        "state": "Michigan",
+        "postcode": "49518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "343, Rivera Court Southwest, Wyoming, Kent County, Michigan, 49518, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:09.290597+00:00",
+  "_kind": "geo_samples"
+}

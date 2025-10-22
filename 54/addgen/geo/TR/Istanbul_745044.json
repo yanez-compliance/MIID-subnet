@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Istanbul",
+  "geonameid": 745044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.03179142212135,
+      "lon": 28.962235960682108,
+      "geoinfo": {
+        "display_name": "Camiikebir, Camiikebir Mahallesi, Beyoğlu, Istanbul, Marmara Region, 34440, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Camiikebir",
+        "city_district": "Camiikebir Mahallesi",
+        "city": "Beyoğlu",
+        "state": null,
+        "postcode": "34440",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Camiikebir, Istanbul, Turkey"
+    },
+    {
+      "lat": 41.03048671190142,
+      "lon": 28.99764137704667,
+      "geoinfo": {
+        "display_name": "Kabataş İskelesi, Meclis-i Mebusan Caddesi, Kabataş, Ömer Avni, Ömer Avni Mahallesi, Beyoğlu, Istanbul, Marmara Region, 34427, Turkey",
+        "road": "Meclis-i Mebusan Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ömer Avni",
+        "city_district": "Ömer Avni Mahallesi",
+        "city": "Beyoğlu",
+        "state": null,
+        "postcode": "34427",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "607, Meclis-i Mebusan Caddesi, 34427 Istanbul, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:52:41.332838+00:00",
+  "_kind": "geo_samples"
+}

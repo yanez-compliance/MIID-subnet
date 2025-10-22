@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Limehouse",
+  "geonameid": 2644497,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.55313611570668,
+      "lon": -0.06634871474134049,
+      "geoinfo": {
+        "display_name": "Beech House, Evelyn Court, Shacklewell, London Borough of Hackney, London, Greater London, England, E8 2BJ, United Kingdom",
+        "road": "Evelyn Court",
+        "house_number": null,
+        "neighbourhood": "Evelyn Court",
+        "suburb": "Shacklewell",
+        "city_district": "London Borough of Hackney",
+        "city": "London",
+        "state": "England",
+        "postcode": "E8 2BJ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Evelyn Court, Limehouse, England, United Kingdom"
+    },
+    {
+      "lat": 51.51445725672262,
+      "lon": 0.031508458435344264,
+      "geoinfo": {
+        "display_name": "SRA Local, Prince Regent Lane, Custom House, Canning Town, London Borough of Newham, London, Greater London, England, E16 3JL, United Kingdom",
+        "road": "Prince Regent Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Canning Town",
+        "city_district": "London Borough of Newham",
+        "city": "London",
+        "state": "England",
+        "postcode": "E16 3JL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "SRA Local, Prince Regent Lane, Custom House, Canning Town, London Borough of Newham, London, Greater London, England, E16 3JL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:05.144256+00:00",
+  "_kind": "geo_samples"
+}

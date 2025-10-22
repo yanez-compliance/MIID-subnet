@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Andover",
+  "geonameid": 5016374,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.24844191734718,
+      "lon": -93.31221816436828,
+      "geoinfo": {
+        "display_name": "Oak View Middle School, School service road and path, Andover, Anoka County, Minnesota, 55304, United States",
+        "road": "School service road and path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Andover",
+        "state": "Minnesota",
+        "postcode": "55304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "School service road and path, Andover, Minnesota, United States"
+    },
+    {
+      "lat": 45.23972976864081,
+      "lon": -93.23480095711189,
+      "geoinfo": {
+        "display_name": "14888, MN 65, Ham Lake, Anoka County, Minnesota, 55304, United States",
+        "road": "MN 65",
+        "house_number": "14888",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ham Lake",
+        "state": "Minnesota",
+        "postcode": "55304",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14888, MN 65, Ham Lake, Anoka County, Minnesota, 55304, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:42.525109+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Mérida",
+  "geonameid": 3523349,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.003543517244054,
+      "lon": -89.60892340856644,
+      "geoinfo": {
+        "display_name": "Calle 17, Mérida, Yucatán, 97137, Mexico",
+        "road": "Calle 17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mérida",
+        "state": "Yucatán",
+        "postcode": "97137",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 17, Mérida, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.965442336911888,
+      "lon": -89.59419946358352,
+      "geoinfo": {
+        "display_name": "Calle 59, Distrito 1, Mérida, Yucatán, 97158, Mexico",
+        "road": "Calle 59",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Distrito 1",
+        "city": "Mérida",
+        "state": "Yucatán",
+        "postcode": "97158",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 59, Distrito 1, Mérida, Yucatán, 97158, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:57.286284+00:00",
+  "_kind": "geo_samples"
+}

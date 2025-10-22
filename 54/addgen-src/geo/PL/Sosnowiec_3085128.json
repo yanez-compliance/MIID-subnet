@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Sosnowiec",
+  "geonameid": 3085128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.305245363997614,
+      "lon": 19.16135585870493,
+      "geoinfo": {
+        "display_name": "Auchan, 20, Zuzanny, Konstantynów, Środula, Sosnowiec, Metropolis GZM, Silesian Voivodeship, 41-200, Poland",
+        "road": "Zuzanny",
+        "house_number": "20",
+        "neighbourhood": "Konstantynów",
+        "suburb": "Środula",
+        "city_district": "Środula",
+        "city": "Sosnowiec",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-200",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "20 Zuzanny, Sosnowiec, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.28933089988233,
+      "lon": 19.064805050248015,
+      "geoinfo": {
+        "display_name": "23, Wyrobiskowa, Nowy Czekaj, Dąbrówka Mała, Katowice, Metropolis GZM, Silesian Voivodeship, 40-307, Poland",
+        "road": "Wyrobiskowa",
+        "house_number": "23",
+        "neighbourhood": "Nowy Czekaj",
+        "suburb": "Dąbrówka Mała",
+        "city_district": null,
+        "city": "Katowice",
+        "state": "Silesian Voivodeship",
+        "postcode": "40-307",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "23, Wyrobiskowa, Nowy Czekaj, Dąbrówka Mała, Katowice, Metropolis GZM, Silesian Voivodeship, 40-307, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:24.118593+00:00",
+  "_kind": "geo_samples"
+}

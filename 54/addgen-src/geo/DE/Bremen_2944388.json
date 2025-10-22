@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bremen",
+  "geonameid": 2944388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.04595995212024,
+      "lon": 8.804480693063603,
+      "geoinfo": {
+        "display_name": "20, A 281, Neuenland, Neustadt, Bremen-Süd, Bremen, 28199, Germany",
+        "road": "A 281",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Neustadt",
+        "city_district": "Bremen-Süd",
+        "city": "Bremen",
+        "state": "Bremen",
+        "postcode": "28199",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "20 A 281, Bremen, Bremen, Germany"
+    },
+    {
+      "lat": 53.06402986712997,
+      "lon": 8.848190572467798,
+      "geoinfo": {
+        "display_name": "Pauliner Marsch, Peterswerder, Östliche Vorstadt, Bremen-Ost, Bremen, 28205, Germany",
+        "road": "Pauliner Marsch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Östliche Vorstadt",
+        "city_district": "Bremen-Ost",
+        "city": "Bremen",
+        "state": "Bremen",
+        "postcode": "28205",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "805, Pauliner Marsch, Peterswerder, Östliche Vorstadt, Bremen-Ost, Bremen, 28205, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:57.899905+00:00",
+  "_kind": "geo_samples"
+}

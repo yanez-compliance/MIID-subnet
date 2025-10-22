@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Armilla",
+  "geonameid": 2521590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.148079844338824,
+      "lon": -3.6283098737251835,
+      "geoinfo": {
+        "display_name": "Calle Ecuador, Churriana de la Vega, Partido Judicial de Santa Fe, Granada, Andalusia, 18100, Spain",
+        "road": "Calle Ecuador",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Churriana de la Vega",
+        "state": "Andalusia",
+        "postcode": "18100",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle Ecuador, Armilla, Andalusia, Spain"
+    },
+    {
+      "lat": 37.15610110229113,
+      "lon": -3.6000444507813807,
+      "geoinfo": {
+        "display_name": "Calle Galicia, Santa Adela, Zaidín - Vergeles, Zaidín, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18007, Spain",
+        "road": "Calle Galicia",
+        "house_number": null,
+        "neighbourhood": "Santa Adela",
+        "suburb": null,
+        "city_district": "Zaidín",
+        "city": "Granada",
+        "state": "Andalusia",
+        "postcode": "18007",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "996, Calle Galicia, Santa Adela, Zaidín - Vergeles, Zaidín, Granada, Comarca de la Vega de Granada, Granada, Andalusia, 18007, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:24.177296+00:00",
+  "_kind": "geo_samples"
+}

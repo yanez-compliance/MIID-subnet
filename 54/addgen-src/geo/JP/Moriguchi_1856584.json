@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Moriguchi",
+  "geonameid": 1856584,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.7745277754506,
+      "lon": 135.55947048983313,
+      "geoinfo": {
+        "display_name": "大阪中央環状線, Mishima 1-chome, Settsu, Osaka Prefecture, 566-0022, Japan",
+        "road": "大阪中央環状線",
+        "house_number": null,
+        "neighbourhood": "Mishima 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Settsu",
+        "state": null,
+        "postcode": "566-0022",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "大阪中央環状線, Moriguchi, Japan"
+    },
+    {
+      "lat": 34.75079765641761,
+      "lon": 135.59107152182375,
+      "geoinfo": {
+        "display_name": "Kajimachi 4-chome, Moriguchi, Osaka Prefecture, 570-0011, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kajimachi 4-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Moriguchi",
+        "state": null,
+        "postcode": "570-0011",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kajimachi 4-chome, Moriguchi, Osaka Prefecture, 570-0011, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:05.793557+00:00",
+  "_kind": "geo_samples"
+}

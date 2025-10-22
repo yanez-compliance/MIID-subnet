@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Palazzolo sull'Oglio",
+  "geonameid": 3171586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.59725439425043,
+      "lon": 9.824864975903429,
+      "geoinfo": {
+        "display_name": "Fondmetal, 4, Via Bergamo, Zona Artigianale Ca', Ca', Palosco, Bergamo, Lombardy, 24050, Italy",
+        "road": "Via Bergamo",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palosco",
+        "state": "Lombardy",
+        "postcode": "24050",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "4 Via Bergamo, Palazzolo sull'Oglio, Lombardy, Italy"
+    },
+    {
+      "lat": 45.622140224882166,
+      "lon": 9.86420270409787,
+      "geoinfo": {
+        "display_name": "Via Roccoli, Telgate, Bergamo, Lombardy, 24060, Italy",
+        "road": "Via Roccoli",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Telgate",
+        "state": "Lombardy",
+        "postcode": "24060",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "767, Via Roccoli, Telgate, Bergamo, Lombardy, 24060, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:41.620492+00:00",
+  "_kind": "geo_samples"
+}

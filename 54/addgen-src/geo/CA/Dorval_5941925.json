@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Dorval",
+  "geonameid": 5941925,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.45319124814813,
+      "lon": -73.7677578617089,
+      "geoinfo": {
+        "display_name": "1710, Avenue Parkfield, Dorval, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H9P 1Y5, Canada",
+        "road": "Avenue Parkfield",
+        "house_number": "1710",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dorval",
+        "state": "Quebec",
+        "postcode": "H9P 1Y5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "1710 Avenue Parkfield, Dorval, Quebec, Canada"
+    },
+    {
+      "lat": 45.41138378649399,
+      "lon": -73.72346001620289,
+      "geoinfo": {
+        "display_name": "River Way, Kahnawake, Montérégie, Quebec, J0L 1B0, Canada",
+        "road": "River Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kahnawake",
+        "state": "Quebec",
+        "postcode": "J0L 1B0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "River Way, Kahnawake, Montérégie, Quebec, J0L 1B0, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:37.994996+00:00",
+  "_kind": "geo_samples"
+}

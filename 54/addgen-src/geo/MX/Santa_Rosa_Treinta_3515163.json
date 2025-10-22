@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Santa Rosa Treinta",
+  "geonameid": 3515163,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.67209815572143,
+      "lon": -99.20360930767637,
+      "geoinfo": {
+        "display_name": "Zacatepec de Hidalgo, Zacatepec, Morelos, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zacatepec de Hidalgo",
+        "state": "Morelos",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Santa Rosa Treinta, Morelos, Mexico"
+    },
+    {
+      "lat": 18.686324506944185,
+      "lon": -99.14635969268198,
+      "geoinfo": {
+        "display_name": "Tlaltizapan, Tlaltizapán de Zapata, Morelos, 62778, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tlaltizapan",
+        "state": "Morelos",
+        "postcode": "62778",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "189, Tlaltizapan, Tlaltizapán de Zapata, Morelos, 62778, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:39.282917+00:00",
+  "_kind": "geo_samples"
+}

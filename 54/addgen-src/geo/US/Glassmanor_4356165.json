@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glassmanor",
+  "geonameid": 4356165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.807758619165824,
+      "lon": -76.98230057043243,
+      "geoinfo": {
+        "display_name": "1515, Birchwood Drive, Phelps Corner, Oxon Hill, Prince George's County, Maryland, 20745, United States",
+        "road": "Birchwood Drive",
+        "house_number": "1515",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxon Hill",
+        "state": "Maryland",
+        "postcode": "20745",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1515 Birchwood Drive, Glassmanor, Maryland, United States"
+    },
+    {
+      "lat": 38.79747614022874,
+      "lon": -77.03349182143991,
+      "geoinfo": {
+        "display_name": "Woodrow Wilson Memorial Bridge, Capital Beltway (Thru), Ward 8, Washington, District of Columbia, 23242, United States",
+        "road": "Capital Beltway (Thru)",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington",
+        "state": "District of Columbia",
+        "postcode": "23242",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Woodrow Wilson Memorial Bridge, Capital Beltway (Thru), Ward 8, Washington, District of Columbia, 23242, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:29.682180+00:00",
+  "_kind": "geo_samples"
+}

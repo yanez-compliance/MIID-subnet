@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jiayue",
+  "geonameid": 1805947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.0305801389917,
+      "lon": 119.21258100361572,
+      "geoinfo": {
+        "display_name": "Zhucheng City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhucheng City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Jiayue, Shandong, China"
+    },
+    {
+      "lat": 36.04054961025823,
+      "lon": 119.15369243862537,
+      "geoinfo": {
+        "display_name": "Jiayue, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weifang",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "891, Jiayue, Weifang, 87192 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:49.653697+00:00",
+  "_kind": "geo_samples"
+}

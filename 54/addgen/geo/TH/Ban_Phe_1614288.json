@@ -1,0 +1,47 @@
+{
+  "country_code": "TH",
+  "country": "Thailand",
+  "city": "Ban Phe",
+  "geonameid": 1614288,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 12.651000130464997,
+      "lon": 101.4410713184905,
+      "geoinfo": {
+        "display_name": "Klaeng Kachet, Mueang Rayong, Rayong Province, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "Ban Phe, Thailand"
+    },
+    {
+      "lat": 12.65647271925569,
+      "lon": 101.42363147134985,
+      "geoinfo": {
+        "display_name": "Ban Phe, Klaeng Kachet, Mueang Rayong, Rayong Province, Thailand",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ban Phe",
+        "state": null,
+        "postcode": null,
+        "country": "Thailand",
+        "country_code": "th"
+      },
+      "address": "678, Ban Phe, Klaeng Kachet, Mueang Rayong, 29761 Rayong Province, Thailand"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:09.741411+00:00",
+  "_kind": "geo_samples"
+}

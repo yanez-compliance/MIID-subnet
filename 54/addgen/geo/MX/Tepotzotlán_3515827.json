@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tepotzotlán",
+  "geonameid": 3515827,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.726429039121573,
+      "lon": -99.1858388987009,
+      "geoinfo": {
+        "display_name": "Cuautitlán Izcalli, State of Mexico, 54770, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuautitlán Izcalli",
+        "state": "State of Mexico",
+        "postcode": "54770",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tepotzotlán, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.697179513027706,
+      "lon": -99.21556941897853,
+      "geoinfo": {
+        "display_name": "Camino a Coacalco, Cuautitlán Izcalli, State of Mexico, 54712, Mexico",
+        "road": "Camino a Coacalco",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuautitlán Izcalli",
+        "state": "State of Mexico",
+        "postcode": "54712",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "545, Camino a Coacalco, Cuautitlán Izcalli, State of Mexico, 54712, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:28:13.457948+00:00",
+  "_kind": "geo_samples"
+}

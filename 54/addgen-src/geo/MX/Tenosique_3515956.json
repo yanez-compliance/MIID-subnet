@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tenosique",
+  "geonameid": 3515956,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.43803410953001,
+      "lon": -91.39508074729328,
+      "geoinfo": {
+        "display_name": "Carretera Tenosique - El Ceibo, Rancho Grande, Tenosique, Tabasco, 86904, Mexico",
+        "road": "Carretera Tenosique - El Ceibo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Grande",
+        "state": "Tabasco",
+        "postcode": "86904",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Tenosique - El Ceibo, Tenosique, Tabasco, Mexico"
+    },
+    {
+      "lat": 17.437619591500383,
+      "lon": -91.40988543567529,
+      "geoinfo": {
+        "display_name": "Rancho Grande, Tenosique, Tabasco, 86904, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rancho Grande",
+        "state": "Tabasco",
+        "postcode": "86904",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "672, Rancho Grande, Tenosique, Tabasco, 86904, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:49.984496+00:00",
+  "_kind": "geo_samples"
+}

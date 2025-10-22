@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Linfeng",
+  "geonameid": 1803564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.86602932844648,
+      "lon": 107.19486553865309,
+      "geoinfo": {
+        "display_name": "X645, Dandu, Changshou District, Chongqing, China",
+        "road": "X645",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dandu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X645, Linfeng, Chongqing, China"
+    },
+    {
+      "lat": 29.867899773891622,
+      "lon": 107.20694842901538,
+      "geoinfo": {
+        "display_name": "X645, Shihui, Changshou District, Chongqing, China",
+        "road": "X645",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shihui",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X645, Shihui, Changshou District, 48622 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:33.064209+00:00",
+  "_kind": "geo_samples"
+}

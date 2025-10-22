@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cecina",
+  "geonameid": 3179235,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.318844696727375,
+      "lon": 10.562812815712489,
+      "geoinfo": {
+        "display_name": "Strada Provinciale 57 del Poggetto, Guardistallo, Pisa, Tuscany, Italy",
+        "road": "Strada Provinciale 57 del Poggetto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guardistallo",
+        "state": "Tuscany",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Provinciale 57 del Poggetto, Cecina, Tuscany, Italy"
+    },
+    {
+      "lat": 43.26725767062704,
+      "lon": 10.515211323229554,
+      "geoinfo": {
+        "display_name": "Via della Pineta, Marina di Cecina, Cecina, Livorno, Tuscany, 57023, Italy",
+        "road": "Via della Pineta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marina di Cecina",
+        "city_district": null,
+        "city": "Cecina",
+        "state": "Tuscany",
+        "postcode": "57023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "781, Via della Pineta, Marina di Cecina, Cecina, Livorno, Tuscany, 57023, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:12.891907+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Villejuif",
+  "geonameid": 2968705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.78654617882072,
+      "lon": 2.411911472048602,
+      "geoinfo": {
+        "display_name": "Rue des Fusillés, Paul Froment - Huit Mai 1945, Vitry-sur-Seine, L'Haÿ-les-Roses, Val-de-Marne, Metropolitan France, 94400, France",
+        "road": "Rue des Fusillés",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Paul Froment - Huit Mai 1945",
+        "city_district": null,
+        "city": "Vitry-sur-Seine",
+        "state": null,
+        "postcode": "94400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue des Fusillés, Villejuif, France"
+    },
+    {
+      "lat": 48.83753860849957,
+      "lon": 2.3510037127917447,
+      "geoinfo": {
+        "display_name": "GMF, Avenue des Gobelins, Quartier du Jardin des Plantes, 5th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75005, France",
+        "road": "Avenue des Gobelins",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "5th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75005",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "GMF, Avenue des Gobelins, Quartier du Jardin des Plantes, 5th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75005, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:24.422754+00:00",
+  "_kind": "geo_samples"
+}

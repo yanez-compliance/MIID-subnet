@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Little Rock",
+  "geonameid": 4119403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.74393636891606,
+      "lon": -92.28838493221875,
+      "geoinfo": {
+        "display_name": "Dr Martin Luther King Drive, Little Rock, Big Rock Township, Pulaski County, Arkansas, 72202, United States",
+        "road": "Dr Martin Luther King Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Little Rock",
+        "state": "Arkansas",
+        "postcode": "72202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dr Martin Luther King Drive, Little Rock, Arkansas, United States"
+    },
+    {
+      "lat": 34.728034467859935,
+      "lon": -92.30235431477439,
+      "geoinfo": {
+        "display_name": "South Thayer Street, Chickasaw Place, Little Rock, Big Rock Township, Pulaski County, Arkansas, 72204, United States",
+        "road": "South Thayer Street",
+        "house_number": null,
+        "neighbourhood": "Chickasaw Place",
+        "suburb": null,
+        "city_district": null,
+        "city": "Little Rock",
+        "state": "Arkansas",
+        "postcode": "72204",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "054, South Thayer Street, Chickasaw Place, Little Rock, Big Rock Township, Pulaski County, Arkansas, 72204, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:45.441370+00:00",
+  "_kind": "geo_samples"
+}

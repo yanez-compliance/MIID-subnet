@@ -1,0 +1,65 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Pérez",
+  "geonameid": 3841500,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": -32.99006412335556,
+      "lon": -60.8062678197173,
+      "geoinfo": {
+        "display_name": "Municipio de Pérez, Gran Rosario, Departamento Rosario, S2121, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "S2121",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Pérez, Argentina"
+    },
+    {
+      "lat": -32.98352172646441,
+      "lon": -60.78937730160804,
+      "geoinfo": {
+        "display_name": "Municipio de Pérez, Gran Rosario, Departamento Rosario, Santa Fe, S2121, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Santa Fe",
+        "postcode": "S2121",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "373, Pérez, S2121 Santa Fe, Argentina"
+    },
+    {
+      "lat": -32.987548154349774,
+      "lon": -60.77495029297563,
+      "geoinfo": {
+        "display_name": "Avenida del Rosario, Municipio de Pérez, Gran Rosario, Departamento Rosario, S2121, Argentina",
+        "road": "Avenida del Rosario",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "S2121",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "830, Avenida del Rosario, Municipio de Pérez, Gran Rosario, Departamento Rosario, S2121, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:06.745503+00:00",
+  "_kind": "geo_samples"
+}

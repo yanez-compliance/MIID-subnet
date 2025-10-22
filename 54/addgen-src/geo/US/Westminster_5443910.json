@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westminster",
+  "geonameid": 5443910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.806619604916165,
+      "lon": -105.05776824026324,
+      "geoinfo": {
+        "display_name": "6022, Depew Street, Arvada, Jefferson County, Colorado, 80003, United States",
+        "road": "Depew Street",
+        "house_number": "6022",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arvada",
+        "state": "Colorado",
+        "postcode": "80003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6022 Depew Street, Westminster, Colorado, United States"
+    },
+    {
+      "lat": 39.8524309731131,
+      "lon": -105.0506212717159,
+      "geoinfo": {
+        "display_name": "US 36 Bikeway, Westminster, Adams County, Colorado, 80031, United States",
+        "road": "US 36 Bikeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westminster",
+        "state": "Colorado",
+        "postcode": "80031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "US 36 Bikeway, Westminster, Adams County, Colorado, 80031, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:54.510978+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brookfield",
+  "geonameid": 5246835,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.02673392609387,
+      "lon": -88.11313865484486,
+      "geoinfo": {
+        "display_name": "South Executive Drive, Brookfield, Waukesha County, Wisconsin, 53005, United States",
+        "road": "South Executive Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brookfield",
+        "state": "Wisconsin",
+        "postcode": "53005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Executive Drive, Brookfield, Wisconsin, United States"
+    },
+    {
+      "lat": 43.084383004723094,
+      "lon": -88.08091041138125,
+      "geoinfo": {
+        "display_name": "Wisconsin Memorial Park Cemetery, Capitol Drive, Brookfield, Waukesha County, Wisconsin, 53007, United States",
+        "road": "Capitol Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brookfield",
+        "state": "Wisconsin",
+        "postcode": "53007",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "606, Capitol Drive, Brookfield, 53007 Wisconsin, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:06.589688+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pittsfield",
+  "geonameid": 4947459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.48706824240392,
+      "lon": -73.26148623980335,
+      "geoinfo": {
+        "display_name": "299, Hancock Road, Pittsfield, Berkshire County, Massachusetts, 01202, United States",
+        "road": "Hancock Road",
+        "house_number": "299",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsfield",
+        "state": "Massachusetts",
+        "postcode": "01202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "299 Hancock Road, Pittsfield, Massachusetts, United States"
+    },
+    {
+      "lat": 42.41187715576422,
+      "lon": -73.2341424579752,
+      "geoinfo": {
+        "display_name": "714, East New Lenox Road, Pittsfield, Berkshire County, Massachusetts, 01201, United States",
+        "road": "East New Lenox Road",
+        "house_number": "714",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsfield",
+        "state": "Massachusetts",
+        "postcode": "01201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "714, East New Lenox Road, Pittsfield, Berkshire County, Massachusetts, 01201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:46.345687+00:00",
+  "_kind": "geo_samples"
+}

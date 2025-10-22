@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Village",
+  "geonameid": 5116093,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72111816579422,
+      "lon": -73.944759289157,
+      "geoinfo": {
+        "display_name": "525A, Humboldt Street, Greenpoint, Brooklyn, Kings County, New York, 11222, United States",
+        "road": "Humboldt Street",
+        "house_number": "525A",
+        "neighbourhood": "Greenpoint",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11222",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "525A Humboldt Street, East Village, New York, United States"
+    },
+    {
+      "lat": 40.73500094459032,
+      "lon": -74.01016200586618,
+      "geoinfo": {
+        "display_name": "West Street, Meatpacking District, Manhattan, New York County, New York, 10014, United States",
+        "road": "West Street",
+        "house_number": null,
+        "neighbourhood": "Meatpacking District",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "977, West Street, Meatpacking District, Manhattan, New York County, New York, 10014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:13.507624+00:00",
+  "_kind": "geo_samples"
+}

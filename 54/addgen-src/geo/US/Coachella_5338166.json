@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coachella",
+  "geonameid": 5338166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.70384411427421,
+      "lon": -116.18865587497517,
+      "geoinfo": {
+        "display_name": "Dillon Road, Indio, Riverside County, California, 92236, United States",
+        "road": "Dillon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indio",
+        "state": "California",
+        "postcode": "92236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dillon Road, Coachella, California, United States"
+    },
+    {
+      "lat": 33.65097159135842,
+      "lon": -116.16528400056004,
+      "geoinfo": {
+        "display_name": "Tyler Street, Coachella, Riverside County, California, 92236, United States",
+        "road": "Tyler Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coachella",
+        "state": "California",
+        "postcode": "92236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "988, Tyler Street, Coachella, Riverside County, California, 92236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:48.420717+00:00",
+  "_kind": "geo_samples"
+}

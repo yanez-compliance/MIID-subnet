@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zengfu",
+  "geonameid": 8416213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.49459624849941,
+      "lon": 107.02321297466672,
+      "geoinfo": {
+        "display_name": "Miaowan Tunnel, Zengfu, Fuling District, Chongqing, China",
+        "road": "Miaowan Tunnel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zengfu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Miaowan Tunnel, Zengfu, Chongqing, China"
+    },
+    {
+      "lat": 29.5469779007506,
+      "lon": 106.96784368011974,
+      "geoinfo": {
+        "display_name": "Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "685, Fuling District, 10168 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:38.807053+00:00",
+  "_kind": "geo_samples"
+}

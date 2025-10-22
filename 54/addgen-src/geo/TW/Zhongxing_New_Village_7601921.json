@@ -1,0 +1,47 @@
+{
+  "country_code": "TW",
+  "country": "Taiwan",
+  "city": "Zhongxing New Village",
+  "geonameid": 7601921,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 23.943153051600586,
+      "lon": 120.68312837341036,
+      "geoinfo": {
+        "display_name": "Dongmin Road, Yingnan Village, Nantou City, Nantou County, 54045, Taiwan",
+        "road": "Dongmin Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Yingnan Village",
+        "city": "Nantou City",
+        "state": null,
+        "postcode": "54045",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "Dongmin Road, Zhongxing New Village, Taiwan"
+    },
+    {
+      "lat": 23.984417102364148,
+      "lon": 120.6598252303194,
+      "geoinfo": {
+        "display_name": "北投路, Beitou, Beitou Village, Caotun Township, Nantou County, 54257, Taiwan",
+        "road": "北投路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Beitou Village",
+        "city": "Caotun Township",
+        "state": null,
+        "postcode": "54257",
+        "country": "Taiwan",
+        "country_code": "tw"
+      },
+      "address": "北投路, Zhongxing New Village, Taiwan"
+    }
+  ],
+  "updated_at": "2025-10-16T23:36:15.074121+00:00",
+  "_kind": "geo_samples"
+}

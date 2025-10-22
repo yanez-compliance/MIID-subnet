@@ -1,0 +1,83 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Brest",
+  "geonameid": 629634,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 52.14882005652652,
+      "lon": 23.707476512011805,
+      "geoinfo": {
+        "display_name": "М1, Ленінскі раён, Чарнаўчыцкі сельскі Савет, Brest District, Brest Region, 224024, Belarus",
+        "road": "М1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ленінскі раён",
+        "city": "Чарнаўчыцкі сельскі Савет",
+        "state": "Brest Region",
+        "postcode": "224024",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "М1, Brest, Brest Region, Belarus"
+    },
+    {
+      "lat": 52.087601904560174,
+      "lon": 23.776327483044568,
+      "geoinfo": {
+        "display_name": "Малінаўка, Маскоўскі раён, Brest, Brest Region, 224007, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Малінаўка",
+        "city_district": null,
+        "city": "Brest",
+        "state": "Brest Region",
+        "postcode": "224007",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Малінаўка, Brest, Brest Region, Belarus"
+    },
+    {
+      "lat": 52.12845901691962,
+      "lon": 23.764367295504492,
+      "geoinfo": {
+        "display_name": "Автодром «Большая медведица», Камерцыйная вуліца, Старыя Задворцы, Ленінскі раён, Brest, Brest Region, 224028, Belarus",
+        "road": "Камерцыйная вуліца",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Старыя Задворцы",
+        "city_district": "Ленінскі раён",
+        "city": "Brest",
+        "state": "Brest Region",
+        "postcode": "224028",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "334, Камерцыйная вуліца, Brest, 224028 Brest Region, Belarus"
+    },
+    {
+      "lat": 52.06534852376845,
+      "lon": 23.71470906220561,
+      "geoinfo": {
+        "display_name": "Царква Раства Хрыстовага, 17, вуліца Барыса Маслова, Вулька Падгародская, Маскоўскі раён, Brest, Brest Region, 224033, Belarus",
+        "road": "вуліца Барыса Маслова",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Вулька Падгародская",
+        "city_district": null,
+        "city": "Brest",
+        "state": "Brest Region",
+        "postcode": "224033",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Царква Раства Хрыстовага, 17, вуліца Барыса Маслова, Вулька Падгародская, Маскоўскі раён, Brest, Brest Region, 224033, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T01:33:46.630405+00:00",
+  "_kind": "geo_samples"
+}

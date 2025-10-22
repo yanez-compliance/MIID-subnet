@@ -1,0 +1,47 @@
+{
+  "country_code": "BF",
+  "country": "Burkina Faso",
+  "city": "Nouna",
+  "geonameid": 2357163,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.697601163536579,
+      "lon": -3.8549236395595656,
+      "geoinfo": {
+        "display_name": "R24, Kerena, Kossi, Boucle du Mouhoun, Burkina Faso",
+        "road": "R24",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kerena",
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "R24, Nouna, Burkina Faso"
+    },
+    {
+      "lat": 12.759135697869999,
+      "lon": -3.8318984732477688,
+      "geoinfo": {
+        "display_name": "Kossi, Boucle du Mouhoun, Burkina Faso",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Burkina Faso",
+        "country_code": "bf"
+      },
+      "address": "Nouna, Burkina Faso"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:48.328759+00:00",
+  "_kind": "geo_samples"
+}

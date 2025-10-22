@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dongyang",
+  "geonameid": 8417106,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.818443946569513,
+      "lon": 106.42712206366244,
+      "geoinfo": {
+        "display_name": "Longfengqiao, Beibei, Beibei District, Chongqing, 400700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Longfengqiao",
+        "city_district": null,
+        "city": "Beibei",
+        "state": "Chongqing",
+        "postcode": "400700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Longfengqiao, Dongyang, Chongqing, China"
+    },
+    {
+      "lat": 29.846328965397362,
+      "lon": 106.41440393214795,
+      "geoinfo": {
+        "display_name": "Beibei, Beibei District, Chongqing, 400702, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beibei",
+        "state": "Chongqing",
+        "postcode": "400702",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "947, Beibei, Beibei District, Chongqing, 400702, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:50.003476+00:00",
+  "_kind": "geo_samples"
+}

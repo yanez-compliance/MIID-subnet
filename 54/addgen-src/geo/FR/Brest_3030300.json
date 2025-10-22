@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Brest",
+  "geonameid": 3030300,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.426422336436616,
+      "lon": -4.485210155754671,
+      "geoinfo": {
+        "display_name": "Baby Montessori Loscoat, Rue Nicéphore Niépce, Zone industrielle de Loscoat, Loscoat, Brest, Finistère, Brittany, Metropolitan France, 29200, France",
+        "road": "Rue Nicéphore Niépce",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brest",
+        "state": "Brittany",
+        "postcode": "29200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Nicéphore Niépce, Brest, Brittany, France"
+    },
+    {
+      "lat": 48.38390202984531,
+      "lon": -4.517140487745891,
+      "geoinfo": {
+        "display_name": "Ehpad Les Quatre Moulins, Rue Docteur Roux, Kerbonne, Les Quatre Moulins, Brest, Finistère, Brittany, Metropolitan France, 29200, France",
+        "road": "Rue Docteur Roux",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Quatre Moulins",
+        "city_district": null,
+        "city": "Brest",
+        "state": "Brittany",
+        "postcode": "29200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "935, Rue Docteur Roux, Brest, 29200 Brittany, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:49:32.575182+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Vicente",
+  "geonameid": 3428068,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.61787446600373,
+      "lon": -54.137260807021924,
+      "geoinfo": {
+        "display_name": "Municipio de San Pedro, Departamento San Pedro, Misiones, 3352, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de San Pedro",
+        "state": "Misiones",
+        "postcode": "3352",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San Vicente, Misiones, Argentina"
+    },
+    {
+      "lat": -26.640947596106837,
+      "lon": -54.10234100115038,
+      "geoinfo": {
+        "display_name": "Semillera, Municipio de San Pedro, Departamento San Pedro, Misiones, 3352, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Semillera",
+        "suburb": null,
+        "city_district": null,
+        "city": "Municipio de San Pedro",
+        "state": "Misiones",
+        "postcode": "3352",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "691, Semillera, Municipio de San Pedro, Departamento San Pedro, Misiones, 3352, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:40.081531+00:00",
+  "_kind": "geo_samples"
+}

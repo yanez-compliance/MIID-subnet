@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Assebroek",
+  "geonameid": 2803030,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.20171643631671,
+      "lon": 3.292578960925274,
+      "geoinfo": {
+        "display_name": "Abdijenroute, Sint-Kruis, Sijsele, Damme, Brugge, West Flanders, Flanders, 8340, Belgium",
+        "road": "Abdijenroute",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Kruis",
+        "city": "Sijsele",
+        "state": "West Flanders",
+        "postcode": "8340",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Abdijenroute, Assebroek, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.16836235320139,
+      "lon": 3.2105526029274625,
+      "geoinfo": {
+        "display_name": "N31, Sint-Michiels, Bruges, Brugge, West Flanders, Flanders, 8200, Belgium",
+        "road": "N31",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Sint-Michiels",
+        "city": "Bruges",
+        "state": "West Flanders",
+        "postcode": "8200",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "N31, Sint-Michiels, Bruges, Brugge, West Flanders, Flanders, 8200, Belgium"
+    },
+    {
+      "lat": 51.17243605030492,
+      "lon": 3.272173009534592,
+      "geoinfo": {
+        "display_name": "8, Van Cailliedreef, Oedelem, Oostkamp, Brugge, West Flanders, 8020, Belgium",
+        "road": "Van Cailliedreef",
+        "house_number": "8",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oostkamp",
+        "state": "West Flanders",
+        "postcode": "8020",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "8, Van Cailliedreef, Oedelem, Oostkamp, Brugge, West Flanders, 8020, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:03.138424+00:00",
+  "_kind": "geo_samples"
+}

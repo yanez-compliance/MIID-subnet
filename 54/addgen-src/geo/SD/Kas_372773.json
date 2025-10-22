@@ -1,0 +1,47 @@
+{
+  "country_code": "SD",
+  "country": "Sudan",
+  "city": "Kas",
+  "geonameid": 372773,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.500621801393368,
+      "lon": 24.299319642152703,
+      "geoinfo": {
+        "display_name": "Kas, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kas",
+        "state": null,
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "Kas, Sudan"
+    },
+    {
+      "lat": 12.478374489723913,
+      "lon": 24.289364846370855,
+      "geoinfo": {
+        "display_name": "Fiyebaiyid, Kas, South Darfur State, Sudan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fiyebaiyid",
+        "state": "South Darfur State",
+        "postcode": null,
+        "country": "Sudan",
+        "country_code": "sd"
+      },
+      "address": "Kas, South Darfur State, Sudan"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:02.037898+00:00",
+  "_kind": "geo_samples"
+}

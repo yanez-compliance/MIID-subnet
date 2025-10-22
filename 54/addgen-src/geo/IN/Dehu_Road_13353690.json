@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Dehu Road",
+  "geonameid": 13353690,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.696413567489692,
+      "lon": 73.76721831137174,
+      "geoinfo": {
+        "display_name": "Haveli, Pune District, Maharashtra, 412114, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "412114",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Dehu Road, Maharashtra, India"
+    },
+    {
+      "lat": 18.676674610105582,
+      "lon": 73.69067893005389,
+      "geoinfo": {
+        "display_name": "Shirgaav, Mawal, Pune District, Maharashtra, 654321, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shirgaav",
+        "state": "Maharashtra",
+        "postcode": "654321",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "808, Shirgaav, Mawal, Pune District, Maharashtra, 654321, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:30.252080+00:00",
+  "_kind": "geo_samples"
+}

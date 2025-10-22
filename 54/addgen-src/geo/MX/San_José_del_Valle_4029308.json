@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "San José del Valle",
+  "geonameid": 4029308,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.750287929267042,
+      "lon": -105.21467140832503,
+      "geoinfo": {
+        "display_name": "Puerto Vallarta, Región Costa Norte, Jalisco, 48274, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "48274",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "San José del Valle, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.755048944344484,
+      "lon": -105.2699903795742,
+      "geoinfo": {
+        "display_name": "Fraccionamiento Paraíso Vallarta, Valle Marlin, Bahía de Banderas, Nayarit, 63737, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Fraccionamiento Paraíso Vallarta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Valle Marlin",
+        "state": "Nayarit",
+        "postcode": "63737",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "320, Fraccionamiento Paraíso Vallarta, Valle Marlin, Bahía de Banderas, Nayarit, 63737, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:56.273152+00:00",
+  "_kind": "geo_samples"
+}

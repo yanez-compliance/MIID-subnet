@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Rivière-du-Loup",
+  "geonameid": 6354897,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.820453705950406,
+      "lon": -69.51485725759784,
+      "geoinfo": {
+        "display_name": "266, Rue Delage, Rivière-du-Loup, Rivière-du-Loup (MRC), Bas-Saint-Laurent, Quebec, G5R 2Y7, Canada",
+        "road": "Rue Delage",
+        "house_number": "266",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rivière-du-Loup",
+        "state": "Quebec",
+        "postcode": "G5R 2Y7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "266 Rue Delage, Rivière-du-Loup, Quebec, Canada"
+    },
+    {
+      "lat": 47.7927996225731,
+      "lon": -69.54006255306365,
+      "geoinfo": {
+        "display_name": "Rivière-du-Loup, Rivière-du-Loup (MRC), Bas-Saint-Laurent, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rivière-du-Loup",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "002, Rivière-du-Loup, Rivière-du-Loup (MRC), Bas-Saint-Laurent, 09014 Quebec, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:44.717423+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Basauri",
+  "geonameid": 6697039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.2323479714534,
+      "lon": -2.8732339225804076,
+      "geoinfo": {
+        "display_name": "BI-625, Urbi, Ariz, Basauri, Biscay, Autonomous Community of the Basque Country, 48970, Spain",
+        "road": "BI-625",
+        "house_number": null,
+        "neighbourhood": "Urbi",
+        "suburb": "Ariz",
+        "city_district": null,
+        "city": "Basauri",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48970",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-625, Basauri, Autonomous Community of the Basque Country, Spain"
+    },
+    {
+      "lat": 43.19673489874369,
+      "lon": -2.8713971759064774,
+      "geoinfo": {
+        "display_name": "BI-3702, Moiordin-Barrondo, Burbustu-Altamira, Zaratamo, Biscay, Autonomous Community of the Basque Country, 48480, Spain",
+        "road": "BI-3702",
+        "house_number": null,
+        "neighbourhood": "Moiordin-Barrondo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Zaratamo",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-3702, Basauri, 48480 Autonomous Community of the Basque Country, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:48.467631+00:00",
+  "_kind": "geo_samples"
+}

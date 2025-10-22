@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pirmasens",
+  "geonameid": 2853574,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.19340653741615,
+      "lon": 7.573266157984398,
+      "geoinfo": {
+        "display_name": "Am Hollerstock, Winzeln, Pirmasens, Rhineland-Palatinate, 66954, Germany",
+        "road": "Am Hollerstock",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Winzeln",
+        "city_district": null,
+        "city": "Pirmasens",
+        "state": "Rhineland-Palatinate",
+        "postcode": "66954",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Hollerstock, Pirmasens, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.17916817068204,
+      "lon": 7.584105473705491,
+      "geoinfo": {
+        "display_name": "14, Am Rehpfad, Niedersimten, Pirmasens, Rhineland-Palatinate, 66955, Germany",
+        "road": "Am Rehpfad",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Niedersimten",
+        "city_district": null,
+        "city": "Pirmasens",
+        "state": "Rhineland-Palatinate",
+        "postcode": "66955",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14, Am Rehpfad, Niedersimten, Pirmasens, Rhineland-Palatinate, 66955, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:20.624928+00:00",
+  "_kind": "geo_samples"
+}

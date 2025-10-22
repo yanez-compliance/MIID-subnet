@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Maria",
+  "geonameid": 5393180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.93261087989985,
+      "lon": -120.45215921908274,
+      "geoinfo": {
+        "display_name": "Battles Road, Santa Maria, Santa Barbara County, California, 93548, United States",
+        "road": "Battles Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Maria",
+        "state": "California",
+        "postcode": "93548",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Battles Road, Santa Maria, California, United States"
+    },
+    {
+      "lat": 34.946580594097306,
+      "lon": -120.4148397757237,
+      "geoinfo": {
+        "display_name": "1327, Estes Drive, Santa Maria, Santa Barbara County, California, 93454, United States",
+        "road": "Estes Drive",
+        "house_number": "1327",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Maria",
+        "state": "California",
+        "postcode": "93454",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1327, Estes Drive, Santa Maria, Santa Barbara County, California, 93454, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:51.208383+00:00",
+  "_kind": "geo_samples"
+}

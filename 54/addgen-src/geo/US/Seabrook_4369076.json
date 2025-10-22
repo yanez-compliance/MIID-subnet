@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seabrook",
+  "geonameid": 4369076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.980181006487,
+      "lon": -76.830285031529,
+      "geoinfo": {
+        "display_name": "10127, Lanham Severn Road, Brookland, Seabrook Acres, Glenn Dale, Prince George's County, Maryland, 20706, United States",
+        "road": "Lanham Severn Road",
+        "house_number": "10127",
+        "neighbourhood": "Brookland",
+        "suburb": null,
+        "city_district": null,
+        "city": "Glenn Dale",
+        "state": "Maryland",
+        "postcode": "20706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10127 Lanham Severn Road, Seabrook, Maryland, United States"
+    },
+    {
+      "lat": 38.9811380225412,
+      "lon": -76.85446471643832,
+      "geoinfo": {
+        "display_name": "6701, Cipriano Road, Hynesboro, Lanham, Prince George's County, Maryland, 20706, United States",
+        "road": "Cipriano Road",
+        "house_number": "6701",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lanham",
+        "state": "Maryland",
+        "postcode": "20706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6701, Cipriano Road, Hynesboro, Lanham, Prince George's County, Maryland, 20706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:20.385532+00:00",
+  "_kind": "geo_samples"
+}

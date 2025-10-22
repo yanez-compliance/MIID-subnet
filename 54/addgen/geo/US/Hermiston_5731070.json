@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hermiston",
+  "geonameid": 5731070,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.81587639155131,
+      "lon": -119.29299676146523,
+      "geoinfo": {
+        "display_name": "South 1st Street, Hermiston, Umatilla County, Oregon, 97838, United States",
+        "road": "South 1st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hermiston",
+        "state": "Oregon",
+        "postcode": "97838",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South 1st Street, Hermiston, Oregon, United States"
+    },
+    {
+      "lat": 45.871475216931614,
+      "lon": -119.26832411116285,
+      "geoinfo": {
+        "display_name": "31192, Joy Lane, Hermiston, Umatilla County, Oregon, 97838, United States",
+        "road": "Joy Lane",
+        "house_number": "31192",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hermiston",
+        "state": "Oregon",
+        "postcode": "97838",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31192, Joy Lane, Hermiston, Umatilla County, Oregon, 97838, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:56.624210+00:00",
+  "_kind": "geo_samples"
+}

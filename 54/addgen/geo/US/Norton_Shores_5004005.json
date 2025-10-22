@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norton Shores",
+  "geonameid": 5004005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.18365032076469,
+      "lon": -86.2246490777719,
+      "geoinfo": {
+        "display_name": "Seaway Drive, Norton Shores, Muskegon County, Michigan, 49444, United States",
+        "road": "Seaway Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norton Shores",
+        "state": "Michigan",
+        "postcode": "49444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seaway Drive, Norton Shores, Michigan, United States"
+    },
+    {
+      "lat": 43.177959203488776,
+      "lon": -86.26137343519925,
+      "geoinfo": {
+        "display_name": "Ranch Drive, Norton Shores, Muskegon County, Michigan, 49441, United States",
+        "road": "Ranch Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norton Shores",
+        "state": "Michigan",
+        "postcode": "49441",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "023, Ranch Drive, Norton Shores, Muskegon County, Michigan, 49441, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:53.933501+00:00",
+  "_kind": "geo_samples"
+}

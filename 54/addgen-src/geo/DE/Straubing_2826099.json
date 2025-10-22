@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Straubing",
+  "geonameid": 2826099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.91358595948219,
+      "lon": 12.546914973870537,
+      "geoinfo": {
+        "display_name": "Breitenfeld, Straubing, Bavaria, 94315, Germany",
+        "road": "Breitenfeld",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bavaria",
+        "postcode": "94315",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Breitenfeld, Straubing, Bavaria, Germany"
+    },
+    {
+      "lat": 48.872723691417136,
+      "lon": 12.54180097693876,
+      "geoinfo": {
+        "display_name": "5, Herzog-Johann-Straße, Am Kronsteig, Alburg, Straubing, Bavaria, 94315, Germany",
+        "road": "Herzog-Johann-Straße",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Alburg",
+        "city_district": null,
+        "city": "Straubing",
+        "state": "Bavaria",
+        "postcode": "94315",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Herzog-Johann-Straße, Am Kronsteig, Alburg, Straubing, Bavaria, 94315, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:03.888842+00:00",
+  "_kind": "geo_samples"
+}

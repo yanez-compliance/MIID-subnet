@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Benito Juárez",
+  "geonameid": 6957079,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.373385514609115,
+      "lon": -99.16745062464247,
+      "geoinfo": {
+        "display_name": "Starbucks, 1357, Gabriel Mancera, Colonia Del Valle Centro, Mexico City, Benito Juárez, Mexico City, 03104, Mexico",
+        "road": "Gabriel Mancera",
+        "house_number": "1357",
+        "neighbourhood": "Colonia Del Valle Centro",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "03104",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "1357 Gabriel Mancera, Benito Juárez, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.416080022587686,
+      "lon": -99.16771850621714,
+      "geoinfo": {
+        "display_name": "23, Avenida Amsterdam, Hipódromo, Mexico City, Cuauhtémoc, Mexico City, 06100, Mexico",
+        "road": "Avenida Amsterdam",
+        "house_number": "23",
+        "neighbourhood": "Hipódromo",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "06100",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "23, Avenida Amsterdam, Hipódromo, Mexico City, Cuauhtémoc, Mexico City, 06100, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:56.979004+00:00",
+  "_kind": "geo_samples"
+}

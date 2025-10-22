@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Maicao",
+  "geonameid": 3675657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.387982289948814,
+      "lon": -72.20778058997612,
+      "geoinfo": {
+        "display_name": "San Felipe, Maicao, La Guajira, 442001, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Felipe",
+        "state": "La Guajira",
+        "postcode": "442001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Maicao, La Guajira, Colombia"
+    },
+    {
+      "lat": 11.345044399572208,
+      "lon": -72.20909760719482,
+      "geoinfo": {
+        "display_name": "Chichituy, Maicao, La Guajira, 442001, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chichituy",
+        "state": "La Guajira",
+        "postcode": "442001",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "106, Chichituy, Maicao, La Guajira, 442001, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:12.758521+00:00",
+  "_kind": "geo_samples"
+}

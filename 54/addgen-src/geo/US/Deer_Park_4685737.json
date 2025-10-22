@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Deer Park",
+  "geonameid": 4685737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.6965392718744,
+      "lon": -95.12825907942373,
+      "geoinfo": {
+        "display_name": "Youth Sports Complex, West X Street, Deer Park, Harris County, Texas, 77536, United States",
+        "road": "West X Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deer Park",
+        "state": "Texas",
+        "postcode": "77536",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West X Street, Deer Park, Texas, United States"
+    },
+    {
+      "lat": 29.727577491113397,
+      "lon": -95.16267601384409,
+      "geoinfo": {
+        "display_name": "Ethyl Corp Road, Pasadena, Harris County, Texas, 75536, United States",
+        "road": "Ethyl Corp Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pasadena",
+        "state": "Texas",
+        "postcode": "75536",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "144, Ethyl Corp Road, Pasadena, Harris County, Texas, 75536, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:47.051716+00:00",
+  "_kind": "geo_samples"
+}

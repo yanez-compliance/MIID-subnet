@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Lanaken",
+  "geonameid": 2793446,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.90837151014624,
+      "lon": 5.6364352833492575,
+      "geoinfo": {
+        "display_name": "Jocomo-Parc, 1, Maastrichterweg, Lanaken, Tongeren, Limburg, Flanders, 3620, Belgium",
+        "road": "Maastrichterweg",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lanaken",
+        "city": "Lanaken",
+        "state": "Limburg",
+        "postcode": "3620",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1 Maastrichterweg, Lanaken, Limburg, Belgium"
+    },
+    {
+      "lat": 50.935249967252496,
+      "lon": 5.6474481460994665,
+      "geoinfo": {
+        "display_name": "Daalbroekstraat, Rekem, Lanaken, Tongeren, Limburg, 3621, Belgium",
+        "road": "Daalbroekstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lanaken",
+        "state": "Limburg",
+        "postcode": "3621",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "770, Daalbroekstraat, Rekem, Lanaken, Tongeren, Limburg, 3621, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:06.038274+00:00",
+  "_kind": "geo_samples"
+}

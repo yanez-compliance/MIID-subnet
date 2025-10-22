@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Qaşşāşīn",
+  "geonameid": 360577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.57570331168258,
+      "lon": 31.92491643234087,
+      "geoinfo": {
+        "display_name": "Eastern, 41642, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Eastern",
+        "postcode": "41642",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Qaşşāşīn, Eastern, Egypt"
+    },
+    {
+      "lat": 30.59814760778055,
+      "lon": 31.932719748469705,
+      "geoinfo": {
+        "display_name": "Eastern, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Eastern",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "850, Al Qaşşāşīn, 29077 Eastern, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:45.505627+00:00",
+  "_kind": "geo_samples"
+}

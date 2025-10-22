@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Likhobory",
+  "geonameid": 535270,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.872361738393046,
+      "lon": 37.54981886860846,
+      "geoinfo": {
+        "display_name": "90 к1, Дмитровское шоссе, Beskudnikovsky District, Moscow, Central Federal District, 127247, Russia",
+        "road": "Дмитровское шоссе",
+        "house_number": "90 к1",
+        "neighbourhood": null,
+        "suburb": "Beskudnikovsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "127247",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "90 к1 Дмитровское шоссе, Likhobory, Moscow, Russia"
+    },
+    {
+      "lat": 55.81655455249417,
+      "lon": 37.60674695122711,
+      "geoinfo": {
+        "display_name": "Ostankinsky District, Moscow, Central Federal District, 127474, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ostankinsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "127474",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "136, Ostankinsky District, Moscow, Central Federal District, 127474, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:51.680504+00:00",
+  "_kind": "geo_samples"
+}

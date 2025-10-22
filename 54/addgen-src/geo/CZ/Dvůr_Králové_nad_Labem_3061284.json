@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Dvůr Králové nad Labem",
+  "geonameid": 3061284,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.44815964492549,
+      "lon": 15.856695733157926,
+      "geoinfo": {
+        "display_name": "37, Kocbeře, okres Trutnov, Hradec Králové Region, Northeast, 544 64, Czechia",
+        "road": "37",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kocbeře",
+        "city_district": null,
+        "city": "Kocbeře",
+        "state": "Northeast",
+        "postcode": "544 64",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "37, Dvůr Králové nad Labem, Northeast, Czechia"
+    },
+    {
+      "lat": 50.41441706584015,
+      "lon": 15.761844016575333,
+      "geoinfo": {
+        "display_name": "109, Doubravice, okres Trutnov, Hradec Králové Region, Northeast, 544 51, Czechia",
+        "road": null,
+        "house_number": "109",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Doubravice",
+        "state": "Northeast",
+        "postcode": "544 51",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "109, Doubravice, okres Trutnov, Hradec Králové Region, Northeast, 544 51, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:07:19.298078+00:00",
+  "_kind": "geo_samples"
+}

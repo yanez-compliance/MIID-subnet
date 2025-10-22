@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Damoujia",
+  "geonameid": 8668394,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.547889796188116,
+      "lon": 119.81867298776436,
+      "geoinfo": {
+        "display_name": "Cuijiaji, Pingdu City, Qingdao, Shandong, 266700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pingdu City",
+        "state": "Shandong",
+        "postcode": "266700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Damoujia, Shandong, China"
+    },
+    {
+      "lat": 36.548949273909784,
+      "lon": 119.75942455127861,
+      "geoinfo": {
+        "display_name": "Gaomi City, Weifang, Shandong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaomi City",
+        "state": "Shandong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "760, Gaomi City, Weifang, 49688 Shandong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:59:54.127934+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Donaustadt",
+  "geonameid": 11903636,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.249107404546244,
+      "lon": 16.440225771461602,
+      "geoinfo": {
+        "display_name": "Schrickgasse, KG Kagran, Donaustadt, Vienna, 1220, Austria",
+        "road": "Schrickgasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Kagran",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Schrickgasse, Donaustadt, Austria"
+    },
+    {
+      "lat": 48.24025217585985,
+      "lon": 16.436473793908917,
+      "geoinfo": {
+        "display_name": "12, Donaustadtstraße, KG Kagran, Donaustadt, Vienna, 1220, Austria",
+        "road": "Donaustadtstraße",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "KG Kagran",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "12 Donaustadtstraße, Donaustadt, Austria"
+    },
+    {
+      "lat": 48.20192511485864,
+      "lon": 16.47624022853402,
+      "geoinfo": {
+        "display_name": "17, Milanweg, KG Aspern, Donaustadt, Vienna, 1220, Austria",
+        "road": "Milanweg",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "KG Aspern",
+        "city_district": "Donaustadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1220",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "17, Milanweg, KG Aspern, Donaustadt, Vienna, 1220, Austria"
+    },
+    {
+      "lat": 48.203093498622195,
+      "lon": 16.414468278078367,
+      "geoinfo": {
+        "display_name": "Hauptallee, KG Leopoldstadt, Leopoldstadt, Vienna, 1020, Austria",
+        "road": "Hauptallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "KG Leopoldstadt",
+        "city_district": "Leopoldstadt",
+        "city": "Vienna",
+        "state": null,
+        "postcode": "1020",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "217, Hauptallee, KG Leopoldstadt, Leopoldstadt, Vienna, 1020, Austria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:28.219966+00:00",
+  "_kind": "geo_samples"
+}

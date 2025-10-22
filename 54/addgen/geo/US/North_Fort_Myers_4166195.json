@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Fort Myers",
+  "geonameid": 4166195,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.673070033947134,
+      "lon": -81.86101543371521,
+      "geoinfo": {
+        "display_name": "Adam Drive, Old Bridge Village, North Fort Myers, Lee County, Florida, 33917, United States",
+        "road": "Adam Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Fort Myers",
+        "state": "Florida",
+        "postcode": "33917",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Adam Drive, North Fort Myers, Florida, United States"
+    },
+    {
+      "lat": 26.627001098312743,
+      "lon": -81.86756097026547,
+      "geoinfo": {
+        "display_name": "2230, Katherine Street, Fort Myers, Lee County, Florida, 33901, United States",
+        "road": "Katherine Street",
+        "house_number": "2230",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Myers",
+        "state": "Florida",
+        "postcode": "33901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2230, Katherine Street, Fort Myers, Lee County, Florida, 33901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:56.986828+00:00",
+  "_kind": "geo_samples"
+}

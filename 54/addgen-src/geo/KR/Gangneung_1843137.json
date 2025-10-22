@@ -1,0 +1,47 @@
+{
+  "country_code": "KR",
+  "country": "South Korea",
+  "city": "Gangneung",
+  "geonameid": 1843137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.751815155009304,
+      "lon": 128.8249292913089,
+      "geoinfo": {
+        "display_name": "Gwaneum-ri, Gangneung-si, Gangwon State, 25448, South Korea",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gangneung-si",
+        "state": null,
+        "postcode": "25448",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Gangneung, South Korea"
+    },
+    {
+      "lat": 37.76720995157461,
+      "lon": 128.8991452333773,
+      "geoinfo": {
+        "display_name": "Myeongnyun-ro 83beon-gil, Gyo 2(i)-dong, Gangneung-si, Gangwon State, 25489, South Korea",
+        "road": "Myeongnyun-ro 83beon-gil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gyo 2(i)-dong",
+        "city": "Gangneung-si",
+        "state": null,
+        "postcode": "25489",
+        "country": "South Korea",
+        "country_code": "kr"
+      },
+      "address": "Myeongnyun-ro 83beon-gil, 25489 Gangneung, South Korea"
+    }
+  ],
+  "updated_at": "2025-10-19T07:54:11.896048+00:00",
+  "_kind": "geo_samples"
+}

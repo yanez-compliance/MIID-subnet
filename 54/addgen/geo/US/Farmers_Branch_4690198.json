@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Farmers Branch",
+  "geonameid": 4690198,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.95936568239555,
+      "lon": -96.91474541704778,
+      "geoinfo": {
+        "display_name": "1467, I 35E TEXpress, Carrollton, Dallas County, Texas, 75006, United States",
+        "road": "I 35E TEXpress",
+        "house_number": "1467",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrollton",
+        "state": "Texas",
+        "postcode": "75006",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1467 I 35E TEXpress, Farmers Branch, Texas, United States"
+    },
+    {
+      "lat": 32.89912496101274,
+      "lon": -96.93805303361894,
+      "geoinfo": {
+        "display_name": "6604, Deseo, Irving, Dallas County, Texas, 75039, United States",
+        "road": "Deseo",
+        "house_number": "6604",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Irving",
+        "state": "Texas",
+        "postcode": "75039",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6604, Deseo, Irving, Dallas County, Texas, 75039, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:51.866660+00:00",
+  "_kind": "geo_samples"
+}

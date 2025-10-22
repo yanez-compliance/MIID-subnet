@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kampung Manjoi",
+  "geonameid": 7473443,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.635012975670627,
+      "lon": 101.03500486898116,
+      "geoinfo": {
+        "display_name": "Jelapang, Ipoh, Kinta, Perak, 30020, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Jelapang",
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "30020",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jelapang, Kampung Manjoi, Perak, Malaysia"
+    },
+    {
+      "lat": 4.602414891870417,
+      "lon": 101.03742219503995,
+      "geoinfo": {
+        "display_name": "Ipoh-Lumut Highway, One Pertama, Ipoh, Kinta, Perak, 30100, Malaysia",
+        "road": "Ipoh-Lumut Highway",
+        "house_number": null,
+        "neighbourhood": "One Pertama",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ipoh",
+        "state": "Perak",
+        "postcode": "30100",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "149, Ipoh-Lumut Highway, One Pertama, Ipoh, Kinta, Perak, 30100, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:00.009156+00:00",
+  "_kind": "geo_samples"
+}

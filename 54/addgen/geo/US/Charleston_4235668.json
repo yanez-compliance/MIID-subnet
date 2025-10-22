@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Charleston",
+  "geonameid": 4235668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.473872083443645,
+      "lon": -88.22398140720586,
+      "geoinfo": {
+        "display_name": "Coles County, Illinois, 61920, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "61920",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Charleston, Illinois, United States"
+    },
+    {
+      "lat": 39.48603179474623,
+      "lon": -88.12098225243172,
+      "geoinfo": {
+        "display_name": "7992, Cub Lane, Coles County, Illinois, 61920, United States",
+        "road": "Cub Lane",
+        "house_number": "7992",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "61920",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7992, Cub Lane, Coles County, Illinois, 61920, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:49.888281+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Strasbourg",
+  "geonameid": 2973783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.557280276225576,
+      "lon": 7.694853938325948,
+      "geoinfo": {
+        "display_name": "Rue Maria Callas, Parc Club Les Tanneries, Lingolsheim, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67380, France",
+        "road": "Rue Maria Callas",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lingolsheim",
+        "state": "Grand Est",
+        "postcode": "67380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue Maria Callas, Strasbourg, Grand Est, France"
+    },
+    {
+      "lat": 48.569491231057604,
+      "lon": 7.700647750772421,
+      "geoinfo": {
+        "display_name": "20, Rue Joseph Hoerle, Montagne Verte, Eckbolsheim, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67201, France",
+        "road": "Rue Joseph Hoerle",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Montagne Verte",
+        "city_district": null,
+        "city": "Eckbolsheim",
+        "state": "Grand Est",
+        "postcode": "67201",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "20, Rue Joseph Hoerle, Montagne Verte, Eckbolsheim, Strasbourg, Bas-Rhin, Grand Est, Metropolitan France, 67201, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:16:10.915936+00:00",
+  "_kind": "geo_samples"
+}

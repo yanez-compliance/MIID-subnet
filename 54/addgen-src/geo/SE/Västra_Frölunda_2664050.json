@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Västra Frölunda",
+  "geonameid": 2664050,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 57.629703030529264,
+      "lon": 11.887452006177876,
+      "geoinfo": {
+        "display_name": "20, Rörviksgatan, Åkered, Näset, Sydväst, Gothenburg, Göteborgs Stad, Västra Götaland County, 421 63, Sweden",
+        "road": "Rörviksgatan",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Åkered",
+        "city_district": "Sydväst",
+        "city": "Gothenburg",
+        "state": null,
+        "postcode": "421 63",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "20 Rörviksgatan, Västra Frölunda, Sweden"
+    },
+    {
+      "lat": 57.63464082178043,
+      "lon": 11.915510663761841,
+      "geoinfo": {
+        "display_name": "Marholmsvägen, Krokegården, Askim, Sydväst, Gothenburg, Göteborgs Stad, Västra Götaland County, 436 45, Sweden",
+        "road": "Marholmsvägen",
+        "house_number": null,
+        "neighbourhood": "Krokegården",
+        "suburb": "Askim",
+        "city_district": "Sydväst",
+        "city": "Gothenburg",
+        "state": null,
+        "postcode": "436 45",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Marholmsvägen, Krokegården, Askim, Sydväst, Gothenburg, Göteborgs Stad, Västra Götaland County, 436 45, Sweden"
+    },
+    {
+      "lat": 57.65130228127508,
+      "lon": 11.899808578383984,
+      "geoinfo": {
+        "display_name": "7, Smyckegatan, Skattegården, Sydväst, Gothenburg, Göteborgs Stad, Västra Götaland County, 421 50, Sweden",
+        "road": "Smyckegatan",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": "Skattegården",
+        "city_district": "Sydväst",
+        "city": "Gothenburg",
+        "state": null,
+        "postcode": "421 50",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "7, Smyckegatan, Skattegården, Sydväst, Gothenburg, Göteborgs Stad, Västra Götaland County, 421 50, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:44.714443+00:00",
+  "_kind": "geo_samples"
+}

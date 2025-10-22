@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Asheville",
+  "geonameid": 4453066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.59379996512044,
+      "lon": -82.51903947642762,
+      "geoinfo": {
+        "display_name": "54, Wake Robin Way, Hawthorne, Haw Creek, Asheville, Buncombe County, North Carolina, 28805, United States",
+        "road": "Wake Robin Way",
+        "house_number": "54",
+        "neighbourhood": "Hawthorne",
+        "suburb": null,
+        "city_district": null,
+        "city": "Asheville",
+        "state": "North Carolina",
+        "postcode": "28805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "54 Wake Robin Way, Asheville, North Carolina, United States"
+    },
+    {
+      "lat": 35.56735736844519,
+      "lon": -82.58478900473197,
+      "geoinfo": {
+        "display_name": "Amboy Road, Pisgah View, West Asheville, Asheville, Buncombe County, North Carolina, 28806, United States",
+        "road": "Amboy Road",
+        "house_number": null,
+        "neighbourhood": "Pisgah View",
+        "suburb": "West Asheville",
+        "city_district": null,
+        "city": "Asheville",
+        "state": "North Carolina",
+        "postcode": "28806",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "967, Amboy Road, Pisgah View, West Asheville, Asheville, Buncombe County, North Carolina, 28806, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:59.800691+00:00",
+  "_kind": "geo_samples"
+}

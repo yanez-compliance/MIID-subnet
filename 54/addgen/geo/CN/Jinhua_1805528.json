@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Jinhua",
+  "geonameid": 1805528,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.14966135585039,
+      "lon": 119.65301069172261,
+      "geoinfo": {
+        "display_name": "芙峰街, 下裴, Wucheng District, Jinhua, Zhejiang, 321004, China",
+        "road": "芙峰街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wucheng District",
+        "state": "Zhejiang",
+        "postcode": "321004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "芙峰街, Jinhua, Zhejiang, China"
+    },
+    {
+      "lat": 29.13143186604929,
+      "lon": 119.64457783725408,
+      "geoinfo": {
+        "display_name": "绿城御园, Xinshi, Wucheng District, Jinhua, Zhejiang, 321004, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xinshi",
+        "city_district": null,
+        "city": "Wucheng District",
+        "state": "Zhejiang",
+        "postcode": "321004",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "126, 绿城御园, Xinshi, Wucheng District, Jinhua, Zhejiang, 321004, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:35.070865+00:00",
+  "_kind": "geo_samples"
+}

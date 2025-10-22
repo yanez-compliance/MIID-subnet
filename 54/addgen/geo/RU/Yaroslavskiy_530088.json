@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Yaroslavskiy",
+  "geonameid": 530088,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.84770305374896,
+      "lon": 37.75871707838829,
+      "geoinfo": {
+        "display_name": "Moscow, Central Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Yaroslavskiy, Moscow, Russia"
+    },
+    {
+      "lat": 55.92682916923131,
+      "lon": 37.73538447186192,
+      "geoinfo": {
+        "display_name": "Ядреево, Mytishchi, Mytishchi Urban Okrug, Moscow Oblast, Central Federal District, 141008, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ядреево",
+        "city_district": null,
+        "city": "Mytishchi",
+        "state": "Moscow Oblast",
+        "postcode": "141008",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "979, Ядреево, Mytishchi, Mytishchi Urban Okrug, Moscow Oblast, Central Federal District, 141008, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:04.470380+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Tala",
+  "geonameid": 3982616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.67884024028923,
+      "lon": -103.71502017670319,
+      "geoinfo": {
+        "display_name": "Tala, Región Valles, Jalisco, 45300, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tala",
+        "state": "Jalisco",
+        "postcode": "45300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Tala, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.6639301807555,
+      "lon": -103.69834743670384,
+      "geoinfo": {
+        "display_name": "Andador del Músico, Tala, Región Valles, Jalisco, 45300, Mexico",
+        "road": "Andador del Músico",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tala",
+        "state": "Jalisco",
+        "postcode": "45300",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "839, Andador del Músico, Tala, Región Valles, Jalisco, 45300, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:27.976797+00:00",
+  "_kind": "geo_samples"
+}

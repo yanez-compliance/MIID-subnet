@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Bougara",
+  "geonameid": 2503147,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.51440861714247,
+      "lon": 3.078524775926126,
+      "geoinfo": {
+        "display_name": "Cité 200 Logts, Tahamoult, Hammam Melouane, Bougara District, Blida, 09350, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tahamoult",
+        "state": "Blida",
+        "postcode": "09350",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Bougara, Blida, Algeria"
+    },
+    {
+      "lat": 36.53139967696163,
+      "lon": 3.045936483650059,
+      "geoinfo": {
+        "display_name": "RN 29, Tabainet, Chebli, Bouïnian District, Blida, 09008, Algeria",
+        "road": "RN 29",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chebli",
+        "state": "Blida",
+        "postcode": "09008",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 29, Tabainet, Chebli, Bouïnian District, Blida, 09008, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:08.034508+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Akihabara",
+  "geonameid": 11790367,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.705543148448996,
+      "lon": 139.77273574139576,
+      "geoinfo": {
+        "display_name": "Ueno 3-chome, Ueno, Taito, Tokyo, 110-0005, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Ueno 3-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Taito",
+        "state": null,
+        "postcode": "110-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Ueno 3-chome, Akihabara, Japan"
+    },
+    {
+      "lat": 35.7076771534618,
+      "lon": 139.8232393683326,
+      "geoinfo": {
+        "display_name": "Bunka 1, Bunka, Sumida, Tokyo, 131-0044, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bunka 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sumida",
+        "state": null,
+        "postcode": "131-0044",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Bunka 1, Bunka, Sumida, Tokyo, 131-0044, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:34.719912+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Thodiyoor",
+  "geonameid": 13353539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 9.069261882672123,
+      "lon": 76.58363801617385,
+      "geoinfo": {
+        "display_name": "Kunnathur, Kollam, Kerala, 690519, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kerala",
+        "postcode": "690519",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Thodiyoor, Kerala, India"
+    },
+    {
+      "lat": 9.106617317729322,
+      "lon": 76.58953011327347,
+      "geoinfo": {
+        "display_name": "Pavumba, Karunagappally, Kollam, Kerala, 690574, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pavumba",
+        "state": "Kerala",
+        "postcode": "690574",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "000, Pavumba, Karunagappally, Kollam, Kerala, 690574, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:43.326139+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Buckingham",
+  "geonameid": 6942645,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.560499283250444,
+      "lon": -75.44682457209893,
+      "geoinfo": {
+        "display_name": "438, Chemin Foucault, Buckingham, Gatineau, Les Collines-de-l'Outaouais, Outaouais, Quebec, J8L 1X4, Canada",
+        "road": "Chemin Foucault",
+        "house_number": "438",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gatineau",
+        "state": "Quebec",
+        "postcode": "J8L 1X4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "438 Chemin Foucault, Buckingham, Quebec, Canada"
+    },
+    {
+      "lat": 45.61183326900389,
+      "lon": -75.41293040931926,
+      "geoinfo": {
+        "display_name": "L'Ange-Gardien, Les Collines-de-l'Outaouais, Outaouais, Quebec, J8L 1A3, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "L'Ange-Gardien",
+        "state": "Quebec",
+        "postcode": "J8L 1A3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "L'Ange-Gardien, Les Collines-de-l'Outaouais, Outaouais, Quebec, J8L 1A3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:46.901746+00:00",
+  "_kind": "geo_samples"
+}

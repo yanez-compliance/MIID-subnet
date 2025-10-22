@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Dachau",
+  "geonameid": 2939623,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.25987700307259,
+      "lon": 11.485634174574553,
+      "geoinfo": {
+        "display_name": "St 2063, Fraunhoferstraße, Unteraugustenfeld, Dachau, Landkreis Dachau, Bavaria, 85221, Germany",
+        "road": "Fraunhoferstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Unteraugustenfeld",
+        "city_district": null,
+        "city": "Dachau",
+        "state": "Bavaria",
+        "postcode": "85221",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Fraunhoferstraße, Dachau, Bavaria, Germany"
+    },
+    {
+      "lat": 48.242595668082785,
+      "lon": 11.380161916712982,
+      "geoinfo": {
+        "display_name": "Brucker Straße, Feldgeding, Bergkirchen, Landkreis Dachau, Bavaria, 85232, Germany",
+        "road": "Brucker Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Feldgeding",
+        "state": "Bavaria",
+        "postcode": "85232",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "484, Brucker Straße, Feldgeding, Bergkirchen, Landkreis Dachau, Bavaria, 85232, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:11.944013+00:00",
+  "_kind": "geo_samples"
+}

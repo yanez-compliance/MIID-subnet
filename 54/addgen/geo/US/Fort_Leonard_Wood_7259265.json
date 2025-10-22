@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Leonard Wood",
+  "geonameid": 7259265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.68848379580164,
+      "lon": -92.18573962371798,
+      "geoinfo": {
+        "display_name": "Bloodland, Pulaski County, Missouri, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fort Leonard Wood, Missouri, United States"
+    },
+    {
+      "lat": 37.73130132472296,
+      "lon": -92.14269402671462,
+      "geoinfo": {
+        "display_name": "Iowa Avenue, Bloodland, Pulaski County, Missouri, 65473, United States",
+        "road": "Iowa Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Missouri",
+        "postcode": "65473",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "456, Iowa Avenue, Bloodland, Pulaski County, Missouri, 65473, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:23.910819+00:00",
+  "_kind": "geo_samples"
+}

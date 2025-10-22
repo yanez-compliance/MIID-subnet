@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woodrow",
+  "geonameid": 5145034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.50448679914917,
+      "lon": -74.17744970496723,
+      "geoinfo": {
+        "display_name": "Staten Island, Richmond County, New York, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Staten Island, Woodrow, New York, United States"
+    },
+    {
+      "lat": 40.525476811310206,
+      "lon": -74.14018090274692,
+      "geoinfo": {
+        "display_name": "Beach Patrol Road, Staten Island, Richmond County, New York, 10308, United States",
+        "road": "Beach Patrol Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Staten Island",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10308",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "852, Beach Patrol Road, Staten Island, Richmond County, New York, 10308, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:59.413466+00:00",
+  "_kind": "geo_samples"
+}

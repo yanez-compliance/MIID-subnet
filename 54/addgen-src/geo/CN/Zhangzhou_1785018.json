@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhangzhou",
+  "geonameid": 1785018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.550335781899275,
+      "lon": 117.64536872259225,
+      "geoinfo": {
+        "display_name": "Zhangzhou, Xiangcheng District, Zhangzhou City, Fujian, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhangzhou",
+        "state": "Fujian",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhangzhou, Fujian, China"
+    },
+    {
+      "lat": 24.515948774533896,
+      "lon": 117.69079460826127,
+      "geoinfo": {
+        "display_name": "G324, Buwen Subdistrict, Longwen, Longwen District, Zhangzhou City, Fujian, 363005, China",
+        "road": "G324",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Buwen Subdistrict",
+        "city_district": null,
+        "city": "Longwen",
+        "state": "Fujian",
+        "postcode": "363005",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G324, Buwen Subdistrict, Longwen, Longwen District, Zhangzhou City, Fujian, 363005, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:40.840849+00:00",
+  "_kind": "geo_samples"
+}

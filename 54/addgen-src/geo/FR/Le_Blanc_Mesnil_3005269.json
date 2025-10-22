@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Le Blanc-Mesnil",
+  "geonameid": 3005269,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.97889278179919,
+      "lon": 2.4441802264103836,
+      "geoinfo": {
+        "display_name": "D 170, Gonesse, Sarcelles, Val-d'Oise, Metropolitan France, 95500, France",
+        "road": "D 170",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gonesse",
+        "state": null,
+        "postcode": "95500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "D 170, Le Blanc-Mesnil, France"
+    },
+    {
+      "lat": 48.953676056864516,
+      "lon": 2.41025914703067,
+      "geoinfo": {
+        "display_name": "Dugny, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93440, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dugny",
+        "state": null,
+        "postcode": "93440",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "320, Dugny, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93440, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:01.796685+00:00",
+  "_kind": "geo_samples"
+}

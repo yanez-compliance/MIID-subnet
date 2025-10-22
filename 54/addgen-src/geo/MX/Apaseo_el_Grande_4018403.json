@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Apaseo el Grande",
+  "geonameid": 4018403,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.56680820663227,
+      "lon": -100.7164570136783,
+      "geoinfo": {
+        "display_name": "El Carmen, San Miguel Octopan, Celaya, Guanajuato, 38130, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Octopan",
+        "state": "Guanajuato",
+        "postcode": "38130",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Apaseo el Grande, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.53123542897073,
+      "lon": -100.71532625247582,
+      "geoinfo": {
+        "display_name": "MEX 45, La Labor, Apaseo el Grande, Guanajuato, 38196, Mexico",
+        "road": "MEX 45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Apaseo el Grande",
+        "state": "Guanajuato",
+        "postcode": "38196",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "MEX 45, La Labor, Apaseo el Grande, Guanajuato, 38196, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:16.418493+00:00",
+  "_kind": "geo_samples"
+}

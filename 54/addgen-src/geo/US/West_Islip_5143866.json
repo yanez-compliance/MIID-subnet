@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Islip",
+  "geonameid": 5143866,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70643985412673,
+      "lon": -73.29263879982415,
+      "geoinfo": {
+        "display_name": "773, Pease Lane, West Islip, Town of Islip, Suffolk County, New York, 11795, United States",
+        "road": "Pease Lane",
+        "house_number": "773",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Islip",
+        "state": "New York",
+        "postcode": "11795",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "773 Pease Lane, West Islip, New York, United States"
+    },
+    {
+      "lat": 40.70413845306156,
+      "lon": -73.25424104591376,
+      "geoinfo": {
+        "display_name": "31, Bayway Avenue, Village of Brightwaters, Town of Islip, Suffolk County, New York, 11706, United States",
+        "road": "Bayway Avenue",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Islip",
+        "state": "New York",
+        "postcode": "11706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "31, Bayway Avenue, Village of Brightwaters, Town of Islip, Suffolk County, New York, 11706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:44.152564+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huejotzingo",
+  "geonameid": 3526953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.137369147250812,
+      "lon": -98.40262292052125,
+      "geoinfo": {
+        "display_name": "Las Huertas, Huejotzingo, Puebla, 74160, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huejotzingo",
+        "state": "Puebla",
+        "postcode": "74160",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huejotzingo, Puebla, Mexico"
+    },
+    {
+      "lat": 19.178761671339913,
+      "lon": -98.44432455455858,
+      "geoinfo": {
+        "display_name": "Benito Juarez, Benito Juárez, San Luis Coyotzingo, Huejotzingo, Puebla, 74165, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Benito Juarez",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Luis Coyotzingo",
+        "state": "Puebla",
+        "postcode": "74165",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "108, Benito Juarez, Benito Juárez, San Luis Coyotzingo, Huejotzingo, Puebla, 74165, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:46.259908+00:00",
+  "_kind": "geo_samples"
+}

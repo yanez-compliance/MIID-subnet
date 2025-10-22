@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vologda",
+  "geonameid": 472459,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 59.25363088618852,
+      "lon": 39.87987204678106,
+      "geoinfo": {
+        "display_name": "Ершовский переулок, Vologda, Vologda Oblast, Northwestern Federal District, 160530, Russia",
+        "road": "Ершовский переулок",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vologda",
+        "state": "Vologda Oblast",
+        "postcode": "160530",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Ершовский переулок, Vologda, Vologda Oblast, Russia"
+    },
+    {
+      "lat": 59.25278598527606,
+      "lon": 39.9024432819061,
+      "geoinfo": {
+        "display_name": "улица Чернышевского, Прилуки, Vologda, Vologda Oblast, Northwestern Federal District, 160019, Russia",
+        "road": "улица Чернышевского",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Прилуки",
+        "city_district": null,
+        "city": "Vologda",
+        "state": "Vologda Oblast",
+        "postcode": "160019",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "739, улица Чернышевского, Прилуки, Vologda, Vologda Oblast, Northwestern Federal District, 160019, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:00.558867+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waco",
+  "geonameid": 4739526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.506862956030613,
+      "lon": -97.15098838173289,
+      "geoinfo": {
+        "display_name": "WoodSpring Suites, South New Road, Waco, McLennan County, Texas, 76711, United States",
+        "road": "South New Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waco",
+        "state": "Texas",
+        "postcode": "76711",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South New Road, Waco, Texas, United States"
+    },
+    {
+      "lat": 31.56532703861516,
+      "lon": -97.10970845702327,
+      "geoinfo": {
+        "display_name": "951, South Price Street, Waco, McLennan County, Texas, 76704, United States",
+        "road": "South Price Street",
+        "house_number": "951",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waco",
+        "state": "Texas",
+        "postcode": "76704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "951, South Price Street, Waco, McLennan County, Texas, 76704, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:57.742977+00:00",
+  "_kind": "geo_samples"
+}

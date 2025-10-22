@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Musashimurayama",
+  "geonameid": 6822130,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.76697408450447,
+      "lon": 139.39050175608332,
+      "geoinfo": {
+        "display_name": "所沢武蔵村山立川線, Chuo 5, 大字勝楽寺, Musashimurayama, Tokorozawa, Saitama Prefecture, 208-0004, Japan",
+        "road": "所沢武蔵村山立川線",
+        "house_number": null,
+        "neighbourhood": "Chuo 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Musashimurayama",
+        "state": null,
+        "postcode": "208-0004",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "所沢武蔵村山立川線, Musashimurayama, Japan"
+    },
+    {
+      "lat": 35.766281339383404,
+      "lon": 139.44190982063483,
+      "geoinfo": {
+        "display_name": "Tamakocho 3, Tamakocho, Higashimurayama, Tokyo, 359-1145, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Tamakocho 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Higashimurayama",
+        "state": null,
+        "postcode": "359-1145",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tamakocho 3, Tamakocho, Higashimurayama, Tokyo, 359-1145, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:18.384370+00:00",
+  "_kind": "geo_samples"
+}

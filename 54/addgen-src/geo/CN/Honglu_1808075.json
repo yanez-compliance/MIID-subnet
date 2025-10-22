@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Honglu",
+  "geonameid": 1808075,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.341276214222397,
+      "lon": 105.71565512561965,
+      "geoinfo": {
+        "display_name": "S546, Honglu, Yongchuan District, Chongqing, China",
+        "road": "S546",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Honglu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S546, Honglu, Chongqing, China"
+    },
+    {
+      "lat": 29.350089300154842,
+      "lon": 105.69314598167784,
+      "geoinfo": {
+        "display_name": "Yongrong, Yongchuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yongrong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "577, Yongrong, Yongchuan District, 25100 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:35.493700+00:00",
+  "_kind": "geo_samples"
+}

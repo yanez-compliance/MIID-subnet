@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schkeuditz",
+  "geonameid": 2839050,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.417778952130426,
+      "lon": 12.25278853456129,
+      "geoinfo": {
+        "display_name": "Flughafenringstraße-Südost, Freiroda, Schkeuditz, Nordsachsen, Saxony, 04435, Germany",
+        "road": "Flughafenringstraße-Südost",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schkeuditz",
+        "state": "Saxony",
+        "postcode": "04435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Flughafenringstraße-Südost, Schkeuditz, Saxony, Germany"
+    },
+    {
+      "lat": 51.43441710663883,
+      "lon": 12.229835825831369,
+      "geoinfo": {
+        "display_name": "Flughafenringstraße-Nord, Ennewitz, Freiroda, Schkeuditz, Nordsachsen, Saxony, 04435, Germany",
+        "road": "Flughafenringstraße-Nord",
+        "house_number": null,
+        "neighbourhood": "Ennewitz",
+        "suburb": null,
+        "city_district": null,
+        "city": "Schkeuditz",
+        "state": "Saxony",
+        "postcode": "04435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "501, Flughafenringstraße-Nord, Ennewitz, Freiroda, Schkeuditz, Nordsachsen, Saxony, 04435, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:16.910951+00:00",
+  "_kind": "geo_samples"
+}

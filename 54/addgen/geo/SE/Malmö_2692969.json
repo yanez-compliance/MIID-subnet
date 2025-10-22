@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Malmö",
+  "geonameid": 2692969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.615030621553494,
+      "lon": 13.017828120237814,
+      "geoinfo": {
+        "display_name": "1, Borrgatan, Mellersta Hamnen, Norr, Malmö, Malmö kommun, Skåne County, 211 24, Sweden",
+        "road": "Borrgatan",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Mellersta Hamnen",
+        "city_district": "Norr",
+        "city": "Malmö",
+        "state": null,
+        "postcode": "211 24",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "1 Borrgatan, Malmö, Sweden"
+    },
+    {
+      "lat": 55.596806784196986,
+      "lon": 12.948453597724557,
+      "geoinfo": {
+        "display_name": "Ribersborgsstigen, Ribersborgsstranden, Innerstaden, Malmö, Malmö kommun, Skåne County, 213 44, Sweden",
+        "road": "Ribersborgsstigen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ribersborgsstranden",
+        "city_district": "Innerstaden",
+        "city": "Malmö",
+        "state": null,
+        "postcode": "213 44",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Ribersborgsstigen, Ribersborgsstranden, Innerstaden, Malmö, Malmö kommun, Skåne County, 213 44, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:03.146910+00:00",
+  "_kind": "geo_samples"
+}

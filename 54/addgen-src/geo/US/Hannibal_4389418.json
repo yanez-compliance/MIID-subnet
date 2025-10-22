@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hannibal",
+  "geonameid": 4389418,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.7360108158322,
+      "lon": -91.34303432696728,
+      "geoinfo": {
+        "display_name": "East Hannibal, Pike County, Illinois, 63401, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "63401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Hannibal, Illinois, United States"
+    },
+    {
+      "lat": 39.69041215115415,
+      "lon": -91.35097306380942,
+      "geoinfo": {
+        "display_name": "2093, Booker Street, Hannibal, Marion County, Missouri, 63401, United States",
+        "road": "Booker Street",
+        "house_number": "2093",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hannibal",
+        "state": "Missouri",
+        "postcode": "63401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2093, Booker Street, Hannibal, Marion County, Missouri, 63401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:59.833564+00:00",
+  "_kind": "geo_samples"
+}

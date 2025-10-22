@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Billerica",
+  "geonameid": 4930577,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.58949017781995,
+      "lon": -71.25761394645257,
+      "geoinfo": {
+        "display_name": "12, Greenmeadow Drive, Billerica, Middlesex County, Massachusetts, 01812, United States",
+        "road": "Greenmeadow Drive",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Billerica",
+        "state": "Massachusetts",
+        "postcode": "01812",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12 Greenmeadow Drive, Billerica, Massachusetts, United States"
+    },
+    {
+      "lat": 42.57429694387224,
+      "lon": -71.23902994597222,
+      "geoinfo": {
+        "display_name": "267, Andover Road, Billerica, Middlesex County, Massachusetts, 01812, United States",
+        "road": "Andover Road",
+        "house_number": "267",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Billerica",
+        "state": "Massachusetts",
+        "postcode": "01812",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "267, Andover Road, Billerica, Middlesex County, Massachusetts, 01812, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:44.070674+00:00",
+  "_kind": "geo_samples"
+}

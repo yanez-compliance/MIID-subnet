@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Strood",
+  "geonameid": 2636619,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.371583455087475,
+      "lon": 0.42013533140065185,
+      "geoinfo": {
+        "display_name": "Cuxton, Medway, England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cuxton",
+        "city_district": null,
+        "city": "Cuxton",
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cuxton, Strood, England, United Kingdom"
+    },
+    {
+      "lat": 51.42274204914113,
+      "lon": 0.4904720760282199,
+      "geoinfo": {
+        "display_name": "Town Road, Frindsbury Extra, Frindsbury, Medway, England, ME3 8ES, United Kingdom",
+        "road": "Town Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Frindsbury Extra",
+        "city_district": null,
+        "city": "Frindsbury",
+        "state": "England",
+        "postcode": "ME3 8ES",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Town Road, Frindsbury Extra, Frindsbury, Medway, England, ME3 8ES, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:48.828473+00:00",
+  "_kind": "geo_samples"
+}

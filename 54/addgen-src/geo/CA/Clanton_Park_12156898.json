@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Clanton Park",
+  "geonameid": 12156898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.729323576763164,
+      "lon": -79.4580913006912,
+      "geoinfo": {
+        "display_name": "3501, Dufferin Street, Clanton Park, York Centre, North York, Toronto, Golden Horseshoe, Ontario, M3K 1E4, Canada",
+        "road": "Dufferin Street",
+        "house_number": "3501",
+        "neighbourhood": "Clanton Park",
+        "suburb": null,
+        "city_district": "North York",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M3K 1E4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "3501 Dufferin Street, Clanton Park, Ontario, Canada"
+    },
+    {
+      "lat": 43.69907626697981,
+      "lon": -79.4395939662626,
+      "geoinfo": {
+        "display_name": "31, Marlee Avenue, Briar Hill-Belgravia, Eglinton—Lawrence, York, Toronto, Golden Horseshoe, Ontario, M6E 2N4, Canada",
+        "road": "Marlee Avenue",
+        "house_number": "31",
+        "neighbourhood": "Briar Hill-Belgravia",
+        "suburb": "York",
+        "city_district": null,
+        "city": "Toronto",
+        "state": "Ontario",
+        "postcode": "M6E 2N4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "31, Marlee Avenue, Briar Hill-Belgravia, Eglinton—Lawrence, York, Toronto, Golden Horseshoe, Ontario, M6E 2N4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:42.550007+00:00",
+  "_kind": "geo_samples"
+}

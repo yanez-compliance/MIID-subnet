@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Port Melbourne",
+  "geonameid": 2152658,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.841093625694775,
+      "lon": 144.91030576780278,
+      "geoinfo": {
+        "display_name": "Empress Road, Port of Melbourne, Port Melbourne, Melbourne, City of Melbourne, Victoria, 3207, Australia",
+        "road": "Empress Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Port Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3207",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Empress Road, Port Melbourne, Victoria, Australia"
+    },
+    {
+      "lat": -37.813216847044124,
+      "lon": 144.9242133382068,
+      "geoinfo": {
+        "display_name": "72, Appleton Dock Road, Port of Melbourne, West Melbourne, Melbourne, City of Melbourne, Victoria, 3003, Australia",
+        "road": "Appleton Dock Road",
+        "house_number": "72",
+        "neighbourhood": null,
+        "suburb": "West Melbourne",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3003",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "72, Appleton Dock Road, Port of Melbourne, West Melbourne, Melbourne, City of Melbourne, Victoria, 3003, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:20.458911+00:00",
+  "_kind": "geo_samples"
+}

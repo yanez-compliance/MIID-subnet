@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Ruislip",
+  "geonameid": 2638976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.58524095474212,
+      "lon": -0.4363260132876982,
+      "geoinfo": {
+        "display_name": "Bury Avenue, London Borough of Hillingdon, London, Greater London, England, HA4 7RT, United Kingdom",
+        "road": "Bury Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Hillingdon",
+        "city": "London",
+        "state": "England",
+        "postcode": "HA4 7RT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bury Avenue, Ruislip, England, United Kingdom"
+    },
+    {
+      "lat": 51.60424172292343,
+      "lon": -0.4166958628354674,
+      "geoinfo": {
+        "display_name": "Watkins Close, Northwood, London Borough of Hillingdon, London, Greater London, England, HA6 1HE, United Kingdom",
+        "road": "Watkins Close",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Northwood",
+        "city_district": "London Borough of Hillingdon",
+        "city": "London",
+        "state": "England",
+        "postcode": "HA6 1HE",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Watkins Close, Northwood, London Borough of Hillingdon, London, Greater London, England, HA6 1HE, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:40.909286+00:00",
+  "_kind": "geo_samples"
+}

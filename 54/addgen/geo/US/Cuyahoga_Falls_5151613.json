@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cuyahoga Falls",
+  "geonameid": 5151613,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.1500553811517,
+      "lon": -81.49420954453863,
+      "geoinfo": {
+        "display_name": "2853, 10th Street, Cuyahoga Falls, Summit County, Ohio, 44221, United States",
+        "road": "10th Street",
+        "house_number": "2853",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuyahoga Falls",
+        "state": "Ohio",
+        "postcode": "44221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2853 10th Street, Cuyahoga Falls, Ohio, United States"
+    },
+    {
+      "lat": 41.089158958220864,
+      "lon": -81.48617270786696,
+      "geoinfo": {
+        "display_name": "Home Avenue, Forest Hill, Akron, Summit County, Ohio, 44310, United States",
+        "road": "Home Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Akron",
+        "state": "Ohio",
+        "postcode": "44310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "006, Home Avenue, Forest Hill, Akron, Summit County, Ohio, 44310, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:44.511248+00:00",
+  "_kind": "geo_samples"
+}

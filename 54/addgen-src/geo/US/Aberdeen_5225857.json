@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aberdeen",
+  "geonameid": 5225857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.48654890881437,
+      "lon": -98.4498245710757,
+      "geoinfo": {
+        "display_name": "2710, Whisper Wind Drive, Aberdeen, Aberdeen Township, Brown County, South Dakota, 57401, United States",
+        "road": "Whisper Wind Drive",
+        "house_number": "2710",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aberdeen",
+        "state": "South Dakota",
+        "postcode": "57401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2710 Whisper Wind Drive, Aberdeen, South Dakota, United States"
+    },
+    {
+      "lat": 45.47057814364578,
+      "lon": -98.52021309779896,
+      "geoinfo": {
+        "display_name": "8th Avenue Northwest, Aberdeen, Aberdeen Township, Brown County, South Dakota, United States",
+        "road": "8th Avenue Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aberdeen",
+        "state": "South Dakota",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8th Avenue Northwest, Aberdeen, Aberdeen Township, Brown County, 11271 South Dakota, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:37.682239+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hampton",
+  "geonameid": 2647550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.379726894173366,
+      "lon": -0.35277962099156795,
+      "geoinfo": {
+        "display_name": "Station Road, Lower Green Esher, Esher, Elmbridge, Surrey, England, KT10 8DT, United Kingdom",
+        "road": "Station Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lower Green Esher",
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "KT10 8DT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Station Road, Hampton, England, United Kingdom"
+    },
+    {
+      "lat": 51.40566676836736,
+      "lon": -0.37994285596664906,
+      "geoinfo": {
+        "display_name": "Hurst Road, West Molesey, Molesey, Elmbridge, Surrey, England, KT8 1QT, United Kingdom",
+        "road": "Hurst Road",
+        "house_number": null,
+        "neighbourhood": "West Molesey",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmbridge",
+        "state": "England",
+        "postcode": "KT8 1QT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hurst Road, West Molesey, Molesey, Elmbridge, Surrey, England, KT8 1QT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:35.585766+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Blansko",
+  "geonameid": 3079273,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.40542031657305,
+      "lon": 16.662464516398455,
+      "geoinfo": {
+        "display_name": "ev.5, Karolín, Rájec-Jestřebí, okres Blansko, South Moravian Region, 679 02, Czechia",
+        "road": null,
+        "house_number": "ev.5",
+        "neighbourhood": null,
+        "suburb": "Karolín",
+        "city_district": null,
+        "city": "Rájec-Jestřebí",
+        "state": null,
+        "postcode": "679 02",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Karolín, Blansko, Czechia"
+    },
+    {
+      "lat": 49.33690738950168,
+      "lon": 16.662245522984158,
+      "geoinfo": {
+        "display_name": "396, Olomučany, okres Blansko, South Moravian Region, 679 03, Czechia",
+        "road": null,
+        "house_number": "396",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olomučany",
+        "state": null,
+        "postcode": "679 03",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "396, Olomučany, okres Blansko, South Moravian Region, 679 03, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T01:50:46.097460+00:00",
+  "_kind": "geo_samples"
+}

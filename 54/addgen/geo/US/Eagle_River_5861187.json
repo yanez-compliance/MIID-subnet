@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eagle River",
+  "geonameid": 5861187,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 61.281007098198266,
+      "lon": -149.5584148382696,
+      "geoinfo": {
+        "display_name": "Eagle River, Anchorage, Alaska, 99577, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Eagle River",
+        "city_district": null,
+        "city": "Anchorage",
+        "state": "Alaska",
+        "postcode": "99577",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Eagle River, Eagle River, Alaska, United States"
+    },
+    {
+      "lat": 61.31444462908249,
+      "lon": -149.48513556781958,
+      "geoinfo": {
+        "display_name": "10327, Stewart Drive, Anchorage, Alaska, 99577, United States",
+        "road": "Stewart Drive",
+        "house_number": "10327",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anchorage",
+        "state": "Alaska",
+        "postcode": "99577",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10327, Stewart Drive, Anchorage, Alaska, 99577, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:41.479498+00:00",
+  "_kind": "geo_samples"
+}

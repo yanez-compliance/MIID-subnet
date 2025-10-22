@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vallejo",
+  "geonameid": 5405380,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.12446393735691,
+      "lon": -122.23973370477873,
+      "geoinfo": {
+        "display_name": "156, Toyon Drive, Harry Floyd Terrace, Vallejo, Solano County, California, 94589, United States",
+        "road": "Toyon Drive",
+        "house_number": "156",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vallejo",
+        "state": "California",
+        "postcode": "94589",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "156 Toyon Drive, Vallejo, California, United States"
+    },
+    {
+      "lat": 38.12159738673787,
+      "lon": -122.22249961926451,
+      "geoinfo": {
+        "display_name": "Blue Rock Springs Cycleway, Hunter Ranch, Vallejo, Solano County, California, 94591, United States",
+        "road": "Blue Rock Springs Cycleway",
+        "house_number": null,
+        "neighbourhood": "Hunter Ranch",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vallejo",
+        "state": "California",
+        "postcode": "94591",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "855, Blue Rock Springs Cycleway, Hunter Ranch, Vallejo, Solano County, California, 94591, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:10.438236+00:00",
+  "_kind": "geo_samples"
+}

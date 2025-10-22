@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Bukit Bintang",
+  "geonameid": 11054399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.1515468561998112,
+      "lon": 101.74013464492334,
+      "geoinfo": {
+        "display_name": "Royal Selangor Polo Club, Lorong 5, Kampung Desa Pahlawan, Kampung Pandan, Kuala Lumpur, 68000, Malaysia",
+        "road": "Lorong 5",
+        "house_number": null,
+        "neighbourhood": "Kampung Desa Pahlawan",
+        "suburb": "Kampung Pandan",
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "68000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Lorong 5, Bukit Bintang, Kuala Lumpur, Malaysia"
+    },
+    {
+      "lat": 3.104422170561343,
+      "lon": 101.71232078809325,
+      "geoinfo": {
+        "display_name": "Villa Laman Tasik, Cheras, Kuala Lumpur, 51020, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cheras",
+        "city_district": null,
+        "city": null,
+        "state": "Kuala Lumpur",
+        "postcode": "51020",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "096, Villa Laman Tasik, Cheras, Kuala Lumpur, 51020, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:18:21.079395+00:00",
+  "_kind": "geo_samples"
+}

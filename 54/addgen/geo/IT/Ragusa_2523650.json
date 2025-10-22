@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ragusa",
+  "geonameid": 2523650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.91554981365553,
+      "lon": 14.722020648212892,
+      "geoinfo": {
+        "display_name": "Via Ducezio, Cappuccini, Selvaggio, Ragusa, Sicily, 97100, Italy",
+        "road": "Via Ducezio",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Selvaggio",
+        "city_district": null,
+        "city": "Ragusa",
+        "state": "Sicily",
+        "postcode": "97100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Ducezio, Ragusa, Sicily, Italy"
+    },
+    {
+      "lat": 36.91970710934903,
+      "lon": 14.691219165947963,
+      "geoinfo": {
+        "display_name": "Via Professor Giuseppe Maiolo, Pianetti, Ragusa, Sicily, 97100, Italy",
+        "road": "Via Professor Giuseppe Maiolo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pianetti",
+        "city_district": null,
+        "city": "Ragusa",
+        "state": "Sicily",
+        "postcode": "97100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "422, Via Professor Giuseppe Maiolo, Pianetti, Ragusa, Sicily, 97100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:41:33.811930+00:00",
+  "_kind": "geo_samples"
+}

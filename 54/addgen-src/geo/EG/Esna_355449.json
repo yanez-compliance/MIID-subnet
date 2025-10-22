@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Esna",
+  "geonameid": 355449,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.312610838756584,
+      "lon": 32.59669764060648,
+      "geoinfo": {
+        "display_name": "Qena, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Qena",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Esna, Qena, Egypt"
+    },
+    {
+      "lat": 25.2803777893115,
+      "lon": 32.519230384057735,
+      "geoinfo": {
+        "display_name": "Naj Buwayl, New Valley, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naj Buwayl",
+        "state": "New Valley",
+        "postcode": null,
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "531, Naj Buwayl, 70063 New Valley, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:53.632451+00:00",
+  "_kind": "geo_samples"
+}

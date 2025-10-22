@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ostend",
+  "geonameid": 2789786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.18608308945796,
+      "lon": 2.9513136187404223,
+      "geoinfo": {
+        "display_name": "33, Polder, Oudenburg, Ostend, West Flanders, 8460, Belgium",
+        "road": "Polder",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Oudenburg",
+        "city": "Oudenburg",
+        "state": "West Flanders",
+        "postcode": "8460",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "33 Polder, Ostend, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.24057913774773,
+      "lon": 2.9322117507848335,
+      "geoinfo": {
+        "display_name": "Spinoladijk, Ostend, West Flanders, Flanders, 8400, Belgium",
+        "road": "Spinoladijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ostend",
+        "city": "Ostend",
+        "state": "West Flanders",
+        "postcode": "8400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "632, Spinoladijk, Ostend, West Flanders, Flanders, 8400, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:46.122169+00:00",
+  "_kind": "geo_samples"
+}

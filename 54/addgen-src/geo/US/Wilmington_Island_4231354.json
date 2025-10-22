@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wilmington Island",
+  "geonameid": 4231354,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.97849666220785,
+      "lon": -80.95933343705015,
+      "geoinfo": {
+        "display_name": "Wilmington Island, Chatham County, Georgia, 31410, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilmington Island",
+        "state": "Georgia",
+        "postcode": "31410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Wilmington Island, Georgia, United States"
+    },
+    {
+      "lat": 32.009189892813204,
+      "lon": -80.96374809991333,
+      "geoinfo": {
+        "display_name": "Palmetto Bay Road, Woodridge Estates, Wilmington Island, Chatham County, Georgia, 31410, United States",
+        "road": "Palmetto Bay Road",
+        "house_number": null,
+        "neighbourhood": "Woodridge Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Wilmington Island",
+        "state": "Georgia",
+        "postcode": "31410",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "290, Palmetto Bay Road, Woodridge Estates, Wilmington Island, Chatham County, Georgia, 31410, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:06:24.209242+00:00",
+  "_kind": "geo_samples"
+}

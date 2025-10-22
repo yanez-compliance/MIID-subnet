@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Wondelgem",
+  "geonameid": 2783456,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.07915655900292,
+      "lon": 3.7159248817005173,
+      "geoinfo": {
+        "display_name": "123, Morekstraat, Wondelgem, Ghent, Gent, East Flanders, 9032, Belgium",
+        "road": "Morekstraat",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9032",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "123 Morekstraat, Wondelgem, East Flanders, Belgium"
+    },
+    {
+      "lat": 51.07547311107654,
+      "lon": 3.710100418462724,
+      "geoinfo": {
+        "display_name": "71, Lisbloemstraat, Bloemekenswijk, Ghent, Gent, East Flanders, 9000, Belgium",
+        "road": "Lisbloemstraat",
+        "house_number": "71",
+        "neighbourhood": "Bloemekenswijk",
+        "suburb": null,
+        "city_district": "Ghent",
+        "city": "Ghent",
+        "state": "East Flanders",
+        "postcode": "9000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "71, Lisbloemstraat, Bloemekenswijk, Ghent, Gent, East Flanders, 9000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:20.456840+00:00",
+  "_kind": "geo_samples"
+}

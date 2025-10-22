@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashland",
+  "geonameid": 4929283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.247967647177845,
+      "lon": -71.50189282850661,
+      "geoinfo": {
+        "display_name": "20, Fawn Ridge Road, Hopkinton, Middlesex County, Massachusetts, 01748, United States",
+        "road": "Fawn Ridge Road",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hopkinton",
+        "state": "Massachusetts",
+        "postcode": "01748",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20 Fawn Ridge Road, Ashland, Massachusetts, United States"
+    },
+    {
+      "lat": 42.25954940263814,
+      "lon": -71.51134644380795,
+      "geoinfo": {
+        "display_name": "Oval, Ashland, Middlesex County, Massachusetts, 01748, United States",
+        "road": "Oval",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashland",
+        "state": "Massachusetts",
+        "postcode": "01748",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "349, Oval, Ashland, Middlesex County, Massachusetts, 01748, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:55.455777+00:00",
+  "_kind": "geo_samples"
+}

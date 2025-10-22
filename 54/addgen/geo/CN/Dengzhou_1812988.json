@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dengzhou",
+  "geonameid": 1812988,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.79417377011212,
+      "lon": 120.75024870395367,
+      "geoinfo": {
+        "display_name": "南环路, Zijingshan, Penglai District, Yantai, Shandong, 264000, China",
+        "road": "南环路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zijingshan",
+        "city_district": null,
+        "city": "Penglai District",
+        "state": "Shandong",
+        "postcode": "264000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "南环路, Dengzhou, Shandong, China"
+    },
+    {
+      "lat": 37.81456145049893,
+      "lon": 120.76342183542852,
+      "geoinfo": {
+        "display_name": "北关路, Dengzhou, Penglai District, Yantai, Shandong, 264000, China",
+        "road": "北关路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dengzhou",
+        "city_district": null,
+        "city": "Penglai District",
+        "state": "Shandong",
+        "postcode": "264000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "326, 北关路, Dengzhou, Penglai District, Yantai, Shandong, 264000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:32.638353+00:00",
+  "_kind": "geo_samples"
+}

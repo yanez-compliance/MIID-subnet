@@ -1,0 +1,47 @@
+{
+  "country_code": "ML",
+  "country": "Mali",
+  "city": "Sangarébougou",
+  "geonameid": 12718651,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 12.737870819591189,
+      "lon": -7.932637822731173,
+      "geoinfo": {
+        "display_name": "Falayan, Kati Cercle, Koulikoro, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Falayan",
+        "state": "Koulikoro",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "Sangarébougou, Koulikoro, Mali"
+    },
+    {
+      "lat": 12.700662478862405,
+      "lon": -7.915926777562747,
+      "geoinfo": {
+        "display_name": "Seydoubougou, Sangarebougou, Kati Cercle, Koulikoro, Mali",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Seydoubougou",
+        "city_district": null,
+        "city": "Sangarebougou",
+        "state": "Koulikoro",
+        "postcode": null,
+        "country": "Mali",
+        "country_code": "ml"
+      },
+      "address": "Seydoubougou, Sangarébougou, Koulikoro, Mali"
+    }
+  ],
+  "updated_at": "2025-10-16T19:34:13.371843+00:00",
+  "_kind": "geo_samples"
+}

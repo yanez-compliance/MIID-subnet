@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Carlos",
+  "geonameid": 5391760,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.48610366321178,
+      "lon": -122.27896643946899,
+      "geoinfo": {
+        "display_name": "Oak Meadow Loop Trail, San Carlos, San Mateo County, California, 94070, United States",
+        "road": "Oak Meadow Loop Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Carlos",
+        "state": "California",
+        "postcode": "94070",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oak Meadow Loop Trail, San Carlos, California, United States"
+    },
+    {
+      "lat": 37.50269214961544,
+      "lon": -122.30655123066974,
+      "geoinfo": {
+        "display_name": "2577, Somerset Drive, Belmont, San Mateo County, California, 94002, United States",
+        "road": "Somerset Drive",
+        "house_number": "2577",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belmont",
+        "state": "California",
+        "postcode": "94002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2577, Somerset Drive, Belmont, San Mateo County, California, 94002, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:33.280471+00:00",
+  "_kind": "geo_samples"
+}

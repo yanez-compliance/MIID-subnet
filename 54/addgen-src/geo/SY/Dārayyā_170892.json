@@ -1,0 +1,47 @@
+{
+  "country_code": "SY",
+  "country": "Syria",
+  "city": "Dārayyā",
+  "geonameid": 170892,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 33.475926952379254,
+      "lon": 36.26378349486088,
+      "geoinfo": {
+        "display_name": "Lwan Neighbourhood, Kafr Sousa Municipality, Damascus Subdistrict, Damascus District, Damascus Governorate, Syria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lwan Neighbourhood",
+        "city_district": null,
+        "city": "Kafr Sousa Municipality",
+        "state": "Damascus Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "116, Lwan Neighbourhood, Kafr Sousa Municipality, Damascus Subdistrict, Damascus District, 70132 Damascus Governorate, Syria"
+    },
+    {
+      "lat": 33.474658264647346,
+      "lon": 36.199937263549415,
+      "geoinfo": {
+        "display_name": "7, Mu'adammiyat ash-Sham, Darayya Subdistrict, Darayya District, Rif Dimashq Governorate, Syria",
+        "road": "7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mu'adammiyat ash-Sham",
+        "state": "Rif Dimashq Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "7, Dārayyā, 86212 Rif Dimashq Governorate, Syria"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:10.314748+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Chrudim",
+  "geonameid": 3077539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.95883509957203,
+      "lon": 15.761853462929851,
+      "geoinfo": {
+        "display_name": "32236, Třibřichy, Markovice, Třibřichy, okres Chrudim, Pardubice Region, Northeast, 538 31, Czechia",
+        "road": "32236",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Třibřichy",
+        "city_district": null,
+        "city": "Markovice",
+        "state": "Northeast",
+        "postcode": "538 31",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "32236, Chrudim, Northeast, Czechia"
+    },
+    {
+      "lat": 49.92428121402422,
+      "lon": 15.780555293871647,
+      "geoinfo": {
+        "display_name": "Podhůra, Chrudim, okres Chrudim, Pardubice Region, Northeast, 537 03, Czechia",
+        "road": "Podhůra",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chrudim",
+        "city_district": null,
+        "city": "Chrudim",
+        "state": "Northeast",
+        "postcode": "537 03",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Podhůra, Chrudim, okres Chrudim, Pardubice Region, Northeast, 537 03, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:04.699852+00:00",
+  "_kind": "geo_samples"
+}

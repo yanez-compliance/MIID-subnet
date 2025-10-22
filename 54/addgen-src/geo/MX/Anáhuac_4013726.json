@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Anáhuac",
+  "geonameid": 4013726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.204693483826162,
+      "lon": -100.14606306304708,
+      "geoinfo": {
+        "display_name": "Anáhuac, Nuevo León, 65030, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nuevo León",
+        "postcode": "65030",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Anáhuac, Nuevo León, Mexico"
+    },
+    {
+      "lat": 27.25358240346269,
+      "lon": -100.1807361866464,
+      "geoinfo": {
+        "display_name": "Hospital, Anáhuac, Nuevo León, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anáhuac",
+        "state": "Nuevo León",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "319, Hospital, Anáhuac, 27482 Nuevo León, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:01.756948+00:00",
+  "_kind": "geo_samples"
+}

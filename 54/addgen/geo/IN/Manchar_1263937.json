@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Manchar",
+  "geonameid": 1263937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.00156620741837,
+      "lon": 73.90843602670726,
+      "geoinfo": {
+        "display_name": "Ambegaon, Pune District, Maharashtra, 410503, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "410503",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Manchar, Maharashtra, India"
+    },
+    {
+      "lat": 19.018384069072713,
+      "lon": 73.9560821110109,
+      "geoinfo": {
+        "display_name": "Manchar, Ambegaon, Pune District, Maharashtra, 410503, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manchar",
+        "state": "Maharashtra",
+        "postcode": "410503",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "141, Manchar, Ambegaon, Pune District, Maharashtra, 410503, India"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:45.876725+00:00",
+  "_kind": "geo_samples"
+}

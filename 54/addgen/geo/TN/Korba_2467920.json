@@ -1,0 +1,83 @@
+{
+  "country_code": "TN",
+  "country": "Tunisia",
+  "city": "Korba",
+  "geonameid": 2467920,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 36.5478764094459,
+      "lon": 10.871436269024093,
+      "geoinfo": {
+        "display_name": "Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "Korba, Tunisia"
+    },
+    {
+      "lat": 36.611788834289825,
+      "lon": 10.88436908627811,
+      "geoinfo": {
+        "display_name": "RR27, ديار الحجاج, معتمدية قربة, Nabeul, 8033, Tunisia",
+        "road": "RR27",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nabeul",
+        "postcode": "8033",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "RR27, ديار الحجاج, معتمدية قربة, Nabeul, 8033, Tunisia"
+    },
+    {
+      "lat": 36.610128394909694,
+      "lon": 10.868861682710138,
+      "geoinfo": {
+        "display_name": "Diar El Hojjej, ديار الحجاج, معتمدية قربة, Nabeul, 8033, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Diar El Hojjej",
+        "state": "Nabeul",
+        "postcode": "8033",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "843, Diar El Hojjej, ديار الحجاج, معتمدية قربة, Nabeul, 8033, Tunisia"
+    },
+    {
+      "lat": 36.58917818968938,
+      "lon": 10.826394552408345,
+      "geoinfo": {
+        "display_name": "Beni Aychoun, قربة الغربية, معتمدية قربة, Nabeul, 8070, Tunisia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beni Aychoun",
+        "state": "Nabeul",
+        "postcode": "8070",
+        "country": "Tunisia",
+        "country_code": "tn"
+      },
+      "address": "580, Beni Aychoun, قربة الغربية, معتمدية قربة, Nabeul, 8070, Tunisia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:29:37.773449+00:00",
+  "_kind": "geo_samples"
+}

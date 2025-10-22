@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Assiut",
+  "geonameid": 359783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.165063433377096,
+      "lon": 31.173972650855475,
+      "geoinfo": {
+        "display_name": "Second, Asyut, 71783, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Second",
+        "state": "Asyut",
+        "postcode": "71783",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Assiut, Asyut, Egypt"
+    },
+    {
+      "lat": 27.177781093299515,
+      "lon": 31.174704208094532,
+      "geoinfo": {
+        "display_name": "4, Youssef Al Kashef Alley, First, Asyut, 71789, Egypt",
+        "road": "Youssef Al Kashef Alley",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "First",
+        "state": "Asyut",
+        "postcode": "71789",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "4, Youssef Al Kashef Alley, First, Asyut, 71789, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:04:23.435142+00:00",
+  "_kind": "geo_samples"
+}

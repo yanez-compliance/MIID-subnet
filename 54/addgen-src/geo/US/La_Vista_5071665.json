@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Vista",
+  "geonameid": 5071665,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.1832380192566,
+      "lon": -96.01480628466103,
+      "geoinfo": {
+        "display_name": "7712, South 66th Street, La Vista, Gilmore II Precinct, Sarpy County, Nebraska, 68128, United States",
+        "road": "South 66th Street",
+        "house_number": "7712",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Vista",
+        "state": "Nebraska",
+        "postcode": "68128",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7712 South 66th Street, La Vista, Nebraska, United States"
+    },
+    {
+      "lat": 41.18132859111853,
+      "lon": -96.09032523627278,
+      "geoinfo": {
+        "display_name": "West Papio Trail, Chalco, La Vista, Sarpy County, Nebraska, 68218, United States",
+        "road": "West Papio Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chalco",
+        "city_district": null,
+        "city": "La Vista",
+        "state": "Nebraska",
+        "postcode": "68218",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "334, West Papio Trail, Chalco, La Vista, Sarpy County, Nebraska, 68218, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:29.402406+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Peabody",
+  "geonameid": 4946863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.526524050350716,
+      "lon": -70.92146867855335,
+      "geoinfo": {
+        "display_name": "Saint Vasilios Church, 5;7, Paleologos Street, Peabody, Essex County, Massachusetts, 01970, United States",
+        "road": "Paleologos Street",
+        "house_number": "5;7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peabody",
+        "state": "Massachusetts",
+        "postcode": "01970",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5;7 Paleologos Street, Peabody, Massachusetts, United States"
+    },
+    {
+      "lat": 42.54108594824599,
+      "lon": -70.89471254214776,
+      "geoinfo": {
+        "display_name": "5, Crescent Court, Rial Side, Beverly, Essex County, Massachusetts, 01915, United States",
+        "road": "Crescent Court",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beverly",
+        "state": "Massachusetts",
+        "postcode": "01915",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5, Crescent Court, Rial Side, Beverly, Essex County, Massachusetts, 01915, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:35.010314+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CM",
+  "country": "Cameroon",
+  "city": "Tchéboa",
+  "geonameid": 2221631,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 9.045725414203659,
+      "lon": 13.160390810427982,
+      "geoinfo": {
+        "display_name": "Bangandje, Ngong, Bénoué, North, Cameroon",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ngong",
+        "state": "North",
+        "postcode": null,
+        "country": "Cameroon",
+        "country_code": "cm"
+      },
+      "address": "Tchéboa, North, Cameroon"
+    },
+    {
+      "lat": 9.017057196077388,
+      "lon": 13.153334708963309,
+      "geoinfo": {
+        "display_name": "D17, Gaba Binossi, Djoutta Ledde, Ngong, Bénoué, North, Cameroon",
+        "road": "D17",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ngong",
+        "state": "North",
+        "postcode": null,
+        "country": "Cameroon",
+        "country_code": "cm"
+      },
+      "address": "D17, Tchéboa, North, Cameroon"
+    }
+  ],
+  "updated_at": "2025-10-16T12:11:47.653282+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Paya Terubong",
+  "geonameid": 13100478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.365857339624838,
+      "lon": 100.272473380162,
+      "geoinfo": {
+        "display_name": "Jalan Paya Terubong, Mukim 13, North-East, George Town, Penang, 11800, Malaysia",
+        "road": "Jalan Paya Terubong",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mukim 13",
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Paya Terubong, Paya Terubong, Penang, Malaysia"
+    },
+    {
+      "lat": 5.334772256813068,
+      "lon": 100.28676409756655,
+      "geoinfo": {
+        "display_name": "Penang Golf Club, 2, Jalan Bukit Jambul, Mukim 13, North-East, George Town, Penang, 11900, Malaysia",
+        "road": "Jalan Bukit Jambul",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Mukim 13",
+        "city_district": null,
+        "city": "George Town",
+        "state": "Penang",
+        "postcode": "11900",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Penang Golf Club, 2, Jalan Bukit Jambul, Mukim 13, North-East, George Town, Penang, 11900, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:54:47.342726+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Córdoba",
+  "geonameid": 3530240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.847760245146652,
+      "lon": -96.91488140247307,
+      "geoinfo": {
+        "display_name": "Calle Abasolo, Ameyalco, Amatlán de los Reyes, Veracruz, 94953, Mexico",
+        "road": "Calle Abasolo",
+        "house_number": null,
+        "neighbourhood": "Ameyalco",
+        "suburb": null,
+        "city_district": null,
+        "city": "Amatlán de los Reyes",
+        "state": "Veracruz",
+        "postcode": "94953",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Abasolo, Córdoba, Veracruz, Mexico"
+    },
+    {
+      "lat": 18.85522560182868,
+      "lon": -96.9045683691461,
+      "geoinfo": {
+        "display_name": "Trabal S. de R.L. de C.V., Carretera Peñuela, La Ermita, Amatlán de los Reyes, Veracruz, 94950, Mexico",
+        "road": "Carretera Peñuela",
+        "house_number": null,
+        "neighbourhood": "La Ermita",
+        "suburb": null,
+        "city_district": null,
+        "city": "Amatlán de los Reyes",
+        "state": "Veracruz",
+        "postcode": "94950",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "699, Carretera Peñuela, Córdoba, 94950 Veracruz, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:58.888331+00:00",
+  "_kind": "geo_samples"
+}

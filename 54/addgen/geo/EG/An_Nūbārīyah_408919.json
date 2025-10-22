@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "An Nūbārīyah",
+  "geonameid": 408919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.658914616295977,
+      "lon": 30.068736594022262,
+      "geoinfo": {
+        "display_name": "New Al Nobaria City, The Lake, 22773, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Al Nobaria City",
+        "state": "The Lake",
+        "postcode": "22773",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "An Nūbārīyah, The Lake, Egypt"
+    },
+    {
+      "lat": 30.687060977498895,
+      "lon": 30.08887557521979,
+      "geoinfo": {
+        "display_name": "Al Nubaria, The Lake, 22773, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Nubaria",
+        "state": "The Lake",
+        "postcode": "22773",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "456, Al Nubaria, The Lake, 22773, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:17.990889+00:00",
+  "_kind": "geo_samples"
+}

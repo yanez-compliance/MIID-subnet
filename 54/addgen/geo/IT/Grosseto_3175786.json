@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Grosseto",
+  "geonameid": 3175786,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.78071699774339,
+      "lon": 11.086001489173798,
+      "geoinfo": {
+        "display_name": "Rugginosa, Grosseto, Tuscany, 58100, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rugginosa",
+        "city_district": null,
+        "city": "Grosseto",
+        "state": "Tuscany",
+        "postcode": "58100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Rugginosa, Grosseto, Tuscany, Italy"
+    },
+    {
+      "lat": 42.7987717466518,
+      "lon": 11.095184679057324,
+      "geoinfo": {
+        "display_name": "Strada Statale 1 Aurelia, Grosseto, Tuscany, 58100, Italy",
+        "road": "Strada Statale 1 Aurelia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grosseto",
+        "state": "Tuscany",
+        "postcode": "58100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Statale 1 Aurelia, Grosseto, Tuscany, 58100, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:10.195437+00:00",
+  "_kind": "geo_samples"
+}

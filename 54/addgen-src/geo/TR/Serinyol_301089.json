@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Serinyol",
+  "geonameid": 301089,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.35798175935333,
+      "lon": 36.1925571156147,
+      "geoinfo": {
+        "display_name": "Antakya, Hatay, Mediterranean Region, 31115, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antakya",
+        "state": null,
+        "postcode": "31115",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Serinyol, Turkey"
+    },
+    {
+      "lat": 36.36255640523998,
+      "lon": 36.22850276412163,
+      "geoinfo": {
+        "display_name": "Serinyol, Paşaköy, Antakya, Hatay, Mediterranean Region, 31115, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Serinyol",
+        "city_district": null,
+        "city": "Antakya",
+        "state": null,
+        "postcode": "31115",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "586, Serinyol, 31115 Serinyol, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:24.122273+00:00",
+  "_kind": "geo_samples"
+}

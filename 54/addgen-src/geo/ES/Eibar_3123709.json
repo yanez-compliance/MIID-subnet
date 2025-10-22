@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Eibar",
+  "geonameid": 3123709,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.19350559177352,
+      "lon": -2.4711154478736725,
+      "geoinfo": {
+        "display_name": "GI-3950, Miraflores, Mandiola, Eibar, Debabarrena, Gipuzkoa, Autonomous Community of the Basque Country, 20600, Spain",
+        "road": "GI-3950",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mandiola",
+        "city_district": null,
+        "city": "Eibar",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "20600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "GI-3950, Eibar, Autonomous Community of the Basque Country, Spain"
+    },
+    {
+      "lat": 43.216018460410716,
+      "lon": -2.4918870632104286,
+      "geoinfo": {
+        "display_name": "Arandoiturralde, 10, GI-3950, Soraen, Agiñaga, Eibar, Debabarrena, Gipuzkoa, Autonomous Community of the Basque Country, 20600, Spain",
+        "road": "GI-3950",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eibar",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "20600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Arandoiturralde, 10, GI-3950, Soraen, Agiñaga, Eibar, Debabarrena, Gipuzkoa, Autonomous Community of the Basque Country, 20600, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:05.776514+00:00",
+  "_kind": "geo_samples"
+}

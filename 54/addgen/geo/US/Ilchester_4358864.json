@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ilchester",
+  "geonameid": 4358864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.23023058823856,
+      "lon": -76.81218561391313,
+      "geoinfo": {
+        "display_name": "MD 100, Howard County, Maryland, 21043, United States",
+        "road": "MD 100",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "MD 100, Ilchester, Maryland, United States"
+    },
+    {
+      "lat": 39.24553885539925,
+      "lon": -76.76559739351008,
+      "geoinfo": {
+        "display_name": "Saint Marys Cemetery, Ilchester Road, Ilchester, Howard County, Maryland, 21052, United States",
+        "road": "Ilchester Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ilchester",
+        "state": "Maryland",
+        "postcode": "21052",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "906, Ilchester Road, Ilchester, 21052 Maryland, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:10.599348+00:00",
+  "_kind": "geo_samples"
+}

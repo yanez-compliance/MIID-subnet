@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kamensk-Shakhtinsky",
+  "geonameid": 553399,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.3536933702061,
+      "lon": 40.2263373423244,
+      "geoinfo": {
+        "display_name": "24, Набережная улица, Fillipyonkov, Красновское сельское поселение, Kamensky District, Rostov Oblast, Southern Federal District, 347837, Russia",
+        "road": "Набережная улица",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Rostov Oblast",
+        "postcode": "347837",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "24 Набережная улица, Kamensk-Shakhtinsky, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 48.33520017503303,
+      "lon": 40.28483508020278,
+      "geoinfo": {
+        "display_name": "Почтовый переулок, Staraya Stanitsa, Старостаничное сельское поселение, Kamensky District, Rostov Oblast, 347810, Russia",
+        "road": "Почтовый переулок",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Staraya Stanitsa",
+        "state": "Rostov Oblast",
+        "postcode": "347810",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "458, Почтовый переулок, Staraya Stanitsa, Старостаничное сельское поселение, Kamensky District, Rostov Oblast, 347810, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:50:45.366989+00:00",
+  "_kind": "geo_samples"
+}

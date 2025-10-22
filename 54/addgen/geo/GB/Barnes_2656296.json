@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Barnes",
+  "geonameid": 2656296,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.43796472659097,
+      "lon": -0.27648498471662314,
+      "geoinfo": {
+        "display_name": "London Borough of Richmond upon Thames, London, Greater London, England, KT2 7NA, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "KT2 7NA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "London Borough of Richmond upon Thames, Barnes, England, United Kingdom"
+    },
+    {
+      "lat": 51.50522452103911,
+      "lon": -0.21397459920722822,
+      "geoinfo": {
+        "display_name": "Fitzclarence House, 175-177, Holland Park Avenue, Notting Hill, Royal Borough of Kensington and Chelsea, London, Greater London, England, W11 4UL, United Kingdom",
+        "road": "Holland Park Avenue",
+        "house_number": "175-177",
+        "neighbourhood": null,
+        "suburb": "Notting Hill",
+        "city_district": "Royal Borough of Kensington and Chelsea",
+        "city": "London",
+        "state": "England",
+        "postcode": "W11 4UL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Fitzclarence House, 175-177, Holland Park Avenue, Notting Hill, Royal Borough of Kensington and Chelsea, London, Greater London, England, W11 4UL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:53.404339+00:00",
+  "_kind": "geo_samples"
+}

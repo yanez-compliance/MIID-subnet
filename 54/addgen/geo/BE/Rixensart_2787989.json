@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Rixensart",
+  "geonameid": 2787989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.705238098025646,
+      "lon": 4.498512531671395,
+      "geoinfo": {
+        "display_name": "Route du Ry-Beau-Ry, Ohain, Lasne, Nivelles, Walloon Brabant, Wallonia, 1380, Belgium",
+        "road": "Route du Ry-Beau-Ry",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ohain",
+        "city": "Lasne",
+        "state": "Walloon Brabant",
+        "postcode": "1380",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Route du Ry-Beau-Ry, Rixensart, Walloon Brabant, Belgium"
+    },
+    {
+      "lat": 50.68932256641823,
+      "lon": 4.537389983945134,
+      "geoinfo": {
+        "display_name": "32A, Rue Alfred Haulotte, Rofessart, Limelette, Ottignies-Louvain-la-Neuve, Nivelles, Walloon Brabant, Wallonia, 1342, Belgium",
+        "road": "Rue Alfred Haulotte",
+        "house_number": "32A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Limelette",
+        "city": "Ottignies-Louvain-la-Neuve",
+        "state": "Walloon Brabant",
+        "postcode": "1342",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "32A, Rue Alfred Haulotte, Rofessart, Limelette, Ottignies-Louvain-la-Neuve, Nivelles, Walloon Brabant, Wallonia, 1342, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:56:53.052301+00:00",
+  "_kind": "geo_samples"
+}

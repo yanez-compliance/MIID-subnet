@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tahlequah",
+  "geonameid": 4552707,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.9427591626078,
+      "lon": -95.00355679886862,
+      "geoinfo": {
+        "display_name": "16498, West 741 Road, Cherokee County, Oklahoma, 74464, United States",
+        "road": "West 741 Road",
+        "house_number": "16498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": "74464",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16498 West 741 Road, Tahlequah, Oklahoma, United States"
+    },
+    {
+      "lat": 35.90214627157858,
+      "lon": -94.9732866326141,
+      "geoinfo": {
+        "display_name": "3rd Street, Plaza, Tahlequah, Cherokee County, Oklahoma, 74465, United States",
+        "road": "3rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tahlequah",
+        "state": "Oklahoma",
+        "postcode": "74465",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3rd Street, Plaza, Tahlequah, Cherokee County, Oklahoma, 74465, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:45.842567+00:00",
+  "_kind": "geo_samples"
+}

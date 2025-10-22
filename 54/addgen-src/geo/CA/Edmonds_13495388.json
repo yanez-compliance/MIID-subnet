@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Edmonds",
+  "geonameid": 13495388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.201516527876144,
+      "lon": -122.91242355120168,
+      "geoinfo": {
+        "display_name": "811, Columbia Street, Downtown, New Westminster, Metro Vancouver Regional District, British Columbia, V3M 1B0, Canada",
+        "road": "Columbia Street",
+        "house_number": "811",
+        "neighbourhood": "Downtown",
+        "suburb": null,
+        "city_district": "Downtown",
+        "city": "New Westminster",
+        "state": "British Columbia",
+        "postcode": "V3M 1B0",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "811 Columbia Street, Edmonds, British Columbia, Canada"
+    },
+    {
+      "lat": 49.20627244656122,
+      "lon": -122.89628668028512,
+      "geoinfo": {
+        "display_name": "Skybridge, Columbia Street, Downtown, New Westminster, Metro Vancouver Regional District, British Columbia, V3L 1A6, Canada",
+        "road": "Columbia Street",
+        "house_number": null,
+        "neighbourhood": "Downtown",
+        "suburb": null,
+        "city_district": "Downtown",
+        "city": "New Westminster",
+        "state": "British Columbia",
+        "postcode": "V3L 1A6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Skybridge, Columbia Street, Downtown, New Westminster, Metro Vancouver Regional District, British Columbia, V3L 1A6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:50.056598+00:00",
+  "_kind": "geo_samples"
+}

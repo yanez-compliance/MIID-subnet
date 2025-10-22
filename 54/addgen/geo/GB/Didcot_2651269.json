@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Didcot",
+  "geonameid": 2651269,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.581915146296005,
+      "lon": -1.2627323748905945,
+      "geoinfo": {
+        "display_name": "Didcot, Newbury and Southampton Railway, Upton, Vale of White Horse, Oxfordshire, England, OX11 9JN, United Kingdom",
+        "road": "Didcot, Newbury and Southampton Railway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vale of White Horse",
+        "state": "England",
+        "postcode": "OX11 9JN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Didcot, Newbury and Southampton Railway, Didcot, England, United Kingdom"
+    },
+    {
+      "lat": 51.58327116265895,
+      "lon": -1.1955418005217004,
+      "geoinfo": {
+        "display_name": "Moreton Road, Aston Tirrold, South Moreton, South Oxfordshire, Oxfordshire, England, OX11 9ES, United Kingdom",
+        "road": "Moreton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Aston Tirrold",
+        "city_district": null,
+        "city": "South Oxfordshire",
+        "state": "England",
+        "postcode": "OX11 9ES",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Moreton Road, Aston Tirrold, South Moreton, South Oxfordshire, Oxfordshire, England, OX11 9ES, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:23.532621+00:00",
+  "_kind": "geo_samples"
+}

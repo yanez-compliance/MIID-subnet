@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Airdrie",
+  "geonameid": 5882799,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.27964452892967,
+      "lon": -114.03459784765667,
+      "geoinfo": {
+        "display_name": "Baywater Manor SW, Bayside, Airdrie, Alberta, T4B 0A7, Canada",
+        "road": "Baywater Manor SW",
+        "house_number": null,
+        "neighbourhood": "Bayside",
+        "suburb": null,
+        "city_district": null,
+        "city": "Airdrie",
+        "state": "Alberta",
+        "postcode": "T4B 0A7",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Baywater Manor SW, Airdrie, Alberta, Canada"
+    },
+    {
+      "lat": 51.32271975881198,
+      "lon": -113.99210267559786,
+      "geoinfo": {
+        "display_name": "Range Road 292, Airdrie, Rocky View County, Alberta, T7E 3T3, Canada",
+        "road": "Range Road 292",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Airdrie",
+        "state": "Alberta",
+        "postcode": "T7E 3T3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Range Road 292, Airdrie, Rocky View County, Alberta, T7E 3T3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:32.772553+00:00",
+  "_kind": "geo_samples"
+}

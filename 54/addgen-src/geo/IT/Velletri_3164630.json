@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Velletri",
+  "geonameid": 3164630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.68547816424997,
+      "lon": 12.833983439577603,
+      "geoinfo": {
+        "display_name": "Velletri, Roma Capitale, Lazio, 00076, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Velletri",
+        "state": "Lazio",
+        "postcode": "00076",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Velletri, Lazio, Italy"
+    },
+    {
+      "lat": 41.65987629106606,
+      "lon": 12.764474412988848,
+      "geoinfo": {
+        "display_name": "Via Campetto dei Macellari, Velletri, Roma Capitale, Lazio, 00049, Italy",
+        "road": "Via Campetto dei Macellari",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Velletri",
+        "state": "Lazio",
+        "postcode": "00049",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "663, Via Campetto dei Macellari, Velletri, Roma Capitale, Lazio, 00049, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:16.975979+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Melilla",
+  "geonameid": 2513947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.327969805420175,
+      "lon": -2.9175792296687497,
+      "geoinfo": {
+        "display_name": "Melilla, 52001, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Melilla",
+        "state": "Melilla",
+        "postcode": "52001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Melilla, Melilla, Spain"
+    },
+    {
+      "lat": 35.29550686205749,
+      "lon": -2.9394884290332555,
+      "geoinfo": {
+        "display_name": "Calle Vicente Aleixandre, Barrio Ataque Seco, Melilla, 52001, Spain",
+        "road": "Calle Vicente Aleixandre",
+        "house_number": null,
+        "neighbourhood": "Barrio Ataque Seco",
+        "suburb": null,
+        "city_district": null,
+        "city": "Melilla",
+        "state": "Melilla",
+        "postcode": "52001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "997, Calle Vicente Aleixandre, Barrio Ataque Seco, Melilla, 52001, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:14.003126+00:00",
+  "_kind": "geo_samples"
+}

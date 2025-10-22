@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Deal",
+  "geonameid": 2651468,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.26479736205793,
+      "lon": 1.3802712748710517,
+      "geoinfo": {
+        "display_name": "Worth, Sandwich Bay, Dover, Kent, England, CT13 9PH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dover",
+        "state": "England",
+        "postcode": "CT13 9PH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Deal, England, United Kingdom"
+    },
+    {
+      "lat": 51.21799122640058,
+      "lon": 1.3721994907444894,
+      "geoinfo": {
+        "display_name": "Mongeham Road, Upper Deal, Deal, Dover, Kent, England, CT14 9PD, United Kingdom",
+        "road": "Mongeham Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Upper Deal",
+        "city_district": null,
+        "city": "Deal",
+        "state": "England",
+        "postcode": "CT14 9PD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Mongeham Road, Upper Deal, Deal, Dover, Kent, England, CT14 9PD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:06:25.610594+00:00",
+  "_kind": "geo_samples"
+}

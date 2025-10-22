@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Alba",
+  "geonameid": 3183364,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.65748935717519,
+      "lon": 8.02038680356638,
+      "geoinfo": {
+        "display_name": "Via Farinetti, Grinzane Cavour, Cuneo, Piedmont, 12055, Italy",
+        "road": "Via Farinetti",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grinzane Cavour",
+        "state": "Piedmont",
+        "postcode": "12055",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Farinetti, Alba, Piedmont, Italy"
+    },
+    {
+      "lat": 44.71998385339262,
+      "lon": 8.073870529426811,
+      "geoinfo": {
+        "display_name": "Località Faset, Barbaresco, Cuneo, Piedmont, 12050, Italy",
+        "road": "Località Faset",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barbaresco",
+        "state": "Piedmont",
+        "postcode": "12050",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "677, Località Faset, Barbaresco, Cuneo, Piedmont, 12050, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:42.505600+00:00",
+  "_kind": "geo_samples"
+}

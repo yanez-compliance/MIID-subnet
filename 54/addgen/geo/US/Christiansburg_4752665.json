@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Christiansburg",
+  "geonameid": 4752665,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.138961107261416,
+      "lon": -80.42835986669087,
+      "geoinfo": {
+        "display_name": "Scattergood Drive Northwest, Suburban Hills, Christiansburg, Montgomery County, Virginia, 24073, United States",
+        "road": "Scattergood Drive Northwest",
+        "house_number": null,
+        "neighbourhood": "Suburban Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Christiansburg",
+        "state": "Virginia",
+        "postcode": "24073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Scattergood Drive Northwest, Christiansburg, Virginia, United States"
+    },
+    {
+      "lat": 37.16736700946612,
+      "lon": -80.38603626041575,
+      "geoinfo": {
+        "display_name": "Montgomery County, Virginia, 20473, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20473",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "039, Montgomery County, Virginia, 20473, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:55.690301+00:00",
+  "_kind": "geo_samples"
+}

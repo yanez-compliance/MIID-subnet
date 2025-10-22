@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kīhei",
+  "geonameid": 5849297,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.77283708301979,
+      "lon": -156.48730352571894,
+      "geoinfo": {
+        "display_name": "Maui County, Hawaii, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Hawaii",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kīhei, Hawaii, United States"
+    },
+    {
+      "lat": 20.772896403454904,
+      "lon": -156.44743715984225,
+      "geoinfo": {
+        "display_name": "Ohukai Road, Kihei, Maui County, Hawaii, 96753, United States",
+        "road": "Ohukai Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kihei",
+        "state": "Hawaii",
+        "postcode": "96753",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "888, Ohukai Road, Kihei, Maui County, Hawaii, 96753, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:16:29.207704+00:00",
+  "_kind": "geo_samples"
+}

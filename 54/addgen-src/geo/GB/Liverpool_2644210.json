@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Liverpool",
+  "geonameid": 2644210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.429601135572405,
+      "lon": -3.007580959989675,
+      "geoinfo": {
+        "display_name": "Kirkdale, Liverpool, Liverpool City Region, England, L4 1QL, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kirkdale",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L4 1QL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Kirkdale, Liverpool, England, United Kingdom"
+    },
+    {
+      "lat": 53.42771534490539,
+      "lon": -2.9691088438067825,
+      "geoinfo": {
+        "display_name": "Everton, Liverpool, Liverpool City Region, England, L5 0RD, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Everton",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L5 0RD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Everton, Liverpool, Liverpool City Region, England, L5 0RD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:11.138825+00:00",
+  "_kind": "geo_samples"
+}

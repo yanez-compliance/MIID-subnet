@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fresno",
+  "geonameid": 5350937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.74768216140998,
+      "lon": -119.79225735906103,
+      "geoinfo": {
+        "display_name": "343, North Calaveras Street, Fresno, Fresno County, California, 93701, United States",
+        "road": "North Calaveras Street",
+        "house_number": "343",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fresno",
+        "state": "California",
+        "postcode": "93701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "343 North Calaveras Street, Fresno, California, United States"
+    },
+    {
+      "lat": 36.74361831585818,
+      "lon": -119.80677394000698,
+      "geoinfo": {
+        "display_name": "2211, G Street, Fresno, Fresno County, California, 93706, United States",
+        "road": "G Street",
+        "house_number": "2211",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fresno",
+        "state": "California",
+        "postcode": "93706",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2211, G Street, Fresno, Fresno County, California, 93706, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:09:34.553492+00:00",
+  "_kind": "geo_samples"
+}

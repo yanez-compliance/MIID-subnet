@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Marseille 05",
+  "geonameid": 7284886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.29378532706541,
+      "lon": 5.3996175498765036,
+      "geoinfo": {
+        "display_name": "Black Room, 14, Boulevard Jeanne d'Arc, Le Camas, 5th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13005, France",
+        "road": "Boulevard Jeanne d'Arc",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "5th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13005",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "14 Boulevard Jeanne d'Arc, Marseille 05, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.313139324989606,
+      "lon": 5.4215008520373456,
+      "geoinfo": {
+        "display_name": "Lycée professionnel Blaise Pascal, Traverse Capron, Montolivet, 12th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13012, France",
+        "road": "Traverse Capron",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Lycée professionnel Blaise Pascal, Traverse Capron, Montolivet, 12th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13012, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:17:55.406970+00:00",
+  "_kind": "geo_samples"
+}

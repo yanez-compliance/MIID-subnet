@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Volendam",
+  "geonameid": 2745340,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 52.497886614587735,
+      "lon": 5.05662305440341,
+      "geoinfo": {
+        "display_name": "De Aventurijn, Jan Sluiterstraat, Blokgouw, Volendam, Edam-Volendam, North Holland, Netherlands, 1132 XT, Netherlands",
+        "road": "Jan Sluiterstraat",
+        "house_number": null,
+        "neighbourhood": "Blokgouw",
+        "suburb": null,
+        "city_district": null,
+        "city": "Volendam",
+        "state": "North Holland",
+        "postcode": "1132 XT",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Jan Sluiterstraat, Volendam, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.45979827641052,
+      "lon": 5.071236807943381,
+      "geoinfo": {
+        "display_name": "Monnickendam, Waterland, North Holland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monnickendam",
+        "state": "North Holland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "952, Volendam, 89752 North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.502604273505426,
+      "lon": 5.012147799722043,
+      "geoinfo": {
+        "display_name": "Oosterweg E, Purmer, Edam-Volendam, North Holland, Netherlands, 1481 AP, Netherlands",
+        "road": "Oosterweg E",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Purmer",
+        "state": "North Holland",
+        "postcode": "1481 AP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "925, Oosterweg E, Purmer, Edam-Volendam, North Holland, Netherlands, 1481 AP, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:03.876668+00:00",
+  "_kind": "geo_samples"
+}

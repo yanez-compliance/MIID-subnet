@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Deolali",
+  "geonameid": 1273234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.463679269270642,
+      "lon": 74.65816887785441,
+      "geoinfo": {
+        "display_name": "Takalimiya, Rahuri, Ahmednagar District, Maharashtra, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Takalimiya",
+        "state": "Maharashtra",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Deolali, Maharashtra, India"
+    },
+    {
+      "lat": 19.507225912527492,
+      "lon": 74.6039736136569,
+      "geoinfo": {
+        "display_name": "Rahuri, Ahmednagar District, Maharashtra, 413716, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maharashtra",
+        "postcode": "413716",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "123, Deolali, 413716 Maharashtra, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:21:56.958428+00:00",
+  "_kind": "geo_samples"
+}

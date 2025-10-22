@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "George",
+  "geonameid": 1002145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.99948417709675,
+      "lon": 22.46376757550142,
+      "geoinfo": {
+        "display_name": "Hendrick Street, Thembalethu, George Local Municipality, George, Western Cape, 6519, South Africa",
+        "road": "Hendrick Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Thembalethu",
+        "city_district": "George Local Municipality",
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6519",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Hendrick Street, George, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.944732779111895,
+      "lon": 22.446754300407022,
+      "geoinfo": {
+        "display_name": "Plane Road, George Ward 3, George Local Municipality, George, Western Cape, 6530, South Africa",
+        "road": "Plane Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "George Ward 3",
+        "city_district": "George Local Municipality",
+        "city": "George",
+        "state": "Western Cape",
+        "postcode": "6530",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Plane Road, George Ward 3, George Local Municipality, George, Western Cape, 6530, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:57.375217+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Voronezh",
+  "geonameid": 472045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.67949827040256,
+      "lon": 39.131615573811395,
+      "geoinfo": {
+        "display_name": "254, улица 9 Января, Советский район, Voronezh, Voronezh Oblast, Central Federal District, 394019, Russia",
+        "road": "улица 9 Января",
+        "house_number": "254",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Советский район",
+        "city": "Voronezh",
+        "state": "Voronezh Oblast",
+        "postcode": "394019",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "254 улица 9 Января, Voronezh, Voronezh Oblast, Russia"
+    },
+    {
+      "lat": 51.62864686335569,
+      "lon": 39.202550449141434,
+      "geoinfo": {
+        "display_name": "улица Степана Солодовникова, Chizhovka, Ленинский район, Voronezh, Voronezh Oblast, Central Federal District, 394031, Russia",
+        "road": "улица Степана Солодовникова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chizhovka",
+        "city_district": "Ленинский район",
+        "city": "Voronezh",
+        "state": "Voronezh Oblast",
+        "postcode": "394031",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "683, улица Степана Солодовникова, Chizhovka, Ленинский район, Voronezh, Voronezh Oblast, Central Federal District, 394031, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:47:57.511772+00:00",
+  "_kind": "geo_samples"
+}

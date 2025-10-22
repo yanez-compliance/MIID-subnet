@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Coudekerque-Branche",
+  "geonameid": 3023356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.02943740018388,
+      "lon": 2.385075435368563,
+      "geoinfo": {
+        "display_name": "Route de Steendam, La Basse-Ville, Dunkerque-Sud, Dunkerque, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59140, France",
+        "road": "Route de Steendam",
+        "house_number": null,
+        "neighbourhood": "La Basse-Ville",
+        "suburb": "Dunkerque-Sud",
+        "city_district": "Dunkerque",
+        "city": "Dunkirk",
+        "state": "Hauts-de-France",
+        "postcode": "59140",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route de Steendam, Coudekerque-Branche, Hauts-de-France, France"
+    },
+    {
+      "lat": 51.004504811566704,
+      "lon": 2.457006401716807,
+      "geoinfo": {
+        "display_name": "Rue des Pierres, Hameau des Neiges, Téteghem, Téteghem-Coudekerque-Village, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France",
+        "road": "Rue des Pierres",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Téteghem",
+        "city": "Téteghem-Coudekerque-Village",
+        "state": "Hauts-de-France",
+        "postcode": "59380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "451, Rue des Pierres, Hameau des Neiges, Téteghem, Téteghem-Coudekerque-Village, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:29.888791+00:00",
+  "_kind": "geo_samples"
+}

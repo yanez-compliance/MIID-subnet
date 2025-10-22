@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Tuckahoe",
+  "geonameid": 4790207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.58713026034511,
+      "lon": -77.58545608244815,
+      "geoinfo": {
+        "display_name": "Tuckahoe, Henrico County, Virginia, 23229, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tuckahoe",
+        "state": "Virginia",
+        "postcode": "23229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Tuckahoe, Virginia, United States"
+    },
+    {
+      "lat": 37.59967505011982,
+      "lon": -77.56712215498935,
+      "geoinfo": {
+        "display_name": "Nova Way, Regency Square, Regency, Tuckahoe, Henrico County, Virginia, 23229, United States",
+        "road": "Nova Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Regency",
+        "city_district": null,
+        "city": "Tuckahoe",
+        "state": "Virginia",
+        "postcode": "23229",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "429, Nova Way, Regency Square, Regency, Tuckahoe, Henrico County, Virginia, 23229, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:33.481365+00:00",
+  "_kind": "geo_samples"
+}

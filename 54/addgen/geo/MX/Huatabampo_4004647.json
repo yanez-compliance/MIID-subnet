@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huatabampo",
+  "geonameid": 4004647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.83186688381023,
+      "lon": -109.59745839912952,
+      "geoinfo": {
+        "display_name": "La Unión, Huatabampo, Sonora, 85994, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Unión",
+        "state": "Sonora",
+        "postcode": "85994",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huatabampo, Sonora, Mexico"
+    },
+    {
+      "lat": 26.788902364906487,
+      "lon": -109.62414937827704,
+      "geoinfo": {
+        "display_name": "Carretera Costera, El Riíto, Huatabampo, Sonora, 85994, Mexico",
+        "road": "Carretera Costera",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Riíto",
+        "state": "Sonora",
+        "postcode": "85994",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "400, Carretera Costera, El Riíto, Huatabampo, Sonora, 85994, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:29.674899+00:00",
+  "_kind": "geo_samples"
+}

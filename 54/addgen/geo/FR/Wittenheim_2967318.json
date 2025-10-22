@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Wittenheim",
+  "geonameid": 2967318,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.821549081904585,
+      "lon": 7.325701319185456,
+      "geoinfo": {
+        "display_name": "68, Rue de la Camargue, Cité Jeune Bois, Wittenheim, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68270, France",
+        "road": "Rue de la Camargue",
+        "house_number": "68",
+        "neighbourhood": null,
+        "suburb": "Cité Jeune Bois",
+        "city_district": null,
+        "city": "Wittenheim",
+        "state": "Grand Est",
+        "postcode": "68270",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "68 Rue de la Camargue, Wittenheim, Grand Est, France"
+    },
+    {
+      "lat": 47.83478125450296,
+      "lon": 7.327736152960736,
+      "geoinfo": {
+        "display_name": "Rue du Général de Gaulle, Ruelisheim, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68270, France",
+        "road": "Rue du Général de Gaulle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ruelisheim",
+        "state": "Grand Est",
+        "postcode": "68270",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "065, Rue du Général de Gaulle, Ruelisheim, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68270, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:54.613450+00:00",
+  "_kind": "geo_samples"
+}

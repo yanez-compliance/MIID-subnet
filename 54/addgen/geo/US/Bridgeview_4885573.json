@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bridgeview",
+  "geonameid": 4885573,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.70695222809906,
+      "lon": -87.81117680357822,
+      "geoinfo": {
+        "display_name": "103rd Street, Bridgeview, Palos Township, Cook County, Illinois, 60465, United States",
+        "road": "103rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bridgeview",
+        "state": "Illinois",
+        "postcode": "60465",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "103rd Street, Bridgeview, Illinois, United States"
+    },
+    {
+      "lat": 41.75585581789655,
+      "lon": -87.84139751262461,
+      "geoinfo": {
+        "display_name": "7412, Oak Grove Avenue, Justice, Lyons Township, Cook County, Illinois, 60458, United States",
+        "road": "Oak Grove Avenue",
+        "house_number": "7412",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Justice",
+        "state": "Illinois",
+        "postcode": "60458",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7412, Oak Grove Avenue, Justice, Lyons Township, Cook County, Illinois, 60458, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:04.636393+00:00",
+  "_kind": "geo_samples"
+}

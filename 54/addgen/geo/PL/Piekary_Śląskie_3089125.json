@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Piekary Śląskie",
+  "geonameid": 3089125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.37446614652731,
+      "lon": 18.89984897840889,
+      "geoinfo": {
+        "display_name": "Autostrada Bursztynowa, Nowy Dwór, Stroszek - Dąbrowa Miejska, Bytom, Metropolis GZM, Silesian Voivodeship, 41-914, Poland",
+        "road": "Autostrada Bursztynowa",
+        "house_number": null,
+        "neighbourhood": "Nowy Dwór",
+        "suburb": null,
+        "city_district": "Stroszek - Dąbrowa Miejska",
+        "city": "Bytom",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-914",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Autostrada Bursztynowa, Piekary Śląskie, Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 50.39738810605311,
+      "lon": 18.909719187531113,
+      "geoinfo": {
+        "display_name": "25, Jana Zejera, Nowy Radzionków, Radzionków, Tarnowskie Góry County, Metropolis GZM, Silesian Voivodeship, 41-922, Poland",
+        "road": "Jana Zejera",
+        "house_number": "25",
+        "neighbourhood": null,
+        "suburb": "Nowy Radzionków",
+        "city_district": null,
+        "city": "Radzionków",
+        "state": "Silesian Voivodeship",
+        "postcode": "41-922",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "25, Jana Zejera, Nowy Radzionków, Radzionków, Tarnowskie Góry County, Metropolis GZM, Silesian Voivodeship, 41-922, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:33:59.175367+00:00",
+  "_kind": "geo_samples"
+}

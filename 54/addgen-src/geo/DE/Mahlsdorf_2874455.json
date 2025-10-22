@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mahlsdorf",
+  "geonameid": 2874455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.54708008851513,
+      "lon": 13.61698002896552,
+      "geoinfo": {
+        "display_name": "Berliner Straße, Hönow, Hoppegarten, Märkisch-Oderland, Brandenburg, 15366, Germany",
+        "road": "Berliner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hoppegarten",
+        "state": "Brandenburg",
+        "postcode": "15366",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Berliner Straße, Mahlsdorf, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.490494976248215,
+      "lon": 13.656286272985824,
+      "geoinfo": {
+        "display_name": "Mönchsheimer Weg, Mönchsheim, Münchehofe, Hoppegarten, Märkisch-Oderland, Brandenburg, 15366, Germany",
+        "road": "Mönchsheimer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hoppegarten",
+        "state": "Brandenburg",
+        "postcode": "15366",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "987, Mönchsheimer Weg, Mönchsheim, Münchehofe, Hoppegarten, Märkisch-Oderland, Brandenburg, 15366, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:23.267676+00:00",
+  "_kind": "geo_samples"
+}

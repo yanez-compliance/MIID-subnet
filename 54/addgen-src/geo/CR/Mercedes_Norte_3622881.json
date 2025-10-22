@@ -1,0 +1,65 @@
+{
+  "country_code": "CR",
+  "country": "Costa Rica",
+  "city": "Mercedes Norte",
+  "geonameid": 3622881,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 9.990816000991833,
+      "lon": -84.13177513770279,
+      "geoinfo": {
+        "display_name": "Calle Central, Urb. La Lilliana 4, San Francisco, Heredia, Heredia Province, 40103, Costa Rica",
+        "road": "Calle Central",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco",
+        "state": null,
+        "postcode": "40103",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle Central, Mercedes Norte, Costa Rica"
+    },
+    {
+      "lat": 10.012381277283547,
+      "lon": -84.10252882561893,
+      "geoinfo": {
+        "display_name": "Calle 29A, Urb. La Rosa, San Rafael, Heredia Province, 40501, Costa Rica",
+        "road": "Calle 29A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Rafael",
+        "state": null,
+        "postcode": "40501",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Calle 29A, Mercedes Norte, Costa Rica"
+    },
+    {
+      "lat": 10.006725021380433,
+      "lon": -84.11568144199197,
+      "geoinfo": {
+        "display_name": "Cond. Heredia Metro, San Josecito, San Rafael, Heredia Province, 40502, Costa Rica",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Josecito",
+        "state": null,
+        "postcode": "40502",
+        "country": "Costa Rica",
+        "country_code": "cr"
+      },
+      "address": "Mercedes Norte, Costa Rica"
+    }
+  ],
+  "updated_at": "2025-10-16T12:42:07.201090+00:00",
+  "_kind": "geo_samples"
+}

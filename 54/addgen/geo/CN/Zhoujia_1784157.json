@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhoujia",
+  "geonameid": 1784157,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.435152549450088,
+      "lon": 107.50495965378047,
+      "geoinfo": {
+        "display_name": "Hurong Expressway, Caohui, Dianjiang County, Chongqing, China",
+        "road": "Hurong Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Caohui",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hurong Expressway, Zhoujia, Chongqing, China"
+    },
+    {
+      "lat": 30.412901851661687,
+      "lon": 107.51320496270225,
+      "geoinfo": {
+        "display_name": "Wulongchang, Dianjiang County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wulongchang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "727, Wulongchang, Dianjiang County, 24334 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:22.400699+00:00",
+  "_kind": "geo_samples"
+}

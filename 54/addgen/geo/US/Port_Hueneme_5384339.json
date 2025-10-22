@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Port Hueneme",
+  "geonameid": 5384339,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.12918310524341,
+      "lon": -119.16044289827502,
+      "geoinfo": {
+        "display_name": "Ventura County, California, 93042, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Port Hueneme, California, United States"
+    },
+    {
+      "lat": 34.17178700245429,
+      "lon": -119.16112894487794,
+      "geoinfo": {
+        "display_name": "Channel Islands High School, 1400, Raiders Way, Oxnard, Ventura County, California, 93033, United States",
+        "road": "Raiders Way",
+        "house_number": "1400",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oxnard",
+        "state": "California",
+        "postcode": "93033",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Channel Islands High School, 1400, Raiders Way, Oxnard, Ventura County, California, 93033, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:27.876828+00:00",
+  "_kind": "geo_samples"
+}

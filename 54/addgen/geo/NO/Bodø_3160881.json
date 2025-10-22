@@ -1,0 +1,65 @@
+{
+  "country_code": "NO",
+  "country": "Norway",
+  "city": "Bodø",
+  "geonameid": 3160881,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 67.28691027189011,
+      "lon": 14.339933480286472,
+      "geoinfo": {
+        "display_name": "Hjartøy, Bodø, Nordland, 8003, Norway",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bodø",
+        "state": null,
+        "postcode": "8003",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Bodø, Norway"
+    },
+    {
+      "lat": 67.25202530138047,
+      "lon": 14.427811710405898,
+      "geoinfo": {
+        "display_name": "Bodøsjøen, Østbyen, Bodø, Nordland, 8070, Norway",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Bodøsjøen",
+        "suburb": "Østbyen",
+        "city_district": null,
+        "city": "Bodø",
+        "state": null,
+        "postcode": "8070",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Bodøsjøen, Bodø, Norway"
+    },
+    {
+      "lat": 67.30174652770437,
+      "lon": 14.414254050072552,
+      "geoinfo": {
+        "display_name": "Leif Aunes vei, Bodø, Mælen, Kirkhaugen, Rønvik, Bodø, Nordland, 8012, Norway",
+        "road": "Leif Aunes vei",
+        "house_number": null,
+        "neighbourhood": "Mælen",
+        "suburb": "Kirkhaugen",
+        "city_district": "Rønvik",
+        "city": "Bodø",
+        "state": null,
+        "postcode": "8012",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Leif Aunes vei, Bodø, Norway"
+    }
+  ],
+  "updated_at": "2025-10-16T20:27:51.047404+00:00",
+  "_kind": "geo_samples"
+}

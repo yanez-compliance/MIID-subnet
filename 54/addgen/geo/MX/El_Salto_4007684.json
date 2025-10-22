@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "El Salto",
+  "geonameid": 4007684,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.318768389449456,
+      "lon": -104.49863798853401,
+      "geoinfo": {
+        "display_name": "Atenguillo, Región Sierra Occidental, Jalisco, 48130, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": "48130",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "El Salto, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.295992860536973,
+      "lon": -104.48173687047164,
+      "geoinfo": {
+        "display_name": "Atenguillo, Región Sierra Occidental, Jalisco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "981, El Salto, 14813 Jalisco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:30:34.327333+00:00",
+  "_kind": "geo_samples"
+}

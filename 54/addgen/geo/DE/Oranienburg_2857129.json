@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oranienburg",
+  "geonameid": 2857129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.77407290582884,
+      "lon": 13.229634132761353,
+      "geoinfo": {
+        "display_name": "3, Feldstraße, Siedlung Friedenthal, Sachsenhausen, Oranienburg, Oberhavel, Brandenburg, 16515, Germany",
+        "road": "Feldstraße",
+        "house_number": "3",
+        "neighbourhood": "Siedlung Friedenthal",
+        "suburb": "Sachsenhausen",
+        "city_district": null,
+        "city": "Oranienburg",
+        "state": "Brandenburg",
+        "postcode": "16515",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Feldstraße, Oranienburg, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.77473982567388,
+      "lon": 13.296452821201067,
+      "geoinfo": {
+        "display_name": "Drei Brüder Buche, Schwarzer Weg, Schmachtenhagen, Oranienburg, Oberhavel, Brandenburg, 16515, Germany",
+        "road": "Schwarzer Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oranienburg",
+        "state": "Brandenburg",
+        "postcode": "16515",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "332, Schwarzer Weg, Oranienburg, 16515 Brandenburg, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:09.352509+00:00",
+  "_kind": "geo_samples"
+}

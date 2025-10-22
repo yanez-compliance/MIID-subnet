@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ludwigshafen am Rhein",
+  "geonameid": 2875376,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.49561435445079,
+      "lon": 8.43432596319583,
+      "geoinfo": {
+        "display_name": "Diaminstraße, Ludwigshafen am Rhein, Rhineland-Palatinate, 67063, Germany",
+        "road": "Diaminstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ludwigshafen am Rhein",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67063",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Diaminstraße, Ludwigshafen am Rhein, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.47775714528593,
+      "lon": 8.506681093372132,
+      "geoinfo": {
+        "display_name": "1, Seckenheimer Landstraße, Neuostheim, Neuostheim/Neuhermsheim, Mannheim, Baden-Württemberg, 68163, Germany",
+        "road": "Seckenheimer Landstraße",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Neuostheim",
+        "city_district": "Neuostheim/Neuhermsheim",
+        "city": "Mannheim",
+        "state": "Baden-Württemberg",
+        "postcode": "68163",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Seckenheimer Landstraße, Neuostheim, Neuostheim/Neuhermsheim, Mannheim, Baden-Württemberg, 68163, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:51.177553+00:00",
+  "_kind": "geo_samples"
+}

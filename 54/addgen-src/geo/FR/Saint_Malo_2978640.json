@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Malo",
+  "geonameid": 2978640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.642214461276666,
+      "lon": -1.9538044193914976,
+      "geoinfo": {
+        "display_name": "Chemin de La Huperie, La Huperie, Paramé, Saint-Malo, Ille-et-Vilaine, Brittany, Metropolitan France, 35400, France",
+        "road": "Chemin de La Huperie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Paramé",
+        "city_district": null,
+        "city": "Saint-Malo",
+        "state": "Brittany",
+        "postcode": "35400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de La Huperie, Saint-Malo, Brittany, France"
+    },
+    {
+      "lat": 48.67581830658374,
+      "lon": -2.0181585165589486,
+      "geoinfo": {
+        "display_name": "Rocabey, Rocabey - Alsace - Gare, Saint-Malo, Ille-et-Vilaine, Brittany, Metropolitan France, 35400, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rocabey",
+        "city_district": null,
+        "city": "Saint-Malo",
+        "state": "Brittany",
+        "postcode": "35400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "680, Rocabey, Rocabey - Alsace - Gare, Saint-Malo, Ille-et-Vilaine, Brittany, Metropolitan France, 35400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:45:53.005903+00:00",
+  "_kind": "geo_samples"
+}

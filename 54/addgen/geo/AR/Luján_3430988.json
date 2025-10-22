@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Luján",
+  "geonameid": 3430988,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.5824334772365,
+      "lon": -59.0691634743482,
+      "geoinfo": {
+        "display_name": "Universidad Nacional de Luján, Ruta Nacional 5, Parque Lasa, Luján, Partido de Luján, Buenos Aires, 6700, Argentina",
+        "road": "Ruta Nacional 5",
+        "house_number": null,
+        "neighbourhood": "Parque Lasa",
+        "suburb": null,
+        "city_district": null,
+        "city": "Luján",
+        "state": "Buenos Aires",
+        "postcode": "6700",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Ruta Nacional 5, Luján, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.57888583065715,
+      "lon": -59.15674770825272,
+      "geoinfo": {
+        "display_name": "Partido de Luján, Buenos Aires, 6706, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "6706",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "263, Partido de Luján, Buenos Aires, 6706, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:00.402288+00:00",
+  "_kind": "geo_samples"
+}

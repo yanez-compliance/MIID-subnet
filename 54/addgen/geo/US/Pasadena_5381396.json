@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pasadena",
+  "geonameid": 5381396,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.16794941300335,
+      "lon": -118.1615417590259,
+      "geoinfo": {
+        "display_name": "519, West Claremont Street, Pasadena Council District 1, Pasadena, Los Angeles County, California, 91109, United States",
+        "road": "West Claremont Street",
+        "house_number": "519",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pasadena Council District 1",
+        "city": "Pasadena",
+        "state": "California",
+        "postcode": "91109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "519 West Claremont Street, Pasadena, California, United States"
+    },
+    {
+      "lat": 34.15528509396155,
+      "lon": -118.09760393278071,
+      "geoinfo": {
+        "display_name": "2565, Deodar Circle, Pasadena Council District 4, Pasadena, Los Angeles County, California, 91107, United States",
+        "road": "Deodar Circle",
+        "house_number": "2565",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pasadena Council District 4",
+        "city": "Pasadena",
+        "state": "California",
+        "postcode": "91107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2565, Deodar Circle, Pasadena Council District 4, Pasadena, Los Angeles County, California, 91107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:52.510045+00:00",
+  "_kind": "geo_samples"
+}

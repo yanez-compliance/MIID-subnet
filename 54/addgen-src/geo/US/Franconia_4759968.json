@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Franconia",
+  "geonameid": 4759968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.79248275547407,
+      "lon": -77.1635605079891,
+      "geoinfo": {
+        "display_name": "Capital Beltway, Monticello Woods, Bren Mar Park, Springfield, Fairfax County, Virginia, 22312, United States",
+        "road": "Capital Beltway",
+        "house_number": null,
+        "neighbourhood": "Monticello Woods",
+        "suburb": null,
+        "city_district": null,
+        "city": "Springfield",
+        "state": "Virginia",
+        "postcode": "22312",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Capital Beltway, Franconia, Virginia, United States"
+    },
+    {
+      "lat": 38.750164812798516,
+      "lon": -77.16367854275994,
+      "geoinfo": {
+        "display_name": "6345, Alderman Drive, Amherst Village, Fairfax County, Virginia, 22315, United States",
+        "road": "Alderman Drive",
+        "house_number": "6345",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22315",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6345, Alderman Drive, Amherst Village, Fairfax County, Virginia, 22315, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:56.396459+00:00",
+  "_kind": "geo_samples"
+}

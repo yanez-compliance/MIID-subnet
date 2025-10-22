@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Buraca",
+  "geonameid": 2270629,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.71083804924684,
+      "lon": -9.209119770513238,
+      "geoinfo": {
+        "display_name": "São Francisco Xavier, Belém, Lisbon, 1400-414, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "São Francisco Xavier",
+        "city_district": "Belém",
+        "city": "Lisbon",
+        "state": null,
+        "postcode": "1400-414",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "São Francisco Xavier, Buraca, Portugal"
+    },
+    {
+      "lat": 38.75743205813071,
+      "lon": -9.188234671319282,
+      "geoinfo": {
+        "display_name": "9, Rua Maria Brown, Carnide, Lisbon, 1500-676, Portugal",
+        "road": "Rua Maria Brown",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "Carnide",
+        "city_district": null,
+        "city": "Lisbon",
+        "state": null,
+        "postcode": "1500-676",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "9, Rua Maria Brown, Carnide, Lisbon, 1500-676, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:45:10.009767+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Plainfield",
+  "geonameid": 5101938,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.640732233186114,
+      "lon": -74.44297657697012,
+      "geoinfo": {
+        "display_name": "96, Brook Drive, Washingtonville, Watchung, Somerset County, New Jersey, 07069, United States",
+        "road": "Brook Drive",
+        "house_number": "96",
+        "neighbourhood": null,
+        "suburb": "Washingtonville",
+        "city_district": null,
+        "city": "Watchung",
+        "state": "New Jersey",
+        "postcode": "07069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "96 Brook Drive, North Plainfield, New Jersey, United States"
+    },
+    {
+      "lat": 40.59971927250801,
+      "lon": -74.46961912053399,
+      "geoinfo": {
+        "display_name": "Washington Avenue, Green Brook Township, Somerset County, New Jersey, 08812, United States",
+        "road": "Washington Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Green Brook Township",
+        "state": "New Jersey",
+        "postcode": "08812",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "611, Washington Avenue, Green Brook Township, Somerset County, New Jersey, 08812, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:56.120557+00:00",
+  "_kind": "geo_samples"
+}

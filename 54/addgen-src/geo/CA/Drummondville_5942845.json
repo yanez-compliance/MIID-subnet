@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Drummondville",
+  "geonameid": 5942845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.89276896830097,
+      "lon": -72.49946405888771,
+      "geoinfo": {
+        "display_name": "10, Avenue des Châtaigniers, Drummondville, Drummond, Centre-du-Québec, Quebec, J2C 1J4, Canada",
+        "road": "Avenue des Châtaigniers",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Drummondville",
+        "state": "Quebec",
+        "postcode": "J2C 1J4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "10 Avenue des Châtaigniers, Drummondville, Quebec, Canada"
+    },
+    {
+      "lat": 45.88478775148882,
+      "lon": -72.495602018711,
+      "geoinfo": {
+        "display_name": "Rue Saint-Georges, Drummondville, Drummond, Centre-du-Québec, Quebec, J2C 1N5, Canada",
+        "road": "Rue Saint-Georges",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Drummondville",
+        "state": "Quebec",
+        "postcode": "J2C 1N5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Rue Saint-Georges, Drummondville, Drummond, Centre-du-Québec, Quebec, J2C 1N5, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:43.210410+00:00",
+  "_kind": "geo_samples"
+}

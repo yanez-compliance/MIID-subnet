@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Kafr al Kurdī",
+  "geonameid": 354605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.13138269954535,
+      "lon": 31.7582162521657,
+      "geoinfo": {
+        "display_name": "Ad Dakahliya, 35756, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ad Dakahliya",
+        "postcode": "35756",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Kafr al Kurdī, Ad Dakahliya, Egypt"
+    },
+    {
+      "lat": 31.17849875207272,
+      "lon": 31.744146557777878,
+      "geoinfo": {
+        "display_name": "Mit al Qamas, Damietta, 35756, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mit al Qamas",
+        "state": "Damietta",
+        "postcode": "35756",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "083, Mit al Qamas, Damietta, 35756, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:57:42.788594+00:00",
+  "_kind": "geo_samples"
+}

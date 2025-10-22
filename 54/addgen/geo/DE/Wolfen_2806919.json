@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wolfen",
+  "geonameid": 2806919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.66113553007339,
+      "lon": 12.252261270132422,
+      "geoinfo": {
+        "display_name": "89, Thalheimer Straße, Krondorf, Wolfen, Bitterfeld-Wolfen, Anhalt-Bitterfeld, Saxony-Anhalt, 06766, Germany",
+        "road": "Thalheimer Straße",
+        "house_number": "89",
+        "neighbourhood": null,
+        "suburb": "Krondorf",
+        "city_district": "Wolfen",
+        "city": "Bitterfeld-Wolfen",
+        "state": "Saxony-Anhalt",
+        "postcode": "06766",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "89 Thalheimer Straße, Wolfen, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.68365131792564,
+      "lon": 12.29535534270549,
+      "geoinfo": {
+        "display_name": "39, Hauptstraße, Jeßnitz (Anhalt), Raguhn-Jeßnitz, Anhalt-Bitterfeld, Saxony-Anhalt, 06800, Germany",
+        "road": "Hauptstraße",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Jeßnitz (Anhalt)",
+        "city": "Jeßnitz (Anhalt)",
+        "state": "Saxony-Anhalt",
+        "postcode": "06800",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "39, Hauptstraße, Wolfen, 06800 Saxony-Anhalt, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:18.965479+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Illzach",
+  "geonameid": 3012829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.76730221135448,
+      "lon": 7.333582880114757,
+      "geoinfo": {
+        "display_name": "La Comtoise, Cité Wolf, Bourtzwiller, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68100, France",
+        "road": "La Comtoise",
+        "house_number": null,
+        "neighbourhood": "Cité Wolf",
+        "suburb": "Bourtzwiller",
+        "city_district": null,
+        "city": "Mulhouse",
+        "state": "Grand Est",
+        "postcode": "68100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "La Comtoise, Illzach, Grand Est, France"
+    },
+    {
+      "lat": 47.74915792322676,
+      "lon": 7.318691545616423,
+      "geoinfo": {
+        "display_name": "D.M.C., Dornach, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68200, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dornach",
+        "city_district": null,
+        "city": "Mulhouse",
+        "state": "Grand Est",
+        "postcode": "68200",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "256, D.M.C., Dornach, Mulhouse, Haut-Rhin, Grand Est, Metropolitan France, 68200, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:27.667668+00:00",
+  "_kind": "geo_samples"
+}

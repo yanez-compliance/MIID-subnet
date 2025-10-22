@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vernon Hills",
+  "geonameid": 4914738,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.239809012474296,
+      "lon": -87.97180622818165,
+      "geoinfo": {
+        "display_name": "Aspen Point Road, Vernon Hills, Lake County, Illinois, 60061, United States",
+        "road": "Aspen Point Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vernon Hills",
+        "state": "Illinois",
+        "postcode": "60061",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Aspen Point Road, Vernon Hills, Illinois, United States"
+    },
+    {
+      "lat": 42.220034349747706,
+      "lon": -88.0285751141738,
+      "geoinfo": {
+        "display_name": "Edward Lane, Rambling Hills, Hawthorn Woods, Ela Township, Lake County, Illinois, 60047, United States",
+        "road": "Edward Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hawthorn Woods",
+        "state": "Illinois",
+        "postcode": "60047",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "542, Edward Lane, Rambling Hills, Hawthorn Woods, Ela Township, Lake County, Illinois, 60047, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:54.187009+00:00",
+  "_kind": "geo_samples"
+}

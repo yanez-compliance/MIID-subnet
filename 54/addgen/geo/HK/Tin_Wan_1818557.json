@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Tin Wan",
+  "geonameid": 1818557,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.25057071984784,
+      "lon": 114.16062951481415,
+      "geoinfo": {
+        "display_name": "Aberdeen Technical School, 1, Wong Chuk Hang Road, Brick Hill, Wong Chuk Hang, Southern District, Hong Kong Island, Hong Kong, China",
+        "road": "Wong Chuk Hang Road",
+        "house_number": "1",
+        "neighbourhood": "Brick Hill",
+        "suburb": "Wong Chuk Hang",
+        "city_district": null,
+        "city": "Hong Kong Island",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "1 Wong Chuk Hang Road, Tin Wan, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.215536676908624,
+      "lon": 114.13956093229103,
+      "geoinfo": {
+        "display_name": "Pok Tung Wan, Luk Chau Village, Islands District, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Islands District",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "492, Pok Tung Wan, Luk Chau Village, Islands District, New Territories, 01361 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T05:49:35.975271+00:00",
+  "_kind": "geo_samples"
+}

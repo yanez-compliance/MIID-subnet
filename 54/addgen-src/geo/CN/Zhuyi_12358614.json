@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhuyi",
+  "geonameid": 12358614,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.052377598344037,
+      "lon": 109.35470406190753,
+      "geoinfo": {
+        "display_name": "Zhuyi, Fengjie County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhuyi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhuyi, Chongqing, China"
+    },
+    {
+      "lat": 30.996464741170588,
+      "lon": 109.41992777818491,
+      "geoinfo": {
+        "display_name": "Fengjie, Fengjie County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fengjie",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "515, Fengjie, Fengjie County, 70160 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:00:58.313447+00:00",
+  "_kind": "geo_samples"
+}

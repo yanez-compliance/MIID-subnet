@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Uptown",
+  "geonameid": 4914557,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.98147743547973,
+      "lon": -87.66179585030633,
+      "geoinfo": {
+        "display_name": "5452, North Magnolia Avenue, Lakewood Balmoral Historic District, Andersonville, Edgewater, Chicago, Lake View Township, Cook County, Illinois, 60640, United States",
+        "road": "North Magnolia Avenue",
+        "house_number": "5452",
+        "neighbourhood": "Lakewood Balmoral Historic District",
+        "suburb": "Edgewater",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60640",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5452 North Magnolia Avenue, Uptown, Illinois, United States"
+    },
+    {
+      "lat": 42.00073103694261,
+      "lon": -87.65948974901256,
+      "geoinfo": {
+        "display_name": "Loyola University Chicago, 1032, West Sheridan Road, Rogers Park, Chicago, Rogers Park Township, Cook County, Illinois, 60660, United States",
+        "road": "West Sheridan Road",
+        "house_number": "1032",
+        "neighbourhood": null,
+        "suburb": "Rogers Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60660",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Loyola University Chicago, 1032, West Sheridan Road, Rogers Park, Chicago, Rogers Park Township, Cook County, Illinois, 60660, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:56:42.925749+00:00",
+  "_kind": "geo_samples"
+}

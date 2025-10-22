@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Cikcilli",
+  "geonameid": 8069036,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.55683413412685,
+      "lon": 32.02464338576875,
+      "geoinfo": {
+        "display_name": "Cikcilli, Alanya, Antalya, Mediterranean Region, 74000, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cikcilli",
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": "74000",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Cikcilli, Cikcilli, Turkey"
+    },
+    {
+      "lat": 36.5296731199258,
+      "lon": 32.07465774796681,
+      "geoinfo": {
+        "display_name": "Tünel, Kestel, Alanya, Antalya, Mediterranean Region, 07460, Turkey",
+        "road": "Tünel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": "07460",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "196, Tünel, Kestel, Alanya, Antalya, Mediterranean Region, 07460, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:14:57.959207+00:00",
+  "_kind": "geo_samples"
+}

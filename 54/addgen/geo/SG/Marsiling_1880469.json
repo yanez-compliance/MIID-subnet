@@ -1,0 +1,47 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Marsiling",
+  "geonameid": 1880469,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3902410921768587,
+      "lon": 103.75974017598539,
+      "geoinfo": {
+        "display_name": "Kranji Expressway, Sungei Kadut, Northwest, Singapore, 677737, Singapore",
+        "road": "Kranji Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sungei Kadut",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "677737",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "889, Kranji Expressway, Sungei Kadut, Northwest, Singapore, 677737, Singapore"
+    },
+    {
+      "lat": 1.4384540218182402,
+      "lon": 103.77176874776787,
+      "geoinfo": {
+        "display_name": "Woodlands Centre Road, Marsiling, Woodlands, Northwest, Singapore, 732191, Singapore",
+        "road": "Woodlands Centre Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Woodlands",
+        "city_district": "Northwest",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "732191",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "915, Woodlands Centre Road, Marsiling, Woodlands, Northwest, Singapore, 732191, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:59.752924+00:00",
+  "_kind": "geo_samples"
+}

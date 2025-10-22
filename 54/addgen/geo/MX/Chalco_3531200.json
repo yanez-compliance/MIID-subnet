@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Chalco",
+  "geonameid": 3531200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.29002399539488,
+      "lon": -98.92030275752288,
+      "geoinfo": {
+        "display_name": "Calle Oriente 23, Valle de Chalco Solidaridad, State of Mexico, 56617, Mexico",
+        "road": "Calle Oriente 23",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valle de Chalco Solidaridad",
+        "state": "State of Mexico",
+        "postcode": "56617",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Oriente 23, Chalco, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.257457106548983,
+      "lon": -98.91844623812345,
+      "geoinfo": {
+        "display_name": "Avenida Crisantemos, Chalco de Díaz Covarrubias, Chalco, State of Mexico, 56607, Mexico",
+        "road": "Avenida Crisantemos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chalco de Díaz Covarrubias",
+        "state": "State of Mexico",
+        "postcode": "56607",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "692, Avenida Crisantemos, Chalco de Díaz Covarrubias, Chalco, State of Mexico, 56607, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:13.366178+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Mandurah",
+  "geonameid": 2067119,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.49011348848604,
+      "lon": 115.74627377982749,
+      "geoinfo": {
+        "display_name": "Acheron Road, San Remo, City of Mandurah, Western Australia, 6180, Australia",
+        "road": "Acheron Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Remo",
+        "city_district": null,
+        "city": "City of Mandurah",
+        "state": "Western Australia",
+        "postcode": "6180",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Acheron Road, Mandurah, Western Australia, Australia"
+    },
+    {
+      "lat": -32.52090738423092,
+      "lon": 115.69172190282546,
+      "geoinfo": {
+        "display_name": "Western Australia, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Western Australia",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "196, Mandurah, 01120 Western Australia, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:47:30.840374+00:00",
+  "_kind": "geo_samples"
+}

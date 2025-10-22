@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grants Pass",
+  "geonameid": 5729080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.41801404460569,
+      "lon": -123.3141623009738,
+      "geoinfo": {
+        "display_name": "1734, Gardendale Lane, Fruitdale, Grants Pass, Josephine County, Oregon, 97527, United States",
+        "road": "Gardendale Lane",
+        "house_number": "1734",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grants Pass",
+        "state": "Oregon",
+        "postcode": "97527",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1734 Gardendale Lane, Grants Pass, Oregon, United States"
+    },
+    {
+      "lat": 42.40954135008978,
+      "lon": -123.2978714290118,
+      "geoinfo": {
+        "display_name": "Trollview Road, Grants Pass, Josephine County, Oregon, 94527, United States",
+        "road": "Trollview Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grants Pass",
+        "state": "Oregon",
+        "postcode": "94527",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "376, Trollview Road, Grants Pass, Josephine County, Oregon, 94527, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:50.592378+00:00",
+  "_kind": "geo_samples"
+}

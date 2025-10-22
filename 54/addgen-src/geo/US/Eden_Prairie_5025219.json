@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Eden Prairie",
+  "geonameid": 5025219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.85101492761718,
+      "lon": -93.44693019971174,
+      "geoinfo": {
+        "display_name": "Carmody Drive, Eden Prairie, Hennepin County, Minnesota, 55344, United States",
+        "road": "Carmody Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eden Prairie",
+        "state": "Minnesota",
+        "postcode": "55344",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carmody Drive, Eden Prairie, Minnesota, United States"
+    },
+    {
+      "lat": 44.851310065794294,
+      "lon": -93.49716712553102,
+      "geoinfo": {
+        "display_name": "Linwood Court, Eden Prairie, Hennepin County, Minnesota, 55347, United States",
+        "road": "Linwood Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eden Prairie",
+        "state": "Minnesota",
+        "postcode": "55347",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "702, Linwood Court, Eden Prairie, Hennepin County, Minnesota, 55347, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:44.608693+00:00",
+  "_kind": "geo_samples"
+}

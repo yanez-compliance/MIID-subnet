@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Glasgow",
+  "geonameid": 2648579,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.847695218014984,
+      "lon": -4.2256731008894715,
+      "geoinfo": {
+        "display_name": "Megan Street, Bridgeton, Glasgow, Glasgow City, Scotland, G40 4AB, United Kingdom",
+        "road": "Megan Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bridgeton",
+        "city_district": null,
+        "city": "Glasgow",
+        "state": "Scotland",
+        "postcode": "G40 4AB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Megan Street, Glasgow, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.84182097521531,
+      "lon": -4.204741491388548,
+      "geoinfo": {
+        "display_name": "Cuningar Avenue, Farme Cross, Rutherglen, South Lanarkshire, Scotland, G73 1PW, United Kingdom",
+        "road": "Cuningar Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Farme Cross",
+        "city_district": null,
+        "city": "Rutherglen",
+        "state": "Scotland",
+        "postcode": "G73 1PW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cuningar Avenue, Farme Cross, Rutherglen, South Lanarkshire, Scotland, G73 1PW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:20:58.126506+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Gómez Palacio",
+  "geonameid": 4005775,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.553069607748387,
+      "lon": -103.5069753602014,
+      "geoinfo": {
+        "display_name": "Boulevard Miguel Alemán, Ciudad Lerdo, Lerdo, Durango, 35000, Mexico",
+        "road": "Boulevard Miguel Alemán",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Lerdo",
+        "state": "Durango",
+        "postcode": "35000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Boulevard Miguel Alemán, Gómez Palacio, Durango, Mexico"
+    },
+    {
+      "lat": 25.5794813022328,
+      "lon": -103.4768411725448,
+      "geoinfo": {
+        "display_name": "Periférico Ejército Mexicano, Gómez Palacio, Durango, 35068, Mexico",
+        "road": "Periférico Ejército Mexicano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gómez Palacio",
+        "state": "Durango",
+        "postcode": "35068",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "344, Periférico Ejército Mexicano, Gómez Palacio, Durango, 35068, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:44.477165+00:00",
+  "_kind": "geo_samples"
+}

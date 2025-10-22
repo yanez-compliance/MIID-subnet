@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Derby",
+  "geonameid": 4270356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.576698141892216,
+      "lon": -97.2631215388323,
+      "geoinfo": {
+        "display_name": "598, Wild Plum Circle, Derby, Riverside Township, Sedgwick County, Kansas, 67037, United States",
+        "road": "Wild Plum Circle",
+        "house_number": "598",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Derby",
+        "state": "Kansas",
+        "postcode": "67037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "598 Wild Plum Circle, Derby, Kansas, United States"
+    },
+    {
+      "lat": 37.57520513477274,
+      "lon": -97.29246707267764,
+      "geoinfo": {
+        "display_name": "Clifton, Riverside Township, Sedgwick County, Kansas, 67216, United States",
+        "road": "Clifton",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": "67216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "522, Clifton, Riverside Township, Sedgwick County, Kansas, 67216, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:22.181012+00:00",
+  "_kind": "geo_samples"
+}

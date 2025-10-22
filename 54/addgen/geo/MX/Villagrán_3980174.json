@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Villagrán",
+  "geonameid": 3980174,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.538537030707264,
+      "lon": -100.96761426455174,
+      "geoinfo": {
+        "display_name": "Villagrán, Guanajuato, 38260, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villagrán",
+        "state": "Guanajuato",
+        "postcode": "38260",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Villagrán, Guanajuato, Mexico"
+    },
+    {
+      "lat": 20.47195033644443,
+      "lon": -101.00671091908325,
+      "geoinfo": {
+        "display_name": "Camino al Colorado, Cortazar, Guanajuato, 38494, Mexico",
+        "road": "Camino al Colorado",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guanajuato",
+        "postcode": "38494",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "647, Camino al Colorado, Cortazar, Guanajuato, 38494, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:06.893652+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Reinbek",
+  "geonameid": 2848845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.54035767637934,
+      "lon": 10.20264246938015,
+      "geoinfo": {
+        "display_name": "Star, Sandweg, Glinde, Kreis Stormarn, Schleswig-Holstein, 21509, Germany",
+        "road": "Sandweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glinde",
+        "state": "Schleswig-Holstein",
+        "postcode": "21509",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Sandweg, Reinbek, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.51521142700533,
+      "lon": 10.252227255979266,
+      "geoinfo": {
+        "display_name": "5, Rade, Reinbek, Kreis Stormarn, Schleswig-Holstein, 21465, Germany",
+        "road": "Rade",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reinbek",
+        "state": "Schleswig-Holstein",
+        "postcode": "21465",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "5, Rade, Reinbek, Kreis Stormarn, Schleswig-Holstein, 21465, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:40:43.798159+00:00",
+  "_kind": "geo_samples"
+}

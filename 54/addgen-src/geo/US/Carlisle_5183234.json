@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Carlisle",
+  "geonameid": 5183234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.195304587002404,
+      "lon": -77.18946824439786,
+      "geoinfo": {
+        "display_name": "Rite Aid, 429, South Hanover Street, Carlisle, Cumberland County, Pennsylvania, 17013, United States",
+        "road": "South Hanover Street",
+        "house_number": "429",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carlisle",
+        "state": "Pennsylvania",
+        "postcode": "17013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "429 South Hanover Street, Carlisle, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.20848028919618,
+      "lon": -77.20188718206734,
+      "geoinfo": {
+        "display_name": "1st Street, Carlisle, Cumberland County, Pennsylvania, 17013, United States",
+        "road": "1st Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carlisle",
+        "state": "Pennsylvania",
+        "postcode": "17013",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1st Street, Carlisle, Cumberland County, Pennsylvania, 17013, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:27.857226+00:00",
+  "_kind": "geo_samples"
+}

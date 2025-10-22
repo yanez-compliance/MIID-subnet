@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wangu",
+  "geonameid": 1791875,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.701614560796266,
+      "lon": 105.91956615436762,
+      "geoinfo": {
+        "display_name": "Guoliang, Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guoliang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wangu, Chongqing, China"
+    },
+    {
+      "lat": 29.64666035288721,
+      "lon": 105.93008955002779,
+      "geoinfo": {
+        "display_name": "Dazu District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "756, Dazu District, 93026 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:12.352721+00:00",
+  "_kind": "geo_samples"
+}

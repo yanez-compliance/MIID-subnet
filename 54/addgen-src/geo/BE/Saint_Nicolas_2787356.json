@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Saint-Nicolas",
+  "geonameid": 2787356,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.641695087822285,
+      "lon": 5.540924667271568,
+      "geoinfo": {
+        "display_name": "54, Rue de Montegnée, Burenville, Glain, Liège, Wallonia, 4000, Belgium",
+        "road": "Rue de Montegnée",
+        "house_number": "54",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "54 Rue de Montegnée, Saint-Nicolas, Liège, Belgium"
+    },
+    {
+      "lat": 50.612489537648095,
+      "lon": 5.534175934230625,
+      "geoinfo": {
+        "display_name": "Rue Ernest Solvay, Sclessin, Liège, Wallonia, 4000, Belgium",
+        "road": "Rue Ernest Solvay",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "581, Rue Ernest Solvay, Sclessin, Liège, Wallonia, 4000, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:43:29.898015+00:00",
+  "_kind": "geo_samples"
+}

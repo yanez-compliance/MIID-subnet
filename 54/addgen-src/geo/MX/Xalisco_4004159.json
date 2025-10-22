@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Xalisco",
+  "geonameid": 4004159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.411225892092055,
+      "lon": -104.91345523103078,
+      "geoinfo": {
+        "display_name": "Testerazo, Xalisco, Nayarit, 63786, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Testerazo",
+        "state": "Nayarit",
+        "postcode": "63786",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Xalisco, Nayarit, Mexico"
+    },
+    {
+      "lat": 21.42255476292059,
+      "lon": -104.88449693580128,
+      "geoinfo": {
+        "display_name": "24 de Febrero, Xalisco, Nayarit, 63786, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "24 de Febrero",
+        "suburb": null,
+        "city_district": null,
+        "city": "Xalisco",
+        "state": "Nayarit",
+        "postcode": "63786",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "24 de Febrero, Xalisco, Nayarit, 63786, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:31.898776+00:00",
+  "_kind": "geo_samples"
+}

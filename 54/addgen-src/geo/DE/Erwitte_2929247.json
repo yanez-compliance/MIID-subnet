@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Erwitte",
+  "geonameid": 2929247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.582295153951954,
+      "lon": 8.333546931706898,
+      "geoinfo": {
+        "display_name": "Lippstädter Straße, Anröchte, Kreis Soest, North Rhine-Westphalia, 59609, Germany",
+        "road": "Lippstädter Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Anröchte",
+        "city_district": null,
+        "city": "Anröchte",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59609",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lippstädter Straße, Erwitte, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.61447329275195,
+      "lon": 8.28683984533419,
+      "geoinfo": {
+        "display_name": "Ruckeligen Hütte, Oberer Langewendeweg, Berenbrocker Norden, Berenbrock, Erwitte, Kreis Soest, North Rhine-Westphalia, 59597, Germany",
+        "road": "Oberer Langewendeweg",
+        "house_number": null,
+        "neighbourhood": "Berenbrocker Norden",
+        "suburb": "Berenbrock",
+        "city_district": null,
+        "city": "Erwitte",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59597",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "882, Oberer Langewendeweg, Erwitte, 59597 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:50.892393+00:00",
+  "_kind": "geo_samples"
+}

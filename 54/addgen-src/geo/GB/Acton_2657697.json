@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Acton",
+  "geonameid": 2657697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.50278999304251,
+      "lon": -0.2848548770478251,
+      "geoinfo": {
+        "display_name": "61, Carbery Avenue, London Borough of Ealing, London, Greater London, England, W3 9AB, United Kingdom",
+        "road": "Carbery Avenue",
+        "house_number": "61",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Ealing",
+        "city": "London",
+        "state": "England",
+        "postcode": "W3 9AB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "61 Carbery Avenue, Acton, England, United Kingdom"
+    },
+    {
+      "lat": 51.481401250440655,
+      "lon": -0.2687514597475513,
+      "geoinfo": {
+        "display_name": "Sutton Court Road, Grove Park, London Borough of Hounslow, London, Greater London, England, W4 3RR, United Kingdom",
+        "road": "Sutton Court Road",
+        "house_number": null,
+        "neighbourhood": "Grove Park",
+        "suburb": null,
+        "city_district": "London Borough of Hounslow",
+        "city": "London",
+        "state": "England",
+        "postcode": "W4 3RR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Sutton Court Road, Grove Park, London Borough of Hounslow, London, Greater London, England, W4 3RR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:56.698512+00:00",
+  "_kind": "geo_samples"
+}

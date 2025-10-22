@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sandy Hills",
+  "geonameid": 5781070,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.58618993990076,
+      "lon": -111.79447570032784,
+      "geoinfo": {
+        "display_name": "9012, Wasatch Boulevard, Cottonwood Heights, Salt Lake County, Utah, 84093, United States",
+        "road": "Wasatch Boulevard",
+        "house_number": "9012",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cottonwood Heights",
+        "state": "Utah",
+        "postcode": "84093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9012 Wasatch Boulevard, Sandy Hills, Utah, United States"
+    },
+    {
+      "lat": 40.57364463545979,
+      "lon": -111.82303617150973,
+      "geoinfo": {
+        "display_name": "2335, 9800 South, Granite View Estates, Eastwood, Sandy, Salt Lake County, Utah, 84092, United States",
+        "road": "9800 South",
+        "house_number": "2335",
+        "neighbourhood": "Granite View Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandy",
+        "state": "Utah",
+        "postcode": "84092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2335, 9800 South, Granite View Estates, Eastwood, Sandy, Salt Lake County, Utah, 84092, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:53:24.791538+00:00",
+  "_kind": "geo_samples"
+}

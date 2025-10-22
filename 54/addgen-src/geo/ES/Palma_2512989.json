@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Palma",
+  "geonameid": 2512989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.58733906541503,
+      "lon": 2.6043984812570797,
+      "geoinfo": {
+        "display_name": "Golf de Son Muntaner, Carrer de Miquel Lladó, Son Xigala, Palma de Mallorca, Palma, Balearic Islands, 07013, Spain",
+        "road": "Carrer de Miquel Lladó",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Son Xigala",
+        "city_district": null,
+        "city": "Palma de Mallorca",
+        "state": "Balearic Islands",
+        "postcode": "07013",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer de Miquel Lladó, Palma, Balearic Islands, Spain"
+    },
+    {
+      "lat": 39.58250752919214,
+      "lon": 2.695294428103444,
+      "geoinfo": {
+        "display_name": "9, Camí de Ca'n Palou, es Viver, Palma de Mallorca, Palma, Balearic Islands, 07008, Spain",
+        "road": "Camí de Ca'n Palou",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": "es Viver",
+        "city_district": null,
+        "city": "Palma de Mallorca",
+        "state": "Balearic Islands",
+        "postcode": "07008",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "9, Camí de Ca'n Palou, es Viver, Palma de Mallorca, Palma, Balearic Islands, 07008, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:31.638209+00:00",
+  "_kind": "geo_samples"
+}

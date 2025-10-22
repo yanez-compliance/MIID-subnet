@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yokota",
+  "geonameid": 1848305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.788903924367894,
+      "lon": 139.37087591026093,
+      "geoinfo": {
+        "display_name": "宮寺, Iruma, Saitama Prefecture, 358-0014, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iruma",
+        "state": null,
+        "postcode": "358-0014",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Yokota, Japan"
+    },
+    {
+      "lat": 35.75800155003999,
+      "lon": 139.39443659386308,
+      "geoinfo": {
+        "display_name": "Chuo 3, Chuo, Musashimurayama, Tokyo, 208-0004, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Chuo 3",
+        "suburb": null,
+        "city_district": null,
+        "city": "Musashimurayama",
+        "state": null,
+        "postcode": "208-0004",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Chuo 3, Chuo, Musashimurayama, Tokyo, 208-0004, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:55.980077+00:00",
+  "_kind": "geo_samples"
+}

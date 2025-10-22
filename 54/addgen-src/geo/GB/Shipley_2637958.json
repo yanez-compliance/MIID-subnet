@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Shipley",
+  "geonameid": 2637958,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.86105698612027,
+      "lon": -1.773703072501217,
+      "geoinfo": {
+        "display_name": "Bingley Road, Low Hill, Baildon, Bradford, West Yorkshire, England, BD17 6AZ, United Kingdom",
+        "road": "Bingley Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Baildon",
+        "city_district": null,
+        "city": "Bradford",
+        "state": "England",
+        "postcode": "BD17 6AZ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bingley Road, Shipley, England, United Kingdom"
+    },
+    {
+      "lat": 53.808028232614305,
+      "lon": -1.7151936810151953,
+      "geoinfo": {
+        "display_name": "Foston Lane, Fagley, Bradford Moor, Bradford, West Yorkshire, England, BD2 3QL, United Kingdom",
+        "road": "Foston Lane",
+        "house_number": null,
+        "neighbourhood": "Fagley",
+        "suburb": "Bradford Moor",
+        "city_district": null,
+        "city": "Bradford",
+        "state": "England",
+        "postcode": "BD2 3QL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Foston Lane, Fagley, Bradford Moor, Bradford, West Yorkshire, England, BD2 3QL, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:36.445601+00:00",
+  "_kind": "geo_samples"
+}

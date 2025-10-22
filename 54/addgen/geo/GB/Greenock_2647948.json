@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Greenock",
+  "geonameid": 2647948,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.923737077351134,
+      "lon": -4.790572996425512,
+      "geoinfo": {
+        "display_name": "The Waterman's Road, Pennyfern, Greenock, Inverclyde, Scotland, PA16 9LY, United Kingdom",
+        "road": "The Waterman's Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pennyfern",
+        "city_district": null,
+        "city": "Greenock",
+        "state": "Scotland",
+        "postcode": "PA16 9LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Waterman's Road, Greenock, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.937146433612085,
+      "lon": -4.816118275132531,
+      "geoinfo": {
+        "display_name": "Inverkip Road, Branchton, Gourock, Inverclyde, Scotland, PA16 0PF, United Kingdom",
+        "road": "Inverkip Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Branchton",
+        "city_district": null,
+        "city": "Gourock",
+        "state": "Scotland",
+        "postcode": "PA16 0PF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Inverkip Road, Branchton, Gourock, Inverclyde, Scotland, PA16 0PF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:30.402870+00:00",
+  "_kind": "geo_samples"
+}

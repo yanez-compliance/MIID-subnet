@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palmer",
+  "geonameid": 4946620,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.17031925474926,
+      "lon": -72.29584234512598,
+      "geoinfo": {
+        "display_name": "3, Country Lane, Palmer, Hampden County, Massachusetts, 01069, United States",
+        "road": "Country Lane",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmer",
+        "state": "Massachusetts",
+        "postcode": "01069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3 Country Lane, Palmer, Massachusetts, United States"
+    },
+    {
+      "lat": 42.180019290478306,
+      "lon": -72.33602940776917,
+      "geoinfo": {
+        "display_name": "67, Mount Dumplin Street, Palmer Center, Thorndike, Palmer, Hampden County, Massachusetts, 01069, United States",
+        "road": "Mount Dumplin Street",
+        "house_number": "67",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palmer",
+        "state": "Massachusetts",
+        "postcode": "01069",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "67, Mount Dumplin Street, Palmer Center, Thorndike, Palmer, Hampden County, Massachusetts, 01069, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:03.022378+00:00",
+  "_kind": "geo_samples"
+}

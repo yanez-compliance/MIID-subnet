@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Düren",
+  "geonameid": 2934486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.80017145771163,
+      "lon": 6.561757747087944,
+      "geoinfo": {
+        "display_name": "L 264, Girbelsrath, Nörvenich, Kreis Düren, North Rhine-Westphalia, 52388, Germany",
+        "road": "L 264",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Girbelsrath",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52388",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 264, Düren, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 50.78745190958207,
+      "lon": 6.520125244542356,
+      "geoinfo": {
+        "display_name": "B 56, Duren, Kreis Düren, North Rhine-Westphalia, 52351, Germany",
+        "road": "B 56",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Duren",
+        "state": "North Rhine-Westphalia",
+        "postcode": "52351",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 56, Duren, Kreis Düren, North Rhine-Westphalia, 52351, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:27.401818+00:00",
+  "_kind": "geo_samples"
+}

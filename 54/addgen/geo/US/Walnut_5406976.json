@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Walnut",
+  "geonameid": 5406976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.04293277344259,
+      "lon": -117.837189716682,
+      "geoinfo": {
+        "display_name": "Bonita Avenue, Walnut, Los Angeles County, California, 91789, United States",
+        "road": "Bonita Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Walnut",
+        "state": "California",
+        "postcode": "91789",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bonita Avenue, Walnut, California, United States"
+    },
+    {
+      "lat": 34.048536238192405,
+      "lon": -117.89989160070556,
+      "geoinfo": {
+        "display_name": "2173, East Kings Crest Drive, West Covina, Los Angeles County, California, 91791, United States",
+        "road": "East Kings Crest Drive",
+        "house_number": "2173",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Covina",
+        "state": "California",
+        "postcode": "91791",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2173, East Kings Crest Drive, West Covina, Los Angeles County, California, 91791, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:34.108673+00:00",
+  "_kind": "geo_samples"
+}

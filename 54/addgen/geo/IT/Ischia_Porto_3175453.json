@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Ischia Porto",
+  "geonameid": 3175453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.76094457251126,
+      "lon": 13.900212819313449,
+      "geoinfo": {
+        "display_name": "Il Fungo, Lacco Ameno, Naples, Campania, 80074, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lacco Ameno",
+        "state": "Campania",
+        "postcode": "80074",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Ischia Porto, Campania, Italy"
+    },
+    {
+      "lat": 40.75643430238866,
+      "lon": 14.003151066089245,
+      "geoinfo": {
+        "display_name": "Via Cavone, Chiaiolella, Procida, Naples, Campania, 80079, Italy",
+        "road": "Via Cavone",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Chiaiolella",
+        "city_district": null,
+        "city": "Procida",
+        "state": "Campania",
+        "postcode": "80079",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "351, Via Cavone, Chiaiolella, Procida, Naples, Campania, 80079, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:13:32.856554+00:00",
+  "_kind": "geo_samples"
+}

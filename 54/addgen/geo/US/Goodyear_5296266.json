@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Goodyear",
+  "geonameid": 5296266,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.44318400466441,
+      "lon": -112.36964472187607,
+      "geoinfo": {
+        "display_name": "UPS, 605, South Bullard Avenue, Goodyear, Maricopa County, Arizona, 85338, United States",
+        "road": "South Bullard Avenue",
+        "house_number": "605",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goodyear",
+        "state": "Arizona",
+        "postcode": "85338",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "605 South Bullard Avenue, Goodyear, Arizona, United States"
+    },
+    {
+      "lat": 33.43318971779855,
+      "lon": -112.37820579804935,
+      "geoinfo": {
+        "display_name": "South Bullard Avenue, Goodyear, Maricopa County, Arizona, 85338, United States",
+        "road": "South Bullard Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Goodyear",
+        "state": "Arizona",
+        "postcode": "85338",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "230, South Bullard Avenue, Goodyear, Maricopa County, Arizona, 85338, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:22.995244+00:00",
+  "_kind": "geo_samples"
+}

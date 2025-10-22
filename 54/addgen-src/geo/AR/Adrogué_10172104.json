@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Adrogué",
+  "geonameid": 10172104,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.813253695081016,
+      "lon": -58.33633419139002,
+      "geoinfo": {
+        "display_name": "Avenida Eva Perón, Barrio Don Orione, San Francisco de Asís, Partido de Almirante Brown, Buenos Aires, 1849, Argentina",
+        "road": "Avenida Eva Perón",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco de Asís",
+        "state": "Buenos Aires",
+        "postcode": "1849",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida Eva Perón, Adrogué, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.80173217185842,
+      "lon": -58.35661565419119,
+      "geoinfo": {
+        "display_name": "2369, General Arias, Rafael Calzada, Partido de Almirante Brown, Buenos Aires, B1847, Argentina",
+        "road": "General Arias",
+        "house_number": "2369",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rafael Calzada",
+        "state": "Buenos Aires",
+        "postcode": "B1847",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "2369, General Arias, Rafael Calzada, Partido de Almirante Brown, Buenos Aires, B1847, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:57:42.926097+00:00",
+  "_kind": "geo_samples"
+}

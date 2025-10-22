@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Center Point",
+  "geonameid": 4054378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.63663876916302,
+      "lon": -86.71685979510836,
+      "geoinfo": {
+        "display_name": "1198, 19th Avenue Northwest, Birmingham, Jefferson County, Alabama, 35215, United States",
+        "road": "19th Avenue Northwest",
+        "house_number": "1198",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35215",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1198 19th Avenue Northwest, Center Point, Alabama, United States"
+    },
+    {
+      "lat": 33.631842565570366,
+      "lon": -86.72028625168323,
+      "geoinfo": {
+        "display_name": "1059, Willow Brook Road, Birmingham, Jefferson County, Alabama, 35215, United States",
+        "road": "Willow Brook Road",
+        "house_number": "1059",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postcode": "35215",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1059, Willow Brook Road, Birmingham, Jefferson County, Alabama, 35215, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:34.661534+00:00",
+  "_kind": "geo_samples"
+}

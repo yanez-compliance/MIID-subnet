@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Malvern East",
+  "geonameid": 7932638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.870841697027174,
+      "lon": 145.0408992000398,
+      "geoinfo": {
+        "display_name": "15, Coppin Street, Malvern East, Melbourne, City of Stonnington, Victoria, 3145, Australia",
+        "road": "Coppin Street",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Malvern East",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3145",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "15 Coppin Street, Malvern East, Victoria, Australia"
+    },
+    {
+      "lat": -37.89479029967013,
+      "lon": 144.9945888485868,
+      "geoinfo": {
+        "display_name": "453, New Street, Brighton, Melbourne, City of Bayside, Victoria, 3186, Australia",
+        "road": "New Street",
+        "house_number": "453",
+        "neighbourhood": null,
+        "suburb": "Brighton",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3186",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "453, New Street, Brighton, Melbourne, City of Bayside, Victoria, 3186, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:35.284454+00:00",
+  "_kind": "geo_samples"
+}

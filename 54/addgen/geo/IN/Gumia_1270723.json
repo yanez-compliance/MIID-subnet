@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Gumia",
+  "geonameid": 1270723,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.827578194817626,
+      "lon": 85.79804983182154,
+      "geoinfo": {
+        "display_name": "Gumia, Bokaro, Jharkhand, 829112, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jharkhand",
+        "postcode": "829112",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Gumia, Jharkhand, India"
+    },
+    {
+      "lat": 23.764805412198232,
+      "lon": 85.83542038779227,
+      "geoinfo": {
+        "display_name": "Kathara, Gumia, Bokaro, Jharkhand, 829111, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kathara",
+        "state": "Jharkhand",
+        "postcode": "829111",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "473, Kathara, Gumia, Bokaro, Jharkhand, 829111, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:35.801615+00:00",
+  "_kind": "geo_samples"
+}

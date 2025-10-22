@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Astraviec",
+  "geonameid": 623941,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 54.6267736339367,
+      "lon": 25.97397075173743,
+      "geoinfo": {
+        "display_name": "6, Крынічная вуліца, Astravyets, Astravyets District, Hrodna Region, 231201, Belarus",
+        "road": "Крынічная вуліца",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Astravyets",
+        "state": "Hrodna Region",
+        "postcode": "231201",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "6 Крынічная вуліца, Astraviec, Hrodna Region, Belarus"
+    },
+    {
+      "lat": 54.63552633915606,
+      "lon": 25.976676808736105,
+      "geoinfo": {
+        "display_name": "Astravyets, Astravyets District, Hrodna Region, 231201, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Astravyets",
+        "state": "Hrodna Region",
+        "postcode": "231201",
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Astraviec, Hrodna Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-16T11:31:24.785383+00:00",
+  "_kind": "geo_samples"
+}

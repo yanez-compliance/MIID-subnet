@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Tirebolu",
+  "geonameid": 738753,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.99305545974297,
+      "lon": 38.81609684363949,
+      "geoinfo": {
+        "display_name": "Tirebolu, Giresun, Black Sea Region, 28500, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tirebolu",
+        "state": null,
+        "postcode": "28500",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Tirebolu, Turkey"
+    },
+    {
+      "lat": 40.96742689793875,
+      "lon": 38.82710132719099,
+      "geoinfo": {
+        "display_name": "İstiklal, Halaçlı, Tirebolu, Giresun, Black Sea Region, 28500, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "İstiklal",
+        "city_district": null,
+        "city": "Tirebolu",
+        "state": null,
+        "postcode": "28500",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "168, İstiklal, 28500 Tirebolu, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:14.951464+00:00",
+  "_kind": "geo_samples"
+}

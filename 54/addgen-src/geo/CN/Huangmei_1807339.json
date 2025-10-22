@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Huangmei",
+  "geonameid": 1807339,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.17694173711683,
+      "lon": 116.05227588018258,
+      "geoinfo": {
+        "display_name": "Huangmei County, Huanggang, Hubei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huangmei County",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Huangmei, Hubei, China"
+    },
+    {
+      "lat": 30.217656167274605,
+      "lon": 115.99701812288475,
+      "geoinfo": {
+        "display_name": "X114, Huangmei County, Huanggang, Hubei, China",
+        "road": "X114",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Huangmei County",
+        "city": "Huanggang",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "X114, Huangmei County, Huanggang, 98876 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:59.895101+00:00",
+  "_kind": "geo_samples"
+}

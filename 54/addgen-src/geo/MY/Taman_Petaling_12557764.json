@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Taman Petaling",
+  "geonameid": 12557764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 3.1958572739302866,
+      "lon": 101.62274821497378,
+      "geoinfo": {
+        "display_name": "Jalan 11/62, Bandar Menjalara, Kepong, Kuala Lumpur, 52200, Malaysia",
+        "road": "Jalan 11/62",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bandar Menjalara",
+        "city_district": null,
+        "city": "Kepong",
+        "state": "Kuala Lumpur",
+        "postcode": "52200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan 11/62, Taman Petaling, Kuala Lumpur, Malaysia"
+    },
+    {
+      "lat": 3.1837759790586686,
+      "lon": 101.66412149625627,
+      "geoinfo": {
+        "display_name": "Segambut, Kuala Lumpur, 51200, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Segambut",
+        "city_district": null,
+        "city": "Kuala Lumpur",
+        "state": "Kuala Lumpur",
+        "postcode": "51200",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "248, Segambut, Kuala Lumpur, 51200, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:33:25.666087+00:00",
+  "_kind": "geo_samples"
+}

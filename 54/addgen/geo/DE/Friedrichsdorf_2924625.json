@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Friedrichsdorf",
+  "geonameid": 2924625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.263460062423476,
+      "lon": 8.671936886174525,
+      "geoinfo": {
+        "display_name": "16, Am Burggraben, Burgholzhausen, Friedrichsdorf, Hochtaunuskreis, Hesse, 61381, Germany",
+        "road": "Am Burggraben",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Burgholzhausen",
+        "city_district": "Burgholzhausen",
+        "city": "Friedrichsdorf",
+        "state": "Hesse",
+        "postcode": "61381",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Am Burggraben, Friedrichsdorf, Hesse, Germany"
+    },
+    {
+      "lat": 50.24933709998696,
+      "lon": 8.662463911818442,
+      "geoinfo": {
+        "display_name": "A 5, Burgholzhausen, Friedrichsdorf, Hochtaunuskreis, Hesse, 61381, Germany",
+        "road": "A 5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Burgholzhausen",
+        "city_district": null,
+        "city": "Friedrichsdorf",
+        "state": "Hesse",
+        "postcode": "61381",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 5, Burgholzhausen, Friedrichsdorf, Hochtaunuskreis, Hesse, 61381, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:59.496268+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Lumiar",
+  "geonameid": 2266940,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 38.78618411993646,
+      "lon": -9.170467914947018,
+      "geoinfo": {
+        "display_name": "Rua Pedro Álvares Cabral, Lumiar, Póvoa de Santo Adrião e Olival Basto, Odivelas, Lisbon, 2620-052, Portugal",
+        "road": "Rua Pedro Álvares Cabral",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lumiar",
+        "city_district": "Póvoa de Santo Adrião e Olival Basto",
+        "city": "Odivelas",
+        "state": null,
+        "postcode": "2620-052",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Pedro Álvares Cabral, Lumiar, Portugal"
+    },
+    {
+      "lat": 38.78244466988565,
+      "lon": -9.20479932303309,
+      "geoinfo": {
+        "display_name": "Rua Florbela Espanca, Bairro da Milharada, Pontinha e Famões, Odivelas, Lisbon, 1675-627, Portugal",
+        "road": "Rua Florbela Espanca",
+        "house_number": null,
+        "neighbourhood": "Bairro da Milharada",
+        "suburb": null,
+        "city_district": "Pontinha e Famões",
+        "city": "Odivelas",
+        "state": null,
+        "postcode": "1675-627",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Rua Florbela Espanca, Bairro da Milharada, Pontinha e Famões, Odivelas, Lisbon, 1675-627, Portugal"
+    },
+    {
+      "lat": 38.76820122733068,
+      "lon": -9.15883992146168,
+      "geoinfo": {
+        "display_name": "2, Avenida Rainha Dona Leonor, Quinta do Lambert, Lumiar, Lisbon, 1750-142, Portugal",
+        "road": "Avenida Rainha Dona Leonor",
+        "house_number": "2",
+        "neighbourhood": "Quinta do Lambert",
+        "suburb": "Lumiar",
+        "city_district": null,
+        "city": "Lisbon",
+        "state": null,
+        "postcode": "1750-142",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "2, Avenida Rainha Dona Leonor, Quinta do Lambert, Lumiar, Lisbon, 1750-142, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:49.217458+00:00",
+  "_kind": "geo_samples"
+}

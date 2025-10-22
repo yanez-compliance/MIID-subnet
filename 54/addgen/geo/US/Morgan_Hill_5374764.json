@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morgan Hill",
+  "geonameid": 5374764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.15415318951521,
+      "lon": -121.63464037563259,
+      "geoinfo": {
+        "display_name": "1647, Half Road, Santa Clara County, California, 95037, United States",
+        "road": "Half Road",
+        "house_number": "1647",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95037",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1647 Half Road, Morgan Hill, California, United States"
+    },
+    {
+      "lat": 37.113462283981136,
+      "lon": -121.65763956480991,
+      "geoinfo": {
+        "display_name": "16290, De Witt Avenue, Santa Clara County, California, 95038, United States",
+        "road": "De Witt Avenue",
+        "house_number": "16290",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16290, De Witt Avenue, Santa Clara County, California, 95038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:19:24.977748+00:00",
+  "_kind": "geo_samples"
+}

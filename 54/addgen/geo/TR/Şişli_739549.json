@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Şişli",
+  "geonameid": 739549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.10213442882286,
+      "lon": 28.993890473848957,
+      "geoinfo": {
+        "display_name": "Huzur Mahallesi, Sarıyer, Istanbul, Marmara Region, 34485, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Huzur Mahallesi",
+        "city_district": null,
+        "city": "Sarıyer",
+        "state": null,
+        "postcode": "34485",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Huzur Mahallesi, Şişli, Turkey"
+    },
+    {
+      "lat": 41.09914904467565,
+      "lon": 29.00351611508208,
+      "geoinfo": {
+        "display_name": "Barbaros Caddesi, Yeşilce Mahallesi, Kâğıthane, Istanbul, Marmara Region, 34418, Turkey",
+        "road": "Barbaros Caddesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yeşilce Mahallesi",
+        "city_district": null,
+        "city": "Kâğıthane",
+        "state": null,
+        "postcode": "34418",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "068, Barbaros Caddesi, Yeşilce Mahallesi, Kâğıthane, Istanbul, Marmara Region, 34418, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:33.495220+00:00",
+  "_kind": "geo_samples"
+}

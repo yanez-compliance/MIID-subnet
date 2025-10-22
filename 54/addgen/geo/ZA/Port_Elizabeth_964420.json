@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Port Elizabeth",
+  "geonameid": 964420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.96769079059239,
+      "lon": 25.589911831296114,
+      "geoinfo": {
+        "display_name": "Mill Park Road, Walmer, Nelson Mandela Bay Ward 3, Gqeberha, Nelson Mandela Bay Metropolitan Municipality, Eastern Cape, 6057, South Africa",
+        "road": "Mill Park Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Walmer",
+        "city_district": null,
+        "city": "Gqeberha",
+        "state": "Eastern Cape",
+        "postcode": "6057",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Mill Park Road, Port Elizabeth, Eastern Cape, South Africa"
+    },
+    {
+      "lat": -33.92838973941361,
+      "lon": 25.59619152135188,
+      "geoinfo": {
+        "display_name": "Pyott Street, Ferguson, Nelson Mandela Bay Ward 7, Gqeberha, Nelson Mandela Bay Metropolitan Municipality, Eastern Cape, 6056, South Africa",
+        "road": "Pyott Street",
+        "house_number": null,
+        "neighbourhood": "Ferguson",
+        "suburb": "Nelson Mandela Bay Ward 7",
+        "city_district": null,
+        "city": "Gqeberha",
+        "state": "Eastern Cape",
+        "postcode": "6056",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Pyott Street, Ferguson, Nelson Mandela Bay Ward 7, Gqeberha, Nelson Mandela Bay Metropolitan Municipality, Eastern Cape, 6056, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:44.126405+00:00",
+  "_kind": "geo_samples"
+}

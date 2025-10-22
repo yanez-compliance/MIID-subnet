@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Severskaya",
+  "geonameid": 496267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.83180534008875,
+      "lon": 38.666342527045686,
+      "geoinfo": {
+        "display_name": "Южная улица, Severskaya, Северское сельское поселение, Seversky District, Krasnodar Krai, Southern Federal District, 353240, Russia",
+        "road": "Южная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Severskaya",
+        "state": "Krasnodar Krai",
+        "postcode": "353240",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Южная улица, Severskaya, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 44.81610102610382,
+      "lon": 38.68948733649491,
+      "geoinfo": {
+        "display_name": "Азовское сельское поселение, Seversky District, Krasnodar Krai, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "080, Severskaya, 43836 Krasnodar Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:30:33.945905+00:00",
+  "_kind": "geo_samples"
+}

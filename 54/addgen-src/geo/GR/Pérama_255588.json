@@ -1,0 +1,47 @@
+{
+  "country_code": "GR",
+  "country": "Greece",
+  "city": "Pérama",
+  "geonameid": 255588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.99416188738145,
+      "lon": 23.534784092282,
+      "geoinfo": {
+        "display_name": "Αγίου Νικολάου, Salamina Community, Salamina Municipal Unit, Municipality of Salamina, Regional Unit of Islands, Attica, 189 01, Greece",
+        "road": "Αγίου Νικολάου",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Salamina Community",
+        "city": "Salamina Municipal Unit",
+        "state": "Attica",
+        "postcode": "189 01",
+        "country": "Greece",
+        "country_code": "gr"
+      },
+      "address": "Αγίου Νικολάου, Pérama, Attica, Greece"
+    },
+    {
+      "lat": 37.94595414831603,
+      "lon": 23.542884430995322,
+      "geoinfo": {
+        "display_name": "Θεμιστοκλέους, Spithari, Ampelakia Community, Ampelakia Municipal Unit, Municipality of Salamina, Regional Unit of Islands, Attica, 189 02, Greece",
+        "road": "Θεμιστοκλέους",
+        "house_number": null,
+        "neighbourhood": "Spithari",
+        "suburb": null,
+        "city_district": "Ampelakia Community",
+        "city": "Ampelakia Municipal Unit",
+        "state": "Attica",
+        "postcode": "189 02",
+        "country": "Greece",
+        "country_code": "gr"
+      },
+      "address": "405, Θεμιστοκλέους, Pérama, 189 02 Attica, Greece"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:22.407374+00:00",
+  "_kind": "geo_samples"
+}

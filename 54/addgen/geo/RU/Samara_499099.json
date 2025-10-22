@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Samara",
+  "geonameid": 499099,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.1711261816064,
+      "lon": 50.132531913213214,
+      "geoinfo": {
+        "display_name": "Шмидта, Zheleznodorozhniy rayon, Samara, Samara Oblast, Volga Federal District, 443028, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Шмидта",
+        "city_district": null,
+        "city": "Samara",
+        "state": "Samara Oblast",
+        "postcode": "443028",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Шмидта, Samara, Samara Oblast, Russia"
+    },
+    {
+      "lat": 53.17881572021829,
+      "lon": 50.10183834383156,
+      "geoinfo": {
+        "display_name": "2к4, Затонная улица, Samarskiy rayon, Samara, Samara Oblast, Volga Federal District, 443028, Russia",
+        "road": "Затонная улица",
+        "house_number": "2к4",
+        "neighbourhood": null,
+        "suburb": "Samarskiy rayon",
+        "city_district": null,
+        "city": "Samara",
+        "state": "Samara Oblast",
+        "postcode": "443028",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "2к4, Затонная улица, Samarskiy rayon, Samara, Samara Oblast, Volga Federal District, 443028, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:48:48.387519+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Barrington",
+  "geonameid": 5220798,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.76330350661177,
+      "lon": -71.30506773849056,
+      "geoinfo": {
+        "display_name": "Cove Avenue, Barrington, Bristol County, Rhode Island, 02806, United States",
+        "road": "Cove Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barrington",
+        "state": "Rhode Island",
+        "postcode": "02806",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Cove Avenue, Barrington, Rhode Island, United States"
+    },
+    {
+      "lat": 41.75313426060772,
+      "lon": -71.32027028061668,
+      "geoinfo": {
+        "display_name": "County Road, Barrington, Bristol County, Rhode Island, 02806, United States",
+        "road": "County Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Barrington",
+        "state": "Rhode Island",
+        "postcode": "02806",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "883, County Road, Barrington, Bristol County, Rhode Island, 02806, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:43.298017+00:00",
+  "_kind": "geo_samples"
+}

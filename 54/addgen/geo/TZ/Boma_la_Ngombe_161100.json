@@ -1,0 +1,47 @@
+{
+  "country_code": "TZ",
+  "country": "Tanzania",
+  "city": "Boma la Ngombe",
+  "geonameid": 161100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -3.364969526965943,
+      "lon": 37.167252598980824,
+      "geoinfo": {
+        "display_name": "Boma Central Street, Hai, Kilimanjaro, Northern Zone, Tanzania",
+        "road": "Boma Central Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kilimanjaro",
+        "postcode": null,
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "609, Boma Central Street, Hai, Kilimanjaro, 62934 Northern Zone, Tanzania"
+    },
+    {
+      "lat": -3.3340395639121643,
+      "lon": 37.137708788205046,
+      "geoinfo": {
+        "display_name": "Boma Ng'ombe, Hai, Kilimanjaro, Northern Zone, 25000, Tanzania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Boma Ng'ombe",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kilimanjaro",
+        "postcode": "25000",
+        "country": "Tanzania",
+        "country_code": "tz"
+      },
+      "address": "314, Boma Ng'ombe, Hai, Kilimanjaro, Northern Zone, 25000, Tanzania"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:19.114593+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,65 @@
+{
+  "country_code": "BW",
+  "country": "Botswana",
+  "city": "Lobatse",
+  "geonameid": 933521,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": -25.248005521183618,
+      "lon": 25.660269385252334,
+      "geoinfo": {
+        "display_name": "A1, South-East District, Botswana",
+        "road": "A1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South-East District",
+        "postcode": null,
+        "country": "Botswana",
+        "country_code": "bw"
+      },
+      "address": "A1, Lobatse, South-East District, Botswana"
+    },
+    {
+      "lat": -25.203420392673458,
+      "lon": 25.68829842350655,
+      "geoinfo": {
+        "display_name": "Lobatse, Botswana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lobatse",
+        "state": null,
+        "postcode": null,
+        "country": "Botswana",
+        "country_code": "bw"
+      },
+      "address": "Lobatse, South-East District, Botswana"
+    },
+    {
+      "lat": -25.21477733347021,
+      "lon": 25.687791895727,
+      "geoinfo": {
+        "display_name": "Lobatse Town Council, Lobatse Road, Lobatse, Botswana",
+        "road": "Lobatse Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lobatse",
+        "state": null,
+        "postcode": null,
+        "country": "Botswana",
+        "country_code": "bw"
+      },
+      "address": "Lobatse Road, Lobatse, South-East District, Botswana"
+    }
+  ],
+  "updated_at": "2025-10-16T11:30:52.773782+00:00",
+  "_kind": "geo_samples"
+}

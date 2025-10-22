@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Ajax",
+  "geonameid": 5882873,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.83176207648224,
+      "lon": -79.0039272841052,
+      "geoinfo": {
+        "display_name": "80, Dreyer Drive, Clover Ridge, Ajax, Durham Region, Golden Horseshoe, Ontario, L1S 1M5, Canada",
+        "road": "Dreyer Drive",
+        "house_number": "80",
+        "neighbourhood": "Clover Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ajax",
+        "state": "Ontario",
+        "postcode": "L1S 1M5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "80 Dreyer Drive, Ajax, Ontario, Canada"
+    },
+    {
+      "lat": 43.850274613671246,
+      "lon": -78.97062387427813,
+      "geoinfo": {
+        "display_name": "Waterfront Trail, Whitby, Durham Region, Golden Horseshoe, Ontario, L1P 2B4, Canada",
+        "road": "Waterfront Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitby",
+        "state": "Ontario",
+        "postcode": "L1P 2B4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Waterfront Trail, Whitby, Durham Region, Golden Horseshoe, Ontario, L1P 2B4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:20:57.626929+00:00",
+  "_kind": "geo_samples"
+}

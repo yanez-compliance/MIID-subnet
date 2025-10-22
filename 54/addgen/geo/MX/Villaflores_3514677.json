@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Villaflores",
+  "geonameid": 3514677,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 16.206996702605807,
+      "lon": -93.28670433321763,
+      "geoinfo": {
+        "display_name": "Nueva Esperanza, Villa Corzo, Chiapas, 30475, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nueva Esperanza",
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Corzo",
+        "state": "Chiapas",
+        "postcode": "30475",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Nueva Esperanza, Villaflores, Chiapas, Mexico"
+    },
+    {
+      "lat": 16.25864248462401,
+      "lon": -93.28592434934217,
+      "geoinfo": {
+        "display_name": "Villaflores, Chiapas, 30475, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villaflores",
+        "state": "Chiapas",
+        "postcode": "30475",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "969, Villaflores, Chiapas, 30475, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:27:59.422482+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ridgewood",
+  "geonameid": 5133858,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.68434102158067,
+      "lon": -73.9467396034574,
+      "geoinfo": {
+        "display_name": "362, Putnam Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York, 11216, United States",
+        "road": "Putnam Avenue",
+        "house_number": "362",
+        "neighbourhood": "Bedford-Stuyvesant",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "362 Putnam Avenue, Ridgewood, New York, United States"
+    },
+    {
+      "lat": 40.68704602892667,
+      "lon": -73.87806950852371,
+      "geoinfo": {
+        "display_name": "Jamaica Avenue, Brooklyn, Kings County, New York, 11208, United States",
+        "road": "Jamaica Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11208",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "906, Jamaica Avenue, Brooklyn, Kings County, New York, 11208, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:34.282961+00:00",
+  "_kind": "geo_samples"
+}

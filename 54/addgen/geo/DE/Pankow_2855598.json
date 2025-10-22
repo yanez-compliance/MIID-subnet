@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Pankow",
+  "geonameid": 2855598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.59975802957063,
+      "lon": 13.366954592956363,
+      "geoinfo": {
+        "display_name": "Birkenweg, Kleingartenkolonie Fechner, Märkisches Viertel, Reinickendorf, Berlin, 13439, Germany",
+        "road": "Birkenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Märkisches Viertel",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13439",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Birkenweg, Pankow, Germany"
+    },
+    {
+      "lat": 52.55373006502387,
+      "lon": 13.437512795447494,
+      "geoinfo": {
+        "display_name": "47A, Goethestraße, Gründerviertel, Weißensee, Pankow, Berlin, 13086, Germany",
+        "road": "Goethestraße",
+        "house_number": "47A",
+        "neighbourhood": null,
+        "suburb": "Weißensee",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "13086",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "47A, Goethestraße, Gründerviertel, Weißensee, Pankow, Berlin, 13086, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:34:31.185746+00:00",
+  "_kind": "geo_samples"
+}

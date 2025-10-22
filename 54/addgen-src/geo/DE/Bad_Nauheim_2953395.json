@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bad Nauheim",
+  "geonameid": 2953395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.353642988023026,
+      "lon": 8.779185433200622,
+      "geoinfo": {
+        "display_name": "Schwalheimer Straße, Speckbrücksiedlung, Schwalheim, Bad Nauheim, Wetteraukreis, Hesse, 61231, Germany",
+        "road": "Schwalheimer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schwalheim",
+        "state": "Hesse",
+        "postcode": "61231",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schwalheimer Straße, Bad Nauheim, Hesse, Germany"
+    },
+    {
+      "lat": 50.37825815571778,
+      "lon": 8.709772255627556,
+      "geoinfo": {
+        "display_name": "Obstlehrpfad, Auf dem Hempler, Nieder-Mörlen, Bad Nauheim, Wetteraukreis, Hesse, 61231, Germany",
+        "road": "Obstlehrpfad",
+        "house_number": null,
+        "neighbourhood": "Auf dem Hempler",
+        "suburb": "Nieder-Mörlen",
+        "city_district": null,
+        "city": "Bad Nauheim",
+        "state": "Hesse",
+        "postcode": "61231",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "585, Obstlehrpfad, Auf dem Hempler, Nieder-Mörlen, Bad Nauheim, Wetteraukreis, Hesse, 61231, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:12.596561+00:00",
+  "_kind": "geo_samples"
+}

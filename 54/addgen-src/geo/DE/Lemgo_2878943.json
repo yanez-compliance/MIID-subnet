@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lemgo",
+  "geonameid": 2878943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.02616319839195,
+      "lon": 8.937204361528904,
+      "geoinfo": {
+        "display_name": "Hamelner Straße, Lemgo, Kreis Lippe, North Rhine-Westphalia, 32657, Germany",
+        "road": "Hamelner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lemgo",
+        "city_district": null,
+        "city": "Lemgo",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32657",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hamelner Straße, Lemgo, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.055479078627535,
+      "lon": 8.847924361355867,
+      "geoinfo": {
+        "display_name": "Papenhauser Straße, Papenhausen, Bad Salzuflen, Kreis Lippe, North Rhine-Westphalia, 32108, Germany",
+        "road": "Papenhauser Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Papenhausen",
+        "city_district": null,
+        "city": "Bad Salzuflen",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32108",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "334, Papenhauser Straße, Papenhausen, Bad Salzuflen, Kreis Lippe, North Rhine-Westphalia, 32108, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:19.850138+00:00",
+  "_kind": "geo_samples"
+}

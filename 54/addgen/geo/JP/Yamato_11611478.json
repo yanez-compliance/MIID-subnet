@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yamato",
+  "geonameid": 11611478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.45754213755253,
+      "lon": 139.4531825599391,
+      "geoinfo": {
+        "display_name": "Constellation Road, Tatekawa, 福田, Ayase, Kanagawa Prefecture, 242-0025, Japan",
+        "road": "Constellation Road",
+        "house_number": null,
+        "neighbourhood": "Tatekawa",
+        "suburb": null,
+        "city_district": "福田",
+        "city": "Ayase",
+        "state": null,
+        "postcode": "242-0025",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Constellation Road, Yamato, Japan"
+    },
+    {
+      "lat": 35.44349390365606,
+      "lon": 139.49106074982782,
+      "geoinfo": {
+        "display_name": "Miyazawa 4-chome, Seya Ward, Yokohama, Kanagawa Prefecture, 246-0038, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Miyazawa 4-chome",
+        "suburb": "Seya Ward",
+        "city_district": null,
+        "city": "Yokohama",
+        "state": null,
+        "postcode": "246-0038",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Miyazawa 4-chome, Seya Ward, Yokohama, Kanagawa Prefecture, 246-0038, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:45.152576+00:00",
+  "_kind": "geo_samples"
+}

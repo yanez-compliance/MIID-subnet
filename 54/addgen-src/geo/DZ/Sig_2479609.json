@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Sig",
+  "geonameid": 2479609,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.54589724849591,
+      "lon": -0.2038297903667351,
+      "geoinfo": {
+        "display_name": "RN 97, Sig, Sig District, Mascara, 29300, Algeria",
+        "road": "RN 97",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sig",
+        "state": "Mascara",
+        "postcode": "29300",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "RN 97, Sig, Mascara, Algeria"
+    },
+    {
+      "lat": 35.52113732551988,
+      "lon": -0.24708246585143775,
+      "geoinfo": {
+        "display_name": "El Ouennene, Oggaz, Oggaz District, Mascara, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oggaz",
+        "state": "Mascara",
+        "postcode": null,
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "949, El Ouennene, Oggaz, Oggaz District, 95158 Mascara, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:26.974779+00:00",
+  "_kind": "geo_samples"
+}

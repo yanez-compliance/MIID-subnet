@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Untolovo",
+  "geonameid": 8504947,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 60.043811612084205,
+      "lon": 30.23543312764593,
+      "geoinfo": {
+        "display_name": "Парашютная улица, Малая Каменка, округ Коломяги, Saint Petersburg, Northwestern Federal District, 197350, Russia",
+        "road": "Парашютная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Малая Каменка",
+        "city_district": "округ Коломяги",
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "197350",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Парашютная улица, Untolovo, Saint Petersburg, Russia"
+    },
+    {
+      "lat": 59.9801305491962,
+      "lon": 30.21667976957616,
+      "geoinfo": {
+        "display_name": "Яхтенная улица, округ № 65, Saint Petersburg, Northwestern Federal District, 197374, Russia",
+        "road": "Яхтенная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "округ № 65",
+        "city": "Saint Petersburg",
+        "state": "Saint Petersburg",
+        "postcode": "197374",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Яхтенная улица, округ № 65, Saint Petersburg, Northwestern Federal District, 197374, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:42:17.175824+00:00",
+  "_kind": "geo_samples"
+}

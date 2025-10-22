@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ourense",
+  "geonameid": 3114965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.2965346405202,
+      "lon": -7.853894772186402,
+      "geoinfo": {
+        "display_name": "OU-105, Seixalbo, Ourense, Galicia, 32970, Spain",
+        "road": "OU-105",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ourense",
+        "state": "Galicia",
+        "postcode": "32970",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "OU-105, Ourense, Galicia, Spain"
+    },
+    {
+      "lat": 42.29694709812345,
+      "lon": -7.865706783769065,
+      "geoinfo": {
+        "display_name": "Carqueixal, Rúa Outeiro da Vela, Seixalbo, Ourense, Galicia, 32911, Spain",
+        "road": "Rúa Outeiro da Vela",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ourense",
+        "state": "Galicia",
+        "postcode": "32911",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "911, Rúa Outeiro da Vela, Ourense, 32911 Galicia, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:11.121052+00:00",
+  "_kind": "geo_samples"
+}

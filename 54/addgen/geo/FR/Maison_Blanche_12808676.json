@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Maison Blanche",
+  "geonameid": 12808676,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.81314589478826,
+      "lon": 2.3526420981013634,
+      "geoinfo": {
+        "display_name": "61, Avenue Jean Jaurès, Gentilly, L'Haÿ-les-Roses, Val-de-Marne, Ile-de-France, Metropolitan France, 94250, France",
+        "road": "Avenue Jean Jaurès",
+        "house_number": "61",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gentilly",
+        "state": "Ile-de-France",
+        "postcode": "94250",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "61 Avenue Jean Jaurès, Maison Blanche, Ile-de-France, France"
+    },
+    {
+      "lat": 48.828430549179494,
+      "lon": 2.417224724545788,
+      "geoinfo": {
+        "display_name": "Promenade Maurice-Boitel, Quartier du Bel-Air, 12th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75012, France",
+        "road": "Promenade Maurice-Boitel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "12th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "postcode": "75012",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Promenade Maurice-Boitel, Quartier du Bel-Air, 12th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75012, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:04.523305+00:00",
+  "_kind": "geo_samples"
+}

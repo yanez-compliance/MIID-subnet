@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Belmont",
+  "geonameid": 5327455,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.517642202065794,
+      "lon": -122.30465141381991,
+      "geoinfo": {
+        "display_name": "2403, Lincoln Avenue, Belmont, San Mateo County, California, 94002, United States",
+        "road": "Lincoln Avenue",
+        "house_number": "2403",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belmont",
+        "state": "California",
+        "postcode": "94002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2403 Lincoln Avenue, Belmont, California, United States"
+    },
+    {
+      "lat": 37.55491168216643,
+      "lon": -122.25198641981997,
+      "geoinfo": {
+        "display_name": "1360, Halibut Street, Foster City, San Mateo County, California, 94404, United States",
+        "road": "Halibut Street",
+        "house_number": "1360",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Foster City",
+        "state": "California",
+        "postcode": "94404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1360, Halibut Street, Foster City, San Mateo County, California, 94404, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:02.009947+00:00",
+  "_kind": "geo_samples"
+}

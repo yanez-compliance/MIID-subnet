@@ -1,0 +1,65 @@
+{
+  "country_code": "NO",
+  "country": "Norway",
+  "city": "Sandnes",
+  "geonameid": 3140321,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 58.83413015603748,
+      "lon": 5.68559571942443,
+      "geoinfo": {
+        "display_name": "63, Todnheimveien, Todnheim, Sandnes, Rogaland, 4312, Norway",
+        "road": "Todnheimveien",
+        "house_number": "63",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandnes",
+        "state": null,
+        "postcode": "4312",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "63 Todnheimveien, Sandnes, Norway"
+    },
+    {
+      "lat": 58.84168233321848,
+      "lon": 5.802390298641472,
+      "geoinfo": {
+        "display_name": "213, Noredalsveien, Skaret, Auestad, Sandnes, Rogaland, 4338, Norway",
+        "road": "Noredalsveien",
+        "house_number": "213",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandnes",
+        "state": null,
+        "postcode": "4338",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "213 Noredalsveien, Sandnes, Norway"
+    },
+    {
+      "lat": 58.865422097934534,
+      "lon": 5.787281753346342,
+      "geoinfo": {
+        "display_name": "Vatne Skytebane, Skytebaneveien, Einartangen, Sandbakk, Sandnes, Rogaland, 4309, Norway",
+        "road": "Skytebaneveien",
+        "house_number": null,
+        "neighbourhood": "Einartangen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandbakk",
+        "state": null,
+        "postcode": "4309",
+        "country": "Norway",
+        "country_code": "no"
+      },
+      "address": "Skytebaneveien, Sandnes, Norway"
+    }
+  ],
+  "updated_at": "2025-10-16T20:26:47.040390+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Mons",
+  "geonameid": 2790869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.44925663650426,
+      "lon": 3.9176887715439612,
+      "geoinfo": {
+        "display_name": "Rue des Sandrinettes, Parc d'activité économique Mons-Cuesmes, Cuesmes, Mons, Hainaut, Wallonia, 7033, Belgium",
+        "road": "Rue des Sandrinettes",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mons",
+        "state": "Hainaut",
+        "postcode": "7033",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue des Sandrinettes, Mons, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.45624531109712,
+      "lon": 3.8898906359841434,
+      "geoinfo": {
+        "display_name": "29, Rue Nouvelle Chasse, Jemappes, Mons, Hainaut, Wallonia, 7012, Belgium",
+        "road": "Rue Nouvelle Chasse",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mons",
+        "state": "Hainaut",
+        "postcode": "7012",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "29, Rue Nouvelle Chasse, Jemappes, Mons, Hainaut, Wallonia, 7012, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:57:04.824515+00:00",
+  "_kind": "geo_samples"
+}

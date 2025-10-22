@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Lavapiés",
+  "geonameid": 6545078,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.40470427874647,
+      "lon": -3.6968707695272878,
+      "geoinfo": {
+        "display_name": "20, Calle de José Antonio Armona, Palos de Moguer, Arganzuela, Madrid, Community of Madrid, 28012, Spain",
+        "road": "Calle de José Antonio Armona",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": "Arganzuela",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "20 Calle de José Antonio Armona, Lavapiés, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.40095867324844,
+      "lon": -3.6965217992270607,
+      "geoinfo": {
+        "display_name": "22, Calle del Ferrocarril, Palos de Moguer, Arganzuela, Madrid, Community of Madrid, 28045, Spain",
+        "road": "Calle del Ferrocarril",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Arganzuela",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28045",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "22, Calle del Ferrocarril, Palos de Moguer, Arganzuela, Madrid, Community of Madrid, 28045, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:41.874970+00:00",
+  "_kind": "geo_samples"
+}

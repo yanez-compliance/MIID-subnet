@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richland",
+  "geonameid": 5808276,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.26644154524741,
+      "lon": -119.27533583213453,
+      "geoinfo": {
+        "display_name": "605, Comstock Street, Richland, Benton County, Washington, 99352, United States",
+        "road": "Comstock Street",
+        "house_number": "605",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richland",
+        "state": "Washington",
+        "postcode": "99352",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "605 Comstock Street, Richland, Washington, United States"
+    },
+    {
+      "lat": 46.275286470087764,
+      "lon": -119.26902190110435,
+      "geoinfo": {
+        "display_name": "Riverfront Trail, Richland, Benton County, Washington, 99352, United States",
+        "road": "Riverfront Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Richland",
+        "state": "Washington",
+        "postcode": "99352",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "269, Riverfront Trail, Richland, Benton County, Washington, 99352, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:22.231914+00:00",
+  "_kind": "geo_samples"
+}

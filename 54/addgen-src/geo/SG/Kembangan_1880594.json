@@ -1,0 +1,65 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Kembangan",
+  "geonameid": 1880594,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.2819190146296897,
+      "lon": 103.92798818494293,
+      "geoinfo": {
+        "display_name": "Bedok, Southeast, Singapore",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bedok",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": null,
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Bedok, Kembangan, Singapore"
+    },
+    {
+      "lat": 1.3239825581323366,
+      "lon": 103.94126639277931,
+      "geoinfo": {
+        "display_name": "58, New Upper Changi Road, Tanah Merah Green, Singapur East, Bedok, Southeast, Singapore, 461058, Singapore",
+        "road": "New Upper Changi Road",
+        "house_number": "58",
+        "neighbourhood": "Tanah Merah Green",
+        "suburb": "Bedok",
+        "city_district": "Southeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "461058",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "58, New Upper Changi Road, Tanah Merah Green, Singapur East, Bedok, Southeast, Singapore, 461058, Singapore"
+    },
+    {
+      "lat": 1.3472869442540099,
+      "lon": 103.90680333812583,
+      "geoinfo": {
+        "display_name": "Airport Road, Paya Lebar, Singapur East, Northeast, Singapore, 533844, Singapore",
+        "road": "Airport Road",
+        "house_number": null,
+        "neighbourhood": "Singapur East",
+        "suburb": "Paya Lebar",
+        "city_district": "Northeast",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "533844",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "984, Airport Road, Paya Lebar, Singapur East, Northeast, Singapore, 533844, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:30.199758+00:00",
+  "_kind": "geo_samples"
+}

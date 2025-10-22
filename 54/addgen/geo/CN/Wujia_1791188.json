@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Wujia",
+  "geonameid": 1791188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.65084294413451,
+      "lon": 105.34400818258892,
+      "geoinfo": {
+        "display_name": "Shizi, Dongxing District, Neijiang, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shizi",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Wujia, Sichuan, China"
+    },
+    {
+      "lat": 29.606741210291922,
+      "lon": 105.36951620960886,
+      "geoinfo": {
+        "display_name": "S546, Qingliu, Rongchang District, Chongqing, China",
+        "road": "S546",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qingliu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S546, Qingliu, Rongchang District, 23392 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:14:49.217165+00:00",
+  "_kind": "geo_samples"
+}

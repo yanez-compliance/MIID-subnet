@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Grandview",
+  "geonameid": 4388460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.890746016312654,
+      "lon": -94.55309121682873,
+      "geoinfo": {
+        "display_name": "3607, Main Street, Grandview, Jackson County, Missouri, 64030, United States",
+        "road": "Main Street",
+        "house_number": "3607",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grandview",
+        "state": "Missouri",
+        "postcode": "64030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3607 Main Street, Grandview, Missouri, United States"
+    },
+    {
+      "lat": 38.91718516850726,
+      "lon": -94.54692237882473,
+      "geoinfo": {
+        "display_name": "11500, Cleveland Avenue, Kansas City, Jackson County, Missouri, 64137, United States",
+        "road": "Cleveland Avenue",
+        "house_number": "11500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kansas City",
+        "state": "Missouri",
+        "postcode": "64137",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11500, Cleveland Avenue, Kansas City, Jackson County, Missouri, 64137, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:11.769178+00:00",
+  "_kind": "geo_samples"
+}

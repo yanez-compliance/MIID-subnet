@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Round Lake Beach",
+  "geonameid": 4908237,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.38816856334131,
+      "lon": -88.07514365009303,
+      "geoinfo": {
+        "display_name": "East Silver Oaks Drive, Round Lake Beach, Lake County, Illinois, 60073, United States",
+        "road": "East Silver Oaks Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Round Lake Beach",
+        "state": "Illinois",
+        "postcode": "60073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Silver Oaks Drive, Round Lake Beach, Illinois, United States"
+    },
+    {
+      "lat": 42.337076598935056,
+      "lon": -88.0733524957388,
+      "geoinfo": {
+        "display_name": "Antioch Street, Hainesville, Lake County, Illinois, 60030, United States",
+        "road": "Antioch Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "256, Antioch Street, Hainesville, Lake County, Illinois, 60030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:56:30.874563+00:00",
+  "_kind": "geo_samples"
+}

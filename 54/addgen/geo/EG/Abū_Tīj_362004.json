@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Abū Tīj",
+  "geonameid": 362004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.009836426100748,
+      "lon": 31.310562756447926,
+      "geoinfo": {
+        "display_name": "Al Masudi, Asyut, 71641, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Masudi",
+        "state": "Asyut",
+        "postcode": "71641",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Abū Tīj, Asyut, Egypt"
+    },
+    {
+      "lat": 27.057821166735575,
+      "lon": 31.281086871262367,
+      "geoinfo": {
+        "display_name": "Nazlet Abu Kaba, Asyut, 71641, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nazlet Abu Kaba",
+        "state": "Asyut",
+        "postcode": "71641",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "930, Nazlet Abu Kaba, Asyut, 71641, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:30.399303+00:00",
+  "_kind": "geo_samples"
+}

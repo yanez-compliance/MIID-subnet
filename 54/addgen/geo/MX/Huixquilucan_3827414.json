@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huixquilucan",
+  "geonameid": 3827414,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.39352151543624,
+      "lon": -99.36476377869658,
+      "geoinfo": {
+        "display_name": "Huixquilucan de Degollado, Huixquilucan, State of Mexico, 52795, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huixquilucan de Degollado",
+        "state": "State of Mexico",
+        "postcode": "52795",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huixquilucan, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.37115376932121,
+      "lon": -99.30478116349516,
+      "geoinfo": {
+        "display_name": "Colonia Ahuatenco, Punta Ahuatenco, Cuajimalpa de Morelos, Mexico City, 05039, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Colonia Ahuatenco",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mexico City",
+        "postcode": "05039",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "784, Colonia Ahuatenco, Punta Ahuatenco, Cuajimalpa de Morelos, Mexico City, 05039, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:55.200081+00:00",
+  "_kind": "geo_samples"
+}

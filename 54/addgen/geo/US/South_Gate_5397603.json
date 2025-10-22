@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Gate",
+  "geonameid": 5397603,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.94128892761648,
+      "lon": -118.20883928242415,
+      "geoinfo": {
+        "display_name": "10238, Virginia Avenue, Tweedy Mile Business District, South Gate, Los Angeles County, California, 90280, United States",
+        "road": "Virginia Avenue",
+        "house_number": "10238",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Gate",
+        "state": "California",
+        "postcode": "90280",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10238 Virginia Avenue, South Gate, California, United States"
+    },
+    {
+      "lat": 33.94127547777007,
+      "lon": -118.1808640761159,
+      "geoinfo": {
+        "display_name": "5136, Tweedy Boulevard, South Gate, Los Angeles County, California, 90280, United States",
+        "road": "Tweedy Boulevard",
+        "house_number": "5136",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Gate",
+        "state": "California",
+        "postcode": "90280",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5136, Tweedy Boulevard, South Gate, Los Angeles County, California, 90280, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:29.728017+00:00",
+  "_kind": "geo_samples"
+}

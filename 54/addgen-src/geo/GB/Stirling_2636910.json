@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Stirling",
+  "geonameid": 2636910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.12600565912684,
+      "lon": -3.925550946188592,
+      "geoinfo": {
+        "display_name": "Waverley Crescent, Riverside, Stirling, Scotland, FK8 1LY, United Kingdom",
+        "road": "Waverley Crescent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Riverside",
+        "city_district": null,
+        "city": "Stirling",
+        "state": "Scotland",
+        "postcode": "FK8 1LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Waverley Crescent, Stirling, Scotland, United Kingdom"
+    },
+    {
+      "lat": 56.15514322628366,
+      "lon": -3.9295951154289024,
+      "geoinfo": {
+        "display_name": "Upper Town, Bridge of Allan, Stirling, Scotland, FK9 4LT, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bridge of Allan",
+        "state": "Scotland",
+        "postcode": "FK9 4LT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Upper Town, Bridge of Allan, Stirling, Scotland, FK9 4LT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:46.786112+00:00",
+  "_kind": "geo_samples"
+}

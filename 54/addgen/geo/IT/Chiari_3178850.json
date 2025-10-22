@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Chiari",
+  "geonameid": 3178850,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.519162134078464,
+      "lon": 9.928217722562477,
+      "geoinfo": {
+        "display_name": "Via Tagliata, Chiari, Brescia, Lombardy, 25032, Italy",
+        "road": "Via Tagliata",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chiari",
+        "state": "Lombardy",
+        "postcode": "25032",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Tagliata, Chiari, Lombardy, Italy"
+    },
+    {
+      "lat": 45.54575183318081,
+      "lon": 9.978236414312423,
+      "geoinfo": {
+        "display_name": "Coccaglio, Brescia, Lombardy, 25030, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coccaglio",
+        "state": "Lombardy",
+        "postcode": "25030",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "941, Coccaglio, Brescia, Lombardy, 25030, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:43.886019+00:00",
+  "_kind": "geo_samples"
+}

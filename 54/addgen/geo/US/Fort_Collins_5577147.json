@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Collins",
+  "geonameid": 5577147,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.61410938600384,
+      "lon": -105.106514991593,
+      "geoinfo": {
+        "display_name": "Fort Collins / Lakeside KOA Holiday, Lakeside Resort Lane, Laporte, Larimer County, Colorado, 80521, United States",
+        "road": "Lakeside Resort Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Laporte",
+        "state": "Colorado",
+        "postcode": "80521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lakeside Resort Lane, Fort Collins, Colorado, United States"
+    },
+    {
+      "lat": 40.56798091469038,
+      "lon": -105.10137843907704,
+      "geoinfo": {
+        "display_name": "1405, West Lake Street, Fort Collins, Larimer County, Colorado, 80521, United States",
+        "road": "West Lake Street",
+        "house_number": "1405",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fort Collins",
+        "state": "Colorado",
+        "postcode": "80521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1405, West Lake Street, Fort Collins, Larimer County, Colorado, 80521, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:14:01.424796+00:00",
+  "_kind": "geo_samples"
+}

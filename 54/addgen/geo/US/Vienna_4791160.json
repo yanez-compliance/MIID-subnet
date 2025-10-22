@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Vienna",
+  "geonameid": 4791160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.87875371976673,
+      "lon": -77.25385770834585,
+      "geoinfo": {
+        "display_name": "I 66, Vienna, Fairfax County, Virginia, 22190, United States",
+        "road": "I 66",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vienna",
+        "state": "Virginia",
+        "postcode": "22190",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 66, Vienna, Virginia, United States"
+    },
+    {
+      "lat": 38.905593692285905,
+      "lon": -77.31092714298684,
+      "geoinfo": {
+        "display_name": "2410, Chris Wood Court, Oakton, Fairfax County, Virginia, 22124, United States",
+        "road": "Chris Wood Court",
+        "house_number": "2410",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakton",
+        "state": "Virginia",
+        "postcode": "22124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2410, Chris Wood Court, Oakton, Fairfax County, Virginia, 22124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:48.392322+00:00",
+  "_kind": "geo_samples"
+}

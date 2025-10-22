@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Bowangshan",
+  "geonameid": 6913329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.277467168070984,
+      "lon": 105.02099202854974,
+      "geoinfo": {
+        "display_name": "Xingwen County, Yibin, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Bowangshan, Sichuan, China"
+    },
+    {
+      "lat": 28.301568639790087,
+      "lon": 105.07360309632271,
+      "geoinfo": {
+        "display_name": "Bowangshan, Xingwen County, Yibin, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bowangshan",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "818, Bowangshan, Xingwen County, Yibin, 21605 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:41.611616+00:00",
+  "_kind": "geo_samples"
+}

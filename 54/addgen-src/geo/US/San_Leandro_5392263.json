@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "San Leandro",
+  "geonameid": 5392263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.69898768448951,
+      "lon": -122.17397468172489,
+      "geoinfo": {
+        "display_name": "14054-72 Catalina Street, 14054, Catalina Street, Mulford Gardens, San Leandro, Alameda County, California, 94577, United States",
+        "road": "Catalina Street",
+        "house_number": "14054",
+        "neighbourhood": "Mulford Gardens",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Leandro",
+        "state": "California",
+        "postcode": "94577",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14054 Catalina Street, San Leandro, California, United States"
+    },
+    {
+      "lat": 37.7212207841576,
+      "lon": -122.14511688226071,
+      "geoinfo": {
+        "display_name": "1932, Bancroft Avenue, San Leandro, Alameda County, California, 94577, United States",
+        "road": "Bancroft Avenue",
+        "house_number": "1932",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Leandro",
+        "state": "California",
+        "postcode": "94577",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1932, Bancroft Avenue, San Leandro, Alameda County, California, 94577, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:10.234596+00:00",
+  "_kind": "geo_samples"
+}

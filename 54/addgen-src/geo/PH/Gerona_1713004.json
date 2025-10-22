@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Gerona",
+  "geonameid": 1713004,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.569764257796688,
+      "lon": 120.59147850113476,
+      "geoinfo": {
+        "display_name": "Villa Paz, Cardona, Gerona, Tarlac, Central Luzon, 2302, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Villa Paz",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gerona",
+        "state": "Tarlac",
+        "postcode": "2302",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "Villa Paz, Gerona, Tarlac, Philippines"
+    },
+    {
+      "lat": 15.646656190572449,
+      "lon": 120.58887005414947,
+      "geoinfo": {
+        "display_name": "MacArthur Highway, Magaspac, Paniqui, Tarlac, Central Luzon, 2302, Philippines",
+        "road": "MacArthur Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paniqui",
+        "state": "Tarlac",
+        "postcode": "2302",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "323, MacArthur Highway, Magaspac, Paniqui, Tarlac, Central Luzon, 2302, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T05:02:47.350595+00:00",
+  "_kind": "geo_samples"
+}

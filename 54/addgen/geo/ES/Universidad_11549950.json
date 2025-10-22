@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Universidad",
+  "geonameid": 11549950,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.389859735090866,
+      "lon": -3.7415940419551443,
+      "geoinfo": {
+        "display_name": "103, Calle de la Laguna, Vista Alegre, Carabanchel, Madrid, Community of Madrid, 28047, Spain",
+        "road": "Calle de la Laguna",
+        "house_number": "103",
+        "neighbourhood": null,
+        "suburb": "Carabanchel",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28047",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "103 Calle de la Laguna, Universidad, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.397318768216195,
+      "lon": -3.6641327799766183,
+      "geoinfo": {
+        "display_name": "52, Calle de la Sierra de Filabres, Numancia, Vallecas, Madrid, Community of Madrid, 28038, Spain",
+        "road": "Calle de la Sierra de Filabres",
+        "house_number": "52",
+        "neighbourhood": null,
+        "suburb": "Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28038",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "52, Calle de la Sierra de Filabres, Numancia, Vallecas, Madrid, Community of Madrid, 28038, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:16.009321+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Richmond Hill",
+  "geonameid": 5133825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7079750091801,
+      "lon": -73.81455617809182,
+      "geoinfo": {
+        "display_name": "139-60, 86th Avenue, Queens, Queens County, New York, 11435, United States",
+        "road": "86th Avenue",
+        "house_number": "139-60",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11435",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "139-60 86th Avenue, Richmond Hill, New York, United States"
+    },
+    {
+      "lat": 40.72028350983609,
+      "lon": -73.85225051135096,
+      "geoinfo": {
+        "display_name": "68-09, Dartmouth Street, Forest Hills, Queens, Queens County, New York, 11375, United States",
+        "road": "Dartmouth Street",
+        "house_number": "68-09",
+        "neighbourhood": "Forest Hills",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11375",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "68-09, Dartmouth Street, Forest Hills, Queens, Queens County, New York, 11375, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:19.746064+00:00",
+  "_kind": "geo_samples"
+}

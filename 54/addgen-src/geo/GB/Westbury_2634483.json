@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Westbury",
+  "geonameid": 2634483,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.28338890908336,
+      "lon": -2.2225486754108417,
+      "geoinfo": {
+        "display_name": "Wood Road, Westbury, Wiltshire, England, BA14 9PT, United Kingdom",
+        "road": "Wood Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westbury",
+        "state": "England",
+        "postcode": "BA14 9PT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wood Road, Westbury, England, United Kingdom"
+    },
+    {
+      "lat": 51.22886783104691,
+      "lon": -2.225560951880518,
+      "geoinfo": {
+        "display_name": "Old Warminster Road, Upton Scudamore, Corsley, Wiltshire, England, BA13 4AQ, United Kingdom",
+        "road": "Old Warminster Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Upton Scudamore",
+        "city_district": null,
+        "city": "Corsley",
+        "state": "England",
+        "postcode": "BA13 4AQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Old Warminster Road, Upton Scudamore, Corsley, Wiltshire, England, BA13 4AQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:21:48.397017+00:00",
+  "_kind": "geo_samples"
+}

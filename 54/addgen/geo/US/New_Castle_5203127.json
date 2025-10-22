@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Castle",
+  "geonameid": 5203127,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.00885065345518,
+      "lon": -80.34993474849733,
+      "geoinfo": {
+        "display_name": "268, West Laurel Avenue, North Hill Historic District, New Castle, Lawrence County, Pennsylvania, 16101, United States",
+        "road": "West Laurel Avenue",
+        "house_number": "268",
+        "neighbourhood": "North Hill Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "New Castle",
+        "state": "Pennsylvania",
+        "postcode": "16101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "268 West Laurel Avenue, New Castle, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.99328481651067,
+      "lon": -80.39218357353809,
+      "geoinfo": {
+        "display_name": "Beaver Valley Expressway, Union Township, Lawrence County, Pennsylvania, 16102, United States",
+        "road": "Beaver Valley Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union Township",
+        "state": "Pennsylvania",
+        "postcode": "16102",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "703, Beaver Valley Expressway, Union Township, Lawrence County, Pennsylvania, 16102, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:51.308825+00:00",
+  "_kind": "geo_samples"
+}

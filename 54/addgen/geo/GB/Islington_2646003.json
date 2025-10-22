@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Islington",
+  "geonameid": 2646003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.55971519367909,
+      "lon": -0.08596580061114453,
+      "geoinfo": {
+        "display_name": "Stoke Newington, London Borough of Hackney, London, Greater London, England, N16 9HH, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Stoke Newington",
+        "city_district": "London Borough of Hackney",
+        "city": "London",
+        "state": "England",
+        "postcode": "N16 9HH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Stoke Newington, Islington, England, United Kingdom"
+    },
+    {
+      "lat": 51.558472147663664,
+      "lon": -0.1440352278404609,
+      "geoinfo": {
+        "display_name": "Bellgate Mews, The Arches, Dartmouth Park, London Borough of Camden, London, Greater London, England, NW5 1SW, United Kingdom",
+        "road": "Bellgate Mews",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dartmouth Park",
+        "city_district": "London Borough of Camden",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW5 1SW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Bellgate Mews, The Arches, Dartmouth Park, London Borough of Camden, London, Greater London, England, NW5 1SW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:23.742316+00:00",
+  "_kind": "geo_samples"
+}

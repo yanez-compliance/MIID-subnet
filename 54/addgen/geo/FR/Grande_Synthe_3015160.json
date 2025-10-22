@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Grande-Synthe",
+  "geonameid": 3015160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.0178722509356,
+      "lon": 2.2737205690153774,
+      "geoinfo": {
+        "display_name": "AIR LIQUIDE, Rue du Champ d'Aviation, Saint-Jacques, Grande-Synthe, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59760, France",
+        "road": "Rue du Champ d'Aviation",
+        "house_number": null,
+        "neighbourhood": "Saint-Jacques",
+        "suburb": null,
+        "city_district": null,
+        "city": "Grande-Synthe",
+        "state": "Hauts-de-France",
+        "postcode": "59760",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du Champ d'Aviation, Grande-Synthe, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.988110905379074,
+      "lon": 2.3178583275339055,
+      "geoinfo": {
+        "display_name": "Route de la Maison Blanche, Spycker, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France",
+        "road": "Route de la Maison Blanche",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spycker",
+        "state": "Hauts-de-France",
+        "postcode": "59380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "850, Route de la Maison Blanche, Spycker, Dunkirk, Nord, Hauts-de-France, Metropolitan France, 59380, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:48:04.369940+00:00",
+  "_kind": "geo_samples"
+}

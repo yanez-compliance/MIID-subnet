@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newton",
+  "geonameid": 4945283,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.36173656116147,
+      "lon": -71.22602251006839,
+      "geoinfo": {
+        "display_name": "29, Fordham Road, West Newton, Newton, Middlesex County, Massachusetts, 02453, United States",
+        "road": "Fordham Road",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "West Newton",
+        "city_district": null,
+        "city": "Newton",
+        "state": "Massachusetts",
+        "postcode": "02453",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29 Fordham Road, Newton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.31223653173363,
+      "lon": -71.22341348328682,
+      "geoinfo": {
+        "display_name": "15, Hale Street, Newton Upper Falls, Newton, Middlesex County, Massachusetts, 02464, United States",
+        "road": "Hale Street",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": "Newton Upper Falls",
+        "city_district": null,
+        "city": "Newton",
+        "state": "Massachusetts",
+        "postcode": "02464",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15, Hale Street, Newton Upper Falls, Newton, Middlesex County, Massachusetts, 02464, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:30.037456+00:00",
+  "_kind": "geo_samples"
+}

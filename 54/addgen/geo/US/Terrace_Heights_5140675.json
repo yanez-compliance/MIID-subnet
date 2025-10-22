@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Terrace Heights",
+  "geonameid": 5140675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.72550438047697,
+      "lon": -73.77313375184693,
+      "geoinfo": {
+        "display_name": "Grand Central Parkway, Terrace Heights, Queens, Queens County, New York, 11423, United States",
+        "road": "Grand Central Parkway",
+        "house_number": null,
+        "neighbourhood": "Terrace Heights",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11423",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grand Central Parkway, Terrace Heights, New York, United States"
+    },
+    {
+      "lat": 40.71245386857711,
+      "lon": -73.73689421420819,
+      "geoinfo": {
+        "display_name": "103-15, 218th Place, Queens, Queens County, New York, 11429, United States",
+        "road": "218th Place",
+        "house_number": "103-15",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11429",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "103-15, 218th Place, Queens, Queens County, New York, 11429, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:38.898162+00:00",
+  "_kind": "geo_samples"
+}

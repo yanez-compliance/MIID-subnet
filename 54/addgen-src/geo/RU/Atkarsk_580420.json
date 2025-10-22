@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Atkarsk",
+  "geonameid": 580420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.86137768979857,
+      "lon": 44.97523283771539,
+      "geoinfo": {
+        "display_name": "Karla Marksa Street, Atkarsk, городское поселение Аткарск, Atkarsky District, Saratov Oblast, Volga Federal District, 412425, Russia",
+        "road": "Karla Marksa Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Atkarsk",
+        "state": "Saratov Oblast",
+        "postcode": "412425",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Karla Marksa Street, Atkarsk, Saratov Oblast, Russia"
+    },
+    {
+      "lat": 51.859016818706856,
+      "lon": 45.063316786288595,
+      "geoinfo": {
+        "display_name": "сельское поселение Озёрное, Atkarsky District, Saratov Oblast, Volga Federal District, 412423, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Saratov Oblast",
+        "postcode": "412423",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "070, Atkarsk, 412423 Saratov Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:07:11.743937+00:00",
+  "_kind": "geo_samples"
+}

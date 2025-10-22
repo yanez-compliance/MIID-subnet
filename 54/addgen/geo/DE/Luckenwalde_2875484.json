@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Luckenwalde",
+  "geonameid": 2875484,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.07797547913486,
+      "lon": 13.099079655909975,
+      "geoinfo": {
+        "display_name": "Wildbahn, Jüterbog, Teltow-Fläming, Brandenburg, 14913, Germany",
+        "road": "Wildbahn",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jüterbog",
+        "state": "Brandenburg",
+        "postcode": "14913",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wildbahn, Luckenwalde, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.095632313226716,
+      "lon": 13.12197064225749,
+      "geoinfo": {
+        "display_name": "Marie-Curie-Straße, Luckenwalde, Teltow-Fläming, Brandenburg, 14943, Germany",
+        "road": "Marie-Curie-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Luckenwalde",
+        "city": "Luckenwalde",
+        "state": "Brandenburg",
+        "postcode": "14943",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "643, Marie-Curie-Straße, Luckenwalde, Teltow-Fläming, Brandenburg, 14943, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:47.179001+00:00",
+  "_kind": "geo_samples"
+}

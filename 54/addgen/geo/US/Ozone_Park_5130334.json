@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ozone Park",
+  "geonameid": 5130334,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.652411673229125,
+      "lon": -73.86930080035809,
+      "geoinfo": {
+        "display_name": "Belt Parkway, Brooklyn, Kings County, New York, 11239, United States",
+        "road": "Belt Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11239",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Belt Parkway, Ozone Park, New York, United States"
+    },
+    {
+      "lat": 40.66839870602716,
+      "lon": -73.82987443141387,
+      "geoinfo": {
+        "display_name": "Aqueduct Racetrack, Aqueduct Road, Queens, Queens County, New York, 11414, United States",
+        "road": "Aqueduct Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11414",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "700, Aqueduct Road, Ozone Park, 11414 New York, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:47.712629+00:00",
+  "_kind": "geo_samples"
+}

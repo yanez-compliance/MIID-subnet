@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seal Beach",
+  "geonameid": 5394086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.70270915944976,
+      "lon": -118.11660200514322,
+      "geoinfo": {
+        "display_name": "Seal Beach, Orange County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seal Beach",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Seal Beach, California, United States"
+    },
+    {
+      "lat": 33.72001864122287,
+      "lon": -118.13682857035188,
+      "geoinfo": {
+        "display_name": "Naples, Long Beach, Los Angeles County, California, 90803, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Naples",
+        "city_district": null,
+        "city": "Long Beach",
+        "state": "California",
+        "postcode": "90803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "822, Naples, Long Beach, Los Angeles County, California, 90803, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:40:08.227027+00:00",
+  "_kind": "geo_samples"
+}

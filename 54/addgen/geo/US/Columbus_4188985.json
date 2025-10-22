@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Columbus",
+  "geonameid": 4188985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.47350971385904,
+      "lon": -84.95921917975852,
+      "geoinfo": {
+        "display_name": "2234, 14th Street, Wynnton, Columbus, Muscogee County, Georgia, 31906, United States",
+        "road": "14th Street",
+        "house_number": "2234",
+        "neighbourhood": "Wynnton",
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Georgia",
+        "postcode": "31906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2234 14th Street, Columbus, Georgia, United States"
+    },
+    {
+      "lat": 32.43061056043791,
+      "lon": -84.96883041326113,
+      "geoinfo": {
+        "display_name": "Chattahoochee RiverWalk, Broadmoor, Columbus, Muscogee County, Georgia, 31903, United States",
+        "road": "Chattahoochee RiverWalk",
+        "house_number": null,
+        "neighbourhood": "Broadmoor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Columbus",
+        "state": "Georgia",
+        "postcode": "31903",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "731, Chattahoochee RiverWalk, Broadmoor, Columbus, Muscogee County, Georgia, 31903, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:47.212934+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Los Alcázares",
+  "geonameid": 2514868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.72682346670976,
+      "lon": -0.8353731684477868,
+      "geoinfo": {
+        "display_name": "Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Los Alcázares, Spain"
+    },
+    {
+      "lat": 37.72407087694894,
+      "lon": -0.8588872749914223,
+      "geoinfo": {
+        "display_name": "Los Alcázares, Campo de Cartagena y Mar Menor, Region of Murcia, 30710, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Los Alcázares",
+        "suburb": null,
+        "city_district": null,
+        "city": "Los Alcázares",
+        "state": "Region of Murcia",
+        "postcode": "30710",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "217, Los Alcázares, Campo de Cartagena y Mar Menor, Region of Murcia, 30710, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:58.353736+00:00",
+  "_kind": "geo_samples"
+}

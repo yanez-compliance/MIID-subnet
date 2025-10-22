@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elgin",
+  "geonameid": 4890864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.003536137078484,
+      "lon": -88.29178411156266,
+      "geoinfo": {
+        "display_name": "Robertson Road, South Elgin, Elgin Township, Kane County, Illinois, 60177, United States",
+        "road": "Robertson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Elgin",
+        "state": "Illinois",
+        "postcode": "60177",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Robertson Road, Elgin, Illinois, United States"
+    },
+    {
+      "lat": 42.048163744545256,
+      "lon": -88.30940367186854,
+      "geoinfo": {
+        "display_name": "592, North Clifton Avenue, Illinois Park, Elgin, Elgin Township, Kane County, Illinois, 60123, United States",
+        "road": "North Clifton Avenue",
+        "house_number": "592",
+        "neighbourhood": "Illinois Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elgin",
+        "state": "Illinois",
+        "postcode": "60123",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "592, North Clifton Avenue, Illinois Park, Elgin, Elgin Township, Kane County, Illinois, 60123, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:18.832005+00:00",
+  "_kind": "geo_samples"
+}

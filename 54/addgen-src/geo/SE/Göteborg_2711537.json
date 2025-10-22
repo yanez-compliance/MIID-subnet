@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Göteborg",
+  "geonameid": 2711537,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 57.69357800567651,
+      "lon": 11.99288244176458,
+      "geoinfo": {
+        "display_name": "Liseberg, 5, Örgrytevägen, Heden, Centrum, Gothenburg, Göteborgs Stad, Västra Götaland County, 412 51, Sweden",
+        "road": "Örgrytevägen",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Heden",
+        "city_district": "Centrum",
+        "city": "Gothenburg",
+        "state": null,
+        "postcode": "412 51",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "5 Örgrytevägen, Göteborg, Sweden"
+    },
+    {
+      "lat": 57.74986422170764,
+      "lon": 11.968087297209912,
+      "geoinfo": {
+        "display_name": "22, Nyhemsgatan, Backatorp, Skälltorp, Hisingen, Gothenburg, Göteborgs Stad, Västra Götaland County, 422 47, Sweden",
+        "road": "Nyhemsgatan",
+        "house_number": "22",
+        "neighbourhood": null,
+        "suburb": "Backatorp",
+        "city_district": "Hisingen",
+        "city": "Gothenburg",
+        "state": null,
+        "postcode": "422 47",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "22, Nyhemsgatan, Backatorp, Skälltorp, Hisingen, Gothenburg, Göteborgs Stad, Västra Götaland County, 422 47, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T09:49:01.537087+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schöneberg",
+  "geonameid": 2836788,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.467598401579565,
+      "lon": 13.32205571911241,
+      "geoinfo": {
+        "display_name": "Retzdorffpromenade, Friedenau, Tempelhof-Schöneberg, Berlin, 12161, Germany",
+        "road": "Retzdorffpromenade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Friedenau",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12161",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Retzdorffpromenade, Schöneberg, Germany"
+    },
+    {
+      "lat": 52.48651535431044,
+      "lon": 13.311679507639752,
+      "geoinfo": {
+        "display_name": "103, Berliner Straße, Güntzelkiez, Wilmersdorf, Charlottenburg-Wilmersdorf, Berlin, 10713, Germany",
+        "road": "Berliner Straße",
+        "house_number": "103",
+        "neighbourhood": null,
+        "suburb": "Wilmersdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10713",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "103, Berliner Straße, Güntzelkiez, Wilmersdorf, Charlottenburg-Wilmersdorf, Berlin, 10713, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:48.168822+00:00",
+  "_kind": "geo_samples"
+}

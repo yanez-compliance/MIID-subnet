@@ -1,0 +1,47 @@
+{
+  "country_code": "BY",
+  "country": "Belarus",
+  "city": "Logoysk",
+  "geonameid": 625972,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 54.233309575995165,
+      "lon": 27.878244904315945,
+      "geoinfo": {
+        "display_name": "Lahojsk selsaviet, Lahojsk District, Minsk Region, Belarus",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lahojsk selsaviet",
+        "state": "Minsk Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "931, Lahojsk selsaviet, Lahojsk District, 96097 Minsk Region, Belarus"
+    },
+    {
+      "lat": 54.22385812329353,
+      "lon": 27.900250558086608,
+      "geoinfo": {
+        "display_name": "Р3, Lahojsk selsaviet, Lahojsk District, Minsk Region, Belarus",
+        "road": "Р3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lahojsk selsaviet",
+        "state": "Minsk Region",
+        "postcode": null,
+        "country": "Belarus",
+        "country_code": "by"
+      },
+      "address": "Р3, Lahojsk selsaviet, Lahojsk District, 11028 Minsk Region, Belarus"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:11.277187+00:00",
+  "_kind": "geo_samples"
+}

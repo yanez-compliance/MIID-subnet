@@ -1,0 +1,47 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Hacienda La Calera",
+  "geonameid": 3888214,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -32.77421446101051,
+      "lon": -71.22638463827074,
+      "geoinfo": {
+        "display_name": "Los Chacras, Nogales, Provincia de Quillota, Valparaiso Region, 2290000, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nogales",
+        "state": "Valparaiso Region",
+        "postcode": "2290000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "122, Los Chacras, Nogales, Provincia de Quillota, Valparaiso Region, 2290000, Chile"
+    },
+    {
+      "lat": -32.79807385991763,
+      "lon": -71.18626664336612,
+      "geoinfo": {
+        "display_name": "Pachacamita, Las Cabritas, La Calera, Provincia de Quillota, Valparaiso Region, 2290000, Chile",
+        "road": "Pachacamita",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Calera",
+        "state": "Valparaiso Region",
+        "postcode": "2290000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "532, Pachacamita, Las Cabritas, La Calera, Provincia de Quillota, Valparaiso Region, 2290000, Chile"
+    }
+  ],
+  "updated_at": "2025-10-19T01:48:07.622954+00:00",
+  "_kind": "geo_samples"
+}

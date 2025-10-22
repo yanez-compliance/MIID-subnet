@@ -1,0 +1,47 @@
+{
+  "country_code": "KE",
+  "country": "Kenya",
+  "city": "Garissa",
+  "geonameid": 197745,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -0.45803076108660545,
+      "lon": 39.690476259940006,
+      "geoinfo": {
+        "display_name": "Garissa Township, Garissa, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Garissa",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "Garissa, Garissa, Kenya"
+    },
+    {
+      "lat": -0.4217038748677241,
+      "lon": 39.66367519997968,
+      "geoinfo": {
+        "display_name": "Garissa, Garissa Township, Garissa, Kenya",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garissa",
+        "state": "Garissa",
+        "postcode": null,
+        "country": "Kenya",
+        "country_code": "ke"
+      },
+      "address": "978, Garissa, Garissa Township, 28231 Garissa, Kenya"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:40.790851+00:00",
+  "_kind": "geo_samples"
+}

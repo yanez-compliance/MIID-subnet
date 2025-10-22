@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Inzai",
+  "geonameid": 6822179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.804920823763766,
+      "lon": 140.1382367961475,
+      "geoinfo": {
+        "display_name": "Kita-Chiba Road, 東の原一丁目, Inzai, Chiba Prefecture, 270-1334, Japan",
+        "road": "Kita-Chiba Road",
+        "house_number": null,
+        "neighbourhood": "東の原一丁目",
+        "suburb": null,
+        "city_district": null,
+        "city": "Inzai",
+        "state": null,
+        "postcode": "270-1334",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kita-Chiba Road, Inzai, Japan"
+    },
+    {
+      "lat": 35.858939477351235,
+      "lon": 140.20204419968863,
+      "geoinfo": {
+        "display_name": "中谷, Sakae, Inba, Chiba Prefecture, 300-1331, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sakae",
+        "state": null,
+        "postcode": "300-1331",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "中谷, Sakae, Inba, Chiba Prefecture, 300-1331, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:30:42.109059+00:00",
+  "_kind": "geo_samples"
+}

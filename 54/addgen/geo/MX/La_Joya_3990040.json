@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Joya",
+  "geonameid": 3990040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.421002514199415,
+      "lon": -117.02187787470233,
+      "geoinfo": {
+        "display_name": "Pórticos de San Antonio, Municipio de Tijuana, Baja California, 22664, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pórticos de San Antonio",
+        "state": "Baja California",
+        "postcode": "22664",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "La Joya, Baja California, Mexico"
+    },
+    {
+      "lat": 32.44726363464952,
+      "lon": -117.0090135359225,
+      "geoinfo": {
+        "display_name": "Privada Hidalgo, Del. Sanchez Taboada, La Joya, Municipio de Tijuana, Baja California, 22645, Mexico",
+        "road": "Privada Hidalgo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Del. Sanchez Taboada",
+        "city_district": null,
+        "city": "La Joya",
+        "state": "Baja California",
+        "postcode": "22645",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "777, Privada Hidalgo, Del. Sanchez Taboada, La Joya, Municipio de Tijuana, Baja California, 22645, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:09.799151+00:00",
+  "_kind": "geo_samples"
+}

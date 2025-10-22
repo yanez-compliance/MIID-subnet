@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Blue Island",
+  "geonameid": 4885186,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.67104780304255,
+      "lon": -87.6743438576193,
+      "geoinfo": {
+        "display_name": "12211, Vincennes Avenue, Blue Island, Calumet Township, Cook County, Illinois, 60406, United States",
+        "road": "Vincennes Avenue",
+        "house_number": "12211",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Blue Island",
+        "state": "Illinois",
+        "postcode": "60406",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12211 Vincennes Avenue, Blue Island, Illinois, United States"
+    },
+    {
+      "lat": 41.67132245468473,
+      "lon": -87.62434249809567,
+      "geoinfo": {
+        "display_name": "12245, South Perry Avenue, Cookes Subdivision, West Pullman, Chicago, Lake Township, Cook County, Illinois, 60628, United States",
+        "road": "South Perry Avenue",
+        "house_number": "12245",
+        "neighbourhood": "Cookes Subdivision",
+        "suburb": "West Pullman",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60628",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12245, South Perry Avenue, Cookes Subdivision, West Pullman, Chicago, Lake Township, Cook County, Illinois, 60628, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:27.467029+00:00",
+  "_kind": "geo_samples"
+}

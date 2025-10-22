@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Argenteuil",
+  "geonameid": 3037044,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.95609453056605,
+      "lon": 2.198516257468935,
+      "geoinfo": {
+        "display_name": "Allée de la Croix Berty, Les Champs Guillaume, Cormeilles-en-Parisis, Argenteuil, Val-d'Oise, Metropolitan France, 95240, France",
+        "road": "Allée de la Croix Berty",
+        "house_number": null,
+        "neighbourhood": "Les Champs Guillaume",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cormeilles-en-Parisis",
+        "state": null,
+        "postcode": "95240",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée de la Croix Berty, Argenteuil, France"
+    },
+    {
+      "lat": 48.97649888597358,
+      "lon": 2.2518296034882335,
+      "geoinfo": {
+        "display_name": "17, Avenue Berthet, Sannois, Argenteuil, Val-d'Oise, Metropolitan France, 95110, France",
+        "road": "Avenue Berthet",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sannois",
+        "state": null,
+        "postcode": "95110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "17, Avenue Berthet, Sannois, Argenteuil, Val-d'Oise, Metropolitan France, 95110, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:00.778675+00:00",
+  "_kind": "geo_samples"
+}

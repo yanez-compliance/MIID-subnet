@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Newport",
+  "geonameid": 2641598,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.5938385348371,
+      "lon": -2.9779576091354656,
+      "geoinfo": {
+        "display_name": "Summerhill Avenue, Victoria, Newport, Wales, NP19 8FS, United Kingdom",
+        "road": "Summerhill Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Victoria",
+        "city_district": null,
+        "city": "Newport",
+        "state": "Wales",
+        "postcode": "NP19 8FS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Summerhill Avenue, Newport, Wales, United Kingdom"
+    },
+    {
+      "lat": 51.56568983058712,
+      "lon": -2.94299217360652,
+      "geoinfo": {
+        "display_name": "Tatton Road, Nash, Newport, Wales, NP19 4SS, United Kingdom",
+        "road": "Tatton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nash",
+        "city_district": null,
+        "city": "Newport",
+        "state": "Wales",
+        "postcode": "NP19 4SS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Tatton Road, Nash, Newport, Wales, NP19 4SS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:31.335703+00:00",
+  "_kind": "geo_samples"
+}

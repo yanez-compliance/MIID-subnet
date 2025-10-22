@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhuzilin",
+  "geonameid": 13308748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.539109786697267,
+      "lon": 114.0448245241352,
+      "geoinfo": {
+        "display_name": "Fu'an, Futian Sub-district, Futian District, Shenzhen, Guangdong Province, 518000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Futian Sub-district",
+        "city_district": null,
+        "city": "Futian District",
+        "state": "Guangdong Province",
+        "postcode": "518000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Futian Sub-district, Zhuzilin, Guangdong Province, China"
+    },
+    {
+      "lat": 22.524392739633942,
+      "lon": 114.04951107977527,
+      "geoinfo": {
+        "display_name": "People’s Government of Futien, 123, Fumin Road, Xingang, Fubao Sub-district, Futian District, Shenzhen, Guangdong Province, 518000, China",
+        "road": "Fumin Road",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": "Fubao Sub-district",
+        "city_district": null,
+        "city": "Futian District",
+        "state": "Guangdong Province",
+        "postcode": "518000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "People’s Government of Futien, 123, Fumin Road, Xingang, Fubao Sub-district, Futian District, Shenzhen, Guangdong Province, 518000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:21.179885+00:00",
+  "_kind": "geo_samples"
+}

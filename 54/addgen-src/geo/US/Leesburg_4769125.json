@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Leesburg",
+  "geonameid": 4769125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.07725580023112,
+      "lon": -77.59228159573115,
+      "geoinfo": {
+        "display_name": "40736, Chevington Lane, Loudoun County, Virginia, 20178, United States",
+        "road": "Chevington Lane",
+        "house_number": "40736",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20178",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "40736 Chevington Lane, Leesburg, Virginia, United States"
+    },
+    {
+      "lat": 39.100585933263105,
+      "lon": -77.5432881756407,
+      "geoinfo": {
+        "display_name": "847, Trailview Boulevard Southeast, Leesburg, Loudoun County, Virginia, 20176, United States",
+        "road": "Trailview Boulevard Southeast",
+        "house_number": "847",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leesburg",
+        "state": "Virginia",
+        "postcode": "20176",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "847, Trailview Boulevard Southeast, Leesburg, Loudoun County, Virginia, 20176, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:02.358505+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Waterloo",
+  "geonameid": 2783985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.728956358703314,
+      "lon": 4.425535529454884,
+      "geoinfo": {
+        "display_name": "Chemin du Fond des Ails, Waterloo, La Hulpe, Nivelles, Walloon Brabant, Wallonia, 1310, Belgium",
+        "road": "Chemin du Fond des Ails",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Waterloo",
+        "city": "La Hulpe",
+        "state": "Walloon Brabant",
+        "postcode": "1310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Chemin du Fond des Ails, Waterloo, Walloon Brabant, Belgium"
+    },
+    {
+      "lat": 50.6877890432044,
+      "lon": 4.455213671306715,
+      "geoinfo": {
+        "display_name": "19A, Route de la Marache, Ohain, Lasne, Nivelles, Walloon Brabant, Wallonia, 1380, Belgium",
+        "road": "Route de la Marache",
+        "house_number": "19A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ohain",
+        "city": "Lasne",
+        "state": "Walloon Brabant",
+        "postcode": "1380",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "19A, Route de la Marache, Ohain, Lasne, Nivelles, Walloon Brabant, Wallonia, 1380, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:02.173241+00:00",
+  "_kind": "geo_samples"
+}

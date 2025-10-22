@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Spring",
+  "geonameid": 4733624,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.112041371497277,
+      "lon": -95.44656753625462,
+      "geoinfo": {
+        "display_name": "Spring Creek Trail, Grogan's Mill, The Woodlands, Montgomery County, Texas, 77386, United States",
+        "road": "Spring Creek Trail",
+        "house_number": null,
+        "neighbourhood": "Grogan's Mill",
+        "suburb": null,
+        "city_district": null,
+        "city": "The Woodlands",
+        "state": "Texas",
+        "postcode": "77386",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Spring Creek Trail, Spring, Texas, United States"
+    },
+    {
+      "lat": 30.079429441850102,
+      "lon": -95.4184711027991,
+      "geoinfo": {
+        "display_name": "Midway Street, Spring, Harris County, Texas, 77373, United States",
+        "road": "Midway Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Spring",
+        "state": "Texas",
+        "postcode": "77373",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "704, Midway Street, Spring, Harris County, Texas, 77373, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:07.178113+00:00",
+  "_kind": "geo_samples"
+}

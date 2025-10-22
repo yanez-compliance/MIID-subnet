@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Goya",
+  "geonameid": 11549944,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.42177224658538,
+      "lon": -3.6779407325651587,
+      "geoinfo": {
+        "display_name": "Bingo O'Donnell, Calle de O'Donnell, Goya, Salamanca, Madrid, Community of Madrid, 28009, Spain",
+        "road": "Calle de O'Donnell",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Salamanca",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28009",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de O'Donnell, Goya, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.4279947132504,
+      "lon": -3.639734019289347,
+      "geoinfo": {
+        "display_name": "78, Calle de Gutierre de Cetina, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain",
+        "road": "Calle de Gutierre de Cetina",
+        "house_number": "78",
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "78, Calle de Gutierre de Cetina, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:18.840012+00:00",
+  "_kind": "geo_samples"
+}

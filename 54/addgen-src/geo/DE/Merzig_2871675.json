@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Merzig",
+  "geonameid": 2871675,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.45969908211128,
+      "lon": 6.599182243211369,
+      "geoinfo": {
+        "display_name": "A 8, Besseringen, Merzig, Landkreis Merzig-Wadern, Saarland, 66663, Germany",
+        "road": "A 8",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Besseringen",
+        "city": "Merzig",
+        "state": "Saarland",
+        "postcode": "66663",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 8, Merzig, Saarland, Germany"
+    },
+    {
+      "lat": 49.46384767497079,
+      "lon": 6.662555995628683,
+      "geoinfo": {
+        "display_name": "Kaserne Auf der Ell, Eller Hof, Merzig, Landkreis Merzig-Wadern, Saarland, 66663, Germany",
+        "road": "Eller Hof",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Merzig",
+        "city": "Merzig",
+        "state": "Saarland",
+        "postcode": "66663",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "492, Eller Hof, Merzig, 66663 Saarland, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:03.942235+00:00",
+  "_kind": "geo_samples"
+}

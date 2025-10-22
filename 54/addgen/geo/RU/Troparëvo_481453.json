@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Troparëvo",
+  "geonameid": 481453,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.615393124948824,
+      "lon": 37.455836267341525,
+      "geoinfo": {
+        "display_name": "проектируемый проезд № 134, Mosrentgen, Moscow, Central Federal District, 108820, Russia",
+        "road": "проектируемый проезд № 134",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mosrentgen",
+        "state": "Moscow",
+        "postcode": "108820",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "проектируемый проезд № 134, Troparëvo, Moscow, Russia"
+    },
+    {
+      "lat": 55.657659145859846,
+      "lon": 37.533475938661404,
+      "geoinfo": {
+        "display_name": "улица Архитектора Власова, Obruchevsky District, Moscow, Central Federal District, 117630, Russia",
+        "road": "улица Архитектора Власова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Obruchevsky District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "117630",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "912, улица Архитектора Власова, Obruchevsky District, Moscow, Central Federal District, 117630, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:31:08.133773+00:00",
+  "_kind": "geo_samples"
+}

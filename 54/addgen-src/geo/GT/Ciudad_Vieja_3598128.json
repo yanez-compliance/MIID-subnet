@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Ciudad Vieja",
+  "geonameid": 3598128,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.484725308192132,
+      "lon": -90.763157571743,
+      "geoinfo": {
+        "display_name": "Ciudad Vieja, Sacatepéquez, 03012, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ciudad Vieja",
+        "state": "Sacatepéquez",
+        "postcode": "03012",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Ciudad Vieja, Sacatepéquez, Guatemala"
+    },
+    {
+      "lat": 14.538064407644754,
+      "lon": -90.79792775003482,
+      "geoinfo": {
+        "display_name": "RD SAC-3, San Miguel Dueñas, Sacatepéquez, 03015, Guatemala",
+        "road": "RD SAC-3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Dueñas",
+        "state": "Sacatepéquez",
+        "postcode": "03015",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "RD SAC-3, San Miguel Dueñas, Sacatepéquez, 03015, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:33.031134+00:00",
+  "_kind": "geo_samples"
+}

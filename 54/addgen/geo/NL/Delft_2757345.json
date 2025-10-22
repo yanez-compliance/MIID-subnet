@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Delft",
+  "geonameid": 2757345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.002719358763045,
+      "lon": 4.3799981465244295,
+      "geoinfo": {
+        "display_name": "114, Professor Evertslaan, Schoemakerplantage, Wippolder, Delft, South Holland, Netherlands, 2628 XZ, Netherlands",
+        "road": "Professor Evertslaan",
+        "house_number": "114",
+        "neighbourhood": "Schoemakerplantage",
+        "suburb": null,
+        "city_district": null,
+        "city": "Delft",
+        "state": "South Holland",
+        "postcode": "2628 XZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "114 Professor Evertslaan, Delft, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.98479003388245,
+      "lon": 4.317161398914832,
+      "geoinfo": {
+        "display_name": "Rijksstraatweg, Hodenpijl, Schipluiden, Midden-Delfland, South Holland, Netherlands, 2636 AX, Netherlands",
+        "road": "Rijksstraatweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schipluiden",
+        "state": "South Holland",
+        "postcode": "2636 AX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "210, Rijksstraatweg, Delft, 2636 AX South Holland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:01.864661+00:00",
+  "_kind": "geo_samples"
+}

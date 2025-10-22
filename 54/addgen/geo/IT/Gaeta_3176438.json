@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Gaeta",
+  "geonameid": 3176438,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.18920469202812,
+      "lon": 13.57513473294269,
+      "geoinfo": {
+        "display_name": "Montagna Spaccata, Gaeta, Latina, Lazio, 04024, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaeta",
+        "state": "Lazio",
+        "postcode": "04024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Gaeta, Lazio, Italy"
+    },
+    {
+      "lat": 41.21366167789201,
+      "lon": 13.540984846313822,
+      "geoinfo": {
+        "display_name": "Via Flacca, Gaeta, Latina, Lazio, 04024, Italy",
+        "road": "Via Flacca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gaeta",
+        "state": "Lazio",
+        "postcode": "04024",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "270, Via Flacca, Gaeta, Latina, Lazio, 04024, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:41.879309+00:00",
+  "_kind": "geo_samples"
+}

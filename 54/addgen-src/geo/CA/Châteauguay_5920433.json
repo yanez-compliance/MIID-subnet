@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Châteauguay",
+  "geonameid": 5920433,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.41544240550153,
+      "lon": -73.72839120414865,
+      "geoinfo": {
+        "display_name": "Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Châteauguay, Quebec, Canada"
+    },
+    {
+      "lat": 45.39412443574435,
+      "lon": -73.77671472804438,
+      "geoinfo": {
+        "display_name": "Secteur Le Grillon, Châteauguay, Roussillon, Montérégie, Quebec, J6J 4J3, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Châteauguay",
+        "state": "Quebec",
+        "postcode": "J6J 4J3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Secteur Le Grillon, Châteauguay, Roussillon, Montérégie, Quebec, J6J 4J3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:21:12.047054+00:00",
+  "_kind": "geo_samples"
+}

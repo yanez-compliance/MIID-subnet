@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bothell",
+  "geonameid": 5787829,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.76899650173328,
+      "lon": -122.20977293672142,
+      "geoinfo": {
+        "display_name": "Building D, 19410, Bothell Way Northeast, Bothell, King County, Washington, 98011, United States",
+        "road": "Bothell Way Northeast",
+        "house_number": "19410",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bothell",
+        "state": "Washington",
+        "postcode": "98011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19410 Bothell Way Northeast, Bothell, Washington, United States"
+    },
+    {
+      "lat": 47.78203743041854,
+      "lon": -122.19676589273212,
+      "geoinfo": {
+        "display_name": "23827, 25th Drive Southeast, Canyon Park, Bothell, Snohomish County, Washington, 98021, United States",
+        "road": "25th Drive Southeast",
+        "house_number": "23827",
+        "neighbourhood": null,
+        "suburb": "Canyon Park",
+        "city_district": null,
+        "city": "Bothell",
+        "state": "Washington",
+        "postcode": "98021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23827, 25th Drive Southeast, Canyon Park, Bothell, Snohomish County, Washington, 98021, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:47:15.334363+00:00",
+  "_kind": "geo_samples"
+}

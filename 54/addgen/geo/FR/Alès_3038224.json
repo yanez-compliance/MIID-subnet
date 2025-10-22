@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Alès",
+  "geonameid": 3038224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.11777777582133,
+      "lon": 4.11888367645914,
+      "geoinfo": {
+        "display_name": "1115C, Chemin du Mas de la Bedosse, Le Rieu, Alès, Gard, Occitania, Metropolitan France, 30100, France",
+        "road": "Chemin du Mas de la Bedosse",
+        "house_number": "1115C",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alès",
+        "state": "Occitania",
+        "postcode": "30100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1115C Chemin du Mas de la Bedosse, Alès, Occitania, France"
+    },
+    {
+      "lat": 44.162134192517875,
+      "lon": 4.0617973699354035,
+      "geoinfo": {
+        "display_name": "Chemin de la coste, Le Soulier, Saint-Martin-de-Valgalgues, Alès, Gard, Occitania, Metropolitan France, 30520, France",
+        "road": "Chemin de la coste",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Martin-de-Valgalgues",
+        "state": "Occitania",
+        "postcode": "30520",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "859, Chemin de la coste, Le Soulier, Saint-Martin-de-Valgalgues, Alès, Gard, Occitania, Metropolitan France, 30520, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:12.148268+00:00",
+  "_kind": "geo_samples"
+}

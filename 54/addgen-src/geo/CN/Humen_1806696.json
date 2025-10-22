@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Humen",
+  "geonameid": 1806696,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.86042128939037,
+      "lon": 113.6657236153374,
+      "geoinfo": {
+        "display_name": "Humen Town, Dongguan, Guangdong Province, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dongguan",
+        "state": "Guangdong Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Humen, Guangdong Province, China"
+    },
+    {
+      "lat": 22.837904255003174,
+      "lon": 113.6366396646702,
+      "geoinfo": {
+        "display_name": "S256, Shatian Town, Dongguan, Guangdong Province, 523061, China",
+        "road": "S256",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dongguan",
+        "state": "Guangdong Province",
+        "postcode": "523061",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S256, Shatian Town, Dongguan, Guangdong Province, 523061, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:25.241034+00:00",
+  "_kind": "geo_samples"
+}

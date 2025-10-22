@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Ahuntsic-Cartierville",
+  "geonameid": 5882725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.57307384009872,
+      "lon": -73.665826357741,
+      "geoinfo": {
+        "display_name": "Autoroute Papineau, Sault-au-Récollet, Ahuntsic, Ahuntsic-Cartierville, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2B 1W9, Canada",
+        "road": "Autoroute Papineau",
+        "house_number": null,
+        "neighbourhood": "Sault-au-Récollet",
+        "suburb": "Ahuntsic-Cartierville",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H2B 1W9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Autoroute Papineau, Ahuntsic-Cartierville, Quebec, Canada"
+    },
+    {
+      "lat": 45.590928931716846,
+      "lon": -73.71949920108389,
+      "geoinfo": {
+        "display_name": "Autoroute Jean-Noël-Lavoie, Vimont, Laval (administrative region), Quebec, H7M 2P4, Canada",
+        "road": "Autoroute Jean-Noël-Lavoie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vimont",
+        "city_district": null,
+        "city": "Laval (administrative region)",
+        "state": "Quebec",
+        "postcode": "H7M 2P4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Autoroute Jean-Noël-Lavoie, Vimont, Laval (administrative region), Quebec, H7M 2P4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:04.301622+00:00",
+  "_kind": "geo_samples"
+}

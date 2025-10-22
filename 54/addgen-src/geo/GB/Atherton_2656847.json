@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Atherton",
+  "geonameid": 2656847,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.51248720510352,
+      "lon": -2.451245712071565,
+      "geoinfo": {
+        "display_name": "Woolston Drive, New Hall Farm, Astley, Wigan, Greater Manchester, England, M29 8WL, United Kingdom",
+        "road": "Woolston Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Astley",
+        "state": "England",
+        "postcode": "M29 8WL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Woolston Drive, Atherton, England, United Kingdom"
+    },
+    {
+      "lat": 53.52926581081549,
+      "lon": -2.473093533068721,
+      "geoinfo": {
+        "display_name": "Martlew Drive, Shakerley, Wigan, Greater Manchester, England, M46 9GW, United Kingdom",
+        "road": "Martlew Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wigan",
+        "state": "England",
+        "postcode": "M46 9GW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Martlew Drive, Shakerley, Wigan, Greater Manchester, England, M46 9GW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:37.828904+00:00",
+  "_kind": "geo_samples"
+}

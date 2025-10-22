@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wardenburg",
+  "geonameid": 2814146,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.05260402346617,
+      "lon": 8.129825321584198,
+      "geoinfo": {
+        "display_name": "Lupinenweg, Wardenburg, Landkreis Oldenburg, Lower Saxony, 26203, Germany",
+        "road": "Lupinenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wardenburg",
+        "state": "Lower Saxony",
+        "postcode": "26203",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Lupinenweg, Wardenburg, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.07026112620387,
+      "lon": 8.256368947440128,
+      "geoinfo": {
+        "display_name": "41, Ginsterweg, Sandkrug, Hatten, Landkreis Oldenburg, Lower Saxony, 26209, Germany",
+        "road": "Ginsterweg",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandkrug",
+        "state": "Lower Saxony",
+        "postcode": "26209",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "41, Ginsterweg, Sandkrug, Hatten, Landkreis Oldenburg, Lower Saxony, 26209, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:35.832220+00:00",
+  "_kind": "geo_samples"
+}

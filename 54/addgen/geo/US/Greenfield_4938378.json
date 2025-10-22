@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenfield",
+  "geonameid": 4938378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.58273478652303,
+      "lon": -72.63136969944466,
+      "geoinfo": {
+        "display_name": "South Shelburne Road, Greenfield, Franklin County, Massachusetts, 01301, United States",
+        "road": "South Shelburne Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenfield",
+        "state": "Massachusetts",
+        "postcode": "01301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Shelburne Road, Greenfield, Massachusetts, United States"
+    },
+    {
+      "lat": 42.604420444369055,
+      "lon": -72.63068829297447,
+      "geoinfo": {
+        "display_name": "388, Colrain Road, Greenfield, Franklin County, Massachusetts, 01301, United States",
+        "road": "Colrain Road",
+        "house_number": "388",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenfield",
+        "state": "Massachusetts",
+        "postcode": "01301",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "388, Colrain Road, Greenfield, Franklin County, Massachusetts, 01301, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:11:54.829056+00:00",
+  "_kind": "geo_samples"
+}

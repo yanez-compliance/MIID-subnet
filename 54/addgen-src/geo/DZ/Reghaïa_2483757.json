@@ -1,0 +1,47 @@
+{
+  "country_code": "DZ",
+  "country": "Algeria",
+  "city": "Reghaïa",
+  "geonameid": 2483757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.75255933565893,
+      "lon": 3.360949412930848,
+      "geoinfo": {
+        "display_name": "115pe200807, Djaafri, Reghaia, Rouiba District, Algiers, 16036, Algeria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Reghaia",
+        "state": "Algiers",
+        "postcode": "16036",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "Reghaïa, Algiers, Algeria"
+    },
+    {
+      "lat": 36.7212646446591,
+      "lon": 3.2971545417921635,
+      "geoinfo": {
+        "display_name": "Falait, ممر ذ, Rouiba-Reghaïa Industrial Zone, Sbaat, Rouiba, Rouiba District, Algiers, 16012, Algeria",
+        "road": "ممر ذ",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rouiba",
+        "state": "Algiers",
+        "postcode": "16012",
+        "country": "Algeria",
+        "country_code": "dz"
+      },
+      "address": "112, ممر ذ, Reghaïa, 16012 Algiers, Algeria"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:17.780455+00:00",
+  "_kind": "geo_samples"
+}

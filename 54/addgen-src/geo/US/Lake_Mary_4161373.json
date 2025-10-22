@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Mary",
+  "geonameid": 4161373,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.754504421701323,
+      "lon": -81.31696764065875,
+      "geoinfo": {
+        "display_name": "Lake Street, Crystal Lake Shores, Lake Mary, Seminole County, Florida, 32795, United States",
+        "road": "Lake Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Mary",
+        "state": "Florida",
+        "postcode": "32795",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Street, Lake Mary, Florida, United States"
+    },
+    {
+      "lat": 28.737177191801596,
+      "lon": -81.33145820886098,
+      "geoinfo": {
+        "display_name": "398, Eagle Creek Circle, Lake Mary, Seminole County, Florida, 32746, United States",
+        "road": "Eagle Creek Circle",
+        "house_number": "398",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Mary",
+        "state": "Florida",
+        "postcode": "32746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "398, Eagle Creek Circle, Lake Mary, Seminole County, Florida, 32746, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:35.895663+00:00",
+  "_kind": "geo_samples"
+}

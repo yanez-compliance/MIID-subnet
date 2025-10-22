@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ridgewood",
+  "geonameid": 5103269,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.96636404730217,
+      "lon": -74.1090805544556,
+      "geoinfo": {
+        "display_name": "PSE&G Path, Southeast Ridgewood, Ridgewood, Bergen County, New Jersey, 07450, United States",
+        "road": "PSE&G Path",
+        "house_number": null,
+        "neighbourhood": "Southeast Ridgewood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ridgewood",
+        "state": "New Jersey",
+        "postcode": "07450",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "PSE&G Path, Ridgewood, New Jersey, United States"
+    },
+    {
+      "lat": 40.938655475410386,
+      "lon": -74.13673289399372,
+      "geoinfo": {
+        "display_name": "Richard Street, Fair Lawn, Bergen County, New Jersey, 07514, United States",
+        "road": "Richard Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fair Lawn",
+        "state": "New Jersey",
+        "postcode": "07514",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "536, Richard Street, Fair Lawn, Bergen County, New Jersey, 07514, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:50.042953+00:00",
+  "_kind": "geo_samples"
+}

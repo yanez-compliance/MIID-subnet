@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Huilango",
+  "geonameid": 3827588,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.684404960837448,
+      "lon": -99.24099122482784,
+      "geoinfo": {
+        "display_name": "Huilango, Cuautitlán Izcalli, State of Mexico, 54710, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huilango",
+        "state": "State of Mexico",
+        "postcode": "54710",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Huilango, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.641976257312532,
+      "lon": -99.2708021166221,
+      "geoinfo": {
+        "display_name": "Cuautitlán Izcalli, State of Mexico, 54410, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cuautitlán Izcalli",
+        "state": "State of Mexico",
+        "postcode": "54410",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "926, Cuautitlán Izcalli, State of Mexico, 54410, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:50:57.694497+00:00",
+  "_kind": "geo_samples"
+}

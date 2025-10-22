@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Colonia del Valle",
+  "geonameid": 7280708,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.36921476781375,
+      "lon": -99.15188858538892,
+      "geoinfo": {
+        "display_name": "Calle Sevilla, Colonia Portales Norte, Mexico City, Benito Juárez, Mexico City, 03303, Mexico",
+        "road": "Calle Sevilla",
+        "house_number": null,
+        "neighbourhood": "Colonia Portales Norte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "03303",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Sevilla, Colonia del Valle, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.3981043060492,
+      "lon": -99.19939323370373,
+      "geoinfo": {
+        "display_name": "Avenida Río de Tacubaya, Colonia Real del monte, Mexico City, Álvaro Obregón, Mexico City, 01130, Mexico",
+        "road": "Avenida Río de Tacubaya",
+        "house_number": null,
+        "neighbourhood": "Colonia Real del monte",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "01130",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "361, Avenida Río de Tacubaya, Colonia Real del monte, Mexico City, Álvaro Obregón, Mexico City, 01130, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:59.953328+00:00",
+  "_kind": "geo_samples"
+}

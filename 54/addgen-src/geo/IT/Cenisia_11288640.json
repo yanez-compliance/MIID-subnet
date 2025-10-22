@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cenisia",
+  "geonameid": 11288640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.053969065385914,
+      "lon": 7.653855515752665,
+      "geoinfo": {
+        "display_name": "104, Corso Carlo e Nello Rosselli, Polo Nord, Circoscrizione 3, Turin, Piedmont, 10129, Italy",
+        "road": "Corso Carlo e Nello Rosselli",
+        "house_number": "104",
+        "neighbourhood": "Polo Nord",
+        "suburb": "Circoscrizione 3",
+        "city_district": null,
+        "city": "Turin",
+        "state": "Piedmont",
+        "postcode": "10129",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "104 Corso Carlo e Nello Rosselli, Cenisia, Piedmont, Italy"
+    },
+    {
+      "lat": 45.082715170947914,
+      "lon": 7.590581862618082,
+      "geoinfo": {
+        "display_name": "Ciclopista Campo Volo Collegno, Borgata Paradiso, Collegno, Turin, Piedmont, 10993, Italy",
+        "road": "Ciclopista Campo Volo Collegno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Borgata Paradiso",
+        "city_district": null,
+        "city": "Collegno",
+        "state": "Piedmont",
+        "postcode": "10993",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "770, Ciclopista Campo Volo Collegno, Borgata Paradiso, Collegno, Turin, Piedmont, 10993, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:32.156794+00:00",
+  "_kind": "geo_samples"
+}

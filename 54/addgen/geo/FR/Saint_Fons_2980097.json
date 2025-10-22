@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Fons",
+  "geonameid": 2980097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.717415976211484,
+      "lon": 4.9110868016631954,
+      "geoinfo": {
+        "display_name": "98, Rue du Dauphiné, Berliet et environs, Saint-Priest, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69800, France",
+        "road": "Rue du Dauphiné",
+        "house_number": "98",
+        "neighbourhood": null,
+        "suburb": "Berliet et environs",
+        "city_district": null,
+        "city": "Saint-Priest",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69800",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "98 Rue du Dauphiné, Saint-Fons, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.69471447639322,
+      "lon": 4.828151738361097,
+      "geoinfo": {
+        "display_name": "216, Rue des Martyrs de la Libération, Zone industrielle de La Mouche, Pierre-Bénite, Oullins-Pierre-Bénite, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69310, France",
+        "road": "Rue des Martyrs de la Libération",
+        "house_number": "216",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oullins-Pierre-Bénite",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69310",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "216, Rue des Martyrs de la Libération, Zone industrielle de La Mouche, Pierre-Bénite, Oullins-Pierre-Bénite, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69310, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:30.623118+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ramsey",
+  "geonameid": 5103086,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.067484565065506,
+      "lon": -74.1223200201456,
+      "geoinfo": {
+        "display_name": "50, Arrow Road, Peach Hill, Ramsey, Bergen County, New Jersey, 07446, United States",
+        "road": "Arrow Road",
+        "house_number": "50",
+        "neighbourhood": "Peach Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ramsey",
+        "state": "New Jersey",
+        "postcode": "07446",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "50 Arrow Road, Ramsey, New Jersey, United States"
+    },
+    {
+      "lat": 41.06167726507274,
+      "lon": -74.09248478817608,
+      "geoinfo": {
+        "display_name": "61, Dansfield Court, Upper Saddle River, Bergen County, New Jersey, 07458, United States",
+        "road": "Dansfield Court",
+        "house_number": "61",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Upper Saddle River",
+        "state": "New Jersey",
+        "postcode": "07458",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "61, Dansfield Court, Upper Saddle River, Bergen County, New Jersey, 07458, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:10.328365+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Mejorada del Campo",
+  "geonameid": 3116963,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.386199930482164,
+      "lon": -3.458615312649248,
+      "geoinfo": {
+        "display_name": "M-217, Valdemera, Loeches, Community of Madrid, 28840, Spain",
+        "road": "M-217",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Loeches",
+        "state": "Community of Madrid",
+        "postcode": "28840",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-217, Mejorada del Campo, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42809017723652,
+      "lon": -3.4622151841714923,
+      "geoinfo": {
+        "display_name": "M-203, San Fernando de Henares, Community of Madrid, 28859, Spain",
+        "road": "M-203",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Fernando de Henares",
+        "state": "Community of Madrid",
+        "postcode": "28859",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-203, San Fernando de Henares, Community of Madrid, 28859, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:43.037656+00:00",
+  "_kind": "geo_samples"
+}

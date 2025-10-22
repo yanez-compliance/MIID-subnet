@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Wayne",
+  "geonameid": 5014224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.308322219355276,
+      "lon": -83.3526935437135,
+      "geoinfo": {
+        "display_name": "The Village of Westland, 32001, Cherry Hill Road, Westland, Wayne County, Michigan, 48186, United States",
+        "road": "Cherry Hill Road",
+        "house_number": "32001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westland",
+        "state": "Michigan",
+        "postcode": "48186",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "32001 Cherry Hill Road, Wayne, Michigan, United States"
+    },
+    {
+      "lat": 42.26041562317637,
+      "lon": -83.42134854130101,
+      "geoinfo": {
+        "display_name": "Beverly Road, Van Born Road Sub, Romulus, Wayne County, Michigan, 48174, United States",
+        "road": "Beverly Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Romulus",
+        "state": "Michigan",
+        "postcode": "48174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "892, Beverly Road, Van Born Road Sub, Romulus, Wayne County, Michigan, 48174, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:33.532989+00:00",
+  "_kind": "geo_samples"
+}

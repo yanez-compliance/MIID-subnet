@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greer",
+  "geonameid": 4580599,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.90939966017109,
+      "lon": -82.20396895248135,
+      "geoinfo": {
+        "display_name": "901, State Highway 101, Greer, Spartanburg County, South Carolina, 29651, United States",
+        "road": "State Highway 101",
+        "house_number": "901",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greer",
+        "state": "South Carolina",
+        "postcode": "29651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "901 State Highway 101, Greer, South Carolina, United States"
+    },
+    {
+      "lat": 34.948543594466976,
+      "lon": -82.26406586284536,
+      "geoinfo": {
+        "display_name": "Locust Hill Road, Fairview, Greenville County, South Carolina, 29651, United States",
+        "road": "Locust Hill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Carolina",
+        "postcode": "29651",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "904, Locust Hill Road, Fairview, Greenville County, South Carolina, 29651, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:29.563453+00:00",
+  "_kind": "geo_samples"
+}

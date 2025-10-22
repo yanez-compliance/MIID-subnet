@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Arnstadt",
+  "geonameid": 2955439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.86591443148816,
+      "lon": 10.936868830614717,
+      "geoinfo": {
+        "display_name": "CATL Gigafactory Arnstadt, Am Ichtershäuser Wege, Rehestädt, Amt Wachsenburg, Ilm-Kreis, Thuringia, 99334, Germany",
+        "road": "Am Ichtershäuser Wege",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Rehestädt",
+        "city": "Rehestädt",
+        "state": "Thuringia",
+        "postcode": "99334",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Ichtershäuser Wege, Arnstadt, Thuringia, Germany"
+    },
+    {
+      "lat": 50.85511998322148,
+      "lon": 10.916202311618578,
+      "geoinfo": {
+        "display_name": "Mittelweg, Arnstadt, Amt Wachsenburg, Ilm-Kreis, Thuringia, 99334, Germany",
+        "road": "Mittelweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amt Wachsenburg",
+        "state": "Thuringia",
+        "postcode": "99334",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "241, Mittelweg, Arnstadt, Amt Wachsenburg, Ilm-Kreis, Thuringia, 99334, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:30.795006+00:00",
+  "_kind": "geo_samples"
+}

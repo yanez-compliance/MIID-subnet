@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neuenhagen",
+  "geonameid": 2865716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.543324161632746,
+      "lon": 13.690653317127875,
+      "geoinfo": {
+        "display_name": "A 10, Neuenhagen bei Berlin, Fredersdorf-Vogelsdorf, Märkisch-Oderland, Brandenburg, 15366, Germany",
+        "road": "A 10",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuenhagen bei Berlin",
+        "state": "Brandenburg",
+        "postcode": "15366",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 10, Neuenhagen, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.515936924209264,
+      "lon": 13.637376023665992,
+      "geoinfo": {
+        "display_name": "Bisamstraße, Bisamkiez, Mahlsdorf, Marzahn-Hellersdorf, Berlin, 12623, Germany",
+        "road": "Bisamstraße",
+        "house_number": null,
+        "neighbourhood": "Bisamkiez",
+        "suburb": "Mahlsdorf",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "12623",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "597, Bisamstraße, Bisamkiez, Mahlsdorf, Marzahn-Hellersdorf, Berlin, 12623, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:12.494025+00:00",
+  "_kind": "geo_samples"
+}

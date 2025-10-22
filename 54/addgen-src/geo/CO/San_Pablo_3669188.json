@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "San Pablo",
+  "geonameid": 3669188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 10.039378473345048,
+      "lon": -75.26140099712664,
+      "geoinfo": {
+        "display_name": "Carrera 3, San Pablo, María la Baja, Montes de María, Bolívar, Colombia",
+        "road": "Carrera 3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "María la Baja",
+        "state": "Bolívar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 3, San Pablo, Bolívar, Colombia"
+    },
+    {
+      "lat": 10.032315425080528,
+      "lon": -75.2273934168597,
+      "geoinfo": {
+        "display_name": "San Pablo, María la Baja, Montes de María, Bolívar, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "María la Baja",
+        "state": "Bolívar",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "051, San Pablo, María la Baja, Montes de María, 10933 Bolívar, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:24:55.563200+00:00",
+  "_kind": "geo_samples"
+}

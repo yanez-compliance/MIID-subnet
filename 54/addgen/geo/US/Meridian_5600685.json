@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Meridian",
+  "geonameid": 5600685,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.58092196323604,
+      "lon": -116.42646233672757,
+      "geoinfo": {
+        "display_name": "2625, West Val Vista Court, Val Vista, Meridian, Ada County, Idaho, 83642, United States",
+        "road": "West Val Vista Court",
+        "house_number": "2625",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meridian",
+        "state": "Idaho",
+        "postcode": "83642",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2625 West Val Vista Court, Meridian, Idaho, United States"
+    },
+    {
+      "lat": 43.62122551885196,
+      "lon": -116.38545881126359,
+      "geoinfo": {
+        "display_name": "700, East Fairview Avenue, Meridian, Ada County, Idaho, 83642, United States",
+        "road": "East Fairview Avenue",
+        "house_number": "700",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meridian",
+        "state": "Idaho",
+        "postcode": "83642",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "700, East Fairview Avenue, Meridian, Ada County, Idaho, 83642, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:12.826331+00:00",
+  "_kind": "geo_samples"
+}

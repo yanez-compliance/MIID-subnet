@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Germantown",
+  "geonameid": 5254218,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.22078623671119,
+      "lon": -88.10358712626012,
+      "geoinfo": {
+        "display_name": "Mequon Road, Village of Germantown, Washington County, Wisconsin, 53022, United States",
+        "road": "Mequon Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Germantown",
+        "state": "Wisconsin",
+        "postcode": "53022",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Mequon Road, Germantown, Wisconsin, United States"
+    },
+    {
+      "lat": 43.270496211540944,
+      "lon": -88.12111496061567,
+      "geoinfo": {
+        "display_name": "Division Road, Village of Germantown, Town of Germantown, Washington County, Wisconsin, United States",
+        "road": "Division Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Germantown",
+        "state": "Wisconsin",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "544, Division Road, Village of Germantown, Town of Germantown, Washington County, 39494 Wisconsin, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:17:54.082705+00:00",
+  "_kind": "geo_samples"
+}

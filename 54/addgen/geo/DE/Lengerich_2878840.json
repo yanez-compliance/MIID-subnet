@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lengerich",
+  "geonameid": 2878840,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.19215462868695,
+      "lon": 7.908096288770641,
+      "geoinfo": {
+        "display_name": "Am Waldrand, Sudenfeld, Niedermark, Hagen am Teutoburger Wald, Landkreis Osnabrück, Lower Saxony, 49170, Germany",
+        "road": "Am Waldrand",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Niedermark",
+        "city": "Hagen am Teutoburger Wald",
+        "state": "Lower Saxony",
+        "postcode": "49170",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Am Waldrand, Lengerich, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.17330004676667,
+      "lon": 7.872100509203772,
+      "geoinfo": {
+        "display_name": "28, Poststraße, Lengerich, Kreis Steinfurt, North Rhine-Westphalia, 49525, Germany",
+        "road": "Poststraße",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lengerich",
+        "state": "North Rhine-Westphalia",
+        "postcode": "49525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "28, Poststraße, Lengerich, Kreis Steinfurt, North Rhine-Westphalia, 49525, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:09.299250+00:00",
+  "_kind": "geo_samples"
+}

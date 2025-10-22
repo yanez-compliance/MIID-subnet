@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Shcherbinka",
+  "geonameid": 495260,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.51108890859987,
+      "lon": 37.61020046591566,
+      "geoinfo": {
+        "display_name": "Симферопольское шоссе, Bobrovo, Leninsky District, Moscow Oblast, Central Federal District, 142718, Russia",
+        "road": "Симферопольское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bobrovo",
+        "state": "Moscow Oblast",
+        "postcode": "142718",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Симферопольское шоссе, Shcherbinka, Moscow Oblast, Russia"
+    },
+    {
+      "lat": 55.50847051932583,
+      "lon": 37.49746067978772,
+      "geoinfo": {
+        "display_name": "Въездная аллея, СНТ «Рязаново», Shcherbinka, Moscow, Central Federal District, 108824, Russia",
+        "road": "Въездная аллея",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shcherbinka",
+        "state": "Moscow",
+        "postcode": "108824",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "247, Въездная аллея, СНТ «Рязаново», Shcherbinka, Moscow, Central Federal District, 108824, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:50.764638+00:00",
+  "_kind": "geo_samples"
+}

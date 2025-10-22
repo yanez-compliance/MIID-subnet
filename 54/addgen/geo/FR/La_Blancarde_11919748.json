@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "La Blancarde",
+  "geonameid": 11919748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.30075724890773,
+      "lon": 5.405771067934605,
+      "geoinfo": {
+        "display_name": "3, Allée des Deux Frères Freschi, La Blancarde, 4th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13004, France",
+        "road": "Allée des Deux Frères Freschi",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "4th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13004",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3 Allée des Deux Frères Freschi, La Blancarde, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.322050804778286,
+      "lon": 5.455683495986726,
+      "geoinfo": {
+        "display_name": "Avenue des Pins, Les Olives, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France",
+        "road": "Avenue des Pins",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "13th Arrondissement",
+        "city_district": null,
+        "city": "Marseille",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "13013",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue des Pins, Les Olives, 13th Arrondissement, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France, 13013, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:32.471582+00:00",
+  "_kind": "geo_samples"
+}

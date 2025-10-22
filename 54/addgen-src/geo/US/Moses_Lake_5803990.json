@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Moses Lake",
+  "geonameid": 5803990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.145578684606896,
+      "lon": -119.2196997996391,
+      "geoinfo": {
+        "display_name": "12678, Cherokee Road, Moses Lake, Grant County, Washington, 98837, United States",
+        "road": "Cherokee Road",
+        "house_number": "12678",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Moses Lake",
+        "state": "Washington",
+        "postcode": "98837",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12678 Cherokee Road, Moses Lake, Washington, United States"
+    },
+    {
+      "lat": 47.160722997974965,
+      "lon": -119.24404006652914,
+      "geoinfo": {
+        "display_name": "Road 5 Northeast, Grant County, Washington, 98837, United States",
+        "road": "Road 5 Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98837",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Road 5 Northeast, Grant County, Washington, 98837, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:07.173300+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Gorinchem",
+  "geonameid": 2755434,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.820416250693214,
+      "lon": 5.021931637120076,
+      "geoinfo": {
+        "display_name": "Waaldijk, Dalem, Gorinchem, South Holland, Netherlands, 4213 LA, Netherlands",
+        "road": "Waaldijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gorinchem",
+        "state": "South Holland",
+        "postcode": "4213 LA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Waaldijk, Gorinchem, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.84946940847837,
+      "lon": 4.976586632360508,
+      "geoinfo": {
+        "display_name": "Haarweg, Schotdeuren, Gorinchem, South Holland, Netherlands, 4205 NG, Netherlands",
+        "road": "Haarweg",
+        "house_number": null,
+        "neighbourhood": "Schotdeuren",
+        "suburb": null,
+        "city_district": "Gorinchem",
+        "city": "Gorinchem",
+        "state": "South Holland",
+        "postcode": "4205 NG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "805, Haarweg, Schotdeuren, Gorinchem, South Holland, Netherlands, 4205 NG, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:02.844712+00:00",
+  "_kind": "geo_samples"
+}

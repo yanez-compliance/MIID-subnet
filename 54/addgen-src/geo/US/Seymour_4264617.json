@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Seymour",
+  "geonameid": 4264617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.95761886070043,
+      "lon": -85.90773446123845,
+      "geoinfo": {
+        "display_name": "Lasher Drive, Sunset Parkway, Seymour, Jackson County, Indiana, 47274, United States",
+        "road": "Lasher Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seymour",
+        "state": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lasher Drive, Seymour, Indiana, United States"
+    },
+    {
+      "lat": 38.92428579917748,
+      "lon": -85.90784565159476,
+      "geoinfo": {
+        "display_name": "A Avenue, Seymour, Jackson County, Indiana, 47274, United States",
+        "road": "A Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Seymour",
+        "state": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "622, A Avenue, Seymour, Jackson County, Indiana, 47274, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:44:52.723700+00:00",
+  "_kind": "geo_samples"
+}

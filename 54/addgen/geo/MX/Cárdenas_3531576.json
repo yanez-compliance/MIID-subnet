@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cárdenas",
+  "geonameid": 3531576,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.005303788387735,
+      "lon": -93.3711652248041,
+      "geoinfo": {
+        "display_name": "Carretera Malpaso - El Bellote, Heroica Cárdenas, Cárdenas, Tabasco, 86500, Mexico",
+        "road": "Carretera Malpaso - El Bellote",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cárdenas",
+        "state": "Tabasco",
+        "postcode": "86500",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Malpaso - El Bellote, Cárdenas, Tabasco, Mexico"
+    },
+    {
+      "lat": 17.963571259771488,
+      "lon": -93.39588124835772,
+      "geoinfo": {
+        "display_name": "Río Seco y Montaña Segunda Sección, Huimanguillo, Tabasco, 86553, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Río Seco y Montaña Segunda Sección",
+        "state": "Tabasco",
+        "postcode": "86553",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "248, Río Seco y Montaña Segunda Sección, Huimanguillo, Tabasco, 86553, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:24.351306+00:00",
+  "_kind": "geo_samples"
+}

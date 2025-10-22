@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Malakoff",
+  "geonameid": 2996514,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.821527733912625,
+      "lon": 2.302273064550407,
+      "geoinfo": {
+        "display_name": "L'herbe rouge, 6, Avenue Jean Jaurès, Malakoff, Antony, Hauts-de-Seine, Metropolitan France, 92240, France",
+        "road": "Avenue Jean Jaurès",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Malakoff",
+        "state": null,
+        "postcode": "92240",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "6 Avenue Jean Jaurès, Malakoff, Ile-de-France, France"
+    },
+    {
+      "lat": 48.852112552320726,
+      "lon": 2.309691389099636,
+      "geoinfo": {
+        "display_name": "33, Avenue Duquesne, Quartier de l'École Militaire, 7th Arrondissement, Paris, Metropolitan France, 75007, France",
+        "road": "Avenue Duquesne",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "7th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "33, Avenue Duquesne, Quartier de l'École Militaire, 7th Arrondissement, Paris, Metropolitan France, 75007, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:37.762270+00:00",
+  "_kind": "geo_samples"
+}

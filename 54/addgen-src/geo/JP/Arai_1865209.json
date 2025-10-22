@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Arai",
+  "geonameid": 1865209,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.68926397791214,
+      "lon": 137.572818860503,
+      "geoinfo": {
+        "display_name": "ホルト通り, Arai-cho Arai, Kosai, Shizuoka Prefecture, 431-0302, Japan",
+        "road": "ホルト通り",
+        "house_number": null,
+        "neighbourhood": "Arai-cho Arai",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kosai",
+        "state": null,
+        "postcode": "431-0302",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "ホルト通り, Arai, Japan"
+    },
+    {
+      "lat": 34.65713012568595,
+      "lon": 137.55762674018368,
+      "geoinfo": {
+        "display_name": "Kosai, Shizuoka Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kosai",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "242, Kosai, 83785 Shizuoka Prefecture, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:27:57.314660+00:00",
+  "_kind": "geo_samples"
+}

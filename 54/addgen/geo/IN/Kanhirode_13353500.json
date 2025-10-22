@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kanhirode",
+  "geonameid": 13353500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.924893258400557,
+      "lon": 75.47564382505553,
+      "geoinfo": {
+        "display_name": "Temple Road, Koodali, Thalassery, Kannur, Kerala, 670592, India",
+        "road": "Temple Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Koodali",
+        "state": "Kerala",
+        "postcode": "670592",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Temple Road, Kanhirode, Kerala, India"
+    },
+    {
+      "lat": 11.894740121358895,
+      "lon": 75.43154056991224,
+      "geoinfo": {
+        "display_name": "Chelora, Valiyannur, Kannur, Kerala, 670018, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Chelora",
+        "city": "Valiyannur",
+        "state": "Kerala",
+        "postcode": "670018",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "908, Chelora, Valiyannur, Kannur, Kerala, 670018, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:36:54.692209+00:00",
+  "_kind": "geo_samples"
+}

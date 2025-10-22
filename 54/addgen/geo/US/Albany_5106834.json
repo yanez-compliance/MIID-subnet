@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Albany",
+  "geonameid": 5106834,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.627255310644706,
+      "lon": -73.76955091513734,
+      "geoinfo": {
+        "display_name": "Kenwood Road, Mount Hope, Kenwood, City of Albany, Albany County, New York, 12202, United States",
+        "road": "Kenwood Road",
+        "house_number": null,
+        "neighbourhood": "Mount Hope",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Albany",
+        "state": "New York",
+        "postcode": "12202",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kenwood Road, Albany, New York, United States"
+    },
+    {
+      "lat": 42.62309036696741,
+      "lon": -73.76919909490833,
+      "geoinfo": {
+        "display_name": "County Waste & Recycling, South Pearl Street, Mount Hope, Kenwood, City of Albany, Albany County, New York, 12207, United States",
+        "road": "South Pearl Street",
+        "house_number": null,
+        "neighbourhood": "Mount Hope",
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Albany",
+        "state": "New York",
+        "postcode": "12207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "106, South Pearl Street, Albany, 12207 New York, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:53.037000+00:00",
+  "_kind": "geo_samples"
+}

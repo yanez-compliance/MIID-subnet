@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cholula",
+  "geonameid": 3530757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.06775736682548,
+      "lon": -98.3101886811318,
+      "geoinfo": {
+        "display_name": "Rivera rojas rogelio, 506, Avenida 10 Poniente, Cholula de Rivadavia, San Pedro Cholula, Puebla, 72760, Mexico",
+        "road": "Avenida 10 Poniente",
+        "house_number": "506",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cholula de Rivadavia",
+        "state": "Puebla",
+        "postcode": "72760",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "506 Avenida 10 Poniente, Cholula, Puebla, Mexico"
+    },
+    {
+      "lat": 19.0806079295132,
+      "lon": -98.2780925249018,
+      "geoinfo": {
+        "display_name": "Privada Central, San Pedro Cholula, Puebla, 72757, Mexico",
+        "road": "Privada Central",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Puebla",
+        "postcode": "72757",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "114, Privada Central, San Pedro Cholula, Puebla, 72757, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:55.619657+00:00",
+  "_kind": "geo_samples"
+}

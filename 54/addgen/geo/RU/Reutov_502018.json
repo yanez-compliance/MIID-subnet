@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Reutov",
+  "geonameid": 502018,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.79604020477035,
+      "lon": 37.82552516989918,
+      "geoinfo": {
+        "display_name": "Санаторный детский дом № 48 \"Солнечный круг\", 16-я Парковая улица, Vostochnoye Izmaylovo District, Moscow, Central Federal District, 105203, Russia",
+        "road": "16-я Парковая улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vostochnoye Izmaylovo District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "105203",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "16-я Парковая улица, Reutov, Moscow, Russia"
+    },
+    {
+      "lat": 55.79218834312387,
+      "lon": 37.860784508851026,
+      "geoinfo": {
+        "display_name": "Южная линия, ТСН СНТ \"Металлург-3\", посёлок Нефтебазы, Balashikhinsky District, Moscow Oblast, Central Federal District, 143908, Russia",
+        "road": "Южная линия",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "посёлок Нефтебазы",
+        "city_district": null,
+        "city": null,
+        "state": "Moscow Oblast",
+        "postcode": "143908",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Южная линия, ТСН СНТ \"Металлург-3\", посёлок Нефтебазы, Balashikhinsky District, Moscow Oblast, Central Federal District, 143908, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:49.570517+00:00",
+  "_kind": "geo_samples"
+}

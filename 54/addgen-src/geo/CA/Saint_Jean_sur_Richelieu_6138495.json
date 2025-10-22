@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Saint-Jean-sur-Richelieu",
+  "geonameid": 6138495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.326220993374754,
+      "lon": -73.21881795692597,
+      "geoinfo": {
+        "display_name": "Saint-Athanase, Saint-Jean-sur-Richelieu, Le Haut-Richelieu, Montérégie, Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Saint-Athanase",
+        "city": "Saint-Jean-sur-Richelieu",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Saint-Athanase, Saint-Jean-sur-Richelieu, Quebec, Canada"
+    },
+    {
+      "lat": 45.28162568825586,
+      "lon": -73.27578136056302,
+      "geoinfo": {
+        "display_name": "219, Boulevard du Séminaire Sud, Saiint-Jean, Saint-Jean-sur-Richelieu, Le Haut-Richelieu, Montérégie, Quebec, J3B 8E9, Canada",
+        "road": "Boulevard du Séminaire Sud",
+        "house_number": "219",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Saiint-Jean",
+        "city": "Saint-Jean-sur-Richelieu",
+        "state": "Quebec",
+        "postcode": "J3B 8E9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "219, Boulevard du Séminaire Sud, Saiint-Jean, Saint-Jean-sur-Richelieu, Le Haut-Richelieu, Montérégie, Quebec, J3B 8E9, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:22.490376+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Benedetto del Tronto",
+  "geonameid": 3168550,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.96468954726882,
+      "lon": 13.843114512811411,
+      "geoinfo": {
+        "display_name": "Via Col di Tenda, Ponterotto, Grottammare, Ascoli Piceno, Marche, 63066, Italy",
+        "road": "Via Col di Tenda",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ponterotto",
+        "city_district": null,
+        "city": "Grottammare",
+        "state": "Marche",
+        "postcode": "63066",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Col di Tenda, San Benedetto del Tronto, Marche, Italy"
+    },
+    {
+      "lat": 42.977365674565725,
+      "lon": 13.882246428120022,
+      "geoinfo": {
+        "display_name": "Club Seven, Viale Alcide De Gasperi, Ischia, San Filippo Neri, Grottammare, Ascoli Piceno, Marche, 63066, Italy",
+        "road": "Viale Alcide De Gasperi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Filippo Neri",
+        "city_district": null,
+        "city": "Grottammare",
+        "state": "Marche",
+        "postcode": "63066",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "178, Viale Alcide De Gasperi, San Benedetto del Tronto, 63066 Marche, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:42:53.945384+00:00",
+  "_kind": "geo_samples"
+}

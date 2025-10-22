@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Molina de Segura",
+  "geonameid": 2513759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.092527575676115,
+      "lon": -1.2187614159689653,
+      "geoinfo": {
+        "display_name": "El Pino, Romeral, Molina de Segura, Vega Media del Segura, Region of Murcia, 30509, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "El Pino",
+        "suburb": null,
+        "city_district": null,
+        "city": "Molina de Segura",
+        "state": "Region of Murcia",
+        "postcode": "30509",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "El Pino, Molina de Segura, Region of Murcia, Spain"
+    },
+    {
+      "lat": 38.0958417150303,
+      "lon": -1.1957682094896693,
+      "geoinfo": {
+        "display_name": "Calle Belén, Romeral, Molina de Segura, Vega Media del Segura, Region of Murcia, 30509, Spain",
+        "road": "Calle Belén",
+        "house_number": null,
+        "neighbourhood": "Romeral",
+        "suburb": null,
+        "city_district": null,
+        "city": "Molina de Segura",
+        "state": "Region of Murcia",
+        "postcode": "30509",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "314, Calle Belén, Romeral, Molina de Segura, Vega Media del Segura, Region of Murcia, 30509, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:43.664594+00:00",
+  "_kind": "geo_samples"
+}

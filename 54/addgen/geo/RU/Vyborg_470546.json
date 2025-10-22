@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vyborg",
+  "geonameid": 470546,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 60.66947041524653,
+      "lon": 28.73708844631087,
+      "geoinfo": {
+        "display_name": "41, Балашовское шоссе, Петербургский микрорайон, Vyborg, Выборг, Vyborgsky District, Leningrad Oblast, Northwestern Federal District, 188800, Russia",
+        "road": "Балашовское шоссе",
+        "house_number": "41",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Петербургский микрорайон",
+        "city": "Vyborg",
+        "state": "Leningrad Oblast",
+        "postcode": "188800",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "41 Балашовское шоссе, Vyborg, Leningrad Oblast, Russia"
+    },
+    {
+      "lat": 60.67739996621167,
+      "lon": 28.714914661055996,
+      "geoinfo": {
+        "display_name": "Фундамент дома, Лесная улица, Sokolinskoye, Советское городское поселение, Vyborgsky District, Leningrad Oblast, Northwestern Federal District, 188807, Russia",
+        "road": "Лесная улица",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sokolinskoye",
+        "state": "Leningrad Oblast",
+        "postcode": "188807",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "738, Лесная улица, Vyborg, 188807 Leningrad Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:43:17.999486+00:00",
+  "_kind": "geo_samples"
+}

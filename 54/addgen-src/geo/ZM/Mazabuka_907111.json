@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Mazabuka",
+  "geonameid": 907111,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.833085508197211,
+      "lon": 27.730532389435968,
+      "geoinfo": {
+        "display_name": "Mazabuka, Mazabuka District, Southern Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mazabuka",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Mazabuka, Southern Province, Zambia"
+    },
+    {
+      "lat": -15.866052745667588,
+      "lon": 27.762233049481544,
+      "geoinfo": {
+        "display_name": "Mazabuka Golf Course, Livingstone Road, Mazabuka, Mazabuka District, Southern Province, Zambia",
+        "road": "Livingstone Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mazabuka",
+        "state": "Southern Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "Livingstone Road, Mazabuka, Southern Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-17T01:28:12.811039+00:00",
+  "_kind": "geo_samples"
+}

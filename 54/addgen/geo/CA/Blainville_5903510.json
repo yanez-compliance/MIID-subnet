@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Blainville",
+  "geonameid": 5903510,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.63489646606552,
+      "lon": -73.90926448842755,
+      "geoinfo": {
+        "display_name": "Chemin de la Côte-Nord, Domaine-Vert Sud, Mirabel, Laurentides, Quebec, J7C 5E2, Canada",
+        "road": "Chemin de la Côte-Nord",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mirabel",
+        "state": "Quebec",
+        "postcode": "J7C 5E2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Chemin de la Côte-Nord, Blainville, Quebec, Canada"
+    },
+    {
+      "lat": 45.62650382090633,
+      "lon": -73.87303958253571,
+      "geoinfo": {
+        "display_name": "École de la Clairière, Rue Charlotte-Boisjoli, Boisbriand, Thérèse-De Blainville, Laurentides, Quebec, J7H 1S6, Canada",
+        "road": "Rue Charlotte-Boisjoli",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boisbriand",
+        "state": "Quebec",
+        "postcode": "J7H 1S6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "École de la Clairière, Rue Charlotte-Boisjoli, Boisbriand, Thérèse-De Blainville, Laurentides, Quebec, J7H 1S6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-18T23:38:08.227025+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Vineland",
+  "geonameid": 4504225,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.472406713323444,
+      "lon": -75.03660148297224,
+      "geoinfo": {
+        "display_name": "Vineland, Cumberland County, New Jersey, 08360, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vineland",
+        "state": "New Jersey",
+        "postcode": "08360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Vineland, New Jersey, United States"
+    },
+    {
+      "lat": 39.4703129109193,
+      "lon": -75.02600519187105,
+      "geoinfo": {
+        "display_name": "South East Boulevard, South Vineland, Vineland, Cumberland County, New Jersey, 08360, United States",
+        "road": "South East Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vineland",
+        "state": "New Jersey",
+        "postcode": "08360",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "668, South East Boulevard, South Vineland, Vineland, Cumberland County, New Jersey, 08360, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:35.663189+00:00",
+  "_kind": "geo_samples"
+}

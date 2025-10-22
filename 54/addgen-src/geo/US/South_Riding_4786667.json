@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Riding",
+  "geonameid": 4786667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.91443533282327,
+      "lon": -77.48277071190405,
+      "geoinfo": {
+        "display_name": "43980, Little River Turnpike, Eastgate, South Riding, Loudoun County, Virginia, 20152, United States",
+        "road": "Little River Turnpike",
+        "house_number": "43980",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Riding",
+        "state": "Virginia",
+        "postcode": "20152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "43980 Little River Turnpike, South Riding, Virginia, United States"
+    },
+    {
+      "lat": 38.91674168243946,
+      "lon": -77.55138547805342,
+      "geoinfo": {
+        "display_name": "Destiny Drive, Kirkpatrick Farms, Stone Ridge, Loudoun County, Virginia, 20152, United States",
+        "road": "Destiny Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stone Ridge",
+        "state": "Virginia",
+        "postcode": "20152",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "003, Destiny Drive, Kirkpatrick Farms, Stone Ridge, Loudoun County, Virginia, 20152, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:21.416022+00:00",
+  "_kind": "geo_samples"
+}

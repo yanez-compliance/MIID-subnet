@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cherry Hill",
+  "geonameid": 4752136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.5902918345401,
+      "lon": -77.30249017441774,
+      "geoinfo": {
+        "display_name": "16681, Blackjack Oak Lane, River Oaks Apartments, Woodbridge, Prince William County, Virginia, 22191, United States",
+        "road": "Blackjack Oak Lane",
+        "house_number": "16681",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woodbridge",
+        "state": "Virginia",
+        "postcode": "22191",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16681 Blackjack Oak Lane, Cherry Hill, Virginia, United States"
+    },
+    {
+      "lat": 38.57203656555162,
+      "lon": -77.26120693490908,
+      "geoinfo": {
+        "display_name": "River Heritage Boulevard, Potomac Shores, Prince William County, Virginia, 22026, United States",
+        "road": "River Heritage Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "22026",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "729, River Heritage Boulevard, Potomac Shores, Prince William County, Virginia, 22026, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:06.766971+00:00",
+  "_kind": "geo_samples"
+}

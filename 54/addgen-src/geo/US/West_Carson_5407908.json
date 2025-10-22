@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "West Carson",
+  "geonameid": 5407908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.82231475414032,
+      "lon": -118.28993663171592,
+      "geoinfo": {
+        "display_name": "22348, Harbor Ridge Lane, West Carson, Gardena, Los Angeles County, California, 90502, United States",
+        "road": "Harbor Ridge Lane",
+        "house_number": "22348",
+        "neighbourhood": null,
+        "suburb": "West Carson",
+        "city_district": null,
+        "city": "Gardena",
+        "state": "California",
+        "postcode": "90502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "22348 Harbor Ridge Lane, West Carson, California, United States"
+    },
+    {
+      "lat": 33.812915066250135,
+      "lon": -118.34081459161793,
+      "geoinfo": {
+        "display_name": "3100, Fujita Street, Torrance, Los Angeles County, California, 90505, United States",
+        "road": "Fujita Street",
+        "house_number": "3100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrance",
+        "state": "California",
+        "postcode": "90505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3100, Fujita Street, Torrance, Los Angeles County, California, 90505, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:21:23.317374+00:00",
+  "_kind": "geo_samples"
+}

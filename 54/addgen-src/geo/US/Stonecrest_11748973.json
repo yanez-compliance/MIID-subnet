@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stonecrest",
+  "geonameid": 11748973,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.69454113975019,
+      "lon": -84.15760845827315,
+      "geoinfo": {
+        "display_name": "Fairington Drive, Stonecrest, DeKalb County, Georgia, 30038, United States",
+        "road": "Fairington Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stonecrest",
+        "state": "Georgia",
+        "postcode": "30038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fairington Drive, Stonecrest, Georgia, United States"
+    },
+    {
+      "lat": 33.69757449339616,
+      "lon": -84.17827478899746,
+      "geoinfo": {
+        "display_name": "5068, Winding Glen Drive, Stonecrest, DeKalb County, Georgia, 30038, United States",
+        "road": "Winding Glen Drive",
+        "house_number": "5068",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stonecrest",
+        "state": "Georgia",
+        "postcode": "30038",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5068, Winding Glen Drive, Stonecrest, DeKalb County, Georgia, 30038, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:35:37.998555+00:00",
+  "_kind": "geo_samples"
+}

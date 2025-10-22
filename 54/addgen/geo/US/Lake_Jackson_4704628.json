@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Jackson",
+  "geonameid": 4704628,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.05580827364997,
+      "lon": -95.39789974080739,
+      "geoinfo": {
+        "display_name": "Brazoria County, Texas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lake Jackson, Texas, United States"
+    },
+    {
+      "lat": 29.00656466233448,
+      "lon": -95.43653292848526,
+      "geoinfo": {
+        "display_name": "Dow Nature Trail, Lake Jackson, Brazoria County, Texas, 77531, United States",
+        "road": "Dow Nature Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lake Jackson",
+        "state": "Texas",
+        "postcode": "77531",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555, Dow Nature Trail, Lake Jackson, Brazoria County, Texas, 77531, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:18.200932+00:00",
+  "_kind": "geo_samples"
+}

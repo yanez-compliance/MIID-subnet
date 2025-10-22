@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Loughborough",
+  "geonameid": 2643567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.75966060873448,
+      "lon": -1.1763892675076606,
+      "geoinfo": {
+        "display_name": "Miller's Bridge, Woodthorpe, Charnwood, Leicestershire, England, LE11 1ST, United Kingdom",
+        "road": "Miller's Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Charnwood",
+        "state": "England",
+        "postcode": "LE11 1ST",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Miller's Bridge, Loughborough, England, United Kingdom"
+    },
+    {
+      "lat": 52.75545846650102,
+      "lon": -1.1927580760049101,
+      "geoinfo": {
+        "display_name": "Lodge End, Shelthorpe, Woodthorpe, Charnwood, Leicestershire, England, LE11 2WD, United Kingdom",
+        "road": "Lodge End",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shelthorpe",
+        "city_district": null,
+        "city": "Charnwood",
+        "state": "England",
+        "postcode": "LE11 2WD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lodge End, Shelthorpe, Woodthorpe, Charnwood, Leicestershire, England, LE11 2WD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:47.655538+00:00",
+  "_kind": "geo_samples"
+}

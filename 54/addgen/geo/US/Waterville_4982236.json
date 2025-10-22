@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Waterville",
+  "geonameid": 4982236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.529929231214716,
+      "lon": -69.65480848367748,
+      "geoinfo": {
+        "display_name": "Waterville Junior High School, 100, West River Road, Waterville, Kennebec County, Maine, 04901, United States",
+        "road": "West River Road",
+        "house_number": "100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterville",
+        "state": "Maine",
+        "postcode": "04901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "100 West River Road, Waterville, Maine, United States"
+    },
+    {
+      "lat": 44.552667219449376,
+      "lon": -69.6293050707098,
+      "geoinfo": {
+        "display_name": "3, Deeb Street, Waterville, Kennebec County, Maine, 04901, United States",
+        "road": "Deeb Street",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waterville",
+        "state": "Maine",
+        "postcode": "04901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3, Deeb Street, Waterville, Kennebec County, Maine, 04901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:26.481715+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Nohsa",
+  "geonameid": 11011454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.544957355983847,
+      "lon": 85.08538363258374,
+      "geoinfo": {
+        "display_name": "Phulwari, Patna, Bihar, 801505, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Bihar",
+        "postcode": "801505",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Nohsa, Bihar, India"
+    },
+    {
+      "lat": 25.580309627863144,
+      "lon": 85.02798692794437,
+      "geoinfo": {
+        "display_name": "Neora Road, Khagaul, Dinapur-Cum-Khagaul, Patna, Bihar, 801105, India",
+        "road": "Neora Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khagaul",
+        "state": "Bihar",
+        "postcode": "801105",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "713, Neora Road, Khagaul, Dinapur-Cum-Khagaul, Patna, Bihar, 801105, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:32:02.260174+00:00",
+  "_kind": "geo_samples"
+}

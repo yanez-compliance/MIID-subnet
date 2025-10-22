@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brandon",
+  "geonameid": 4148757,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.92588673956811,
+      "lon": -82.33157711667913,
+      "geoinfo": {
+        "display_name": "I 75, Brandon, Hillsborough County, Florida, 33551, United States",
+        "road": "I 75",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brandon",
+        "state": "Florida",
+        "postcode": "33551",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 75, Brandon, Florida, United States"
+    },
+    {
+      "lat": 27.953689741134006,
+      "lon": -82.31293679848271,
+      "geoinfo": {
+        "display_name": "903, Oak Hollow Place, Brandon, Hillsborough County, Florida, 33510, United States",
+        "road": "Oak Hollow Place",
+        "house_number": "903",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brandon",
+        "state": "Florida",
+        "postcode": "33510",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "903, Oak Hollow Place, Brandon, Hillsborough County, Florida, 33510, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:41:27.941314+00:00",
+  "_kind": "geo_samples"
+}

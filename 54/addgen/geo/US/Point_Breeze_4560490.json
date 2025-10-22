@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Point Breeze",
+  "geonameid": 4560490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.89807867095591,
+      "lon": -75.1623114981023,
+      "geoinfo": {
+        "display_name": "South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19112, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Philadelphia, Point Breeze, Pennsylvania, United States"
+    },
+    {
+      "lat": 39.90837834627456,
+      "lon": -75.18242097513718,
+      "geoinfo": {
+        "display_name": "3412, South 20th Street, Packer Park, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19145, United States",
+        "road": "South 20th Street",
+        "house_number": "3412",
+        "neighbourhood": "Packer Park",
+        "suburb": "South Philadelphia",
+        "city_district": null,
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "postcode": "19145",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3412, South 20th Street, Packer Park, South Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19145, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:29:47.653030+00:00",
+  "_kind": "geo_samples"
+}

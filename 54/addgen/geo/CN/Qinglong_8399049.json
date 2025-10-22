@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qinglong",
+  "geonameid": 8399049,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.804612858603107,
+      "lon": 109.28080625871985,
+      "geoinfo": {
+        "display_name": "Qinglong, Fengjie County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qinglong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Qinglong, Chongqing, China"
+    },
+    {
+      "lat": 30.76623337659277,
+      "lon": 109.25610424173797,
+      "geoinfo": {
+        "display_name": "奉利路, Qinglong, Fengjie County, Chongqing, China",
+        "road": "奉利路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qinglong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "152, 奉利路, Qinglong, Fengjie County, 62517 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:06.012617+00:00",
+  "_kind": "geo_samples"
+}

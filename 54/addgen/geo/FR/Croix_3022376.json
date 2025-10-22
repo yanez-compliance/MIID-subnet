@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Croix",
+  "geonameid": 3022376,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.69705708568414,
+      "lon": 3.092081467343205,
+      "geoinfo": {
+        "display_name": "Label Côte, 660, Avenue du Général de Gaulle, Domaine de la Vigne, Bondues, Lille, Nord, Hauts-de-France, Metropolitan France, 59910, France",
+        "road": "Avenue du Général de Gaulle",
+        "house_number": "660",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bondues",
+        "state": "Hauts-de-France",
+        "postcode": "59910",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "660 Avenue du Général de Gaulle, Croix, Hauts-de-France, France"
+    },
+    {
+      "lat": 50.656013612496956,
+      "lon": 3.2099192128948224,
+      "geoinfo": {
+        "display_name": "Antenne Sud de Roubaix, Hem, Lille, Nord, Hauts-de-France, Metropolitan France, 59510, France",
+        "road": "Antenne Sud de Roubaix",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hem",
+        "state": "Hauts-de-France",
+        "postcode": "59510",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "944, Antenne Sud de Roubaix, Hem, Lille, Nord, Hauts-de-France, Metropolitan France, 59510, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:26.143900+00:00",
+  "_kind": "geo_samples"
+}

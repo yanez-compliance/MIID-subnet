@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lawrence",
+  "geonameid": 4260210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.86886090317636,
+      "lon": -86.00363519733054,
+      "geoinfo": {
+        "display_name": "Lee Road, Lawrence, Marion County, Indiana, 46236, United States",
+        "road": "Lee Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lawrence",
+        "state": "Indiana",
+        "postcode": "46236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lee Road, Lawrence, Indiana, United States"
+    },
+    {
+      "lat": 39.80540490874291,
+      "lon": -86.01642203687656,
+      "geoinfo": {
+        "display_name": "2635, Planes Drive, Indianapolis, Marion County, Indiana, 46219, United States",
+        "road": "Planes Drive",
+        "house_number": "2635",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "postcode": "46219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2635, Planes Drive, Indianapolis, Marion County, Indiana, 46219, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:24:59.571945+00:00",
+  "_kind": "geo_samples"
+}

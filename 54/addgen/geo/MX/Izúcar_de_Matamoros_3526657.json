@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Izúcar de Matamoros",
+  "geonameid": 3526657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.629686546507614,
+      "lon": -98.46600680764533,
+      "geoinfo": {
+        "display_name": "Izúcar de Matamoros, Puebla, 74570, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Puebla",
+        "postcode": "74570",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Izúcar de Matamoros, Puebla, Mexico"
+    },
+    {
+      "lat": 18.56634768929175,
+      "lon": -98.48038367657689,
+      "geoinfo": {
+        "display_name": "Mariano Matamoros, Matzaco, Izúcar de Matamoros, Puebla, 74400, Mexico",
+        "road": "Mariano Matamoros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Matzaco",
+        "state": "Puebla",
+        "postcode": "74400",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "897, Mariano Matamoros, Matzaco, Izúcar de Matamoros, Puebla, 74400, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:30:00.434633+00:00",
+  "_kind": "geo_samples"
+}

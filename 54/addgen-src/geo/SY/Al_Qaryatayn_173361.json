@@ -1,0 +1,47 @@
+{
+  "country_code": "SY",
+  "country": "Syria",
+  "city": "Al Qaryatayn",
+  "geonameid": 173361,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 34.248610829656045,
+      "lon": 37.26563048407449,
+      "geoinfo": {
+        "display_name": "7, Al-Qaryatain Subdistrict, Homs District, Homs Governorate, Syria",
+        "road": "7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Homs Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "7, Al Qaryatayn, Homs Governorate, Syria"
+    },
+    {
+      "lat": 34.21364078906163,
+      "lon": 37.195688048124474,
+      "geoinfo": {
+        "display_name": "Al-Qaryatain, Al-Qaryatain Subdistrict, Homs District, Homs Governorate, Syria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Qaryatain",
+        "state": "Homs Governorate",
+        "postcode": null,
+        "country": "Syria",
+        "country_code": "sy"
+      },
+      "address": "Al Qaryatayn, Homs Governorate, Syria"
+    }
+  ],
+  "updated_at": "2025-10-16T23:10:22.384137+00:00",
+  "_kind": "geo_samples"
+}

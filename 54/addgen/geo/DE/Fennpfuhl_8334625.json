@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Fennpfuhl",
+  "geonameid": 8334625,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.522161993563415,
+      "lon": 13.472358038848943,
+      "geoinfo": {
+        "display_name": "Carl-von-Linné Schule, Storkower Straße, Lichtenberg, Berlin, 10369, Germany",
+        "road": "Storkower Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lichtenberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10369",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Storkower Straße, Fennpfuhl, Germany"
+    },
+    {
+      "lat": 52.520812553227586,
+      "lon": 13.482254933908036,
+      "geoinfo": {
+        "display_name": "Bornitzstraße, Bornitz-Viertel, Lichtenberg, Berlin, 10367, Germany",
+        "road": "Bornitzstraße",
+        "house_number": null,
+        "neighbourhood": "Bornitz-Viertel",
+        "suburb": "Lichtenberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10367",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "855, Bornitzstraße, Bornitz-Viertel, Lichtenberg, Berlin, 10367, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:02.840314+00:00",
+  "_kind": "geo_samples"
+}

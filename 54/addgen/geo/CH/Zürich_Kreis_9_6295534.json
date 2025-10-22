@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich (Kreis 9)",
+  "geonameid": 6295534,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.382018301020565,
+      "lon": 8.459412100054944,
+      "geoinfo": {
+        "display_name": "Unter Betentalweg, Altstetten, Kreis 9, Zurich, District Zurich, Zurich, 8142, Switzerland",
+        "road": "Unter Betentalweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altstetten",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8142",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Unter Betentalweg, Zürich (Kreis 9), Zurich, Switzerland"
+    },
+    {
+      "lat": 47.37414740350289,
+      "lon": 8.481543865599944,
+      "geoinfo": {
+        "display_name": "406, Albisriederstrasse, Albisrieden, Kreis 9, Zurich, District Zurich, Zurich, 8047, Switzerland",
+        "road": "Albisriederstrasse",
+        "house_number": "406",
+        "neighbourhood": null,
+        "suburb": "Albisrieden",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8047",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "406 Albisriederstrasse, Zürich (Kreis 9), Zurich, Switzerland"
+    },
+    {
+      "lat": 47.350665090561534,
+      "lon": 8.474236294630359,
+      "geoinfo": {
+        "display_name": "Schwandenstrasse, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland",
+        "road": "Schwandenstrasse",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stallikon",
+        "state": "Zurich",
+        "postcode": "8143",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "559, Schwandenstrasse, Stallikon, Bezirk Affoltern, Zurich, 8143, Switzerland"
+    },
+    {
+      "lat": 47.389039031418896,
+      "lon": 8.480178208339293,
+      "geoinfo": {
+        "display_name": "11, Kelchweg, Werdwies, Altstetten, Kreis 9, Zurich, District Zurich, Zurich, 8048, Switzerland",
+        "road": "Kelchweg",
+        "house_number": "11",
+        "neighbourhood": "Werdwies",
+        "suburb": "Altstetten",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8048",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "11, Kelchweg, Zürich (Kreis 9), Zurich, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:47.854964+00:00",
+  "_kind": "geo_samples"
+}

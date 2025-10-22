@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Viana do Castelo",
+  "geonameid": 2732773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.652402793987875,
+      "lon": -8.849979002556811,
+      "geoinfo": {
+        "display_name": "Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Viana do Castelo, Portugal"
+    },
+    {
+      "lat": 41.690333730641775,
+      "lon": -8.789650187037099,
+      "geoinfo": {
+        "display_name": "Largo do Cais Velho, Darque, Viana do Castelo, 4935-066, Portugal",
+        "road": "Largo do Cais Velho",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Viana do Castelo",
+        "state": null,
+        "postcode": "4935-066",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Largo do Cais Velho, Darque, Viana do Castelo, 4935-066, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:59.395309+00:00",
+  "_kind": "geo_samples"
+}

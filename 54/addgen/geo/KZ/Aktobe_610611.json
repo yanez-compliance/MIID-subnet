@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Aktobe",
+  "geonameid": 610611,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 50.28740325603253,
+      "lon": 57.224327127815975,
+      "geoinfo": {
+        "display_name": "114, улица Некрасова, Old Town, Ақтөбе, Almaty District, Aqtöbe Region, 030000, Kazakhstan",
+        "road": "улица Некрасова",
+        "house_number": "114",
+        "neighbourhood": "Old Town",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ақтөбе",
+        "state": "Aqtöbe Region",
+        "postcode": "030000",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "114 улица Некрасова, Aktobe, Aqtöbe Region, Kazakhstan"
+    },
+    {
+      "lat": 50.25979557576287,
+      "lon": 57.14582412612091,
+      "geoinfo": {
+        "display_name": "348к1, Дорога Батыс 2, Алтын Орда, Aktobe, Astana District, Aqtöbe Region, 000030, Kazakhstan",
+        "road": "Дорога Батыс 2",
+        "house_number": "348к1",
+        "neighbourhood": "Алтын Орда",
+        "suburb": null,
+        "city_district": null,
+        "city": "Aktobe",
+        "state": "Aqtöbe Region",
+        "postcode": "000030",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "348к1 Дорога Батыс 2, Aktobe, Aqtöbe Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-16T18:22:32.911944+00:00",
+  "_kind": "geo_samples"
+}

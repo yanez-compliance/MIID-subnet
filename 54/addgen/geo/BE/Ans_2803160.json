@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Ans",
+  "geonameid": 2803160,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 50.657731686022494,
+      "lon": 5.554012710943221,
+      "geoinfo": {
+        "display_name": "122, Rue des Quatorze Verges, Glain, Liège, Wallonia, 4000, Belgium",
+        "road": "Rue des Quatorze Verges",
+        "house_number": "122",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liège",
+        "state": "Liège",
+        "postcode": "4000",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "122 Rue des Quatorze Verges, Ans, Liège, Belgium"
+    },
+    {
+      "lat": 50.6702395140198,
+      "lon": 5.460336161082898,
+      "geoinfo": {
+        "display_name": "9, Rue Blanche d'Ans, Hognoul, Awans, Liège, Wallonia, 4340, Belgium",
+        "road": "Rue Blanche d'Ans",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hognoul",
+        "state": "Liège",
+        "postcode": "4340",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "9, Rue Blanche d'Ans, Hognoul, Awans, Liège, Wallonia, 4340, Belgium"
+    },
+    {
+      "lat": 50.70396060806147,
+      "lon": 5.502248291892424,
+      "geoinfo": {
+        "display_name": "Rue de Juprelle, Xhendremael, Ans, Liège, Wallonia, 4432, Belgium",
+        "road": "Rue de Juprelle",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ans",
+        "state": "Liège",
+        "postcode": "4432",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "970, Rue de Juprelle, Xhendremael, Ans, Liège, Wallonia, 4432, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:07.205893+00:00",
+  "_kind": "geo_samples"
+}

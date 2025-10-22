@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Perris",
+  "geonameid": 5382146,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.79784676962594,
+      "lon": -117.22876314518068,
+      "geoinfo": {
+        "display_name": "1200, Comiskey Court, Perris, Riverside County, California, 92571, United States",
+        "road": "Comiskey Court",
+        "house_number": "1200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perris",
+        "state": "California",
+        "postcode": "92571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1200 Comiskey Court, Perris, California, United States"
+    },
+    {
+      "lat": 33.765941285621274,
+      "lon": -117.2187614410728,
+      "geoinfo": {
+        "display_name": "Perris Valley Airport, Paseo Adelanto, Perris, Riverside County, California, 92570, United States",
+        "road": "Paseo Adelanto",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Perris",
+        "state": "California",
+        "postcode": "92570",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "957, Paseo Adelanto, Perris, 92570 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:57.367058+00:00",
+  "_kind": "geo_samples"
+}

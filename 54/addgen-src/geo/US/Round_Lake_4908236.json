@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Round Lake",
+  "geonameid": 4908236,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.376283969813755,
+      "lon": -88.09298087591884,
+      "geoinfo": {
+        "display_name": "416, West Golfview Drive, Round Lake Beach, Lake County, Illinois, 60073, United States",
+        "road": "West Golfview Drive",
+        "house_number": "416",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Round Lake Beach",
+        "state": "Illinois",
+        "postcode": "60073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "416 West Golfview Drive, Round Lake, Illinois, United States"
+    },
+    {
+      "lat": 42.35615596409754,
+      "lon": -88.10472823389843,
+      "geoinfo": {
+        "display_name": "West Hart Road, Round Lake, Lake County, Illinois, 60073, United States",
+        "road": "West Hart Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Round Lake",
+        "state": "Illinois",
+        "postcode": "60073",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "256, West Hart Road, Round Lake, Lake County, Illinois, 60073, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:31.828742+00:00",
+  "_kind": "geo_samples"
+}

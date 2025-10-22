@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Kilmarnock",
+  "geonameid": 2645605,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.63911866760685,
+      "lon": -4.458580931660963,
+      "geoinfo": {
+        "display_name": "Barncroft House helipad, East Drive, East Ayrshire, Scotland, KA3 6BS, United Kingdom",
+        "road": "East Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Scotland",
+        "postcode": "KA3 6BS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "East Drive, Kilmarnock, Scotland, United Kingdom"
+    },
+    {
+      "lat": 55.58489488421821,
+      "lon": -4.528655465929277,
+      "geoinfo": {
+        "display_name": "Caprington, Earlston, East Ayrshire, Scotland, KA2 9AD, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Caprington",
+        "city_district": null,
+        "city": "Earlston",
+        "state": "Scotland",
+        "postcode": "KA2 9AD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Caprington, Earlston, East Ayrshire, Scotland, KA2 9AD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:43.279892+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Nice",
+  "geonameid": 2990440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.744291863692176,
+      "lon": 7.250505874589465,
+      "geoinfo": {
+        "display_name": "Route d'Aspremont, Saint-Pancrace, Nice, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06950, France",
+        "road": "Route d'Aspremont",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Saint-Pancrace",
+        "city_district": null,
+        "city": "Nice",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "06950",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route d'Aspremont, Nice, Provence-Alpes-Côte d'Azur, France"
+    },
+    {
+      "lat": 43.70410895528043,
+      "lon": 7.308946901140602,
+      "geoinfo": {
+        "display_name": "Palais Albert 1er, 11, Avenue Albert 1er, Remelin, Villefranche-sur-Mer, Nice, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06230, France",
+        "road": "Avenue Albert 1er",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": "Remelin",
+        "city_district": null,
+        "city": "Villefranche-sur-Mer",
+        "state": "Provence-Alpes-Côte d'Azur",
+        "postcode": "06230",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Palais Albert 1er, 11, Avenue Albert 1er, Remelin, Villefranche-sur-Mer, Nice, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06230, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:50.624886+00:00",
+  "_kind": "geo_samples"
+}

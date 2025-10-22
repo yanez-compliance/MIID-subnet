@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Weldiya",
+  "geonameid": 326406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.813129718886808,
+      "lon": 39.580145320044096,
+      "geoinfo": {
+        "display_name": "B22, Woldia, North Wollo Zone, Amhara Region, Ethiopia",
+        "road": "B22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woldia",
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "B22, Weldiya, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 11.844639121010495,
+      "lon": 39.553965224296995,
+      "geoinfo": {
+        "display_name": "B22, North Wollo Zone, Amhara Region, Ethiopia",
+        "road": "B22",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "B22, Weldiya, 75810 Amhara Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:05.491825+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Aobadai",
+  "geonameid": 8576683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.54438639842956,
+      "lon": 139.48003976858587,
+      "geoinfo": {
+        "display_name": "この先車は通り抜けできません, Flower Road, Naruse 2-chome, Machida, Tokyo, 194-0043, Japan",
+        "road": "Flower Road",
+        "house_number": null,
+        "neighbourhood": "Naruse 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Machida",
+        "state": null,
+        "postcode": "194-0043",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Flower Road, Aobadai, Japan"
+    },
+    {
+      "lat": 35.537639691924184,
+      "lon": 139.57121792488476,
+      "geoinfo": {
+        "display_name": "Nagasaka, Tsuzuki Ward, Yokohama, Kanagawa Prefecture, 224-0063, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Nagasaka",
+        "suburb": "Tsuzuki Ward",
+        "city_district": null,
+        "city": "Yokohama",
+        "state": null,
+        "postcode": "224-0063",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nagasaka, Tsuzuki Ward, Yokohama, Kanagawa Prefecture, 224-0063, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:23.585317+00:00",
+  "_kind": "geo_samples"
+}

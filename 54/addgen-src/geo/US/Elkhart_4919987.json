@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elkhart",
+  "geonameid": 4919987,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.68710956711582,
+      "lon": -85.96543622538245,
+      "geoinfo": {
+        "display_name": "Prairie Street, Elkhart, Elkhart County, Indiana, 46516, United States",
+        "road": "Prairie Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkhart",
+        "state": "Indiana",
+        "postcode": "46516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Prairie Street, Elkhart, Indiana, United States"
+    },
+    {
+      "lat": 41.69358617530713,
+      "lon": -85.95163738502978,
+      "geoinfo": {
+        "display_name": "1500, East Jackson Boulevard, East Lake Estates, Elkhart, Elkhart County, Indiana, 46516, United States",
+        "road": "East Jackson Boulevard",
+        "house_number": "1500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elkhart",
+        "state": "Indiana",
+        "postcode": "46516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1500, East Jackson Boulevard, East Lake Estates, Elkhart, Elkhart County, Indiana, 46516, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:17.977830+00:00",
+  "_kind": "geo_samples"
+}

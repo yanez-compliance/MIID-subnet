@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Pasir Puteh",
+  "geonameid": 1735545,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.8395930123833,
+      "lon": 102.43452491080623,
+      "geoinfo": {
+        "display_name": "D12, Pasir Puteh, Kelantan, 16800, Malaysia",
+        "road": "D12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kelantan",
+        "postcode": "16800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "D12, Pasir Puteh, Kelantan, Malaysia"
+    },
+    {
+      "lat": 5.824481544402756,
+      "lon": 102.40405571435925,
+      "geoinfo": {
+        "display_name": "Pasir Puteh, Kelantan, 16800, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pasir Puteh",
+        "state": "Kelantan",
+        "postcode": "16800",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "350, Pasir Puteh, Kelantan, 16800, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:15.776126+00:00",
+  "_kind": "geo_samples"
+}

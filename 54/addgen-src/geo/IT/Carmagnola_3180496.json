@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Carmagnola",
+  "geonameid": 3180496,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.85295418569623,
+      "lon": 7.727629260276667,
+      "geoinfo": {
+        "display_name": "1, Via Irma Antonetto, Carmagnola, Turin, Piedmont, 10022, Italy",
+        "road": "Via Irma Antonetto",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmagnola",
+        "state": "Piedmont",
+        "postcode": "10022",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "1 Via Irma Antonetto, Carmagnola, Piedmont, Italy"
+    },
+    {
+      "lat": 44.84999989483053,
+      "lon": 7.674532808470144,
+      "geoinfo": {
+        "display_name": "Strada Campagnino, Carmagnola, Turin, Piedmont, Italy",
+        "road": "Strada Campagnino",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmagnola",
+        "state": "Piedmont",
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "322, Strada Campagnino, Carmagnola, Turin, 59876 Piedmont, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:23:45.228009+00:00",
+  "_kind": "geo_samples"
+}

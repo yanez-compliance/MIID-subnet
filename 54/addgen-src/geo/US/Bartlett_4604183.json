@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bartlett",
+  "geonameid": 4604183,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.198597866355605,
+      "lon": -89.87171374229332,
+      "geoinfo": {
+        "display_name": "Ferguson Road, Bartlett, Shelby County, West Tennessee, Tennessee, 38134, United States",
+        "road": "Ferguson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bartlett",
+        "state": "Tennessee",
+        "postcode": "38134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ferguson Road, Bartlett, Tennessee, United States"
+    },
+    {
+      "lat": 35.217032648677566,
+      "lon": -89.85251184194122,
+      "geoinfo": {
+        "display_name": "Yale Road, Bartlett, Shelby County, West Tennessee, Tennessee, 38134, United States",
+        "road": "Yale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bartlett",
+        "state": "Tennessee",
+        "postcode": "38134",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "122, Yale Road, Bartlett, Shelby County, West Tennessee, Tennessee, 38134, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:02.923361+00:00",
+  "_kind": "geo_samples"
+}

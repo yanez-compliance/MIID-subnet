@@ -1,0 +1,65 @@
+{
+  "country_code": "SN",
+  "country": "Senegal",
+  "city": "Le Plateau",
+  "geonameid": 2595758,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 14.638303643645632,
+      "lon": -17.476299570719384,
+      "geoinfo": {
+        "display_name": "Senegal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Senegal",
+        "country_code": "sn"
+      },
+      "address": "Le Plateau, Dakar Region, Senegal"
+    },
+    {
+      "lat": 14.650958332340727,
+      "lon": -17.430165944289406,
+      "geoinfo": {
+        "display_name": "Route de la Corniche Est, Commune de Dakar-Plateau, Arrondissement de Dakar-Plateau, Dakar, Dakar Region, 99341, Senegal",
+        "road": "Route de la Corniche Est",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Commune de Dakar-Plateau",
+        "city_district": "Arrondissement de Dakar-Plateau",
+        "city": "Dakar",
+        "state": "Dakar Region",
+        "postcode": "99341",
+        "country": "Senegal",
+        "country_code": "sn"
+      },
+      "address": "170, Route de la Corniche Est, Commune de Dakar-Plateau, Arrondissement de Dakar-Plateau, Dakar, Dakar Region, 99341, Senegal"
+    },
+    {
+      "lat": 14.668805623012249,
+      "lon": -17.41087005850707,
+      "geoinfo": {
+        "display_name": "Pointe de Dakar, Commune de Dakar-Plateau, Arrondissement de Dakar-Plateau, Dakar, Dakar Region, 99900, Senegal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Commune de Dakar-Plateau",
+        "city_district": "Arrondissement de Dakar-Plateau",
+        "city": "Dakar",
+        "state": "Dakar Region",
+        "postcode": "99900",
+        "country": "Senegal",
+        "country_code": "sn"
+      },
+      "address": "079, Pointe de Dakar, Commune de Dakar-Plateau, Arrondissement de Dakar-Plateau, Dakar, Dakar Region, 99900, Senegal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:37:50.364027+00:00",
+  "_kind": "geo_samples"
+}

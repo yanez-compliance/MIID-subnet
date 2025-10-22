@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neustadt an der Weinstraße",
+  "geonameid": 2864054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.33277577352103,
+      "lon": 8.10986011960247,
+      "geoinfo": {
+        "display_name": "Kanonenweg, Hambach an der Weinstraße, Neustadt an der Weinstraße, Rhineland-Palatinate, 67434, Germany",
+        "road": "Kanonenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hambach an der Weinstraße",
+        "city_district": null,
+        "city": "Neustadt an der Weinstraße",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67434",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Kanonenweg, Neustadt an der Weinstraße, Rhineland-Palatinate, Germany"
+    },
+    {
+      "lat": 49.339659389837635,
+      "lon": 8.11919369110564,
+      "geoinfo": {
+        "display_name": "65, Triftbrunnenweg, Hambach an der Weinstraße, Neustadt an der Weinstraße, Rhineland-Palatinate, 67434, Germany",
+        "road": "Triftbrunnenweg",
+        "house_number": "65",
+        "neighbourhood": null,
+        "suburb": "Hambach an der Weinstraße",
+        "city_district": null,
+        "city": "Neustadt an der Weinstraße",
+        "state": "Rhineland-Palatinate",
+        "postcode": "67434",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "65, Triftbrunnenweg, Hambach an der Weinstraße, Neustadt an der Weinstraße, Rhineland-Palatinate, 67434, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:10.600320+00:00",
+  "_kind": "geo_samples"
+}

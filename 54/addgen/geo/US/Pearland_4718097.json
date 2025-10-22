@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pearland",
+  "geonameid": 4718097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.54378234531941,
+      "lon": -95.26914388718382,
+      "geoinfo": {
+        "display_name": "3535, Pheasant Lane, Pearland, Brazoria County, Texas, 77581, United States",
+        "road": "Pheasant Lane",
+        "house_number": "3535",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pearland",
+        "state": "Texas",
+        "postcode": "77581",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3535 Pheasant Lane, Pearland, Texas, United States"
+    },
+    {
+      "lat": 29.52533939225871,
+      "lon": -95.2847992887608,
+      "geoinfo": {
+        "display_name": "Jenkins Road, Brazoria County, Texas, 77581, United States",
+        "road": "Jenkins Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "77581",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "548, Jenkins Road, Brazoria County, Texas, 77581, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:52:26.130351+00:00",
+  "_kind": "geo_samples"
+}

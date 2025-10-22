@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Quentin",
+  "geonameid": 2977295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.87400750000091,
+      "lon": 3.31995294554471,
+      "geoinfo": {
+        "display_name": "3, Rue de Saint-Quentin, Morcourt, Saint-Quentin, Aisne, Hauts-de-France, Metropolitan France, 02100, France",
+        "road": "Rue de Saint-Quentin",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morcourt",
+        "state": "Hauts-de-France",
+        "postcode": "02100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "3 Rue de Saint-Quentin, Saint-Quentin, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.817299204357305,
+      "lon": 3.329944325584857,
+      "geoinfo": {
+        "display_name": "Route d'Itancourt, Neuville-Saint-Amand, Saint-Quentin, Aisne, Hauts-de-France, Metropolitan France, 02100, France",
+        "road": "Route d'Itancourt",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Neuville-Saint-Amand",
+        "state": "Hauts-de-France",
+        "postcode": "02100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "486, Route d'Itancourt, Neuville-Saint-Amand, Saint-Quentin, Aisne, Hauts-de-France, Metropolitan France, 02100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:02.964175+00:00",
+  "_kind": "geo_samples"
+}

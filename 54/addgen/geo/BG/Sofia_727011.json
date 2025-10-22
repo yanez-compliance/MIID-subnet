@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Sofia",
+  "geonameid": 727011,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.72046054154697,
+      "lon": 23.36071106815005,
+      "geoinfo": {
+        "display_name": "Zhak Dyuklo, Sofia, Poduyane, Sofia City, Sofia-City, 1510, Bulgaria",
+        "road": "Zhak Dyuklo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sofia",
+        "state": "Sofia-City",
+        "postcode": "1510",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "Zhak Dyuklo, Sofia, Sofia-City, Bulgaria"
+    },
+    {
+      "lat": 42.67654310967744,
+      "lon": 23.374517818744796,
+      "geoinfo": {
+        "display_name": "21, Spatnik, zh.k. Hristo Smirnenski, Sofia, Slatina, Sofia City, Sofia-City, 1574, Bulgaria",
+        "road": "Spatnik",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": "zh.k. Hristo Smirnenski",
+        "city_district": null,
+        "city": "Sofia",
+        "state": "Sofia-City",
+        "postcode": "1574",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "21 Spatnik, Sofia, Sofia-City, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:47:57.618163+00:00",
+  "_kind": "geo_samples"
+}

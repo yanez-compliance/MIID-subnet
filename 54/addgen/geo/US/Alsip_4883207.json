@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Alsip",
+  "geonameid": 4883207,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.66778239085211,
+      "lon": -87.75111227454762,
+      "geoinfo": {
+        "display_name": "12315, South Latrobe Avenue, Alsip, Worth Township, Cook County, Illinois, 60803, United States",
+        "road": "South Latrobe Avenue",
+        "house_number": "12315",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alsip",
+        "state": "Illinois",
+        "postcode": "60803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12315 South Latrobe Avenue, Alsip, Illinois, United States"
+    },
+    {
+      "lat": 41.70658976804376,
+      "lon": -87.74006728514475,
+      "geoinfo": {
+        "display_name": "103rd Street, Oak Lawn, Worth Township, Cook County, Illinois, 60415, United States",
+        "road": "103rd Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oak Lawn",
+        "state": "Illinois",
+        "postcode": "60415",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "103rd Street, Oak Lawn, Worth Township, Cook County, Illinois, 60415, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:49.488743+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Pitäjänmäki",
+  "geonameid": 641374,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.2147651859392,
+      "lon": 24.9074127439912,
+      "geoinfo": {
+        "display_name": "Kivihaantie, Kivihaka, Haaga, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00320, Finland",
+        "road": "Kivihaantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Haaga",
+        "city_district": "Western major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00320",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "207, Kivihaantie, Kivihaka, Haaga, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00320, Finland"
+    },
+    {
+      "lat": 60.19781287422257,
+      "lon": 24.881014901415824,
+      "geoinfo": {
+        "display_name": "18, Perustie, Vanha Munkkiniemi, Munkkiniemi, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00330, Finland",
+        "road": "Perustie",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Munkkiniemi",
+        "city_district": "Western major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00330",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "18, Perustie, Vanha Munkkiniemi, Munkkiniemi, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00330, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:15.539558+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Scaggsville",
+  "geonameid": 4368918,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.15219792071384,
+      "lon": -76.90433310846242,
+      "geoinfo": {
+        "display_name": "Maple Lawn Boulevard, Maple Lawn, Scaggsville, Howard County, Maryland, 20759, United States",
+        "road": "Maple Lawn Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maple Lawn",
+        "city_district": null,
+        "city": "Scaggsville",
+        "state": "Maryland",
+        "postcode": "20759",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Maple Lawn Boulevard, Scaggsville, Maryland, United States"
+    },
+    {
+      "lat": 39.129946691764175,
+      "lon": -76.87868658558527,
+      "geoinfo": {
+        "display_name": "10601, Stansfield Road, High Ridge, Laurel, Howard County, Maryland, 20723, United States",
+        "road": "Stansfield Road",
+        "house_number": "10601",
+        "neighbourhood": "High Ridge",
+        "suburb": null,
+        "city_district": null,
+        "city": "Laurel",
+        "state": "Maryland",
+        "postcode": "20723",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10601, Stansfield Road, High Ridge, Laurel, Howard County, Maryland, 20723, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:37.264211+00:00",
+  "_kind": "geo_samples"
+}

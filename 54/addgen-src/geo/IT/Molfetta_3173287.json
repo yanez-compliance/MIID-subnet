@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Molfetta",
+  "geonameid": 3173287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.201346338987555,
+      "lon": 16.60266659232459,
+      "geoinfo": {
+        "display_name": "Via Trieste, Villaggio Belgiovine, Molfetta, Bari, Apulia, 70056, Italy",
+        "road": "Via Trieste",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Molfetta",
+        "state": "Apulia",
+        "postcode": "70056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Trieste, Molfetta, Apulia, Italy"
+    },
+    {
+      "lat": 41.2210836817378,
+      "lon": 16.59810260102386,
+      "geoinfo": {
+        "display_name": "Villaggio Belgiovine, Molfetta, Bari, Apulia, 70056, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Molfetta",
+        "state": "Apulia",
+        "postcode": "70056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "331, Villaggio Belgiovine, Molfetta, Bari, Apulia, 70056, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:07:20.782790+00:00",
+  "_kind": "geo_samples"
+}

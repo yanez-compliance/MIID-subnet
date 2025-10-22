@@ -1,0 +1,65 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Mek'ele",
+  "geonameid": 331180,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 13.507803558858027,
+      "lon": 39.43643231322141,
+      "geoinfo": {
+        "display_name": "Mek'elē, Southern Tigray, Tigray, 1547, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mek'elē",
+        "state": "Tigray",
+        "postcode": "1547",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Mek'ele, Tigray, Ethiopia"
+    },
+    {
+      "lat": 13.521586231937544,
+      "lon": 39.50621766108328,
+      "geoinfo": {
+        "display_name": "Mek'elē, Southern Tigray, Tigray, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mek'elē",
+        "state": "Tigray",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "722, Mek'ele, 80748 Tigray, Ethiopia"
+    },
+    {
+      "lat": 13.479855153978034,
+      "lon": 39.485370590688696,
+      "geoinfo": {
+        "display_name": "Arid Campus, Godena Eyassu Street, Quiha, Southern Tigray, Tigray, 1547, Ethiopia",
+        "road": "Godena Eyassu Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Quiha",
+        "state": "Tigray",
+        "postcode": "1547",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "278, Godena Eyassu Street, Mek'ele, 1547 Tigray, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:20.636474+00:00",
+  "_kind": "geo_samples"
+}

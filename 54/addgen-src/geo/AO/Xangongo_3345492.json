@@ -1,0 +1,47 @@
+{
+  "country_code": "AO",
+  "country": "Angola",
+  "city": "Xangongo",
+  "geonameid": 3345492,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -16.771964085382443,
+      "lon": 14.949479180112332,
+      "geoinfo": {
+        "display_name": "Xangongo, Cunene Province, Angola",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xangongo",
+        "state": "Cunene Province",
+        "postcode": null,
+        "country": "Angola",
+        "country_code": "ao"
+      },
+      "address": "618, Xangongo, 42858 Cunene Province, Angola"
+    },
+    {
+      "lat": -16.721876741098093,
+      "lon": 14.939625112154221,
+      "geoinfo": {
+        "display_name": "Cunene Province, Angola",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Cunene Province",
+        "postcode": null,
+        "country": "Angola",
+        "country_code": "ao"
+      },
+      "address": "138, Xangongo, 86686 Cunene Province, Angola"
+    }
+  ],
+  "updated_at": "2025-10-19T02:46:40.851464+00:00",
+  "_kind": "geo_samples"
+}

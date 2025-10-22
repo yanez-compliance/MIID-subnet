@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shima",
+  "geonameid": 1909053,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.001679442036203,
+      "lon": 105.93345190792658,
+      "geoinfo": {
+        "display_name": "永合高速, Shima, Jiangjin District, Chongqing, China",
+        "road": "永合高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shima",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "永合高速, Shima, Chongqing, China"
+    },
+    {
+      "lat": 28.95423820547891,
+      "lon": 105.9300619005962,
+      "geoinfo": {
+        "display_name": "Jiangjin District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "781, Jiangjin District, 18417 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:39:02.747618+00:00",
+  "_kind": "geo_samples"
+}

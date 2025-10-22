@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Aksay",
+  "geonameid": 583673,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.293783460051046,
+      "lon": 39.83960641884808,
+      "geoinfo": {
+        "display_name": "улица Дениса Давыдова, Aksay, Аксайское городское поселение, Aksaysky District, Rostov Oblast, 346715, Russia",
+        "road": "улица Дениса Давыдова",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aksay",
+        "state": "Rostov Oblast",
+        "postcode": "346715",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "улица Дениса Давыдова, Aksay, Rostov Oblast, Russia"
+    },
+    {
+      "lat": 47.248686919830156,
+      "lon": 39.819689911215846,
+      "geoinfo": {
+        "display_name": "Первомайский район, Rostov-on-Don, Rostov Oblast, 344027, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Первомайский район",
+        "city": "Rostov-on-Don",
+        "state": "Rostov Oblast",
+        "postcode": "344027",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "504, Первомайский район, Rostov-on-Don, Rostov Oblast, 344027, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:11.364501+00:00",
+  "_kind": "geo_samples"
+}

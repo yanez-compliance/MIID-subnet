@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Princeton",
+  "geonameid": 4169345,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.54758799909161,
+      "lon": -80.42143825919325,
+      "geoinfo": {
+        "display_name": "23550, Southwest 142nd Avenue, Naranja, Miami-Dade County, Florida, 33032, United States",
+        "road": "Southwest 142nd Avenue",
+        "house_number": "23550",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Naranja",
+        "state": "Florida",
+        "postcode": "33032",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23550 Southwest 142nd Avenue, Princeton, Florida, United States"
+    },
+    {
+      "lat": 25.541395046494397,
+      "lon": -80.36728675890464,
+      "geoinfo": {
+        "display_name": "Princeton, Miami-Dade County, Florida, 33190, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Princeton",
+        "state": "Florida",
+        "postcode": "33190",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "550, Princeton, Miami-Dade County, Florida, 33190, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:07.617857+00:00",
+  "_kind": "geo_samples"
+}

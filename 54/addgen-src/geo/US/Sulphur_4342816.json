@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sulphur",
+  "geonameid": 4342816,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.24274210579957,
+      "lon": -93.38098393703437,
+      "geoinfo": {
+        "display_name": "599, North Crocker Street, Sulphur, Calcasieu Parish, Louisiana, 70663, United States",
+        "road": "North Crocker Street",
+        "house_number": "599",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sulphur",
+        "state": "Louisiana",
+        "postcode": "70663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "599 North Crocker Street, Sulphur, Louisiana, United States"
+    },
+    {
+      "lat": 30.25477125783682,
+      "lon": -93.34210718276623,
+      "geoinfo": {
+        "display_name": "Vallage Orphange, Sulphur, Calcasieu Parish, Louisiana, 70663, United States",
+        "road": "Vallage Orphange",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sulphur",
+        "state": "Louisiana",
+        "postcode": "70663",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "559, Vallage Orphange, Sulphur, Calcasieu Parish, Louisiana, 70663, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:25:53.413793+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mission Viejo",
+  "geonameid": 5373763,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.6208987142548,
+      "lon": -117.6425916786514,
+      "geoinfo": {
+        "display_name": "28061, Calle Valdes, Casta del Sol, Mission Viejo, Orange County, California, 92692, United States",
+        "road": "Calle Valdes",
+        "house_number": "28061",
+        "neighbourhood": "Casta del Sol",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mission Viejo",
+        "state": "California",
+        "postcode": "92692",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "28061 Calle Valdes, Mission Viejo, California, United States"
+    },
+    {
+      "lat": 33.5893216885747,
+      "lon": -117.63876442161948,
+      "geoinfo": {
+        "display_name": "Quail Run walking path, Mission Viejo, Orange County, California, 92692, United States",
+        "road": "Quail Run walking path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mission Viejo",
+        "state": "California",
+        "postcode": "92692",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "164, Quail Run walking path, Mission Viejo, Orange County, California, 92692, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:45.348872+00:00",
+  "_kind": "geo_samples"
+}

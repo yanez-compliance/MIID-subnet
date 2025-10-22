@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brooklyn Center",
+  "geonameid": 5019330,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.078407212112054,
+      "lon": -93.31307275754295,
+      "geoinfo": {
+        "display_name": "Shingle Creek Parkway, Brooklyn Center, Hennepin County, Minnesota, 55444, United States",
+        "road": "Shingle Creek Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brooklyn Center",
+        "state": "Minnesota",
+        "postcode": "55444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Shingle Creek Parkway, Brooklyn Center, Minnesota, United States"
+    },
+    {
+      "lat": 45.10748505147777,
+      "lon": -93.29681033649447,
+      "geoinfo": {
+        "display_name": "1243, 84th Way North, Brooklyn Park, Hennepin County, Minnesota, 55444, United States",
+        "road": "84th Way North",
+        "house_number": "1243",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brooklyn Park",
+        "state": "Minnesota",
+        "postcode": "55444",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1243, 84th Way North, Brooklyn Park, Hennepin County, Minnesota, 55444, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:47.113239+00:00",
+  "_kind": "geo_samples"
+}

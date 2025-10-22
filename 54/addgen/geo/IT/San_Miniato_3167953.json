@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Miniato",
+  "geonameid": 3167953,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.65192481644598,
+      "lon": 10.872997141713544,
+      "geoinfo": {
+        "display_name": "Via Corniano, Corniano, San Miniato, Pisa, Tuscany, 56028, Italy",
+        "road": "Via Corniano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miniato",
+        "state": "Tuscany",
+        "postcode": "56028",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Corniano, San Miniato, Tuscany, Italy"
+    },
+    {
+      "lat": 43.70540399966254,
+      "lon": 10.835027287677791,
+      "geoinfo": {
+        "display_name": "Case Nuove di Roffia, San Miniato Basso, San Miniato, Pisa, Tuscany, 56028, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miniato",
+        "state": "Tuscany",
+        "postcode": "56028",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "348, San Miniato, 56028 Tuscany, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:12:50.200615+00:00",
+  "_kind": "geo_samples"
+}

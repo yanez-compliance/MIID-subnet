@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Saint Joseph",
+  "geonameid": 4407010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.73125853950399,
+      "lon": -94.84575884031983,
+      "geoinfo": {
+        "display_name": "South 11th Street Road, Saint Joseph, Buchanan County, Missouri, 64503, United States",
+        "road": "South 11th Street Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Joseph",
+        "state": "Missouri",
+        "postcode": "64503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South 11th Street Road, Saint Joseph, Missouri, United States"
+    },
+    {
+      "lat": 39.75947610436814,
+      "lon": -94.86226082266091,
+      "geoinfo": {
+        "display_name": "I 229;US 59, Saint Joseph, Buchanan County, Missouri, 64502, United States",
+        "road": "I 229;US 59",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint Joseph",
+        "state": "Missouri",
+        "postcode": "64502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 229;US 59, Saint Joseph, Buchanan County, Missouri, 64502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:43.217337+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Pontoise",
+  "geonameid": 2986140,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.03536203225613,
+      "lon": 2.1210159644104345,
+      "geoinfo": {
+        "display_name": "Rue de Paris, Liesse 1, Saint-Ouen-l'Aumône, Pontoise, Val-d'Oise, Metropolitan France, 95310, France",
+        "road": "Rue de Paris",
+        "house_number": null,
+        "neighbourhood": "Liesse 1",
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Ouen-l'Aumône",
+        "state": null,
+        "postcode": "95310",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Paris, Pontoise, Ile-de-France, France"
+    },
+    {
+      "lat": 49.05859795073744,
+      "lon": 2.063315774417791,
+      "geoinfo": {
+        "display_name": "Gymnase de la Ravinière, Rue Jean Larosa, La Colline de la Ravinière, Osny, Pontoise, Val-d'Oise, Metropolitan France, 95520, France",
+        "road": "Rue Jean Larosa",
+        "house_number": null,
+        "neighbourhood": "La Colline de la Ravinière",
+        "suburb": null,
+        "city_district": null,
+        "city": "Osny",
+        "state": null,
+        "postcode": "95520",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "561, Rue Jean Larosa, 95520 Pontoise, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:46:20.825810+00:00",
+  "_kind": "geo_samples"
+}

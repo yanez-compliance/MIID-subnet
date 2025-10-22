@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fort Bragg",
+  "geonameid": 6941080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.121722793015174,
+      "lon": -79.03886185847026,
+      "geoinfo": {
+        "display_name": "Cumberland County, North Carolina, 28310, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "28310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fort Bragg, North Carolina, United States"
+    },
+    {
+      "lat": 35.11876382491899,
+      "lon": -79.0461397694585,
+      "geoinfo": {
+        "display_name": "Mac Ridge Road, Cumberland County, North Carolina, 28310, United States",
+        "road": "Mac Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "28310",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "683, Mac Ridge Road, Cumberland County, North Carolina, 28310, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:55:13.889348+00:00",
+  "_kind": "geo_samples"
+}

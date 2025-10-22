@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Liberal",
+  "geonameid": 5445820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.04738489155061,
+      "lon": -100.86699972841647,
+      "geoinfo": {
+        "display_name": "Seward County, Kansas, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kansas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Liberal, Kansas, United States"
+    },
+    {
+      "lat": 37.051563821737794,
+      "lon": -100.9016416136999,
+      "geoinfo": {
+        "display_name": "East 8th Street, Liberal, Seward County, Kansas, 67901, United States",
+        "road": "East 8th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Liberal",
+        "state": "Kansas",
+        "postcode": "67901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East 8th Street, Liberal, Seward County, Kansas, 67901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:51:00.376936+00:00",
+  "_kind": "geo_samples"
+}

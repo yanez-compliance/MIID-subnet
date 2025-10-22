@@ -1,0 +1,47 @@
+{
+  "country_code": "PS",
+  "country": "Palestinian Territory",
+  "city": "East Jerusalem",
+  "geonameid": 7303419,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 31.754824331706708,
+      "lon": 35.27231295880283,
+      "geoinfo": {
+        "display_name": "Abu Dis, Area B, West Bank, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abu Dis",
+        "state": null,
+        "postcode": null,
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "East Jerusalem, Jerusalem District, Palestinian Territory"
+    },
+    {
+      "lat": 31.804624967908847,
+      "lon": 35.2761940513734,
+      "geoinfo": {
+        "display_name": "Abu Dahouk, 'Anata, Area C, Judea and Samaria, Palestinian Territories",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "'Anata",
+        "state": "Judea and Samaria",
+        "postcode": null,
+        "country": "Palestinian Territories",
+        "country_code": "ps"
+      },
+      "address": "East Jerusalem, Judea and Samaria, Palestinian Territory"
+    }
+  ],
+  "updated_at": "2025-10-19T06:44:24.541911+00:00",
+  "_kind": "geo_samples"
+}

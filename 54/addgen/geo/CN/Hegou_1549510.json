@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Hegou",
+  "geonameid": 1549510,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.42029354215426,
+      "lon": 118.07907832214089,
+      "geoinfo": {
+        "display_name": "Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Hegou, Jiangsu, China"
+    },
+    {
+      "lat": 34.40354528376678,
+      "lon": 118.11840942674773,
+      "geoinfo": {
+        "display_name": "Hokoo Town, Xinyi City, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hokoo Town",
+        "city_district": null,
+        "city": "Xinyi City",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "632, Hokoo Town, Xinyi City, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:50:15.037965+00:00",
+  "_kind": "geo_samples"
+}

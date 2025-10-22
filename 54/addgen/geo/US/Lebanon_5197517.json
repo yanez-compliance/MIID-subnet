@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lebanon",
+  "geonameid": 5197517,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.332994809473924,
+      "lon": -76.39195807178446,
+      "geoinfo": {
+        "display_name": "Hebron, South Lebanon Township, Lebanon County, Pennsylvania, 17042, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "South Lebanon Township",
+        "state": "Pennsylvania",
+        "postcode": "17042",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lebanon, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.367901434659814,
+      "lon": -76.43199262043932,
+      "geoinfo": {
+        "display_name": "1558, Sandhill Road, Sand Hill, North Lebanon Township, Lebanon County, Pennsylvania, 17046, United States",
+        "road": "Sandhill Road",
+        "house_number": "1558",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Lebanon Township",
+        "state": "Pennsylvania",
+        "postcode": "17046",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1558, Sandhill Road, Sand Hill, North Lebanon Township, Lebanon County, Pennsylvania, 17046, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:05:45.144274+00:00",
+  "_kind": "geo_samples"
+}

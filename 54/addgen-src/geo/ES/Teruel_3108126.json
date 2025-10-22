@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Teruel",
+  "geonameid": 3108126,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.329812107782,
+      "lon": -1.0806921916306866,
+      "geoinfo": {
+        "display_name": "N-234, Teruel, Comunidad de Teruel, Aragon, 44002, Spain",
+        "road": "N-234",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teruel",
+        "state": "Aragon",
+        "postcode": "44002",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-234, Teruel, Aragon, Spain"
+    },
+    {
+      "lat": 40.31839959235752,
+      "lon": -1.1463513791158446,
+      "geoinfo": {
+        "display_name": "Las Muelas, Teruel, Comunidad de Teruel, Aragon, 44001, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teruel",
+        "state": "Aragon",
+        "postcode": "44001",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "345, Las Muelas, Teruel, Comunidad de Teruel, Aragon, 44001, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:54:58.294686+00:00",
+  "_kind": "geo_samples"
+}

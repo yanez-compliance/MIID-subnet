@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gulin",
+  "geonameid": 1809408,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.079471317465842,
+      "lon": 105.83336133561441,
+      "geoinfo": {
+        "display_name": "S442, Jinlan, Gulin County, Luzhou, Sichuan, China",
+        "road": "S442",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jinlan",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S442, Gulin, Sichuan, China"
+    },
+    {
+      "lat": 28.081816472597424,
+      "lon": 105.8006476240149,
+      "geoinfo": {
+        "display_name": "Gulin, Gulin County, Luzhou, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulin",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "673, Gulin, Gulin County, Luzhou, 51292 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:41.748543+00:00",
+  "_kind": "geo_samples"
+}

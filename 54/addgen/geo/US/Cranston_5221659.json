@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cranston",
+  "geonameid": 5221659,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.77388471260022,
+      "lon": -71.44867900699592,
+      "geoinfo": {
+        "display_name": "98, Bridgeton Court, Cranston, Providence County, Rhode Island, 02910, United States",
+        "road": "Bridgeton Court",
+        "house_number": "98",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cranston",
+        "state": "Rhode Island",
+        "postcode": "02910",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "98 Bridgeton Court, Cranston, Rhode Island, United States"
+    },
+    {
+      "lat": 41.74710257422051,
+      "lon": -71.4270668311944,
+      "geoinfo": {
+        "display_name": "250, Pettaconsett Avenue, Norwood, Warwick, Kent County, Rhode Island, 02888, United States",
+        "road": "Pettaconsett Avenue",
+        "house_number": "250",
+        "neighbourhood": "Norwood",
+        "suburb": null,
+        "city_district": null,
+        "city": "Warwick",
+        "state": "Rhode Island",
+        "postcode": "02888",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "250, Pettaconsett Avenue, Norwood, Warwick, Kent County, Rhode Island, 02888, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:30.044226+00:00",
+  "_kind": "geo_samples"
+}

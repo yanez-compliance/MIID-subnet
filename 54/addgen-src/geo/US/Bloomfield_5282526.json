@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bloomfield",
+  "geonameid": 5282526,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.85635511224231,
+      "lon": -72.7431361344635,
+      "geoinfo": {
+        "display_name": "259, Tunxis Avenue, Bloomfield, Capitol Planning Region, Connecticut, 06002, United States",
+        "road": "Tunxis Avenue",
+        "house_number": "259",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomfield",
+        "state": "Connecticut",
+        "postcode": "06002",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "259 Tunxis Avenue, Bloomfield, Connecticut, United States"
+    },
+    {
+      "lat": 41.81664254236387,
+      "lon": -72.77213196173008,
+      "geoinfo": {
+        "display_name": "Mushroom Trail, Bloomfield, Capitol Planning Region, Connecticut, 06117, United States",
+        "road": "Mushroom Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bloomfield",
+        "state": "Connecticut",
+        "postcode": "06117",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "935, Mushroom Trail, Bloomfield, Capitol Planning Region, Connecticut, 06117, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:04.644924+00:00",
+  "_kind": "geo_samples"
+}

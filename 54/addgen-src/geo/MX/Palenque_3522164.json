@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Palenque",
+  "geonameid": 3522164,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 17.46887601341339,
+      "lon": -91.98200975791374,
+      "geoinfo": {
+        "display_name": "Palenque, Chiapas, 29960, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palenque",
+        "state": "Chiapas",
+        "postcode": "29960",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Palenque, Chiapas, Mexico"
+    },
+    {
+      "lat": 17.527757366890036,
+      "lon": -92.02032463022515,
+      "geoinfo": {
+        "display_name": "Palenque, Chiapas, 29960, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chiapas",
+        "postcode": "29960",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "493, Palenque, Chiapas, 29960, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:28.052321+00:00",
+  "_kind": "geo_samples"
+}

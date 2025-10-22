@@ -1,0 +1,83 @@
+{
+  "country_code": "PY",
+  "country": "Paraguay",
+  "city": "Filadelfia",
+  "geonameid": 3867291,
+  "target_addresses": 4,
+  "samples": [
+    {
+      "lat": -22.303588186316638,
+      "lon": -60.014972424389015,
+      "geoinfo": {
+        "display_name": "Filadelfia Norte, Filadelfia, Boquerón, Región Occidental, Paraguay",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Filadelfia Norte",
+        "city_district": null,
+        "city": "Filadelfia",
+        "state": "Boquerón",
+        "postcode": null,
+        "country": "Paraguay",
+        "country_code": "py"
+      },
+      "address": "Filadelfia Norte, Filadelfia, Boquerón, Paraguay"
+    },
+    {
+      "lat": -22.320652189265545,
+      "lon": -60.01819344249377,
+      "geoinfo": {
+        "display_name": "Fernheim, Kleefeld, Filadelfia, Boquerón, Región Occidental, 160402, Paraguay",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fernheim",
+        "city_district": null,
+        "city": "Filadelfia",
+        "state": "Boquerón",
+        "postcode": "160402",
+        "country": "Paraguay",
+        "country_code": "py"
+      },
+      "address": "Fernheim, Filadelfia, Boquerón, Paraguay"
+    },
+    {
+      "lat": -22.309335360433035,
+      "lon": -59.99665141863816,
+      "geoinfo": {
+        "display_name": "Pekari, Fernheim, Filadelfia, Boquerón, Región Occidental, 160402, Paraguay",
+        "road": "Pekari",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fernheim",
+        "city_district": null,
+        "city": "Filadelfia",
+        "state": "Boquerón",
+        "postcode": "160402",
+        "country": "Paraguay",
+        "country_code": "py"
+      },
+      "address": "Pekari, Filadelfia, Boquerón, Paraguay"
+    },
+    {
+      "lat": -22.350454035834026,
+      "lon": -60.066000792352085,
+      "geoinfo": {
+        "display_name": "Trebol, Fernheim, Filadelfia, Boquerón, Región Occidental, 160402, Paraguay",
+        "road": "Trebol",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fernheim",
+        "city_district": null,
+        "city": "Filadelfia",
+        "state": "Boquerón",
+        "postcode": "160402",
+        "country": "Paraguay",
+        "country_code": "py"
+      },
+      "address": "Trebol, Filadelfia, Boquerón, Paraguay"
+    }
+  ],
+  "updated_at": "2025-10-16T21:43:59.099199+00:00",
+  "_kind": "geo_samples"
+}

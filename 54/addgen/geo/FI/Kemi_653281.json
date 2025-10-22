@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Kemi",
+  "geonameid": 653281,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 65.72201570566776,
+      "lon": 24.62333689294057,
+      "geoinfo": {
+        "display_name": "Hiekkakuopantie, Ritikka, Kemi, Kemi-Tornio sub-region, Lapland, Mainland Finland, 94700, Finland",
+        "road": "Hiekkakuopantie",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ritikka",
+        "city_district": null,
+        "city": "Kemi",
+        "state": "Lapland",
+        "postcode": "94700",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Hiekkakuopantie, Kemi, Lapland, Finland"
+    },
+    {
+      "lat": 65.72481691276153,
+      "lon": 24.54137375953295,
+      "geoinfo": {
+        "display_name": "Kiikeli, Kemi, Kemi-Tornio sub-region, Lapland, Mainland Finland, 94100, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kiikeli",
+        "city_district": null,
+        "city": "Kemi",
+        "state": "Lapland",
+        "postcode": "94100",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Kiikeli, Kemi, Lapland, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:58:20.405150+00:00",
+  "_kind": "geo_samples"
+}

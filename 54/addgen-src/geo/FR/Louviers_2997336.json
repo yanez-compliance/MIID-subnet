@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Louviers",
+  "geonameid": 2997336,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.241863093074606,
+      "lon": 1.1352878917495952,
+      "geoinfo": {
+        "display_name": "Route d'Elbeuf, Louviers, Les Andelys, Eure, Normandy, Metropolitan France, 27400, France",
+        "road": "Route d'Elbeuf",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Louviers",
+        "state": "Normandy",
+        "postcode": "27400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route d'Elbeuf, Louviers, Normandy, France"
+    },
+    {
+      "lat": 49.17484265623279,
+      "lon": 1.1736234626383313,
+      "geoinfo": {
+        "display_name": "2, Rue Maubuisson Selle, Acquigny, Les Andelys, Eure, Normandy, Metropolitan France, 27400, France",
+        "road": "Rue Maubuisson Selle",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acquigny",
+        "state": "Normandy",
+        "postcode": "27400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "2, Rue Maubuisson Selle, Acquigny, Les Andelys, Eure, Normandy, Metropolitan France, 27400, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:22.566171+00:00",
+  "_kind": "geo_samples"
+}

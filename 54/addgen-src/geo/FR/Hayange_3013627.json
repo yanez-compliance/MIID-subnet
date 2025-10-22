@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Hayange",
+  "geonameid": 3013627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.35401143694224,
+      "lon": 6.021312192603788,
+      "geoinfo": {
+        "display_name": "Genneschlag, Fontoy, Thionville, Moselle, Grand Est, Metropolitan France, 57650, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fontoy",
+        "state": "Grand Est",
+        "postcode": "57650",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Hayange, Grand Est, France"
+    },
+    {
+      "lat": 49.299940522956526,
+      "lon": 6.050498973924381,
+      "geoinfo": {
+        "display_name": "Beninfo, Rue de Neufchef, Ranguevaux, Thionville, Moselle, Grand Est, Metropolitan France, 57700, France",
+        "road": "Rue de Neufchef",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ranguevaux",
+        "state": "Grand Est",
+        "postcode": "57700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "342, Rue de Neufchef, Hayange, 57700 Grand Est, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:20.511208+00:00",
+  "_kind": "geo_samples"
+}

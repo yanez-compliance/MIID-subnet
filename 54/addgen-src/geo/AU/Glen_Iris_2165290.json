@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Glen Iris",
+  "geonameid": 2165290,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.86106283541983,
+      "lon": 145.03731918630632,
+      "geoinfo": {
+        "display_name": "27, Dixon Street, Malvern, Melbourne, City of Stonnington, Victoria, 3144, Australia",
+        "road": "Dixon Street",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": "Malvern",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3144",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "27 Dixon Street, Glen Iris, Victoria, Australia"
+    },
+    {
+      "lat": -37.878204068342455,
+      "lon": 145.1077518766984,
+      "geoinfo": {
+        "display_name": "25, Melinga Crescent, Jordanville, Chadstone, Melbourne, City of Monash, Victoria, 3148, Australia",
+        "road": "Melinga Crescent",
+        "house_number": "25",
+        "neighbourhood": "Jordanville",
+        "suburb": "Chadstone",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3148",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "25, Melinga Crescent, Jordanville, Chadstone, Melbourne, City of Monash, Victoria, 3148, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:10:46.375051+00:00",
+  "_kind": "geo_samples"
+}

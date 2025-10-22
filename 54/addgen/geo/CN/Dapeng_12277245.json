@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dapeng",
+  "geonameid": 12277245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.268210662606855,
+      "lon": 117.02830586940313,
+      "geoinfo": {
+        "display_name": "Dapeng Town, Tongshan District, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongshan District",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Dapeng, Jiangsu, China"
+    },
+    {
+      "lat": 34.26737224744299,
+      "lon": 117.0467648571528,
+      "geoinfo": {
+        "display_name": "京台高速, Dapeng Town, Tongshan District, Xuzhou, Jiangsu, 221000, China",
+        "road": "京台高速",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tongshan District",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "013, 京台高速, Dapeng Town, Tongshan District, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:31:20.594725+00:00",
+  "_kind": "geo_samples"
+}

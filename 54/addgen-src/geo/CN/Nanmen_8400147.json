@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Nanmen",
+  "geonameid": 8400147,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.98968276502102,
+      "lon": 108.2314577419344,
+      "geoinfo": {
+        "display_name": "Nanmen, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanmen",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Nanmen, Chongqing, China"
+    },
+    {
+      "lat": 30.963805763777124,
+      "lon": 108.29389516290351,
+      "geoinfo": {
+        "display_name": "Jianshan, Kaizhou District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jianshan",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "950, Jianshan, Kaizhou District, 73876 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:06.594190+00:00",
+  "_kind": "geo_samples"
+}

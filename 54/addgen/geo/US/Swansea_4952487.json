@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Swansea",
+  "geonameid": 4952487,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.7856735919986,
+      "lon": -71.18560926329677,
+      "geoinfo": {
+        "display_name": "Girl Scouts Of Ri Property, Dillon Lane, Swansea, Bristol County, Massachusetts, 02777, United States",
+        "road": "Dillon Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Swansea",
+        "state": "Massachusetts",
+        "postcode": "02777",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Dillon Lane, Swansea, Massachusetts, United States"
+    },
+    {
+      "lat": 41.79078345366234,
+      "lon": -71.18213647949538,
+      "geoinfo": {
+        "display_name": "71, Carolyn Court, Swansea, Bristol County, Massachusetts, United States",
+        "road": "Carolyn Court",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Swansea",
+        "state": "Massachusetts",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "71, Carolyn Court, Swansea, Bristol County, 16339 Massachusetts, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:05.373476+00:00",
+  "_kind": "geo_samples"
+}

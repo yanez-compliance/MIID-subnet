@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coppell",
+  "geonameid": 4683217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.95185886877315,
+      "lon": -97.01934078865594,
+      "geoinfo": {
+        "display_name": "USPS North Texas Processing & Distribution Center, 951, West Bethel Road, Coppell, Dallas County, Texas, 75019, United States",
+        "road": "West Bethel Road",
+        "house_number": "951",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coppell",
+        "state": "Texas",
+        "postcode": "75019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "951 West Bethel Road, Coppell, Texas, United States"
+    },
+    {
+      "lat": 32.95712702076688,
+      "lon": -96.96350531983256,
+      "geoinfo": {
+        "display_name": "918, Mallard Drive, Coppell, Dallas County, Texas, 75019, United States",
+        "road": "Mallard Drive",
+        "house_number": "918",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coppell",
+        "state": "Texas",
+        "postcode": "75019",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "918, Mallard Drive, Coppell, Dallas County, Texas, 75019, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:33.073968+00:00",
+  "_kind": "geo_samples"
+}

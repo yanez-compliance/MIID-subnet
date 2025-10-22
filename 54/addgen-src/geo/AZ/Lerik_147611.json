@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Lerik",
+  "geonameid": 147611,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 38.76696079268346,
+      "lon": 48.46086467447268,
+      "geoinfo": {
+        "display_name": "Lerik District, 7384, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "7384",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Lerik, Azerbaijan"
+    },
+    {
+      "lat": 38.75317091204358,
+      "lon": 48.41069191661047,
+      "geoinfo": {
+        "display_name": "Lüləkəran yolu, Lerik District, 7384, Azerbaijan",
+        "road": "Lüləkəran yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "7384",
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Lüləkəran yolu, Lerik, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:19.949536+00:00",
+  "_kind": "geo_samples"
+}

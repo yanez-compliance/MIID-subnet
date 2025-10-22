@@ -1,0 +1,47 @@
+{
+  "country_code": "MA",
+  "country": "Morocco",
+  "city": "Meknes",
+  "geonameid": 2542715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.911984784302476,
+      "lon": -5.534252721849005,
+      "geoinfo": {
+        "display_name": "Meknes, Pachalik de Meknes, Meknès Prefecture, Fez-Meknes, 50010, Morocco",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Meknes",
+        "state": null,
+        "postcode": "50010",
+        "country": "Morocco",
+        "country_code": "ma"
+      },
+      "address": "Meknes, Morocco"
+    },
+    {
+      "lat": 33.858146262610205,
+      "lon": -5.572242674985102,
+      "geoinfo": {
+        "display_name": "RN6, Marjane, Meknes, Pachalik de Meknes, Meknès Prefecture, Fez-Meknes, 50050, Morocco",
+        "road": "RN6",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Marjane",
+        "city_district": null,
+        "city": "Meknes",
+        "state": null,
+        "postcode": "50050",
+        "country": "Morocco",
+        "country_code": "ma"
+      },
+      "address": "RN6, Marjane, Meknes, Pachalik de Meknes, Meknès Prefecture, Fez-Meknes, 50050, Morocco"
+    }
+  ],
+  "updated_at": "2025-10-19T05:53:14.579950+00:00",
+  "_kind": "geo_samples"
+}

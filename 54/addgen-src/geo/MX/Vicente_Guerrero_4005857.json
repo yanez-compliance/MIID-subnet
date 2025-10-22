@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Vicente Guerrero",
+  "geonameid": 4005857,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.750157866194026,
+      "lon": -103.95074597586466,
+      "geoinfo": {
+        "display_name": "Carretera Durango-El Calabazal, Vicente Guerrero, Durango, Mexico",
+        "road": "Carretera Durango-El Calabazal",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vicente Guerrero",
+        "state": "Durango",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Durango-El Calabazal, Vicente Guerrero, Durango, Mexico"
+    },
+    {
+      "lat": 23.765123849237735,
+      "lon": -103.97772306943554,
+      "geoinfo": {
+        "display_name": "El Ancón, Vicente Guerrero, Durango, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Ancón",
+        "state": "Durango",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "328, El Ancón, Vicente Guerrero, 51035 Durango, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:33:55.930931+00:00",
+  "_kind": "geo_samples"
+}

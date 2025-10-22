@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Haverhill",
+  "geonameid": 2647310,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.10390442801697,
+      "lon": 0.4571062526957757,
+      "geoinfo": {
+        "display_name": "Withersfield Road, West Suffolk, Suffolk, England, CB9 7HD, United Kingdom",
+        "road": "Withersfield Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Suffolk",
+        "state": "England",
+        "postcode": "CB9 7HD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Withersfield Road, Haverhill, England, United Kingdom"
+    },
+    {
+      "lat": 52.10924375843677,
+      "lon": 0.4803152685758967,
+      "geoinfo": {
+        "display_name": "Barnardiston, Great Wratting, Suffolk, England, CB9 7TF, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Great Wratting",
+        "state": "England",
+        "postcode": "CB9 7TF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "782, Haverhill, CB9 7TF England, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:26.282732+00:00",
+  "_kind": "geo_samples"
+}

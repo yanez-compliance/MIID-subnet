@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Novomoskovsk",
+  "geonameid": 518557,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.98076454516075,
+      "lon": 38.29258157244731,
+      "geoinfo": {
+        "display_name": "21, улица Пушкина, Novomoskovsk, Novomoskovsky District, Tula Oblast, Central Federal District, 301650, Russia",
+        "road": "улица Пушкина",
+        "house_number": "21",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Novomoskovsk",
+        "state": "Tula Oblast",
+        "postcode": "301650",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "21 улица Пушкина, Novomoskovsk, Tula Oblast, Russia"
+    },
+    {
+      "lat": 53.97826652211537,
+      "lon": 38.329884836894074,
+      "geoinfo": {
+        "display_name": "Новоугольный, Donskoy, Tula Oblast, Central Federal District, 301770, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Новоугольный",
+        "city_district": null,
+        "city": "Donskoy",
+        "state": "Tula Oblast",
+        "postcode": "301770",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "268, Новоугольный, Donskoy, Tula Oblast, Central Federal District, 301770, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T09:32:24.399892+00:00",
+  "_kind": "geo_samples"
+}

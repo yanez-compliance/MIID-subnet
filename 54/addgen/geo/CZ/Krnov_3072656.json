@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Krnov",
+  "geonameid": 3072656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.097788539203876,
+      "lon": 17.675096282731577,
+      "geoinfo": {
+        "display_name": "1776/18, Šafaříkova, Krnov-Horní Předměstí, Krnov, okres Bruntál, Moravian-Silesian Region, Moravia-Silesia, 794 01, Czechia",
+        "road": "Šafaříkova",
+        "house_number": "1776/18",
+        "neighbourhood": null,
+        "suburb": "Krnov-Horní Předměstí",
+        "city_district": null,
+        "city": "Krnov",
+        "state": "Moravia-Silesia",
+        "postcode": "794 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "1776/18 Šafaříkova, Krnov, Moravia-Silesia, Czechia"
+    },
+    {
+      "lat": 50.07331836005147,
+      "lon": 17.71025640200171,
+      "geoinfo": {
+        "display_name": "Nová Cvilínská, Troppauer Vorstadt, Opavské Předměstí, Krnov, okres Bruntál, Moravian-Silesian Region, Moravia-Silesia, 794 01, Czechia",
+        "road": "Nová Cvilínská",
+        "house_number": null,
+        "neighbourhood": "Troppauer Vorstadt",
+        "suburb": "Opavské Předměstí",
+        "city_district": null,
+        "city": "Krnov",
+        "state": "Moravia-Silesia",
+        "postcode": "794 01",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Nová Cvilínská, Troppauer Vorstadt, Opavské Předměstí, Krnov, okres Bruntál, Moravian-Silesian Region, Moravia-Silesia, 794 01, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:52.981730+00:00",
+  "_kind": "geo_samples"
+}

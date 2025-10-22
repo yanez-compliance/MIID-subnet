@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Richmond",
+  "geonameid": 2639389,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.44395178353602,
+      "lon": -0.26897996663885865,
+      "geoinfo": {
+        "display_name": "Queen's Ride, Petersham, London Borough of Richmond upon Thames, London, Greater London, England, TW10 5HS, United Kingdom",
+        "road": "Queen's Ride",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Petersham",
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "TW10 5HS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Queen's Ride, Richmond, England, United Kingdom"
+    },
+    {
+      "lat": 51.44490953668166,
+      "lon": -0.33391898623595456,
+      "geoinfo": {
+        "display_name": "Machine Mart, Heath Road, Strawberry Hill, Twickenham, London, Greater London, England, TW1 4AT, United Kingdom",
+        "road": "Heath Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Strawberry Hill",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "TW1 4AT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Machine Mart, Heath Road, Strawberry Hill, Twickenham, London, Greater London, England, TW1 4AT, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:21.226372+00:00",
+  "_kind": "geo_samples"
+}

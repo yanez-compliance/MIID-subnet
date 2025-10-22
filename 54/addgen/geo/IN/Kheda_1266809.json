@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Kheda",
+  "geonameid": 1266809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.737073020502375,
+      "lon": 72.72493626530736,
+      "geoinfo": {
+        "display_name": "Matar Taluka, Kheda, Gujarat, 387570, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gujarat",
+        "postcode": "387570",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Kheda, Gujarat, India"
+    },
+    {
+      "lat": 22.723666910274307,
+      "lon": 72.71660180579133,
+      "geoinfo": {
+        "display_name": "Kheda Bypass, Ratanpur, Matar Taluka, Kheda, Gujarat, 387570, India",
+        "road": "Kheda Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ratanpur",
+        "state": "Gujarat",
+        "postcode": "387570",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "537, Kheda Bypass, Ratanpur, Matar Taluka, Kheda, Gujarat, 387570, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:16.773339+00:00",
+  "_kind": "geo_samples"
+}

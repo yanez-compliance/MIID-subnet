@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Paragould",
+  "geonameid": 4125388,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.081685632546765,
+      "lon": -90.46223710333763,
+      "geoinfo": {
+        "display_name": "1718, Goldsmith Road, Paragould, Greene County, Arkansas, 72450, United States",
+        "road": "Goldsmith Road",
+        "house_number": "1718",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paragould",
+        "state": "Arkansas",
+        "postcode": "72450",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1718 Goldsmith Road, Paragould, Arkansas, United States"
+    },
+    {
+      "lat": 36.01806908099471,
+      "lon": -90.48372768949423,
+      "geoinfo": {
+        "display_name": "Greene County, Arkansas, 77245, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arkansas",
+        "postcode": "77245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "549, Greene County, Arkansas, 77245, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:57.613923+00:00",
+  "_kind": "geo_samples"
+}

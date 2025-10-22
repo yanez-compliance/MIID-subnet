@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Minya",
+  "geonameid": 360686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.121741624333907,
+      "lon": 30.744111570259648,
+      "geoinfo": {
+        "display_name": "Al Akhsas, Al Minya, 61516, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Akhsas",
+        "state": "Al Minya",
+        "postcode": "61516",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Minya, Al Minya, Egypt"
+    },
+    {
+      "lat": 28.106218859603853,
+      "lon": 30.73870848216352,
+      "geoinfo": {
+        "display_name": "Shaker Sihah, Al Minya, 61519, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shaker Sihah",
+        "state": "Al Minya",
+        "postcode": "61519",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "609, Shaker Sihah, Al Minya, 61519, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:53.290859+00:00",
+  "_kind": "geo_samples"
+}

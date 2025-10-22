@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "New Malden",
+  "geonameid": 2641617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.41249762308433,
+      "lon": -0.2754095759860714,
+      "geoinfo": {
+        "display_name": "Revell Road, Norbiton, Royal Borough of Kingston upon Thames, London, Greater London, England, KT1 3SW, United Kingdom",
+        "road": "Revell Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Norbiton",
+        "city_district": "Royal Borough of Kingston upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "KT1 3SW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Revell Road, New Malden, England, United Kingdom"
+    },
+    {
+      "lat": 51.43792286501556,
+      "lon": -0.2700949045068274,
+      "geoinfo": {
+        "display_name": "London Borough of Richmond upon Thames, London, Greater London, England, KT2 7NA, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Richmond upon Thames",
+        "city": "London",
+        "state": "England",
+        "postcode": "KT2 7NA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "London Borough of Richmond upon Thames, London, Greater London, England, KT2 7NA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:18:23.694736+00:00",
+  "_kind": "geo_samples"
+}

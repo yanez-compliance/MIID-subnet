@@ -1,0 +1,65 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Outram Park",
+  "geonameid": 1882044,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.2877399162750083,
+      "lon": 103.84333250200403,
+      "geoinfo": {
+        "display_name": "Havelock Road, Clarke Quay, Riverside, Central, Singapore, 059725, Singapore",
+        "road": "Havelock Road",
+        "house_number": null,
+        "neighbourhood": "Clarke Quay",
+        "suburb": "Riverside",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "059725",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "Havelock Road, Outram Park, Singapore"
+    },
+    {
+      "lat": 1.2855491076696297,
+      "lon": 103.85537014019128,
+      "geoinfo": {
+        "display_name": "Fullerton Promenade, Raffles Place, Downtown Core, Central, Singapore, 049213, Singapore",
+        "road": "Fullerton Promenade",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Downtown Core",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "049213",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "464, Fullerton Promenade, Raffles Place, Downtown Core, Central, Singapore, 049213, Singapore"
+    },
+    {
+      "lat": 1.2748534462245167,
+      "lon": 103.86055920262064,
+      "geoinfo": {
+        "display_name": "Central Boulevard, Marina Bay, Straits View, Central, Singapore, 018988, Singapore",
+        "road": "Central Boulevard",
+        "house_number": null,
+        "neighbourhood": "Marina Bay",
+        "suburb": "Straits View",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "018988",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "220, Central Boulevard, Marina Bay, Straits View, Central, Singapore, 018988, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:46.964222+00:00",
+  "_kind": "geo_samples"
+}

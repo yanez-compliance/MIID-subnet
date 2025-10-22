@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Acton",
+  "geonameid": 4928703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.49625657866414,
+      "lon": -71.45867526539472,
+      "geoinfo": {
+        "display_name": "Yellow, Acton, Middlesex County, Massachusetts, 01720, United States",
+        "road": "Yellow",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Acton",
+        "state": "Massachusetts",
+        "postcode": "01720",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Yellow, Acton, Massachusetts, United States"
+    },
+    {
+      "lat": 42.48277496595086,
+      "lon": -71.38411078877986,
+      "geoinfo": {
+        "display_name": "444, Strawberry Hill Road, Concord, Middlesex County, Massachusetts, 01742, United States",
+        "road": "Strawberry Hill Road",
+        "house_number": "444",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Concord",
+        "state": "Massachusetts",
+        "postcode": "01742",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "444, Strawberry Hill Road, Concord, Middlesex County, Massachusetts, 01742, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:49.538777+00:00",
+  "_kind": "geo_samples"
+}

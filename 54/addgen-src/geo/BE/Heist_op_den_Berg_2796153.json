@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Heist-op-den-Berg",
+  "geonameid": 2796153,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.05288398283288,
+      "lon": 4.7471164034835915,
+      "geoinfo": {
+        "display_name": "13E, Drie Maagdekensstraat, Zonderschot, Heist-op-den-Berg, Mechelen, Antwerp, 2220, Belgium",
+        "road": "Drie Maagdekensstraat",
+        "house_number": "13E",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Heist-op-den-Berg",
+        "city": "Heist-op-den-Berg",
+        "state": "Antwerp",
+        "postcode": "2220",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "13E Drie Maagdekensstraat, Heist-op-den-Berg, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.05735725347431,
+      "lon": 4.678900888046685,
+      "geoinfo": {
+        "display_name": "8B, Bogaardenstraat, Beerzel, Heist-op-den-Berg, Mechelen, Antwerp, 2220, Belgium",
+        "road": "Bogaardenstraat",
+        "house_number": "8B",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heist-op-den-Berg",
+        "state": "Antwerp",
+        "postcode": "2220",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "8B, Bogaardenstraat, Beerzel, Heist-op-den-Berg, Mechelen, Antwerp, 2220, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:01:34.407493+00:00",
+  "_kind": "geo_samples"
+}

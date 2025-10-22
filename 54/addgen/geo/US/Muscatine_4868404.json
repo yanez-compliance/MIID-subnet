@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Muscatine",
+  "geonameid": 4868404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.45431913263467,
+      "lon": -91.06177362506031,
+      "geoinfo": {
+        "display_name": "2654, Anna Elizabeth Lane, Cedar Hills, Muscatine County, Iowa, 52761, United States",
+        "road": "Anna Elizabeth Lane",
+        "house_number": "2654",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Iowa",
+        "postcode": "52761",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2654 Anna Elizabeth Lane, Muscatine, Iowa, United States"
+    },
+    {
+      "lat": 41.40133502165255,
+      "lon": -91.06336465987692,
+      "geoinfo": {
+        "display_name": "1481, Oregon Street, Muscatine, Muscatine County, Iowa, 52761, United States",
+        "road": "Oregon Street",
+        "house_number": "1481",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muscatine",
+        "state": "Iowa",
+        "postcode": "52761",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1481, Oregon Street, Muscatine, Muscatine County, Iowa, 52761, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:59.092824+00:00",
+  "_kind": "geo_samples"
+}

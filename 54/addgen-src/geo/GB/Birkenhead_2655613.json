@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Birkenhead",
+  "geonameid": 2655613,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.36964743883048,
+      "lon": -3.0409386706319634,
+      "geoinfo": {
+        "display_name": "14-25, Prenton Lane, Egerton Park, Prenton, Wirral, Liverpool City Region, England, CH42 8LB, United Kingdom",
+        "road": "Prenton Lane",
+        "house_number": "14-25",
+        "neighbourhood": null,
+        "suburb": "Egerton Park",
+        "city_district": null,
+        "city": "Prenton",
+        "state": "England",
+        "postcode": "CH42 8LB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "14-25 Prenton Lane, Birkenhead, England, United Kingdom"
+    },
+    {
+      "lat": 53.412486409146204,
+      "lon": -3.060633248481325,
+      "geoinfo": {
+        "display_name": "A5139, Poulton, Wallasey, Wirral, Liverpool City Region, England, CH44 3HS, United Kingdom",
+        "road": "A5139",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Poulton",
+        "city_district": null,
+        "city": "Wallasey",
+        "state": "England",
+        "postcode": "CH44 3HS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "A5139, Poulton, Wallasey, Wirral, Liverpool City Region, England, CH44 3HS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:25:57.790008+00:00",
+  "_kind": "geo_samples"
+}

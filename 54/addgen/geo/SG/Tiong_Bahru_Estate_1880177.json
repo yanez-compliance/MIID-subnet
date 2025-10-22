@@ -1,0 +1,65 @@
+{
+  "country_code": "SG",
+  "country": "Singapore",
+  "city": "Tiong Bahru Estate",
+  "geonameid": 1880177,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 1.3227465280452586,
+      "lon": 103.8137150607893,
+      "geoinfo": {
+        "display_name": "Serene Centre, 10, Jalan Serene, Chip Hock Gardens, Tanglin, Central, Singapore, 258748, Singapore",
+        "road": "Jalan Serene",
+        "house_number": "10",
+        "neighbourhood": "Chip Hock Gardens",
+        "suburb": "Tanglin",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "258748",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "10 Jalan Serene, Tiong Bahru Estate, Singapore"
+    },
+    {
+      "lat": 1.2510685691245107,
+      "lon": 103.84049722945998,
+      "geoinfo": {
+        "display_name": "35, Ocean Drive, Sentosa Cove, Southern Islands, Central, Singapore, 098375, Singapore",
+        "road": "Ocean Drive",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": "Southern Islands",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "098375",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "35, Ocean Drive, Sentosa Cove, Southern Islands, Central, Singapore, 098375, Singapore"
+    },
+    {
+      "lat": 1.2482723024908053,
+      "lon": 103.84909867925046,
+      "geoinfo": {
+        "display_name": "Ocean Drive, Sentosa Cove, Southern Islands, Central, Singapore, 098619, Singapore",
+        "road": "Ocean Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southern Islands",
+        "city_district": "Central",
+        "city": "Singapore",
+        "state": null,
+        "postcode": "098619",
+        "country": "Singapore",
+        "country_code": "sg"
+      },
+      "address": "996, Ocean Drive, Sentosa Cove, Southern Islands, Central, Singapore, 098619, Singapore"
+    }
+  ],
+  "updated_at": "2025-10-19T09:49:29.681823+00:00",
+  "_kind": "geo_samples"
+}

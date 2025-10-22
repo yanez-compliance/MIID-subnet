@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palm Springs",
+  "geonameid": 4167583,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.621679557099252,
+      "lon": -80.10722525847171,
+      "geoinfo": {
+        "display_name": "4148, Lakewood Road, Lake Worth Corridor, Palm Springs, Palm Beach County, Florida, 33461, United States",
+        "road": "Lakewood Road",
+        "house_number": "4148",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Springs",
+        "state": "Florida",
+        "postcode": "33461",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4148 Lakewood Road, Palm Springs, Florida, United States"
+    },
+    {
+      "lat": 26.673333887961242,
+      "lon": -80.09861329091672,
+      "geoinfo": {
+        "display_name": "3611, Gun Club Road, Palm Beach County, Florida, 33406, United States",
+        "road": "Gun Club Road",
+        "house_number": "3611",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33406",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3611, Gun Club Road, Palm Beach County, Florida, 33406, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:07.612317+00:00",
+  "_kind": "geo_samples"
+}

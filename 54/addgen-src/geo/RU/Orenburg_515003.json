@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Orenburg",
+  "geonameid": 515003,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.79320654542114,
+      "lon": 55.14265445616452,
+      "geoinfo": {
+        "display_name": "Исправительная колония №1, 119, Крымский переулок, Центральный район, Orenburg, городской округ Оренбург, Orenburg Oblast, Volga Federal District, 460000, Russia",
+        "road": "Крымский переулок",
+        "house_number": "119",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Центральный район",
+        "city": "Orenburg",
+        "state": "Orenburg Oblast",
+        "postcode": "460000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "119 Крымский переулок, Orenburg, Orenburg Oblast, Russia"
+    },
+    {
+      "lat": 51.782013702189886,
+      "lon": 55.12141117257401,
+      "geoinfo": {
+        "display_name": "71, Самолётная улица, Новостройка, Центральный район, Orenburg, городской округ Оренбург, Orenburg Oblast, Volga Federal District, 460000, Russia",
+        "road": "Самолётная улица",
+        "house_number": "71",
+        "neighbourhood": null,
+        "suburb": "Новостройка",
+        "city_district": "Центральный район",
+        "city": "Orenburg",
+        "state": "Orenburg Oblast",
+        "postcode": "460000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "71, Самолётная улица, Новостройка, Центральный район, Orenburg, городской округ Оренбург, Orenburg Oblast, Volga Federal District, 460000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:11.895554+00:00",
+  "_kind": "geo_samples"
+}

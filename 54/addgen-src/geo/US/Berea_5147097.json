@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Berea",
+  "geonameid": 5147097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.35101674803438,
+      "lon": -81.885610865124,
+      "geoinfo": {
+        "display_name": "23804, Sprague Road, Olmsted Falls, Columbia Township, Cuyahoga County, Ohio, 44138, United States",
+        "road": "Sprague Road",
+        "house_number": "23804",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olmsted Falls",
+        "state": "Ohio",
+        "postcode": "44138",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23804 Sprague Road, Berea, Ohio, United States"
+    },
+    {
+      "lat": 41.39880651366659,
+      "lon": -81.88063766338259,
+      "geoinfo": {
+        "display_name": "Bridle Trail RR1, Olmsted Township, Cuyahoga County, Ohio, 44017, United States",
+        "road": "Bridle Trail RR1",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "44017",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bridle Trail RR1, Olmsted Township, Cuyahoga County, Ohio, 44017, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:26.155814+00:00",
+  "_kind": "geo_samples"
+}

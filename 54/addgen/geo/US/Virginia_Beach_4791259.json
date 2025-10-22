@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Virginia Beach",
+  "geonameid": 4791259,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.84856562006236,
+      "lon": -76.0210637904224,
+      "geoinfo": {
+        "display_name": "Donna Drive, Laurel Manor, Virginia Beach, Virginia, 23454, United States",
+        "road": "Donna Drive",
+        "house_number": null,
+        "neighbourhood": "Laurel Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Virginia Beach",
+        "state": "Virginia",
+        "postcode": "23454",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Donna Drive, Virginia Beach, Virginia, United States"
+    },
+    {
+      "lat": 36.81486066654543,
+      "lon": -75.95416852110567,
+      "geoinfo": {
+        "display_name": "Virginia Beach, Virginia, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Virginia Beach",
+        "state": "Virginia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "937, Virginia Beach, 79593 Virginia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:03.585243+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marysville",
+  "geonameid": 5162077,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.23182225836601,
+      "lon": -83.40737176548116,
+      "geoinfo": {
+        "display_name": "Collins Road, Marysville, Paris Township, Union County, Ohio, 43040, United States",
+        "road": "Collins Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marysville",
+        "state": "Ohio",
+        "postcode": "43040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Collins Road, Marysville, Ohio, United States"
+    },
+    {
+      "lat": 40.234361743146856,
+      "lon": -83.35796393664477,
+      "geoinfo": {
+        "display_name": "265, Poplar Street, Millcreek Meadows, Marysville, Union County, Ohio, 43040, United States",
+        "road": "Poplar Street",
+        "house_number": "265",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marysville",
+        "state": "Ohio",
+        "postcode": "43040",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "265, Poplar Street, Millcreek Meadows, Marysville, Union County, Ohio, 43040, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:04:57.222336+00:00",
+  "_kind": "geo_samples"
+}

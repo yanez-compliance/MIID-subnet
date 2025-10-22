@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East New York",
+  "geonameid": 5115985,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.69272337127877,
+      "lon": -73.92415210931469,
+      "geoinfo": {
+        "display_name": "928, Bushwick Avenue, Brooklyn, Kings County, New York, 11221, United States",
+        "road": "Bushwick Avenue",
+        "house_number": "928",
+        "neighbourhood": null,
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "928 Bushwick Avenue, East New York, New York, United States"
+    },
+    {
+      "lat": 40.6536805344705,
+      "lon": -73.90259121748954,
+      "geoinfo": {
+        "display_name": "10417, Avenue D, New Lots, Brooklyn, Kings County, New York, 11236, United States",
+        "road": "Avenue D",
+        "house_number": "10417",
+        "neighbourhood": "New Lots",
+        "suburb": "Brooklyn",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11236",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10417, Avenue D, New Lots, Brooklyn, Kings County, New York, 11236, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:36.772673+00:00",
+  "_kind": "geo_samples"
+}

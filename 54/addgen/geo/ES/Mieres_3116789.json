@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Mieres",
+  "geonameid": 3116789,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.22257129641052,
+      "lon": -5.780590889890789,
+      "geoinfo": {
+        "display_name": "AS-375 (Oviedo-Campomanes), La Pedrera, Santuyano, Mieres, Asturias, 33683, Spain",
+        "road": "AS-375 (Oviedo-Campomanes)",
+        "house_number": null,
+        "neighbourhood": "La Pedrera",
+        "suburb": null,
+        "city_district": "Santuyano",
+        "city": "Mieres",
+        "state": "Asturias",
+        "postcode": "33683",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "AS-375 (Oviedo-Campomanes), Mieres, Asturias, Spain"
+    },
+    {
+      "lat": 43.283599688628556,
+      "lon": -5.731623478538605,
+      "geoinfo": {
+        "display_name": "La Polea, Lada, Llangréu / Langreo, Asturias, 33614, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Lada",
+        "city": "Llangréu / Langreo",
+        "state": "Asturias",
+        "postcode": "33614",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "490, La Polea, Lada, Llangréu / Langreo, Asturias, 33614, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:26.800125+00:00",
+  "_kind": "geo_samples"
+}

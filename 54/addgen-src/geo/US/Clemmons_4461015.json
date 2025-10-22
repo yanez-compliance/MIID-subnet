@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clemmons",
+  "geonameid": 4461015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.0424731344587,
+      "lon": -80.41491568769457,
+      "geoinfo": {
+        "display_name": "2084, Waterford Village Drive, Clemmons, Forsyth County, North Carolina, 27012, United States",
+        "road": "Waterford Village Drive",
+        "house_number": "2084",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clemmons",
+        "state": "North Carolina",
+        "postcode": "27012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2084 Waterford Village Drive, Clemmons, North Carolina, United States"
+    },
+    {
+      "lat": 36.01950774052748,
+      "lon": -80.3523347140721,
+      "geoinfo": {
+        "display_name": "Idols Road, Muddy Creek, Forsyth County, North Carolina, 27012, United States",
+        "road": "Idols Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "North Carolina",
+        "postcode": "27012",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "029, Idols Road, Muddy Creek, Forsyth County, North Carolina, 27012, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:11.431535+00:00",
+  "_kind": "geo_samples"
+}

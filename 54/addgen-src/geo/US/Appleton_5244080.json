@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Appleton",
+  "geonameid": 5244080,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.30301123262975,
+      "lon": -88.411918302598,
+      "geoinfo": {
+        "display_name": "598, Winrowe Court, Appleton, Outagamie County, Wisconsin, 54913, United States",
+        "road": "Winrowe Court",
+        "house_number": "598",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Appleton",
+        "state": "Wisconsin",
+        "postcode": "54913",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "598 Winrowe Court, Appleton, Wisconsin, United States"
+    },
+    {
+      "lat": 44.23753257237156,
+      "lon": -88.43471133644007,
+      "geoinfo": {
+        "display_name": "878, Valley Road, Fox Crossing, Winnebago County, Wisconsin, 54952, United States",
+        "road": "Valley Road",
+        "house_number": "878",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fox Crossing",
+        "state": "Wisconsin",
+        "postcode": "54952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "878, Valley Road, Fox Crossing, Winnebago County, Wisconsin, 54952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:44:49.677225+00:00",
+  "_kind": "geo_samples"
+}

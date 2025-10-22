@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norco",
+  "geonameid": 5377199,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.90443735393672,
+      "lon": -117.54542137321656,
+      "geoinfo": {
+        "display_name": "961, 1st Street, Norco, Riverside County, California, 92860, United States",
+        "road": "1st Street",
+        "house_number": "961",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norco",
+        "state": "California",
+        "postcode": "92860",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "961 1st Street, Norco, California, United States"
+    },
+    {
+      "lat": 33.93985667270821,
+      "lon": -117.57750818456739,
+      "geoinfo": {
+        "display_name": "2937, Shadow Canyon Circle, Norco, Riverside County, California, 92860, United States",
+        "road": "Shadow Canyon Circle",
+        "house_number": "2937",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norco",
+        "state": "California",
+        "postcode": "92860",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2937, Shadow Canyon Circle, Norco, Riverside County, California, 92860, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:11.098689+00:00",
+  "_kind": "geo_samples"
+}

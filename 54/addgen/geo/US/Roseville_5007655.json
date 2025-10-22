@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Roseville",
+  "geonameid": 5007655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.48856853372498,
+      "lon": -82.9567851431107,
+      "geoinfo": {
+        "display_name": "Woodmont Street, Grandmont Gardens, Roseville, Macomb County, Michigan, 48021, United States",
+        "road": "Woodmont Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roseville",
+        "state": "Michigan",
+        "postcode": "48021",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Woodmont Street, Roseville, Michigan, United States"
+    },
+    {
+      "lat": 42.48540504005554,
+      "lon": -82.98144092141601,
+      "geoinfo": {
+        "display_name": "14042, Frazho Road, Warren, Macomb County, Michigan, 48089, United States",
+        "road": "Frazho Road",
+        "house_number": "14042",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Warren",
+        "state": "Michigan",
+        "postcode": "48089",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14042, Frazho Road, Warren, Macomb County, Michigan, 48089, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:57.566578+00:00",
+  "_kind": "geo_samples"
+}

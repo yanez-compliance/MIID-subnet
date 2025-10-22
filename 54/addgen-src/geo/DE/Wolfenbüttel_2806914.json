@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wolfenbüttel",
+  "geonameid": 2806914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.157876291584714,
+      "lon": 10.57006910463544,
+      "geoinfo": {
+        "display_name": "Leipziger Straße, Wendessen, Wolfenbüttel, Landkreis Wolfenbüttel, Lower Saxony, 38300, Germany",
+        "road": "Leipziger Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wendessen",
+        "city": "Wolfenbüttel",
+        "state": "Lower Saxony",
+        "postcode": "38300",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Leipziger Straße, Wolfenbüttel, Lower Saxony, Germany"
+    },
+    {
+      "lat": 52.14856065074295,
+      "lon": 10.55111724358732,
+      "geoinfo": {
+        "display_name": "2a, Halberstädter Straße, Linden, Wolfenbüttel, Landkreis Wolfenbüttel, Lower Saxony, 38300, Germany",
+        "road": "Halberstädter Straße",
+        "house_number": "2a",
+        "neighbourhood": null,
+        "suburb": "Linden",
+        "city_district": "Linden",
+        "city": "Wolfenbüttel",
+        "state": "Lower Saxony",
+        "postcode": "38300",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2a, Halberstädter Straße, Linden, Wolfenbüttel, Landkreis Wolfenbüttel, Lower Saxony, 38300, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:08:22.496457+00:00",
+  "_kind": "geo_samples"
+}

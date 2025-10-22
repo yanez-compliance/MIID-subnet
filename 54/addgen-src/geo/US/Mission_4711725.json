@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mission",
+  "geonameid": 4711725,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.18101789340649,
+      "lon": -98.31706832868339,
+      "geoinfo": {
+        "display_name": "Anzalduas Highway, Mission, Hidalgo County, Texas, 78572, United States",
+        "road": "Anzalduas Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mission",
+        "state": "Texas",
+        "postcode": "78572",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Anzalduas Highway, Mission, Texas, United States"
+    },
+    {
+      "lat": 26.25530901178687,
+      "lon": -98.33876224143349,
+      "geoinfo": {
+        "display_name": "Azalea Street, Basham Number 7 Colonia, Moreno Colonia, Mission, Hidalgo County, Texas, 78571, United States",
+        "road": "Azalea Street",
+        "house_number": null,
+        "neighbourhood": "Basham Number 7 Colonia",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mission",
+        "state": "Texas",
+        "postcode": "78571",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Azalea Street, Basham Number 7 Colonia, Moreno Colonia, Mission, Hidalgo County, Texas, 78571, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:15.216614+00:00",
+  "_kind": "geo_samples"
+}

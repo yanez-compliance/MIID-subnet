@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rochester",
+  "geonameid": 5043473,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.02771966252026,
+      "lon": -92.41972906685776,
+      "geoinfo": {
+        "display_name": "East Circle Drive Northeast, Rochester, Olmsted County, Minnesota, 55906, United States",
+        "road": "East Circle Drive Northeast",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rochester",
+        "state": "Minnesota",
+        "postcode": "55906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Circle Drive Northeast, Rochester, Minnesota, United States"
+    },
+    {
+      "lat": 44.06356245307228,
+      "lon": -92.47007097406153,
+      "geoinfo": {
+        "display_name": "Rochester Water Reclamation, Rochester, Olmsted County, Minnesota, 55901, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rochester",
+        "state": "Minnesota",
+        "postcode": "55901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "311, Rochester Water Reclamation, Rochester, Olmsted County, Minnesota, 55901, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:43.571018+00:00",
+  "_kind": "geo_samples"
+}

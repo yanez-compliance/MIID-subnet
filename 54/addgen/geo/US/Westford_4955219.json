@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westford",
+  "geonameid": 4955219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.56393259536733,
+      "lon": -71.42153106541778,
+      "geoinfo": {
+        "display_name": "14, Carlisle Road, Parkerville, Westford, Middlesex County, Massachusetts, 01866, United States",
+        "road": "Carlisle Road",
+        "house_number": "14",
+        "neighbourhood": "Parkerville",
+        "suburb": null,
+        "city_district": null,
+        "city": "Westford",
+        "state": "Massachusetts",
+        "postcode": "01866",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "14 Carlisle Road, Westford, Massachusetts, United States"
+    },
+    {
+      "lat": 42.56509469153164,
+      "lon": -71.46149327249819,
+      "geoinfo": {
+        "display_name": "85, Concord Road, East Littleton, Westford, Middlesex County, Massachusetts, 01886, United States",
+        "road": "Concord Road",
+        "house_number": "85",
+        "neighbourhood": "East Littleton",
+        "suburb": null,
+        "city_district": null,
+        "city": "Westford",
+        "state": "Massachusetts",
+        "postcode": "01886",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "85, Concord Road, East Littleton, Westford, Middlesex County, Massachusetts, 01886, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:56.977430+00:00",
+  "_kind": "geo_samples"
+}

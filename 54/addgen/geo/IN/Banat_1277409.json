@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Banat",
+  "geonameid": 1277409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.498035078966897,
+      "lon": 77.36251600487452,
+      "geoinfo": {
+        "display_name": "NH709B, Thana Bhawan, Shamli, Uttar Pradesh, 247777, India",
+        "road": "NH709B",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Thana Bhawan",
+        "state": "Uttar Pradesh",
+        "postcode": "247777",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH709B, Banat, Uttar Pradesh, India"
+    },
+    {
+      "lat": 29.46415560721004,
+      "lon": 77.35005125979136,
+      "geoinfo": {
+        "display_name": "Banat, Shamli, Uttar Pradesh, 247776, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Banat",
+        "state": "Uttar Pradesh",
+        "postcode": "247776",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "200, Banat, Shamli, Uttar Pradesh, 247776, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:28.819321+00:00",
+  "_kind": "geo_samples"
+}

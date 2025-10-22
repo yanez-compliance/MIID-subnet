@@ -1,0 +1,47 @@
+{
+  "country_code": "UA",
+  "country": "Ukraine",
+  "city": "Pereiaslav",
+  "geonameid": 697637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.067633638520306,
+      "lon": 31.399067510195906,
+      "geoinfo": {
+        "display_name": "Н-08, Дівичківська сільська громада, Boryspil Raion, Kyiv Oblast, 08404, Ukraine",
+        "road": "Н-08",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Kyiv Oblast",
+        "postcode": "08404",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "Н-08, Pereiaslav, Kyiv Oblast, Ukraine"
+    },
+    {
+      "lat": 50.05650032240606,
+      "lon": 31.494039749506854,
+      "geoinfo": {
+        "display_name": "Підварки, Pereiaslav, Переяславська міська громада, Boryspil Raion, Kyiv Oblast, 08400, Ukraine",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Підварки",
+        "city_district": null,
+        "city": "Pereiaslav",
+        "state": "Kyiv Oblast",
+        "postcode": "08400",
+        "country": "Ukraine",
+        "country_code": "ua"
+      },
+      "address": "945, Підварки, Pereiaslav, Переяславська міська громада, Boryspil Raion, Kyiv Oblast, 08400, Ukraine"
+    }
+  ],
+  "updated_at": "2025-10-19T10:37:46.397827+00:00",
+  "_kind": "geo_samples"
+}

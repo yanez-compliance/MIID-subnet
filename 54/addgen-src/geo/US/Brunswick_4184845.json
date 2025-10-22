@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Brunswick",
+  "geonameid": 4184845,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.167712574255912,
+      "lon": -81.52750612051307,
+      "geoinfo": {
+        "display_name": "Dock Junction, Glynn County, Georgia, 31521, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dock Junction",
+        "state": "Georgia",
+        "postcode": "31521",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Brunswick, Georgia, United States"
+    },
+    {
+      "lat": 31.12078706073505,
+      "lon": -81.48855271578361,
+      "geoinfo": {
+        "display_name": "Admiralty Way, Brunswick, Glynn County, Georgia, United States",
+        "road": "Admiralty Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brunswick",
+        "state": "Georgia",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "644, Admiralty Way, Brunswick, Glynn County, 68362 Georgia, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:43.777960+00:00",
+  "_kind": "geo_samples"
+}

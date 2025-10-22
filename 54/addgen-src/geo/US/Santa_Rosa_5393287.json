@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Rosa",
+  "geonameid": 5393287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.464975228224226,
+      "lon": -122.68689628119239,
+      "geoinfo": {
+        "display_name": "1475, Los Olivos Road, Santa Rosa, Sonoma County, California, 95404, United States",
+        "road": "Los Olivos Road",
+        "house_number": "1475",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa",
+        "state": "California",
+        "postcode": "95404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1475 Los Olivos Road, Santa Rosa, California, United States"
+    },
+    {
+      "lat": 38.443970118098825,
+      "lon": -122.74794524455226,
+      "geoinfo": {
+        "display_name": "Santa Rosa, Sonoma County, California, 95401, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Rosa",
+        "state": "California",
+        "postcode": "95401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "090, Santa Rosa, Sonoma County, California, 95401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:11:33.395484+00:00",
+  "_kind": "geo_samples"
+}

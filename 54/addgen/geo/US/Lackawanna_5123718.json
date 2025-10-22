@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lackawanna",
+  "geonameid": 5123718,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.80889835327323,
+      "lon": -78.80798642950313,
+      "geoinfo": {
+        "display_name": "484, New York State Thruway, Buffalo, Erie County, New York, 14218, United States",
+        "road": "New York State Thruway",
+        "house_number": "484",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buffalo",
+        "state": "New York",
+        "postcode": "14218",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "484 New York State Thruway, Lackawanna, New York, United States"
+    },
+    {
+      "lat": 42.80906274590276,
+      "lon": -78.85214349707371,
+      "geoinfo": {
+        "display_name": "Woodlawn, City of Lackawanna, Erie County, New York, 14219, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "City of Lackawanna",
+        "state": "New York",
+        "postcode": "14219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "751, Lackawanna, 14219 New York, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:15:56.719680+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oroville",
+  "geonameid": 5379759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.495642206346126,
+      "lon": -121.57701384534921,
+      "geoinfo": {
+        "display_name": "CA 70, Oroville, Butte County, California, 95965, United States",
+        "road": "CA 70",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oroville",
+        "state": "California",
+        "postcode": "95965",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CA 70, Oroville, California, United States"
+    },
+    {
+      "lat": 39.53066864088032,
+      "lon": -121.59167557397352,
+      "geoinfo": {
+        "display_name": "Garden Drive, Butte County, California, 95965, United States",
+        "road": "Garden Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95965",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "555, Garden Drive, Butte County, California, 95965, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:24.301688+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairborn",
+  "geonameid": 4511263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.85594717386384,
+      "lon": -83.9930097253279,
+      "geoinfo": {
+        "display_name": "I 675, Clark County, Ohio, 45341, United States",
+        "road": "I 675",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45341",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 675, Fairborn, Ohio, United States"
+    },
+    {
+      "lat": 39.85697728404106,
+      "lon": -84.01155001543454,
+      "geoinfo": {
+        "display_name": "10245, Haddix Road, Clark County, Ohio, 45324, United States",
+        "road": "Haddix Road",
+        "house_number": "10245",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Ohio",
+        "postcode": "45324",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10245, Haddix Road, Clark County, Ohio, 45324, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:49.580339+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Friern Barnet",
+  "geonameid": 2649055,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.61331619282209,
+      "lon": -0.14571313313933584,
+      "geoinfo": {
+        "display_name": "Royal Drive, Friern Barnet, London Borough of Barnet, London, Greater London, England, N11 3FS, United Kingdom",
+        "road": "Royal Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Friern Barnet",
+        "city_district": "London Borough of Barnet",
+        "city": "London",
+        "state": "England",
+        "postcode": "N11 3FS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Royal Drive, Friern Barnet, England, United Kingdom"
+    },
+    {
+      "lat": 51.5875814145448,
+      "lon": -0.10029374326727367,
+      "geoinfo": {
+        "display_name": "22, Alfoxton Avenue, Duckett's Green, Harringay, London Borough of Haringey, London, Greater London, England, N15 3DD, United Kingdom",
+        "road": "Alfoxton Avenue",
+        "house_number": "22",
+        "neighbourhood": "Duckett's Green",
+        "suburb": "Harringay",
+        "city_district": "London Borough of Haringey",
+        "city": "London",
+        "state": "England",
+        "postcode": "N15 3DD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "22, Alfoxton Avenue, Duckett's Green, Harringay, London Borough of Haringey, London, Greater London, England, N15 3DD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:17.533354+00:00",
+  "_kind": "geo_samples"
+}

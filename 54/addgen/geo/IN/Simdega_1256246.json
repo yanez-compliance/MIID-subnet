@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Simdega",
+  "geonameid": 1256246,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.58687029797889,
+      "lon": 84.50905703317817,
+      "geoinfo": {
+        "display_name": "Dumbartoli, Simdega, Jharkhand, 825223, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jharkhand",
+        "postcode": "825223",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Simdega, Jharkhand, India"
+    },
+    {
+      "lat": 22.611058434915076,
+      "lon": 84.49559047104964,
+      "geoinfo": {
+        "display_name": "Saleiatoli, Dumbartoli, Simdega, Jharkhand, 835223, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Saleiatoli",
+        "suburb": null,
+        "city_district": null,
+        "city": "Simdega",
+        "state": "Jharkhand",
+        "postcode": "835223",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "359, Saleiatoli, Simdega, 835223 Jharkhand, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:58.055576+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Peoria",
+  "geonameid": 4903976,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.71742576723546,
+      "lon": -89.5462040595842,
+      "geoinfo": {
+        "display_name": "East Peoria, Tazewell County, Illinois, 61639, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Peoria",
+        "state": "Illinois",
+        "postcode": "61639",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North Peoria, Illinois, United States"
+    },
+    {
+      "lat": 40.67540865126642,
+      "lon": -89.60439869993195,
+      "geoinfo": {
+        "display_name": "Edmund Street, Warehouse District, Peoria, Peoria County, Illinois, 61602, United States",
+        "road": "Edmund Street",
+        "house_number": null,
+        "neighbourhood": "Warehouse District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peoria",
+        "state": "Illinois",
+        "postcode": "61602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "856, Edmund Street, Warehouse District, Peoria, Peoria County, Illinois, 61602, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:32:13.699611+00:00",
+  "_kind": "geo_samples"
+}

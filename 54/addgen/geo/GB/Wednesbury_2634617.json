@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wednesbury",
+  "geonameid": 2634617,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.5538314241899,
+      "lon": -2.006044082955042,
+      "geoinfo": {
+        "display_name": "Alma Street, Mesty Croft, Wednesbury, Sandwell, West Midlands, England, WS10 0QB, United Kingdom",
+        "road": "Alma Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sandwell",
+        "state": "England",
+        "postcode": "WS10 0QB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Alma Street, Wednesbury, England, United Kingdom"
+    },
+    {
+      "lat": 52.555992759204706,
+      "lon": -1.9743907183207579,
+      "geoinfo": {
+        "display_name": "Tame Valley Viaduct, Walsall Road, Yew Tree, Sandwell, West Midlands, England, WS10 0LD, United Kingdom",
+        "road": "Walsall Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Yew Tree",
+        "city_district": null,
+        "city": "Sandwell",
+        "state": "England",
+        "postcode": "WS10 0LD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Tame Valley Viaduct, Walsall Road, Yew Tree, Sandwell, West Midlands, England, WS10 0LD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:52.061209+00:00",
+  "_kind": "geo_samples"
+}

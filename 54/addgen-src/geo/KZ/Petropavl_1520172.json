@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Petropavl",
+  "geonameid": 1520172,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 54.876694040970726,
+      "lon": 69.14904521679487,
+      "geoinfo": {
+        "display_name": "32, Пионерский переулок, Petropavl City Administration, 1-ші полиция басқармасы, North Kazakhstan Region, 150000, Kazakhstan",
+        "road": "Пионерский переулок",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petropavl City Administration",
+        "state": "North Kazakhstan Region",
+        "postcode": "150000",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "32, Пионерский переулок, Petropavl, 150000 North Kazakhstan Region, Kazakhstan"
+    },
+    {
+      "lat": 54.85955350894975,
+      "lon": 69.21948142090068,
+      "geoinfo": {
+        "display_name": "Калинина, 2629 км, Petropavl City Administration, 2 полиция басқармасы, North Kazakhstan Region, 150002, Kazakhstan",
+        "road": "Калинина",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Petropavl City Administration",
+        "state": "North Kazakhstan Region",
+        "postcode": "150002",
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "311, Калинина, Petropavl, 150002 North Kazakhstan Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:13.705246+00:00",
+  "_kind": "geo_samples"
+}

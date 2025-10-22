@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Suwanee",
+  "geonameid": 4225309,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.02899477588626,
+      "lon": -84.1097055844998,
+      "geoinfo": {
+        "display_name": "Peachtree Industrial Boulevard, Gwinnett County, Georgia, 30518, United States",
+        "road": "Peachtree Industrial Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Peachtree Industrial Boulevard, Suwanee, Georgia, United States"
+    },
+    {
+      "lat": 34.03739775224307,
+      "lon": -84.1169475437922,
+      "geoinfo": {
+        "display_name": "Noblin Ridge Trail Northwest, Gwinnett County, Georgia, 30097, United States",
+        "road": "Noblin Ridge Trail Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Georgia",
+        "postcode": "30097",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "371, Noblin Ridge Trail Northwest, Gwinnett County, Georgia, 30097, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:28:58.682407+00:00",
+  "_kind": "geo_samples"
+}

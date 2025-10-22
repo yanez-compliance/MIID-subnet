@@ -1,0 +1,65 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Kapellen",
+  "geonameid": 2794730,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.2859813126132,
+      "lon": 4.473768075197698,
+      "geoinfo": {
+        "display_name": "49, Voshollei, Brasschaat, Antwerp, 2930, Belgium",
+        "road": "Voshollei",
+        "house_number": "49",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brasschaat",
+        "state": "Antwerp",
+        "postcode": "2930",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "49 Voshollei, Kapellen, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.34958408236412,
+      "lon": 4.464393252763993,
+      "geoinfo": {
+        "display_name": "13, Duinendreef, Kapellenbos, Kapellen, Antwerp, 2950, Belgium",
+        "road": "Duinendreef",
+        "house_number": "13",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kapellen",
+        "state": "Antwerp",
+        "postcode": "2950",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "13, Duinendreef, Kapellenbos, Kapellen, Antwerp, 2950, Belgium"
+    },
+    {
+      "lat": 51.286574834685865,
+      "lon": 4.420866228032842,
+      "geoinfo": {
+        "display_name": "69, Bosstraat, Ekeren-Centrum, Ekeren, Antwerp, 2180, Belgium",
+        "road": "Bosstraat",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": "Ekeren-Centrum",
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2180",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "69, Bosstraat, Ekeren-Centrum, Ekeren, Antwerp, 2180, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:11.941423+00:00",
+  "_kind": "geo_samples"
+}

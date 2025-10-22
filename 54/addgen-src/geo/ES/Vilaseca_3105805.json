@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vilaseca",
+  "geonameid": 3105805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.03265329875034,
+      "lon": 2.2471104196806384,
+      "geoinfo": {
+        "display_name": "Serrat de Puigdejoan, Torelló, Osona, Barcelona, Catalonia, 08570, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torelló",
+        "state": "Catalonia",
+        "postcode": "08570",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Vilaseca, Catalonia, Spain"
+    },
+    {
+      "lat": 42.04671836958507,
+      "lon": 2.2801710690185333,
+      "geoinfo": {
+        "display_name": "SC-B2, Can Pesseta, Torelló, Osona, Barcelona, Catalonia, 08570, Spain",
+        "road": "SC-B2",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torelló",
+        "state": "Catalonia",
+        "postcode": "08570",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "SC-B2, Can Pesseta, Torelló, Osona, Barcelona, Catalonia, 08570, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:29.825795+00:00",
+  "_kind": "geo_samples"
+}

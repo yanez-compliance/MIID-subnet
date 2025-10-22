@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fairwood",
+  "geonameid": 5794097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.4554732231819,
+      "lon": -122.15855468871368,
+      "geoinfo": {
+        "display_name": "13611, Southeast Fairwood Boulevard, Fairwood West, Fairwood, Renton, King County, Washington, 98058, United States",
+        "road": "Southeast Fairwood Boulevard",
+        "house_number": "13611",
+        "neighbourhood": "Fairwood West",
+        "suburb": "Fairwood",
+        "city_district": null,
+        "city": "Renton",
+        "state": "Washington",
+        "postcode": "98058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13611 Southeast Fairwood Boulevard, Fairwood, Washington, United States"
+    },
+    {
+      "lat": 47.4493604610052,
+      "lon": -122.16037782698697,
+      "geoinfo": {
+        "display_name": "13414, Southeast 171st Place, Fairwood, Renton, King County, Washington, 98058, United States",
+        "road": "Southeast 171st Place",
+        "house_number": "13414",
+        "neighbourhood": null,
+        "suburb": "Fairwood",
+        "city_district": null,
+        "city": "Renton",
+        "state": "Washington",
+        "postcode": "98058",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13414, Southeast 171st Place, Fairwood, Renton, King County, Washington, 98058, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:15:35.154131+00:00",
+  "_kind": "geo_samples"
+}

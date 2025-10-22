@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Ashmūn",
+  "geonameid": 360048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.288790475332235,
+      "lon": 30.95113842419654,
+      "geoinfo": {
+        "display_name": "Ashmoun, Al Minufiya, 12967, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashmoun",
+        "state": "Al Minufiya",
+        "postcode": "12967",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Ashmūn, Al Minufiya, Egypt"
+    },
+    {
+      "lat": 30.298344711599835,
+      "lon": 30.992898088527635,
+      "geoinfo": {
+        "display_name": "Port Said Street, Ashmoun, Al Minufiya, 32811, Egypt",
+        "road": "Port Said Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashmoun",
+        "state": "Al Minufiya",
+        "postcode": "32811",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "695, Port Said Street, Ashmoun, Al Minufiya, 32811, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:13.552930+00:00",
+  "_kind": "geo_samples"
+}

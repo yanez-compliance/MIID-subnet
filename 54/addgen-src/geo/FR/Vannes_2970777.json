@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Vannes",
+  "geonameid": 2970777,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.68426065460171,
+      "lon": -2.7177888811558755,
+      "geoinfo": {
+        "display_name": "Rue de Kerat, Kerrat, Saint-Avé, Vannes, Morbihan, Brittany, Metropolitan France, 56890, France",
+        "road": "Rue de Kerat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Avé",
+        "state": "Brittany",
+        "postcode": "56890",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue de Kerat, Vannes, Brittany, France"
+    },
+    {
+      "lat": 47.67231546794279,
+      "lon": -2.7903270023407343,
+      "geoinfo": {
+        "display_name": "Ferrand, Route de Sainte-Anne, Kerpeter, Nord - Ménimur, Tréhuinec, Vannes, Morbihan, Brittany, Metropolitan France, 56000, France",
+        "road": "Route de Sainte-Anne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nord - Ménimur",
+        "city_district": null,
+        "city": "Vannes",
+        "state": "Brittany",
+        "postcode": "56000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "195, Route de Sainte-Anne, Vannes, 56000 Brittany, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:47.705412+00:00",
+  "_kind": "geo_samples"
+}

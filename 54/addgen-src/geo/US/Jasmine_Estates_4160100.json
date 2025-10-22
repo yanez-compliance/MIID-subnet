@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jasmine Estates",
+  "geonameid": 4160100,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.326180883459504,
+      "lon": -82.68564393011107,
+      "geoinfo": {
+        "display_name": "11620, Meadow Drive, Gulf Highlands, Bayonet Point, Pasco County, Florida, 34668, United States",
+        "road": "Meadow Drive",
+        "house_number": "11620",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bayonet Point",
+        "state": "Florida",
+        "postcode": "34668",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11620 Meadow Drive, Jasmine Estates, Florida, United States"
+    },
+    {
+      "lat": 28.310603611318435,
+      "lon": -82.73050469728135,
+      "geoinfo": {
+        "display_name": "Jasmine Estates, Pasco County, Florida, 34668, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jasmine Estates",
+        "state": "Florida",
+        "postcode": "34668",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "820, Jasmine Estates, Pasco County, Florida, 34668, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:30.049053+00:00",
+  "_kind": "geo_samples"
+}

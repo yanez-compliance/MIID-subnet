@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cockeysville",
+  "geonameid": 4351887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.507147934798866,
+      "lon": -76.60853295672378,
+      "geoinfo": {
+        "display_name": "Paper Mill Road, Phoenix, Baltimore County, Maryland, 21131, United States",
+        "road": "Paper Mill Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Phoenix",
+        "state": "Maryland",
+        "postcode": "21131",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Paper Mill Road, Cockeysville, Maryland, United States"
+    },
+    {
+      "lat": 39.48472930671364,
+      "lon": -76.6741975844764,
+      "geoinfo": {
+        "display_name": "706, Ivy Hill Road, Hunt Valley, Cockeysville, Baltimore County, Maryland, 21030, United States",
+        "road": "Ivy Hill Road",
+        "house_number": "706",
+        "neighbourhood": null,
+        "suburb": "Hunt Valley",
+        "city_district": null,
+        "city": "Cockeysville",
+        "state": "Maryland",
+        "postcode": "21030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "706, Ivy Hill Road, Hunt Valley, Cockeysville, Baltimore County, Maryland, 21030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:14.024758+00:00",
+  "_kind": "geo_samples"
+}

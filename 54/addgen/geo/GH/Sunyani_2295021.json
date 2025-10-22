@@ -1,0 +1,47 @@
+{
+  "country_code": "GH",
+  "country": "Ghana",
+  "city": "Sunyani",
+  "geonameid": 2295021,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 7.326753685021178,
+      "lon": -2.325572185583262,
+      "geoinfo": {
+        "display_name": "Area 4, Sunyani Municipal District, Bono Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Area 4",
+        "city_district": null,
+        "city": null,
+        "state": "Bono Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "Area 4, Sunyani, Bono Region, Ghana"
+    },
+    {
+      "lat": 7.342971523487515,
+      "lon": -2.3095792608981047,
+      "geoinfo": {
+        "display_name": "New Dormaa, Sunyani, Sunyani Municipal District, Bono Region, Ghana",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New Dormaa",
+        "city_district": null,
+        "city": "Sunyani",
+        "state": "Bono Region",
+        "postcode": null,
+        "country": "Ghana",
+        "country_code": "gh"
+      },
+      "address": "New Dormaa, Sunyani, Bono Region, Ghana"
+    }
+  ],
+  "updated_at": "2025-10-16T14:46:49.790296+00:00",
+  "_kind": "geo_samples"
+}

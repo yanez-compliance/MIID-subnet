@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Times Square",
+  "geonameid": 6930378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.741318261925024,
+      "lon": -73.99742008827897,
+      "geoinfo": {
+        "display_name": "147, 7th Avenue, Chelsea, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States",
+        "road": "7th Avenue",
+        "house_number": "147",
+        "neighbourhood": "Chelsea",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "10011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "147 7th Avenue, Times Square, New York, United States"
+    },
+    {
+      "lat": 40.758921828970465,
+      "lon": -74.04167280446501,
+      "geoinfo": {
+        "display_name": "Central Avenue, Union City, Hudson County, New Jersey, 07087, United States",
+        "road": "Central Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Union City",
+        "state": "New Jersey",
+        "postcode": "07087",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "496, Central Avenue, Union City, Hudson County, New Jersey, 07087, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:35.163378+00:00",
+  "_kind": "geo_samples"
+}

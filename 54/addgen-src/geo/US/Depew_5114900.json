@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Depew",
+  "geonameid": 5114900,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.8975696861688,
+      "lon": -78.7361235365033,
+      "geoinfo": {
+        "display_name": "4, 2nd Street, Bellevue, Buffalo, Erie County, New York, 14227, United States",
+        "road": "2nd Street",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buffalo",
+        "state": "New York",
+        "postcode": "14227",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4 2nd Street, Depew, New York, United States"
+    },
+    {
+      "lat": 42.87340976438649,
+      "lon": -78.64819610594402,
+      "geoinfo": {
+        "display_name": "88, Brunck Road, Town of Lancaster, Erie County, New York, 14086, United States",
+        "road": "Brunck Road",
+        "house_number": "88",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Lancaster",
+        "state": "New York",
+        "postcode": "14086",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "88, Brunck Road, Town of Lancaster, Erie County, New York, 14086, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:40:49.503699+00:00",
+  "_kind": "geo_samples"
+}

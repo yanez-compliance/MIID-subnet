@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hohenstein-Ernstthal",
+  "geonameid": 2901420,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.77536458391855,
+      "lon": 12.667854074716685,
+      "geoinfo": {
+        "display_name": "Dresdner Straße, Bernsdorf, Rund um den Auersberg, Zwickau, Saxony, 09337, Germany",
+        "road": "Dresdner Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Bernsdorf",
+        "city": "Bernsdorf",
+        "state": "Saxony",
+        "postcode": "09337",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Dresdner Straße, Hohenstein-Ernstthal, Saxony, Germany"
+    },
+    {
+      "lat": 50.81174754567138,
+      "lon": 12.73609448750023,
+      "geoinfo": {
+        "display_name": "1f, Wind, Wüstenbrand, Hohenstein-Ernstthal, Zwickau, Saxony, 09337, Germany",
+        "road": "Wind",
+        "house_number": "1f",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Wüstenbrand",
+        "city": "Hohenstein-Ernstthal",
+        "state": "Saxony",
+        "postcode": "09337",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1f, Wind, Wüstenbrand, Hohenstein-Ernstthal, Zwickau, Saxony, 09337, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:17:37.631971+00:00",
+  "_kind": "geo_samples"
+}

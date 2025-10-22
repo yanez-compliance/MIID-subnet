@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clovis",
+  "geonameid": 5462393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.434140460552555,
+      "lon": -103.21164760618457,
+      "geoinfo": {
+        "display_name": "West Llano Estacado Boulevard, Clovis, Curry County, New Mexico, 88101, United States",
+        "road": "West Llano Estacado Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clovis",
+        "state": "New Mexico",
+        "postcode": "88101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "West Llano Estacado Boulevard, Clovis, New Mexico, United States"
+    },
+    {
+      "lat": 34.36791489510988,
+      "lon": -103.23432252708088,
+      "geoinfo": {
+        "display_name": "Thomas Street, Curry County, New Mexico, United States",
+        "road": "Thomas Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "543, Thomas Street, Curry County, 25767 New Mexico, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:52.400266+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Qitang",
+  "geonameid": 12450886,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.749045177565105,
+      "lon": 106.24699380762814,
+      "geoinfo": {
+        "display_name": "Dalu, Bishan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dalu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Qitang, Chongqing, China"
+    },
+    {
+      "lat": 29.787930447581513,
+      "lon": 106.30572317499724,
+      "geoinfo": {
+        "display_name": "Qitang, Bishan District, Chongqing, 400712, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Qitang",
+        "state": "Chongqing",
+        "postcode": "400712",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "133, Qitang, Bishan District, Chongqing, 400712, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:30:57.694766+00:00",
+  "_kind": "geo_samples"
+}

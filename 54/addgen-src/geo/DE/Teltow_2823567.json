@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Teltow",
+  "geonameid": 2823567,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.38318771839828,
+      "lon": 13.309563728516736,
+      "geoinfo": {
+        "display_name": "7, Birkenhainer Ring, Birkenhain, Heinersdorf, Großbeeren, Teltow-Fläming, Brandenburg, 14979, Germany",
+        "road": "Birkenhainer Ring",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Heinersdorf",
+        "state": "Brandenburg",
+        "postcode": "14979",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Birkenhainer Ring, Teltow, Brandenburg, Germany"
+    },
+    {
+      "lat": 52.37107585211234,
+      "lon": 13.209166316023877,
+      "geoinfo": {
+        "display_name": "L 40, Kienwerder, Güterfelde, Stahnsdorf, Teltow, Potsdam-Mittelmark, Brandenburg, 14532, Germany",
+        "road": "L 40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kienwerder",
+        "city_district": null,
+        "city": "Stahnsdorf",
+        "state": "Brandenburg",
+        "postcode": "14532",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 40, Kienwerder, Güterfelde, Stahnsdorf, Teltow, Potsdam-Mittelmark, Brandenburg, 14532, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:16.964888+00:00",
+  "_kind": "geo_samples"
+}

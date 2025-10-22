@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Redford",
+  "geonameid": 5006917,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.42059948245444,
+      "lon": -83.28582562451071,
+      "geoinfo": {
+        "display_name": "17891, Salem Street, The Eye, Detroit, Wayne County, Michigan, 48219, United States",
+        "road": "Salem Street",
+        "house_number": "17891",
+        "neighbourhood": "The Eye",
+        "suburb": null,
+        "city_district": null,
+        "city": "Detroit",
+        "state": "Michigan",
+        "postcode": "48219",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "17891 Salem Street, Redford, Michigan, United States"
+    },
+    {
+      "lat": 42.34164430449867,
+      "lon": -83.31421852962048,
+      "geoinfo": {
+        "display_name": "7332, Cavell Street, Dearnan Park, Westland, Wayne County, Michigan, 48185, United States",
+        "road": "Cavell Street",
+        "house_number": "7332",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Westland",
+        "state": "Michigan",
+        "postcode": "48185",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7332, Cavell Street, Dearnan Park, Westland, Wayne County, Michigan, 48185, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:45.247115+00:00",
+  "_kind": "geo_samples"
+}

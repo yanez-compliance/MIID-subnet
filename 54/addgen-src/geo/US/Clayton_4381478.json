@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Clayton",
+  "geonameid": 4381478,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.62832081483178,
+      "lon": -90.35391808741966,
+      "geoinfo": {
+        "display_name": "Brentwood Forest Condominiums, Brentwood, Saint Louis County, Missouri, 63144, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "Missouri",
+        "postcode": "63144",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Clayton, Missouri, United States"
+    },
+    {
+      "lat": 38.6099989379601,
+      "lon": -90.28684631697708,
+      "geoinfo": {
+        "display_name": "2707, 59th Street, Southwest Garden, St. Louis, Missouri, 63139, United States",
+        "road": "59th Street",
+        "house_number": "2707",
+        "neighbourhood": "Southwest Garden",
+        "suburb": null,
+        "city_district": null,
+        "city": "St. Louis",
+        "state": "Missouri",
+        "postcode": "63139",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2707, 59th Street, Southwest Garden, St. Louis, Missouri, 63139, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:52.766017+00:00",
+  "_kind": "geo_samples"
+}

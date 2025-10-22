@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Kingman",
+  "geonameid": 5301067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.18171245634508,
+      "lon": -114.01456994246364,
+      "geoinfo": {
+        "display_name": "Peppergrass Lane, Kingman, Mohave County, Arizona, 86401, United States",
+        "road": "Peppergrass Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kingman",
+        "state": "Arizona",
+        "postcode": "86401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Peppergrass Lane, Kingman, Arizona, United States"
+    },
+    {
+      "lat": 35.15111929624215,
+      "lon": -114.03451728592393,
+      "geoinfo": {
+        "display_name": "Mohave County, Arizona, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Arizona",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "628, Kingman, 91405 Arizona, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:07:44.010540+00:00",
+  "_kind": "geo_samples"
+}

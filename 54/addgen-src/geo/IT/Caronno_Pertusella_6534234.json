@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Caronno Pertusella",
+  "geonameid": 6534234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.62127881886972,
+      "lon": 9.042724938072709,
+      "geoinfo": {
+        "display_name": "Via Bainsizza, Campo Sportivo-Colombara, Saronno, Varese, Lombardy, 21047, Italy",
+        "road": "Via Bainsizza",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Campo Sportivo-Colombara",
+        "city_district": null,
+        "city": "Saronno",
+        "state": "Lombardy",
+        "postcode": "21047",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Bainsizza, Caronno Pertusella, Lombardy, Italy"
+    },
+    {
+      "lat": 45.6302690383086,
+      "lon": 9.01052189611194,
+      "geoinfo": {
+        "display_name": "Via Leonardo da Vinci, Fusetti, Gerenzano, Varese, Lombardy, 21040, Italy",
+        "road": "Via Leonardo da Vinci",
+        "house_number": null,
+        "neighbourhood": "Fusetti",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gerenzano",
+        "state": "Lombardy",
+        "postcode": "21040",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "056, Via Leonardo da Vinci, Fusetti, Gerenzano, Varese, Lombardy, 21040, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:53.576628+00:00",
+  "_kind": "geo_samples"
+}

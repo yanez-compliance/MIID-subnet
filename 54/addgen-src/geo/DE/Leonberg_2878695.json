@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leonberg",
+  "geonameid": 2878695,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.77031397412861,
+      "lon": 9.025626779295441,
+      "geoinfo": {
+        "display_name": "A 8;A 81, Leonberg, Landkreis Böblingen, Baden-Württemberg, 71229, Germany",
+        "road": "A 8;A 81",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leonberg",
+        "state": "Baden-Württemberg",
+        "postcode": "71229",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "A 8;A 81, Leonberg, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.78819386835293,
+      "lon": 9.047910496425608,
+      "geoinfo": {
+        "display_name": "33, Bopserwaldstraße, Waldsiedlung, Schillerhöhe, Gerlingen, Landkreis Ludwigsburg, Baden-Württemberg, 70839, Germany",
+        "road": "Bopserwaldstraße",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "Schillerhöhe",
+        "city_district": null,
+        "city": "Gerlingen",
+        "state": "Baden-Württemberg",
+        "postcode": "70839",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "33, Bopserwaldstraße, Waldsiedlung, Schillerhöhe, Gerlingen, Landkreis Ludwigsburg, Baden-Württemberg, 70839, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:42:48.770119+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Wettingen",
+  "geonameid": 2658011,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.505267441857086,
+      "lon": 8.315233111631697,
+      "geoinfo": {
+        "display_name": "14, Berghof, Freienwil, Bezirk Baden, Aargau, 5423, Switzerland",
+        "road": null,
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Freienwil",
+        "state": "Aargau",
+        "postcode": "5423",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Wettingen, Aargau, Switzerland"
+    },
+    {
+      "lat": 47.45833933205531,
+      "lon": 8.348925778837467,
+      "geoinfo": {
+        "display_name": "63a, Otelfingerstrasse, Wettingen, Bezirk Baden, Aargau, 5430, Switzerland",
+        "road": "Otelfingerstrasse",
+        "house_number": "63a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wettingen",
+        "state": "Aargau",
+        "postcode": "5430",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "63a Otelfingerstrasse, Wettingen, Aargau, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:05:18.221233+00:00",
+  "_kind": "geo_samples"
+}

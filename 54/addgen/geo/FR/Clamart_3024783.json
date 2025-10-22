@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Clamart",
+  "geonameid": 3024783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.82361115421547,
+      "lon": 2.2812722930574694,
+      "geoinfo": {
+        "display_name": "31, Rue d'Issy, Vanves, Boulogne-Billancourt, Hauts-de-Seine, Metropolitan France, 92170, France",
+        "road": "Rue d'Issy",
+        "house_number": "31",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vanves",
+        "state": null,
+        "postcode": "92170",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "31 Rue d'Issy, Clamart, Ile-de-France, France"
+    },
+    {
+      "lat": 48.785927593710525,
+      "lon": 2.3058548062195414,
+      "geoinfo": {
+        "display_name": "5, Allée Paul Éluard, Résidence du Port Galand, Bagneux, Antony, Hauts-de-Seine, Metropolitan France, 92220, France",
+        "road": "Allée Paul Éluard",
+        "house_number": "5",
+        "neighbourhood": "Résidence du Port Galand",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagneux",
+        "state": null,
+        "postcode": "92220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5, Allée Paul Éluard, Résidence du Port Galand, Bagneux, Antony, Hauts-de-Seine, Metropolitan France, 92220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:18:23.204689+00:00",
+  "_kind": "geo_samples"
+}

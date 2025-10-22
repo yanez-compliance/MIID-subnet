@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Savigny-sur-Orge",
+  "geonameid": 2975525,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.7046383582008,
+      "lon": 2.3057861756320284,
+      "geoinfo": {
+        "display_name": "Autoroute du Soleil, Gravigny, Chilly-Mazarin, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91380, France",
+        "road": "Autoroute du Soleil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Gravigny",
+        "city_district": null,
+        "city": "Chilly-Mazarin",
+        "state": "Ile-de-France",
+        "postcode": "91380",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Autoroute du Soleil, Savigny-sur-Orge, Ile-de-France, France"
+    },
+    {
+      "lat": 48.68475387606435,
+      "lon": 2.407573656593145,
+      "geoinfo": {
+        "display_name": "Allée du Domaine de Villiers, Draveil, Évry, Essonne, Ile-de-France, Metropolitan France, 91210, France",
+        "road": "Allée du Domaine de Villiers",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Draveil",
+        "state": "Ile-de-France",
+        "postcode": "91210",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "827, Allée du Domaine de Villiers, Draveil, Évry, Essonne, Ile-de-France, Metropolitan France, 91210, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:59.505526+00:00",
+  "_kind": "geo_samples"
+}

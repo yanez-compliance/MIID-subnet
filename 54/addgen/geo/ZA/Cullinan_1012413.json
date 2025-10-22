@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Cullinan",
+  "geonameid": 1012413,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.713013064705056,
+      "lon": 28.535410824922206,
+      "geoinfo": {
+        "display_name": "Plein Street, Zonderwater, Tshwane Ward 100, Rayton, City of Tshwane Metropolitan Municipality, Gauteng, 1001, South Africa",
+        "road": "Plein Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zonderwater",
+        "city_district": null,
+        "city": "Rayton",
+        "state": "Gauteng",
+        "postcode": "1001",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Plein Street, Cullinan, Gauteng, South Africa"
+    },
+    {
+      "lat": -25.664448956809967,
+      "lon": 28.52305570384573,
+      "geoinfo": {
+        "display_name": "Jasmine Avenue, Tshwane Ward 100, Cullinan, City of Tshwane Metropolitan Municipality, Gauteng, South Africa",
+        "road": "Jasmine Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tshwane Ward 100",
+        "city_district": null,
+        "city": "Cullinan",
+        "state": "Gauteng",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "349, Jasmine Avenue, Tshwane Ward 100, Cullinan, City of Tshwane Metropolitan Municipality, Gauteng, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:45:43.369431+00:00",
+  "_kind": "geo_samples"
+}

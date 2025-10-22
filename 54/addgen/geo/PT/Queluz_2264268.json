@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Queluz",
+  "geonameid": 2264268,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.75356539843045,
+      "lon": -9.247431000144656,
+      "geoinfo": {
+        "display_name": "Avenida do Regimento de Comandos, Bairro Janeiro, Venteira, Amadora, Lisbon, 2700-192, Portugal",
+        "road": "Avenida do Regimento de Comandos",
+        "house_number": null,
+        "neighbourhood": "Bairro Janeiro",
+        "suburb": "Venteira",
+        "city_district": null,
+        "city": "Amadora",
+        "state": null,
+        "postcode": "2700-192",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Avenida do Regimento de Comandos, Queluz, Portugal"
+    },
+    {
+      "lat": 38.751815513636444,
+      "lon": -9.30436391132585,
+      "geoinfo": {
+        "display_name": "Aldi, 3, Estrada de São Marcos, Casal de Cabanas, Barcarena, Oeiras, Lisbon, 2735-521, Portugal",
+        "road": "Estrada de São Marcos",
+        "house_number": "3",
+        "neighbourhood": "Casal de Cabanas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Oeiras",
+        "state": null,
+        "postcode": "2735-521",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "Aldi, 3, Estrada de São Marcos, Casal de Cabanas, Barcarena, Oeiras, Lisbon, 2735-521, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:20.634551+00:00",
+  "_kind": "geo_samples"
+}

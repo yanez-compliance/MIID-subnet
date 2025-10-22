@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Genoa",
+  "geonameid": 3176219,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.398946542315436,
+      "lon": 8.93642640463107,
+      "geoinfo": {
+        "display_name": "3, Via Fiodor, Carignano, Centro Est, Genoa, Liguria, 16128, Italy",
+        "road": "Via Fiodor",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": "Carignano",
+        "city_district": null,
+        "city": "Genoa",
+        "state": "Liguria",
+        "postcode": "16128",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "3 Via Fiodor, Genoa, Liguria, Italy"
+    },
+    {
+      "lat": 44.36585985322813,
+      "lon": 8.930969093773081,
+      "geoinfo": {
+        "display_name": "Carignano, Centro Est, Genoa, Liguria, 16128, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Carignano",
+        "city_district": null,
+        "city": "Genoa",
+        "state": "Liguria",
+        "postcode": "16128",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "499, Carignano, Centro Est, Genoa, Liguria, 16128, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:53.456021+00:00",
+  "_kind": "geo_samples"
+}

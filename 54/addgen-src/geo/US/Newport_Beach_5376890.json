@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newport Beach",
+  "geonameid": 5376890,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.625994572434855,
+      "lon": -117.9815692038952,
+      "geoinfo": {
+        "display_name": "Huntington Beach, Orange County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntington Beach",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Newport Beach, California, United States"
+    },
+    {
+      "lat": 33.63130894473419,
+      "lon": -117.92236442131313,
+      "geoinfo": {
+        "display_name": "1560, Orange Avenue, Costa Mesa, Orange County, California, 92627, United States",
+        "road": "Orange Avenue",
+        "house_number": "1560",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Costa Mesa",
+        "state": "California",
+        "postcode": "92627",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1560, Orange Avenue, Costa Mesa, Orange County, California, 92627, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:22.372960+00:00",
+  "_kind": "geo_samples"
+}

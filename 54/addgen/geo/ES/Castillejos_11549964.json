@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Castillejos",
+  "geonameid": 11549964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.499956432471066,
+      "lon": -3.7219482568803475,
+      "geoinfo": {
+        "display_name": "M-40, Mirasierra, Fuencarral-El Pardo, Madrid, Community of Madrid, 28035, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Castillejos, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.4584668025549,
+      "lon": -3.674018243044533,
+      "geoinfo": {
+        "display_name": "18, Calle de Costa Rica, Hispanoamérica, Chamartín, Madrid, Community of Madrid, 28016, Spain",
+        "road": "Calle de Costa Rica",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": "Chamartín",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28016",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "18, Calle de Costa Rica, Hispanoamérica, Chamartín, Madrid, Community of Madrid, 28016, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:24.744286+00:00",
+  "_kind": "geo_samples"
+}

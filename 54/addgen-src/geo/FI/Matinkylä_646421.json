@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Matinkylä",
+  "geonameid": 646421,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.18804940827794,
+      "lon": 24.77841270508542,
+      "geoinfo": {
+        "display_name": "Mankkaanlaaksontie, Koivu-Mankkaa, Pohjois-Tapiola, Suur-Tapiola, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, 02130, Finland",
+        "road": "Mankkaanlaaksontie",
+        "house_number": null,
+        "neighbourhood": "Pohjois-Tapiola",
+        "suburb": "Pohjois-Tapiola",
+        "city_district": "Suur-Tapiola",
+        "city": "Espoo",
+        "state": "Uusimaa",
+        "postcode": "02130",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Mankkaanlaaksontie, Matinkylä, Uusimaa, Finland"
+    },
+    {
+      "lat": 60.123742925404976,
+      "lon": 24.793781989455024,
+      "geoinfo": {
+        "display_name": "Miessaari, Matinkylä, Suur-Matinkylä, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, Finland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Miessaari",
+        "suburb": "Matinkylä",
+        "city_district": "Suur-Matinkylä",
+        "city": "Espoo",
+        "state": "Uusimaa",
+        "postcode": null,
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "Miessaari, Matinkylä, Uusimaa, Finland"
+    }
+  ],
+  "updated_at": "2025-10-16T13:57:48.416940+00:00",
+  "_kind": "geo_samples"
+}

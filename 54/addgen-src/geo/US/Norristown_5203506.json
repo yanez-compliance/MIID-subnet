@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Norristown",
+  "geonameid": 5203506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.118169293902746,
+      "lon": -75.3269244669592,
+      "geoinfo": {
+        "display_name": "East Fornance Street, Norristown, Montgomery County, Pennsylvania, 19401, United States",
+        "road": "East Fornance Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norristown",
+        "state": "Pennsylvania",
+        "postcode": "19401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Fornance Street, Norristown, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.13207821948501,
+      "lon": -75.29947380966662,
+      "geoinfo": {
+        "display_name": "35, East Valley Creek Road, Plymouth Township, Montgomery County, Pennsylvania, 19462, United States",
+        "road": "East Valley Creek Road",
+        "house_number": "35",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plymouth Township",
+        "state": "Pennsylvania",
+        "postcode": "19462",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "35, East Valley Creek Road, Plymouth Township, Montgomery County, Pennsylvania, 19462, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:39.443538+00:00",
+  "_kind": "geo_samples"
+}

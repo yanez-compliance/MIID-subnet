@@ -1,0 +1,47 @@
+{
+  "country_code": "PT",
+  "country": "Portugal",
+  "city": "Piedade",
+  "geonameid": 2264736,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.64769222125822,
+      "lon": -9.19764515986964,
+      "geoinfo": {
+        "display_name": "EN 10-1, Lazarim, Charneca de Caparica e Sobreda, Almada, Setúbal, 2825, Portugal",
+        "road": "EN 10-1",
+        "house_number": null,
+        "neighbourhood": "Lazarim",
+        "suburb": null,
+        "city_district": "Charneca de Caparica e Sobreda",
+        "city": "Almada",
+        "state": null,
+        "postcode": "2825",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "EN 10-1, Piedade, Portugal"
+    },
+    {
+      "lat": 38.64887168507313,
+      "lon": -9.20369947602752,
+      "geoinfo": {
+        "display_name": "Área Residencial de Capuchos, Funchalinho, Casas Velhas, Pilotos, Vila Nova de Caparica, Casalinho, Caparica e Trafaria, Almada, Setúbal, 2825-026, Portugal",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Caparica e Trafaria",
+        "city": "Almada",
+        "state": null,
+        "postcode": "2825-026",
+        "country": "Portugal",
+        "country_code": "pt"
+      },
+      "address": "574, Caparica e Trafaria, 2825-026 Piedade, Portugal"
+    }
+  ],
+  "updated_at": "2025-10-19T06:39:02.854367+00:00",
+  "_kind": "geo_samples"
+}

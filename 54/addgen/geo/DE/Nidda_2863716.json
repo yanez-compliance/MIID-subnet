@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Nidda",
+  "geonameid": 2863716,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.39360041533288,
+      "lon": 9.018161661377102,
+      "geoinfo": {
+        "display_name": "3, Fußgasse, Wallernhausen, Nidda, Wetteraukreis, Hesse, 63667, Germany",
+        "road": "Fußgasse",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wallernhausen",
+        "state": "Hesse",
+        "postcode": "63667",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Fußgasse, Nidda, Hesse, Germany"
+    },
+    {
+      "lat": 50.42249799719783,
+      "lon": 8.974793759786369,
+      "geoinfo": {
+        "display_name": "7, Im Park, Bad Salzhausen, Nidda, Wetteraukreis, Hesse, 63667, Germany",
+        "road": "Im Park",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bad Salzhausen",
+        "state": "Hesse",
+        "postcode": "63667",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7, Im Park, Bad Salzhausen, Nidda, Wetteraukreis, Hesse, 63667, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:00.521618+00:00",
+  "_kind": "geo_samples"
+}

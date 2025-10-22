@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Plymstock",
+  "geonameid": 2640190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.38140680527089,
+      "lon": -4.0967247714479385,
+      "geoinfo": {
+        "display_name": "The Ride, Laira, Plymouth, England, PL9 7JS, United Kingdom",
+        "road": "The Ride",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Laira",
+        "city_district": null,
+        "city": "Plymouth",
+        "state": "England",
+        "postcode": "PL9 7JS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Ride, Plymstock, England, United Kingdom"
+    },
+    {
+      "lat": 50.352161577022194,
+      "lon": -4.145427759225996,
+      "geoinfo": {
+        "display_name": "Hoe Park, Barbican, Plymouth, England, PL1 2HU, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barbican",
+        "city_district": null,
+        "city": "Plymouth",
+        "state": "England",
+        "postcode": "PL1 2HU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hoe Park, Barbican, Plymouth, England, PL1 2HU, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:29.829451+00:00",
+  "_kind": "geo_samples"
+}

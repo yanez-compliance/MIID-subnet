@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "La Ermita",
+  "geonameid": 8858107,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.17280377420917,
+      "lon": -101.74008943242748,
+      "geoinfo": {
+        "display_name": "Boulevard San Juan Bosco, Porton Cañada, León, Guanajuato, 37358, Mexico",
+        "road": "Boulevard San Juan Bosco",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "León",
+        "state": "Guanajuato",
+        "postcode": "37358",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Boulevard San Juan Bosco, La Ermita, Guanajuato, Mexico"
+    },
+    {
+      "lat": 21.16931162849166,
+      "lon": -101.7747362769459,
+      "geoinfo": {
+        "display_name": "Urbivilla Del Roble, León, Guanajuato, 37669, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "León",
+        "state": "Guanajuato",
+        "postcode": "37669",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "213, Urbivilla Del Roble, León, Guanajuato, 37669, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T08:35:11.517605+00:00",
+  "_kind": "geo_samples"
+}

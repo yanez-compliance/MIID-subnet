@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Anamur",
+  "geonameid": 323828,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.058189114919536,
+      "lon": 32.787419133839265,
+      "geoinfo": {
+        "display_name": "Ören, Anamur, Mersin, Mediterranean Region, 33660, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Anamur",
+        "state": null,
+        "postcode": "33660",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Anamur, Turkey"
+    },
+    {
+      "lat": 36.05282266373618,
+      "lon": 32.843569245884495,
+      "geoinfo": {
+        "display_name": "Güzelyurt, Anamur, Mersin, Mediterranean Region, 33650, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Güzelyurt",
+        "city_district": null,
+        "city": "Anamur",
+        "state": null,
+        "postcode": "33650",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "505, Güzelyurt, Anamur, Mersin, Mediterranean Region, 33650, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T06:52:01.236387+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lunel",
+  "geonameid": 2997116,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.6924237163154,
+      "lon": 4.150530105274002,
+      "geoinfo": {
+        "display_name": "Algosud, 30, Chemin des Boeufs, Lunel, Montpellier, Hérault, Occitania, Metropolitan France, 34400, France",
+        "road": "Chemin des Boeufs",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lunel",
+        "state": "Occitania",
+        "postcode": "34400",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "30 Chemin des Boeufs, Lunel, Occitania, France"
+    },
+    {
+      "lat": 43.670986477744435,
+      "lon": 4.190983964896939,
+      "geoinfo": {
+        "display_name": "Chemin Bas de Marsillargues, Mas de Bornier, Aimargues, Nîmes, Gard, Occitania, Metropolitan France, 30470, France",
+        "road": "Chemin Bas de Marsillargues",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aimargues",
+        "state": "Occitania",
+        "postcode": "30470",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "735, Chemin Bas de Marsillargues, Mas de Bornier, Aimargues, Nîmes, Gard, Occitania, Metropolitan France, 30470, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:15.361006+00:00",
+  "_kind": "geo_samples"
+}

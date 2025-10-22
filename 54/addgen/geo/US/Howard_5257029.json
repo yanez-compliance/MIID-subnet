@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Howard",
+  "geonameid": 5257029,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.586401399533464,
+      "lon": -88.08979563329633,
+      "geoinfo": {
+        "display_name": "2733, Prairie Garden Trail, Howard, Brown County, Wisconsin, 54313, United States",
+        "road": "Prairie Garden Trail",
+        "house_number": "2733",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Howard",
+        "state": "Wisconsin",
+        "postcode": "54313",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2733 Prairie Garden Trail, Howard, Wisconsin, United States"
+    },
+    {
+      "lat": 44.53790930458201,
+      "lon": -88.12939321088048,
+      "geoinfo": {
+        "display_name": "4084, Hillcrest Drive, Hobart, Brown County, Wisconsin, 54155, United States",
+        "road": "Hillcrest Drive",
+        "house_number": "4084",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hobart",
+        "state": "Wisconsin",
+        "postcode": "54155",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4084, Hillcrest Drive, Hobart, Brown County, Wisconsin, 54155, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:55.574140+00:00",
+  "_kind": "geo_samples"
+}

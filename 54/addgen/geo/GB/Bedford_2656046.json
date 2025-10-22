@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bedford",
+  "geonameid": 2656046,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.15033757994785,
+      "lon": -0.5083434044540714,
+      "geoinfo": {
+        "display_name": "Little Park House, Lower Farm Road, Bromham, Bedford, England, MK43 8JD, United Kingdom",
+        "road": "Lower Farm Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bromham",
+        "state": "England",
+        "postcode": "MK43 8JD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lower Farm Road, Bedford, England, United Kingdom"
+    },
+    {
+      "lat": 52.130687449160575,
+      "lon": -0.48605263571657953,
+      "geoinfo": {
+        "display_name": "Ford End Road, Queens Park, Bedford, England, MK40 4NW, United Kingdom",
+        "road": "Ford End Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queens Park",
+        "city_district": null,
+        "city": "Bedford",
+        "state": "England",
+        "postcode": "MK40 4NW",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ford End Road, Queens Park, Bedford, England, MK40 4NW, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:42.535381+00:00",
+  "_kind": "geo_samples"
+}

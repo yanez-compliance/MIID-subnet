@@ -1,0 +1,47 @@
+{
+  "country_code": "SK",
+  "country": "Slovakia",
+  "city": "Levice",
+  "geonameid": 3059101,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 48.234453582228554,
+      "lon": 18.629600537504864,
+      "geoinfo": {
+        "display_name": "5665, Krížny Vrch, Krížny vrch, Levice, District of Levice, Region of Nitra, Western Slovakia, 934 01, Slovakia",
+        "road": null,
+        "house_number": "5665",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Levice",
+        "state": "Region of Nitra",
+        "postcode": "934 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Levice, Region of Nitra, Slovakia"
+    },
+    {
+      "lat": 48.225241577415275,
+      "lon": 18.637080050508178,
+      "geoinfo": {
+        "display_name": "Bátovská cesta, Nixbrod, Levice, District of Levice, Region of Nitra, Western Slovakia, 934 01, Slovakia",
+        "road": "Bátovská cesta",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nixbrod",
+        "city_district": null,
+        "city": "Levice",
+        "state": "Region of Nitra",
+        "postcode": "934 01",
+        "country": "Slovakia",
+        "country_code": "sk"
+      },
+      "address": "Bátovská cesta, Levice, Region of Nitra, Slovakia"
+    }
+  ],
+  "updated_at": "2025-10-16T22:57:59.004355+00:00",
+  "_kind": "geo_samples"
+}

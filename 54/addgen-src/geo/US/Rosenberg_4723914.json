@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rosenberg",
+  "geonameid": 4723914,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.539144551324434,
+      "lon": -95.84651486559387,
+      "geoinfo": {
+        "display_name": "Kroesche Road, McHattie, Rosenberg, Fort Bend County, Texas, 77471, United States",
+        "road": "Kroesche Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosenberg",
+        "state": "Texas",
+        "postcode": "77471",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Kroesche Road, Rosenberg, Texas, United States"
+    },
+    {
+      "lat": 29.55810645195695,
+      "lon": -95.77144971828028,
+      "geoinfo": {
+        "display_name": "5438, Avenue I, Rosenberg, Fort Bend County, Texas, 77471, United States",
+        "road": "Avenue I",
+        "house_number": "5438",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rosenberg",
+        "state": "Texas",
+        "postcode": "77471",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5438, Avenue I, Rosenberg, Fort Bend County, Texas, 77471, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:55.082322+00:00",
+  "_kind": "geo_samples"
+}

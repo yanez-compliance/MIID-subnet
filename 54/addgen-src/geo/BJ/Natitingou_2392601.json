@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Natitingou",
+  "geonameid": 2392601,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 10.276935839004127,
+      "lon": 1.3495935558438659,
+      "geoinfo": {
+        "display_name": "RN 7, Tagayé, Natitingou, Atakora Department, Benin",
+        "road": "RN 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tagayé",
+        "state": "Atakora Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "RN 7, Natitingou, Atakora Department, Benin"
+    },
+    {
+      "lat": 10.295731985826274,
+      "lon": 1.4049856870575295,
+      "geoinfo": {
+        "display_name": "Kantaborifa, Natitingou, Atakora Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kantaborifa",
+        "city_district": null,
+        "city": "Natitingou",
+        "state": "Atakora Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Kantaborifa, Natitingou, Atakora Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-16T10:51:49.586251+00:00",
+  "_kind": "geo_samples"
+}

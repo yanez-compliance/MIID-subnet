@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "San Fernando de Henares",
+  "geonameid": 3110627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.46726664930101,
+      "lon": -3.53748884800221,
+      "geoinfo": {
+        "display_name": "Arco Verde, Barajas, Madrid, Community of Madrid, 28860, Spain",
+        "road": "Arco Verde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28860",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Arco Verde, San Fernando de Henares, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.39847696191377,
+      "lon": -3.5275102029225476,
+      "geoinfo": {
+        "display_name": "M-50, El Cañaveral, Vicálvaro, Madrid, Community of Madrid, 28830, Spain",
+        "road": "M-50",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vicálvaro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28830",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-50, El Cañaveral, Vicálvaro, Madrid, Community of Madrid, 28830, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:12.661173+00:00",
+  "_kind": "geo_samples"
+}

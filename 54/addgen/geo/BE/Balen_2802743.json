@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Balen",
+  "geonameid": 2802743,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.133215739424465,
+      "lon": 5.161635450910021,
+      "geoinfo": {
+        "display_name": "36, Heistraat, Olmen, Balen, Turnhout, Antwerp, 2491, Belgium",
+        "road": "Heistraat",
+        "house_number": "36",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olmen",
+        "state": "Antwerp",
+        "postcode": "2491",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "36 Heistraat, Balen, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.1336798658917,
+      "lon": 5.209828082641356,
+      "geoinfo": {
+        "display_name": "Gerhees, Oostham, Tessenderlo-Ham, Hasselt, Limburg, 3945, Belgium",
+        "road": "Gerhees",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tessenderlo-Ham",
+        "state": "Limburg",
+        "postcode": "3945",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "643, Gerhees, Oostham, Tessenderlo-Ham, Hasselt, Limburg, 3945, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:02:09.273223+00:00",
+  "_kind": "geo_samples"
+}

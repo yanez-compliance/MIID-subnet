@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Zhicheng",
+  "geonameid": 1784554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.270487409461964,
+      "lon": 111.5042732774684,
+      "geoinfo": {
+        "display_name": "Yidu, Yichang, Hubei, 443311, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yidu",
+        "state": "Hubei",
+        "postcode": "443311",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Zhicheng, Hubei, China"
+    },
+    {
+      "lat": 30.337476527314003,
+      "lon": 111.50192527443434,
+      "geoinfo": {
+        "display_name": "090乡道, Zhijiang, Yichang, Hubei, China",
+        "road": "090乡道",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zhijiang",
+        "state": "Hubei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "090乡道, Zhijiang, Yichang, 50595 Hubei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:51:02.089786+00:00",
+  "_kind": "geo_samples"
+}

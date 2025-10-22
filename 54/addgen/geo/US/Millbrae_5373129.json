@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Millbrae",
+  "geonameid": 5373129,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.605401457492704,
+      "lon": -122.37614737648931,
+      "geoinfo": {
+        "display_name": "Old Bayshore Highway, Millbrae, San Mateo County, California, 94030, United States",
+        "road": "Old Bayshore Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millbrae",
+        "state": "California",
+        "postcode": "94030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Old Bayshore Highway, Millbrae, California, United States"
+    },
+    {
+      "lat": 37.587793378234274,
+      "lon": -122.40047388541485,
+      "geoinfo": {
+        "display_name": "1313, Manzanita Drive, Millbrae, San Mateo County, California, 94030, United States",
+        "road": "Manzanita Drive",
+        "house_number": "1313",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millbrae",
+        "state": "California",
+        "postcode": "94030",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1313, Manzanita Drive, Millbrae, San Mateo County, California, 94030, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:07.610257+00:00",
+  "_kind": "geo_samples"
+}

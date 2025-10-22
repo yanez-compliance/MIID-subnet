@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Inkster",
+  "geonameid": 4832554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.309550230978864,
+      "lon": -83.32010203200083,
+      "geoinfo": {
+        "display_name": "Harrison Road, Fellrath's Inkster Acres, Inkster, Wayne County, Michigan, 48135, United States",
+        "road": "Harrison Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Inkster",
+        "state": "Michigan",
+        "postcode": "48135",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Harrison Road, Inkster, Michigan, United States"
+    },
+    {
+      "lat": 42.28904475671605,
+      "lon": -83.27293693095075,
+      "geoinfo": {
+        "display_name": "24194, Boston Street, Crowley Park, Dearborn, Wayne County, Michigan, 48124, United States",
+        "road": "Boston Street",
+        "house_number": "24194",
+        "neighbourhood": "Crowley Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dearborn",
+        "state": "Michigan",
+        "postcode": "48124",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "24194, Boston Street, Crowley Park, Dearborn, Wayne County, Michigan, 48124, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:21.477475+00:00",
+  "_kind": "geo_samples"
+}

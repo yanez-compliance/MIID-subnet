@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Mimarsinan",
+  "geonameid": 741529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.97877847425655,
+      "lon": 28.57387597208039,
+      "geoinfo": {
+        "display_name": "Istanbul, Marmara Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Mimarsinan, Turkey"
+    },
+    {
+      "lat": 41.00118798052822,
+      "lon": 28.603567717414577,
+      "geoinfo": {
+        "display_name": "Ezgi 2. Sokak, Pınartepe Mahallesi, Büyükçekmece, Istanbul, Marmara Region, 34500, Turkey",
+        "road": "Ezgi 2. Sokak",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pınartepe Mahallesi",
+        "city_district": null,
+        "city": "Büyükçekmece",
+        "state": null,
+        "postcode": "34500",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Ezgi 2. Sokak, Pınartepe Mahallesi, Büyükçekmece, Istanbul, Marmara Region, 34500, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:38.251009+00:00",
+  "_kind": "geo_samples"
+}

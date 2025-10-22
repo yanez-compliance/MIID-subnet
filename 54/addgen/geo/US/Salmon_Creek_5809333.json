@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salmon Creek",
+  "geonameid": 5809333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.70361563624824,
+      "lon": -122.67211475126025,
+      "geoinfo": {
+        "display_name": "11313, Northwest 3rd Avenue, Felida, Vancouver, Clark County, Washington, 98685, United States",
+        "road": "Northwest 3rd Avenue",
+        "house_number": "11313",
+        "neighbourhood": null,
+        "suburb": "Felida",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98685",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11313 Northwest 3rd Avenue, Salmon Creek, Washington, United States"
+    },
+    {
+      "lat": 45.68365547880751,
+      "lon": -122.67487336720285,
+      "geoinfo": {
+        "display_name": "403, Northwest 85th Street, West Hazel Dell, Hazel Dell, Vancouver, Clark County, Washington, 98665, United States",
+        "road": "Northwest 85th Street",
+        "house_number": "403",
+        "neighbourhood": null,
+        "suburb": "Hazel Dell",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "Washington",
+        "postcode": "98665",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "403, Northwest 85th Street, West Hazel Dell, Hazel Dell, Vancouver, Clark County, Washington, 98665, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:51.172873+00:00",
+  "_kind": "geo_samples"
+}

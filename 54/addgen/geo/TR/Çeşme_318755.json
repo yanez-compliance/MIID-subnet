@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Çeşme",
+  "geonameid": 318755,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.322166318170986,
+      "lon": 26.251833999040482,
+      "geoinfo": {
+        "display_name": "Izmir, Aegean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Çeşme, Turkey"
+    },
+    {
+      "lat": 38.2958384427845,
+      "lon": 26.290059586099552,
+      "geoinfo": {
+        "display_name": "Çiftlik Mahallesi, Çeşme, Aegean Region, 35930, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Çiftlik Mahallesi",
+        "city_district": null,
+        "city": "Çeşme",
+        "state": null,
+        "postcode": "35930",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "654, Çiftlik Mahallesi, Çeşme, Aegean Region, 35930, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:14.163111+00:00",
+  "_kind": "geo_samples"
+}

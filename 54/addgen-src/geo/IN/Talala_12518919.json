@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Talala",
+  "geonameid": 12518919,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.07530931122405,
+      "lon": 70.51357573987673,
+      "geoinfo": {
+        "display_name": "SH98, Talala Taluka, Gir Somnath, Gujarat, 362150, India",
+        "road": "SH98",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gujarat",
+        "postcode": "362150",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "SH98, Talala, Gujarat, India"
+    },
+    {
+      "lat": 21.02017167551255,
+      "lon": 70.54445158707586,
+      "geoinfo": {
+        "display_name": "Talala Taluka, Gir Somnath, Gujarat, 362150, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gujarat",
+        "postcode": "362150",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "675, Talala Taluka, Gir Somnath, Gujarat, 362150, India"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:19.825419+00:00",
+  "_kind": "geo_samples"
+}

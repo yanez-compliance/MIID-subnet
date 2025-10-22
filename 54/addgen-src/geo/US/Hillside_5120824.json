@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hillside",
+  "geonameid": 5120824,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.739626462529856,
+      "lon": -73.76621157442653,
+      "geoinfo": {
+        "display_name": "73rd Avenue, Windsor Oak, Queens, Queens County, New York, 11364, United States",
+        "road": "73rd Avenue",
+        "house_number": null,
+        "neighbourhood": "Windsor Oak",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11364",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "73rd Avenue, Hillside, New York, United States"
+    },
+    {
+      "lat": 40.68127687042924,
+      "lon": -73.75149475967247,
+      "geoinfo": {
+        "display_name": "216-11, 133rd Avenue, Laurelton Gardens, Queens, Queens County, New York, 11413, United States",
+        "road": "133rd Avenue",
+        "house_number": "216-11",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11413",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "216-11, 133rd Avenue, Laurelton Gardens, Queens, Queens County, New York, 11413, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:16:14.798156+00:00",
+  "_kind": "geo_samples"
+}

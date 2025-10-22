@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Medemblik",
+  "geonameid": 2751073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.76648240913166,
+      "lon": 5.0552581589999255,
+      "geoinfo": {
+        "display_name": "Oostlanderweg, Agriport A7, Middenmeer, Hollands Kroon, North Holland, Netherlands, 1775 TH, Netherlands",
+        "road": "Oostlanderweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Middenmeer",
+        "state": "North Holland",
+        "postcode": "1775 TH",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Oostlanderweg, Medemblik, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.79306200792137,
+      "lon": 5.116277295602915,
+      "geoinfo": {
+        "display_name": "Medemblik, North Holland, Netherlands",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Medemblik",
+        "state": "North Holland",
+        "postcode": null,
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "771, Medemblik, 61852 North Holland, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:56.398812+00:00",
+  "_kind": "geo_samples"
+}

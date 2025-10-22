@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Ferrol",
+  "geonameid": 3123493,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.52734046229615,
+      "lon": -8.236878197053715,
+      "geoinfo": {
+        "display_name": "O Pazo de Mandiá, Chá, Mandiá, Ferrol, A Coruña, Galicia, 15595, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "O Pazo de Mandiá",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ferrol",
+        "state": "Galicia",
+        "postcode": "15595",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "O Pazo de Mandiá, Ferrol, Galicia, Spain"
+    },
+    {
+      "lat": 43.4726493863614,
+      "lon": -8.27307393769478,
+      "geoinfo": {
+        "display_name": "Camiño de Paleteiro á Graña, A Lousada, San Felipe, Brión, Ferrol, A Coruña, Galicia, 15591, Spain",
+        "road": "Camiño de Paleteiro á Graña",
+        "house_number": null,
+        "neighbourhood": "A Lousada",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ferrol",
+        "state": "Galicia",
+        "postcode": "15591",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "803, Camiño de Paleteiro á Graña, A Lousada, San Felipe, Brión, Ferrol, A Coruña, Galicia, 15591, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:09:13.373510+00:00",
+  "_kind": "geo_samples"
+}

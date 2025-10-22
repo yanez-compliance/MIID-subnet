@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Mouscron",
+  "geonameid": 2790595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.756345644311985,
+      "lon": 3.236930840594935,
+      "geoinfo": {
+        "display_name": "Rue des Garennes - Warandenstraat, Compas, Mouscron - Moeskroen, Mouscron, Tournai-Mouscron, Hainaut, Wallonia, 7700, Belgium",
+        "road": "Rue des Garennes - Warandenstraat",
+        "house_number": null,
+        "neighbourhood": "Compas",
+        "suburb": null,
+        "city_district": "Mouscron - Moeskroen",
+        "city": "Mouscron",
+        "state": "Hainaut",
+        "postcode": "7700",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Rue des Garennes - Warandenstraat, Mouscron, Hainaut, Belgium"
+    },
+    {
+      "lat": 50.7850623867559,
+      "lon": 3.2360685401688527,
+      "geoinfo": {
+        "display_name": "Busschaertstraat, Marke, Kortrijk, West Flanders, Flanders, 8510, Belgium",
+        "road": "Busschaertstraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kortrijk",
+        "state": "West Flanders",
+        "postcode": "8510",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "893, Busschaertstraat, Marke, Kortrijk, West Flanders, Flanders, 8510, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:16.511487+00:00",
+  "_kind": "geo_samples"
+}

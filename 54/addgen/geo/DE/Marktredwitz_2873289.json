@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Marktredwitz",
+  "geonameid": 2873289,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.03332127033751,
+      "lon": 12.059069178985647,
+      "geoinfo": {
+        "display_name": "Bollenstein, Tiefenbach, Marktredwitz, Tröstau (VGem), Landkreis Wunsiedel im Fichtelgebirge, Bavaria, 95615, Germany",
+        "road": "Tiefenbach",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marktredwitz",
+        "state": "Bavaria",
+        "postcode": "95615",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Tiefenbach, Marktredwitz, Bavaria, Germany"
+    },
+    {
+      "lat": 49.96473822182769,
+      "lon": 12.054673795735475,
+      "geoinfo": {
+        "display_name": "Mascher Mühle, Masch, Waldershof, Landkreis Tirschenreuth, Bavaria, 95679, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Waldershof",
+        "state": "Bavaria",
+        "postcode": "95679",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "358, Marktredwitz, 95679 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:43.652789+00:00",
+  "_kind": "geo_samples"
+}

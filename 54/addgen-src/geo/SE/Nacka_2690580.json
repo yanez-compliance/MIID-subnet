@@ -1,0 +1,65 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Nacka",
+  "geonameid": 2690580,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 59.31851132328496,
+      "lon": 18.138369563005,
+      "geoinfo": {
+        "display_name": "16, Mjölnarvägen, Finnboda, Kvarnholmen, Nacka, Nacka kommun, Stockholm County, 131 36, Sweden",
+        "road": "Mjölnarvägen",
+        "house_number": "16",
+        "neighbourhood": "Finnboda",
+        "suburb": "Kvarnholmen",
+        "city_district": null,
+        "city": "Nacka",
+        "state": null,
+        "postcode": "131 36",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "16 Mjölnarvägen, Nacka, Sweden"
+    },
+    {
+      "lat": 59.343471427381694,
+      "lon": 18.141664472866406,
+      "geoinfo": {
+        "display_name": "Larsbergsvägen, Bodal, Larsberg, Lidingö, Lidingö kommun, Stockholm County, 181 39, Sweden",
+        "road": "Larsbergsvägen",
+        "house_number": null,
+        "neighbourhood": "Bodal",
+        "suburb": "Larsberg",
+        "city_district": null,
+        "city": "Lidingö",
+        "state": null,
+        "postcode": "181 39",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Larsbergsvägen, Bodal, Larsberg, Lidingö, Lidingö kommun, Stockholm County, 181 39, Sweden"
+    },
+    {
+      "lat": 59.33646757649525,
+      "lon": 18.183408878853673,
+      "geoinfo": {
+        "display_name": "La Pucelle, Tykövägen, Skärsätra, Lidingö, Lidingö kommun, Stockholm County, 181 61, Sweden",
+        "road": "Tykövägen",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Skärsätra",
+        "city_district": null,
+        "city": "Lidingö",
+        "state": null,
+        "postcode": "181 61",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "La Pucelle, Tykövägen, Skärsätra, Lidingö, Lidingö kommun, Stockholm County, 181 61, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:01.737008+00:00",
+  "_kind": "geo_samples"
+}

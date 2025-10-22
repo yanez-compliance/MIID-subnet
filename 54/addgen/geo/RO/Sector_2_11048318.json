@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Sector 2",
+  "geonameid": 11048318,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.47479397777817,
+      "lon": 26.1113300333626,
+      "geoinfo": {
+        "display_name": "Hotel Caro, Șoseaua Fabrica de Glucoză, Pipera, Sector 2, Bucharest, 020333, Romania",
+        "road": "Șoseaua Fabrica de Glucoză",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pipera",
+        "city_district": "Sector 2",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "020333",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Șoseaua Fabrica de Glucoză, Sector 2, Romania"
+    },
+    {
+      "lat": 44.45341289143046,
+      "lon": 26.07756634573014,
+      "geoinfo": {
+        "display_name": "23A, Strada Doctor Constantin Caracaș, Grivița, Sector 1, Bucharest, 011143, Romania",
+        "road": "Strada Doctor Constantin Caracaș",
+        "house_number": "23A",
+        "neighbourhood": null,
+        "suburb": "Grivița",
+        "city_district": "Sector 1",
+        "city": "Bucharest",
+        "state": null,
+        "postcode": "011143",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "23A, Strada Doctor Constantin Caracaș, Grivița, Sector 1, Bucharest, 011143, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:20:00.863888+00:00",
+  "_kind": "geo_samples"
+}

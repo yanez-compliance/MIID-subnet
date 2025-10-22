@@ -1,0 +1,83 @@
+{
+  "country_code": "CL",
+  "country": "Chile",
+  "city": "Peñaflor",
+  "geonameid": 3876685,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -33.61076953698423,
+      "lon": -70.88287214010208,
+      "geoinfo": {
+        "display_name": "Colegio Patrona de Lourdes, 2291, Avenida Vicuña Mackenna, La Foresta, Peñaflor, Provincia de Talagante, Santiago Metropolitan Region, 9750000, Chile",
+        "road": "Avenida Vicuña Mackenna",
+        "house_number": "2291",
+        "neighbourhood": "La Foresta",
+        "suburb": null,
+        "city_district": null,
+        "city": "Peñaflor",
+        "state": "Santiago Metropolitan Region",
+        "postcode": "9750000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "2291 Avenida Vicuña Mackenna, Peñaflor, Santiago Metropolitan Region, Chile"
+    },
+    {
+      "lat": -33.62690926476034,
+      "lon": -70.88081718931795,
+      "geoinfo": {
+        "display_name": "Avenida Berlín, Las Palmeras, Peñaflor, Provincia de Talagante, Santiago Metropolitan Region, 9750000, Chile",
+        "road": "Avenida Berlín",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peñaflor",
+        "state": "Santiago Metropolitan Region",
+        "postcode": "9750000",
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "Avenida Berlín, Peñaflor, Santiago Metropolitan Region, Chile"
+    },
+    {
+      "lat": -33.57427637303845,
+      "lon": -70.8873792013289,
+      "geoinfo": {
+        "display_name": "Los Aromos, Padre Hurtado, Provincia de Talagante, Santiago Metropolitan Region, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Padre Hurtado",
+        "city_district": null,
+        "city": null,
+        "state": "Santiago Metropolitan Region",
+        "postcode": null,
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "817, Los Aromos, Padre Hurtado, Provincia de Talagante, 57141 Santiago Metropolitan Region, Chile"
+    },
+    {
+      "lat": -33.63502074727377,
+      "lon": -70.84642105539567,
+      "geoinfo": {
+        "display_name": "El Parrón, Calera de Tango, Provincia de Maipo, Santiago Metropolitan Region, Chile",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calera de Tango",
+        "state": "Santiago Metropolitan Region",
+        "postcode": null,
+        "country": "Chile",
+        "country_code": "cl"
+      },
+      "address": "659, El Parrón, Calera de Tango, Provincia de Maipo, 31225 Santiago Metropolitan Region, Chile"
+    }
+  ],
+  "updated_at": "2025-10-19T03:18:23.727097+00:00",
+  "_kind": "geo_samples"
+}

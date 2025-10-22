@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Wadern",
+  "geonameid": 2815565,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.50816379765863,
+      "lon": 6.884400175168655,
+      "geoinfo": {
+        "display_name": "Naturschutzgebiet Junger Hirschkopf, Primstalradweg, Bardenbach, Wadern, Landkreis Merzig-Wadern, Saarland, 66687, Germany",
+        "road": "Primstalradweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wadern",
+        "state": "Saarland",
+        "postcode": "66687",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Primstalradweg, Wadern, Saarland, Germany"
+    },
+    {
+      "lat": 49.54096034916871,
+      "lon": 6.8923478978524395,
+      "geoinfo": {
+        "display_name": "HACO Parkhaus, Franz-Haas-Straße, Wadern, Landkreis Merzig-Wadern, Saarland, 66687, Germany",
+        "road": "Franz-Haas-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wadern",
+        "city_district": "Wadern",
+        "city": "Wadern",
+        "state": "Saarland",
+        "postcode": "66687",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "571, Franz-Haas-Straße, Wadern, 66687 Saarland, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:16.910388+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Thatcham",
+  "geonameid": 2636049,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.414723735811904,
+      "lon": -1.3004445463824013,
+      "geoinfo": {
+        "display_name": "Stoney Lane, Ashmore Green, Cold Ash, West Berkshire, England, RG18 9HF, United Kingdom",
+        "road": "Stoney Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cold Ash",
+        "state": "England",
+        "postcode": "RG18 9HF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Stoney Lane, Thatcham, England, United Kingdom"
+    },
+    {
+      "lat": 51.41758005496561,
+      "lon": -1.3283187078754266,
+      "geoinfo": {
+        "display_name": "The Castle School, Yew Gate, Shaw cum Donnington, Shaw, West Berkshire, England, RG14 2JG, United Kingdom",
+        "road": "Yew Gate",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shaw cum Donnington",
+        "city_district": null,
+        "city": "Shaw",
+        "state": "England",
+        "postcode": "RG14 2JG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Castle School, Yew Gate, Shaw cum Donnington, Shaw, West Berkshire, England, RG14 2JG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:38.119185+00:00",
+  "_kind": "geo_samples"
+}

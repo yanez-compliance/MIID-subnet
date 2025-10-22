@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Antioch",
+  "geonameid": 5324200,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.034787296775335,
+      "lon": -121.83833885395794,
+      "geoinfo": {
+        "display_name": "Contra Costa County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Antioch, California, United States"
+    },
+    {
+      "lat": 38.0044191226895,
+      "lon": -121.77144090696108,
+      "geoinfo": {
+        "display_name": "Oak View Memorial Park, East 18th Street, Antioch, Contra Costa County, California, 94509, United States",
+        "road": "East 18th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antioch",
+        "state": "California",
+        "postcode": "94509",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Oak View Memorial Park, East 18th Street, Antioch, Contra Costa County, California, 94509, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:28.822123+00:00",
+  "_kind": "geo_samples"
+}

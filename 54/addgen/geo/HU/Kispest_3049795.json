@@ -1,0 +1,47 @@
+{
+  "country_code": "HU",
+  "country": "Hungary",
+  "city": "Kispest",
+  "geonameid": 3049795,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.46504127527379,
+      "lon": 19.123156517600275,
+      "geoinfo": {
+        "display_name": "197-199, Üllői út, József Attila-lakótelep, 9th district, Budapest, Central Hungary, 1091, Hungary",
+        "road": "Üllői út",
+        "house_number": "197-199",
+        "neighbourhood": null,
+        "suburb": "József Attila-lakótelep",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1091",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "197-199 Üllői út, Kispest, Hungary"
+    },
+    {
+      "lat": 47.45301569633553,
+      "lon": 19.1114569069566,
+      "geoinfo": {
+        "display_name": "87, Határ út, Erzsébetfalva, 20th district, Budapest, Central Hungary, 1205, Hungary",
+        "road": "Határ út",
+        "house_number": "87",
+        "neighbourhood": null,
+        "suburb": "Erzsébetfalva",
+        "city_district": null,
+        "city": "Budapest",
+        "state": null,
+        "postcode": "1205",
+        "country": "Hungary",
+        "country_code": "hu"
+      },
+      "address": "87, Határ út, Erzsébetfalva, 20th district, Budapest, Central Hungary, 1205, Hungary"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:16.142897+00:00",
+  "_kind": "geo_samples"
+}

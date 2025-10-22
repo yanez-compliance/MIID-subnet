@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Toledo",
+  "geonameid": 5174035,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.65434730744179,
+      "lon": -83.52727901888512,
+      "geoinfo": {
+        "display_name": "Water Street, Vistula Historic District, Toledo, Lucas County, Ohio, 43604, United States",
+        "road": "Water Street",
+        "house_number": null,
+        "neighbourhood": "Vistula Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toledo",
+        "state": "Ohio",
+        "postcode": "43604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Water Street, Toledo, Ohio, United States"
+    },
+    {
+      "lat": 41.695364067671285,
+      "lon": -83.52727996812833,
+      "geoinfo": {
+        "display_name": "4057, Stickney Avenue, Stickney, Hallett, Toledo, Lucas County, Ohio, 43612, United States",
+        "road": "Stickney Avenue",
+        "house_number": "4057",
+        "neighbourhood": "Stickney",
+        "suburb": null,
+        "city_district": null,
+        "city": "Toledo",
+        "state": "Ohio",
+        "postcode": "43612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4057, Stickney Avenue, Stickney, Hallett, Toledo, Lucas County, Ohio, 43612, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:16.186722+00:00",
+  "_kind": "geo_samples"
+}

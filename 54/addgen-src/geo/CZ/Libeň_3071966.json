@@ -1,0 +1,47 @@
+{
+  "country_code": "CZ",
+  "country": "Czechia",
+  "city": "Libeň",
+  "geonameid": 3071966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.12415055302202,
+      "lon": 14.48357807947374,
+      "geoinfo": {
+        "display_name": "Studio Štěpánky Jánošík Podroužkové, Střížkovská, Střížkov, Prague, obvod Praha 8, Capital City of Prague, Prague, 180 00, Czechia",
+        "road": "Střížkovská",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Střížkov",
+        "city_district": "obvod Praha 8",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "180 00",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Střížkovská, Libeň, Prague, Czechia"
+    },
+    {
+      "lat": 50.11455175013398,
+      "lon": 14.430356378019278,
+      "geoinfo": {
+        "display_name": "Bubenec Tunnel, Troja, Prague, obvod Praha 7, Capital City of Prague, Prague, 170 21, Czechia",
+        "road": "Bubenec Tunnel",
+        "house_number": null,
+        "neighbourhood": "Troja",
+        "suburb": "Prague",
+        "city_district": "obvod Praha 7",
+        "city": "Capital City of Prague",
+        "state": "Prague",
+        "postcode": "170 21",
+        "country": "Czechia",
+        "country_code": "cz"
+      },
+      "address": "Bubenec Tunnel, Troja, Prague, obvod Praha 7, Capital City of Prague, Prague, 170 21, Czechia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:49.482033+00:00",
+  "_kind": "geo_samples"
+}

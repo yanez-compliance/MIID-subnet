@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "American Fork",
+  "geonameid": 5844096,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.366619378158305,
+      "lon": -111.81521931158757,
+      "geoinfo": {
+        "display_name": "American Fork, Utah County, Utah, 84003, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "American Fork",
+        "state": "Utah",
+        "postcode": "84003",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "American Fork, Utah, United States"
+    },
+    {
+      "lat": 40.34922834854175,
+      "lon": -111.80072981626678,
+      "geoinfo": {
+        "display_name": "5950, East 1500 South, American Fork, Utah County, Utah, United States",
+        "road": "East 1500 South",
+        "house_number": "5950",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "American Fork",
+        "state": "Utah",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5950, East 1500 South, American Fork, Utah County, Utah, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:49.090061+00:00",
+  "_kind": "geo_samples"
+}

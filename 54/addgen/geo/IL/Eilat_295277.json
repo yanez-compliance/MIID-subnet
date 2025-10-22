@@ -1,0 +1,47 @@
+{
+  "country_code": "IL",
+  "country": "Israel",
+  "city": "Eilat",
+  "geonameid": 295277,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.555782715133393,
+      "lon": 34.92125446892239,
+      "geoinfo": {
+        "display_name": "Western Border Road, Eilat, Beersheba Subdistrict, South District, 8804625, Israel",
+        "road": "Western Border Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eilat",
+        "state": "South District",
+        "postcode": "8804625",
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "Western Border Road, Eilat, South District, Israel"
+    },
+    {
+      "lat": 29.599089183551524,
+      "lon": 34.96066131655348,
+      "geoinfo": {
+        "display_name": "Eilat, Beersheba Subdistrict, South District, Israel",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Eilat",
+        "state": "South District",
+        "postcode": null,
+        "country": "Israel",
+        "country_code": "il"
+      },
+      "address": "160, Eilat, Beersheba Subdistrict, 19513 South District, Israel"
+    }
+  ],
+  "updated_at": "2025-10-19T06:01:19.020443+00:00",
+  "_kind": "geo_samples"
+}

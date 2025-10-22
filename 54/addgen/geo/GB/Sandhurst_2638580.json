@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Sandhurst",
+  "geonameid": 2638580,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.3664004499138,
+      "lon": -0.7487356222620564,
+      "geoinfo": {
+        "display_name": "Windsor Ride, Sandhurst, Crowthorne, Bracknell Forest, England, GU15 4LY, United Kingdom",
+        "road": "Windsor Ride",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Sandhurst",
+        "city_district": null,
+        "city": "Crowthorne",
+        "state": "England",
+        "postcode": "GU15 4LY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Windsor Ride, Sandhurst, England, United Kingdom"
+    },
+    {
+      "lat": 51.36216077320893,
+      "lon": -0.7887321961317424,
+      "geoinfo": {
+        "display_name": "Jerome Corner, Crowthorne, Bracknell Forest, England, RG45 7JF, United Kingdom",
+        "road": "Jerome Corner",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crowthorne",
+        "state": "England",
+        "postcode": "RG45 7JF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Jerome Corner, Crowthorne, Bracknell Forest, England, RG45 7JF, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:51:05.364134+00:00",
+  "_kind": "geo_samples"
+}

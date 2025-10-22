@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hemer",
+  "geonameid": 2906595,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.347000463234565,
+      "lon": 7.738859085295459,
+      "geoinfo": {
+        "display_name": "3, Ihmerter Ort, Ihmerterort, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany",
+        "road": "Ihmerter Ort",
+        "house_number": "3",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hemer",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58675",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "3 Ihmerter Ort, Hemer, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.38417685247324,
+      "lon": 7.831302390862887,
+      "geoinfo": {
+        "display_name": "Hönnetalstraße, Riemke, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany",
+        "road": "Hönnetalstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Riemke",
+        "city_district": null,
+        "city": "Hemer",
+        "state": "North Rhine-Westphalia",
+        "postcode": "58675",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "626, Hönnetalstraße, Riemke, Hemer, Märkischer Kreis, North Rhine-Westphalia, 58675, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:44:02.956945+00:00",
+  "_kind": "geo_samples"
+}

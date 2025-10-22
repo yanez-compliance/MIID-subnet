@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bremerhaven",
+  "geonameid": 2944368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.574369293442814,
+      "lon": 8.606425359596553,
+      "geoinfo": {
+        "display_name": "28, Beuthener Straße, Schierholz, Lehe, Stadtbezirk Bremerhaven-Nord, Bremerhaven, Bremen, 27578, Germany",
+        "road": "Beuthener Straße",
+        "house_number": "28",
+        "neighbourhood": null,
+        "suburb": "Lehe",
+        "city_district": "Stadtbezirk Bremerhaven-Nord",
+        "city": "Bremerhaven",
+        "state": "Bremen",
+        "postcode": "27578",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "28 Beuthener Straße, Bremerhaven, Bremen, Germany"
+    },
+    {
+      "lat": 53.53128737674748,
+      "lon": 8.588834307368078,
+      "geoinfo": {
+        "display_name": "12, Posener Straße, Geestendorf, Geestemünde, Stadtbezirk Bremerhaven-Süd, Bremerhaven, Bremen, 27570, Germany",
+        "road": "Posener Straße",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Geestemünde",
+        "city_district": "Stadtbezirk Bremerhaven-Süd",
+        "city": "Bremerhaven",
+        "state": "Bremen",
+        "postcode": "27570",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "12, Posener Straße, Geestendorf, Geestemünde, Stadtbezirk Bremerhaven-Süd, Bremerhaven, Bremen, 27570, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:37:53.667591+00:00",
+  "_kind": "geo_samples"
+}

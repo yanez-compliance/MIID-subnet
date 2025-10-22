@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Sunnybank Hills",
+  "geonameid": 9957350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.64973915395882,
+      "lon": 153.0403511233574,
+      "geoinfo": {
+        "display_name": "Beaudesert Road, Parkinson, Greater Brisbane, Queensland, 4115, Australia",
+        "road": "Beaudesert Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parkinson",
+        "city_district": "Parkinson",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4115",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Beaudesert Road, Sunnybank Hills, Queensland, Australia"
+    },
+    {
+      "lat": -27.645778310454155,
+      "lon": 153.02879728581524,
+      "geoinfo": {
+        "display_name": "Recycled Water Pipeline Track, Parkinson, Greater Brisbane, Queensland, 4115, Australia",
+        "road": "Recycled Water Pipeline Track",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parkinson",
+        "city_district": "Parkinson",
+        "city": null,
+        "state": "Queensland",
+        "postcode": "4115",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "401, Recycled Water Pipeline Track, Parkinson, Greater Brisbane, Queensland, 4115, Australia"
+    }
+  ],
+  "updated_at": "2025-10-18T23:11:55.086695+00:00",
+  "_kind": "geo_samples"
+}

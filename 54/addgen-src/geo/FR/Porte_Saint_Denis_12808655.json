@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Porte Saint-Denis",
+  "geonameid": 12808655,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.913264525678805,
+      "lon": 2.3556550008436377,
+      "geoinfo": {
+        "display_name": "19, Rue du Bailly, La Montjoie, La Plaine, Saint-Denis, Seine-Saint-Denis, Metropolitan France, 93210, France",
+        "road": "Rue du Bailly",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "La Plaine",
+        "city_district": null,
+        "city": "Saint-Denis",
+        "state": null,
+        "postcode": "93210",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "19 Rue du Bailly, Porte Saint-Denis, Ile-de-France, France"
+    },
+    {
+      "lat": 48.88316470598466,
+      "lon": 2.3794249747951817,
+      "geoinfo": {
+        "display_name": "27, Rue Cavendish, Quartier du Combat, 19th Arrondissement, Paris, Metropolitan France, 75019, France",
+        "road": "Rue Cavendish",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": "19th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75019",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "27, Rue Cavendish, Quartier du Combat, 19th Arrondissement, Paris, Metropolitan France, 75019, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:12:31.995213+00:00",
+  "_kind": "geo_samples"
+}

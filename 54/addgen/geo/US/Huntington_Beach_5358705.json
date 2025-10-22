@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Huntington Beach",
+  "geonameid": 5358705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.67764457989824,
+      "lon": -118.02936569256404,
+      "geoinfo": {
+        "display_name": "Pacific Coast Highway, Huntington Beach, Orange County, California, 92648, United States",
+        "road": "Pacific Coast Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntington Beach",
+        "state": "California",
+        "postcode": "92648",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pacific Coast Highway, Huntington Beach, California, United States"
+    },
+    {
+      "lat": 33.62973020186508,
+      "lon": -118.00747058438775,
+      "geoinfo": {
+        "display_name": "Huntington Beach, Orange County, California, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Huntington Beach",
+        "state": "California",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "265, Huntington Beach, Orange County, 74871 California, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:40.646165+00:00",
+  "_kind": "geo_samples"
+}

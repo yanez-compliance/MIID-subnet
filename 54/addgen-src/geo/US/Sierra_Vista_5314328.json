@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sierra Vista",
+  "geonameid": 5314328,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.569624119722352,
+      "lon": -110.34678088189699,
+      "geoinfo": {
+        "display_name": "Bissel Street, Sierra Vista, Cochise County, Arizona, 85670, United States",
+        "road": "Bissel Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sierra Vista",
+        "state": "Arizona",
+        "postcode": "85670",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bissel Street, Sierra Vista, Arizona, United States"
+    },
+    {
+      "lat": 31.56200806066276,
+      "lon": -110.28653778891263,
+      "geoinfo": {
+        "display_name": "1173, East Acacia Drive, Fry, Sierra Vista, Cochise County, Arizona, 85635, United States",
+        "road": "East Acacia Drive",
+        "house_number": "1173",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sierra Vista",
+        "state": "Arizona",
+        "postcode": "85635",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1173, East Acacia Drive, Fry, Sierra Vista, Cochise County, Arizona, 85635, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:18:23.905036+00:00",
+  "_kind": "geo_samples"
+}

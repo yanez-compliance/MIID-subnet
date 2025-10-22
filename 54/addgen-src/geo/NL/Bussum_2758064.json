@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Bussum",
+  "geonameid": 2758064,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.26596391073419,
+      "lon": 5.1981646801740835,
+      "geoinfo": {
+        "display_name": "Amersfoortsestraatweg, Hilversum, North Holland, Netherlands, 1222 ZZ, Netherlands",
+        "road": "Amersfoortsestraatweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hilversum",
+        "state": "North Holland",
+        "postcode": "1222 ZZ",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Amersfoortsestraatweg, Bussum, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.294168259358145,
+      "lon": 5.212427446766357,
+      "geoinfo": {
+        "display_name": "Naarderstraat, Thames, Huizen, North Holland, Netherlands, 1272 NN, Netherlands",
+        "road": "Naarderstraat",
+        "house_number": null,
+        "neighbourhood": "Thames",
+        "suburb": null,
+        "city_district": null,
+        "city": "Huizen",
+        "state": "North Holland",
+        "postcode": "1272 NN",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "988, Naarderstraat, Thames, Huizen, North Holland, Netherlands, 1272 NN, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:24.845435+00:00",
+  "_kind": "geo_samples"
+}

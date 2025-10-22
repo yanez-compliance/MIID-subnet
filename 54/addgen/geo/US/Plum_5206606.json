@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Plum",
+  "geonameid": 5206606,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.49724066278032,
+      "lon": -79.76116962424271,
+      "geoinfo": {
+        "display_name": "Greendale Drive, New Texas, Plum, Allegheny County, Pennsylvania, 15239, United States",
+        "road": "Greendale Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Plum",
+        "state": "Pennsylvania",
+        "postcode": "15239",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Greendale Drive, Plum, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.49653741842019,
+      "lon": -79.6939353039843,
+      "geoinfo": {
+        "display_name": "Dunnett Lane, Sardis, Murrysville, Westmoreland County, Pennsylvania, 15668, United States",
+        "road": "Dunnett Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Murrysville",
+        "state": "Pennsylvania",
+        "postcode": "15668",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "950, Dunnett Lane, Sardis, Murrysville, Westmoreland County, Pennsylvania, 15668, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:43.000577+00:00",
+  "_kind": "geo_samples"
+}

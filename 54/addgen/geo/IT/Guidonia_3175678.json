@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Guidonia",
+  "geonameid": 3175678,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.006434329722204,
+      "lon": 12.670098928596023,
+      "geoinfo": {
+        "display_name": "Autostrada del Sole, Immaginella, Fonte Nuova, Roma Capitale, Lazio, 00013, Italy",
+        "road": "Autostrada del Sole",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Immaginella",
+        "city_district": null,
+        "city": "Fonte Nuova",
+        "state": "Lazio",
+        "postcode": "00013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Autostrada del Sole, Guidonia, Lazio, Italy"
+    },
+    {
+      "lat": 41.99471247941393,
+      "lon": 12.662756288944161,
+      "geoinfo": {
+        "display_name": "Quarto del Carnale, Fonte Nuova, Roma Capitale, Lazio, 00013, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fonte Nuova",
+        "state": "Lazio",
+        "postcode": "00013",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "649, Quarto del Carnale, Fonte Nuova, Roma Capitale, Lazio, 00013, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:57:38.298467+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Oliva",
+  "geonameid": 2513145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.89244623793721,
+      "lon": -0.07395874337640429,
+      "geoinfo": {
+        "display_name": "Autopista del Mediterráneo, Oliva, la Safor, Valencia, Valencian Community, Spain",
+        "road": "Autopista del Mediterráneo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oliva",
+        "state": "Valencian Community",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Autopista del Mediterráneo, Oliva, Valencian Community, Spain"
+    },
+    {
+      "lat": 38.917613707784085,
+      "lon": -0.06330260893164404,
+      "geoinfo": {
+        "display_name": "Platja dels Gorgs, Oliva, la Safor, Valencia, Valencian Community, 46780, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oliva",
+        "state": "Valencian Community",
+        "postcode": "46780",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "112, Platja dels Gorgs, Oliva, la Safor, Valencia, Valencian Community, 46780, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:45.266886+00:00",
+  "_kind": "geo_samples"
+}

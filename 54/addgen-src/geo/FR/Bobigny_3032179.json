@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Bobigny",
+  "geonameid": 3032179,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.92725823240638,
+      "lon": 2.495871667821524,
+      "geoinfo": {
+        "display_name": "1, Avenue Jean Jaurès, Nonneville, Aulnay-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93600, France",
+        "road": "Avenue Jean Jaurès",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Nonneville",
+        "city_district": null,
+        "city": "Aulnay-sous-Bois",
+        "state": null,
+        "postcode": "93600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "1 Avenue Jean Jaurès, Bobigny, France"
+    },
+    {
+      "lat": 48.906075606931466,
+      "lon": 2.49941950072272,
+      "geoinfo": {
+        "display_name": "Avenue Jean Jaurès, Les Pavillons-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93320, France",
+        "road": "Avenue Jean Jaurès",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Les Pavillons-sous-Bois",
+        "state": null,
+        "postcode": "93320",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "007, Avenue Jean Jaurès, Les Pavillons-sous-Bois, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93320, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:21.864080+00:00",
+  "_kind": "geo_samples"
+}

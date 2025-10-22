@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Montijo",
+  "geonameid": 2513604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.882397595815085,
+      "lon": -6.619505068186499,
+      "geoinfo": {
+        "display_name": "BA-109, Puebla de la Calzada, Badajoz, Extremadura, 06480, Spain",
+        "road": "BA-109",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puebla de la Calzada",
+        "state": "Extremadura",
+        "postcode": "06480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BA-109, Montijo, Extremadura, Spain"
+    },
+    {
+      "lat": 38.94783572704857,
+      "lon": -6.616498107362068,
+      "geoinfo": {
+        "display_name": "Centinela, Montijo, Badajoz, Extremadura, 06480, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montijo",
+        "state": "Extremadura",
+        "postcode": "06480",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "014, Centinela, Montijo, Badajoz, Extremadura, 06480, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:23:32.018894+00:00",
+  "_kind": "geo_samples"
+}

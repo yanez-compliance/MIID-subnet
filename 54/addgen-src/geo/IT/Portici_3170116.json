@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Portici",
+  "geonameid": 3170116,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.790483170033035,
+      "lon": 14.294865695020617,
+      "geoinfo": {
+        "display_name": "Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Portici, Italy"
+    },
+    {
+      "lat": 40.80669799860162,
+      "lon": 14.357057526401837,
+      "geoinfo": {
+        "display_name": "via Caprile, Ercolano, Naples, Campania, 80056, Italy",
+        "road": "via Caprile",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ercolano",
+        "state": "Campania",
+        "postcode": "80056",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "701, via Caprile, Ercolano, Naples, Campania, 80056, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:24.143180+00:00",
+  "_kind": "geo_samples"
+}

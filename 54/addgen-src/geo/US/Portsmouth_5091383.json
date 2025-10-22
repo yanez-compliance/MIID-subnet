@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Portsmouth",
+  "geonameid": 5091383,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.08781590741867,
+      "lon": -70.79646109961975,
+      "geoinfo": {
+        "display_name": "Spaulding Turnpike, Pease International Tradeport, Portsmouth, Rockingham County, New Hampshire, 03801, United States",
+        "road": "Spaulding Turnpike",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pease International Tradeport",
+        "city_district": null,
+        "city": "Portsmouth",
+        "state": "New Hampshire",
+        "postcode": "03801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Spaulding Turnpike, Portsmouth, New Hampshire, United States"
+    },
+    {
+      "lat": 43.10832555520488,
+      "lon": -70.73913014120731,
+      "geoinfo": {
+        "display_name": "Route 1, Remick Corners, Kittery, York County, Maine, 03904, United States",
+        "road": "Route 1",
+        "house_number": null,
+        "neighbourhood": "Remick Corners",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kittery",
+        "state": "Maine",
+        "postcode": "03904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Route 1, Remick Corners, Kittery, York County, Maine, 03904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:58.047469+00:00",
+  "_kind": "geo_samples"
+}

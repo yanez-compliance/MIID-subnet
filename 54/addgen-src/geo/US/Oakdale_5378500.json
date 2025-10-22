@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Oakdale",
+  "geonameid": 5378500,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.757941244171796,
+      "lon": -120.90050818505043,
+      "geoinfo": {
+        "display_name": "CA 108, Stanislaus County, California, 95367, United States",
+        "road": "CA 108",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "95367",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "CA 108, Oakdale, California, United States"
+    },
+    {
+      "lat": 37.75261916705639,
+      "lon": -120.86896574716026,
+      "geoinfo": {
+        "display_name": "581, Triple Crown Court, Oakdale, Stanislaus County, California, 95361, United States",
+        "road": "Triple Crown Court",
+        "house_number": "581",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oakdale",
+        "state": "California",
+        "postcode": "95361",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "581, Triple Crown Court, Oakdale, Stanislaus County, California, 95361, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:48:41.232475+00:00",
+  "_kind": "geo_samples"
+}

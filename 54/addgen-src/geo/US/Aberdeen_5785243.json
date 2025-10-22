@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aberdeen",
+  "geonameid": 5785243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.003143754784844,
+      "lon": -123.84699043788248,
+      "geoinfo": {
+        "display_name": "Herbig Heights, Aberdeen, Grays Harbor County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aberdeen",
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Aberdeen, Washington, United States"
+    },
+    {
+      "lat": 46.9524211034494,
+      "lon": -123.78413142455923,
+      "geoinfo": {
+        "display_name": "1138, Paisley Way, Cosmopolis, Grays Harbor County, Washington, 98537, United States",
+        "road": "Paisley Way",
+        "house_number": "1138",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cosmopolis",
+        "state": "Washington",
+        "postcode": "98537",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1138, Paisley Way, Cosmopolis, Grays Harbor County, Washington, 98537, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:27.008703+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Montfermeil",
+  "geonameid": 2992616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.89685057486526,
+      "lon": 2.5188082139727217,
+      "geoinfo": {
+        "display_name": "12, Allée de Montfermeil, Centre, Le Raincy, Seine-Saint-Denis, Metropolitan France, 93340, France",
+        "road": "Allée de Montfermeil",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": "Centre",
+        "city_district": null,
+        "city": "Le Raincy",
+        "state": null,
+        "postcode": "93340",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "12 Allée de Montfermeil, Montfermeil, Ile-de-France, France"
+    },
+    {
+      "lat": 48.89490309273102,
+      "lon": 2.591081747067658,
+      "geoinfo": {
+        "display_name": "Chemin du Sempin, Les Coudreaux, Chelles, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77500, France",
+        "road": "Chemin du Sempin",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Les Coudreaux",
+        "city_district": null,
+        "city": "Chelles",
+        "state": "Ile-de-France",
+        "postcode": "77500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "587, Chemin du Sempin, Les Coudreaux, Chelles, Torcy, Seine-et-Marne, Ile-de-France, Metropolitan France, 77500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:15:04.620895+00:00",
+  "_kind": "geo_samples"
+}

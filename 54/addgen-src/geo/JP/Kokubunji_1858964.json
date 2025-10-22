@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Kokubunji",
+  "geonameid": 1858964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.707452816485485,
+      "lon": 139.44901854380504,
+      "geoinfo": {
+        "display_name": "Fujimoto 2-chome, Kokubunji, Tokyo, 185-0031, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Fujimoto 2-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Kokubunji",
+        "state": null,
+        "postcode": "185-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Fujimoto 2-chome, Kokubunji, Japan"
+    },
+    {
+      "lat": 35.67837241929,
+      "lon": 139.49726789928894,
+      "geoinfo": {
+        "display_name": "美術館通り, Sengencho 4-chome, Fuchu, Tokyo, 183-0005, Japan",
+        "road": "美術館通り",
+        "house_number": null,
+        "neighbourhood": "Sengencho 4-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuchu",
+        "state": null,
+        "postcode": "183-0005",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "美術館通り, Sengencho 4-chome, Fuchu, Tokyo, 183-0005, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:25.339339+00:00",
+  "_kind": "geo_samples"
+}

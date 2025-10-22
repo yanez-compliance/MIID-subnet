@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Salinas",
+  "geonameid": 5391295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.69447655641962,
+      "lon": -121.65500509980372,
+      "geoinfo": {
+        "display_name": "205, Larkspur Drive, Salinas, Monterey County, California, 93906, United States",
+        "road": "Larkspur Drive",
+        "house_number": "205",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Salinas",
+        "state": "California",
+        "postcode": "93906",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "205 Larkspur Drive, Salinas, California, United States"
+    },
+    {
+      "lat": 36.68202554028006,
+      "lon": -121.6937829484573,
+      "geoinfo": {
+        "display_name": "Porter, East Garrison, Monterey County, California, 93907, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Garrison",
+        "state": "California",
+        "postcode": "93907",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "344, Porter, East Garrison, Monterey County, California, 93907, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:59.808000+00:00",
+  "_kind": "geo_samples"
+}

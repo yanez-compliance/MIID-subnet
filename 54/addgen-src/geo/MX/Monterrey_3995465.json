@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Monterrey",
+  "geonameid": 3995465,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.70862718388323,
+      "lon": -100.28212007950262,
+      "geoinfo": {
+        "display_name": "Avenida Ciudad de Los Ángeles, San Nicolás de los Garza, Nuevo León, 64530, Mexico",
+        "road": "Avenida Ciudad de Los Ángeles",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Nicolás de los Garza",
+        "state": "Nuevo León",
+        "postcode": "64530",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Ciudad de Los Ángeles, Monterrey, Nuevo León, Mexico"
+    },
+    {
+      "lat": 25.69492629927671,
+      "lon": -100.29019939523734,
+      "geoinfo": {
+        "display_name": "Jardín de Niños Adolfo Prito, Calle Fresno, Monterrey, Nuevo León, 64530, Mexico",
+        "road": "Calle Fresno",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Monterrey",
+        "state": "Nuevo León",
+        "postcode": "64530",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "898, Calle Fresno, Monterrey, 64530 Nuevo León, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:15.988771+00:00",
+  "_kind": "geo_samples"
+}

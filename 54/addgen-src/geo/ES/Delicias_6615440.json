@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Delicias",
+  "geonameid": 6615440,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.640853287945525,
+      "lon": -0.9466714576601652,
+      "geoinfo": {
+        "display_name": "Avenida Manuel Rodríguez Ayuso, Valdefierro, Miralbueno, Zaragoza, Aragon, 50012, Spain",
+        "road": "Avenida Manuel Rodríguez Ayuso",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Valdefierro",
+        "city_district": null,
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "postcode": "50012",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida Manuel Rodríguez Ayuso, Delicias, Aragon, Spain"
+    },
+    {
+      "lat": 41.61465160784474,
+      "lon": -0.8900971721670669,
+      "geoinfo": {
+        "display_name": "Barranco de la Muerte, La Paz, Zaragoza, Aragon, 50021, Spain",
+        "road": "Barranco de la Muerte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Paz",
+        "city_district": null,
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "postcode": "50021",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "694, Barranco de la Muerte, La Paz, Zaragoza, Aragon, 50021, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:38:58.587425+00:00",
+  "_kind": "geo_samples"
+}

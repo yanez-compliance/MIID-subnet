@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Vyksa",
+  "geonameid": 470444,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.34626855824588,
+      "lon": 42.232949984928126,
+      "geoinfo": {
+        "display_name": "городской округ Выкса, Nizhny Novgorod Oblast, Volga Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Vyksa, Nizhny Novgorod Oblast, Russia"
+    },
+    {
+      "lat": 55.301150844551394,
+      "lon": 42.14338843204353,
+      "geoinfo": {
+        "display_name": "Западный микрорайон, Vyksa, городской округ Выкса, Nizhny Novgorod Oblast, Volga Federal District, 607067, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Западный микрорайон",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vyksa",
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": "607067",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "386, Западный микрорайон, Vyksa, городской округ Выкса, Nizhny Novgorod Oblast, Volga Federal District, 607067, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:26.753781+00:00",
+  "_kind": "geo_samples"
+}

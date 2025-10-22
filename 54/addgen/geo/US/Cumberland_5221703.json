@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cumberland",
+  "geonameid": 5221703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.94859317185242,
+      "lon": -71.38194578483026,
+      "geoinfo": {
+        "display_name": "7, Abbott Run Valley Road, Abbott Run, Cumberland, Providence County, Rhode Island, 02864, United States",
+        "road": "Abbott Run Valley Road",
+        "house_number": "7",
+        "neighbourhood": "Abbott Run",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cumberland",
+        "state": "Rhode Island",
+        "postcode": "02864",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7 Abbott Run Valley Road, Cumberland, Rhode Island, United States"
+    },
+    {
+      "lat": 41.97162973231372,
+      "lon": -71.41488552506857,
+      "geoinfo": {
+        "display_name": "69, Billington Circle, Cumberland, Providence County, Rhode Island, 02864, United States",
+        "road": "Billington Circle",
+        "house_number": "69",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cumberland",
+        "state": "Rhode Island",
+        "postcode": "02864",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "69, Billington Circle, Cumberland, Providence County, Rhode Island, 02864, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:41.729138+00:00",
+  "_kind": "geo_samples"
+}

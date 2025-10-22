@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Berëzovka",
+  "geonameid": 1510255,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.046320955215776,
+      "lon": 93.08004902050678,
+      "geoinfo": {
+        "display_name": "5/65, 1-й км автодороги Красноярск-Железногорск, Ленинский район, Krasnoyarsk, городское поселение Берёзовка, Beryozovsky Rayon, Krasnoyarsk Krai, Siberian Federal District, 662521, Russia",
+        "road": "1-й км автодороги Красноярск-Железногорск",
+        "house_number": "5/65",
+        "neighbourhood": null,
+        "suburb": "Ленинский район",
+        "city_district": null,
+        "city": "Krasnoyarsk",
+        "state": "Krasnoyarsk Krai",
+        "postcode": "662521",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "5/65 1-й км автодороги Красноярск-Железногорск, Berëzovka, Krasnoyarsk Krai, Russia"
+    },
+    {
+      "lat": 56.003245935695354,
+      "lon": 93.12530579355305,
+      "geoinfo": {
+        "display_name": "городское поселение Берёзовка, Beryozovsky Rayon, Krasnoyarsk Krai, Siberian Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnoyarsk Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "741, Berëzovka, 89164 Krasnoyarsk Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:53:59.736274+00:00",
+  "_kind": "geo_samples"
+}

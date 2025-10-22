@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "La Cañada Flintridge",
+  "geonameid": 5363859,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.20920603341911,
+      "lon": -118.20968980441735,
+      "geoinfo": {
+        "display_name": "Foothill Boulevard, La Cañada Flintridge, Los Angeles County, California, 91011, United States",
+        "road": "Foothill Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Cañada Flintridge",
+        "state": "California",
+        "postcode": "91011",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Foothill Boulevard, La Cañada Flintridge, California, United States"
+    },
+    {
+      "lat": 34.18676862226824,
+      "lon": -118.15036146833886,
+      "geoinfo": {
+        "display_name": "Fair Oaks Avenue, Altadena, Los Angeles County, California, 91001, United States",
+        "road": "Fair Oaks Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Altadena",
+        "state": "California",
+        "postcode": "91001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "895, Fair Oaks Avenue, Altadena, Los Angeles County, California, 91001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:36.322851+00:00",
+  "_kind": "geo_samples"
+}

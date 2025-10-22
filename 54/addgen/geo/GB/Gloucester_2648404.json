@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Gloucester",
+  "geonameid": 2648404,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.82182883063892,
+      "lon": -2.2527400864517104,
+      "geoinfo": {
+        "display_name": "Homeground Road, Kingsway, Grange, Gloucester, Gloucestershire, England, GL4 0XT, United Kingdom",
+        "road": "Homeground Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kingsway",
+        "city_district": null,
+        "city": "Gloucester",
+        "state": "England",
+        "postcode": "GL4 0XT",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Homeground Road, Gloucester, England, United Kingdom"
+    },
+    {
+      "lat": 51.827128752435875,
+      "lon": -2.258370848528384,
+      "geoinfo": {
+        "display_name": "Chatsworth Avenue, Kingsway, Grange, Gloucester, Gloucestershire, England, GL4 0SH, United Kingdom",
+        "road": "Chatsworth Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kingsway",
+        "city_district": null,
+        "city": "Gloucester",
+        "state": "England",
+        "postcode": "GL4 0SH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Chatsworth Avenue, Kingsway, Grange, Gloucester, Gloucestershire, England, GL4 0SH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:32.460397+00:00",
+  "_kind": "geo_samples"
+}

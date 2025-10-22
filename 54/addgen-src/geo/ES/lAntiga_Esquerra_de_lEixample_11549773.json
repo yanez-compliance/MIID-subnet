@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "l'Antiga Esquerra de l'Eixample",
+  "geonameid": 11549773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.38443631151015,
+      "lon": 2.1539763263509477,
+      "geoinfo": {
+        "display_name": "131, Carrer d'Aragó, la Nova Esquerra de l'Eixample, Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08011, Spain",
+        "road": "Carrer d'Aragó",
+        "house_number": "131",
+        "neighbourhood": null,
+        "suburb": "Eixample",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08011",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "131 Carrer d'Aragó, l'Antiga Esquerra de l'Eixample, Catalonia, Spain"
+    },
+    {
+      "lat": 41.42422710277255,
+      "lon": 2.130345589368566,
+      "geoinfo": {
+        "display_name": "Carretera de Sant Cugat, Sant Genís dels Agudells, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08035, Spain",
+        "road": "Carretera de Sant Cugat",
+        "house_number": null,
+        "neighbourhood": "Sant Genís dels Agudells",
+        "suburb": "Horta-Guinardó",
+        "city_district": null,
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "postcode": "08035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "286, Carretera de Sant Cugat, Sant Genís dels Agudells, Horta-Guinardó, Barcelona, Barcelonès, Barcelona, Catalonia, 08035, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:09.270410+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "North Bay Shore",
+  "geonameid": 5128898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.77084912856516,
+      "lon": -73.3082815022044,
+      "geoinfo": {
+        "display_name": "#4B, Deer Park, Town of Babylon, Suffolk County, New York, 11729, United States",
+        "road": "#4B",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deer Park",
+        "state": "New York",
+        "postcode": "11729",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "#4B, North Bay Shore, New York, United States"
+    },
+    {
+      "lat": 40.787402056191915,
+      "lon": -73.26705131392373,
+      "geoinfo": {
+        "display_name": "10, East Drive, Brentwood, Town of Islip, Suffolk County, New York, 11717, United States",
+        "road": "East Drive",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Brentwood",
+        "state": "New York",
+        "postcode": "11717",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "10, East Drive, Brentwood, Town of Islip, Suffolk County, New York, 11717, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:17.896389+00:00",
+  "_kind": "geo_samples"
+}

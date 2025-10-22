@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Avola",
+  "geonameid": 2525643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.92437754042005,
+      "lon": 15.10701764975231,
+      "geoinfo": {
+        "display_name": "Avola, Siracusa, Sicily, 96012, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Avola",
+        "state": "Sicily",
+        "postcode": "96012",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Avola, Sicily, Italy"
+    },
+    {
+      "lat": 36.87166218913562,
+      "lon": 15.131203103236658,
+      "geoinfo": {
+        "display_name": "Viale Ferdinando Secondo, Calabernardo, Noto, Siracusa, Sicily, 96017, Italy",
+        "road": "Viale Ferdinando Secondo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noto",
+        "state": "Sicily",
+        "postcode": "96017",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "475, Viale Ferdinando Secondo, Calabernardo, Noto, Siracusa, Sicily, 96017, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:11:58.054256+00:00",
+  "_kind": "geo_samples"
+}

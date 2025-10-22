@@ -1,0 +1,47 @@
+{
+  "country_code": "CU",
+  "country": "Cuba",
+  "city": "Bayamo",
+  "geonameid": 3567597,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.347566804782993,
+      "lon": -76.60513417374747,
+      "geoinfo": {
+        "display_name": "Carretera Central, Ciudad de Bayamo, Bayamo, Granma, 85300, Cuba",
+        "road": "Carretera Central",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ciudad de Bayamo",
+        "city": "Bayamo",
+        "state": "Granma",
+        "postcode": "85300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "Carretera Central, Bayamo, Granma, Cuba"
+    },
+    {
+      "lat": 20.33417378364156,
+      "lon": -76.63893465692364,
+      "geoinfo": {
+        "display_name": "Carretera de San José, El Almirante, Bayamo, Granma, 85300, Cuba",
+        "road": "Carretera de San José",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bayamo",
+        "state": "Granma",
+        "postcode": "85300",
+        "country": "Cuba",
+        "country_code": "cu"
+      },
+      "address": "346, Carretera de San José, El Almirante, Bayamo, Granma, 85300, Cuba"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:51.822569+00:00",
+  "_kind": "geo_samples"
+}

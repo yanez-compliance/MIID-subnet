@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Moorreesburg",
+  "geonameid": 3363957,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.13853201887443,
+      "lon": 18.6668850761824,
+      "geoinfo": {
+        "display_name": "4th Avenue, Hooikraal, Swartland Ward 1, Moorreesburg, Swartland Local Municipality, West Coast District Municipality, Western Cape, South Africa",
+        "road": "4th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hooikraal",
+        "city_district": null,
+        "city": "Swartland Local Municipality",
+        "state": "Western Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "4th Avenue, Moorreesburg, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.18616787698959,
+      "lon": 18.667725690504767,
+      "geoinfo": {
+        "display_name": "Swartland Ward 1, Swartland Local Municipality, West Coast District Municipality, Western Cape, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Swartland Ward 1",
+        "city_district": null,
+        "city": "Swartland Local Municipality",
+        "state": "Western Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Swartland Ward 1, Swartland Local Municipality, West Coast District Municipality, 02882 Western Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T11:39:39.918885+00:00",
+  "_kind": "geo_samples"
+}

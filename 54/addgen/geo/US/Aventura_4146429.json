@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Aventura",
+  "geonameid": 4146429,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.948176430805518,
+      "lon": -80.09743049019372,
+      "geoinfo": {
+        "display_name": "Miami-Dade County, Florida, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Aventura, Florida, United States"
+    },
+    {
+      "lat": 25.968135118714,
+      "lon": -80.15437696729369,
+      "geoinfo": {
+        "display_name": "2365, Northeast 209th Street, Highland Lakes, Miami, Miami-Dade County, Florida, 33180, United States",
+        "road": "Northeast 209th Street",
+        "house_number": "2365",
+        "neighbourhood": "Highland Lakes",
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33180",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2365, Northeast 209th Street, Highland Lakes, Miami, Miami-Dade County, Florida, 33180, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:27:13.594499+00:00",
+  "_kind": "geo_samples"
+}

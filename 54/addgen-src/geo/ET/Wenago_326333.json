@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Wenago",
+  "geonameid": 326333,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.287151767673921,
+      "lon": 38.23886294735725,
+      "geoinfo": {
+        "display_name": "Gedeo, South Ethiopia Regional State, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "South Ethiopia Regional State",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Wenago, South Ethiopia Regional State, Ethiopia"
+    },
+    {
+      "lat": 6.337746119028556,
+      "lon": 38.25248699580941,
+      "geoinfo": {
+        "display_name": "Wenago, Gedeo, South Ethiopia Regional State, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wenago",
+        "state": "South Ethiopia Regional State",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "046, Wenago, Gedeo, 15563 South Ethiopia Regional State, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:02.228093+00:00",
+  "_kind": "geo_samples"
+}

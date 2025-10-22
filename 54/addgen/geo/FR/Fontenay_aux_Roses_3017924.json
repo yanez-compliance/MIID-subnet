@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Fontenay-aux-Roses",
+  "geonameid": 3017924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.777000727563504,
+      "lon": 2.2693296119473314,
+      "geoinfo": {
+        "display_name": "Rue la Fontaine, Malabry, Le Plessis-Robinson, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92350, France",
+        "road": "Rue la Fontaine",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Plessis-Robinson",
+        "state": "Ile-de-France",
+        "postcode": "92350",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue la Fontaine, Fontenay-aux-Roses, Ile-de-France, France"
+    },
+    {
+      "lat": 48.801561432155516,
+      "lon": 2.2999264401121273,
+      "geoinfo": {
+        "display_name": "60, Chemin Latéral, Porte d'En Bas, Résidence Pablo Picasso, Bagneux, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92220, France",
+        "road": "Chemin Latéral",
+        "house_number": "60",
+        "neighbourhood": "Porte d'En Bas",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bagneux",
+        "state": "Ile-de-France",
+        "postcode": "92220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "60, Chemin Latéral, Porte d'En Bas, Résidence Pablo Picasso, Bagneux, Antony, Hauts-de-Seine, Ile-de-France, Metropolitan France, 92220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:45.171851+00:00",
+  "_kind": "geo_samples"
+}

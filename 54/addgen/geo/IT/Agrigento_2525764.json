@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Agrigento",
+  "geonameid": 2525764,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.31637392991327,
+      "lon": 13.55283342296123,
+      "geoinfo": {
+        "display_name": "Strada Provinciale 02-A, Montaperto, Agrigento, Sicily, 92100, Italy",
+        "road": "Strada Provinciale 02-A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Agrigento",
+        "state": "Sicily",
+        "postcode": "92100",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Strada Provinciale 02-A, Agrigento, Sicily, Italy"
+    },
+    {
+      "lat": 37.28683453991165,
+      "lon": 13.541875295429564,
+      "geoinfo": {
+        "display_name": "Strada statale Strada degli Scrittori, Porto Empedocle, Agrigento, Sicily, 92014, Italy",
+        "road": "Strada statale Strada degli Scrittori",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Porto Empedocle",
+        "state": "Sicily",
+        "postcode": "92014",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "229, Strada statale Strada degli Scrittori, Porto Empedocle, Agrigento, Sicily, 92014, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:39:32.466301+00:00",
+  "_kind": "geo_samples"
+}

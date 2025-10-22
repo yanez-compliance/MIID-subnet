@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Sutton Coldfield",
+  "geonameid": 2636486,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.600186238489876,
+      "lon": -1.8361664496334877,
+      "geoinfo": {
+        "display_name": "Tree Tops, 200, Hill Village Road, Sutton Coldfield, Mere Green, Birmingham, West Midlands, England, B75 5JN, United Kingdom",
+        "road": "Hill Village Road",
+        "house_number": "200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "England",
+        "postcode": "B75 5JN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "200 Hill Village Road, Sutton Coldfield, England, United Kingdom"
+    },
+    {
+      "lat": 52.52805784295854,
+      "lon": -1.8134352393059243,
+      "geoinfo": {
+        "display_name": "Chester Road, Walmley, Erdington, Tyburn, Birmingham, West Midlands, England, B24 0BS, United Kingdom",
+        "road": "Chester Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Walmley",
+        "city_district": null,
+        "city": "Birmingham",
+        "state": "England",
+        "postcode": "B24 0BS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Chester Road, Walmley, Erdington, Tyburn, Birmingham, West Midlands, England, B24 0BS, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:03.199113+00:00",
+  "_kind": "geo_samples"
+}

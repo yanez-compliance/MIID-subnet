@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Lô",
+  "geonameid": 2978758,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.122743066799195,
+      "lon": -1.1269582830290477,
+      "geoinfo": {
+        "display_name": "Chemin de Halage, La Buissonnière, Pont-Hébert, Agneaux, Saint-Lô, Manche, Normandy, Metropolitan France, 50180, France",
+        "road": "Chemin de Halage",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Pont-Hébert",
+        "city": "Agneaux",
+        "state": "Normandy",
+        "postcode": "50180",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Halage, Saint-Lô, Normandy, France"
+    },
+    {
+      "lat": 49.091001084748484,
+      "lon": -1.1105614528726304,
+      "geoinfo": {
+        "display_name": "Chemin du Pont de Candol, Candol, Saint-Lô, Manche, Normandy, Metropolitan France, 50000, France",
+        "road": "Chemin du Pont de Candol",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Lô",
+        "state": "Normandy",
+        "postcode": "50000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "496, Chemin du Pont de Candol, Candol, Saint-Lô, Manche, Normandy, Metropolitan France, 50000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T03:58:58.099047+00:00",
+  "_kind": "geo_samples"
+}

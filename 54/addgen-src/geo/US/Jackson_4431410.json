@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Jackson",
+  "geonameid": 4431410,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.28526698654438,
+      "lon": -90.13931025250184,
+      "geoinfo": {
+        "display_name": "MS 477, Bates Park, Flowood, Rankin County, Mississippi, 39288, United States",
+        "road": "MS 477",
+        "house_number": null,
+        "neighbourhood": "Bates Park",
+        "suburb": null,
+        "city_district": null,
+        "city": "Flowood",
+        "state": "Mississippi",
+        "postcode": "39288",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "MS 477, Jackson, Mississippi, United States"
+    },
+    {
+      "lat": 32.32505959202423,
+      "lon": -90.1632915228568,
+      "geoinfo": {
+        "display_name": "G.V. (Sonny) Montgomery VA Medical Center, 1500, East Woodrow Wilson Avenue, Fondren, Jackson, Hinds County, Mississippi, 39216, United States",
+        "road": "East Woodrow Wilson Avenue",
+        "house_number": "1500",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jackson",
+        "state": "Mississippi",
+        "postcode": "39216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "G.V. (Sonny) Montgomery VA Medical Center, 1500, East Woodrow Wilson Avenue, Fondren, Jackson, Hinds County, Mississippi, 39216, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:28:06.471694+00:00",
+  "_kind": "geo_samples"
+}

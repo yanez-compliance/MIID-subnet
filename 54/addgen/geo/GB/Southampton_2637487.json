@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Southampton",
+  "geonameid": 2637487,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.92178345041389,
+      "lon": -1.4156761712674744,
+      "geoinfo": {
+        "display_name": "King Edward VI School, Wilton Road, Upper Shirley, Southampton, England, SO15 5UQ, United Kingdom",
+        "road": "Wilton Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Upper Shirley",
+        "city_district": null,
+        "city": "Southampton",
+        "state": "England",
+        "postcode": "SO15 5UQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Wilton Road, Southampton, England, United Kingdom"
+    },
+    {
+      "lat": 50.91143739195397,
+      "lon": -1.3501016739678369,
+      "geoinfo": {
+        "display_name": "Beacon Court, 131-137, Upper Deacon Road, Sholing Common, Southampton, England, SO19 5LN, United Kingdom",
+        "road": "Upper Deacon Road",
+        "house_number": "131-137",
+        "neighbourhood": null,
+        "suburb": "Sholing Common",
+        "city_district": null,
+        "city": "Southampton",
+        "state": "England",
+        "postcode": "SO19 5LN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Beacon Court, 131-137, Upper Deacon Road, Sholing Common, Southampton, England, SO19 5LN, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:16:11.355740+00:00",
+  "_kind": "geo_samples"
+}

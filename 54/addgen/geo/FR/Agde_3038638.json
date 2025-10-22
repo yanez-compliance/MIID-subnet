@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Agde",
+  "geonameid": 3038638,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.3403018699547,
+      "lon": 3.4511571340355336,
+      "geoinfo": {
+        "display_name": "Route d'Agde, Bessan, Béziers, Hérault, Occitania, Metropolitan France, 34550, France",
+        "road": "Route d'Agde",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bessan",
+        "state": "Occitania",
+        "postcode": "34550",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Route d'Agde, Agde, Occitania, France"
+    },
+    {
+      "lat": 43.28567263906543,
+      "lon": 3.4482455310474194,
+      "geoinfo": {
+        "display_name": "École élémentaire Victor Hugo, Rue des Écoles, La Tamarissière, Agde, Béziers, Hérault, Occitania, Metropolitan France, 34300, France",
+        "road": "Rue des Écoles",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "La Tamarissière",
+        "city_district": null,
+        "city": "Agde",
+        "state": "Occitania",
+        "postcode": "34300",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "441, Rue des Écoles, Agde, 34300 Occitania, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:15.913339+00:00",
+  "_kind": "geo_samples"
+}

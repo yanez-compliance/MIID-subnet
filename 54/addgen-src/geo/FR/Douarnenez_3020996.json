@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Douarnenez",
+  "geonameid": 3020996,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.110701357722,
+      "lon": -4.358064404806002,
+      "geoinfo": {
+        "display_name": "Sentier Côtier, Bois d'Isis, Gorléoc'h, Douarnenez, Quimper, Finistère, Brittany, Metropolitan France, 29100, France",
+        "road": "Sentier Côtier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Douarnenez",
+        "state": "Brittany",
+        "postcode": "29100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Sentier Côtier, Douarnenez, Brittany, France"
+    },
+    {
+      "lat": 48.13102182697019,
+      "lon": -4.322428177727274,
+      "geoinfo": {
+        "display_name": "Metropolitan France, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "003, 17955 Metropolitan France, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:16:18.769484+00:00",
+  "_kind": "geo_samples"
+}

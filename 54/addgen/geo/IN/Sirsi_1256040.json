@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Sirsi",
+  "geonameid": 1256040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.616971279972624,
+      "lon": 78.65800380357533,
+      "geoinfo": {
+        "display_name": "Sambhal, Uttar Pradesh, 244302, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sambhal",
+        "state": "Uttar Pradesh",
+        "postcode": "244302",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Sirsi, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.656354695662113,
+      "lon": 78.65473234282365,
+      "geoinfo": {
+        "display_name": "MDR69W, Maniather, Sambhal, Uttar Pradesh, India",
+        "road": "MDR69W",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maniather",
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "MDR69W, Maniather, Sambhal, 67268 Uttar Pradesh, India"
+    }
+  ],
+  "updated_at": "2025-10-19T01:13:00.098657+00:00",
+  "_kind": "geo_samples"
+}

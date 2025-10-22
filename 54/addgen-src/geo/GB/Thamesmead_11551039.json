@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Thamesmead",
+  "geonameid": 11551039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.5109443694621,
+      "lon": 0.13583201623780025,
+      "geoinfo": {
+        "display_name": "The Ridgeway, London Borough of Bexley, London, Greater London, England, SE2 9AR, United Kingdom",
+        "road": "The Ridgeway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "London Borough of Bexley",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE2 9AR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Ridgeway, Thamesmead, England, United Kingdom"
+    },
+    {
+      "lat": 51.49969426426942,
+      "lon": 0.0819925636847493,
+      "geoinfo": {
+        "display_name": "Anson Place, Royal Borough of Greenwich, London, Greater London, England, SE28 0HP, United Kingdom",
+        "road": "Anson Place",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Royal Borough of Greenwich",
+        "city": "London",
+        "state": "England",
+        "postcode": "SE28 0HP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Anson Place, Royal Borough of Greenwich, London, Greater London, England, SE28 0HP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:54.342663+00:00",
+  "_kind": "geo_samples"
+}

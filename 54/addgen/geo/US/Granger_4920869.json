@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Granger",
+  "geonameid": 4920869,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.74351245933411,
+      "lon": -86.11741396945634,
+      "geoinfo": {
+        "display_name": "Anderson Road, Prairie Lane, Granger, Saint Joseph County, Indiana, 46530, United States",
+        "road": "Anderson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Granger",
+        "state": "Indiana",
+        "postcode": "46530",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Anderson Road, Granger, Indiana, United States"
+    },
+    {
+      "lat": 41.78659213464114,
+      "lon": -86.07305218172283,
+      "geoinfo": {
+        "display_name": "Elkhart Road, Ontwa Township, Cass County, Michigan, 49112, United States",
+        "road": "Elkhart Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ontwa Township",
+        "state": "Michigan",
+        "postcode": "49112",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "223, Elkhart Road, Ontwa Township, Cass County, Michigan, 49112, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:36:02.638181+00:00",
+  "_kind": "geo_samples"
+}

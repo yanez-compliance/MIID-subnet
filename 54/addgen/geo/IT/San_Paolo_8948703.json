@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Paolo",
+  "geonameid": 8948703,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.08797766543519,
+      "lon": 16.78896132932113,
+      "geoinfo": {
+        "display_name": "Via Roma (Galleria Commerciale), Via Roma, Modugno, Bari, Apulia, 70026, Italy",
+        "road": "Via Roma",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Modugno",
+        "state": "Apulia",
+        "postcode": "70026",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via Roma, San Paolo, Apulia, Italy"
+    },
+    {
+      "lat": 41.16506209018346,
+      "lon": 16.779468357362713,
+      "geoinfo": {
+        "display_name": "Lungomare Ugo Lorusso, Municipio 5, Bari, Apulia, 70128, Italy",
+        "road": "Lungomare Ugo Lorusso",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Municipio 5",
+        "city_district": null,
+        "city": "Bari",
+        "state": "Apulia",
+        "postcode": "70128",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Lungomare Ugo Lorusso, Municipio 5, Bari, Apulia, 70128, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T03:15:09.364854+00:00",
+  "_kind": "geo_samples"
+}

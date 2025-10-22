@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Los Polvorines",
+  "geonameid": 3431057,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.511678041338875,
+      "lon": -58.660361299326304,
+      "geoinfo": {
+        "display_name": "Avenida General Juan Gregorio Lemos, San Calal, Ingeniero Adolfo Sourdeaux, Partido de Malvinas Argentinas, Buenos Aires, 1660, Argentina",
+        "road": "Avenida General Juan Gregorio Lemos",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ingeniero Adolfo Sourdeaux",
+        "state": "Buenos Aires",
+        "postcode": "1660",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Avenida General Juan Gregorio Lemos, Los Polvorines, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.48922724795016,
+      "lon": -58.72207984220282,
+      "geoinfo": {
+        "display_name": "Bogado, Grand Bourg, Partido de Malvinas Argentinas, Buenos Aires, 1615, Argentina",
+        "road": "Bogado",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Grand Bourg",
+        "state": "Buenos Aires",
+        "postcode": "1615",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "807, Bogado, Grand Bourg, Partido de Malvinas Argentinas, Buenos Aires, 1615, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T02:28:40.928909+00:00",
+  "_kind": "geo_samples"
+}

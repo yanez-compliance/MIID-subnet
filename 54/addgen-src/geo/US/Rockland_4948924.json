@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rockland",
+  "geonameid": 4948924,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.14552330580807,
+      "lon": -70.93718641233882,
+      "geoinfo": {
+        "display_name": "Runway 08/26, Abington, Plymouth County, Massachusetts, 02190, United States",
+        "road": "Runway 08/26",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Abington",
+        "state": "Massachusetts",
+        "postcode": "02190",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Runway 08/26, Rockland, Massachusetts, United States"
+    },
+    {
+      "lat": 42.170513384495784,
+      "lon": -70.9400982601896,
+      "geoinfo": {
+        "display_name": "15, Lawson Road, South Weymouth, Weymouth, Norfolk County, Massachusetts, 02190, United States",
+        "road": "Lawson Road",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Weymouth",
+        "state": "Massachusetts",
+        "postcode": "02190",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "15, Lawson Road, South Weymouth, Weymouth, Norfolk County, Massachusetts, 02190, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:41.646817+00:00",
+  "_kind": "geo_samples"
+}

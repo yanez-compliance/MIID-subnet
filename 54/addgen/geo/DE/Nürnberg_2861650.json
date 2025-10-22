@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Nürnberg",
+  "geonameid": 2861650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.41489665281267,
+      "lon": 11.095508403650037,
+      "geoinfo": {
+        "display_name": "Rangierbahnhof-Einfahrbahnhof, Rangierbahnhof, Rangierbahnhofsiedlung, Nuremberg, Bavaria, 90469, Germany",
+        "road": "Rangierbahnhof-Einfahrbahnhof",
+        "house_number": null,
+        "neighbourhood": "Rangierbahnhof",
+        "suburb": "Rangierbahnhofsiedlung",
+        "city_district": null,
+        "city": "Nuremberg",
+        "state": "Bavaria",
+        "postcode": "90469",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Rangierbahnhof-Einfahrbahnhof, Nürnberg, Bavaria, Germany"
+    },
+    {
+      "lat": 49.43231077359281,
+      "lon": 11.033203973428602,
+      "geoinfo": {
+        "display_name": "Tillystraße, Großreuth b. Schweinau, Sündersbühl, Nuremberg, Bavaria, 90431, Germany",
+        "road": "Tillystraße",
+        "house_number": null,
+        "neighbourhood": "Großreuth b. Schweinau",
+        "suburb": "Sündersbühl",
+        "city_district": null,
+        "city": "Nuremberg",
+        "state": "Bavaria",
+        "postcode": "90431",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "352, Tillystraße, Nürnberg, 90431 Bavaria, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:59.876832+00:00",
+  "_kind": "geo_samples"
+}

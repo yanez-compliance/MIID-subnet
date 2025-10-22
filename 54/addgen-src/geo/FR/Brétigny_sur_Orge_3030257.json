@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Brétigny-sur-Orge",
+  "geonameid": 3030257,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.61906646804208,
+      "lon": 2.3450448883914237,
+      "geoinfo": {
+        "display_name": "Le Plessis-Pâté, Palaiseau, Essonne, Metropolitan France, 91220, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Plessis-Pâté",
+        "state": null,
+        "postcode": "91220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Brétigny-sur-Orge, France"
+    },
+    {
+      "lat": 48.609184375592044,
+      "lon": 2.3212244912741937,
+      "geoinfo": {
+        "display_name": "Rue Mozart, Le Plessis-Pâté, Palaiseau, Essonne, Metropolitan France, 91220, France",
+        "road": "Rue Mozart",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Le Plessis-Pâté",
+        "state": null,
+        "postcode": "91220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "273, Rue Mozart, Le Plessis-Pâté, Palaiseau, Essonne, Metropolitan France, 91220, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:11:56.909342+00:00",
+  "_kind": "geo_samples"
+}

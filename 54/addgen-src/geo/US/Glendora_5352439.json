@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glendora",
+  "geonameid": 5352439,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.12515957325425,
+      "lon": -117.82705050106813,
+      "geoinfo": {
+        "display_name": "1952, Kenoma Street, Glendora, Los Angeles County, California, 91740, United States",
+        "road": "Kenoma Street",
+        "house_number": "1952",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glendora",
+        "state": "California",
+        "postcode": "91740",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1952 Kenoma Street, Glendora, California, United States"
+    },
+    {
+      "lat": 34.10410348240375,
+      "lon": -117.86063537909725,
+      "geoinfo": {
+        "display_name": "5069, North Mangrove Avenue, Los Angeles County, California, 91724, United States",
+        "road": "North Mangrove Avenue",
+        "house_number": "5069",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "91724",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5069, North Mangrove Avenue, Los Angeles County, California, 91724, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:23.250630+00:00",
+  "_kind": "geo_samples"
+}

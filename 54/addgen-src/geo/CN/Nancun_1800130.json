@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Nancun",
+  "geonameid": 1800130,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.510983786166385,
+      "lon": 120.09140514573357,
+      "geoinfo": {
+        "display_name": "Shenhai Expressway, Nancun, Pingdu City, Qingdao, Shandong, 266700, China",
+        "road": "Shenhai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pingdu City",
+        "state": "Shandong",
+        "postcode": "266700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Shenhai Expressway, Nancun, Shandong, China"
+    },
+    {
+      "lat": 36.53055761718382,
+      "lon": 120.10397497337662,
+      "geoinfo": {
+        "display_name": "Nancun, Pingdu City, Qingdao, Shandong, 266700, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pingdu City",
+        "state": "Shandong",
+        "postcode": "266700",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "967, Nancun, Pingdu City, Qingdao, Shandong, 266700, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:54:14.483947+00:00",
+  "_kind": "geo_samples"
+}

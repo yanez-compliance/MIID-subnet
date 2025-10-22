@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Fraser Heights",
+  "geonameid": 5957564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.163656235066426,
+      "lon": -122.80212766706123,
+      "geoinfo": {
+        "display_name": "8819, 152 Street, Fleetwood, Surrey, Metro Vancouver Regional District, British Columbia, V3R 4E5, Canada",
+        "road": "152 Street",
+        "house_number": "8819",
+        "neighbourhood": null,
+        "suburb": "Fleetwood",
+        "city_district": null,
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V3R 4E5",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "8819 152 Street, Fraser Heights, British Columbia, Canada"
+    },
+    {
+      "lat": 49.20290145790523,
+      "lon": -122.782221362714,
+      "geoinfo": {
+        "display_name": "15893, 110 Avenue, Fraser Heights, Guildford, Surrey, Metro Vancouver Regional District, British Columbia, V4N 1P3, Canada",
+        "road": "110 Avenue",
+        "house_number": "15893",
+        "neighbourhood": null,
+        "suburb": "Fraser Heights",
+        "city_district": null,
+        "city": "Surrey",
+        "state": "British Columbia",
+        "postcode": "V4N 1P3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "15893, 110 Avenue, Fraser Heights, Guildford, Surrey, Metro Vancouver Regional District, British Columbia, V4N 1P3, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T01:37:35.445538+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marysville",
+  "geonameid": 5802570,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.062091982606375,
+      "lon": -122.18936068254169,
+      "geoinfo": {
+        "display_name": "3199, 72nd Street Northeast, Snohomish County, Washington, 98271, United States",
+        "road": "72nd Street Northeast",
+        "house_number": "3199",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "98271",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3199 72nd Street Northeast, Marysville, Washington, United States"
+    },
+    {
+      "lat": 48.069781819900086,
+      "lon": -122.12745429149828,
+      "geoinfo": {
+        "display_name": "8314, 76th Avenue Northeast, Marysville, Snohomish County, Washington, 98270, United States",
+        "road": "76th Avenue Northeast",
+        "house_number": "8314",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marysville",
+        "state": "Washington",
+        "postcode": "98270",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8314, 76th Avenue Northeast, Marysville, Snohomish County, Washington, 98270, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:00.860663+00:00",
+  "_kind": "geo_samples"
+}

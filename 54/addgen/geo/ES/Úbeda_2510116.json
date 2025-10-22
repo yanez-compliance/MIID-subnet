@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Úbeda",
+  "geonameid": 2510116,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.01026259284208,
+      "lon": -3.3644739070901077,
+      "geoinfo": {
+        "display_name": "3, Calle Llana de San Millán, San Millán, Úbeda, Jaén, Andalusia, 23400, Spain",
+        "road": "Calle Llana de San Millán",
+        "house_number": "3",
+        "neighbourhood": "San Millán",
+        "suburb": null,
+        "city_district": null,
+        "city": "Úbeda",
+        "state": "Andalusia",
+        "postcode": "23400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "3 Calle Llana de San Millán, Úbeda, Andalusia, Spain"
+    },
+    {
+      "lat": 37.98734783243363,
+      "lon": -3.4120213847409837,
+      "geoinfo": {
+        "display_name": "Baeza-Utiel, Úbeda, Jaén, Andalusia, 23400, Spain",
+        "road": "Baeza-Utiel",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Úbeda",
+        "state": "Andalusia",
+        "postcode": "23400",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "181, Baeza-Utiel, Úbeda, Jaén, Andalusia, 23400, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:41.350279+00:00",
+  "_kind": "geo_samples"
+}

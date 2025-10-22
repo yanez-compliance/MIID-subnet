@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Koppies",
+  "geonameid": 987875,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -27.27946881139662,
+      "lon": 27.559014056072556,
+      "geoinfo": {
+        "display_name": "R82, Ngwathe Ward 18, Ngwathe Local Municipality, Fezile Dabi District Municipality, Free State, 1820, South Africa",
+        "road": "R82",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ngwathe Ward 18",
+        "city_district": null,
+        "city": "Ngwathe Local Municipality",
+        "state": "Free State",
+        "postcode": "1820",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R82, Koppies, Free State, South Africa"
+    },
+    {
+      "lat": -27.2680816594021,
+      "lon": 27.581517514965366,
+      "geoinfo": {
+        "display_name": "S163, Ngwathe Ward 18, Ngwathe Local Municipality, Fezile Dabi District Municipality, Free State, South Africa",
+        "road": "S163",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ngwathe Ward 18",
+        "city_district": null,
+        "city": "Ngwathe Local Municipality",
+        "state": "Free State",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "S163, Koppies, 86830 Free State, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:50.430558+00:00",
+  "_kind": "geo_samples"
+}

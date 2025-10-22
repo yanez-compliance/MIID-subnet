@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Bundaberg",
+  "geonameid": 2173323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -24.85112965502209,
+      "lon": 152.3294913720049,
+      "geoinfo": {
+        "display_name": "58, Mt Perry Road, Bundaberg North, Bundaberg, Bundaberg Region, Queensland, 4670, Australia",
+        "road": "Mt Perry Road",
+        "house_number": "58",
+        "neighbourhood": null,
+        "suburb": "Bundaberg North",
+        "city_district": null,
+        "city": "Bundaberg",
+        "state": "Queensland",
+        "postcode": "4670",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "58 Mt Perry Road, Bundaberg, Queensland, Australia"
+    },
+    {
+      "lat": -24.89845423677115,
+      "lon": 152.31742431287856,
+      "geoinfo": {
+        "display_name": "Bundaberg Airport, Phoebe Crescent, Kensington, Bundaberg, Bundaberg Region, Queensland, Australia",
+        "road": "Phoebe Crescent",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kensington",
+        "city_district": null,
+        "city": "Bundaberg",
+        "state": "Queensland",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "973, Phoebe Crescent, Bundaberg, 32835 Queensland, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T00:55:39.399315+00:00",
+  "_kind": "geo_samples"
+}

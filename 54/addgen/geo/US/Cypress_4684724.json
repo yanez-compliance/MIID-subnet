@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cypress",
+  "geonameid": 4684724,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.945074535659,
+      "lon": -95.68178540329204,
+      "geoinfo": {
+        "display_name": "Peralta Cove Circle, Alder Trails, Cypress, Harris County, Texas, 77429, United States",
+        "road": "Peralta Cove Circle",
+        "house_number": null,
+        "neighbourhood": "Alder Trails",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cypress",
+        "state": "Texas",
+        "postcode": "77429",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Peralta Cove Circle, Cypress, Texas, United States"
+    },
+    {
+      "lat": 29.94795690106061,
+      "lon": -95.68314607018098,
+      "geoinfo": {
+        "display_name": "11858, Apple Harvest Lane, Alder Trails, Cypress, Harris County, Texas, 77433, United States",
+        "road": "Apple Harvest Lane",
+        "house_number": "11858",
+        "neighbourhood": "Alder Trails",
+        "suburb": null,
+        "city_district": null,
+        "city": "Cypress",
+        "state": "Texas",
+        "postcode": "77433",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11858, Apple Harvest Lane, Alder Trails, Cypress, Harris County, Texas, 77433, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:40.893889+00:00",
+  "_kind": "geo_samples"
+}

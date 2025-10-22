@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Besançon",
+  "geonameid": 3033123,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.259631117761394,
+      "lon": 6.065024361547554,
+      "geoinfo": {
+        "display_name": "2, Impasse de la Gouttote, Chalezeule, Besançon, Doubs, Bourgogne – Franche-Comté, Metropolitan France, 25220, France",
+        "road": "Impasse de la Gouttote",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chalezeule",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "25220",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "2 Impasse de la Gouttote, Besançon, Bourgogne – Franche-Comté, France"
+    },
+    {
+      "lat": 47.25474073368288,
+      "lon": 6.051376644998891,
+      "geoinfo": {
+        "display_name": "33, Chemin des Bicquey, Vaite, Besançon, Doubs, Bourgogne – Franche-Comté, Metropolitan France, 25000, France",
+        "road": "Chemin des Bicquey",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": "Vaite",
+        "city_district": null,
+        "city": "Besançon",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "25000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "33, Chemin des Bicquey, Vaite, Besançon, Doubs, Bourgogne – Franche-Comté, Metropolitan France, 25000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:22.076142+00:00",
+  "_kind": "geo_samples"
+}

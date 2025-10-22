@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Narre Warren South",
+  "geonameid": 9972518,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.04358680349995,
+      "lon": 145.29402263320557,
+      "geoinfo": {
+        "display_name": "Smith Court, Narre Warren South, Melbourne, City of Casey, Victoria, 3805, Australia",
+        "road": "Smith Court",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Narre Warren South",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3805",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Smith Court, Narre Warren South, Victoria, Australia"
+    },
+    {
+      "lat": -38.02130401545421,
+      "lon": 145.28882010262888,
+      "geoinfo": {
+        "display_name": "10, Cricklewood Circuit, Casey Green, Narre Warren, Melbourne, City of Casey, Victoria, 3805, Australia",
+        "road": "Cricklewood Circuit",
+        "house_number": "10",
+        "neighbourhood": null,
+        "suburb": "Narre Warren",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3805",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "10, Cricklewood Circuit, Casey Green, Narre Warren, Melbourne, City of Casey, Victoria, 3805, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:35:06.132350+00:00",
+  "_kind": "geo_samples"
+}

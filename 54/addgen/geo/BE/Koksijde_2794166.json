@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Koksijde",
+  "geonameid": 2794166,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.11392763486422,
+      "lon": 2.6736104844815776,
+      "geoinfo": {
+        "display_name": "18, Weststraat, Westhinder, Oostduinkerke, Koksijde, Veurne, West Flanders, Flanders, 8670, Belgium",
+        "road": "Weststraat",
+        "house_number": "18",
+        "neighbourhood": "Westhinder",
+        "suburb": null,
+        "city_district": null,
+        "city": "Koksijde",
+        "state": "West Flanders",
+        "postcode": "8670",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "18 Weststraat, Koksijde, West Flanders, Belgium"
+    },
+    {
+      "lat": 51.11950370495173,
+      "lon": 2.635552147469247,
+      "geoinfo": {
+        "display_name": "Westendestraat, Koksijde-Bad, Koksijde, Veurne, West Flanders, Flanders, 8670, Belgium",
+        "road": "Westendestraat",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Koksijde",
+        "city": "Koksijde",
+        "state": "West Flanders",
+        "postcode": "8670",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "641, Westendestraat, Koksijde-Bad, Koksijde, Veurne, West Flanders, Flanders, 8670, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:44:09.592282+00:00",
+  "_kind": "geo_samples"
+}

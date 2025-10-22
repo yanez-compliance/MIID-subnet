@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Uithoorn",
+  "geonameid": 2745973,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.243223272258184,
+      "lon": 4.785574402552959,
+      "geoinfo": {
+        "display_name": "Ringdijk, De Kwakel, Uithoorn, North Holland, Netherlands, 1424 AH, Netherlands",
+        "road": "Ringdijk",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Uithoorn",
+        "state": "North Holland",
+        "postcode": "1424 AH",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Ringdijk, Uithoorn, North Holland, The Netherlands"
+    },
+    {
+      "lat": 52.276387018483014,
+      "lon": 4.805857203976762,
+      "geoinfo": {
+        "display_name": "90, Snoekbaarsstraat, Nieuw Oosteinde, Aalsmeer, North Holland, Netherlands, 1432 PG, Netherlands",
+        "road": "Snoekbaarsstraat",
+        "house_number": "90",
+        "neighbourhood": "Nieuw Oosteinde",
+        "suburb": null,
+        "city_district": "Aalsmeer",
+        "city": "Aalsmeer",
+        "state": "North Holland",
+        "postcode": "1432 PG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "90, Snoekbaarsstraat, Nieuw Oosteinde, Aalsmeer, North Holland, Netherlands, 1432 PG, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:11.769568+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,83 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Zürich",
+  "geonameid": 2657896,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.386172613097045,
+      "lon": 8.565359673814887,
+      "geoinfo": {
+        "display_name": "Heubeeriweg, Fluntern, Kreis 7, Zurich, District Zurich, Zurich, 8044, Switzerland",
+        "road": "Heubeeriweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fluntern",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8044",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Heubeeriweg, Zürich, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.389688070493875,
+      "lon": 8.508793919070444,
+      "geoinfo": {
+        "display_name": "Betriebszentrale Migros Zürich, 103, Pfingstweidstrasse, Escher Wyss, Industriequartier, Zurich, District Zurich, Zurich, 8005, Switzerland",
+        "road": "Pfingstweidstrasse",
+        "house_number": "103",
+        "neighbourhood": null,
+        "suburb": "Industriequartier",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8005",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "103 Pfingstweidstrasse, Zürich, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.38405384807683,
+      "lon": 8.541268081746155,
+      "geoinfo": {
+        "display_name": "5, Waltersbachstrasse, Unterstrass, Kreis 6, Zurich, District Zurich, Zurich, 8006, Switzerland",
+        "road": "Waltersbachstrasse",
+        "house_number": "5",
+        "neighbourhood": null,
+        "suburb": "Unterstrass",
+        "city_district": null,
+        "city": "Zurich",
+        "state": "Zurich",
+        "postcode": "8006",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "5, Waltersbachstrasse, Zürich, 8006 Zurich, Switzerland"
+    },
+    {
+      "lat": 47.33462062715435,
+      "lon": 8.562052276156084,
+      "geoinfo": {
+        "display_name": "Zollikerberg, Zollikon, Bezirk Meilen, Zurich, 8702, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Zollikerberg",
+        "city_district": null,
+        "city": "Zollikon",
+        "state": "Zurich",
+        "postcode": "8702",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "304, Zollikerberg, Zürich, 8702 Zurich, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:10:30.219474+00:00",
+  "_kind": "geo_samples"
+}

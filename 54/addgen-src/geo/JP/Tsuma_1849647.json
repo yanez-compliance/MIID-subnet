@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Tsuma",
+  "geonameid": 1849647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.09319782545582,
+      "lon": 131.3528799923912,
+      "geoinfo": {
+        "display_name": "Saito, Miyazaki Prefecture, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saito",
+        "state": null,
+        "postcode": null,
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tsuma, Japan"
+    },
+    {
+      "lat": 32.06625854315302,
+      "lon": 131.40176312217685,
+      "geoinfo": {
+        "display_name": "Kurouno, Saito, Miyazaki Prefecture, 880-0301, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saito",
+        "state": null,
+        "postcode": "880-0301",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kurouno, Saito, Miyazaki Prefecture, 880-0301, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T07:16:37.929825+00:00",
+  "_kind": "geo_samples"
+}

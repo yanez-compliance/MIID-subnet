@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Atarra",
+  "geonameid": 1278228,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.306837583563066,
+      "lon": 80.55209548294275,
+      "geoinfo": {
+        "display_name": "NH35, Khurhand, Atarra, Banda, Uttar Pradesh, 210120, India",
+        "road": "NH35",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Khurhand",
+        "state": "Uttar Pradesh",
+        "postcode": "210120",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH35, Atarra, Uttar Pradesh, India"
+    },
+    {
+      "lat": 25.300694965572557,
+      "lon": 80.53247400961442,
+      "geoinfo": {
+        "display_name": "Atarra, Banda, Uttar Pradesh, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Uttar Pradesh",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "103, Atarra, Banda, 39319 Uttar Pradesh, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:43:25.787858+00:00",
+  "_kind": "geo_samples"
+}

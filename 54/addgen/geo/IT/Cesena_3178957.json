@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cesena",
+  "geonameid": 3178957,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.11712520155711,
+      "lon": 12.223085765168326,
+      "geoinfo": {
+        "display_name": "235, Via Roversano, Quartiere Centro Urbano, Ponte Abbadesse, Cesena, Unione dei comuni Valle del Savio, Forlì-Cesena, Emilia-Romagna, 47521, Italy",
+        "road": "Via Roversano",
+        "house_number": "235",
+        "neighbourhood": null,
+        "suburb": "Quartiere Centro Urbano",
+        "city_district": null,
+        "city": "Cesena",
+        "state": "Emilia-Romagna",
+        "postcode": "47521",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "235 Via Roversano, Cesena, Emilia-Romagna, Italy"
+    },
+    {
+      "lat": 44.09573591837599,
+      "lon": 12.234735124051468,
+      "geoinfo": {
+        "display_name": "Via Cesuola, Quartiere Cesuola, Cesena, Unione dei comuni Valle del Savio, Forlì-Cesena, Emilia-Romagna, 47023, Italy",
+        "road": "Via Cesuola",
+        "house_number": null,
+        "neighbourhood": "Quartiere Cesuola",
+        "suburb": "Quartiere Cesuola",
+        "city_district": null,
+        "city": "Cesena",
+        "state": "Emilia-Romagna",
+        "postcode": "47023",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "875, Via Cesuola, Quartiere Cesuola, Cesena, Unione dei comuni Valle del Savio, Forlì-Cesena, Emilia-Romagna, 47023, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:08:46.918543+00:00",
+  "_kind": "geo_samples"
+}

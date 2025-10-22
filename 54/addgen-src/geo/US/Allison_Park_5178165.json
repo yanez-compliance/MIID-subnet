@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Allison Park",
+  "geonameid": 5178165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.5814949714937,
+      "lon": -79.9836231567013,
+      "geoinfo": {
+        "display_name": "Wildwood Golf Club, 2195, Sample Road, Hampton Township, Allegheny County, Pennsylvania, 15101, United States",
+        "road": "Sample Road",
+        "house_number": "2195",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hampton Township",
+        "state": "Pennsylvania",
+        "postcode": "15101",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2195 Sample Road, Allison Park, Pennsylvania, United States"
+    },
+    {
+      "lat": 40.56307154669258,
+      "lon": -79.90073409614895,
+      "geoinfo": {
+        "display_name": "3220, Waterford Court, Pittsburgh, Allegheny County, Pennsylvania, 15238, United States",
+        "road": "Waterford Court",
+        "house_number": "3220",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "postcode": "15238",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3220, Waterford Court, Pittsburgh, Allegheny County, Pennsylvania, 15238, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:24.519688+00:00",
+  "_kind": "geo_samples"
+}

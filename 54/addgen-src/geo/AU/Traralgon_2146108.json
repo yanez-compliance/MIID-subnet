@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Traralgon",
+  "geonameid": 2146108,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -38.19668302252477,
+      "lon": 146.56129760412904,
+      "geoinfo": {
+        "display_name": "51, McNairn Road, Traralgon East, City of Latrobe, Victoria, 3844, Australia",
+        "road": "McNairn Road",
+        "house_number": "51",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Traralgon East",
+        "city": null,
+        "state": "Victoria",
+        "postcode": "3844",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "51 McNairn Road, Traralgon, Victoria, Australia"
+    },
+    {
+      "lat": -38.184831589694845,
+      "lon": 146.50860403187357,
+      "geoinfo": {
+        "display_name": "45, Parkwood Way, Traralgon, City of Latrobe, Victoria, 3844, Australia",
+        "road": "Parkwood Way",
+        "house_number": "45",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Traralgon",
+        "state": "Victoria",
+        "postcode": "3844",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "45, Parkwood Way, Traralgon, City of Latrobe, Victoria, 3844, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:55.212730+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Isumi",
+  "geonameid": 6822180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.245487359150474,
+      "lon": 140.405891366513,
+      "geoinfo": {
+        "display_name": "Isumi, Chiba Prefecture, 298-0003, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Isumi",
+        "state": null,
+        "postcode": "298-0003",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Isumi, Japan"
+    },
+    {
+      "lat": 35.21688106976978,
+      "lon": 140.37391381315797,
+      "geoinfo": {
+        "display_name": "Ozawa, Isumi, Chiba Prefecture, 298-0018, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Isumi",
+        "state": null,
+        "postcode": "298-0018",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Ozawa, Isumi, Chiba Prefecture, 298-0018, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:28.456939+00:00",
+  "_kind": "geo_samples"
+}

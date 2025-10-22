@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Siwei",
+  "geonameid": 12324548,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.03177168422891,
+      "lon": 114.14855760051363,
+      "geoinfo": {
+        "display_name": "Jingxing County, Shijiazhuang, Hebei, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jingxing County",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Siwei, Hebei, China"
+    },
+    {
+      "lat": 38.038333848640846,
+      "lon": 114.12958009593439,
+      "geoinfo": {
+        "display_name": "G307, Jingxing County, Shijiazhuang, Hebei, China",
+        "road": "G307",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jingxing County",
+        "state": "Hebei",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G307, Jingxing County, Shijiazhuang, 91184 Hebei, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:57.644284+00:00",
+  "_kind": "geo_samples"
+}

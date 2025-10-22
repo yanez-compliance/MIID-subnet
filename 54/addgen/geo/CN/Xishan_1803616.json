@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xishan",
+  "geonameid": 1803616,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 27.660718327347325,
+      "lon": 113.48154193383722,
+      "geoinfo": {
+        "display_name": "S313, Xianyueshan Subdistrict, Liling, Zhuzhou, Hunan, 412200, China",
+        "road": "S313",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Xianyueshan Subdistrict",
+        "city_district": null,
+        "city": "Liling",
+        "state": "Hunan",
+        "postcode": "412200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S313, Xishan, Hunan, China"
+    },
+    {
+      "lat": 27.685988433615343,
+      "lon": 113.4890379896338,
+      "geoinfo": {
+        "display_name": "Guoci Subdistrict, Liling, Zhuzhou, Hunan, 412200, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Guoci Subdistrict",
+        "city_district": null,
+        "city": "Liling",
+        "state": "Hunan",
+        "postcode": "412200",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "950, Guoci Subdistrict, Liling, Zhuzhou, Hunan, 412200, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:34.657565+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hof",
+  "geonameid": 2902768,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.345845313048834,
+      "lon": 11.917493541436247,
+      "geoinfo": {
+        "display_name": "Unterkotzau, Hofeck, Hof, Bavaria, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hof",
+        "state": "Bavaria",
+        "postcode": null,
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hof, Bavaria, Germany"
+    },
+    {
+      "lat": 50.289569209697284,
+      "lon": 11.939877800657346,
+      "geoinfo": {
+        "display_name": "Oberkotzauer Straße, Otterberg, Alsenberg, Hof, Bavaria, 95032, Germany",
+        "road": "Oberkotzauer Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Otterberg",
+        "city_district": null,
+        "city": "Hof",
+        "state": "Bavaria",
+        "postcode": "95032",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "390, Oberkotzauer Straße, Otterberg, Alsenberg, Hof, Bavaria, 95032, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:33.635089+00:00",
+  "_kind": "geo_samples"
+}

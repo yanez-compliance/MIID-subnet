@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Aalst",
+  "geonameid": 2803448,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.94905224882766,
+      "lon": 4.100707633558876,
+      "geoinfo": {
+        "display_name": "42, Raymond Uyttersprotstraat, Moorsel, Aalst, East Flanders, 9310, Belgium",
+        "road": "Raymond Uyttersprotstraat",
+        "house_number": "42",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalst",
+        "state": "East Flanders",
+        "postcode": "9310",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "42 Raymond Uyttersprotstraat, Aalst, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.97849151741884,
+      "lon": 4.031035658539696,
+      "geoinfo": {
+        "display_name": "Meerveldbaan, Hofstade, Aalst, East Flanders, 9308, Belgium",
+        "road": "Meerveldbaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aalst",
+        "state": "East Flanders",
+        "postcode": "9308",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "051, Meerveldbaan, Hofstade, Aalst, East Flanders, 9308, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:38:29.388487+00:00",
+  "_kind": "geo_samples"
+}

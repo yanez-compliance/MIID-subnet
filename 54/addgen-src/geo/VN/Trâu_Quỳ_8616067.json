@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Trâu Quỳ",
+  "geonameid": 8616067,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.01083715957904,
+      "lon": 105.95233769625185,
+      "geoinfo": {
+        "display_name": "Kien Thanh, Gia Lam Commune, Hà Nội, 17710, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kien Thanh",
+        "suburb": null,
+        "city_district": "Gia Lam Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "17710",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Kien Thanh, Trâu Quỳ, Vietnam"
+    },
+    {
+      "lat": 21.046488480778365,
+      "lon": 105.95347410423747,
+      "geoinfo": {
+        "display_name": "Phu Dong Commune, Hà Nội, 08443, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Phu Dong Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "08443",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "679, Phu Dong Commune, Hà Nội, 08443, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T11:34:10.214499+00:00",
+  "_kind": "geo_samples"
+}

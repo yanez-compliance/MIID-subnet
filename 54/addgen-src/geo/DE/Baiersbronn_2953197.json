@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Baiersbronn",
+  "geonameid": 2953197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.516348258211494,
+      "lon": 8.32483219269915,
+      "geoinfo": {
+        "display_name": "7, Am Baumgarten, Schramberg, Mitteltal, Baiersbronn, Landkreis Freudenstadt, Baden-Württemberg, 72270, Germany",
+        "road": "Am Baumgarten",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Baiersbronn",
+        "state": "Baden-Württemberg",
+        "postcode": "72270",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "7 Am Baumgarten, Baiersbronn, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.51748804290814,
+      "lon": 8.439190799188886,
+      "geoinfo": {
+        "display_name": "Stutzwaldweg, Musbach, Freudenstadt, Vereinbarte Verwaltungsgemeinschaft Freudenstadt, Landkreis Freudenstadt, Baden-Württemberg, 72250, Germany",
+        "road": "Stutzwaldweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Musbach",
+        "city": "Freudenstadt",
+        "state": "Baden-Württemberg",
+        "postcode": "72250",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "977, Stutzwaldweg, Musbach, Freudenstadt, Vereinbarte Verwaltungsgemeinschaft Freudenstadt, Landkreis Freudenstadt, Baden-Württemberg, 72250, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:25:24.972793+00:00",
+  "_kind": "geo_samples"
+}

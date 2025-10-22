@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Zottegem",
+  "geonameid": 2783175,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.89309041986878,
+      "lon": 3.8318695660321342,
+      "geoinfo": {
+        "display_name": "Europaweg, Leeuwergem, Zottegem, Aalst, East Flanders, 9620, Belgium",
+        "road": "Europaweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leeuwergem",
+        "state": "East Flanders",
+        "postcode": "9620",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Europaweg, Zottegem, East Flanders, Belgium"
+    },
+    {
+      "lat": 50.84070833897789,
+      "lon": 3.827021996721407,
+      "geoinfo": {
+        "display_name": "Capperweg, Erwetegem, Zottegem, Aalst, East Flanders, 9620, Belgium",
+        "road": "Capperweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erwetegem",
+        "state": "East Flanders",
+        "postcode": "9620",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "319, Capperweg, Erwetegem, Zottegem, Aalst, East Flanders, 9620, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:49.157800+00:00",
+  "_kind": "geo_samples"
+}

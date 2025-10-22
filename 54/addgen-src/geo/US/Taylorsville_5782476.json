@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Taylorsville",
+  "geonameid": 5782476,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.70455271648308,
+      "lon": -111.92859985057193,
+      "geoinfo": {
+        "display_name": "3100 South, West Valley City, Salt Lake County, Utah, 84199, United States",
+        "road": "3100 South",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Valley City",
+        "state": "Utah",
+        "postcode": "84199",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3100 South, Taylorsville, Utah, United States"
+    },
+    {
+      "lat": 40.643169016897346,
+      "lon": -111.97835684052001,
+      "geoinfo": {
+        "display_name": "Bangerter Highway, Taylorsville, Salt Lake County, Utah, 84129, United States",
+        "road": "Bangerter Highway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Taylorsville",
+        "state": "Utah",
+        "postcode": "84129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "006, Bangerter Highway, Taylorsville, Salt Lake County, Utah, 84129, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:58.691308+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Stamford",
+  "geonameid": 4843564,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.03341811224383,
+      "lon": -73.49542728310293,
+      "geoinfo": {
+        "display_name": "Pratt Island One, Darien, Western Connecticut Planning Region, Connecticut, 06820, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Darien",
+        "state": "Connecticut",
+        "postcode": "06820",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Stamford, Connecticut, United States"
+    },
+    {
+      "lat": 41.048540295709884,
+      "lon": -73.51037799716309,
+      "geoinfo": {
+        "display_name": "12, Horton Street, Stamford, Western Connecticut Planning Region, Connecticut, 06902, United States",
+        "road": "Horton Street",
+        "house_number": "12",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Stamford",
+        "state": "Connecticut",
+        "postcode": "06902",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12, Horton Street, Stamford, Western Connecticut Planning Region, Connecticut, 06902, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:44.576006+00:00",
+  "_kind": "geo_samples"
+}

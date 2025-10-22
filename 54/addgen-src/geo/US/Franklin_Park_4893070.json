@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Franklin Park",
+  "geonameid": 4893070,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.923088938667284,
+      "lon": -87.9040070531596,
+      "geoinfo": {
+        "display_name": "658, North Wolf Road, Northlake, Leyden Township, Cook County, Illinois, 60164, United States",
+        "road": "North Wolf Road",
+        "house_number": "658",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northlake",
+        "state": "Illinois",
+        "postcode": "60164",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "658 North Wolf Road, Franklin Park, Illinois, United States"
+    },
+    {
+      "lat": 41.91187060949262,
+      "lon": -87.86429436799946,
+      "geoinfo": {
+        "display_name": "North 25th Avenue, Franklin Park, Leyden Township, Cook County, Illinois, 60160, United States",
+        "road": "North 25th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Franklin Park",
+        "state": "Illinois",
+        "postcode": "60160",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "North 25th Avenue, Franklin Park, Leyden Township, Cook County, Illinois, 60160, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:17.646674+00:00",
+  "_kind": "geo_samples"
+}

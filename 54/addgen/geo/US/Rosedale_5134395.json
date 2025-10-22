@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Rosedale",
+  "geonameid": 5134395,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.65202151766584,
+      "lon": -73.73179342938265,
+      "geoinfo": {
+        "display_name": "149-29, 257th Street, Rosedale, Queens, Queens County, New York, 11422, United States",
+        "road": "257th Street",
+        "house_number": "149-29",
+        "neighbourhood": "Rosedale",
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11422",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "149-29 257th Street, Rosedale, New York, United States"
+    },
+    {
+      "lat": 40.6615676251083,
+      "lon": -73.70624129536843,
+      "geoinfo": {
+        "display_name": "86, Station Plaza, Village of Valley Stream, Town of Hempstead, Nassau County, New York, 11581, United States",
+        "road": "Station Plaza",
+        "house_number": "86",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Valley Stream",
+        "state": "New York",
+        "postcode": "11581",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "86, Station Plaza, Village of Valley Stream, Town of Hempstead, Nassau County, New York, 11581, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:28.015116+00:00",
+  "_kind": "geo_samples"
+}

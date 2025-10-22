@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Silverdale",
+  "geonameid": 5810490,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.6390289389103,
+      "lon": -122.68953103602942,
+      "geoinfo": {
+        "display_name": "Silverdale, Kitsap County, Washington, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silverdale",
+        "state": "Washington",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Silverdale, Washington, United States"
+    },
+    {
+      "lat": 47.62041977108274,
+      "lon": -122.64015123162481,
+      "geoinfo": {
+        "display_name": "6361, Pine Road Northeast, Tracyton, Kitsap County, Washington, 98311, United States",
+        "road": "Pine Road Northeast",
+        "house_number": "6361",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tracyton",
+        "state": "Washington",
+        "postcode": "98311",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6361, Pine Road Northeast, Tracyton, Kitsap County, Washington, 98311, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:18.760824+00:00",
+  "_kind": "geo_samples"
+}

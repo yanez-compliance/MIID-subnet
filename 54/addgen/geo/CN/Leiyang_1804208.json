@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Leiyang",
+  "geonameid": 1804208,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.418157848214015,
+      "lon": 112.84437301452913,
+      "geoinfo": {
+        "display_name": "城北中路, 金杯, Wulipai, Leiyang, Hengyang, Hunan, 421800, China",
+        "road": "城北中路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leiyang",
+        "state": "Hunan",
+        "postcode": "421800",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "城北中路, Leiyang, Hunan, China"
+    },
+    {
+      "lat": 26.41396917669388,
+      "lon": 112.87335062143667,
+      "geoinfo": {
+        "display_name": "东鹿, Shuidongjiang, Leiyang, Hengyang, Hunan, 421899, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shuidongjiang",
+        "city_district": null,
+        "city": "Leiyang",
+        "state": "Hunan",
+        "postcode": "421899",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "581, 东鹿, Shuidongjiang, Leiyang, Hengyang, Hunan, 421899, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:17:13.217239+00:00",
+  "_kind": "geo_samples"
+}

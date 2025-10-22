@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Mong Kok",
+  "geonameid": 1819353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.308599056100967,
+      "lon": 114.21536655393662,
+      "geoinfo": {
+        "display_name": "Kowloon City District, Kowloon, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kowloon City District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Kowloon City District, Mong Kok, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.304034108164856,
+      "lon": 114.21627245525282,
+      "geoinfo": {
+        "display_name": "Central Kowloon Bypass, Trunk Road T2, Cha Kwo Ling, Kwun Tong District, Kowloon, Hong Kong, China",
+        "road": "Central Kowloon Bypass",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cha Kwo Ling",
+        "city_district": "Kwun Tong District",
+        "city": "Kowloon",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "047, Central Kowloon Bypass, Trunk Road T2, Cha Kwo Ling, Kwun Tong District, Kowloon, Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T02:33:47.367955+00:00",
+  "_kind": "geo_samples"
+}

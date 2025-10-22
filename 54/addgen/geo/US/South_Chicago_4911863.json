@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Chicago",
+  "geonameid": 4911863,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.748887288398045,
+      "lon": -87.50510267213441,
+      "geoinfo": {
+        "display_name": "Lake County, Indiana, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Indiana",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Chicago, Indiana, United States"
+    },
+    {
+      "lat": 41.77647754361716,
+      "lon": -87.58141334911059,
+      "geoinfo": {
+        "display_name": "Jackson Park Golf Course, 6401, South Richards Drive, Woodlawn, Chicago, Hyde Park Township, Cook County, Illinois, 60649, United States",
+        "road": "South Richards Drive",
+        "house_number": "6401",
+        "neighbourhood": null,
+        "suburb": "Woodlawn",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60649",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Jackson Park Golf Course, 6401, South Richards Drive, Woodlawn, Chicago, Hyde Park Township, Cook County, Illinois, 60649, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:22:06.142597+00:00",
+  "_kind": "geo_samples"
+}

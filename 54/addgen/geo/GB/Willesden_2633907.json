@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Willesden",
+  "geonameid": 2633907,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.54743988369394,
+      "lon": -0.24771321399201673,
+      "geoinfo": {
+        "display_name": "Ilex Road, Dudden Hill, Harlesden, London Borough of Brent, London, Greater London, England, NW10 9NU, United Kingdom",
+        "road": "Ilex Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Harlesden",
+        "city_district": "London Borough of Brent",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW10 9NU",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Ilex Road, Willesden, England, United Kingdom"
+    },
+    {
+      "lat": 51.57045349575351,
+      "lon": -0.24625819818362266,
+      "geoinfo": {
+        "display_name": "Cool Oak Lane, West Hendon, London Borough of Barnet, London, Greater London, England, NW9 7ND, United Kingdom",
+        "road": "Cool Oak Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "West Hendon",
+        "city_district": "London Borough of Barnet",
+        "city": "London",
+        "state": "England",
+        "postcode": "NW9 7ND",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cool Oak Lane, West Hendon, London Borough of Barnet, London, Greater London, England, NW9 7ND, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:14:40.176953+00:00",
+  "_kind": "geo_samples"
+}

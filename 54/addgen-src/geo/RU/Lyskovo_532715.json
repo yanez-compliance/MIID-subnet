@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Lyskovo",
+  "geonameid": 532715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.064095526242404,
+      "lon": 45.002721896730016,
+      "geoinfo": {
+        "display_name": "Lyskovo, Lyskovsky District, Nizhny Novgorod Oblast, Volga Federal District, 606210, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lyskovo",
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": "606210",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Lyskovo, Nizhny Novgorod Oblast, Russia"
+    },
+    {
+      "lat": 56.05604395427527,
+      "lon": 45.01040108337443,
+      "geoinfo": {
+        "display_name": "Lyskovsky District, Nizhny Novgorod Oblast, Volga Federal District, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Nizhny Novgorod Oblast",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "400, Lyskovo, 25770 Nizhny Novgorod Oblast, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:50:21.968466+00:00",
+  "_kind": "geo_samples"
+}

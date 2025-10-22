@@ -1,0 +1,47 @@
+{
+  "country_code": "BR",
+  "country": "Brazil",
+  "city": "Penha",
+  "geonameid": 3454213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -26.777149992397455,
+      "lon": -48.64506383242732,
+      "geoinfo": {
+        "display_name": "Rua Florianópolis, Centro, Penha, Região Geográfica Imediata de Itajaí, Região Geográfica Intermediária de Blumenau, Santa Catarina, South Region, 88385-000, Brazil",
+        "road": "Rua Florianópolis",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Centro",
+        "city_district": null,
+        "city": "Penha",
+        "state": "Santa Catarina",
+        "postcode": "88385-000",
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "Rua Florianópolis, Penha, Santa Catarina, Brazil"
+    },
+    {
+      "lat": -26.746984865785667,
+      "lon": -48.60916918538579,
+      "geoinfo": {
+        "display_name": "Santa Catarina, South Region, Brazil",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Santa Catarina",
+        "postcode": null,
+        "country": "Brazil",
+        "country_code": "br"
+      },
+      "address": "711, Santa Catarina, 71913 South Region, Brazil"
+    }
+  ],
+  "updated_at": "2025-10-19T01:13:24.228465+00:00",
+  "_kind": "geo_samples"
+}

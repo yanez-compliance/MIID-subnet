@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schwanewede",
+  "geonameid": 2835260,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.22998141028718,
+      "lon": 8.59287543967296,
+      "geoinfo": {
+        "display_name": "17, Anne-Frank-Weg, Hohenbuchen, Langenberg, Schwanewede, Landkreis Osterholz, Lower Saxony, 28790, Germany",
+        "road": "Anne-Frank-Weg",
+        "house_number": "17",
+        "neighbourhood": "Hohenbuchen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Schwanewede",
+        "state": "Lower Saxony",
+        "postcode": "28790",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "17 Anne-Frank-Weg, Schwanewede, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.269004246994335,
+      "lon": 8.575793846174406,
+      "geoinfo": {
+        "display_name": "Mittelster Weg, Meyenburg, Schwanewede, Landkreis Osterholz, Lower Saxony, 28790, Germany",
+        "road": "Mittelster Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schwanewede",
+        "state": "Lower Saxony",
+        "postcode": "28790",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "049, Mittelster Weg, Meyenburg, Schwanewede, Landkreis Osterholz, Lower Saxony, 28790, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:15:06.137964+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Longview",
+  "geonameid": 4707814,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.516660699388886,
+      "lon": -94.77619709117768,
+      "geoinfo": {
+        "display_name": "Pine Tree High School, 1111, West Fairmont Street, Toler Place, Greggton, Longview, Gregg County, Texas, 75604, United States",
+        "road": "West Fairmont Street",
+        "house_number": "1111",
+        "neighbourhood": null,
+        "suburb": "Greggton",
+        "city_district": null,
+        "city": "Longview",
+        "state": "Texas",
+        "postcode": "75604",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1111 West Fairmont Street, Longview, Texas, United States"
+    },
+    {
+      "lat": 32.46573075482003,
+      "lon": -94.7292190831116,
+      "geoinfo": {
+        "display_name": "LeTourneau University, 2100, South Mobberly Avenue, Longview, Gregg County, Texas, 75602, United States",
+        "road": "South Mobberly Avenue",
+        "house_number": "2100",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Longview",
+        "state": "Texas",
+        "postcode": "75602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "LeTourneau University, 2100, South Mobberly Avenue, Longview, Gregg County, Texas, 75602, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:51.480176+00:00",
+  "_kind": "geo_samples"
+}

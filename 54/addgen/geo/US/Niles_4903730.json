@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Niles",
+  "geonameid": 4903730,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.02233219339448,
+      "lon": -87.77590933888202,
+      "geoinfo": {
+        "display_name": "Niles West High School, 5701, Oakton Street, Skokie, Niles Township, Cook County, Illinois, 60077, United States",
+        "road": "Oakton Street",
+        "house_number": "5701",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Skokie",
+        "state": "Illinois",
+        "postcode": "60077",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "5701 Oakton Street, Niles, Illinois, United States"
+    },
+    {
+      "lat": 42.03073587025729,
+      "lon": -87.76412573160188,
+      "geoinfo": {
+        "display_name": "Edison Elementary School, 8200, Gross Point Road, Morton Grove, Niles Township, Cook County, Illinois, 60053, United States",
+        "road": "Gross Point Road",
+        "house_number": "8200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morton Grove",
+        "state": "Illinois",
+        "postcode": "60053",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Edison Elementary School, 8200, Gross Point Road, Morton Grove, Niles Township, Cook County, Illinois, 60053, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:05.990052+00:00",
+  "_kind": "geo_samples"
+}

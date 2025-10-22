@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "La Ceja",
+  "geonameid": 3679554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 6.065115436530961,
+      "lon": -75.41418975739793,
+      "geoinfo": {
+        "display_name": "La Ceja, Oriente, Antioquia, RAP del Agua y la Montaña, 055010, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Antioquia",
+        "postcode": "055010",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "La Ceja, Antioquia, Colombia"
+    },
+    {
+      "lat": 6.036454718278009,
+      "lon": -75.42717184995813,
+      "geoinfo": {
+        "display_name": "Carrera 17A, San Cayetano, La Ceja, Oriente, Antioquia, RAP del Agua y la Montaña, 055010, Colombia",
+        "road": "Carrera 17A",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "San Cayetano",
+        "city": "La Ceja",
+        "state": "Antioquia",
+        "postcode": "055010",
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Carrera 17A, San Cayetano, La Ceja, Oriente, Antioquia, RAP del Agua y la Montaña, 055010, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:02:44.191509+00:00",
+  "_kind": "geo_samples"
+}

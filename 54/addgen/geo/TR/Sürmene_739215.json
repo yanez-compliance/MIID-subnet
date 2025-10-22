@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Sürmene",
+  "geonameid": 739215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.88513624097878,
+      "lon": 40.143619417746656,
+      "geoinfo": {
+        "display_name": "Sürmene, Trabzon, Black Sea Region, 61600, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sürmene",
+        "state": null,
+        "postcode": "61600",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Sürmene, Turkey"
+    },
+    {
+      "lat": 40.91231540447368,
+      "lon": 40.18285879773455,
+      "geoinfo": {
+        "display_name": "Baştımar, Yeniay, Sürmene, Trabzon, Black Sea Region, 61600, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Baştımar",
+        "suburb": null,
+        "city_district": null,
+        "city": "Sürmene",
+        "state": null,
+        "postcode": "61600",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "121, Baştımar, Yeniay, Sürmene, Trabzon, Black Sea Region, 61600, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:40.584246+00:00",
+  "_kind": "geo_samples"
+}

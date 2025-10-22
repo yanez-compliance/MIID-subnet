@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Nyon",
+  "geonameid": 2659422,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 46.40628576559774,
+      "lon": 6.272906752917998,
+      "geoinfo": {
+        "display_name": "Golf Club du Domaine Impérial, sentier découverte, Gland, District de Nyon, Vaud, 1196, Switzerland",
+        "road": "sentier découverte",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gland",
+        "state": "Vaud",
+        "postcode": "1196",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "639, sentier découverte, Nyon, 1196 Vaud, Switzerland"
+    },
+    {
+      "lat": 46.38993294421103,
+      "lon": 6.246467971961223,
+      "geoinfo": {
+        "display_name": "9, Chemin de Bellevue, Prangins, District de Nyon, Vaud, 1197, Switzerland",
+        "road": "Chemin de Bellevue",
+        "house_number": "9",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Prangins",
+        "state": "Vaud",
+        "postcode": "1197",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "9, Chemin de Bellevue, Prangins, District de Nyon, Vaud, 1197, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:19:25.555577+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Dalmine",
+  "geonameid": 3177650,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.62870145317939,
+      "lon": 9.563299827734646,
+      "geoinfo": {
+        "display_name": "Osio Sopra, Bergamo, Lombardy, 24040, Italy",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Osio Sopra",
+        "state": "Lombardy",
+        "postcode": "24040",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Dalmine, Lombardy, Italy"
+    },
+    {
+      "lat": 45.67072203596547,
+      "lon": 9.5684461031063,
+      "geoinfo": {
+        "display_name": "Via San Quirico, Bonate Sotto, Bergamo, Lombardy, 24040, Italy",
+        "road": "Via San Quirico",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bonate Sotto",
+        "state": "Lombardy",
+        "postcode": "24040",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "502, Via San Quirico, Bonate Sotto, Bergamo, Lombardy, 24040, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:32.611534+00:00",
+  "_kind": "geo_samples"
+}

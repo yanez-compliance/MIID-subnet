@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sanger",
+  "geonameid": 5392868,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.67035026380129,
+      "lon": -119.58182929668976,
+      "geoinfo": {
+        "display_name": "South Indianola Avenue, Fresno County, California, 93616, United States",
+        "road": "South Indianola Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "93616",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Indianola Avenue, Sanger, California, United States"
+    },
+    {
+      "lat": 36.71484139554561,
+      "lon": -119.56318080769152,
+      "geoinfo": {
+        "display_name": "1898, Canal Drive, Sanger, Fresno County, California, 93657, United States",
+        "road": "Canal Drive",
+        "house_number": "1898",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sanger",
+        "state": "California",
+        "postcode": "93657",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1898, Canal Drive, Sanger, Fresno County, California, 93657, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:20:51.624714+00:00",
+  "_kind": "geo_samples"
+}

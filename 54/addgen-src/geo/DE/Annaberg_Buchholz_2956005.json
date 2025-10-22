@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Annaberg-Buchholz",
+  "geonameid": 2956005,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.571784752312126,
+      "lon": 13.04505700214678,
+      "geoinfo": {
+        "display_name": "Alte Königswalder Straße, Geyersdorf, Annaberg-Buchholz, Erzgebirgskreis, Saxony, 09456, Germany",
+        "road": "Alte Königswalder Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Geyersdorf",
+        "city_district": null,
+        "city": "Annaberg-Buchholz",
+        "state": "Saxony",
+        "postcode": "09456",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Alte Königswalder Straße, Annaberg-Buchholz, Saxony, Germany"
+    },
+    {
+      "lat": 50.54006004611296,
+      "lon": 12.987789842414632,
+      "geoinfo": {
+        "display_name": "39, Schlettauer Straße, Sehma, Sehmatal, Erzgebirgskreis, Saxony, 09465, Germany",
+        "road": "Schlettauer Straße",
+        "house_number": "39",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sehmatal",
+        "state": "Saxony",
+        "postcode": "09465",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "39, Schlettauer Straße, Sehma, Sehmatal, Erzgebirgskreis, Saxony, 09465, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:36.032224+00:00",
+  "_kind": "geo_samples"
+}

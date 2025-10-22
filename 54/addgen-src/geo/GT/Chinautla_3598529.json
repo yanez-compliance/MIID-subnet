@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Chinautla",
+  "geonameid": 3598529,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.708486810039659,
+      "lon": -90.46974110982441,
+      "geoinfo": {
+        "display_name": "Chinautla, Guatemala Department, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Chinautla, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.738336366139231,
+      "lon": -90.48474323494459,
+      "geoinfo": {
+        "display_name": "San Antonio las Flores, Chinautla, Guatemala Department, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio las Flores",
+        "state": "Guatemala Department",
+        "postcode": null,
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "886, San Antonio las Flores, Chinautla, 61315 Guatemala Department, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:35:45.115640+00:00",
+  "_kind": "geo_samples"
+}

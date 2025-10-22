@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Sakai",
+  "geonameid": 8572855,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.72253505268748,
+      "lon": 139.5349514658567,
+      "geoinfo": {
+        "display_name": "Mukodaicho, Nishitokyo, Tokyo, 188-0013, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nishitokyo",
+        "state": null,
+        "postcode": "188-0013",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Sakai, Japan"
+    },
+    {
+      "lat": 35.6793611758555,
+      "lon": 139.57945347001876,
+      "geoinfo": {
+        "display_name": "Kitano 3-chome, Mitaka, Tokyo, 181-0003, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Kitano 3-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mitaka",
+        "state": null,
+        "postcode": "181-0003",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kitano 3-chome, Mitaka, Tokyo, 181-0003, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:31:23.048341+00:00",
+  "_kind": "geo_samples"
+}

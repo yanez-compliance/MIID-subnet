@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yoyogi",
+  "geonameid": 10866689,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.66379352880882,
+      "lon": 139.72693720140464,
+      "geoinfo": {
+        "display_name": "National Graduate Institute for Policy Studies, Circular Route 3, Roppongi 7, Roppongi, Minato, Tokyo, 106-0032, Japan",
+        "road": "Circular Route 3",
+        "house_number": null,
+        "neighbourhood": "Roppongi 7",
+        "suburb": null,
+        "city_district": null,
+        "city": "Minato",
+        "state": null,
+        "postcode": "106-0032",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Circular Route 3, Yoyogi, Japan"
+    },
+    {
+      "lat": 35.66929409107573,
+      "lon": 139.6668782205724,
+      "geoinfo": {
+        "display_name": "Kitazawa Junior High School, 3, Kitazawa 5, Kitazawa, Setagaya, Tokyo, 155-0031, Japan",
+        "road": null,
+        "house_number": "3",
+        "neighbourhood": "Kitazawa 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Setagaya",
+        "state": null,
+        "postcode": "155-0031",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Kitazawa Junior High School, 3, Kitazawa 5, Kitazawa, Setagaya, Tokyo, 155-0031, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:32:06.375094+00:00",
+  "_kind": "geo_samples"
+}

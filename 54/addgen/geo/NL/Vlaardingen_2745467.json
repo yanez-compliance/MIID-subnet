@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Vlaardingen",
+  "geonameid": 2745467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.94855254126203,
+      "lon": 4.340003549598767,
+      "geoinfo": {
+        "display_name": "Veenpad, Vlaardingen, South Holland, Netherlands, 3137 KA, Netherlands",
+        "road": "Veenpad",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vlaardingen",
+        "state": "South Holland",
+        "postcode": "3137 KA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Veenpad, Vlaardingen, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.94046670470654,
+      "lon": 4.327835733672768,
+      "geoinfo": {
+        "display_name": "23, Trekkade, Kruidenbuurt, Vlaardingen, South Holland, Netherlands, 3137 KD, Netherlands",
+        "road": "Trekkade",
+        "house_number": "23",
+        "neighbourhood": "Kruidenbuurt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vlaardingen",
+        "state": "South Holland",
+        "postcode": "3137 KD",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "23, Trekkade, Kruidenbuurt, Vlaardingen, South Holland, Netherlands, 3137 KD, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T08:47:39.230736+00:00",
+  "_kind": "geo_samples"
+}

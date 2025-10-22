@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Tergnier",
+  "geonameid": 2973146,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.6352020988985,
+      "lon": 3.292572904672223,
+      "geoinfo": {
+        "display_name": "Chemin des Sarts, Tergnier, Laon, Aisne, Hauts-de-France, Metropolitan France, 02700, France",
+        "road": "Chemin des Sarts",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Tergnier",
+        "city": "Tergnier",
+        "state": "Hauts-de-France",
+        "postcode": "02700",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Sarts, Tergnier, Hauts-de-France, France"
+    },
+    {
+      "lat": 49.695776450751445,
+      "lon": 3.311415623891476,
+      "geoinfo": {
+        "display_name": "Chemin de Vendeuil, Remigny, Saint-Quentin, Aisne, Hauts-de-France, Metropolitan France, 02440, France",
+        "road": "Chemin de Vendeuil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Remigny",
+        "state": "Hauts-de-France",
+        "postcode": "02440",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "301, Chemin de Vendeuil, Remigny, Saint-Quentin, Aisne, Hauts-de-France, Metropolitan France, 02440, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:13:35.301288+00:00",
+  "_kind": "geo_samples"
+}

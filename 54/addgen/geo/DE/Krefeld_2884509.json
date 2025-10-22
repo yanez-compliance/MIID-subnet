@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Krefeld",
+  "geonameid": 2884509,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.33417412615369,
+      "lon": 6.567050647307807,
+      "geoinfo": {
+        "display_name": "Yakamoz Grill, 59, Rheinstraße, Kronprinzenviertel, Krefeld-Mitte, Krefeld, North Rhine-Westphalia, 47799, Germany",
+        "road": "Rheinstraße",
+        "house_number": "59",
+        "neighbourhood": null,
+        "suburb": "Krefeld-Mitte",
+        "city_district": "Krefeld-Mitte",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47799",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "59 Rheinstraße, Krefeld, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.313791365587086,
+      "lon": 6.5451226796312545,
+      "geoinfo": {
+        "display_name": "Alte Gladbacher Straße, Lindental, Benrad, Krefeld-West, Krefeld, North Rhine-Westphalia, 47804, Germany",
+        "road": "Alte Gladbacher Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lindental",
+        "city_district": "Krefeld-West",
+        "city": "Krefeld",
+        "state": "North Rhine-Westphalia",
+        "postcode": "47804",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "464, Alte Gladbacher Straße, Lindental, Benrad, Krefeld-West, Krefeld, North Rhine-Westphalia, 47804, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:30.832884+00:00",
+  "_kind": "geo_samples"
+}

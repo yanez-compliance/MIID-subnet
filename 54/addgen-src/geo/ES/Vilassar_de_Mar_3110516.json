@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vilassar de Mar",
+  "geonameid": 3110516,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.50907399422267,
+      "lon": 2.3772735408588637,
+      "geoinfo": {
+        "display_name": "Avinguda del Progrés, Vilassar de Mar, Maresme, Barcelona, Catalonia, 08340, Spain",
+        "road": "Avinguda del Progrés",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Vilassar de Mar",
+        "state": "Catalonia",
+        "postcode": "08340",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avinguda del Progrés, Vilassar de Mar, Catalonia, Spain"
+    },
+    {
+      "lat": 41.53319359090784,
+      "lon": 2.4374241269843933,
+      "geoinfo": {
+        "display_name": "Ronda de Francesc Macià, Pla d'en Boet, Mataró, Maresme, Barcelona, Catalonia, 08302, Spain",
+        "road": "Ronda de Francesc Macià",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mataró",
+        "state": "Catalonia",
+        "postcode": "08302",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "614, Ronda de Francesc Macià, Pla d'en Boet, Mataró, Maresme, Barcelona, Catalonia, 08302, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:55:21.302251+00:00",
+  "_kind": "geo_samples"
+}

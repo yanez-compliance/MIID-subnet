@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Harewood",
+  "geonameid": 13512378,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.1797202831885,
+      "lon": -123.90718037039203,
+      "geoinfo": {
+        "display_name": "Nanaimo, Regional District of Nanaimo, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nanaimo",
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Harewood, British Columbia, Canada"
+    },
+    {
+      "lat": 49.15761397436844,
+      "lon": -123.88189278579954,
+      "geoinfo": {
+        "display_name": "475, Jackson Road, Duke Point Sawmill, Duke Point, Nanaimo, Regional District of Nanaimo, British Columbia, V9X 1J2, Canada",
+        "road": "Jackson Road",
+        "house_number": "475",
+        "neighbourhood": null,
+        "suburb": "Duke Point",
+        "city_district": null,
+        "city": "Nanaimo",
+        "state": "British Columbia",
+        "postcode": "V9X 1J2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "475, Jackson Road, Duke Point Sawmill, Duke Point, Nanaimo, Regional District of Nanaimo, British Columbia, V9X 1J2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:59.672460+00:00",
+  "_kind": "geo_samples"
+}

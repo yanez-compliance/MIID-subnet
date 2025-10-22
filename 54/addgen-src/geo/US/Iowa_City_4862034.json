@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Iowa City",
+  "geonameid": 4862034,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.68773634103963,
+      "lon": -91.48295096150274,
+      "geoinfo": {
+        "display_name": "I 80, Iowa City, Newport Township, Johnson County, Iowa, 52241, United States",
+        "road": "I 80",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iowa City",
+        "state": "Iowa",
+        "postcode": "52241",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 80, Iowa City, Iowa, United States"
+    },
+    {
+      "lat": 41.66275719349513,
+      "lon": -91.52699385068186,
+      "geoinfo": {
+        "display_name": "124, North Johnson Street, Iowa City, Johnson County, Iowa, 52245, United States",
+        "road": "North Johnson Street",
+        "house_number": "124",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Iowa City",
+        "state": "Iowa",
+        "postcode": "52245",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "124, North Johnson Street, Iowa City, Johnson County, Iowa, 52245, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:55.539261+00:00",
+  "_kind": "geo_samples"
+}

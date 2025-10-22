@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Cahors",
+  "geonameid": 3029213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.475473564080595,
+      "lon": 1.4180076434671487,
+      "geoinfo": {
+        "display_name": "Chemin des Parbels, Résidence Beaulieu, Pradines, Cahors, Lot, Occitania, Metropolitan France, 46090, France",
+        "road": "Chemin des Parbels",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pradines",
+        "state": "Occitania",
+        "postcode": "46090",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin des Parbels, Cahors, Occitania, France"
+    },
+    {
+      "lat": 44.47686820441011,
+      "lon": 1.462339639177877,
+      "geoinfo": {
+        "display_name": "Chemin des Coumbellous, Laroque-des-Arcs, Bellefont-La Rauze, Cahors, Lot, Occitania, Metropolitan France, 46090, France",
+        "road": "Chemin des Coumbellous",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Laroque-des-Arcs",
+        "city": "Bellefont-La Rauze",
+        "state": "Occitania",
+        "postcode": "46090",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "843, Chemin des Coumbellous, Laroque-des-Arcs, Bellefont-La Rauze, Cahors, Lot, Occitania, Metropolitan France, 46090, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:19:02.013372+00:00",
+  "_kind": "geo_samples"
+}

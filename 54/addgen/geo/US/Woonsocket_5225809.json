@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Woonsocket",
+  "geonameid": 5225809,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.99254848953901,
+      "lon": -71.49855191021412,
+      "geoinfo": {
+        "display_name": "Fairfield Avenue, Bernon Heights, Woonsocket, Providence County, Rhode Island, 02895, United States",
+        "road": "Fairfield Avenue",
+        "house_number": null,
+        "neighbourhood": "Bernon Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Woonsocket",
+        "state": "Rhode Island",
+        "postcode": "02895",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Fairfield Avenue, Woonsocket, Rhode Island, United States"
+    },
+    {
+      "lat": 41.97523106731779,
+      "lon": -71.49394942724281,
+      "geoinfo": {
+        "display_name": "177, Hawthorne Circle, Woonsocket, Providence County, Rhode Island, 02895, United States",
+        "road": "Hawthorne Circle",
+        "house_number": "177",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woonsocket",
+        "state": "Rhode Island",
+        "postcode": "02895",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "177, Hawthorne Circle, Woonsocket, Providence County, Rhode Island, 02895, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:40.611808+00:00",
+  "_kind": "geo_samples"
+}

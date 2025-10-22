@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Zárate",
+  "geonameid": 3427213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.12928531395889,
+      "lon": -59.03320614236575,
+      "geoinfo": {
+        "display_name": "Ruta Nacional 12, Zárate, Partido de Zárate, Buenos Aires, 2800, Argentina",
+        "road": "Ruta Nacional 12",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zárate",
+        "state": "Buenos Aires",
+        "postcode": "2800",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Ruta Nacional 12, Zárate, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.107053799110844,
+      "lon": -58.98485662163729,
+      "geoinfo": {
+        "display_name": "Partido de Campana, Buenos Aires, B2800JZD, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "B2800JZD",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "239, Zárate, B2800JZD Buenos Aires, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:52:10.641239+00:00",
+  "_kind": "geo_samples"
+}

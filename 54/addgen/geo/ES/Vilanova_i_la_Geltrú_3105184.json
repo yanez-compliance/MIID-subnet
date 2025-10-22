@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vilanova i la Geltrú",
+  "geonameid": 3105184,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.226340312987105,
+      "lon": 1.7155348152214749,
+      "geoinfo": {
+        "display_name": "2, Carrer Abat Escarré, Sant Joan, Sínia Artigues, Vilanova i la Geltrú, Garraf, Barcelona, Catalonia, 08800, Spain",
+        "road": "Carrer Abat Escarré",
+        "house_number": "2",
+        "neighbourhood": "Sant Joan",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vilanova i la Geltrú",
+        "state": "Catalonia",
+        "postcode": "08800",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "2 Carrer Abat Escarré, Vilanova i la Geltrú, Catalonia, Spain"
+    },
+    {
+      "lat": 41.22158368623146,
+      "lon": 1.7578399648962928,
+      "geoinfo": {
+        "display_name": "barraca de pedra seca 383, Camí Pedalable de la Costa del Garraf, Sitges, Garraf, Barcelona, Catalonia, 08812, Spain",
+        "road": "Camí Pedalable de la Costa del Garraf",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sitges",
+        "state": "Catalonia",
+        "postcode": "08812",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "barraca de pedra seca 383, Camí Pedalable de la Costa del Garraf, Sitges, Garraf, Barcelona, Catalonia, 08812, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:28.543594+00:00",
+  "_kind": "geo_samples"
+}

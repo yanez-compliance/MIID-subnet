@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Yuba City",
+  "geonameid": 5411015,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.170836409888324,
+      "lon": -121.65433190087445,
+      "geoinfo": {
+        "display_name": "2163, Pease Road, Yuba City, Sutter County, California, 95993, United States",
+        "road": "Pease Road",
+        "house_number": "2163",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuba City",
+        "state": "California",
+        "postcode": "95993",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2163 Pease Road, Yuba City, California, United States"
+    },
+    {
+      "lat": 39.12984642430539,
+      "lon": -121.60117234869514,
+      "geoinfo": {
+        "display_name": "Yuba City, Sutter County, California, 95991, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yuba City",
+        "state": "California",
+        "postcode": "95991",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "903, Yuba City, Sutter County, California, 95991, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:43.441999+00:00",
+  "_kind": "geo_samples"
+}

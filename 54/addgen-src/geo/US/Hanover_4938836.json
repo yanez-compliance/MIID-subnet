@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hanover",
+  "geonameid": 4938836,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.10767251865026,
+      "lon": -70.81511270644967,
+      "geoinfo": {
+        "display_name": "Broad Oak Way, Curtis Crossing, Hanover, Plymouth County, Massachusetts, 02339, United States",
+        "road": "Broad Oak Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hanover",
+        "state": "Massachusetts",
+        "postcode": "02339",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Broad Oak Way, Hanover, Massachusetts, United States"
+    },
+    {
+      "lat": 42.14410832956564,
+      "lon": -70.83584215510027,
+      "geoinfo": {
+        "display_name": "214, South Street, Norwell, Plymouth County, Massachusetts, 02061, United States",
+        "road": "South Street",
+        "house_number": "214",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Norwell",
+        "state": "Massachusetts",
+        "postcode": "02061",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "214, South Street, Norwell, Plymouth County, Massachusetts, 02061, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:02.277740+00:00",
+  "_kind": "geo_samples"
+}

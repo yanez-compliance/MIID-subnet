@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Addis Ababa",
+  "geonameid": 344979,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.996878315874522,
+      "lon": 38.748289597952,
+      "geoinfo": {
+        "display_name": "Beg Tera, Kirkos, Addis Ababa, 2506, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Beg Tera",
+        "city_district": null,
+        "city": null,
+        "state": "Addis Ababa",
+        "postcode": "2506",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Beg Tera, Addis Ababa, Addis Ababa, Ethiopia"
+    },
+    {
+      "lat": 9.045306679163044,
+      "lon": 38.755004498464366,
+      "geoinfo": {
+        "display_name": "Webe Berha, Giorgis, Addis Ababa, Arada, Addis Ababa, 1176, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Webe Berha",
+        "suburb": "Giorgis",
+        "city_district": null,
+        "city": "Addis Ababa",
+        "state": "Addis Ababa",
+        "postcode": "1176",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "768, Webe Berha, Giorgis, Addis Ababa, Arada, Addis Ababa, 1176, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:10:02.865765+00:00",
+  "_kind": "geo_samples"
+}

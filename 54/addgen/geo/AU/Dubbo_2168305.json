@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Dubbo",
+  "geonameid": 2168305,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.21049083943712,
+      "lon": 148.63484346009326,
+      "geoinfo": {
+        "display_name": "Yarrandale Road, Dubbo, Dubbo Regional Council, New South Wales, 2830, Australia",
+        "road": "Yarrandale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dubbo",
+        "state": "New South Wales",
+        "postcode": "2830",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Yarrandale Road, Dubbo, New South Wales, Australia"
+    },
+    {
+      "lat": -32.24440223654883,
+      "lon": 148.55448175234096,
+      "geoinfo": {
+        "display_name": "Rosedale Road, Dubbo, Dubbo Regional Council, New South Wales, 2830, Australia",
+        "road": "Rosedale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dubbo",
+        "state": "New South Wales",
+        "postcode": "2830",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "402, Rosedale Road, Dubbo, Dubbo Regional Council, New South Wales, 2830, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:33.924355+00:00",
+  "_kind": "geo_samples"
+}

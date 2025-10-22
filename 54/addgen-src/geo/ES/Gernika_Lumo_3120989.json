@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Gernika-Lumo",
+  "geonameid": 3120989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.345936260729566,
+      "lon": -2.7112124263212967,
+      "geoinfo": {
+        "display_name": "Errigoiti, Busturia, Biscay, Autonomous Community of the Basque Country, 48309, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Busturia",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48309",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Gernika-Lumo, Autonomous Community of the Basque Country, Spain"
+    },
+    {
+      "lat": 43.29239043199052,
+      "lon": -2.681492251170522,
+      "geoinfo": {
+        "display_name": "10, BI-635, Kurtzero, Zubieta, Muxika, Biscay, Autonomous Community of the Basque Country, 48392, Spain",
+        "road": "BI-635",
+        "house_number": "10",
+        "neighbourhood": "Kurtzero",
+        "suburb": null,
+        "city_district": null,
+        "city": "Muxika",
+        "state": "Autonomous Community of the Basque Country",
+        "postcode": "48392",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "BI-635, Gernika-Lumo, 48392 Autonomous Community of the Basque Country, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:04:47.576311+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Greenacres City",
+  "geonameid": 4157467,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 26.64552415485541,
+      "lon": -80.16191575405907,
+      "geoinfo": {
+        "display_name": "Palm Beach County, Florida, 33413, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "33413",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Greenacres City, Florida, United States"
+    },
+    {
+      "lat": 26.618829936444456,
+      "lon": -80.14653587334868,
+      "geoinfo": {
+        "display_name": "6498, Lake Worth Road, Greenacres, Palm Beach County, Florida, 33463, United States",
+        "road": "Lake Worth Road",
+        "house_number": "6498",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Greenacres",
+        "state": "Florida",
+        "postcode": "33463",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "6498, Lake Worth Road, Greenacres, Palm Beach County, Florida, 33463, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:42:07.372427+00:00",
+  "_kind": "geo_samples"
+}

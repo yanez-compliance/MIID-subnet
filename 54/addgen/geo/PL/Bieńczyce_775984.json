@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Bieńczyce",
+  "geonameid": 775984,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.07954187896154,
+      "lon": 20.047033210595607,
+      "geoinfo": {
+        "display_name": "19, Osiedle Szkolne, Nowa Huta, Krakow, Lesser Poland Voivodeship, 31-977, Poland",
+        "road": null,
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": "Nowa Huta",
+        "city_district": "Nowa Huta",
+        "city": "Krakow",
+        "state": "Lesser Poland Voivodeship",
+        "postcode": "31-977",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "Nowa Huta, Bieńczyce, Lesser Poland Voivodeship, Poland"
+    },
+    {
+      "lat": 50.12485874644059,
+      "lon": 20.058964419094796,
+      "geoinfo": {
+        "display_name": "1, Zielona, Zastów, gmina Kocmyrzów-Luborzyca, Kraków County, Lesser Poland Voivodeship, 32-010, Poland",
+        "road": "Zielona",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zastów",
+        "state": "Lesser Poland Voivodeship",
+        "postcode": "32-010",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "1, Zielona, Zastów, gmina Kocmyrzów-Luborzyca, Kraków County, Lesser Poland Voivodeship, 32-010, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:46.500031+00:00",
+  "_kind": "geo_samples"
+}

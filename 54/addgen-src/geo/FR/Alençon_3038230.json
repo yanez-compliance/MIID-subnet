@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Alençon",
+  "geonameid": 3038230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.43207192341939,
+      "lon": 0.07265587440054413,
+      "geoinfo": {
+        "display_name": "135, Rue de Bretagne, Les Portes de Bretagne, Alençon, Orne, Normandy, Metropolitan France, 61000, France",
+        "road": "Rue de Bretagne",
+        "house_number": "135",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alençon",
+        "state": "Normandy",
+        "postcode": "61000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "135 Rue de Bretagne, Alençon, Normandy, France"
+    },
+    {
+      "lat": 48.43426063051622,
+      "lon": 0.06402553685247364,
+      "geoinfo": {
+        "display_name": "Action, Rue d'Alençon, Les Portes de Bretagne, Alençon, Orne, Normandy, Metropolitan France, 61000, France",
+        "road": "Rue d'Alençon",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alençon",
+        "state": "Normandy",
+        "postcode": "61000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "244, Rue d'Alençon, Alençon, 61000 Normandy, France"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:10.612201+00:00",
+  "_kind": "geo_samples"
+}

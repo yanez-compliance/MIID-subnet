@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ferguson",
+  "geonameid": 4386387,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.72124249962158,
+      "lon": -90.30374716420414,
+      "geoinfo": {
+        "display_name": "Cool Valley, Saint Louis County, Missouri, 63121, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cool Valley",
+        "state": "Missouri",
+        "postcode": "63121",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ferguson, Missouri, United States"
+    },
+    {
+      "lat": 38.745442209606445,
+      "lon": -90.25607069080382,
+      "geoinfo": {
+        "display_name": "2114, Kappel Drive, Highview Acres, Castle Point, Saint Louis County, Missouri, 63136, United States",
+        "road": "Kappel Drive",
+        "house_number": "2114",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Castle Point",
+        "state": "Missouri",
+        "postcode": "63136",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2114, Kappel Drive, Highview Acres, Castle Point, Saint Louis County, Missouri, 63136, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:47:31.974303+00:00",
+  "_kind": "geo_samples"
+}

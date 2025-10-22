@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oer-Erkenschwick",
+  "geonameid": 2857904,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.63865766180169,
+      "lon": 7.261441564325107,
+      "geoinfo": {
+        "display_name": "6, Marktstraße, Groß-Erkenschwick, Oer-Erkenschwick, Kreis Recklinghausen, North Rhine-Westphalia, 45739, Germany",
+        "road": "Marktstraße",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Groß-Erkenschwick",
+        "city_district": null,
+        "city": "Oer-Erkenschwick",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45739",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6 Marktstraße, Oer-Erkenschwick, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.63833148129446,
+      "lon": 7.285294925905949,
+      "geoinfo": {
+        "display_name": "Wegkreuz Notarp, Verbandsstraße, Rapen, Oer-Erkenschwick, Kreis Recklinghausen, North Rhine-Westphalia, 45739, Germany",
+        "road": "Verbandsstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Rapen",
+        "city_district": null,
+        "city": "Oer-Erkenschwick",
+        "state": "North Rhine-Westphalia",
+        "postcode": "45739",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "331, Verbandsstraße, Oer-Erkenschwick, 45739 North Rhine-Westphalia, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:10:39.963972+00:00",
+  "_kind": "geo_samples"
+}

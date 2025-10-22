@@ -1,0 +1,47 @@
+{
+  "country_code": "PH",
+  "country": "Philippines",
+  "city": "Mandaluyong City",
+  "geonameid": 1701966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.60424073876544,
+      "lon": 121.06589157676872,
+      "geoinfo": {
+        "display_name": "Camp Aguinaldo, 3rd District, Quezon City, Eastern Manila District, Metro Manila, 1110, Philippines",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "3rd District",
+        "city": "Quezon City",
+        "state": null,
+        "postcode": "1110",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "3rd District, Mandaluyong City, Philippines"
+    },
+    {
+      "lat": 14.550244811830186,
+      "lon": 121.0683385437367,
+      "geoinfo": {
+        "display_name": "F. C. Tuazon Street, Tabacalera, Pateros, Southern Manila District, Metro Manila, 1623, Philippines",
+        "road": "F. C. Tuazon Street",
+        "house_number": null,
+        "neighbourhood": "Tabacalera",
+        "suburb": null,
+        "city_district": null,
+        "city": "Pateros",
+        "state": null,
+        "postcode": "1623",
+        "country": "Philippines",
+        "country_code": "ph"
+      },
+      "address": "756, F. C. Tuazon Street, Tabacalera, Pateros, Southern Manila District, Metro Manila, 1623, Philippines"
+    }
+  ],
+  "updated_at": "2025-10-19T06:27:01.316098+00:00",
+  "_kind": "geo_samples"
+}

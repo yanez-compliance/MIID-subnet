@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Arao",
+  "geonameid": 11274040,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.962213800754164,
+      "lon": 130.4862705171168,
+      "geoinfo": {
+        "display_name": "Hachimandai 1-chome, Arao, Kumamoto Prefecture, 864-0033, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Hachimandai 1-chome",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arao",
+        "state": null,
+        "postcode": "864-0033",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hachimandai 1-chome, Arao, Japan"
+    },
+    {
+      "lat": 32.93505569525598,
+      "lon": 130.45626927166302,
+      "geoinfo": {
+        "display_name": "Takahama, Nagasu, Tamana County, Kumamoto Prefecture, 864-0027, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nagasu",
+        "state": null,
+        "postcode": "864-0027",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Takahama, Nagasu, Tamana County, Kumamoto Prefecture, 864-0027, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T01:54:32.460979+00:00",
+  "_kind": "geo_samples"
+}

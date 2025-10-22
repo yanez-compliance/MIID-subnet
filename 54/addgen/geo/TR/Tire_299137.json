@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Tire",
+  "geonameid": 299137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.09673696207738,
+      "lon": 27.716575222604238,
+      "geoinfo": {
+        "display_name": "Fatih, Fatih Mahallesi, Tire, Aegean Region, 35900, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fatih",
+        "city_district": "Fatih Mahallesi",
+        "city": "Tire",
+        "state": null,
+        "postcode": "35900",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Fatih, Tire, Turkey"
+    },
+    {
+      "lat": 38.07052894890282,
+      "lon": 27.6832456363212,
+      "geoinfo": {
+        "display_name": "Yuvalı, Hisarlık Mahallesi, Tire, Aegean Region, 35900, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Yuvalı",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tire",
+        "state": null,
+        "postcode": "35900",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "503, Yuvalı, Hisarlık Mahallesi, Tire, Aegean Region, 35900, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T10:26:14.136551+00:00",
+  "_kind": "geo_samples"
+}

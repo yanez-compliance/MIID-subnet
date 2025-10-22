@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Silver Spring",
+  "geonameid": 4369596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.0070868616236,
+      "lon": -77.0113134036199,
+      "geoinfo": {
+        "display_name": "104, Hamilton Avenue, Indian Spring Terrace, Silver Spring, Montgomery County, Maryland, 20901, United States",
+        "road": "Hamilton Avenue",
+        "house_number": "104",
+        "neighbourhood": "Indian Spring Terrace",
+        "suburb": null,
+        "city_district": null,
+        "city": "Silver Spring",
+        "state": "Maryland",
+        "postcode": "20901",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "104 Hamilton Avenue, Silver Spring, Maryland, United States"
+    },
+    {
+      "lat": 39.00635921439434,
+      "lon": -77.02560383750712,
+      "geoinfo": {
+        "display_name": "1102, Dale Drive, South Woodside Park, Montgomery County, Maryland, 20910, United States",
+        "road": "Dale Drive",
+        "house_number": "1102",
+        "neighbourhood": "South Woodside Park",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "20910",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1102, Dale Drive, South Woodside Park, Montgomery County, Maryland, 20910, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:24.358142+00:00",
+  "_kind": "geo_samples"
+}

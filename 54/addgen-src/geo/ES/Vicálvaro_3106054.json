@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Vicálvaro",
+  "geonameid": 3106054,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.39717159805729,
+      "lon": -3.6111680654860585,
+      "geoinfo": {
+        "display_name": "Calle de la Dehesa de Vicálvaro, Valdebernardo, Vicálvaro, Madrid, Community of Madrid, 28032, Spain",
+        "road": "Calle de la Dehesa de Vicálvaro",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Vicálvaro",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28032",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle de la Dehesa de Vicálvaro, Vicálvaro, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.36112460000894,
+      "lon": -3.6209511310861138,
+      "geoinfo": {
+        "display_name": "Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28031, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28031",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "480, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28031, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:24:35.914422+00:00",
+  "_kind": "geo_samples"
+}

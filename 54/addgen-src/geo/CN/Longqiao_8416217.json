@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Longqiao",
+  "geonameid": 8416217,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.726299208401276,
+      "lon": 107.28695035787824,
+      "geoinfo": {
+        "display_name": "Taibai Avenue, Lidu, Fuling, Fuling District, Chongqing, China",
+        "road": "Taibai Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lidu",
+        "city_district": null,
+        "city": "Fuling",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Taibai Avenue, Longqiao, Chongqing, China"
+    },
+    {
+      "lat": 29.68352666301739,
+      "lon": 107.28428632057341,
+      "geoinfo": {
+        "display_name": "Fuling, Fuling District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fuling",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "889, Fuling, Fuling District, 51086 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:54.828175+00:00",
+  "_kind": "geo_samples"
+}

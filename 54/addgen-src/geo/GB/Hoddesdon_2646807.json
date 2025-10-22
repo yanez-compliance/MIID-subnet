@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hoddesdon",
+  "geonameid": 2646807,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.74298951374449,
+      "lon": -0.020776044479984875,
+      "geoinfo": {
+        "display_name": "High Road Broxbourne, Wormley, Broxbourne, Hertfordshire, England, EN10 7BS, United Kingdom",
+        "road": "High Road Broxbourne",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Broxbourne",
+        "state": "England",
+        "postcode": "EN10 7BS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "High Road Broxbourne, Hoddesdon, England, United Kingdom"
+    },
+    {
+      "lat": 51.799621688936064,
+      "lon": -0.01810320276494497,
+      "geoinfo": {
+        "display_name": "Lower Road, Great Amwell, East Hertfordshire, Hertfordshire, England, SG12 9TA, United Kingdom",
+        "road": "Lower Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Great Amwell",
+        "city_district": null,
+        "city": "East Hertfordshire",
+        "state": "England",
+        "postcode": "SG12 9TA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Lower Road, Great Amwell, East Hertfordshire, Hertfordshire, England, SG12 9TA, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:20:02.565573+00:00",
+  "_kind": "geo_samples"
+}

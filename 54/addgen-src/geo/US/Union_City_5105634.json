@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Union City",
+  "geonameid": 5105634,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.75420204600255,
+      "lon": -74.04462010025048,
+      "geoinfo": {
+        "display_name": "Grace Street, Jersey City, Hudson County, New Jersey, 07307, United States",
+        "road": "Grace Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jersey City",
+        "state": "New Jersey",
+        "postcode": "07307",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Grace Street, Union City, New Jersey, United States"
+    },
+    {
+      "lat": 40.79298251868819,
+      "lon": -74.0035446328023,
+      "geoinfo": {
+        "display_name": "7001, Park Avenue, Guttenberg, Hudson County, New Jersey, 07093, United States",
+        "road": "Park Avenue",
+        "house_number": "7001",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guttenberg",
+        "state": "New Jersey",
+        "postcode": "07093",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7001, Park Avenue, Guttenberg, Hudson County, New Jersey, 07093, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:15:47.415139+00:00",
+  "_kind": "geo_samples"
+}

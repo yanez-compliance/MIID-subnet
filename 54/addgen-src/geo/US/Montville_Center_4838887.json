@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montville Center",
+  "geonameid": 4838887,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.47325022317042,
+      "lon": -72.14534654752697,
+      "geoinfo": {
+        "display_name": "231, Simpson Lane, Oakdale, Montville, Southeastern Connecticut Planning Region, Connecticut, 06370, United States",
+        "road": "Simpson Lane",
+        "house_number": "231",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montville",
+        "state": "Connecticut",
+        "postcode": "06370",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "231 Simpson Lane, Montville Center, Connecticut, United States"
+    },
+    {
+      "lat": 41.44227362715403,
+      "lon": -72.17559444001691,
+      "geoinfo": {
+        "display_name": "Oakdale, Montville, Southeastern Connecticut Planning Region, Connecticut, 06353, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montville",
+        "state": "Connecticut",
+        "postcode": "06353",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "962, Oakdale, Montville, Southeastern Connecticut Planning Region, Connecticut, 06353, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:54:15.474464+00:00",
+  "_kind": "geo_samples"
+}

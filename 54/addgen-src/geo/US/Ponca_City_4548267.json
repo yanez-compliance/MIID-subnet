@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ponca City",
+  "geonameid": 4548267,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.687141328883186,
+      "lon": -97.075956547946,
+      "geoinfo": {
+        "display_name": "874, East Drummond Avenue, Ponca City, Kay County, Oklahoma, 74601, United States",
+        "road": "East Drummond Avenue",
+        "house_number": "874",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Ponca City",
+        "state": "Oklahoma",
+        "postcode": "74601",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "874 East Drummond Avenue, Ponca City, Oklahoma, United States"
+    },
+    {
+      "lat": 36.69339270857409,
+      "lon": -97.13241374876732,
+      "geoinfo": {
+        "display_name": "West South Avenue, Kay County, Oklahoma, United States",
+        "road": "West South Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Oklahoma",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "651, West South Avenue, Kay County, 43566 Oklahoma, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:26.174415+00:00",
+  "_kind": "geo_samples"
+}

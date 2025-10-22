@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Gate",
+  "geonameid": 4369964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.1407112942455,
+      "lon": -76.61011556480409,
+      "geoinfo": {
+        "display_name": "Oakwood Park, Glen Burnie, Anne Arundel County, Maryland, 21060, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glen Burnie",
+        "state": "Maryland",
+        "postcode": "21060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Gate, Maryland, United States"
+    },
+    {
+      "lat": 39.12495657194482,
+      "lon": -76.6256882754876,
+      "geoinfo": {
+        "display_name": "Centre Road, Shetland Square, Glen Burnie, Anne Arundel County, Maryland, 21108, United States",
+        "road": "Centre Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Glen Burnie",
+        "state": "Maryland",
+        "postcode": "21108",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "964, Centre Road, Shetland Square, Glen Burnie, Anne Arundel County, Maryland, 21108, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:38.547439+00:00",
+  "_kind": "geo_samples"
+}

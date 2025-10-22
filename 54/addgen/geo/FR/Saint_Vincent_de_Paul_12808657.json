@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Vincent de Paul",
+  "geonameid": 12808657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.916898594911444,
+      "lon": 2.316107546388791,
+      "geoinfo": {
+        "display_name": "4, Bords de Seine, Asnières-sur-Seine, Arrondissement of Nanterre, Hauts-de-Seine, Metropolitan France, 92600, France",
+        "road": null,
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Asnières-sur-Seine",
+        "state": null,
+        "postcode": "92600",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Saint-Vincent de Paul, Ile-de-France, France"
+    },
+    {
+      "lat": 48.86365159205521,
+      "lon": 2.301746569198527,
+      "geoinfo": {
+        "display_name": "Pont de l'Alma, Promenade Gisèle Halimi, Quartier du Gros-Caillou, 7th Arrondissement, Paris, Metropolitan France, 75007, France",
+        "road": "Promenade Gisèle Halimi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "7th Arrondissement",
+        "city_district": "Paris",
+        "city": "Paris",
+        "state": null,
+        "postcode": "75007",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Pont de l'Alma, Promenade Gisèle Halimi, Quartier du Gros-Caillou, 7th Arrondissement, Paris, Metropolitan France, 75007, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:12:43.812366+00:00",
+  "_kind": "geo_samples"
+}

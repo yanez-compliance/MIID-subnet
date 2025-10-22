@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Espelkamp",
+  "geonameid": 2928874,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.40480965232556,
+      "lon": 8.61151535734262,
+      "geoinfo": {
+        "display_name": "Schulstraße, Altgemeinde Espelkamp, Espelkamp, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32339, Germany",
+        "road": "Schulstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Altgemeinde Espelkamp",
+        "city_district": null,
+        "city": "Espelkamp",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32339",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Schulstraße, Espelkamp, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 52.40334174956406,
+      "lon": 8.652775651545074,
+      "geoinfo": {
+        "display_name": "4, Weddingfeld, Tonnenheide, Rahden, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32369, Germany",
+        "road": "Weddingfeld",
+        "house_number": "4",
+        "neighbourhood": null,
+        "suburb": "Tonnenheide",
+        "city_district": null,
+        "city": "Rahden",
+        "state": "North Rhine-Westphalia",
+        "postcode": "32369",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "4, Weddingfeld, Tonnenheide, Rahden, Kreis Minden-Lübbecke, North Rhine-Westphalia, 32369, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:14:07.136416+00:00",
+  "_kind": "geo_samples"
+}

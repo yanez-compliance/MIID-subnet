@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Tarneit",
+  "geonameid": 2147357,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.81578121755008,
+      "lon": 144.6991792446025,
+      "geoinfo": {
+        "display_name": "14, Hackamore Street, Tarneit, Melbourne, City of Wyndham, Victoria, 3029, Australia",
+        "road": "Hackamore Street",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Tarneit",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3029",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "14 Hackamore Street, Tarneit, Victoria, Australia"
+    },
+    {
+      "lat": -37.80173876189279,
+      "lon": 144.64393354426832,
+      "geoinfo": {
+        "display_name": "1471, Boundary Road, Mount Cottrell, Melbourne, City of Wyndham, Victoria, Australia",
+        "road": "Boundary Road",
+        "house_number": "1471",
+        "neighbourhood": null,
+        "suburb": "Mount Cottrell",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": null,
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "1471, Boundary Road, Mount Cottrell, Melbourne, City of Wyndham, 13377 Victoria, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:30:53.466764+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ditzingen",
+  "geonameid": 2936705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.80685340013617,
+      "lon": 9.062018663583594,
+      "geoinfo": {
+        "display_name": "Jakobstraße, Gerlingen, Landkreis Ludwigsburg, Baden-Württemberg, 70839, Germany",
+        "road": "Jakobstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gerlingen",
+        "state": "Baden-Württemberg",
+        "postcode": "70839",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Jakobstraße, Ditzingen, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.80039228792271,
+      "lon": 9.061522862480103,
+      "geoinfo": {
+        "display_name": "14/1, Hauptstraße, Schillerhöhe, Gerlingen, Landkreis Ludwigsburg, Baden-Württemberg, 70839, Germany",
+        "road": "Hauptstraße",
+        "house_number": "14/1",
+        "neighbourhood": null,
+        "suburb": "Schillerhöhe",
+        "city_district": null,
+        "city": "Gerlingen",
+        "state": "Baden-Württemberg",
+        "postcode": "70839",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "14/1, Hauptstraße, Schillerhöhe, Gerlingen, Landkreis Ludwigsburg, Baden-Württemberg, 70839, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:45:28.539191+00:00",
+  "_kind": "geo_samples"
+}

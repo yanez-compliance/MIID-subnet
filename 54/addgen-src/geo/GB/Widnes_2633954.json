@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Widnes",
+  "geonameid": 2633954,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.37084531763301,
+      "lon": -2.694926698699524,
+      "geoinfo": {
+        "display_name": "Johnson's Lane, Fiddlers Ferry Power Station, Shell Green, Widnes, Halton, Liverpool City Region, England, WA8 0WB, United Kingdom",
+        "road": "Johnson's Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Shell Green",
+        "city_district": null,
+        "city": "Widnes",
+        "state": "England",
+        "postcode": "WA8 0WB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Johnson's Lane, Widnes, England, United Kingdom"
+    },
+    {
+      "lat": 53.36636742476828,
+      "lon": -2.6784964899302506,
+      "geoinfo": {
+        "display_name": "Cuerdley, Warrington, England, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Cuerdley",
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": null,
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "510, Cuerdley, Warrington, 78017 England, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:39:54.051076+00:00",
+  "_kind": "geo_samples"
+}

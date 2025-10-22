@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Parole",
+  "geonameid": 4364964,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.96592754987221,
+      "lon": -76.5165829663007,
+      "geoinfo": {
+        "display_name": "Forest Drive, Heritage, Captains Walk, Annapolis, Anne Arundel County, Maryland, 21401, United States",
+        "road": "Forest Drive",
+        "house_number": null,
+        "neighbourhood": "Heritage",
+        "suburb": null,
+        "city_district": null,
+        "city": "Annapolis",
+        "state": "Maryland",
+        "postcode": "21401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Forest Drive, Parole, Maryland, United States"
+    },
+    {
+      "lat": 38.97863028058926,
+      "lon": -76.4959779228823,
+      "geoinfo": {
+        "display_name": "80, West Street, Bay View Heights, Annapolis, Anne Arundel County, Maryland, 21401, United States",
+        "road": "West Street",
+        "house_number": "80",
+        "neighbourhood": "Bay View Heights",
+        "suburb": null,
+        "city_district": null,
+        "city": "Annapolis",
+        "state": "Maryland",
+        "postcode": "21401",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "80, West Street, Bay View Heights, Annapolis, Anne Arundel County, Maryland, 21401, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:25.651717+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Northport",
+  "geonameid": 5115989,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.85135086201188,
+      "lon": -73.32824879140779,
+      "geoinfo": {
+        "display_name": "16, Hammond Road, Elwood, Town of Huntington, Suffolk County, New York, 11731, United States",
+        "road": "Hammond Road",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elwood",
+        "state": "New York",
+        "postcode": "11731",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16 Hammond Road, East Northport, New York, United States"
+    },
+    {
+      "lat": 40.844912724194984,
+      "lon": -73.29064919504619,
+      "geoinfo": {
+        "display_name": "18, Fox Lane, Town of Smithtown, Suffolk County, New York, 11725, United States",
+        "road": "Fox Lane",
+        "house_number": "18",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Town of Smithtown",
+        "state": "New York",
+        "postcode": "11725",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "18, Fox Lane, Town of Smithtown, Suffolk County, New York, 11725, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:39:28.821890+00:00",
+  "_kind": "geo_samples"
+}

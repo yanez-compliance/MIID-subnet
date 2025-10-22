@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Leer",
+  "geonameid": 2879697,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.21491539186973,
+      "lon": 7.39475386888234,
+      "geoinfo": {
+        "display_name": "1, Schnepfenweg, Bingumgaste, Bingum, Leer (Ostfriesland), Landkreis Leer, Lower Saxony, 26789, Germany",
+        "road": "Schnepfenweg",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Leer (Ostfriesland)",
+        "state": "Lower Saxony",
+        "postcode": "26789",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1 Schnepfenweg, Leer, Lower Saxony, Germany"
+    },
+    {
+      "lat": 53.24051649718477,
+      "lon": 7.446286319843671,
+      "geoinfo": {
+        "display_name": "Stadtring, Kernstadt Leer, Leer (Ostfriesland), Landkreis Leer, Lower Saxony, 26789, Germany",
+        "road": "Stadtring",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Kernstadt Leer",
+        "city": "Leer (Ostfriesland)",
+        "state": "Lower Saxony",
+        "postcode": "26789",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "225, Stadtring, Kernstadt Leer, Leer (Ostfriesland), Landkreis Leer, Lower Saxony, 26789, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:21:10.724641+00:00",
+  "_kind": "geo_samples"
+}

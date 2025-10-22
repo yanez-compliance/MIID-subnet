@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Sultanbeyli",
+  "geonameid": 7628419,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.95306663027931,
+      "lon": 29.325243574570784,
+      "geoinfo": {
+        "display_name": "Kurna Mahallesi, Pendik, Istanbul, Marmara Region, 34916, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pendik",
+        "state": null,
+        "postcode": "34916",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Sultanbeyli, Turkey"
+    },
+    {
+      "lat": 40.98830942121563,
+      "lon": 29.290820671340565,
+      "geoinfo": {
+        "display_name": "Kurtdoğmuş Mah., Kurtdoğmuş Mahallesi, Pendik, Istanbul, Marmara Region, 34916, Turkey",
+        "road": "Kurtdoğmuş Mah.",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pendik",
+        "state": null,
+        "postcode": "34916",
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "499, Kurtdoğmuş Mah., Kurtdoğmuş Mahallesi, Pendik, Istanbul, Marmara Region, 34916, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:28.101752+00:00",
+  "_kind": "geo_samples"
+}

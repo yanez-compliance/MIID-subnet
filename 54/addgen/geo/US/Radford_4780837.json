@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Radford",
+  "geonameid": 4780837,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.10812297924717,
+      "lon": -80.58712315060541,
+      "geoinfo": {
+        "display_name": "101, Midkiff Lane, Radford, Virginia, 24129, United States",
+        "road": "Midkiff Lane",
+        "house_number": "101",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Radford",
+        "state": "Virginia",
+        "postcode": "24129",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "101 Midkiff Lane, Radford, Virginia, United States"
+    },
+    {
+      "lat": 37.10913788948021,
+      "lon": -80.57704515419748,
+      "geoinfo": {
+        "display_name": "1001, Rock Road West, Smithfield, Radford, Virginia, 24141, United States",
+        "road": "Rock Road West",
+        "house_number": "1001",
+        "neighbourhood": "Smithfield",
+        "suburb": null,
+        "city_district": null,
+        "city": "Radford",
+        "state": "Virginia",
+        "postcode": "24141",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1001, Rock Road West, Smithfield, Radford, Virginia, 24141, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:53:09.490293+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lake Magdalene",
+  "geonameid": 4161313,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.045602201011967,
+      "lon": -82.48062993370127,
+      "geoinfo": {
+        "display_name": "Carroll Landing Drive, Carrollwood, Hillsborough County, Florida, 33612, United States",
+        "road": "Carroll Landing Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carrollwood",
+        "state": "Florida",
+        "postcode": "33612",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Carroll Landing Drive, Lake Magdalene, Florida, United States"
+    },
+    {
+      "lat": 28.086961540941484,
+      "lon": -82.45841641300576,
+      "geoinfo": {
+        "display_name": "Domino's, 14955, North Florida Avenue, Tampa, Hillsborough County, Florida, 33613, United States",
+        "road": "North Florida Avenue",
+        "house_number": "14955",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tampa",
+        "state": "Florida",
+        "postcode": "33613",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Domino's, 14955, North Florida Avenue, Tampa, Hillsborough County, Florida, 33613, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:13:32.343450+00:00",
+  "_kind": "geo_samples"
+}

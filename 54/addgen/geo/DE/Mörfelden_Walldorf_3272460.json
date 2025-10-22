@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Mörfelden-Walldorf",
+  "geonameid": 3272460,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.99693479017194,
+      "lon": 8.577792492963285,
+      "geoinfo": {
+        "display_name": "Hurenweg, Mörfelden, Walldorf, Mörfelden-Walldorf, Kreis Groß-Gerau, Hesse, 64546, Germany",
+        "road": "Hurenweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mörfelden",
+        "city_district": null,
+        "city": "Walldorf",
+        "state": "Hesse",
+        "postcode": "64546",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Hurenweg, Mörfelden-Walldorf, Hesse, Germany"
+    },
+    {
+      "lat": 49.974297048067974,
+      "lon": 8.62146482099875,
+      "geoinfo": {
+        "display_name": "Kalb-Schneise, Mörfelden, Egelsbach, Mörfelden-Walldorf, Kreis Groß-Gerau, Hesse, 64546, Germany",
+        "road": "Kalb-Schneise",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mörfelden",
+        "city_district": null,
+        "city": "Egelsbach",
+        "state": "Hesse",
+        "postcode": "64546",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "912, Kalb-Schneise, Mörfelden, Egelsbach, Mörfelden-Walldorf, Kreis Groß-Gerau, Hesse, 64546, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:20:56.025674+00:00",
+  "_kind": "geo_samples"
+}

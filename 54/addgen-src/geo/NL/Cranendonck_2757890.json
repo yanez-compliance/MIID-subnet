@@ -1,0 +1,65 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Cranendonck",
+  "geonameid": 2757890,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 51.30121253644079,
+      "lon": 5.618420066079767,
+      "geoinfo": {
+        "display_name": "De Hoge Weg, Budel, Cranendonck, North Brabant, Netherlands, 6026 AX, Netherlands",
+        "road": "De Hoge Weg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Budel",
+        "state": "North Brabant",
+        "postcode": "6026 AX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "De Hoge Weg, Cranendonck, North Brabant, The Netherlands"
+    },
+    {
+      "lat": 51.31869831948993,
+      "lon": 5.645071296684283,
+      "geoinfo": {
+        "display_name": "Koenraadtweg, Maarheeze, Cranendonck, North Brabant, Netherlands, 6026 SK, Netherlands",
+        "road": "Koenraadtweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Maarheeze",
+        "state": "North Brabant",
+        "postcode": "6026 SK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "539, Koenraadtweg, Maarheeze, Cranendonck, North Brabant, Netherlands, 6026 SK, Netherlands"
+    },
+    {
+      "lat": 51.33375496482032,
+      "lon": 5.6280886794884415,
+      "geoinfo": {
+        "display_name": "8a, Chijnsgoed, Sterksel, Heeze-Leende, North Brabant, Netherlands, 6029 RR, Netherlands",
+        "road": "Chijnsgoed",
+        "house_number": "8a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sterksel",
+        "state": "North Brabant",
+        "postcode": "6029 RR",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "8a, Chijnsgoed, Cranendonck, 6029 RR North Brabant, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T05:59:53.111302+00:00",
+  "_kind": "geo_samples"
+}

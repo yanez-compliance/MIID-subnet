@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Ottensen",
+  "geonameid": 2856075,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.55630162004465,
+      "lon": 9.926893036138214,
+      "geoinfo": {
+        "display_name": "Völckersstraße, Ottensen, Altona, Hamburg, 22765, Germany",
+        "road": "Völckersstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ottensen",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22765",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Völckersstraße, Ottensen, Germany"
+    },
+    {
+      "lat": 53.58705793391022,
+      "lon": 9.908257133557509,
+      "geoinfo": {
+        "display_name": "UPS, 131, Ottensener Straße, Eidelstedt, Bahrenfeld, Altona, Hamburg, 22525, Germany",
+        "road": "Ottensener Straße",
+        "house_number": "131",
+        "neighbourhood": null,
+        "suburb": "Eidelstedt",
+        "city_district": "Altona",
+        "city": "Hamburg",
+        "state": null,
+        "postcode": "22525",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "UPS, 131, Ottensener Straße, Eidelstedt, Bahrenfeld, Altona, Hamburg, 22525, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:41:11.693242+00:00",
+  "_kind": "geo_samples"
+}

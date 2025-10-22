@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Lichtenfels",
+  "geonameid": 2878074,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.14372802371149,
+      "lon": 11.017243043688174,
+      "geoinfo": {
+        "display_name": "6a, Wirtsberg, Weingarten, Lichtenfels, Landkreis Lichtenfels, Bavaria, 96215, Germany",
+        "road": "Wirtsberg",
+        "house_number": "6a",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lichtenfels",
+        "state": "Bavaria",
+        "postcode": "96215",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6a Wirtsberg, Lichtenfels, Bavaria, Germany"
+    },
+    {
+      "lat": 50.13937503995573,
+      "lon": 11.014670082919961,
+      "geoinfo": {
+        "display_name": "LIF 7, Weingarten, Lichtenfels, Landkreis Lichtenfels, Bavaria, 96215, Germany",
+        "road": "LIF 7",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lichtenfels",
+        "state": "Bavaria",
+        "postcode": "96215",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "LIF 7, Weingarten, Lichtenfels, Landkreis Lichtenfels, Bavaria, 96215, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:11:56.587174+00:00",
+  "_kind": "geo_samples"
+}

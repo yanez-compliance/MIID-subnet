@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Hong Lok Yuen",
+  "geonameid": 1819726,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.468263868733292,
+      "lon": 114.19052433582928,
+      "geoinfo": {
+        "display_name": "House 42, Lo Ping Road, Fung Yuen, Tai Po District, New Territories, Hong Kong, China",
+        "road": "Lo Ping Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tai Po District",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Lo Ping Road, Hong Lok Yuen, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.476643138312546,
+      "lon": 114.14012658176759,
+      "geoinfo": {
+        "display_name": "古墓路, Wa Mei Shan, North District, Fanling, New Territories, Hong Kong, China",
+        "road": "古墓路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "North District",
+        "city_district": null,
+        "city": "Fanling",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "151, 古墓路, Wa Mei Shan, North District, Fanling, New Territories, 52466 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:57.134853+00:00",
+  "_kind": "geo_samples"
+}

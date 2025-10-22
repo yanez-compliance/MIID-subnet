@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Oelde",
+  "geonameid": 2857943,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.81775784352277,
+      "lon": 8.138165976598746,
+      "geoinfo": {
+        "display_name": "19, Bismarckstraße, Oelde, Kreis Warendorf, North Rhine-Westphalia, 59302, Germany",
+        "road": "Bismarckstraße",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oelde",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59302",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19 Bismarckstraße, Oelde, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.810198314620216,
+      "lon": 8.089881820682576,
+      "geoinfo": {
+        "display_name": "Hesseler, Beckum, Kreis Warendorf, North Rhine-Westphalia, 59269, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hesseler",
+        "city_district": null,
+        "city": "Beckum",
+        "state": "North Rhine-Westphalia",
+        "postcode": "59269",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "235, Hesseler, Beckum, Kreis Warendorf, North Rhine-Westphalia, 59269, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:53:11.341699+00:00",
+  "_kind": "geo_samples"
+}

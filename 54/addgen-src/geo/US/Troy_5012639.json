@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Troy",
+  "geonameid": 5012639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.613624165666934,
+      "lon": -83.12162058366194,
+      "geoinfo": {
+        "display_name": "Walker Drive, Emerald Lakes Village, Troy, Oakland County, Michigan, 48085, United States",
+        "road": "Walker Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troy",
+        "state": "Michigan",
+        "postcode": "48085",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Walker Drive, Troy, Michigan, United States"
+    },
+    {
+      "lat": 42.61830698513083,
+      "lon": -83.09291652302849,
+      "geoinfo": {
+        "display_name": "William Beaumont Hospital (Troy campus), 44201, Dequindre Road, Troy, Macomb County, Michigan, 48085, United States",
+        "road": "Dequindre Road",
+        "house_number": "44201",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Troy",
+        "state": "Michigan",
+        "postcode": "48085",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "William Beaumont Hospital (Troy campus), 44201, Dequindre Road, Troy, Macomb County, Michigan, 48085, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:25.553596+00:00",
+  "_kind": "geo_samples"
+}

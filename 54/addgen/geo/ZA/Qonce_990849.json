@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Qonce",
+  "geonameid": 990849,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -32.88708873207484,
+      "lon": 27.400239649491894,
+      "geoinfo": {
+        "display_name": "Central Primary School, Yellowwood Road, Schornville, Buffalo City Ward 37, Qonce, Buffalo City Metropolitan Municipality, Eastern Cape, 5600, South Africa",
+        "road": "Yellowwood Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Schornville",
+        "city_district": null,
+        "city": "Qonce",
+        "state": "Eastern Cape",
+        "postcode": "5600",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Yellowwood Road, Qonce, Eastern Cape, South Africa"
+    },
+    {
+      "lat": -32.91116976249882,
+      "lon": 27.38038986172586,
+      "geoinfo": {
+        "display_name": "Kwalini, Buffalo City Ward 39, Zwelitsha, Buffalo City Metropolitan Municipality, Eastern Cape, 5601, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kwalini",
+        "city_district": null,
+        "city": "Zwelitsha",
+        "state": "Eastern Cape",
+        "postcode": "5601",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "365, Kwalini, Qonce, 5601 Eastern Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:56:24.631427+00:00",
+  "_kind": "geo_samples"
+}

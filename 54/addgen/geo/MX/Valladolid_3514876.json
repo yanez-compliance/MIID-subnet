@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Valladolid",
+  "geonameid": 3514876,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.69904684157379,
+      "lon": -88.23462571240304,
+      "geoinfo": {
+        "display_name": "Colonia Emiliano Zapata, Valladolid, Yucatán, 97784, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Colonia Emiliano Zapata",
+        "suburb": null,
+        "city_district": null,
+        "city": "Valladolid",
+        "state": "Yucatán",
+        "postcode": "97784",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Colonia Emiliano Zapata, Valladolid, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.65237343454165,
+      "lon": -88.1908495568932,
+      "geoinfo": {
+        "display_name": "Anillo Periférico de Valladolid, Polígono Zaciabil, Valladolid, Yucatán, 97783, Mexico",
+        "road": "Anillo Periférico de Valladolid",
+        "house_number": null,
+        "neighbourhood": "Polígono Zaciabil",
+        "suburb": null,
+        "city_district": null,
+        "city": "Valladolid",
+        "state": "Yucatán",
+        "postcode": "97783",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "531, Anillo Periférico de Valladolid, Polígono Zaciabil, Valladolid, Yucatán, 97783, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:03:31.161873+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Myyrmäki",
+  "geonameid": 847422,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.30279985510184,
+      "lon": 24.88969525646418,
+      "geoinfo": {
+        "display_name": "1, Turvalaaksontie, Viinikkala, Aviapoliksen suuralue, Vantaa, Helsinki sub-region, Uusimaa, Mainland Finland, 01740, Finland",
+        "road": "Turvalaaksontie",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Viinikkala",
+        "city_district": "Aviapoliksen suuralue",
+        "city": "Vantaa",
+        "state": "Uusimaa",
+        "postcode": "01740",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "1, Turvalaaksontie, Viinikkala, Aviapoliksen suuralue, Vantaa, Helsinki sub-region, Uusimaa, Mainland Finland, 01740, Finland"
+    },
+    {
+      "lat": 60.26512274617071,
+      "lon": 24.88979762642594,
+      "geoinfo": {
+        "display_name": "6, Kuninkaantammentie, Kuninkaantammi, Kaarela, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00430, Finland",
+        "road": "Kuninkaantammentie",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": "Kuninkaantammi",
+        "city_district": "Western major district",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "postcode": "00430",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "6, Kuninkaantammentie, Kuninkaantammi, Kaarela, Western major district, Helsinki, Helsinki sub-region, Uusimaa, Mainland Finland, 00430, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:18.647023+00:00",
+  "_kind": "geo_samples"
+}

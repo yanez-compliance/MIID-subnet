@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Southbridge",
+  "geonameid": 4951594,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.07117539059512,
+      "lon": -71.99757399683787,
+      "geoinfo": {
+        "display_name": "307, Dudley River Road, Sandersdale, Southbridge, Worcester County, Massachusetts, 01550, United States",
+        "road": "Dudley River Road",
+        "house_number": "307",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southbridge",
+        "state": "Massachusetts",
+        "postcode": "01550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "307 Dudley River Road, Southbridge, Massachusetts, United States"
+    },
+    {
+      "lat": 42.070744481063585,
+      "lon": -71.98482133980443,
+      "geoinfo": {
+        "display_name": "20, French Road, Dudley, Worcester County, Massachusetts, 01550, United States",
+        "road": "French Road",
+        "house_number": "20",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dudley",
+        "state": "Massachusetts",
+        "postcode": "01550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20, French Road, Dudley, Worcester County, Massachusetts, 01550, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:45.218820+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "HK",
+  "country": "Hong Kong",
+  "city": "Mei Foo Sun Chuen",
+  "geonameid": 12719566,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 22.30715156584025,
+      "lon": 114.14906427900976,
+      "geoinfo": {
+        "display_name": "Kwai Chung, New Territories, Hong Kong, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kwai Chung",
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Mei Foo Sun Chuen, Hong Kong, Hong Kong"
+    },
+    {
+      "lat": 22.31345860206947,
+      "lon": 114.12952135271664,
+      "geoinfo": {
+        "display_name": "Ngong Wan Road, Kwai Tsing District, New Territories, Hong Kong, China",
+        "road": "Ngong Wan Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kwai Tsing District",
+        "city_district": null,
+        "city": null,
+        "state": "Hong Kong",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "790, Ngong Wan Road, Kwai Tsing District, New Territories, 07704 Hong Kong, China"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:07.074364+00:00",
+  "_kind": "geo_samples"
+}

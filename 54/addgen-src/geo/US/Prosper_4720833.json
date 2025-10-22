@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Prosper",
+  "geonameid": 4720833,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.264976703631966,
+      "lon": -96.8086122894236,
+      "geoinfo": {
+        "display_name": "Bridgewater Boulevard, Light Farms, Collin County, Texas, 75078, United States",
+        "road": "Bridgewater Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "75078",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bridgewater Boulevard, Prosper, Texas, United States"
+    },
+    {
+      "lat": 33.25987279499133,
+      "lon": -96.845717878447,
+      "geoinfo": {
+        "display_name": "Composition Drive, Mosaic, Denton County, Texas, United States",
+        "road": "Composition Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "015, Composition Drive, Mosaic, Denton County, 08776 Texas, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:50.341371+00:00",
+  "_kind": "geo_samples"
+}

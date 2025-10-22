@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Westminster",
+  "geonameid": 4373238,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.53203690808574,
+      "lon": -76.998157207895,
+      "geoinfo": {
+        "display_name": "Fenby, Carroll County, Maryland, 21157, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21157",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Westminster, Maryland, United States"
+    },
+    {
+      "lat": 39.59292032555982,
+      "lon": -76.96133913615654,
+      "geoinfo": {
+        "display_name": "942, Gahle Road, Mountain Lake View, Carroll County, Maryland, 21157, United States",
+        "road": "Gahle Road",
+        "house_number": "942",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Maryland",
+        "postcode": "21157",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "942, Gahle Road, Mountain Lake View, Carroll County, Maryland, 21157, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:49.137935+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Thembisa",
+  "geonameid": 949880,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -25.964924854305103,
+      "lon": 28.25415252971777,
+      "geoinfo": {
+        "display_name": "R21, Ekurhuleni Ward 89, City of Ekurhuleni Metropolitan Municipality, Gauteng, 1665, South Africa",
+        "road": "R21",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ekurhuleni Ward 89",
+        "city_district": null,
+        "city": null,
+        "state": "Gauteng",
+        "postcode": "1665",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R21, Thembisa, Gauteng, South Africa"
+    },
+    {
+      "lat": -26.013157337116887,
+      "lon": 28.266373740299986,
+      "geoinfo": {
+        "display_name": "Ekurhuleni Ward 100, City of Ekurhuleni Metropolitan Municipality, Gauteng, 1628, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ekurhuleni Ward 100",
+        "city_district": null,
+        "city": null,
+        "state": "Gauteng",
+        "postcode": "1628",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Ekurhuleni Ward 100, City of Ekurhuleni Metropolitan Municipality, Gauteng, 1628, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T05:19:19.169475+00:00",
+  "_kind": "geo_samples"
+}

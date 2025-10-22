@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Xiaochangshan",
+  "geonameid": 1921495,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.2383578673562,
+      "lon": 122.74631539910655,
+      "geoinfo": {
+        "display_name": "蛎子圈, Changhai County, Liaoning, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changhai County",
+        "state": "Liaoning",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Xiaochangshan, Liaoning, China"
+    },
+    {
+      "lat": 39.26576256265932,
+      "lon": 122.68099626838305,
+      "geoinfo": {
+        "display_name": "Dachangshan, Changhai County, Liaoning, 116500, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changhai County",
+        "state": "Liaoning",
+        "postcode": "116500",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "248, Dachangshan, Changhai County, Liaoning, 116500, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:02.094829+00:00",
+  "_kind": "geo_samples"
+}

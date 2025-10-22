@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Montgomery",
+  "geonameid": 4076784,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.359107793602604,
+      "lon": -86.28199176610931,
+      "geoinfo": {
+        "display_name": "2024, West Street, Oak Park, Montgomery, Montgomery County, Alabama, 36106, United States",
+        "road": "West Street",
+        "house_number": "2024",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery",
+        "state": "Alabama",
+        "postcode": "36106",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2024 West Street, Montgomery, Alabama, United States"
+    },
+    {
+      "lat": 32.35957074167113,
+      "lon": -86.27174783230093,
+      "geoinfo": {
+        "display_name": "1648, Robinson Hill Road, McGehee Estates, Grove Hill, Montgomery, Montgomery County, Alabama, 36107, United States",
+        "road": "Robinson Hill Road",
+        "house_number": "1648",
+        "neighbourhood": "McGehee Estates",
+        "suburb": null,
+        "city_district": null,
+        "city": "Montgomery",
+        "state": "Alabama",
+        "postcode": "36107",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1648, Robinson Hill Road, McGehee Estates, Grove Hill, Montgomery, Montgomery County, Alabama, 36107, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:13.981056+00:00",
+  "_kind": "geo_samples"
+}

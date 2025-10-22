@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Ali",
+  "geonameid": 10265188,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.533842817008942,
+      "lon": 77.33853664539484,
+      "geoinfo": {
+        "display_name": "Sector 127, Noida, Bakhtawarpur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201313, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "postcode": "201313",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Ali, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.53664873124321,
+      "lon": 77.29680974855113,
+      "geoinfo": {
+        "display_name": "Haddu Mohalla, Madanpur Khadar, Sarita Vihar Tehsil, South East Delhi, Delhi, 110025, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Haddu Mohalla",
+        "suburb": "Sarita Vihar Tehsil",
+        "city_district": "South East Delhi",
+        "city": "Delhi",
+        "state": null,
+        "postcode": "110025",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "358, Haddu Mohalla, Madanpur Khadar, Sarita Vihar Tehsil, South East Delhi, Delhi, 110025, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:46:39.693660+00:00",
+  "_kind": "geo_samples"
+}

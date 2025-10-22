@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Garden Grove",
+  "geonameid": 5351515,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.768620423886475,
+      "lon": -117.97047722149065,
+      "geoinfo": {
+        "display_name": "9103, Bestel Avenue, Koreatown, Garden Grove, Orange County, California, 92844, United States",
+        "road": "Bestel Avenue",
+        "house_number": "9103",
+        "neighbourhood": null,
+        "suburb": "Koreatown",
+        "city_district": null,
+        "city": "Garden Grove",
+        "state": "California",
+        "postcode": "92844",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9103 Bestel Avenue, Garden Grove, California, United States"
+    },
+    {
+      "lat": 33.7907000469283,
+      "lon": -117.92674458745368,
+      "geoinfo": {
+        "display_name": "11851, Robert Lane, Beverly Gardens, Garden Grove, Orange County, California, 92840, United States",
+        "road": "Robert Lane",
+        "house_number": "11851",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Garden Grove",
+        "state": "California",
+        "postcode": "92840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11851, Robert Lane, Beverly Gardens, Garden Grove, Orange County, California, 92840, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:37.094762+00:00",
+  "_kind": "geo_samples"
+}

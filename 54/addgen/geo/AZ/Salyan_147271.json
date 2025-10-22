@@ -1,0 +1,47 @@
+{
+  "country_code": "AZ",
+  "country": "Azerbaijan",
+  "city": "Salyan",
+  "geonameid": 147271,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 39.55486989752221,
+      "lon": 49.00031338728047,
+      "geoinfo": {
+        "display_name": "Beştalı, Salyan District, Azerbaijan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Salyan, Azerbaijan"
+    },
+    {
+      "lat": 39.60666145850169,
+      "lon": 48.92865290779564,
+      "geoinfo": {
+        "display_name": "Bakı-Ələt-Astara-İran yolu, Salyan District, Azerbaijan",
+        "road": "Bakı-Ələt-Astara-İran yolu",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Azerbaijan",
+        "country_code": "az"
+      },
+      "address": "Bakı-Ələt-Astara-İran yolu, Salyan, Azerbaijan"
+    }
+  ],
+  "updated_at": "2025-10-16T10:37:11.966695+00:00",
+  "_kind": "geo_samples"
+}

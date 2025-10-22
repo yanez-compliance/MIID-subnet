@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Hāpur",
+  "geonameid": 1270393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 28.72416775771075,
+      "lon": 77.82953830922243,
+      "geoinfo": {
+        "display_name": "NH9, Babugarh, Hapur, Uttar Pradesh, 245200, India",
+        "road": "NH9",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Babugarh",
+        "state": "Uttar Pradesh",
+        "postcode": "245200",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH9, Hāpur, Uttar Pradesh, India"
+    },
+    {
+      "lat": 28.71118708696194,
+      "lon": 77.78881961918685,
+      "geoinfo": {
+        "display_name": "Hapur, Uttar Pradesh, 245101, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hapur",
+        "state": "Uttar Pradesh",
+        "postcode": "245101",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "475, Hapur, Uttar Pradesh, 245101, India"
+    }
+  ],
+  "updated_at": "2025-10-19T02:55:22.792969+00:00",
+  "_kind": "geo_samples"
+}

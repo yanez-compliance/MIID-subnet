@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Malmesbury",
+  "geonameid": 3364346,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -33.46244590727713,
+      "lon": 18.747950160361153,
+      "geoinfo": {
+        "display_name": "R45, Swartland Ward 12, Malmesbury, Swartland Local Municipality, West Coast District Municipality, Western Cape, 7299, South Africa",
+        "road": "R45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Swartland Ward 12",
+        "city_district": null,
+        "city": "Swartland Local Municipality",
+        "state": "Western Cape",
+        "postcode": "7299",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "R45, Malmesbury, Western Cape, South Africa"
+    },
+    {
+      "lat": -33.49863239156864,
+      "lon": 18.738400278152866,
+      "geoinfo": {
+        "display_name": "Swartland Local Municipality, West Coast District Municipality, Western Cape, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Swartland Local Municipality",
+        "state": "Western Cape",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "671, Swartland Local Municipality, West Coast District Municipality, 26268 Western Cape, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:52:56.231134+00:00",
+  "_kind": "geo_samples"
+}

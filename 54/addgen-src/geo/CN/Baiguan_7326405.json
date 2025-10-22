@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Baiguan",
+  "geonameid": 7326405,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.99815985094946,
+      "lon": 104.9375815029587,
+      "geoinfo": {
+        "display_name": "Songshuping, Li County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Baiguan, Gansu, China"
+    },
+    {
+      "lat": 33.94125783430445,
+      "lon": 104.8846169545196,
+      "geoinfo": {
+        "display_name": "Wenjiadi, Li County, Longnan, Gansu, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wenjiadi",
+        "state": "Gansu",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "065, Wenjiadi, Li County, Longnan, 48169 Gansu, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:43.638815+00:00",
+  "_kind": "geo_samples"
+}

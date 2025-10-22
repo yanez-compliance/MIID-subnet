@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Yukon",
+  "geonameid": 4556165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.48956356463161,
+      "lon": -97.7437941002613,
+      "geoinfo": {
+        "display_name": "1730, Janeen Street, Yukon, Canadian County, Oklahoma, 73099, United States",
+        "road": "Janeen Street",
+        "house_number": "1730",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Yukon",
+        "state": "Oklahoma",
+        "postcode": "73099",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1730 Janeen Street, Yukon, Oklahoma, United States"
+    },
+    {
+      "lat": 35.49721112623007,
+      "lon": -97.80156620419393,
+      "geoinfo": {
+        "display_name": "2586, Lost Lake Lane, Oklahoma City, Canadian County, Oklahoma, 73099, United States",
+        "road": "Lost Lake Lane",
+        "house_number": "2586",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oklahoma City",
+        "state": "Oklahoma",
+        "postcode": "73099",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2586, Lost Lake Lane, Oklahoma City, Canadian County, Oklahoma, 73099, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:09.436759+00:00",
+  "_kind": "geo_samples"
+}

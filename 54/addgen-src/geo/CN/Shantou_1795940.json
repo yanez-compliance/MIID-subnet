@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shantou",
+  "geonameid": 1795940,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 23.395065715036303,
+      "lon": 116.67926891851496,
+      "geoinfo": {
+        "display_name": "S233, Qishan Subdistrict, Jinping District, Shantou, Guangdong Province, 515063, China",
+        "road": "S233",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Qishan Subdistrict",
+        "city_district": null,
+        "city": "Jinping District",
+        "state": "Guangdong Province",
+        "postcode": "515063",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S233, Shantou, Guangdong Province, China"
+    },
+    {
+      "lat": 23.31066155641379,
+      "lon": 116.67355791756147,
+      "geoinfo": {
+        "display_name": "Queshi Subdistrict, Haojiang District, Shantou, Guangdong Province, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Queshi Subdistrict",
+        "city_district": null,
+        "city": "Haojiang District",
+        "state": "Guangdong Province",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "350, Queshi Subdistrict, Haojiang District, Shantou, 84856 Guangdong Province, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:53:40.964507+00:00",
+  "_kind": "geo_samples"
+}

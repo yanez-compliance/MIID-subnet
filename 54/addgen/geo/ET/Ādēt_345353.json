@@ -1,0 +1,47 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Ādēt",
+  "geonameid": 345353,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.300668560561471,
+      "lon": 37.47437336458652,
+      "geoinfo": {
+        "display_name": "Mota Road, Adet, West Gojjam, Amhara Region, Ethiopia",
+        "road": "Mota Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Adet",
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Mota Road, Ādēt, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 11.263056096078119,
+      "lon": 37.43879908321231,
+      "geoinfo": {
+        "display_name": "West Gojjam, Amhara Region, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "796, Ādēt, 48609 Amhara Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:13:08.911444+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Media Legua",
+  "geonameid": 11550010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.40905801550491,
+      "lon": -3.6454151460117354,
+      "geoinfo": {
+        "display_name": "Avenida de Moratalaz, Marroquina, Moratalaz, Madrid, Community of Madrid, 28030, Spain",
+        "road": "Avenida de Moratalaz",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Moratalaz",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28030",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Avenida de Moratalaz, Media Legua, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.42714464241259,
+      "lon": -3.63336461093201,
+      "geoinfo": {
+        "display_name": "Calle de José Arcones Gil, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain",
+        "road": "Calle de José Arcones Gil",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "946, Calle de José Arcones Gil, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:39:37.296018+00:00",
+  "_kind": "geo_samples"
+}

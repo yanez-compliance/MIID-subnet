@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Medvedovskaya",
+  "geonameid": 527968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.45492019429079,
+      "lon": 39.0734042835917,
+      "geoinfo": {
+        "display_name": "03К-503, Медведовское сельское поселение, Timashyovsky District, Krasnodar Krai, 352722, Russia",
+        "road": "03К-503",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": "352722",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "03К-503, Medvedovskaya, Krasnodar Krai, Russia"
+    },
+    {
+      "lat": 45.44387762654063,
+      "lon": 39.079914354802696,
+      "geoinfo": {
+        "display_name": "Медведовское сельское поселение, Timashyovsky District, Krasnodar Krai, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Krasnodar Krai",
+        "postcode": null,
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "680, Medvedovskaya, 49896 Krasnodar Krai, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:23:53.674324+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "Pisco",
+  "geonameid": 3932145,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -13.677505122970526,
+      "lon": -76.17402057954381,
+      "geoinfo": {
+        "display_name": "Monte Blanco, San Clemente, Province of Pisco, Ica, 11620, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Clemente",
+        "state": "Ica",
+        "postcode": "11620",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Pisco, Ica, Peru"
+    },
+    {
+      "lat": -13.71917289418499,
+      "lon": -76.19114474611254,
+      "geoinfo": {
+        "display_name": "La Yesera, Fundo El Salitre, San Andrés, Province of Pisco, Ica, 11601, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "La Yesera",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Andrés",
+        "state": "Ica",
+        "postcode": "11601",
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "047, La Yesera, Fundo El Salitre, San Andrés, Province of Pisco, Ica, 11601, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:26:36.935349+00:00",
+  "_kind": "geo_samples"
+}

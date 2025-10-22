@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Saint-Gratien",
+  "geonameid": 2979627,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.96127155426991,
+      "lon": 2.283733926559549,
+      "geoinfo": {
+        "display_name": "École Édouard Herriot, Allée Germain Petitou, Saint-Gratien, Sarcelles, Val-d'Oise, Ile-de-France, Metropolitan France, 95210, France",
+        "road": "Allée Germain Petitou",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Gratien",
+        "state": "Ile-de-France",
+        "postcode": "95210",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Allée Germain Petitou, Saint-Gratien, Ile-de-France, France"
+    },
+    {
+      "lat": 49.017344004348224,
+      "lon": 2.290860796902031,
+      "geoinfo": {
+        "display_name": "94 bis, Rue de Paris, Montlignon, Sarcelles, Val-d'Oise, Metropolitan France, 95680, France",
+        "road": "Rue de Paris",
+        "house_number": "94 bis",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Montlignon",
+        "state": null,
+        "postcode": "95680",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "94 bis, Rue de Paris, Montlignon, Sarcelles, Val-d'Oise, Metropolitan France, 95680, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:06:25.325406+00:00",
+  "_kind": "geo_samples"
+}

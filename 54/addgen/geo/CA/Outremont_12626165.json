@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Outremont",
+  "geonameid": 12626165,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.51410945461049,
+      "lon": -73.6365684624978,
+      "geoinfo": {
+        "display_name": "2690, Avenue Glencoe, Glenmount, Côte-des-Neiges–Notre-Dame-de-Grâce, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3R 2B3, Canada",
+        "road": "Avenue Glencoe",
+        "house_number": "2690",
+        "neighbourhood": "Glenmount",
+        "suburb": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H3R 2B3",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "2690 Avenue Glencoe, Outremont, Quebec, Canada"
+    },
+    {
+      "lat": 45.522470082491736,
+      "lon": -73.54557332118944,
+      "geoinfo": {
+        "display_name": "Pont Jacques-Cartier, Rue Dorion, Gay Village, Ville-Marie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2K 4P4, Canada",
+        "road": "Rue Dorion",
+        "house_number": null,
+        "neighbourhood": "Gay Village",
+        "suburb": "Ville-Marie",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H2K 4P4",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Pont Jacques-Cartier, Rue Dorion, Gay Village, Ville-Marie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2K 4P4, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:03:25.579921+00:00",
+  "_kind": "geo_samples"
+}

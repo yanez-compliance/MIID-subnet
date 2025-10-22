@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Chilliwack-Downtown",
+  "geonameid": 13512426,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.17769629658569,
+      "lon": -122.00791959441254,
+      "geoinfo": {
+        "display_name": "Chilliwack, Fraser Valley Regional District, British Columbia, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilliwack",
+        "state": "British Columbia",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Chilliwack-Downtown, British Columbia, Canada"
+    },
+    {
+      "lat": 49.1647444275902,
+      "lon": -121.99594936989133,
+      "geoinfo": {
+        "display_name": "Chilliwack Mountain Road, Chilliwack, Fraser Valley Regional District, British Columbia, V2R 5V2, Canada",
+        "road": "Chilliwack Mountain Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chilliwack",
+        "state": "British Columbia",
+        "postcode": "V2R 5V2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Chilliwack Mountain Road, Chilliwack, Fraser Valley Regional District, British Columbia, V2R 5V2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:08:25.153048+00:00",
+  "_kind": "geo_samples"
+}

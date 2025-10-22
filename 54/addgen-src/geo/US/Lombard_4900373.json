@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lombard",
+  "geonameid": 4900373,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.88463980659778,
+      "lon": -87.95600601316491,
+      "geoinfo": {
+        "display_name": "530, Fairview Avenue, Elmhurst, DuPage County, Illinois, 60126, United States",
+        "road": "Fairview Avenue",
+        "house_number": "530",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmhurst",
+        "state": "Illinois",
+        "postcode": "60126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "530 Fairview Avenue, Lombard, Illinois, United States"
+    },
+    {
+      "lat": 41.88160418164577,
+      "lon": -87.99246720158635,
+      "geoinfo": {
+        "display_name": "962, East Division Street, Lombard, DuPage County, Illinois, 60148, United States",
+        "road": "East Division Street",
+        "house_number": "962",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lombard",
+        "state": "Illinois",
+        "postcode": "60148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "962, East Division Street, Lombard, DuPage County, Illinois, 60148, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:27.123608+00:00",
+  "_kind": "geo_samples"
+}

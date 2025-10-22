@@ -1,0 +1,47 @@
+{
+  "country_code": "ZM",
+  "country": "Zambia",
+  "city": "Chisankane",
+  "geonameid": 13132724,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -15.4591168679496,
+      "lon": 28.36149613574038,
+      "geoinfo": {
+        "display_name": "Ishindi Street, New Woodlands Extension, Lusaka, Lusaka District, Lusaka Province, Zambia",
+        "road": "Ishindi Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "New Woodlands Extension",
+        "city_district": null,
+        "city": "Lusaka",
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "495, Ishindi Street, New Woodlands Extension, Lusaka, Lusaka District, 98802 Lusaka Province, Zambia"
+    },
+    {
+      "lat": -15.488463532164987,
+      "lon": 28.31302656452133,
+      "geoinfo": {
+        "display_name": "Kafue District, Lusaka Province, Zambia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Lusaka Province",
+        "postcode": null,
+        "country": "Zambia",
+        "country_code": "zm"
+      },
+      "address": "473, Kafue District, 35890 Lusaka Province, Zambia"
+    }
+  ],
+  "updated_at": "2025-10-19T06:32:49.260404+00:00",
+  "_kind": "geo_samples"
+}

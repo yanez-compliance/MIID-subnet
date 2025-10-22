@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Wilrijk",
+  "geonameid": 2783615,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.16262970522543,
+      "lon": 4.394574115820768,
+      "geoinfo": {
+        "display_name": "Krijgslaan, Neerland, Wilrijk-Centrum, Wilrijk, Antwerp, Flanders, 2610, Belgium",
+        "road": "Krijgslaan",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Wilrijk-Centrum",
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2610",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Krijgslaan, Wilrijk, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.15799338316428,
+      "lon": 4.346736240746856,
+      "geoinfo": {
+        "display_name": "1081, Sint-Bernardsesteenweg, Zwaluwenhof, Hoboken, Antwerp, 2660, Belgium",
+        "road": "Sint-Bernardsesteenweg",
+        "house_number": "1081",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Antwerp",
+        "state": "Antwerp",
+        "postcode": "2660",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "1081, Sint-Bernardsesteenweg, Zwaluwenhof, Hoboken, Antwerp, 2660, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:34:58.686513+00:00",
+  "_kind": "geo_samples"
+}

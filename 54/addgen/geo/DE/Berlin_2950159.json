@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Berlin",
+  "geonameid": 2950159,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.516179907875404,
+      "lon": 13.42413716440352,
+      "geoinfo": {
+        "display_name": "GutsMuths-Grundschule, Singerstraße, Stralauer Vorstadt, Mitte, Berlin, 10179, Germany",
+        "road": "Singerstraße",
+        "house_number": null,
+        "neighbourhood": "Stralauer Vorstadt",
+        "suburb": "Mitte",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10179",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Singerstraße, Berlin, Germany"
+    },
+    {
+      "lat": 52.504931976509596,
+      "lon": 13.437136453632771,
+      "geoinfo": {
+        "display_name": "Ehemalige Zapf Umzüge, 14, Köpenicker Straße, Luisenstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10997, Germany",
+        "road": "Köpenicker Straße",
+        "house_number": "14",
+        "neighbourhood": null,
+        "suburb": "Kreuzberg",
+        "city_district": null,
+        "city": "Berlin",
+        "state": null,
+        "postcode": "10997",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Ehemalige Zapf Umzüge, 14, Köpenicker Straße, Luisenstadt, Kreuzberg, Friedrichshain-Kreuzberg, Berlin, 10997, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:52:51.370730+00:00",
+  "_kind": "geo_samples"
+}

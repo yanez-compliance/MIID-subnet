@@ -1,0 +1,47 @@
+{
+  "country_code": "CO",
+  "country": "Colombia",
+  "city": "Puerto Rico",
+  "geonameid": 3671348,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 1.911237705362733,
+      "lon": -75.14947538994988,
+      "geoinfo": {
+        "display_name": "Calle 5, Puerto Rico, Caquetá, RAP Amazonía, Colombia",
+        "road": "Calle 5",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puerto Rico",
+        "state": "Caquetá",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "Calle 5, Puerto Rico, Caquetá, Colombia"
+    },
+    {
+      "lat": 1.8954458989701808,
+      "lon": -75.1524806606676,
+      "geoinfo": {
+        "display_name": "Puerto Rico, Caquetá, RAP Amazonía, Colombia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Puerto Rico",
+        "state": "Caquetá",
+        "postcode": null,
+        "country": "Colombia",
+        "country_code": "co"
+      },
+      "address": "420, Puerto Rico, Caquetá, 52406 RAP Amazonía, Colombia"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:32.042058+00:00",
+  "_kind": "geo_samples"
+}

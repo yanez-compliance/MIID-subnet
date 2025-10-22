@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Glen Avon",
+  "geonameid": 5352350,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.03307759397411,
+      "lon": -117.49677938753919,
+      "geoinfo": {
+        "display_name": "Philadelphia Street, Glen Avon, Jurupa Valley, Riverside County, California, 92337, United States",
+        "road": "Philadelphia Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glen Avon",
+        "city_district": null,
+        "city": "Jurupa Valley",
+        "state": "California",
+        "postcode": "92337",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Philadelphia Street, Glen Avon, California, United States"
+    },
+    {
+      "lat": 34.02541810064891,
+      "lon": -117.47255338058025,
+      "geoinfo": {
+        "display_name": "Glen Avon, Jurupa Valley, Riverside County, California, 92337, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Glen Avon",
+        "city_district": null,
+        "city": "Jurupa Valley",
+        "state": "California",
+        "postcode": "92337",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "637, Glen Avon, Jurupa Valley, Riverside County, California, 92337, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:47:27.179114+00:00",
+  "_kind": "geo_samples"
+}

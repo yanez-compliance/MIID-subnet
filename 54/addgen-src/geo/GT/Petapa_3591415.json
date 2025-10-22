@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "Petapa",
+  "geonameid": 3591415,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 14.490482411597672,
+      "lon": -90.53541882164102,
+      "geoinfo": {
+        "display_name": "Vía Alterna del Sur, Villa Canales, Zona 4, Guatemala Department, 01066, Guatemala",
+        "road": "Vía Alterna del Sur",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Canales",
+        "state": "Guatemala Department",
+        "postcode": "01066",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Vía Alterna del Sur, Petapa, Guatemala Department, Guatemala"
+    },
+    {
+      "lat": 14.528409166004616,
+      "lon": -90.54317189557752,
+      "geoinfo": {
+        "display_name": "Prados de Villa Hermosa, San Miguel Petapa, Zona 7, Guatemala Department, 01066, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Prados de Villa Hermosa",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Miguel Petapa",
+        "state": "Guatemala Department",
+        "postcode": "01066",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "Prados de Villa Hermosa, San Miguel Petapa, Zona 7, Guatemala Department, 01066, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T04:37:55.739825+00:00",
+  "_kind": "geo_samples"
+}

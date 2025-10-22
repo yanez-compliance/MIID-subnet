@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Calverton",
+  "geonameid": 4350160,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.06332532615589,
+      "lon": -76.90699438193475,
+      "geoinfo": {
+        "display_name": "I 95, Scotchtown Hills, Laurel, Prince George's County, Maryland, 20707, United States",
+        "road": "I 95",
+        "house_number": null,
+        "neighbourhood": "Scotchtown Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Laurel",
+        "state": "Maryland",
+        "postcode": "20707",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 95, Calverton, Maryland, United States"
+    },
+    {
+      "lat": 39.04565453428703,
+      "lon": -76.98354063186942,
+      "geoinfo": {
+        "display_name": "99, White Oak Vista Court, Pine Hill, White Oak, Montgomery County, Maryland, 20904, United States",
+        "road": "White Oak Vista Court",
+        "house_number": "99",
+        "neighbourhood": "Pine Hill",
+        "suburb": null,
+        "city_district": null,
+        "city": "White Oak",
+        "state": "Maryland",
+        "postcode": "20904",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99, White Oak Vista Court, Pine Hill, White Oak, Montgomery County, Maryland, 20904, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:26:20.355383+00:00",
+  "_kind": "geo_samples"
+}

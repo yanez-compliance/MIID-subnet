@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Peto",
+  "geonameid": 3521596,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.111888072161975,
+      "lon": -88.89014655884618,
+      "geoinfo": {
+        "display_name": "Carretera Peto-Ichmul, Progresito, Peto, Yucatán, Mexico",
+        "road": "Carretera Peto-Ichmul",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Progresito",
+        "state": "Yucatán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Carretera Peto-Ichmul, Peto, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.132330356164548,
+      "lon": -88.92093163739742,
+      "geoinfo": {
+        "display_name": "Calle 28, Peto, Yucatán, 97930, Mexico",
+        "road": "Calle 28",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Peto",
+        "state": "Yucatán",
+        "postcode": "97930",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle 28, Peto, Yucatán, 97930, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:04:15.094833+00:00",
+  "_kind": "geo_samples"
+}

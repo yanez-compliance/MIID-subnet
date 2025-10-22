@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Kaliningrad",
+  "geonameid": 554234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 54.74210566929399,
+      "lon": 20.5308986978596,
+      "geoinfo": {
+        "display_name": "137, улица Александра Невского, Ленинградский район, Kaliningrad, Northwestern Federal District, 236041, Russia",
+        "road": "улица Александра Невского",
+        "house_number": "137",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ленинградский район",
+        "city": "Kaliningrad",
+        "state": "Kaliningrad",
+        "postcode": "236041",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "137 улица Александра Невского, Kaliningrad, Kaliningrad, Russia"
+    },
+    {
+      "lat": 54.68273143596944,
+      "lon": 20.468453202322554,
+      "geoinfo": {
+        "display_name": "Ponarth, Московский район, Kaliningrad, Northwestern Federal District, 236005, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ponarth",
+        "city_district": "Московский район",
+        "city": "Kaliningrad",
+        "state": "Kaliningrad",
+        "postcode": "236005",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "710, Ponarth, Московский район, Kaliningrad, Northwestern Federal District, 236005, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:19.055716+00:00",
+  "_kind": "geo_samples"
+}

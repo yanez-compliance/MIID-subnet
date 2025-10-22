@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pullman",
+  "geonameid": 5807540,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.76532694721122,
+      "lon": -117.17144539255379,
+      "geoinfo": {
+        "display_name": "Kitzmiller, Whitman County, Washington, 99163, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "99163",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pullman, Washington, United States"
+    },
+    {
+      "lat": 46.70345091413464,
+      "lon": -117.15164351166865,
+      "geoinfo": {
+        "display_name": "Johnson Road, Busby, Whitman County, Washington, 99164, United States",
+        "road": "Johnson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Washington",
+        "postcode": "99164",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "512, Johnson Road, Busby, Whitman County, Washington, 99164, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:54:12.768255+00:00",
+  "_kind": "geo_samples"
+}

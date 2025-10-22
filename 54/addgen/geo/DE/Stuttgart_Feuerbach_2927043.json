@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Stuttgart Feuerbach",
+  "geonameid": 2927043,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.7833773416562,
+      "lon": 9.212434954000901,
+      "geoinfo": {
+        "display_name": "40, Talstraße, Stuttgart-Ost, Ostheim, Stuttgart-Ost, Stuttgart, Baden-Württemberg, 70188, Germany",
+        "road": "Talstraße",
+        "house_number": "40",
+        "neighbourhood": null,
+        "suburb": "Stuttgart-Ost",
+        "city_district": "Stuttgart-Ost",
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70188",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "40 Talstraße, Stuttgart Feuerbach, Baden-Württemberg, Germany"
+    },
+    {
+      "lat": 48.823055972684344,
+      "lon": 9.144568287555334,
+      "geoinfo": {
+        "display_name": "Waldwiesenweg, Zuffenhausen-Am Stadtpark, Zuffenhausen, Stuttgart, Baden-Württemberg, 70435, Germany",
+        "road": "Waldwiesenweg",
+        "house_number": null,
+        "neighbourhood": "Zuffenhausen-Am Stadtpark",
+        "suburb": "Zuffenhausen",
+        "city_district": null,
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "postcode": "70435",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "161, Waldwiesenweg, Zuffenhausen-Am Stadtpark, Zuffenhausen, Stuttgart, Baden-Württemberg, 70435, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:38.274886+00:00",
+  "_kind": "geo_samples"
+}

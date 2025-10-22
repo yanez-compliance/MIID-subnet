@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Magdalena",
+  "geonameid": 3996910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.90962246620963,
+      "lon": -103.99423833302104,
+      "geoinfo": {
+        "display_name": "Autopista Guadalajara - Tepic, Magdalena, Región Valles, Jalisco, 46470, Mexico",
+        "road": "Autopista Guadalajara - Tepic",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Magdalena",
+        "state": "Jalisco",
+        "postcode": "46470",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Autopista Guadalajara - Tepic, Magdalena, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.892103154783086,
+      "lon": -103.9829097344057,
+      "geoinfo": {
+        "display_name": "Magdalena, Región Valles, Jalisco, 46490, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Magdalena",
+        "state": "Jalisco",
+        "postcode": "46490",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "805, Magdalena, Región Valles, Jalisco, 46490, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:20.608036+00:00",
+  "_kind": "geo_samples"
+}

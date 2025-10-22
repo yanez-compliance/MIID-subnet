@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Ommoord",
+  "geonameid": 2749604,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.9646048834875,
+      "lon": 4.549802226019756,
+      "geoinfo": {
+        "display_name": "Albert Camusplaats, Baersmeer, Ommoord, Prins Alexander, Rotterdam, South Holland, Netherlands, 3069 BK, Netherlands",
+        "road": "Albert Camusplaats",
+        "house_number": null,
+        "neighbourhood": "Baersmeer",
+        "suburb": "Prins Alexander",
+        "city_district": null,
+        "city": "Rotterdam",
+        "state": "South Holland",
+        "postcode": "3069 BK",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Albert Camusplaats, Ommoord, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.949155959073224,
+      "lon": 4.544980139945325,
+      "geoinfo": {
+        "display_name": "60, Metaalhof, Het Lage Land, Prins Alexander, Rotterdam, South Holland, Netherlands, 3067 GM, Netherlands",
+        "road": "Metaalhof",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": "Prins Alexander",
+        "city_district": null,
+        "city": "Rotterdam",
+        "state": "South Holland",
+        "postcode": "3067 GM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "60, Metaalhof, Het Lage Land, Prins Alexander, Rotterdam, South Holland, Netherlands, 3067 GM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:49:22.051393+00:00",
+  "_kind": "geo_samples"
+}

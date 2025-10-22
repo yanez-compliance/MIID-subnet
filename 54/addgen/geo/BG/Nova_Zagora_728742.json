@@ -1,0 +1,47 @@
+{
+  "country_code": "BG",
+  "country": "Bulgaria",
+  "city": "Nova Zagora",
+  "geonameid": 728742,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 42.44376459114245,
+      "lon": 26.039100917121733,
+      "geoinfo": {
+        "display_name": "Trakia Motorway, Polsko Padarevo, Nova Zagora, Sliven, 8921, Bulgaria",
+        "road": "Trakia Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Polsko Padarevo",
+        "state": "Sliven",
+        "postcode": "8921",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "467, Trakia Motorway, Polsko Padarevo, Nova Zagora, Sliven, 8921, Bulgaria"
+    },
+    {
+      "lat": 42.48536503994835,
+      "lon": 25.98371824610741,
+      "geoinfo": {
+        "display_name": "кв. Шести, Nova Zagora, Sliven, 8900, Bulgaria",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "кв. Шести",
+        "city_district": null,
+        "city": "Nova Zagora",
+        "state": "Sliven",
+        "postcode": "8900",
+        "country": "Bulgaria",
+        "country_code": "bg"
+      },
+      "address": "166, кв. Шести, Nova Zagora, Sliven, 8900, Bulgaria"
+    }
+  ],
+  "updated_at": "2025-10-19T02:58:53.250001+00:00",
+  "_kind": "geo_samples"
+}

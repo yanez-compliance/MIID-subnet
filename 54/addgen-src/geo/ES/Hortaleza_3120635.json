@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Hortaleza",
+  "geonameid": 3120635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.502587337980216,
+      "lon": -3.6360735970012343,
+      "geoinfo": {
+        "display_name": "Calle San Enrique de Ossó, Encinar de los Reyes, Valdefuentes, Hortaleza, Madrid, Community of Madrid, 28055, Spain",
+        "road": "Calle San Enrique de Ossó",
+        "house_number": null,
+        "neighbourhood": "Encinar de los Reyes",
+        "suburb": "Hortaleza",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28055",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle San Enrique de Ossó, Hortaleza, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.48580628196635,
+      "lon": -3.591372581253629,
+      "geoinfo": {
+        "display_name": "APRON T4, Airport T4 Departures, Barajas, Madrid, Community of Madrid, 28055, Spain",
+        "road": "Airport T4 Departures",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Barajas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28055",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "APRON T4, Airport T4 Departures, Barajas, Madrid, Community of Madrid, 28055, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:02:27.738356+00:00",
+  "_kind": "geo_samples"
+}

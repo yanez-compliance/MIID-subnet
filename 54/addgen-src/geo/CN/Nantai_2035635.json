@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Nantai",
+  "geonameid": 2035635,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.92839002374464,
+      "lon": 122.82862780496437,
+      "geoinfo": {
+        "display_name": "Nantai, Haicheng City, Anshan City, Liaoning, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haicheng City",
+        "state": "Liaoning",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Nantai, Liaoning, China"
+    },
+    {
+      "lat": 40.92493620876896,
+      "lon": 122.80018137535333,
+      "geoinfo": {
+        "display_name": "南台医院, 新昌大街, Nantai, Haicheng City, Anshan City, Liaoning, China",
+        "road": "新昌大街",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Haicheng City",
+        "state": "Liaoning",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "992, 新昌大街, Nantai, 54632 Liaoning, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:28:50.711686+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Marion",
+  "geonameid": 4923210,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.57629499070248,
+      "lon": -85.66923321569129,
+      "geoinfo": {
+        "display_name": "1122, West Roberts Avenue, Marion, Grant County, Indiana, 46952, United States",
+        "road": "West Roberts Avenue",
+        "house_number": "1122",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marion",
+        "state": "Indiana",
+        "postcode": "46952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1122 West Roberts Avenue, Marion, Indiana, United States"
+    },
+    {
+      "lat": 40.587061945663514,
+      "lon": -85.64838825183743,
+      "geoinfo": {
+        "display_name": "East Charles Road, Marion, Grant County, Indiana, 46952, United States",
+        "road": "East Charles Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Marion",
+        "state": "Indiana",
+        "postcode": "46952",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "182, East Charles Road, Marion, Grant County, Indiana, 46952, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:15.313077+00:00",
+  "_kind": "geo_samples"
+}

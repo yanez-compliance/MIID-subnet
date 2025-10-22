@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "San Juan",
+  "geonameid": 3837213,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -31.566949063337983,
+      "lon": -68.49079581642998,
+      "geoinfo": {
+        "display_name": "El Medanito, Rawson, San Juan, 5400, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Medanito",
+        "state": "San Juan",
+        "postcode": "5400",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "San Juan, San Juan, Argentina"
+    },
+    {
+      "lat": -31.52287282334046,
+      "lon": -68.50937323553399,
+      "geoinfo": {
+        "display_name": "820 (N), Pueyrredón, Loteo Meneses, Concepción, San Juan, Capital, San Juan, J5411EXR, Argentina",
+        "road": "Pueyrredón",
+        "house_number": "820 (N)",
+        "neighbourhood": "Loteo Meneses",
+        "suburb": "Concepción",
+        "city_district": null,
+        "city": "San Juan",
+        "state": "San Juan",
+        "postcode": "J5411EXR",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "820 (N), Pueyrredón, Loteo Meneses, Concepción, San Juan, Capital, San Juan, J5411EXR, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:28.339864+00:00",
+  "_kind": "geo_samples"
+}

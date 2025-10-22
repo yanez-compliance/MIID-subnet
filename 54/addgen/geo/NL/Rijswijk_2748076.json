@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Rijswijk",
+  "geonameid": 2748076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.03238187225413,
+      "lon": 4.327703542259852,
+      "geoinfo": {
+        "display_name": "Bosgang, Muziekbuurt, Rijswijk, South Holland, Netherlands, 2287 CH, Netherlands",
+        "road": "Bosgang",
+        "house_number": null,
+        "neighbourhood": "Muziekbuurt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Rijswijk",
+        "state": "South Holland",
+        "postcode": "2287 CH",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "Bosgang, Rijswijk, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.05528409948329,
+      "lon": 4.310688869372338,
+      "geoinfo": {
+        "display_name": "Hildebrandstraat, Spoorwijk, Laak, The Hague, South Holland, Netherlands, 2524 VM, Netherlands",
+        "road": "Hildebrandstraat",
+        "house_number": null,
+        "neighbourhood": "Spoorwijk",
+        "suburb": "Laak",
+        "city_district": null,
+        "city": "The Hague",
+        "state": "South Holland",
+        "postcode": "2524 VM",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "840, Hildebrandstraat, Spoorwijk, Laak, The Hague, South Holland, Netherlands, 2524 VM, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:17:03.355901+00:00",
+  "_kind": "geo_samples"
+}

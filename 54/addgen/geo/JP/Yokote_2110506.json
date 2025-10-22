@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Yokote",
+  "geonameid": 2110506,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.30333857630872,
+      "lon": 140.53432819181901,
+      "geoinfo": {
+        "display_name": "Uenodai, Yokote, Akita Prefecture, 013-0055, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Uenodai",
+        "suburb": null,
+        "city_district": null,
+        "city": "Yokote",
+        "state": null,
+        "postcode": "013-0055",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Uenodai, Yokote, Japan"
+    },
+    {
+      "lat": 39.293762796912006,
+      "lon": 140.54269882539862,
+      "geoinfo": {
+        "display_name": "4-chome, Asahigaoka, Yokote, Akita Prefecture, 013-0055, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "4-chome",
+        "suburb": null,
+        "city_district": "Asahigaoka",
+        "city": "Yokote",
+        "state": null,
+        "postcode": "013-0055",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "4-chome, Asahigaoka, Yokote, Akita Prefecture, 013-0055, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:44.849408+00:00",
+  "_kind": "geo_samples"
+}

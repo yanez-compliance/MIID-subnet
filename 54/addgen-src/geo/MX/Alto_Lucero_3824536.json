@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Alto Lucero",
+  "geonameid": 3824536,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.91712043941917,
+      "lon": -97.44016897146338,
+      "geoinfo": {
+        "display_name": "Juana Moza, Terrenos del Lote \"La Asunción\", Tuxpan, Veracruz, 92860, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Veracruz",
+        "postcode": "92860",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Alto Lucero, Veracruz, Mexico"
+    },
+    {
+      "lat": 20.963975356120027,
+      "lon": -97.42569530766949,
+      "geoinfo": {
+        "display_name": "Calle Camelia, Colonia Villa Rosita II, Tuxpan, Veracruz, 92860, Mexico",
+        "road": "Calle Camelia",
+        "house_number": null,
+        "neighbourhood": "Colonia Villa Rosita II",
+        "suburb": null,
+        "city_district": null,
+        "city": "Tuxpan",
+        "state": "Veracruz",
+        "postcode": "92860",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "234, Calle Camelia, Colonia Villa Rosita II, Tuxpan, Veracruz, 92860, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:05:50.958623+00:00",
+  "_kind": "geo_samples"
+}

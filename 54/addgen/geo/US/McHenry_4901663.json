@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McHenry",
+  "geonameid": 4901663,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.3417865801677,
+      "lon": -88.25652175559854,
+      "geoinfo": {
+        "display_name": "1038, North River Road, Riverstream, McHenry, McHenry County, Illinois, 60051, United States",
+        "road": "North River Road",
+        "house_number": "1038",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McHenry",
+        "state": "Illinois",
+        "postcode": "60051",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1038 North River Road, McHenry, Illinois, United States"
+    },
+    {
+      "lat": 42.33433847784783,
+      "lon": -88.2137859819337,
+      "geoinfo": {
+        "display_name": "McHenry Public Library, 813, Rand Road, Lakemoor, McHenry County, Illinois, 60051, United States",
+        "road": "Rand Road",
+        "house_number": "813",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60051",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "McHenry Public Library, 813, Rand Road, Lakemoor, McHenry County, Illinois, 60051, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:30.627386+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "EG",
+  "country": "Egypt",
+  "city": "Al Manzalah",
+  "geonameid": 360754,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.15108843243366,
+      "lon": 31.92125759128684,
+      "geoinfo": {
+        "display_name": "Al Manzala, Ad Dakahliya, 35642, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al Manzala",
+        "state": "Ad Dakahliya",
+        "postcode": "35642",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "Al Manzalah, Ad Dakahliya, Egypt"
+    },
+    {
+      "lat": 31.199828372420328,
+      "lon": 31.93359261346346,
+      "geoinfo": {
+        "display_name": "Al-Gamaleya, Ad Dakahliya, 35642, Egypt",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Al-Gamaleya",
+        "state": "Ad Dakahliya",
+        "postcode": "35642",
+        "country": "Egypt",
+        "country_code": "eg"
+      },
+      "address": "326, Al-Gamaleya, Ad Dakahliya, 35642, Egypt"
+    }
+  ],
+  "updated_at": "2025-10-19T02:22:15.331309+00:00",
+  "_kind": "geo_samples"
+}

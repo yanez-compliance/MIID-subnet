@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Matveyevskoye",
+  "geonameid": 528454,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.71210619897523,
+      "lon": 37.530683152622295,
+      "geoinfo": {
+        "display_name": "Мичуринский проспект, Ramenki District, Moscow, Central Federal District, 119234, Russia",
+        "road": "Мичуринский проспект",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Ramenki District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "119234",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Мичуринский проспект, Matveyevskoye, Moscow, Russia"
+    },
+    {
+      "lat": 55.68975298058306,
+      "lon": 37.51310811664804,
+      "geoinfo": {
+        "display_name": "23А, Мичуринский проспект, Ramenki District, Moscow, Central Federal District, 119192, Russia",
+        "road": "Мичуринский проспект",
+        "house_number": "23А",
+        "neighbourhood": null,
+        "suburb": "Ramenki District",
+        "city_district": null,
+        "city": "Moscow",
+        "state": "Moscow",
+        "postcode": "119192",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "23А, Мичуринский проспект, Ramenki District, Moscow, Central Federal District, 119192, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:24:05.817952+00:00",
+  "_kind": "geo_samples"
+}

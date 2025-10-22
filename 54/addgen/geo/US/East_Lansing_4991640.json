@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "East Lansing",
+  "geonameid": 4991640,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.74460344193826,
+      "lon": -84.48881800936104,
+      "geoinfo": {
+        "display_name": "435, Oxford Road, Glencairn, East Lansing, Ingham County, Michigan, 48823, United States",
+        "road": "Oxford Road",
+        "house_number": "435",
+        "neighbourhood": "Glencairn",
+        "suburb": null,
+        "city_district": null,
+        "city": "East Lansing",
+        "state": "Michigan",
+        "postcode": "48823",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "435 Oxford Road, East Lansing, Michigan, United States"
+    },
+    {
+      "lat": 42.742378557463475,
+      "lon": -84.4616962182747,
+      "geoinfo": {
+        "display_name": "MacDonald Middle School, 1601, Burcham Drive, East Lansing, Ingham County, Michigan, 48823, United States",
+        "road": "Burcham Drive",
+        "house_number": "1601",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Lansing",
+        "state": "Michigan",
+        "postcode": "48823",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "MacDonald Middle School, 1601, Burcham Drive, East Lansing, Ingham County, Michigan, 48823, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:38:03.085038+00:00",
+  "_kind": "geo_samples"
+}

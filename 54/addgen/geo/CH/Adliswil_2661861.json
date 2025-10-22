@@ -1,0 +1,47 @@
+{
+  "country_code": "CH",
+  "country": "Switzerland",
+  "city": "Adliswil",
+  "geonameid": 2661861,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.32424498386044,
+      "lon": 8.564678812835114,
+      "geoinfo": {
+        "display_name": "Goldbach, Küsnacht (ZH), Bezirk Meilen, Zurich, 8700, Switzerland",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Küsnacht (ZH)",
+        "state": "Zurich",
+        "postcode": "8700",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "Adliswil, Zurich, Switzerland"
+    },
+    {
+      "lat": 47.28263756632755,
+      "lon": 8.531808724569922,
+      "geoinfo": {
+        "display_name": "2, Quellenstrasse, Haslen, Rinderweid, Langnau am Albis, Bezirk Horgen, Zurich, 8135, Switzerland",
+        "road": "Quellenstrasse",
+        "house_number": "2",
+        "neighbourhood": "Haslen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Langnau am Albis",
+        "state": "Zurich",
+        "postcode": "8135",
+        "country": "Switzerland",
+        "country_code": "ch"
+      },
+      "address": "2 Quellenstrasse, Adliswil, Zurich, Switzerland"
+    }
+  ],
+  "updated_at": "2025-10-16T12:07:13.404882+00:00",
+  "_kind": "geo_samples"
+}

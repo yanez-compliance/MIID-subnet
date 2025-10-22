@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Redondo Beach",
+  "geonameid": 5386785,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.845282781877955,
+      "lon": -118.35326934739028,
+      "geoinfo": {
+        "display_name": "Pacific Audi, Spencer Street, Torrance, Los Angeles County, California, 90503, United States",
+        "road": "Spencer Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrance",
+        "state": "California",
+        "postcode": "90503",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Spencer Street, Redondo Beach, California, United States"
+    },
+    {
+      "lat": 33.88187960383663,
+      "lon": -118.4156730861458,
+      "geoinfo": {
+        "display_name": "Manhattan Beach Pier, Manhattan Beach, Los Angeles County, California, 90266, United States",
+        "road": "Manhattan Beach Pier",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manhattan Beach",
+        "state": "California",
+        "postcode": "90266",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "744, Manhattan Beach Pier, Manhattan Beach, Los Angeles County, California, 90266, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:51.897772+00:00",
+  "_kind": "geo_samples"
+}

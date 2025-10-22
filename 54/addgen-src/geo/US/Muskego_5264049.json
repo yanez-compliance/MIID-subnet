@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Muskego",
+  "geonameid": 5264049,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.866703509319635,
+      "lon": -88.12171527721645,
+      "geoinfo": {
+        "display_name": "Muskego, Waukesha County, Wisconsin, 53150, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Muskego",
+        "state": "Wisconsin",
+        "postcode": "53150",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Muskego, Wisconsin, United States"
+    },
+    {
+      "lat": 42.93897745243129,
+      "lon": -88.12248551936729,
+      "geoinfo": {
+        "display_name": "16676, West Small Road, New Berlin, Waukesha County, Wisconsin, 53151, United States",
+        "road": "West Small Road",
+        "house_number": "16676",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "New Berlin",
+        "state": "Wisconsin",
+        "postcode": "53151",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "16676, West Small Road, New Berlin, Waukesha County, Wisconsin, 53151, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:42:07.246680+00:00",
+  "_kind": "geo_samples"
+}

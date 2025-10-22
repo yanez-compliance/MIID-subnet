@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bensheim",
+  "geonameid": 2950978,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.70106726181394,
+      "lon": 8.642594285723186,
+      "geoinfo": {
+        "display_name": "Wilhelmsweg, Auerbach, Bensheim, Kreis Bergstraße, Hesse, 64625, Germany",
+        "road": "Wilhelmsweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auerbach",
+        "state": "Hesse",
+        "postcode": "64625",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Wilhelmsweg, Bensheim, Hesse, Germany"
+    },
+    {
+      "lat": 49.72597014253969,
+      "lon": 8.601551108845715,
+      "geoinfo": {
+        "display_name": "Platanenallee, Zwingenberg, Kreis Bergstraße, Hesse, 64673, Germany",
+        "road": "Platanenallee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zwingenberg",
+        "state": "Hesse",
+        "postcode": "64673",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "171, Platanenallee, Bensheim, 64673 Hesse, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:15.814576+00:00",
+  "_kind": "geo_samples"
+}

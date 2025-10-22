@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "El Arahal",
+  "geonameid": 2518729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.29269794520095,
+      "lon": -5.569729709996997,
+      "geoinfo": {
+        "display_name": "Cañada Real de Sevilla, Carmona, Sevilla, Andalusia, 41600, Spain",
+        "road": "Cañada Real de Sevilla",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carmona",
+        "state": "Andalusia",
+        "postcode": "41600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Cañada Real de Sevilla, El Arahal, Andalusia, Spain"
+    },
+    {
+      "lat": 37.289899119344184,
+      "lon": -5.561547917284182,
+      "geoinfo": {
+        "display_name": "Calle Carmona, Paradas, Sevilla, Andalusia, 41600, Spain",
+        "road": "Calle Carmona",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Paradas",
+        "state": "Andalusia",
+        "postcode": "41600",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "346, Calle Carmona, Paradas, Sevilla, Andalusia, 41600, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:03:02.965977+00:00",
+  "_kind": "geo_samples"
+}

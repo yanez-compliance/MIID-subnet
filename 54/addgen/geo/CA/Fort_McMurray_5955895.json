@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Fort McMurray",
+  "geonameid": 5955895,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 56.691882398479436,
+      "lon": -111.3979984812623,
+      "geoinfo": {
+        "display_name": "Abasand, Fort McMurray, Wood Buffalo, Alberta, T9J 1G9, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Abasand",
+        "city_district": null,
+        "city": "Fort McMurray",
+        "state": "Alberta",
+        "postcode": "T9J 1G9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Abasand, Fort McMurray, Alberta, Canada"
+    },
+    {
+      "lat": 56.737260722699645,
+      "lon": -111.3038705567174,
+      "geoinfo": {
+        "display_name": "Wood Buffalo, Alberta, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Alberta",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "768, Wood Buffalo, 69490 Alberta, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:54.013017+00:00",
+  "_kind": "geo_samples"
+}

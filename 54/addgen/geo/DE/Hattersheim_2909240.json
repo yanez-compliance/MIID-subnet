@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hattersheim",
+  "geonameid": 2909240,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.08257335608654,
+      "lon": 8.49376749978001,
+      "geoinfo": {
+        "display_name": "B 40, Hattersheim, Hattersheim am Main, Main-Taunus-Kreis, Hesse, 65795, Germany",
+        "road": "B 40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hattersheim",
+        "state": "Hesse",
+        "postcode": "65795",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 40, Hattersheim, Hesse, Germany"
+    },
+    {
+      "lat": 50.036937507652326,
+      "lon": 8.495816630622235,
+      "geoinfo": {
+        "display_name": "Kernweg, Kelsterbach, Kreis Groß-Gerau, Hesse, 65451, Germany",
+        "road": "Kernweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kelsterbach",
+        "state": "Hesse",
+        "postcode": "65451",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "486, Kernweg, Kelsterbach, Kreis Groß-Gerau, Hesse, 65451, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:18:01.395832+00:00",
+  "_kind": "geo_samples"
+}

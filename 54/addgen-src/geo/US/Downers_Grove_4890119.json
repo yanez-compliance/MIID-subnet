@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Downers Grove",
+  "geonameid": 4890119,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.780261295860754,
+      "lon": -88.0303172597326,
+      "geoinfo": {
+        "display_name": "1938, 59th Street, DuPage County, Illinois, 60516, United States",
+        "road": "59th Street",
+        "house_number": "1938",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": "60516",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1938 59th Street, Downers Grove, Illinois, United States"
+    },
+    {
+      "lat": 41.82771573699403,
+      "lon": -87.96238589040517,
+      "geoinfo": {
+        "display_name": "251, Saint Michael Court, Trinity Lakes, Oak Brook, DuPage County, Illinois, 60523, United States",
+        "road": "Saint Michael Court",
+        "house_number": "251",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Oak Brook",
+        "state": "Illinois",
+        "postcode": "60523",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "251, Saint Michael Court, Trinity Lakes, Oak Brook, DuPage County, Illinois, 60523, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:35:11.072222+00:00",
+  "_kind": "geo_samples"
+}

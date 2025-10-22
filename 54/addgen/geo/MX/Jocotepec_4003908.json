@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Jocotepec",
+  "geonameid": 4003908,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.275263540371284,
+      "lon": -103.40003237330974,
+      "geoinfo": {
+        "display_name": "Chapala, Región Ciénega, Jalisco, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Jalisco",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Jocotepec, Jalisco, Mexico"
+    },
+    {
+      "lat": 20.26715269953829,
+      "lon": -103.46307902172478,
+      "geoinfo": {
+        "display_name": "Jocotepec, Zacoalco de Torres, Región Sur, Jalisco, 45800, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Jocotepec",
+        "state": "Jalisco",
+        "postcode": "45800",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "324, Jocotepec, 45800 Jalisco, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T05:51:24.156601+00:00",
+  "_kind": "geo_samples"
+}

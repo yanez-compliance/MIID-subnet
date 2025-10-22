@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nashville",
+  "geonameid": 4644585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.130804978874906,
+      "lon": -86.75254799150824,
+      "geoinfo": {
+        "display_name": "375, Woodycrest Avenue, Nashville, Davidson County, Middle Tennessee, Tennessee, 37210, United States",
+        "road": "Woodycrest Avenue",
+        "house_number": "375",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nashville",
+        "state": "Tennessee",
+        "postcode": "37210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "375 Woodycrest Avenue, Nashville, Tennessee, United States"
+    },
+    {
+      "lat": 36.14411855950278,
+      "lon": -86.75788860775974,
+      "geoinfo": {
+        "display_name": "Nashville, Davidson County, Middle Tennessee, Tennessee, 37210, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nashville",
+        "state": "Tennessee",
+        "postcode": "37210",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "072, Nashville, Davidson County, Middle Tennessee, Tennessee, 37210, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:33.617754+00:00",
+  "_kind": "geo_samples"
+}

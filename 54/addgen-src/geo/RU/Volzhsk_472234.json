@@ -1,0 +1,47 @@
+{
+  "country_code": "RU",
+  "country": "Russia",
+  "city": "Volzhsk",
+  "geonameid": 472234,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 55.89595974406719,
+      "lon": 48.322209126127106,
+      "geoinfo": {
+        "display_name": "Volzhsk, Помарское сельское поселение, Volzhsky District, Mari El Republic, Volga Federal District, 425008, Russia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Volzhsk",
+        "state": "Mari El Republic",
+        "postcode": "425008",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "Volzhsk, Mari El Republic, Russia"
+    },
+    {
+      "lat": 55.896768638688485,
+      "lon": 48.35765936860717,
+      "geoinfo": {
+        "display_name": "Йошкар-Олинское шоссе, Мамасево, Volzhsk, Mari El Republic, Volga Federal District, 425000, Russia",
+        "road": "Йошкар-Олинское шоссе",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Мамасево",
+        "city_district": null,
+        "city": "Volzhsk",
+        "state": "Mari El Republic",
+        "postcode": "425000",
+        "country": "Russia",
+        "country_code": "ru"
+      },
+      "address": "312, Йошкар-Олинское шоссе, Мамасево, Volzhsk, Mari El Republic, Volga Federal District, 425000, Russia"
+    }
+  ],
+  "updated_at": "2025-10-19T05:21:35.428992+00:00",
+  "_kind": "geo_samples"
+}

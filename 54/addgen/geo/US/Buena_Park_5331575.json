@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Buena Park",
+  "geonameid": 5331575,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.83621113616485,
+      "lon": -118.02876451097461,
+      "geoinfo": {
+        "display_name": "8701, Valley View Street, Buena Park, Orange County, California, 90620, United States",
+        "road": "Valley View Street",
+        "house_number": "8701",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Buena Park",
+        "state": "California",
+        "postcode": "90620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "8701 Valley View Street, Buena Park, California, United States"
+    },
+    {
+      "lat": 33.85639297031733,
+      "lon": -117.95474029361847,
+      "geoinfo": {
+        "display_name": "1537, West Roberta Avenue, Fullerton, Orange County, California, 92833, United States",
+        "road": "West Roberta Avenue",
+        "house_number": "1537",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fullerton",
+        "state": "California",
+        "postcode": "92833",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1537, West Roberta Avenue, Fullerton, Orange County, California, 92833, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:41:05.523310+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Verdun",
+  "geonameid": 6173767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.42250310115277,
+      "lon": -73.57135155781835,
+      "geoinfo": {
+        "display_name": "LaSalle, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, Canada",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "LaSalle",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": null,
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "LaSalle, Verdun, Quebec, Canada"
+    },
+    {
+      "lat": 45.45641085851666,
+      "lon": -73.60261552018687,
+      "geoinfo": {
+        "display_name": "6053, Rue Jogues, Ville-Émard, Le Sud-Ouest, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4E 2V6, Canada",
+        "road": "Rue Jogues",
+        "house_number": "6053",
+        "neighbourhood": "Ville-Émard",
+        "suburb": "Le Sud-Ouest",
+        "city_district": null,
+        "city": "Montreal",
+        "state": "Quebec",
+        "postcode": "H4E 2V6",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "6053, Rue Jogues, Ville-Émard, Le Sud-Ouest, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H4E 2V6, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:23:25.472046+00:00",
+  "_kind": "geo_samples"
+}

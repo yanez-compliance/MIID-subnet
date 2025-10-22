@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "New Haven",
+  "geonameid": 4839366,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.27175414930816,
+      "lon": -72.91543973045691,
+      "geoinfo": {
+        "display_name": "East Shore, Raynham, Morris Cove, New Haven, South Central Connecticut Planning Region, Connecticut, 06512, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "East Shore",
+        "suburb": null,
+        "city_district": null,
+        "city": "New Haven",
+        "state": "Connecticut",
+        "postcode": "06512",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Shore, New Haven, Connecticut, United States"
+    },
+    {
+      "lat": 41.31684056288921,
+      "lon": -72.98130443645223,
+      "geoinfo": {
+        "display_name": "Yale Golf Course, 200, Conrad Drive, Westville, New Haven, Connecticut, 06515, United States",
+        "road": "Conrad Drive",
+        "house_number": "200",
+        "neighbourhood": null,
+        "suburb": "Westville",
+        "city_district": null,
+        "city": "New Haven",
+        "state": "Connecticut",
+        "postcode": "06515",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Yale Golf Course, 200, Conrad Drive, Westville, New Haven, Connecticut, 06515, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:54.347851+00:00",
+  "_kind": "geo_samples"
+}

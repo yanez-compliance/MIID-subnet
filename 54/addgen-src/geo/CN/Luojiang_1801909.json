@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Luojiang",
+  "geonameid": 1801909,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.296600254708274,
+      "lon": 104.55509139811439,
+      "geoinfo": {
+        "display_name": "Luojiang District, Deyang, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Luojiang District",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Luojiang, Sichuan, China"
+    },
+    {
+      "lat": 31.270677071503258,
+      "lon": 104.49290386355197,
+      "geoinfo": {
+        "display_name": "Panlong, Luojiang District, Deyang, Sichuan, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Panlong",
+        "city_district": null,
+        "city": "Luojiang District",
+        "state": "Sichuan",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "420, Panlong, Luojiang District, Deyang, 18317 Sichuan, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:33:52.426302+00:00",
+  "_kind": "geo_samples"
+}

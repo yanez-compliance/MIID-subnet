@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Des Moines",
+  "geonameid": 5792244,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.42256897289913,
+      "lon": -122.30587627407753,
+      "geoinfo": {
+        "display_name": "South 200th Street, SeaTac, King County, Washington, 98158, United States",
+        "road": "South 200th Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "SeaTac",
+        "state": "Washington",
+        "postcode": "98158",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South 200th Street, Des Moines, Washington, United States"
+    },
+    {
+      "lat": 47.4366876446165,
+      "lon": -122.3306575721955,
+      "geoinfo": {
+        "display_name": "331, South 185th Street, Burien, King County, Washington, 98148, United States",
+        "road": "South 185th Street",
+        "house_number": "331",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burien",
+        "state": "Washington",
+        "postcode": "98148",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "331, South 185th Street, Burien, King County, Washington, 98148, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:45.472004+00:00",
+  "_kind": "geo_samples"
+}

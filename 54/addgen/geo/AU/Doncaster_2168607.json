@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Doncaster",
+  "geonameid": 2168607,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.78109081782053,
+      "lon": 145.12862761246643,
+      "geoinfo": {
+        "display_name": "17, Saxon Street, Doncaster, Melbourne, City of Manningham, Victoria, 3108, Australia",
+        "road": "Saxon Street",
+        "house_number": "17",
+        "neighbourhood": null,
+        "suburb": "Doncaster",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3108",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "17 Saxon Street, Doncaster, Victoria, Australia"
+    },
+    {
+      "lat": -37.807987219252595,
+      "lon": 145.09564145915706,
+      "geoinfo": {
+        "display_name": "123, Winmalee Road, Balwyn East, Balwyn, Melbourne, City of Boroondara, Victoria, 3103, Australia",
+        "road": "Winmalee Road",
+        "house_number": "123",
+        "neighbourhood": "Balwyn East",
+        "suburb": "Balwyn",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3103",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "123, Winmalee Road, Balwyn East, Balwyn, Melbourne, City of Boroondara, Victoria, 3103, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:46.643198+00:00",
+  "_kind": "geo_samples"
+}

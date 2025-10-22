@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Deerfield",
+  "geonameid": 4889668,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.16681089565833,
+      "lon": -87.88302033056472,
+      "geoinfo": {
+        "display_name": "Sanders Road, Riverwoods, Lake County, Illinois, 60015, United States",
+        "road": "Sanders Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverwoods",
+        "state": "Illinois",
+        "postcode": "60015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Sanders Road, Deerfield, Illinois, United States"
+    },
+    {
+      "lat": 42.17057478838909,
+      "lon": -87.83110272320006,
+      "geoinfo": {
+        "display_name": "987, Heather Road, Deerfield, Lake County, Illinois, 60015, United States",
+        "road": "Heather Road",
+        "house_number": "987",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Deerfield",
+        "state": "Illinois",
+        "postcode": "60015",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "987, Heather Road, Deerfield, Lake County, Illinois, 60015, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:10:16.548586+00:00",
+  "_kind": "geo_samples"
+}

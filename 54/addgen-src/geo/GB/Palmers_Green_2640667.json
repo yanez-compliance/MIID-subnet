@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Palmers Green",
+  "geonameid": 2640667,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.62470147626433,
+      "lon": -0.12379457561220283,
+      "geoinfo": {
+        "display_name": "The Mall, Southgate, London Borough of Enfield, London, Greater London, England, N14 6EN, United Kingdom",
+        "road": "The Mall",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Southgate",
+        "city_district": "London Borough of Enfield",
+        "city": "London",
+        "state": "England",
+        "postcode": "N14 6EN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "The Mall, Palmers Green, England, United Kingdom"
+    },
+    {
+      "lat": 51.576535765466254,
+      "lon": -0.1126333423649226,
+      "geoinfo": {
+        "display_name": "44, Mount View Road, Ferme Park, Stroud Green, London Borough of Haringey, London, Greater London, England, N4 4SP, United Kingdom",
+        "road": "Mount View Road",
+        "house_number": "44",
+        "neighbourhood": "Ferme Park",
+        "suburb": "Stroud Green",
+        "city_district": "London Borough of Haringey",
+        "city": "London",
+        "state": "England",
+        "postcode": "N4 4SP",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "44, Mount View Road, Ferme Park, Stroud Green, London Borough of Haringey, London, Greater London, England, N4 4SP, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T05:17:48.075850+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Santa Cruz de los Taques",
+  "geonameid": 7909705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 11.855691690876005,
+      "lon": -70.28296515764531,
+      "geoinfo": {
+        "display_name": "R-3, El Pico, Parroquia Los Taques, Municipio Los Taques, Falcon State, Venezuela",
+        "road": "R-3",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "El Pico",
+        "state": "Falcon State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "R-3, Santa Cruz de los Taques, Falcon State, Venezuela"
+    },
+    {
+      "lat": 11.80202838855734,
+      "lon": -70.28633575471562,
+      "geoinfo": {
+        "display_name": "Villa Marina, Parroquia Los Taques, Municipio Los Taques, Falcon State, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Villa Marina",
+        "state": "Falcon State",
+        "postcode": null,
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "748, Villa Marina, Parroquia Los Taques, Municipio Los Taques, 25302 Falcon State, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T07:50:43.625254+00:00",
+  "_kind": "geo_samples"
+}

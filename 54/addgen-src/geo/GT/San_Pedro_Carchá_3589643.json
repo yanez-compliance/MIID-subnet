@@ -1,0 +1,47 @@
+{
+  "country_code": "GT",
+  "country": "Guatemala",
+  "city": "San Pedro Carchá",
+  "geonameid": 3589643,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 15.483886590685008,
+      "lon": -90.27738052652295,
+      "geoinfo": {
+        "display_name": "San Pedro Carchá, Alta Verapaz, 16009, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Pedro Carchá",
+        "state": "Alta Verapaz",
+        "postcode": "16009",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "San Pedro Carchá, Alta Verapaz, Guatemala"
+    },
+    {
+      "lat": 15.503745938127171,
+      "lon": -90.32408747864834,
+      "geoinfo": {
+        "display_name": "Cobán, San Pedro Carchá, Alta Verapaz, 16009, Guatemala",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cobán",
+        "state": "Alta Verapaz",
+        "postcode": "16009",
+        "country": "Guatemala",
+        "country_code": "gt"
+      },
+      "address": "117, Cobán, San Pedro Carchá, Alta Verapaz, 16009, Guatemala"
+    }
+  ],
+  "updated_at": "2025-10-19T02:32:37.670358+00:00",
+  "_kind": "geo_samples"
+}

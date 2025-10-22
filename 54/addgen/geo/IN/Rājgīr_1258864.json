@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Rājgīr",
+  "geonameid": 1258864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.040159993196873,
+      "lon": 85.42221803345888,
+      "geoinfo": {
+        "display_name": "Rajgir, Nalanda, Bihar, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rajgir",
+        "state": "Bihar",
+        "postcode": null,
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Rājgīr, Bihar, India"
+    },
+    {
+      "lat": 25.071745734947918,
+      "lon": 85.4332469394776,
+      "geoinfo": {
+        "display_name": "Karahdih, NH120, Silao, Nalanda, Bihar, 803111, India",
+        "road": "NH120",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Silao",
+        "state": "Bihar",
+        "postcode": "803111",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Karahdih, NH120, Silao, Nalanda, Bihar, 803111, India"
+    }
+  ],
+  "updated_at": "2025-10-19T03:10:55.855138+00:00",
+  "_kind": "geo_samples"
+}

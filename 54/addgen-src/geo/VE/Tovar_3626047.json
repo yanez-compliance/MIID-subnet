@@ -1,0 +1,47 @@
+{
+  "country_code": "VE",
+  "country": "Venezuela",
+  "city": "Tovar",
+  "geonameid": 3626047,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 8.354201711955291,
+      "lon": -71.72880439006886,
+      "geoinfo": {
+        "display_name": "Santa Bárbara, Parroquia Tovar, Municipio Tovar, Merida State, 5143, Venezuela",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Santa Bárbara",
+        "city_district": null,
+        "city": null,
+        "state": "Merida State",
+        "postcode": "5143",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "Santa Bárbara, Tovar, Merida State, Venezuela"
+    },
+    {
+      "lat": 8.340082923586447,
+      "lon": -71.74890524534655,
+      "geoinfo": {
+        "display_name": "Carretera Regional Tovar - Zea, Parroquia Tovar, Municipio Tovar, Merida State, 5143, Venezuela",
+        "road": "Carretera Regional Tovar - Zea",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Merida State",
+        "postcode": "5143",
+        "country": "Venezuela",
+        "country_code": "ve"
+      },
+      "address": "268, Carretera Regional Tovar - Zea, Parroquia Tovar, Municipio Tovar, Merida State, 5143, Venezuela"
+    }
+  ],
+  "updated_at": "2025-10-19T11:24:49.217445+00:00",
+  "_kind": "geo_samples"
+}

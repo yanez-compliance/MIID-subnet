@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sewell",
+  "geonameid": 4504048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.74292507023398,
+      "lon": -75.11537984256476,
+      "geoinfo": {
+        "display_name": "1, Marcy Court, Washington Township, Gloucester County, New Jersey, 08080, United States",
+        "road": "Marcy Court",
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Washington Township",
+        "state": "New Jersey",
+        "postcode": "08080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1 Marcy Court, Sewell, New Jersey, United States"
+    },
+    {
+      "lat": 39.753104968686536,
+      "lon": -75.18291688450259,
+      "geoinfo": {
+        "display_name": "Jackson Road, Mantua Township, Gloucester County, New Jersey, 08080, United States",
+        "road": "Jackson Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mantua Township",
+        "state": "New Jersey",
+        "postcode": "08080",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "809, Jackson Road, Mantua Township, Gloucester County, New Jersey, 08080, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:06:08.979406+00:00",
+  "_kind": "geo_samples"
+}

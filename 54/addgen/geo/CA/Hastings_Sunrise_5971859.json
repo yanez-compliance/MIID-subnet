@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Hastings-Sunrise",
+  "geonameid": 5971859,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.281039221991364,
+      "lon": -123.08469757074113,
+      "geoinfo": {
+        "display_name": "Belcourt Residence, 947, East Hastings Street, Strathcona, Vancouver, Metro Vancouver Regional District, British Columbia, V6A, Canada",
+        "road": "East Hastings Street",
+        "house_number": "947",
+        "neighbourhood": null,
+        "suburb": "Strathcona",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V6A",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "947 East Hastings Street, Hastings-Sunrise, British Columbia, Canada"
+    },
+    {
+      "lat": 49.253306361930115,
+      "lon": -123.02683554051941,
+      "geoinfo": {
+        "display_name": "Haida Drive, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada",
+        "road": "Haida Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Renfrew-Collingwood",
+        "city_district": null,
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "postcode": "V5M",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "896, Haida Drive, Renfrew-Collingwood, Vancouver, Metro Vancouver Regional District, British Columbia, V5M, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:20:09.939507+00:00",
+  "_kind": "geo_samples"
+}

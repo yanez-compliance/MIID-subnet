@@ -1,0 +1,47 @@
+{
+  "country_code": "SE",
+  "country": "Sweden",
+  "city": "Ludvika",
+  "geonameid": 2693759,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 60.150586466499696,
+      "lon": 15.274957747483933,
+      "geoinfo": {
+        "display_name": "Fiskarbo, Smedjebackens kommun, Dalarna County, 777 91, Sweden",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "777 91",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "Ludvika, Sweden"
+    },
+    {
+      "lat": 60.11449520409328,
+      "lon": 15.21650048072734,
+      "geoinfo": {
+        "display_name": "Info, Rävsnäsvägen, Jägarnäs, Rävsnäs, Ludvika kommun, Dalarna County, 771 43, Sweden",
+        "road": "Rävsnäsvägen",
+        "house_number": null,
+        "neighbourhood": "Jägarnäs",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": "771 43",
+        "country": "Sweden",
+        "country_code": "se"
+      },
+      "address": "369, Rävsnäsvägen, 771 43 Ludvika, Sweden"
+    }
+  ],
+  "updated_at": "2025-10-19T07:00:06.856148+00:00",
+  "_kind": "geo_samples"
+}

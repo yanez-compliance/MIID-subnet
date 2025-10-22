@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hutto",
+  "geonameid": 4699626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.521268451182813,
+      "lon": -97.57314269025824,
+      "geoinfo": {
+        "display_name": "Pickle Parkway, Williamson County, Texas, 78634, United States",
+        "road": "Pickle Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78634",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pickle Parkway, Hutto, Texas, United States"
+    },
+    {
+      "lat": 30.54719357291976,
+      "lon": -97.59029308129696,
+      "geoinfo": {
+        "display_name": "Angelo Street, Sienna, Williamson County, Texas, 78634, United States",
+        "road": "Angelo Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Texas",
+        "postcode": "78634",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "943, Angelo Street, Sienna, Williamson County, Texas, 78634, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:03.427166+00:00",
+  "_kind": "geo_samples"
+}

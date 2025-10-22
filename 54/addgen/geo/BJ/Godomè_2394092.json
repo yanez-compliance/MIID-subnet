@@ -1,0 +1,47 @@
+{
+  "country_code": "BJ",
+  "country": "Benin",
+  "city": "Godomè",
+  "geonameid": 2394092,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 6.358300897773069,
+      "lon": 2.3695235932429486,
+      "geoinfo": {
+        "display_name": "Madame Dorothée, Rue 2147, Hlazounto, 12ᵉ Arrondissement, Cotonou, Abomey-Calavi, Littoral Department, Benin",
+        "road": "Rue 2147",
+        "house_number": null,
+        "neighbourhood": "Hlazounto",
+        "suburb": null,
+        "city_district": "12ᵉ Arrondissement",
+        "city": "Cotonou",
+        "state": "Littoral Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "Madame Dorothée, Rue 2147, Hlazounto, 12ᵉ Arrondissement, Cotonou, Abomey-Calavi, Littoral Department, Benin"
+    },
+    {
+      "lat": 6.353931155587522,
+      "lon": 2.350632384654014,
+      "geoinfo": {
+        "display_name": "Djako Daho, Abomey-Calavi, Atlantique Department, Benin",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Djako Daho",
+        "state": "Atlantique Department",
+        "postcode": null,
+        "country": "Benin",
+        "country_code": "bj"
+      },
+      "address": "931, Djako Daho, Abomey-Calavi, 75559 Atlantique Department, Benin"
+    }
+  ],
+  "updated_at": "2025-10-19T03:00:37.651679+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Orléans",
+  "geonameid": 2989317,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.874267707036395,
+      "lon": 1.8913958282426586,
+      "geoinfo": {
+        "display_name": "487, Rue des Cireries, Olivet, Orléans, Loiret, Centre-Val de Loire, Metropolitan France, 45160, France",
+        "road": "Rue des Cireries",
+        "house_number": "487",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Olivet",
+        "state": "Centre-Val de Loire",
+        "postcode": "45160",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "487 Rue des Cireries, Orléans, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.8915218863877,
+      "lon": 1.9685006673216454,
+      "geoinfo": {
+        "display_name": "Rue Jehan du Lys, Parc de Loire, Saint-Denis-en-Val, Orléans, Loiret, Centre-Val de Loire, Metropolitan France, 45560, France",
+        "road": "Rue Jehan du Lys",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saint-Denis-en-Val",
+        "state": "Centre-Val de Loire",
+        "postcode": "45560",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "481, Rue Jehan du Lys, Parc de Loire, Saint-Denis-en-Val, Orléans, Loiret, Centre-Val de Loire, Metropolitan France, 45560, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:07:23.261003+00:00",
+  "_kind": "geo_samples"
+}

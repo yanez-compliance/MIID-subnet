@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Nagano",
+  "geonameid": 1856215,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.64043009592109,
+      "lon": 138.2301036163449,
+      "geoinfo": {
+        "display_name": "Minaminagaike, Nagano, Nagano Prefecture, 381-0034, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nagano",
+        "state": null,
+        "postcode": "381-0034",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Nagano, Japan"
+    },
+    {
+      "lat": 36.673403987303615,
+      "lon": 138.17336582049913,
+      "geoinfo": {
+        "display_name": "鍋石, Nagano, Nagano Prefecture, 380-0801, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "鍋石",
+        "suburb": null,
+        "city_district": null,
+        "city": "Nagano",
+        "state": null,
+        "postcode": "380-0801",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "鍋石, Nagano, Nagano Prefecture, 380-0801, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:25:49.538448+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Lino Lakes",
+  "geonameid": 5034767,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.13648821018265,
+      "lon": -93.14031607597073,
+      "geoinfo": {
+        "display_name": "White Pine Road, Lino Lakes, Anoka County, Minnesota, 55014, United States",
+        "road": "White Pine Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lino Lakes",
+        "state": "Minnesota",
+        "postcode": "55014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "White Pine Road, Lino Lakes, Minnesota, United States"
+    },
+    {
+      "lat": 45.12137821673921,
+      "lon": -93.08082434615642,
+      "geoinfo": {
+        "display_name": "99, Monarch Lane, Rapp Farm, North Oaks, Ramsey County, Minnesota, 55127, United States",
+        "road": "Monarch Lane",
+        "house_number": "99",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Oaks",
+        "state": "Minnesota",
+        "postcode": "55127",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "99, Monarch Lane, Rapp Farm, North Oaks, Ramsey County, Minnesota, 55127, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:03.316407+00:00",
+  "_kind": "geo_samples"
+}

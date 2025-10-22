@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Northwich",
+  "geonameid": 2641224,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.27228947571662,
+      "lon": -2.471626225469032,
+      "geoinfo": {
+        "display_name": "Hall Lane, Wincham, Lostock Gralam, Cheshire West and Chester, England, CW9 6DG, United Kingdom",
+        "road": "Hall Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lostock Gralam",
+        "state": "England",
+        "postcode": "CW9 6DG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Hall Lane, Northwich, England, United Kingdom"
+    },
+    {
+      "lat": 53.282184797847215,
+      "lon": -2.4775307569118277,
+      "geoinfo": {
+        "display_name": "Church Street, Wincham, Cheshire West and Chester, England, CW9 6RB, United Kingdom",
+        "road": "Church Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wincham",
+        "state": "England",
+        "postcode": "CW9 6RB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Church Street, Wincham, Cheshire West and Chester, England, CW9 6RB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:41:05.185335+00:00",
+  "_kind": "geo_samples"
+}

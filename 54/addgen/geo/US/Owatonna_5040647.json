@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Owatonna",
+  "geonameid": 5040647,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.08799296210099,
+      "lon": -93.27658301361066,
+      "geoinfo": {
+        "display_name": "39th Avenue Northwest, Owatonna, Steele County, Minnesota, 55060, United States",
+        "road": "39th Avenue Northwest",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Owatonna",
+        "state": "Minnesota",
+        "postcode": "55060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "39th Avenue Northwest, Owatonna, Minnesota, United States"
+    },
+    {
+      "lat": 44.083934575756665,
+      "lon": -93.17657672359358,
+      "geoinfo": {
+        "display_name": "School Street, Owatonna, Steele County, Minnesota, 55060, United States",
+        "road": "School Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Owatonna",
+        "state": "Minnesota",
+        "postcode": "55060",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "067, School Street, Owatonna, Steele County, Minnesota, 55060, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:00:15.372748+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Schiffweiler",
+  "geonameid": 2839316,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.40401045512206,
+      "lon": 7.113927667658917,
+      "geoinfo": {
+        "display_name": "L 141, Welschbach, Illingen, Landkreis Neunkirchen, Saarland, 66557, Germany",
+        "road": "L 141",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Welschbach",
+        "city": "Illingen",
+        "state": "Saarland",
+        "postcode": "66557",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 141, Schiffweiler, Saarland, Germany"
+    },
+    {
+      "lat": 49.404819540895275,
+      "lon": 7.148475846379623,
+      "geoinfo": {
+        "display_name": "38a, Maria-Juchacz-Ring, Neumünster, Ottweiler, Landkreis Neunkirchen, Saarland, 66564, Germany",
+        "road": "Maria-Juchacz-Ring",
+        "house_number": "38a",
+        "neighbourhood": null,
+        "suburb": "Neumünster",
+        "city_district": "Ottweiler",
+        "city": "Ottweiler",
+        "state": "Saarland",
+        "postcode": "66564",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "38a, Maria-Juchacz-Ring, Neumünster, Ottweiler, Landkreis Neunkirchen, Saarland, 66564, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:38:06.692248+00:00",
+  "_kind": "geo_samples"
+}

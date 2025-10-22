@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bristol",
+  "geonameid": 4608657,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.59192748213583,
+      "lon": -82.17880491839767,
+      "geoinfo": {
+        "display_name": "Anderson Street, Bristol, Sullivan County, East Tennessee, Tennessee, 24201, United States",
+        "road": "Anderson Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Tennessee",
+        "postcode": "24201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Anderson Street, Bristol, Tennessee, United States"
+    },
+    {
+      "lat": 36.555389822071035,
+      "lon": -82.20368881110757,
+      "geoinfo": {
+        "display_name": "398, Highland Street, Bristol, Sullivan County, East Tennessee, Tennessee, 37620, United States",
+        "road": "Highland Street",
+        "house_number": "398",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bristol",
+        "state": "Tennessee",
+        "postcode": "37620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "398, Highland Street, Bristol, Sullivan County, East Tennessee, Tennessee, 37620, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:50:43.661902+00:00",
+  "_kind": "geo_samples"
+}

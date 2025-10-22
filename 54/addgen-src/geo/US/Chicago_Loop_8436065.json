@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Chicago Loop",
+  "geonameid": 8436065,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.873345405240755,
+      "lon": -87.58184541793905,
+      "geoinfo": {
+        "display_name": "Cook County, Illinois, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Illinois",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Chicago Loop, Illinois, United States"
+    },
+    {
+      "lat": 41.9246847280048,
+      "lon": -87.62782626687043,
+      "geoinfo": {
+        "display_name": "Lakefront Trail, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60610, United States",
+        "road": "Lakefront Trail",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lincoln Park",
+        "city_district": null,
+        "city": "Chicago",
+        "state": "Illinois",
+        "postcode": "60610",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "057, Lakefront Trail, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60610, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:37.653320+00:00",
+  "_kind": "geo_samples"
+}

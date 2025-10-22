@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Elmhurst",
+  "geonameid": 4891010,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.862653928558096,
+      "lon": -87.94655721450123,
+      "geoinfo": {
+        "display_name": "98, Atrium Way, Yorkfield, Elmhurst, DuPage County, Illinois, 60126, United States",
+        "road": "Atrium Way",
+        "house_number": "98",
+        "neighbourhood": "Yorkfield",
+        "suburb": null,
+        "city_district": null,
+        "city": "Elmhurst",
+        "state": "Illinois",
+        "postcode": "60126",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "98 Atrium Way, Elmhurst, Illinois, United States"
+    },
+    {
+      "lat": 41.90722525581491,
+      "lon": -87.89482509401714,
+      "geoinfo": {
+        "display_name": "East North Avenue, Northlake, Proviso Township, Cook County, Illinois, 60164, United States",
+        "road": "East North Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Northlake",
+        "state": "Illinois",
+        "postcode": "60164",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "582, East North Avenue, Northlake, Proviso Township, Cook County, Illinois, 60164, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:34:11.788587+00:00",
+  "_kind": "geo_samples"
+}

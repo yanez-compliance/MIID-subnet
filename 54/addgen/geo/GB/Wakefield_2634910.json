@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Wakefield",
+  "geonameid": 2634910,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.67520472659948,
+      "lon": -1.4975035694540206,
+      "geoinfo": {
+        "display_name": "Russell Street, Belle Isle, Wakefield, West Yorkshire, England, WF1 5QS, United Kingdom",
+        "road": "Russell Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Belle Isle",
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "England",
+        "postcode": "WF1 5QS",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Russell Street, Wakefield, England, United Kingdom"
+    },
+    {
+      "lat": 53.65939827539748,
+      "lon": -1.5397431301534326,
+      "geoinfo": {
+        "display_name": "Parker Road, Horbury, Wakefield, West Yorkshire, England, WF4 5JR, United Kingdom",
+        "road": "Parker Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Wakefield",
+        "state": "England",
+        "postcode": "WF4 5JR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Parker Road, Horbury, Wakefield, West Yorkshire, England, WF4 5JR, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:50:39.582082+00:00",
+  "_kind": "geo_samples"
+}

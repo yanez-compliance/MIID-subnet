@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Fushun",
+  "geonameid": 2037355,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.921167421798,
+      "lon": 123.90766911514207,
+      "geoinfo": {
+        "display_name": "Hebei, Shuncheng District, Liaoning, 113000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Hebei",
+        "state": "Liaoning",
+        "postcode": "113000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Fushun, Liaoning, China"
+    },
+    {
+      "lat": 41.884769610040586,
+      "lon": 123.90249256360153,
+      "geoinfo": {
+        "display_name": "抚顺城路, Fushuncheng Subdistrict, Shuncheng, Shuncheng District, Liaoning, 113000, China",
+        "road": "抚顺城路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Fushuncheng Subdistrict",
+        "city_district": null,
+        "city": "Shuncheng",
+        "state": "Liaoning",
+        "postcode": "113000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "561, 抚顺城路, Fushuncheng Subdistrict, Shuncheng, Shuncheng District, Liaoning, 113000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:29:22.279364+00:00",
+  "_kind": "geo_samples"
+}

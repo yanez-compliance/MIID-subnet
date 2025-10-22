@@ -1,0 +1,65 @@
+{
+  "country_code": "ET",
+  "country": "Ethiopia",
+  "city": "Bichena",
+  "geonameid": 342190,
+  "target_addresses": 3,
+  "samples": [
+    {
+      "lat": 10.443701796542706,
+      "lon": 38.20576857346723,
+      "geoinfo": {
+        "display_name": "Mota Road, Bechena, East Gojjam, Amhara Region, 1221, Ethiopia",
+        "road": "Mota Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bechena",
+        "state": "Amhara Region",
+        "postcode": "1221",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "Mota Road, Bichena, Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 10.453653209461494,
+      "lon": 38.16092148062305,
+      "geoinfo": {
+        "display_name": "Bechena, East Gojjam, Amhara Region, 1221, Ethiopia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bechena",
+        "state": "Amhara Region",
+        "postcode": "1221",
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "472, Bichena, 1221 Amhara Region, Ethiopia"
+    },
+    {
+      "lat": 10.477739704150457,
+      "lon": 38.18664808612984,
+      "geoinfo": {
+        "display_name": "Mota Road, Bechena, East Gojjam, Amhara Region, Ethiopia",
+        "road": "Mota Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bechena",
+        "state": "Amhara Region",
+        "postcode": null,
+        "country": "Ethiopia",
+        "country_code": "et"
+      },
+      "address": "772, Mota Road, Bichena, 68531 Amhara Region, Ethiopia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:27:35.493455+00:00",
+  "_kind": "geo_samples"
+}

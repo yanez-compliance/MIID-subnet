@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Arteixo",
+  "geonameid": 3129329,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.306313173395,
+      "lon": -8.452847788256998,
+      "geoinfo": {
+        "display_name": "Vía Morta, Souteiro, Santa Icía, Morás, Arteixo, A Coruña, Galicia, 15190, Spain",
+        "road": "Vía Morta",
+        "house_number": null,
+        "neighbourhood": "Souteiro",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arteixo",
+        "state": "Galicia",
+        "postcode": "15190",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Vía Morta, Arteixo, Galicia, Spain"
+    },
+    {
+      "lat": 43.27694772221902,
+      "lon": -8.463311946271435,
+      "geoinfo": {
+        "display_name": "Canzobre, Morás, Arteixo, A Coruña, Galicia, 15141, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Arteixo",
+        "state": "Galicia",
+        "postcode": "15141",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "548, Canzobre, Morás, Arteixo, A Coruña, Galicia, 15141, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T04:05:25.374278+00:00",
+  "_kind": "geo_samples"
+}

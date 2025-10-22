@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Torrox",
+  "geonameid": 2510245,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.75924769708724,
+      "lon": -3.990454673797205,
+      "geoinfo": {
+        "display_name": "Torrox, La Axarquía, Malaga, Andalusia, 29793, Spain",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Torrox",
+        "state": "Andalusia",
+        "postcode": "29793",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Torrox, Andalusia, Spain"
+    },
+    {
+      "lat": 36.73539618879176,
+      "lon": -3.9269479651966117,
+      "geoinfo": {
+        "display_name": "Avenida El Calaceite, Urbanizacion Ladera del Mar II, El Peñoncillo, Torrox Park, Torrox, La Axarquía, Malaga, Andalusia, 29770, Spain",
+        "road": "Avenida El Calaceite",
+        "house_number": null,
+        "neighbourhood": "Urbanizacion Ladera del Mar II",
+        "suburb": "El Peñoncillo",
+        "city_district": null,
+        "city": "Torrox",
+        "state": "Andalusia",
+        "postcode": "29770",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "473, Avenida El Calaceite, Urbanizacion Ladera del Mar II, El Peñoncillo, Torrox Park, Torrox, La Axarquía, Malaga, Andalusia, 29770, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:59:31.183250+00:00",
+  "_kind": "geo_samples"
+}

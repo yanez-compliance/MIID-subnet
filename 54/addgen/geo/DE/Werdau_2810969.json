@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Werdau",
+  "geonameid": 2810969,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.73257364294702,
+      "lon": 12.35422287612981,
+      "geoinfo": {
+        "display_name": "24, Waldweg, Werdau, Stadt, Werdau, Zwickau, Saxony, 08412, Germany",
+        "road": "Waldweg",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Werdau, Stadt",
+        "city": "Werdau",
+        "state": "Saxony",
+        "postcode": "08412",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "24 Waldweg, Werdau, Saxony, Germany"
+    },
+    {
+      "lat": 50.725402421076566,
+      "lon": 12.334699966803935,
+      "geoinfo": {
+        "display_name": "16, Straße der Freundschaft, Leubnitz, Werdau, Zwickau, Saxony, 08412, Germany",
+        "road": "Straße der Freundschaft",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Leubnitz",
+        "city": "Werdau",
+        "state": "Saxony",
+        "postcode": "08412",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16, Straße der Freundschaft, Leubnitz, Werdau, Zwickau, Saxony, 08412, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:47:33.574564+00:00",
+  "_kind": "geo_samples"
+}

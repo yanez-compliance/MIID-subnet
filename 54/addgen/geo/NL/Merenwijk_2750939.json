@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Merenwijk",
+  "geonameid": 2750939,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.17051764385351,
+      "lon": 4.5089635967903945,
+      "geoinfo": {
+        "display_name": "IJsselmeerlaan, Wallen, Leiden, South Holland, Netherlands, 2315 PX, Netherlands",
+        "road": "IJsselmeerlaan",
+        "house_number": null,
+        "neighbourhood": "Wallen",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leiden",
+        "state": "South Holland",
+        "postcode": "2315 PX",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "IJsselmeerlaan, Merenwijk, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.15736292174049,
+      "lon": 4.494414481858553,
+      "geoinfo": {
+        "display_name": "30, Nieuwstraat, Pancras, Leiden, South Holland, Netherlands, 2312 KC, Netherlands",
+        "road": "Nieuwstraat",
+        "house_number": "30",
+        "neighbourhood": "Pancras",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leiden",
+        "state": "South Holland",
+        "postcode": "2312 KC",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "30, Nieuwstraat, Pancras, Leiden, South Holland, Netherlands, 2312 KC, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T06:24:06.980401+00:00",
+  "_kind": "geo_samples"
+}

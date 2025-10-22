@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Copiague",
+  "geonameid": 5113683,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.6583116889362,
+      "lon": -73.39594122359871,
+      "geoinfo": {
+        "display_name": "11, Tanner Park, Amity Harbor, Copiague, Town of Babylon, Suffolk County, New York, 11726, United States",
+        "road": "Tanner Park",
+        "house_number": "11",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Copiague",
+        "state": "New York",
+        "postcode": "11726",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "11 Tanner Park, Copiague, New York, United States"
+    },
+    {
+      "lat": 40.71722419641018,
+      "lon": -73.36575840120936,
+      "geoinfo": {
+        "display_name": "1323, 2nd Street, West Babylon, Town of Babylon, Suffolk County, New York, 11704, United States",
+        "road": "2nd Street",
+        "house_number": "1323",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "West Babylon",
+        "state": "New York",
+        "postcode": "11704",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1323, 2nd Street, West Babylon, Town of Babylon, Suffolk County, New York, 11704, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:26:02.643845+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "South Ogden",
+  "geonameid": 5781783,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.19394219133353,
+      "lon": -112.02980242136971,
+      "geoinfo": {
+        "display_name": "2207, West 3825 South, Roy, Weber County, Utah, 84067, United States",
+        "road": "West 3825 South",
+        "house_number": "2207",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Roy",
+        "state": "Utah",
+        "postcode": "84067",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2207 West 3825 South, South Ogden, Utah, United States"
+    },
+    {
+      "lat": 41.15830195732115,
+      "lon": -111.99489768513179,
+      "geoinfo": {
+        "display_name": "I 84, Southcrest, Riverdale, Weber County, Utah, 84405, United States",
+        "road": "I 84",
+        "house_number": null,
+        "neighbourhood": "Southcrest",
+        "suburb": null,
+        "city_district": null,
+        "city": "Riverdale",
+        "state": "Utah",
+        "postcode": "84405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "I 84, Southcrest, Riverdale, Weber County, Utah, 84405, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:34:19.941216+00:00",
+  "_kind": "geo_samples"
+}

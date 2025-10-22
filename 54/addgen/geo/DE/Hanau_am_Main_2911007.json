@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Hanau am Main",
+  "geonameid": 2911007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.098429723207744,
+      "lon": 8.87826132179018,
+      "geoinfo": {
+        "display_name": "Reitweg, Groß-Steinheim, Steinheim, Hanau, Main-Kinzig-Kreis, Hesse, 63456, Germany",
+        "road": "Reitweg",
+        "house_number": null,
+        "neighbourhood": "Groß-Steinheim",
+        "suburb": "Steinheim",
+        "city_district": null,
+        "city": "Hanau",
+        "state": "Hesse",
+        "postcode": "63456",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Reitweg, Hanau am Main, Hesse, Germany"
+    },
+    {
+      "lat": 50.166433902012585,
+      "lon": 8.903831919711235,
+      "geoinfo": {
+        "display_name": "B 45, Bruchköbel, Main-Kinzig-Kreis, Hesse, 63486, Germany",
+        "road": "B 45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bruchköbel",
+        "state": "Hesse",
+        "postcode": "63486",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "B 45, Bruchköbel, Main-Kinzig-Kreis, Hesse, 63486, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T04:22:32.604395+00:00",
+  "_kind": "geo_samples"
+}

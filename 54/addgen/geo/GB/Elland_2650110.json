@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Elland",
+  "geonameid": 2650110,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.69032884168078,
+      "lon": -1.8911696863861447,
+      "geoinfo": {
+        "display_name": "The Sportsmans Inn, Rochdale Road, Greetland, Calderdale, West Yorkshire, England, HX4 8PL, United Kingdom",
+        "road": "Rochdale Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Calderdale",
+        "state": "England",
+        "postcode": "HX4 8PL",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Rochdale Road, Elland, England, United Kingdom"
+    },
+    {
+      "lat": 53.67170590225826,
+      "lon": -1.8072547843550604,
+      "geoinfo": {
+        "display_name": "Grimescar Road, Prince Royd, Birchencliffe, Lindley, Kirklees, West Yorkshire, England, HD2 2DD, United Kingdom",
+        "road": "Grimescar Road",
+        "house_number": null,
+        "neighbourhood": "Prince Royd",
+        "suburb": "Birchencliffe",
+        "city_district": null,
+        "city": "Kirklees",
+        "state": "England",
+        "postcode": "HD2 2DD",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Grimescar Road, Prince Royd, Birchencliffe, Lindley, Kirklees, West Yorkshire, England, HD2 2DD, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T00:53:05.174130+00:00",
+  "_kind": "geo_samples"
+}

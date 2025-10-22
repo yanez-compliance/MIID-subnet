@@ -1,0 +1,47 @@
+{
+  "country_code": "EC",
+  "country": "Ecuador",
+  "city": "La Libertad",
+  "geonameid": 3655131,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": -2.2574177295834335,
+      "lon": -80.90677676800053,
+      "geoinfo": {
+        "display_name": "La Libertad, Santa Elena Province, 240209, Ecuador",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Libertad",
+        "state": "Santa Elena Province",
+        "postcode": "240209",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "La Libertad, Santa Elena Province, Ecuador"
+    },
+    {
+      "lat": -2.211122420695288,
+      "lon": -80.89335443764745,
+      "geoinfo": {
+        "display_name": "Calle 32, Cautivo, La Libertad, Santa Elena Province, 240202, Ecuador",
+        "road": "Calle 32",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "La Libertad",
+        "state": "Santa Elena Province",
+        "postcode": "240202",
+        "country": "Ecuador",
+        "country_code": "ec"
+      },
+      "address": "Calle 32, La Libertad, Santa Elena Province, Ecuador"
+    }
+  ],
+  "updated_at": "2025-10-16T13:07:45.280714+00:00",
+  "_kind": "geo_samples"
+}

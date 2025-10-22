@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Badger",
+  "geonameid": 5879898,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 64.80925475274847,
+      "lon": -147.46812790994673,
+      "geoinfo": {
+        "display_name": "Bradway Road, Badger, Fairbanks North Star Borough, Alaska, United States",
+        "road": "Bradway Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Badger",
+        "state": "Alaska",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Bradway Road, Badger, Alaska, United States"
+    },
+    {
+      "lat": 64.82451488522257,
+      "lon": -147.62097321323103,
+      "geoinfo": {
+        "display_name": "MacArthur Street, Fairbanks, Fairbanks North Star Borough, Alaska, United States",
+        "road": "MacArthur Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fairbanks",
+        "state": "Alaska",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "673, MacArthur Street, Fairbanks, Fairbanks North Star Borough, 35023 Alaska, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:23:23.399492+00:00",
+  "_kind": "geo_samples"
+}

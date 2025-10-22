@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Pinecrest",
+  "geonameid": 4168590,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.659304248420803,
+      "lon": -80.26968469839498,
+      "geoinfo": {
+        "display_name": "Gables by the Sea, Coral Gables, Miami-Dade County, Florida, 33156, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coral Gables",
+        "state": "Florida",
+        "postcode": "33156",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Pinecrest, Florida, United States"
+    },
+    {
+      "lat": 25.68152142935883,
+      "lon": -80.32218537933825,
+      "geoinfo": {
+        "display_name": "7841, Southwest 96th Street, Miami, Miami-Dade County, Florida, 33156, United States",
+        "road": "Southwest 96th Street",
+        "house_number": "7841",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postcode": "33156",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7841, Southwest 96th Street, Miami, Miami-Dade County, Florida, 33156, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:23:11.735345+00:00",
+  "_kind": "geo_samples"
+}

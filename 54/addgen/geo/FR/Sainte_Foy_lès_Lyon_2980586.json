@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Sainte-Foy-lès-Lyon",
+  "geonameid": 2980586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.73733845741849,
+      "lon": 4.804077598690574,
+      "geoinfo": {
+        "display_name": "Rue du Château, Sainte-Foy-lès-Lyon, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69110, France",
+        "road": "Rue du Château",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Foy-lès-Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Rue du Château, Sainte-Foy-lès-Lyon, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.76410937769417,
+      "lon": 4.848845682828247,
+      "geoinfo": {
+        "display_name": "32, Rue Robert, La Guillotière, Préfecture, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69006, France",
+        "road": "Rue Robert",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "La Guillotière",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69006",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "32, Rue Robert, La Guillotière, Préfecture, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69006, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:14:05.990124+00:00",
+  "_kind": "geo_samples"
+}

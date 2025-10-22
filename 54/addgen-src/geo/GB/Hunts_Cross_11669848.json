@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Hunts Cross",
+  "geonameid": 11669848,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.34826150728991,
+      "lon": -2.869373737125276,
+      "geoinfo": {
+        "display_name": "Leeward Drive, Estuary Banks Business Park, Speke, Liverpool, Liverpool City Region, England, L24 8DA, United Kingdom",
+        "road": "Leeward Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Speke",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L24 8DA",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Leeward Drive, Hunts Cross, England, United Kingdom"
+    },
+    {
+      "lat": 53.313757587598765,
+      "lon": -2.8834225664768787,
+      "geoinfo": {
+        "display_name": "Speke, Liverpool, Liverpool City Region, England, L24 1WB, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Speke",
+        "city_district": null,
+        "city": "Liverpool",
+        "state": "England",
+        "postcode": "L24 1WB",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Speke, Liverpool, Liverpool City Region, England, L24 1WB, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:08:01.952439+00:00",
+  "_kind": "geo_samples"
+}

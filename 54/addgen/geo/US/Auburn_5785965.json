@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Auburn",
+  "geonameid": 5785965,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.32854197232563,
+      "lon": -122.17655226717459,
+      "geoinfo": {
+        "display_name": "Lea Hill, Auburn, King County, Washington, 90092, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Lea Hill",
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Washington",
+        "postcode": "90092",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Lea Hill, Auburn, Washington, United States"
+    },
+    {
+      "lat": 47.34065121824781,
+      "lon": -122.24342127719467,
+      "geoinfo": {
+        "display_name": "Essendant, 3703, 37th Street Northwest, Meredith, Auburn, King County, Washington, 98001, United States",
+        "road": "37th Street Northwest",
+        "house_number": "3703",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Auburn",
+        "state": "Washington",
+        "postcode": "98001",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Essendant, 3703, 37th Street Northwest, Meredith, Auburn, King County, Washington, 98001, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:44:59.545217+00:00",
+  "_kind": "geo_samples"
+}

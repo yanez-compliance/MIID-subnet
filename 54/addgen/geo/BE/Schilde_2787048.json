@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Schilde",
+  "geonameid": 2787048,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.2751541613521,
+      "lon": 4.55724564132241,
+      "geoinfo": {
+        "display_name": "Kwikaardstraatje, 's-Gravenwezel, Schilde, Antwerp, 2970, Belgium",
+        "road": "Kwikaardstraatje",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Schilde",
+        "state": "Antwerp",
+        "postcode": "2970",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Kwikaardstraatje, Schilde, Antwerp, Belgium"
+    },
+    {
+      "lat": 51.25702758028831,
+      "lon": 4.644070260703108,
+      "geoinfo": {
+        "display_name": "24, Violetlaan, Halle, Zoersel, Antwerp, 2980, Belgium",
+        "road": "Violetlaan",
+        "house_number": "24",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Zoersel",
+        "state": "Antwerp",
+        "postcode": "2980",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "24, Violetlaan, Halle, Zoersel, Antwerp, 2980, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T02:37:29.279548+00:00",
+  "_kind": "geo_samples"
+}

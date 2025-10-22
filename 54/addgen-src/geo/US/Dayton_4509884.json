@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Dayton",
+  "geonameid": 4509884,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.78828065416185,
+      "lon": -84.20531778098692,
+      "geoinfo": {
+        "display_name": "Riverside Drive, North Riverdale, Dayton, Montgomery County, Ohio, 45405, United States",
+        "road": "Riverside Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Ohio",
+        "postcode": "45405",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Riverside Drive, Dayton, Ohio, United States"
+    },
+    {
+      "lat": 39.78608004554932,
+      "lon": -84.16361360676567,
+      "geoinfo": {
+        "display_name": "Farr Drive, Kossuth Colony Historic District, Dayton, Montgomery County, Ohio, 45404, United States",
+        "road": "Farr Drive",
+        "house_number": null,
+        "neighbourhood": "Kossuth Colony Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Dayton",
+        "state": "Ohio",
+        "postcode": "45404",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "138, Farr Drive, Kossuth Colony Historic District, Dayton, Montgomery County, Ohio, 45404, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:08:19.568762+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Northwood",
+  "geonameid": 12750406,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.701982277727005,
+      "lon": -117.76080570684232,
+      "geoinfo": {
+        "display_name": "29, Antique Rose, Frances, Northwood, Irvine, Orange County, California, 92620, United States",
+        "road": "Antique Rose",
+        "house_number": "29",
+        "neighbourhood": null,
+        "suburb": "Frances",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92620",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "29 Antique Rose, Northwood, California, United States"
+    },
+    {
+      "lat": 33.73903282807356,
+      "lon": -117.74569752873268,
+      "geoinfo": {
+        "display_name": "305, Paradiso, Orchard Hills, Irvine, Orange County, California, 92602, United States",
+        "road": "Paradiso",
+        "house_number": "305",
+        "neighbourhood": null,
+        "suburb": "Orchard Hills",
+        "city_district": null,
+        "city": "Irvine",
+        "state": "California",
+        "postcode": "92602",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "305, Paradiso, Orchard Hills, Irvine, Orange County, California, 92602, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:43:38.952960+00:00",
+  "_kind": "geo_samples"
+}

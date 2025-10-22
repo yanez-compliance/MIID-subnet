@@ -1,0 +1,47 @@
+{
+  "country_code": "BE",
+  "country": "Belgium",
+  "city": "Middelkerke",
+  "geonameid": 2791194,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.21700646888249,
+      "lon": 2.7772546908389617,
+      "geoinfo": {
+        "display_name": "Belgium",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "Middelkerke, Belgium"
+    },
+    {
+      "lat": 51.20143808225603,
+      "lon": 2.8676751830042226,
+      "geoinfo": {
+        "display_name": "2, Dienstweg, Raversijde, Ostend, West Flanders, 8400, Belgium",
+        "road": "Dienstweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Ostend",
+        "city": "Ostend",
+        "state": "West Flanders",
+        "postcode": "8400",
+        "country": "Belgium",
+        "country_code": "be"
+      },
+      "address": "2, Dienstweg, Raversijde, Ostend, West Flanders, 8400, Belgium"
+    }
+  ],
+  "updated_at": "2025-10-19T01:06:51.526473+00:00",
+  "_kind": "geo_samples"
+}

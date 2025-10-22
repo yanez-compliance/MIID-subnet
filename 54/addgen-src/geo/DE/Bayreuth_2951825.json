@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bayreuth",
+  "geonameid": 2951825,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.92909823302998,
+      "lon": 11.596351655590937,
+      "geoinfo": {
+        "display_name": "72, Nürnberger Straße, Kreuzstein, Oberkonnersreuth, Birken, Quellhöfe, Bayreuth, Bavaria, 95448, Germany",
+        "road": "Nürnberger Straße",
+        "house_number": "72",
+        "neighbourhood": null,
+        "suburb": "Oberkonnersreuth",
+        "city_district": "Birken, Quellhöfe",
+        "city": "Bayreuth",
+        "state": "Bavaria",
+        "postcode": "95448",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "72 Nürnberger Straße, Bayreuth, Bavaria, Germany"
+    },
+    {
+      "lat": 49.92736953865211,
+      "lon": 11.527054948381634,
+      "geoinfo": {
+        "display_name": "1, Geigenreuth, Meyernberg, Adolf-Wächter-Straße, Bayreuth, Bavaria, 95447, Germany",
+        "road": null,
+        "house_number": "1",
+        "neighbourhood": null,
+        "suburb": "Meyernberg",
+        "city_district": "Adolf-Wächter-Straße",
+        "city": "Bayreuth",
+        "state": "Bavaria",
+        "postcode": "95447",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "1, Geigenreuth, Meyernberg, Adolf-Wächter-Straße, Bayreuth, Bavaria, 95447, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:02.329599+00:00",
+  "_kind": "geo_samples"
+}

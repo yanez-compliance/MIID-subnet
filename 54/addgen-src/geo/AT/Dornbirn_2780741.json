@@ -1,0 +1,47 @@
+{
+  "country_code": "AT",
+  "country": "Austria",
+  "city": "Dornbirn",
+  "geonameid": 2780741,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 47.421896364775975,
+      "lon": 9.747591666031758,
+      "geoinfo": {
+        "display_name": "Dr.-Anton-Schneider-Straße, Markt, Dornbirn, Bezirk Dornbirn, Vorarlberg, 6850, Austria",
+        "road": "Dr.-Anton-Schneider-Straße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Markt",
+        "city_district": null,
+        "city": "Dornbirn",
+        "state": "Vorarlberg",
+        "postcode": "6850",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Dr.-Anton-Schneider-Straße, Dornbirn, Vorarlberg, Austria"
+    },
+    {
+      "lat": 47.400779075457244,
+      "lon": 9.69023946160289,
+      "geoinfo": {
+        "display_name": "Schweizerstraße, Lustenau, Bezirk Dornbirn, Vorarlberg, 6890, Austria",
+        "road": "Schweizerstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lustenau",
+        "state": "Vorarlberg",
+        "postcode": "6890",
+        "country": "Austria",
+        "country_code": "at"
+      },
+      "address": "Schweizerstraße, Dornbirn, Vorarlberg, Austria"
+    }
+  ],
+  "updated_at": "2025-10-16T10:29:37.300471+00:00",
+  "_kind": "geo_samples"
+}

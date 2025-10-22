@@ -1,0 +1,47 @@
+{
+  "country_code": "CA",
+  "country": "Canada",
+  "city": "Stouffville",
+  "geonameid": 6157718,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.97810358945518,
+      "lon": -79.24969497276936,
+      "geoinfo": {
+        "display_name": "Millard Street, Whitchurch-Stouffville, York Region, Golden Horseshoe, Ontario, L4A 8B9, Canada",
+        "road": "Millard Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Whitchurch-Stouffville",
+        "state": "Ontario",
+        "postcode": "L4A 8B9",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "Millard Street, Stouffville, Ontario, Canada"
+    },
+    {
+      "lat": 43.949008879667545,
+      "lon": -79.27250114769373,
+      "geoinfo": {
+        "display_name": "19th Avenue, Dickson Hill, Markham, Whitchurch-Stouffville, York Region, Golden Horseshoe, Ontario, L4A 0K2, Canada",
+        "road": "19th Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Markham",
+        "state": "Ontario",
+        "postcode": "L4A 0K2",
+        "country": "Canada",
+        "country_code": "ca"
+      },
+      "address": "19th Avenue, Dickson Hill, Markham, Whitchurch-Stouffville, York Region, Golden Horseshoe, Ontario, L4A 0K2, Canada"
+    }
+  ],
+  "updated_at": "2025-10-19T03:02:55.429274+00:00",
+  "_kind": "geo_samples"
+}

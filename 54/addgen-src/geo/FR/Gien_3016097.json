@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Gien",
+  "geonameid": 3016097,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.67446678087204,
+      "lon": 2.65232338178832,
+      "geoinfo": {
+        "display_name": "70, Route de Briare, Gien, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45500, France",
+        "road": "Route de Briare",
+        "house_number": "70",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gien",
+        "city": "Gien",
+        "state": "Centre-Val de Loire",
+        "postcode": "45500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "70 Route de Briare, Gien, Centre-Val de Loire, France"
+    },
+    {
+      "lat": 47.70750187481238,
+      "lon": 2.6011068957566494,
+      "geoinfo": {
+        "display_name": "Rue Jules César, Gien, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45500, France",
+        "road": "Rue Jules César",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gien",
+        "city": "Gien",
+        "state": "Centre-Val de Loire",
+        "postcode": "45500",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "011, Rue Jules César, Gien, Montargis, Loiret, Centre-Val de Loire, Metropolitan France, 45500, France"
+    }
+  ],
+  "updated_at": "2025-10-19T05:10:25.603555+00:00",
+  "_kind": "geo_samples"
+}

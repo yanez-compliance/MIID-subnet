@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Manzanares",
+  "geonameid": 2514190,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.97915642269102,
+      "lon": -3.327467364367496,
+      "geoinfo": {
+        "display_name": "N-430, Membrilla, Ciudad Real, Castile-La Mancha, 13200, Spain",
+        "road": "N-430",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Membrilla",
+        "state": "Castile-La Mancha",
+        "postcode": "13200",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "N-430, Manzanares, Castile-La Mancha, Spain"
+    },
+    {
+      "lat": 38.982080441105914,
+      "lon": -3.3956260788303894,
+      "geoinfo": {
+        "display_name": "CR-5212, Manzanares, Ciudad Real, Castile-La Mancha, Spain",
+        "road": "CR-5212",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Manzanares",
+        "state": "Castile-La Mancha",
+        "postcode": null,
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "CR-5212, Manzanares, Ciudad Real, 60084 Castile-La Mancha, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:36:18.603123+00:00",
+  "_kind": "geo_samples"
+}

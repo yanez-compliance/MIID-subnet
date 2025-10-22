@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Cuauhtémoc",
+  "geonameid": 3827409,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.45243776421655,
+      "lon": -99.14739029493792,
+      "geoinfo": {
+        "display_name": "Calle Zaragoza, Buenavista, Mexico City, Cuauhtémoc, Mexico City, 06350, Mexico",
+        "road": "Calle Zaragoza",
+        "house_number": null,
+        "neighbourhood": "Buenavista",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "06350",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Zaragoza, Cuauhtémoc, Mexico City, Mexico"
+    },
+    {
+      "lat": 19.478710415043516,
+      "lon": -99.11824867733685,
+      "geoinfo": {
+        "display_name": "Calle Malintzin, Colonia Aragón, Mexico City, Gustavo A. Madero, Mexico City, 07000, Mexico",
+        "road": "Calle Malintzin",
+        "house_number": null,
+        "neighbourhood": "Colonia Aragón",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "postcode": "07000",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "221, Calle Malintzin, Colonia Aragón, Mexico City, Gustavo A. Madero, Mexico City, 07000, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:14:20.961352+00:00",
+  "_kind": "geo_samples"
+}

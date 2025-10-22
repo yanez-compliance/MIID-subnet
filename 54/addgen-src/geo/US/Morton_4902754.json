@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Morton",
+  "geonameid": 4902754,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.60912998341473,
+      "lon": -89.4166620965739,
+      "geoinfo": {
+        "display_name": "East Jefferson Street, Morton, Tazewell County, Illinois, 61550, United States",
+        "road": "East Jefferson Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morton",
+        "state": "Illinois",
+        "postcode": "61550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "East Jefferson Street, Morton, Illinois, United States"
+    },
+    {
+      "lat": 40.603996388181216,
+      "lon": -89.48880768853219,
+      "geoinfo": {
+        "display_name": "West Birchwood Street, Morton, Tazewell County, Illinois, 61550, United States",
+        "road": "West Birchwood Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Morton",
+        "state": "Illinois",
+        "postcode": "61550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "271, West Birchwood Street, Morton, Tazewell County, Illinois, 61550, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:12:29.653838+00:00",
+  "_kind": "geo_samples"
+}

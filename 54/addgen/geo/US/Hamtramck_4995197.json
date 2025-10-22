@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Hamtramck",
+  "geonameid": 4995197,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.415182962096154,
+      "lon": -83.06845557024023,
+      "geoinfo": {
+        "display_name": "13678, Mitchell Street, North Campau, Detroit, Wayne County, Michigan, 48212, United States",
+        "road": "Mitchell Street",
+        "house_number": "13678",
+        "neighbourhood": "North Campau",
+        "suburb": null,
+        "city_district": null,
+        "city": "Detroit",
+        "state": "Michigan",
+        "postcode": "48212",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "13678 Mitchell Street, Hamtramck, Michigan, United States"
+    },
+    {
+      "lat": 42.36087166198479,
+      "lon": -83.02551694777793,
+      "geoinfo": {
+        "display_name": "3519, Pulford Street, McDougall-Hunt, Detroit, Wayne County, Michigan, 48207, United States",
+        "road": "Pulford Street",
+        "house_number": "3519",
+        "neighbourhood": "McDougall-Hunt",
+        "suburb": null,
+        "city_district": null,
+        "city": "Detroit",
+        "state": "Michigan",
+        "postcode": "48207",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3519, Pulford Street, McDougall-Hunt, Detroit, Wayne County, Michigan, 48207, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:59:19.299137+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Denton",
+  "geonameid": 4685907,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.206271514748174,
+      "lon": -97.18075508200741,
+      "geoinfo": {
+        "display_name": "Airport Road, Denton, Denton County, Texas, 76203, United States",
+        "road": "Airport Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denton",
+        "state": "Texas",
+        "postcode": "76203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Airport Road, Denton, Texas, United States"
+    },
+    {
+      "lat": 33.22033168112958,
+      "lon": -97.14955242392142,
+      "geoinfo": {
+        "display_name": "1677, Egan Street, Denton, Denton County, Texas, 76201, United States",
+        "road": "Egan Street",
+        "house_number": "1677",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Denton",
+        "state": "Texas",
+        "postcode": "76201",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1677, Egan Street, Denton, Denton County, Texas, 76201, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:51:53.051956+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "ZA",
+  "country": "South Africa",
+  "city": "Ladysmith",
+  "geonameid": 984998,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.569779231864477,
+      "lon": 29.793075902296188,
+      "geoinfo": {
+        "display_name": "Main Road, Nambiti, Emnambithi/Ladysmith Ward 10, Ladysmith, Emnambithi/Ladysmith Local Municipality, Uthukela District Municipality, KwaZulu-Natal, 3370, South Africa",
+        "road": "Main Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Nambiti",
+        "city_district": null,
+        "city": "Ladysmith",
+        "state": "KwaZulu-Natal",
+        "postcode": "3370",
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Main Road, Ladysmith, KwaZulu-Natal, South Africa"
+    },
+    {
+      "lat": -28.520203157342202,
+      "lon": 29.765615393206932,
+      "geoinfo": {
+        "display_name": "Emnambithi/Ladysmith Ward 26, Emnambithi/Ladysmith Local Municipality, Uthukela District Municipality, KwaZulu-Natal, South Africa",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Emnambithi/Ladysmith Ward 26",
+        "city_district": null,
+        "city": "Emnambithi/Ladysmith Local Municipality",
+        "state": "KwaZulu-Natal",
+        "postcode": null,
+        "country": "South Africa",
+        "country_code": "za"
+      },
+      "address": "Emnambithi/Ladysmith Ward 26, Ladysmith, 56442 KwaZulu-Natal, South Africa"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:38.702973+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Arlington",
+  "geonameid": 4929180,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.41180851701987,
+      "lon": -71.16295890692335,
+      "geoinfo": {
+        "display_name": "104, Bartlett Avenue, Kensington Park Historic District, Arlington, Middlesex County, Massachusetts, 02174, United States",
+        "road": "Bartlett Avenue",
+        "house_number": "104",
+        "neighbourhood": "Kensington Park Historic District",
+        "suburb": null,
+        "city_district": null,
+        "city": "Arlington",
+        "state": "Massachusetts",
+        "postcode": "02174",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "104 Bartlett Avenue, Arlington, Massachusetts, United States"
+    },
+    {
+      "lat": 42.441664505637966,
+      "lon": -71.17005842141502,
+      "geoinfo": {
+        "display_name": "7, Plymouth Road, Winchester, Middlesex County, Massachusetts, 02476, United States",
+        "road": "Plymouth Road",
+        "house_number": "7",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Winchester",
+        "state": "Massachusetts",
+        "postcode": "02476",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "7, Plymouth Road, Winchester, Middlesex County, Massachusetts, 02476, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:36:33.113095+00:00",
+  "_kind": "geo_samples"
+}

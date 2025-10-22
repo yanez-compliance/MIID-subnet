@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Shawnee",
+  "geonameid": 4279247,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.02866366791932,
+      "lon": -94.73545710486047,
+      "geoinfo": {
+        "display_name": "12859, West 55th Street, Shawnee, Johnson County, Kansas, 66216, United States",
+        "road": "West 55th Street",
+        "house_number": "12859",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shawnee",
+        "state": "Kansas",
+        "postcode": "66216",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "12859 West 55th Street, Shawnee, Kansas, United States"
+    },
+    {
+      "lat": 39.017921400635515,
+      "lon": -94.69939097445324,
+      "geoinfo": {
+        "display_name": "9793, West 61st Street, Merriam, Johnson County, Kansas, 66203, United States",
+        "road": "West 61st Street",
+        "house_number": "9793",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Merriam",
+        "state": "Kansas",
+        "postcode": "66203",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "9793, West 61st Street, Merriam, Johnson County, Kansas, 66203, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:45:31.642894+00:00",
+  "_kind": "geo_samples"
+}

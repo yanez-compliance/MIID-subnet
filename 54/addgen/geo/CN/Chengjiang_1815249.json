@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chengjiang",
+  "geonameid": 1815249,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.87700215430874,
+      "lon": 106.35215190361663,
+      "geoinfo": {
+        "display_name": "G244, Tanba, Beibei District, Chongqing, China",
+        "road": "G244",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Tanba",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "G244, Chengjiang, Chongqing, China"
+    },
+    {
+      "lat": 29.847071192277866,
+      "lon": 106.35694531876211,
+      "geoinfo": {
+        "display_name": "Beibei, Beibei District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Beibei",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "812, Beibei, Beibei District, 34464 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:36:17.934363+00:00",
+  "_kind": "geo_samples"
+}

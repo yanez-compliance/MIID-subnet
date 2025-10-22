@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Southfield",
+  "geonameid": 5010636,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.50787305660432,
+      "lon": -83.18996761791088,
+      "geoinfo": {
+        "display_name": "3025, Morrison Avenue, Berkley, Oakland County, Michigan, 48072, United States",
+        "road": "Morrison Avenue",
+        "house_number": "3025",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Berkley",
+        "state": "Michigan",
+        "postcode": "48072",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "3025 Morrison Avenue, Southfield, Michigan, United States"
+    },
+    {
+      "lat": 42.45150454871651,
+      "lon": -83.24657579015039,
+      "geoinfo": {
+        "display_name": "20572, Midway Avenue, Southfield, Oakland County, Michigan, 48075, United States",
+        "road": "Midway Avenue",
+        "house_number": "20572",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Southfield",
+        "state": "Michigan",
+        "postcode": "48075",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20572, Midway Avenue, Southfield, Oakland County, Michigan, 48075, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:52.422448+00:00",
+  "_kind": "geo_samples"
+}

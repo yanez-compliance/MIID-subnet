@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Bossier City",
+  "geonameid": 4317639,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 32.51183567982481,
+      "lon": -93.74615656646853,
+      "geoinfo": {
+        "display_name": "Market Street, Shreveport, Caddo Parish, Louisiana, 71161, United States",
+        "road": "Market Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shreveport",
+        "state": "Louisiana",
+        "postcode": "71161",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Market Street, Bossier City, Louisiana, United States"
+    },
+    {
+      "lat": 32.5107092753556,
+      "lon": -93.72723577277154,
+      "geoinfo": {
+        "display_name": "Live Casino Boulevard, Bossier City, Bossier Parish, Louisiana, 71171, United States",
+        "road": "Live Casino Boulevard",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bossier City",
+        "state": "Louisiana",
+        "postcode": "71171",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "863, Live Casino Boulevard, Bossier City, Bossier Parish, Louisiana, 71171, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:29:49.749904+00:00",
+  "_kind": "geo_samples"
+}

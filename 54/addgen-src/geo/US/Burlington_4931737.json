@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Burlington",
+  "geonameid": 4931737,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.50580630272858,
+      "lon": -71.22770713039692,
+      "geoinfo": {
+        "display_name": "27, Corcoran Road, Burlington, Middlesex County, Massachusetts, 01803, United States",
+        "road": "Corcoran Road",
+        "house_number": "27",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Burlington",
+        "state": "Massachusetts",
+        "postcode": "01803",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "27 Corcoran Road, Burlington, Massachusetts, United States"
+    },
+    {
+      "lat": 42.514771935433764,
+      "lon": -71.15077994904493,
+      "geoinfo": {
+        "display_name": "2, Knight Avenue, North Woburn, Woburn, Middlesex County, Massachusetts, 01801, United States",
+        "road": "Knight Avenue",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Woburn",
+        "state": "Massachusetts",
+        "postcode": "01801",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2, Knight Avenue, North Woburn, Woburn, Middlesex County, Massachusetts, 01801, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:57:50.057783+00:00",
+  "_kind": "geo_samples"
+}

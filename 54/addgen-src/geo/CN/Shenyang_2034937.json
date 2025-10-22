@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Shenyang",
+  "geonameid": 2034937,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.770841416328096,
+      "lon": 123.41230498512606,
+      "geoinfo": {
+        "display_name": "南五马路185巷, Maluwan Subdistrict, Shenyang City, Heping District, Liaoning, 110001, China",
+        "road": "南五马路185巷",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Maluwan Subdistrict",
+        "city_district": null,
+        "city": "Shenyang City",
+        "state": "Liaoning",
+        "postcode": "110001",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "南五马路185巷, Shenyang, Liaoning, China"
+    },
+    {
+      "lat": 41.806031814278825,
+      "lon": 123.44754085852902,
+      "geoinfo": {
+        "display_name": "Dabei Subdistrict, Dadong District, Liaoning, 110013, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Dabei Subdistrict",
+        "city_district": null,
+        "city": "Dadong District",
+        "state": "Liaoning",
+        "postcode": "110013",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "838, Dabei Subdistrict, Dadong District, Liaoning, 110013, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:50:40.032130+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Cape Girardeau",
+  "geonameid": 4379966,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 37.28213310648544,
+      "lon": -89.5028365775171,
+      "geoinfo": {
+        "display_name": "South Cape Road, East Cape Girardeau, Alexander County, Illinois, 63703, United States",
+        "road": "South Cape Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "East Cape Girardeau",
+        "state": "Illinois",
+        "postcode": "63703",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "South Cape Road, Cape Girardeau, Illinois, United States"
+    },
+    {
+      "lat": 37.32030591371855,
+      "lon": -89.50794598325504,
+      "geoinfo": {
+        "display_name": "Hill Street, Cape Girardeau, Cape Girardeau County, Missouri, 63701, United States",
+        "road": "Hill Street",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cape Girardeau",
+        "state": "Missouri",
+        "postcode": "63701",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "269, Hill Street, Cape Girardeau, Cape Girardeau County, Missouri, 63701, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:26:32.926322+00:00",
+  "_kind": "geo_samples"
+}

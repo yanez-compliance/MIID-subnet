@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Makakilo City",
+  "geonameid": 5850554,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.37809419196513,
+      "lon": -158.1145270053437,
+      "geoinfo": {
+        "display_name": "Akupu, Kapolei, Honolulu County, Hawaii, United States",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kapolei",
+        "state": "Hawaii",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Makakilo City, Hawaii, United States"
+    },
+    {
+      "lat": 21.32485615942501,
+      "lon": -158.08381764498182,
+      "geoinfo": {
+        "display_name": "Renton Road, West Kapolei, Kalaeloa, Kapolei, Honolulu County, Hawaii, 96707, United States",
+        "road": "Renton Road",
+        "house_number": null,
+        "neighbourhood": "West Kapolei",
+        "suburb": "Kalaeloa",
+        "city_district": null,
+        "city": "Kapolei",
+        "state": "Hawaii",
+        "postcode": "96707",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "961, Renton Road, West Kapolei, Kalaeloa, Kapolei, Honolulu County, Hawaii, 96707, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T06:22:09.218180+00:00",
+  "_kind": "geo_samples"
+}

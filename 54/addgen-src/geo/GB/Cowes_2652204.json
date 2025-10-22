@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Cowes",
+  "geonameid": 2652204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.789181484776364,
+      "lon": -1.2998171635067222,
+      "geoinfo": {
+        "display_name": "Thorn Channel, England, SO45 1BR, United Kingdom",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "England",
+        "postcode": "SO45 1BR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Cowes, England, United Kingdom"
+    },
+    {
+      "lat": 50.723143066570536,
+      "lon": -1.3099100714908105,
+      "geoinfo": {
+        "display_name": "Noke Common, Parkhurst, Newport, Isle of Wight, England, PO30 5TY, United Kingdom",
+        "road": "Noke Common",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Parkhurst",
+        "city_district": null,
+        "city": "Newport",
+        "state": "England",
+        "postcode": "PO30 5TY",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Noke Common, Parkhurst, Newport, Isle of Wight, England, PO30 5TY, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:42:56.636069+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Bayswater",
+  "geonameid": 6545243,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.53141909885624,
+      "lon": -0.19113041267474717,
+      "geoinfo": {
+        "display_name": "Carlton Vale, Kensal Town, Maida Vale, London, Greater London, England, NW6 5EN, United Kingdom",
+        "road": "Carlton Vale",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kensal Town",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "NW6 5EN",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Carlton Vale, Bayswater, England, United Kingdom"
+    },
+    {
+      "lat": 51.53025203519763,
+      "lon": -0.21263668050933593,
+      "geoinfo": {
+        "display_name": "82, Sixth Avenue, Kensal Town, Queen's Park, London, Greater London, England, W10 4HH, United Kingdom",
+        "road": "Sixth Avenue",
+        "house_number": "82",
+        "neighbourhood": null,
+        "suburb": "Kensal Town",
+        "city_district": null,
+        "city": "London",
+        "state": "England",
+        "postcode": "W10 4HH",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "82, Sixth Avenue, Kensal Town, Queen's Park, London, Greater London, England, W10 4HH, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T02:26:21.712806+00:00",
+  "_kind": "geo_samples"
+}

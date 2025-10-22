@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Numancia",
+  "geonameid": 11549994,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.36215140670146,
+      "lon": -3.6666957987747524,
+      "geoinfo": {
+        "display_name": "M-40, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Numancia, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.43101594159633,
+      "lon": -3.6431938632845937,
+      "geoinfo": {
+        "display_name": "26, Calle de Vital Aza, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain",
+        "road": "Calle de Vital Aza",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": "Ciudad Lineal",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28017",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "26, Calle de Vital Aza, Pueblo Nuevo, Ciudad Lineal, Madrid, Community of Madrid, 28017, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:34.254813+00:00",
+  "_kind": "geo_samples"
+}

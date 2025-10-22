@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Gulu",
+  "geonameid": 1942230,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.320042085710526,
+      "lon": 109.45561340306112,
+      "geoinfo": {
+        "display_name": "Anlai Expressway, Gulu, Wuxi County, Chongqing, China",
+        "road": "Anlai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gulu",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Anlai Expressway, Gulu, Chongqing, China"
+    },
+    {
+      "lat": 31.328809028981592,
+      "lon": 109.48109313489816,
+      "geoinfo": {
+        "display_name": "Shanghuang, Wuxi County, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Shanghuang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "428, Shanghuang, Wuxi County, 29177 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-18T23:59:32.164110+00:00",
+  "_kind": "geo_samples"
+}

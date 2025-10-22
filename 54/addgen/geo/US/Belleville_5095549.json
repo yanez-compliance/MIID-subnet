@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Belleville",
+  "geonameid": 5095549,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.7959282623724,
+      "lon": -74.1647048605448,
+      "geoinfo": {
+        "display_name": "79, Dawson Street, Belleville, Essex County, New Jersey, 07109, United States",
+        "road": "Dawson Street",
+        "house_number": "79",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Belleville",
+        "state": "New Jersey",
+        "postcode": "07109",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "79 Dawson Street, Belleville, New Jersey, United States"
+    },
+    {
+      "lat": 40.82344899574703,
+      "lon": -74.12728779395526,
+      "geoinfo": {
+        "display_name": "Kingsland Avenue, Clifton, Passaic County, New Jersey, 07014, United States",
+        "road": "Kingsland Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Clifton",
+        "state": "New Jersey",
+        "postcode": "07014",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "878, Kingsland Avenue, Clifton, Passaic County, New Jersey, 07014, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:09.789145+00:00",
+  "_kind": "geo_samples"
+}

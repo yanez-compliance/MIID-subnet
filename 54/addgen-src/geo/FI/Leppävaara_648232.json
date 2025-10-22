@@ -1,0 +1,47 @@
+{
+  "country_code": "FI",
+  "country": "Finland",
+  "city": "Leppävaara",
+  "geonameid": 648232,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 60.182451715152844,
+      "lon": 24.834836126766167,
+      "geoinfo": {
+        "display_name": "2, Otakallio, Kivimies, Otaniemi, Suur-Tapiola, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, 02150, Finland",
+        "road": "Otakallio",
+        "house_number": "2",
+        "neighbourhood": "Kivimies",
+        "suburb": "Otaniemi",
+        "city_district": "Suur-Tapiola",
+        "city": "Espoo",
+        "state": "Uusimaa",
+        "postcode": "02150",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "2, Otakallio, Kivimies, Otaniemi, Suur-Tapiola, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, 02150, Finland"
+    },
+    {
+      "lat": 60.18572597311525,
+      "lon": 24.76703700998266,
+      "geoinfo": {
+        "display_name": "Kluuvinniitynpolku, Lukupuro, Vanha-Mankkaa, Mankkaa, Suur-Tapiola, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, 02180, Finland",
+        "road": "Kluuvinniitynpolku",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Mankkaa",
+        "city_district": "Suur-Tapiola",
+        "city": "Espoo",
+        "state": "Uusimaa",
+        "postcode": "02180",
+        "country": "Finland",
+        "country_code": "fi"
+      },
+      "address": "346, Kluuvinniitynpolku, Lukupuro, Vanha-Mankkaa, Mankkaa, Suur-Tapiola, Espoo, Helsinki sub-region, Uusimaa, Mainland Finland, 02180, Finland"
+    }
+  ],
+  "updated_at": "2025-10-19T03:53:08.678293+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "PE",
+  "country": "Peru",
+  "city": "La Unión",
+  "geonameid": 3695466,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -5.400622021510436,
+      "lon": -80.73962618011312,
+      "geoinfo": {
+        "display_name": "Calle Arequipa, Jose Carlos Mariategui, Fundo San Carlos, Canizal Santa Rosa, La Unión, Province of Piura, Piura, Peru",
+        "road": "Calle Arequipa",
+        "house_number": null,
+        "neighbourhood": "Jose Carlos Mariategui",
+        "suburb": null,
+        "city_district": null,
+        "city": "La Unión",
+        "state": "Piura",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "Calle Arequipa, La Unión, Piura, Peru"
+    },
+    {
+      "lat": -5.425677655971085,
+      "lon": -80.71905893772966,
+      "geoinfo": {
+        "display_name": "Nuevo Vega del Chico, Bernal, Province of Sechura, Piura, Peru",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bernal",
+        "state": "Piura",
+        "postcode": null,
+        "country": "Peru",
+        "country_code": "pe"
+      },
+      "address": "447, Nuevo Vega del Chico, Bernal, Province of Sechura, 82041 Piura, Peru"
+    }
+  ],
+  "updated_at": "2025-10-19T06:21:58.323963+00:00",
+  "_kind": "geo_samples"
+}

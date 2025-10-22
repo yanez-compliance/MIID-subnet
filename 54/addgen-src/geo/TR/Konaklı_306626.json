@@ -1,0 +1,47 @@
+{
+  "country_code": "TR",
+  "country": "Turkey",
+  "city": "Konaklı",
+  "geonameid": 306626,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 36.55775230428509,
+      "lon": 31.914608019215688,
+      "geoinfo": {
+        "display_name": "Elikesik, Alanya, Antalya, Mediterranean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Alanya",
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "Konaklı, Turkey"
+    },
+    {
+      "lat": 36.56230583854848,
+      "lon": 31.88004812480501,
+      "geoinfo": {
+        "display_name": "Antalya, Mediterranean Region, Turkey",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Turkey",
+        "country_code": "tr"
+      },
+      "address": "006, Antalya, 41574 Mediterranean Region, Turkey"
+    }
+  ],
+  "updated_at": "2025-10-19T07:13:33.809193+00:00",
+  "_kind": "geo_samples"
+}

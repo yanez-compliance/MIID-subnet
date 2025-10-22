@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Bergschenhoek",
+  "geonameid": 2759113,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.98846863074781,
+      "lon": 4.5213301282320435,
+      "geoinfo": {
+        "display_name": "11, De Wateringhe, Hoeksekade, Bergschenhoek, Lansingerland, South Holland, Netherlands, 2661 GP, Netherlands",
+        "road": "De Wateringhe",
+        "house_number": "11",
+        "neighbourhood": "Hoeksekade",
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergschenhoek",
+        "state": "South Holland",
+        "postcode": "2661 GP",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "11 De Wateringhe, Bergschenhoek, South Holland, The Netherlands"
+    },
+    {
+      "lat": 51.978431336644725,
+      "lon": 4.50483762236809,
+      "geoinfo": {
+        "display_name": "30, Weg en Bos, Weg en Land, Bergschenhoek, Lansingerland, South Holland, Netherlands, 2661 DH, Netherlands",
+        "road": "Weg en Bos",
+        "house_number": "30",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bergschenhoek",
+        "state": "South Holland",
+        "postcode": "2661 DH",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "30, Weg en Bos, Weg en Land, Bergschenhoek, Lansingerland, South Holland, Netherlands, 2661 DH, Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:54.271819+00:00",
+  "_kind": "geo_samples"
+}

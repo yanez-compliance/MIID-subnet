@@ -1,0 +1,47 @@
+{
+  "country_code": "AR",
+  "country": "Argentina",
+  "city": "Lincoln",
+  "geonameid": 3846864,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -34.83161791753294,
+      "lon": -61.54957463405052,
+      "geoinfo": {
+        "display_name": "Partido de Lincoln, Buenos Aires, 6070, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "6070",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "Lincoln, Buenos Aires, Argentina"
+    },
+    {
+      "lat": -34.84849117729273,
+      "lon": -61.4942168028897,
+      "geoinfo": {
+        "display_name": "Partido de Lincoln, Buenos Aires, B6070, Argentina",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Buenos Aires",
+        "postcode": "B6070",
+        "country": "Argentina",
+        "country_code": "ar"
+      },
+      "address": "030, Lincoln, B6070 Buenos Aires, Argentina"
+    }
+  ],
+  "updated_at": "2025-10-19T00:56:39.631697+00:00",
+  "_kind": "geo_samples"
+}

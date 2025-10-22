@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Newport",
+  "geonameid": 5223593,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.49305956930115,
+      "lon": -71.34257306769707,
+      "geoinfo": {
+        "display_name": "Newport Bridge, Newport, Newport County, Rhode Island, 02840, United States",
+        "road": "Newport Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newport",
+        "state": "Rhode Island",
+        "postcode": "02840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Newport Bridge, Newport, Rhode Island, United States"
+    },
+    {
+      "lat": 41.49430327907616,
+      "lon": -71.33461542860297,
+      "geoinfo": {
+        "display_name": "Citing Rock, Newport Bridge, Newport, Newport County, Rhode Island, 02840, United States",
+        "road": "Newport Bridge",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Newport",
+        "state": "Rhode Island",
+        "postcode": "02840",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "566, Newport Bridge, Newport, 02840 Rhode Island, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:46.870128+00:00",
+  "_kind": "geo_samples"
+}

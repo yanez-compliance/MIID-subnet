@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Dushan",
+  "geonameid": 1811794,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 25.83664498786271,
+      "lon": 107.57454832489775,
+      "geoinfo": {
+        "display_name": "大河口路, Dushan, Qiannan, Guizhou, 558000, China",
+        "road": "大河口路",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dushan",
+        "state": "Guizhou",
+        "postcode": "558000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "大河口路, Dushan, Guizhou, China"
+    },
+    {
+      "lat": 25.85658359943166,
+      "lon": 107.5252474283272,
+      "geoinfo": {
+        "display_name": "Dushan, Qiannan, Guizhou, 558000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Dushan",
+        "state": "Guizhou",
+        "postcode": "558000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "265, Dushan, Qiannan, Guizhou, 558000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T01:55:27.470019+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Bernburg",
+  "geonameid": 2950073,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.82768093640089,
+      "lon": 11.717742110332322,
+      "geoinfo": {
+        "display_name": "L 50, Bernburg, Salzlandkreis, Saxony-Anhalt, 06406, Germany",
+        "road": "L 50",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Bernburg",
+        "city": "Bernburg",
+        "state": "Saxony-Anhalt",
+        "postcode": "06406",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 50, Bernburg, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.76604141612154,
+      "lon": 11.714434663293256,
+      "geoinfo": {
+        "display_name": "Grönaer Landstraße, Gröna, Bernburg, Salzlandkreis, Saxony-Anhalt, 06406, Germany",
+        "road": "Grönaer Landstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gröna",
+        "city": "Bernburg",
+        "state": "Saxony-Anhalt",
+        "postcode": "06406",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "630, Grönaer Landstraße, Gröna, Bernburg, Salzlandkreis, Saxony-Anhalt, 06406, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:56:43.694573+00:00",
+  "_kind": "geo_samples"
+}

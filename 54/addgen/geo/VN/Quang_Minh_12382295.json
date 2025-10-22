@@ -1,0 +1,47 @@
+{
+  "country_code": "VN",
+  "country": "Vietnam",
+  "city": "Quang Minh",
+  "geonameid": 12382295,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.228851848401572,
+      "lon": 105.76419167554971,
+      "geoinfo": {
+        "display_name": "Noi Bai Commune, Hà Nội, 12910, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Noi Bai Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "12910",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "Noi Bai Commune, Quang Minh, Vietnam"
+    },
+    {
+      "lat": 21.19005535397721,
+      "lon": 105.75072753764074,
+      "geoinfo": {
+        "display_name": "Quang Minh Commune, Hà Nội, 12910, Vietnam",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Quang Minh Commune",
+        "city": "Hà Nội",
+        "state": null,
+        "postcode": "12910",
+        "country": "Vietnam",
+        "country_code": "vn"
+      },
+      "address": "832, Quang Minh Commune, Hà Nội, 12910, Vietnam"
+    }
+  ],
+  "updated_at": "2025-10-19T07:51:58.835375+00:00",
+  "_kind": "geo_samples"
+}

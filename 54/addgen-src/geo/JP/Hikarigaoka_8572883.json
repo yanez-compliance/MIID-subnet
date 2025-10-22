@@ -1,0 +1,47 @@
+{
+  "country_code": "JP",
+  "country": "Japan",
+  "city": "Hikarigaoka",
+  "geonameid": 8572883,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.76781319976321,
+      "lon": 139.65616413316883,
+      "geoinfo": {
+        "display_name": "Kitamachi, Nerima, Tokyo, 175-0083, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Nerima",
+        "state": null,
+        "postcode": "175-0083",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Hikarigaoka, Japan"
+    },
+    {
+      "lat": 35.77757730862476,
+      "lon": 139.6559030918845,
+      "geoinfo": {
+        "display_name": "Tokumaru 5, Tokumaru, Itabashi, Tokyo, 175-0084, Japan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Tokumaru 5",
+        "suburb": null,
+        "city_district": null,
+        "city": "Itabashi",
+        "state": null,
+        "postcode": "175-0084",
+        "country": "Japan",
+        "country_code": "jp"
+      },
+      "address": "Tokumaru 5, Tokumaru, Itabashi, Tokyo, 175-0084, Japan"
+    }
+  ],
+  "updated_at": "2025-10-19T03:25:12.449016+00:00",
+  "_kind": "geo_samples"
+}

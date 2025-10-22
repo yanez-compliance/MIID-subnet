@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Zwickau",
+  "geonameid": 2803560,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.70931948904389,
+      "lon": 12.45540589930246,
+      "geoinfo": {
+        "display_name": "Olzmannstraße, Geb. Reichenb. Str./Freiheitssiedlung, Zwickau-West, Zwickau, Langenweißbach, Zwickau, Saxony, 08060, Germany",
+        "road": "Olzmannstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Geb. Reichenb. Str./Freiheitssiedlung",
+        "city_district": "Zwickau-West",
+        "city": "Zwickau",
+        "state": "Saxony",
+        "postcode": "08060",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Olzmannstraße, Zwickau, Saxony, Germany"
+    },
+    {
+      "lat": 50.691473515245896,
+      "lon": 12.527227213088793,
+      "geoinfo": {
+        "display_name": "19, Waldweg, Reinsdorf, Langenweißbach, Zwickau, Saxony, 08141, Germany",
+        "road": "Waldweg",
+        "house_number": "19",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Reinsdorf",
+        "city": "Reinsdorf",
+        "state": "Saxony",
+        "postcode": "08141",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "19, Waldweg, Reinsdorf, Langenweißbach, Zwickau, Saxony, 08141, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:13:47.886090+00:00",
+  "_kind": "geo_samples"
+}

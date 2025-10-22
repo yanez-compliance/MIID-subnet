@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Amecameca",
+  "geonameid": 3532899,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.142356630708615,
+      "lon": -98.77230717767988,
+      "geoinfo": {
+        "display_name": "Calle Chapultepec, Amecameca de Juárez, Amecameca, State of Mexico, 56900, Mexico",
+        "road": "Calle Chapultepec",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Amecameca",
+        "state": "State of Mexico",
+        "postcode": "56900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Chapultepec, Amecameca, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.154503966868155,
+      "lon": -98.7824544373843,
+      "geoinfo": {
+        "display_name": "Calle Matamoros, San Francisco Zentlalpan, Amecameca, State of Mexico, 56900, Mexico",
+        "road": "Calle Matamoros",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Francisco Zentlalpan",
+        "state": "State of Mexico",
+        "postcode": "56900",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "955, Calle Matamoros, San Francisco Zentlalpan, Amecameca, State of Mexico, 56900, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:13:48.160149+00:00",
+  "_kind": "geo_samples"
+}

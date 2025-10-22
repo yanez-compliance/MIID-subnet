@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Pune",
+  "geonameid": 1259229,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 18.48951668199845,
+      "lon": 73.857732942549,
+      "geoinfo": {
+        "display_name": "Satara Road, Swargate, Pune, Pune District, Maharashtra, 411009, India",
+        "road": "Satara Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Swargate",
+        "city_district": null,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postcode": "411009",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Satara Road, Pune, Maharashtra, India"
+    },
+    {
+      "lat": 18.48926504579605,
+      "lon": 73.850281243642,
+      "geoinfo": {
+        "display_name": "Relax, 123, Golwalkar Guruji Path, Sahakar Nagar, Anandnagar, Pune, Pune District, Maharashtra, 411051, India",
+        "road": "Golwalkar Guruji Path",
+        "house_number": "123",
+        "neighbourhood": null,
+        "suburb": "Sahakar Nagar",
+        "city_district": null,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postcode": "411051",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "Relax, 123, Golwalkar Guruji Path, Sahakar Nagar, Anandnagar, Pune, Pune District, Maharashtra, 411051, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:52:04.159748+00:00",
+  "_kind": "geo_samples"
+}

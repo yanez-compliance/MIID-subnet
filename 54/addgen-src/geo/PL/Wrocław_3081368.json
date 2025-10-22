@@ -1,0 +1,47 @@
+{
+  "country_code": "PL",
+  "country": "Poland",
+  "city": "Wrocław",
+  "geonameid": 3081368,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.09746553710488,
+      "lon": 16.997039861450684,
+      "geoinfo": {
+        "display_name": "60, Oporowska, Gajowice, Wrocław, Lower Silesian Voivodeship, 53-434, Poland",
+        "road": "Oporowska",
+        "house_number": "60",
+        "neighbourhood": null,
+        "suburb": "Gajowice",
+        "city_district": null,
+        "city": "Wrocław",
+        "state": "Lower Silesian Voivodeship",
+        "postcode": "53-434",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "60 Oporowska, Wrocław, Lower Silesian Voivodeship, Poland"
+    },
+    {
+      "lat": 51.09953615029835,
+      "lon": 16.99145784089094,
+      "geoinfo": {
+        "display_name": "231f, Grabiszyńska, Grabiszyn, Grabiszyn-Grabiszynek, Wrocław, Lower Silesian Voivodeship, 53-234, Poland",
+        "road": "Grabiszyńska",
+        "house_number": "231f",
+        "neighbourhood": null,
+        "suburb": "Grabiszyn",
+        "city_district": "Grabiszyn-Grabiszynek",
+        "city": "Wrocław",
+        "state": "Lower Silesian Voivodeship",
+        "postcode": "53-234",
+        "country": "Poland",
+        "country_code": "pl"
+      },
+      "address": "231f, Grabiszyńska, Grabiszyn, Grabiszyn-Grabiszynek, Wrocław, Lower Silesian Voivodeship, 53-234, Poland"
+    }
+  ],
+  "updated_at": "2025-10-19T06:11:10.156872+00:00",
+  "_kind": "geo_samples"
+}

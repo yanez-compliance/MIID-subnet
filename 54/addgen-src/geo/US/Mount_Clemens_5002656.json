@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Mount Clemens",
+  "geonameid": 5002656,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.60081787220061,
+      "lon": -82.8928778476805,
+      "geoinfo": {
+        "display_name": "51, Mary Street, Breitmeyer Hills, Mount Clemens, Macomb County, Michigan, 48043, United States",
+        "road": "Mary Street",
+        "house_number": "51",
+        "neighbourhood": "Breitmeyer Hills",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Clemens",
+        "state": "Michigan",
+        "postcode": "48043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "51 Mary Street, Mount Clemens, Michigan, United States"
+    },
+    {
+      "lat": 42.60145017724172,
+      "lon": -82.87254554000424,
+      "geoinfo": {
+        "display_name": "185, North Walnut Street, Mount Clemens Downtown Loop, Mount Clemens, Macomb County, Michigan, 48043, United States",
+        "road": "North Walnut Street",
+        "house_number": "185",
+        "neighbourhood": "Mount Clemens Downtown Loop",
+        "suburb": null,
+        "city_district": null,
+        "city": "Mount Clemens",
+        "state": "Michigan",
+        "postcode": "48043",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "185, North Walnut Street, Mount Clemens Downtown Loop, Mount Clemens, Macomb County, Michigan, 48043, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:33:37.219131+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Sangerhausen",
+  "geonameid": 2841693,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.45867496695405,
+      "lon": 11.240041024212857,
+      "geoinfo": {
+        "display_name": "L 151, Sangerhausen, Goldene Aue, Mansfeld-Südharz, Saxony-Anhalt, 06526, Germany",
+        "road": "L 151",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sangerhausen",
+        "state": "Saxony-Anhalt",
+        "postcode": "06526",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "L 151, Sangerhausen, Saxony-Anhalt, Germany"
+    },
+    {
+      "lat": 51.48431874606626,
+      "lon": 11.290593622720893,
+      "geoinfo": {
+        "display_name": "Gewerbegebiet Schacht, Sangerhausen, Mansfeld-Südharz, Saxony-Anhalt, 06526, Germany",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sangerhausen",
+        "state": "Saxony-Anhalt",
+        "postcode": "06526",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "757, Gewerbegebiet Schacht, Sangerhausen, Mansfeld-Südharz, Saxony-Anhalt, 06526, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:52:20.152819+00:00",
+  "_kind": "geo_samples"
+}

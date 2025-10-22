@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Albal",
+  "geonameid": 2522250,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.39211014399357,
+      "lon": -0.4089731150153022,
+      "geoinfo": {
+        "display_name": "Carrer del Palleter, Albal, l'Horta Sud, Valencia, Valencian Community, 46469, Spain",
+        "road": "Carrer del Palleter",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Albal",
+        "state": "Valencian Community",
+        "postcode": "46469",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Carrer del Palleter, Albal, Valencian Community, Spain"
+    },
+    {
+      "lat": 39.42682827141201,
+      "lon": -0.3730329544761616,
+      "geoinfo": {
+        "display_name": "Avinguda d'Ausiàs March, Polígon Industrial Forn d'Alcedo, Pobles del Sud, Valencia, Comarca de València, Valencia, Valencian Community, 46910, Spain",
+        "road": "Avinguda d'Ausiàs March",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Pobles del Sud",
+        "city_district": null,
+        "city": "Valencia",
+        "state": "Valencian Community",
+        "postcode": "46910",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "670, Avinguda d'Ausiàs March, Polígon Industrial Forn d'Alcedo, Pobles del Sud, Valencia, Comarca de València, Valencia, Valencian Community, 46910, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T00:37:35.775898+00:00",
+  "_kind": "geo_samples"
+}

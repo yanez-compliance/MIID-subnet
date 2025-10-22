@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Balu",
+  "geonameid": 1817137,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.22563910408201,
+      "lon": 117.88210178698796,
+      "geoinfo": {
+        "display_name": "Pizhou, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Pizhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Balu, Jiangsu, China"
+    },
+    {
+      "lat": 34.168935169723056,
+      "lon": 117.89844940766989,
+      "geoinfo": {
+        "display_name": "Gupi, Xuzhou, Jiangsu, 221000, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Xuzhou",
+        "state": "Jiangsu",
+        "postcode": "221000",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "975, Gupi, Xuzhou, Jiangsu, 221000, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:49:27.971733+00:00",
+  "_kind": "geo_samples"
+}

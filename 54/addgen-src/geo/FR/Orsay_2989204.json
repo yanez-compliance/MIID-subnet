@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Orsay",
+  "geonameid": 2989204,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 48.725204380190235,
+      "lon": 2.1480856155858934,
+      "geoinfo": {
+        "display_name": "CEA Paris-Saclay, Chemin de Palaiseau, Saclay, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91190, France",
+        "road": "Chemin de Palaiseau",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Saclay",
+        "state": "Ile-de-France",
+        "postcode": "91190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Chemin de Palaiseau, Orsay, Ile-de-France, France"
+    },
+    {
+      "lat": 48.693654855900135,
+      "lon": 2.1370017101464187,
+      "geoinfo": {
+        "display_name": "DH, La Petite Coudraie, Gif-sur-Yvette, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91190, France",
+        "road": "DH",
+        "house_number": null,
+        "neighbourhood": "La Petite Coudraie",
+        "suburb": null,
+        "city_district": null,
+        "city": "Gif-sur-Yvette",
+        "state": "Ile-de-France",
+        "postcode": "91190",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "697, DH, La Petite Coudraie, Gif-sur-Yvette, Palaiseau, Essonne, Ile-de-France, Metropolitan France, 91190, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:36:10.986385+00:00",
+  "_kind": "geo_samples"
+}

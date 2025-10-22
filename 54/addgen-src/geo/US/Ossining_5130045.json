@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ossining",
+  "geonameid": 5130045,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.16562446586632,
+      "lon": -73.85586254834871,
+      "geoinfo": {
+        "display_name": "Upper Croton Avenue, Village of Ossining, Town of Ossining, Westchester County, New York, 10562, United States",
+        "road": "Upper Croton Avenue",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Ossining",
+        "state": "New York",
+        "postcode": "10562",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Upper Croton Avenue, Ossining, New York, United States"
+    },
+    {
+      "lat": 41.167223254824556,
+      "lon": -73.84343008954555,
+      "geoinfo": {
+        "display_name": "1 A, Iroquois Road, Spring Valley, Village of Ossining, Town of Ossining, Westchester County, New York, 10562, United States",
+        "road": "Iroquois Road",
+        "house_number": "1 A",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Village of Ossining",
+        "state": "New York",
+        "postcode": "10562",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1 A, Iroquois Road, Spring Valley, Village of Ossining, Town of Ossining, Westchester County, New York, 10562, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:16.250203+00:00",
+  "_kind": "geo_samples"
+}

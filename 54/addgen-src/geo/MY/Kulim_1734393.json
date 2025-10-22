@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kulim",
+  "geonameid": 1734393,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 5.368724476172206,
+      "lon": 100.5567238609236,
+      "geoinfo": {
+        "display_name": "Nasi Kandar, Jalan Hospital, Kulim, Kedah, 09000, Malaysia",
+        "road": "Jalan Hospital",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kulim",
+        "state": "Kedah",
+        "postcode": "09000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Jalan Hospital, Kulim, Kedah, Malaysia"
+    },
+    {
+      "lat": 5.401301197606746,
+      "lon": 100.55952215672396,
+      "geoinfo": {
+        "display_name": "SMK Kulim, Jalan Sultan Badlishah, Kelang Lama, Kulim, Kedah, 09000, Malaysia",
+        "road": "Jalan Sultan Badlishah",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Kelang Lama",
+        "city_district": null,
+        "city": "Kulim",
+        "state": "Kedah",
+        "postcode": "09000",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "684, Jalan Sultan Badlishah, Kulim, 09000 Kedah, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:00:07.903137+00:00",
+  "_kind": "geo_samples"
+}

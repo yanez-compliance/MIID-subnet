@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Kanasín",
+  "geonameid": 3526323,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 20.895673572660947,
+      "lon": -89.53936666228907,
+      "geoinfo": {
+        "display_name": "Santa Cecilia, Kanasín, Yucatán, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Yucatán",
+        "postcode": null,
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Kanasín, Yucatán, Mexico"
+    },
+    {
+      "lat": 20.92592427555846,
+      "lon": -89.53255118789593,
+      "geoinfo": {
+        "display_name": "Teya, Kanasín, Yucatán, 97370, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Teya",
+        "state": "Yucatán",
+        "postcode": "97370",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "041, Teya, Kanasín, Yucatán, 97370, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T03:56:31.097681+00:00",
+  "_kind": "geo_samples"
+}

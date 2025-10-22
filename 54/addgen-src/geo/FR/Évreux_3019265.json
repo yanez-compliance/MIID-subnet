@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Évreux",
+  "geonameid": 3019265,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 49.05333839549622,
+      "lon": 1.1174205778372872,
+      "geoinfo": {
+        "display_name": "5 bis, Rue du Bourg, Les Tourelles, Aviron, Évreux, Eure, Normandy, Metropolitan France, 27930, France",
+        "road": "Rue du Bourg",
+        "house_number": "5 bis",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Aviron",
+        "state": "Normandy",
+        "postcode": "27930",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "5 bis Rue du Bourg, Évreux, Normandy, France"
+    },
+    {
+      "lat": 49.01471919035704,
+      "lon": 1.1418504031667367,
+      "geoinfo": {
+        "display_name": "40, Rue de Washington, Le Village de la Forêt, La Madeleine, Évreux, Eure, Normandy, Metropolitan France, 27000, France",
+        "road": "Rue de Washington",
+        "house_number": "40",
+        "neighbourhood": "Le Village de la Forêt",
+        "suburb": "La Madeleine",
+        "city_district": null,
+        "city": "Évreux",
+        "state": "Normandy",
+        "postcode": "27000",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "40, Rue de Washington, Le Village de la Forêt, La Madeleine, Évreux, Eure, Normandy, Metropolitan France, 27000, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:11:00.741569+00:00",
+  "_kind": "geo_samples"
+}

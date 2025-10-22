@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Palm Beach",
+  "geonameid": 2153925,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -28.13305260025099,
+      "lon": 153.46996633738243,
+      "geoinfo": {
+        "display_name": "Pacific Motorway, Palm Beach, Gold Coast City, Queensland, 4223, Australia",
+        "road": "Pacific Motorway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Palm Beach",
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4223",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Pacific Motorway, Palm Beach, Queensland, Australia"
+    },
+    {
+      "lat": -28.120057477647677,
+      "lon": 153.50361489830038,
+      "geoinfo": {
+        "display_name": "Tugun, Gold Coast City, Queensland, 4224, Australia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Tugun",
+        "city_district": "Tugun",
+        "city": "Gold Coast City",
+        "state": "Queensland",
+        "postcode": "4224",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "755, Tugun, Gold Coast City, Queensland, 4224, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:29:56.460697+00:00",
+  "_kind": "geo_samples"
+}

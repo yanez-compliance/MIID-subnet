@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Gorgonzola",
+  "geonameid": 3175990,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.55258194364019,
+      "lon": 9.415835942793343,
+      "geoinfo": {
+        "display_name": "107/26, Via Monza, Gessate, Milan, Lombardy, 20060, Italy",
+        "road": "Via Monza",
+        "house_number": "107/26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Gessate",
+        "state": "Lombardy",
+        "postcode": "20060",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "107/26 Via Monza, Gorgonzola, Lombardy, Italy"
+    },
+    {
+      "lat": 45.52560401179232,
+      "lon": 9.439449249250009,
+      "geoinfo": {
+        "display_name": "Tangenziale Est Esterna Milano, Bellinzago Lombardo, Milan, Lombardy, 20060, Italy",
+        "road": "Tangenziale Est Esterna Milano",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bellinzago Lombardo",
+        "state": "Lombardy",
+        "postcode": "20060",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "490, Tangenziale Est Esterna Milano, Bellinzago Lombardo, Milan, Lombardy, 20060, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:44:00.361518+00:00",
+  "_kind": "geo_samples"
+}

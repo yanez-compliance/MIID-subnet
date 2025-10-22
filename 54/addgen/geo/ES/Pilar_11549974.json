@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Pilar",
+  "geonameid": 11549974,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.49230477544114,
+      "lon": -3.739497632032475,
+      "geoinfo": {
+        "display_name": "M-40, Mirasierra, Fuencarral-El Pardo, Madrid, Community of Madrid, 28035, Spain",
+        "road": "M-40",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Fuencarral-El Pardo",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28035",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-40, Pilar, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.463852506306495,
+      "lon": -3.7035278996254983,
+      "geoinfo": {
+        "display_name": "2, Calle de la Genciana, Valdeacederas, Tetuán, Madrid, Community of Madrid, 28039, Spain",
+        "road": "Calle de la Genciana",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Tetuán",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28039",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "2, Calle de la Genciana, Valdeacederas, Tetuán, Madrid, Community of Madrid, 28039, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T02:27:26.980130+00:00",
+  "_kind": "geo_samples"
+}

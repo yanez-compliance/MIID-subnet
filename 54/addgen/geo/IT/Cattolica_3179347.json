@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Cattolica",
+  "geonameid": 3179347,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.96610116686513,
+      "lon": 12.750692750926573,
+      "geoinfo": {
+        "display_name": "26, Via Sebastiano Caboto, Cattolica, Rimini, Emilia-Romagna, 61011, Italy",
+        "road": "Via Sebastiano Caboto",
+        "house_number": "26",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Cattolica",
+        "state": "Emilia-Romagna",
+        "postcode": "61011",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "26 Via Sebastiano Caboto, Cattolica, Emilia-Romagna, Italy"
+    },
+    {
+      "lat": 43.958557927871084,
+      "lon": 12.712471638277352,
+      "geoinfo": {
+        "display_name": "Via Marecchia, Montalbano, San Giovanni in Marignano, Rimini, Emilia-Romagna, 47842, Italy",
+        "road": "Via Marecchia",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Giovanni in Marignano",
+        "state": "Emilia-Romagna",
+        "postcode": "47842",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "658, Via Marecchia, Montalbano, San Giovanni in Marignano, Rimini, Emilia-Romagna, 47842, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T07:09:04.901730+00:00",
+  "_kind": "geo_samples"
+}

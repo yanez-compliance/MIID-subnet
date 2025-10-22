@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Long Island City",
+  "geonameid": 5125125,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.77731783363445,
+      "lon": -73.92053364505193,
+      "geoinfo": {
+        "display_name": "23-61, 21st Street, Queens, Queens County, New York, 11105, United States",
+        "road": "21st Street",
+        "house_number": "23-61",
+        "neighbourhood": null,
+        "suburb": "Queens",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11105",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "23-61 21st Street, Long Island City, New York, United States"
+    },
+    {
+      "lat": 40.70981383977363,
+      "lon": -73.98042049229333,
+      "geoinfo": {
+        "display_name": "FDR Drive, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 11251, United States",
+        "road": "FDR Drive",
+        "house_number": null,
+        "neighbourhood": "Lower East Side",
+        "suburb": "Manhattan",
+        "city_district": null,
+        "city": "New York",
+        "state": "New York",
+        "postcode": "11251",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "FDR Drive, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 11251, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:37:58.808148+00:00",
+  "_kind": "geo_samples"
+}

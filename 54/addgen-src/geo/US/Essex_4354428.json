@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Essex",
+  "geonameid": 4354428,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.29887845667925,
+      "lon": -76.45801673009679,
+      "geoinfo": {
+        "display_name": "Nerbay Road, Fox Ridge Manor, Essex, Baltimore County, Maryland, 21221, United States",
+        "road": "Nerbay Road",
+        "house_number": null,
+        "neighbourhood": "Fox Ridge Manor",
+        "suburb": null,
+        "city_district": null,
+        "city": "Essex",
+        "state": "Maryland",
+        "postcode": "21221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Nerbay Road, Essex, Maryland, United States"
+    },
+    {
+      "lat": 39.28303175047645,
+      "lon": -76.43183911114723,
+      "geoinfo": {
+        "display_name": "1421, Cherry Garden Road, Port Cherry Gardens Farm, Essex, Baltimore County, Maryland, 21221, United States",
+        "road": "Cherry Garden Road",
+        "house_number": "1421",
+        "neighbourhood": "Port Cherry Gardens Farm",
+        "suburb": null,
+        "city_district": null,
+        "city": "Essex",
+        "state": "Maryland",
+        "postcode": "21221",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1421, Cherry Garden Road, Port Cherry Gardens Farm, Essex, Baltimore County, Maryland, 21221, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:04:25.628959+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "UZ",
+  "country": "Uzbekistan",
+  "city": "Koson",
+  "geonameid": 1217007,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.05731294689109,
+      "lon": 65.61602237336112,
+      "geoinfo": {
+        "display_name": "Koson District, Qashqadaryo Region, 180000, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Qashqadaryo Region",
+        "postcode": "180000",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "Koson, Qashqadaryo Region, Uzbekistan"
+    },
+    {
+      "lat": 39.04636380507809,
+      "lon": 65.53772014152132,
+      "geoinfo": {
+        "display_name": "Kasan, Koson District, Qashqadaryo Region, 180800, Uzbekistan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kasan",
+        "state": "Qashqadaryo Region",
+        "postcode": "180800",
+        "country": "Uzbekistan",
+        "country_code": "uz"
+      },
+      "address": "400, Kasan, Koson District, Qashqadaryo Region, 180800, Uzbekistan"
+    }
+  ],
+  "updated_at": "2025-10-19T11:19:31.436762+00:00",
+  "_kind": "geo_samples"
+}

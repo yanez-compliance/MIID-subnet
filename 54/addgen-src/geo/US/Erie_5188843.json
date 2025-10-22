@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Erie",
+  "geonameid": 5188843,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 42.151671753930614,
+      "lon": -80.10251084858471,
+      "geoinfo": {
+        "display_name": "Presque Isle Bike Path, Millcreek Township, Erie County, Pennsylvania, 16550, United States",
+        "road": "Presque Isle Bike Path",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Millcreek Township",
+        "state": "Pennsylvania",
+        "postcode": "16550",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Presque Isle Bike Path, Erie, Pennsylvania, United States"
+    },
+    {
+      "lat": 42.08836625807431,
+      "lon": -80.0898967311264,
+      "geoinfo": {
+        "display_name": "4318, Miller Avenue, Erie, Erie County, Pennsylvania, 16509, United States",
+        "road": "Miller Avenue",
+        "house_number": "4318",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Erie",
+        "state": "Pennsylvania",
+        "postcode": "16509",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4318, Miller Avenue, Erie, Erie County, Pennsylvania, 16509, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:28:20.285338+00:00",
+  "_kind": "geo_samples"
+}

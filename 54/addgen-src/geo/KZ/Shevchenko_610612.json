@@ -1,0 +1,47 @@
+{
+  "country_code": "KZ",
+  "country": "Kazakhstan",
+  "city": "Shevchenko",
+  "geonameid": 610612,
+  "target_addresses": 2,
+  "samples": [
+    {
+      "lat": 43.683967413298795,
+      "lon": 51.12840352266204,
+      "geoinfo": {
+        "display_name": "Теңіз жағасындағы жазғы резиденция, Ақтау қалалық әкімдігі, Mangystau Region, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mangystau Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "666, Shevchenko, 49062 Mangystau Region, Kazakhstan"
+    },
+    {
+      "lat": 43.647812109202924,
+      "lon": 51.12735251341253,
+      "geoinfo": {
+        "display_name": "Mangystau Region, Kazakhstan",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mangystau Region",
+        "postcode": null,
+        "country": "Kazakhstan",
+        "country_code": "kz"
+      },
+      "address": "562, Shevchenko, 08200 Mangystau Region, Kazakhstan"
+    }
+  ],
+  "updated_at": "2025-10-19T05:05:43.938719+00:00",
+  "_kind": "geo_samples"
+}

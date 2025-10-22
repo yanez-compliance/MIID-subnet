@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Coventry",
+  "geonameid": 5221637,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 41.7040526036902,
+      "lon": -71.64294749749365,
+      "geoinfo": {
+        "display_name": "Flat River Road, Coventry, Kent County, Rhode Island, 01816, United States",
+        "road": "Flat River Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coventry",
+        "state": "Rhode Island",
+        "postcode": "01816",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Flat River Road, Coventry, Rhode Island, United States"
+    },
+    {
+      "lat": 41.70361069344481,
+      "lon": -71.70661517974918,
+      "geoinfo": {
+        "display_name": "246, Susan Bowen Road, Coventry, Kent County, Rhode Island, 02827, United States",
+        "road": "Susan Bowen Road",
+        "house_number": "246",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Coventry",
+        "state": "Rhode Island",
+        "postcode": "02827",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "246, Susan Bowen Road, Coventry, Kent County, Rhode Island, 02827, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T11:06:19.445548+00:00",
+  "_kind": "geo_samples"
+}

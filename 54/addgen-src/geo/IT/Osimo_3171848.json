@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "Osimo",
+  "geonameid": 3171848,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 43.45584449732322,
+      "lon": 13.50859188034051,
+      "geoinfo": {
+        "display_name": "Via di Jesi, Campocavallo, Osimo, Ancona, Marche, 60027, Italy",
+        "road": "Via di Jesi",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Osimo",
+        "state": "Marche",
+        "postcode": "60027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Via di Jesi, Osimo, Marche, Italy"
+    },
+    {
+      "lat": 43.44691487149315,
+      "lon": 13.503686594676351,
+      "geoinfo": {
+        "display_name": "Pista Ciclabile Girardengo, Campocavallo, Osimo, Ancona, 60027, Italy",
+        "road": "Pista Ciclabile Girardengo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Osimo",
+        "state": null,
+        "postcode": "60027",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "769, Pista Ciclabile Girardengo, Campocavallo, Osimo, Ancona, 60027, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T04:56:47.980122+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Bai’anba",
+  "geonameid": 8403618,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 30.738295400551625,
+      "lon": 108.47404526622785,
+      "geoinfo": {
+        "display_name": "Yinbai Expressway, Dongqiao, Changling, Wanzhou, Chongqing, 404100, China",
+        "road": "Yinbai Expressway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Changling",
+        "state": "Chongqing",
+        "postcode": "404100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Yinbai Expressway, Bai’anba, Chongqing, China"
+    },
+    {
+      "lat": 30.73999979809876,
+      "lon": 108.43566891488815,
+      "geoinfo": {
+        "display_name": "Bai'anba Subdistrict, Xintian, Wanzhou, Chongqing, 404100, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Bai'anba Subdistrict",
+        "city_district": null,
+        "city": "Xintian",
+        "state": "Chongqing",
+        "postcode": "404100",
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "521, Bai'anba Subdistrict, Xintian, Wanzhou, Chongqing, 404100, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:22:27.790949+00:00",
+  "_kind": "geo_samples"
+}

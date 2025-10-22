@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Laurel",
+  "geonameid": 4433039,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 31.669703371065108,
+      "lon": -89.14812315089334,
+      "geoinfo": {
+        "display_name": "1301, Ellisville Boulevard, Queensburg, Laurel, Jones County, Mississippi, 39440, United States",
+        "road": "Ellisville Boulevard",
+        "house_number": "1301",
+        "neighbourhood": null,
+        "suburb": "Queensburg",
+        "city_district": null,
+        "city": "Laurel",
+        "state": "Mississippi",
+        "postcode": "39440",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1301 Ellisville Boulevard, Laurel, Mississippi, United States"
+    },
+    {
+      "lat": 31.69591910432778,
+      "lon": -89.10258613475531,
+      "geoinfo": {
+        "display_name": "Frontage Road, Jones County, Mississippi, 39442, United States",
+        "road": "Frontage Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Mississippi",
+        "postcode": "39442",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "076, Frontage Road, Jones County, Mississippi, 39442, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:30:52.382734+00:00",
+  "_kind": "geo_samples"
+}

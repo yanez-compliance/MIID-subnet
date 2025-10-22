@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Boulder City",
+  "geonameid": 5500539,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.99410558918768,
+      "lon": -114.81983570424575,
+      "geoinfo": {
+        "display_name": "115, Caperna Court, Boulder City, Clark County, Nevada, United States",
+        "road": "Caperna Court",
+        "house_number": "115",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boulder City",
+        "state": "Nevada",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "115 Caperna Court, Boulder City, Nevada, United States"
+    },
+    {
+      "lat": 35.9742949967929,
+      "lon": -114.82827369924075,
+      "geoinfo": {
+        "display_name": "566, 5th Street, Boulder City, Clark County, Nevada, 89005, United States",
+        "road": "5th Street",
+        "house_number": "566",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Boulder City",
+        "state": "Nevada",
+        "postcode": "89005",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "566, 5th Street, Boulder City, Clark County, Nevada, 89005, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:46:01.461073+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "RO",
+  "country": "Romania",
+  "city": "Balş",
+  "geonameid": 685586,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 44.32817325265005,
+      "lon": 24.0952388118445,
+      "geoinfo": {
+        "display_name": "Voineasa, Olt, Romania",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": null,
+        "postcode": null,
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "Balş, Romania"
+    },
+    {
+      "lat": 44.33732430864209,
+      "lon": 24.104015921057556,
+      "geoinfo": {
+        "display_name": "Strada Măinești, Balș, Olt, 235100, Romania",
+        "road": "Strada Măinești",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Balș",
+        "state": null,
+        "postcode": "235100",
+        "country": "Romania",
+        "country_code": "ro"
+      },
+      "address": "829, Strada Măinești, 235100 Balş, Romania"
+    }
+  ],
+  "updated_at": "2025-10-19T06:42:10.593828+00:00",
+  "_kind": "geo_samples"
+}

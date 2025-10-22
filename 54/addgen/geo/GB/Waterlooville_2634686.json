@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Waterlooville",
+  "geonameid": 2634686,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.865961231764814,
+      "lon": -0.9682991865168376,
+      "geoinfo": {
+        "display_name": "New Lane, Denvilles, Leigh Park, Warblington, Havant, Hampshire, England, PO9 2LF, United Kingdom",
+        "road": "New Lane",
+        "house_number": null,
+        "neighbourhood": "Denvilles",
+        "suburb": "Leigh Park",
+        "city_district": null,
+        "city": "Havant",
+        "state": "England",
+        "postcode": "PO9 2LF",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "New Lane, Waterlooville, England, United Kingdom"
+    },
+    {
+      "lat": 50.90342320142678,
+      "lon": -1.085141762761931,
+      "geoinfo": {
+        "display_name": "Forest Road, World's End, Denmead, Winchester, Hampshire, England, PO7 6UG, United Kingdom",
+        "road": "Forest Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Denmead",
+        "city_district": null,
+        "city": "Winchester",
+        "state": "England",
+        "postcode": "PO7 6UG",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Forest Road, World's End, Denmead, Winchester, Hampshire, England, PO7 6UG, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:18:53.963329+00:00",
+  "_kind": "geo_samples"
+}

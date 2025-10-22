@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Chenshi",
+  "geonameid": 1904136,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.283166706427842,
+      "lon": 106.02556721337172,
+      "geoinfo": {
+        "display_name": "Yongchuan District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Chenshi, Chongqing, China"
+    },
+    {
+      "lat": 29.334300843843717,
+      "lon": 105.96882766488379,
+      "geoinfo": {
+        "display_name": "S207, Chenshi, Yongchuan District, Chongqing, China",
+        "road": "S207",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Chenshi",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S207, Chenshi, Yongchuan District, 27490 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:26:27.219165+00:00",
+  "_kind": "geo_samples"
+}

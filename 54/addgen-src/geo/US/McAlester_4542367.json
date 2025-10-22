@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "McAlester",
+  "geonameid": 4542367,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 34.93702267435554,
+      "lon": -95.77654728150085,
+      "geoinfo": {
+        "display_name": "512, West Adams Avenue, McAlester, Pittsburg County, Oklahoma, 74501, United States",
+        "road": "West Adams Avenue",
+        "house_number": "512",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McAlester",
+        "state": "Oklahoma",
+        "postcode": "74501",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "512 West Adams Avenue, McAlester, Oklahoma, United States"
+    },
+    {
+      "lat": 34.93567340236073,
+      "lon": -95.74339523347966,
+      "geoinfo": {
+        "display_name": "Buffalo Drive, McAlester, Pittsburg County, Oklahoma, 74502, United States",
+        "road": "Buffalo Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "McAlester",
+        "state": "Oklahoma",
+        "postcode": "74502",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "895, Buffalo Drive, McAlester, Pittsburg County, Oklahoma, 74502, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:49:13.860237+00:00",
+  "_kind": "geo_samples"
+}

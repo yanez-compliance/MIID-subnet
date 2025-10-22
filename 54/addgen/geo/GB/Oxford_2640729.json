@@ -1,0 +1,47 @@
+{
+  "country_code": "GB",
+  "country": "United Kingdom",
+  "city": "Oxford",
+  "geonameid": 2640729,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.72183876586808,
+      "lon": -1.232128525737291,
+      "geoinfo": {
+        "display_name": "Sainsbury's, Eastern Bypass, Littlemore Park, Littlemore, Oxford, Oxfordshire, England, OX4 4XR, United Kingdom",
+        "road": "Eastern Bypass",
+        "house_number": null,
+        "neighbourhood": "Littlemore Park",
+        "suburb": "Littlemore",
+        "city_district": null,
+        "city": "Oxford",
+        "state": "England",
+        "postcode": "OX4 4XR",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "Eastern Bypass, Oxford, England, United Kingdom"
+    },
+    {
+      "lat": 51.77016750092703,
+      "lon": -1.276884565306029,
+      "geoinfo": {
+        "display_name": "John Thompson Memorial Stone, Stone Meadow, The Waterways, North Oxford, Oxford, Oxfordshire, England, OX2 6TQ, United Kingdom",
+        "road": "Stone Meadow",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "North Oxford",
+        "city_district": null,
+        "city": "Oxford",
+        "state": "England",
+        "postcode": "OX2 6TQ",
+        "country": "United Kingdom",
+        "country_code": "gb"
+      },
+      "address": "John Thompson Memorial Stone, Stone Meadow, The Waterways, North Oxford, Oxford, Oxfordshire, England, OX2 6TQ, United Kingdom"
+    }
+  ],
+  "updated_at": "2025-10-19T04:19:31.757236+00:00",
+  "_kind": "geo_samples"
+}

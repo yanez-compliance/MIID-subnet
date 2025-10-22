@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Santa Fe",
+  "geonameid": 5490263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.648966114344596,
+      "lon": -105.92756575582617,
+      "geoinfo": {
+        "display_name": "2200, Espejo Place, Santa Fe, Santa Fe County, New Mexico, 87505, United States",
+        "road": "Espejo Place",
+        "house_number": "2200",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Fe",
+        "state": "New Mexico",
+        "postcode": "87505",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "2200 Espejo Place, Santa Fe, New Mexico, United States"
+    },
+    {
+      "lat": 35.716139175464384,
+      "lon": -105.89701065818991,
+      "geoinfo": {
+        "display_name": "1213, North Summit Drive, Santa Fe Summit, Santa Fe, Santa Fe County, New Mexico, United States",
+        "road": "North Summit Drive",
+        "house_number": "1213",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Santa Fe",
+        "state": "New Mexico",
+        "postcode": null,
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1213, North Summit Drive, Santa Fe Summit, Santa Fe, Santa Fe County, 43087 New Mexico, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T05:33:04.271613+00:00",
+  "_kind": "geo_samples"
+}

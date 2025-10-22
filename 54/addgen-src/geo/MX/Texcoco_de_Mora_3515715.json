@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Texcoco de Mora",
+  "geonameid": 3515715,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.473449919157012,
+      "lon": -98.90215222750662,
+      "geoinfo": {
+        "display_name": "Avenida Tlayeca, San Bernardino, Texcoco, State of Mexico, 56260, Mexico",
+        "road": "Avenida Tlayeca",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "San Bernardino",
+        "state": "State of Mexico",
+        "postcode": "56260",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida Tlayeca, Texcoco de Mora, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.501552958007668,
+      "lon": -98.91336740479613,
+      "geoinfo": {
+        "display_name": "Texcoco de Mora, Texcoco, State of Mexico, 56263, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Texcoco de Mora",
+        "state": "State of Mexico",
+        "postcode": "56263",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "087, Texcoco de Mora, Texcoco, State of Mexico, 56263, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:09:29.629639+00:00",
+  "_kind": "geo_samples"
+}

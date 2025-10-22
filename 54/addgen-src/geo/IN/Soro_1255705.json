@@ -1,0 +1,47 @@
+{
+  "country_code": "IN",
+  "country": "India",
+  "city": "Soro",
+  "geonameid": 1255705,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 21.303571860329907,
+      "lon": 86.69975290941912,
+      "geoinfo": {
+        "display_name": "NH16, Bahanaga, Soro, Baleshwar, Odisha, 756045, India",
+        "road": "NH16",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bahanaga",
+        "state": "Odisha",
+        "postcode": "756045",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "NH16, Soro, Odisha, India"
+    },
+    {
+      "lat": 21.26796901341779,
+      "lon": 86.71689464835998,
+      "geoinfo": {
+        "display_name": "Soro, Baleshwar, Odisha, 756045, India",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Soro",
+        "state": "Odisha",
+        "postcode": "756045",
+        "country": "India",
+        "country_code": "in"
+      },
+      "address": "198, Soro, Baleshwar, Odisha, 756045, India"
+    }
+  ],
+  "updated_at": "2025-10-19T04:50:28.459210+00:00",
+  "_kind": "geo_samples"
+}

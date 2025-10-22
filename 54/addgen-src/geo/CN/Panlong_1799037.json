@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Panlong",
+  "geonameid": 1799037,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.502494865136722,
+      "lon": 105.34344827714733,
+      "geoinfo": {
+        "display_name": "Panlong, Rongchang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panlong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Panlong, Chongqing, China"
+    },
+    {
+      "lat": 29.53240677768003,
+      "lon": 105.35525297760181,
+      "geoinfo": {
+        "display_name": "S546, Panlong, Rongchang District, Chongqing, China",
+        "road": "S546",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Panlong",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S546, Panlong, Rongchang District, 60125 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:43:36.930346+00:00",
+  "_kind": "geo_samples"
+}

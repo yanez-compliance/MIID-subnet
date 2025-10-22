@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Landover",
+  "geonameid": 4360287,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 38.944196539980574,
+      "lon": -76.87735943915708,
+      "geoinfo": {
+        "display_name": "John Hanson Highway, Ardwick, Landover, Prince George's County, Maryland, 20784, United States",
+        "road": "John Hanson Highway",
+        "house_number": null,
+        "neighbourhood": "Ardwick",
+        "suburb": null,
+        "city_district": null,
+        "city": "Landover",
+        "state": "Maryland",
+        "postcode": "20784",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "John Hanson Highway, Landover, Maryland, United States"
+    },
+    {
+      "lat": 38.94280694312624,
+      "lon": -76.91567473902128,
+      "geoinfo": {
+        "display_name": "4213, 58th Avenue, Bladensburg, Prince George's County, Maryland, 20710, United States",
+        "road": "58th Avenue",
+        "house_number": "4213",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Bladensburg",
+        "state": "Maryland",
+        "postcode": "20710",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "4213, 58th Avenue, Bladensburg, Prince George's County, Maryland, 20710, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T10:46:37.980231+00:00",
+  "_kind": "geo_samples"
+}

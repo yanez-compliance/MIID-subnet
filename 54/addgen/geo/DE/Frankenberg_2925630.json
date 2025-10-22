@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Frankenberg",
+  "geonameid": 2925630,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.918661185615605,
+      "lon": 12.980965603819326,
+      "geoinfo": {
+        "display_name": "Sonnenlandpark Lichtenau, 6, Sachsenstraße, Niederlichtenau, Lichtenau, Mittelsachsen, Saxony, 09244, Germany",
+        "road": "Sachsenstraße",
+        "house_number": "6",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Lichtenau",
+        "state": "Saxony",
+        "postcode": "09244",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "6 Sachsenstraße, Frankenberg, Saxony, Germany"
+    },
+    {
+      "lat": 50.91125311324156,
+      "lon": 13.035271026381785,
+      "geoinfo": {
+        "display_name": "15, Parkstraße, Frankenberg/Sachsen, Mittelsachsen, Saxony, 09669, Germany",
+        "road": "Parkstraße",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Frankenberg/Sachsen",
+        "state": "Saxony",
+        "postcode": "09669",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "15, Parkstraße, Frankenberg, 09669 Saxony, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:19:07.043888+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Dole",
+  "geonameid": 3021263,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 47.068445246773805,
+      "lon": 5.484392916640494,
+      "geoinfo": {
+        "display_name": "15, Rue de la Platière, Crissey, Dole, Jura, Bourgogne – Franche-Comté, Metropolitan France, 39100, France",
+        "road": "Rue de la Platière",
+        "house_number": "15",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Crissey",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "39100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "15 Rue de la Platière, Dole, Bourgogne – Franche-Comté, France"
+    },
+    {
+      "lat": 47.06921539084287,
+      "lon": 5.447603897958869,
+      "geoinfo": {
+        "display_name": "Choisey, Dole, Jura, Bourgogne – Franche-Comté, Metropolitan France, 39100, France",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Choisey",
+        "state": "Bourgogne – Franche-Comté",
+        "postcode": "39100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "268, Choisey, Dole, Jura, Bourgogne – Franche-Comté, Metropolitan France, 39100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T02:18:09.386494+00:00",
+  "_kind": "geo_samples"
+}

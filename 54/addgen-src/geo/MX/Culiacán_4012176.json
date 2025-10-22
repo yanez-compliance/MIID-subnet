@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Culiacán",
+  "geonameid": 4012176,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 24.8003279664684,
+      "lon": -107.38045432593076,
+      "geoinfo": {
+        "display_name": "Avenida 30 de Septiembre, Benito Juárez, Culiacán, Culiacán Rosales, Culiacán, Sinaloa, 80210, Mexico",
+        "road": "Avenida 30 de Septiembre",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Culiacán",
+        "state": "Sinaloa",
+        "postcode": "80210",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Avenida 30 de Septiembre, Culiacán, Sinaloa, Mexico"
+    },
+    {
+      "lat": 24.82293326756787,
+      "lon": -107.35896866059696,
+      "geoinfo": {
+        "display_name": "La Limita de Itaje, Culiacán, Sinaloa, 80064, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Culiacán",
+        "state": "Sinaloa",
+        "postcode": "80064",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "452, La Limita de Itaje, Culiacán, Sinaloa, 80064, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:07:43.792480+00:00",
+  "_kind": "geo_samples"
+}

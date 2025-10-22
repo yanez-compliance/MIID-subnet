@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Fallbrook",
+  "geonameid": 5347578,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.36776463734901,
+      "lon": -117.2478913258705,
+      "geoinfo": {
+        "display_name": "242, Shetland Way, Fallbrook, San Diego County, California, 92028, United States",
+        "road": "Shetland Way",
+        "house_number": "242",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Fallbrook",
+        "state": "California",
+        "postcode": "92028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "242 Shetland Way, Fallbrook, California, United States"
+    },
+    {
+      "lat": 33.3585432567122,
+      "lon": -117.20696702943553,
+      "geoinfo": {
+        "display_name": "1994, Carriage Lane, San Diego County, California, 92028, United States",
+        "road": "Carriage Lane",
+        "house_number": "1994",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "California",
+        "postcode": "92028",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "1994, Carriage Lane, San Diego County, California, 92028, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:19:05.014192+00:00",
+  "_kind": "geo_samples"
+}

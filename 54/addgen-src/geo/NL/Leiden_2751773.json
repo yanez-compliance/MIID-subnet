@@ -1,0 +1,47 @@
+{
+  "country_code": "NL",
+  "country": "The Netherlands",
+  "city": "Leiden",
+  "geonameid": 2751773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 52.16082306188991,
+      "lon": 4.55104344304533,
+      "geoinfo": {
+        "display_name": "McDrive, Voorhof, Leiderdorp, South Holland, Netherlands, 2353 KA, Netherlands",
+        "road": "McDrive",
+        "house_number": null,
+        "neighbourhood": "Voorhof",
+        "suburb": null,
+        "city_district": null,
+        "city": "Leiderdorp",
+        "state": "South Holland",
+        "postcode": "2353 KA",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "McDrive, Leiden, South Holland, The Netherlands"
+    },
+    {
+      "lat": 52.162489008170475,
+      "lon": 4.444440990082981,
+      "geoinfo": {
+        "display_name": "Voorschoterweg, Valkenburg, Katwijk, South Holland, Netherlands, 2235 SG, Netherlands",
+        "road": "Voorschoterweg",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Valkenburg",
+        "state": "South Holland",
+        "postcode": "2235 SG",
+        "country": "Netherlands",
+        "country_code": "nl"
+      },
+      "address": "257, Voorschoterweg, Leiden, 2235 SG South Holland, The Netherlands"
+    }
+  ],
+  "updated_at": "2025-10-19T04:09:06.475765+00:00",
+  "_kind": "geo_samples"
+}

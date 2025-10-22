@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Aplerbeck",
+  "geonameid": 2955773,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 51.495468478914354,
+      "lon": 7.556071887778876,
+      "geoinfo": {
+        "display_name": "32, Märtmannstraße, Aplerbeck, Dortmund, North Rhine-Westphalia, 44287, Germany",
+        "road": "Märtmannstraße",
+        "house_number": "32",
+        "neighbourhood": null,
+        "suburb": "Aplerbeck",
+        "city_district": "Aplerbeck",
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44287",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "32 Märtmannstraße, Aplerbeck, North Rhine-Westphalia, Germany"
+    },
+    {
+      "lat": 51.48723472567251,
+      "lon": 7.483751134680578,
+      "geoinfo": {
+        "display_name": "Carlo-Schmid-Allee, Phönix-West, Hacheney, Hörde, Dortmund, North Rhine-Westphalia, 44263, Germany",
+        "road": "Carlo-Schmid-Allee",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Hacheney",
+        "city_district": "Hörde",
+        "city": "Dortmund",
+        "state": "North Rhine-Westphalia",
+        "postcode": "44263",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "978, Carlo-Schmid-Allee, Phönix-West, Hacheney, Hörde, Dortmund, North Rhine-Westphalia, 44263, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T01:57:01.168508+00:00",
+  "_kind": "geo_samples"
+}

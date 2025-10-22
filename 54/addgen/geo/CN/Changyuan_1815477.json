@@ -1,0 +1,47 @@
+{
+  "country_code": "CN",
+  "country": "China",
+  "city": "Changyuan",
+  "geonameid": 1815477,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.38320179782745,
+      "lon": 105.59588678837626,
+      "geoinfo": {
+        "display_name": "Guangshun, Rongchang District, Chongqing, China",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Guangshun",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "Changyuan, Chongqing, China"
+    },
+    {
+      "lat": 29.43849366810098,
+      "lon": 105.56060268336468,
+      "geoinfo": {
+        "display_name": "S209, Rongchang, Rongchang District, Chongqing, China",
+        "road": "S209",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Rongchang",
+        "state": "Chongqing",
+        "postcode": null,
+        "country": "China",
+        "country_code": "cn"
+      },
+      "address": "S209, Rongchang, Rongchang District, 90434 Chongqing, China"
+    }
+  ],
+  "updated_at": "2025-10-19T03:48:52.059525+00:00",
+  "_kind": "geo_samples"
+}

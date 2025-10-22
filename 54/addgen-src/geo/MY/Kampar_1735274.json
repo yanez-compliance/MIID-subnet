@@ -1,0 +1,47 @@
+{
+  "country_code": "MY",
+  "country": "Malaysia",
+  "city": "Kampar",
+  "geonameid": 1735274,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 4.273519070082777,
+      "lon": 101.15535060275263,
+      "geoinfo": {
+        "display_name": "Mambang Diawan, Kampar, Perak, 31950, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Mambang Diawan",
+        "state": "Perak",
+        "postcode": "31950",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "Kampar, Perak, Malaysia"
+    },
+    {
+      "lat": 4.33146114270114,
+      "lon": 101.16558367125366,
+      "geoinfo": {
+        "display_name": "Taman Kampar Siswa, Kampar, Perak, 31900, Malaysia",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Taman Kampar Siswa",
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Perak",
+        "postcode": "31900",
+        "country": "Malaysia",
+        "country_code": "my"
+      },
+      "address": "614, Taman Kampar Siswa, Kampar, Perak, 31900, Malaysia"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:16.303186+00:00",
+  "_kind": "geo_samples"
+}

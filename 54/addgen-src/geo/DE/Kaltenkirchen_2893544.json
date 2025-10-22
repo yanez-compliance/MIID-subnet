@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Kaltenkirchen",
+  "geonameid": 2893544,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 53.82014788007305,
+      "lon": 9.972011375266513,
+      "geoinfo": {
+        "display_name": "16, Werner-von-Siemens-Straße, Gewerbegebiet Süd, Kaltenkirchen, Kreis Segeberg, Schleswig-Holstein, 24568, Germany",
+        "road": "Werner-von-Siemens-Straße",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Kaltenkirchen",
+        "state": "Schleswig-Holstein",
+        "postcode": "24568",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "16 Werner-von-Siemens-Straße, Kaltenkirchen, Schleswig-Holstein, Germany"
+    },
+    {
+      "lat": 53.80503689711076,
+      "lon": 9.981433547547848,
+      "geoinfo": {
+        "display_name": "2, Gutenbergstraße, Gewerbegebiet Ulzburg, Ulzburg, Henstedt-Ulzburg, Kreis Segeberg, Schleswig-Holstein, 24558, Germany",
+        "road": "Gutenbergstraße",
+        "house_number": "2",
+        "neighbourhood": null,
+        "suburb": "Ulzburg",
+        "city_district": null,
+        "city": "Henstedt-Ulzburg",
+        "state": "Schleswig-Holstein",
+        "postcode": "24558",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "2, Gutenbergstraße, Gewerbegebiet Ulzburg, Ulzburg, Henstedt-Ulzburg, Kreis Segeberg, Schleswig-Holstein, 24558, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T02:12:48.223594+00:00",
+  "_kind": "geo_samples"
+}

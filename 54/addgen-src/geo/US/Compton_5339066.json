@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Compton",
+  "geonameid": 5339066,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 33.85593919703068,
+      "lon": -118.24025018107758,
+      "geoinfo": {
+        "display_name": "19284, Broadacres Avenue, Carson, Los Angeles County, California, 90746, United States",
+        "road": "Broadacres Avenue",
+        "house_number": "19284",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Carson",
+        "state": "California",
+        "postcode": "90746",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "19284 Broadacres Avenue, Compton, California, United States"
+    },
+    {
+      "lat": 33.87089216419101,
+      "lon": -118.19745172031433,
+      "geoinfo": {
+        "display_name": "287, East Bort Street, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States",
+        "road": "East Bort Street",
+        "house_number": "287",
+        "neighbourhood": null,
+        "suburb": "North Long Beach",
+        "city_district": null,
+        "city": "Long Beach",
+        "state": "California",
+        "postcode": "90805",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "287, East Bort Street, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:38:56.892854+00:00",
+  "_kind": "geo_samples"
+}

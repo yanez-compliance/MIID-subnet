@@ -1,0 +1,47 @@
+{
+  "country_code": "ES",
+  "country": "Spain",
+  "city": "Villaverde",
+  "geonameid": 3104748,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.341557891067374,
+      "lon": -3.6626460416586766,
+      "geoinfo": {
+        "display_name": "M-45, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28909, Spain",
+        "road": "M-45",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28909",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "M-45, Villaverde, Community of Madrid, Spain"
+    },
+    {
+      "lat": 40.354574519366814,
+      "lon": -3.6643662227471316,
+      "geoinfo": {
+        "display_name": "Calle 13, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain",
+        "road": "Calle 13",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Villa de Vallecas",
+        "city_district": null,
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "postcode": "28053",
+        "country": "Spain",
+        "country_code": "es"
+      },
+      "address": "Calle 13, Casco Histórico de Vallecas, Villa de Vallecas, Madrid, Community of Madrid, 28053, Spain"
+    }
+  ],
+  "updated_at": "2025-10-19T03:46:57.313474+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "AU",
+  "country": "Australia",
+  "city": "Caroline Springs",
+  "geonameid": 7281805,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": -37.72833250629643,
+      "lon": 144.7359716513439,
+      "geoinfo": {
+        "display_name": "Holland Way, Caroline Springs, Melbourne, City of Melton, Victoria, 3023, Australia",
+        "road": "Holland Way",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "Caroline Springs",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3023",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "Holland Way, Caroline Springs, Victoria, Australia"
+    },
+    {
+      "lat": -37.76699149472844,
+      "lon": 144.76685147925213,
+      "geoinfo": {
+        "display_name": "16, Eymard Street, Deer Park, Melbourne, City of Brimbank, Victoria, 3023, Australia",
+        "road": "Eymard Street",
+        "house_number": "16",
+        "neighbourhood": null,
+        "suburb": "Deer Park",
+        "city_district": null,
+        "city": "Melbourne",
+        "state": "Victoria",
+        "postcode": "3023",
+        "country": "Australia",
+        "country_code": "au"
+      },
+      "address": "16, Eymard Street, Deer Park, Melbourne, City of Brimbank, Victoria, 3023, Australia"
+    }
+  ],
+  "updated_at": "2025-10-19T02:31:33.103530+00:00",
+  "_kind": "geo_samples"
+}

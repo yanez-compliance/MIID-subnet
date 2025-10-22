@@ -1,0 +1,47 @@
+{
+  "country_code": "IT",
+  "country": "Italy",
+  "city": "San Lorenzo",
+  "geonameid": 12070070,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.856613062043685,
+      "lon": 14.265284502897948,
+      "geoinfo": {
+        "display_name": "Vico dei Lepri, Borgo Sant'Antonio Abate, Vicaria, Municipalità 4, Naples, Campania, 80139, Italy",
+        "road": "Vico dei Lepri",
+        "house_number": null,
+        "neighbourhood": "Borgo Sant'Antonio Abate",
+        "suburb": "Vicaria",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80139",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Vico dei Lepri, San Lorenzo, Campania, Italy"
+    },
+    {
+      "lat": 40.83235982178005,
+      "lon": 14.269131252616031,
+      "geoinfo": {
+        "display_name": "Molo San Vincenzo, San Ferdinando, Municipalità 1, Naples, Campania, 80133, Italy",
+        "road": "Molo San Vincenzo",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": "San Ferdinando",
+        "city_district": null,
+        "city": "Naples",
+        "state": "Campania",
+        "postcode": "80133",
+        "country": "Italy",
+        "country_code": "it"
+      },
+      "address": "Molo San Vincenzo, San Ferdinando, Municipalità 1, Naples, Campania, 80133, Italy"
+    }
+  ],
+  "updated_at": "2025-10-19T01:45:42.901964+00:00",
+  "_kind": "geo_samples"
+}

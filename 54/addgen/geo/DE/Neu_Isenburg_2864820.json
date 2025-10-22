@@ -1,0 +1,47 @@
+{
+  "country_code": "DE",
+  "country": "Germany",
+  "city": "Neu-Isenburg",
+  "geonameid": 2864820,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 50.05563902661151,
+      "lon": 8.750704837886035,
+      "geoinfo": {
+        "display_name": "Nachtigallenstraße, Gravenbruch, Neu-Isenburg, Landkreis Offenbach, Hesse, 63263, Germany",
+        "road": "Nachtigallenstraße",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": "Gravenbruch",
+        "city": "Gravenbruch",
+        "state": "Hesse",
+        "postcode": "63263",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "Nachtigallenstraße, Neu-Isenburg, Hesse, Germany"
+    },
+    {
+      "lat": 50.00571120991958,
+      "lon": 8.679750031681928,
+      "geoinfo": {
+        "display_name": "33, Am Bürgeracker, Sprendlingen, Dreieich, Landkreis Offenbach, Hesse, 63303, Germany",
+        "road": "Am Bürgeracker",
+        "house_number": "33",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sprendlingen",
+        "state": "Hesse",
+        "postcode": "63303",
+        "country": "Germany",
+        "country_code": "de"
+      },
+      "address": "33, Am Bürgeracker, Sprendlingen, Dreieich, Landkreis Offenbach, Hesse, 63303, Germany"
+    }
+  ],
+  "updated_at": "2025-10-19T00:16:20.881810+00:00",
+  "_kind": "geo_samples"
+}

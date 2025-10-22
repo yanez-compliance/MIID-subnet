@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Annemasse",
+  "geonameid": 3037538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 46.186342336923204,
+      "lon": 6.22931559458482,
+      "geoinfo": {
+        "display_name": "44, Rue du Brouaz, Vernand, Annemasse, Saint-Julien-en-Genevois, Upper Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 74100, France",
+        "road": "Rue du Brouaz",
+        "house_number": "44",
+        "neighbourhood": null,
+        "suburb": "Vernand",
+        "city_district": null,
+        "city": "Annemasse",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "74100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "44 Rue du Brouaz, Annemasse, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 46.18273005538869,
+      "lon": 6.267230037679212,
+      "geoinfo": {
+        "display_name": "Chemin de Charudenant, La Rape, Corly, Vétraz-Monthoux, Saint-Julien-en-Genevois, Upper Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 74100, France",
+        "road": "Chemin de Charudenant",
+        "house_number": null,
+        "neighbourhood": "La Rape",
+        "suburb": null,
+        "city_district": null,
+        "city": "Vétraz-Monthoux",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "74100",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "335, Chemin de Charudenant, La Rape, Corly, Vétraz-Monthoux, Saint-Julien-en-Genevois, Upper Savoy, Auvergne-Rhône-Alpes, Metropolitan France, 74100, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:03.849791+00:00",
+  "_kind": "geo_samples"
+}

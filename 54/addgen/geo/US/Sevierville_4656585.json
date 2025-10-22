@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Sevierville",
+  "geonameid": 4656585,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 35.87890031205195,
+      "lon": -83.5547364981757,
+      "geoinfo": {
+        "display_name": "694, Burridge Drive, Sevierville, Sevier County, East Tennessee, Tennessee, 37862, United States",
+        "road": "Burridge Drive",
+        "house_number": "694",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sevierville",
+        "state": "Tennessee",
+        "postcode": "37862",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "694 Burridge Drive, Sevierville, Tennessee, United States"
+    },
+    {
+      "lat": 35.87896648890428,
+      "lon": -83.59866596811231,
+      "geoinfo": {
+        "display_name": "Watson Lane, Sevierville, Sevier County, East Tennessee, Tennessee, 37862, United States",
+        "road": "Watson Lane",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sevierville",
+        "state": "Tennessee",
+        "postcode": "37862",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "991, Watson Lane, Sevierville, Sevier County, East Tennessee, Tennessee, 37862, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:31:36.998374+00:00",
+  "_kind": "geo_samples"
+}

@@ -1,0 +1,47 @@
+{
+  "country_code": "MX",
+  "country": "Mexico",
+  "city": "Ocoyoacac",
+  "geonameid": 3522445,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 19.276721330974997,
+      "lon": -99.48719666390807,
+      "geoinfo": {
+        "display_name": "Calle Paseo de la Cartuja, Parque Industrial Ocoyoacac, Benevento, San Antonio El Llanito, Ocoyoacac, State of Mexico, 52005, Mexico",
+        "road": "Calle Paseo de la Cartuja",
+        "house_number": null,
+        "neighbourhood": "Parque Industrial Ocoyoacac",
+        "suburb": null,
+        "city_district": null,
+        "city": "San Antonio El Llanito",
+        "state": "State of Mexico",
+        "postcode": "52005",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "Calle Paseo de la Cartuja, Ocoyoacac, State of Mexico, Mexico"
+    },
+    {
+      "lat": 19.258668826770926,
+      "lon": -99.44142422253569,
+      "geoinfo": {
+        "display_name": "Loma Bonita, Hacienda Texcalpa, Ocoyoacac, State of Mexico, 52755, Mexico",
+        "road": null,
+        "house_number": null,
+        "neighbourhood": "Loma Bonita",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ocoyoacac",
+        "state": "State of Mexico",
+        "postcode": "52755",
+        "country": "Mexico",
+        "country_code": "mx"
+      },
+      "address": "694, Loma Bonita, Ocoyoacac, 52755 State of Mexico, Mexico"
+    }
+  ],
+  "updated_at": "2025-10-19T06:10:11.478269+00:00",
+  "_kind": "geo_samples"
+}

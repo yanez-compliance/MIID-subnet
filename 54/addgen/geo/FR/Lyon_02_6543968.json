@@ -1,0 +1,47 @@
+{
+  "country_code": "FR",
+  "country": "France",
+  "city": "Lyon 02",
+  "geonameid": 6543968,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 45.740805954727996,
+      "lon": 4.805080348258884,
+      "geoinfo": {
+        "display_name": "Terrain de Sports Marius Bourrat, Avenue Maréchal Foch, Sainte-Foy-lès-Lyon, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69110, France",
+        "road": "Avenue Maréchal Foch",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Sainte-Foy-lès-Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69110",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Avenue Maréchal Foch, Lyon 02, Auvergne-Rhône-Alpes, France"
+    },
+    {
+      "lat": 45.77212309794183,
+      "lon": 4.799062368600868,
+      "geoinfo": {
+        "display_name": "Le Syndic Équitable, Avenue Joannès Masset, Château, Gorge de Loup, 9th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69009, France",
+        "road": "Avenue Joannès Masset",
+        "house_number": null,
+        "neighbourhood": "Château",
+        "suburb": "Gorge de Loup",
+        "city_district": null,
+        "city": "Lyon",
+        "state": "Auvergne-Rhône-Alpes",
+        "postcode": "69009",
+        "country": "France",
+        "country_code": "fr"
+      },
+      "address": "Le Syndic Équitable, Avenue Joannès Masset, Château, Gorge de Loup, 9th Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Metropolitan France, 69009, France"
+    }
+  ],
+  "updated_at": "2025-10-19T04:01:24.236593+00:00",
+  "_kind": "geo_samples"
+}

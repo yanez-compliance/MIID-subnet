@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Nutley",
+  "geonameid": 5102076,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 40.791246564319096,
+      "lon": -74.12906018753036,
+      "geoinfo": {
+        "display_name": "Ridge Road, North Arlington, Bergen County, New Jersey, 07031, United States",
+        "road": "Ridge Road",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "North Arlington",
+        "state": "New Jersey",
+        "postcode": "07031",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Ridge Road, Nutley, New Jersey, United States"
+    },
+    {
+      "lat": 40.844762519164085,
+      "lon": -74.13519836880978,
+      "geoinfo": {
+        "display_name": "57, Idaho Street, Passaic, Passaic County, New Jersey, 07055, United States",
+        "road": "Idaho Street",
+        "house_number": "57",
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Passaic",
+        "state": "New Jersey",
+        "postcode": "07055",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "57, Idaho Street, Passaic, Passaic County, New Jersey, 07055, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:34:54.226022+00:00",
+  "_kind": "geo_samples"
+}

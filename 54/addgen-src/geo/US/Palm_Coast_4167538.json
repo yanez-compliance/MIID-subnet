@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Palm Coast",
+  "geonameid": 4167538,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 29.546187931564432,
+      "lon": -81.20517467179506,
+      "geoinfo": {
+        "display_name": "Blaine Drive, Palm Coast, Flagler County, Florida, 32137, United States",
+        "road": "Blaine Drive",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": "Palm Coast",
+        "state": "Florida",
+        "postcode": "32137",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "Blaine Drive, Palm Coast, Florida, United States"
+    },
+    {
+      "lat": 29.567102652604543,
+      "lon": -81.17701419445679,
+      "geoinfo": {
+        "display_name": "Camino del Rey Parkway, Flagler County, Florida, 32137, United States",
+        "road": "Camino del Rey Parkway",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Florida",
+        "postcode": "32137",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "127, Camino del Rey Parkway, Flagler County, Florida, 32137, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T07:02:01.115602+00:00",
+  "_kind": "geo_samples"
+}

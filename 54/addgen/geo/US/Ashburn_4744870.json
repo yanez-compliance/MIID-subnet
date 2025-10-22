@@ -1,0 +1,47 @@
+{
+  "country_code": "US",
+  "country": "United States",
+  "city": "Ashburn",
+  "geonameid": 4744870,
+  "target_addresses": 1,
+  "samples": [
+    {
+      "lat": 39.04423596202848,
+      "lon": -77.45683404003364,
+      "geoinfo": {
+        "display_name": "20630, Hope Spring Terrace, Potomac Green, Ashburn, Loudoun County, Virginia, 20147, United States",
+        "road": "Hope Spring Terrace",
+        "house_number": "20630",
+        "neighbourhood": "Potomac Green",
+        "suburb": null,
+        "city_district": null,
+        "city": "Ashburn",
+        "state": "Virginia",
+        "postcode": "20147",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "20630 Hope Spring Terrace, Ashburn, Virginia, United States"
+    },
+    {
+      "lat": 39.071999919933624,
+      "lon": -77.51540986951595,
+      "geoinfo": {
+        "display_name": "Kittery Point, Loudoun County, Virginia, 20176, United States",
+        "road": "Kittery Point",
+        "house_number": null,
+        "neighbourhood": null,
+        "suburb": null,
+        "city_district": null,
+        "city": null,
+        "state": "Virginia",
+        "postcode": "20176",
+        "country": "United States",
+        "country_code": "us"
+      },
+      "address": "445, Kittery Point, Loudoun County, Virginia, 20176, United States"
+    }
+  ],
+  "updated_at": "2025-10-19T04:32:05.401322+00:00",
+  "_kind": "geo_samples"
+}
