@@ -212,7 +212,9 @@ def looks_like_address(address: str) -> bool:
         return False
         
     # Has at least two digit (street number)
-    number_groups = re.findall(r"\d+", address)
+    # Replace hyphens and semicolons with empty strings before counting numbers
+    address_for_number_count = address.replace('-', '').replace(';', '')
+    number_groups = re.findall(r"\d+", address_for_number_count)
     if len(number_groups) < 2:
         return False
 
@@ -293,7 +295,7 @@ COUNTRY_MAPPING = {
 }
 
 
-def extract_city_country(address: str) -> tuple:
+def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     """
     Extract city and country from an address.
     Country is always the last part.
@@ -310,6 +312,11 @@ def extract_city_country(address: str) -> tuple:
     Args:
         address: The address to extract from
         
+    Args:
+        address: The address to extract from
+        two_parts: If True, treat the last two comma-separated segments as the country
+                   (e.g., "congo, republic of the"). Defaults to False.
+
     Returns:
         Tuple of (city, country) - both strings, empty if not found
     """
@@ -321,16 +328,27 @@ def extract_city_country(address: str) -> tuple:
     parts = [p.strip() for p in address.split(",")]
     if len(parts) < 2:
         return "", ""
-    
-    country = parts[-1]
-    country = COUNTRY_MAPPING.get(country.lower(), country.lower())
-    
+
+    # Determine country. If two_parts is True, use the last two parts as the country;
+    # otherwise, use only the last part (original behavior).
+    used_two_parts_for_country = bool(two_parts)
+    if used_two_parts_for_country and len(parts) >= 2:
+        two_part_raw = f"{parts[-2]}, {parts[-1]}".lower()
+        country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+        country = two_part_raw
+    else:
+        last_part = parts[-1]
+        country_checking_name = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
+        country = last_part.lower()
+
     # If no country found, return empty
     if not country:
         return "", ""
 
     # Check each section from right to left (excluding the country)
-    for i in range(2, len(parts) + 1):
+    exclude_count = 2 if used_two_parts_for_country else 1
+    # Start from 2 when excluding one part (country), 3 when excluding two parts
+    for i in range(exclude_count + 1, len(parts) + 1):
         candidate_index = -i
         if abs(candidate_index) > len(parts):
             break
@@ -360,7 +378,7 @@ def extract_city_country(address: str) -> tuple:
                     continue
 
                 # Validate the city exists in the country
-                if city_in_country(city_candidate, country):
+                if city_in_country(city_candidate, country_checking_name):
                     return city_candidate, country
 
     return "", country
@@ -469,7 +487,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return seed_lower in gen_lower
     
     # Extract city and country from both addresses
-    gen_city, gen_country = extract_city_country(generated_address)
+    gen_city, gen_country = extract_city_country(generated_address, two_parts=(',' in seed_address))
     seed_city, seed_country = seed_address.lower(), seed_address.lower()
     
     # If no city was extracted from generated address, it's an error
@@ -486,10 +504,6 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     if not (city_match or country_match):
         return False
-    
-    # If we have both city and country, validate city is in country
-    if gen_city and gen_country:
-        return city_in_country(gen_city, gen_country)
     
     return True
 
@@ -2004,6 +2018,7 @@ def get_name_variation_rewards(
                 "missing_names": 0.0,
                 "insufficient_addresses": 0.0,
                 "insufficient_dob": 0.0,
+                "numbers_in_names": 0.0,
                 "total_penalty": 0.0
             },
             "completeness_multiplier": 1.0,
@@ -2210,8 +2225,23 @@ def get_name_variation_rewards(
         insufficient_dob_penalty = min(insufficient_dob_penalty, 0.1)  # Max 10% penalty
         miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
         
+        # Penalty for names with numbers (only if >40% have numbers)
+        names_with_numbers = 0
+        total_names = 0
+        
+        for name, vars_list in variations.items():
+            total_names += 1
+            for var in vars_list:
+                if len(var) > 0 and var[0] and any(char.isdigit() for char in var[0]):
+                    names_with_numbers += 1
+                    break  # Only count once per name
+        
+        # Only apply penalty if more than 40% of names have numbers
+        numbers_penalty = 0.2 if total_names > 0 and (names_with_numbers / total_names) > 0.4 else 0.0
+        miner_metrics["penalties"]["numbers_in_names"] = float(numbers_penalty)
+        
         # Calculate total penalty and completeness multiplier
-        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"])
+        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"] + miner_metrics["penalties"]["numbers_in_names"])
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
