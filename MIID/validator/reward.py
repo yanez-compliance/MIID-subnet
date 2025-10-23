@@ -2370,6 +2370,9 @@ def get_name_variation_rewards(
         # Grade address variations before final reward calculation
         start_time = time.time()
         address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics)
+        
+        bt.logging.info(address_grading_score)
+        
         miner_metrics["address_grading"] = address_grading_score
         end_time = time.time()
         bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
@@ -2453,7 +2456,7 @@ def get_name_variation_rewards(
         rewards, detailed_metrics = _calculate_similarity_and_penalties(
             responses, uids, processed_seed_names, detailed_metrics, rewards
         )
-        bt.logging.info(detailed_metrics)
+        # bt.logging.info(detailed_metrics)
     except Exception as e:
         bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
         bt.logging.warning("Using rewards without similarity penalties as fallback")
