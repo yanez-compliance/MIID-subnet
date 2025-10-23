@@ -144,6 +144,18 @@ def main():
                                 reverse=True)[:10]
         for i, (code, data) in enumerate(sorted_by_addrs, 1):
             print(f"{i:2}. {data['country_name']:<30} ({code}): {data['total_addresses']} addresses")
+        
+        print("\nCOUNTRIES WITH LESS THAN 20 ADDRESSES:")
+        print("-"*50)
+        countries_with_few_addresses = sorted(
+            [(code, data) for code, data in stats.items() if data['total_addresses'] < 20],
+            key=lambda x: x[1]['total_addresses']
+        )
+        if countries_with_few_addresses:
+            for code, data in countries_with_few_addresses:
+                print(f"{code:<6} {data['country_name']:<30} - {data['total_addresses']} addresses")
+        else:
+            print("No countries with less than 20 addresses found.")
 
 
 if __name__ == '__main__':

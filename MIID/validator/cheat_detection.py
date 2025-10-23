@@ -290,6 +290,7 @@ def detect_cheating_patterns(
             special_char_variations_count = 0
             total_variations_count = 0
             all_addresses = []
+            all_origin_addresses = []
             
             for name in variations:
                 name_variations = variations.get(name, [])
@@ -311,6 +312,10 @@ def detect_cheating_patterns(
                         re.sub(r'\d+-\d+|\d+', '', addr.strip().replace(" ", "").replace(",", "").replace("-", "").replace(";", "")).lower()
                         for addr in address_vars if addr and addr.strip()
                     ])
+                    all_origin_addresses.extend([
+                        addr
+                        for addr in address_vars if addr and addr.strip()
+                    ])
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -326,6 +331,9 @@ def detect_cheating_patterns(
                 unique_addresses = set(all_addresses)
                 duplicate_count = len(all_addresses) - len(unique_addresses)
                 if duplicate_count > 0:
+                    logging.warning(f"Duplicate addresses found for miner {i}: {duplicate_count}")
+                    # INSERT_YOUR_CODE
+                    logging.warning(f"Miner {i} has the following duplicate addresses: {set([all_origin_addresses[i] for i, addr in enumerate(all_addresses) if all_addresses.count(addr) > 1])}")
                     # Apply penalty based on duplicate ratio, normalized and capped at 0.2
                     duplicate_ratio = duplicate_count / len(all_addresses)
                     # Normalize: scale the ratio to 0-1 range, then scale to 0-0.2 range

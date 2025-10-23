@@ -1846,6 +1846,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             elif result == True:
                 nominatim_successful_calls += 1
             else:
+                bt.logging.warning(f"Nominatim API failed for address: {addr}")
                 nominatim_failed_calls += 1
             
             # Wait 1 second between API calls to prevent rate limiting

@@ -1,0 +1,21 @@
+{
+  "seed_addresses": [
+    "456 5th Ave, New York, NY 10018, United States",
+    "10 Downing Street, Westminster, London SW1A 2AA, United Kingdom"
+  ],
+  "variations": {
+    "John Smith": [
+      ["John Smith", "1990-01-01", "123 Broadway, New York, NY 10001, United States"],
+      ["John Smith", "1990-01-02", "789 Madison Ave, New York, NY 10021, United States"],
+      ["John Smith", "1990-01-03", "321 Park Ave, New York, NY 10022, United States"]
+    ],
+    "Jane Doe": [
+      ["Jane Doe", "1985-05-15", "1 Parliament Square, Westminster, London SW1P 3BD, United Kingdom"],
+      ["Jane Doe", "1985-05-16", "20 Whitehall, Westminster, London SW1A 2WH, United Kingdom"],
+      ["Jane Doe", "1985-05-17", "Horse Guards Road, Westminster, London SW1A 2AX, United Kingdom"]
+    ]
+  }
+}
+
+
+
