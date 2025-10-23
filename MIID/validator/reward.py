@@ -237,11 +237,11 @@ def looks_like_address(address: str) -> bool:
     
     return True
 
-def check_with_nominatim(address: str) -> bool:
+def check_with_nominatim(address: str, validator_uid: int, miner_uid: int) -> bool:
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
-        response = requests.get(url, params=params, headers={"User-Agent": "address-checker"}, timeout=5)
+        response = requests.get(url, params=params, headers={"User-Agent": f"SN54-uid-{miner_uid}-{validator_uid}"}, timeout=5)
         return len(response.json()) > 0
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
@@ -488,7 +488,9 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     # Extract city and country from both addresses
     gen_city, gen_country = extract_city_country(generated_address, two_parts=(',' in seed_address))
-    seed_city, seed_country = seed_address.lower(), seed_address.lower()
+    seed_address_lower = seed_address.lower()
+    seed_address_mapped = COUNTRY_MAPPING.get(seed_address.lower(), seed_address.lower())
+
     
     # If no city was extracted from generated address, it's an error
     if not gen_city:
@@ -499,10 +501,12 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Check if either city or country matches
-    city_match = gen_city and seed_city and gen_city == seed_city
-    country_match = gen_country and seed_country and gen_country == seed_country
+    city_match = gen_city and seed_address_lower and gen_city == seed_address_lower
+    country_match = gen_country and seed_address_lower and gen_country == seed_address_lower
+    mapped_match = gen_country and seed_address_mapped and gen_country == seed_address_mapped
+
     
-    if not (city_match or country_match):
+    if not (city_match or country_match or mapped_match):
         return False
     
     return True
@@ -1707,7 +1711,7 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
         "detailed_breakdown": detailed_breakdown
     }
 
-def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
+def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int) -> Dict[str, Any]:
     """Grade address variations - check all with heuristics, one random with API, and region validation."""
     if not seed_addresses or not any(seed_addresses):
         return {"overall_score": 1.0}
@@ -1842,7 +1846,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         
         # Try Nominatim API (up to 5 calls)
         for i, addr in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr)
+            result = check_with_nominatim(addr, validator_uid, miner_uid)
             api_attempts.append({
                 "address": addr,
                 "api": "nominatim",
@@ -1852,6 +1856,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             
             if result == "TIMEOUT":
                 nominatim_timeout_calls += 1
+                time.sleep(1.0)
             elif result == True:
                 nominatim_successful_calls += 1
             else:
@@ -1877,15 +1882,15 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     
     # Scoring based on individual API results
     if api_result == "FAILED":
-        base_score = 0.0  # Any failure = 0.0 score
+        base_score = 0.3  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
         # Calculate penalty: -0.2 per timeout
         timeout_penalty = total_timeouts * 0.2
-        base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+        base_score = max(0.3, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
-        base_score = 0.0  # Default fallback
+        base_score = 0.3  # Default fallback
     
     # Store API validation results
     address_breakdown["api_validation"] = {
@@ -2363,7 +2368,7 @@ def get_name_variation_rewards(
         
         # Grade address variations before final reward calculation
         start_time = time.time()
-        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics)
+        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid)
         miner_metrics["address_grading"] = address_grading_score
         end_time = time.time()
         bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
