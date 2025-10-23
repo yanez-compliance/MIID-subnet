@@ -241,7 +241,6 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int) -> bo
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
-        bt.logging.info(f"Checking with Nominatim: {address}, validator_uid: {validator_uid}, miner_uid: {miner_uid}")
         response = requests.get(url, params=params, headers={"User-Agent": f"SN54-uid-{miner_uid}-{validator_uid}"}, timeout=5)
         return len(response.json()) > 0
     except requests.exceptions.Timeout:
@@ -489,7 +488,9 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     # Extract city and country from both addresses
     gen_city, gen_country = extract_city_country(generated_address, two_parts=(',' in seed_address))
-    seed_city, seed_country = seed_address.lower(), seed_address.lower()
+    seed_address_lower = seed_address.lower()
+    seed_address_mapped = COUNTRY_MAPPING.get(seed_address.lower(), seed_address.lower())
+
     
     # If no city was extracted from generated address, it's an error
     if not gen_city:
@@ -500,10 +501,12 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Check if either city or country matches
-    city_match = gen_city and seed_city and gen_city == seed_city
-    country_match = gen_country and seed_country and gen_country == seed_country
+    city_match = gen_city and seed_address_lower and gen_city == seed_address_lower
+    country_match = gen_country and seed_address_lower and gen_country == seed_address_lower
+    mapped_match = gen_country and seed_address_mapped and gen_country == seed_address_mapped
+
     
-    if not (city_match or country_match):
+    if not (city_match or country_match or mapped_match):
         return False
     
     return True
@@ -1879,15 +1882,15 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     
     # Scoring based on individual API results
     if api_result == "FAILED":
-        base_score = 0.0  # Any failure = 0.0 score
+        base_score = 0.3  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
         # Calculate penalty: -0.2 per timeout
         timeout_penalty = total_timeouts * 0.2
-        base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+        base_score = max(0.3, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
-        base_score = 0.0  # Default fallback
+        base_score = 0.3  # Default fallback
     
     # Store API validation results
     address_breakdown["api_validation"] = {
