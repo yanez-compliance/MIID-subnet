@@ -113,6 +113,19 @@ def infer_country_code_from_seed(seed: str) -> Optional[str]:
                 return code
     return None
 
+
+def normalize_address(addr_str):
+    """Normalize address string by removing extra spaces and standardizing format"""
+    if not addr_str:
+        return ""
+    # Remove extra spaces, convert to lowercase, and standardize common separators
+    normalized = " ".join(addr_str.split()).lower()
+    # Replace common separators with spaces
+    normalized = normalized.replace(",", " ").replace(";", " ").replace("-", " ")
+    # Remove multiple spaces
+    normalized = " ".join(normalized.split())
+    return normalized
+            
 def _seed_key(seed: str) -> str:
     return (seed or "").strip().lower()
 
@@ -297,24 +310,26 @@ def allocate_for_seed(round_id: str, seed: str, per_seed: int) -> Tuple[str, Lis
             available = [a for a in pool_list if a not in used and seed.lower() in a.lower()]
         else:
             available = [a for a in pool_list if a not in used]
-            
+                                                                                                                                    
         if not available:
             msg = f"Pool exhausted for (round={round_id}, seed={seed!r}); prefetch/expand pool for {cc}."
             logger.warning(msg)
             return cc, [], True, msg
 
         # take up to per_seed
-        n = min(per_seed, len(available))
-        allocated = random.sample(available, n) if n > 0 else []
+
+        exhausted = len(available) < per_seed + per_seed/3
+        
+        allocated = random.sample(available, per_seed) if not exhausted else []    
+
         used.update(allocated)
         _mark_dirty()
 
-        exhausted = n < per_seed
         if exhausted:
             msg = (f"Insufficient pool for (round={round_id}, seed={seed!r}) in {cc}: "
-                   f"requested {per_seed}, served {n}, remaining 0.")
+                   f"requested {per_seed}, served {0}, remaining {len(available)}.")
             logger.warning(msg)
-            return cc, allocated, True, msg
+            return cc, [], True, msg
 
         return cc, allocated, False, None
 

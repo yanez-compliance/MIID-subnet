@@ -83,46 +83,52 @@ def normalize_address(address: str) -> str:
 # ============================================================================
 
 def looks_like_address(address: str) -> bool:
-    """Check if a string looks like a valid address."""
     address = address.strip().lower()
 
     # Keep all letters (Latin and non-Latin) and numbers
+    # Using a more compatible approach for Unicode characters
     address_len = re.sub(r'[^\w]', '', address.strip(), flags=re.UNICODE)
 
     if len(address_len) < 30:
-        logging.debug(f"Address has less than 30 characters: {address}")
         return False
     if len(address_len) > 300:  # maximum length check
+
         return False
 
-    # Count letters (both Latin and non-Latin)
+    # Count letters (both Latin and non-Latin) - using \w which includes Unicode letters
     letter_count = len(re.findall(r'[^\W\d]', address, flags=re.UNICODE))
     if letter_count < 20:
-        logging.debug(f"Address has less than 20 letters: {address}")
         return False
 
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
-        logging.debug(f"Address has no letters: {address}")
         return False
     if len(set(address)) < 5:  # all chars basically the same
-        logging.debug(f"Address has all same chars: {address}")
         return False
         
     # Has at least two digit (street number)
-    number_groups = re.findall(r"\d+", address)
+    # Replace hyphens and semicolons with empty strings before counting numbers
+    address_for_number_count = address.replace('-', '').replace(';', '')
+    number_groups = re.findall(r"\d+", address_for_number_count)
     if len(number_groups) < 2:
-        logging.debug(f"Address has less than 2 numbers: {address}")
         return False
 
     if address.count(",") < 2:
-        logging.debug(f"Address has less than 2 commas: {address}")
         return False
     
     # Check for special characters that should not be in addresses
     special_chars = ['`', ':', '%', '$', '@', '*', '^', '[', ']', '{', '}']
     if any(char in address for char in special_chars):
-        logging.debug(f"Address has special characters: {address}")
         return False
+    
+    # # Contains common address words or patterns
+    # common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "boulevard", "drive", "ln", "lane", "plaza", "city", "platz", "straße", "straße", "way", "place", "square", "allee", "allee", "gasse", "gasse"]
+    # # Also check for common patterns like "1-1-1" (Japanese addresses) or "Unter den" (German)
+    # has_common_word = any(word in address for word in common_words)
+    # has_address_pattern = re.search(r'\d+-\d+-\d+', address) or re.search(r'unter den|marienplatz|champs|place de', address)
+    
+    # if not (has_common_word or has_address_pattern):
+    #     return False
+    
     return True
 
 
