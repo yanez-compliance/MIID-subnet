@@ -1928,7 +1928,7 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     """    
     # Get initial quality scores from detailed metrics for thresholding
     quality_scores = np.array([
-        metrics.get('average_quality', 0.0) 
+        metrics.get('final_reward', 0.0) 
         for metrics in detailed_metrics
     ])
     
