@@ -416,6 +416,38 @@ def add_validator_args(cls, parser):
         default=False
     )
 
+    # --- Blended Ranking Reward System Arguments ---
+    parser.add_argument(
+        '--neuron.apply_ranking',
+        action='store_true',
+        help="If set, enables the blended ranking reward system with quality thresholds.",
+        default=True
+    )
+    parser.add_argument(
+        '--neuron.top_miner_cap',
+        type=int,
+        help="The maximum number of top miners to consider for ranking rewards.",
+        default=50
+    )
+    parser.add_argument(
+        '--neuron.quality_threshold',
+        type=float,
+        help="The minimum quality score a miner must achieve to be eligible for ranking rewards.",
+        default=0.6
+    )
+    parser.add_argument(
+        '--neuron.decay_rate',
+        type=float,
+        help="The decay rate for the exponential ranking reward curve.",
+        default=0.05
+    )
+    parser.add_argument(
+        '--neuron.blend_factor',
+        type=float,
+        help="The blend factor between rank-based reward and original score (e.g., 0.7 means 70% rank, 30% original score).",
+        default=0.7
+    )
+
 
 def config(cls):
     """
