@@ -334,23 +334,17 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     single_part_normalized = COUNTRY_MAPPING.get(last_part, last_part)
     
     # If two_parts flag is set, also try two-part country
+    country_checking_name = ''
     if two_parts and len(parts) >= 2:
         two_part_raw = f"{parts[-2]}, {parts[-1]}"
         two_part_normalized = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
-        
-        # Use two-part if it's different from single-part (i.e., mapping exists)
-        # Otherwise stick with single-part
-        if two_part_normalized != two_part_raw:
-            # We have a mapping for the two-part version, use it
-            country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
-            normalized_country = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+
+        if two_part_raw != two_part_normalized:
+            country_checking_name = two_part_normalized
+            normalized_country = two_part_normalized
             used_two_parts_for_country = True
-        else:
-            # No special mapping, just use single-part
-            country_checking_name = single_part_normalized
-            normalized_country = single_part_normalized
-            used_two_parts_for_country = False
-    else:
+
+    if country_checking_name == '':
         # Single-part country
         country_checking_name = single_part_normalized
         normalized_country = single_part_normalized
