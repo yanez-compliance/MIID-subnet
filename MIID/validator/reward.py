@@ -260,11 +260,9 @@ COUNTRY_MAPPING = {
     "cote d ivoire": "ivory coast",
     "côte d'ivoire": "ivory coast",
     "cote d'ivoire": "ivory coast",
-    "ivory coast": "ivory coast",
     
     # Gambia variations
     "the gambia": "gambia",
-    "gambia": "gambia",
     
     # Netherlands variations
     "netherlands": "the netherlands",
@@ -311,14 +309,12 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     
     Args:
         address: The address to extract from
-        
-    Args:
-        address: The address to extract from
         two_parts: If True, treat the last two comma-separated segments as the country
                    (e.g., "congo, republic of the"). Defaults to False.
 
     Returns:
         Tuple of (city, country) - both strings, empty if not found
+        The country is returned in its normalized form (mapped to standard name)
     """
     if not address:
         return "", ""
@@ -329,20 +325,39 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     if len(parts) < 2:
         return "", ""
 
-    # Determine country. If two_parts is True, use the last two parts as the country;
-    # otherwise, use only the last part (original behavior).
-    used_two_parts_for_country = bool(two_parts)
-    if used_two_parts_for_country and len(parts) >= 2:
-        two_part_raw = f"{parts[-2]}, {parts[-1]}".lower()
-        country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
-        country = two_part_raw
+    # Determine country and its normalized form
+    # The country_checking_name is used for geonames lookups
+    # The normalized_country is what we return
+    
+    # Always try single-part country first (just the last segment)
+    last_part = parts[-1]
+    single_part_normalized = COUNTRY_MAPPING.get(last_part, last_part)
+    
+    # If two_parts flag is set, also try two-part country
+    if two_parts and len(parts) >= 2:
+        two_part_raw = f"{parts[-2]}, {parts[-1]}"
+        two_part_normalized = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+        
+        # Use two-part if it's different from single-part (i.e., mapping exists)
+        # Otherwise stick with single-part
+        if two_part_normalized != two_part_raw:
+            # We have a mapping for the two-part version, use it
+            country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+            normalized_country = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+            used_two_parts_for_country = True
+        else:
+            # No special mapping, just use single-part
+            country_checking_name = single_part_normalized
+            normalized_country = single_part_normalized
+            used_two_parts_for_country = False
     else:
-        last_part = parts[-1]
-        country_checking_name = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
-        country = last_part.lower()
+        # Single-part country
+        country_checking_name = single_part_normalized
+        normalized_country = single_part_normalized
+        used_two_parts_for_country = False
 
     # If no country found, return empty
-    if not country:
+    if not normalized_country:
         return "", ""
 
     # Check each section from right to left (excluding the country)
@@ -379,9 +394,9 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
 
                 # Validate the city exists in the country
                 if city_in_country(city_candidate, country_checking_name):
-                    return city_candidate, country
+                    return city_candidate, normalized_country
 
-    return "", country
+    return "", normalized_country
 
 # Global cache for geonames data to avoid reloading
 _geonames_cache = None
