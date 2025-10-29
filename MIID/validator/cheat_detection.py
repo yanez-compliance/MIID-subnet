@@ -308,7 +308,7 @@ def detect_cheating_patterns(
                     # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                     address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
                     all_addresses.extend([
-                        ''.join(sorted(re.sub(r'\d+-\d+|\d+', '', addr.strip().replace(" ", "").replace(",", "").replace("-", "").replace(";", "").replace(".", "")).lower()))
+                        ''.join(sorted(re.findall(r'[^\W\d]', addr, flags=re.UNICODE))).lower()
                         for addr in address_vars if addr and addr.strip()
                     ])
 
@@ -354,9 +354,9 @@ def detect_cheating_patterns(
                 
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                # Normalize addresses for comparison (remove spaces, commas, convert to lowercase, sort characters)
+                # Normalize addresses for comparison - keep only letters, sorted
                 normalized_addresses = [
-                    ''.join(sorted(re.sub(r'\d+', '', addr).strip().replace(" ", "").replace(",", "").replace(".", "").lower()))
+                    ''.join(sorted(re.findall(r'[^\W\d]', addr, flags=re.UNICODE))).lower()
                     for addr in address_list if addr and addr.strip()
                 ]
                 miner_address_sets[name] = set(normalized_addresses)
