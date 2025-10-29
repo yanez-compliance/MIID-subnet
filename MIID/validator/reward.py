@@ -477,7 +477,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Special handling for disputed regions not in geonames
-    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara"]
+    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara", "western saraha"]
     
     # Check if seed address is one of the special regions
     seed_lower = seed_address.lower()
