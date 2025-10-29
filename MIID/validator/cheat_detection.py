@@ -4,7 +4,6 @@ import logging
 from typing import Dict, List, Set, Tuple, Any
 from pathlib import Path
 import numpy as np
-from difflib import SequenceMatcher
 
 
 _LEET_MAP = str.maketrans({
@@ -309,7 +308,7 @@ def detect_cheating_patterns(
                     # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                     address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
                     all_addresses.extend([
-                        ''.join(sorted(re.findall(r'[^\W\d]', addr, flags=re.UNICODE))).lower()
+                        ''.join(sorted(re.sub(r'\d+-\d+|\d+', '', addr.strip().replace(" ", "").replace(",", "").replace("-", "").replace(";", "").replace(".", "")).lower()))
                         for addr in address_vars if addr and addr.strip()
                     ])
 
@@ -355,9 +354,9 @@ def detect_cheating_patterns(
                 
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                # Normalize addresses for comparison - keep only letters, sorted
+                # Normalize addresses for comparison (remove spaces, commas, convert to lowercase, sort characters)
                 normalized_addresses = [
-                    ''.join(sorted(re.findall(r'[^\W\d]', addr, flags=re.UNICODE))).lower()
+                    ''.join(sorted(re.sub(r'\d+', '', addr).strip().replace(" ", "").replace(",", "").replace(".", "").lower()))
                     for addr in address_list if addr and addr.strip()
                 ]
                 miner_address_sets[name] = set(normalized_addresses)
@@ -482,31 +481,13 @@ def detect_cheating_patterns(
                 if not addresses1 or not addresses2:
                     continue
                 
-                # Calculate sequence similarity between addresses (without character sorting)
-                # This is better for catching translated addresses that only differ slightly
-                max_similarity = 0.0
-                for addr1 in addresses1:
-                    for addr2 in addresses2:
-                        # Use difflib for character sequence similarity
-                        similarity = SequenceMatcher(None, addr1, addr2).ratio()
-                        max_similarity = max(max_similarity, similarity)
-                
-                # Also calculate traditional overlap and jaccard as fallback
+                # Calculate overlap and jaccard for addresses
                 overlap = overlap_coefficient(addresses1, addresses2)
                 jac = jaccard(addresses1, addresses2)
                 
-                # If addresses are very similar (either by sequence or exact matching), apply penalty
-                # Lower thresholds since we're now using sequence similarity
-                if max_similarity > 0.85 or overlap > 0.6 or jac > 0.5:
-                    # Scale penalty based on similarity - use the highest metric
-                    base_similarity = max(max_similarity, overlap, jac)
-                    if max_similarity > 0.85:
-                        # Strong penalty for high sequence similarity
-                        penalty = min(0.6, base_similarity * 0.7)
-                    else:
-                        # Moderate penalty for exact matches
-                        penalty = min(0.4, base_similarity * 0.5)
-                    
+                # If addresses are too similar, apply penalty
+                if overlap > 0.8 or jac > 0.7:
+                    penalty = min(0.6, max(overlap, jac) * 0.8)  # Scale penalty based on similarity
                     address_duplication_penalties[idx1] = max(address_duplication_penalties[idx1], penalty)
                     address_duplication_penalties[idx2] = max(address_duplication_penalties[idx2], penalty)
 
