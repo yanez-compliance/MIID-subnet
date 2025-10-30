@@ -618,15 +618,15 @@ async def forward(self):
     # --- FINISH WANDB RUN AFTER EACH FORWARD PASS ---
     # Finish the wandb run after weights are set and logged (unless wandb is disabled)
     if self.wandb_run and not wandb_disabled:
-        # Completely skip finishing wandb runs to avoid potential hangs
-        bt.logging.warning("Skipping wandb run.finish(); performing cleanup and dropping reference")
-        # Attempt to clean up any existing wandb run folders even if we didn't finish
+        bt.logging.info("Finishing wandb run after completing validation cycle")
         try:
+            self.wandb_run.finish()
+            # Clean up all wandb run folders after finishing
             self.cleanup_all_wandb_runs()
         except Exception as e:
-            bt.logging.error(f"Error during wandb cleanup: {e}")
-        # Ensure we drop the reference so a new run can start next cycle
-        self.wandb_run = None
+            bt.logging.error(f"Error finishing wandb run: {e}")
+        finally:
+            self.wandb_run = None
     # --- END WANDB FINISH ---
     
     # 10) Set weights and enforce min epoch time
