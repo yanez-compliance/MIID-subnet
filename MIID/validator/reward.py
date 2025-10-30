@@ -260,11 +260,9 @@ COUNTRY_MAPPING = {
     "cote d ivoire": "ivory coast",
     "côte d'ivoire": "ivory coast",
     "cote d'ivoire": "ivory coast",
-    "ivory coast": "ivory coast",
     
     # Gambia variations
     "the gambia": "gambia",
-    "gambia": "gambia",
     
     # Netherlands variations
     "netherlands": "the netherlands",
@@ -311,14 +309,12 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     
     Args:
         address: The address to extract from
-        
-    Args:
-        address: The address to extract from
         two_parts: If True, treat the last two comma-separated segments as the country
                    (e.g., "congo, republic of the"). Defaults to False.
 
     Returns:
         Tuple of (city, country) - both strings, empty if not found
+        The country is returned in its normalized form (mapped to standard name)
     """
     if not address:
         return "", ""
@@ -329,20 +325,33 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     if len(parts) < 2:
         return "", ""
 
-    # Determine country. If two_parts is True, use the last two parts as the country;
-    # otherwise, use only the last part (original behavior).
-    used_two_parts_for_country = bool(two_parts)
-    if used_two_parts_for_country and len(parts) >= 2:
-        two_part_raw = f"{parts[-2]}, {parts[-1]}".lower()
-        country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
-        country = two_part_raw
-    else:
-        last_part = parts[-1]
-        country_checking_name = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
-        country = last_part.lower()
+    # Determine country and its normalized form
+    # The country_checking_name is used for geonames lookups
+    # The normalized_country is what we return
+    
+    # Always try single-part country first (just the last segment)
+    last_part = parts[-1]
+    single_part_normalized = COUNTRY_MAPPING.get(last_part, last_part)
+    
+    # If two_parts flag is set, also try two-part country
+    country_checking_name = ''
+    if two_parts and len(parts) >= 2:
+        two_part_raw = f"{parts[-2]}, {parts[-1]}"
+        two_part_normalized = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+
+        if two_part_raw != two_part_normalized:
+            country_checking_name = two_part_normalized
+            normalized_country = two_part_normalized
+            used_two_parts_for_country = True
+
+    if country_checking_name == '':
+        # Single-part country
+        country_checking_name = single_part_normalized
+        normalized_country = single_part_normalized
+        used_two_parts_for_country = False
 
     # If no country found, return empty
-    if not country:
+    if not normalized_country:
         return "", ""
 
     # Check each section from right to left (excluding the country)
@@ -379,9 +388,9 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
 
                 # Validate the city exists in the country
                 if city_in_country(city_candidate, country_checking_name):
-                    return city_candidate, country
+                    return city_candidate, normalized_country
 
-    return "", country
+    return "", normalized_country
 
 # Global cache for geonames data to avoid reloading
 _geonames_cache = None
@@ -477,7 +486,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Special handling for disputed regions not in geonames
-    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara"]
+    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara", 'western sahara']
     
     # Check if seed address is one of the special regions
     seed_lower = seed_address.lower()
@@ -1884,9 +1893,16 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     if api_result == "FAILED":
         base_score = 0.3  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
-        # Calculate penalty: -0.2 per timeout
-        timeout_penalty = total_timeouts * 0.2
-        base_score = max(0.3, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+        # Updated timeout scoring rules:
+        # - 3 or fewer timeouts (and no failures) => 1.0
+        # - 4 timeouts => 0.6
+        # - 5 or more timeouts => 0.3
+        if total_timeouts <= 3:
+            base_score = 1.0
+        elif total_timeouts == 4:
+            base_score = 0.6
+        else:
+            base_score = 0.3
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
@@ -2106,6 +2122,11 @@ def get_name_variation_rewards(
     end_time = time.time()
     bt.logging.info(f"Transliteration complete in {end_time - start_time:.2f} seconds")
     bt.logging.info(f"Transliteration complete. Transliterated names: {transliterated_seed_names}")
+    
+    # Exponential backoff sleep between miner gradings
+    _sleep_time = 0.05  # start at 50ms
+    _sleep_growth = 1.02
+    _sleep_cap = 3.0
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
@@ -2531,6 +2552,9 @@ def get_name_variation_rewards(
         bt.logging.info(f"Miner {uid} Address score: {miner_metrics.get('address_grading', {}).get('overall_score', 0.0)}")
         bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
+        # backoff sleep before grading next miner
+        time.sleep(_sleep_time)
+        _sleep_time = min(_sleep_cap, _sleep_time * _sleep_growth)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
     # Process seed names for cheating detection using pre-transliterated names
