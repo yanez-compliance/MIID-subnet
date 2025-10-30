@@ -307,10 +307,17 @@ def detect_cheating_patterns(
                     
                     # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                     address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                    all_addresses.extend([
-                        ''.join(sorted(re.sub(r'\d+-\d+|\d+', '', addr.strip().replace(" ", "").replace(",", "").replace("-", "").replace(";", "").replace(".", "")).lower()))
-                        for addr in address_vars if addr and addr.strip()
-                    ])
+                    # Normalize addresses with explicit loop and word de-duplication
+                    for addr in address_vars:
+                        if not addr or not addr.strip():
+                            continue
+                        cleaned = addr.replace(",", " ").lower()
+                        parts = [p for p in cleaned.split(" ") if p]
+                        unique_words = set(parts)
+                        dedup_text = " ".join(unique_words)
+                        letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+                        normalized = ''.join(sorted(letters)).lower()
+                        all_addresses.append(normalized)
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -354,11 +361,18 @@ def detect_cheating_patterns(
                 
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                # Normalize addresses for comparison (remove spaces, commas, convert to lowercase, sort characters)
-                normalized_addresses = [
-                    ''.join(sorted(re.sub(r'\d+', '', addr).strip().replace(" ", "").replace(",", "").replace(".", "").lower()))
-                    for addr in address_list if addr and addr.strip()
-                ]
+                # Normalize addresses for comparison with explicit loop and word de-duplication
+                normalized_addresses: List[str] = []
+                for addr in address_list:
+                    if not addr or not addr.strip():
+                        continue
+                    cleaned = addr.replace(",", " ").lower()
+                    parts = [p for p in cleaned.split(" ") if p]
+                    unique_words = set(parts)
+                    dedup_text = " ".join(unique_words)
+                    letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+                    normalized = ''.join(sorted(letters)).lower()
+                    normalized_addresses.append(normalized)
                 miner_address_sets[name] = set(normalized_addresses)
 
         if not has_any_variations:

@@ -310,6 +310,9 @@ def is_all_spaces_removed(original: str, variation: str) -> bool:
 
 def is_letter_duplicated(original: str, variation: str) -> bool:
     """Check if a letter is duplicated"""
+    original = original.lower()
+    variation = variation.lower()
+
     if len(variation) != len(original) + 1:
         return False
     
