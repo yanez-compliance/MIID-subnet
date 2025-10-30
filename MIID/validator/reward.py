@@ -1893,9 +1893,16 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     if api_result == "FAILED":
         base_score = 0.3  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
-        # Calculate penalty: -0.2 per timeout
-        timeout_penalty = total_timeouts * 0.2
-        base_score = max(0.3, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+        # Updated timeout scoring rules:
+        # - 3 or fewer timeouts (and no failures) => 1.0
+        # - 4 timeouts => 0.6
+        # - 5 or more timeouts => 0.3
+        if total_timeouts <= 3:
+            base_score = 1.0
+        elif total_timeouts == 4:
+            base_score = 0.6
+        else:
+            base_score = 0.3
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
@@ -2115,6 +2122,11 @@ def get_name_variation_rewards(
     end_time = time.time()
     bt.logging.info(f"Transliteration complete in {end_time - start_time:.2f} seconds")
     bt.logging.info(f"Transliteration complete. Transliterated names: {transliterated_seed_names}")
+    
+    # Exponential backoff sleep between miner gradings
+    _sleep_time = 0.05  # start at 50ms
+    _sleep_growth = 1.02
+    _sleep_cap = 3.0
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
@@ -2540,6 +2552,9 @@ def get_name_variation_rewards(
         bt.logging.info(f"Miner {uid} Address score: {miner_metrics.get('address_grading', {}).get('overall_score', 0.0)}")
         bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
+        # backoff sleep before grading next miner
+        time.sleep(_sleep_time)
+        _sleep_time = min(_sleep_cap, _sleep_time * _sleep_growth)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
     # Process seed names for cheating detection using pre-transliterated names
