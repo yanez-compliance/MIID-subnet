@@ -316,6 +316,7 @@ def detect_cheating_patterns(
                         unique_words = set(parts)
                         dedup_text = " ".join(unique_words)
                         letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+                        letters = [c for c in letters if c not in ['\u02BB', '\u02BC']]
                         normalized = ''.join(sorted(letters)).lower()
                         all_addresses.append(normalized)
 
