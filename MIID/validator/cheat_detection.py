@@ -1,9 +1,11 @@
 import re
 import json
 import logging
+import unicodedata
 from typing import Dict, List, Set, Tuple, Any
 from pathlib import Path
 import numpy as np
+from unidecode import unidecode
 
 
 _LEET_MAP = str.maketrans({
@@ -75,6 +77,53 @@ def normalize_variation(text: str, aggressive: bool = True) -> str:
         normalized = normalized.translate(_LEET_MAP)
         # Remove any lingering non-letters
         normalized = re.sub(r"[^a-z]", "", normalized)
+    return normalized
+
+
+def normalize_address_for_deduplication(addr: str) -> str:
+    """Normalize address using Nominatim-style normalization + transliteration + deduplication logic.
+    
+    This combines:
+    1. Nominatim-style Unicode normalization (NFKD) and diacritic removal
+    2. Transliteration of all non-ASCII characters to ASCII (using unidecode)
+    3. Existing deduplication logic (unique words, sorted letters)
+    
+    This prevents different transliterations/translations of the same address
+    from bypassing duplicate detection by converting all scripts to ASCII.
+    """
+    if not addr or not addr.strip():
+        return ""
+    
+    # Step 1: Apply Nominatim-style normalization (NFKD + diacritic removal)
+    # Unicode normalization (NFKD)
+    text = unicodedata.normalize("NFKD", addr)
+    # Remove diacritics
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    # Lowercase
+    text = text.lower()
+    # Replace punctuation and symbols with space (like Nominatim)
+    text = re.sub(r"[-:,.;!?(){}\[\]\"'""''/\\|*_=+<>@#^&]", " ", text)
+    # Collapse whitespace
+    text = re.sub(r"\s+", " ", text)
+    # Trim
+    text = text.strip(" -:")
+    
+    # Step 2: Transliterate all non-ASCII characters to ASCII
+    # This converts Arabic, Cyrillic, Chinese, etc. to their ASCII equivalents
+    text = unidecode(text)
+    
+    # Step 3: Apply existing deduplication logic
+    # Replace commas with spaces (if any remain)
+    cleaned = text.replace(",", " ")
+    parts = [p for p in cleaned.split(" ") if p]
+    unique_words = set(parts)
+    dedup_text = " ".join(unique_words)
+    # Extract letters (non-word, non-digit), excluding specific Unicode chars and lowercase
+    letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+    letters = [c.lower() for c in letters if c not in ['\u02BB', '\u02BC']]
+    # Sort and join
+    normalized = ''.join(sorted(letters))
+    
     return normalized
 
 
@@ -307,17 +356,11 @@ def detect_cheating_patterns(
                     
                     # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                     address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                    # Normalize addresses with explicit loop and word de-duplication
+                    # Normalize addresses using Nominatim-style normalization + deduplication
                     for addr in address_vars:
-                        if not addr or not addr.strip():
-                            continue
-                        cleaned = addr.replace(",", " ").lower()
-                        parts = [p for p in cleaned.split(" ") if p]
-                        unique_words = set(parts)
-                        dedup_text = " ".join(unique_words)
-                        letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
-                        normalized = ''.join(sorted(letters)).lower()
-                        all_addresses.append(normalized)
+                        normalized = normalize_address_for_deduplication(addr)
+                        if normalized:
+                            all_addresses.append(normalized)
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -361,18 +404,12 @@ def detect_cheating_patterns(
                 
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                # Normalize addresses for comparison with explicit loop and word de-duplication
+                # Normalize addresses using Nominatim-style normalization + deduplication
                 normalized_addresses: List[str] = []
                 for addr in address_list:
-                    if not addr or not addr.strip():
-                        continue
-                    cleaned = addr.replace(",", " ").lower()
-                    parts = [p for p in cleaned.split(" ") if p]
-                    unique_words = set(parts)
-                    dedup_text = " ".join(unique_words)
-                    letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
-                    normalized = ''.join(sorted(letters)).lower()
-                    normalized_addresses.append(normalized)
+                    normalized = normalize_address_for_deduplication(addr)
+                    if normalized:
+                        normalized_addresses.append(normalized)
                 miner_address_sets[name] = set(normalized_addresses)
 
         if not has_any_variations:
