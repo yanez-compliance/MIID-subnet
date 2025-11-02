@@ -222,7 +222,7 @@ def looks_like_address(address: str) -> bool:
         return False
     
     # Check for special characters that should not be in addresses
-    special_chars = ['`', ':', '%', '$', '@', '*', '^', '[', ']', '{', '}']
+    special_chars = ['`', ':', '%', '$', '@', '*', '^', '[', ']', '{', '}', '_', '«', '»']
     if any(char in address for char in special_chars):
         return False
     
