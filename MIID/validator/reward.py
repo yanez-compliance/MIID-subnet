@@ -1932,7 +1932,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     }
 
 
-def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
+def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float, burn_uid: int) -> Tuple[np.ndarray, np.ndarray, List[Dict], bool]:
     """
     Applies a blended ranking model with a quality threshold.
     1. Ranks all miners based on their initial reward scores.
@@ -1941,6 +1941,9 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     4. Re-ranks the final qualified group and calculates an exponential decay reward.
     5. Blends the rank-based reward with the original reward score.
     6. Miners who do not qualify receive a reward of 0.
+    
+    Args:
+        burn_uid: UID to receive burned emissions (from config)
     """    
     # Get initial quality scores from detailed metrics for thresholding
     quality_scores = np.array([
@@ -1995,14 +1998,14 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
             detailed_metrics[qualified_idx]['ranking_info']['final_blended_reward'] = float(blended_rewards[idx])
         
         bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
-        return final_rewards, uids, detailed_metrics
+        # Return False to indicate 100% burn did not occur (miners qualified)
+        return final_rewards, uids, detailed_metrics, False
     else:
         # No miners qualified - burn all emissions
         bt.logging.warning("🔥 BURN EVENT: No miners qualified after applying top cap and quality threshold")
-        bt.logging.warning(f"All emissions will be burned to UID 59")
+        bt.logging.warning(f"All emissions will be burned to UID {burn_uid}")
         
         # Extend arrays to include burn UID
-        burn_uid = 59
         extended_uids = np.append(uids, burn_uid)
         extended_rewards = np.append(final_rewards, 1.0)  # All zeros except burn UID gets 1.0
         
@@ -2014,6 +2017,7 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
             'similarity_penalty': 0.0,
             'post_penalty_reward': 1.0,
             'is_burn': True,
+            'burn_type': '100_percent',  # Indicates 100% burn due to no qualified miners
             'ranking_info': {
                 'initial_reward': 0.0,
                 'global_rank': -1,  # Special rank for burn
@@ -2026,7 +2030,8 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
         }
         detailed_metrics.append(burn_metrics)
         
-        return extended_rewards, extended_uids, detailed_metrics
+        # Return True to indicate 100% burn occurred (no miners qualified)
+        return extended_rewards, extended_uids, detailed_metrics, True
 
 
 def get_name_variation_rewards(
@@ -2579,10 +2584,16 @@ def get_name_variation_rewards(
         # Keep the original rewards without applying similarity penalties
         # detailed_metrics would remain as calculated before the penalty step
     
+    # Get burn configuration from config with defaults
+    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.40)
+    burn_uid = getattr(self.config.neuron, 'burn_uid', 59)
+    keep_fraction = 1.0 - burn_fraction
+    
     # Apply the blended ranking and quality threshold based on the validator's config.
+    is_100_percent_burn = False
     if self.config.neuron.apply_ranking:
         bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
-        rewards, uids, detailed_metrics = _apply_blended_rank_cap_with_quality(
+        rewards, uids, detailed_metrics, is_100_percent_burn = _apply_blended_rank_cap_with_quality(
             rewards,
             detailed_metrics,
             uids,
@@ -2590,14 +2601,85 @@ def get_name_variation_rewards(
             quality_threshold=self.config.neuron.quality_threshold,
             decay_rate=self.config.neuron.decay_rate,
             blend_factor=self.config.neuron.blend_factor,
+            burn_uid=burn_uid,
         )
+
+    # Apply configured emission burn if 100% burn did not occur (miners qualified)
+    if not is_100_percent_burn:
+        # Check if burn UID is already in the array (shouldn't happen, but safety check)
+        if burn_uid not in uids:
+            # Calculate total reward sum for rescaling
+            total_reward_sum = np.sum(rewards)
+            
+            if total_reward_sum > 0:
+                # Rescale miner rewards to keep_fraction (default 60%)
+                # This ensures miners receive keep_fraction of emissions, with burn_fraction going to burn
+                rescale_factor = keep_fraction / total_reward_sum
+                rewards = rewards * rescale_factor
+                
+                # Add burn UID with configured burn_fraction weight (default 40%)
+                uids = np.append(uids, burn_uid)
+                rewards = np.append(rewards, burn_fraction)
+                
+                # Log the burn event
+                bt.logging.info(f"🔥 Applied {burn_fraction*100:.1f}% emission burn: {burn_fraction*100:.1f}% to UID {burn_uid}, {keep_fraction*100:.1f}% to miners")
+                
+                # Add burn metrics to detailed_metrics for tracking
+                burn_metrics = {
+                    'uid': burn_uid,
+                    'variations': {},
+                    'average_quality': 0.0,
+                    'similarity_penalty': 0.0,
+                    'post_penalty_reward': burn_fraction,
+                    'is_burn': True,
+                    'burn_type': f'{int(burn_fraction*100)}_percent',  # Indicates configured burn percentage
+                    'ranking_info': {
+                        'initial_reward': 0.0,
+                        'global_rank': -1,  # Special rank for burn
+                        'within_top_cap': False,
+                        'quality_score': 0.0,
+                        'meets_quality_threshold': False,
+                        'is_qualified_for_ranking': False,
+                        'final_blended_reward': burn_fraction
+                    }
+                }
+                detailed_metrics.append(burn_metrics)
+            else:
+                # Edge case: all rewards are zero, still apply burn structure
+                bt.logging.warning(f"All miner rewards are zero, but applying {burn_fraction*100:.1f}% burn structure")
+                uids = np.append(uids, burn_uid)
+                rewards = np.append(rewards, burn_fraction)
+                
+                burn_metrics = {
+                    'uid': burn_uid,
+                    'variations': {},
+                    'average_quality': 0.0,
+                    'similarity_penalty': 0.0,
+                    'post_penalty_reward': burn_fraction,
+                    'is_burn': True,
+                    'burn_type': f'{int(burn_fraction*100)}_percent',
+                    'ranking_info': {
+                        'initial_reward': 0.0,
+                        'global_rank': -1,
+                        'within_top_cap': False,
+                        'quality_score': 0.0,
+                        'meets_quality_threshold': False,
+                        'is_qualified_for_ranking': False,
+                        'final_blended_reward': burn_fraction
+                    }
+                }
+                detailed_metrics.append(burn_metrics)
+        else:
+            bt.logging.warning(f"Burn UID {burn_uid} already present in uids array, skipping {burn_fraction*100:.1f}% burn application")
+    else:
+        bt.logging.info("100% burn occurred (no miners qualified), skipping configured burn application")
 
     # Final verification: ensure rewards array length matches UIDs length
     if len(rewards) != len(uids):
         bt.logging.error(f"CRITICAL: Final rewards length ({len(rewards)}) does not match UIDs length ({len(uids)})")
         raise ValueError(f"Final length mismatch: rewards={len(rewards)}, uids={len(uids)}")
     
-    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} miners")
+    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} UIDs (including burn)")
     bt.logging.debug(f"Final rewards: {rewards}")
     bt.logging.debug(f"Final UIDs: {uids}")
     

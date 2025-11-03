@@ -447,6 +447,20 @@ def add_validator_args(cls, parser):
         help="The blend factor between rank-based reward and original score (e.g., 0.7 means 70% rank, 30% original score).",
         default=0.7
     )
+    
+    # --- Emission Burn Configuration ---
+    parser.add_argument(
+        '--neuron.burn_fraction',
+        type=float,
+        help="Fraction of emissions to burn to the burn UID when miners qualify (default: 0.40 = 40%).",
+        default=0.40
+    )
+    parser.add_argument(
+        '--neuron.burn_uid',
+        type=int,
+        help="UID to receive burned emissions (default: 59).",
+        default=59
+    )
 
 
 def config(cls):
