@@ -2046,7 +2046,7 @@ def get_name_variation_rewards(
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
     rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
-) -> Tuple[np.ndarray, List[Dict]]:
+) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
     Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
     
