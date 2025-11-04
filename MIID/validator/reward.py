@@ -237,11 +237,25 @@ def looks_like_address(address: str) -> bool:
     
     return True
 
-def check_with_nominatim(address: str, validator_uid: int, miner_uid: int) -> bool:
+def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str) -> bool:
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
-        response = requests.get(url, params=params, headers={"User-Agent": f"SN54-uid-{miner_uid}-{validator_uid}"}, timeout=5)
+        
+        # Create a unique User-Agent by mixing seed name, country, and UIDs
+        # Extract country from seed address
+        _, country = extract_city_country(seed_address)
+        # Use first word of country if available, otherwise use first word from last part of address
+        if country:
+            country_part = country.split()[0].lower()
+        else:
+            country_part = seed_address.split(",")[-1].strip().split()[0].lower()
+        # Clean seed name - take first name if multiple words
+        name_part = seed_name.split()[0].lower() if seed_name else "unknown"
+        
+        user_agent = f"Identity Valid - {name_part}-{country_part} m-{miner_uid} v-{validator_uid}"
+        
+        response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
@@ -1759,7 +1773,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     # Process each name and validate addresses (do the work once)
     heuristic_perfect = True
     region_matches = 0
-    api_validated_addresses = []
+    api_validated_addresses = []  # Will store tuples of (addr, seed_addr, seed_name)
     
     for name_idx, name in enumerate(variations.keys()):
         if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_addresses):
@@ -1777,11 +1791,12 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         
         # Store validation results for each address (do the work once)
         validation_results = []
+        seed_addr = seed_addresses[name_idx]
         for i, addr in enumerate(address_variations):
             if not addr or not addr.strip():
                 validation_results.append({
                     "address": addr,
-                    "seed_address": seed_addresses[name_idx],
+                    "seed_address": seed_addr,
                     "looks_like_address": False,
                     "region_match": False,
                     "passed_validation": False,
@@ -1796,7 +1811,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             # Step 2: Check if country or city matches seed
             region_match = False
             if looks_like:
-                region_match = validate_address_region(addr, seed_addresses[name_idx])
+                region_match = validate_address_region(addr, seed_addr)
             
             # Track validation results
             passed_validation = looks_like and region_match
@@ -1804,7 +1819,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 heuristic_perfect = False
             
             if passed_validation:
-                api_validated_addresses.append(addr)
+                # Store address, seed address, and seed name (name is the key from variations)
+                api_validated_addresses.append((addr, seed_addr, name))
                 region_matches += 1
             
             validation_results.append({
@@ -1854,8 +1870,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         nominatim_addresses = chosen_addresses
         
         # Try Nominatim API (up to 5 calls)
-        for i, addr in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr, validator_uid, miner_uid)
+        for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
+            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name)
             api_attempts.append({
                 "address": addr,
                 "api": "nominatim",
