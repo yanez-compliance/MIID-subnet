@@ -21,6 +21,7 @@ import typing
 import bittensor as bt
 import json
 from typing import List, Dict, Optional
+from typing_extensions import TypedDict
 
 # TODO(developer): Rewrite with your protocol definition.
 
@@ -65,13 +66,13 @@ class IdentitySynapse(bt.Synapse):
     
     
     # TypedDicts for UAV structure
-    class UAVData(typing.TypedDict):
+    class UAVData(TypedDict):
         address: str
         label: str
         latitude: typing.Optional[float]
         longitude: typing.Optional[float]
 
-    class SeedData(typing.TypedDict):
+    class SeedData(TypedDict):
         variations: List[List[str]]
         uav: 'IdentitySynapse.UAVData'
 
