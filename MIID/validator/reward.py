@@ -260,7 +260,21 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
-    except:
+    except requests.exceptions.RequestException as e:
+        bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
+        return False
+    except ValueError as e:
+        error_msg = str(e)
+        # Check if it's an encoding error (like latin-1 codec issues)
+        if "codec" in error_msg.lower() and "encode" in error_msg.lower():
+            bt.logging.warning(f"Encoding error for address '{address}' (treating as timeout): {error_msg}")
+            return "TIMEOUT"
+        else:
+            bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
+            return False
+    except Exception as e:
+        bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
+        bt.logging.error(f"Traceback: {traceback.format_exc()}")
         return False
 
 # Global country name mapping to handle variations between miner submissions and geonames data
@@ -1862,14 +1876,14 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     total_calls = 0
     
     if api_validated_addresses:
-        # Randomly choose up to 5 different addresses for API validation with Nominatim
-        max_addresses = min(5, len(api_validated_addresses))
+        # Randomly choose up to 3 different addresses for API validation with Nominatim
+        max_addresses = min(3, len(api_validated_addresses))
         chosen_addresses = random.sample(api_validated_addresses, max_addresses)
         
         # Use all chosen addresses for Nominatim API
         nominatim_addresses = chosen_addresses
         
-        # Try Nominatim API (up to 5 calls)
+        # Try Nominatim API (up to 3 calls)
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name)
             api_attempts.append({
@@ -1913,9 +1927,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # - 3 or fewer timeouts (and no failures) => 1.0
         # - 4 timeouts => 0.6
         # - 5 or more timeouts => 0.3
-        if total_timeouts <= 3:
+        if total_timeouts <= 1:
             base_score = 1.0
-        elif total_timeouts == 4:
+        elif total_timeouts == 2:
             base_score = 0.6
         else:
             base_score = 0.3
