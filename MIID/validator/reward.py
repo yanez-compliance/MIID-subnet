@@ -253,11 +253,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         # Clean seed name - take first name if multiple words
         name_part = seed_name.split()[0].lower() if seed_name else "unknown"
         
-        # Multiply miner_uid by random number and convert to range 0-999
-        random_multiplier = random.randint(7, 13)
-        miner_code = ((miner_uid * random_multiplier) % 1000)
-        
-        user_agent = f"Identity Valid {miner_code} - {name_part}-{country_part}"
+        user_agent = f"Identity Valid {miner_uid} - {name_part}-{country_part} (contact=omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
