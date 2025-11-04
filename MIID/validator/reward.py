@@ -1943,8 +1943,11 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     6. Miners who do not qualify receive a reward of 0.
     
     Args:
-        burn_uid: UID to receive burned emissions (from config)
+        burn_uid: UID to receive burned emissions (always 59, hardcoded)
     """    
+    # Convert uids to numpy array for consistent return type
+    uids = np.array(uids)
+    
     # Get initial quality scores from detailed metrics for thresholding
     quality_scores = np.array([
         metrics.get('final_reward', 0.0) 
@@ -2586,23 +2589,22 @@ def get_name_variation_rewards(
     
     # Get burn configuration from config with defaults
     burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.40)
-    burn_uid = getattr(self.config.neuron, 'burn_uid', 59)
+    burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
     keep_fraction = 1.0 - burn_fraction
     
-    # Apply the blended ranking and quality threshold based on the validator's config.
+    # Apply the blended ranking and quality threshold (always enabled).
+    bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
     is_100_percent_burn = False
-    if self.config.neuron.apply_ranking:
-        bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
-        rewards, uids, detailed_metrics, is_100_percent_burn = _apply_blended_rank_cap_with_quality(
-            rewards,
-            detailed_metrics,
-            uids,
-            top_miner_cap=self.config.neuron.top_miner_cap,
-            quality_threshold=self.config.neuron.quality_threshold,
-            decay_rate=self.config.neuron.decay_rate,
-            blend_factor=self.config.neuron.blend_factor,
-            burn_uid=burn_uid,
-        )
+    rewards, uids, detailed_metrics, is_100_percent_burn = _apply_blended_rank_cap_with_quality(
+        rewards,
+        detailed_metrics,
+        uids,
+        top_miner_cap=self.config.neuron.top_miner_cap,
+        quality_threshold=self.config.neuron.quality_threshold,
+        decay_rate=self.config.neuron.decay_rate,
+        blend_factor=self.config.neuron.blend_factor,
+        burn_uid=burn_uid,
+    )
 
     # Apply configured emission burn if 100% burn did not occur (miners qualified)
     if not is_100_percent_burn:

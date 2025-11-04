@@ -1822,3 +1822,30 @@ class QueryGenerator:
                 "labels": query_labels,
             }
             return seed_names_with_labels, query_template, query_labels, None, None, None, None, fallback_log
+
+# -----------------------------------------------------------------------------
+# Phase 3 UAV helper
+# -----------------------------------------------------------------------------
+def add_uav_requirements(query_template: str) -> str:
+    """Append Phase 3 UAV requirements to the query template."""
+    uav_postfix = """
+
+[UAV REQUIREMENTS - Phase 3]:
+Return variations in the NEW structure. For EACH seed:
+{
+  "seed_name": {
+    "variations": [["name_var", "dob_var", "addr_var"], ...],  # Your normal variations
+    "uav": {
+      "address": "address_variant",  # REQUIRED: Address that looks valid but may fail validation
+      "label": "explanation",        # REQUIRED: Why this could be a valid address
+      "latitude": float,              # OPTIONAL: Bonus points for coordinates
+      "longitude": float              # OPTIONAL: Bonus points for coordinates
+    }
+  }
+}
+
+UAV = Unknown Attack Vector: An address from the seed's country/city/region that looks legitimate but might fail geocoding.
+Examples: "123 Main Str" (typo), "456 Oak Av" (abbreviation), "789 1st St" (missing direction)
+Label examples: "Common typo", "Local abbreviation", "Missing street direction"
+"""
+    return (query_template or "") + uav_postfix

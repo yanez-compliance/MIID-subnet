@@ -60,10 +60,25 @@ class IdentitySynapse(bt.Synapse):
     timeout: float = 120.0
     
     # Optional request output, filled by receiving axon
-    variations: Optional[Dict[str, List[List[str]]]] = None
+    # Phase 3: support extended structure with UAV data while maintaining backward compatibility.
+    # Define structured types for clarity
+    
+    
+    # TypedDicts for UAV structure
+    class UAVData(typing.TypedDict):
+        address: str
+        label: str
+        latitude: typing.Optional[float]
+        longitude: typing.Optional[float]
+
+    class SeedData(typing.TypedDict):
+        variations: List[List[str]]
+        uav: 'IdentitySynapse.UAVData'
+
+    variations: Optional[Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]] = None
     process_time: Optional[float] = None  # <-- add this
     
-    def deserialize(self) -> Dict[str, List[List[str]]]:
+    def deserialize(self) -> Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]:
         """
         Deserialize the variations output.
         

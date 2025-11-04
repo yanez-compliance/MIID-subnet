@@ -417,12 +417,7 @@ def add_validator_args(cls, parser):
     )
 
     # --- Blended Ranking Reward System Arguments ---
-    parser.add_argument(
-        '--neuron.apply_ranking',
-        action='store_true',
-        help="If set, enables the blended ranking reward system with quality thresholds.",
-        default=True
-    )
+    # Note: apply_ranking is always enabled (removed as configurable option)
     parser.add_argument(
         '--neuron.top_miner_cap',
         type=int,
@@ -455,12 +450,7 @@ def add_validator_args(cls, parser):
         help="Fraction of emissions to burn to the burn UID when miners qualify (default: 0.40 = 40%).",
         default=0.40
     )
-    parser.add_argument(
-        '--neuron.burn_uid',
-        type=int,
-        help="UID to receive burned emissions (default: 59).",
-        default=59
-    )
+    # Note: burn_uid is hardcoded to 59 and not configurable
 
 
 def config(cls):
