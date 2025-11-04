@@ -50,7 +50,7 @@ from MIID.protocol import IdentitySynapse
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
-from MIID.validator.query_generator import QueryGenerator
+from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
 
 
 # Import your new upload_data function here
@@ -164,6 +164,77 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     return res
 
 
+def process_new_variations_structure(uid_response_map, miner_uids, self):
+    """Process the new variations structure and extract UAV data.
+
+    This function updates each response's variations to the legacy list-of-lists
+    while collecting UAV information separately for logging and result export.
+    """
+    uav_summary = {
+        "total_miners_with_uav": 0,
+        "total_uavs_collected": 0,
+        "miners_with_coordinates": 0,
+    }
+    uav_by_miner = {}
+
+    for uid in miner_uids:
+        response = uid_response_map.get(uid)
+        if not response or not hasattr(response, "variations") or response.variations is None:
+            continue
+
+        miner_variations = {}
+        miner_uav_data = {"uavs": {}, "valid_count": 0, "has_coordinates": False}
+
+        try:
+            items = response.variations.items() if isinstance(response.variations, dict) else []
+            for seed_name, seed_data in items:
+                if isinstance(seed_data, list):
+                    # Old format: variations only
+                    miner_variations[seed_name] = seed_data
+                elif isinstance(seed_data, dict):
+                    # New format: { "variations": [...], "uav": {...} }
+                    if "variations" in seed_data:
+                        miner_variations[seed_name] = seed_data.get("variations") or []
+
+                    if seed_data.get("uav"):
+                        uav = seed_data["uav"]
+                        if (
+                            isinstance(uav, dict)
+                            and uav.get("address")
+                            and uav.get("label")
+                        ):
+                            miner_uav_data["uavs"][seed_name] = uav
+                            miner_uav_data["valid_count"] += 1
+                            uav_summary["total_uavs_collected"] += 1
+
+                            if (
+                                uav.get("latitude") is not None
+                                and uav.get("longitude") is not None
+                            ):
+                                miner_uav_data["has_coordinates"] = True
+                        else:
+                            bt.logging.warning(
+                                f"Miner {uid}: Invalid UAV for '{seed_name}'"
+                            )
+        except Exception as e:
+            bt.logging.warning(f"Miner {uid}: Error processing variations: {e}")
+
+        # Normalize response variations for reward calculation
+        response.variations = miner_variations
+
+        # Store UAV data if any valid UAVs found
+        if miner_uav_data["valid_count"] > 0:
+            uav_by_miner[str(uid)] = {
+                "hotkey": str(self.metagraph.axons[uid].hotkey),
+                **miner_uav_data,
+            }
+            uav_summary["total_miners_with_uav"] += 1
+            if miner_uav_data["has_coordinates"]:
+                uav_summary["miners_with_coordinates"] += 1
+
+    return uav_summary, uav_by_miner
+
+
 async def forward(self):
     """
     The forward function is called by the validator every time step.
@@ -212,6 +283,8 @@ async def forward(self):
     # Use the query generator
     challenge_start_time = time.time()
     seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
+    # Append Phase 3 UAV requirements to the query template sent to miners
+    query_template = add_uav_requirements(query_template)
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
@@ -308,11 +381,18 @@ async def forward(self):
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
             await asyncio.sleep(sleep_time)
     
-    # Create ordered lists from the mapping to maintain consistency
-    all_responses = [uid_response_map[uid] for uid in miner_uids]
-    
     end_time = time.time()
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
+
+    # Normalize new structure to legacy for rewards and collect UAV data
+    uav_summary, uav_by_miner = process_new_variations_structure(uid_response_map, miner_uids, self)
+    bt.logging.info(
+        f"UAV Collection: {uav_summary.get('total_miners_with_uav', 0)} miners provided UAVs, "
+        f"{uav_summary.get('total_uavs_collected', 0)} total collected"
+    )
+
+    # Create ordered lists from the mapping to maintain consistency (after normalization)
+    all_responses = [uid_response_map[uid] for uid in miner_uids]
 
     # 7) Compute rewards
     bt.logging.info(f"Received identity variation responses for {len(all_responses)} miners")
@@ -398,6 +478,13 @@ async def forward(self):
             "identity": identity_list,
             "query_template": query_template,
             "dendrite_timeout": adaptive_timeout
+        },
+        # Phase 3 UAV data (collected but not scored in Cycle 1)
+        "uav_data": {
+            "cycle": "Phase 3 Cycle 1 Sandbox",
+            "note": "UAVs are collected but NOT scored in Cycle 1",
+            "summary": uav_summary,
+            "by_miner": uav_by_miner,
         },
         "query_generation": {
             "use_default_query": self.query_generator.use_default_query,

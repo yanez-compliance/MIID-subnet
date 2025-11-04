@@ -237,16 +237,44 @@ def looks_like_address(address: str) -> bool:
     
     return True
 
-def check_with_nominatim(address: str, validator_uid: int, miner_uid: int) -> bool:
+def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str) -> bool:
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
-        response = requests.get(url, params=params, headers={"User-Agent": f"SN54-uid-{miner_uid}-{validator_uid}"}, timeout=5)
+        
+        # Create a unique User-Agent by mixing seed name, country, and UIDs
+        # Extract country from seed address
+        _, country = extract_city_country(seed_address)
+        # Use first word of country if available, otherwise use first word from last part of address
+        if country:
+            country_part = country.split()[0].lower()
+        else:
+            country_part = seed_address.split(",")[-1].strip().split()[0].lower()
+        # Clean seed name - take first name if multiple words
+        name_part = seed_name.split()[0].lower() if seed_name else "unknown"
+        
+        user_agent = f"Identity Valid {miner_uid} - {name_part}-{country_part} (contact=omar@yanezcompliance.com)"
+        
+        response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
-    except:
+    except requests.exceptions.RequestException as e:
+        bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
+        return False
+    except ValueError as e:
+        error_msg = str(e)
+        # Check if it's an encoding error (like latin-1 codec issues)
+        if "codec" in error_msg.lower() and "encode" in error_msg.lower():
+            bt.logging.warning(f"Encoding error for address '{address}' (treating as timeout): {error_msg}")
+            return "TIMEOUT"
+        else:
+            bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
+            return False
+    except Exception as e:
+        bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
+        bt.logging.error(f"Traceback: {traceback.format_exc()}")
         return False
 
 # Global country name mapping to handle variations between miner submissions and geonames data
@@ -1759,7 +1787,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     # Process each name and validate addresses (do the work once)
     heuristic_perfect = True
     region_matches = 0
-    api_validated_addresses = []
+    api_validated_addresses = []  # Will store tuples of (addr, seed_addr, seed_name)
     
     for name_idx, name in enumerate(variations.keys()):
         if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_addresses):
@@ -1777,11 +1805,12 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         
         # Store validation results for each address (do the work once)
         validation_results = []
+        seed_addr = seed_addresses[name_idx]
         for i, addr in enumerate(address_variations):
             if not addr or not addr.strip():
                 validation_results.append({
                     "address": addr,
-                    "seed_address": seed_addresses[name_idx],
+                    "seed_address": seed_addr,
                     "looks_like_address": False,
                     "region_match": False,
                     "passed_validation": False,
@@ -1796,7 +1825,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             # Step 2: Check if country or city matches seed
             region_match = False
             if looks_like:
-                region_match = validate_address_region(addr, seed_addresses[name_idx])
+                region_match = validate_address_region(addr, seed_addr)
             
             # Track validation results
             passed_validation = looks_like and region_match
@@ -1804,7 +1833,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 heuristic_perfect = False
             
             if passed_validation:
-                api_validated_addresses.append(addr)
+                # Store address, seed address, and seed name (name is the key from variations)
+                api_validated_addresses.append((addr, seed_addr, name))
                 region_matches += 1
             
             validation_results.append({
@@ -1846,16 +1876,16 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     total_calls = 0
     
     if api_validated_addresses:
-        # Randomly choose up to 5 different addresses for API validation with Nominatim
-        max_addresses = min(5, len(api_validated_addresses))
+        # Randomly choose up to 3 different addresses for API validation with Nominatim
+        max_addresses = min(3, len(api_validated_addresses))
         chosen_addresses = random.sample(api_validated_addresses, max_addresses)
         
         # Use all chosen addresses for Nominatim API
         nominatim_addresses = chosen_addresses
         
-        # Try Nominatim API (up to 5 calls)
-        for i, addr in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr, validator_uid, miner_uid)
+        # Try Nominatim API (up to 3 calls)
+        for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
+            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name)
             api_attempts.append({
                 "address": addr,
                 "api": "nominatim",
@@ -1897,9 +1927,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # - 3 or fewer timeouts (and no failures) => 1.0
         # - 4 timeouts => 0.6
         # - 5 or more timeouts => 0.3
-        if total_timeouts <= 3:
+        if total_timeouts <= 1:
             base_score = 1.0
-        elif total_timeouts == 4:
+        elif total_timeouts == 2:
             base_score = 0.6
         else:
             base_score = 0.3
@@ -1932,7 +1962,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     }
 
 
-def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
+def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float, burn_uid: int) -> Tuple[np.ndarray, np.ndarray, List[Dict], bool]:
     """
     Applies a blended ranking model with a quality threshold.
     1. Ranks all miners based on their initial reward scores.
@@ -1941,7 +1971,13 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     4. Re-ranks the final qualified group and calculates an exponential decay reward.
     5. Blends the rank-based reward with the original reward score.
     6. Miners who do not qualify receive a reward of 0.
+    
+    Args:
+        burn_uid: UID to receive burned emissions (always 59, hardcoded)
     """    
+    # Convert uids to numpy array for consistent return type
+    uids = np.array(uids)
+    
     # Get initial quality scores from detailed metrics for thresholding
     quality_scores = np.array([
         metrics.get('final_reward', 0.0) 
@@ -1995,14 +2031,14 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
             detailed_metrics[qualified_idx]['ranking_info']['final_blended_reward'] = float(blended_rewards[idx])
         
         bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
-        return final_rewards, uids, detailed_metrics
+        # Return False to indicate 100% burn did not occur (miners qualified)
+        return final_rewards, uids, detailed_metrics, False
     else:
         # No miners qualified - burn all emissions
         bt.logging.warning("🔥 BURN EVENT: No miners qualified after applying top cap and quality threshold")
-        bt.logging.warning(f"All emissions will be burned to UID 59")
+        bt.logging.warning(f"All emissions will be burned to UID {burn_uid}")
         
         # Extend arrays to include burn UID
-        burn_uid = 59
         extended_uids = np.append(uids, burn_uid)
         extended_rewards = np.append(final_rewards, 1.0)  # All zeros except burn UID gets 1.0
         
@@ -2014,6 +2050,7 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
             'similarity_penalty': 0.0,
             'post_penalty_reward': 1.0,
             'is_burn': True,
+            'burn_type': '100_percent',  # Indicates 100% burn due to no qualified miners
             'ranking_info': {
                 'initial_reward': 0.0,
                 'global_rank': -1,  # Special rank for burn
@@ -2026,7 +2063,8 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
         }
         detailed_metrics.append(burn_metrics)
         
-        return extended_rewards, extended_uids, detailed_metrics
+        # Return True to indicate 100% burn occurred (no miners qualified)
+        return extended_rewards, extended_uids, detailed_metrics, True
 
 
 def get_name_variation_rewards(
@@ -2041,7 +2079,7 @@ def get_name_variation_rewards(
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
     rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
-) -> Tuple[np.ndarray, List[Dict]]:
+) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
     Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
     
@@ -2579,25 +2617,101 @@ def get_name_variation_rewards(
         # Keep the original rewards without applying similarity penalties
         # detailed_metrics would remain as calculated before the penalty step
     
-    # Apply the blended ranking and quality threshold based on the validator's config.
-    if self.config.neuron.apply_ranking:
-        bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
-        rewards, uids, detailed_metrics = _apply_blended_rank_cap_with_quality(
-            rewards,
-            detailed_metrics,
-            uids,
-            top_miner_cap=self.config.neuron.top_miner_cap,
-            quality_threshold=self.config.neuron.quality_threshold,
-            decay_rate=self.config.neuron.decay_rate,
-            blend_factor=self.config.neuron.blend_factor,
-        )
+    # Get burn configuration from config with defaults
+    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.40)
+    burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
+    keep_fraction = 1.0 - burn_fraction
+    
+    # Apply the blended ranking and quality threshold (always enabled).
+    bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
+    is_100_percent_burn = False
+    rewards, uids, detailed_metrics, is_100_percent_burn = _apply_blended_rank_cap_with_quality(
+        rewards,
+        detailed_metrics,
+        uids,
+        top_miner_cap=self.config.neuron.top_miner_cap,
+        quality_threshold=self.config.neuron.quality_threshold,
+        decay_rate=self.config.neuron.decay_rate,
+        blend_factor=self.config.neuron.blend_factor,
+        burn_uid=burn_uid,
+    )
+
+    # Apply configured emission burn if 100% burn did not occur (miners qualified)
+    if not is_100_percent_burn:
+        # Check if burn UID is already in the array (shouldn't happen, but safety check)
+        if burn_uid not in uids:
+            # Calculate total reward sum for rescaling
+            total_reward_sum = np.sum(rewards)
+            
+            if total_reward_sum > 0:
+                # Rescale miner rewards to keep_fraction (default 60%)
+                # This ensures miners receive keep_fraction of emissions, with burn_fraction going to burn
+                rescale_factor = keep_fraction / total_reward_sum
+                rewards = rewards * rescale_factor
+                
+                # Add burn UID with configured burn_fraction weight (default 40%)
+                uids = np.append(uids, burn_uid)
+                rewards = np.append(rewards, burn_fraction)
+                
+                # Log the burn event
+                bt.logging.info(f"🔥 Applied {burn_fraction*100:.1f}% emission burn: {burn_fraction*100:.1f}% to UID {burn_uid}, {keep_fraction*100:.1f}% to miners")
+                
+                # Add burn metrics to detailed_metrics for tracking
+                burn_metrics = {
+                    'uid': burn_uid,
+                    'variations': {},
+                    'average_quality': 0.0,
+                    'similarity_penalty': 0.0,
+                    'post_penalty_reward': burn_fraction,
+                    'is_burn': True,
+                    'burn_type': f'{int(burn_fraction*100)}_percent',  # Indicates configured burn percentage
+                    'ranking_info': {
+                        'initial_reward': 0.0,
+                        'global_rank': -1,  # Special rank for burn
+                        'within_top_cap': False,
+                        'quality_score': 0.0,
+                        'meets_quality_threshold': False,
+                        'is_qualified_for_ranking': False,
+                        'final_blended_reward': burn_fraction
+                    }
+                }
+                detailed_metrics.append(burn_metrics)
+            else:
+                # Edge case: all rewards are zero, still apply burn structure
+                bt.logging.warning(f"All miner rewards are zero, but applying {burn_fraction*100:.1f}% burn structure")
+                uids = np.append(uids, burn_uid)
+                rewards = np.append(rewards, burn_fraction)
+                
+                burn_metrics = {
+                    'uid': burn_uid,
+                    'variations': {},
+                    'average_quality': 0.0,
+                    'similarity_penalty': 0.0,
+                    'post_penalty_reward': burn_fraction,
+                    'is_burn': True,
+                    'burn_type': f'{int(burn_fraction*100)}_percent',
+                    'ranking_info': {
+                        'initial_reward': 0.0,
+                        'global_rank': -1,
+                        'within_top_cap': False,
+                        'quality_score': 0.0,
+                        'meets_quality_threshold': False,
+                        'is_qualified_for_ranking': False,
+                        'final_blended_reward': burn_fraction
+                    }
+                }
+                detailed_metrics.append(burn_metrics)
+        else:
+            bt.logging.warning(f"Burn UID {burn_uid} already present in uids array, skipping {burn_fraction*100:.1f}% burn application")
+    else:
+        bt.logging.info("100% burn occurred (no miners qualified), skipping configured burn application")
 
     # Final verification: ensure rewards array length matches UIDs length
     if len(rewards) != len(uids):
         bt.logging.error(f"CRITICAL: Final rewards length ({len(rewards)}) does not match UIDs length ({len(uids)})")
         raise ValueError(f"Final length mismatch: rewards={len(rewards)}, uids={len(uids)}")
     
-    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} miners")
+    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} UIDs (including burn)")
     bt.logging.debug(f"Final rewards: {rewards}")
     bt.logging.debug(f"Final UIDs: {uids}")
     
