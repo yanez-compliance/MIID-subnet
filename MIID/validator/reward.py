@@ -242,11 +242,10 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
         
-        # Use a fixed, consistent User-Agent that looks like a legitimate application
-        # Nominatim requires a stable User-Agent that identifies your application
-        # Format: AppName/Version (contact email)
-        # This avoids detection as automated/bot traffic
-        user_agent = "YanezCompliance/1.0 (https://yanezcompliance.com; omar@yanezcompliance.com)"
+        # Use validator_uid to create a unique User-Agent per validator
+        # Each validator consistently uses its own User-Agent for all requests
+        # Format: AppName/ValidatorUID (contact email)
+        user_agent = f"YanezCompliance/{validator_uid} (https://yanezcompliance.com; omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
@@ -2423,7 +2422,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
+            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
             name_metrics = {
                 "variations": [],
                 "quality_score": 0.0,
@@ -2468,7 +2467,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
+            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
             
             # Use pre-transliterated name
             transliterated_name = transliterated_seed_names[name]
