@@ -242,18 +242,11 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
         
-        # Create a unique User-Agent by mixing seed name, country, and UIDs
-        # Extract country from seed address
-        _, country = extract_city_country(seed_address)
-        # Use first word of country if available, otherwise use first word from last part of address
-        if country:
-            country_part = country.split()[0].lower()
-        else:
-            country_part = seed_address.split(",")[-1].strip().split()[0].lower()
-        # Clean seed name - take first name if multiple words
-        name_part = seed_name.split()[0].lower() if seed_name else "unknown"
-        
-        user_agent = f"Identity Valid {miner_uid} - {name_part}-{country_part} (contact=omar@yanezcompliance.com)"
+        # Use a fixed, consistent User-Agent that looks like a legitimate application
+        # Nominatim requires a stable User-Agent that identifies your application
+        # Format: AppName/Version (contact email)
+        # This avoids detection as automated/bot traffic
+        user_agent = "YanezCompliance/1.0 (https://yanezcompliance.com; omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
