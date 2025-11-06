@@ -242,18 +242,10 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
         
-        # Create a unique User-Agent by mixing seed name, country, and UIDs
-        # Extract country from seed address
-        _, country = extract_city_country(seed_address)
-        # Use first word of country if available, otherwise use first word from last part of address
-        if country:
-            country_part = country.split()[0].lower()
-        else:
-            country_part = seed_address.split(",")[-1].strip().split()[0].lower()
-        # Clean seed name - take first name if multiple words
-        name_part = seed_name.split()[0].lower() if seed_name else "unknown"
-        
-        user_agent = f"Identity Valid {miner_uid} - {name_part}-{country_part} (contact=omar@yanezcompliance.com)"
+        # Use validator_uid to create a unique User-Agent per validator
+        # Each validator consistently uses its own User-Agent for all requests
+        # Format: AppName/ValidatorUID (contact email)
+        user_agent = f"YanezCompliance/{validator_uid} (https://yanezcompliance.com; omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         return len(response.json()) > 0
@@ -463,7 +455,7 @@ def city_in_country(city_name: str, country_name: str) -> bool:
         # Find country code
         country_code = None
         for code, data in countries.items():
-            if data.get('name', '').lower() == country_name_lower:
+            if data.get('name', '').lower().strip() == country_name_lower.strip():
                 country_code = code
                 break
         
@@ -481,7 +473,7 @@ def city_in_country(city_name: str, country_name: str) -> bool:
             city_data_name = city_data.get("name", "").lower()
             
             # Check exact match first
-            if city_data_name == city_name_lower:
+            if city_data_name.strip() == city_name_lower.strip():
                 return True
             # Check first word match
             elif len(city_words) >= 2 and city_data_name.startswith(city_words[0]):
@@ -2430,7 +2422,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
+            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
             name_metrics = {
                 "variations": [],
                 "quality_score": 0.0,
@@ -2475,7 +2467,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
+            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
             
             # Use pre-transliterated name
             transliterated_name = transliterated_seed_names[name]

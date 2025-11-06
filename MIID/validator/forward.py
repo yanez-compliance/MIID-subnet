@@ -533,10 +533,22 @@ async def forward(self):
         if response is not None:
             bt.logging.info(f"#########################################Response Time miner {uid}: {response.process_time}#########################################")
 
+            # Get the axon for this UID
+            axon = self.metagraph.axons[uid]
+            
             # Convert the response to a serializable format
             response_data = {
                 "uid": int(uid),
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
+                "axon": {
+                    "ip": str(axon.ip) if hasattr(axon, 'ip') else None,
+                    "port": int(axon.port) if hasattr(axon, 'port') else None,
+                    "hotkey": str(axon.hotkey),
+                    "coldkey": str(axon.coldkey) if hasattr(axon, 'coldkey') else None,
+                    "version": int(axon.version) if hasattr(axon, 'version') else None,
+                    "protocol": int(axon.protocol) if hasattr(axon, 'protocol') else None,
+                    "is_serving": bool(axon.is_serving) if hasattr(axon, 'is_serving') else None
+                },
                 "response_time": response.process_time,  # When we processed this response
                 "variations": {},
                 "error": None,
@@ -561,9 +573,22 @@ async def forward(self):
         else:
             # Handle case where no response was received for this UID
             bt.logging.warning(f"No response received for miner {uid}")
+            
+            # Get the axon for this UID
+            axon = self.metagraph.axons[uid]
+            
             response_data = {
                 "uid": int(uid),
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
+                "axon": {
+                    "ip": str(axon.ip) if hasattr(axon, 'ip') else None,
+                    "port": int(axon.port) if hasattr(axon, 'port') else None,
+                    "hotkey": str(axon.hotkey),
+                    "coldkey": str(axon.coldkey) if hasattr(axon, 'coldkey') else None,
+                    "version": int(axon.version) if hasattr(axon, 'version') else None,
+                    "protocol": int(axon.protocol) if hasattr(axon, 'protocol') else None,
+                    "is_serving": bool(axon.is_serving) if hasattr(axon, 'is_serving') else None
+                },
                 "response_time": None,
                 "variations": {},
                 "error": {
