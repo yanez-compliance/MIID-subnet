@@ -455,7 +455,7 @@ def city_in_country(city_name: str, country_name: str) -> bool:
         # Find country code
         country_code = None
         for code, data in countries.items():
-            if data.get('name', '').lower() == country_name_lower:
+            if data.get('name', '').lower().strip() == country_name_lower.strip():
                 country_code = code
                 break
         
@@ -473,7 +473,7 @@ def city_in_country(city_name: str, country_name: str) -> bool:
             city_data_name = city_data.get("name", "").lower()
             
             # Check exact match first
-            if city_data_name == city_name_lower:
+            if city_data_name.strip() == city_name_lower.strip():
                 return True
             # Check first word match
             elif len(city_words) >= 2 and city_data_name.startswith(city_words[0]):
