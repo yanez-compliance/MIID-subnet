@@ -297,7 +297,7 @@ COUNTRY_MAPPING = {
     "burma": "myanmar",
 
     # Bonaire variations
-    'bonaire': 'bonaire, saint eustatius and saba',
+    'bonaire': 'bonaire, saint eustatius and saba ',
     
     # Additional common variations
     "usa": "united states",
