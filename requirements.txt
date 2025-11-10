@@ -19,4 +19,4 @@ wandb
 python-dotenv # Add dotenv for .env file handling
 requests
 unidecode
-geonamescache
+geonamescache==3.0.0
