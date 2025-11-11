@@ -398,7 +398,8 @@ class QueryGenerator:
             
             valid_countries = []
             for country_code, country_info in countries_data.items():
-                country_name = country_info.get('name', '')
+                country_name_regular = country_info.get('name', '')
+                country_name = country_name_regular.strip()
                 
                 # Skip if country name is empty
                 if not country_name:
