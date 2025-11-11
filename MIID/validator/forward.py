@@ -289,7 +289,7 @@ async def forward(self):
         # Select the first high_risk identity for UAV requirements
         selected_identity = high_risk_identities[0]
         query_template = add_uav_requirements(query_template, selected_identity['name'])
-        bt.logging.info(f"UAV requirements added only for high_risk identity: {selected_identity['name']}")
+        bt.logging.info(f"UAV requirements added only for high_risk identity: {selected_identity['name']}, address: {selected_identity['address']}")
     else:
         bt.logging.info("No high_risk identities found, skipping UAV requirements")
     challenge_end_time = time.time()
