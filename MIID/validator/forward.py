@@ -283,8 +283,15 @@ async def forward(self):
     # Use the query generator
     challenge_start_time = time.time()
     seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
-    # Append Phase 3 UAV requirements to the query template sent to miners
-    query_template = add_uav_requirements(query_template)
+    # Append Phase 3 UAV requirements to the query template sent to miners - only for one high_risk identity
+    high_risk_identities = [item for item in seed_names_with_labels if item.get('label') == 'High Risk']
+    if high_risk_identities:
+        # Select the first high_risk identity for UAV requirements
+        selected_identity = high_risk_identities[0]
+        query_template = add_uav_requirements(query_template, selected_identity['name'])
+        bt.logging.info(f"UAV requirements added only for high_risk identity: {selected_identity['name']}")
+    else:
+        bt.logging.info("No high_risk identities found, skipping UAV requirements")
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
