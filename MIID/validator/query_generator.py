@@ -1,7 +1,7 @@
 import random
 import bittensor as bt
 import ollama
-from typing import Dict, Any, Tuple, List
+from typing import Dict, Any, Tuple, List, Optional
 import os
 import re
 import json
@@ -1827,23 +1827,43 @@ class QueryGenerator:
 # -----------------------------------------------------------------------------
 # Phase 3 UAV helper
 # -----------------------------------------------------------------------------
-def add_uav_requirements(query_template: str) -> str:
-    """Append Phase 3 UAV requirements to the query template."""
-    uav_postfix = """
+def add_uav_requirements(query_template: str, uav_seed_name: Optional[str] = None) -> str:
+    """
+    Append Phase 3 UAV requirements to the query template.
+    
+    Args:
+        query_template: The base query template
+        uav_seed_name: Optional. If provided, only request UAV for this specific seed name.
+                      If None, no UAV requirements are added.
+    
+    Returns:
+        The query template with UAV requirements appended (if uav_seed_name is provided)
+    """
+    if not uav_seed_name:
+        # No UAV requested, return template as-is
+        return query_template or ""
+    
+    # Only request UAV for the specified seed
+    uav_postfix = f"""
 
 [UAV REQUIREMENTS - Phase 3]:
-Return variations in the NEW structure. For EACH seed:
-{
-  "seed_name": {
+Return variations in the NEW structure. For the seed "{uav_seed_name}" ONLY, use this structure:
+{{
+  "{uav_seed_name}": {{
     "variations": [["name_var", "dob_var", "addr_var"], ...],  # Your normal variations
-    "uav": {
+    "uav": {{
       "address": "address_variant",  # REQUIRED: Address that looks valid but may fail validation
       "label": "explanation",        # REQUIRED: Why this could be a valid address
       "latitude": float,              # OPTIONAL: Bonus points for coordinates
       "longitude": float              # OPTIONAL: Bonus points for coordinates
-    }
-  }
-}
+    }}
+  }}
+}}
+
+For all OTHER seeds, use the standard structure (variations only):
+{{
+  "other_seed_name": [["name_var", "dob_var", "addr_var"], ...]
+}}
 
 UAV = Unknown Attack Vector: An address from the seed's country/city/region that looks legitimate but might fail geocoding.
 Examples: "123 Main Str" (typo), "456 Oak Av" (abbreviation), "789 1st St" (missing direction)
