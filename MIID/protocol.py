@@ -56,8 +56,9 @@ class IdentitySynapse(bt.Synapse):
     
     # Required request input, filled by sending dendrite caller
     identity: List[List[str]]  # Each inner list contains [name, dob, address]
-    query_template: str
-
+    query_template: str  # Base template used for all identities (backward compatibility)
+    query_templates: Optional[Dict[str, str]] = None  # Optional per-identity templates (identity name -> template)
+    
     timeout: float = 120.0
     
     # Optional request output, filled by receiving axon

@@ -283,13 +283,14 @@ async def forward(self):
     # Use the query generator
     challenge_start_time = time.time()
     seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
-    # Append Phase 3 UAV requirements to the query template sent to miners - only for one high_risk identity
+    # Identify which identity should get UAV requirements (but don't add to shared template)
     high_risk_identities = [item for item in seed_names_with_labels if item.get('label') == 'High Risk']
+    uav_identity_name = None
     if high_risk_identities:
         # Select the first high_risk identity for UAV requirements
         selected_identity = high_risk_identities[0]
-        query_template = add_uav_requirements(query_template, selected_identity['name'])
-        bt.logging.info(f"UAV requirements added only for high_risk identity: {selected_identity['name']}, address: {selected_identity['address']}")
+        uav_identity_name = selected_identity['name']
+        bt.logging.info(f"UAV requirements will be added only for high_risk identity: {selected_identity['name']}, address: {selected_identity['address']}")
     else:
         bt.logging.info("No high_risk identities found, skipping UAV requirements")
     challenge_end_time = time.time()
@@ -311,9 +312,25 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # 5) Prepare the synapse
+    # Create per-identity query templates: all identities get the base template,
+    # except the high-risk identity gets UAV requirements added
+    query_templates_dict = {}
+    if uav_identity_name:
+        # Create templates for each identity
+        for item in seed_names_with_labels:
+            identity_name = item['name']
+            if identity_name == uav_identity_name:
+                # Add UAV requirements only for this identity
+                query_templates_dict[identity_name] = add_uav_requirements(query_template, identity_name)
+                bt.logging.info(f"UAV requirements added to template for identity: {identity_name}")
+            else:
+                # Use base template for all other identities
+                query_templates_dict[identity_name] = query_template
+    
     request_synapse = IdentitySynapse(
         identity=identity_list,
-        query_template=query_template,
+        query_template=query_template,  # Base template for backward compatibility
+        query_templates=query_templates_dict if query_templates_dict else None,  # Per-identity templates
         variations={},
         timeout=adaptive_timeout
     )

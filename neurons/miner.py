@@ -258,8 +258,16 @@ class Miner(BaseMinerNeuron):
             Response_list.append("Query-" + name)
             Response_list.append("---")
             
+            # Use per-identity template if available, otherwise fall back to base template
+            template_to_use = synapse.query_template  # Default to base template
+            if hasattr(synapse, 'query_templates') and synapse.query_templates and name in synapse.query_templates:
+                template_to_use = synapse.query_templates[name]
+                bt.logging.debug(f"Using per-identity template for: {name}")
+            else:
+                bt.logging.debug(f"Using base template for: {name}")
+            
             # Format the query with the current name, address, and DOB
-            formatted_query = synapse.query_template.replace("{name}", name)
+            formatted_query = template_to_use.replace("{name}", name)
             formatted_query = formatted_query.replace("{address}", address)
             formatted_query = formatted_query.replace("{dob}", dob)
             

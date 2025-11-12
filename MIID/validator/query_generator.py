@@ -1830,6 +1830,9 @@ class QueryGenerator:
 def add_uav_requirements(query_template: str, identity_name: str) -> str:
     """Append Phase 3 UAV requirements to the query template for a specific identity.
     
+    This function is called only for the specific identity that should include UAV requirements.
+    The template returned will only be used for that identity, so no conditional logic is needed.
+    
     Args:
         query_template: The base query template
         identity_name: The name of the identity that should include UAV requirements.
@@ -1837,7 +1840,7 @@ def add_uav_requirements(query_template: str, identity_name: str) -> str:
     uav_postfix = f"""
 
 [UAV REQUIREMENTS - Phase 3]:
-Return variations in the NEW structure. For the identity "{identity_name}" ONLY, include a UAV:
+Return variations in the NEW structure with a UAV for the identity "{identity_name}":
 {{
   "{identity_name}": {{
     "variations": [["name_var", "dob_var", "addr_var"], ...],  # Your normal variations
@@ -1849,8 +1852,6 @@ Return variations in the NEW structure. For the identity "{identity_name}" ONLY,
     }}
   }}
 }}
-
-For all other identities, use the standard structure (variations only, no UAV required).
 
 UAV = Unknown Attack Vector: An address from the seed's country/city/region that looks legitimate but might fail geocoding.
 Examples: "123 Main Str" (typo), "456 Oak Av" (abbreviation), "789 1st St" (missing direction)
