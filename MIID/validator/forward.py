@@ -520,24 +520,38 @@ async def forward(self):
     os.makedirs(run_dir, exist_ok=True)
     
     # Format example queries with actual identities to show what was sent to miners
+    # Use base template for all identities, but add UAV requirements only for the high-risk identity
     formatted_queries = {}
     for identity in seed_names_with_labels:
         try:
-            # Format the query template with the actual identity name
-            formatted_query = query_template.replace("{name}", identity['name'])
-            formatted_queries[identity['name']] = {
+            identity_name = identity['name']
+            # Use base template (without UAV) for most identities
+            template_to_use = query_template
+            
+            # Only add UAV requirements for the high-risk identity
+            if uav_identity_name and identity_name == uav_identity_name:
+                template_to_use = add_uav_requirements(query_template, identity_name)
+            
+            # Format the query template with the actual identity name, address, and DOB
+            formatted_query = template_to_use.replace("{name}", identity_name)
+            formatted_query = formatted_query.replace("{address}", identity.get('address', ''))
+            formatted_query = formatted_query.replace("{dob}", identity.get('dob', ''))
+            
+            formatted_queries[identity_name] = {
                 "query": formatted_query,
                 "identity": {
-                    "name": identity['name'],
-                    "dob": identity['dob'],
-                    "address": identity['address']
-                }
+                    "name": identity_name,
+                    "dob": identity.get('dob', ''),
+                    "address": identity.get('address', '')
+                },
+                "has_uav_requirements": uav_identity_name == identity_name if uav_identity_name else False
             }
         except Exception as e:
             bt.logging.error(f"Error formatting query for identity '{identity.get('name', 'unknown')}': {str(e)}")
             formatted_queries[identity.get('name', 'unknown')] = {
                 "query": f"Error formatting query: {str(e)}",
-                "identity": identity
+                "identity": identity,
+                "has_uav_requirements": False
             }
     
     # Save the query and responses to a JSON file
