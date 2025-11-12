@@ -1840,11 +1840,15 @@ def add_uav_requirements(query_template: str, identity_name: str) -> str:
     uav_postfix = f"""
 
 [UAV REQUIREMENTS - Phase 3]:
-Return variations in the NEW structure with a UAV for the identity "{identity_name}":
+IMPORTANT: Return variations and UAVs in SEPARATE fields. Use this structure:
+
 {{
-  "{identity_name}": {{
-    "variations": [["name_var", "dob_var", "addr_var"], ...],  # Your normal variations
-    "uav": {{
+  "variations": {{
+    "{identity_name}": [["name_var", "dob_var", "addr_var"], ...],  # All variations for all identities
+    "other_identity": [["name_var", "dob_var", "addr_var"], ...]
+  }},
+  "uavs": {{
+    "{identity_name}": {{
       "address": "address_variant",  # REQUIRED: Address that looks valid but may fail validation
       "label": "explanation",        # REQUIRED: Why this could be a valid address
       "latitude": float,              # OPTIONAL: Bonus points for coordinates
@@ -1852,6 +1856,8 @@ Return variations in the NEW structure with a UAV for the identity "{identity_na
     }}
   }}
 }}
+
+NOTE: Only include UAV for the identity "{identity_name}" in the "uavs" field. All other identities should only have entries in "variations", not in "uavs".
 
 UAV = Unknown Attack Vector: An address from the seed's country/city/region that looks legitimate but might fail geocoding.
 Examples: "123 Main Str" (typo), "456 Oak Av" (abbreviation), "789 1st St" (missing direction)

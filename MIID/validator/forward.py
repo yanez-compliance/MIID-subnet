@@ -164,11 +164,19 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     return res
 
 
-def process_new_variations_structure(uid_response_map, miner_uids, self):
-    """Process the new variations structure and extract UAV data.
+def process_new_variations_structure(uid_response_map, miner_uids, self, uav_identity_name=None):
+    """Process variations and UAV data from miner responses.
 
-    This function updates each response's variations to the legacy list-of-lists
-    while collecting UAV information separately for logging and result export.
+    Supports both old format (variations with embedded UAVs) and new format (separate variations and uavs fields).
+    This function normalizes responses to use separate variations and uavs fields while collecting UAV data
+    separately for logging and result export.
+    
+    Args:
+        uid_response_map: Dictionary mapping UIDs to responses
+        miner_uids: List of miner UIDs
+        self: Validator instance
+        uav_identity_name: Optional. If provided, only collect UAVs for this specific identity.
+                          If None, collect UAVs for all identities (backward compatibility).
     """
     uav_summary = {
         "total_miners_with_uav": 0,
@@ -179,25 +187,31 @@ def process_new_variations_structure(uid_response_map, miner_uids, self):
 
     for uid in miner_uids:
         response = uid_response_map.get(uid)
-        if not response or not hasattr(response, "variations") or response.variations is None:
+        if not response:
             continue
 
         miner_variations = {}
         miner_uav_data = {"uavs": {}, "valid_count": 0, "has_coordinates": False}
 
         try:
-            items = response.variations.items() if isinstance(response.variations, dict) else []
-            for seed_name, seed_data in items:
-                if isinstance(seed_data, list):
-                    # Old format: variations only
-                    miner_variations[seed_name] = seed_data
-                elif isinstance(seed_data, dict):
-                    # New format: { "variations": [...], "uav": {...} }
-                    if "variations" in seed_data:
-                        miner_variations[seed_name] = seed_data.get("variations") or []
-
-                    if seed_data.get("uav"):
-                        uav = seed_data["uav"]
+            # Check if response has separate uavs field (new format)
+            if hasattr(response, "uavs") and response.uavs:
+                # New format: separate variations and uavs fields
+                # Process variations
+                if hasattr(response, "variations") and response.variations:
+                    if isinstance(response.variations, dict):
+                        miner_variations = response.variations.copy()
+                
+                # Process UAVs from separate uavs field
+                if isinstance(response.uavs, dict):
+                    for seed_name, uav in response.uavs.items():
+                        # Only collect UAV if it's for the specified high-risk identity
+                        if uav_identity_name and seed_name != uav_identity_name:
+                            bt.logging.debug(
+                                f"Miner {uid}: Ignoring UAV for '{seed_name}' (only collecting for '{uav_identity_name}')"
+                            )
+                            continue
+                        
                         if (
                             isinstance(uav, dict)
                             and uav.get("address")
@@ -216,13 +230,57 @@ def process_new_variations_structure(uid_response_map, miner_uids, self):
                             bt.logging.warning(
                                 f"Miner {uid}: Invalid UAV for '{seed_name}'"
                             )
+            
+            # Check old format: variations with embedded UAVs (backward compatibility)
+            elif hasattr(response, "variations") and response.variations:
+                items = response.variations.items() if isinstance(response.variations, dict) else []
+                for seed_name, seed_data in items:
+                    if isinstance(seed_data, list):
+                        # Old format: variations only
+                        miner_variations[seed_name] = seed_data
+                    elif isinstance(seed_data, dict):
+                        # Old format: { "variations": [...], "uav": {...} }
+                        if "variations" in seed_data:
+                            miner_variations[seed_name] = seed_data.get("variations") or []
+
+                        if seed_data.get("uav"):
+                            # Only collect UAV if it's for the specified high-risk identity
+                            if uav_identity_name and seed_name != uav_identity_name:
+                                bt.logging.debug(
+                                    f"Miner {uid}: Ignoring UAV for '{seed_name}' (only collecting for '{uav_identity_name}')"
+                                )
+                                continue
+                            
+                            uav = seed_data["uav"]
+                            if (
+                                isinstance(uav, dict)
+                                and uav.get("address")
+                                and uav.get("label")
+                            ):
+                                miner_uav_data["uavs"][seed_name] = uav
+                                miner_uav_data["valid_count"] += 1
+                                uav_summary["total_uavs_collected"] += 1
+
+                                if (
+                                    uav.get("latitude") is not None
+                                    and uav.get("longitude") is not None
+                                ):
+                                    miner_uav_data["has_coordinates"] = True
+                            else:
+                                bt.logging.warning(
+                                    f"Miner {uid}: Invalid UAV for '{seed_name}'"
+                                )
         except Exception as e:
             bt.logging.warning(f"Miner {uid}: Error processing variations: {e}")
 
-        # Normalize response variations for reward calculation
+        # Normalize response to use separate variations and uavs fields
         response.variations = miner_variations
+        if miner_uav_data["valid_count"] > 0:
+            response.uavs = miner_uav_data["uavs"]
+        else:
+            response.uavs = None
 
-        # Store UAV data if any valid UAVs found
+        # Store UAV data for logging/export if any valid UAVs found
         if miner_uav_data["valid_count"] > 0:
             uav_by_miner[str(uid)] = {
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
@@ -312,25 +370,18 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # 5) Prepare the synapse
-    # Create per-identity query templates: all identities get the base template,
-    # except the high-risk identity gets UAV requirements added
-    query_templates_dict = {}
+    # Add UAV requirements to the template only for the high-risk identity
+    # Since we can't use per-identity templates, we add it to the shared template
+    # but filter UAVs in processing to only accept them for the high-risk identity
+    final_query_template = query_template
     if uav_identity_name:
-        # Create templates for each identity
-        for item in seed_names_with_labels:
-            identity_name = item['name']
-            if identity_name == uav_identity_name:
-                # Add UAV requirements only for this identity
-                query_templates_dict[identity_name] = add_uav_requirements(query_template, identity_name)
-                bt.logging.info(f"UAV requirements added to template for identity: {identity_name}")
-            else:
-                # Use base template for all other identities
-                query_templates_dict[identity_name] = query_template
+        final_query_template = add_uav_requirements(query_template, uav_identity_name)
+        bt.logging.info(f"UAV requirements added to template for high-risk identity: {uav_identity_name}")
+        bt.logging.info(f"Note: Only UAVs for '{uav_identity_name}' will be collected, others will be ignored")
     
     request_synapse = IdentitySynapse(
         identity=identity_list,
-        query_template=query_template,  # Base template for backward compatibility
-        query_templates=query_templates_dict if query_templates_dict else None,  # Per-identity templates
+        query_template=final_query_template,
         variations={},
         timeout=adaptive_timeout
     )
@@ -409,7 +460,8 @@ async def forward(self):
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
 
     # Normalize new structure to legacy for rewards and collect UAV data
-    uav_summary, uav_by_miner = process_new_variations_structure(uid_response_map, miner_uids, self)
+    # Only collect UAVs for the high-risk identity
+    uav_summary, uav_by_miner = process_new_variations_structure(uid_response_map, miner_uids, self, uav_identity_name)
     bt.logging.info(
         f"UAV Collection: {uav_summary.get('total_miners_with_uav', 0)} miners provided UAVs, "
         f"{uav_summary.get('total_uavs_collected', 0)} total collected"
