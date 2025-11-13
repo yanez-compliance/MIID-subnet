@@ -307,7 +307,7 @@ async def forward(self):
     if high_risk_identities:
         selected_identity = random.choice(high_risk_identities)
         uav_seed_name = selected_identity['name']
-        bt.logging.info(f"Selected high-risk identity '{uav_seed_name}' for UAV request")
+        bt.logging.info(f"Selected high-risk identity '{uav_seed_name}' with address '{selected_identity['address']}' for UAV request")
     else:
         bt.logging.warning("No high-risk identities found. Skipping UAV request.")
     

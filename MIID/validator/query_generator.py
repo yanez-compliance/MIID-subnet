@@ -1854,8 +1854,8 @@ Return variations in the NEW structure. For the seed "{uav_seed_name}" ONLY, use
     "uav": {{
       "address": "address_variant",  # REQUIRED: Address that looks valid but may fail validation
       "label": "explanation",        # REQUIRED: Why this could be a valid address
-      "latitude": float,              # OPTIONAL: Bonus points for coordinates
-      "longitude": float              # OPTIONAL: Bonus points for coordinates
+      "latitude": float,              # REQUIRED: Latitude coordinates
+      "longitude": float              # REQUIRED: Longitude coordinates
     }}
   }}
 }}
