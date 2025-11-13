@@ -304,12 +304,20 @@ async def forward(self):
     # Identify high-risk identities and randomly select one for UAV request
     high_risk_identities = [item for item in seed_names_with_labels if item.get('label') == 'High Risk']
     uav_seed_name = None
+    selected_identity = None
     if high_risk_identities:
         selected_identity = random.choice(high_risk_identities)
         uav_seed_name = selected_identity['name']
         bt.logging.info(f"Selected high-risk identity '{uav_seed_name}' with address '{selected_identity['address']}' for UAV request")
     else:
         bt.logging.warning("No high-risk identities found. Skipping UAV request.")
+    
+    # Add UAV field to all identities (true for selected one, false for others)
+    for identity in seed_names_with_labels:
+        identity['UAV'] = (identity['name'] == uav_seed_name) if uav_seed_name else False
+    
+    # Store the base query template before adding UAV requirements (for formatted queries)
+    base_query_template = query_template
     
     # Append Phase 3 UAV requirements to the query template sent to miners (only for selected identity)
     query_template = add_uav_requirements(query_template, uav_seed_name=uav_seed_name)
@@ -481,8 +489,15 @@ async def forward(self):
     formatted_queries = {}
     for identity in seed_names_with_labels:
         try:
+            # Use base query template (without UAV) for all identities except the UAV-selected one
+            # For the UAV-selected identity, use the full query template (with UAV requirements)
+            if uav_seed_name and identity['name'] == uav_seed_name:
+                template_to_use = query_template
+            else:
+                template_to_use = base_query_template
+            
             # Format the query template with the actual identity name
-            formatted_query = query_template.replace("{name}", identity['name'])
+            formatted_query = template_to_use.replace("{name}", identity['name'])
             formatted_queries[identity['name']] = {
                 "query": formatted_query,
                 "identity": {
