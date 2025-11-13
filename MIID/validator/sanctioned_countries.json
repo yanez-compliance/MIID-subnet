@@ -1,6 +1,6 @@
 {
     "latin": [
-        {"country": "Cuba", "faker_locale": "es_ES"},
+        {"country": "Cuba", "faker_locale": "es_ES"},   
         {"country": "Venezuela", "faker_locale": "es_ES"},
         {"country": "South Sudan", "faker_locale": "en_US"}, 
         {"country": "Central African Republic", "faker_locale": "fr_FR"}, 
@@ -23,12 +23,7 @@
         {"country": "Myanmar", "faker_locale": "en_US"}, 
         {"country": "Laos", "faker_locale": "en_US"},
         {"country": "Nepal", "faker_locale": "en_US"}, 
-        {"country": "Vietnam", "faker_locale": "en_US"}, 
-        {"country": "India", "faker_locale": "en_US"},
-        {"country": "Thailand", "faker_locale": "en_US"},  
-        {"country": "Israel", "faker_locale": "en_US"},  
-        {"country": "Greece", "faker_locale": "en_US"}, 
-        {"country": "Georgia", "faker_locale": "en_US"}
+        {"country": "Vietnam", "faker_locale": "en_US"}
     ],
     "arabic": [
         {"country": "Iran", "faker_locale": "fa_IR"}, 
@@ -43,9 +38,6 @@
         {"country": "Syria", "faker_locale": "ar_AA"}
     ],
     "cjk": [
-        {"country": "China", "faker_locale": "zh_CN"},
-        {"country": "Taiwan", "faker_locale": "zh_TW"},
-        {"country": "Japan", "faker_locale": "ja_JP"},
         {"country": "North Korea", "faker_locale": "ko_KR"}
     ],
     "cyrillic": [
@@ -55,6 +47,6 @@
         {"country": "Luhansk", "faker_locale": "ru_RU"},
         {"country": "Belarus", "faker_locale": "ru_RU"},
         {"country": "Bulgaria", "faker_locale": "bg_BG"}, 
-        {"country": "Armenia", "faker_locale": "ru_RU"}
+        {"country": "Ukraine", "faker_locale": "uk_UA"}
     ]
 }
