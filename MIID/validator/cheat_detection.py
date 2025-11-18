@@ -90,6 +90,12 @@ def remove_disallowed_unicode(text: str) -> str:
     """
     allowed = []
     for c in text:
+        codepoint = ord(c)
+        
+        # Exclude phonetic small-cap blocks
+        if 0x1D00 <= codepoint <= 0x1D7F or 0x1D80 <= codepoint <= 0x1DBF:
+            continue
+        
         cat = unicodedata.category(c)
         if cat.startswith("L"):       # ✓ Letter (any language)
             allowed.append(c)

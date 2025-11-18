@@ -218,7 +218,8 @@ def looks_like_address(address: str) -> bool:
     sections = [s.strip() for s in address_for_number_count.split(',')]
     sections_with_numbers = []
     for section in sections:
-        number_groups = re.findall(r"\d+", section)
+        # Only match ASCII digits (0-9), not other numeric characters
+        number_groups = re.findall(r"[0-9]+", section)
         if len(number_groups) > 0:
             sections_with_numbers.append(section)
     # Need at least 2 sections that contain numbers
@@ -255,7 +256,21 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         user_agent = f"YanezCompliance/{validator_uid} (https://yanezcompliance.com; omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
-        return len(response.json()) > 0
+        results = response.json()
+        
+        # Check if we have any results
+        if len(results) == 0:
+            return False
+        
+        # Validate that at least one result has a display_name that looks like an address
+        # This ensures the API actually found a valid address, not just any match
+        for result in results:
+            display_name = result.get('display_name', '')
+            if display_name and looks_like_address(display_name):
+                return True
+        
+        # If no display_name passes the looks_like_address check, return False
+        return False
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
