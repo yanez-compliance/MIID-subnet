@@ -87,13 +87,21 @@ def remove_disallowed_unicode(text: str) -> str:
     - ASCII digits and space
     
     This removes currency symbols (like £), emoji, math operators, etc.
+    Also excludes phonetic small-cap blocks AND Latin Extended-D block (U+A720 to U+A7FF)
+    which includes characters like ꞎ, ꞙ, ꞟ and similar extended Latin characters.
     """
     allowed = []
+    
     for c in text:
         codepoint = ord(c)
         
-        # Exclude phonetic small-cap blocks
-        if 0x1D00 <= codepoint <= 0x1D7F or 0x1D80 <= codepoint <= 0x1DBF:
+        # ✅ Updated exclusion: phonetic small-cap blocks + Latin Extended-D block
+        # Latin Extended-D (U+A720 to U+A7FF) includes characters like ꞎ, ꞙ, ꞟ
+        if (
+            0x1D00 <= codepoint <= 0x1D7F or  # Phonetic Extensions
+            0x1D80 <= codepoint <= 0x1DBF or  # Phonetic Extensions Supplement
+            0xA720 <= codepoint <= 0xA7FF      # Latin Extended-D (includes ꞎ, ꞙ, ꞟ)
+        ):
             continue
         
         cat = unicodedata.category(c)
