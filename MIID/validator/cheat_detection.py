@@ -80,13 +80,38 @@ def normalize_variation(text: str, aggressive: bool = True) -> str:
     return normalized
 
 
+def remove_disallowed_unicode(text: str) -> str:
+    """Remove disallowed Unicode characters from text, keeping only:
+    - Letters (any language)
+    - Marks (diacritics)
+    - ASCII digits and space
+    
+    This removes currency symbols (like £), emoji, math operators, etc.
+    """
+    allowed = []
+    for c in text:
+        cat = unicodedata.category(c)
+        if cat.startswith("L"):       # ✓ Letter (any language)
+            allowed.append(c)
+        elif cat.startswith("M"):     # ✓ Mark (diacritics)
+            allowed.append(c)
+        elif c in " 0123456789":      # ✓ ASCII digits and space
+            allowed.append(c)
+        else:
+            # everything else (symbols, emoji, currency signs, math operators)
+            # gets removed
+            pass
+    return "".join(allowed)
+
+
 def normalize_address_for_deduplication(addr: str) -> str:
     """Normalize address using Nominatim-style normalization + transliteration + deduplication logic.
     
     This combines:
-    1. Nominatim-style Unicode normalization (NFKD) and diacritic removal
-    2. Transliteration of all non-ASCII characters to ASCII (using unidecode)
-    3. Existing deduplication logic (unique words, sorted letters)
+    1. Remove disallowed Unicode characters (currency symbols, emoji, etc.)
+    2. Nominatim-style Unicode normalization (NFKD) and diacritic removal
+    3. Transliteration of all non-ASCII characters to ASCII (using unidecode)
+    4. Existing deduplication logic (unique words, sorted letters)
     
     This prevents different transliterations/translations of the same address
     from bypassing duplicate detection by converting all scripts to ASCII.
@@ -94,9 +119,12 @@ def normalize_address_for_deduplication(addr: str) -> str:
     if not addr or not addr.strip():
         return ""
     
+    # Step 0: Remove disallowed Unicode characters (currency symbols like £, emoji, etc.)
+    text = remove_disallowed_unicode(addr)
+    
     # Step 1: Apply Nominatim-style normalization (NFKD + diacritic removal)
     # Unicode normalization (NFKD)
-    text = unicodedata.normalize("NFKD", addr)
+    text = unicodedata.normalize("NFKD", text)
     # Remove diacritics
     text = "".join(c for c in text if not unicodedata.combining(c))
     # Lowercase

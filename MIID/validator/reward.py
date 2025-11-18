@@ -211,11 +211,18 @@ def looks_like_address(address: str) -> bool:
     if len(set(address)) < 5:  # all chars basically the same
         return False
         
-    # Has at least two digit (street number)
+    # Has at least two digits in two different comma-separated sections
     # Replace hyphens and semicolons with empty strings before counting numbers
     address_for_number_count = address.replace('-', '').replace(';', '')
-    number_groups = re.findall(r"\d+", address_for_number_count)
-    if len(number_groups) < 2:
+    # Split address by commas and check for numbers in each section
+    sections = [s.strip() for s in address_for_number_count.split(',')]
+    sections_with_numbers = []
+    for section in sections:
+        number_groups = re.findall(r"\d+", section)
+        if len(number_groups) > 0:
+            sections_with_numbers.append(section)
+    # Need at least 2 sections that contain numbers
+    if len(sections_with_numbers) < 2:
         return False
 
     if address.count(",") < 2:
@@ -2527,9 +2534,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.3
+            quality_weight = 0.2
             dob_weight = 0.1
-            address_weight = 0.6
+            address_weight = 0.7
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight

@@ -43,7 +43,7 @@ import os
 import random
 import asyncio
 import numpy as np
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 
 from MIID.protocol import IdentitySynapse
@@ -164,16 +164,24 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     return res
 
 
-def process_new_variations_structure(uid_response_map, miner_uids, self):
+def process_new_variations_structure(uid_response_map, miner_uids, self, expected_uav_seed_name: Optional[str] = None):
     """Process the new variations structure and extract UAV data.
 
     This function updates each response's variations to the legacy list-of-lists
     while collecting UAV information separately for logging and result export.
+    
+    Args:
+        uid_response_map: Dictionary mapping UIDs to responses
+        miner_uids: List of miner UIDs
+        self: Validator instance
+        expected_uav_seed_name: Optional. If provided, only accept UAVs for this specific seed name.
+                               UAVs for other seeds will be ignored and logged as warnings.
     """
     uav_summary = {
         "total_miners_with_uav": 0,
         "total_uavs_collected": 0,
         "miners_with_coordinates": 0,
+        "rejected_uavs": 0,  # Track UAVs from unexpected seeds
     }
     uav_by_miner = {}
 
@@ -197,6 +205,15 @@ def process_new_variations_structure(uid_response_map, miner_uids, self):
                         miner_variations[seed_name] = seed_data.get("variations") or []
 
                     if seed_data.get("uav"):
+                        # Only accept UAV for the expected seed name
+                        if expected_uav_seed_name and seed_name != expected_uav_seed_name:
+                            bt.logging.warning(
+                                f"Miner {uid}: Rejected UAV for unexpected seed '{seed_name}'. "
+                                f"Expected UAV only for '{expected_uav_seed_name}'"
+                            )
+                            uav_summary["rejected_uavs"] += 1
+                            continue
+                        
                         uav = seed_data["uav"]
                         if (
                             isinstance(uav, dict)
@@ -283,8 +300,27 @@ async def forward(self):
     # Use the query generator
     challenge_start_time = time.time()
     seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
-    # Append Phase 3 UAV requirements to the query template sent to miners
-    query_template = add_uav_requirements(query_template)
+    
+    # Identify high-risk identities and randomly select one for UAV request
+    high_risk_identities = [item for item in seed_names_with_labels if item.get('label') == 'High Risk']
+    uav_seed_name = None
+    selected_identity = None
+    if high_risk_identities:
+        selected_identity = random.choice(high_risk_identities)
+        uav_seed_name = selected_identity['name']
+        bt.logging.info(f"Selected high-risk identity '{uav_seed_name}' with address '{selected_identity['address']}' for UAV request")
+    else:
+        bt.logging.warning("No high-risk identities found. Skipping UAV request.")
+    
+    # Add UAV field to all identities (true for selected one, false for others)
+    for identity in seed_names_with_labels:
+        identity['UAV'] = (identity['name'] == uav_seed_name) if uav_seed_name else False
+    
+    # Store the base query template before adding UAV requirements (for formatted queries)
+    base_query_template = query_template
+    
+    # Append Phase 3 UAV requirements to the query template sent to miners (only for selected identity)
+    query_template = add_uav_requirements(query_template, uav_seed_name=uav_seed_name)
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
@@ -385,11 +421,17 @@ async def forward(self):
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
 
     # Normalize new structure to legacy for rewards and collect UAV data
-    uav_summary, uav_by_miner = process_new_variations_structure(uid_response_map, miner_uids, self)
+    # Only accept UAVs for the expected high-risk identity
+    uav_summary, uav_by_miner = process_new_variations_structure(uid_response_map, miner_uids, self, expected_uav_seed_name=uav_seed_name)
     bt.logging.info(
         f"UAV Collection: {uav_summary.get('total_miners_with_uav', 0)} miners provided UAVs, "
         f"{uav_summary.get('total_uavs_collected', 0)} total collected"
     )
+    if uav_summary.get('rejected_uavs', 0) > 0:
+        bt.logging.warning(
+            f"Rejected {uav_summary.get('rejected_uavs', 0)} UAV(s) from unexpected seed names. "
+            f"Expected UAV only for '{uav_seed_name}'"
+        )
 
     # Create ordered lists from the mapping to maintain consistency (after normalization)
     all_responses = [uid_response_map[uid] for uid in miner_uids]
@@ -447,8 +489,15 @@ async def forward(self):
     formatted_queries = {}
     for identity in seed_names_with_labels:
         try:
+            # Use base query template (without UAV) for all identities except the UAV-selected one
+            # For the UAV-selected identity, use the full query template (with UAV requirements)
+            if uav_seed_name and identity['name'] == uav_seed_name:
+                template_to_use = query_template
+            else:
+                template_to_use = base_query_template
+            
             # Format the query template with the actual identity name
-            formatted_query = query_template.replace("{name}", identity['name'])
+            formatted_query = template_to_use.replace("{name}", identity['name'])
             formatted_queries[identity['name']] = {
                 "query": formatted_query,
                 "identity": {
