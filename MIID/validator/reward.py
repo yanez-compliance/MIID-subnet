@@ -211,18 +211,19 @@ def looks_like_address(address: str) -> bool:
     if len(set(address)) < 5:  # all chars basically the same
         return False
         
-    # Has at least two digits in two different comma-separated sections
+    # Has at least one digit in a comma-separated section
     # Replace hyphens and semicolons with empty strings before counting numbers
     address_for_number_count = address.replace('-', '').replace(';', '')
     # Split address by commas and check for numbers in each section
     sections = [s.strip() for s in address_for_number_count.split(',')]
     sections_with_numbers = []
     for section in sections:
-        number_groups = re.findall(r"\d+", section)
+        # Only match ASCII digits (0-9), not other numeric characters
+        number_groups = re.findall(r"[0-9]+", section)
         if len(number_groups) > 0:
             sections_with_numbers.append(section)
-    # Need at least 2 sections that contain numbers
-    if len(sections_with_numbers) < 2:
+    # Need at least 1 section that contains numbers
+    if len(sections_with_numbers) < 1:
         return False
 
     if address.count(",") < 2:
@@ -255,7 +256,48 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         user_agent = f"YanezCompliance/{validator_uid} (https://yanezcompliance.com; omar@yanezcompliance.com)"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
-        return len(response.json()) > 0
+        results = response.json()
+        
+        # Check if we have any results
+        if len(results) == 0:
+            return False
+        
+        # Extract numbers from the original address for matching
+        original_numbers = set(re.findall(r"[0-9]+", address.lower()))
+        
+        # Validate that at least one result meets all criteria
+        for result in results:
+            # Check place_rank is 20 or above
+            place_rank = result.get('place_rank', 0)
+            if place_rank < 20:
+                continue
+            
+            # Check that 'name' field exists and is in the original address
+            name = result.get('name', '')
+            if name:
+                # Check if name is in the address (case-insensitive)
+                if name.lower() not in address.lower():
+                    continue
+            
+            # Check display_name looks like an address
+            display_name = result.get('display_name', '')
+            if not display_name or not looks_like_address(display_name):
+                continue
+            
+            # Check that numbers in display_name match numbers in original address exactly (==)
+            # Each number from original must appear as an exact match, not as a substring
+            display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
+            # All numbers from original must be exactly equal to numbers in display_name
+            if original_numbers:
+                # Check that every number in original has an exact match in display_name
+                if not all(num in display_numbers for num in original_numbers):
+                    continue
+            
+            # All checks passed
+            return True
+        
+        # If no result passes all checks, return False
+        return False
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
