@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict, Tuple, Any, Set
+from typing import List, Dict, Tuple, Any, Set, Union
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -245,7 +245,48 @@ def looks_like_address(address: str) -> bool:
     
     return True
 
-def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str) -> bool:
+def compute_bounding_box_areas_meters(nominatim_results):
+    """
+    Computes bounding box areas in meters instead of degrees.
+    """
+    if not isinstance(nominatim_results, list):
+        return []
+    
+    areas = []
+    for item in nominatim_results:
+        if "boundingbox" not in item:
+            continue
+        
+        # Extract and convert bounding box coords to floats
+        south, north, west, east = map(float, item["boundingbox"])
+        
+        # Approx center latitude for longitude scaling
+        center_lat = (south + north) / 2.0
+        lat_m = 111_000  # meters per degree latitude
+        lon_m = 111_000 * math.cos(math.radians(center_lat))  # meters per degree longitude
+        height_m = abs(north - south) * lat_m
+        width_m = abs(east - west) * lon_m
+        area_m2 = width_m * height_m
+        
+        areas.append({
+            "south": south,
+            "north": north,
+            "west": west,
+            "east": east,
+            "width_m": width_m,
+            "height_m": height_m,
+            "area_m2": area_m2,
+            "result": item  # Keep reference to original result
+        })
+    
+    return areas
+
+
+def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str) -> Union[float, str, dict]:
+    """
+    Validates address using Nominatim API and returns a score based on bounding box areas.
+    Returns: dict with 'score' and 'details' for success, "TIMEOUT" for timeout, or 0.0 for failure
+    """
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
@@ -260,12 +301,13 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         
         # Check if we have any results
         if len(results) == 0:
-            return False
+            return 0.0
         
         # Extract numbers from the original address for matching
         original_numbers = set(re.findall(r"[0-9]+", address.lower()))
         
-        # Validate that at least one result meets all criteria
+        # Filter results based on place_rank, name check, and numbers check
+        filtered_results = []
         for result in results:
             # Check place_rank is 20 or above
             place_rank = result.get('place_rank', 0)
@@ -279,31 +321,61 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
                 if name.lower() not in address.lower():
                     continue
             
-            # Check display_name looks like an address
+            # Check that numbers in display_name match numbers from the original address
             display_name = result.get('display_name', '')
-            if not display_name or not looks_like_address(display_name):
-                continue
+            if display_name:
+                display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
+                if original_numbers:
+                    # Ensure display numbers are a subset of original numbers (no new numbers introduced)
+                    if display_numbers and not display_numbers.issubset(original_numbers):
+                        continue
             
-            # Check that numbers in display_name match numbers in original address exactly (==)
-            # Each number from original must appear as an exact match, not as a substring
-            display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
-            # All numbers from original must be exactly equal to numbers in display_name
-            if original_numbers:
-                # Check that every number in original has an exact match in display_name
-                if not all(num in display_numbers for num in original_numbers):
-                    continue
-            
-            # All checks passed
-            return True
+            filtered_results.append(result)
         
-        # If no result passes all checks, return False
-        return False
+        # If no results pass the filters, return 0.0
+        if len(filtered_results) == 0:
+            return 0.0
+        
+        # Calculate bounding box areas for all results (not just filtered)
+        areas_data = compute_bounding_box_areas_meters(results)
+        
+        if len(areas_data) == 0:
+            return 0.0
+        
+        # Extract areas
+        areas = [item["area_m2"] for item in areas_data]
+        
+        # Use the smallest area for scoring
+        min_area = min(areas)
+        
+        # Score based on smallest area
+        if min_area < 100:
+            score = 1.0
+        elif min_area < 1000:
+            score = 0.9
+        elif min_area < 10000:
+            score = 0.8
+        elif min_area < 100000:
+            score = 0.7
+        else:
+            score = 0.3
+        
+        # Store score details
+        score_details = {
+            "score": score,
+            "areas": areas,
+            "min_area": min_area,
+            "num_results": len(areas),
+            "areas_data": areas_data
+        }
+        
+        return score_details
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
     except requests.exceptions.RequestException as e:
         bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
-        return False
+        return 0.0
     except ValueError as e:
         error_msg = str(e)
         # Check if it's an encoding error (like latin-1 codec issues)
@@ -312,11 +384,11 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             return "TIMEOUT"
         else:
             bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
-            return False
+            return 0.0
     except Exception as e:
         bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
-        return False
+        return 0.0
 
 # Global country name mapping to handle variations between miner submissions and geonames data
 # All keys and values are lowercase for case-insensitive matching
@@ -1915,6 +1987,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     nominatim_timeout_calls = 0
     nominatim_failed_calls = 0
     total_calls = 0
+    nominatim_scores = []  # Initialize scores list
     
     if api_validated_addresses:
         # Randomly choose up to 3 different addresses for API validation with Nominatim
@@ -1925,20 +1998,38 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         nominatim_addresses = chosen_addresses
         
         # Try Nominatim API (up to 3 calls)
+        nominatim_scores = []
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name)
+            
+            # Extract score and details from result
+            score = None
+            score_details = None
+            if isinstance(result, dict) and "score" in result:
+                score = result["score"]
+                score_details = result
+            elif result == "TIMEOUT":
+                score = "TIMEOUT"
+            else:
+                score = result if isinstance(result, (int, float)) else 0.0
+            
             api_attempts.append({
                 "address": addr,
                 "api": "nominatim",
-                "result": result,
+                "result": score,
+                "score_details": score_details,
                 "attempt": i + 1
             })
             
             if result == "TIMEOUT":
                 nominatim_timeout_calls += 1
                 time.sleep(1.0)
-            elif result == True:
+            elif isinstance(result, dict) and result.get("score", 0) > 0.0:
                 nominatim_successful_calls += 1
+                nominatim_scores.append(result["score"])
+            elif isinstance(result, (int, float)) and result > 0.0:
+                nominatim_successful_calls += 1
+                nominatim_scores.append(result)
             else:
                 nominatim_failed_calls += 1
             
@@ -1960,24 +2051,13 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         else:
             api_result = "SUCCESS"  # All pass without timeouts = perfect score
     
-    # Scoring based on individual API results
-    if api_result == "FAILED":
-        base_score = 0.3  # Any failure = 0.0 score
-    elif api_result == "TIMEOUT":
-        # Updated timeout scoring rules:
-        # - 3 or fewer timeouts (and no failures) => 1.0
-        # - 4 timeouts => 0.6
-        # - 5 or more timeouts => 0.3
-        if total_timeouts <= 1:
-            base_score = 1.0
-        elif total_timeouts == 2:
-            base_score = 0.6
-        else:
-            base_score = 0.3
-    elif api_result == "SUCCESS":
-        base_score = 1.0  # Perfect - all addresses passed without timeouts
+    # Scoring based on individual API results using actual scores from API calls
+    if nominatim_failed_calls > 0 or len(nominatim_scores) == 0:
+        # Any failure or no successful calls results in 0.3 score
+        base_score = 0.3
     else:
-        base_score = 0.3  # Default fallback
+        # Use the average of all successful API call scores
+        base_score = sum(nominatim_scores) / len(nominatim_scores)
     
     # Store API validation results
     address_breakdown["api_validation"] = {
