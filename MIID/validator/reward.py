@@ -2052,8 +2052,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             api_result = "SUCCESS"  # All pass without timeouts = perfect score
     
     # Scoring based on individual API results using actual scores from API calls
-    if len(nominatim_scores) == 0:
-        # All API calls failed - no successful calls with scores
+    if nominatim_failed_calls > 0 or len(nominatim_scores) == 0:
+        # Any failure or no successful calls results in 0.3 score
         base_score = 0.3
     else:
         # Use the average of all successful API call scores
