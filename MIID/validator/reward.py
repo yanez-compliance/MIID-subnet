@@ -358,7 +358,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         elif min_area < 100000:
             score = 0.7
         else:
-            score = 0.0
+            score = 0.3
         
         # Store score details
         score_details = {
