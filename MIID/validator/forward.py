@@ -528,10 +528,10 @@ async def forward(self):
             "query_template": query_template,
             "dendrite_timeout": adaptive_timeout
         },
-        # Phase 3 UAV data (collected but not scored in Cycle 1)
+        # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
-            "cycle": "Phase 3 Cycle 1 Sandbox",
-            "note": "UAVs are collected but NOT scored in Cycle 1",
+            "cycle": "Phase3-C1-Exec",
+            "note": "UAVs are collected and scored in Cycle 1 execution",
             "summary": uav_summary,
             "by_miner": uav_by_miner,
         },
