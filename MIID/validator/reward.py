@@ -609,6 +609,33 @@ def city_in_country(city_name: str, country_name: str) -> bool:
         bt.logging.warning(f"Error checking city '{city_name}' in country '{country_name}': {str(e)}")
         return False
 
+def check_western_sahara_cities(generated_address: str) -> bool:
+    """
+    Check if any Western Sahara city appears in the generated address.
+    
+    Args:
+        generated_address: The generated address to check
+        
+    Returns:
+        True if any Western Sahara city is found in the address, False otherwise
+    """
+    if not generated_address:
+        return False
+    
+    # Western Sahara cities
+    WESTERN_SAHARA_CITIES = [
+        "laayoune", "dakhla", "boujdour", "es semara", "sahrawi", "tifariti", "aousserd"
+    ]
+    
+    gen_lower = generated_address.lower()
+    
+    # Check if any of the cities appear in the generated address
+    for city in WESTERN_SAHARA_CITIES:
+        if city in gen_lower:
+            return True
+    
+    return False
+
 def validate_address_region(generated_address: str, seed_address: str) -> bool:
     """
     Validate that generated address has correct region from seed address.
@@ -627,11 +654,15 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Special handling for disputed regions not in geonames
-    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara", 'western sahara']
-    
-    # Check if seed address is one of the special regions
     seed_lower = seed_address.lower()
-    if seed_lower in SPECIAL_REGIONS:
+    
+    # Special handling for Western Sahara - check for cities instead of region name
+    if seed_lower in ["west sahara", "western sahara"]:
+        return check_western_sahara_cities(generated_address)
+    
+    # Other special regions
+    OTHER_SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk"]
+    if seed_lower in OTHER_SPECIAL_REGIONS:
         # If seed is a special region, check if that region appears in generated address
         gen_lower = generated_address.lower()
         return seed_lower in gen_lower
