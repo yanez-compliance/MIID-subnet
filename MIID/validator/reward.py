@@ -345,17 +345,17 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         # Extract areas
         areas = [item["area_m2"] for item in areas_data]
         
-        # Use the smallest area for scoring
-        min_area = min(areas)
+        # Use the total area for scoring
+        total_area = sum(areas)
         
-        # Score based on smallest area
-        if min_area < 100:
+        # Score based on total area
+        if total_area < 100:
             score = 1.0
-        elif min_area < 1000:
+        elif total_area < 1000:
             score = 0.9
-        elif min_area < 10000:
+        elif total_area < 10000:
             score = 0.8
-        elif min_area < 100000:
+        elif total_area < 100000:
             score = 0.7
         else:
             score = 0.3
@@ -364,7 +364,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         score_details = {
             "score": score,
             "areas": areas,
-            "min_area": min_area,
+            "total_area": total_area,
             "num_results": len(areas),
             "areas_data": areas_data
         }
