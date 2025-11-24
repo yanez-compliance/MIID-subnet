@@ -2463,12 +2463,41 @@ def get_name_variation_rewards(
             # Penalty for duplicate variations - addresses (with normalization)
             address_duplicates_penalty = 0.0
             if address_variations:  # Check if address list exists and is not empty
+                # First, check for exact duplicates (existing logic)
                 normalized_addresses = [normalize_address(addr) for addr in address_variations if addr]  # Filter out empty strings
                 duplicates_addresses = len(normalized_addresses) - len(set(normalized_addresses))
                 if duplicates_addresses > 0:
                     penalty_duplicates = duplicates_addresses * 0.05  # e.g. 5% penalty per duplicate
                     # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
                     address_duplicates_penalty += penalty_duplicates
+                
+                # Second, check for duplicate first sections (before first comma)
+                first_sections = []
+                for addr in address_variations:
+                    if addr and addr.strip():
+                        # Split on comma and get the first section
+                        parts = addr.split(',')
+                        if parts:
+                            first_section = parts[0].strip()
+                            # Normalize the first section (lowercase, remove extra spaces, remove 2-letter words)
+                            words = first_section.split()
+                            # Filter out 2-letter words
+                            filtered_words = [word for word in words if len(word) > 2]
+                            normalized_first = " ".join(filtered_words).lower().strip()
+                            if normalized_first:  # Only add if not empty after filtering
+                                first_sections.append(normalized_first)
+                
+                if first_sections:
+                    # Count how many addresses share the same first section using dictionary
+                    first_section_counts = {}
+                    for section in first_sections:
+                        first_section_counts[section] = first_section_counts.get(section, 0) + 1
+                    # Penalize if any first section appears more than once
+                    duplicate_first_sections = sum(count - 1 for count in first_section_counts.values() if count > 1)
+                    if duplicate_first_sections > 0:
+                        penalty_first_section = duplicate_first_sections * 0.05  # 5% penalty per duplicate first section
+                        # bt.logging.info(f"Duplicate first sections for {name}: {duplicate_first_sections} duplicates → penalty {penalty_first_section}")
+                        address_duplicates_penalty += penalty_first_section
             
             address_duplicates_penalty = min(address_duplicates_penalty, 0.5)  # Max 50% penalty
 
