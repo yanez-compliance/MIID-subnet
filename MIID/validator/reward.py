@@ -326,8 +326,8 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             if display_name:
                 display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
                 if original_numbers:
-                    # Ensure display numbers are a subset of original numbers (no new numbers introduced)
-                    if display_numbers and not display_numbers.issubset(original_numbers):
+                    # Ensure display numbers exactly match original numbers (no new numbers, no missing numbers)
+                    if display_numbers != original_numbers:
                         continue
             
             filtered_results.append(result)
