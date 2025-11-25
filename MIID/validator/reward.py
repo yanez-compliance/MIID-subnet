@@ -326,8 +326,8 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             if display_name:
                 display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
                 if original_numbers:
-                    # Ensure display numbers are a subset of original numbers (no new numbers introduced)
-                    if display_numbers and not display_numbers.issubset(original_numbers):
+                    # Ensure display numbers exactly match original numbers (no new numbers, no missing numbers)
+                    if display_numbers != original_numbers:
                         continue
             
             filtered_results.append(result)
@@ -345,17 +345,17 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         # Extract areas
         areas = [item["area_m2"] for item in areas_data]
         
-        # Use the smallest area for scoring
-        min_area = min(areas)
+        # Use the total area for scoring
+        total_area = sum(areas)
         
-        # Score based on smallest area
-        if min_area < 100:
+        # Score based on total area
+        if total_area < 100:
             score = 1.0
-        elif min_area < 1000:
+        elif total_area < 1000:
             score = 0.9
-        elif min_area < 10000:
+        elif total_area < 10000:
             score = 0.8
-        elif min_area < 100000:
+        elif total_area < 100000:
             score = 0.7
         else:
             score = 0.3
@@ -364,7 +364,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         score_details = {
             "score": score,
             "areas": areas,
-            "min_area": min_area,
+            "total_area": total_area,
             "num_results": len(areas),
             "areas_data": areas_data
         }
@@ -609,6 +609,33 @@ def city_in_country(city_name: str, country_name: str) -> bool:
         bt.logging.warning(f"Error checking city '{city_name}' in country '{country_name}': {str(e)}")
         return False
 
+def check_western_sahara_cities(generated_address: str) -> bool:
+    """
+    Check if any Western Sahara city appears in the generated address.
+    
+    Args:
+        generated_address: The generated address to check
+        
+    Returns:
+        True if any Western Sahara city is found in the address, False otherwise
+    """
+    if not generated_address:
+        return False
+    
+    # Western Sahara cities
+    WESTERN_SAHARA_CITIES = [
+        "laayoune", "dakhla", "boujdour", "es semara", "sahrawi", "tifariti", "aousserd"
+    ]
+    
+    gen_lower = generated_address.lower()
+    
+    # Check if any of the cities appear in the generated address
+    for city in WESTERN_SAHARA_CITIES:
+        if city in gen_lower:
+            return True
+    
+    return False
+
 def validate_address_region(generated_address: str, seed_address: str) -> bool:
     """
     Validate that generated address has correct region from seed address.
@@ -627,11 +654,15 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Special handling for disputed regions not in geonames
-    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara", 'western sahara']
-    
-    # Check if seed address is one of the special regions
     seed_lower = seed_address.lower()
-    if seed_lower in SPECIAL_REGIONS:
+    
+    # Special handling for Western Sahara - check for cities instead of region name
+    if seed_lower in ["west sahara", "western sahara"]:
+        return check_western_sahara_cities(generated_address)
+    
+    # Other special regions
+    OTHER_SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk"]
+    if seed_lower in OTHER_SPECIAL_REGIONS:
         # If seed is a special region, check if that region appears in generated address
         gen_lower = generated_address.lower()
         return seed_lower in gen_lower
@@ -2432,12 +2463,41 @@ def get_name_variation_rewards(
             # Penalty for duplicate variations - addresses (with normalization)
             address_duplicates_penalty = 0.0
             if address_variations:  # Check if address list exists and is not empty
+                # First, check for exact duplicates (existing logic)
                 normalized_addresses = [normalize_address(addr) for addr in address_variations if addr]  # Filter out empty strings
                 duplicates_addresses = len(normalized_addresses) - len(set(normalized_addresses))
                 if duplicates_addresses > 0:
                     penalty_duplicates = duplicates_addresses * 0.05  # e.g. 5% penalty per duplicate
                     # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
                     address_duplicates_penalty += penalty_duplicates
+                
+                # Second, check for duplicate first sections (before first comma)
+                first_sections = []
+                for addr in address_variations:
+                    if addr and addr.strip():
+                        # Split on comma and get the first section
+                        parts = addr.split(',')
+                        if parts:
+                            first_section = parts[0].strip()
+                            # Normalize the first section (lowercase, remove extra spaces, remove 2-letter words)
+                            words = first_section.split()
+                            # Filter out 2-letter words
+                            filtered_words = [word for word in words if len(word) > 2]
+                            normalized_first = " ".join(filtered_words).lower().strip()
+                            if normalized_first:  # Only add if not empty after filtering
+                                first_sections.append(normalized_first)
+                
+                if first_sections:
+                    # Count how many addresses share the same first section using dictionary
+                    first_section_counts = {}
+                    for section in first_sections:
+                        first_section_counts[section] = first_section_counts.get(section, 0) + 1
+                    # Penalize if any first section appears more than once
+                    duplicate_first_sections = sum(count - 1 for count in first_section_counts.values() if count > 1)
+                    if duplicate_first_sections > 0:
+                        penalty_first_section = duplicate_first_sections * 0.05  # 5% penalty per duplicate first section
+                        # bt.logging.info(f"Duplicate first sections for {name}: {duplicate_first_sections} duplicates → penalty {penalty_first_section}")
+                        address_duplicates_penalty += penalty_first_section
             
             address_duplicates_penalty = min(address_duplicates_penalty, 0.5)  # Max 50% penalty
 
