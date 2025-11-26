@@ -119,13 +119,14 @@ def remove_disallowed_unicode(text: str) -> str:
 
 
 def normalize_address_for_deduplication(addr: str) -> str:
-    """Normalize address using Nominatim-style normalization + transliteration + deduplication logic.
+    """Normalize address using Nominatim-style normalization + deduplication logic.
     
     This combines:
     1. Remove disallowed Unicode characters (currency symbols, emoji, etc.)
     2. Nominatim-style Unicode normalization (NFKD) and diacritic removal
     3. Transliteration of all non-ASCII characters to ASCII (using unidecode)
-    4. Existing deduplication logic (unique words, sorted letters)
+    4. Remove numbers
+    5. Deduplication logic - filter out short words (1, 2, or 3 letters) and unique words, sorted letters
     
     This prevents different transliterations/translations of the same address
     from bypassing duplicate detection by converting all scripts to ASCII.
@@ -154,10 +155,15 @@ def normalize_address_for_deduplication(addr: str) -> str:
     # This converts Arabic, Cyrillic, Chinese, etc. to their ASCII equivalents
     text = unidecode(text)
     
+    # Step 2.5: Remove numbers
+    text = re.sub(r'\d+', ' ', text)
+    
     # Step 3: Apply existing deduplication logic
     # Replace commas with spaces (if any remain)
     cleaned = text.replace(",", " ")
     parts = [p for p in cleaned.split(" ") if p]
+    # Filter out words that are 1, 2, or 3 characters long
+    parts = [p for p in parts if len(p) > 3]
     unique_words = set(parts)
     dedup_text = " ".join(unique_words)
     # Extract letters (non-word, non-digit), excluding specific Unicode chars and lowercase
