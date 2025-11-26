@@ -2475,10 +2475,19 @@ def get_name_variation_rewards(
                 first_sections = []
                 for addr in address_variations:
                     if addr and addr.strip():
+                        # Strip leading commas and spaces to prevent gaming the system
+                        # (miners might add ", " at the front to bypass duplicate detection)
+                        normalized_addr = addr.strip().lstrip(',').strip()
+                        if not normalized_addr:
+                            continue
                         # Split on comma and get the first section
-                        parts = addr.split(',')
+                        parts = normalized_addr.split(',')
                         if parts:
                             first_section = parts[0].strip()
+                            # If first section is less than 3 characters, combine with second section
+                            if len(first_section) < 4 and len(parts) > 1:
+                                # Combine first 2 sections (remove the comma between them)
+                                first_section = (parts[0].strip() + " " + parts[1].strip()).strip()
                             # Normalize the first section (lowercase, remove extra spaces, remove 2-letter words)
                             words = first_section.split()
                             # Filter out 2-letter words
