@@ -2091,7 +2091,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             
             api_attempts.append({
                 "address": addr,
-                "api": "nominatim",
+                "api": "Photon",
                 "result": score,
                 "score_details": score_details,
                 "attempt": i + 1
