@@ -419,12 +419,14 @@ def check_with_photon(address: str) -> dict:
 
         response = requests.get(url, params=params)
         response.raise_for_status()
+            # Return False if features list is empty
+        if response.get('features') == []:
+            return 0.0
 
-        data = response.json()
-        return data
+        return 1.0
     except Exception as e:
         bt.logging.error(f"Error checking address with Photon API: {type(e).__name__}: {str(e)}")
-        return 0.0
+        return 'TIMEOUT'
 
 # Global country name mapping to handle variations between miner submissions and geonames data
 # All keys and values are lowercase for case-insensitive matching
