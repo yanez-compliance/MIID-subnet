@@ -409,6 +409,23 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
         return 0.0
 
+def check_with_photon(address: str) -> dict:
+    """
+    Check address with Photon API.
+    """
+    try:
+        url = "https://photon.komoot.io/api/"
+        params = {"q": address}
+
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+
+        data = response.json()
+        return data
+    except Exception as e:
+        bt.logging.error(f"Error checking address with Photon API: {type(e).__name__}: {str(e)}")
+        return 0.0
+
 # Global country name mapping to handle variations between miner submissions and geonames data
 # All keys and values are lowercase for case-insensitive matching
 COUNTRY_MAPPING = {
@@ -2050,7 +2067,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # Try Nominatim API (up to 3 calls)
         nominatim_scores = []
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
+            result = check_with_photon(addr)
+            #result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
             # Extract score and details from result
             score = None
