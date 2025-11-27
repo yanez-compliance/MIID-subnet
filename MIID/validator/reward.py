@@ -309,8 +309,13 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         else:
             # Fallback if hotkey not found in mapping
             user_agent = f"GeocodingClient/testing_agent"
+
+        nominatim_headers = {
+            "User-Agent": user_agent,
+            "Referer": "https://github.com/osm-search/Nominatim"
+        }
         
-        response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
+        response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
         results = response.json()
         
         # Check if we have any results
