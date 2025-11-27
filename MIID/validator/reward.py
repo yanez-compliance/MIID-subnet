@@ -305,10 +305,10 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         # Each validator consistently uses its own User-Agent for all requests
         if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
             validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
-            user_agent = f"IdentityValidator/{validator_name} (UID:{validator_uid})"
+            user_agent = f"GeocodingClient/{validator_name} (UID:{validator_uid})"
         else:
             # Fallback if hotkey not found in mapping
-            user_agent = f"IdentityValidator/Unknown (UID:{validator_uid})"
+            user_agent = f"GeocodingClient/Unknown (UID:{validator_uid})"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         results = response.json()
