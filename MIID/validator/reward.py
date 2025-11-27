@@ -409,24 +409,30 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
         return 0.0
 
-def check_with_photon(address: str) -> dict:
+def check_with_photon(address: str) -> Union[float, str]:
     """
     Check address with Photon API.
+    Returns: float score (1.0 for success, 0.0 for failure) or "TIMEOUT" string
     """
     try:
         url = "https://photon.komoot.io/api/"
         params = {"q": address}
 
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, timeout=5)
         response.raise_for_status()
-            # Return False if features list is empty
-        if response.get('features') == []:
+        data = response.json()
+        
+        # Return 0.0 if features list is empty
+        if not data.get('features') or len(data.get('features', [])) == 0:
             return 0.0
 
         return 1.0
+    except requests.exceptions.Timeout:
+        bt.logging.warning(f"Photon API timeout for address: {address}")
+        return "TIMEOUT"
     except Exception as e:
         bt.logging.error(f"Error checking address with Photon API: {type(e).__name__}: {str(e)}")
-        return 'TIMEOUT'
+        return 0.0
 
 # Global country name mapping to handle variations between miner submissions and geonames data
 # All keys and values are lowercase for case-insensitive matching
@@ -2075,10 +2081,10 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             # Extract score and details from result
             score = None
             score_details = None
-            if isinstance(result, dict) and "score" in result:
-                score = result["score"]
-                score_details = result
-            elif result == "TIMEOUT":
+            # if isinstance(result, dict) and "score" in result:
+            #     score = result["score"]
+            #     score_details = result
+            if result == "TIMEOUT":
                 score = "TIMEOUT"
             else:
                 score = result if isinstance(result, (int, float)) else 0.0
@@ -2094,9 +2100,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             if result == "TIMEOUT":
                 nominatim_timeout_calls += 1
                 time.sleep(1.0)
-            elif isinstance(result, dict) and result.get("score", 0) > 0.0:
-                nominatim_successful_calls += 1
-                nominatim_scores.append(result["score"])
+            # elif isinstance(result, dict) and result.get("score", 0) > 0.0:
+            #     nominatim_successful_calls += 1
+            #     nominatim_scores.append(result["score"])
             elif isinstance(result, (int, float)) and result > 0.0:
                 nominatim_successful_calls += 1
                 nominatim_scores.append(result)
