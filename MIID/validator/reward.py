@@ -43,7 +43,17 @@ from MIID.validator.cheat_detection import (
     overlap_coefficient,
     jaccard,
     detect_cheating_patterns,
+    remove_disallowed_unicode,
 )
+
+HOTKEY_TO_VALIDATOR_NAME: Dict[str, str] = {
+    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "MIIDOwner",
+    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Yuma",
+    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "RT21",
+    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "Tensora",
+    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "OTF",
+    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Rizzo",
+}
 
 def clean_transliteration_output(raw_response: str) -> str:
     """
@@ -282,7 +292,7 @@ def compute_bounding_box_areas_meters(nominatim_results):
     return areas
 
 
-def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str) -> Union[float, str, dict]:
+def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str, validator_hotkey: str = None) -> Union[float, str, dict]:
     """
     Validates address using Nominatim API and returns a score based on bounding box areas.
     Returns: dict with 'score' and 'details' for success, "TIMEOUT" for timeout, or 0.0 for failure
@@ -291,10 +301,14 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
         
-        # Use validator_uid to create a unique User-Agent per validator
+        # Use validator hotkey to get validator name from mapping and create a unique User-Agent
         # Each validator consistently uses its own User-Agent for all requests
-        # Format: AppName/ValidatorUID (contact email)
-        user_agent = f"YanezCompliance/{validator_uid} (https://yanezcompliance.com; omar@yanezcompliance.com)"
+        if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
+            validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
+            user_agent = f"IdentityValidator/{validator_name} (UID:{validator_uid})"
+        else:
+            # Fallback if hotkey not found in mapping
+            user_agent = f"IdentityValidator/Unknown (UID:{validator_uid})"
         
         response = requests.get(url, params=params, headers={"User-Agent": user_agent}, timeout=5)
         results = response.json()
@@ -1892,7 +1906,7 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
         "detailed_breakdown": detailed_breakdown
     }
 
-def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int) -> Dict[str, Any]:
+def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int, validator_hotkey: str = None) -> Dict[str, Any]:
     """Grade address variations - check all with heuristics, one random with API, and region validation."""
     if not seed_addresses or not any(seed_addresses):
         return {"overall_score": 1.0}
@@ -2031,7 +2045,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # Try Nominatim API (up to 3 calls)
         nominatim_scores = []
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name)
+            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
             # Extract score and details from result
             score = None
@@ -2475,6 +2489,10 @@ def get_name_variation_rewards(
                 first_sections = []
                 for addr in address_variations:
                     if addr and addr.strip():
+                        # Remove disallowed Unicode characters (symbols, emoji, etc.)
+                        addr = remove_disallowed_unicode(addr)
+                        if not addr or not addr.strip():
+                            continue
                         # Strip leading commas and spaces to prevent gaming the system
                         # (miners might add ", " at the front to bypass duplicate detection)
                         normalized_addr = addr.strip().lstrip(',').strip()
@@ -2714,7 +2732,13 @@ def get_name_variation_rewards(
         
         # Grade address variations before final reward calculation
         start_time = time.time()
-        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid)
+        # Get validator hotkey for user agent mapping
+        validator_hotkey = None
+        if hasattr(self, 'metagraph') and hasattr(self.metagraph, 'hotkeys') and self.uid < len(self.metagraph.hotkeys):
+            validator_hotkey = str(self.metagraph.hotkeys[self.uid])
+        elif hasattr(self, 'wallet') and hasattr(self.wallet, 'hotkey'):
+            validator_hotkey = str(self.wallet.hotkey.ss58_address)
+        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid, validator_hotkey)
         miner_metrics["address_grading"] = address_grading_score
         end_time = time.time()
         bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
