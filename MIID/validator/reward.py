@@ -2863,7 +2863,7 @@ def get_name_variation_rewards(
         # detailed_metrics would remain as calculated before the penalty step
     
     # Get burn configuration from config with defaults
-    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.40)
+    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
     burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
     keep_fraction = 1.0 - burn_fraction
     
