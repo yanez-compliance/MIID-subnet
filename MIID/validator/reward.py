@@ -2229,12 +2229,6 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # Use the average of all successful API call scores
         base_score = sum(nominatim_scores) / len(nominatim_scores)
     
-    # Get cache statistics
-    cache_hits = _cache_stats["cache_hits"]
-    api_calls = _cache_stats["api_calls"]
-    total_cache_requests = cache_hits + api_calls
-    cache_hit_rate = (cache_hits / total_cache_requests * 100) if total_cache_requests > 0 else 0.0
-    
     # Store API validation results
     address_breakdown["api_validation"] = {
         "api_result": api_result,
@@ -2246,13 +2240,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         "total_successful_calls": total_successful,
         "total_timeout_calls": total_timeouts,
         "total_failed_calls": total_failed,
-        "total_calls": total_calls,
-        "cache_stats": {
-            "cache_hits": cache_hits,
-            "api_calls": api_calls,
-            "total_requests": total_cache_requests,
-            "cache_hit_rate_percent": round(cache_hit_rate, 2)
-        }
+        "total_calls": total_calls
     }
     
     return {

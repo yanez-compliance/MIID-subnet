@@ -47,7 +47,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 
 from MIID.protocol import IdentitySynapse
-from MIID.validator.reward import get_name_variation_rewards
+from MIID.validator.reward import get_name_variation_rewards, _cache_stats
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
@@ -696,6 +696,18 @@ async def forward(self):
         bt.logging.error("Failed to set weights. Exiting.")
     else:
         bt.logging.info("Weights set successfully.")
+
+    # Get cache statistics once at the very end and add to results
+    cache_hits = _cache_stats["cache_hits"]
+    api_calls = _cache_stats["api_calls"]
+    total_cache_requests = cache_hits + api_calls
+    cache_hit_rate = (cache_hits / total_cache_requests * 100) if total_cache_requests > 0 else 0.0
+    results["nominatim_cache_stats"] = {
+        "cache_hits": cache_hits,
+        "api_calls": api_calls,
+        "total_requests": total_cache_requests,
+        "cache_hit_rate_percent": round(cache_hit_rate, 2)
+    }
 
     # Save the query and responses to a JSON file (now including weights)
     json_path = os.path.join(run_dir, f"results_{timestamp}.json")
