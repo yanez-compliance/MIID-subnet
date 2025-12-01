@@ -80,17 +80,25 @@ def normalize_variation(text: str, aggressive: bool = True) -> str:
     return normalized
 
 
-def remove_disallowed_unicode(text: str) -> str:
+def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     """Remove disallowed Unicode characters from text, keeping only:
     - Letters (any language)
     - Marks (diacritics)
     - ASCII digits and space
+    - Comma (if preserve_comma=True)
     
     This removes currency symbols (like £), emoji, math operators, etc.
     Also excludes phonetic small-cap blocks AND Latin Extended-D block (U+A720 to U+A7FF)
     which includes characters like ꞎ, ꞙ, ꞟ and similar extended Latin characters.
+    
+    Args:
+        text: The text to clean
+        preserve_comma: If True, preserves commas in the output. Defaults to False.
     """
     allowed = []
+    
+    # Determine which characters to allow based on preserve_comma
+    allowed_chars = " ,0123456789" if preserve_comma else " 0123456789"
     
     for c in text:
         codepoint = ord(c)
@@ -109,7 +117,7 @@ def remove_disallowed_unicode(text: str) -> str:
             allowed.append(c)
         elif cat.startswith("M"):     # ✓ Mark (diacritics)
             allowed.append(c)
-        elif c in " 0123456789":      # ✓ ASCII digits and space
+        elif c in allowed_chars:      # ✓ ASCII digits, space, and optionally comma
             allowed.append(c)
         else:
             # everything else (symbols, emoji, currency signs, math operators)

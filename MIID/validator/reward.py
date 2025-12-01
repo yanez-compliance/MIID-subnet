@@ -2573,8 +2573,8 @@ def get_name_variation_rewards(
                 first_sections = []
                 for addr in address_variations:
                     if addr and addr.strip():
-                        # Remove disallowed Unicode characters (symbols, emoji, etc.)
-                        addr = remove_disallowed_unicode(addr)
+                        # Remove disallowed Unicode characters (symbols, emoji, etc.) but preserve commas
+                        addr = remove_disallowed_unicode(addr, preserve_comma=True)
                         if not addr or not addr.strip():
                             continue
                         # Strip leading commas and spaces to prevent gaming the system
