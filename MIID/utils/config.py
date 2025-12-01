@@ -451,6 +451,20 @@ def add_validator_args(cls, parser):
         default=0.75
     )
     # Note: burn_uid is hardcoded to 59 and not configurable
+    
+    # --- Nominatim Cache Configuration ---
+    parser.add_argument(
+        '--neuron.nominatim_cache_enabled',
+        action='store_true',
+        help="Enable caching of Nominatim API results to reduce API calls.",
+        default=True
+    )
+    parser.add_argument(
+        '--neuron.nominatim_cache_max_size',
+        type=int,
+        help="Maximum number of entries in the Nominatim cache. Lower values reduce memory usage.",
+        default=10000
+    )
 
 
 def config(cls):
