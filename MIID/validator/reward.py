@@ -297,35 +297,55 @@ def compute_bounding_box_areas_meters(nominatim_results):
 # Global cache instance for Nominatim API results
 # Max size of 10000 entries (~36 MB memory usage)
 _nominatim_cache = LRUCache(max_size=10000)
+_cache_enabled = None  # Will be initialized from config.neuron.nominatim_cache_enabled
+
+# Cache statistics tracking
+_cache_stats = {
+    "cache_hits": 0,
+    "api_calls": 0
+}
 
 
 def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str, validator_hotkey: str = None) -> Union[float, str, dict]:
     """
     Validates address using Nominatim API and returns a score based on bounding box areas.
-    Returns: dict with 'score' and 'details' for success, "TIMEOUT" for timeout, or 0.0 for failure
+    Returns: dict with 'score' and 'num_results' for success, "TIMEOUT" for timeout, or 0.0 for failure
     
     Results are cached to avoid repeated API calls for the same address.
     Addresses are normalized using normalize_address_for_deduplication so that similar
     addresses (e.g., "House 4" vs "House 1" in the same location) share the same cache entry.
+    
+    Cache only stores the score to minimize memory usage.
     """
+    global _cache_stats
+    
     # Normalize address for cache key using deduplication normalization
     # This ensures addresses like "House 4" and "House 1" at the same location share cache
     cache_key = normalize_address_for_deduplication(address)
     
-    # Only use cache if we have a valid cache key (non-empty)
-    use_cache = bool(cache_key)
+    # Check if cache is enabled and we have a valid cache key
+    # Default to True if not yet initialized from config
+    cache_enabled = _cache_enabled if _cache_enabled is not None else True
+    use_cache = cache_enabled and bool(cache_key) and _nominatim_cache is not None
     
     if use_cache:
         # Check cache first
         cached_result = _nominatim_cache.get(cache_key)
         if cached_result is not None:
+            _cache_stats["cache_hits"] += 1
             bt.logging.debug(f"Cache hit for address: {address}")
+            # Cached result is just the score (float), return as dict with only score
+            if isinstance(cached_result, (int, float)):
+                return {"score": float(cached_result)}
             return cached_result
         bt.logging.debug(f"Cache miss for address: {address}")
+    elif not cache_enabled:
+        bt.logging.debug(f"Cache disabled, making API call for: {address}")
     else:
         bt.logging.debug(f"Address normalization resulted in empty key, skipping cache for: {address}")
     
     # Cache miss or no cache key - make API call
+    _cache_stats["api_calls"] += 1
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
@@ -417,18 +437,22 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         else:
             score = 0.3
         
-        # Store score details
+        # Store simplified score details (only score and num_results for cache)
+        num_results = len(areas)
+        
+        # Full details for return value (includes all data for current use)
         score_details = {
             "score": score,
+            "num_results": num_results,
             "areas": areas,
             "total_area": total_area,
-            "num_results": len(areas),
             "areas_data": areas_data
         }
         
-        # Cache the result before returning
+        # Cache only the score to save memory
         if use_cache:
-            _nominatim_cache.put(cache_key, score_details)
+            _nominatim_cache.put(cache_key, score)
+        
         return score_details
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
@@ -1990,8 +2014,16 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
         "detailed_breakdown": detailed_breakdown
     }
 
-def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int, validator_hotkey: str = None) -> Dict[str, Any]:
+def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int, validator_hotkey: str = None, config=None) -> Dict[str, Any]:
     """Grade address variations - check all with heuristics, one random with API, and region validation."""
+    # Initialize cache enabled state from config
+    global _cache_enabled
+    if config is not None:
+        _cache_enabled = getattr(config.neuron, 'nominatim_cache_enabled', True)
+    elif _cache_enabled is None:
+        # If no config provided and not yet initialized, default to enabled
+        _cache_enabled = True
+    
     if not seed_addresses or not any(seed_addresses):
         return {"overall_score": 1.0}
     
@@ -2132,11 +2164,20 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
             # Extract score and details from result
+            # Cache returns simplified dict with only score (no num_results)
             score = None
             score_details = None
             if isinstance(result, dict) and "score" in result:
                 score = result["score"]
-                score_details = result
+                # If it's a cached result (only has score, no areas_data), use minimal details
+                if "areas_data" not in result:
+                    # This is a cached simplified result - only score, no num_results
+                    score_details = {
+                        "score": result["score"]
+                    }
+                else:
+                    # Full result from API call
+                    score_details = result
             elif result == "TIMEOUT":
                 score = "TIMEOUT"
             else:
@@ -2822,7 +2863,7 @@ def get_name_variation_rewards(
             validator_hotkey = str(self.metagraph.hotkeys[self.uid])
         elif hasattr(self, 'wallet') and hasattr(self.wallet, 'hotkey'):
             validator_hotkey = str(self.wallet.hotkey.ss58_address)
-        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid, validator_hotkey)
+        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid, validator_hotkey, config=self.config)
         miner_metrics["address_grading"] = address_grading_score
         end_time = time.time()
         bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
