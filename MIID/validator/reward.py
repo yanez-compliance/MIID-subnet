@@ -44,7 +44,9 @@ from MIID.validator.cheat_detection import (
     jaccard,
     detect_cheating_patterns,
     remove_disallowed_unicode,
+    normalize_address_for_deduplication,
 )
+from MIID.validator.cache import LRUCache
 
 HOTKEY_TO_VALIDATOR_NAME: Dict[str, str] = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "MIIDOwner",
@@ -292,11 +294,38 @@ def compute_bounding_box_areas_meters(nominatim_results):
     return areas
 
 
+# Global cache instance for Nominatim API results
+# Max size of 10000 entries (~36 MB memory usage)
+_nominatim_cache = LRUCache(max_size=10000)
+
+
 def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str, validator_hotkey: str = None) -> Union[float, str, dict]:
     """
     Validates address using Nominatim API and returns a score based on bounding box areas.
     Returns: dict with 'score' and 'details' for success, "TIMEOUT" for timeout, or 0.0 for failure
+    
+    Results are cached to avoid repeated API calls for the same address.
+    Addresses are normalized using normalize_address_for_deduplication so that similar
+    addresses (e.g., "House 4" vs "House 1" in the same location) share the same cache entry.
     """
+    # Normalize address for cache key using deduplication normalization
+    # This ensures addresses like "House 4" and "House 1" at the same location share cache
+    cache_key = normalize_address_for_deduplication(address)
+    
+    # Only use cache if we have a valid cache key (non-empty)
+    use_cache = bool(cache_key)
+    
+    if use_cache:
+        # Check cache first
+        cached_result = _nominatim_cache.get(cache_key)
+        if cached_result is not None:
+            bt.logging.debug(f"Cache hit for address: {address}")
+            return cached_result
+        bt.logging.debug(f"Cache miss for address: {address}")
+    else:
+        bt.logging.debug(f"Address normalization resulted in empty key, skipping cache for: {address}")
+    
+    # Cache miss or no cache key - make API call
     try:
         url = "https://nominatim.openstreetmap.org/search"
         params = {"q": address, "format": "json"}
@@ -305,10 +334,10 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         # Each validator consistently uses its own User-Agent for all requests
         if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
             validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
-            user_agent = f"GeocodingClient/{validator_name}"
+            user_agent = f"GeocodingClient/{seed_address} - {validator_name}"
         else:
             # Fallback if hotkey not found in mapping
-            user_agent = f"GeocodingClient/testing_agent"
+            user_agent = f"GeocodingClient/{seed_address} - testing_agent"
 
         nominatim_headers = {
             "User-Agent": user_agent,
@@ -320,7 +349,10 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         
         # Check if we have any results
         if len(results) == 0:
-            return 0.0
+            result = 0.0
+            if use_cache:
+                _nominatim_cache.put(cache_key, result)
+            return result
         
         # Extract numbers from the original address for matching
         original_numbers = set(re.findall(r"[0-9]+", address.lower()))
@@ -353,13 +385,19 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         
         # If no results pass the filters, return 0.0
         if len(filtered_results) == 0:
-            return 0.0
+            result = 0.0
+            if use_cache:
+                _nominatim_cache.put(cache_key, result)
+            return result
         
         # Calculate bounding box areas for all results (not just filtered)
         areas_data = compute_bounding_box_areas_meters(results)
         
         if len(areas_data) == 0:
-            return 0.0
+            result = 0.0
+            if use_cache:
+                _nominatim_cache.put(cache_key, result)
+            return result
         
         # Extract areas
         areas = [item["area_m2"] for item in areas_data]
@@ -388,26 +426,42 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             "areas_data": areas_data
         }
         
+        # Cache the result before returning
+        if use_cache:
+            _nominatim_cache.put(cache_key, score_details)
         return score_details
     except requests.exceptions.Timeout:
         bt.logging.warning(f"API timeout for address: {address}")
-        return "TIMEOUT"
+        result = "TIMEOUT"
+        # Don't cache timeouts - they might succeed on retry
+        return result
     except requests.exceptions.RequestException as e:
         bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
-        return 0.0
+        result = 0.0
+        if use_cache:
+            _nominatim_cache.put(cache_key, result)
+        return result
     except ValueError as e:
         error_msg = str(e)
         # Check if it's an encoding error (like latin-1 codec issues)
         if "codec" in error_msg.lower() and "encode" in error_msg.lower():
             bt.logging.warning(f"Encoding error for address '{address}' (treating as timeout): {error_msg}")
-            return "TIMEOUT"
+            result = "TIMEOUT"
+            # Don't cache timeouts - they might succeed on retry
+            return result
         else:
             bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
-            return 0.0
+            result = 0.0
+            if use_cache:
+                _nominatim_cache.put(cache_key, result)
+            return result
     except Exception as e:
         bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
-        return 0.0
+        result = 0.0
+        if use_cache:
+            _nominatim_cache.put(cache_key, result)
+        return result
 
 def check_with_photon(address: str) -> Union[float, str]:
     """
@@ -2075,23 +2129,22 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # Try Nominatim API (up to 3 calls)
         nominatim_scores = []
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
-            result = check_with_photon(addr)
-            #result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
+            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
             # Extract score and details from result
             score = None
             score_details = None
-            # if isinstance(result, dict) and "score" in result:
-            #     score = result["score"]
-            #     score_details = result
-            if result == "TIMEOUT":
+            if isinstance(result, dict) and "score" in result:
+                score = result["score"]
+                score_details = result
+            elif result == "TIMEOUT":
                 score = "TIMEOUT"
             else:
                 score = result if isinstance(result, (int, float)) else 0.0
             
             api_attempts.append({
                 "address": addr,
-                "api": "Photon",
+                "api": "nominatim",
                 "result": score,
                 "score_details": score_details,
                 "attempt": i + 1
@@ -2100,9 +2153,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             if result == "TIMEOUT":
                 nominatim_timeout_calls += 1
                 time.sleep(1.0)
-            # elif isinstance(result, dict) and result.get("score", 0) > 0.0:
-            #     nominatim_successful_calls += 1
-            #     nominatim_scores.append(result["score"])
+            elif isinstance(result, dict) and result.get("score", 0) > 0.0:
+                nominatim_successful_calls += 1
+                nominatim_scores.append(result["score"])
             elif isinstance(result, (int, float)) and result > 0.0:
                 nominatim_successful_calls += 1
                 nominatim_scores.append(result)
@@ -2520,8 +2573,8 @@ def get_name_variation_rewards(
                 first_sections = []
                 for addr in address_variations:
                     if addr and addr.strip():
-                        # Remove disallowed Unicode characters (symbols, emoji, etc.)
-                        addr = remove_disallowed_unicode(addr)
+                        # Remove disallowed Unicode characters (symbols, emoji, etc.) but preserve commas
+                        addr = remove_disallowed_unicode(addr, preserve_comma=True)
                         if not addr or not addr.strip():
                             continue
                         # Strip leading commas and spaces to prevent gaming the system
