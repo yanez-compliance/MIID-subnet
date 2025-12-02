@@ -356,25 +356,26 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         
         # Use validator hotkey to get validator name from mapping and create a unique User-Agent
         # Each validator consistently uses its own User-Agent for all requests
-        if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
-            validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
-            user_agent = (
-                f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
-                f"https://github.com/yanez-compliance/MIID-subnet; "
-                f"Validator: {validator_name}; "
-                f"Using OpenStreetMap/Nominatim data under ODbL)"
-            )
-        else:
-            # Fallback if hotkey not found in mapping
-            user_agent = (
-                f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
-                f"https://github.com/yanez-compliance/MIID-subnet; "
-                f"Using OpenStreetMap/Nominatim data under ODbL)"
-            )
+        # if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
+        #     validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
+        #     user_agent = (
+        #         f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
+        #         f"https://github.com/yanez-compliance/MIID-subnet; "
+        #         f"Validator: {validator_name}; "
+        #         f"Using OpenStreetMap/Nominatim data under ODbL)"
+        #     )
+        # else:
+        #     # Fallback if hotkey not found in mapping
+        #     user_agent = (
+        #         f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
+        #         f"https://github.com/yanez-compliance/MIID-subnet; "
+        #         f"Using OpenStreetMap/Nominatim data under ODbL)"
+        #     )
 
 
         nominatim_headers = {
-            "User-Agent": user_agent
+            # "User-Agent": user_agent
+            "User-Agent": "Testing"
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
