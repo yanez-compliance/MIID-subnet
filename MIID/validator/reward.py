@@ -360,8 +360,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             user_agent = f"GeocodingClient/{seed_address} - testing_agent"
 
         nominatim_headers = {
-            "User-Agent": user_agent,
-            "Referer": "https://github.com/osm-search/Nominatim"
+            "User-Agent": user_agent
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
@@ -462,8 +461,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
     except requests.exceptions.RequestException as e:
         bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
         result = 0.0
-        if use_cache:
-            _nominatim_cache.put(cache_key, result)
+        # Don't cache API failures - they might succeed on retry
         return result
     except ValueError as e:
         error_msg = str(e)
@@ -476,15 +474,13 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         else:
             bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
             result = 0.0
-            if use_cache:
-                _nominatim_cache.put(cache_key, result)
+            # Don't cache API failures - they might succeed on retry
             return result
     except Exception as e:
         bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
         result = 0.0
-        if use_cache:
-            _nominatim_cache.put(cache_key, result)
+        # Don't cache API failures - they might succeed on retry
         return result
 
 def check_with_photon(address: str) -> Union[float, str]:
