@@ -66,8 +66,11 @@ Below is the conceptual flow extracted from the system diagram.
 3. If Flask is unreachable, validator uses last cached snapshot (never falls back to Neutral).
 
 ## **C. Validator Computes Final Rewards -> Sends Back `/reward_allocation`**
-1. Validator computes online quality scores (Phase-2 logic in `reward.py`).
-2. Applies reputation multipliers using `apply_reputation_weighting()`.
+1. Validator computes online quality scores Q (Phase-2 logic in `reward.py`).
+2. Calculates blended reward using `calculate_blended_reward(Q, R, tier)`:
+   - KAV portion: 20% × Q (online quality)
+   - UAV portion: 80% × R × T (reputation-based)
+   - Apply 75% burn after blending
 3. Uses weighted rewards for on-chain weight setting.
 4. Sends final JSON to Flask via `POST /reward_allocation`.
 5. Flask stores JSON under `data/rewards/`.
@@ -100,8 +103,8 @@ sequenceDiagram
     FLASK->>FLASK: Lookup miners in snapshot
     FLASK-->>VAL: {rep_snapshot_version, miners[{hotkey, rep_score, rep_tier}]}
 
-    Note over VAL: Apply Reputation Weighting
-    VAL->>VAL: apply_reputation_weighting()<br/>weighted_reward = Q * T * score_factor
+    Note over VAL: Apply Reputation-Weighted Reward (KAV + UAV)
+    VAL->>VAL: calculate_reputation_reward()<br/>final = (0.20*Q + 0.80*R*T) * 0.25
 
     Note over VAL,CHAIN: Set Weights On-Chain
     VAL->>CHAIN: set_weights(weighted_rewards)
@@ -204,14 +207,32 @@ Validators (continuous):
 
 ---
 
-# 3. MATH: REPUTATION-WEIGHTED REWARD FORMULA
+# 3. MATH: REPUTATION-WEIGHTED REWARD FORMULA (Cycle 2)
 
-**Variables:**
-- `Q` = Online Quality Score (Phase-2) - computed by existing `get_name_variation_rewards()`
-- `R` = Reputation Score (baseline 1.0)
-- `T` = Tier Multiplier
+Phase 3 Cycle 2 introduces a **reputation-weighted reward system** that separates emissions into two components:
+- **KAV (Known Attack Vector)**: Online quality from validator evaluation
+- **UAV (Unknown Attack Vector)**: Reputation-based rewards from manual validation
 
-### **Step 1 — Tier Multiplier**
+## Allocation Weights
+
+```python
+KAV_WEIGHT = 0.20      # 20% allocated to online quality (Q)
+UAV_WEIGHT = 0.80      # 80% allocated to reputation-based rewards
+# BURN_FRACTION uses existing config: self.config.neuron.burn_fraction (default: 0.40, set to 0.75 for Cycle 2)
+```
+
+> **Note**: `burn_fraction` is an existing config parameter (`--neuron.burn_fraction`). For Cycle 2, set it to `0.75` when running the validator.
+
+## Variables
+
+| Variable | Description | Source |
+|----------|-------------|--------|
+| `Q` | Online Quality Score | `get_name_variation_rewards()` in validator |
+| `R` | Reputation Score | Flask API (computed by DB: novelty × impact × quality × reputation × penalty) |
+| `T` | Tier Multiplier | Flask API (based on rep_tier) |
+
+## Tier Multipliers
+
 ```python
 TIER_MULTIPLIERS = {
     "Diamond": 1.15,
@@ -223,22 +244,91 @@ TIER_MULTIPLIERS = {
 }
 ```
 
-### **Step 2 — Reputation Score Adjustment (Linear Clamp)**
-To keep the system stable and predictable, we use a gentle linear clamp:
-```python
-score_factor = max(0.8, min(rep_score, 1.2))  # clamp between 0.8 and 1.2
-```
-This gives approximately +/-20% adjustment around Neutral (1.0). Tier multipliers remain the primary lever.
+## Formula Steps
 
-### **Step 3 — Final Reward**
+### **Step 1 — Calculate KAV Portion (Online Quality)**
 ```python
-final_reward = Q * T * score_factor
+kav_reward = KAV_WEIGHT * Q
+# Example: 0.20 * 0.85 = 0.17
 ```
 
-### **Step 4 — Reputation Bonus (for logging)**
+### **Step 2 — Calculate UAV Portion (Reputation-Based)**
+The `rep_score` from Flask already includes the full UAV calculation from the DB machine:
+`rep_score = novelty × impact × quality × reputation × penalty`
+
+Apply tier multiplier for additional weighting:
 ```python
-reputation_bonus = final_reward - Q
+T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+uav_reward = UAV_WEIGHT * R * T
+# Example: 0.80 * 1.2 * 1.10 = 1.056 (Gold tier, high rep)
 ```
+
+### **Step 3 — Combine KAV + UAV**
+```python
+combined_reward = kav_reward + uav_reward
+# Example: 0.17 + 1.056 = 1.226
+```
+
+### **Step 4 — Apply Burn**
+```python
+final_reward = combined_reward * (1 - BURN_FRACTION)
+# Example: 1.226 * 0.25 = 0.3065
+```
+
+### **Step 5 — Metrics for Logging**
+```python
+kav_contribution = kav_reward / combined_reward  # % from online quality
+uav_contribution = uav_reward / combined_reward  # % from reputation
+reputation_bonus = final_reward - (Q * (1 - BURN_FRACTION))  # Gain/loss from reputation
+```
+
+## Complete Formula (Summary)
+
+```python
+def calculate_reputation_reward(Q, rep_score, rep_tier, burn_fraction):
+    """
+    Q: Online quality score from get_name_variation_rewards()
+    rep_score: Reputation score from Flask (DB-computed)
+    rep_tier: Tier string from Flask (Diamond/Gold/Silver/Bronze/Neutral/Watch)
+    burn_fraction: From self.config.neuron.burn_fraction (default 0.40, use 0.75 for Cycle 2)
+    """
+    KAV_WEIGHT = 0.20
+    UAV_WEIGHT = 0.80
+
+    # Tier multiplier
+    T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+
+    # KAV portion (online quality)
+    kav_reward = KAV_WEIGHT * Q
+
+    # UAV portion (reputation-based)
+    uav_reward = UAV_WEIGHT * rep_score * T
+
+    # Combine KAV + UAV
+    combined_reward = kav_reward + uav_reward
+
+    # Apply burn (uses existing config parameter)
+    final_reward = combined_reward * (1 - burn_fraction)
+
+    return {
+        "kav_reward": kav_reward,
+        "uav_reward": uav_reward,
+        "combined_reward": combined_reward,
+        "final_reward": final_reward,
+        "burn_amount": combined_reward * burn_fraction
+    }
+```
+
+## Example Calculations
+
+| Miner | Q (Quality) | R (Rep Score) | Tier | KAV (20%) | UAV (80%) | Combined | After Burn (25%) |
+|-------|-------------|---------------|------|-----------|-----------|---------|------------------|
+| A | 0.90 | 1.40 | Diamond | 0.18 | 1.288 | 1.468 | 0.367 |
+| B | 0.85 | 1.00 | Neutral | 0.17 | 0.80 | 0.97 | 0.243 |
+| C | 0.70 | 0.80 | Watch | 0.14 | 0.576 | 0.716 | 0.179 |
+| D | 0.95 | 0.50 | Watch | 0.19 | 0.36 | 0.55 | 0.138 |
+
+**Key Insight**: Miner D has excellent online quality (0.95) but low reputation (0.50) - they still earn less than Miner B with lower quality but neutral reputation. This incentivizes consistent, long-term good behavior over short-term gaming.
 
 ---
 
@@ -286,11 +376,16 @@ reputation_bonus = final_reward - Q
   "miners": [
     {
       "miner_hotkey": "5CnkkjPdfsA...",
-      "base_reward": 0.73,
+      "uid": 42,
+      "quality_score": 0.85,
       "rep_score": 1.23,
       "rep_tier": "Bronze",
-      "reputation_bonus": 0.12,
-      "total_reward": 0.85
+      "kav_reward": 0.17,
+      "uav_reward": 1.00,
+      "combined_reward": 1.17,
+      "burn_amount": 0.88,
+      "final_reward": 0.29,
+      "reputation_bonus": 0.08
     }
   ],
   "signature": "<Bytes>On 2025-11-20 CST ...</Bytes>\n\tSigned by: ...\n\tSignature: ..."
@@ -332,7 +427,7 @@ reputation_bonus = final_reward - Q
 |------|--------|
 | `MIID/datasets/config.py` | Add reputation config (paths, tier multipliers) |
 | `MIID/datasets/app.py` | Add `/reputation_request` and `/reward_allocation` endpoints |
-| `MIID/validator/reward.py` | Add `apply_reputation_weighting()` function |
+| `MIID/validator/reward.py` | Add `calculate_reputation_reward()` function |
 | `MIID/utils/misc.py` | Add `fetch_reputation()` and `send_reward_allocation()` helpers |
 | `MIID/validator/forward.py` | Integrate reputation into reward loop |
 | `scripts/generate_mock_snapshot.py` | New script to generate test snapshots |
@@ -350,6 +445,12 @@ Add:
 REPUTATION_SNAPSHOT_PATH = "/data/MIID_data/reputation_snapshot.json"
 REWARDS_DIR = "/data/MIID_data/rewards"
 
+# Reputation-weighted reward allocation (Cycle 2)
+KAV_WEIGHT = 0.20      # 20% allocated to online quality (Q)
+UAV_WEIGHT = 0.80      # 80% allocated to reputation-based rewards
+# Note: burn_fraction already exists as --neuron.burn_fraction (default 0.40)
+# For Cycle 2, run validator with: --neuron.burn_fraction 0.75
+
 # Tier multipliers for reputation weighting
 TIER_MULTIPLIERS = {
     "Diamond": 1.15,
@@ -359,10 +460,6 @@ TIER_MULTIPLIERS = {
     "Neutral": 1.00,
     "Watch":   0.90,
 }
-
-# Score factor clamp range
-REP_SCORE_MIN = 0.8
-REP_SCORE_MAX = 1.2
 ```
 
 ---
@@ -555,12 +652,17 @@ def reward_allocation():
 
 ---
 
-## **TASK 5 — Add Reputation Weighting Function**
+## **TASK 5 — Add Reputation Reward Function**
 
 **File:** `MIID/validator/reward.py`
 
 Add at the end of the file (or in a logical location near other reward functions):
 ```python
+# Reputation-weighted reward allocation (Cycle 2)
+KAV_WEIGHT = 0.20      # 20% allocated to online quality (Q)
+UAV_WEIGHT = 0.80      # 80% allocated to reputation-based rewards
+# Note: burn_fraction comes from self.config.neuron.burn_fraction (set to 0.75 for Cycle 2)
+
 # Reputation tier multipliers
 TIER_MULTIPLIERS = {
     "Diamond": 1.15,
@@ -571,43 +673,68 @@ TIER_MULTIPLIERS = {
     "Watch":   0.90,
 }
 
-# Score factor clamp range
-REP_SCORE_MIN = 0.8
-REP_SCORE_MAX = 1.2
 
-
-def apply_reputation_weighting(base_reward: float, rep_score: float, rep_tier: str) -> dict:
+def calculate_reputation_reward(Q: float, rep_score: float, rep_tier: str, burn_fraction: float) -> dict:
     """
-    Apply reputation-based weighting to a base reward.
+    Calculate reputation-weighted reward using KAV (online quality) + UAV (reputation-based).
+
+    Cycle 2 Formula:
+        kav_reward = KAV_WEIGHT * Q
+        uav_reward = UAV_WEIGHT * R * T
+        combined = kav_reward + uav_reward
+        final = combined * (1 - burn_fraction)
 
     Args:
-        base_reward: The original quality-based reward (Q)
-        rep_score: Miner's reputation score (R), baseline 1.0
-        rep_tier: Miner's reputation tier (Diamond, Gold, Silver, Bronze, Neutral, Watch)
+        Q: Online quality score from get_name_variation_rewards()
+        rep_score: Reputation score (R) from Flask (DB-computed: novelty × impact × quality × reputation × penalty)
+        rep_tier: Tier string from Flask (Diamond/Gold/Silver/Bronze/Neutral/Watch)
+        burn_fraction: From self.config.neuron.burn_fraction (default 0.40, use 0.75 for Cycle 2)
 
     Returns:
         dict with:
-            - tier_factor: multiplier from tier
-            - score_factor: clamped rep_score
-            - final_reward: base_reward * tier_factor * score_factor
-            - reputation_bonus: final_reward - base_reward
+            - kav_reward: KAV portion (20% of Q)
+            - uav_reward: UAV portion (80% of R × T)
+            - combined_reward: kav + uav before burn
+            - final_reward: after burn applied
+            - burn_amount: amount burned
+            - tier_multiplier: T value used
+            - kav_contribution: % of combined from KAV
+            - uav_contribution: % of combined from UAV
+            - reputation_bonus: gain/loss compared to no-reputation baseline
     """
-    # Get tier multiplier (default to Neutral if unknown tier)
-    tier_factor = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+    # Tier multiplier
+    T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
 
-    # Clamp rep_score to safe range
-    score_factor = max(REP_SCORE_MIN, min(rep_score, REP_SCORE_MAX))
+    # KAV portion (online quality)
+    kav_reward = KAV_WEIGHT * Q
 
-    # Calculate final reward
-    final_reward = base_reward * tier_factor * score_factor
+    # UAV portion (reputation-based)
+    uav_reward = UAV_WEIGHT * rep_score * T
 
-    # Calculate bonus/penalty from reputation
-    reputation_bonus = final_reward - base_reward
+    # Combine KAV + UAV
+    combined_reward = kav_reward + uav_reward
+
+    # Apply burn (uses existing config parameter)
+    final_reward = combined_reward * (1 - burn_fraction)
+    burn_amount = combined_reward * burn_fraction
+
+    # Calculate contributions (avoid division by zero)
+    kav_contribution = kav_reward / combined_reward if combined_reward > 0 else 0
+    uav_contribution = uav_reward / combined_reward if combined_reward > 0 else 0
+
+    # Calculate reputation bonus (compared to no-reputation baseline)
+    baseline_reward = Q * (1 - burn_fraction)
+    reputation_bonus = final_reward - baseline_reward
 
     return {
-        "tier_factor": tier_factor,
-        "score_factor": score_factor,
+        "kav_reward": kav_reward,
+        "uav_reward": uav_reward,
+        "combined_reward": combined_reward,
         "final_reward": final_reward,
+        "burn_amount": burn_amount,
+        "tier_multiplier": T,
+        "kav_contribution": kav_contribution,
+        "uav_contribution": uav_contribution,
         "reputation_bonus": reputation_bonus
     }
 ```
@@ -694,7 +821,7 @@ def send_reward_allocation(endpoint_base: str, payload: dict) -> bool:
 ### Step 7.1: Add imports at top
 ```python
 from MIID.utils.misc import fetch_reputation, send_reward_allocation
-from MIID.validator.reward import apply_reputation_weighting
+from MIID.validator.reward import calculate_reputation_reward
 ```
 
 ### Step 7.2: Add server constant (near existing MIID_SERVER)
@@ -738,35 +865,41 @@ if rep_response:
             "rep_tier": m["rep_tier"]
         }
 
-# 5) Apply reputation weighting to rewards
+# 5) Apply reputation-weighted reward calculation (KAV + UAV with burn)
+burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.40)  # Use existing config
 weighted_rewards = rewards.copy()
 reward_allocation_miners = []
 
 for uid in uids:
     hotkey = self.metagraph.hotkeys[uid]
-    base_reward = rewards[uid]
+    Q = rewards[uid]  # Online quality score
 
     # Get reputation (default to Neutral if not found)
     rep = rep_data.get(hotkey, {"rep_score": 1.0, "rep_tier": "Neutral"})
 
-    # Apply weighting
-    weighted = apply_reputation_weighting(
-        base_reward=base_reward,
+    # Calculate reputation-weighted reward (20% KAV + 80% UAV, then apply burn)
+    rep_reward = calculate_reputation_reward(
+        Q=Q,
         rep_score=rep["rep_score"],
-        rep_tier=rep["rep_tier"]
+        rep_tier=rep["rep_tier"],
+        burn_fraction=burn_fraction
     )
 
-    weighted_rewards[uid] = weighted["final_reward"]
+    weighted_rewards[uid] = rep_reward["final_reward"]
 
     # Build allocation entry for Flask
     reward_allocation_miners.append({
         "miner_hotkey": hotkey,
         "uid": uid,
-        "base_reward": base_reward,
+        "quality_score": Q,
         "rep_score": rep["rep_score"],
         "rep_tier": rep["rep_tier"],
-        "reputation_bonus": weighted["reputation_bonus"],
-        "total_reward": weighted["final_reward"]
+        "kav_reward": rep_reward["kav_reward"],
+        "uav_reward": rep_reward["uav_reward"],
+        "combined_reward": rep_reward["combined_reward"],
+        "burn_amount": rep_reward["burn_amount"],
+        "final_reward": rep_reward["final_reward"],
+        "reputation_bonus": rep_reward["reputation_bonus"]
     })
 
 # 6) Use weighted_rewards for chain weight setting (replace `rewards` with `weighted_rewards`)
@@ -890,10 +1023,19 @@ if __name__ == "__main__":
 - [ ] Validator sends reward allocation to Flask
 - [ ] Weighted rewards are used for on-chain weight setting
 
-## Math Verification
-- [ ] Neutral miner (rep_score=1.0, tier=Neutral): final_reward = base_reward
-- [ ] Diamond miner (rep_score=1.2, tier=Diamond): final_reward = base_reward * 1.15 * 1.2
-- [ ] Watch miner (rep_score=0.8, tier=Watch): final_reward = base_reward * 0.90 * 0.8
+## Math Verification (KAV + UAV with 75% Burn)
+- [ ] Neutral miner (Q=1.0, R=1.0, tier=Neutral):
+      - KAV: 0.20 * 1.0 = 0.20
+      - UAV: 0.80 * 1.0 * 1.0 = 0.80
+      - Combined: 1.00, Final: 0.25
+- [ ] Diamond miner (Q=0.90, R=1.4, tier=Diamond):
+      - KAV: 0.20 * 0.90 = 0.18
+      - UAV: 0.80 * 1.4 * 1.15 = 1.288
+      - Combined: 1.468, Final: 0.367
+- [ ] Watch miner (Q=0.70, R=0.8, tier=Watch):
+      - KAV: 0.20 * 0.70 = 0.14
+      - UAV: 0.80 * 0.8 * 0.90 = 0.576
+      - Combined: 0.716, Final: 0.179
 
 ---
 
@@ -933,18 +1075,18 @@ MIID-subnet/
 This README provides:
 - Big picture explanation of Phase 3 reputation-weighted rewards
 - Clear data flow from snapshot to validator to Flask
-- Mathematical formula with tier multipliers and score clamping
+- Reputation-weighted reward formula (20% KAV + 80% UAV with 75% burn and tier multipliers)
 - Exact task breakdown with code aligned to existing codebase patterns
 - API schemas for both endpoints
 - Failure handling strategy
 - Testing checklist
 
 **Implementation order:**
-1. Task 1: Config
+1. Task 1: Config (add KAV_WEIGHT, UAV_WEIGHT, TIER_MULTIPLIERS; use existing `--neuron.burn_fraction`)
 2. Task 2: Snapshot loader
 3. Task 3: `/reputation_request` endpoint
 4. Task 4: `/reward_allocation` endpoint
-5. Task 5: `apply_reputation_weighting()` function
+5. Task 5: `calculate_reputation_reward()` function
 6. Task 6: Client helpers in `misc.py`
 7. Task 7: Integrate into `forward.py`
 8. Task 8: Mock snapshot generator
@@ -953,4 +1095,5 @@ This README provides:
 - V1 uses file-based mock snapshots (no DB connectivity yet)
 - Validators cache last known snapshot if Flask is unreachable
 - Reputation multipliers affect on-chain TAO distribution
-- Linear clamp (0.8-1.2) instead of log10 formula
+- Reputation-weighted reward formula: 20% KAV (online quality) + 80% UAV (reputation-based)
+- Uses existing `--neuron.burn_fraction` config (set to 0.75 for Cycle 2)
