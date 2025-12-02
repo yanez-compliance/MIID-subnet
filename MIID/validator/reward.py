@@ -2219,7 +2219,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             elif result == "API_ERROR":
                 nominatim_failed_calls += 1
                 failure_count += 1
-                wait_time = min(1.0 * (2 ** failure_count), 60.0)  # Exponential backoff, max 60s
+                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
                 bt.logging.debug(f"API error - waiting {wait_time:.2f}s (failure count: {failure_count})")
                 if i < len(nominatim_addresses) - 1:
                     time.sleep(wait_time)
