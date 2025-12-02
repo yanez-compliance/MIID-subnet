@@ -309,7 +309,11 @@ _cache_stats = {
 def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str, validator_hotkey: str = None) -> Union[float, str, dict]:
     """
     Validates address using Nominatim API and returns a score based on bounding box areas.
-    Returns: dict with 'score' and 'num_results' for success, "TIMEOUT" for timeout, or 0.0 for failure
+    Returns:
+        - dict with 'score' and 'num_results' for success
+        - "TIMEOUT" for timeout
+        - "API_ERROR" for API failures (network errors, exceptions)
+        - 0.0 for invalid address (API succeeded but address not found/filtered out)
     
     Results are cached to avoid repeated API calls for the same address.
     Addresses are normalized using normalize_address_for_deduplication so that similar
@@ -357,7 +361,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             user_agent = f"GeocodingClient/{seed_address} - {validator_name}"
         else:
             # Fallback if hotkey not found in mapping
-            user_agent = f"GeocodingClient/{seed_address} - testing_agent"
+            user_agent = f"GeocodingClient/{seed_address}"
 
         nominatim_headers = {
             "User-Agent": user_agent
@@ -460,7 +464,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         return result
     except requests.exceptions.RequestException as e:
         bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
-        result = 0.0
+        result = "API_ERROR"
         # Don't cache API failures - they might succeed on retry
         return result
     except ValueError as e:
@@ -473,13 +477,13 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             return result
         else:
             bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
-            result = 0.0
+            result = "API_ERROR"
             # Don't cache API failures - they might succeed on retry
             return result
     except Exception as e:
         bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
         bt.logging.error(f"Traceback: {traceback.format_exc()}")
-        result = 0.0
+        result = "API_ERROR"
         # Don't cache API failures - they might succeed on retry
         return result
 
@@ -2156,6 +2160,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         
         # Try Nominatim API (up to 3 calls)
         nominatim_scores = []
+        failure_count = 0  # Track consecutive failures for exponential backoff
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
@@ -2176,6 +2181,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                     score_details = result
             elif result == "TIMEOUT":
                 score = "TIMEOUT"
+            elif result == "API_ERROR":
+                score = "API_ERROR"
             else:
                 score = result if isinstance(result, (int, float)) else 0.0
             
@@ -2187,21 +2194,44 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 "attempt": i + 1
             })
             
+            # Handle result and apply exponential backoff for API failures/timeouts only
+            # Distinguish between:
+            # - 0.0 = API succeeded but address is invalid (bad address) - no backoff needed
+            # - "API_ERROR" = API call failed (network error, exception) - apply backoff
+            # - "TIMEOUT" = API timeout - apply backoff
             if result == "TIMEOUT":
                 nominatim_timeout_calls += 1
-                time.sleep(1.0)
+                failure_count += 1
+                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
+                bt.logging.debug(f"Timeout - waiting {wait_time:.2f}s (failure count: {failure_count})")
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(wait_time)
+            elif result == "API_ERROR":
+                nominatim_failed_calls += 1
+                failure_count += 1
+                wait_time = min(1.0 * (2 ** failure_count), 60.0)  # Exponential backoff, max 60s
+                bt.logging.debug(f"API error - waiting {wait_time:.2f}s (failure count: {failure_count})")
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(wait_time)
             elif isinstance(result, dict) and result.get("score", 0) > 0.0:
                 nominatim_successful_calls += 1
                 nominatim_scores.append(result["score"])
+                failure_count = 0  # Reset on success
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(1.0)  # Normal wait between calls
             elif isinstance(result, (int, float)) and result > 0.0:
                 nominatim_successful_calls += 1
                 nominatim_scores.append(result)
+                failure_count = 0  # Reset on success
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(1.0)  # Normal wait between calls
             else:
+                # result == 0.0: API succeeded but address is invalid (bad address)
+                # Don't apply exponential backoff - API worked fine, address is just bad
                 nominatim_failed_calls += 1
-            
-            # Wait 1 second between API calls to prevent rate limiting
-            if i < len(nominatim_addresses) - 1:
-                time.sleep(1.0)
+                failure_count = 0  # Reset since API call succeeded
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(1.0)  # Normal wait between calls
         
         
         # Set final result based on Nominatim API results
