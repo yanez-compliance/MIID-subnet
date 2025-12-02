@@ -2172,6 +2172,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         # Try Nominatim API (up to 3 calls)
         nominatim_scores = []
         failure_count = 0  # Track consecutive failures for exponential backoff
+        api_error_count = 0  # Track total API_ERROR results (for fallback to Photon)
+        addresses_with_api_errors = []  # Store addresses that resulted in API_ERROR
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
@@ -2194,6 +2196,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 score = "TIMEOUT"
             elif result == "API_ERROR":
                 score = "API_ERROR"
+                api_error_count += 1
+                addresses_with_api_errors.append((addr, seed_addr, seed_name))
             else:
                 score = result if isinstance(result, (int, float)) else 0.0
             
@@ -2243,6 +2247,104 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 failure_count = 0  # Reset since API call succeeded
                 if i < len(nominatim_addresses) - 1:
                     time.sleep(1.0)  # Normal wait between calls
+        
+        # Fallback to Photon API if we got 3 API_ERROR results (all addresses failed with API_ERROR)
+        # This triggers when we get API_ERROR for all addresses we checked (up to 3)
+        if api_error_count >= 3 and addresses_with_api_errors and len(addresses_with_api_errors) >= 3:
+            bt.logging.warning(f"Got {api_error_count} API_ERROR results from Nominatim. Falling back to Photon API for {len(addresses_with_api_errors)} addresses.")
+            
+            # Reset scores and counters for Photon API fallback
+            photon_scores = []
+            photon_successful_calls = 0
+            photon_timeout_calls = 0
+            photon_failed_calls = 0
+            
+            # Use Photon API for the addresses that had API_ERROR from Nominatim
+            for idx, (addr, seed_addr, seed_name) in enumerate(addresses_with_api_errors):
+                # Call Photon API to check the address
+                photon_result = check_with_photon(addr)
+                
+                # Process Photon API result and convert to match scoring format
+                if photon_result == "TIMEOUT":
+                    photon_timeout_calls += 1
+                    api_attempts.append({
+                        "address": addr,
+                        "api": "photon",
+                        "result": "TIMEOUT",
+                        "score_details": None,
+                        "attempt": len(api_attempts) + 1,
+                        "fallback": True
+                    })
+                elif isinstance(photon_result, (int, float)):
+                    if photon_result > 0.0:
+                        photon_successful_calls += 1
+                        photon_scores.append(photon_result)
+                        api_attempts.append({
+                            "address": addr,
+                            "api": "photon",
+                            "result": photon_result,
+                            "score_details": {"score": photon_result},
+                            "attempt": len(api_attempts) + 1,
+                            "fallback": True
+                        })
+                    else:
+                        photon_failed_calls += 1
+                        api_attempts.append({
+                            "address": addr,
+                            "api": "photon",
+                            "result": photon_result,
+                            "score_details": None,
+                            "attempt": len(api_attempts) + 1,
+                            "fallback": True
+                        })
+                
+                # Add delay between Photon API calls to respect rate limits
+                if idx < len(addresses_with_api_errors) - 1:
+                    time.sleep(1.0)
+            
+            # Calculate results from Photon API and return early
+            total_calls = len(addresses_with_api_errors)
+            total_successful = photon_successful_calls
+            total_timeouts = photon_timeout_calls
+            total_failed = photon_failed_calls
+            
+            if total_failed > 0:
+                api_result = "FAILED"  # Any failure = 0.0 score
+            elif total_timeouts > 0:
+                api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
+            else:
+                api_result = "SUCCESS"  # All pass without timeouts = perfect score
+            
+            # Scoring based on Photon API results
+            if photon_failed_calls > 0 or len(photon_scores) == 0:
+                # Any failure or no successful calls results in 0.3 score
+                base_score = 0.3
+            else:
+                # Use the average of all successful Photon API call scores
+                base_score = sum(photon_scores) / len(photon_scores)
+            
+            # Store API validation results with Photon API data
+            address_breakdown["api_validation"] = {
+                "api_result": api_result,
+                "total_eligible_addresses": len(api_validated_addresses),
+                "api_attempts": api_attempts,
+                "nominatim_successful_calls": photon_successful_calls,
+                "nominatim_timeout_calls": photon_timeout_calls,
+                "nominatim_failed_calls": photon_failed_calls,
+                "total_successful_calls": total_successful,
+                "total_timeout_calls": total_timeouts,
+                "total_failed_calls": total_failed,
+                "total_calls": total_calls
+            }
+            
+            return {
+                "overall_score": base_score,
+                "heuristic_perfect": heuristic_perfect,
+                "api_result": api_result,
+                "region_matches": region_matches,
+                "total_addresses": len(all_addresses),
+                "detailed_breakdown": address_breakdown
+            }
         
         
         # Set final result based on Nominatim API results
