@@ -202,6 +202,24 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
         bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
         return 0.0
 
+def has_excessive_letter_repetition(text: str, max_repetition: int = 2) -> bool:
+    """
+    Check if a string has any letter repeated more than max_repetition times consecutively.
+    
+    Args:
+        text: The text to check
+        max_repetition: Maximum allowed consecutive repetitions (default: 2, so "aaa" is excessive)
+        
+    Returns:
+        True if there are more than max_repetition consecutive identical letters, False otherwise
+    """
+    if not text:
+        return False
+    
+    # Use regex to find sequences of 3 or more identical letters (case-insensitive)
+    pattern = r'(.)\1{' + str(max_repetition) + r',}'
+    return bool(re.search(pattern, text, re.IGNORECASE))
+
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
 
@@ -375,7 +393,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
 
         nominatim_headers = {
             # "User-Agent": user_agent
-            "User-Agent": "Testing"
+            "User-Agent": "address generation"
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
@@ -951,9 +969,16 @@ def calculate_part_score(
             count_score = math.exp(-deviation / expected_count)
             #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
-    # 2. Enhanced uniqueness check with similarity clustering
+    # 2. Enhanced uniqueness check with similarity clustering and excessive repetition filtering
     unique_variations = []
+    filtered_count = 0
     for var in variations:
+        # Filter out variations with excessive letter repetition (more than 2 consecutive identical letters)
+        if has_excessive_letter_repetition(var, max_repetition=2):
+            filtered_count += 1
+            #bt.logging.warning(f"Filtered variation '{var}' due to excessive letter repetition")
+            continue
+        
         # Check if this variation is too similar to any existing unique variation
         is_unique = True
         for unique_var in unique_variations:
@@ -967,6 +992,12 @@ def calculate_part_score(
                 break
         if is_unique:
             unique_variations.append(var)
+    
+    # Calculate penalty for filtered variations (excessive repetition)
+    filter_penalty = 0.0
+    if filtered_count > 0:
+        filter_penalty = min(0.2, filtered_count * 0.05)  # Up to 20% penalty
+        #bt.logging.warning(f"Filtered {filtered_count} variations with excessive repetition (penalty: {filter_penalty:.3f})")
     
     uniqueness_score = len(unique_variations) / len(variations) if variations else 0
     # if uniqueness_score < 1.0:
@@ -1097,6 +1128,10 @@ def calculate_part_score(
         length_weight * length_score
     )
     
+    # Apply penalty for filtered variations with excessive letter repetition
+    if filter_penalty > 0:
+        final_score = max(0.0, final_score * (1.0 - filter_penalty))
+    
     # # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
     # bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
     # bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
@@ -1198,9 +1233,16 @@ def calculate_part_score_phonetic_only(
             count_score = math.exp(-deviation / expected_count)
             #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
-    # 2. Enhanced uniqueness check with phonetic similarity clustering
+    # 2. Enhanced uniqueness check with phonetic similarity clustering and excessive repetition filtering
     unique_variations = []
+    filtered_count = 0
     for var in variations:
+        # Filter out variations with excessive letter repetition (more than 2 consecutive identical letters)
+        if has_excessive_letter_repetition(var, max_repetition=2):
+            filtered_count += 1
+            #bt.logging.warning(f"Filtered variation '{var}' due to excessive letter repetition")
+            continue
+        
         # Check if this variation is too similar to any existing unique variation
         is_unique = True
         for unique_var in unique_variations:
@@ -1211,6 +1253,12 @@ def calculate_part_score_phonetic_only(
                 break
         if is_unique:
             unique_variations.append(var)
+    
+    # Calculate penalty for filtered variations (excessive repetition)
+    filter_penalty = 0.0
+    if filtered_count > 0:
+        filter_penalty = min(0.2, filtered_count * 0.05)  # Up to 20% penalty
+        #bt.logging.warning(f"Filtered {filtered_count} variations with excessive repetition (penalty: {filter_penalty:.3f})")
     
     uniqueness_score = len(unique_variations) / len(variations) if variations else 0
     
@@ -1310,6 +1358,11 @@ def calculate_part_score_phonetic_only(
         uniqueness_weight * uniqueness_score +
         length_weight * length_score
     )
+    
+    # Apply penalty for filtered variations with excessive letter repetition
+    if filter_penalty > 0:
+        final_score = max(0.0, final_score * (1.0 - filter_penalty))
+    
     if final_score == 0:
         bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
         if len(variations) == 0:
@@ -2222,7 +2275,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 if i < len(nominatim_addresses) - 1:
                     time.sleep(wait_time)
             elif result == "API_ERROR":
-                nominatim_failed_calls += 1
+                nominatim_timeout_calls += 1
                 failure_count += 1
                 wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
                 bt.logging.debug(f"API error - waiting {wait_time:.2f}s (failure count: {failure_count})")
@@ -2328,9 +2381,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 "api_result": api_result,
                 "total_eligible_addresses": len(api_validated_addresses),
                 "api_attempts": api_attempts,
-                "nominatim_successful_calls": photon_successful_calls,
-                "nominatim_timeout_calls": photon_timeout_calls,
-                "nominatim_failed_calls": photon_failed_calls,
+                "photon_successful_calls": photon_successful_calls,
+                "photon_timeout_calls": photon_timeout_calls,
+                "photon_failed_calls": photon_failed_calls,
                 "total_successful_calls": total_successful,
                 "total_timeout_calls": total_timeouts,
                 "total_failed_calls": total_failed,
