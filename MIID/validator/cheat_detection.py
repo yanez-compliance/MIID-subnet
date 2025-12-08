@@ -80,7 +80,6 @@ def normalize_variation(text: str, aggressive: bool = True) -> str:
     return normalized
 
 
-import unicodedata
 
 def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     """Remove disallowed Unicode characters from text, keeping only:
