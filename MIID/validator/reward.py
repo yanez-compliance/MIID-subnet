@@ -3422,3 +3422,183 @@ def calculate_rule_compliance_score(
         "total_target_rules": len(target_rules),
         "score": float(final_score) # This is the score based on meeting the target rule_percentage and diversity
     }
+
+
+# =============================================================================
+# Reputation-Weighted Reward System (Phase 3 - Cycle 2)
+# =============================================================================
+
+# Reputation-weighted reward allocation weights
+KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
+UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards
+
+# Reputation tier multipliers
+TIER_MULTIPLIERS = {
+    "Diamond": 1.15,
+    "Gold": 1.10,
+    "Silver": 1.05,
+    "Bronze": 1.02,
+    "Neutral": 1.00,
+    "Watch": 0.90,
+}
+
+# Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
+# Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
+# This prevents Diamond miners from dominating emissions
+NORM_RANGES = {
+    "Watch": (0.10, 0.699, 0.50, 0.70),
+    "Neutral": (0.70, 1.00, 0.70, 1.00),
+    "Bronze": (1.00, 1.999, 1.00, 1.20),
+    "Silver": (2.00, 9.999, 1.20, 1.50),
+    "Gold": (10.0, 49.99, 1.50, 1.80),
+    "Diamond": (50.0, 9999.0, 1.80, 2.00),
+}
+
+# Burn UID (hardcoded in existing codebase)
+BURN_UID = 59
+
+
+def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
+    """
+    Normalize rep_score to reward-friendly range (0.5 - 2.0).
+
+    Prevents extreme disparity when raw rep_score varies from 0.10 to 9999.0.
+    Each tier maps to a compressed normalized range.
+
+    Args:
+        rep_score: Raw reputation score from policy (0.10 - 9999.0)
+        rep_tier: Tier string (Diamond/Gold/Silver/Bronze/Neutral/Watch)
+
+    Returns:
+        Normalized rep_score in range 0.5 - 2.0
+    """
+    if rep_tier not in NORM_RANGES:
+        return 1.0  # Default to Neutral midpoint
+
+    rep_min, rep_max, norm_min, norm_max = NORM_RANGES[rep_tier]
+
+    if rep_max == rep_min:
+        return norm_min
+
+    # Clamp rep_score to tier boundaries
+    clamped = max(rep_min, min(rep_score, rep_max))
+
+    # Linear map: rep_score -> normalized
+    normalized = norm_min + (clamped - rep_min) * (norm_max - norm_min) / (rep_max - rep_min)
+
+    return round(normalized, 3)
+
+
+def apply_reputation_rewards(
+    kav_rewards: np.ndarray,
+    uids: List[int],
+    rep_data: Dict[str, Dict],
+    metagraph,
+    burn_fraction: float = 0.75,
+    kav_metrics: List[Dict] = None
+) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
+    """
+    Apply reputation weighting to KAV rewards, combine with UAV, and apply burn.
+
+    This single function handles the entire reputation reward pipeline:
+    1. Calculate UAV rewards (R × T) from rep_data
+    2. Combine KAV + UAV: (0.20 × Q) + (0.80 × R × T)
+    3. Apply burn: rescale all to keep_fraction, add burn UID 59
+
+    Args:
+        kav_rewards: KAV quality scores (Q) from get_name_variation_rewards()
+        uids: List of miner UIDs
+        rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
+        metagraph: Bittensor metagraph for hotkey lookup
+        burn_fraction: Fraction to burn (default 0.75 for Cycle 2)
+        kav_metrics: Optional detailed metrics from KAV calculation
+
+    Returns:
+        Tuple of:
+            - final_rewards: np.ndarray including burn UID (ready for set_weights)
+            - final_uids: np.ndarray including burn UID
+            - combined_metrics: List of dicts with full breakdown per miner
+    """
+    combined_rewards = np.zeros(len(uids))
+    combined_metrics = []
+
+    # --- Step 1 & 2: Calculate UAV and combine with KAV ---
+    for i, uid in enumerate(uids):
+        hotkey = metagraph.hotkeys[uid]
+        Q = kav_rewards[i]  # KAV quality score
+
+        # Get reputation (default to Neutral if not found)
+        rep = rep_data.get(hotkey, {"rep_score": 1.0, "rep_tier": "Neutral"})
+        rep_score = rep.get("rep_score", 1.0)
+        rep_tier = rep.get("rep_tier", "Neutral")
+
+        # Normalize rep_score to reward-friendly range (0.5 - 2.0)
+        # This prevents Diamond miners from dominating emissions
+        R_norm = normalize_rep_score(rep_score, rep_tier)
+
+        # Get tier multiplier
+        T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+
+        # UAV reward = R_norm × T (using NORMALIZED rep_score)
+        uav_reward = R_norm * T
+
+        # Apply weights and combine
+        kav_portion = KAV_WEIGHT * Q
+        uav_portion = UAV_WEIGHT * uav_reward
+        combined = kav_portion + uav_portion
+        combined_rewards[i] = combined
+
+        # Calculate contributions (avoid division by zero)
+        kav_contribution = kav_portion / combined if combined > 0 else 0
+        uav_contribution = uav_portion / combined if combined > 0 else 0
+
+        # Build metrics
+        kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
+
+        combined_metrics.append({
+            "uid": uid,
+            "miner_hotkey": hotkey,
+            # KAV details
+            "quality_score": float(Q),
+            "kav_portion": float(kav_portion),
+            # UAV details (raw + normalized)
+            "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0)
+            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0)
+            "rep_tier": rep_tier,
+            "tier_multiplier": float(T),
+            "uav_reward": float(uav_reward),
+            "uav_portion": float(uav_portion),
+            # Combined (before burn)
+            "combined_reward": float(combined),
+            "kav_contribution": float(kav_contribution),
+            "uav_contribution": float(uav_contribution),
+        })
+
+    # --- Step 3: Apply burn (proportional rescaling + burn UID) ---
+    total_reward_sum = np.sum(combined_rewards)
+    keep_fraction = 1.0 - burn_fraction
+
+    if total_reward_sum > 0:
+        # Rescale all miners proportionally to keep_fraction
+        rescale_factor = keep_fraction / total_reward_sum
+        final_rewards = combined_rewards * rescale_factor
+    else:
+        final_rewards = combined_rewards
+
+    # Add burn UID with burn_fraction weight
+    final_rewards = np.append(final_rewards, burn_fraction)
+    final_uids = np.append(np.array(uids), BURN_UID)
+
+    # Update metrics with final (post-burn) rewards
+    for i, metric in enumerate(combined_metrics):
+        metric["final_reward"] = float(final_rewards[i])
+        metric["burn_fraction"] = float(burn_fraction)
+
+    bt.logging.info(
+        f"Applied reputation rewards for {len(uids)} miners. "
+        f"KAV: {KAV_WEIGHT}, UAV: {UAV_WEIGHT}, Burn: {burn_fraction}. "
+        f"Total before burn: {total_reward_sum:.4f}, "
+        f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {burn_fraction:.2%}"
+    )
+
+    return final_rewards, final_uids, combined_metrics
