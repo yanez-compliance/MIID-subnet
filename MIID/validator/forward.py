@@ -486,6 +486,7 @@ async def forward(self):
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
     seed_script = [item['script'] for item in seed_names_with_labels]
+    # Phase 3: Get KAV rewards WITHOUT burn - burn will be applied after reputation weighting
     kav_rewards, kav_uids, detailed_metrics = get_name_variation_rewards(
         self,
         seed_names,
@@ -497,7 +498,8 @@ async def forward(self):
         variation_count=query_labels['variation_count'],
         phonetic_similarity=query_labels['phonetic_similarity'],
         orthographic_similarity=query_labels['orthographic_similarity'],
-        rule_based=query_labels.get('rule_based')  # Pass rule-based metadata
+        rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
+        skip_burn=True  # Phase 3: Skip burn here, apply after KAV+UAV in apply_reputation_rewards()
     )
 
     # ==========================================================================
@@ -512,21 +514,18 @@ async def forward(self):
         if _pending_allocations:
             bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from previous session")
 
-    # Extract miner-only UIDs and rewards (exclude burn UID 59)
-    # get_name_variation_rewards returns UIDs with burn UID at the end
-    burn_uid = 59
-    miner_only_mask = np.array(kav_uids) != burn_uid
-    miner_only_uids = np.array(kav_uids)[miner_only_mask].tolist()
-    miner_only_kav_rewards = kav_rewards[miner_only_mask]
+    # With skip_burn=True, kav_rewards/kav_uids contain only miners (no burn UID)
+    # Convert to list for apply_reputation_rewards
+    miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
     # Get burn fraction from config (default 0.75 for Cycle 2)
     burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
 
     # Apply reputation weighting (UAV + combine + burn in one call)
-    # Uses cached rep_data from previous forward pass
+    # Burn is applied ONCE here after KAV + UAV are combined
     rewards, updated_uids, combined_metrics = apply_reputation_rewards(
-        kav_rewards=miner_only_kav_rewards,
-        uids=miner_only_uids,
+        kav_rewards=kav_rewards,  # Raw KAV quality scores (no burn applied yet)
+        uids=miner_uids_list,
         rep_data=_cached_rep_data,  # From previous forward pass (may be empty on first run)
         metagraph=self.metagraph,
         burn_fraction=burn_fraction,
@@ -534,7 +533,7 @@ async def forward(self):
     )
 
     bt.logging.info(
-        f"Applied reputation rewards: {len(miner_only_uids)} miners, "
+        f"Applied reputation rewards: {len(miner_uids_list)} miners, "
         f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
     )
     # ==========================================================================

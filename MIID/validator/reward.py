@@ -2572,7 +2572,8 @@ def get_name_variation_rewards(
     variation_count: int = 10,
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
-    rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
+    rule_based: Dict[str, Any] = None,  # New parameter for rule-based metadata
+    skip_burn: bool = False  # Phase 3: Skip burn when using reputation-weighted rewards
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
     Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
@@ -3181,7 +3182,7 @@ def get_name_variation_rewards(
     burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
     burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
     keep_fraction = 1.0 - burn_fraction
-    
+
     # Apply the blended ranking and quality threshold (always enabled).
     bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
     is_100_percent_burn = False
@@ -3195,6 +3196,15 @@ def get_name_variation_rewards(
         blend_factor=self.config.neuron.blend_factor,
         burn_uid=burn_uid,
     )
+
+    # ==========================================================================
+    # Phase 3: Skip burn if using reputation-weighted rewards
+    # Burn will be applied later in apply_reputation_rewards() after KAV+UAV
+    # ==========================================================================
+    if skip_burn:
+        bt.logging.info("Skipping burn application (will be applied after reputation weighting)")
+        # Return rewards without burn - burn will be applied in apply_reputation_rewards()
+        return rewards, np.array(uids), detailed_metrics
 
     # Apply configured emission burn if 100% burn did not occur (miners qualified)
     if not is_100_percent_burn:

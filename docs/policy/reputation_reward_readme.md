@@ -421,24 +421,26 @@ combined_reward = kav_reward + uav_reward
 # This is the miner's reputation-weighted reward (used for weight calculation)
 ```
 
-### **Step 4 — Burn Applied by Existing Mechanism (NOT per-miner)**
-> **Important**: Burn is NOT applied to each miner individually. The existing mechanism in `get_name_variation_rewards()` handles burn as a **proportional rescaling** across ALL miners:
+### **Step 4 — Burn Applied ONCE in apply_reputation_rewards()**
+> **Important**: Burn is applied **only once** after KAV + UAV are combined. The `get_name_variation_rewards()` function is called with `skip_burn=True` to return raw quality scores, then `apply_reputation_rewards()` applies burn after combining KAV + UAV:
 
 ```python
-# Existing burn mechanism in reward.py (lines ~2824-2835):
-total_reward_sum = np.sum(rewards)  # Sum of all miner rewards
+# Burn is applied in apply_reputation_rewards() AFTER combining KAV + UAV:
+total_reward_sum = np.sum(combined_rewards)  # Sum of all KAV+UAV rewards
 keep_fraction = 1.0 - burn_fraction  # e.g., 0.25 if burn=0.75
 
 # Rescale ALL miners proportionally
 rescale_factor = keep_fraction / total_reward_sum
-rewards = rewards * rescale_factor
+final_rewards = combined_rewards * rescale_factor
 
 # Add burn UID 59 with burn_fraction weight
-uids = np.append(uids, burn_uid)
-rewards = np.append(rewards, burn_fraction)  # e.g., 0.75 goes to burn
+final_rewards = np.append(final_rewards, burn_fraction)
+final_uids = np.append(uids, BURN_UID)  # e.g., 0.75 goes to burn
 ```
 
 This means:
+- `get_name_variation_rewards(skip_burn=True)` returns raw KAV quality scores (no burn)
+- `apply_reputation_rewards()` combines KAV + UAV, then applies burn ONCE
 - Miners collectively receive `keep_fraction` (e.g., 25%) of emissions
 - Burn UID 59 receives `burn_fraction` (e.g., 75%) of emissions
 - Each miner's **relative share** is preserved based on their `combined_reward`
@@ -738,7 +740,7 @@ else:
 |------|--------|
 | `MIID/datasets/config.py` | Add reputation config (paths, tier multipliers) |
 | `MIID/datasets/app.py` | **Modify existing** `/upload_data/<hotkey>` endpoint (extract reward_allocation, return rep_cache) |
-| `MIID/validator/reward.py` | Add `apply_reputation_rewards()` function; keep `get_name_variation_rewards()` as-is |
+| `MIID/validator/reward.py` | Add `apply_reputation_rewards()` function; add `skip_burn` parameter to `get_name_variation_rewards()` |
 | `MIID/utils/misc.py` | **Modify existing** `upload_data()` to return response (for rep_cache extraction) |
 | `MIID/validator/forward.py` | Add `reward_allocation` to existing results JSON; cache rep_cache from response |
 | `scripts/generate_mock_snapshot.py` | New script to generate test snapshots |
@@ -765,14 +767,15 @@ else:
 ┌─────────────────────────────────────────────────────────────────┐
 │                        reward.py                                 │
 │                                                                  │
-│  get_name_variation_rewards()   [EXISTING - NO CHANGES]         │
+│  get_name_variation_rewards()   [EXISTING - ADD skip_burn PARAM]│
 │     └─► Returns KAV quality scores (Q) for each miner           │
+│     └─► Call with skip_burn=True to return raw scores (no burn) │
 │                                                                  │
 │  apply_reputation_rewards()     [NEW - SINGLE FUNCTION]         │
 │     └─► Takes KAV rewards + rep_data                            │
 │     └─► Calculates UAV: R × T for each miner                    │
 │     └─► Combines: (0.20 × Q) + (0.80 × R × T)                   │
-│     └─► Applies burn: rescale to keep_fraction + add burn UID   │
+│     └─► Applies burn ONCE: rescale to keep_fraction + burn UID  │
 │     └─► Returns final rewards ready for set_weights()           │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -938,15 +941,44 @@ def upload_data(hotkey):
 
 ---
 
-## **TASK 4 — Add apply_reputation_rewards() Function**
+## **TASK 4 — Add apply_reputation_rewards() Function and Modify get_name_variation_rewards()**
 
 **File:** `MIID/validator/reward.py`
 
-> **Key Design**: Keep `get_name_variation_rewards()` as-is for KAV. Add ONE new function that handles UAV + combine + burn.
+> **Key Design**:
+> 1. Add `skip_burn: bool = False` parameter to `get_name_variation_rewards()` so it can return raw quality scores when `skip_burn=True`
+> 2. Add ONE new function `apply_reputation_rewards()` that handles UAV + combine + burn ONCE
+>
+> **CRITICAL**: Burn must be applied ONCE after KAV + UAV are combined. Call `get_name_variation_rewards(skip_burn=True)` to get raw scores, then `apply_reputation_rewards()` applies burn.
 
-Add at the end of the file (or in a logical location near other reward functions):
+### 4.1 Modify get_name_variation_rewards() to add skip_burn parameter
 
-### 5.1 Constants and Normalization
+Add `skip_burn: bool = False` parameter to the function signature and add early return when `skip_burn=True`:
+
+```python
+def get_name_variation_rewards(
+    # ... existing parameters ...
+    skip_burn: bool = False  # Phase 3: Skip burn when using reputation-weighted rewards
+) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
+    """
+    ... existing docstring ...
+
+    Args:
+        skip_burn: If True, return raw rewards without applying burn.
+                   Use this when calling from reputation-weighted reward flow,
+                   where burn is applied ONCE in apply_reputation_rewards().
+    """
+    # ... existing calculation logic that produces rewards, uids, detailed_metrics ...
+
+    # At the end, BEFORE the existing burn logic, add:
+    if skip_burn:
+        bt.logging.info("Skipping burn application (will be applied after reputation weighting)")
+        return rewards, np.array(uids), detailed_metrics
+
+    # ... existing burn logic continues for non-reputation-weighted flow ...
+```
+
+### 4.2 Constants and Normalization
 ```python
 # Reputation-weighted reward allocation (Cycle 2)
 KAV_WEIGHT = 0.20      # 20% allocated to online quality (Q)
@@ -1001,7 +1033,7 @@ def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
     return round(normalized, 3)
 ```
 
-### 5.2 apply_reputation_rewards() — Single function for UAV + combine + burn
+### 4.3 apply_reputation_rewards() — Single function for UAV + combine + burn
 ```python
 def apply_reputation_rewards(
     kav_rewards: np.ndarray,
@@ -1221,8 +1253,9 @@ _pending_file_path = None  # Set in forward() based on config
 # --- REPUTATION WEIGHTING INTEGRATION ---
 global _cached_rep_data, _cached_rep_version
 
-# Step 1: KAV rewards already calculated by get_name_variation_rewards()
-# rewards, uids, detailed_metrics = get_name_variation_rewards(...)  # Already done above
+# Step 1: KAV rewards calculated by get_name_variation_rewards() with skip_burn=True
+# IMPORTANT: Use skip_burn=True to get raw quality scores (burn applied later in apply_reputation_rewards)
+# rewards, uids, detailed_metrics = get_name_variation_rewards(..., skip_burn=True)
 
 # Step 2: Use CACHED rep_data from previous forward pass
 rep_data = _cached_rep_data  # May be empty on first run (defaults to Neutral)
@@ -1290,10 +1323,10 @@ if upload_response and upload_response.get("rep_cache"):
 
 ### Key Integration Point
 
-The integration should happen **AFTER** `get_name_variation_rewards()` returns and **REPLACE** the existing burn mechanism:
+The integration should happen **AFTER** `get_name_variation_rewards()` returns. **IMPORTANT**: Call `get_name_variation_rewards()` with `skip_burn=True` to get raw quality scores, then `apply_reputation_rewards()` applies burn ONCE after combining KAV + UAV:
 
 ```
-get_name_variation_rewards()     # Existing KAV logic (unchanged)
+get_name_variation_rewards(skip_burn=True)  # Returns raw KAV scores (NO burn)
        │
        ▼
 ┌────────────────────────────────┐
@@ -1306,7 +1339,7 @@ get_name_variation_rewards()     # Existing KAV logic (unchanged)
 │  apply_reputation_rewards()    │
 │  - Calculates UAV (R × T)      │
 │  - Combines KAV + UAV          │
-│  - Applies burn + adds UID 59  │
+│  - Applies burn ONCE + UID 59  │
 │  - Returns final rewards+uids  │
 └────────────────────────────────┘
        │
@@ -1329,7 +1362,7 @@ set_weights(final_uids, final_rewards)  # On-chain weights
 └────────────────────────────────┘
 ```
 
-> **Note**: Since `apply_reputation_rewards()` now handles burn internally, you should **bypass the existing burn mechanism** in the code path that uses reputation rewards. The function returns rewards that are ready for `set_weights()`.
+> **CRITICAL**: Burn is applied **ONCE** in `apply_reputation_rewards()` after KAV + UAV are combined. You MUST call `get_name_variation_rewards(skip_burn=True)` to avoid double-burn. The `skip_burn` parameter was added to `get_name_variation_rewards()` specifically for this purpose.
 
 ---
 
@@ -1509,7 +1542,7 @@ This README provides:
 - **No new endpoint**: signature verification already happens in `/upload_data/<hotkey>`
 - **Minimal changes**: modify existing `upload_data()` to return response (for rep_cache extraction)
 - Reputation multipliers affect on-chain TAO distribution
-- Keep `get_name_variation_rewards()` unchanged for KAV
+- Add `skip_burn=True` parameter to `get_name_variation_rewards()` for KAV (returns raw scores without burn)
 - **Single new function** `apply_reputation_rewards()` handles everything:
   - Calculates UAV portion (R × T)
   - Combines KAV + UAV: (0.20 × Q) + (0.80 × R × T)
