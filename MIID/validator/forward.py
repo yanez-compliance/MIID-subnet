@@ -518,8 +518,10 @@ async def forward(self):
     # Convert to list for apply_reputation_rewards
     miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
-    # Get burn fraction from config (default 0.75 for Cycle 2)
+    # Get config values (Phase 3 - Cycle 2)
     burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+    kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
+    uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
 
     # Apply reputation weighting (UAV + combine + burn in one call)
     # Burn is applied ONCE here after KAV + UAV are combined
@@ -529,6 +531,8 @@ async def forward(self):
         rep_data=_cached_rep_data,  # From previous forward pass (may be empty on first run)
         metagraph=self.metagraph,
         burn_fraction=burn_fraction,
+        kav_weight=kav_weight,
+        uav_weight=uav_weight,
         kav_metrics=detailed_metrics
     )
 

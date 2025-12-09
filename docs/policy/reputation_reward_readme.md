@@ -736,9 +736,12 @@ else:
 
 ## Overview of Files to Modify/Create
 
+> **Note**: There are TWO config files - Flask config (runs on Flask server) and Validator config (runs on validator machine). They cannot share imports.
+
 | File | Action |
 |------|--------|
-| `MIID/datasets/config.py` | Add reputation config (paths, tier multipliers) |
+| `MIID/datasets/config.py` | **Flask config** - Add reputation paths, tier multipliers (Flask server) |
+| `MIID/utils/config.py` | **Validator config** - Add `--neuron.kav_weight`, `--neuron.uav_weight` args |
 | `MIID/datasets/app.py` | **Modify existing** `/upload_data/<hotkey>` endpoint (extract reward_allocation, return rep_cache) |
 | `MIID/validator/reward.py` | Add `apply_reputation_rewards()` function; add `skip_burn` parameter to `get_name_variation_rewards()` |
 | `MIID/utils/misc.py` | **Modify existing** `upload_data()` to return response (for rep_cache extraction) |
@@ -978,37 +981,66 @@ def get_name_variation_rewards(
     # ... existing burn logic continues for non-reputation-weighted flow ...
 ```
 
-### 4.2 Constants and Normalization
-```python
-# Reputation-weighted reward allocation (Cycle 2)
-KAV_WEIGHT = 0.20      # 20% allocated to online quality (Q)
-UAV_WEIGHT = 0.80      # 80% allocated to reputation-based rewards
+### 4.2 Constants and Configuration
 
-# Reputation tier multipliers
+> **Note**: There are TWO config files that run on DIFFERENT machines:
+> - `MIID/datasets/config.py` - Flask server config (cannot be imported by validator)
+> - `MIID/utils/config.py` - Validator config (argparse + `getattr()` pattern)
+>
+> **Approach**: Policy-based constants (rarely change) are defined locally in `reward.py`. Configurable weights use `getattr()` from validator config.
+
+**In `MIID/utils/config.py` (validator config):**
+```python
+# --- Reputation-Weighted Reward Configuration (Phase 3 - Cycle 2) ---
+parser.add_argument(
+    '--neuron.kav_weight',
+    type=float,
+    help="Weight for KAV (online quality) in reputation-weighted rewards (default: 0.20 = 20%).",
+    default=0.20
+)
+parser.add_argument(
+    '--neuron.uav_weight',
+    type=float,
+    help="Weight for UAV (reputation-based) in reputation-weighted rewards (default: 0.80 = 80%).",
+    default=0.80
+)
+```
+
+**In `MIID/validator/reward.py` (local policy constants):**
+```python
+# =============================================================================
+# Reputation-Weighted Reward System (Phase 3 - Cycle 2)
+#
+# Configurable weights (via --neuron.kav_weight, --neuron.uav_weight):
+#   - Passed to apply_reputation_rewards() from forward.py using getattr()
+#
+# Policy-based constants (hardcoded, rarely change):
+#   - TIER_MULTIPLIERS, NORM_RANGES, BURN_UID
+# =============================================================================
+
+# Tier multipliers for reputation weighting (policy-based, rarely change)
 TIER_MULTIPLIERS = {
-    "Diamond": 1.15,
-    "Gold":    1.10,
-    "Silver":  1.05,
-    "Bronze":  1.02,
-    "Neutral": 1.00,
-    "Watch":   0.90,
+    "Diamond": 1.15, "Gold": 1.10, "Silver": 1.05,
+    "Bronze": 1.02, "Neutral": 1.00, "Watch": 0.90,
 }
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
-# Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
 NORM_RANGES = {
-    "Watch":   (0.10, 0.699, 0.50, 0.70),
-    "Neutral": (0.70, 1.00,  0.70, 1.00),
-    "Bronze":  (1.00, 1.999, 1.00, 1.20),
-    "Silver":  (2.00, 9.999, 1.20, 1.50),
-    "Gold":    (10.0, 49.99, 1.50, 1.80),
-    "Diamond": (50.0, 9999., 1.80, 2.00),
+    "Watch": (0.10, 0.699, 0.50, 0.70),
+    "Neutral": (0.70, 1.00, 0.70, 1.00),
+    "Bronze": (1.00, 1.999, 1.00, 1.20),
+    "Silver": (2.00, 9.999, 1.20, 1.50),
+    "Gold": (10.0, 49.99, 1.50, 1.80),
+    "Diamond": (50.0, 9999.0, 1.80, 2.00),
 }
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
+```
 
+### 4.3 normalize_rep_score() Function
 
+```python
 def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
     """
     Normalize rep_score to reward-friendly range (0.5 - 2.0).
@@ -1033,7 +1065,7 @@ def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
     return round(normalized, 3)
 ```
 
-### 4.3 apply_reputation_rewards() — Single function for UAV + combine + burn
+### 4.4 apply_reputation_rewards() — Single function for UAV + combine + burn
 ```python
 def apply_reputation_rewards(
     kav_rewards: np.ndarray,
@@ -1041,6 +1073,8 @@ def apply_reputation_rewards(
     rep_data: Dict[str, Dict],  # hotkey -> {"rep_score": float, "rep_tier": str}
     metagraph,
     burn_fraction: float = 0.75,
+    kav_weight: float = 0.20,    # Passed from forward.py via getattr()
+    uav_weight: float = 0.80,    # Passed from forward.py via getattr()
     kav_metrics: List[Dict] = None
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
@@ -1098,27 +1132,33 @@ def apply_reputation_rewards(
         kav_contribution = kav_portion / combined if combined > 0 else 0
         uav_contribution = uav_portion / combined if combined > 0 else 0
 
-        # Build metrics
+        # Build metrics - merge KAV details with reputation metrics
         kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
 
-        combined_metrics.append({
+        metric_entry = {
             "uid": uid,
-            "hotkey": hotkey,
+            "miner_hotkey": hotkey,
             # KAV details
-            "quality_score": Q,
-            "kav_portion": kav_portion,
+            "quality_score": float(Q),
+            "kav_portion": float(kav_portion),
             # UAV details (raw + normalized)
-            "rep_score": rep_score,           # Raw score from policy (0.10 - 9999.0)
-            "rep_score_normalized": R_norm,   # Normalized for rewards (0.5 - 2.0)
+            "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0)
+            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0)
             "rep_tier": rep_tier,
-            "tier_multiplier": T,
-            "uav_reward": uav_reward,
-            "uav_portion": uav_portion,
+            "tier_multiplier": float(T),
+            "uav_reward": float(uav_reward),
+            "uav_portion": float(uav_portion),
             # Combined (before burn)
-            "combined_reward": combined,
-            "kav_contribution": kav_contribution,
-            "uav_contribution": uav_contribution
-        })
+            "combined_reward": float(combined),
+            "kav_contribution": float(kav_contribution),
+            "uav_contribution": float(uav_contribution),
+        }
+
+        # Merge KAV detailed metrics (variations, similarity scores, etc.) if available
+        if kav_info:
+            metric_entry["kav_details"] = kav_info
+
+        combined_metrics.append(metric_entry)
 
     # --- Step 3: Apply burn (proportional rescaling + burn UID) ---
     total_reward_sum = np.sum(combined_rewards)
@@ -1260,19 +1300,24 @@ global _cached_rep_data, _cached_rep_version
 # Step 2: Use CACHED rep_data from previous forward pass
 rep_data = _cached_rep_data  # May be empty on first run (defaults to Neutral)
 
-# Step 3: Apply reputation rewards (UAV + combine + burn in ONE call)
+# Step 3: Get config values using getattr() from validator config
 burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
+uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
 
+# Step 4: Apply reputation rewards (UAV + combine + burn in ONE call)
 final_rewards, final_uids, combined_metrics = apply_reputation_rewards(
     kav_rewards=rewards,           # From get_name_variation_rewards()
     uids=uids,
     rep_data=rep_data,             # From cache (may be empty on first run)
     metagraph=self.metagraph,
     burn_fraction=burn_fraction,
+    kav_weight=kav_weight,
+    uav_weight=uav_weight,
     kav_metrics=detailed_metrics   # Optional, for full metrics
 )
 
-# Step 4: Use final_rewards and final_uids for set_weights()
+# Step 5: Use final_rewards and final_uids for set_weights()
 # These already include burn UID 59 — ready to use directly
 rewards = final_rewards
 uids = final_uids

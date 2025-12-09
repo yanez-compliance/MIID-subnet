@@ -3436,13 +3436,15 @@ def calculate_rule_compliance_score(
 
 # =============================================================================
 # Reputation-Weighted Reward System (Phase 3 - Cycle 2)
+#
+# Configurable weights (via --neuron.kav_weight, --neuron.uav_weight):
+#   - Passed to apply_reputation_rewards() from forward.py using getattr()
+#
+# Policy-based constants (hardcoded, rarely change):
+#   - TIER_MULTIPLIERS, NORM_RANGES, BURN_UID
 # =============================================================================
 
-# Reputation-weighted reward allocation weights
-KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
-UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards
-
-# Reputation tier multipliers
+# Tier multipliers for reputation weighting (policy-based, rarely change)
 TIER_MULTIPLIERS = {
     "Diamond": 1.15,
     "Gold": 1.10,
@@ -3454,7 +3456,6 @@ TIER_MULTIPLIERS = {
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
 # Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
-# This prevents Diamond miners from dominating emissions
 NORM_RANGES = {
     "Watch": (0.10, 0.699, 0.50, 0.70),
     "Neutral": (0.70, 1.00, 0.70, 1.00),
@@ -3505,6 +3506,8 @@ def apply_reputation_rewards(
     rep_data: Dict[str, Dict],
     metagraph,
     burn_fraction: float = 0.75,
+    kav_weight: float = 0.20,
+    uav_weight: float = 0.80,
     kav_metrics: List[Dict] = None
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
@@ -3512,7 +3515,7 @@ def apply_reputation_rewards(
 
     This single function handles the entire reputation reward pipeline:
     1. Calculate UAV rewards (R × T) from rep_data
-    2. Combine KAV + UAV: (0.20 × Q) + (0.80 × R × T)
+    2. Combine KAV + UAV: (kav_weight × Q) + (uav_weight × R × T)
     3. Apply burn: rescale all to keep_fraction, add burn UID 59
 
     Args:
@@ -3521,6 +3524,8 @@ def apply_reputation_rewards(
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
         burn_fraction: Fraction to burn (default 0.75 for Cycle 2)
+        kav_weight: Weight for KAV online quality (default 0.20 = 20%)
+        uav_weight: Weight for UAV reputation-based (default 0.80 = 80%)
         kav_metrics: Optional detailed metrics from KAV calculation
 
     Returns:
@@ -3553,8 +3558,8 @@ def apply_reputation_rewards(
         uav_reward = R_norm * T
 
         # Apply weights and combine
-        kav_portion = KAV_WEIGHT * Q
-        uav_portion = UAV_WEIGHT * uav_reward
+        kav_portion = kav_weight * Q
+        uav_portion = uav_weight * uav_reward
         combined = kav_portion + uav_portion
         combined_rewards[i] = combined
 
@@ -3562,10 +3567,10 @@ def apply_reputation_rewards(
         kav_contribution = kav_portion / combined if combined > 0 else 0
         uav_contribution = uav_portion / combined if combined > 0 else 0
 
-        # Build metrics
+        # Build metrics - merge KAV details with reputation metrics
         kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
 
-        combined_metrics.append({
+        metric_entry = {
             "uid": uid,
             "miner_hotkey": hotkey,
             # KAV details
@@ -3582,7 +3587,13 @@ def apply_reputation_rewards(
             "combined_reward": float(combined),
             "kav_contribution": float(kav_contribution),
             "uav_contribution": float(uav_contribution),
-        })
+        }
+
+        # Merge KAV detailed metrics (variations, similarity scores, etc.) if available
+        if kav_info:
+            metric_entry["kav_details"] = kav_info
+
+        combined_metrics.append(metric_entry)
 
     # --- Step 3: Apply burn (proportional rescaling + burn UID) ---
     total_reward_sum = np.sum(combined_rewards)
@@ -3606,7 +3617,7 @@ def apply_reputation_rewards(
 
     bt.logging.info(
         f"Applied reputation rewards for {len(uids)} miners. "
-        f"KAV: {KAV_WEIGHT}, UAV: {UAV_WEIGHT}, Burn: {burn_fraction}. "
+        f"KAV: {kav_weight}, UAV: {uav_weight}, Burn: {burn_fraction}. "
         f"Total before burn: {total_reward_sum:.4f}, "
         f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {burn_fraction:.2%}"
     )
