@@ -390,10 +390,13 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         #         f"Using OpenStreetMap/Nominatim data under ODbL)"
         #     )
 
-
+        if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
+            validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
+        else:
+            validator_name = "Unknown Validator"
         nominatim_headers = {
             # "User-Agent": user_agent
-            "User-Agent": "evaluating variations"
+            "User-Agent": f"{validator_name} - {seed_address}"
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
@@ -2662,7 +2665,7 @@ def get_name_variation_rewards(
                 "missing_names": 0.0,
                 "insufficient_addresses": 0.0,
                 "insufficient_dob": 0.0,
-                "numbers_in_names": 0.0,
+                "non_letters_in_names": 0.0,
                 "total_penalty": 0.0
             },
             "completeness_multiplier": 1.0,
@@ -2911,23 +2914,41 @@ def get_name_variation_rewards(
         insufficient_dob_penalty = min(insufficient_dob_penalty, 0.1)  # Max 10% penalty
         miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
         
-        # Penalty for names with numbers (only if >40% have numbers)
+        # Penalty for names with non-letters (only if >40% have non-letters)
+        # Valid characters: letters, spaces, hyphens, apostrophes
         names_with_numbers = 0
         total_names = 0
+        non_letters_penalty = 0.0
         
         for name, vars_list in variations.items():
             total_names += 1
+            name_has_numbers = False
+            
             for var in vars_list:
-                if len(var) > 0 and var[0] and any(char.isdigit() for char in var[0]):
-                    names_with_numbers += 1
-                    break  # Only count once per name
+                if len(var) > 0 and var[0]:
+                    name_var = var[0]
+                    # Check for non-letter characters (excluding allowed: spaces)
+                    non_letter_chars = []
+                    for char in name_var:
+                        if not char.isalpha() and not char == " ":
+                            non_letter_chars.append(char)
+                            if char.isdigit():
+                                name_has_numbers = True
+                    # If more than 2 symbols/numbers in the name variation, add 0.05 penalty
+                    if len(non_letter_chars) > 2:
+                        non_letters_penalty += 0.05
+
+            if name_has_numbers:
+                names_with_numbers += 1
         
-        # Only apply penalty if more than 40% of names have numbers
-        numbers_penalty = 0.2 if total_names > 0 and (names_with_numbers / total_names) > 0.4 else 0.0
-        miner_metrics["penalties"]["numbers_in_names"] = float(numbers_penalty)
+        # If more than 40% of names have numbers, add 0.2 penalty
+        if total_names > 0 and (names_with_numbers / total_names) > 0.4:
+            non_letters_penalty += 0.2
+        
+        miner_metrics["penalties"]["non_letters_in_names"] = float(non_letters_penalty)
         
         # Calculate total penalty and completeness multiplier
-        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"] + miner_metrics["penalties"]["numbers_in_names"])
+        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"] + miner_metrics["penalties"]["non_letters_in_names"])
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)

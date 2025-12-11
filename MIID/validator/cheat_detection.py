@@ -89,8 +89,9 @@ def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     - Comma (if preserve_comma=True)
     
     This removes currency symbols (like £), emoji, math operators, etc.
-    Also excludes phonetic small-cap blocks AND Latin Extended-D block (U+A720 to U+A7FF)
-    which includes characters like ꞎ, ꞙ, ꞟ and similar extended Latin characters.
+    Also excludes phonetic small-cap blocks, Latin Extended-D block (U+A720 to U+A7FF),
+    and Latin Extended-F block (U+10780 to U+107BF) which includes characters like
+    ꞎ, ꞙ, ꞟ, 𐞃 and similar extended Latin characters.
     
     Args:
         text: The text to clean
@@ -104,12 +105,14 @@ def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     for c in text:
         codepoint = ord(c)
         
-        # ✅ Updated exclusion: phonetic small-cap blocks + Latin Extended-D block
+        # ✅ Updated exclusion: phonetic small-cap blocks + Latin Extended-D block + Latin Extended-F block
         # Latin Extended-D (U+A720 to U+A7FF) includes characters like ꞎ, ꞙ, ꞟ
+        # Latin Extended-F (U+10780 to U+107BF) includes characters like 𐞃
         if (
             0x1D00 <= codepoint <= 0x1D7F or  # Phonetic Extensions
             0x1D80 <= codepoint <= 0x1DBF or  # Phonetic Extensions Supplement
-            0xA720 <= codepoint <= 0xA7FF      # Latin Extended-D (includes ꞎ, ꞙ, ꞟ)
+            0xA720 <= codepoint <= 0xA7FF or  # Latin Extended-D (includes ꞎ, ꞙ, ꞟ)
+            0x10780 <= codepoint <= 0x107BF   # Latin Extended-F (includes 𐞃)
         ):
             continue
         
@@ -171,6 +174,21 @@ def normalize_address_for_deduplication(addr: str) -> str:
     parts = [p for p in cleaned.split(" ") if p]
     # Filter out words that are 1, 2, or 3 characters long
     parts = [p for p in parts if len(p) > 3]
+    
+    # Step 3.5: Remove common administrative and location variation words
+    # These words often vary between similar addresses and cause false negatives
+    # in duplicate detection. Removing them helps match addresses that are essentially the same.
+    administrative_words = {
+        'area', 'district', 'subdistrict', 'sub', 'residential',
+        'street', 'avenue', 'road', 'boulevard', 'drive', 'lane', 'way',
+        'city', 'town', 'village', 'province', 'region', 'state', 'county',
+        'postal', 'zip', 'code', 'country'
+    }
+    # Location-specific variations that should be normalized away
+    location_variations = {'dawha', 'qasabah'}
+    
+    parts = [p for p in parts if p not in administrative_words and p not in location_variations]
+    
     unique_words = set(parts)
     dedup_text = " ".join(unique_words)
     # Extract letters (non-word, non-digit), excluding specific Unicode chars and lowercase
