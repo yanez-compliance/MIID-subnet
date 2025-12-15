@@ -92,13 +92,42 @@ class BaseValidatorNeuron(BaseNeuron):
             self.axon = bt.Axon(wallet=self.wallet, config=self.config)
 
             try:
-                self.subtensor.serve_axon(
+                # In bittensor 10.0.0+, serve_axon returns ExtrinsicResponse instead of bool/tuple
+                response = self.subtensor.serve_axon(
                     netuid=self.config.netuid,
                     axon=self.axon,
                 )
-                bt.logging.info(
-                    f"Running validator {self.axon} on network: {self.config.subtensor.chain_endpoint} with netuid: {self.config.netuid}"
-                )
+                # Handle ExtrinsicResponse object
+                if hasattr(response, 'success'):
+                    if response.success:
+                        message = getattr(response, 'message', 'Success')
+                        bt.logging.info(
+                            f"Running validator {self.axon} on network: {self.config.subtensor.chain_endpoint} with netuid: {self.config.netuid}. {message}"
+                        )
+                    else:
+                        error_msg = getattr(response, 'message', getattr(response, 'error', 'Unknown error'))
+                        bt.logging.error(f"Failed to serve Axon: {error_msg}")
+                # Fallback for compatibility (if response is still a bool/tuple)
+                elif isinstance(response, tuple):
+                    result, msg = response
+                    if result:
+                        bt.logging.info(
+                            f"Running validator {self.axon} on network: {self.config.subtensor.chain_endpoint} with netuid: {self.config.netuid}"
+                        )
+                    else:
+                        bt.logging.error(f"Failed to serve Axon: {msg}")
+                elif isinstance(response, bool):
+                    if response:
+                        bt.logging.info(
+                            f"Running validator {self.axon} on network: {self.config.subtensor.chain_endpoint} with netuid: {self.config.netuid}"
+                        )
+                    else:
+                        bt.logging.error("Failed to serve Axon: Unknown error")
+                else:
+                    bt.logging.warning(f"serve_axon returned unexpected type: {type(response)}, assuming success")
+                    bt.logging.info(
+                        f"Running validator {self.axon} on network: {self.config.subtensor.chain_endpoint} with netuid: {self.config.netuid}"
+                    )
             except Exception as e:
                 bt.logging.error(f"Failed to serve Axon with exception: {e}")
                 pass
@@ -281,12 +310,13 @@ class BaseValidatorNeuron(BaseNeuron):
                 version_key=self.spec_version,
             )
             # Handle ExtrinsicResponse object
-            if hasattr(response, 'is_success'):
-                if response.is_success:
-                    bt.logging.info("set_weights on chain successfully!")
+            if hasattr(response, 'success'):
+                if response.success:
+                    message = getattr(response, 'message', 'Success')
+                    bt.logging.info(f"set_weights on chain successfully! {message}")
                     return True, uint_uids, uint_weights
                 else:
-                    error_msg = getattr(response, 'error_message', 'Unknown error')
+                    error_msg = getattr(response, 'message', getattr(response, 'error', 'Unknown error'))
                     bt.logging.error(f"set_weights failed: {error_msg}")
                     return False, [], []
             # Fallback for compatibility (if response is still a tuple)
@@ -300,7 +330,7 @@ class BaseValidatorNeuron(BaseNeuron):
                     return False, [], []
             else:
                 # Assume success if we can't determine
-                bt.logging.warning("set_weights returned unexpected type, assuming success")
+                bt.logging.warning(f"set_weights returned unexpected type: {type(response)}, assuming success")
                 return True, uint_uids, uint_weights
         except Exception as e:
             bt.logging.error(f"set_weights raised exception: {e}")
