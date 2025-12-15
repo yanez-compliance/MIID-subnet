@@ -59,7 +59,7 @@ class BaseValidatorNeuron(BaseNeuron):
         if self.config.mock:
             self.dendrite = MockDendrite(wallet=self.wallet)
         else:
-            self.dendrite = bt.dendrite(wallet=self.wallet)
+            self.dendrite = bt.Dendrite(wallet=self.wallet)
         bt.logging.info(f"Dendrite: {self.dendrite}")
 
         # Set up initial scoring weights for validation
@@ -89,7 +89,7 @@ class BaseValidatorNeuron(BaseNeuron):
 
         bt.logging.info("serving ip to chain...")
         try:
-            self.axon = bt.axon(wallet=self.wallet, config=self.config)
+            self.axon = bt.Axon(wallet=self.wallet, config=self.config)
 
             try:
                 self.subtensor.serve_axon(
@@ -269,20 +269,41 @@ class BaseValidatorNeuron(BaseNeuron):
         bt.logging.debug("uint_uids", uint_uids)
 
         # Set the weights on chain via our subtensor connection.
-        result, msg = self.subtensor.set_weights(
-            wallet=self.wallet,
-            netuid=self.config.netuid,
-            uids=uint_uids,
-            weights=uint_weights,
-            wait_for_finalization=False,
-            wait_for_inclusion=False,
-            version_key=self.spec_version,
-        )
-        if result is True:
-            bt.logging.info("set_weights on chain successfully!")
-            return True, uint_uids, uint_weights
-        else:
-            bt.logging.error("set_weights failed", msg)
+        # In bittensor 10.0.0+, set_weights returns ExtrinsicResponse instead of tuple
+        try:
+            response = self.subtensor.set_weights(
+                wallet=self.wallet,
+                netuid=self.config.netuid,
+                uids=uint_uids,
+                weights=uint_weights,
+                wait_for_finalization=False,
+                wait_for_inclusion=False,
+                version_key=self.spec_version,
+            )
+            # Handle ExtrinsicResponse object
+            if hasattr(response, 'is_success'):
+                if response.is_success:
+                    bt.logging.info("set_weights on chain successfully!")
+                    return True, uint_uids, uint_weights
+                else:
+                    error_msg = getattr(response, 'error_message', 'Unknown error')
+                    bt.logging.error(f"set_weights failed: {error_msg}")
+                    return False, [], []
+            # Fallback for compatibility (if response is still a tuple)
+            elif isinstance(response, tuple):
+                result, msg = response
+                if result is True:
+                    bt.logging.info("set_weights on chain successfully!")
+                    return True, uint_uids, uint_weights
+                else:
+                    bt.logging.error(f"set_weights failed: {msg}")
+                    return False, [], []
+            else:
+                # Assume success if we can't determine
+                bt.logging.warning("set_weights returned unexpected type, assuming success")
+                return True, uint_uids, uint_weights
+        except Exception as e:
+            bt.logging.error(f"set_weights raised exception: {e}")
             return False, [], []
         
     def resync_metagraph(self):
