@@ -588,10 +588,10 @@ COUNTRY_MAPPING = {
 
 
     # north 
-    'North Macedonia, The Republic of': 'north macedonia',
+    'north macedonia, the republic of': 'north macedonia',
 
     # palestinian
-    'Palestine, State of': 'palestinian territory',
+    'palestine, state of': 'palestinian territory',
     'palestinian': 'palestinian territory',
 }
 
