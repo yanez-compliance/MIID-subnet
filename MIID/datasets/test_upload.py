@@ -16,7 +16,7 @@ MESSAGE = {"test_data": "hello from auto-signed client"}
 
 # === STEP 1: Load or generate a wallet ===
 # Load wallet using bittensor
-wallet = bittensor.wallet(name='validator', hotkey='v')
+wallet = bittensor.Wallet(name='validator', hotkey='v')
 print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {wallet.hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
 # === STEP 2: Create test results payload ===

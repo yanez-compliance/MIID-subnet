@@ -2,12 +2,12 @@ from datetime import datetime
 import bittensor
 
 
-def sign_message(wallet: bittensor.wallet, message_text: str, output_file: str = "message_and_signature.txt"):
+def sign_message(wallet: bittensor.Wallet, message_text: str, output_file: str = "message_and_signature.txt"):
     """
     Signs a message using the specified wallet and writes it to a file.
 
     Args:
-        wallet (bittensor.wallet): The wallet object to use for signing.
+        wallet (bittensor.Wallet): The wallet object to use for signing.
         message_text (str): The message you want to sign.
         output_file (str, optional): Filename to save message and signature. Defaults to "message_and_signature.txt".
 

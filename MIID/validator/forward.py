@@ -59,7 +59,7 @@ from MIID.utils.misc import upload_data
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse,
+async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
     """
     Send requests to miners with automatic retry logic for failed connections.
