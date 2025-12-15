@@ -589,6 +589,10 @@ COUNTRY_MAPPING = {
 
     # north 
     'North Macedonia, The Republic of': 'north macedonia',
+
+    # palestinian
+    'Palestine, State of': 'palestinian territory',
+    'palestinian': 'palestinian territory',
 }
 
 
@@ -819,7 +823,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return check_western_sahara_cities(generated_address)
     
     # Other special regions
-    OTHER_SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "palestinian", "macau"]
+    OTHER_SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "macau"]
     if seed_lower in OTHER_SPECIAL_REGIONS:
         # If seed is a special region, check if that region appears in generated address
         gen_lower = generated_address.lower()
