@@ -90,8 +90,9 @@ def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     
     This removes currency symbols (like £), emoji, math operators, etc.
     Also excludes phonetic small-cap blocks, Latin Extended-D block (U+A720 to U+A7FF),
-    and Latin Extended-F block (U+10780 to U+107BF) which includes characters like
-    ꞎ, ꞙ, ꞟ, 𐞃 and similar extended Latin characters.
+    Latin Extended-F block (U+10780 to U+107BF) which includes characters like
+    ꞎ, ꞙ, ꞟ, 𐞃 and similar extended Latin characters, and subscript characters
+    (U+2080 to U+209F) like ₐₑₐₑ.
     
     Args:
         text: The text to clean
@@ -105,19 +106,25 @@ def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     for c in text:
         codepoint = ord(c)
         
-        # ✅ Updated exclusion: phonetic small-cap blocks + Latin Extended-D block + Latin Extended-F block
+        # ✅ Updated exclusion: phonetic small-cap blocks + Latin Extended-D block + Latin Extended-F block + Subscripts
         # Latin Extended-D (U+A720 to U+A7FF) includes characters like ꞎ, ꞙ, ꞟ
         # Latin Extended-F (U+10780 to U+107BF) includes characters like 𐞃
+        # Subscripts (U+2080 to U+209F) includes characters like ₐₑₐₑ
         if (
             0x1D00 <= codepoint <= 0x1D7F or  # Phonetic Extensions
             0x1D80 <= codepoint <= 0x1DBF or  # Phonetic Extensions Supplement
             0xA720 <= codepoint <= 0xA7FF or  # Latin Extended-D (includes ꞎ, ꞙ, ꞟ)
-            0x10780 <= codepoint <= 0x107BF   # Latin Extended-F (includes 𐞃)
+            0x10780 <= codepoint <= 0x107BF or  # Latin Extended-F (includes 𐞃)
+            0x2070 <= codepoint <= 0x207F or  # Superscripts (includes ⁰¹²³ⁿ etc.)
+            0x2080 <= codepoint <= 0x209F or  # Subscripts (includes ₐₑₐₑ)
+            codepoint in [0x00B2, 0x00B3, 0x00B9, 0x00BC, 0x00BD, 0x00BE]  # Other superscripts (²³¹¼½¾)
         ):
             continue
         
+        # Allow letters (L*), but exclude modifier letters (Lm) which include superscript letters
+        # We keep regular letters and marks (diacritics)
         cat = unicodedata.category(c)
-        if cat.startswith("L"):       # ✓ Letter (any language)
+        if cat.startswith("L") and cat != "Lm":  # ✓ Letter (any language, except modifier/superscript)
             allowed.append(c)
         elif c in allowed_chars:      # ✓ ASCII digits, space, and optionally comma
             allowed.append(c)
