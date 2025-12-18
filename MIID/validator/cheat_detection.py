@@ -135,7 +135,7 @@ def remove_disallowed_unicode(text: str, preserve_comma: bool = False) -> str:
     return "".join(allowed)
 
 
-def normalize_address_for_deduplication(addr: str) -> str:
+def normalize_address_for_deduplication(addr: str) -> Set[str]:
     """Normalize address using Nominatim-style normalization + deduplication logic.
     
     This combines:
@@ -149,7 +149,7 @@ def normalize_address_for_deduplication(addr: str) -> str:
     from bypassing duplicate detection by converting all scripts to ASCII.
     """
     if not addr or not addr.strip():
-        return ""
+        return set()
     
     # Step 0: Remove disallowed Unicode characters (currency symbols like £, emoji, etc.)
     text = remove_disallowed_unicode(addr)
@@ -197,14 +197,11 @@ def normalize_address_for_deduplication(addr: str) -> str:
     parts = [p for p in parts if p not in administrative_words and p not in location_variations]
     
     unique_words = set(parts)
-    dedup_text = " ".join(unique_words)
-    # Extract letters (non-word, non-digit), excluding specific Unicode chars and lowercase
-    letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
-    letters = [c.lower() for c in letters if c not in ['\u02BB', '\u02BC']]
-    # Sort and join
-    normalized = ''.join(sorted(letters))
+    for word in unique_words:
+        word = re.findall(r'[^\W\d]', word, flags=re.UNICODE)
+        word = [c.lower() for c in word if c not in ['\u02BB', '\u02BC']]
     
-    return normalized
+    return unique_words
 
 
 def build_normalized_set(variations: List[str]) -> Set[str]:
@@ -440,7 +437,7 @@ def detect_cheating_patterns(
                     for addr in address_vars:
                         normalized = normalize_address_for_deduplication(addr)
                         if normalized:
-                            all_addresses.append(normalized)
+                            all_addresses.extend(normalized)
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -485,12 +482,12 @@ def detect_cheating_patterns(
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
                 # Normalize addresses using Nominatim-style normalization + deduplication
-                normalized_addresses: List[str] = []
+                normalized_addresses: Set[str] = set()
                 for addr in address_list:
                     normalized = normalize_address_for_deduplication(addr)
                     if normalized:
-                        normalized_addresses.append(normalized)
-                miner_address_sets[name] = set(normalized_addresses)
+                        normalized_addresses.update(normalized)
+                miner_address_sets[name] = normalized_addresses
 
         if not has_any_variations:
             all_normalized_sets.append(None)
