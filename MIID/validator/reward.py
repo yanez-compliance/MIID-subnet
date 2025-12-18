@@ -408,7 +408,7 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
         nominatim_headers = {
             # "User-Agent": user_agent
             # "User-Agent": f"{validator_name}"
-            "User-Agent": "add/1.0"
+            "User-Agent": "nominatim check"
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
