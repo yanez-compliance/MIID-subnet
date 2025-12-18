@@ -49,12 +49,12 @@ from MIID.validator.cheat_detection import (
 from MIID.validator.cache import LRUCache
 
 HOTKEY_TO_VALIDATOR_NAME: Dict[str, str] = {
-    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "MIIDOwner",
-    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Yuma",
-    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "RT21",
-    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "Tensora",
-    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "OTF",
-    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Rizzo",
+    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Postal system",
+    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Street data",
+    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "Residence service",
+    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "Geospatial data",
+    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "Location precision",
+    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Quality service",
 }
 
 def clean_transliteration_output(raw_response: str) -> str:
@@ -343,7 +343,17 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
     
     # Normalize address for cache key using deduplication normalization
     # This ensures addresses like "House 4" and "House 1" at the same location share cache
-    cache_key = normalize_address_for_deduplication(address)
+    normalized_set = normalize_address_for_deduplication(address)
+    if not normalized_set:
+        cache_key = ""
+    else:
+        # Sort words for deterministic ordering, then extract all letters
+        dedup_text = " ".join(sorted(normalized_set))
+        letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+        letters = [c.lower() for c in letters if c not in ['\u02BB', '\u02BC']]
+        cache_key = ''.join(sorted(letters))
+    # Convert set to string for use as cache key (sets are unhashable)
+    
     
     # Check if cache is enabled and we have a valid cache key
     # Default to True if not yet initialized from config
@@ -394,9 +404,11 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
             validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
         else:
             validator_name = "Unknown Validator"
+            # validator_name = random.choice(list(HOTKEY_TO_VALIDATOR_NAME.values()))
         nominatim_headers = {
             # "User-Agent": user_agent
-            "User-Agent": f"{validator_name} - {seed_address}"
+            # "User-Agent": f"{validator_name}"
+            "User-Agent": "nominatim check"
         }
         
         response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
@@ -2237,7 +2249,8 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         nominatim_scores = []
         failure_count = 0  # Track consecutive failures for exponential backoff
         api_error_count = 0  # Track total API_ERROR results (for fallback to Photon)
-        addresses_with_api_errors = []  # Store addresses that resulted in API_ERROR
+        timeout_count = 0  # Track total TIMEOUT results (for fallback to Photon)
+        addresses_with_api_errors = []  # Store addresses that resulted in API_ERROR or TIMEOUT
         for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
             
@@ -2256,12 +2269,20 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 else:
                     # Full result from API call
                     score_details = result
-            elif result == "TIMEOUT":
-                score = "TIMEOUT"
-            elif result == "API_ERROR":
-                score = "API_ERROR"
-                api_error_count += 1
+            elif result == "TIMEOUT" or result == "API_ERROR":
+                score = result
+                if result == "TIMEOUT":
+                    timeout_count += 1
+                else:
+                    api_error_count += 1
                 addresses_with_api_errors.append((addr, seed_addr, seed_name))
+                # Apply exponential backoff for API failures/timeouts
+                nominatim_timeout_calls += 1
+                failure_count += 1
+                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
+                bt.logging.debug(f"{result} - waiting {wait_time:.2f}s (failure count: {failure_count})")
+                if i < len(nominatim_addresses) - 1:
+                    time.sleep(wait_time)
             else:
                 score = result if isinstance(result, (int, float)) else 0.0
             
@@ -2273,26 +2294,9 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 "attempt": i + 1
             })
             
-            # Handle result and apply exponential backoff for API failures/timeouts only
-            # Distinguish between:
-            # - 0.0 = API succeeded but address is invalid (bad address) - no backoff needed
-            # - "API_ERROR" = API call failed (network error, exception) - apply backoff
-            # - "TIMEOUT" = API timeout - apply backoff
-            if result == "TIMEOUT":
-                nominatim_timeout_calls += 1
-                failure_count += 1
-                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
-                bt.logging.debug(f"Timeout - waiting {wait_time:.2f}s (failure count: {failure_count})")
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(wait_time)
-            elif result == "API_ERROR":
-                nominatim_timeout_calls += 1
-                failure_count += 1
-                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
-                bt.logging.debug(f"API error - waiting {wait_time:.2f}s (failure count: {failure_count})")
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(wait_time)
-            elif isinstance(result, dict) and result.get("score", 0) > 0.0:
+            # Handle result - successful API calls
+            # Note: TIMEOUT and API_ERROR are handled above, so we only handle successful results here
+            if isinstance(result, dict) and result.get("score", 0) > 0.0:
                 nominatim_successful_calls += 1
                 nominatim_scores.append(result["score"])
                 failure_count = 0  # Reset on success
@@ -2312,10 +2316,11 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
                 if i < len(nominatim_addresses) - 1:
                     time.sleep(1.0)  # Normal wait between calls
         
-        # Fallback to Photon API if we got 3 API_ERROR results (all addresses failed with API_ERROR)
-        # This triggers when we get API_ERROR for all addresses we checked (up to 3)
-        if api_error_count >= 3 and addresses_with_api_errors and len(addresses_with_api_errors) >= 3:
-            bt.logging.warning(f"Got {api_error_count} API_ERROR results from Nominatim. Falling back to Photon API for {len(addresses_with_api_errors)} addresses.")
+        # Fallback to Photon API if we got 3 API_ERROR results or 3 TIMEOUT results (all addresses failed)
+        # This triggers when we get API_ERROR or TIMEOUT for all addresses we checked (up to 3)
+        total_failures = api_error_count + timeout_count
+        if total_failures >= 3 and addresses_with_api_errors and len(addresses_with_api_errors) >= 3:
+            bt.logging.warning(f"Got {total_failures} failures ({api_error_count} API_ERROR, {timeout_count} TIMEOUT) from Nominatim. Falling back to Photon API for {len(addresses_with_api_errors)} addresses.")
             
             # Reset scores and counters for Photon API fallback
             photon_scores = []
@@ -2323,7 +2328,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             photon_timeout_calls = 0
             photon_failed_calls = 0
             
-            # Use Photon API for the addresses that had API_ERROR from Nominatim
+            # Use Photon API for the addresses that had API_ERROR or TIMEOUT from Nominatim
             for idx, (addr, seed_addr, seed_name) in enumerate(addresses_with_api_errors):
                 # Call Photon API to check the address
                 photon_result = check_with_photon(addr)
