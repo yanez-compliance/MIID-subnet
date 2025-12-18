@@ -343,7 +343,17 @@ def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_
     
     # Normalize address for cache key using deduplication normalization
     # This ensures addresses like "House 4" and "House 1" at the same location share cache
-    cache_key = normalize_address_for_deduplication(address)
+    normalized_set = normalize_address_for_deduplication(address)
+    if not normalized_set:
+        cache_key = ""
+    else:
+        # Sort words for deterministic ordering, then extract all letters
+        dedup_text = " ".join(sorted(normalized_set))
+        letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
+        letters = [c.lower() for c in letters if c not in ['\u02BB', '\u02BC']]
+        cache_key = ''.join(sorted(letters))
+    # Convert set to string for use as cache key (sets are unhashable)
+    
     
     # Check if cache is enabled and we have a valid cache key
     # Default to True if not yet initialized from config
