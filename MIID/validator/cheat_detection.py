@@ -2,7 +2,7 @@ import re
 import json
 import logging
 import unicodedata
-from typing import Dict, List, Set, Tuple, Any
+from typing import Dict, List, Set, Tuple, Any, FrozenSet
 from pathlib import Path
 import numpy as np
 from unidecode import unidecode
@@ -437,7 +437,8 @@ def detect_cheating_patterns(
                     for addr in address_vars:
                         normalized = normalize_address_for_deduplication(addr)
                         if normalized:
-                            all_addresses.extend(normalized)
+                            # Store each address as a frozenset (the whole address, not individual words)
+                            all_addresses.append(frozenset(normalized))
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -466,7 +467,7 @@ def detect_cheating_patterns(
             continue
 
         miner_normalized_sets: Dict[str, Set[str]] = {}
-        miner_address_sets: Dict[str, Set[str]] = {}  # Track address variations by name
+        miner_address_sets: Dict[str, Set[FrozenSet[str]]] = {}  # Track address variations by name - each address is a frozenset of words
         miner_map_for_signature: Dict[str, list] = {}
         has_any_variations = False
         
@@ -482,11 +483,13 @@ def detect_cheating_patterns(
                 # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
                 # Normalize addresses using Nominatim-style normalization + deduplication
-                normalized_addresses: Set[str] = set()
+                # Store each normalized address as a separate frozenset (set of words per address)
+                normalized_addresses: Set[FrozenSet[str]] = set()
                 for addr in address_list:
                     normalized = normalize_address_for_deduplication(addr)
                     if normalized:
-                        normalized_addresses.update(normalized)
+                        # Store each address as a frozenset so it can be in a set
+                        normalized_addresses.add(frozenset(normalized))
                 miner_address_sets[name] = normalized_addresses
 
         if not has_any_variations:
@@ -609,9 +612,17 @@ def detect_cheating_patterns(
                 if not addresses1 or not addresses2:
                     continue
                 
+                # Flatten frozensets to combined word sets for comparison
+                words1: Set[str] = set()
+                for addr in addresses1:
+                    words1.update(addr)
+                words2: Set[str] = set()
+                for addr in addresses2:
+                    words2.update(addr)
+                
                 # Calculate overlap and jaccard for addresses
-                overlap = overlap_coefficient(addresses1, addresses2)
-                jac = jaccard(addresses1, addresses2)
+                overlap = overlap_coefficient(words1, words2)
+                jac = jaccard(words1, words2)
                 
                 # If addresses are too similar, apply penalty
                 if overlap > 0.8 or jac > 0.7:
