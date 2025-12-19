@@ -621,12 +621,12 @@ def detect_cheating_patterns(
                     words2.update(addr)
                 
                 # Calculate overlap and jaccard for addresses
-                overlap = overlap_coefficient(words1, words2)
+                # overlap = overlap_coefficient(words1, words2)
                 jac = jaccard(words1, words2)
                 
                 # If addresses are too similar, apply penalty
-                if overlap > 0.8 or jac > 0.7:
-                    penalty = min(0.6, max(overlap, jac) * 0.8)  # Scale penalty based on similarity
+                if jac > 0.7:
+                    penalty = min(0.6, jac * 0.8)  # Scale penalty based on similarity
                     address_duplication_penalties[idx1] = max(address_duplication_penalties[idx1], penalty)
                     address_duplication_penalties[idx2] = max(address_duplication_penalties[idx2], penalty)
 
