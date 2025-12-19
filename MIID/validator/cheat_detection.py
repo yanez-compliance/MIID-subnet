@@ -152,7 +152,9 @@ def normalize_address_for_deduplication(addr: str) -> Set[str]:
         return set()
     
     # Step 0: Remove disallowed Unicode characters (currency symbols like £, emoji, etc.)
-    text = remove_disallowed_unicode(addr)
+    # IMPORTANT: Preserve commas so they can be replaced with spaces later, preventing
+    # words from merging when addresses have no spaces after commas (e.g., "Road,Kanyama")
+    text = remove_disallowed_unicode(addr, preserve_comma=True)
     
     # Step 1: Apply Nominatim-style normalization (NFKD + diacritic removal)
     # Unicode normalization (NFKD)
