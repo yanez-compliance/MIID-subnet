@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIID Phase 4: Image Variations Pipeline</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .mermaid {
+            text-align: center;
+            overflow-x: auto;
+        }
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .toggle-btn {
+            background-color: #f8f9fa;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .toggle-btn:hover {
+            background-color: #eef2ff;
+        }
+        .toggle-btn.active {
+            background-color: #6366f1;
+            color: white;
+        }
+        .description {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .description h3 {
+            color: #6366f1;
+            margin-top: 0;
+        }
+        .description ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .description li {
+            margin-bottom: 8px;
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .spec-table th, .spec-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .spec-table th {
+            background-color: #6366f1;
+            color: white;
+        }
+        .spec-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MIID Subnet Phase 4: Image Variations</h1>
+        <p class="subtitle">Synthetic Image Variation Generation for KYC Verification</p>
+
+        <div class="toggle-buttons">
+            <button id="overviewBtn" class="toggle-btn active" onclick="showOverview()">Overview</button>
+            <button id="detailedBtn" class="toggle-btn" onclick="showDetailed()">Detailed Flow</button>
+            <button id="protocolBtn" class="toggle-btn" onclick="showProtocol()">Protocol</button>
+            <button id="validationBtn" class="toggle-btn" onclick="showValidation()">Validation Flow</button>
+            <button id="databaseBtn" class="toggle-btn" onclick="showDatabase()">Database Schema</button>
+            <button id="s3Btn" class="toggle-btn" onclick="showS3()">S3 Storage</button>
+            <button id="drandBtn" class="toggle-btn" onclick="showDrand()">Drand Timelock</button>
+        </div>
+
+        <!-- Overview Diagram -->
+        <div id="overviewDiagram" class="mermaid">
+flowchart LR
+    subgraph Validator["Validator (Online)"]
+        DB["Base Image<br/>Database"]
+        KAV["KAV + Reputation<br/>SET WEIGHTS"]
+    end
+
+    subgraph Miners["Miners"]
+        MG["Image Generator<br/>(Any Model)"]
+        S3UP["Encrypt & Upload<br/>to S3"]
+    end
+
+    subgraph PostVal["Post-Validation (After Cycle)"]
+        PV["Face Match<br/>Quality Check<br/>Cheat Detection"]
+        REP["Update Reputation<br/>for Next Cycle"]
+    end
+
+    DB -->|Base Image| MG
+    MG -->|Generate 3-5| S3UP
+    S3UP -->|S3 Refs| KAV
+    KAV -.->|S3 Refs stored| PV
+    PV --> REP
+    REP -.->|Used in Next Cycle| KAV
+
+    style DB fill:#e0e7ff,stroke:#6366f1
+    style KAV fill:#fee2e2,stroke:#ef4444
+    style MG fill:#fef3c7,stroke:#f59e0b
+    style S3UP fill:#fef3c7,stroke:#f59e0b
+    style PV fill:#d1fae5,stroke:#10b981
+    style REP fill:#d1fae5,stroke:#10b981
+        </div>
+
+        <!-- Detailed Flow Diagram -->
+        <div id="detailedDiagram" class="mermaid" style="display: none;">
+flowchart TB
+    subgraph Input["Input (Validator)"]
+        DB["Base Image Database<br/>(Pre-loaded images)"]
+        PROMPT["Variation Prompt<br/>(pose, expression,<br/>lighting, background)"]
+    end
+
+    subgraph Synapse["IdentitySynapse (Request)"]
+        BASE["base_image (Base64)"]
+        TYPES["variation_types[]"]
+        DRAND["target_drand_round"]
+    end
+
+    subgraph Miner["Miner Processing"]
+        DECODE["Decode Base Image"]
+        GEN["Generate Variations<br/>(Any Model)"]
+        SIGN["Sign with Wallet<br/>(sign_message)"]
+        ENCRYPT["Encrypt with Drand<br/>(tlock.encrypt)"]
+        UPLOAD["Upload to S3"]
+    end
+
+    subgraph Response["Synapse Response (NOT images)"]
+        S3KEY["s3_key (path)"]
+        HASH["image_hash (SHA256)"]
+        SIG["signature (wallet)"]
+    end
+
+    subgraph OnlineVal["ONLINE VALIDATION (Immediate)"]
+        KAV["Validate KAV<br/>(Name/DOB/Address)"]
+        PREV_REP["Get Previous<br/>Cycle Reputation"]
+        WEIGHT["SET WEIGHTS<br/>ON-CHAIN NOW"]
+        STORE["Store S3 Refs<br/>for Post-Validation"]
+    end
+
+    subgraph PostVal["POST-VALIDATION (After Cycle + Drand)"]
+        DOWNLOAD["Download from S3"]
+        DECRYPT["Decrypt with<br/>Drand Beacon"]
+        VERIFY["Verify Signature"]
+        FACE["Face Matching<br/>(ArcFace >= 0.8)"]
+        QUALITY["Quality Check"]
+        CHEAT["Cheat Detection"]
+    end
+
+    subgraph RepUpdate["REPUTATION UPDATE (For Next Cycle)"]
+        SCORE["Calculate<br/>Post-Validation Score"]
+        REP["Update Reputation<br/>for Cycle N+1"]
+    end
+
+    DB --> BASE
+    PROMPT --> TYPES
+    BASE --> Synapse
+    TYPES --> Synapse
+    DRAND --> Synapse
+
+    Synapse -->|"120s timeout"| DECODE
+    DECODE --> GEN
+    GEN --> SIGN
+    SIGN --> ENCRYPT
+    ENCRYPT --> UPLOAD
+
+    UPLOAD --> S3KEY
+    UPLOAD --> HASH
+    UPLOAD --> SIG
+    Response -->|"Return to Validator"| KAV
+
+    KAV --> PREV_REP
+    PREV_REP --> WEIGHT
+    KAV --> STORE
+
+    STORE -.->|"After Cycle Ends"| DOWNLOAD
+    DOWNLOAD --> DECRYPT
+    DECRYPT --> VERIFY
+    VERIFY -->|"Valid"| FACE
+    VERIFY -->|"Invalid"| REJECT["Reject"]
+    FACE -->|">= 0.8"| QUALITY
+    FACE -->|"< 0.8"| REJECT
+    QUALITY --> CHEAT
+    CHEAT --> SCORE
+
+    SCORE --> REP
+    REP -.->|"Used in<br/>Next Cycle"| PREV_REP
+
+    style DB fill:#e0e7ff,stroke:#6366f1
+    style PROMPT fill:#e0e7ff,stroke:#6366f1
+    style BASE fill:#f3e8ff,stroke:#a855f7
+    style TYPES fill:#f3e8ff,stroke:#a855f7
+    style DRAND fill:#f3e8ff,stroke:#a855f7
+    style DECODE fill:#fef3c7,stroke:#f59e0b
+    style GEN fill:#fef3c7,stroke:#f59e0b
+    style SIGN fill:#fef3c7,stroke:#f59e0b
+    style ENCRYPT fill:#fef3c7,stroke:#f59e0b
+    style UPLOAD fill:#fef3c7,stroke:#f59e0b
+    style S3KEY fill:#fce7f3,stroke:#ec4899
+    style HASH fill:#fce7f3,stroke:#ec4899
+    style SIG fill:#fce7f3,stroke:#ec4899
+    style KAV fill:#d1fae5,stroke:#10b981
+    style PREV_REP fill:#d1fae5,stroke:#10b981
+    style STORE fill:#d1fae5,stroke:#10b981
+    style DOWNLOAD fill:#dbeafe,stroke:#3b82f6
+    style DECRYPT fill:#dbeafe,stroke:#3b82f6
+    style VERIFY fill:#dbeafe,stroke:#3b82f6
+    style FACE fill:#dbeafe,stroke:#3b82f6
+    style QUALITY fill:#dbeafe,stroke:#3b82f6
+    style CHEAT fill:#dbeafe,stroke:#3b82f6
+    style SCORE fill:#fef3c7,stroke:#f59e0b
+    style REP fill:#fef3c7,stroke:#f59e0b
+    style WEIGHT fill:#fee2e2,stroke:#ef4444
+    style REJECT fill:#fecaca,stroke:#dc2626
+        </div>
+
+        <!-- Protocol Diagram -->
+        <div id="protocolDiagram" class="mermaid" style="display: none;">
+classDiagram
+    class IdentitySynapse {
+        +List~List~str~~ identity
+        +str query_template
+        +Optional~Dict~ variations
+        +Optional~ImageRequest~ image_request
+        +Optional~List~S3Submission~~ s3_submissions
+    }
+
+    class ImageRequest {
+        +str base_image
+        +Tuple~int,int~ resolution
+        +List~str~ variation_types
+        +int variation_count
+        +str challenge_id
+        +int target_drand_round
+    }
+
+    class S3Submission {
+        +str s3_key
+        +str image_hash
+        +str signature
+        +str variation_type
+    }
+
+    class UAVData {
+        +str address
+        +str label
+        +Optional~float~ latitude
+        +Optional~float~ longitude
+    }
+
+    class SeedData {
+        +List~str~ names
+        +List~str~ addresses
+        +List~str~ dobs
+    }
+
+    IdentitySynapse --> ImageRequest : "Validator → Miner"
+    IdentitySynapse --> S3Submission : "Miner → Validator"
+    IdentitySynapse --> UAVData : "Phase 3"
+    IdentitySynapse --> SeedData : "Phase 3"
+
+    note for IdentitySynapse "Extended Bittensor Synapse<br/>for MIID subnet"
+    note for ImageRequest "Validator sends base image +<br/>drand round for encryption"
+    note for S3Submission "Miner returns S3 paths,<br/>NOT actual images"
+        </div>
+
+        <!-- Validation Flow Diagram -->
+        <div id="validationDiagram" class="mermaid" style="display: none;">
+sequenceDiagram
+    autonumber
+    participant V as Validator
+    participant M as Miner
+    participant S3 as S3 Bucket
+    participant DR as Drand Network
+    participant PV as Post-Validator
+    participant DB as Database
+
+    Note over V: STAGE 1: ONLINE VALIDATION (Immediate)
+
+    Note over V: Select base image from database
+    V->>V: Create ImageRequest with target_drand_round
+
+    V->>M: Send IdentitySynapse<br/>(base_image, variation_types, drand_round)
+
+    Note over M: 120 second timeout - Generate & Upload
+    M->>M: Decode base image
+    M->>M: Generate 3-5 variations
+    M->>M: Sign with wallet (sign_message)
+    M->>M: Encrypt with drand timelock
+    M->>S3: Upload encrypted images
+
+    M->>V: Return S3Submissions[]<br/>(s3_keys, hashes, signatures)
+
+    Note over V: Online: KAV + Previous Reputation
+    V->>V: Validate KAV (Name/DOB/Address)
+    V->>DB: Get previous cycle reputation
+    V->>V: Calculate weight = f(KAV, prev_reputation)
+    V->>V: SET WEIGHTS ON-CHAIN NOW
+    V->>DB: Store S3 references for post-validation
+
+    Note over DR,PV: STAGE 2: POST-VALIDATION (After Cycle Ends)
+
+    DR->>DR: Drand beacon published
+    PV->>S3: Download encrypted images
+    PV->>PV: Decrypt with drand beacon
+    PV->>PV: Verify signatures (verify_message)
+
+    loop For each submission
+        PV->>PV: Face match (ArcFace >= 0.8)
+        PV->>PV: Quality assessment
+        PV->>PV: Watermark detection
+        PV->>PV: Duplicate check
+    end
+    PV->>PV: Cross-miner collusion detection
+
+    Note over PV,DB: Update REPUTATION for NEXT cycle
+    PV->>DB: Store post-validation scores
+    PV->>DB: Update miner reputation for Cycle N+1
+    Note over PV: ⚠️ Does NOT affect current weights!
+        </div>
+
+        <!-- Database Schema Diagram -->
+        <div id="databaseDiagram" class="mermaid" style="display: none;">
+erDiagram
+    IDENTITY ||--o{ SEED_IMAGES : "has"
+    SEED_IMAGES ||--o{ IMAGE_VARIATIONS : "generates"
+    MINER ||--o{ IMAGE_VARIATIONS : "creates"
+    IMAGE_VARIATIONS ||--|| IMAGE_VALIDATION : "has"
+    IMAGE_VARIATIONS ||--o{ IMAGE_OBSERVATIONS : "tracked_in"
+    VALIDATOR ||--o{ IMAGE_OBSERVATIONS : "observes"
+    QUERY ||--o{ IMAGE_OBSERVATIONS : "belongs_to"
+
+    IDENTITY {
+        BIGINT id PK
+        BIGINT seed_name_id FK
+        BIGINT seed_address_id FK
+        BIGINT seed_dob_id FK
+        TEXT label
+        DATETIME created_at
+    }
+
+    SEED_IMAGES {
+        BIGINT id PK
+        BIGINT identity_id FK
+        TEXT image_hash UK
+        TEXT image_data
+        INT resolution_width
+        INT resolution_height
+        TEXT source
+        VECTOR face_embedding
+        DATETIME created_at
+    }
+
+    IMAGE_VARIATIONS {
+        BIGINT id PK
+        BIGINT seed_image_id FK
+        BIGINT miner_id FK
+        TEXT variation_type
+        TEXT image_data
+        TEXT image_hash
+        VECTOR face_embedding
+        FLOAT face_similarity
+        TEXT description
+        DATETIME created_at
+    }
+
+    IMAGE_VALIDATION {
+        BIGINT id PK
+        BIGINT variation_id FK
+        BOOLEAN face_match_passed
+        FLOAT face_similarity_score
+        FLOAT prompt_adherence_score
+        FLOAT quality_score
+        BOOLEAN watermark_detected
+        BOOLEAN is_duplicate
+        BOOLEAN is_collusion
+        TEXT validation_status
+        DATETIME validated_at
+        DATETIME created_at
+    }
+
+    IMAGE_OBSERVATIONS {
+        BIGINT id PK
+        BIGINT seed_image_id FK
+        BIGINT variation_id FK
+        BIGINT miner_id FK
+        BIGINT validator_id FK
+        BIGINT query_id FK
+        DATETIME observed_at
+    }
+
+    MINER {
+        BIGINT id PK
+        TEXT hotkey
+        TEXT coldkey
+        TEXT display_name
+        DATETIME created_at
+    }
+
+    VALIDATOR {
+        BIGINT id PK
+        TEXT hotkey
+        DATETIME created_at
+    }
+
+    QUERY {
+        BIGINT id PK
+        TEXT query_text
+        TEXT query_hash
+        DATETIME created_at
+    }
+        </div>
+
+        <!-- S3 Storage Diagram -->
+        <div id="s3Diagram" class="mermaid" style="display: none;">
+sequenceDiagram
+    autonumber
+    participant V as Validator
+    participant M as Miner
+    participant S3 as S3 Bucket
+    participant D as Drand Network
+
+    Note over V: Phase 1: Request
+    V->>M: Send IdentitySynapse<br/>(base_image, variation_types)
+
+    Note over M: Phase 2: Generate & Encrypt
+    M->>M: Generate image variations
+    M->>M: Sign with wallet.hotkey
+    M->>D: Get future drand round
+    D-->>M: Round number + public key
+    M->>M: Timelock encrypt images<br/>(tlock.encrypt)
+
+    Note over M,S3: Phase 3: Upload to S3
+    M->>S3: Upload encrypted images
+    Note right of S3: Metadata:<br/>- miner_hotkey<br/>- signature<br/>- drand_round<br/>- timestamp
+    S3-->>M: Upload confirmation
+
+    M->>V: Return commitment hash<br/>(not actual images)
+
+    Note over V,D: Phase 4: Wait for Reveal
+    V->>D: Wait for drand round
+    D-->>V: Drand beacon published
+
+    Note over V,S3: Phase 5: Verify & Validate
+    V->>S3: Fetch encrypted images
+    S3-->>V: Encrypted data + metadata
+    V->>V: Decrypt with drand beacon<br/>(tlock.decrypt)
+    V->>V: verify_message(signature, hotkey)
+    alt Signature Valid
+        V->>V: Process variations
+        V->>V: Face matching (ArcFace)
+    else Signature Invalid
+        V->>V: Reject submission
+    end
+        </div>
+
+        <!-- Drand Timelock Diagram -->
+        <div id="drandDiagram" class="mermaid" style="display: none;">
+flowchart LR
+    subgraph Timeline["Drand Timelock Timeline"]
+        T0["t0: Request Sent"]
+        T1["t1: Miner Encrypts<br/>(future round N)"]
+        T2["t2: All Commits<br/>Uploaded to S3"]
+        T3["t3: Drand Round N<br/>Beacon Published"]
+        T4["t4: Simultaneous<br/>Reveal"]
+    end
+
+    subgraph Encryption["Timelock Encryption"]
+        E1["Miner gets future<br/>drand round number"]
+        E2["Encrypt with tlock:<br/>tlock.encrypt(<br/>  data,<br/>  round_number,<br/>  drand_public_key<br/>)"]
+        E3["Cannot decrypt until<br/>drand publishes beacon"]
+    end
+
+    subgraph Storage["Commit Phase"]
+        ST1["Miner signs data<br/>with wallet.hotkey"]
+        ST2["Upload to S3 with:<br/>- encrypted_data<br/>- miner_hotkey<br/>- signature<br/>- target_round"]
+        ST3["All miners commit<br/>before reveal time"]
+    end
+
+    subgraph Reveal["Reveal Phase"]
+        R1["Drand beacon published<br/>at round N"]
+        R2["Validator fetches<br/>from S3"]
+        R3["Decrypt with beacon:<br/>tlock.decrypt(<br/>  encrypted_data,<br/>  beacon_signature<br/>)"]
+        R4["Verify miner identity:<br/>verify_message(<br/>  signature,<br/>  hotkey<br/>)"]
+    end
+
+    subgraph Benefits["Why Timelock?"]
+        B1["No Early Peeking:<br/>Validators can't see<br/>submissions early"]
+        B2["Fair Competition:<br/>All reveals happen<br/>simultaneously"]
+        B3["Anti-Gaming:<br/>Miners can't adjust<br/>based on others"]
+        B4["Verifiable:<br/>Drand is decentralized<br/>and trustless"]
+    end
+
+    T0 --> T1
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+
+    E1 --> E2
+    E2 --> E3
+
+    ST1 --> ST2
+    ST2 --> ST3
+
+    R1 --> R2
+    R2 --> R3
+    R3 --> R4
+
+    style T0 fill:#e0e7ff,stroke:#6366f1
+    style T1 fill:#e0e7ff,stroke:#6366f1
+    style T2 fill:#e0e7ff,stroke:#6366f1
+    style T3 fill:#e0e7ff,stroke:#6366f1
+    style T4 fill:#e0e7ff,stroke:#6366f1
+    style E1 fill:#fef3c7,stroke:#f59e0b
+    style E2 fill:#fef3c7,stroke:#f59e0b
+    style E3 fill:#fef3c7,stroke:#f59e0b
+    style ST1 fill:#d1fae5,stroke:#10b981
+    style ST2 fill:#d1fae5,stroke:#10b981
+    style ST3 fill:#d1fae5,stroke:#10b981
+    style R1 fill:#dbeafe,stroke:#3b82f6
+    style R2 fill:#dbeafe,stroke:#3b82f6
+    style R3 fill:#dbeafe,stroke:#3b82f6
+    style R4 fill:#dbeafe,stroke:#3b82f6
+    style B1 fill:#fce7f3,stroke:#ec4899
+    style B2 fill:#fce7f3,stroke:#ec4899
+    style B3 fill:#fce7f3,stroke:#ec4899
+    style B4 fill:#fce7f3,stroke:#ec4899
+        </div>
+
+        <!-- Description Section -->
+        <div id="overviewDesc" class="description">
+            <h3>Phase 4 Overview</h3>
+            <p>Phase 4 extends MIID Subnet with synthetic image variations for KYC verification.</p>
+            <ul>
+                <li><strong>Online (Immediate):</strong> Validator sends base image → Miner uploads encrypted variations to S3 → Validator sets weights using KAV + previous reputation</li>
+                <li><strong>Post-Validation (After Cycle):</strong> Decrypt images → Face matching, quality, cheat detection → Update reputation for NEXT cycle</li>
+            </ul>
+        </div>
+
+        <div id="detailedDesc" class="description" style="display: none;">
+            <h3>Detailed Data Flow (Two-Stage)</h3>
+            <ul>
+                <li><strong>Input:</strong> Validator selects base image from pre-loaded database (FLUXSynID can be added later)</li>
+                <li><strong>Synapse Request:</strong> base_image, variation_types[], target_drand_round</li>
+                <li><strong>Miner Processing:</strong> Generate variations → Sign → Encrypt with drand → Upload to S3</li>
+                <li><strong>Synapse Response:</strong> S3 paths, hashes, signatures (NOT images)</li>
+                <li><strong>ONLINE (Immediate):</strong> KAV validation + previous reputation → <strong>SET WEIGHTS NOW</strong> → Store S3 refs</li>
+                <li><strong>POST-VALIDATION (After Cycle):</strong> Download → Decrypt → Face match → Quality → Cheat detection → <strong>Update reputation for NEXT cycle</strong></li>
+            </ul>
+        </div>
+
+        <div id="protocolDesc" class="description" style="display: none;">
+            <h3>Protocol Extension</h3>
+            <p>The existing <code>IdentitySynapse</code> is extended with two new types:</p>
+            <ul>
+                <li><strong>ImageRequest:</strong> Sent by validator with base image, resolution, variation types, <code>challenge_id</code>, and <code>target_drand_round</code></li>
+                <li><strong>S3Submission:</strong> Returned by miner with <code>s3_key</code>, <code>image_hash</code>, <code>signature</code>, and <code>variation_type</code></li>
+            </ul>
+            <p><strong>Key change:</strong> Miners return S3 references, NOT actual images. Images are encrypted and stored in S3 until drand reveal.</p>
+        </div>
+
+        <div id="validationDesc" class="description" style="display: none;">
+            <h3>Two-Stage Validation Pipeline</h3>
+            <ul>
+                <li><strong>STAGE 1: Online Validation (Immediate)</strong>
+                    <ul>
+                        <li>Validator receives S3 references from miners</li>
+                        <li>Validates KAV (Name/DOB/Address) immediately</li>
+                        <li>Applies <strong>previous cycle's reputation</strong></li>
+                        <li><strong>SETS WEIGHTS ON-CHAIN NOW</strong></li>
+                        <li>Stores S3 refs for later post-validation</li>
+                    </ul>
+                </li>
+                <li><strong>STAGE 2: Post-Validation (After Cycle Ends)</strong>
+                    <ul>
+                        <li>Download encrypted images from S3</li>
+                        <li>Decrypt with drand beacon</li>
+                        <li>ALL image validation: face matching, quality, watermarks, cheat detection</li>
+                        <li><strong>Updates REPUTATION for NEXT cycle</strong></li>
+                        <li>⚠️ Does NOT affect current weights!</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="databaseDesc" class="description" style="display: none;">
+            <h3>Database Schema</h3>
+            <p>Phase 4 adds four new tables to the existing MIID database:</p>
+            <ul>
+                <li><strong>seed_images:</strong> Base images from database (FLUXSynID placeholder for future)</li>
+                <li><strong>image_variations:</strong> Miner-generated variations with embeddings and similarity scores</li>
+                <li><strong>image_validation:</strong> Validation results including face match, quality, and cheat flags</li>
+                <li><strong>image_observations:</strong> Links variations to miners, validators, and queries</li>
+            </ul>
+        </div>
+
+        <div id="s3Desc" class="description" style="display: none;">
+            <h3>S3 Storage & Wallet Verification</h3>
+            <p>Miners upload encrypted image variations to S3 with wallet-based authentication for secure, verifiable submissions.</p>
+            <table class="spec-table">
+                <tr><th>Step</th><th>Action</th><th>Purpose</th></tr>
+                <tr><td>1. Sign</td><td><code>wallet.hotkey.sign(data)</code></td><td>Prove miner identity</td></tr>
+                <tr><td>2. Encrypt</td><td><code>tlock.encrypt(data, round)</code></td><td>Timelock until reveal</td></tr>
+                <tr><td>3. Upload</td><td>S3 with metadata (hotkey, signature, round)</td><td>Commit submission</td></tr>
+                <tr><td>4. Verify</td><td><code>verify_message(signature, hotkey)</code></td><td>Confirm miner identity</td></tr>
+            </table>
+            <p><strong>Key Files:</strong> <code>MIID/utils/sign_message.py</code>, <code>MIID/utils/verify_message.py</code></p>
+        </div>
+
+        <div id="drandDesc" class="description" style="display: none;">
+            <h3>Drand Timelock Encryption</h3>
+            <p>Drand is a distributed randomness beacon that enables time-locked encryption. Data encrypted for a future round can only be decrypted after that round's beacon is published.</p>
+            <table class="spec-table">
+                <tr><th>Parameter</th><th>Value</th></tr>
+                <tr><td>Network</td><td>Drand Quicknet</td></tr>
+                <tr><td>Round Period</td><td>3 seconds</td></tr>
+                <tr><td>URL</td><td><code>https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971</code></td></tr>
+            </table>
+            <h4>Benefits</h4>
+            <ul>
+                <li><strong>Fair Competition:</strong> All submissions revealed simultaneously</li>
+                <li><strong>Anti-Gaming:</strong> Miners cannot adjust based on seeing other submissions</li>
+                <li><strong>Trustless:</strong> Drand is decentralized - no single point of failure</li>
+                <li><strong>Verifiable:</strong> Anyone can verify the beacon was used correctly</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                diagramPadding: 16,
+                nodeSpacing: 80,
+                rankSpacing: 150
+            }
+        });
+
+        async function renderMermaid(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (el.getAttribute('data-rendered')) return;
+            try {
+                const code = el.textContent.trim();
+                const { svg } = await mermaid.render(id + "__svg", code);
+                el.innerHTML = svg;
+                el.setAttribute('data-rendered', 'true');
+            } catch (e) {
+                console.error('Mermaid render error for', id, e);
+                el.innerText = 'Mermaid render error: ' + (e && e.message ? e.message : e);
+            }
+        }
+
+        renderMermaid('overviewDiagram');
+
+        const diagrams = ['overviewDiagram', 'detailedDiagram', 'protocolDiagram', 'validationDiagram', 'databaseDiagram', 's3Diagram', 'drandDiagram'];
+        const descriptions = ['overviewDesc', 'detailedDesc', 'protocolDesc', 'validationDesc', 'databaseDesc', 's3Desc', 'drandDesc'];
+        const buttons = ['overviewBtn', 'detailedBtn', 'protocolBtn', 'validationBtn', 'databaseBtn', 's3Btn', 'drandBtn'];
+
+        function hideAll() {
+            diagrams.forEach(d => document.getElementById(d).style.display = 'none');
+            descriptions.forEach(d => document.getElementById(d).style.display = 'none');
+            buttons.forEach(b => document.getElementById(b).classList.remove('active'));
+        }
+
+        async function showDiagram(index) {
+            hideAll();
+            await renderMermaid(diagrams[index]);
+            document.getElementById(diagrams[index]).style.display = 'block';
+            document.getElementById(descriptions[index]).style.display = 'block';
+            document.getElementById(buttons[index]).classList.add('active');
+        }
+
+        async function showOverview() { await showDiagram(0); }
+        async function showDetailed() { await showDiagram(1); }
+        async function showProtocol() { await showDiagram(2); }
+        async function showValidation() { await showDiagram(3); }
+        async function showDatabase() { await showDiagram(4); }
+        async function showS3() { await showDiagram(5); }
+        async function showDrand() { await showDiagram(6); }
+    </script>
+</body>
+</html>
