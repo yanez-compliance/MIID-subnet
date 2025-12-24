@@ -279,10 +279,12 @@ def upload_variation_to_s3(wallet, challenge_id: str, image_data: bytes) -> dict
     }
 ```
 
-### Validator Verification Flow
+### YANEZ Post-Validation Verification Flow
+
+**Note**: This verification is performed by YANEZ during post-validation, NOT by the validator in real-time. The validator only collects S3 references during online validation.
 
 ```python
-# Validator verifies miner identity and downloads images
+# YANEZ post-validator verifies miner identity and downloads images
 from MIID.utils.verify_message import verify_message
 from substrateinterface import Keypair
 
@@ -340,15 +342,17 @@ miid-image-variations/
 
 ### Why Timelock?
 
-Without timelock, validators could:
-- Peek at submissions before all miners have responded
-- Favor early submitters or friends
-- Influence scoring based on early results
+Timelock encryption serves several critical purposes:
+
+1. **Protect Miner Work**: Miners' generated images are encrypted until reveal, preventing others from seeing/copying their work
+2. **Prevent Relay Attacks**: Without timelock, an attacker could intercept a miner's submission and re-submit it as their own. Timelock ensures all submissions are committed before any can be read
+3. **Anti-Cheating in Post-Validation**: When YANEZ performs post-validation, all images are decrypted simultaneously, making cross-miner comparison fair and preventing miners from adjusting based on others' work
+4. **Future Cycle Protection**: As the system evolves, validators may perform real-time validation - timelock ensures fair competition
 
 With drand timelock:
 - All submissions are encrypted until reveal time
 - Decryption only possible after drand releases signature
-- All miners' work revealed simultaneously
+- All miners' work revealed simultaneously for fair post-validation by YANEZ
 
 ### Drand Quicknet Configuration
 
@@ -383,7 +387,9 @@ def tlock_encrypt(data: bytes, target_round: int) -> bytes:
     return tlock.tle(target_round, data, ephemeral_sk)
 ```
 
-### Validator: Decrypt After Reveal
+### YANEZ Post-Validator: Decrypt After Reveal
+
+**Note**: Decryption is performed by YANEZ during post-validation, NOT by validators in real-time. In future cycles, validators may perform this step.
 
 ```python
 def wait_for_round(target_round: int) -> bytes:
@@ -918,14 +924,18 @@ substrateinterface>=1.7.0  # Keypair verification
 
 ---
 
-## Open Questions
+## Resolved Questions
 
-1. **Watermark handling specifics**: Detection thresholds and penalty structure
-2. **Exact quality metrics**: Which metrics to use for image quality scoring
-3. **Post-validation timing**: How frequently to run batch post-validation
-4. **Reputation integration**: How image scores affect miner reputation
-5. **S3 bucket ownership**: Validator-owned vs miner-owned buckets
-6. **Drand reveal delay**: Optimal time between challenge and reveal (currently 5 minutes)
+| Question | Answer |
+|----------|--------|
+| **Watermark handling specifics** | Details handled in post-validation by YANEZ - skip for now |
+| **Exact quality metrics** | Post-validation details handled by YANEZ team in separate repo |
+| **Post-validation timing** | Weeks (TBD - exact timing to be determined) |
+| **Reputation integration** | Will be decided later when coding - for now just conceptual |
+| **S3 bucket ownership** | YANEZ owns the S3 bucket |
+| **Drand reveal delay** | After validator finishes receiving ALL miner responses (see forward.py) |
+
+**Note**: Cheat detection, quality metrics, and reputation integration details will be implemented by YANEZ in the post-validation system (separate repo/machine). What we get back is the reputation update for the next cycle.
 
 ---
 
