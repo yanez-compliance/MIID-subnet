@@ -109,6 +109,7 @@
 
         <div class="toggle-buttons">
             <button id="overviewBtn" class="toggle-btn active" onclick="showOverview()">Overview</button>
+            <button id="sandboxBtn" class="toggle-btn" onclick="showSandbox()">Sandbox</button>
             <button id="detailedBtn" class="toggle-btn" onclick="showDetailed()">Detailed Flow</button>
             <button id="protocolBtn" class="toggle-btn" onclick="showProtocol()">Protocol</button>
             <button id="validationBtn" class="toggle-btn" onclick="showValidation()">Validation Flow</button>
@@ -148,6 +149,65 @@ flowchart LR
     style S3UP fill:#fef3c7,stroke:#f59e0b
     style PV fill:#d1fae5,stroke:#10b981
     style REP fill:#d1fae5,stroke:#10b981
+        </div>
+
+        <!-- Sandbox Diagram -->
+        <div id="sandboxDiagram" class="mermaid" style="display: none;">
+flowchart LR
+    subgraph Validator["VALIDATOR"]
+        FOLDER["./base_images/<br/>folder"]
+        LOAD["Load Random<br/>Image"]
+        SYNAPSE["Create Synapse<br/>+ ImageRequest"]
+        KAV["KAV Validation<br/>SET WEIGHTS"]
+        UPLOAD["Upload to<br/>YANEZ Server"]
+    end
+
+    subgraph Miner["MINER"]
+        DECODE["Decode Base64<br/>Image"]
+        GEN["generate_variations()<br/>[PLACEHOLDER:<br/>returns copies]"]
+        SIGN["Sign with<br/>wallet.hotkey"]
+        ENCRYPT["tlock.encrypt()<br/>with drand round"]
+        S3MOCK["Upload to S3<br/>[MOCK URL]"]
+        RESPOND["Return<br/>S3Submissions"]
+    end
+
+    subgraph YANEZ["YANEZ (Post-Validation)"]
+        DOWNLOAD["Download from S3"]
+        DECRYPT["Decrypt with<br/>drand beacon"]
+        VALIDATE["Face Match<br/>Quality Check"]
+        REPUPDATE["Update Reputation<br/>for Next Cycle"]
+    end
+
+    FOLDER --> LOAD
+    LOAD --> SYNAPSE
+    SYNAPSE -->|"base_image +<br/>target_drand_round"| DECODE
+    DECODE --> GEN
+    GEN --> SIGN
+    SIGN --> ENCRYPT
+    ENCRYPT --> S3MOCK
+    S3MOCK --> RESPOND
+    RESPOND -->|"s3_key, hash,<br/>signature"| KAV
+    KAV --> UPLOAD
+    UPLOAD -.->|"Results JSON"| DOWNLOAD
+    DOWNLOAD --> DECRYPT
+    DECRYPT --> VALIDATE
+    VALIDATE --> REPUPDATE
+
+    style FOLDER fill:#e0e7ff,stroke:#6366f1
+    style LOAD fill:#e0e7ff,stroke:#6366f1
+    style SYNAPSE fill:#e0e7ff,stroke:#6366f1
+    style KAV fill:#fee2e2,stroke:#ef4444
+    style UPLOAD fill:#e0e7ff,stroke:#6366f1
+    style DECODE fill:#fef3c7,stroke:#f59e0b
+    style GEN fill:#fef3c7,stroke:#f59e0b
+    style SIGN fill:#fef3c7,stroke:#f59e0b
+    style ENCRYPT fill:#fef3c7,stroke:#f59e0b
+    style S3MOCK fill:#fef3c7,stroke:#f59e0b
+    style RESPOND fill:#fef3c7,stroke:#f59e0b
+    style DOWNLOAD fill:#d1fae5,stroke:#10b981
+    style DECRYPT fill:#d1fae5,stroke:#10b981
+    style VALIDATE fill:#d1fae5,stroke:#10b981
+    style REPUPDATE fill:#d1fae5,stroke:#10b981
         </div>
 
         <!-- Detailed Flow Diagram -->
@@ -584,6 +644,27 @@ flowchart LR
             </ul>
         </div>
 
+        <div id="sandboxDesc" class="description" style="display: none;">
+            <h3>Sandbox Testing Flow</h3>
+            <p>Sandbox environment for testing Phase 4 logic before production deployment.</p>
+            <ul>
+                <li><strong>Validator:</strong> Loads base images from local <code>./base_images/</code> folder (no FLUXSynID yet)</li>
+                <li><strong>Miner:</strong> Uses placeholder <code>generate_variations()</code> that returns copies (model to be integrated later)</li>
+                <li><strong>Encryption:</strong> Real drand timelock encryption with <code>tlock.encrypt()</code></li>
+                <li><strong>S3 Upload:</strong> Mock URL placeholder (will be configured with real S3 bucket later)</li>
+                <li><strong>Full Flow:</strong> Complete end-to-end testing of synapse, signing, encryption, and response handling</li>
+            </ul>
+            <table class="spec-table">
+                <tr><th>Component</th><th>Status</th><th>Notes</th></tr>
+                <tr><td>Base Image Source</td><td>📁 Local Folder</td><td><code>./base_images/*.jpg</code></td></tr>
+                <tr><td>Image Generator</td><td>🔧 Placeholder</td><td>Returns copies, model TBD</td></tr>
+                <tr><td>Drand Encryption</td><td>✅ Real</td><td><code>tlock.encrypt()</code></td></tr>
+                <tr><td>S3 Upload</td><td>🔧 Mock URL</td><td>To be configured</td></tr>
+                <tr><td>Wallet Signing</td><td>✅ Real</td><td><code>wallet.hotkey.sign()</code></td></tr>
+                <tr><td>YANEZ Upload</td><td>✅ Real</td><td>Existing code path</td></tr>
+            </table>
+        </div>
+
         <div id="detailedDesc" class="description" style="display: none;">
             <h3>Detailed Data Flow (Two-Stage)</h3>
             <ul>
@@ -706,9 +787,9 @@ flowchart LR
 
         renderMermaid('overviewDiagram');
 
-        const diagrams = ['overviewDiagram', 'detailedDiagram', 'protocolDiagram', 'validationDiagram', 'databaseDiagram', 's3Diagram', 'drandDiagram'];
-        const descriptions = ['overviewDesc', 'detailedDesc', 'protocolDesc', 'validationDesc', 'databaseDesc', 's3Desc', 'drandDesc'];
-        const buttons = ['overviewBtn', 'detailedBtn', 'protocolBtn', 'validationBtn', 'databaseBtn', 's3Btn', 'drandBtn'];
+        const diagrams = ['overviewDiagram', 'sandboxDiagram', 'detailedDiagram', 'protocolDiagram', 'validationDiagram', 'databaseDiagram', 's3Diagram', 'drandDiagram'];
+        const descriptions = ['overviewDesc', 'sandboxDesc', 'detailedDesc', 'protocolDesc', 'validationDesc', 'databaseDesc', 's3Desc', 'drandDesc'];
+        const buttons = ['overviewBtn', 'sandboxBtn', 'detailedBtn', 'protocolBtn', 'validationBtn', 'databaseBtn', 's3Btn', 'drandBtn'];
 
         function hideAll() {
             diagrams.forEach(d => document.getElementById(d).style.display = 'none');
@@ -725,12 +806,13 @@ flowchart LR
         }
 
         async function showOverview() { await showDiagram(0); }
-        async function showDetailed() { await showDiagram(1); }
-        async function showProtocol() { await showDiagram(2); }
-        async function showValidation() { await showDiagram(3); }
-        async function showDatabase() { await showDiagram(4); }
-        async function showS3() { await showDiagram(5); }
-        async function showDrand() { await showDiagram(6); }
+        async function showSandbox() { await showDiagram(1); }
+        async function showDetailed() { await showDiagram(2); }
+        async function showProtocol() { await showDiagram(3); }
+        async function showValidation() { await showDiagram(4); }
+        async function showDatabase() { await showDiagram(5); }
+        async function showS3() { await showDiagram(6); }
+        async function showDrand() { await showDiagram(7); }
     </script>
 </body>
 </html>
