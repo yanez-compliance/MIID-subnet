@@ -648,6 +648,157 @@ MIID/
 
 ---
 
+## Local Subnet Testing
+
+Before testing on testnet, run the sandbox on a local subnet. This allows fast iteration without spending real TAO.
+
+### Prerequisites
+
+```bash
+# Install Bittensor
+pip install bittensor
+
+# Install substrate dependencies (Linux)
+sudo apt update
+sudo apt install --assume-yes make build-essential git clang curl libssl-dev llvm libudev-dev protobuf-compiler
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+```
+
+### Step 1: Run Local Subtensor
+
+```bash
+# Clone and build subtensor
+git clone https://github.com/opentensor/subtensor.git
+cd subtensor
+./scripts/init.sh
+cargo build -p node-subtensor --profile production --features pow-faucet
+
+# Start local network
+BUILD_BINARY=0 ./scripts/localnet.sh
+```
+
+Keep this terminal running. Local chain endpoint: `ws://127.0.0.1:9946`
+
+### Step 2: Create Wallets
+
+```bash
+# Owner wallet (for subnet creation)
+btcli wallet new_coldkey --wallet.name owner
+
+# Miner wallet
+btcli wallet new_coldkey --wallet.name miner
+btcli wallet new_hotkey --wallet.name miner --wallet.hotkey default
+
+# Validator wallet
+btcli wallet new_coldkey --wallet.name validator
+btcli wallet new_hotkey --wallet.name validator --wallet.hotkey default
+```
+
+### Step 3: Fund Wallets & Create Subnet
+
+```bash
+# Get test TAO from faucet
+btcli wallet faucet --wallet.name owner --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli wallet faucet --wallet.name miner --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli wallet faucet --wallet.name validator --subtensor.chain_endpoint ws://127.0.0.1:9946
+
+# Create subnet (netuid will be 1)
+btcli subnet create --wallet.name owner --subtensor.chain_endpoint ws://127.0.0.1:9946
+```
+
+### Step 4: Register on Subnet
+
+```bash
+# Register miner
+btcli subnet register --netuid 1 --wallet.name miner --wallet.hotkey default --subtensor.chain_endpoint ws://127.0.0.1:9946
+
+# Register validator
+btcli subnet register --netuid 1 --wallet.name validator --wallet.hotkey default --subtensor.chain_endpoint ws://127.0.0.1:9946
+
+# Add stake to validator (enables weight setting)
+btcli stake add --wallet.name validator --wallet.hotkey default --subtensor.chain_endpoint ws://127.0.0.1:9946
+```
+
+### Step 5: Setup MIID
+
+```bash
+# From repo root
+cd /path/to/MIID-subnet-private
+
+# Install dependencies
+pip install -e .
+
+# Create base_images folder for sandbox
+mkdir -p MIID/validator/base_images
+
+# Add test images (5-10 face images)
+cp /path/to/test/faces/*.jpg MIID/validator/base_images/
+```
+
+### Step 6: Run Miner (Terminal 2)
+
+```bash
+python -m MIID.miner \
+    --netuid 1 \
+    --subtensor.chain_endpoint ws://127.0.0.1:9946 \
+    --wallet.name miner \
+    --wallet.hotkey default \
+    --logging.debug
+```
+
+### Step 7: Run Validator (Terminal 3)
+
+```bash
+python -m MIID.validator \
+    --netuid 1 \
+    --subtensor.chain_endpoint ws://127.0.0.1:9946 \
+    --wallet.name validator \
+    --wallet.hotkey default \
+    --logging.debug
+```
+
+### Step 8: Verify Operation
+
+```bash
+# Check miner status
+btcli wallet overview --wallet.name miner --subtensor.chain_endpoint ws://127.0.0.1:9946
+
+# Check validator status
+btcli wallet overview --wallet.name validator --subtensor.chain_endpoint ws://127.0.0.1:9946
+
+# Watch subnet activity
+btcli subnet list --subtensor.chain_endpoint ws://127.0.0.1:9946
+```
+
+### Local Testing Checklist
+
+- [ ] Local subtensor running on `ws://127.0.0.1:9946`
+- [ ] Owner, miner, and validator wallets created
+- [ ] Wallets funded via faucet
+- [ ] Subnet created (netuid 1)
+- [ ] Miner and validator registered
+- [ ] Base images folder populated
+- [ ] Miner running and responding
+- [ ] Validator sending image requests
+- [ ] S3 submissions being returned (mock)
+- [ ] Weights being set on-chain
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| "No module named MIID" | Run `pip install -e .` from repo root |
+| "Wallet not found" | Check wallet names match exactly |
+| "Not registered" | Run `btcli subnet register` for the wallet |
+| "Insufficient stake" | Add more stake via `btcli stake add` |
+| "Connection refused" | Ensure local subtensor is running |
+| "Base images not found" | Create folder and add test images |
+
+---
+
 ## Next Steps After Sandbox
 
 1. **Integrate real model**: Replace `generate_variations()` placeholder with actual FLUX/SD model
@@ -662,3 +813,4 @@ MIID/
 - [PHASE4_PLAN.md](./PHASE4_PLAN.md) - Full Phase 4 specification
 - [DRAND_TLOCK_BITTENSOR_GUIDE.md](./S3_drand/DRAND_TLOCK_BITTENSOR_GUIDE.md) - Drand encryption details
 - [forward.py](../../MIID/validator/forward.py) - Current validator forward implementation
+- [Bittensor Subnet Template - Running on Staging](https://github.com/opentensor/bittensor-subnet-template/blob/main/docs/running_on_staging.md) - Official local subnet guide
