@@ -58,12 +58,17 @@ from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
 
 # Bittensor Miner Template:
-from MIID.protocol import IdentitySynapse
+from MIID.protocol import IdentitySynapse, S3Submission
 
 # import base miner class which takes care of most of the boilerplate
 from MIID.base.miner import BaseMinerNeuron
 
 from bittensor.core.errors import NotVerifiedException
+
+# Phase 4 imports
+from MIID.miner.image_generator import decode_base_image, generate_variations
+from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
+from MIID.miner.s3_upload import upload_to_s3
 
 
 class Miner(BaseMinerNeuron):
@@ -87,9 +92,10 @@ class Miner(BaseMinerNeuron):
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
     """
+    # Base whitelist of known validators
     WHITELISTED_VALIDATORS = {
         "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "RoundTable21",
-        "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Yanez", 
+        "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Yanez",
         "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Yuma",
         "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "OpenTensor",
         "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Rizzo",
@@ -98,6 +104,17 @@ class Miner(BaseMinerNeuron):
         "5GuPvuyKBJAWQbEGAkMbfRpG5qDqqhML8uDVSWoFjqcKKvDU": "Testnet_omar",
         "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "Testnet_asem"
     }
+
+    def _add_local_validators_to_whitelist(self):
+        """Add all registered neurons as whitelisted validators in local_test mode."""
+        if not getattr(self.config, 'local_test', False):
+            return
+
+        bt.logging.info("Local test mode: Adding all registered neurons to whitelist")
+        for i, hotkey in enumerate(self.metagraph.hotkeys):
+            if hotkey not in self.WHITELISTED_VALIDATORS:
+                self.WHITELISTED_VALIDATORS[hotkey] = f"LocalValidator_UID{i}"
+                bt.logging.info(f"  Added {hotkey[:16]}... as LocalValidator_UID{i}")
 
     def __init__(self, config=None):
         """
@@ -146,6 +163,10 @@ class Miner(BaseMinerNeuron):
         self.output_path = os.path.join(self.config.logging.logging_dir, "mining_results")
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
+
+        # Add local validators to whitelist in local_test mode
+        self._add_local_validators_to_whitelist()
+
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
 
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
@@ -305,8 +326,107 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(f"==========================Processed variations for {len(synapse.variations)} names in run {run_id}")
         bt.logging.info(f"==========================Synapse: {synapse}")
         bt.logging.info("========================================================================================")
+
+        # ==========================================================================
+        # Phase 4: Process Image Request
+        # ==========================================================================
+        if hasattr(synapse, 'image_request') and synapse.image_request is not None:
+            try:
+                s3_submissions = self.process_image_request(synapse)
+                synapse.s3_submissions = s3_submissions
+                bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+            except Exception as e:
+                bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                synapse.s3_submissions = []
+        # ==========================================================================
+
         return synapse
-    
+
+    def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
+        """Process Phase 4 image variation request.
+
+        Generates image variations, encrypts them with drand timelock,
+        uploads to S3, and returns S3 submission references.
+
+        Args:
+            synapse: IdentitySynapse with image_request
+
+        Returns:
+            List of S3Submission objects
+        """
+        image_request = synapse.image_request
+        if not image_request:
+            return []
+
+        try:
+            # 1. Decode base image
+            bt.logging.info(f"Phase 4: Decoding base image: {image_request.image_filename}")
+            base_image = decode_base_image(image_request.base_image)
+
+            # 2. Generate variations (SANDBOX: returns copies)
+            bt.logging.info(f"Phase 4: Generating {image_request.requested_variations} variations")
+            variations = generate_variations(
+                base_image,
+                image_request.variation_types,
+                image_request.requested_variations
+            )
+
+            # 3. Process each variation
+            s3_submissions = []
+            target_round = image_request.target_drand_round
+            challenge_id = image_request.challenge_id or "sandbox_test"
+
+            for var in variations:
+                try:
+                    # Sign the image hash
+                    message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
+                    signature = self.wallet.hotkey.sign(message.encode()).hex()
+
+                    # Encrypt with drand timelock
+                    if is_timelock_available():
+                        encrypted_data = encrypt_image_for_drand(
+                            var["image_bytes"],
+                            target_round
+                        )
+                        if encrypted_data is None:
+                            bt.logging.warning(f"Phase 4: Encryption failed for {var['variation_type']}")
+                            continue
+                    else:
+                        # SANDBOX: Use raw bytes if timelock not available
+                        bt.logging.warning("Phase 4: Timelock not available, using raw bytes (SANDBOX ONLY)")
+                        encrypted_data = var["image_bytes"]
+
+                    # Upload to S3 (SANDBOX: mock upload)
+                    s3_key = upload_to_s3(
+                        encrypted_data=encrypted_data,
+                        miner_hotkey=self.wallet.hotkey.ss58_address,
+                        signature=signature,
+                        image_hash=var["image_hash"],
+                        target_round=target_round,
+                        challenge_id=challenge_id,
+                        variation_type=var["variation_type"]
+                    )
+
+                    if s3_key:
+                        s3_submissions.append(S3Submission(
+                            s3_key=s3_key,
+                            image_hash=var["image_hash"],
+                            signature=signature,
+                            variation_type=var["variation_type"]
+                        ))
+                        bt.logging.debug(f"Phase 4: Created submission for {var['variation_type']}")
+
+                except Exception as e:
+                    bt.logging.error(f"Phase 4: Error processing variation {var['variation_type']}: {e}")
+                    continue
+
+            bt.logging.info(f"Phase 4: Successfully created {len(s3_submissions)} S3 submissions")
+            return s3_submissions
+
+        except Exception as e:
+            bt.logging.error(f"Phase 4: Error in process_image_request: {e}")
+            return []
+
     def Get_Respond_LLM(self, prompt: str) -> str:
         """
         Query the LLM using Ollama.

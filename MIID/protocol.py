@@ -20,8 +20,9 @@
 import typing
 import bittensor as bt
 import json
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 from typing_extensions import TypedDict
+from pydantic import BaseModel, Field
 
 # TODO(developer): Rewrite with your protocol definition.
 
@@ -41,6 +42,53 @@ from typing_extensions import TypedDict
 #   dendrite = bt.dendrite()
 #   dummy_output = dendrite.query( Dummy( dummy_input = 1 ) )
 #   assert dummy_output == 2
+
+
+# =============================================================================
+# Phase 4: Image Variation Types
+# =============================================================================
+
+class ImageRequest(BaseModel):
+    """Phase 4: Image variation request from validator to miner.
+
+    Contains the base image and parameters for generating variations.
+    The miner will generate variations, encrypt them with drand timelock,
+    upload to S3, and return S3 references.
+    """
+    base_image: str  # Base64 encoded image
+    image_filename: str  # Original filename for reference
+    variation_types: List[str] = Field(
+        default_factory=lambda: ["pose", "expression", "lighting", "background"]
+    )  # Types of variations requested
+    target_drand_round: int  # Drand round when decryption becomes possible
+    reveal_timestamp: int  # Unix timestamp when reveal occurs
+    requested_variations: int = 3  # Number of variations to generate (3-5)
+    challenge_id: Optional[str] = None  # Unique identifier for this challenge
+
+    class Config:
+        # Allow arbitrary types for flexibility
+        arbitrary_types_allowed = True
+
+
+class S3Submission(BaseModel):
+    """Phase 4: Miner's S3 submission response.
+
+    Contains references to encrypted images uploaded to S3.
+    The actual images are NOT included - only S3 paths, hashes, and signatures.
+    Post-validation will download and decrypt after drand reveal.
+    """
+    s3_key: str  # Path to encrypted file in S3 bucket
+    image_hash: str  # SHA256 hash of the original (unencrypted) image
+    signature: str  # Wallet signature proving ownership
+    variation_type: str  # Which variation type this submission addresses
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
+# =============================================================================
+# End Phase 4 Types
+# =============================================================================
 
 
 class IdentitySynapse(bt.Synapse):
@@ -78,6 +126,16 @@ class IdentitySynapse(bt.Synapse):
 
     variations: Optional[Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]] = None
     process_time: Optional[float] = None  # <-- add this
+
+    # ==========================================================================
+    # Phase 4: Image Variation Fields
+    # ==========================================================================
+    # Request: Validator → Miner (base image + parameters)
+    image_request: Optional[ImageRequest] = None
+
+    # Response: Miner → Validator (S3 references, NOT actual images)
+    s3_submissions: Optional[List[S3Submission]] = None
+    # ==========================================================================
     
     def deserialize(self) -> Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]:
         """

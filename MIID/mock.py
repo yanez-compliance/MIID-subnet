@@ -2,9 +2,10 @@ import time
 
 import asyncio
 import random
+import numpy as np
 import bittensor as bt
 
-from typing import List
+from typing import List, Optional
 
 
 class MockSubtensor(bt.MockSubtensor):
@@ -120,3 +121,188 @@ class MockDendrite(bt.Dendrite):
             str: The string representation of the Dendrite object in the format "dendrite(<user_wallet_address>)".
         """
         return "MockDendrite({})".format(self.keypair.ss58_address)
+
+
+class LocalTestMetagraph:
+    """
+    Lightweight metagraph for local testing that uses direct substrate queries
+    instead of the incompatible SubnetInfoRuntimeApi.
+
+    This allows testing on local subtensor networks that don't have the
+    required runtime APIs for bittensor 10.0.0.
+    """
+
+    def __init__(
+        self,
+        netuid: int,
+        subtensor: "bt.Subtensor",
+        wallet: Optional["bt.Wallet"] = None
+    ):
+        self.netuid = netuid
+        self.subtensor = subtensor
+        self.network = subtensor.network
+        self.block = 0
+
+        # Query neurons directly from substrate
+        self._load_neurons_from_chain()
+
+        bt.logging.info(f"LocalTestMetagraph: netuid={netuid}, n={self.n}")
+
+    def _get_value(self, result):
+        """Extract value from substrate query result (handles different return types)."""
+        if result is None:
+            return None
+        if isinstance(result, str):
+            return result
+        if hasattr(result, 'value'):
+            inner = result.value
+            # Handle nested value (e.g., BittensorScaleType)
+            if hasattr(inner, 'value'):
+                return inner.value
+            return inner
+        return result
+
+    def _load_neurons_from_chain(self):
+        """Load neuron data using direct substrate queries."""
+        substrate = self.subtensor.substrate
+
+        # Get neuron count for this subnet
+        try:
+            n_result = substrate.query('SubtensorModule', 'SubnetworkN', [self.netuid])
+            self.n = self._get_value(n_result) or 0
+        except Exception as e:
+            bt.logging.warning(f"Could not get subnet size: {e}")
+            self.n = 0
+
+        # Initialize arrays
+        self.uids = np.array(list(range(self.n)))
+        self.hotkeys = []
+        self.coldkeys = []
+        self.axons = []
+        self.S = np.zeros(self.n)  # Stake
+        self.R = np.zeros(self.n)  # Rank
+        self.I = np.zeros(self.n)  # Incentive
+        self.E = np.zeros(self.n)  # Emission
+        self.C = np.zeros(self.n)  # Consensus
+        self.T = np.zeros(self.n)  # Trust
+        self.D = np.zeros(self.n)  # Dividends
+        self.B = np.zeros(self.n)  # Bonds
+        self.W = np.zeros((self.n, self.n))  # Weights
+        self.last_update = np.zeros(self.n)  # Last update block
+        self.active = np.ones(self.n, dtype=bool)  # Active neurons
+        self.validator_permit = np.zeros(self.n, dtype=bool)  # Validator permits
+        self.validator_trust = np.zeros(self.n)  # Validator trust
+
+        # Query each neuron's data
+        for uid in range(self.n):
+            try:
+                # Get hotkey for this UID
+                hotkey_result = substrate.query(
+                    'SubtensorModule', 'Keys', [self.netuid, uid]
+                )
+                hotkey = self._get_value(hotkey_result) or f"unknown-{uid}"
+                self.hotkeys.append(hotkey)
+
+                # Get coldkey (owner)
+                try:
+                    owner_result = substrate.query(
+                        'SubtensorModule', 'Owner', [hotkey]
+                    )
+                    coldkey = self._get_value(owner_result) or "unknown"
+                except:
+                    coldkey = "unknown"
+                self.coldkeys.append(coldkey)
+
+                # Get stake
+                try:
+                    stake_result = substrate.query(
+                        'SubtensorModule', 'TotalHotkeyAlpha', [hotkey, self.netuid]
+                    )
+                    stake_val = self._get_value(stake_result)
+                    self.S[uid] = stake_val / 1e9 if stake_val else 0
+                except:
+                    self.S[uid] = 0
+
+                # Get axon info
+                try:
+                    axon_result = substrate.query(
+                        'SubtensorModule', 'Axons', [self.netuid, hotkey]
+                    )
+                    axon_data = self._get_value(axon_result)
+                    if axon_data and isinstance(axon_data, dict):
+                        axon = bt.AxonInfo(
+                            version=axon_data.get('version', 0),
+                            ip=self._int_to_ip(axon_data.get('ip', 0)),
+                            port=axon_data.get('port', 0),
+                            ip_type=axon_data.get('ip_type', 4),
+                            hotkey=hotkey,
+                            coldkey=coldkey,
+                            protocol=axon_data.get('protocol', 4),
+                            placeholder1=0,
+                            placeholder2=0
+                        )
+                    else:
+                        # No axon info - neuron not serving
+                        axon = bt.AxonInfo(
+                            version=0, ip="0.0.0.0", port=0, ip_type=4,
+                            hotkey=hotkey, coldkey=coldkey, protocol=4,
+                            placeholder1=0, placeholder2=0
+                        )
+                except Exception as e:
+                    bt.logging.debug(f"Could not get axon for UID {uid}: {e}")
+                    axon = bt.AxonInfo(
+                        version=0, ip="0.0.0.0", port=0, ip_type=4,
+                        hotkey=hotkey, coldkey=coldkey, protocol=4,
+                        placeholder1=0, placeholder2=0
+                    )
+                self.axons.append(axon)
+
+                bt.logging.debug(f"Loaded UID {uid}: hotkey={hotkey[:16]}..., stake={self.S[uid]:.2f}")
+
+            except Exception as e:
+                bt.logging.warning(f"Error loading neuron {uid}: {e}")
+                self.hotkeys.append(f"error-{uid}")
+                self.coldkeys.append("unknown")
+                self.axons.append(bt.AxonInfo(
+                    version=0, ip="0.0.0.0", port=0, ip_type=4,
+                    hotkey=f"error-{uid}", coldkey="unknown", protocol=4,
+                    placeholder1=0, placeholder2=0
+                ))
+
+        # Get current block
+        try:
+            self.block = substrate.get_block_number(None)
+        except:
+            self.block = 0
+
+    def _int_to_ip(self, ip_int: int) -> str:
+        """Convert integer IP to dotted notation."""
+        if ip_int == 0:
+            return "0.0.0.0"
+        return f"{(ip_int >> 24) & 0xFF}.{(ip_int >> 16) & 0xFF}.{(ip_int >> 8) & 0xFF}.{ip_int & 0xFF}"
+
+    def sync(self, block: Optional[int] = None, lite: bool = True, subtensor: Optional["bt.Subtensor"] = None):
+        """Sync metagraph with chain."""
+        if subtensor:
+            self.subtensor = subtensor
+        self._load_neurons_from_chain()
+
+    def __deepcopy__(self, memo):
+        """Custom deepcopy that avoids copying the subtensor (contains unpicklable objects)."""
+        import copy
+        cls = self.__class__
+        result = cls.__new__(cls)
+        memo[id(self)] = result
+        for k, v in self.__dict__.items():
+            if k == 'subtensor':
+                # Don't deepcopy subtensor - just reference it
+                setattr(result, k, v)
+            else:
+                setattr(result, k, copy.deepcopy(v, memo))
+        return result
+
+    def __repr__(self):
+        return f"LocalTestMetagraph(netuid={self.netuid}, n={self.n}, network={self.network})"
+
+    def __str__(self):
+        return self.__repr__()

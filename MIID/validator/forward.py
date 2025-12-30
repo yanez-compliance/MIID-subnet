@@ -47,11 +47,15 @@ from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse
+from MIID.protocol import IdentitySynapse, ImageRequest
 from MIID.validator.reward import get_name_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
+
+# Phase 4 imports
+from MIID.validator.base_images import load_random_base_image, validate_base_images_folder
+from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 
 
 # Import your new upload_data function here
@@ -97,7 +101,15 @@ def _clear_pending_allocations(file_path: Path):
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse,
+# =============================================================================
+# Phase 4: Image Variation Configuration
+# =============================================================================
+PHASE4_ENABLED = True  # Set to False to disable Phase 4 features
+PHASE4_VARIATION_TYPES = ["pose", "expression", "lighting", "background"]
+PHASE4_REQUESTED_VARIATIONS = 3  # Number of variations to request
+# =============================================================================
+
+async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
     """
     Send requests to miners with automatic retry logic for failed connections.
@@ -377,12 +389,56 @@ async def forward(self):
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
+    # ==========================================================================
+    # Phase 4: Create Image Request
+    # ==========================================================================
+    image_request = None
+    challenge_id = None
+
+    if PHASE4_ENABLED:
+        try:
+            # Validate base images folder
+            is_valid, validation_msg = validate_base_images_folder()
+            if not is_valid:
+                bt.logging.warning(f"Phase 4 disabled: {validation_msg}")
+            else:
+                # Load a random base image
+                image_filename, base64_image = load_random_base_image()
+
+                # Calculate drand round for reveal (after all miners respond)
+                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                target_round, reveal_timestamp = calculate_target_round(reveal_delay)
+
+                # Generate unique challenge ID
+                challenge_id = f"challenge_{int(time.time())}_{random.randint(1000, 9999)}"
+
+                # Create image request
+                image_request = ImageRequest(
+                    base_image=base64_image,
+                    image_filename=image_filename,
+                    variation_types=PHASE4_VARIATION_TYPES,
+                    target_drand_round=target_round,
+                    reveal_timestamp=reveal_timestamp,
+                    requested_variations=PHASE4_REQUESTED_VARIATIONS,
+                    challenge_id=challenge_id
+                )
+
+                bt.logging.info(
+                    f"Phase 4: Created image request for '{image_filename}', "
+                    f"drand round {target_round}, reveal at {reveal_timestamp}"
+                )
+        except Exception as e:
+            bt.logging.warning(f"Phase 4: Could not create image request: {e}")
+            image_request = None
+    # ==========================================================================
+
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
         identity=identity_list,
         query_template=query_template,
         variations={},
-        timeout=adaptive_timeout
+        timeout=adaptive_timeout,
+        image_request=image_request  # Phase 4: Add image request
     )
 
     if query_generator.use_default_query:  
@@ -617,6 +673,17 @@ async def forward(self):
             "summary": uav_summary,
             "by_miner": uav_by_miner,
         },
+        # Phase 4: Image variation data
+        "phase4_image_data": {
+            "enabled": PHASE4_ENABLED and image_request is not None,
+            "challenge_id": challenge_id,
+            "base_image_filename": image_request.image_filename if image_request else None,
+            "target_drand_round": image_request.target_drand_round if image_request else None,
+            "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
+            "requested_variations": image_request.requested_variations if image_request else None,
+            "variation_types": image_request.variation_types if image_request else None,
+            "s3_submissions_by_miner": {},  # Populated below
+        },
         "query_generation": {
             "use_default_query": self.query_generator.use_default_query,
             "configured_model": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
@@ -701,6 +768,24 @@ async def forward(self):
                         "message": "Invalid response format",
                         "response_type": str(type(response))
                     }
+
+            # Phase 4: Collect S3 submissions
+            if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
+                miner_hotkey = str(self.metagraph.axons[uid].hotkey)
+                s3_data = []
+                for submission in response.s3_submissions:
+                    s3_data.append({
+                        "s3_key": submission.s3_key,
+                        "image_hash": submission.image_hash,
+                        "signature": submission.signature,
+                        "variation_type": submission.variation_type
+                    })
+                results["phase4_image_data"]["s3_submissions_by_miner"][str(uid)] = {
+                    "hotkey": miner_hotkey,
+                    "submissions": s3_data,
+                    "submission_count": len(s3_data)
+                }
+                bt.logging.info(f"Phase 4: Collected {len(s3_data)} S3 submissions from miner {uid}")
         else:
             # Handle case where no response was received for this UID
             bt.logging.warning(f"No response received for miner {uid}")

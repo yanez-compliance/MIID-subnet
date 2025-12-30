@@ -98,6 +98,13 @@ def add_args(cls, parser):
     )
 
     parser.add_argument(
+        "--local_test",
+        action="store_true",
+        help="Local test mode - bypasses incompatible metagraph API for local subtensor testing.",
+        default=False,
+    )
+
+    parser.add_argument(
         "--neuron.events_retention_size",
         type=str,
         help="Events retention size.",

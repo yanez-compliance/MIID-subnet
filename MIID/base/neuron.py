@@ -26,7 +26,7 @@ from abc import ABC, abstractmethod
 from MIID.utils.config import check_config, add_args, config
 from MIID.utils.misc import ttl_get_block
 from MIID import __spec_version__ as spec_version
-from MIID.mock import MockSubtensor, MockMetagraph
+from MIID.mock import MockSubtensor, MockMetagraph, LocalTestMetagraph
 
 
 class BaseNeuron(ABC):
@@ -86,6 +86,16 @@ class BaseNeuron(ABC):
             )
             self.metagraph = MockMetagraph(
                 self.config.netuid, subtensor=self.subtensor
+            )
+        elif getattr(self.config, 'local_test', False):
+            # Local test mode - bypasses incompatible metagraph API
+            bt.logging.info("Using local_test mode (bypasses metagraph runtime API)")
+            self.wallet = bt.Wallet(config=self.config)
+            self.subtensor = bt.Subtensor(config=self.config)
+            self.metagraph = LocalTestMetagraph(
+                netuid=self.config.netuid,
+                subtensor=self.subtensor,
+                wallet=self.wallet
             )
         else:
             self.wallet = bt.Wallet(config=self.config)
