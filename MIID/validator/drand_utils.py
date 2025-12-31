@@ -186,17 +186,19 @@ def is_round_available(round_number: int) -> bool:
 
 
 def calculate_reveal_buffer(timeout_seconds: float) -> int:
-    """Calculate appropriate reveal delay based on request timeout.
+    """Calculate appropriate reveal delay based on Bittensor epoch.
 
-    The reveal should happen after all miners have had time to submit.
-    We add a buffer to ensure all responses are in before reveal.
+    The reveal should happen after post-validation completes, which
+    occurs at the end of a Bittensor epoch. A Bittensor epoch is
+    approximately 72 minutes (360 blocks × 12 seconds/block = 4320 seconds).
 
     Args:
-        timeout_seconds: The synapse timeout for miner responses
+        timeout_seconds: The synapse timeout for miner responses (unused,
+                        kept for API compatibility)
 
     Returns:
-        Recommended delay in seconds for drand reveal
+        Delay in seconds for drand reveal (1 Bittensor epoch)
     """
-    # Add 60 second buffer after timeout expires
-    buffer = 60
-    return int(timeout_seconds + buffer)
+    # One Bittensor epoch: 360 blocks × 12 seconds = 4320 seconds (~72 minutes)
+    BITTENSOR_EPOCH_SECONDS = 4320
+    return BITTENSOR_EPOCH_SECONDS

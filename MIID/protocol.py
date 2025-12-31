@@ -48,6 +48,21 @@ from pydantic import BaseModel, Field
 # Phase 4: Image Variation Types
 # =============================================================================
 
+class VariationRequest(BaseModel):
+    """Phase 4: Single variation request with type and intensity.
+
+    Specifies what kind of variation to generate and at what intensity level.
+    Used as a guideline for miners; post-validation will judge compliance.
+    """
+    type: str  # Variation type: pose_edit, lighting_edit, expression_edit, background_edit
+    intensity: str  # Intensity level: light, medium, far
+    description: str = ""  # Human-readable description of the type
+    detail: str = ""  # Intensity-specific detail/guideline
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
 class ImageRequest(BaseModel):
     """Phase 4: Image variation request from validator to miner.
 
@@ -57,17 +72,26 @@ class ImageRequest(BaseModel):
     """
     base_image: str  # Base64 encoded image
     image_filename: str  # Original filename for reference
-    variation_types: List[str] = Field(
-        default_factory=lambda: ["pose", "expression", "lighting", "background"]
-    )  # Types of variations requested
+    variation_requests: List[VariationRequest] = Field(
+        default_factory=list
+    )  # Specific variation requests with type + intensity
     target_drand_round: int  # Drand round when decryption becomes possible
     reveal_timestamp: int  # Unix timestamp when reveal occurs
-    requested_variations: int = 3  # Number of variations to generate (3-5)
     challenge_id: Optional[str] = None  # Unique identifier for this challenge
 
     class Config:
         # Allow arbitrary types for flexibility
         arbitrary_types_allowed = True
+
+    @property
+    def requested_variations(self) -> int:
+        """Number of variations requested (derived from variation_requests)."""
+        return len(self.variation_requests)
+
+    @property
+    def variation_types(self) -> List[str]:
+        """List of variation type names (for backwards compatibility)."""
+        return [v.type for v in self.variation_requests]
 
 
 class S3Submission(BaseModel):

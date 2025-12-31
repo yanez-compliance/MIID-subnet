@@ -47,7 +47,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse, ImageRequest
+from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
 from MIID.validator.reward import get_name_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
@@ -56,6 +56,10 @@ from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
 # Phase 4 imports
 from MIID.validator.base_images import load_random_base_image, validate_base_images_folder
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
+from MIID.validator.image_variations import (
+    select_random_variations,
+    format_variation_requirements
+)
 
 
 # Import your new upload_data function here
@@ -105,8 +109,8 @@ MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
 # Phase 4: Image Variation Configuration
 # =============================================================================
 PHASE4_ENABLED = True  # Set to False to disable Phase 4 features
-PHASE4_VARIATION_TYPES = ["pose", "expression", "lighting", "background"]
-PHASE4_REQUESTED_VARIATIONS = 3  # Number of variations to request
+# Variation types and counts are now dynamically selected per challenge
+# See: MIID/validator/image_variations.py for definitions
 # =============================================================================
 
 async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
@@ -394,6 +398,7 @@ async def forward(self):
     # ==========================================================================
     image_request = None
     challenge_id = None
+    selected_variations = None  # Track what variations were requested
 
     if PHASE4_ENABLED:
         try:
@@ -410,26 +415,51 @@ async def forward(self):
                 target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
                 # Generate unique challenge ID
-                challenge_id = f"challenge_{int(time.time())}_{random.randint(1000, 9999)}"
+                challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+
+                # Randomly select variation types with intensities (2-4 variations)
+                selected_variations = select_random_variations(min_variations=2, max_variations=4)
+
+                # Convert to VariationRequest objects
+                variation_requests = [
+                    VariationRequest(
+                        type=v["type"],
+                        intensity=v["intensity"],
+                        description=v["description"],
+                        detail=v["detail"]
+                    )
+                    for v in selected_variations
+                ]
 
                 # Create image request
                 image_request = ImageRequest(
                     base_image=base64_image,
                     image_filename=image_filename,
-                    variation_types=PHASE4_VARIATION_TYPES,
+                    variation_requests=variation_requests,
                     target_drand_round=target_round,
                     reveal_timestamp=reveal_timestamp,
-                    requested_variations=PHASE4_REQUESTED_VARIATIONS,
                     challenge_id=challenge_id
                 )
 
+                # Log what was selected
+                variation_summary = ", ".join(
+                    f"{v['type']}({v['intensity']})" for v in selected_variations
+                )
                 bt.logging.info(
                     f"Phase 4: Created image request for '{image_filename}', "
+                    f"variations: [{variation_summary}], "
                     f"drand round {target_round}, reveal at {reveal_timestamp}"
                 )
         except Exception as e:
             bt.logging.warning(f"Phase 4: Could not create image request: {e}")
             image_request = None
+            selected_variations = None
+
+    # Add image variation requirements to query template (if Phase 4 enabled)
+    if selected_variations:
+        image_variation_text = format_variation_requirements(selected_variations)
+        query_template = query_template + image_variation_text
+        bt.logging.debug(f"Phase 4: Added image variation requirements to query template")
     # ==========================================================================
 
     # 5) Prepare the synapse
@@ -673,15 +703,19 @@ async def forward(self):
             "summary": uav_summary,
             "by_miner": uav_by_miner,
         },
-        # Phase 4: Image variation data
+        # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
             "enabled": PHASE4_ENABLED and image_request is not None,
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename if image_request else None,
             "target_drand_round": image_request.target_drand_round if image_request else None,
             "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
-            "requested_variations": image_request.requested_variations if image_request else None,
-            "variation_types": image_request.variation_types if image_request else None,
+            # Detailed variation requests with type + intensity for scoring
+            "requested_variations": selected_variations if selected_variations else [],
+            # Summary for quick reference
+            "variation_count": len(selected_variations) if selected_variations else 0,
+            "variation_types": [v["type"] for v in selected_variations] if selected_variations else [],
+            "variation_intensities": [v["intensity"] for v in selected_variations] if selected_variations else [],
             "s3_submissions_by_miner": {},  # Populated below
         },
         "query_generation": {

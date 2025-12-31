@@ -32,8 +32,9 @@ This sandbox tests the Phase 4 image variation pipeline with minimal dependencie
 │                                                                              │
 │  2. VALIDATOR → MINER: Send Synapse                                          │
 │     ├── base_image (Base64)                                                  │
-│     ├── variation_types[] (pose, expression, lighting, background)           │
-│     └── target_drand_round (calculated from current time + delay)            │
+│     ├── variation_requests[] (dynamically selected 2-4 types with intensity) │
+│     ├── target_drand_round (current time + 72 min = 1 Bittensor epoch)       │
+│     └── challenge_id (challenge_{timestamp}_{validator_hotkey[:8]})          │
 │                                                                              │
 │  3. MINER: Process Request                                                   │
 │     ├── Decode Base64 image                                                  │
@@ -68,29 +69,33 @@ This sandbox tests the Phase 4 image variation pipeline with minimal dependencie
 
 ### Phase 1: Validator Setup
 
-- [ ] Create `base_images/` folder in validator directory
+- [x] Create `base_images/` folder in validator directory
 - [ ] Add 5-10 sample face images for testing
-- [ ] Implement `load_base_image()` function to read from folder
-- [ ] Extend `IdentitySynapse` with `ImageRequest` field
-- [ ] Calculate `target_drand_round` based on response timeout
+- [x] Implement `load_base_image()` function to read from folder
+- [x] Extend `IdentitySynapse` with `ImageRequest` field
+- [x] Calculate `target_drand_round` based on Bittensor epoch (72 min)
+- [x] Implement `image_variations.py` with dynamic type/intensity selection
+- [x] Add `VariationRequest` model to protocol.py
+- [x] Unique `challenge_id` with validator hotkey
 
 ### Phase 2: Miner Implementation
 
-- [ ] Implement `decode_base_image()` function
-- [ ] Create `generate_variations()` placeholder function
-  - For now: return 3-5 copies of the original image
+- [x] Implement `decode_base_image()` function
+- [x] Create `generate_variations()` placeholder function
+  - For now: return copies of the original image
   - TODO: integrate actual model later
-- [ ] Implement `sign_image()` using wallet.hotkey
-- [ ] Implement `encrypt_with_drand()` using tlock
-- [ ] Implement `upload_to_s3()` with placeholder URL
-- [ ] Return `S3Submission` objects in synapse response
+- [x] Implement `sign_image()` using wallet.hotkey
+- [x] Implement `encrypt_with_drand()` using tlock
+- [x] Implement `upload_to_s3()` with local storage (mock S3)
+- [x] Return `S3Submission` objects in synapse response
 
 ### Phase 3: Validator Response Handling
 
-- [ ] Parse `S3Submission[]` from miner responses
-- [ ] Store S3 references in results JSON
-- [ ] Existing: KAV validation continues as-is
-- [ ] Existing: Upload to YANEZ server continues as-is
+- [x] Parse `S3Submission[]` from miner responses
+- [x] Store S3 references in results JSON
+- [x] Include `requested_variations` with type + intensity for YANEZ
+- [x] Existing: KAV validation continues as-is
+- [x] Existing: Upload to YANEZ server continues as-is
 
 ### Phase 4: Testing
 
@@ -170,35 +175,58 @@ def load_all_base_images() -> List[Tuple[str, str]]:
 ```python
 # In MIID/validator/forward.py - Add to forward() function
 
+from MIID.protocol import ImageRequest, VariationRequest
 from MIID.validator.base_images import load_random_base_image
-from MIID.validator.drand_utils import calculate_target_round
+from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
+from MIID.validator.image_variations import select_random_variations, format_variation_requirements
 
 # After creating the synapse, add image request
 async def forward(self):
     # ... existing code ...
 
     # === PHASE 4: Add image request ===
+    selected_variations = None
     try:
         image_filename, base64_image = load_random_base_image()
 
-        # Calculate drand round for reveal (after all miners respond)
-        # Use adaptive_timeout + buffer to ensure all responses are in
-        reveal_delay = adaptive_timeout + 60  # 60 second buffer
+        # Calculate drand round for reveal (1 Bittensor epoch = ~72 minutes)
+        reveal_delay = calculate_reveal_buffer(adaptive_timeout)  # Returns 4320 seconds
         target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
-        image_request = {
-            "base_image": base64_image,
-            "image_filename": image_filename,
-            "variation_types": ["pose", "expression", "lighting", "background"],
-            "target_drand_round": target_round,
-            "reveal_timestamp": reveal_timestamp,
-            "requested_variations": 3  # Request 3-5 variations
-        }
+        # Generate unique challenge ID (includes validator hotkey for uniqueness)
+        challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
 
-        bt.logging.info(f"Phase 4: Added image request for '{image_filename}', drand round {target_round}")
+        # Randomly select 2-4 variation types with random intensities
+        selected_variations = select_random_variations(min_variations=2, max_variations=4)
+
+        # Convert to VariationRequest objects
+        variation_requests = [
+            VariationRequest(
+                type=v["type"],
+                intensity=v["intensity"],
+                description=v["description"],
+                detail=v["detail"]
+            )
+            for v in selected_variations
+        ]
+
+        image_request = ImageRequest(
+            base_image=base64_image,
+            image_filename=image_filename,
+            variation_requests=variation_requests,
+            target_drand_round=target_round,
+            reveal_timestamp=reveal_timestamp,
+            challenge_id=challenge_id
+        )
+
+        bt.logging.info(f"Phase 4: Created image request, variations: {[v['type'] for v in selected_variations]}")
     except Exception as e:
         bt.logging.warning(f"Phase 4: Could not load base image: {e}")
         image_request = None
+
+    # Add image variation requirements to query template
+    if selected_variations:
+        query_template = query_template + format_variation_requirements(selected_variations)
 
     # Add to synapse
     request_synapse = IdentitySynapse(
@@ -206,7 +234,7 @@ async def forward(self):
         query_template=query_template,
         variations={},
         timeout=adaptive_timeout,
-        image_request=image_request  # NEW: Phase 4
+        image_request=image_request  # Phase 4
     )
 
     # ... rest of forward() ...
@@ -252,6 +280,20 @@ def calculate_target_round(delay_seconds: int) -> Tuple[int, int]:
         reveal_timestamp = genesis + (target_round - 1) * period
 
         return target_round, reveal_timestamp
+
+
+def calculate_reveal_buffer(timeout_seconds: float) -> int:
+    """Calculate appropriate reveal delay based on Bittensor epoch.
+
+    The reveal should happen after post-validation completes, which
+    occurs at the end of a Bittensor epoch (~72 minutes).
+
+    Returns:
+        Delay in seconds for drand reveal (1 Bittensor epoch = 4320 seconds)
+    """
+    # One Bittensor epoch: 360 blocks × 12 seconds = 4320 seconds (~72 minutes)
+    BITTENSOR_EPOCH_SECONDS = 4320
+    return BITTENSOR_EPOCH_SECONDS
 ```
 
 ---
@@ -533,24 +575,41 @@ def process_image_request(synapse, wallet) -> List[Dict]:
 # In MIID/protocol.py - Extend IdentitySynapse
 
 from typing import List, Dict, Optional
-from pydantic import Field
+from pydantic import BaseModel, Field
+
+class VariationRequest(BaseModel):
+    """Phase 4: Single variation request with type and intensity."""
+    type: str        # pose_edit, lighting_edit, expression_edit, background_edit
+    intensity: str   # light, medium, far
+    description: str = ""  # Human-readable description
+    detail: str = ""       # Intensity-specific guideline
+
 
 class ImageRequest(BaseModel):
     """Phase 4: Image variation request from validator."""
-    base_image: str  # Base64 encoded image
-    image_filename: str
-    variation_types: List[str]  # ["pose", "expression", "lighting", "background"]
-    target_drand_round: int
-    reveal_timestamp: int
-    requested_variations: int = 3
-    challenge_id: Optional[str] = None
+    base_image: str                              # Base64 encoded image
+    image_filename: str                          # Original filename
+    variation_requests: List[VariationRequest]   # Dynamically selected types + intensities
+    target_drand_round: int                      # Drand round for reveal (~72 min)
+    reveal_timestamp: int                        # Unix timestamp when reveal occurs
+    challenge_id: Optional[str] = None           # Unique ID with validator hotkey
+
+    @property
+    def requested_variations(self) -> int:
+        """Number of variations (derived from variation_requests)."""
+        return len(self.variation_requests)
+
+    @property
+    def variation_types(self) -> List[str]:
+        """List of type names (for backwards compatibility)."""
+        return [v.type for v in self.variation_requests]
 
 
 class S3Submission(BaseModel):
     """Phase 4: Miner's S3 submission response."""
-    s3_key: str  # Path to encrypted file in S3
-    image_hash: str  # SHA256 of original image
-    signature: str  # Wallet signature
+    s3_key: str        # Path to encrypted file in S3
+    image_hash: str    # SHA256 of original image
+    signature: str     # Wallet signature
     variation_type: str  # Which variation type this is
 
 
@@ -564,7 +623,7 @@ class IdentitySynapse(bt.Synapse):
     process_time: Optional[float] = None
 
     # Phase 4 additions
-    image_request: Optional[ImageRequest] = None  # Validator → Miner
+    image_request: Optional[ImageRequest] = None       # Validator → Miner
     s3_submissions: Optional[List[S3Submission]] = None  # Miner → Validator
 ```
 
@@ -634,8 +693,9 @@ MIID/
 │   │   ├── face_002.png
 │   │   └── ...
 │   ├── base_images.py         # NEW: Load base images
-│   ├── drand_utils.py         # NEW: Drand utilities
-│   └── forward.py             # MODIFIED: Add image request
+│   ├── drand_utils.py         # NEW: Drand utilities (72 min reveal buffer)
+│   ├── image_variations.py    # NEW: Variation type definitions + random selection
+│   └── forward.py             # MODIFIED: Dynamic variation selection, image request
 │
 ├── miner/
 │   ├── image_generator.py     # NEW: Generate variations
@@ -643,7 +703,7 @@ MIID/
 │   ├── s3_upload.py           # NEW: S3 upload (mock)
 │   └── forward.py             # MODIFIED: Process image request
 │
-└── protocol.py                # MODIFIED: Add ImageRequest, S3Submission
+└── protocol.py                # MODIFIED: Add VariationRequest, ImageRequest, S3Submission
 ```
 
 ---
@@ -802,8 +862,11 @@ btcli subnet list --subtensor.chain_endpoint ws://127.0.0.1:9946
 ## Next Steps After Sandbox
 
 1. **Integrate real model**: Replace `generate_variations()` placeholder with actual FLUX/SD model
-2. **S3 configuration**: YANEZ provides actual S3 bucket URL and credentials
+2. **S3 configuration**: YANEZ provides actual S3 bucket URL and credentials (replace local storage)
 3. **Post-validation**: YANEZ implements image validation in separate system
+   - Type compliance checking (did miner follow requested type?)
+   - Intensity compliance checking (Light/Medium/Far)
+   - Face matching (ArcFace similarity >= 0.8)
 4. **Reputation integration**: Connect post-validation scores to reputation system
 
 ---

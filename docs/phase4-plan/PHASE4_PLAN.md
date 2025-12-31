@@ -193,7 +193,7 @@ Similar to UAV addresses, image variations are assessed in batch **after drand r
 
 | Concept | Scope | Duration |
 |---------|-------|----------|
-| **Challenge** | Single image variation request | ~5 minutes (drand window) |
+| **Challenge** | Single image variation request | ~72 minutes (1 Bittensor epoch for drand reveal) |
 | **Cycle** | Full validation period | Multiple challenges |
 | **Online Validation** | Per challenge | Immediate |
 | **Post-Validation** | Per cycle | After cycle ends |
@@ -416,7 +416,7 @@ def tlock_decrypt(encrypted_data: bytes, drand_signature: bytes) -> bytes:
 ```
 Time ────────────────────────────────────────────────────────────────►
 
-T+0         T+30s       T+60s       T+90s       T+120s      T+300s (REVEAL)
+T+0         T+30s       T+60s       T+90s       T+120s      T+72min (REVEAL)
  │           │           │           │           │           │
  │ Challenge │ Miner A   │ Miner B   │ Miner C   │ Deadline  │ Drand
  │ Created   │ Encrypts  │ Encrypts  │ Encrypts  │           │ Releases
@@ -426,6 +426,10 @@ T+0         T+30s       T+60s       T+90s       T+120s      T+300s (REVEAL)
  │           SUBMISSION WINDOW                   │    ALL REVEALED
  │           (All encrypted, validator           │    SIMULTANEOUSLY
  │            CANNOT see any submission)         │
+ │                                               │
+ │  Note: Reveal happens after 1 Bittensor epoch │
+ │  (~72 min = 360 blocks × 12s) to allow        │
+ │  post-validation at cycle end                 │
 ```
 
 ---
@@ -437,47 +441,107 @@ T+0         T+30s       T+60s       T+90s       T+120s      T+300s (REVEAL)
 The existing `IdentitySynapse` will be extended with image-related fields. **Note**: Miners do NOT return images in the synapse - they return S3 references.
 
 ```python
+# Phase 4: Single variation request with type and intensity
+class VariationRequest(BaseModel):
+    type: str        # pose_edit, lighting_edit, expression_edit, background_edit
+    intensity: str   # light, medium, far
+    description: str # Human-readable description of the type
+    detail: str      # Intensity-specific guideline (e.g., "±30° rotation")
+
+# Phase 4: Image variation request from validator to miner
+class ImageRequest(BaseModel):
+    base_image: str                              # Base64 encoded image
+    image_filename: str                          # Original filename for reference
+    variation_requests: List[VariationRequest]   # Dynamic selection with type + intensity
+    target_drand_round: int                      # Drand round for reveal (~72 min)
+    reveal_timestamp: int                        # Unix timestamp when reveal occurs
+    challenge_id: str                            # Unique ID: challenge_{timestamp}_{validator_hotkey[:8]}
+
+    @property
+    def requested_variations(self) -> int:
+        return len(self.variation_requests)
+
+    @property
+    def variation_types(self) -> List[str]:
+        return [v.type for v in self.variation_requests]
+
+# Phase 4: Miner's S3 submission response
+class S3Submission(BaseModel):
+    s3_key: str        # Path to encrypted image in S3
+    image_hash: str    # SHA256 hash of original (unencrypted) image
+    signature: str     # Wallet signature proving ownership
+    variation_type: str # Which type this variation addresses
+
 class IdentitySynapse(bt.Synapse):
     # Existing fields
     identity: List[List[str]]  # [name, dob, address]
     query_template: str
     variations: Optional[Dict[str, Union[List[List[str]], SeedData]]] = None
 
-    # NEW Phase 4 fields - REQUEST (Validator → Miner)
-    class ImageRequest(TypedDict):
-        base_image: str  # Base64 encoded image
-        resolution: Tuple[int, int]  # e.g., (512, 512) or (1024, 1024)
-        variation_types: List[str]  # ["pose", "expression", "lighting", "background"]
-        variation_count: int  # 3-5 variations requested
-        challenge_id: str  # Unique ID for this challenge
-        target_drand_round: int  # Drand round for reveal
-
-    # NEW Phase 4 fields - RESPONSE (Miner → Validator)
-    # Miners return S3 references, NOT actual images
-    class S3Submission(TypedDict):
-        s3_key: str  # Path to encrypted image in S3
-        image_hash: str  # SHA256 hash of original (unencrypted) image
-        signature: str  # Wallet signature proving ownership
-        variation_type: str  # Which type this variation addresses
-
-    image_request: Optional[ImageRequest] = None
-    s3_submissions: Optional[List[S3Submission]] = None  # Miner returns S3 refs, not images
+    # Phase 4 additions
+    image_request: Optional[ImageRequest] = None      # Validator → Miner
+    s3_submissions: Optional[List[S3Submission]] = None  # Miner → Validator
 ```
 
-**Key change from previous design**: No `ImageVariation` with Base64 images. Miners upload encrypted images to S3 and return only the S3 paths, hashes, and signatures.
+**Key changes**:
+1. `VariationRequest` includes type + intensity (dynamically selected per challenge)
+2. `challenge_id` includes validator hotkey for uniqueness across validators
+3. `target_drand_round` set to ~72 minutes (1 Bittensor epoch) for post-validation
+4. Miners return S3 references, NOT actual images
 
 ---
 
-## Variation Types
+## Variation Types and Intensity Bins
 
-Miners must generate variations across these dimensions:
+Validators randomly select **2-4 variation types** per challenge, each with a randomly assigned **intensity level** (Light/Medium/Far). This prevents miners from gaming the system with fixed responses.
 
-| Type | Description | Examples |
-|------|-------------|----------|
-| **Pose** | Different head angles, body positions | Head tilt, profile view, slight turn |
-| **Expression** | Facial expression changes | Neutral, smiling, serious, slight smile |
-| **Lighting** | Different lighting conditions | Bright, dim, side-lit, backlit, shadows |
-| **Background** | Different backgrounds | Solid color, office, outdoor, gradient |
+### Variation Type Definitions (YEVS-style)
+
+| Family | Description | Light | Medium | Far |
+|--------|-------------|-------|--------|-----|
+| **pose_edit** | Change head pose (yaw/pitch/roll) while keeping identity | ±15° rotation (slight head tilt) | ±30° rotation (clear head turn) | >±45° rotation (near-profile view) |
+| **lighting_edit** | Modify illumination direction, intensity, or color temperature | Subtle brightness/contrast, soft shadows | Directional light, noticeable shadows | Strong shadows, dramatic contrast, unusual color temp |
+| **expression_edit** | Change facial expression while preserving identity | Subtle (neutral ↔ slight smile) | Clear change (smile, serious) | Strong (laughing, surprised) |
+| **background_edit** | Change background environment | Color/blur adjustment, similar background | Different setting (office ↔ outdoor) | Dramatic/unusual environment |
+
+### Dynamic Selection Per Challenge
+
+Each challenge randomly selects:
+1. **Which types**: 2-4 from the 4 available types
+2. **Which intensity**: Light, Medium, or Far (can be different per type)
+
+Example challenge request:
+```python
+requested_variations = [
+    {"type": "pose_edit", "intensity": "medium", "detail": "±30° rotation..."},
+    {"type": "expression_edit", "intensity": "light", "detail": "Subtle change..."},
+    {"type": "background_edit", "intensity": "far", "detail": "Dramatic environment..."}
+]
+```
+
+### Query Template Integration
+
+Variation requirements are appended to the query template sent to miners:
+
+```
+[IMAGE VARIATION REQUIREMENTS]
+For the face image provided, generate the following variations while preserving identity:
+
+1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
+2. expression_edit (light): Neutral to slight smile, minor brow movement
+3. background_edit (far): Unusual or contrasting environment, complex scene
+
+IMPORTANT: The subject's face must remain recognizable across all variations.
+```
+
+### Scoring (Post-Validation by YANEZ)
+
+Post-validation will judge:
+- **Did the miner follow the requested type?** (pose vs expression vs lighting vs background)
+- **Did the miner match the intensity level?** (Light changes should be subtle, Far should be dramatic)
+- **Is identity preserved?** (ArcFace similarity >= 0.8)
+
+Intensity compliance is a **guideline** - exact measurements are not required, but the variation should clearly match the requested intensity level.
 
 ---
 
