@@ -233,9 +233,9 @@ announcements/
 #MIID/validator/SanctionedIndividulas.json
 MIID/validator/test.txt
 unittest/
-MIID/validator/base_images/*.png
-docs/phase4-plan/
-docs/policy/
+#MIID/validator/base_images/*.png
+docs/phase4-plan/*.md
+docs/policy/*.md
 
 scripts/test_phase4_integration.py
 scripts/test_phase4_components.py
