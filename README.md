@@ -134,7 +134,8 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 - Continue location UAV submissions unknown to LDS V1 while expanding adversarial identity testing.
 - Phase 4 execution begins incorporating rewards based on validated UAV quality from Phase 3 Cycle 1.
 
-- Expand biometric attack families beyond Cycle 1 (e.g., swap/recapture/morphing) (2026)
+### Phase 5–11 (2026–2027): Identity Realism & Simulation
+- Expand biometric attack families beyond Cycle 1 (e.g., swap/recapture/morphing) (Q1 2026)
 - Generate and validate synthetic documents (Q2 2026)
 - Simulate digital presence and interactions (Q3 2026)
 - Introduce financial transaction modeling (Q4 2026)
