@@ -1556,7 +1556,7 @@ class QueryGenerator:
             # Generate ONE non-Latin high-risk individual
             if high_risk_sample_count > 0:
                 # Select a random non-Latin script
-                non_latin_scripts = ['arabic', 'chinese', 'cyrillic']
+                non_latin_scripts = ['arabic', 'cjk', 'cyrillic']
                 available_non_latin = [script for script in non_latin_scripts if script in self.sanctioned_countries_by_script]
                 
                 if available_non_latin:
@@ -1670,7 +1670,7 @@ class QueryGenerator:
                         elif non_latin_locale.startswith(("bg_", "ru_", "uk_", "kk_", "ky_", "sr_", "mn_")):
                             script_type = "cyrillic"
                         elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
-                            script_type = "chinese"
+                            script_type = "cjk"
 
                         name = f"{first_name} {last_name}"
                         if (name not in generated_names and name not in seen_names and 
