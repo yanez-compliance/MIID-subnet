@@ -38,21 +38,22 @@ This network helps **governments, financial institutions, and researchers** impr
 
 ## ⚙️ How It Works
 
-### 🛠️ **Miners: Generate Name Variations & Identity Attributes**
+### 🛠️ **Miners: Generate KAV, UAV, and Image Variations**
 Miners process requests from validators and return **identity data variations** to enhance detection models.
 
-- Receive identity-related tasks (e.g., name variations, transliterations, identity attribute augmentation)
-- Use **LLMs** to generate valid yet challenging identity variations
-- Submit responses for validation
-- Earn rewards based on accuracy, diversity, and originality
+- Receive mixed identity challenges from validators (KAV, UAV, and image-variation requests)
+- Generate **KAV** variations: Name / DOB / Address
+- Submit **UAV** location attack vectors that are **unknown to LDS V1**
+- Generate **face image variations** from validator-provided seed images (Phase 4)
+- Earn rewards based on accuracy, novelty, constraint adherence, and real-world adversarial value
 
 ### 🧑‍🏫 **Validators: Evaluate & Score Miners**
 Validators ensure the dataset maintains **high-quality** and **real-world relevance**.
 
-- Send challenge queries to miners
-- Evaluate submissions based on **linguistic accuracy, realism, and relevance**
-- Score miners and allocate rewards
-- Update the identity dataset for use in AI models
+- Issue challenge queries across KAV, UAV, and image variations
+- Run online validation for immediate weight setting (where applicable)
+- Perform post-validation to assess novelty/quality and update miner reputation for the next cycle
+- Allocate rewards and continuously evolve the dataset for KYC/IDV resilience
 
 ---
 
@@ -122,16 +123,18 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 - Support new evasion tactics, including nickname-based threats, transliteration-based alterations, and middle name manipulations.
 - Improve validator scoring and introduce penalties for repetitive or low-value submissions.
 
-### Phase 3: Location-Based Threat Scenarios (Q4 2025)
-- Add support for location obfuscation via IP, region, and geographic manipulation.
-- Support organic queries to detect evasion tied to high-risk regions.
+### Phase 3: Location UAV + LDS V1 Post-Validation (Q4 2025)
+- Add support for location-based unknown attack vectors (UAV) and obfuscation patterns.
+- Establish post-validation workflows and LDS V1 (beta → full) to separate signal from noise.
+- Use validated UAV quality to build a reputation signal that carries into future cycles.
 
-### Phase 4: AML Ecosystem Integration (Q4 2025)
-- Open subnet to external institutions and regulators.
-- Enable real-world compliance queries and expand validated execution vectors.
+### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1 2026)
+- Introduce validator-provided seed face images and deepfake-style transformation families.
+- Cycle 1 focuses on: pose_edit, lighting_edit, expression_edit, background_edit.
+- Continue location UAV submissions unknown to LDS V1 while expanding adversarial identity testing.
+- Phase 4 execution begins incorporating rewards based on validated UAV quality from Phase 3 Cycle 1.
 
-### Phase 5–11 (2026–2027): Identity Realism & Simulation
-- Integrate biometric data (Q1 2026)
+- Expand biometric attack families beyond Cycle 1 (e.g., swap/recapture/morphing) (2026)
 - Generate and validate synthetic documents (Q2 2026)
 - Simulate digital presence and interactions (Q3 2026)
 - Introduce financial transaction modeling (Q4 2026)
