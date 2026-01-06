@@ -154,9 +154,10 @@ flowchart LR
         <!-- Sandbox Diagram -->
         <div id="sandboxDiagram" class="mermaid" style="display: none;">
 flowchart LR
-    subgraph Validator["VALIDATOR"]
+    subgraph Validator["VALIDATOR (Phase4-C1-Sandbox)"]
         FOLDER["./base_images/<br/>folder"]
         LOAD["Load Random<br/>Image"]
+        VARSEL["Select 2-4 Variations<br/>(type + intensity)"]
         SYNAPSE["Create Synapse<br/>+ ImageRequest"]
         KAV["KAV Validation<br/>SET WEIGHTS"]
         UPLOAD["Upload to<br/>YANEZ Server"]
@@ -164,45 +165,50 @@ flowchart LR
 
     subgraph Miner["MINER"]
         DECODE["Decode Base64<br/>Image"]
-        GEN["generate_variations()<br/>[PLACEHOLDER:<br/>returns copies]"]
+        GEN["generate_variations()<br/>[SANDBOX:<br/>returns copies]"]
+        PATHSIG["Generate<br/>path_signature"]
         SIGN["Sign with<br/>wallet.hotkey"]
-        ENCRYPT["tlock.encrypt()<br/>with drand round"]
-        S3MOCK["Upload to S3<br/>[MOCK URL]"]
+        ENCRYPT["tlock.encrypt()<br/>72 min reveal"]
+        S3UP["Upload to S3<br/>yanez-miid-sn54"]
         RESPOND["Return<br/>S3Submissions"]
     end
 
     subgraph YANEZ["YANEZ (Post-Validation)"]
         DOWNLOAD["Download from S3"]
         DECRYPT["Decrypt with<br/>drand beacon"]
-        VALIDATE["Face Match<br/>Quality Check"]
+        VALIDATE["Face Match<br/>Quality Check<br/>Intensity Check"]
         REPUPDATE["Update Reputation<br/>for Next Cycle"]
     end
 
     FOLDER --> LOAD
-    LOAD --> SYNAPSE
-    SYNAPSE -->|"base_image +<br/>target_drand_round"| DECODE
+    LOAD --> VARSEL
+    VARSEL --> SYNAPSE
+    SYNAPSE -->|"base_image +<br/>variation_requests[]"| DECODE
     DECODE --> GEN
-    GEN --> SIGN
+    GEN --> PATHSIG
+    PATHSIG --> SIGN
     SIGN --> ENCRYPT
-    ENCRYPT --> S3MOCK
-    S3MOCK --> RESPOND
-    RESPOND -->|"s3_key, hash,<br/>signature"| KAV
+    ENCRYPT --> S3UP
+    S3UP --> RESPOND
+    RESPOND -->|"s3_key, hash,<br/>signature, path_signature"| KAV
     KAV --> UPLOAD
-    UPLOAD -.->|"Results JSON"| DOWNLOAD
+    UPLOAD -.->|"Results JSON<br/>Phase4-C1-Sandbox"| DOWNLOAD
     DOWNLOAD --> DECRYPT
     DECRYPT --> VALIDATE
     VALIDATE --> REPUPDATE
 
     style FOLDER fill:#e0e7ff,stroke:#6366f1
     style LOAD fill:#e0e7ff,stroke:#6366f1
+    style VARSEL fill:#e0e7ff,stroke:#6366f1
     style SYNAPSE fill:#e0e7ff,stroke:#6366f1
     style KAV fill:#fee2e2,stroke:#ef4444
     style UPLOAD fill:#e0e7ff,stroke:#6366f1
     style DECODE fill:#fef3c7,stroke:#f59e0b
     style GEN fill:#fef3c7,stroke:#f59e0b
+    style PATHSIG fill:#fef3c7,stroke:#f59e0b
     style SIGN fill:#fef3c7,stroke:#f59e0b
     style ENCRYPT fill:#fef3c7,stroke:#f59e0b
-    style S3MOCK fill:#fef3c7,stroke:#f59e0b
+    style S3UP fill:#fef3c7,stroke:#f59e0b
     style RESPOND fill:#fef3c7,stroke:#f59e0b
     style DOWNLOAD fill:#d1fae5,stroke:#10b981
     style DECRYPT fill:#d1fae5,stroke:#10b981
@@ -215,13 +221,14 @@ flowchart LR
 flowchart TB
     subgraph Input["Input (Validator)"]
         DB["Base Image Database<br/>(Pre-loaded images)"]
-        PROMPT["Variation Prompt<br/>(pose, expression,<br/>lighting, background)"]
+        PROMPT["Dynamic Selection<br/>2-4 types × intensity<br/>(light/medium/far)"]
     end
 
     subgraph Synapse["IdentitySynapse (Request)"]
         BASE["base_image (Base64)"]
-        TYPES["variation_types[]"]
-        DRAND["target_drand_round"]
+        TYPES["variation_requests[]<br/>(type + intensity)"]
+        DRAND["target_drand_round<br/>(72 min reveal)"]
+        CHID["challenge_id<br/>(with validator hotkey)"]
     end
 
     subgraph Miner["Miner Processing"]
@@ -236,6 +243,7 @@ flowchart TB
         S3KEY["s3_key (path)"]
         HASH["image_hash (SHA256)"]
         SIG["signature (wallet)"]
+        PSIG["path_signature<br/>(prevents path hijacking)"]
     end
 
     subgraph OnlineVal["ONLINE VALIDATION (Immediate)"]
@@ -332,13 +340,20 @@ classDiagram
         +Optional~List~S3Submission~~ s3_submissions
     }
 
+    class VariationRequest {
+        +str type
+        +str intensity
+        +str description
+        +str detail
+    }
+
     class ImageRequest {
         +str base_image
-        +Tuple~int,int~ resolution
-        +List~str~ variation_types
-        +int variation_count
-        +str challenge_id
+        +str image_filename
+        +List~VariationRequest~ variation_requests
         +int target_drand_round
+        +int reveal_timestamp
+        +str challenge_id
     }
 
     class S3Submission {
@@ -346,6 +361,7 @@ classDiagram
         +str image_hash
         +str signature
         +str variation_type
+        +str path_signature
     }
 
     class UAVData {
@@ -363,12 +379,14 @@ classDiagram
 
     IdentitySynapse --> ImageRequest : "Validator → Miner"
     IdentitySynapse --> S3Submission : "Miner → Validator"
+    ImageRequest --> VariationRequest : "2-4 per challenge"
     IdentitySynapse --> UAVData : "Phase 3"
     IdentitySynapse --> SeedData : "Phase 3"
 
     note for IdentitySynapse "Extended Bittensor Synapse<br/>for MIID subnet"
-    note for ImageRequest "Validator sends base image +<br/>drand round for encryption"
-    note for S3Submission "Miner returns S3 paths,<br/>NOT actual images"
+    note for VariationRequest "Dynamic selection:<br/>pose_edit, lighting_edit,<br/>expression_edit, background_edit<br/>× light/medium/far"
+    note for ImageRequest "challenge_id includes<br/>validator hotkey for uniqueness"
+    note for S3Submission "path_signature prevents<br/>other miners writing to path"
         </div>
 
         <!-- Validation Flow Diagram -->
@@ -377,46 +395,47 @@ sequenceDiagram
     autonumber
     participant V as Validator
     participant M as Miner
-    participant S3 as S3 Bucket
+    participant S3 as S3 (yanez-miid-sn54)
     participant DR as Drand Network
-    participant PV as Post-Validator
+    participant PV as YANEZ Post-Validator
     participant DB as Database
 
     Note over V: STAGE 1: ONLINE VALIDATION (Immediate)
 
-    Note over V: Select base image from database
-    V->>V: Create ImageRequest with target_drand_round
+    Note over V: Select base image + 2-4 variation types
+    V->>V: Create ImageRequest with variation_requests[]<br/>(type + intensity) + challenge_id
 
-    V->>M: Send IdentitySynapse<br/>(base_image, variation_types, drand_round)
+    V->>M: Send IdentitySynapse<br/>(base_image, variation_requests[], 72min reveal)
 
     Note over M: 120 second timeout - Generate & Upload
     M->>M: Decode base image
-    M->>M: Generate 3-5 variations
+    M->>M: Generate 2-4 variations
+    M->>M: Derive path_signature from challenge_id
     M->>M: Sign with wallet (sign_message)
     M->>M: Encrypt with drand timelock
-    M->>S3: Upload encrypted images
+    M->>S3: Upload to /{challenge_id}/{hotkey}/{path_signature}/
 
-    M->>V: Return S3Submissions[]<br/>(s3_keys, hashes, signatures)
+    M->>V: Return S3Submissions[]<br/>(s3_keys, hashes, signatures, path_signature)
 
     Note over V: Online: KAV + Previous Reputation
     V->>V: Validate KAV (Name/DOB/Address)
     V->>DB: Get previous cycle reputation
     V->>V: Calculate weight = f(KAV, prev_reputation)
     V->>V: SET WEIGHTS ON-CHAIN NOW
-    V->>DB: Store S3 references for post-validation
+    V->>DB: Store S3 refs + requested_variations for YANEZ
 
-    Note over DR,PV: STAGE 2: POST-VALIDATION (After Cycle Ends)
+    Note over DR,PV: STAGE 2: POST-VALIDATION (After ~72 min)
 
-    DR->>DR: Drand beacon published
+    DR->>DR: Drand beacon published (1 Bittensor epoch)
     PV->>S3: Download encrypted images
     PV->>PV: Decrypt with drand beacon
-    PV->>PV: Verify signatures (verify_message)
+    PV->>PV: Verify signatures + path_signature
 
     loop For each submission
         PV->>PV: Face match (ArcFace >= 0.8)
+        PV->>PV: Variation type compliance
+        PV->>PV: Intensity compliance (light/medium/far)
         PV->>PV: Quality assessment
-        PV->>PV: Watermark detection
-        PV->>PV: Duplicate check
     end
     PV->>PV: Cross-miner collusion detection
 
@@ -524,69 +543,72 @@ sequenceDiagram
     autonumber
     participant V as Validator
     participant M as Miner
-    participant S3 as S3 Bucket
+    participant S3 as S3 (yanez-miid-sn54)
     participant D as Drand Network
+    participant PV as YANEZ Post-Validator
 
     Note over V: Phase 1: Request
-    V->>M: Send IdentitySynapse<br/>(base_image, variation_types)
+    V->>M: Send IdentitySynapse<br/>(base_image, variation_requests[], challenge_id)
 
     Note over M: Phase 2: Generate & Encrypt
-    M->>M: Generate image variations
-    M->>M: Sign with wallet.hotkey
-    M->>D: Get future drand round
+    M->>M: Generate 2-4 image variations
+    M->>M: Derive path_signature = sign(challenge_id:hotkey)[:16]
+    M->>M: Sign each image with wallet.hotkey
+    M->>D: Get future drand round (72 min)
     D-->>M: Round number + public key
     M->>M: Timelock encrypt images<br/>(tlock.encrypt)
 
-    Note over M,S3: Phase 3: Upload to S3
-    M->>S3: Upload encrypted images
-    Note right of S3: Metadata:<br/>- miner_hotkey<br/>- signature<br/>- drand_round<br/>- timestamp
+    Note over M,S3: Phase 3: Upload to S3 (path protected)
+    M->>S3: PUT /{challenge_id}/{hotkey}/{path_signature}/*.tlock
+    Note right of S3: Metadata:<br/>- miner_hotkey<br/>- signature<br/>- path_signature<br/>- image_hash<br/>- drand_round
     S3-->>M: Upload confirmation
 
-    M->>V: Return commitment hash<br/>(not actual images)
+    M->>V: Return S3Submissions[]<br/>(s3_key, hash, signature, path_signature)
 
-    Note over V,D: Phase 4: Wait for Reveal
-    V->>D: Wait for drand round
-    D-->>V: Drand beacon published
+    Note over V,D: Phase 4: Wait for Reveal (~72 min)
+    V->>V: Store refs for YANEZ
+    D->>D: Drand beacon published after 1 epoch
 
-    Note over V,S3: Phase 5: Verify & Validate
-    V->>S3: Fetch encrypted images
-    S3-->>V: Encrypted data + metadata
-    V->>V: Decrypt with drand beacon<br/>(tlock.decrypt)
-    V->>V: verify_message(signature, hotkey)
-    alt Signature Valid
-        V->>V: Process variations
-        V->>V: Face matching (ArcFace)
-    else Signature Invalid
-        V->>V: Reject submission
+    Note over PV,S3: Phase 5: YANEZ Post-Validation
+    PV->>S3: Fetch encrypted images
+    S3-->>PV: Encrypted data + metadata
+    PV->>PV: Verify path_signature matches path
+    PV->>PV: Decrypt with drand beacon
+    PV->>PV: verify_message(signature, hotkey)
+    alt Valid
+        PV->>PV: Face matching (ArcFace)
+        PV->>PV: Type + intensity compliance
+    else Invalid
+        PV->>PV: Reject submission
     end
         </div>
 
         <!-- Drand Timelock Diagram -->
         <div id="drandDiagram" class="mermaid" style="display: none;">
 flowchart LR
-    subgraph Timeline["Drand Timelock Timeline"]
+    subgraph Timeline["Drand Timelock Timeline (72 min = 1 Bittensor Epoch)"]
         T0["t0: Request Sent"]
         T1["t1: Miner Encrypts<br/>(future round N)"]
         T2["t2: All Commits<br/>Uploaded to S3"]
-        T3["t3: Drand Round N<br/>Beacon Published"]
-        T4["t4: Simultaneous<br/>Reveal"]
+        T3["t3: ~72 min later<br/>Drand Round N<br/>Beacon Published"]
+        T4["t4: Simultaneous<br/>Reveal by YANEZ"]
     end
 
     subgraph Encryption["Timelock Encryption"]
-        E1["Miner gets future<br/>drand round number"]
+        E1["Miner gets future<br/>drand round number<br/>(~1440 rounds ahead)"]
         E2["Encrypt with tlock:<br/>tlock.encrypt(<br/>  data,<br/>  round_number,<br/>  drand_public_key<br/>)"]
-        E3["Cannot decrypt until<br/>drand publishes beacon"]
+        E3["Cannot decrypt until<br/>drand publishes beacon<br/>(72 min = 4320 sec)"]
     end
 
     subgraph Storage["Commit Phase"]
         ST1["Miner signs data<br/>with wallet.hotkey"]
-        ST2["Upload to S3 with:<br/>- encrypted_data<br/>- miner_hotkey<br/>- signature<br/>- target_round"]
+        ST2["Upload to S3 with:<br/>- encrypted_data<br/>- miner_hotkey<br/>- signature<br/>- path_signature<br/>- target_round"]
         ST3["All miners commit<br/>before reveal time"]
     end
 
-    subgraph Reveal["Reveal Phase"]
-        R1["Drand beacon published<br/>at round N"]
-        R2["Validator fetches<br/>from S3"]
+    subgraph Reveal["Reveal Phase (YANEZ Post-Validator)"]
+        R1["Drand beacon published<br/>at round N (~72 min)"]
+        R2["YANEZ fetches<br/>from S3"]
         R3["Decrypt with beacon:<br/>tlock.decrypt(<br/>  encrypted_data,<br/>  beacon_signature<br/>)"]
         R4["Verify miner identity:<br/>verify_message(<br/>  signature,<br/>  hotkey<br/>)"]
     end
@@ -639,27 +661,31 @@ flowchart LR
             <h3>Phase 4 Overview</h3>
             <p>Phase 4 extends MIID Subnet with synthetic image variations for KYC verification.</p>
             <ul>
-                <li><strong>Online (Immediate):</strong> Validator sends base image → Miner uploads encrypted variations to S3 → Validator sets weights using KAV + previous reputation</li>
-                <li><strong>Post-Validation (After Cycle):</strong> Decrypt images → Face matching, quality, cheat detection → Update reputation for NEXT cycle</li>
+                <li><strong>Online (Immediate):</strong> Validator sends base image + 2-4 variation requests (type × intensity) → Miner uploads encrypted variations to S3 (<code>yanez-miid-sn54</code>) → Validator sets weights using KAV + previous reputation</li>
+                <li><strong>Post-Validation (After ~72 min = 1 Bittensor epoch):</strong> YANEZ decrypts images → Face matching, type/intensity compliance, quality, cheat detection → Update reputation for NEXT cycle</li>
             </ul>
+            <p><strong>Key Security Features:</strong> <code>path_signature</code> prevents miners from overwriting others' submissions; drand timelock ensures fair reveal.</p>
         </div>
 
         <div id="sandboxDesc" class="description" style="display: none;">
-            <h3>Sandbox Testing Flow</h3>
-            <p>Sandbox environment for testing Phase 4 logic before production deployment.</p>
+            <h3>Sandbox Testing Flow (Phase4-C1-Sandbox)</h3>
+            <p>Sandbox environment for testing Phase 4 logic before production deployment. Cycle label: <code>Phase4-C1-Sandbox</code></p>
             <ul>
-                <li><strong>Validator:</strong> Loads base images from local <code>./base_images/</code> folder (no FLUXSynID yet)</li>
+                <li><strong>Validator:</strong> Loads base images from local <code>./base_images/</code> folder, dynamically selects 2-4 variation types with intensities</li>
                 <li><strong>Miner:</strong> Uses placeholder <code>generate_variations()</code> that returns copies (model to be integrated later)</li>
-                <li><strong>Encryption:</strong> Real drand timelock encryption with <code>tlock.encrypt()</code></li>
-                <li><strong>S3 Upload:</strong> Mock URL placeholder (will be configured with real S3 bucket later)</li>
+                <li><strong>Encryption:</strong> Real drand timelock encryption with <code>tlock.encrypt()</code> (72 min reveal = 1 Bittensor epoch)</li>
+                <li><strong>S3 Upload:</strong> Real S3 bucket: <code>s3://yanez-miid-sn54/</code></li>
+                <li><strong>Security:</strong> <code>path_signature</code> prevents miners from overwriting others' submissions</li>
                 <li><strong>Full Flow:</strong> Complete end-to-end testing of synapse, signing, encryption, and response handling</li>
             </ul>
             <table class="spec-table">
                 <tr><th>Component</th><th>Status</th><th>Notes</th></tr>
                 <tr><td>Base Image Source</td><td>📁 Local Folder</td><td><code>./base_images/*.jpg</code></td></tr>
+                <tr><td>Variation Selection</td><td>✅ Dynamic</td><td>2-4 types × light/medium/far</td></tr>
                 <tr><td>Image Generator</td><td>🔧 Placeholder</td><td>Returns copies, model TBD</td></tr>
-                <tr><td>Drand Encryption</td><td>✅ Real</td><td><code>tlock.encrypt()</code></td></tr>
-                <tr><td>S3 Upload</td><td>🔧 Mock URL</td><td>To be configured</td></tr>
+                <tr><td>Drand Encryption</td><td>✅ Real</td><td><code>tlock.encrypt()</code> (72 min)</td></tr>
+                <tr><td>S3 Upload</td><td>✅ Real</td><td><code>yanez-miid-sn54</code></td></tr>
+                <tr><td>Path Security</td><td>✅ Real</td><td><code>path_signature</code></td></tr>
                 <tr><td>Wallet Signing</td><td>✅ Real</td><td><code>wallet.hotkey.sign()</code></td></tr>
                 <tr><td>YANEZ Upload</td><td>✅ Real</td><td>Existing code path</td></tr>
             </table>
@@ -668,23 +694,28 @@ flowchart LR
         <div id="detailedDesc" class="description" style="display: none;">
             <h3>Detailed Data Flow (Two-Stage)</h3>
             <ul>
-                <li><strong>Input:</strong> Validator selects base image from pre-loaded database (FLUXSynID can be added later)</li>
-                <li><strong>Synapse Request:</strong> base_image, variation_types[], target_drand_round</li>
-                <li><strong>Miner Processing:</strong> Generate variations → Sign → Encrypt with drand → Upload to S3</li>
-                <li><strong>Synapse Response:</strong> S3 paths, hashes, signatures (NOT images)</li>
-                <li><strong>ONLINE (Immediate):</strong> KAV validation + previous reputation → <strong>SET WEIGHTS NOW</strong> → Store S3 refs</li>
-                <li><strong>POST-VALIDATION (After Cycle):</strong> Download → Decrypt → Face match → Quality → Cheat detection → <strong>Update reputation for NEXT cycle</strong></li>
+                <li><strong>Input:</strong> Validator selects base image, dynamically picks 2-4 variation types with intensities (light/medium/far)</li>
+                <li><strong>Synapse Request:</strong> base_image, variation_requests[] (type + intensity), target_drand_round, challenge_id (includes validator hotkey)</li>
+                <li><strong>Miner Processing:</strong> Generate variations → Derive path_signature → Sign → Encrypt with drand (72 min reveal) → Upload to S3</li>
+                <li><strong>Synapse Response:</strong> S3 paths, hashes, signatures, path_signature (NOT images)</li>
+                <li><strong>ONLINE (Immediate):</strong> KAV validation + previous reputation → <strong>SET WEIGHTS NOW</strong> → Store S3 refs for YANEZ</li>
+                <li><strong>POST-VALIDATION (After ~72 min):</strong> YANEZ downloads → Decrypts → Face match → Type/intensity compliance → <strong>Update reputation for NEXT cycle</strong></li>
             </ul>
         </div>
 
         <div id="protocolDesc" class="description" style="display: none;">
             <h3>Protocol Extension</h3>
-            <p>The existing <code>IdentitySynapse</code> is extended with two new types:</p>
+            <p>The existing <code>IdentitySynapse</code> is extended with three new types:</p>
             <ul>
-                <li><strong>ImageRequest:</strong> Sent by validator with base image, resolution, variation types, <code>challenge_id</code>, and <code>target_drand_round</code></li>
-                <li><strong>S3Submission:</strong> Returned by miner with <code>s3_key</code>, <code>image_hash</code>, <code>signature</code>, and <code>variation_type</code></li>
+                <li><strong>VariationRequest:</strong> Defines each variation with <code>type</code> (pose_edit, lighting_edit, expression_edit, background_edit) and <code>intensity</code> (light/medium/far)</li>
+                <li><strong>ImageRequest:</strong> Sent by validator with base image, <code>variation_requests[]</code>, <code>challenge_id</code> (includes validator hotkey for uniqueness), and <code>target_drand_round</code></li>
+                <li><strong>S3Submission:</strong> Returned by miner with <code>s3_key</code>, <code>image_hash</code>, <code>signature</code>, <code>variation_type</code>, and <code>path_signature</code> (prevents path hijacking)</li>
             </ul>
-            <p><strong>Key change:</strong> Miners return S3 references, NOT actual images. Images are encrypted and stored in S3 until drand reveal.</p>
+            <p><strong>Key changes:</strong></p>
+            <ul>
+                <li>Miners return S3 references, NOT actual images. Images are encrypted and stored in S3 until drand reveal (~72 min).</li>
+                <li><code>path_signature = sign(challenge_id:hotkey)[:16]</code> prevents malicious miners from writing to others' paths.</li>
+            </ul>
         </div>
 
         <div id="validationDesc" class="description" style="display: none;">
@@ -692,18 +723,19 @@ flowchart LR
             <ul>
                 <li><strong>STAGE 1: Online Validation (Immediate)</strong>
                     <ul>
-                        <li>Validator receives S3 references from miners</li>
+                        <li>Validator receives S3 references from miners (s3_key, hash, signature, path_signature)</li>
                         <li>Validates KAV (Name/DOB/Address) immediately</li>
                         <li>Applies <strong>previous cycle's reputation</strong></li>
                         <li><strong>SETS WEIGHTS ON-CHAIN NOW</strong></li>
-                        <li>Stores S3 refs for later post-validation</li>
+                        <li>Stores S3 refs + variation_requests for YANEZ post-validation</li>
                     </ul>
                 </li>
-                <li><strong>STAGE 2: Post-Validation (After Cycle Ends)</strong>
+                <li><strong>STAGE 2: Post-Validation (After ~72 min = 1 Bittensor Epoch)</strong>
                     <ul>
-                        <li>Download encrypted images from S3</li>
+                        <li>YANEZ downloads encrypted images from S3 (<code>yanez-miid-sn54</code>)</li>
+                        <li>Verifies path_signature matches S3 path</li>
                         <li>Decrypt with drand beacon</li>
-                        <li>ALL image validation: face matching, quality, watermarks, cheat detection</li>
+                        <li>ALL image validation: face matching, type/intensity compliance, quality, cheat detection</li>
                         <li><strong>Updates REPUTATION for NEXT cycle</strong></li>
                         <li>⚠️ Does NOT affect current weights!</li>
                     </ul>
@@ -724,15 +756,17 @@ flowchart LR
 
         <div id="s3Desc" class="description" style="display: none;">
             <h3>S3 Storage & Wallet Verification</h3>
-            <p>Miners upload encrypted image variations to S3 with wallet-based authentication for secure, verifiable submissions.</p>
+            <p>Miners upload encrypted image variations to S3 (<code>s3://yanez-miid-sn54/</code>) with wallet-based authentication and path security.</p>
             <table class="spec-table">
                 <tr><th>Step</th><th>Action</th><th>Purpose</th></tr>
-                <tr><td>1. Sign</td><td><code>wallet.hotkey.sign(data)</code></td><td>Prove miner identity</td></tr>
-                <tr><td>2. Encrypt</td><td><code>tlock.encrypt(data, round)</code></td><td>Timelock until reveal</td></tr>
-                <tr><td>3. Upload</td><td>S3 with metadata (hotkey, signature, round)</td><td>Commit submission</td></tr>
-                <tr><td>4. Verify</td><td><code>verify_message(signature, hotkey)</code></td><td>Confirm miner identity</td></tr>
+                <tr><td>1. Path Signature</td><td><code>sign(challenge_id:hotkey)[:16]</code></td><td>Prevent path hijacking</td></tr>
+                <tr><td>2. Sign Image</td><td><code>wallet.hotkey.sign(data)</code></td><td>Prove miner identity</td></tr>
+                <tr><td>3. Encrypt</td><td><code>tlock.encrypt(data, round)</code></td><td>Timelock until reveal (72 min)</td></tr>
+                <tr><td>4. Upload</td><td>S3 path: <code>/{challenge_id}/{hotkey}/{path_signature}/</code></td><td>Commit submission</td></tr>
+                <tr><td>5. Verify</td><td><code>verify_message(signature, hotkey)</code></td><td>Confirm miner identity</td></tr>
             </table>
-            <p><strong>Key Files:</strong> <code>MIID/utils/sign_message.py</code>, <code>MIID/utils/verify_message.py</code></p>
+            <p><strong>S3 Path Structure:</strong> <code>submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}_{timestamp}.png.tlock</code></p>
+            <p><strong>Key Files:</strong> <code>MIID/miner/s3_upload.py</code>, <code>MIID/utils/sign_message.py</code>, <code>MIID/utils/verify_message.py</code></p>
         </div>
 
         <div id="drandDesc" class="description" style="display: none;">
@@ -742,14 +776,17 @@ flowchart LR
                 <tr><th>Parameter</th><th>Value</th></tr>
                 <tr><td>Network</td><td>Drand Quicknet</td></tr>
                 <tr><td>Round Period</td><td>3 seconds</td></tr>
+                <tr><td>Reveal Buffer</td><td><strong>72 minutes (4320 seconds = 1 Bittensor epoch)</strong></td></tr>
+                <tr><td>Rounds Ahead</td><td>~1440 rounds (4320 sec ÷ 3 sec/round)</td></tr>
                 <tr><td>URL</td><td><code>https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971</code></td></tr>
             </table>
             <h4>Benefits</h4>
             <ul>
-                <li><strong>Fair Competition:</strong> All submissions revealed simultaneously</li>
+                <li><strong>Fair Competition:</strong> All submissions revealed simultaneously after 1 Bittensor epoch</li>
                 <li><strong>Anti-Gaming:</strong> Miners cannot adjust based on seeing other submissions</li>
                 <li><strong>Trustless:</strong> Drand is decentralized - no single point of failure</li>
                 <li><strong>Verifiable:</strong> Anyone can verify the beacon was used correctly</li>
+                <li><strong>Aligned with Bittensor:</strong> 72-minute reveal aligns with Bittensor epoch timing</li>
             </ul>
         </div>
 

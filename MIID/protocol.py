@@ -100,11 +100,16 @@ class S3Submission(BaseModel):
     Contains references to encrypted images uploaded to S3.
     The actual images are NOT included - only S3 paths, hashes, and signatures.
     Post-validation will download and decrypt after drand reveal.
+
+    SECURITY: path_signature prevents malicious miners from writing to other
+    miners' S3 paths. The path_signature is derived from the miner's private
+    key and can be verified during post-validation.
     """
     s3_key: str  # Path to encrypted file in S3 bucket
     image_hash: str  # SHA256 hash of the original (unencrypted) image
     signature: str  # Wallet signature proving ownership
     variation_type: str  # Which variation type this submission addresses
+    path_signature: str  # Unique path component: sign(challenge_id:miner_hotkey)[:16]
 
     class Config:
         arbitrary_types_allowed = True

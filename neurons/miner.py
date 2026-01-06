@@ -376,6 +376,12 @@ class Miner(BaseMinerNeuron):
             target_round = image_request.target_drand_round
             challenge_id = image_request.challenge_id or "sandbox_test"
 
+            # Generate path_signature ONCE per challenge for security
+            # This prevents other miners from writing to our path
+            path_message = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
+            path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
+            bt.logging.debug(f"Phase 4: Generated path_signature: {path_signature}")
+
             for var in variations:
                 try:
                     # Sign the image hash
@@ -404,7 +410,8 @@ class Miner(BaseMinerNeuron):
                         image_hash=var["image_hash"],
                         target_round=target_round,
                         challenge_id=challenge_id,
-                        variation_type=var["variation_type"]
+                        variation_type=var["variation_type"],
+                        path_signature=path_signature
                     )
 
                     if s3_key:
@@ -412,7 +419,8 @@ class Miner(BaseMinerNeuron):
                             s3_key=s3_key,
                             image_hash=var["image_hash"],
                             signature=signature,
-                            variation_type=var["variation_type"]
+                            variation_type=var["variation_type"],
+                            path_signature=path_signature
                         ))
                         bt.logging.debug(f"Phase 4: Created submission for {var['variation_type']}")
 

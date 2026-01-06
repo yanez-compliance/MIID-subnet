@@ -239,27 +239,45 @@ Similar to UAV addresses, image variations are assessed in batch **after drand r
 Miners upload image variations to S3 encrypted with their wallet signature. This ensures:
 - **Identity verification**: Only the miner who claims the upload can prove ownership
 - **Tamper prevention**: Images cannot be modified after submission
+- **Path protection**: Miners cannot write to other miners' S3 paths (via path_signature)
 - **Auditable**: All uploads are traceable to specific miner hotkeys
+
+### Path Signature Security
+
+To prevent malicious miners from overwriting other miners' submissions, each miner derives a unique `path_signature` that becomes part of the S3 path:
+
+```python
+# Path signature derivation (miner-side)
+path_message = f"{challenge_id}:{wallet.hotkey.ss58_address}"
+path_signature = wallet.hotkey.sign(path_message.encode()).hex()[:16]
+
+# S3 path structure (attacker cannot forge path_signature without private key)
+s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}.png.tlock"
+```
+
+**Why it works**: An attacker who knows the victim's hotkey still cannot compute the victim's `path_signature` because they don't have the victim's private key.
 
 ### Miner Upload Flow
 
 ```python
 # Miner signs and uploads images to S3
-from MIID.utils.sign_message import sign_message
+def upload_variation_to_s3(wallet, challenge_id: str, image_data: bytes, variation_type: str) -> dict:
+    # 1. Generate path_signature (unique per miner, unpredictable by others)
+    path_message = f"{challenge_id}:{wallet.hotkey.ss58_address}"
+    path_signature = wallet.hotkey.sign(path_message.encode()).hex()[:16]
 
-def upload_variation_to_s3(wallet, challenge_id: str, image_data: bytes) -> dict:
-    # 1. Create message with image hash
+    # 2. Create message with image hash
     image_hash = hashlib.sha256(image_data).hexdigest()
     message = f"challenge:{challenge_id}:hash:{image_hash}"
 
-    # 2. Sign with wallet hotkey
+    # 3. Sign with wallet hotkey
     signature = wallet.hotkey.sign(message.encode()).hex()
 
-    # 3. Encrypt image with drand timelock (see Drand section)
+    # 4. Encrypt image with drand timelock (see Drand section)
     encrypted_data = tlock_encrypt(image_data, target_drand_round)
 
-    # 4. Upload to S3 with signature metadata
-    s3_key = f"submissions/{challenge_id}/{wallet.hotkey.ss58_address}/variation.png.tlock"
+    # 5. Upload to S3 with path_signature in path (prevents path hijacking)
+    s3_key = f"submissions/{challenge_id}/{wallet.hotkey.ss58_address}/{path_signature}/{variation_type}.png.tlock"
     s3_client.put_object(
         Bucket=BUCKET_NAME,
         Key=s3_key,
@@ -268,6 +286,7 @@ def upload_variation_to_s3(wallet, challenge_id: str, image_data: bytes) -> dict
             "hotkey": wallet.hotkey.ss58_address,
             "signature": signature,
             "image_hash": image_hash,
+            "path_signature": path_signature,
             "timestamp": str(int(time.time()))
         }
     )
@@ -275,7 +294,8 @@ def upload_variation_to_s3(wallet, challenge_id: str, image_data: bytes) -> dict
     return {
         "s3_key": s3_key,
         "signature": signature,
-        "image_hash": image_hash
+        "image_hash": image_hash,
+        "path_signature": path_signature
     }
 ```
 
@@ -317,10 +337,16 @@ def verify_and_download(miner_hotkey: str, submission: dict) -> bytes:
     return decrypted_data
 ```
 
+### S3 Bucket Configuration
+
+**Bucket**: `s3://yanez-miid-sn54/`
+
+Miners upload encrypted image variations to this YANEZ-managed S3 bucket.
+
 ### S3 Bucket Structure
 
 ```
-miid-image-variations/
+yanez-miid-sn54/
 ├── challenges/
 │   └── <challenge_id>/
 │       ├── seed_image.png              # Base image from validator
@@ -330,11 +356,14 @@ miid-image-variations/
 └── submissions/
     └── <challenge_id>/
         └── <miner_hotkey>/
-            ├── variation_001.png.tlock  # Encrypted with tlock
-            ├── variation_002.png.tlock
-            ├── variation_003.png.tlock
-            └── submission_metadata.json  # Hashes, signatures
+            └── <path_signature>/       # Unique per miner (prevents path hijacking)
+                ├── pose_edit_123456.png.tlock    # Encrypted with tlock
+                ├── expression_edit_123457.png.tlock
+                ├── lighting_edit_123458.png.tlock
+                └── submission_metadata.json      # Hashes, signatures, path_signature
 ```
+
+**Security Note**: The `<path_signature>` folder is derived from `sign(challenge_id:miner_hotkey)[:16]`. Attackers cannot write to other miners' paths without their private key.
 
 ---
 
@@ -467,10 +496,11 @@ class ImageRequest(BaseModel):
 
 # Phase 4: Miner's S3 submission response
 class S3Submission(BaseModel):
-    s3_key: str        # Path to encrypted image in S3
-    image_hash: str    # SHA256 hash of original (unencrypted) image
-    signature: str     # Wallet signature proving ownership
+    s3_key: str         # Path to encrypted image in S3
+    image_hash: str     # SHA256 hash of original (unencrypted) image
+    signature: str      # Wallet signature proving ownership
     variation_type: str # Which type this variation addresses
+    path_signature: str # Unique path component: sign(challenge_id:miner_hotkey)[:16]
 
 class IdentitySynapse(bt.Synapse):
     # Existing fields

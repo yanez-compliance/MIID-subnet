@@ -8,13 +8,16 @@ This sandbox tests the Phase 4 image variation pipeline with minimal dependencie
 
 ## Sandbox Scope
 
+**Cycle**: `Phase4-C1-Sandbox`
+
 | Component | Sandbox Implementation | Production (Future) |
 |-----------|----------------------|---------------------|
 | **Base Images** | Pre-loaded folder on validator | FLUXSynID generation |
 | **Miner Model** | Placeholder function (returns copies) | Actual image generation model |
-| **S3 Storage** | Placeholder URL (TBD) | YANEZ-owned S3 bucket |
+| **S3 Storage** | `s3://yanez-miid-sn54/` (real bucket) | Same |
 | **Drand Encryption** | Real tlock encryption | Same |
 | **Post-Validation** | YANEZ handles separately | Same |
+| **Scoring** | Data collected for YANEZ | Integrated reputation system |
 
 ---
 
@@ -38,15 +41,16 @@ This sandbox tests the Phase 4 image variation pipeline with minimal dependencie
 │                                                                              │
 │  3. MINER: Process Request                                                   │
 │     ├── Decode Base64 image                                                  │
-│     ├── Call generate_variations() [PLACEHOLDER - returns copies for now]    │
+│     ├── Call generate_variations() [SANDBOX - returns copies for now]        │
 │     ├── Sign each variation with wallet.hotkey                               │
 │     ├── Encrypt with drand timelock (tlock.encrypt)                          │
-│     └── Upload to S3 (placeholder URL)                                       │
+│     └── Upload to S3 (s3://yanez-miid-sn54/)                                 │
 │                                                                              │
 │  4. MINER → VALIDATOR: Return S3Submissions                                  │
 │     ├── s3_key (path to encrypted file)                                      │
 │     ├── image_hash (SHA256 of original image)                                │
-│     └── signature (wallet signature)                                         │
+│     ├── signature (wallet signature)                                         │
+│     └── path_signature (unique path component for security)                  │
 │                                                                              │
 │  5. VALIDATOR: Online Validation                                             │
 │     ├── Validate KAV (Name/DOB/Address) - existing logic                     │
@@ -295,6 +299,28 @@ def calculate_reveal_buffer(timeout_seconds: float) -> int:
     BITTENSOR_EPOCH_SECONDS = 4320
     return BITTENSOR_EPOCH_SECONDS
 ```
+
+---
+
+## S3 Path Security (path_signature)
+
+To prevent malicious miners from overwriting other miners' submissions, each miner derives a unique `path_signature`:
+
+```python
+# Miner derives unique path_signature (cannot be forged by others)
+path_message = f"{challenge_id}:{wallet.hotkey.ss58_address}"
+path_signature = wallet.hotkey.sign(path_message.encode()).hex()[:16]
+
+# S3 path includes path_signature
+s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}.png.tlock"
+```
+
+**Attack Prevention**:
+- Attacker knows victim's hotkey (public) ✅
+- Attacker knows challenge_id (from synapse) ✅
+- Attacker CANNOT sign with victim's private key ❌
+
+**Result**: Attacker cannot compute victim's `path_signature`, so they cannot write to victim's path.
 
 ---
 
@@ -606,11 +632,16 @@ class ImageRequest(BaseModel):
 
 
 class S3Submission(BaseModel):
-    """Phase 4: Miner's S3 submission response."""
-    s3_key: str        # Path to encrypted file in S3
-    image_hash: str    # SHA256 of original image
-    signature: str     # Wallet signature
-    variation_type: str  # Which variation type this is
+    """Phase 4: Miner's S3 submission response.
+
+    SECURITY: path_signature prevents malicious miners from writing to
+    other miners' S3 paths. Derived from sign(challenge_id:miner_hotkey)[:16].
+    """
+    s3_key: str         # Path to encrypted file in S3
+    image_hash: str     # SHA256 of original image
+    signature: str      # Wallet signature
+    variation_type: str # Which variation type this is
+    path_signature: str # Unique path component (prevents path hijacking)
 
 
 class IdentitySynapse(bt.Synapse):
@@ -634,9 +665,47 @@ class IdentitySynapse(bt.Synapse):
 Add to `requirements.txt`:
 
 ```
-# Phase 4 Sandbox
+# Phase 4
 timelock>=0.1.0  # Drand timelock encryption
 Pillow>=9.0.0    # Image processing
+boto3>=1.26.0    # AWS S3 uploads
+```
+
+---
+
+## S3 Configuration
+
+**Bucket**: `s3://yanez-miid-sn54/`
+
+### Environment Variables
+
+```bash
+# S3 bucket (default: yanez-miid-sn54)
+export MIID_S3_BUCKET="yanez-miid-sn54"
+
+# AWS region (default: us-east-1)
+export MIID_S3_REGION="us-east-1"
+
+# Enable/disable S3 (default: true)
+export MIID_USE_S3="true"
+
+# AWS credentials (required for S3 uploads)
+export AWS_ACCESS_KEY_ID="your-access-key"
+export AWS_SECRET_ACCESS_KEY="your-secret-key"
+
+# Or use AWS credentials file (~/.aws/credentials)
+```
+
+### Local Storage Fallback
+
+If S3 is not configured or unavailable, files are stored locally:
+
+```bash
+# Local storage directory (default: /tmp/miid_submissions)
+export MIID_LOCAL_STORAGE="/path/to/local/storage"
+
+# Disable S3, use local storage only
+export MIID_USE_S3="false"
 ```
 
 ---
@@ -700,10 +769,19 @@ MIID/
 ├── miner/
 │   ├── image_generator.py     # NEW: Generate variations
 │   ├── drand_encrypt.py       # NEW: Tlock encryption
-│   ├── s3_upload.py           # NEW: S3 upload (mock)
+│   ├── s3_upload.py           # NEW: S3 upload with path_signature security
 │   └── forward.py             # MODIFIED: Process image request
 │
 └── protocol.py                # MODIFIED: Add VariationRequest, ImageRequest, S3Submission
+
+# Local storage structure (sandbox mode - mirrors S3)
+.local_s3_storage/
+└── submissions/
+    └── <challenge_id>/
+        └── <miner_hotkey>/
+            └── <path_signature>/     # Prevents path hijacking
+                ├── pose_edit_123456.png.tlock
+                └── pose_edit_123456.png.tlock.meta.json
 ```
 
 ---
