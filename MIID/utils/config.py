@@ -74,6 +74,7 @@ def add_args(cls, parser):
     Adds relevant arguments to the parser for operation.
     """
 
+
     parser.add_argument("--netuid", type=int, help="Subnet netuid", default=1)
 
     parser.add_argument(
@@ -458,6 +459,26 @@ def add_validator_args(cls, parser):
         default=0.75
     )
     # Note: burn_uid is hardcoded to 59 and not configurable
+    
+    # --- UAV Grading Configuration ---
+    parser.add_argument(
+        '--neuron.UAV_grading',
+        action='store_true',
+        help="Enable UAV grading system with reputation-weighted rewards (KAV + UAV). When False, uses KAV-only scoring with burn applied directly.",
+        default=False
+    )
+    parser.add_argument(
+        '--neuron.kav_weight',
+        type=float,
+        help="Weight for KAV (Known Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
+        default=0.20
+    )
+    parser.add_argument(
+        '--neuron.uav_weight',
+        type=float,
+        help="Weight for UAV (Unknown Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
+        default=0.80
+    )
     
     # --- Nominatim Cache Configuration ---
     parser.add_argument(

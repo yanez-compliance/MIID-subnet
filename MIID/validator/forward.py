@@ -113,6 +113,14 @@ PHASE4_ENABLED = True  # Set to False to disable Phase 4 features
 # See: MIID/validator/image_variations.py for definitions
 # =============================================================================
 
+# =============================================================================
+# UAV Grading Configuration
+# =============================================================================
+# UAV_grading is controlled via config.neuron.UAV_grading (default: False)
+# When False: Uses KAV-only scoring with burn applied directly
+# When True: Uses reputation-weighted rewards (KAV + UAV) with burn applied after combination
+# =============================================================================
+
 async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
     """
@@ -572,63 +580,87 @@ async def forward(self):
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
     seed_script = [item['script'] for item in seed_names_with_labels]
-    # Phase 3: Get KAV rewards WITHOUT burn - burn will be applied after reputation weighting
-    kav_rewards, kav_uids, detailed_metrics = get_name_variation_rewards(
-        self,
-        seed_names,
-        seed_dob,
-        seed_addresses,
-        seed_script,
-        all_responses,
-        miner_uids,
-        variation_count=query_labels['variation_count'],
-        phonetic_similarity=query_labels['phonetic_similarity'],
-        orthographic_similarity=query_labels['orthographic_similarity'],
-        rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
-        skip_burn=True  # Phase 3: Skip burn here, apply after KAV+UAV in apply_reputation_rewards()
-    )
+    
+    # Check if UAV grading is enabled (default: False)
+    uav_grading_enabled = getattr(self.config.neuron, 'UAV_grading', False)
+    
+    if uav_grading_enabled:
+        # Phase 3: Get KAV rewards WITHOUT burn - burn will be applied after reputation weighting
+        kav_rewards, kav_uids, detailed_metrics = get_name_variation_rewards(
+            self,
+            seed_names,
+            seed_dob,
+            seed_addresses,
+            seed_script,
+            all_responses,
+            miner_uids,
+            variation_count=query_labels['variation_count'],
+            phonetic_similarity=query_labels['phonetic_similarity'],
+            orthographic_similarity=query_labels['orthographic_similarity'],
+            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
+            skip_burn=True  # Phase 3: Skip burn here, apply after KAV+UAV in apply_reputation_rewards()
+        )
 
-    # ==========================================================================
-    # REPUTATION-WEIGHTED REWARDS (Phase 3 - Cycle 2)
-    # ==========================================================================
-    global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
+        # ==========================================================================
+        # REPUTATION-WEIGHTED REWARDS (Phase 3 - Cycle 2)
+        # ==========================================================================
+        global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
 
-    # Initialize pending file path (once per validator session)
-    if _pending_file_path is None:
-        _pending_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "pending_allocations.json"
-        _pending_allocations = _load_pending_allocations(_pending_file_path)
-        if _pending_allocations:
-            bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from previous session")
+        # Initialize pending file path (once per validator session)
+        if _pending_file_path is None:
+            _pending_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "pending_allocations.json"
+            _pending_allocations = _load_pending_allocations(_pending_file_path)
+            if _pending_allocations:
+                bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from previous session")
 
-    # With skip_burn=True, kav_rewards/kav_uids contain only miners (no burn UID)
-    # Convert to list for apply_reputation_rewards
-    miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
+        # With skip_burn=True, kav_rewards/kav_uids contain only miners (no burn UID)
+        # Convert to list for apply_reputation_rewards
+        miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
-    # Get config values (Phase 3 - Cycle 2)
-    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
-    kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
-    uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
+        # Get config values (Phase 3 - Cycle 2)
+        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
+        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
 
-    # Apply reputation weighting (UAV + combine + burn in one call)
-    # Burn is applied ONCE here after KAV + UAV are combined
-    rewards, updated_uids, combined_metrics = apply_reputation_rewards(
-        kav_rewards=kav_rewards,  # Raw KAV quality scores (no burn applied yet)
-        uids=miner_uids_list,
-        rep_data=_cached_rep_data,  # From previous forward pass (may be empty on first run)
-        metagraph=self.metagraph,
-        burn_fraction=burn_fraction,
-        kav_weight=kav_weight,
-        uav_weight=uav_weight,
-        kav_metrics=detailed_metrics
-    )
+        # Apply reputation weighting (UAV + combine + burn in one call)
+        # Burn is applied ONCE here after KAV + UAV are combined
+        rewards, updated_uids, combined_metrics = apply_reputation_rewards(
+            kav_rewards=kav_rewards,  # Raw KAV quality scores (no burn applied yet)
+            uids=miner_uids_list,
+            rep_data=_cached_rep_data,  # From previous forward pass (may be empty on first run)
+            metagraph=self.metagraph,
+            burn_fraction=burn_fraction,
+            kav_weight=kav_weight,
+            uav_weight=uav_weight,
+            kav_metrics=detailed_metrics
+        )
 
-    bt.logging.info(
-        f"Applied reputation rewards: {len(miner_uids_list)} miners, "
-        f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
-    )
-    # ==========================================================================
-    # END REPUTATION-WEIGHTED REWARDS
-    # ==========================================================================
+        bt.logging.info(
+            f"Applied reputation rewards: {len(miner_uids_list)} miners, "
+            f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
+        )
+        # ==========================================================================
+        # END REPUTATION-WEIGHTED REWARDS
+        # ==========================================================================
+    else:
+        # UAV grading disabled: Use KAV-only scoring with burn applied directly
+        bt.logging.info("UAV_grading disabled. Using KAV-only scoring with burn applied.")
+        rewards, updated_uids, detailed_metrics = get_name_variation_rewards(
+            self,
+            seed_names,
+            seed_dob,
+            seed_addresses,
+            seed_script,
+            all_responses,
+            miner_uids,
+            variation_count=query_labels['variation_count'],
+            phonetic_similarity=query_labels['phonetic_similarity'],
+            orthographic_similarity=query_labels['orthographic_similarity'],
+            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
+            skip_burn=False  # Apply burn directly in get_name_variation_rewards
+        )
+        # Use detailed_metrics as combined_metrics for consistency
+        combined_metrics = detailed_metrics
 
     # Verify UID-reward mapping before updating scores
     bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
@@ -930,28 +962,35 @@ async def forward(self):
     # ==========================================================================
     # 9) Add reward_allocation to results (Phase 3 - Cycle 2)
     # ==========================================================================
-    # Create new allocation for this forward pass
-    new_allocation = {
-        "timestamp": timestamp,
-        "rep_snapshot_version": _cached_rep_version,
-        "miners": combined_metrics  # Full breakdown per miner from apply_reputation_rewards()
-    }
+    if uav_grading_enabled:
+        # Create new allocation for this forward pass
+        new_allocation = {
+            "timestamp": timestamp,
+            "rep_snapshot_version": _cached_rep_version,
+            "miners": combined_metrics  # Full breakdown per miner from apply_reputation_rewards()
+        }
 
-    # Add to pending allocations and save to disk
-    _pending_allocations.append(new_allocation)
-    _save_pending_allocations(_pending_file_path, _pending_allocations)
+        # Add to pending allocations and save to disk
+        _pending_allocations.append(new_allocation)
+        _save_pending_allocations(_pending_file_path, _pending_allocations)
 
-    # Build reward_allocation with ALL pending allocations (for retry on previous failures)
-    results["reward_allocation"] = {
-        "rep_snapshot_version": _cached_rep_version,
-        "cycle_id": f"cycle_{timestamp}",
-        "pending_count": len(_pending_allocations),
-        "allocations": _pending_allocations  # ALL pending allocations
-    }
+        # Build reward_allocation with ALL pending allocations (for retry on previous failures)
+        results["reward_allocation"] = {
+            "rep_snapshot_version": _cached_rep_version,
+            "cycle_id": f"cycle_{timestamp}",
+            "pending_count": len(_pending_allocations),
+            "allocations": _pending_allocations  # ALL pending allocations
+        }
 
-    bt.logging.info(
-        f"Added reward_allocation to results: {len(_pending_allocations)} pending allocation(s)"
-    )
+        bt.logging.info(
+            f"Added reward_allocation to results: {len(_pending_allocations)} pending allocation(s)"
+        )
+    else:
+        # UAV grading disabled: No reward allocation tracking
+        results["reward_allocation"] = {
+            "enabled": False,
+            "note": "UAV_grading disabled - using KAV-only scoring"
+        }
     # ==========================================================================
 
     # 10) Upload to external endpoint (moved to a separate utils function)
@@ -979,29 +1018,32 @@ async def forward(self):
             # ==========================================================================
             # Cache rep_data from response for NEXT forward pass (Phase 3 - Cycle 2)
             # ==========================================================================
-            if upload_response.get("rep_cache"):
-                _cached_rep_version = upload_response.get("rep_snapshot_version")
-                _cached_rep_data = upload_response.get("rep_cache", {})
-                bt.logging.info(
-                    f"Updated rep cache: version={_cached_rep_version}, "
-                    f"miners={len(_cached_rep_data)}"
-                )
+            if uav_grading_enabled:
+                if upload_response.get("rep_cache"):
+                    _cached_rep_version = upload_response.get("rep_snapshot_version")
+                    _cached_rep_data = upload_response.get("rep_cache", {})
+                    bt.logging.info(
+                        f"Updated rep cache: version={_cached_rep_version}, "
+                        f"miners={len(_cached_rep_data)}"
+                    )
 
-            # Clear pending allocations after successful upload
-            _pending_allocations.clear()
-            _clear_pending_allocations(_pending_file_path)
-            bt.logging.info("Cleared pending allocations after successful upload")
+                # Clear pending allocations after successful upload
+                _pending_allocations.clear()
+                _clear_pending_allocations(_pending_file_path)
+                bt.logging.info("Cleared pending allocations after successful upload")
             # ==========================================================================
         else:
             bt.logging.error("Failed to upload data to external server")
+            if uav_grading_enabled:
+                bt.logging.warning(
+                    f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
+                )
+    except Exception as e:
+        bt.logging.error(f"Uploading data failed: {str(e)}")
+        if uav_grading_enabled:
             bt.logging.warning(
                 f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
             )
-    except Exception as e:
-        bt.logging.error(f"Uploading data failed: {str(e)}")
-        bt.logging.warning(
-            f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
-        )
         upload_success = False
     
     wandb_extra_data["upload_success"] = upload_success
