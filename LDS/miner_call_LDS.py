@@ -6,8 +6,8 @@ import bittensor
 miner_address = "123 main street, Ukraine"  # Change this to your miner address
 latitude = None  # Optional: set to float value (e.g., 4.5) or leave as None
 longitude = None  # Optional: set to float value (e.g., 31.6) or leave as None
-wallet_name = "validator"  # Your wallet name
-wallet_hotkey = "v"  # Your hotkey name
+wallet_name = "miner"  # Your wallet name
+wallet_hotkey = "m"  # Your hotkey name
 api_url = "http://34.211.230.92:5000/validate"  # API endpoint URL
 
 
