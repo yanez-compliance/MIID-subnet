@@ -105,17 +105,6 @@ class Miner(BaseMinerNeuron):
         "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "Testnet_asem"
     }
 
-    def _add_local_validators_to_whitelist(self):
-        """Add all registered neurons as whitelisted validators in local_test mode."""
-        if not getattr(self.config, 'local_test', False):
-            return
-
-        bt.logging.info("Local test mode: Adding all registered neurons to whitelist")
-        for i, hotkey in enumerate(self.metagraph.hotkeys):
-            if hotkey not in self.WHITELISTED_VALIDATORS:
-                self.WHITELISTED_VALIDATORS[hotkey] = f"LocalValidator_UID{i}"
-                bt.logging.info(f"  Added {hotkey[:16]}... as LocalValidator_UID{i}")
-
     def __init__(self, config=None):
         """
         Initialize the Name Variation Miner.
@@ -163,9 +152,6 @@ class Miner(BaseMinerNeuron):
         self.output_path = os.path.join(self.config.logging.logging_dir, "mining_results")
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
-
-        # Add local validators to whitelist in local_test mode
-        self._add_local_validators_to_whitelist()
 
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
 
