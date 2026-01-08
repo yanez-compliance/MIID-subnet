@@ -20,6 +20,13 @@ except ImportError:
     BOTO3_AVAILABLE = False
     bt.logging.warning("boto3 not installed. S3 uploads disabled, using local storage.")
 
+# Try to import requests for HTTP PUT uploads (public write buckets)
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+
 
 # =============================================================================
 # S3 Configuration
@@ -28,7 +35,8 @@ S3_BUCKET_NAME = os.environ.get("MIID_S3_BUCKET", "yanez-miid-sn54")
 S3_REGION = os.environ.get("MIID_S3_REGION", "us-east-1")
 
 # Set to True to use S3, False for local storage only
-USE_S3 = os.environ.get("MIID_USE_S3", "true").lower() == "true" and BOTO3_AVAILABLE
+# Miners use HTTP PUT for public write buckets (no AWS credentials needed)
+USE_S3 = os.environ.get("MIID_USE_S3", "true").lower() == "true" and REQUESTS_AVAILABLE
 
 # Local storage directory (fallback or for sandbox testing)
 LOCAL_STORAGE_DIR = Path(os.environ.get("MIID_LOCAL_STORAGE", "/tmp/miid_submissions"))
@@ -38,7 +46,11 @@ _s3_client = None
 
 
 def get_s3_client():
-    """Get or create S3 client."""
+    """Get or create S3 client.
+    
+    Supports authenticated access. For public write buckets without credentials,
+    use upload_via_http_put() instead.
+    """
     global _s3_client
     if _s3_client is None and BOTO3_AVAILABLE:
         try:
@@ -48,6 +60,43 @@ def get_s3_client():
             bt.logging.error(f"[S3] Failed to create S3 client: {e}")
             return None
     return _s3_client
+
+
+def upload_via_http_put(s3_key: str, data: bytes, content_type: str = 'application/octet-stream') -> bool:
+    """Upload file to S3 using HTTP PUT (for public write buckets).
+    
+    Args:
+        s3_key: S3 object key (path)
+        data: File data as bytes
+        content_type: Content type for the file
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    if not REQUESTS_AVAILABLE:
+        return False
+    
+    url = f"https://{S3_BUCKET_NAME}.s3.{S3_REGION}.amazonaws.com/{s3_key}"
+    
+    try:
+        response = requests.put(
+            url,
+            data=data,
+            headers={
+                'Content-Type': content_type,
+            },
+            timeout=30
+        )
+        
+        if response.status_code in [200, 204]:
+            return True
+        else:
+            bt.logging.warning(f"[S3 HTTP PUT] Upload failed with status {response.status_code}: {response.text[:200]}")
+            return False
+            
+    except requests.exceptions.RequestException as e:
+        bt.logging.warning(f"[S3 HTTP PUT] Request failed: {e}")
+        return False
 
 
 def ensure_local_storage():
@@ -106,28 +155,17 @@ def upload_to_s3(
     }
 
     # Try S3 upload if configured
+    # Miners use HTTP PUT directly for public write bucket (no AWS credentials needed)
     if USE_S3:
-        try:
-            s3_client = get_s3_client()
-            if s3_client:
-                s3_client.put_object(
-                    Bucket=S3_BUCKET_NAME,
-                    Key=s3_key,
-                    Body=encrypted_data,
-                    Metadata=metadata,
-                    ContentType='application/octet-stream'
-                )
-                bt.logging.info(
-                    f"[S3] Uploaded: s3://{S3_BUCKET_NAME}/{s3_key} "
-                    f"({len(encrypted_data)} bytes)"
-                )
-                return s3_key
-        except NoCredentialsError:
-            bt.logging.warning("[S3] No AWS credentials found. Falling back to local storage.")
-        except ClientError as e:
-            bt.logging.warning(f"[S3] Upload failed: {e}. Falling back to local storage.")
-        except Exception as e:
-            bt.logging.warning(f"[S3] Unexpected error: {e}. Falling back to local storage.")
+        bt.logging.info("[S3] Uploading via HTTP PUT to public write bucket.")
+        if upload_via_http_put(s3_key, encrypted_data, 'application/octet-stream'):
+            bt.logging.info(
+                f"[S3] Uploaded (HTTP PUT): s3://{S3_BUCKET_NAME}/{s3_key} "
+                f"({len(encrypted_data)} bytes)"
+            )
+            return s3_key
+        else:
+            bt.logging.warning("[S3] HTTP PUT upload failed. Falling back to local storage.")
 
     # Fallback to local storage
     try:
