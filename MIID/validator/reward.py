@@ -3447,6 +3447,11 @@ def calculate_rule_compliance_score(
 #
 # Policy-based constants (hardcoded, rarely change):
 #   - TIER_MULTIPLIERS, NORM_RANGES, BURN_UID
+#
+# New Miner Behavior:
+#   - Miners not in rep_data (snapshot) get ZERO UAV rewards
+#   - They only receive KAV (online quality) rewards
+#   - Must contribute validated UAVs to build reputation first
 # =============================================================================
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
@@ -3461,13 +3466,15 @@ TIER_MULTIPLIERS = {
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
 # Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
+# NOTE: These ranges must match the tier boundaries in reputation-policy-v1.md
+# Tier assignment is done by the database, validator uses these for normalization only
 NORM_RANGES = {
-    "Watch": (0.10, 0.699, 0.50, 0.70),
-    "Neutral": (0.70, 1.00, 0.70, 1.00),
-    "Bronze": (1.00, 1.999, 1.00, 1.20),
-    "Silver": (2.00, 9.999, 1.20, 1.50),
-    "Gold": (10.0, 49.99, 1.50, 1.80),
-    "Diamond": (50.0, 9999.0, 1.80, 2.00),
+    "Watch":   (0.10, 0.999,  0.50, 0.70),   # rep_score 0.10 - <1.0
+    "Neutral": (1.00, 5.00,   0.70, 1.00),   # rep_score 1.0 - 5.0
+    "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
+    "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
+    "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999
+    "Diamond": (50.0, 9999.0, 1.80, 2.00),   # rep_score >= 50.0
 }
 
 # Burn UID (hardcoded in existing codebase)
@@ -3543,24 +3550,33 @@ def apply_reputation_rewards(
     combined_metrics = []
 
     # --- Step 1 & 2: Calculate UAV and combine with KAV ---
+    new_miner_count = 0
     for i, uid in enumerate(uids):
         hotkey = metagraph.hotkeys[uid]
         Q = kav_rewards[i]  # KAV quality score
 
-        # Get reputation (default to Neutral if not found)
-        rep = rep_data.get(hotkey, {"rep_score": 1.0, "rep_tier": "Neutral"})
-        rep_score = rep.get("rep_score", 1.0)
-        rep_tier = rep.get("rep_tier", "Neutral")
+        # Get reputation from snapshot
+        rep = rep_data.get(hotkey)
 
-        # Normalize rep_score to reward-friendly range (0.5 - 2.0)
-        # This prevents Diamond miners from dominating emissions
-        R_norm = normalize_rep_score(rep_score, rep_tier)
-
-        # Get tier multiplier
-        T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
-
-        # UAV reward = R_norm × T (using NORMALIZED rep_score)
-        uav_reward = R_norm * T
+        # New miners (not in rep_data) get ZERO UAV rewards - KAV only
+        # They must first contribute validated UAVs to build reputation
+        if rep is None:
+            new_miner_count += 1
+            rep_score = 0.0
+            rep_tier = "New"
+            R_norm = 0.0
+            T = 0.0
+            uav_reward = 0.0
+        else:
+            rep_score = rep.get("rep_score", 1.0)
+            rep_tier = rep.get("rep_tier", "Neutral")
+            # Normalize rep_score to reward-friendly range (0.5 - 2.0)
+            # This prevents Diamond miners from dominating emissions
+            R_norm = normalize_rep_score(rep_score, rep_tier)
+            # Get tier multiplier
+            T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+            # UAV reward = R_norm × T (using NORMALIZED rep_score)
+            uav_reward = R_norm * T
 
         # Apply weights and combine
         kav_portion = kav_weight * Q
@@ -3575,16 +3591,18 @@ def apply_reputation_rewards(
         # Build metrics - merge KAV details with reputation metrics
         kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
 
+        is_new_miner = rep is None
         metric_entry = {
             "uid": uid,
             "miner_hotkey": hotkey,
+            "is_new_miner": is_new_miner,  # True if miner not in rep_data (zero UAV)
             # KAV details
             "quality_score": float(Q),
             "kav_portion": float(kav_portion),
             # UAV details (raw + normalized)
-            "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0)
-            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0)
-            "rep_tier": rep_tier,
+            "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0), 0 for new miners
+            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0), 0 for new miners
+            "rep_tier": rep_tier,                    # "New" for new miners
             "tier_multiplier": float(T),
             "uav_reward": float(uav_reward),
             "uav_portion": float(uav_portion),
@@ -3621,7 +3639,7 @@ def apply_reputation_rewards(
         metric["burn_fraction"] = float(burn_fraction)
 
     bt.logging.info(
-        f"Applied reputation rewards for {len(uids)} miners. "
+        f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
         f"KAV: {kav_weight}, UAV: {uav_weight}, Burn: {burn_fraction}. "
         f"Total before burn: {total_reward_sum:.4f}, "
         f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {burn_fraction:.2%}"

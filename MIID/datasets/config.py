@@ -52,8 +52,10 @@ REWARDS_DIR = os.path.join(DATA_DIR, "rewards")
 # Reputation-weighted reward allocation weights
 # KAV = Known Attack Vector (online quality from validator evaluation)
 # UAV = Unknown Attack Vector (reputation-based from manual validation)
+# NOTE: New miners (not in rep_data) get ZERO UAV - only KAV rewards
+#       They must contribute validated UAVs to build reputation first
 KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
-UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards
+UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards (0 for new miners)
 
 # Note: burn_fraction is configured via --neuron.burn_fraction (default 0.75 for Cycle 2)
 
@@ -72,24 +74,26 @@ TIER_MULTIPLIERS = {
 }
 
 # Tier boundaries (rep_score -> tier) from reputation-policy-v1.md
-# Used for reference and tier determination
+# NOTE: Tier assignment is done by the database Reputation Engine, not this code.
+# These values are for reference only - must match reputation-policy-v1.md
 TIER_BOUNDARIES = {
     "Diamond": (50.0, 9999.0),   # rep_score >= 50.0
-    "Gold": (10.0, 49.999),      # rep_score 10.0 - 49.999
-    "Silver": (2.0, 9.999),      # rep_score 2.0 - 9.999
-    "Bronze": (1.001, 1.999),    # rep_score > 1.0 - 1.999
-    "Neutral": (0.70, 1.00),     # rep_score 0.70 - 1.00
-    "Watch": (0.10, 0.699),      # rep_score 0.10 - 0.699
+    "Gold":    (30.0, 49.999),   # rep_score 30.0 - 49.999
+    "Silver":  (15.0, 29.999),   # rep_score 15.0 - 29.999
+    "Bronze":  (5.001, 14.999),  # rep_score >5.0 - 14.999
+    "Neutral": (1.00, 5.00),     # rep_score 1.0 - 5.0
+    "Watch":   (0.10, 0.999),    # rep_score 0.10 - <1.0
 }
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
 # Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
 # This prevents Diamond miners from dominating emissions
+# NOTE: rep_min/rep_max must match TIER_BOUNDARIES above
 NORM_RANGES = {
-    "Watch": (0.10, 0.699, 0.50, 0.70),
-    "Neutral": (0.70, 1.00, 0.70, 1.00),
-    "Bronze": (1.00, 1.999, 1.00, 1.20),
-    "Silver": (2.00, 9.999, 1.20, 1.50),
-    "Gold": (10.0, 49.99, 1.50, 1.80),
-    "Diamond": (50.0, 9999.0, 1.80, 2.00),
+    "Watch":   (0.10, 0.999,  0.50, 0.70),   # rep_score 0.10 - <1.0
+    "Neutral": (1.00, 5.00,   0.70, 1.00),   # rep_score 1.0 - 5.0
+    "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
+    "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
+    "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999
+    "Diamond": (50.0, 9999.0, 1.80, 2.00),   # rep_score >= 50.0
 }
