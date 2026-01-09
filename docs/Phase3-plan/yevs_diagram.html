@@ -559,6 +559,9 @@ erDiagram
         BIGINT uav_id FK
         BIGINT miner_id FK
         BIGINT source_id FK
+        TEXT cycle_id
+        BOOLEAN is_duplicated
+        DATETIME rep_processed_at
         DATETIME observed_at
     }
 
@@ -616,6 +619,7 @@ erDiagram
         BIGINT total_cheats
         FLOAT last_delta
         TEXT last_reason
+        FLOAT total_score
         DATETIME last_updated_at
         DATETIME created_at
     }
