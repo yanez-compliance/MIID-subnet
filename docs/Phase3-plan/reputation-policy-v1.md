@@ -23,6 +23,17 @@ A miner-submitted data point stored in the UAV table. Relevant fields for reputa
 - `is_duplicate`
 - `reviewer_id`, `comment`
 
+### AUTO-Validation Score (`validation_score`)  
+AUTO-scored integer from **–5 → +5**:
+| Score | Meaning |
+|-------|---------|
+| **+2** | Simple word changes, one to two words are different, missing or added.(target it so catch any spelling changes)(Target is also to catch any simple additions or removal from the address) |
+| **0** | UAV is not a UAV, when sent to the api the coordinates match the coordinates sent |
+| **0** | +0	Coordinates are not in the same region|
+| **–3** | Duplicate – recycled or structurally reused |
+| **–5** | UAV is just spam text, simple check to make sure there are more letters then numbers and its not an empty address |
+
+
 ### Validation Score (`validation_score`)  
 Human-scored integer from **–5 → +5**:
 
@@ -112,11 +123,14 @@ AND rep_processed_at IS NULL
 
 | validation_score | Meaning | Δrep |
 |------------------|---------|------|
-| **+5** | Perfect | +0.10 |
-| **+3/+4** | Good | +0.05 |
-| **+1/+2** | Acceptable | +0.02 |
+| **+5** | Perfect | +1 |
+| **+3/+4** | Good | +0.4 |
+| **+1/+2** | Acceptable | +0.2 |
 | **0** | Unclear | 0.00 |
+| **–1** | Partial | –0.05 |
+| **–2** | Misleading | –0.08 |
 | **–3** | Duplicate | –0.10 |
+| **–4** | Not enought | –0.25 |
 | **–5** | Cheat / fake | –0.50 |
 
 **Penalty > reward** by design.
@@ -142,11 +156,11 @@ Tiers provide a high-level trust classification for analytics and reward multipl
 | Tier | rep_score Range |
 |------|-----------------|
 | **Diamond** | ≥ 50.0 |
-| **Gold** | 10.0 – 49.999 |
-| **Silver** | 2.0 – 9.999 |
-| **Bronze** | >1.0 – 1.999 |
-| **Neutral** | 0.70 – 1.00 |
-| **Watch** | 0.10 – 0.699 |
+| **Gold** | 30.0 – 49.999 |
+| **Silver** | 15.0 – 29.999 |
+| **Bronze** | >5.0 – 14.999 |
+| **Neutral** | 1 – 5.00 |
+| **Watch** | 0.10 – 1 |
 
 ### Notes
 - **Neutral is exactly baseline (1.0)**  
